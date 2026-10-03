@@ -1,0 +1,21 @@
+E02-a060957 | A060957: refutation and arbitrarily long prime-exponent gaps
+
+Exact contribution: Original refutation: ∃ n,m,p∈N with m>0, p prime, p≤n, m∈P(n), p^5 m∈P(n), and p^4 m∉P(n). Stronger: ∀ g≥1 and B∈N, ∃ n,p,d,h∈N with p prime, B<p≤n, d>0, p∤d, and for every e∈N, p^e d∈P(n) iff e lies in {h,h+1,h+2,h+3,h+g+4,h+g+5,h+g+6,h+g+7}. Hence g consecutive missing levels between attainable endpoints.
+
+Assessment: This refutes the actual whole-interval distinct-subset-product interpolation assertion, not an arbitrary restricted factor set. The arbitrary-gap theorem is materially stronger but stays in this family. Prime-coordinate encoding and the exact eight-level fibre are the useful reusable mechanism.
+
+Novelty: Strong original-result candidate against the 2020 OEIS conjecture; the located prior work supplies methods, not this complete-interval counterexample. First-publication priority remains a bounded-search conclusion.
+
+Formalization: Packet evidence: Combined 45-module 4.33.1 replay and aggregate passed 2026-10-01 around16:08UTC. Generalized24-module closure also passed4.34.1 around16:01 and4.33.1 around16:05. Standard final axioms; no unproved graph-existence premise.. Endpoint signatures and declared axioms are recorded below; author/internal replay is not this reviewer’s fresh rebuild. 
+
+Proposal: Approve one full M3A family at p=1, contingent on pinned closure and cutoff. Do not add separate points for every gap length.
+
+OPDP target OPENMATH-OEIS-A060957 | intrinsic 5.4/10 | competition D proposal 527/1000
+
+Modality M3A | p 1 | b 1 | m 1 | numerical family points 277.729
+
+Specific remaining checks: Late ZIP 06:19:17 versus on-time PDF 05:57:20: prove fixed cutoff artifact or organizer admin-transfer decision; Exact source/library closure fresh independent build and semantic review; Target admission/open-at-freeze/novelty and canonicalD mapping
+
+Key files: 349479 Claim_Evidence/proofs/a060957/OpHack/SubsetProducts/Main.lean; 349479 Claim_Evidence/proofs/a060957/OpHack/SubsetProducts/Main.lean; 349478 Claim_Evidence/proofs/a060957/OpHack/SubsetProducts/Generic/Final.lean; 349478 Claim_Evidence/proofs/a060957/OpHack/SubsetProducts/Generic/Final.lean; 349484 Claim_Evidence/proofs/a060957/verification/full-verification.json; 349480 Claim_Evidence/proofs/a060957/verification/arbitrary-gaps-4341-verification.json; 349481 Claim_Evidence/proofs/a060957/verification/arbitrary-gaps-pinned-verification.json; 349483 Claim_Evidence/proofs/a060957/verification/full-replay/OpHack_SubsetProducts_Main.log; 349482 Claim_Evidence/proofs/a060957/verification/full-replay/OpHack_SubsetProducts_Generic_Final.log
+
+Primary/source locators: https://oeis.org/A060957; https://arxiv.org/abs/2501.02695

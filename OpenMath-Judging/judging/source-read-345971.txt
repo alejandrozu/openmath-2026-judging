@@ -1,0 +1,91 @@
+{
+  "schema_version": "1.0.0",
+  "record_id": "OM26-H7-SECTION8-DRAFT-001",
+  "state": "TECHNICAL_AND_HUMAN_PACKET_PREPARED__OFFICIAL_ROUTE_AND_ORGANIZER_CLASSIFICATION_PENDING",
+  "identity_target": {
+    "campaign": "OPENMATH-2026",
+    "hill_id": "ottogin/erdos-3",
+    "problem_id": "OM26-H7",
+    "family_id": "PENDING_COMPETITION_NAMESPACE",
+    "primary_modality": "M2_FORMALIZATION_OR_NARROW_FORMALIZED_PARTIAL_PENDING_COMPETITION_CLASSIFICATION",
+    "registered_human_roster": [
+      "Jamie Steeg"
+    ],
+    "entrant_class": "Individual",
+    "affiliations": [],
+    "resource_classification": "SELF_RESOURCED"
+  },
+  "exact_claims": [
+    {
+      "theorem": "Erdos3.ap_subprogression_of_le",
+      "statement": "If S is an arithmetic progression of length k contained in A and m <= k, then A contains an arithmetic progression of length m.",
+      "state": "PINNED_COMPILE_PASS"
+    },
+    {
+      "theorem": "Erdos3.ap_frequently_iff_every_length",
+      "statement": "For A ⊆ ℕ, the protected conclusion that arbitrarily/unboundedly large AP lengths occur frequently at atTop is equivalent to A containing an arithmetic progression of every exact finite length.",
+      "state": "PINNED_COMPILE_PASS"
+    }
+  ],
+  "completeness_boundary": "These theorems formalize only the conclusion-side representational bridge. They do not prove that divergent reciprocal sum implies arithmetic progressions and do not solve Erdős Problem 3.",
+  "formal_environment": {
+    "image": "ghcr.io/ottogin/lean-mathlib@sha256:964547ad81e109c78545512867bae70b710c55d833078674878faad7de0ebb85",
+    "lean": "4.33.1",
+    "mathlib_revision": "0df444a360eaa60ab8c11dca51a86af692955474",
+    "source_paths": [
+      "work_packages/OPENMATH_2026/OM26_H7_ERDOS_3/H7_D3.lean",
+      "work_packages/OPENMATH_2026/OM26_H7_ERDOS_3/H7_D4.lean"
+    ],
+    "pinned_run": {
+      "run_id": 36879690920,
+      "job_id": 110427986166
+    },
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "proof_holes": false
+  },
+  "target_correspondence": {
+    "protected_statement": "work_packages/OPENMATH_2026/AUTHORITATIVE_SOURCE_POOL/erdos-3/PUBLIC_SOURCE/statement.lean",
+    "effect": "FORMALLY_REWRITES_PROTECTED_AP_CONCLUSION_TO_EVERY_EXACT_FINITE_LENGTH",
+    "parent_implication_remaining": "RECIPROCAL_NONSUMMABILITY_TO_AP_EXISTENCE"
+  },
+  "provenance": {
+    "event_window_delta": "H7 formal decomposition identified D3; GCL then constructed and pinned-compiled D3 and D4 during the competition window.",
+    "predecessor_returns": [
+      "contributions/OPENMATH-2026/OM26-H7/WP01/raw/OM26-H7-WP01-IA-001/github-comment-5909810515.md",
+      "contributions/OPENMATH-2026/OM26-H7/WP02/raw/OM26-H7-WP02-IA-001/github-comment-5921278456.md"
+    ],
+    "proof_closure_pr": "grandchallenge/MATHSOLVE#593",
+    "proof_receipts": [
+      "work_packages/OPENMATH_2026/OM26_H7_ERDOS_3/H7_D3_PROOF_RECEIPT.json",
+      "work_packages/OPENMATH_2026/OM26_H7_ERDOS_3/H7_D4_PROOF_RECEIPT.json"
+    ],
+    "proof_closure_commit": "187ce0debe76cb960724a6078b16660a11531941"
+  },
+  "status_review": {
+    "mathematical_novelty": "NOT_CLAIMED",
+    "formalization_novelty": "PLAUSIBLE__NO_EXACT_MATCH_FOUND_IN_SCOPED_FORMAL_LIBRARY_SEARCH__COMPETITION_REVIEW_REQUIRED",
+    "reusable_value": "AP truncation and exact-length equivalence for shared Set.IsAPOfLength vocabulary"
+  },
+  "disclosures": {
+    "ai_tools_compute": "See repository provenance and SECTION8_SHARED_DRAFT.json.",
+    "outside_help": "Independent zero-context agents identified in predecessor records; final proof closure is separately pinned and replayable.",
+    "conflicts": "none",
+    "publication_authority": "AUTHORIZED__SEE_HUMAN_AUTHORITY_DECLARATION.json"
+  },
+  "official_submission": {
+    "native_climb": null,
+    "submission_id": null,
+    "final_evaluator_report": null,
+    "route": "PENDING_ORGANIZER_COMPETITION_WORKFLOW"
+  },
+  "remaining": [
+    "official competition workflow/submission ID/evaluator report",
+    "organizer novelty/usefulness classification"
+  ],
+  "claim_boundary": "Formalization/reduction contribution only; no solution of Erdős Problem 3, no mathematical novelty claim, no official competition submission/score/acceptance, and no MATHCERT certification.",
+  "authority_receipt": "work_packages/OPENMATH_2026/COMPETITION_PACKETS/HUMAN_AUTHORITY_DECLARATION.json"
+}

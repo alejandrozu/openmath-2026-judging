@@ -1,0 +1,163 @@
+Source: https://github.com/ChandraguptSharma07/matrix-multiplication-tensor-3x3/blob/479c2416b6261ee841052eef4881df0e40054f3f/evaluation/evaluator_report_b8e0716a.txt
+Observed: 2026-10-03T04:56:43.999Z
+Representation: rendered GitHub UI extraction; may be incomplete, not original bytes.
+
+Files
+479c241
+t
+T
+evaluation
+evaluator_report_b8e0716a.txt
+leaderboard_snapshot.json
+kaggle
+lean
+paper
+reports
+reproduce
+results
+solutions
+src
+verify
+.gitignore
+HANDOFF.md
+README.md
+journal.html
+Breadcrumbs
+matrix-multiplication-tensor-3x3/evaluation
+/evaluator_report_b8e0716a.txt
+Latest commit
+ChandraguptSharma07
+Added the official evaluator report for experiment b8e0716a and a lea…
+2107bc0
+ · 
+History
+History
+File metadata and controls
+Code
+Blame
+72 lines (68 loc) · 2.55 KB
+Raw
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+
+
+=== evaluation: alejandrozu/matrix-multiplication-tensor-3x3 @ 526770e74b46 ===
+
+
+=== run ===
+
+
+matrix-multiplication-tensor-3x3 @ 526770e74b46
+  submission   /root/.autolab/0e30422919be/nodes/autolab-1dfc5db1033f6744-matrix-multi-9dd87f5d/projects/chandraguptsharma07--matrix-multiplication-tensor-3x3-attempt-9/trees/b8e0716a
+  hash         sha256:0e40414c6baa…  exp/autolab-1dfc5db1033f6744-matrix-multi-9dd87f5d/b8e0716a@83fbae7
+  PASSED       rank=23 (min)  support=138 (min)
+  config       tensor=3x3-general-matrix-multiplication*  coefficient_domain=exact-rationals*  verification=729-brent-identities*  mode=validation   (* = primary)
+  report       /root/.autolab/0e30422919be/nodes/autolab-1dfc5db1033f6744-matrix-multi-9dd87f5d/projects/chandraguptsharma07--matrix-multiplication-tensor-3x3-attempt-9/hills-home/runs/matrix-multiplication-tensor-3x3/20260930T051826Z-f9c03b8c/report.json
+
+
+{
+  "hill": "matrix-multiplication-tensor-3x3",
+  "tree_hash": "526770e74b465dbd444049d169e2f373eeb0339d",
+  "commit": "63260ee2b02247200888cb63faf3ada44e6cffeb",
+  "submission_hash": "sha256:0e40414c6baa73551b6b20da79f2a53057fee62640e70af747e6a7e8be58941b",
+  "submission_git": "exp/autolab-1dfc5db1033f6744-matrix-multi-9dd87f5d/b8e0716a@83fbae7",
+  "passed": true,
+  "config": [
+    {
+      "name": "tensor",
+      "value": "3x3-general-matrix-multiplication",
+      "primary": true
+    },
+    {
+      "name": "coefficient_domain",
+      "value": "exact-rationals",
+      "primary": true
+    },
+    {
+      "name": "verification",
+      "value": "729-brent-identities",
+      "primary": true
+    },
+    {
+      "name": "mode",
+      "value": "validation",
+      "primary": false
+    }
+  ],
+  "metrics": [
+    {
+      "name": "rank",
+      "value": 23,
+      "direction": "min"
+    },
+    {
+      "name": "support",
+      "value": 138,
+      "direction": "min"
+    }
+  ],
+  "details": {
+    "brent_identities_checked": 729,
+    "private_replays_checked": 2,
+    "coefficient_domain": "Q"
+  },
+  "params": {},
+  "final": false,

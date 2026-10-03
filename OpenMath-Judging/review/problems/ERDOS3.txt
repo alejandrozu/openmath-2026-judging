@@ -1,0 +1,149 @@
+OPENMATH-ERDOS3
+Canonical target: Divergent reciprocal sums imply arithmetic progressions of every length
+D proposal=674/1000; intrinsic=7/10
+Existing published CFSD1000 value, reused without rescaling or changing its frozen source profile.
+
+FRONTIER: Leon/Cameron and Wilson supply overlapping extremal/dyadic equivalences; Jamie a conclusion bridge. Three-term Kelley–Meka and Gowers4 material is known mathematics. Neither side of the all-length equivalence is discharged. Sakana proves a mod13 diagonal-pullback obstruction; its4-AP sum>4.44 belongs to Erdős169, not a solution here.
+
+INTERACTION: Normalize progression length, density/maxCard and dyadic summability definitions. Align exact endpoints and imported dependencies; preserve conditional analytic hypotheses.
+
+PAPER: A reusable formal interface joining extremal counting and reciprocal-sum conclusions is plausible. Keep the all-length density estimate clearly open; deduplicate the equivalence while recording independent implementations.
+
+COLLECTIVE: No full solution. Sakana narrow method-obstruction proposal p=.01 gives4.997036; known equivalences earn no original-result points. Proposed M2 frontier families: dyadic equivalence, AP/conclusion interface, three-term integration, Gowers4 estimate. Separate implementation novelty from mathematical novelty.
+
+CONTRIBUTION MAP
+
+E02-FOCUS-E3 / Rachel Teo / Wenyi Wang / Hamdi Abderrahmene
+At modulus 13, the supplied 79-point subset B of (Z/13Z)^2 avoids (x,y), (x,y+d), (x,y+2d), (x+d,y) for every nonzero d. The maximum size of a cyclic four-AP-free subset A of Z/13Z is exactly 6, attained by {0,1,2,4,5,7}. Hence |B|=79>78>=13|A| for every such A. In particular, every diagonal pullback S_A={(x,y):x-y belongs to A} has size 13|A|<=78 and is beaten by B. The source-faithful bridge kernel-checks the original pullback cardinality identity |S_A|=13|A|, the L-free transfer and its strict comparison with B.
+The modulus13 witness79 beats the best diagonal-pullback capacity78. It disproves that proposed finite auxiliary extremal ansatz. It supplies no divergent infinite set and no theorem forcing longer arithmetic progressions.
+Novelty: Candidate finite obstruction to a particular ansatz; direct original-problem pivotality is limited.
+Formalization: The cyclic sharpness certificate and source-faithful diagonal-pullback bridge passed Lean 4.33.1 / Mathlib 0df444a360eaa60ab8c11dca51a86af692955474 with standard axioms only. The bridge passed a fresh seven-module source-only replay on 3 October 2026, with no reused project-local compiled objects. It checks the actual pullback cardinality, its L-free transfer and the strict comparison with the retained 79-point witness. No native_decide or admitted theorem occurs in the successful chain.
+Proposed M1; p=0.01; points=4.997036; full review: entries/E02-FOCUS-E3.txt
+
+E10-H7 / Jamie Steeg / grandchallenge / GCL
+ap_subprogression_of_le; ap_frequently_iff_every_length.
+Both endpoints serve one reusable conclusion bridge; not two open-problem families.
+Novelty: Known mathematics; only a genuinely new, faithful, useful, reusable event-window formalization may count. Exact prior-library overlap is not yet independently cleared.
+Formalization: Source and pinned compile/standard-axiom receipts present; final hill/workflow fields null. No fresh build.
+Proposed M2; p=1; points=None; full review: entries/E10-H7.txt
+
+E11-THREE / Leon Koerbs / Cameron Fen — Erdős #3 Token Burner
+Formal divergent-reciprocal implication for3-term APs using external Kelley–Meka formalization.
+The imported Kelley–Meka formalization is load-bearing known mathematics. Assess only the genuinely new bridge to divergent reciprocal sums, not re-exported theorem declarations. Known k3 cannot solve the all-length target.
+Novelty: Mathematical result known; formal integration novelty requires baseline and imported-source comparison.
+Formalization: Source includes vendored dependencies and fetch_plby route; external44files not redistributed. Author reports standard-axiom check.
+Proposed M2; p=1; points=None; full review: entries/E11-THREE.txt
+
+E11-DYADIC / Leon Koerbs / Cameron Fen — Erdős #3 Token Burner
+For everyK≥3, dyadic rK(2^j)/2^j summability iff every divergent set containsK-term AP.
+The equivalence isolates the correct extremal-summability bottleneck for each progression length. Earlier source leaves a full goal sorry; the separately closed converse/equivalence endpoint has to be selected explicitly. Wilson proves an overlapping exact equivalence.
+Novelty: Candidate reusable formalization/reformulation; sealed independence or distinct extension controls separate entrant credit.
+Formalization: Converse.lean provides named closed maxCardDyadicSummable_iff. Earlier lean/equivalence/solution.lean ends in a real sorry on the parent goal; do not advertise that as full proof or reject the separately closed Converse endpoint.
+Proposed M2; p=1; points=None; full review: entries/E11-DYADIC.txt
+
+E11-GOWERS / Leon Koerbs / Cameron Fen — Erdős #3 Token Burner
+norm_apCount4_pow8_le_gowers3 and associated closed counterexample-audit lemmas.
+Potential one reusable theorem family for four-term analytic machinery; elementary audit lemmas support it or require their own admitted useful target.
+Novelty: Known mathematics; only a genuinely new, faithful, useful, reusable event-window formalization may count. Exact prior-library overlap is not yet independently cleared.
+Formalization: Submitted module described as compiling without holes; exact axiom output for every endpoint not yet independently rerun.
+Proposed M2; p=1; points=None; full review: entries/E11-GOWERS.txt
+
+E65-DYADIC / Wilson Wu — Erdős supporting formalizations
+Original hill iff Σj r_k(2^j)/2^j converges for everyk≥4; neither side proved.
+This closed equivalence replaces the conjecture with summability of normalized extremal dyadic counts. Neither side is discharged. The answer(sorry) syntax in the imported target is a proposition elaborator here, not proof admission. Explicit conditional density envelopes remain hypotheses.
+Novelty: Candidate useful formal bridge, overlapping Leon/Cameron's family. Supplied pinned-image checks and the separate equivalence hill are evidence for this theorem, not the original hill.
+Formalization: Nine local Lean texts scanned; sole sorry token in exact hill restatement is answer(sorry), not a proof admission. Author axiom logs report standard3. No fresh independent build.
+Proposed M2; p=1; points=None; full review: entries/E65-DYADIC.txt
+
+E65-THREE / Wilson Wu — Erdős supporting formalizations
+Kelley–Meka/Bloom–Sisask density hypotheses imply known three-term target; analytic bounds are not proved here.
+The analytic bound is an explicit theorem parameter in this bridge. A standard-axiom audit of the implication does not prove that parameter or a new Roth/Kelley–Meka estimate.
+Novelty: Known analytic mathematics with a potentially new useful bridge; count only if distinct from the dyadic/AP library family.
+Formalization: Parameters are explicit assumptions; clean axiom output does not discharge them.
+Proposed M2; p=1; points=None; full review: entries/E65-THREE.txt
+
+E65-ELEMENTARY / Wilson Wu — Erdős supporting formalizations
+Cofinite sets, affine tails, unboundedness→two-term, AP truncation and library bridges.
+At most one admitted useful infrastructure family, not a count for every trivial special case. Overlap Jamie requires source comparison.
+Novelty: Known mathematics; only a genuinely new, faithful, useful, reusable event-window formalization may count. Exact prior-library overlap is not yet independently cleared.
+Formalization: Closed helper proofs reported; stronger cofinite assumptions cannot substitute for reciprocal divergence.
+Proposed M2; p=1; points=None; full review: entries/E65-ELEMENTARY.txt
+
+OPDP INPUTS AND RATIONALE
+{
+  "inputs": {
+    "catalog_status": "open",
+    "assessment_gate": "source_claimed_open",
+    "scope": "atomic",
+    "answer_type": "proof_disproof",
+    "intrinsic_difficulty_0_10": 7,
+    "intrinsic_tier_code": "T4",
+    "intrinsic_tier_label": "Frontier Challenge",
+    "ai_relative_difficulty_0_10": 6.5,
+    "human_effort_1_9": 2,
+    "human_exposure_1_5": 2,
+    "tractability_status": "scored",
+    "tractability_0_10": 5,
+    "verification_if_true_0_10": 5.3,
+    "verification_if_false_0_10": 4.5,
+    "formalization_0_10": 3.5,
+    "prerequisite_preparation_0_10": 6.4,
+    "prerequisite_breadth_1_5": 3,
+    "tool_leverage_0_10_higher_is_favorable": 5.3,
+    "ambiguity_0_10": 1.5,
+    "literature_load_0_10": 2,
+    "ai_context_load_predictor_minus1_to_plus1": -1,
+    "ai_reasoning_horizon_predictor_minus1_to_plus1": 1,
+    "recommended_route": "Expert-guided proof search"
+  },
+  "calculation": {
+    "normalized_barriers_0_1": {
+      "ai_relative_core": 0.65,
+      "intrinsic_difficulty": 0.7,
+      "human_resistance": 0.15,
+      "inverse_tractability": 0.5,
+      "verification_burden": 0.49,
+      "formalization_burden": 0.35,
+      "prerequisite_load": 0.61,
+      "context_and_ambiguity": 0.28,
+      "tool_constraint": 0.47
+    },
+    "weighted_component_points": {
+      "ai_relative_core": 260,
+      "intrinsic_difficulty": 119,
+      "human_resistance": 13.5,
+      "inverse_tractability": 75,
+      "verification_burden": 22.05,
+      "formalization_burden": 12.25,
+      "prerequisite_load": 24.2,
+      "context_and_ambiguity": 11.2,
+      "tool_constraint": 14.1
+    },
+    "linear_barrier_points_0_1000": 551.3,
+    "complete_solution_transform_exponent": 1.4,
+    "complete_solution_uplift_points": 122.7,
+    "final_score_0_1000": 674
+  },
+  "intrinsic_factors": {
+    "conceptual_gap": 3,
+    "route_gap": 3,
+    "technical_depth": 2.5,
+    "known_barrier": 2.5,
+    "search_scale": 3
+  },
+  "axis_rationales": {
+    "intrinsic": "Known length-three case and representation bridges do not settle lengths ≥4.",
+    "AI": "Statement has exact finite certificate feedback; the dated tool-assisted protocol is an estimate, not an empirical solve run.",
+    "attention": "H/X are historical-effort/exposure priors, not contestant hours. Insufficient documentation: neutral normalized .5 used for scoring.",
+    "tractability": "Known targets use N/A and neutral full-resolution component; otherwise the band is an editorial chance of useful100-hour partial progress, not full resolution.",
+    "verification": "Positive checking uses the stated specialist semantic or analytic argument; a negative/global resolution can have a different burden. No fresh Lean build is claimed.",
+    "formalization": "Statement encoding and libraries require 5.0/10 burden; this is the target burden, not the quality of a submitted proof.",
+    "prerequisites": "The target needs its Additive combinatorics background; preparation and breadth refer to a prepared researcher, not entrant prestige.",
+    "tools": "Higher L means favorable exact-feedback/search/prover leverage. It does not turn a leaderboard number into a theorem.",
+    "status": "Source-claimed pre-event open target or explicitly parent-linked variation; no independently certified verified_open status invented."
+  },
+  "parent_links": [],
+  "sources": [
+    "https://github.com/alejandrozu/ulam-opdp-difficulty-atlas"
+  ]
+}

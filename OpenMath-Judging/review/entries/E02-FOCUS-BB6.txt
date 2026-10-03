@@ -1,0 +1,21 @@
+E02-FOCUS-BB6 | Busy Beaver 6: exact halting witness
+
+Exact contribution: Starting on a bi-infinite blank tape in state A, the six-state two-symbol machine 1RB0LC_1RD1RB_0LH1LE_1LA1LD_0LA1LF_0LE0RD executes exactly 1,235,211 transitions to H with 1,519 ones on its final tape and no earlier halted prefix. Every state A–F is visited by step 40. Separate exact simulators give final head -2001 and visited span 2,028 (minimum -2001, maximum 26, including the post-halting head); head and span are not kernel-certified claims.
+
+Assessment: The six-state witness halts after1,235,211 steps with1,519 ones. That is a finite exact run, not maximality among all six-state machines. Head and visited span were separate simulator measurements, not the claimed kernel endpoint.
+
+Novelty: No new original Busy Beaver frontier demonstrated; a reusable newly formalized simulator would require an explicit M2 claim and prior-library check.
+
+Formalization: A new standard-kernel certificate in Lean 4.33.1 successfully checks the literal machine, exact run, final ones count, absence of an earlier halt and all-six-states visitation. Claims.lean endpoints exact_halting_witness and visits_all_six_states have only propext and Quot.sound in their printed axiom sets. The 129-source-module closure uses no native_decide, custom axiom or admission, and requires no Mathlib. Semantics.lean proves the tape-cell equations for both move directions. Original dictionary- and set-tape simulator records are preserved as independent evidence.
+
+Proposal: Open score0. Do not count steps or ones as a fraction of resolving BB6.
+
+OPDP target OPENMATH-BB6 | intrinsic 10.0/10 | competition D proposal 974/1000
+
+Modality M1 | p 0 | b 1.1 | m 1 | numerical family points 0.0
+
+Specific remaining checks: Late ZIP / cutoff, fixed source and proof closure; Fresh independent verification of the selected endpoint; Novelty status and frozen family D
+
+Key files: 
+
+Primary/source locators: 

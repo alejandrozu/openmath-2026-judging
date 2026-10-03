@@ -1,0 +1,21 @@
+E02-erdos1060-uniform-partial | Erdős 1060 uniform quantitative partial bound
+
+Exact contribution: Let sigma(k) be the sum of positive divisors of k, and let f(n) count positive integers k satisfying k sigma(k) = n. With C = log(2539/1000)/3 + log(10/9)/2, for every epsilon > 0 there is N such that every n >= N satisfies f(n) <= exp((C+epsilon) log(n)/log(log(n))). The formal count is exactly the finite set {k <= n : k sigma(k) = n}. The strict comparison C < log(3)/3 is also proved.
+
+Assessment: The proposed uniform exponent constant is about.363272, below log(3)/3 about.366204. The separately located odd-target constant log(2)/2 about.346574 applies only to odd n and does not subsume this all-target theorem. A positive constant still misses the requested little-o exponent.
+
+Novelty: Candidate new all-target refinement; isolate the all-n domain from prior odd-only bounds and known powerful-core machinery.
+
+Formalization: Packet evidence: Fresh isolated Lean 4.33.1 compilation passed all 10 own source modules, with no own olean reuse. Before/after source hashes agree and final canonical theorem types and axiom lists were printed. Only propext, Classical.choice and Quot.sound occur. Exact package evidence is retained; integration performs file-identity validation, not another replay.. Endpoint signatures and declared axioms are recorded below; author/internal replay is not this reviewer’s fresh rebuild. 
+
+Proposal: P2 p=.05. The small constant improvement does not justify a high fraction of the original target.
+
+OPDP target OPENMATH-ERDOS1060 | intrinsic 5.6/10 | competition D proposal 574/1000
+
+Modality M3A | p 0.05 | b 1 | m 1 | numerical family points 16.4738
+
+Specific remaining checks: Late ZIP 06:19:17 versus on-time PDF 05:57:20: prove fixed cutoff artifact or organizer admin-transfer decision; Exact source/library closure fresh independent build and semantic review; Target admission/open-at-freeze/novelty and canonicalD mapping; Current official forum discussion reads returned HTTP 403. No exact overlapping proof located in bounded permitted-source searches; first-discovery priority is not certified.
+
+Key files: 349491 Claim_Evidence/proofs/erdos1060-uniform-partial/src/SigmaFiberAsymptotic.lean; 349491 Claim_Evidence/proofs/erdos1060-uniform-partial/src/SigmaFiberAsymptotic.lean; 349490 Claim_Evidence/proofs/erdos1060-uniform-partial/src/EntropyConversion.lean; 349492 Claim_Evidence/proofs/erdos1060-uniform-partial/verification/RESULT.json; 349493 Claim_Evidence/proofs/erdos1060-uniform-partial/verification/fresh-replay.log; 349495 Claim_Evidence/proofs/erdos1060-uniform-partial/verification/source-hashes-before.json; 349494 Claim_Evidence/proofs/erdos1060-uniform-partial/verification/source-hashes-after.json
+
+Primary/source locators: https://www.erdosproblems.com/1060; https://scottkom.com/assets/articles/Kominers_ksigmak.pdf; https://github.com/google-deepmind/formal-conjectures/blob/main/FormalConjectures/ErdosProblems/1060.lean; https://github.com/alejandrozu/ulam-opdp-difficulty-atlas

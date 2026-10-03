@@ -1,0 +1,74 @@
+{
+  "group_id": "E05",
+  "name": "Chaewon Yoon",
+  "classification": "Identified work group / named lead",
+  "is_potential_entrant_unit": true,
+  "identified_work_group": true,
+  "has_review_material_or_manifests": true,
+  "source_record_ids": [
+    "E05"
+  ],
+  "authors": [
+    "Chaewon Yoon"
+  ],
+  "accounts": [
+    "chaewon",
+    "chaewon-research"
+  ],
+  "possible_alias_not_merged": null,
+  "status": "Complete accessible Collatz review packet; official final receipt missing",
+  "claims": [
+    "512 exact accelerated-Collatz descent rules for specified infinite odd residue classes; union 1765 odd residues modulo 4096. Public target coverage 3352/3968, not universal convergence.",
+    "Validation coverage_ppm 1000000, min_descent_ppm 525390, rule_count 512; private 639/639 weight across 20 targets."
+  ],
+  "gaps": [
+    "Official final/test evaluator and acceptance",
+    "Novelty/usefulness assessment versus classical modular descent",
+    "Private-score reproduction requires organizers"
+  ],
+  "repo": "chaewon-research/openmath-2026",
+  "immutable_commit": "9bc116919c27e63db193e03ae6b567a9f2a09579",
+  "leaderboard_runs": [
+    {
+      "account": "chaewon-research",
+      "hill": "alejandrozu/collatz-modular-descent",
+      "values": {
+        "#": "8",
+        "Climber": "chaewon-research",
+        "coverage_ppm": "1000000",
+        "min_descent_ppm": "525390",
+        "rule_count": "512",
+        "When": "2026-09-29"
+      },
+      "table_context": "validation",
+      "observed": "2026-10-03T08:37:10.103Z",
+      "source_url": "https://app.autolab.ai/hills/alejandrozu/collatz-modular-descent/leaderboard"
+    },
+    {
+      "account": "chaewon-research",
+      "hill": "alejandrozu/busy-beaver-6-certificates",
+      "values": {
+        "#": "6",
+        "Climber": "chaewon-research",
+        "steps": "249614",
+        "ones": "542",
+        "tape_span": "973",
+        "When": "2026-09-30"
+      },
+      "table_context": "validation",
+      "observed": "2026-10-03T08:37:11.339Z",
+      "source_url": "https://app.autolab.ai/hills/alejandrozu/busy-beaver-6-certificates/leaderboard"
+    }
+  ],
+  "final_packet_received": false,
+  "official_acceptance_confirmed": false,
+  "score_policy": null,
+  "source_routes": [
+    {
+      "record_id": "E05",
+      "route": "https://mail.google.com/mail/u/0/#sent/1a0fe97d748f80a0",
+      "latest_evidence": "Repository delivered October 2 at 16:40 CEST; documentation now substantially polished New 00:18 CEST reply confirms current packet 9bc116919c27e63db193e03ae6b567a9f2a09579; preserved submission 57c1ad7f2af78339260fcc4d8498a05dda4cfc77, final=false. Waiting for Serge’s final-evaluation workflow confirmation; BB6 is separate.",
+      "receipt_notes": "Experiment 351d2794-d842-41a1-aa86-83e11fbca2fa; mathematical submission 57c1ad7f2af78339260fcc4d8498a05dda4cfc77, report 2026-09-29T22:09:07Z: official=true, final=false. Artifact SHA256 1e533cbd5dbb17bb6ad52c7c80faa3a6abce587a32204ef5228de54da5b069e6. HMAC requires organizer context."
+    }
+  ]
+}

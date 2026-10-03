@@ -1,0 +1,21 @@
+E08-RAMSEY | Weighted K4 upper bound
+
+Exact contribution: c4 ≤ 200137750014677779172692777477/6640289795261907019148161833841, Q=50762939,1024 blocks;30139911990ppt.
+
+Assessment: The exact weighted rational is about.030139912 rather than the McKay.030142273 reference, and is smaller than Sakana's reported bound. The generic lifting theorem matters because the finite weighted objective must imply an infinite graph-family bound. Native cross-check modules do not determine the main proof's axioms unless imported.
+
+Novelty: Candidate exact new upper bound. Stronger prior bounds and independent sealed development still require the named audit.
+
+Formalization: 2158 HTPeo formal source texts scanned, including final v2. Native.lean is explicitly separate, not imported by main claimed chain; do not reject main result for that cross-check. Packet reports standard-axiom kernel count and lifting, no fresh independent full build.
+
+Proposal: P1=.05 with the explicit lifting/significance rationale; fallback.01 if only a narrow new certificate is admitted. No matching lower bound, so p=1 is excluded. Conservative b=1 until inclusion in the frozen focus set is verified; confirmed M1 would multiply these points by1.1.
+
+OPDP target OPENMATH-RAMSEY-K4 | intrinsic 8.4/10 | competition D proposal 840/1000
+
+Modality M3A | p 0.05 | b 1 | m 1 | numerical family points 35.28
+
+Specific remaining checks: Fresh endpoint closure build; Verify JSON→Lean identity and oracle density convention; Official receipt: report official=true, final=false; Current primary bound/independence and target D freeze
+
+Key files: 7582 entries/ramsey-k4-multiplicity/artifact/lean_v2/solution.json; 1238 entries/ramsey-k4-multiplicity/PACKET.md; 5461 entries/ramsey-k4-multiplicity/artifact/lean_v2/RamseyCert/Native.lean
+
+Primary/source locators: https://arxiv.org/pdf/2206.04036; https://app.autolab.ai/hills/alejandrozu/clique-cluster-ramsey-multiplicity

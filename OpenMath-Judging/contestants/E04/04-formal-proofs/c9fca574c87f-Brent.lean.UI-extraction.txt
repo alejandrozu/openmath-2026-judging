@@ -1,0 +1,170 @@
+Source: https://github.com/ChandraguptSharma07/matrix-multiplication-tensor-3x3/blob/479c2416b6261ee841052eef4881df0e40054f3f/lean/MM3/Brent.lean
+Observed: 2026-10-03T04:49:49.136Z
+Representation: rendered GitHub UI extraction; may be incomplete, not original bytes.
+
+Files
+479c241
+t
+T
+evaluation
+kaggle
+lean
+MM3
+Brent.lean
+Certificates.lean
+Scheme138.lean
+Scheme138Gauged.lean
+Scheme139Exotic.lean
+Scheme143Core1809.lean
+.gitignore
+MM3.lean
+README.md
+gen.py
+lake-manifest.json
+lakefile.toml
+lean-toolchain
+paper
+reports
+reproduce
+results
+solutions
+src
+verify
+.gitignore
+HANDOFF.md
+README.md
+journal.html
+Breadcrumbs
+matrix-multiplication-tensor-3x3/lean/MM3
+/Brent.lean
+Latest commit
+ 
+History
+History
+File metadata and controls
+Code
+Blame
+98 lines (78 loc) · 3.67 KB
+Raw
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+/-
+Brent identities for 3x3 matrix-multiplication schemes.
+A scheme of rank R consists of three R x 9 coefficient matrices u, v, w. Term t
+computes (sum_e u[t][e] * A_e) * (sum_e v[t][e] * B_e), and output entry f of
+C receives sum_t w[t][f] * term_t. Entries of A and B are indexed row-major
+(A_e = A[e / 3][e % 3]) and entries of C as 3 * column + row (C_f = C[f % 3][f / 3]).
+The scheme computes the product of two 3x3 matrices if and only if, for all
+a, b, c in 0..8,
+    sum_t u[t][a] * v[t][b] * w[t][c] = T[a][b][c],
+where T[3i+j][3j+k][3k+i] = 1 and all other entries of T are 0.
+The data files hold integer matrices obtained from the rational scheme by
+scaling u, v, w by positive integers su, sv, sw (the least common multiples of
+the denominators), so the identity that is checked reads
+    sum_t u[t][a] * v[t][b] * w[t][c] = su * sv * sw * T[a][b][c].
+Everything below is structurally recursive on lists and natural numbers so
+that the kernel can evaluate `brentOK` and `support` by `decide`.
+-/
+
+
+namespace MM3
+
+
+/-- The rank of the schemes certified here (number of terms). -/
+def rank : Nat := 23
+
+
+/-- The target tensor of 3x3 matrix multiplication: `T a b c = 1` if and only if
+`a = 3i + j`, `b = 3j + k`, `c = 3k + i` for some `i j k`, and `0` otherwise. -/
+def target (a b c : Nat) : Int :=
+  if b / 3 == a % 3 && c / 3 == b % 3 && c % 3 == a / 3 then 1 else 0
+
+
+/-- Entry `i` of a row, `0` when out of range. -/
+def nth : List Int → Nat → Int
+  | [], _ => 0
+  | x :: _, 0 => x
+  | _ :: xs, n + 1 => nth xs n
+
+
+/-- One triple of rows per term. -/
+def terms (u v w : List (List Int)) : List (List Int × List Int × List Int) :=
+  u.zip (v.zip w)
+
+
+/-- The coefficient of `A_a * B_b` in output entry `c`: `sum_t u[t][a] * v[t][b] * w[t][c]`. -/
+def coeff (ts : List (List Int × List Int × List Int)) (a b c : Nat) : Int :=
+  match ts with
+  | [] => 0
+  | (ut, vt, wt) :: rest => nth ut a * nth vt b * nth wt c + coeff rest a b c
+
+
+/-- A matrix has `rank` rows of 9 entries each. -/
+def shapeOK (m : List (List Int)) : Bool :=
+  m.length == rank && m.all fun row => row.length == 9
+
+
+/-- All 729 identities `coeff a b c = su * sv * sw * target a b c`. -/
+def identitiesOK (su sv sw : Int) (u v w : List (List Int)) : Bool :=
+  let ts := terms u v w
+  let s := su * sv * sw
+  (List.range 9).all fun a =>
+    (List.range 9).all fun b =>

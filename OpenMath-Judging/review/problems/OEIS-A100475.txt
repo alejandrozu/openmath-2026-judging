@@ -1,0 +1,93 @@
+OPENMATH-OEIS-A100475
+Canonical target: Let p_n be the nth prime with p_1=2, and T(n) the decimal digit reversal of p_n. For every natural x>0, the orbit starting at x under T is not ultimately periodic. Thus False iff there exists x>0, x≠1, whose orbit is ultimately periodic.
+D proposal=541/1000; intrinsic=5.4/10
+New local OPDP extension with CFSD1000 formula; one editorial assessor, not the required three-assessor median.
+
+FRONTIER: A100475: no positive prime-reversal cycle: Let p_n be the nth prime with p_1=2, and T(n) the decimal digit reversal of p_n. For every natural x>0, the orbit starting at x under T is not ultimately periodic. Thus False iff there exists x>0, x≠1, whose orbit is ult
+
+INTERACTION: Supporting lemmas and corollaries belong to the same scope union. Any transfer to a parent or another problem requires a proved scope-preserving bridge.
+
+PAPER: Candidate building block only; preserve source hypotheses, exact priority comparison, proof closure and contribution-based authorship.
+
+COLLECTIVE: Virtual family representative E02-a100475; conservative one-family points 292.681. M2 is separate when applicable.
+
+CONTRIBUTION MAP
+
+E02-a100475 / Rachel Teo / Wenyi Wang / Hamdi Abderrahmene
+Let p_n be the nth prime with p_1=2, and T(n) the decimal digit reversal of p_n. For every natural x>0, the orbit starting at x under T is not ultimately periodic. Thus False iff there exists x>0, x≠1, whose orbit is ultimately periodic.
+The positive-start restriction is essential. Growth of the prime-index map plus finite exceptional checks can rule out periodic tails for every positive start. Zero-start totalization would answer a different question. This is a complete target candidate, with a substantial source chain for a deceptively short statement.
+Novelty: Candidate original resolution; bounded searches found no exact positive-start solution. Ball–Coxeter and the 2004 SeqFan discussion remain specific priority checks, so novelty is medium confidence rather than certified.
+Formalization: Packet evidence: Independent complete 84-module replay completed 2026-10-01T13:03:31.027744Z; source receipt records byte identity with user ZIP; final theorem standard axioms. Endpoint signatures and declared axioms are recorded below; author/internal replay is not this reviewer’s fresh rebuild. 
+Proposed M3A; p=1; points=292.681; full review: entries/E02-a100475.txt
+
+OPDP INPUTS AND RATIONALE
+{
+  "inputs": {
+    "H": 4,
+    "X": 2,
+    "T": 6,
+    "Vtrue": 3,
+    "Vfalse": 2,
+    "F": 5,
+    "P": 5,
+    "B": 2,
+    "L": 8,
+    "literature": 4,
+    "ambiguity": 1,
+    "context": 0,
+    "horizon": 0,
+    "D": 5.4,
+    "AI": 4.4
+  },
+  "calculation": {
+    "normalized_components": {
+      "ai_relative_core": 0.44000000000000006,
+      "intrinsic_difficulty": 0.54,
+      "human_resistance": 0.35000000000000003,
+      "inverse_tractability": 0.4,
+      "verification_burden": 0.25,
+      "formalization_burden": 0.5,
+      "prerequisite_load": 0.4375,
+      "context_and_ambiguity": 0.37,
+      "tool_constraint": 0.19999999999999996
+    },
+    "weighted_points": {
+      "ai_relative_core": 176.00000000000003,
+      "intrinsic_difficulty": 91.80000000000001,
+      "human_resistance": 31.500000000000004,
+      "inverse_tractability": 60.0,
+      "verification_burden": 11.25,
+      "formalization_burden": 17.5,
+      "prerequisite_load": 17.5,
+      "context_and_ambiguity": 14.8,
+      "tool_constraint": 5.999999999999998
+    },
+    "linear_barrier": 426.35,
+    "transform_exponent": 1.4,
+    "final_value": 541
+  },
+  "intrinsic_factors": {
+    "conceptual_gap": 2.5,
+    "route_gap": 2,
+    "technical_depth": 2.5,
+    "known_barrier": 1.5,
+    "search_scale": 2
+  },
+  "axis_rationales": {
+    "intrinsic": "Complete positive-start orbit refutation if definitions, novelty and deadline closure hold. No separate zero-start credit.",
+    "AI": "Statement has exact finite certificate feedback; the dated tool-assisted protocol is an estimate, not an empirical solve run.",
+    "attention": "H/X are historical-effort/exposure priors, not contestant hours. The chosen bands are single-assessor estimates; no labor total was observed.",
+    "tractability": "Known targets use N/A and neutral full-resolution component; otherwise the band is an editorial chance of useful100-hour partial progress, not full resolution.",
+    "verification": "Positive checking uses the stated exact finite data/proof chain; a negative/global resolution can have a different burden. No fresh Lean build is claimed.",
+    "formalization": "Statement encoding and libraries require 5/10 burden; this is the target burden, not the quality of a submitted proof.",
+    "prerequisites": "The target needs its Number theory / digit dynamics background; preparation and breadth refer to a prepared researcher, not entrant prestige.",
+    "tools": "Higher L means favorable exact-feedback/search/prover leverage. It does not turn a leaderboard number into a theorem.",
+    "status": "Source-claimed pre-event open target or explicitly parent-linked variation; no independently certified verified_open status invented."
+  },
+  "parent_links": [],
+  "sources": [
+    "https://oeis.org/A100475",
+    "https://github.com/google-deepmind/formal-conjectures/pull/5567",
+    "https://dlmf.nist.gov/27.12#E2"
+  ]
+}

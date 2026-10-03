@@ -1,0 +1,746 @@
+# OpenMath 2026 -- M2 formalization packet, FINAL DRAFT v2 (not submitted)
+
+## Team, human review and publication (added 2026-10-03 KST; supersedes the corresponding TODO(operator) items below)
+
+* **Team:** HTPeo (team entrant). Autolab owner/account `lavaskiller`.
+* **Roster** (each member fills in their own row; see `TEAM.md` at the repository root):
+
+  | Name | Affiliation | E-mail | Role / contribution |
+  |---|---|---|---|
+  | Woohyuk Kang | HTPeo, KyungHee Univ. CS&E | [REDACTED CONTACT] | harness operator; Ramsey search and certificate; Erdős formalizations; packets |
+  | Hyunjin Lee (@hl728) | University of Cambridge | [REDACTED CONTACT] | K4 Ramsey hill (validation and final-board evaluation); separate local research on Erdős #1038 and the 3x3 tensor hill |
+  | Sanghyeon Lee (@n0rang2) | Korea Univ. Security | [REDACTED CONTACT] | Busy Beaver 6 hill (machine, Lean certificates, maximality computation); K4 Ramsey hill; Erdős #1038 with @hl728 |
+  | Youchan Oh (@thomasoh0408) | Seoul National Univ. TI | [REDACTED CONTACT] | Kobon triangles hill (n = 18) |
+
+* **Human review:** none. No team member reviewed the proofs or the statement-correspondence notes of this packet line by line; Woohyuk Kang (@lavaskiller) and Hyunjin Lee (@hl728) declared on 2026-10-03 that they did no human review, and the other members did not state one. The checks are the Lean kernel, the build and axiom logs, scripts, and cross-checks by AI models.
+* **Repository:** https://github.com/lavaskiller/openmath-2026-htpeo (private to the team until the competition deadline; it will be opened, or access given to the organisers, on request / after the deadline) — this entry is the folder `entries/erdos-m2-formalizations`; the submitted state is fixed by the git tag `erdos-m2-v1` (https://github.com/lavaskiller/openmath-2026-htpeo/tree/erdos-m2-v1/entries/erdos-m2-formalizations). The commit hashes quoted further below refer to the earlier local artifact repository with the same file contents (checked by `SHA256SUMS`).
+* **Publication authority:** the materials are held in the team repository above (private until the deadline). Permission to release: Woohyuk Kang (@lavaskiller), 2026-10-03 . Attribution approval by every roster member: @lavaskiller 2026-10-03; @hl728 (Hyunjin Lee) 2026-10-03; @n0rang2 (Sanghyeon Lee) and @thomasoh0408 (Youchan Oh) 2026-10-03, recorded by the team lead on their behalf (`TEAM.md`) .
+
+Prepared 2026-10-02T15:06Z by helper-m2-advanced (Claude) from `~/erdos-fc/m2/`; supersedes `PACKET_FINAL.md` (v1, kept). Nothing has been submitted, uploaded or sent. Fields marked **TODO(operator)** must be filled by the team.
+
+Local artifact repository (unpublished, no remote): `openmath/erdos_m2_artifact/`, commit `a215390ec63042ce82677ac3de496a6b5bdcedde`.
+
+## 0. Summary
+
+- Mechanically verified pool: 63 rows / 56 distinct theorems / 36 Erdos-problem families, of which 61 rows pass (compile rc 0, statement textually identical to the pinned FC commit, axioms within [propext, Classical.choice, Quot.sound]) and 2 are rejected (proof was already in FC); `verify_all.py` re-run 2026-10-02 14:16 UTC including the five 'advanced' sessions adv1..adv5.
+- **Claimed set: 17 families** = 10 substantive (section 1: G-PM + 9 Erdos families, 15 Erdos theorems) + 7 minor/sanity (section 2, 7 theorems, team to decide). E477 (section 1.10) and E358, E619, E1148 (sections 2.5-2.7) were added on 2026-10-03; until then the claimed set was 13 families.
+  - Substantive, ordered by level: G-PM (Schoenberger's theorem and Petersen's theorem, connected case, from the star6 library), E942, E44, E123, E918, E292, E395, E698, E939, E477
+  - Minor / sanity: E295, E703, E748, E1136, E358, E619, E1148
+- Optional, NOT claimed by default (section 3): 8 theorems in 5 families (E757, E261, E36, E649, E508) -- the FC statement has no prior formal proof that we could find, but the same mathematics was already formalized publicly under different definitions.
+- **What changed against v1.** (a) New substantive families: G-PM and E942. (b) **Correction: E649 is moved from 'substantive' to 'optional'**: plby/lean-proofs already proves Sampaio's instance (and Tong's theorem) with its own definition of P(n); v1 was wrong to call it new. (c) Of the eight 'advanced' results produced on 2026-10-02 (E508 x2, E138, E942, E649 tong, E770, E273, E1136 mueller), the exhaustive prior-art pass found that **only E942 is new**: E508 `4 ≤ χ`, E138, E770, E273 are exact duplicates of JSP pull requests of 2026-09-16/17, E1136 mueller is plby's theorem (with plby code copied), E508 `χ ≤ 7` and E649 tong are formalized elsewhere under other definitions (optional). All eight are mechanically verified and are genuine proofs (section 4 and the notes in sections 1 and 3); they are simply not first formalizations.
+- Excluded as duplicates (section 4): E508 `HadwigerNelsonAtLeast4`, E138, E770, E273, E1136 `mueller` (this pass); E1063, E859, E835, E1074, E1193, E282, E291, E302, E317, E367, E423, E865, E885, E1008 (earlier); inside claimed/optional families `erdos_698.variants.erdos_szekeres_sharp`, `erdos_1136.variants.upper_bound` and `HadwigerNelsonAtLeast4` stay proved in the files but are not claimed. E723 and E120 were skipped by the proving sessions as duplicates of conjectures-io contributions. E617 `r_eq_3`: still in progress (session adv5) when this packet was generated; not included.
+- M2 counts families, not theorems (handbook 4.1). Each family below is one Erdos problem number; variants of one problem are never counted separately.
+- Human review status: **none yet**. All proofs were written by an AI model and checked only by the Lean kernel and by scripts.
+
+## 1. Substantive families (ordered by level)
+
+### 1.1. Family G-PM -- Schoenberger's theorem and Petersen's theorem (connected case), Mathlib `SimpleGraph` form
+
+- Source theorems: J. Petersen, *Die Theorie der regulären graphs*, Acta Math. 15 (1891), 193-220: every bridgeless cubic graph has a perfect matching. T. Schönberger, *Ein Beweis des Petersenschen Graphensatzes*, Acta Litt. Sci. Szeged 7 (1934), 51-57: in a bridgeless cubic graph every edge lies in a perfect matching (equivalently: for any edge there is also a perfect matching avoiding it; the special case of Plesník 1972 with one deleted edge). The Schönberger reference was confirmed in this form by a web search on 2026-10-02 (it is cited so in the current literature on perfect matchings of cubic graphs); the Petersen reference is the standard one (e.g. Wikipedia, 'Petersen's theorem').
+- Formal source: `bundle/Star6Simple.lean` (sha256 `37fabd0f3cc1c26effe55b87e6d6574bd4e204951623754b2ba0be64703c1b04`), module `Star6Simple` of the star6 library; star6 artifact `openmath/star6_artifact/lean/pack5/src/Star6Simple.lean` (server `~/danus-projects/star6/lean433/pack5/src/`). Environment: Lean 4.33.1, Mathlib v4.33.1 (commit `0df444a360ea`). NOT a formal-conjectures statement.
+- Claimed theorems: `Star6.simple_schoenberger`, `Star6.simple_petersen_connected` (one family).
+- Exact Lean statements (context `{V : Type} [Fintype V] [DecidableEq V] (G : SimpleGraph V) [DecidableRel G.Adj]`):
+```lean
+def Star6.Bridgeless (G : SimpleGraph V) : Prop := ∀ e ∈ G.edgeSet, ¬ G.IsBridge e
+theorem Star6.simple_schoenberger (hconn : G.Connected) (hreg : G.IsRegularOfDegree 3) (hbr : Bridgeless G)
+    {e : Sym2 V} (he : e ∈ G.edgeSet) :
+    (∃ M : G.Subgraph, M.IsPerfectMatching ∧ e ∈ M.edgeSet) ∧ (∃ M : G.Subgraph, M.IsPerfectMatching ∧ e ∉ M.edgeSet)
+theorem Star6.simple_petersen_connected (hconn : G.Connected) (hreg : G.IsRegularOfDegree 3) (hbr : Bridgeless G) :
+    ∃ M : G.Subgraph, M.IsPerfectMatching
+```
+- How it is proved: derived from Mathlib's Tutte theorem `SimpleGraph.tutte` (`Mathlib/Combinatorics/SimpleGraph/Tutte.lean`). The library proves the multigraph version `RH2P.schoenberger` (pack3 module `MhFact_046773df0a672922`, 550 lines): for an edge h = uw form the simple graph GT on the remaining vertices; if GT had a Tutte violator U, every odd component of GT - U sends an odd number of edges to S = U ∪ {u, w} (degree sum), not exactly one (bridgeless), hence at least three; counting the edges leaving S (h lies inside S) bounds the number of odd components by |U|, so there is no violator; `SimpleGraph.tutte` gives a perfect matching of GT, and h plus one edge per matched pair is the matching through h. The avoiding matching is obtained by applying this to another edge at an end of h. `Star6Corollaries.plain_schoenberger` restates it for a multigraph given by `en : E → Sym2 V`; `Star6Simple.lean` (115 lines of private lemmas) translates `SimpleGraph.Connected`, `IsRegularOfDegree 3`, `IsBridge` and `Subgraph.IsPerfectMatching` to and from that vocabulary. Petersen (connected) is a 5-line corollary.
+- Dependencies: `Star6Simple` imports `Star6Corollaries` and through it 99 further library modules (54401 lines in total; exact list in `bundle/STAR6_DEPENDENCY.md`). The mathematics of this family is in the 19-module prefix ending with `MhFact_046773df0a672922` (12511 lines) plus the translation layers; the rest of the chain (the star-edge-colouring development) is imported but not used for these two theorems.
+- Prior formal libraries searched (2026-10-02, see section 7): **NEW** -- no Lean proof found: Mathlib v4.33.1 (Mathlib/, Archive/, Counterexamples/) has `SimpleGraph.tutte` and `IsBridge` but no hit for petersen/schoenberger/bridgeless-matching; mathlib4 PR/issue search 'Petersen theorem perfect matching', 'bridgeless cubic perfect matching', 'Schönberger': 0 hits; KunalRelia/VCCBG states it as `public axiom PetersenMatching` ('Petersen 1891 (not yet in Mathlib)'); KokunoYumeto/lean-theorems-1 `petersen_bridgeless_cubic_1factor` takes Tutte's condition as a hypothesis `h_tutte` and is therefore not a proof of Petersen's theorem; Vilin97/lean-pool, plby/lean-proofs, formal-conjectures (Wikipedia/LovaszPlummerConjecture.lean only uses `IsBridgeless` in a conjecture), all 4155 JSP PR heads: no hit.
+- Genuinely new formal contribution: first formal proof found (Lean ecosystem searched as described in section 7; a web search found no formalization in another proof assistant either) of Schönberger's theorem, and of Petersen's theorem for connected graphs, stated for Mathlib's `SimpleGraph` with Mathlib's own `IsBridge`, `IsRegularOfDegree`, `Subgraph.IsPerfectMatching`. Not a re-export of a Mathlib result: Mathlib has Tutte's theorem (the input) but no theorem producing a perfect matching from regularity and bridgelessness.
+- Statement-correspondence / honesty notes: (1) **connected case only** -- Petersen's theorem is usually stated without connectedness (apply the connected case to each component); the union over components is not formalized, so the claim must say 'connected'. (2) `[Fintype V]` finite graphs; `IsRegularOfDegree 3` is cubic; `Bridgeless` is the plain 'no edge is a bridge' with Mathlib's `IsBridge`. Nothing is vacuous: a 3-regular graph has edges, and the hypotheses are satisfiable (e.g. K4). (3) The simple-graph theorems are corollaries of a multigraph theorem; for simple graphs parallel edges do not occur, so the multigraph generality is not visible in the claimed statements. (4) The theorems are by-products of the star6 (DMS conjecture) library that the team submits separately; **the same Lean library is thus cited in two packets** -- operator to confirm that this is acceptable (TODO list). (5) Event-window delta (handbook: only work contributed within the window counts; the window opened 2026-09-27 noon EDT): on the project server the Schönberger module `MhFact_046773df0a672922` is dated 2026-09-29 (fact store `fact_graph/facts/046773df0a672922.md`, `lean/MhFact_046773df0a672922.lean`; Lean 4.20 original), its Lean 4.33.1 port 2026-10-01, `Star6Corollaries.lean` / `Star6Simple.lean` 2026-10-02. These are file timestamps read by the helper, not a signed baseline; the operator must confirm them against the baseline declaration of the star6 submission.
+- Axioms: `[propext, Classical.choice, Quot.sound]` for both theorems (`pack5/logs/Star6Simple.out`, and re-compiled independently by this helper against the existing pack3/pack5 oleans: `bundle/Star6Simple.out`, rc=0). No `sorry`, `axiom`, `native_decide` in `Star6Simple.lean`.
+- Significance tier: Substantive -- the highest-level item of this packet (two named classical theorems of graph theory absent from Mathlib, about 550 lines for the multigraph theorem on top of Tutte's theorem, plus the translation layers).
+
+### 1.2. Family E942 -- Erdos problem 942
+
+- FC file + commit: `FormalConjectures/ErdosProblems/942.lean` @ `df3f12d7bd06feb3f71ae37abae0ca7cb798d9b1`; informal: https://www.erdosproblems.com/942
+- Bundle file: `bundle/Erdos942.lean` (sha256 `e902e8e237372f54a19c554b715ef0435b80cedd1ce68cd5d3064f521a3a1d77`), produced by session `adv3`
+- Claimed theorems: `Erdos942.erdos_942.variants.limsup`
+- Source theorem / citation: erdosproblems.com/942 (FC docstring: 'It is not hard to prove that limsup h(n) = infinity'), where h(n) is the number of powerful integers in [n^2, (n+1)^2). Standard argument: the powerful numbers a^2 p^3 (p prime) plus simultaneous Diophantine approximation.
+- Statements (verbatim from FC, whitespace-normalised):
+```lean
+@[category textbook, AMS 11] theorem erdos_942.variants.limsup : atTop.limsup (((fun (n : ℕ) ↦ (n : ℕ∞)) ∘ erdos_942.h)) = ⊤
+```
+- Prior formal libraries searched (2026-10-02, see section 7): 
+  - `erdos_942.variants.limsup`: **NEW** -- no complete proof found. kavanaghpatrick/aristotle-math-problems (commit 2425339, 2026-06-24) has two automated attempts (`submissions/yolo_results/yolo_d6_e942_limsup_extracted/...` and `.../yolo_mega6_e942_kronecker_extracted/...`, the latter also under `submissions/nu4_final/`) that prove the bookkeeping and leave the simultaneous-approximation lemma (`kronecker_construction` / `simultaneous_approx_primes`) as `sorry`; JSP PR #4355 states 'no complete formalization known' (#3575 is a filler file, #889 only two powerful numbers); conjectures-io erdos-942: 0 contributions; lean-genius / Bench / other copies: stubs; plby: no file
+- Genuinely new formal contribution: First complete formal proof found. Two earlier public attempts by an automated prover (kavanaghpatrick/aristotle-math-problems) reduce the theorem to a simultaneous-approximation lemma and leave exactly that lemma as `sorry` ('requires Kronecker's theorem ... not available in Mathlib'). The proof here closes the gap without Kronecker's theorem and without any linear-independence input: homogeneous simultaneous Dirichlet approximation on the torus (R/Z)^k, obtained from Mathlib's `NormedAddCommGroup.exists_norm_nsmul_le` (measure pigeonhole on a compact group), gives arbitrarily large q with every q / p_i^(3/2) within epsilon of a positive integer a_i; then every a_i^2 p_i^3 lies in [(q-1)^2, (q+1)^2), and of 2M such numbers M lie in one of the two adjacent intervals [(q-1)^2, q^2), [q^2, (q+1)^2). Distinctness of the numbers a_i^2 p_i^3 is by parity of the p_i-adic valuation.
+- Statement-correspondence note: The statement is `atTop.limsup (fun n => (h n : ℕ∞)) = ⊤`; the proof shows: for all M, N there is n >= N with h(n) >= M, which is what the limsup in ℕ∞ expresses (no junk value). FC's `Powerful` (= `Nat.Powerful`) also holds for 0 and 1; the witnesses are numbers a^2 p^3 with a > 0, so this plays no role. One added line `open MeasureTheory` (the script's semantic statement check -- restating the FC statement at the end of the file and comparing types by `rfl` -- passed). FC category is `textbook`.
+- Axioms: [propext, Classical.choice, Quot.sound] for every claimed theorem. FC categories: textbook.
+- Proof summary (written by the proving model in `work/adv3/Erdos942.proof.md`; read but not re-derived line by line by the helper):
+
+  > # Problem 942, limsup variant — proof
+  > 
+  > For any requested count `M`, choose `2M` distinct primes `pᵢ`. Each number `aᵢ² pᵢ³` is powerful; the numbers for different primes are distinct, since the exponent of `pᵢ` has odd parity for its own representation and even parity for another prime's representation.
+  > 
+  > Use simultaneous Dirichlet approximation on the finite product of unit circles to find an arbitrarily large natural number `q` for which every `q / pᵢ^(3/2)` is very close to an integer `aᵢ`. Then each `aᵢ² pᵢ³` has square root within `1/2` of `q`, so it lies in either `[(q-1)²,q²)` or `[q²,(q+1)²)`. One interval contains at least `M` of the `2M` numbers. The first interval has index `q-1`, and the second has index `q`, both arbitrarily large. Thus `h(n) ≥ M` frequently, giving `limsup h(n)=⊤` in `ℕ∞`.
+  > 
+  > The approximation needs no linear independence: homogeneous approximation to zero suffices because both adjacent square intervals are allowed. The finite product of circles is compact, and Mathlib's `NormedAddCommGroup.exists_norm_nsmul_le` supplies simultaneous Dirichlet approximation. Multiplying an approximate return by a fixed natural number makes its index arbitrarily large while retaining a suitably chosen error bound.
+  > 
+  > Source: the Formal Conjectures docstring for Problem 942, which states the limsup result. The approximation step uses Mathlib's `NormedAddCommGroup.exists_norm_nsmul_le`; the two-sided construction is worked out here. The problem reference is [erdosproblems.com/942](https://www.erdosproblems.com/942).
+  > 
+  > Formal statement quirks: the limsup takes values in `ℕ∞`, so its top value represents unbounded counts. The FC definition of `Powerful` also includes zero, which affects only the initial interval and does not affect the limsup. The file's main conjecture has `answer(sorry)` but is outside this target and is left unchanged.
+
+- Significance tier: Substantive: the strongest Erdos item of the batch (about 230 added lines, real analysis on the torus; earlier automated attempts stalled on exactly this step).
+
+### 1.3. Family E44 -- Erdos problem 44
+
+- FC file + commit: `FormalConjectures/ErdosProblems/44.lean` @ `df3f12d7bd06feb3f71ae37abae0ca7cb798d9b1`; informal: https://www.erdosproblems.com/44
+- Bundle file: `bundle/Erdos44.lean` (sha256 `2a1d49488e57fddd11d99bea84730545868ec84aa32407ce5f54f786696408a5`), produced by session `gptG`
+- Claimed theorems: `Erdos44.greedy_sidon_construction`
+- Source theorem / citation: Greedy Sidon set: for every N >= 1 there is a Sidon set A in {1..N} with |A| >= N^(1/3) (folklore, usually attributed to Erdos; FC cites the survey arXiv:2103.15850, Section 1).
+- Statements (verbatim from FC, whitespace-normalised):
+```lean
+@[category textbook, AMS 5 11] theorem greedy_sidon_construction (N : ℕ) (hN : 1 ≤ N) : ∃ᵉ (A ⊆ Finset.Icc 1 N), IsSidon (A : Set ℕ) ∧ N ≤ A.card ^ 3
+```
+- Prior formal libraries searched (2026-10-02, see section 7): 
+  - `greedy_sidon_construction`: **NEW** -- no proof found; conjectures-io erdos-44 proves only maxSidonSubsetCard_icc_bound; lean-genius Erdos44Problem has no greedy N^(1/3) bound; kavanaghpatrick/aristotle-math-problems and FormalConjectures-Bench copies are `sorry` stubs (of an older, false sqrt(N) version of the statement)
+- Genuinely new formal contribution: First formal proof found of the greedy N <= |A|^3 bound in the FC statement. An auxiliary lemma builds the greedy set by recursion on N and shows every x in [1,N] is of the form b+c-a with a,b,c in A, whence N <= |A|^3.
+- Statement-correspondence note: Statement is exactly the intended bound, written as `N <= A.card ^ 3` (no real cube roots). No junk values: A is a Finset inside `Finset.Icc 1 N`. Note the FC statement was corrected upstream before the pinned commit (older FC versions claimed the false bound `A.card >= N.sqrt`; public stub copies still carry that).
+- Axioms: [propext, Classical.choice, Quot.sound] for every claimed theorem. FC categories: textbook.
+- Proof summary (written by the proving model in `work/gptG/Erdos44.proof.md`; read but not re-derived line by line by the helper):
+
+  > # Erdős 44: greedy Sidon construction
+  > 
+  > Process the integers from 1 through N. Keep an integer if adjoining it to the selected set preserves the Sidon property. The selected set A is Sidon and lies in [1,N]. Every integer x in [1,N] has a representation x+a=b+c with a,b,c in A: if x was kept, use a=b=c=x. If x was skipped, the failure of the Sidon condition for the enlarged set supplies such a relation. The other possible failure, 2x=a+b with a,b already selected, is impossible because a,b<x.
+  > 
+  > The map (a,b,c) ↦ b+c-a sends A³ onto a set containing [1,N]. Hence N ≤ |A³|=|A|³.
+  > 
+  > Source: Section 1 of [arXiv:2103.15850](https://arxiv.org/abs/2103.15850), as cited in the Formal Conjectures docstring; the greedy counting argument is formalized directly. The statement uses natural subtraction in the counting map, with the representation equation ensuring it gives the intended x.
+
+- Significance tier: Substantive (textbook-level counting argument, ~80 added lines).
+
+### 1.4. Family E123 -- Erdos problem 123
+
+- FC file + commit: `FormalConjectures/ErdosProblems/123.lean` @ `df3f12d7bd06feb3f71ae37abae0ca7cb798d9b1`; informal: https://www.erdosproblems.com/123
+- Bundle file: `bundle/Erdos123.lean` (sha256 `9f7d935c3e8622b38ce8423f3952ae657e7e1a7b423d7988e3f5904623a8b256`), produced by session `gptF`
+- Claimed theorems: `Erdos123.erdos_123.variants.powers_2_3`
+- Source theorem / citation: {2^k 3^l} is d-complete: every (large) integer is a sum of distinct numbers 2^k 3^l none dividing another. Conjectured by Erdos 1992 [Er92b]; proved by Jansen and others by the induction quoted in the FC docstring (erdosproblems.com/123).
+- Statements (verbatim from FC, whitespace-normalised):
+```lean
+@[category research solved, AMS 11] theorem erdos_123.variants.powers_2_3 : IsDComplete (↑(powers 2) * ↑(powers 3))
+```
+- Prior formal libraries searched (2026-10-02, see section 7): 
+  - `erdos_123.variants.powers_2_3`: **NEW** -- plby Erdos123.lean and JSP PR #715 treat the three-generator theorem / the 6,10,15 counterexample, not the two-generator set; lean-genius Erdos123Problem derives it from an `axiom powers23_repr` (not a proof); FC upstream PRs #2485/#3344 only retag the category (sorryAx present)
+- Genuinely new formal contribution: First formal proof found of the two-generator d-completeness statement. Strong induction exactly as in the docstring (double the representation of n/2; for odd n subtract the largest power of 3), with the antichain condition checked.
+- Statement-correspondence note: `IsDComplete` asks for representations eventually; the proof gives them for every n (n = 0 by the empty sum), so nothing degenerate is used. `powers 2 * powers 3` is the pointwise product set {2^k 3^l}.
+- Axioms: [propext, Classical.choice, Quot.sound] for every claimed theorem. FC categories: research solved.
+- Proof summary (written by the proving model in `work/gptF/Erdos123.proof.md`; read but not re-derived line by line by the helper):
+
+  > # Erdős 123, powers of 2 and 3
+  > 
+  > Source: the inductive argument in the docstring of `erdos_123.variants.powers_2_3` in Formal Conjectures, citing Erdős's 1992 formulation.
+  > 
+  > Prove by strong induction that every natural number has a sum representation by a finite divisibility antichain of numbers `2^a 3^b`. Zero uses the empty set. For a positive even number, double every summand in a representation of its half. For an odd number `n`, let `q = 3^⌊log₃ n⌋`. Then `q ≤ n < 3q`, so `n-q=2m` with `m<q`. Double a representation of `m` and add `q`. Its doubled summands are less than `2q`. None divides `q`, since they are even and `q` is odd. If `q` divided a doubled summand `2x`, coprimality of `q` and `2` would give `q∣x`, contradicting `x≤m<q`. The formal statement asks for representations eventually; the proof gives them for every `n`.
+  > 
+  > The source file contains unrelated theorems with `sorry`; the axiom print for this target contains only `propext`, `Classical.choice`, and `Quot.sound`.
+
+- Significance tier: Substantive (classical result Erdos called 'nice and difficult'; ~120 added lines).
+
+### 1.5. Family E918 -- Erdos problem 918
+
+- FC file + commit: `FormalConjectures/ErdosProblems/918.lean` @ `df3f12d7bd06feb3f71ae37abae0ca7cb798d9b1`; informal: https://www.erdosproblems.com/918
+- Bundle file: `bundle/Erdos918.lean` (sha256 `e3b9555c94193117c38d4499fad4f7def1121994cded0c589f6d10006cd080b1`), produced by session `w3f`
+- Claimed theorems: `Erdos918.erdos_918.variants.eq_aleph_0.parts.i`, `Erdos918.erdos_918.variants.eq_aleph_0_all_subgraphs.parts.i`, `Erdos918.erdos_918.variants.eq_aleph_0_all_subgraphs.parts.ii`
+- Source theorem / citation: Remark on erdosproblems.com/918 about [Er69b]: with '= aleph_0' in place of '<= aleph_0' no such graph exists (a likely typo in the source).
+- Statements (verbatim from FC, whitespace-normalised):
+```lean
+@[category textbook, AMS 5] theorem erdos_918.variants.eq_aleph_0.parts.i : ¬∃ (V : Type u) (G : SimpleGraph V), #V = ℵ_ 2 ∧ G.chromaticCardinal = ℵ_ 2 ∧ ∀ (W : Set V) (_ : #W = ℵ₁), (G.induce W).chromaticCardinal = ℵ₀
+@[category textbook, AMS 5] theorem erdos_918.variants.eq_aleph_0_all_subgraphs.parts.i : ¬∃ (V : Type u) (G : SimpleGraph V), #V = ℵ_ 2 ∧ G.chromaticCardinal = ℵ_ 2 ∧ ∀ (H : G.Subgraph) (_ : #H.verts = ℵ₁), H.coe.chromaticCardinal = ℵ₀
+@[category textbook, AMS 5] theorem erdos_918.variants.eq_aleph_0_all_subgraphs.parts.ii : ¬∃ (V : Type u) (G : SimpleGraph V), #V = ℵ_ (ω + 1) ∧ G.chromaticCardinal = ℵ₁ ∧ ∀ (H : G.Subgraph) (_ : #H.verts = ℵ_ ω), H.coe.chromaticCardinal = ℵ₀
+```
+- Prior formal libraries searched (2026-10-02, see section 7): 
+  - `erdos_918.variants.eq_aleph_0.parts.i`: **NEW** -- no proof found (lean-genius Erdos918Problem axiomatises the questions; Bench/Aristotle copies are stubs)
+  - `erdos_918.variants.eq_aleph_0_all_subgraphs.parts.i`: **NEW** -- as above
+  - `erdos_918.variants.eq_aleph_0_all_subgraphs.parts.ii`: **NEW** -- as above
+- Genuinely new formal contribution: Formal proofs of three of the four '= aleph_0' impossibility variants. All-subgraph versions: an edgeless subgraph on kappa vertices has chromatic cardinal <= 1. Induced version at aleph_1: a countable colouring of an aleph_1-set has an uncountable colour class, which induces an edgeless graph on aleph_1 vertices. The induced aleph_omega variant (`eq_aleph_0.parts.ii`) is NOT proved (the argument needs regularity).
+- Statement-correspondence note: HONESTY NOTE: these statements are true for a structural reason that does not use the chromatic-number hypothesis `G.chromaticCardinal = aleph_2` at all (only #V >= kappa); that is the source's own argument for the all-subgraph versions. For the induced variant `eq_aleph_0.parts.i` the FC formalisation note says the edgeless argument 'does not carry over'; our proof uses a different (pigeonhole) argument, so this variant is slightly more than the source asserts. `chromaticCardinal` is an sInf over cardinals; the proof exhibits explicit colourings, no junk value of sInf is used.
+- Axioms: [propext, Classical.choice, Quot.sound] for every claimed theorem. FC categories: textbook.
+- Proof summary (written by the proving model in `work/w3f/Erdos918.proof.md`; read but not re-derived line by line by the helper):
+
+  > # Erdős 918: all-subgraph equality variants
+  > 
+  > For any graph whose vertex set has at least `κ` elements, choose a subset `W` of cardinality `κ`. Give `W` the edgeless subgraph structure. Its chromatic cardinal is at most one, so it cannot equal `ℵ₀`. This contradicts the demand that *every* subgraph with `κ` vertices have chromatic cardinal exactly `ℵ₀`. Apply this with `(κ, #V) = (ℵ₁, ℵ₂)` and `(ℵ_ω, ℵ_(ω+1))`.
+  > 
+  > Source: the FC docstring for [Erdős problem 918](https://www.erdosproblems.com/918) notes this edgeless-subgraph obstruction. The argument applies to the all-subgraphs variants because they quantify over non-induced subgraphs.
+  > 
+  > For the induced-subgraph variant at `ℵ₁`, first choose any `ℵ₁`-sized vertex subset `W`. Its stipulated chromatic cardinal `ℵ₀` is attained by a coloring with countably many colors. Since `ℵ₁` is uncountable and a countable union of countable sets is countable, one color class is uncountable. As a subset of `W`, it has cardinality exactly `ℵ₁`; its induced graph is edgeless and has chromatic cardinal at most one, contradicting the stipulation. This argument uses the regularity of `ℵ₁` and does not establish the analogous `ℵ_ω` variant.
+
+- Significance tier: Substantive-low (short cardinal arguments, ~100 added lines; FC category `textbook`).
+
+### 1.6. Family E292 -- Erdos problem 292
+
+- FC file + commit: `FormalConjectures/ErdosProblems/292.lean` @ `df3f12d7bd06feb3f71ae37abae0ca7cb798d9b1`; informal: https://www.erdosproblems.com/292
+- Bundle file: `bundle/Erdos292.lean` (sha256 `b9db02f5d45241bb708b563e8abe648645929406283ef0c0b931db71a7633df4`), produced by session `gptC`
+- Claimed theorems: `Erdos292.erdos_292.variants.mul`, `Erdos292.erdos_292.variants.two_mul`, `Erdos292.erdos_292.variants.prime_pow`
+- Source theorem / citation: Observations recorded on erdosproblems.com/292: Straus (A is closed under multiplication), 'easy to see' (A contains no prime power), van Doorn (n in A, n > 1 implies 2n in A).
+- Statements (verbatim from FC, whitespace-normalised):
+```lean
+@[category research solved, AMS 11] theorem erdos_292.variants.mul : ∀ m ∈ A, ∀ n ∈ A, m * n ∈ A
+@[category research solved, AMS 11] theorem erdos_292.variants.two_mul : ∀ n ∈ A, 1 < n → 2 * n ∈ A
+@[category research solved, AMS 11] theorem erdos_292.variants.prime_pow : ∀ n ∈ A, ¬ IsPrimePow n
+```
+- Prior formal libraries searched (2026-10-02, see section 7): 
+  - `erdos_292.variants.mul`: **NEW** -- plby Erdos292.lean proves only the main density-1 theorem; lean-genius Erdos292Problem states Straus closure and the prime-power fact as `axiom`s
+  - `erdos_292.variants.two_mul`: **NEW** -- as above; no hit anywhere
+  - `erdos_292.variants.prime_pow`: **NEW** -- as above (lean-genius: `axiom prime_powers_not_in_A`)
+- Genuinely new formal contribution: First formal proofs found of the three closure/exclusion facts about the set A of largest denominators of Egyptian-fraction representations of 1 (main density theorem is formalized in plby and is not claimed). prime_pow uses p-adic valuations of the unit-fraction sum.
+- Statement-correspondence note: FC's A contains 1 (S = {1}); the proofs handle m = 1 / n = 1 honestly and `IsPrimePow 1` is false, so nothing is vacuous. two_mul is not a special case of mul (2 is not in A).
+- Axioms: [propext, Classical.choice, Quot.sound] for every claimed theorem. FC categories: research solved.
+- Proof summary (written by the proving model in `work/gptC/Erdos292.proof.md`; read but not re-derived line by line by the helper):
+
+  > # Erdős 292
+  > 
+  > Source: the FC docstring, which attributes multiplicative closure to Straus and the doubling construction to van Doorn; [erdosproblems.com/292](https://www.erdosproblems.com/292).
+  > 
+  > ## `erdos_292.variants.mul`
+  > 
+  > Take unit fraction representations with largest denominators `m` and `n`. Remove `1/n` from the second representation and replace it with the first representation scaled by `n`. The new denominators are distinct: the old ones are below `n`, and the scaled ones are at least `n`. Their sum remains one, and the largest denominator is `m*n`.
+  > 
+  > The formal set `A` permits `1` as a denominator, but the construction also handles the resulting `m=1` case. The other unproved declarations in the copied FC file remain untouched; the target's axiom check contains no `sorryAx`.
+  > 
+  > ## `erdos_292.variants.two_mul`
+  > 
+  > A representation ending in `n>1` cannot contain `1`: that term alone would sum to one, while the positive term `1/n` is also present. Double every denominator in the representation and add `1/2`. The doubled terms sum to `1/2`, are all distinct from `2`, and end at `2n`. The new sum is one.
+  > 
+  > ## `erdos_292.variants.prime_pow`
+  > 
+  > Suppose the largest denominator is `n=p^k`, where `p` is prime and `k>0`. Every other denominator `s` is smaller than `p^k`, so `p^k` does not divide `s`. Consequently the `p`-adic valuation of `1/s` is strictly greater than the valuation `-k` of `1/n`. The valuation of the sum over the other denominators is likewise greater than `-k`, using the finite-sum valuation lemma and positivity. The valuation of the full sum must therefore be `-k`, whereas its stated value `1` has valuation zero, a contradiction. The proof first rules out the singleton representation so the finite-sum lemma applies.
+
+- Significance tier: Substantive-low (elementary observations; ~190 added lines).
+
+### 1.7. Family E395 -- Erdos problem 395
+
+- FC file + commit: `FormalConjectures/ErdosProblems/395.lean` @ `df3f12d7bd06feb3f71ae37abae0ca7cb798d9b1`; informal: https://www.erdosproblems.com/395
+- Bundle file: `bundle/Erdos395.lean` (sha256 `003880cb653e5f4b35e2e56122fe32c317347cb9d567bcd31056b2b6848c914d`), produced by session `gptD`
+- Claimed theorems: `Erdos395.erdos_395.variants.one`
+- Source theorem / citation: Carnielli-Carolino 2011 [CaCa11]: Erdos's original radius-1 reverse Littlewood-Offord question is false (z_1 = 1, z_k = i).
+- Statements (verbatim from FC, whitespace-normalised):
+```lean
+@[category research solved, AMS 5 60] theorem erdos_395.variants.one : answer(False) ↔ ∃ c : ℝ, 0 < c ∧ ∀ n : ℕ, 0 < n → ∀ z : Fin n → ℂ, (∀ i, ‖z i‖ = 1) → c / n ≤ (signedSumCount z 1 : ℝ) / 2 ^ n
+```
+- Prior formal libraries searched (2026-10-02, see section 7): 
+  - `erdos_395.variants.one`: **NEW** -- plby Erdos395.lean proves the main sqrt(2) theorem only; lean-genius has `axiom erdos_original_is_false`
+- Genuinely new formal contribution: First formal proof found of the radius-1 counterexample in the FC statement (`answer(False)`); uses n = 2, z = (1, i): all four signed sums have norm sqrt 2 > 1.
+- Statement-correspondence note: `answer(False)` is fixed by FC, unchanged. `signedSumCount` is an `ncard` of a finite set of sign vectors and is shown to be 0 by case analysis (no junk value). Only the smallest instance n = 2 of the published family is needed.
+- Axioms: [propext, Classical.choice, Quot.sound] for every claimed theorem. FC categories: research solved.
+- Proof summary (written by the proving model in `work/gptD/Erdos395.proof.md`; read but not re-derived line by line by the helper):
+
+  > # Erdős 395, radius 1 variant
+  > 
+  > Choose n = 2 and z = (1, i). Both entries have complex norm 1. For each of the four choices of signs, the signed sum has real and imaginary parts each equal to ±1, so its squared norm is 2. Its norm therefore exceeds 1, making the sign pattern set empty. The proposed positive lower bound at n = 2 would then be at most zero, a contradiction.
+  > 
+  > Source: the FC docstring for the radius 1 variant, citing Carnielli and Carolino (2011), and [erdosproblems.com/395](https://www.erdosproblems.com/395). The FC statement has the closed `answer(False)` term. The proof computes the set cardinality from the four sign cases; the other `sorry` declarations in this file are unrelated.
+
+- Significance tier: Substantive-low (short, ~30 added lines).
+
+### 1.8. Family E698 -- Erdos problem 698
+
+- FC file + commit: `FormalConjectures/ErdosProblems/698.lean` @ `df3f12d7bd06feb3f71ae37abae0ca7cb798d9b1`; informal: https://www.erdosproblems.com/698
+- Bundle file: `bundle/Erdos698.lean` (sha256 `15577f010988f4751510a1739de0765a855f07df090d135613e96ccecd37c1d9`), produced by session `gptB`
+- Claimed theorems: `Erdos698.erdos_698.variants.erdos_szekeres`
+- Proved in the file but **not claimed** (duplicates): `erdos_698.variants.erdos_szekeres_sharp` -- https://github.com/TheJustinSunPrize/awards/pull/589 (exact FC statement, 2026-09-17)
+- Source theorem / citation: Erdos-Szekeres 1978: gcd(C(n,i), C(n,j)) >= C(n,i)/C(j,i) >= 2^i for 1 <= i < j <= n/2.
+- Statements (verbatim from FC, whitespace-normalised):
+```lean
+@[category research solved, AMS 5 11] theorem erdos_698.variants.erdos_szekeres (n i j : ℕ) (hi : 1 ≤ i) (hij : i < j) (hj : j ≤ n / 2) : (n.choose i : ℝ) / (j.choose i : ℝ) ≤ (Nat.gcd (n.choose i) (n.choose j) : ℝ) ∧ (2 : ℝ) ^ i ≤ (n.choose i : ℝ) / (j.choose i : ℝ)
+```
+- Prior formal libraries searched (2026-10-02, see section 7): 
+  - `erdos_698.variants.erdos_szekeres`: **NEW** -- plby Erdos698.lean proves Bergman's bound for i>=2 (different inequality); JSP PR #589 proves only the sharpness variant; lean-genius has `axiom erdos_szekeres_exponential`
+- Genuinely new formal contribution: First formal proof found of the Erdos-Szekeres inequality in the FC statement, via C(n,i) C(n-i,j-i) = C(n,j) C(j,i). (Bergman's stronger theorem for i >= 2 is in plby with a different statement.)
+- Statement-correspondence note: Real division by `j.choose i > 0`; no junk. The file also proves the sharpness variant, which is a DUPLICATE of JSP PR #589 and is NOT claimed.
+- Axioms: [propext, Classical.choice, Quot.sound] for every claimed theorem. FC categories: research solved.
+- Proof summary (written by the proving model in `work/gptB/Erdos698.proof.md`; read but not re-derived line by line by the helper):
+
+  > # Problem 698, Erdős–Szekeres variants
+  > 
+  > Sources: the Erdős–Szekeres observation in the FC docstring and [erdosproblems.com/698](https://www.erdosproblems.com/698); the sharp case uses Pascal symmetry and the standard Lucas congruence, as formalized in Mathlib.
+  > 
+  > For `i < j ≤ n/2`, the binomial identity `C(n,i) C(n-i,j-i) = C(n,j) C(j,i)` implies `C(n,i)/gcd(C(n,i),C(n,j))` divides `C(j,i)`: divide the identity by the gcd and use coprimality of the reduced coefficients. This yields the first real inequality. For the second, `2j ≤ n` gives `2(j-k) ≤ n-k` for every `k`; induction on `i` proves `2^i` times the descending factorial of `j` is at most that of `n`. Cancel `i!` to obtain `2^i C(j,i) ≤ C(n,i)`.
+  > 
+  > For odd prime `p`, Pascal's identity and symmetry show `C(2p,p)` is even. Lucas' congruence gives `C(2p,p) ≡ C(2,1)=2 (mod p)`, so `p` does not divide it. Consequently `gcd(2p,C(2p,p))=2`; the quotient `C(2p,1)/C(p,1)` is also 2.
+  > 
+  > There are no answer placeholders or junk values in these variants. The assumption `1 ≤ i` in the first statement is stronger than needed. Other unrelated original `sorry`s remain in the copied FC file; the axiom prints apply only to the two targets.
+
+- Significance tier: Substantive-low (elementary, ~60 added lines for the claimed theorem).
+
+### 1.9. Family E939 -- Erdos problem 939
+
+- FC file + commit: `FormalConjectures/ErdosProblems/939.lean` @ `df3f12d7bd06feb3f71ae37abae0ca7cb798d9b1`; informal: https://www.erdosproblems.com/939
+- Bundle file: `bundle/Erdos939.lean` (sha256 `17bd86b729b6d7cd47118c4590253119dbded6741e57888ef6a17400c42868ac`), produced by session `gptF`
+- Claimed theorems: `Erdos939.erdos_939.variants.seven`, `Erdos939.erdos_939.variants.eight`
+- Source theorem / citation: erdosproblems.com/939: Cambie found sums of r-2 coprime r-powerful numbers that are r-powerful for r = 7 and r = 8.
+- Statements (verbatim from FC, whitespace-normalised):
+```lean
+@[category research solved, AMS 11] theorem erdos_939.variants.seven : (Erdos939Sums 7).Nonempty
+@[category research solved, AMS 11] theorem erdos_939.variants.eight : (Erdos939Sums 8).Nonempty
+```
+- Prior formal libraries searched (2026-10-02, see section 7): 
+  - `erdos_939.variants.seven`: **NEW** -- all public copies found (kavanaghpatrick/aristotle-math-problems tier5/6, FormalConjectures-Bench tasks-v2, Paul-Lez/fc100, epoch-research/LeanOpenProblems, ...) are `sorry` stubs; JSP PRs #65/#265/#370 prove the 3-powerful-triples and r=6 infinitude statements, not r=7/8; FC upstream PRs #2591/#3115 only retag
+  - `erdos_939.variants.eight`: **NEW** -- as r=7
+- Genuinely new formal contribution: First formal proofs found of the r = 7 and r = 8 existence statements, by explicit witnesses checked in the kernel (no native_decide).
+- Statement-correspondence note: HONESTY NOTE: the r = 7 witness is {1, 2^7 3^8, 2^9 5^7, 2^15 3^10, 2^9 5^10} with sum 17^8; it uses the summand 1, which is vacuously 7-full, and coprimality in FC is set-wise gcd = 1 (trivial once 1 is present). This satisfies the FC definition `Erdos939Sums 7` but is a degenerate example that is NOT taken from Cambie; it was found by the model's own finite search. The r = 8 witness comes from the binomial identity recorded in the FC docstring (X = 8^8, Y = 7^8), has no summand 1, and is non-degenerate.
+- Axioms: [propext, Classical.choice, Quot.sound] for every claimed theorem. FC categories: research solved.
+- Proof summary (written by the proving model in `work/gptF/Erdos939.proof.md`; read but not re-derived line by line by the helper):
+
+  > # Erdős 939, seven
+  > 
+  > Source: the definition and `examples` proof in Formal Conjectures' [problem 939 file](https://www.erdosproblems.com/939); the certificate was found by a finite search over 7-full integers, then independently verified by Lean normalization. The file attributes the existence of seven-case solutions to Cambie.
+  > 
+  > The set is `{1, 839808, 40000000, 1934917632, 5000000000}`. Its sum is `6975757441 = 17^8`. The four nonunit summands factor respectively as `2^7·3^8`, `2^9·5^7`, `2^15·3^10`, and `2^9·5^10`, so every summand and the sum is 7-full. The set is coprime because it contains 1. Lean checks the size, positivity, coprimality, fullness, and sum by normalization.
+  > 
+  > Other `sorry`s in the file remain. The target's printed axioms are exactly `propext`, `Classical.choice`, and `Quot.sound`.
+  > 
+  > # Erdős 939, eight
+  > 
+  > Source: the binomial construction stated in the Formal Conjectures docstring for `erdos_939.variants.infinite_of_six_le`, attributed there to the discussion of [problem 939](https://www.erdosproblems.com/939). This specialization uses `X=8^8`, `Y=7^8` and the identity
+  > 
+  > `(X+Y)^8 = (X-Y)^8 + 16X^7Y + 112X^5Y^3 + 112X^3Y^5 + 16XY^7`.
+  > 
+  > Split the `112X^5Y^3` term into `14X^5Y^3` and `98X^5Y^3`, producing six distinct positive summands. Both the sum and `(X-Y)^8` are eighth powers. The remaining terms are products `2^a 7^b` with `a,b≥8`, hence 8-full. Lean verifies the finite set's size, its coprimality, and the identity; the fullness argument uses only prime divisibility. The target's axiom print contains exactly `propext`, `Classical.choice`, and `Quot.sound`.
+
+- Significance tier: Minor-to-substantive (explicit certificates).
+
+### 1.10. Family E477 -- Erdos problem 477
+
+- FC file + commit: `FormalConjectures/ErdosProblems/477.lean` @ `df3f12d7bd06feb3f71ae37abae0ca7cb798d9b1`; informal: https://www.erdosproblems.com/477
+- Bundle file: `bundle/Erdos477.lean` (sha256 `6f36a324a5c890fa4c7e38df2da86e8a12144bfc29877d7de99e14b78bfc3e1d`), produced by session `helper-erdos3`
+- Claimed theorems: `Erdos477.erdos_477.variants.S_sq`, `Erdos477.erdos_477.variants.degree_two_dvd_condition_b_ne_zero`
+- Source theorem / citation: Sekanina 1959 [Sek59] for f = X^2; the FC docstring for the quadratic case (AlphaProof for X^2 - X + 1, then generalised to a | b).
+- Statements (verbatim from FC):
+```lean
+@[category research solved, AMS 12] theorem erdos_477.variants.S_sq :
+    letI f := X ^ 2
+    ∀ A : Set ℤ, ∃ z, ¬ ∃! a ∈ A ×ˢ (Set.range f.eval), z = a.1 + a.2
+@[category research solved, AMS 12] theorem erdos_477.variants.degree_two_dvd_condition_b_ne_zero {a b c : ℤ} (ha : a ≠ 0) (hb : b ≠ 0) (hab : a ∣ b) :
+    let f := a • X ^ 2 + b • X + C c
+    ∀ A : Set ℤ, ∃ z, ¬ ∃! a ∈ A ×ˢ (Set.range f.eval), z = a.1 + a.2
+```
+- Prior formal libraries searched (2026-10-03): **NEW** -- FC has `sorry`; plby proves only the sixth-power case; TheJustinSunPrize PR heads contain only generic templates; GitHub code search finds only stubs. The AlphaProof proof of the X^2 - X + 1 instance was not found publicly.
+- Genuinely new formal contribution: First formal proofs found of these two FC variants: no set A of integers makes every integer uniquely a + f(n), for f = X^2 and for f = aX^2 + bX + c with a | b. Argument: every multiple of 4a (for X^2: every odd number and every multiple of 4) is a difference of two values of f, which bounds how many elements of A can lie in one residue class, while A must be unbounded; pigeonhole in ZMod |4a|.
+- Statement-correspondence note: Only Mathlib definitions are used. The hypothesis b ≠ 0 of the FC statement is not used by the proof.
+- Axioms: [propext, Classical.choice, Quot.sound] for every claimed theorem (`artifact/logs/extra3/`). Added 2026-10-03 (session helper-erdos3; written by an AI model, checked by the Lean kernel and `e3_verify.py`; statement text identical to FC, the file differs from FC only by the removed `sorry` of the claimed theorem). Prior-art search: `artifact/logs/extra3/REPORT.md` (FC, TheJustinSunPrize/awards main and all 4155 PR heads, plby/lean-proofs @ 8822f7d, FC-Bench, aristotle, conjectures-io, erdos-lean, GitHub code search; not searched: Zulip, arXiv, private repositories).
+- Significance tier: Substantive-low (elementary, about 180 added lines).
+
+## 2. Minor / sanity (no prior formal proof found, but trivial or helper-level -- team decides whether to include)
+
+Handbook 4.1 requires each counted contribution to be 'new, faithful, useful, and reusable'; the items below are new and faithful, but their usefulness is small. Including them risks looking like count-padding; excluding them costs at most 4 families.
+
+### 2.1. Family E295 -- Erdos problem 295
+
+- FC file + commit: `FormalConjectures/ErdosProblems/295.lean` @ `df3f12d7bd06feb3f71ae37abae0ca7cb798d9b1`; informal: https://www.erdosproblems.com/295
+- Bundle file: `bundle/Erdos295.lean` (sha256 `59b39678630187fd4544d3d717cccdde5241e75d2ab50aafde9f7ad36a25751b`), produced by session `gptG`
+- Claimed theorems: `Erdos295.exists_k`
+- Source theorem / citation: Folklore: for every N there are N <= n_1 < ... < n_k with sum 1/n_i = 1 (needed for k(N) in Erdos problem 295 to be well defined).
+- Statements (verbatim from FC, whitespace-normalised):
+```lean
+@[category textbook, AMS 5 11] lemma exists_k (N : ℕ) : ∃ (k : ℕ) (n : Fin k → ℕ), (∀ i, N ≤ n i) ∧ StrictMono n ∧ ∑ i, (1 / n i : ℝ) = 1
+```
+- Prior formal libraries searched (2026-10-02, see section 7): 
+  - `exists_k`: **NEW** -- helper lemma of the FC file; JSP PR #271 proves the Erdos-Straus lower bound with its own definitions and assumes existence; no proof of this lemma found
+- Genuinely new formal contribution: Formal proof of the FC helper lemma (harmonic block plus greedy Egyptian-fraction completion; ~200 added lines). It is what makes FC's `k N := Nat.find (exists_k N)` sorry-free.
+- Statement-correspondence note: N = 0 is allowed by the statement; the construction uses denominators > max(N,1), so `1/0 = 0` is not exploited. This is a helper lemma, not a named result of the problem.
+- Axioms: [propext, Classical.choice, Quot.sound] for every claimed theorem. FC categories: textbook.
+- Proof summary (written by the proving model in `work/gptG/Erdos295.proof.md`; read but not re-derived line by line by the helper):
+
+  > # Erdős 295: existence of an Egyptian expansion
+  > 
+  > Choose a finite consecutive block of unit fractions with denominators greater than the requested bound. The harmonic series diverges, so there is a first point where the block sum reaches or exceeds 1. Stop just before that point. The remaining positive rational is at most the next unit fraction.
+  > 
+  > Apply the greedy Egyptian fraction algorithm to the remainder. For a positive rational a/b, take q = ⌈b/a⌉ and subtract 1/q. The new numerator is a q - b, which lies in [0,a), so this terminates by induction on a. The next chosen denominator is strictly larger than q. In the initial application, q is past the consecutive block. Combining the two finite sets gives distinct denominators, all above the requested bound, with reciprocal sum 1. Sort the finite set to obtain the strictly increasing Fin-indexed sequence.
+  > 
+  > Source: elementary Egyptian fraction greedy construction, applied to the helper lemma stated in [erdosproblems.com/295](https://www.erdosproblems.com/295) and the Formal Conjectures docstring. The formal statement permits N=0; the construction uses denominators at least max(N,1)+1, so no zero-denominator junk values occur. The sum is in ℝ, while the construction can use ℚ before casting.
+
+- Significance tier: Minor (helper lemma), although the proof is not short.
+
+### 2.2. Family E703 -- Erdos problem 703
+
+- FC file + commit: `FormalConjectures/ErdosProblems/703.lean` @ `df3f12d7bd06feb3f71ae37abae0ca7cb798d9b1`; informal: https://www.erdosproblems.com/703
+- Bundle file: `bundle/Erdos703.lean` (sha256 `1bf2ca3afc1bc2fcf482220ec22ee4e8a9489bf54e9a1784f1cbdf76ed201c58`), produced by session `gptE`
+- Claimed theorems: `Erdos703.erdos_703.variants.zero`
+- Source theorem / citation: erdosproblems.com/703: 'It is trivial that T(n,0) = 2^(n-1)' (maximum intersecting family).
+- Statements (verbatim from FC, whitespace-normalised):
+```lean
+@[category textbook, AMS 5] theorem erdos_703.variants.zero (n : ℕ) (hn : 1 ≤ n) : T n 0 = 2 ^ (n - 1)
+```
+- Prior formal libraries searched (2026-10-02, see section 7): 
+  - `erdos_703.variants.zero`: **TRIVIAL** -- source: 'It is trivial that T(n,0)=2^(n-1)'. No prior proof of this exact statement found (plby Erdos703 proves the Frankl-Rodl main theorem)
+- Genuinely new formal contribution: Formal proof of the trivial t = 0 value in the FC statement.
+- Statement-correspondence note: `T` is an `sSup` of a bounded nonempty set of naturals; both bounds are proved (no junk).
+- Axioms: [propext, Classical.choice, Quot.sound] for every claimed theorem. FC categories: textbook.
+- Proof summary (written by the proving model in `work/gptE/Erdos703.proof.md`; read but not re-derived line by line by the helper):
+
+  > # Problem 703, `zero`
+  > 
+  > A family with every pair intersecting cannot contain both a set and its complement. Complementation is an injection on all subsets of `Fin n`; hence the family has at most half of the `2^n` subsets. Conversely, all subsets containing one fixed element form an intersecting family of size `2^(n-1)`. The proof separately establishes that the set of candidate cardinalities is bounded above before using `le_csSup`, avoiding the junk value of an unbounded natural `sSup`.
+  > 
+  > Source: the elementary observation in the Formal Conjectures docstring for [erdosproblems.com/703](https://www.erdosproblems.com/703); the complement and star-family argument also appears in plby's `T_zero`, for its different `T` definition. The formal statement includes `A = B` among the intersection conditions, as encoded by the two unrestricted family quantifiers. Other original `sorry`s remain.
+
+- Significance tier: Minor / trivial per the source.
+
+### 2.3. Family E748 -- Erdos problem 748
+
+- FC file + commit: `FormalConjectures/ErdosProblems/748.lean` @ `df3f12d7bd06feb3f71ae37abae0ca7cb798d9b1`; informal: https://www.erdosproblems.com/748
+- Bundle file: `bundle/Erdos748.lean` (sha256 `b04797885f82798e79b0bd275cc5ec59dd71ea749769c197ac51226ae70fd849`), produced by session `gptE`
+- Claimed theorems: `Erdos748.erdos_748.variants.lower_bound`
+- Source theorem / citation: erdosproblems.com/748: trivially f(n) >= 2^(n/2) (subsets of the odd numbers are sum-free).
+- Statements (verbatim from FC, whitespace-normalised):
+```lean
+@[category textbook, AMS 5 11] theorem erdos_748.variants.lower_bound (n : ℕ) : (2 : ℝ) ^ ((n : ℝ) / 2) ≤ (f n : ℝ)
+```
+- Prior formal libraries searched (2026-10-02, see section 7): 
+  - `erdos_748.variants.lower_bound`: **TRIVIAL** -- source: 'It is trivial to see'. No prior proof of this exact statement found (plby Erdos748 / JSP #1664 prove the Cameron-Erdos upper bound)
+- Genuinely new formal contribution: Formal proof of the trivial lower bound, with the real exponent n/2 as fixed upstream on 2026-09-22 (FC PR #6495).
+- Statement-correspondence note: No junk; real power.
+- Axioms: [propext, Classical.choice, Quot.sound] for every claimed theorem. FC categories: textbook.
+- Proof summary (written by the proving model in `work/gptE/Erdos748.proof.md`; read but not re-derived line by line by the helper):
+
+  > # Problem 748, `lower_bound`
+  > 
+  > Every subset of the integers strictly above `⌊n/2⌋` and at most `n` is sum-free: two members have sum greater than `n`. This upper half has `n - ⌊n/2⌋` elements, so it contributes `2^(n - ⌊n/2⌋)` distinct sets counted by `f n`. Since `n/2 ≤ n - ⌊n/2⌋`, monotonicity of the real power function gives the stated lower bound.
+  > 
+  > Source: the Formal Conjectures docstring for [erdosproblems.com/748](https://www.erdosproblems.com/748); the same upper-half counting argument appears in plby's proof of the main result. The formal target uses a real exponent, so the last step explicitly compares it with the natural-number cardinal exponent. Other `sorry`s in the copied file remain original.
+
+- Significance tier: Minor / trivial per the source.
+
+### 2.4. Family E1136 -- Erdos problem 1136
+
+- FC file + commit: `FormalConjectures/ErdosProblems/1136.lean` @ `df3f12d7bd06feb3f71ae37abae0ca7cb798d9b1`; informal: https://www.erdosproblems.com/1136
+- Bundle file: `bundle/Erdos1136.lean` (sha256 `74ece9ebc11495cc1dc38f68b9cbd5c12e9601f8b0f06cd7f471dc59e4fe032a`), produced by session `gptE`
+- Claimed theorems: `Erdos1136.erdos_1136.variants.multiples_of_three`
+- Proved in the file but **not claimed** (duplicates): `erdos_1136.variants.upper_bound` -- https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos1136.lean (2nd conjunct: upper density <= 1/2 for every such set; subsumes)
+- Source theorem / citation: erdosproblems.com/1136: the multiples of 3 avoid sums equal to powers of two and have density 1/3 (the trivial example the question asks to beat).
+- Statements (verbatim from FC, whitespace-normalised):
+```lean
+@[category research solved, AMS 11] theorem erdos_1136.variants.multiples_of_three : AvoidsPowersOfTwo {n : ℕ | 3 ∣ n} ∧ Set.HasDensity {n : ℕ | 3 ∣ n} (1 / 3)
+```
+- Prior formal libraries searched (2026-10-02, see section 7): 
+  - `erdos_1136.variants.multiples_of_three`: **TRIVIAL** -- trivial example given on the problem page (density 1/3); plby Erdos1136.lean proves the stronger density-1/2 construction; no prior proof of this exact statement found
+- Genuinely new formal contribution: Formal proof of the trivial example in the FC statement.
+- Statement-correspondence note: {n | 3 | n} contains 0; 0 + 0 = 0 is not a power of two, fine. The file also proves `upper_bound`, subsumed by plby (NOT claimed).
+- Axioms: [propext, Classical.choice, Quot.sound] for every claimed theorem. FC categories: research solved.
+- Proof summary (written by the proving model in `work/gptE/Erdos1136.proof.md`; read but not re-derived line by line by the helper):
+
+  > # Problem 1136
+  > 
+  > ## `multiples_of_three`
+  > 
+  > If both summands are divisible by `3`, so is their sum; no power of `2` is divisible by `3` because `3` and `2^k` are coprime. Among `0, …, N`, precisely `⌊N/3⌋ + 1` numbers are divisible by `3`. This count divided by the interval length is squeezed between `1/3` and `1/3 + 1/n`, giving density `1/3`.
+  > 
+  > Source: the elementary construction in the Formal Conjectures docstring for [erdosproblems.com/1136](https://www.erdosproblems.com/1136). The formal density uses the half-open interval below `n`, so zero contributes one element and must be included in the exact count.
+  > 
+  > ## `upper_bound`
+  > 
+  > For each power `N = 2^k`, reflect the integers in `[0,N]` by `x ↦ N-x`. This is an involution. The family `A ∩ [0,N]` is disjoint from its reflected image, because a member in both would give two elements of `A` summing to `N`. Thus at most half of the `N+1` integers in this interval belong to `A`. The sample densities at `N+1` are at most `1/2` for arbitrarily large `N`, so their liminf is at most `1/2`.
+  > 
+  > Source: the optimality claim attributed to Müller in the Formal Conjectures docstring. The proof works with the half-open sample interval `[0,N+1)` required by the formal `lowerDensity` definition and explicitly supplies the lower boundedness needed for real-valued `liminf`.
+  > 
+  > ## `mueller` (unresolved)
+  > 
+  > The FC docstring gives Müller's residue-class construction. Its formal target requires both avoiding powers of two and density `1/2`; neither conjunct was completed here. Establishing density for the infinite union of classes modulo `2^(i+2)` is the main remaining obstacle.
+
+- Significance tier: Minor / trivial.
+
+### 2.5. Family E358 -- Erdos problem 358
+
+- FC file + commit: `FormalConjectures/ErdosProblems/358.lean` @ `df3f12d7bd06feb3f71ae37abae0ca7cb798d9b1`; informal: https://www.erdosproblems.com/358
+- Bundle file: `bundle/Erdos358.lean` (sha256 `bbaccc0fbda2b195d0bed0327d46d4eaf0a2ce29616cb565eceb37df7b712c68`), produced by session `helper-erdos3`
+- Claimed theorems: `Erdos358.f_id`
+- Source theorem / citation: Sylvester: representations of n as a sum of consecutive positive integers correspond to the odd divisors of n (textbook).
+- Statements (verbatim from FC):
+```lean
+@[category textbook, AMS 5 11] theorem f_id : f id = fun n ↦ #{d ∈ n.divisors | Odd d}
+```
+- Prior formal libraries searched (2026-10-03): **NEW** -- plby `Erdos358` has no odd-divisor statement; no TheJustinSunPrize PR; no FC-Bench task; not found in Mathlib/Archive (it may exist elsewhere under other definitions).
+- Genuinely new formal contribution: Formal proof of the FC lemma `f_id` (bijection through (v + 1 - u)(u + v) = 2n).
+- Statement-correspondence note: Uses FC's `f` and `intervalRepresentations`. n = 0 holds only by convention (infinitely many representations; `Nat.card` of an infinite set is 0 and `divisors 0 = ∅`).
+- Axioms: [propext, Classical.choice, Quot.sound] for every claimed theorem (`artifact/logs/extra3/`). Added 2026-10-03 (session helper-erdos3; written by an AI model, checked by the Lean kernel and `e3_verify.py`; statement text identical to FC, the file differs from FC only by the removed `sorry` of the claimed theorem). Prior-art search: `artifact/logs/extra3/REPORT.md` (FC, TheJustinSunPrize/awards main and all 4155 PR heads, plby/lean-proofs @ 8822f7d, FC-Bench, aristotle, conjectures-io, erdos-lean, GitHub code search; not searched: Zulip, arXiv, private repositories).
+- Significance tier: Minor / textbook.
+
+### 2.6. Family E619 -- Erdos problem 619
+
+- FC file + commit: `FormalConjectures/ErdosProblems/619.lean` @ `df3f12d7bd06feb3f71ae37abae0ca7cb798d9b1`; informal: https://www.erdosproblems.com/619
+- Bundle file: `bundle/Erdos619.lean` (sha256 `f596f21e1353bf6e9292d7f0cd9772c265dfc705ca855868e0a9e166149132ab`), produced by session `helper-erdos3`
+- Claimed theorems: `Erdos619.erdos_619.variants.add_edges_diam_three`
+- Source theorem / citation: Erdős-Gyárfás-Ruszinkó 1998 [EGR98], preliminary observation: a maximal triangle-free supergraph has diameter at most 2.
+- Statements (verbatim from FC):
+```lean
+@[category research solved, AMS 5] theorem erdos_619.variants.add_edges_diam_three {V : Type*} [Fintype V] (G : SimpleGraph V) (hG : G.Connected) (hG' : G.CliqueFree 3) :
+    ∃ H : SimpleGraph V, G ≤ H ∧ H.CliqueFree 3 ∧ H.ediam ≤ 3
+```
+- Prior formal libraries searched (2026-10-03): **NEW** -- FC has `sorry` (also in the older FC revision that proves the main problem); nick-kuhn/erdos-619, plby, TheJustinSunPrize: nothing.
+- Genuinely new formal contribution: Formal proof of the FC variant (maximal triangle-free supergraph).
+- Statement-correspondence note: Easy; it is not the quantitative bounds of EGR98 (`h_three_le`, `h_five_le`, not proved). Connectivity is not needed by the proof.
+- Axioms: [propext, Classical.choice, Quot.sound] for every claimed theorem (`artifact/logs/extra3/`). Added 2026-10-03 (session helper-erdos3; written by an AI model, checked by the Lean kernel and `e3_verify.py`; statement text identical to FC, the file differs from FC only by the removed `sorry` of the claimed theorem). Prior-art search: `artifact/logs/extra3/REPORT.md` (FC, TheJustinSunPrize/awards main and all 4155 PR heads, plby/lean-proofs @ 8822f7d, FC-Bench, aristotle, conjectures-io, erdos-lean, GitHub code search; not searched: Zulip, arXiv, private repositories).
+- Significance tier: Minor.
+
+### 2.7. Family E1148 -- Erdos problem 1148
+
+- FC file + commit: `FormalConjectures/ErdosProblems/1148.lean` @ `df3f12d7bd06feb3f71ae37abae0ca7cb798d9b1`; informal: https://www.erdosproblems.com/1148
+- Bundle file: `bundle/Erdos1148.lean` (sha256 `e44647fb459d160b9c3499ba926a048c35c608587d54f87c5a66fa12c935534e`), produced by session `helper-erdos3`
+- Claimed theorems: `Erdos1148.erdos_1148.variants.weaker`
+- Source theorem / citation: [Va99] via FC, where it is called obvious: every n is x^2 + y^2 - z^2 with x^2, y^2, z^2 at most n + 2 sqrt n.
+- Statements (verbatim from FC):
+```lean
+@[category research solved, AMS 11] theorem erdos_1148.variants.weaker : ∀ n, erdos_1148_weaker_prop n
+```
+- Prior formal libraries searched (2026-10-03): **NEW** -- plby `Erdos1148` proves the main 'eventually at most n' result and other lemmas, not this version; no TheJustinSunPrize PR; the FC-Bench task has no oracle.
+- Genuinely new formal contribution: Formal proof of the FC variant (explicit witnesses from s = floor(sqrt n)).
+- Statement-correspondence note: FC's `erdos_1148_weaker_prop` uses truncated ℕ subtraction; the witnesses always have x^2 + y^2 ≥ z^2, so truncation is never used. FC's own `erdos_1148.variants.lower_bound` in the same file uses `decide +native`; the claimed theorem does not depend on it.
+- Axioms: [propext, Classical.choice, Quot.sound] for every claimed theorem (`artifact/logs/extra3/`). Added 2026-10-03 (session helper-erdos3; written by an AI model, checked by the Lean kernel and `e3_verify.py`; statement text identical to FC, the file differs from FC only by the removed `sorry` of the claimed theorem). Prior-art search: `artifact/logs/extra3/REPORT.md` (FC, TheJustinSunPrize/awards main and all 4155 PR heads, plby/lean-proofs @ 8822f7d, FC-Bench, aristotle, conjectures-io, erdos-lean, GitHub code search; not searched: Zulip, arXiv, private repositories).
+- Significance tier: Minor / trivial.
+
+## 3. Optional families -- FC statement new, mathematics already formalized elsewhere (NOT claimed by default)
+
+Handbook 3.2: 'Renaming declarations, re-exporting library results, or restating an existing formalization is not a new accomplishment.' The proofs below were produced independently and for a different formal statement (the FC one), but a reviewer who finds the earlier formalization may reasonably call them restatements. If the team claims them, the prior work must be disclosed exactly as written here.
+
+### 3.1. Family E757 -- Erdos problem 757
+
+- FC file + commit: `FormalConjectures/ErdosProblems/757.lean` @ `df3f12d7bd06feb3f71ae37abae0ca7cb798d9b1`; informal: https://www.erdosproblems.com/757
+- Bundle file: `bundle_optional/Erdos757.lean` (sha256 `a1260c57f324cbc3e0794bdc32dfb94d4c905e2643eb8e347b8b07fea3d6043f`), produced by session `w3e`
+- Claimed theorems: `Erdos757.erdos_757.variants.upperBound`
+- Source theorem / citation: FC docstring: Gyarfas-Lehel 1995 [GyLe95] ('the supremum is smaller than 3/5'). The proof here does NOT follow [GyLe95]: it uses the 14-point set of Jie Ma and Quanyu Tang, 'Largest Sidon subsets in weak Sidon sets', arXiv:2602.23282 (2026), which gives sup <= 4/7.
+- Statements (verbatim from FC, whitespace-normalised):
+```lean
+@[category research solved, AMS 5] theorem erdos_757.variants.upperBound {A : Set ℝ} : sSup {c | IsAdmissible c} < 3 / (5 : ℝ)
+```
+- Prior formal libraries searched (2026-10-02, see section 7): 
+  - `erdos_757.variants.upperBound`: **DUPLICATE-CORE** -- https://github.com/TheJustinSunPrize/awards/pull/74 (2026-09-16: `admissible_le_four_sevenths`, the same Ma-Tang 14-point c <= 4/7 argument, with its own `Admissible` over Finset R; NOT the FC statement `sSup {c | IsAdmissible c} < 3/5`). No proof of the FC statement itself found (Bench/Aristotle copies are stubs; FC PRs #2696/#3218 only retag)
+- Genuinely new formal contribution: Proof of the exact FC statement `sSup {c | IsAdmissible c} < 3/5`. The integer set {0,136,200,243,246,249,272,286,298,323,400,528,596,1056} is checked by `decide` to satisfy the (4,5) condition and to have no Sidon subset of size 9 (every 9-subset contains one of 12 listed 3-term APs); it is transported to R; hence every admissible c satisfies 14 c <= 8.
+- Statement-correspondence note: Is using Ma-Tang fine for the fixed statement? Yes: the statement only asserts sup < 3/5 and 4/7 < 3/5; any valid proof suffices, and the strict inequality is in fact not obviously delivered by the cited non-strict Gyarfas-Lehel bound. The set {c | IsAdmissible c} is nonempty (c <= 0) and bounded above, and the proof bounds every admissible c, so no junk value of `sSup` is used; `Set.ncard` is only applied to finite sets. The implicit `{A : Set R}` in the FC statement is unused. PRIOR ART: the same mathematical result (Ma-Tang 14-point set, c <= 4/7) was formalized publicly on 2026-09-16 in JSP PR #74 with its own definitions; only the FC-statement form is new here.
+- Axioms: [propext, Classical.choice, Quot.sound] for every claimed theorem. FC categories: research solved.
+- Proof summary (written by the proving model in `work/w3e/Erdos757.proof.md`; read but not re-derived line by line by the helper):
+
+  > # Erdős 757, upper bound
+  > 
+  > Take the 14-element integer set
+  > \(A=\{0,136,200,243,246,249,272,286,298,323,400,528,596,1056\}\).
+  > Lean checks by `decide` that each four-element subset has at least 11 differences. It also checks that every nine-element subset contains one of twelve listed three-term arithmetic progressions. Each such progression violates the Sidon property, so every Sidon subset of `A` has at most eight elements. The integer set and its difference set are mapped injectively to real numbers. Thus any admissible `c` satisfies `14c ≤ 8`, giving `sSup {c | IsAdmissible c} ≤ 4/7 < 3/5`.
+  > 
+  > Source: Jie Ma and Quanyu Tang, [*Largest Sidon subsets in weak Sidon sets*](https://arxiv.org/abs/2602.23282), and their [base-block verification](https://github.com/QuanyuTang/ep757-45set-base-block-verification). The FC docstring cites Gyárfás–Lehel (1995) for the weaker non-strict upper bound `≤ 3/5`; the formal target is strict and uses the later improvement.
+  > 
+  > Formal-statement quirks: the implicit `{A : Set ℝ}` in the target is unused. The proof applies `Set.ncard` only to finite sets, so the infinite-set junk value does not intervene. There is no `answer(...)` term in this target.
+
+- Significance tier: Would be the most substantive item of the batch, but the core is not a first formalization.
+
+### 3.2. Family E261 -- Erdos problem 261
+
+- FC file + commit: `FormalConjectures/ErdosProblems/261.lean` @ `df3f12d7bd06feb3f71ae37abae0ca7cb798d9b1`; informal: https://www.erdosproblems.com/261
+- Bundle file: `bundle_optional/Erdos261.lean` (sha256 `ebc7899a33f775bf08240f139d23c3ade6ff3b9cff8ffec8918560276ff01548`), produced by session `gptA`
+- Claimed theorems: `Erdos261.erdos_261.variants.borwein_loring`, `Erdos261.erdos_261.variants.borwein_loring_property`, `Erdos261.erdos_261.parts.i`
+- Source theorem / citation: Borwein-Loring 1990 [BoLo90]: for n = 2^(m+1) - m - 2, n/2^n = sum_{n<k<=n+m} k/2^k; hence infinitely many n have the property (Erdos credits Cusick for infinitude).
+- Statements (verbatim from FC, whitespace-normalised):
+```lean
+@[category textbook, AMS 11] theorem erdos_261.variants.borwein_loring (m : ℕ) (hm : 0 < m) : let n := 2 ^ (m + 1) - m - 2 n / (2 ^ n : ℚ) = ∑ k ∈ Finset.Ioc n (n + m), k / (2 ^ k : ℚ)
+@[category textbook, AMS 11] theorem erdos_261.variants.borwein_loring_property (m : ℕ) (hm : 2 ≤ m) : Erdos261Prop (2 ^ (m + 1) - m - 2)
+@[category research solved, AMS 11] theorem erdos_261.parts.i : answer(True) ↔ {n : ℕ | 0 < n ∧ Erdos261Prop n}.Infinite
+```
+- Prior formal libraries searched (2026-10-02, see section 7): 
+  - `erdos_261.variants.borwein_loring`: **DUPLICATE-CORE** -- https://github.com/rjwalters/lean-genius/blob/HEAD/proofs/Proofs/Erdos261Problem.lean (2026-07-17: `borwein_loring_family`, `ErdosProblem261_infinitely_many`, own definitions `IsRepresentable`; not compiled by us). No proof of the FC statements found; JSP PR #268 covers only n <= 10000
+  - `erdos_261.variants.borwein_loring_property`: **DUPLICATE-CORE** -- as borwein_loring
+  - `erdos_261.parts.i`: **DUPLICATE-CORE** -- as borwein_loring
+- Genuinely new formal contribution: Proofs of the three FC statements (identity by telescoping; property for m >= 2; infinitude, `answer(True)`).
+- Statement-correspondence note: Natural subtraction in n is justified (m + 2 <= 2^(m+1)); `answer(True)` fixed by FC. No junk. PRIOR ART: rjwalters/lean-genius `Erdos261Problem.lean` (2026-07-17) already contains `borwein_loring_family` and an 'infinitely many' theorem with its own definitions (we did not compile it); only the FC-statement form is new here.
+- Axioms: [propext, Classical.choice, Quot.sound] for every claimed theorem. FC categories: research solved, textbook.
+- Proof summary (written by the proving model in `work/gptA/Erdos261.proof.md`; read but not re-derived line by line by the helper):
+
+  > # Erdős problem 261
+  > 
+  > Source: the Formal Conjectures docstring, citing Borwein–Loring (1990) and erdosproblems.com/261.
+  > 
+  > For the Borwein–Loring identity, telescope
+  > \(k/2^k=(k+1)/2^{k-1}-(k+2)/2^k\) across \(a<k\le b\). Thus the sum is \((a+2)/2^a-(b+2)/2^b\). Set \(n=2^{m+1}-m-2\); since \(n+m+2=2^{m+1}\), the second term equals \(2/2^n\), leaving \(n/2^n\). The natural subtraction is justified by \(m+2\le2^{m+1}\).
+  > 
+  > For the property, take the \(m\) distinct integers \(a_i=n+i+1\) for \(0\le i<m\). They are positive, and reindex the interval sum in the Borwein–Loring identity. The hypothesis \(m\ge2\) supplies at least two terms.
+  > 
+  > For infinitude, \(2^{m+1}\ge 2m+2\) by induction, so the constructed \(n=2^{m+1}-m-2\) satisfies \(n\ge m\). Choosing \(m=k+2\) gives a member of the property set greater than any given \(k\). The `answer(True)` wrapper is the prescribed affirmative answer; no answer term needed replacement.
+
+- Significance tier: Elementary; core not a first formalization.
+
+### 3.3. Family E36 -- Erdos problem 36
+
+- FC file + commit: `FormalConjectures/ErdosProblems/36.lean` @ `df3f12d7bd06feb3f71ae37abae0ca7cb798d9b1`; informal: https://www.erdosproblems.com/36
+- Bundle file: `bundle_optional/Erdos36.lean` (sha256 `06d274ab776ca3673e160ebf917562b9e7cba10e8b85ff995535e40b736e745f`), produced by session `gptA`
+- Claimed theorems: `Erdos36.minimum_overlap.variants.lower.erdos_1955`
+- Source theorem / citation: Erdos 1955: M(N) >= N/4 (pigeonhole), i.e. liminf M(N)/N >= 1/4.
+- Statements (verbatim from FC, whitespace-normalised):
+```lean
+@[category textbook, AMS 5 11] theorem minimum_overlap.variants.lower.erdos_1955 : (1 : ℝ) / 4 ≤ atTop.liminf MinOverlapQuotient
+```
+- Prior formal libraries searched (2026-10-02, see section 7): 
+  - `minimum_overlap.variants.lower.erdos_1955`: **DUPLICATE-CORE** -- https://github.com/rjwalters/lean-genius/blob/HEAD/proofs/Proofs/Erdos36Problem.lean (`trivial_lower_bound`, `erdos_lower_quarter`: M(N)/N > 1/4 for all N, own definitions); also TRIVIAL (pigeonhole). No proof of the FC liminf statement found
+- Genuinely new formal contribution: Proof of the FC liminf statement.
+- Statement-correspondence note: No junk. PRIOR ART: lean-genius `Erdos36Problem.lean` proves M(N)/N > 1/4 for all N with its own definitions; the bound is the trivial pigeonhole bound. (The upper bound variant is a DUPLICATE of JSP PR #304 and lives in a different session file, not bundled here.)
+- Axioms: [propext, Classical.choice, Quot.sound] for every claimed theorem. FC categories: textbook.
+- Proof summary (written by the proving model in `work/gptA/Erdos36.proof.md`; read but not re-derived line by line by the helper):
+
+  > # Erdős problem 36: 1955 lower bound
+  > 
+  > Source: the Formal Conjectures docstring, citing Erdős, *Some remarks on number theory* (1955), and erdosproblems.com/36.
+  > 
+  > For a balanced partition \(A\sqcup B=\{1,\ldots,2n\}\), there are \(n^2\) ordered cross pairs. Each pair contributes to exactly one difference \(a-b\), and all such differences lie in \([-2n,2n)\), an interval of \(4n\) integers. Each difference has at most \(\operatorname{MaxOverlap}(A,B)\) contributing pairs, so \(n^2\le4n\operatorname{MaxOverlap}(A,B)\). Taking the minimum gives \(n\le4M(n)\), hence \(M(n)/n\ge1/4\) for positive \(n\). The eventual inequality implies the liminf bound.
+  > 
+  > The formal proof also shows that the set defining `M` is nonempty, so its natural-number `sInf` is a genuine minimum. It verifies `M(n)/n ≤ 1`, the boundedness needed by Mathlib's real `liminf` lemma. No `answer(...)` term or cast in the target statement needed replacement.
+
+- Significance tier: Minor / trivial; core not a first formalization.
+
+### 3.4. Family E649 -- Erdos problem 649
+
+- FC file + commit: `FormalConjectures/ErdosProblems/649.lean` @ `df3f12d7bd06feb3f71ae37abae0ca7cb798d9b1`; informal: https://www.erdosproblems.com/649
+- Bundle file: `bundle_optional/Erdos649.lean` (sha256 `5ea9a0b3071602d0b7e7f7151c91c14e6320dfc1c4e1280d9ed2db4e83ab5f2c`), produced by session `adv4`
+- Claimed theorems: `Erdos649.erdos_649.variants.tong`, `Erdos649.erdos_649.variants.sampaio`
+- Source theorem / citation: erdosproblems.com/649. Tong: for every prime p there are infinitely many primes q with no n such that P(n) = p and P(n+1) = q. Sampaio: there is no n with P(n) = 19 and P(n+1) = 2.
+- Statements (verbatim from FC, whitespace-normalised):
+```lean
+@[category research solved, AMS 11] theorem erdos_649.variants.tong (p : ℕ) (hp : p.Prime) : {q : ℕ | q.Prime ∧ ¬ ∃ n : ℕ, n.maxPrimeFac = p ∧ (n + 1).maxPrimeFac = q}.Infinite
+@[category textbook, AMS 11] theorem erdos_649.variants.sampaio : ¬ ∃ n : ℕ, n.maxPrimeFac = 19 ∧ (n + 1).maxPrimeFac = 2
+```
+- Prior formal libraries searched (2026-10-02, see section 7): 
+  - `erdos_649.variants.tong`: **DUPLICATE-CORE** -- https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos649.lean#L374 (`tong_counterexamples (p) (hp : p.Prime) : {q | q.Prime ∧ ¬ ∃ n, P n = p ∧ P (n + 1) = q}.Infinite`, the same Dirichlet + quadratic-reciprocity argument, own `P`). rjwalters/lean-genius has it as `axiom tong_theorem`. No proof of the FC statement (with `Nat.maxPrimeFac`) found
+  - `erdos_649.variants.sampaio`: **DUPLICATE-CORE** -- https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos649.lean#L488 (`sampaio_counterexample : ¬ ∃ n, P n = 19 ∧ P (n + 1) = 2`, own `P n := (n.primeFactors).max.getD 0`; present since the v4.24.0 tree; the FC `formal_proof` tag of the main `erdos_649` points to this very file). CORRECTION: v1 of this packet listed this theorem as NEW -- the plby file had been read only for its last theorem
+- Genuinely new formal contribution: Proofs of the two FC statements in terms of `Nat.maxPrimeFac`. tong: Dirichlet's theorem (`Nat.infinite_setOfPred_prime_and_eq_mod`) gives infinitely many primes q ≡ -1 (mod 8·p!); by quadratic reciprocity and the supplementary law for 2 every prime r <= p is a square mod q, hence so is n; but -1 is not a square mod q (q ≡ 3 mod 4), so q does not divide n+1. sampaio: n+1 = 2^k, 19 | 2^k - 1 forces 18 | k, then 73 | 2^18 - 1 | n.
+- Statement-correspondence note: `Nat.maxPrimeFac` junk values at n = 0, 1 are excluded inside the proofs (P(n) = p prime forces n > 1). The tong proof is the real theorem for every prime p (not a degenerate case). PRIOR ART: plby/lean-proofs `Erdos649.lean` already proves both results (`tong_counterexamples`, `sampaio_counterexample`) with its own `P n := (n.primeFactors).max.getD 0`; only the FC-statement form is new. CORRECTION to v1 of this packet, which claimed `sampaio` as a new substantive family: that was an error of the earlier prior-art pass.
+- Axioms: [propext, Classical.choice, Quot.sound] for every claimed theorem. FC categories: research solved, textbook.
+- Proof summary (written by the proving model in `work/adv4/Erdos649.proof.md`; read but not re-derived line by line by the helper):
+
+  > # Erdős 649, Tong variant
+  > 
+  > Choose primes `q ≡ -1 (mod 8 p!)` by Dirichlet's theorem. These form an infinite set. In particular `q ≡ 7 (mod 8)` and, for each prime `r ≤ p`, `q ≡ -1 (mod r)`.
+  > 
+  > Every prime `r ≤ p` is a quadratic residue modulo `q`: for `r = 2` use the supplementary law for 2. For odd `r`, quadratic reciprocity and `q ≡ -1 (mod r)` give the result in either case `r ≡ 1` or `3 (mod 4)`. The prime factors of any `n` with `P(n)=p` all lie below `p`, hence `n` is a square modulo `q`. But `q ≡ 3 (mod 4)`, so `-1` is not a square modulo `q`. Thus `q ∤ n+1`, while `P(n+1)=q` would imply `q ∣ n+1`.
+  > 
+  > Source: Alan Tong's argument in the Formal Conjectures docstring for [Erdős Problem 649](https://www.erdosproblems.com/649), using Mathlib's Dirichlet theorem and quadratic reciprocity. The `maxPrimeFac` statement requires excluding the junk values `n ≤ 1`; this follows from `P(n)=p` with `p` prime.
+
+- Significance tier: Tong's theorem is a genuine number-theoretic result, but it is not a first formalization.
+
+### 3.5. Family E508 -- Erdos problem 508
+
+- FC file + commit: `FormalConjectures/ErdosProblems/508.lean` @ `df3f12d7bd06feb3f71ae37abae0ca7cb798d9b1`; informal: https://www.erdosproblems.com/508
+- Bundle file: `bundle_optional/Erdos508.lean` (sha256 `ddb8ccdba30284308afc16e66290b390154ca83999c432e7947a061e840bb171`), produced by session `adv1`
+- Claimed theorems: `Erdos508.HadwigerNelsonAtMostSeven`
+- Proved in the file but **not claimed** (duplicates): `HadwigerNelsonAtLeast4` -- https://github.com/TheJustinSunPrize/awards/pull/270 (2026-09-16, `hadwiger_nelson_at_least_four : 4 ≤ (UnitDistancePlaneGraph Set.univ).chromaticNumber`, Moser spindle, exact FC shape); subsumed by https://github.com/Vilin97/lean-pool/blob/c77d19c49b/LeanPool/HadwigerNelsonBounds.lean (5 ≤ χ)
+- Source theorem / citation: Hadwiger-Nelson problem. Upper bound χ(R^2) <= 7: Isbell's hexagonal colouring (see Soifer, The Mathematical Coloring Book, 2008). Lower bound χ(R^2) >= 4: the Moser spindle (L. Moser and W. Moser, 1961).
+- Statements (verbatim from FC, whitespace-normalised):
+```lean
+@[category textbook, AMS 52] theorem HadwigerNelsonAtMostSeven : χ(ℝ²) ≤ 7
+```
+- Prior formal libraries searched (2026-10-02, see section 7): 
+  - `HadwigerNelsonAtMostSeven`: **DUPLICATE-CORE** -- https://github.com/Vilin97/lean-pool/blob/c77d19c49b/LeanPool/HadwigerNelsonBounds.lean (Vilin97/lean-pool, author Egor Lyfar, file history 2026-07-23 .. 2026-09-18: `hadwiger_nelson_known_bounds : 5 ≤ unitDistanceGraph.chromaticNumber ∧ unitDistanceGraph.chromaticNumber ≤ 7`, Isbell hexagonal colouring with lattice step 3/4, own `unitDistanceGraph : SimpleGraph (EuclideanSpace ℝ (Fin 2))`; no `sorry` in the top-level file, header 'Status: verified'; read, not compiled by us). No proof of the FC statement itself found (all public copies are `sorry` stubs; no JSP PR)
+- Genuinely new formal contribution: Proof of the exact FC statement `χ(ℝ²) ≤ 7` for FC's `UnitDistancePlaneGraph Set.univ`: triangular lattice of centres ((4/5)(i + j/2), (2√3/5) j), colour (i + 5j) mod 7; every point of the plane is at distance < 1/2 from some centre (squared distance <= 16/75, proved in oblique coordinates with floors); two distinct centres of the same colour are at distance > 2 because i^2 + ij + j^2 is a positive multiple of 7; so two points of the same colour are at distance < 1 or > 1. The file also proves `4 ≤ χ(ℝ²)` with an explicit Moser spindle (seven points with coordinates in Q(√3, √11), eleven unit distances checked by `nlinarith`, the 3-colour contradiction by two 'diamond' lemmas).
+- Statement-correspondence note: Both proofs are the real theorems, not artefacts: FC's graph has as vertices the subtype of `Set.univ` in `EuclideanSpace ℝ (Fin 2)`, adjacency `dist x y = 1`, and `chromaticNumber` is ℕ∞-valued; the upper bound exhibits a total colouring of the whole plane by `ZMod 7` (the nearby centre is picked by `Classical.choose`), the lower bound exhibits a genuine unit-distance configuration with exact real coordinates. PRIOR ART: Vilin97/lean-pool `HadwigerNelsonBounds` proves 5 <= χ <= 7 (same Isbell construction, own graph definition), and JSP PR #270 proves `4 ≤ χ(ℝ²)` in the exact FC shape; so only the FC-statement form of the upper bound is new.
+- Axioms: [propext, Classical.choice, Quot.sound] for every claimed theorem. FC categories: textbook.
+- Proof summary (written by the proving model in `work/adv1/Erdos508.proof.md`; read but not re-derived line by line by the helper):
+
+  > # Erdős 508: the four and seven colour bounds
+  > 
+  > Sources: the [FC docstring](https://www.erdosproblems.com/508) cites the Moser spindle for the lower bound and Isbell's hexagonal tiling for the upper bound. The seven-colour hexagon pattern is also described in [The Chromatic Number of the Plane](https://opentext.uleth.ca/Ramsey/sec_Chromatic.html).
+  > 
+  > For the lower bound, a diamond is two equilateral triangles sharing an edge. In any three-colouring its opposite tips have the same colour: each tip must take the third colour excluded by the shared edge. Construct two diamonds sharing one tip, rotating one so that their other tips are a unit distance apart. This makes a three-colouring impossible. The coordinates use square roots of 3 and 11; the Lean proof checks the eleven required unit edges algebraically and checks the finite three-colour argument with `decide`.
+  > 
+  > For the upper bound, use the triangular lattice with centres
+  > `((4/5)(i+j/2), (2√3/5)j)` for integers `i,j`, and colour centre `(i,j)` by `i+5j` modulo 7. Every point lies within distance **strictly less than 1/2** of a centre: write it in oblique lattice coordinates, take the floors of both coordinates, and check the four corners of that unit cell. The squared distance to the nearest corner is at most `16/75`, using the fact that in either triangular half of the cell one of its three vertices has quadratic distance `a²+ab+b² ≤ 1/3`. Distinct centres of the same colour have integer displacement satisfying `i+5j ≡ 0 (mod 7)`. Its positive quadratic norm `i²+ij+j²` is a multiple of 7, hence at least 7. The centres are therefore more than distance 2 apart. Give each plane point the colour of a nearby centre. Two points receiving the same colour are either less than distance 1 apart (same centre) or more than distance 1 apart (different centres). This is the Voronoi form of the hexagonal tiling construction.
+  > 
+  > The FC statement uses the chromatic number of the graph on the subtype `Set.univ`, valued in `ℕ∞`. The auxiliary colouring uses `ZMod 7`, whose cardinality is 7. The other `sorry` declarations in the copied FC file are untouched.
+
+- Significance tier: Famous classical result, about 300 added lines, but not a first formalization (lean-pool).
+
+## 4. Excluded families (duplicates / rejected) -- for the record
+
+| Family | Theorem | Verdict | Evidence |
+| --- | --- | --- | --- |
+| E494 | `erdos_494.variants.k_eq_2_card_not_pow_two` (Selfridge-Straus) | DUPLICATE | https://github.com/TheJustinSunPrize/awards/pull/127 (2026-09-16); proved again on 2026-10-03 (`artifact/logs/extra3/`), not claimed |
+| E825 | `erdos_825.variants.necessary_cond` (weird number 70) | DUPLICATE | https://github.com/TheJustinSunPrize/awards/pull/685 and https://github.com/TheJustinSunPrize/awards/pull/400; proved again on 2026-10-03, not claimed |
+| E36 | `minimum_overlap.variants.upper.erdos_1955` | DUPLICATE | https://github.com/TheJustinSunPrize/awards/pull/304 (exact FC statement, 2026-09-16) |
+| E138 | `monoAP_guarantee_set_nonempty` | DUPLICATE | https://github.com/TheJustinSunPrize/awards/pull/516 (2026-09-17, exact FC statement `monoAP_guarantee_set_nonempty`, same Hales-Jewett derivation) ; https://github.com/AllenGrahamHart/FormalConjectures-Bench/blob/0d031f72/oracles/erdosproblems-138-difference/Submission.lean (`vdw_nonempty (r k) : (monoAP_guarantee_set r k).Nonempty`, l. 197; the proof linked from FC's `formal_proof` tag of `erdos_138.variants.difference`). Also a thin wrapper: Mathlib has Hales-Jewett `Combinatorics.Line.exists_mono_in_high_dimension` and the van der Waerden corollary `Combinatorics.exists_mono_homothetic_copy` |
+| E273 | `erdos_273.variants.three` | DUPLICATE | https://github.com/TheJustinSunPrize/awards/pull/299 (2026-09-16, `erdos_273_three`, Selfridge's twelve moduli dividing 360, exact FC content) , https://github.com/TheJustinSunPrize/awards/pull/281 (`variants_three`, `exact_public_statement`) |
+| E282 | `erdos_282.variants.fibonacci` | DUPLICATE | https://github.com/TheJustinSunPrize/awards/pull/583 |
+| E291 | `erdos_291.parts.ii` | DUPLICATE | https://github.com/TheJustinSunPrize/awards/pull/216 |
+| E302 | `erdos_302.parts.ii` | DUPLICATE | https://github.com/TheJustinSunPrize/awards/pull/301 (corollary of the 5/8 bound) |
+| E302 | `erdos_302.variants.lower_five_eighths` | DUPLICATE | https://github.com/TheJustinSunPrize/awards/pull/301 |
+| E302 | `erdos_302.variants.lower_half` | DUPLICATE | https://github.com/TheJustinSunPrize/awards/pull/301 |
+| E317 | `claim2_inequality` | DUPLICATE | https://github.com/TheJustinSunPrize/awards/pull/493 |
+| E367 | `erdos_367.variants.k_le_two` | DUPLICATE | https://github.com/TheJustinSunPrize/awards/pull/455 |
+| E409 | `erdos_409.variants.termination` | REJECTED | proof already present in FC, nothing contributed |
+| E423 | `erdos_423.variants.nondecreasing` | DUPLICATE | https://github.com/TheJustinSunPrize/awards/pull/415 , https://github.com/baobingzhang/jsp-000348-erdos423-lean |
+| E508 | `HadwigerNelsonAtLeast4` | DUPLICATE | https://github.com/TheJustinSunPrize/awards/pull/270 (2026-09-16, `hadwiger_nelson_at_least_four : 4 ≤ (UnitDistancePlaneGraph Set.univ).chromaticNumber`, Moser spindle, exact FC shape); subsumed by https://github.com/Vilin97/lean-pool/blob/c77d19c49b/LeanPool/HadwigerNelsonBounds.lean (5 ≤ χ) |
+| E602 | `erdos_602.variants.two_sets` | REJECTED | proof already present in FC, nothing contributed |
+| E698 | `erdos_698.variants.erdos_szekeres_sharp` | DUPLICATE | https://github.com/TheJustinSunPrize/awards/pull/589 (exact FC statement, 2026-09-17) |
+| E770 | `Nat.Prime.h_eq_add_one` | DUPLICATE | https://github.com/TheJustinSunPrize/awards/pull/580 (2026-09-17, exact FC statement `Erdos770.Nat.Prime.h_eq_add_one`) |
+| E835 | `property_iff_chromaticNumber` | DUPLICATE | https://github.com/conjectures-io/conjectures-contribution/tree/be220ff/contributions/erdos-835 (exact statement); FC category `test` |
+| E859 | `erdos_859.variants.positive_density` | DUPLICATE | https://github.com/conjectures-io/conjectures-contribution/tree/be220ff/contributions/erdos-859 (`positive_density (t) : (DivisorSumSet t).HasPosDensity`, exact FC statement); FC itself calls it 'an easy sanity check' |
+| E865 | `erdos_865.variants.k2` | DUPLICATE | https://github.com/TheJustinSunPrize/awards/pull/658 |
+| E885 | `erdos_885.variants.k_eq_2` | DUPLICATE | https://github.com/TheJustinSunPrize/awards/pull/297 |
+| E885 | `erdos_885.variants.k_eq_3` | DUPLICATE | https://github.com/TheJustinSunPrize/awards/pull/297 |
+| E1008 | `erdos_1008.variants.lower_bound` | DUPLICATE | https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos1008.lean (stronger m^(2/3) bound) ; https://github.com/TheJustinSunPrize/awards/pull/662 |
+| E1063 | `erdos_1063.variants.exists_exception` | DUPLICATE | https://github.com/TheJustinSunPrize/awards/pull/631 (exact FC statement `erdos_1063.variants.exists_exception`, 2026-09-17) |
+| E1063 | `erdos_1063.variants.monier_upper_bound` | DUPLICATE | https://github.com/TheJustinSunPrize/awards/pull/56 , https://github.com/TheJustinSunPrize/awards/pull/406 (Monier bound, 2026-09-16); subsumed by https://github.com/pcycho/erdos1063-cambie |
+| E1074 | `erdos_1074.variants.EHSNumbers_init` | DUPLICATE | https://github.com/conjectures-io/conjectures-contribution/tree/be220ff/contributions/erdos-1074-variants-ehsnumbers-one-half and https://github.com/williamjblair/lean-proofs/blob/HEAD/ErdosProblems/Erdos1074.lean ; FC category `test` |
+| E1074 | `erdos_1074.variants.PillaiPrimes_init` | DUPLICATE | https://github.com/conjectures-io/conjectures-contribution/tree/be220ff/contributions/erdos-1074-variants-ehsnumbers-one-half ; FC category `test` |
+| E1136 | `erdos_1136.variants.mueller` | DUPLICATE | https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos1136.lean (Mueller's set, sum-freeness and density 1/2: `A_sumfree`, `A_density_half`). The adv5 file copies ~370 lines of that plby file as `namespace MuellerAux` and adds only a ~70-line bridge to the FC definitions `muellerSet` / `HasDensity` |
+| E1136 | `erdos_1136.variants.upper_bound` | DUPLICATE | https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos1136.lean (2nd conjunct: upper density <= 1/2 for every such set; subsumes) |
+| E1193 | `erdos_1193.parts.i` | DUPLICATE-CORE | https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos1193.lean (`not_erdos_1193`) and https://github.com/TheJustinSunPrize/awards/pull/26 (density-one statements for A = N, g(n) = n+1); also TRIVIAL (source: 'the answer is trivially no') |
+| E1193 | `erdos_1193.parts.ii` | DUPLICATE-CORE | as parts.i |
+| E1193 | `erdos_1193.variants.upper_density_pos` | DUPLICATE-CORE | as parts.i |
+
+New duplicates found in this pass (they were listed as 'no prior formal proof found' in the earlier draft): E1063 `exists_exception` (JSP PR #631, exact statement), E859 `positive_density` and E835 `property_iff_chromaticNumber` and E1074 `*_init` (conjectures-io/conjectures-contribution, exact statements), E1193 (plby + JSP PR #26, same core), and the core of E757 (JSP PR #74), E261 and E36-lower (rjwalters/lean-genius).
+
+Found in the v2 pass: E508 `HadwigerNelsonAtLeast4` (JSP PR #270, exact shape), E138 (JSP PR #516 and the FormalConjectures-Bench oracle; also a thin wrapper of Mathlib's Hales-Jewett theorem), E770 (JSP PR #580), E273 (JSP PRs #299 and #281), E1136 `mueller` (plby; proof body copied from plby), and the cores of E508 `HadwigerNelsonAtMostSeven` (Vilin97/lean-pool) and E649 (plby). Substance of these proofs, for the record: all are the real theorems (508: explicit spindle and explicit 7-colouring of the plane; 138: genuine Hales-Jewett encoding v -> 1 + Σ v_i with the injectivity argument needed for FC's exact-cardinality AP definition, degenerate cases r = 0 and k = 0 handled separately; 770: Fermat plus root counting for X^n - 1 over ZMod q; 273: Selfridge's 12 distinct moduli 2,4,6,10,12,18,30,36,40,60,72,180 = p - 1 with p prime >= 3, cover checked on 360 residues by `decide`, over `Ideal ℕ` as FC states it), none exploits a statement quirk.
+
+## 5. Identity / target (handbook 8.1)
+
+- Submission / version: **TODO(operator)** (Autolab submission ID) / packet final-draft 2
+- Modality: **M2** (new formalizations of known mathematics; separate M2 family leaderboard, handbook 4.1). No open-problem credit is requested for anything here.
+- Roster / entrant class / affiliations / resource classification: **TODO(operator)** (team entrant)
+- Authors / contributions: **TODO(operator)** for the humans. Proofs of the Erdos families: OpenAI GPT (`gpt-6-sol`) run through the `codex` CLI in unattended sessions. G-PM: the star6 library was produced by the team's star6 project (AI-written, see the star6 packet); the 115-line translation to Mathlib `SimpleGraph` in `Star6Simple.lean` was written by `gpt-6-sol` against statements fixed beforehand. Verification scripts, prior-art search and this packet: Claude (Anthropic).
+- Source / snapshot: `google-deepmind/formal-conjectures` commit `df3f12d7bd06feb3f71ae37abae0ca7cb798d9b1`, files `FormalConjectures/ErdosProblems/<n>.lean`; informal source https://www.erdosproblems.com/<n> and the references in each FC docstring.
+- Family IDs: `E<n>` = Erdos problem n; `G-PM` = perfect matchings in bridgeless cubic graphs (Schoenberger 1934 / Petersen 1891), from the star6 library, not from formal-conjectures. Exact claims: the Lean statements listed per family, verbatim from the pinned FC commit. Claimed completeness: each listed theorem is fully proved; the main (often open) statement of each problem is NOT claimed. Requested p: n/a (M2).
+
+## 6. Artifact / proof (handbook 8.2)
+
+- Autolab owner, Hill hash/version, Climb link, final commit, evaluator report: **TODO(operator)**
+- Formal source: `bundle/Erdos<n>.lean` (one file per claimed family), `bundle/SHA256SUMS`, `VERIFY.md`; optional families in `bundle_optional/`. G-PM: `bundle/Star6Simple.lean` + `bundle/STAR6_DEPENDENCY.md` (exact list of the star6 modules it imports) + `bundle/Star6Simple.out`; the library itself is in the star6 artifact and is not duplicated here.
+- Environment: Lean `leanprover/lean4:v4.33.1`; Mathlib as pinned by formal-conjectures at `df3f12d7bd06feb3f71ae37abae0ca7cb798d9b1`.
+- Reproduction: `git checkout df3f12d7bd06feb3f71ae37abae0ca7cb798d9b1` in formal-conjectures, `lake exe cache get`, `lake env lean bundle/Erdos<n>.lean`; expected output lines are listed in `VERIFY.md`.
+- Statement correspondence (mechanical): for every target the text from the attribute line through `:=` is compared (comments stripped, whitespace-normalised) with the pinned FC file, and a whole-file diff confirms that the only removed FC lines are the `sorry` proofs of the targets. Added lines are private auxiliary declarations plus, in some files, `open`/`set_option`/local `instance` lines (listed in `VERIFIED.tsv` flags). Per-family notes on what the statement really says are given below.
+- Axioms / trust: every target prints `[propext, Classical.choice, Quot.sound]`. No `native_decide`, `axiom`, `unsafe`, `implemented_by`, `admit`. Other, untouched statements of the same FC files still contain `sorry`; they are not claimed and no target depends on them.
+- `answer(...)`: no target contains `answer(sorry)`; `answer(True)` / `answer(False)` terms were fixed by FC and are unchanged.
+
+## 7. Provenance (handbook 8.3)
+
+- Baseline: formal-conjectures at `df3f12d7bd06feb3f71ae37abae0ca7cb798d9b1` (statements and definitions; not our work) and Mathlib. Event delta: the proofs and auxiliary lemmas, all produced on 2026-10-02 inside the event window (session directories `~/erdos-fc/work/<session>/` with prompts and `codex_*.log`).
+- AI / tool disclosure: proofs written by OpenAI GPT `gpt-6-sol` via `codex exec` (unattended); Lean 4 via `lake env lean`; verification (`verify_all.py`), prior-art search (`prior_art.py`, `final/jsp_scan*.py`, `final/gh_check.py`) and packet by Claude (Anthropic). Compute: one team server. Model versions / credits: **TODO(operator)**.
+- Human checking statement: **TODO(operator)**. At the time of writing no human has read the proofs or this packet.
+- Outside help / conflicts: none known to the helper; **TODO(operator)** confirm.
+- Prior-art search performed 2026-10-02 (what was searched):
+  1. `TheJustinSunPrize/awards`: main at `5125fd7` plus the head of **every one of its 4155 pull requests** (fetched to a local clone); all non-catalog files grepped for the problem numbers, FC theorem names and statement vocabulary.
+  2. `plby/lean-proofs` at `8822f7d` (2026-09-15, still HEAD on 2026-10-02): all trees (`src/latest`, `src/v4.*`, `ErdosProblems/`), by file name, theorem name and number.
+  3. formal-conjectures `main` (raw files fetched 2026-10-02): no target carries a `formal_proof` tag or a proof; upstream PRs titled 'solve(...)' for these problems (e.g. #2485, #3344, #2591, #3115, #2696, #3218; all closed 2026-03-03) only retag the category and leave `sorryAx`.
+  4. GitHub code search (2026-10-02) for each target theorem name and key definition names; every hit file was downloaded and the target declaration tested for a non-`sorry` body (`final/gh_check.tsv`, 328 files). Repositories inspected include AllenGrahamHart/FormalConjectures-Bench (77 gold tasks checked; the others are unsolved task stubs), kavanaghpatrick/aristotle-math-problems, conjectures-io/conjectures-contribution, williamjblair/lean-proofs, rjwalters/lean-genius, Paul-Lez/fc100, epoch-research/LeanOpenProblems, hongjin-he/erdos-lean, pcycho/erdos1063-cambie, tadamcz/fc-review-results.
+  5. Mathlib (pinned): name/keyword grep, done by the earlier helper.
+  6. **v2 pass (helper-m2-advanced, 2026-10-02 14:20-15:00 UTC)** for E508, E138, E942, E649, E770, E273, E1136-mueller, E617 and for Petersen/Schoenberger: (i) all 4155 JSP PR heads re-scanned with new number and keyword patterns (`final/jsp_scan3.py`, `jsp_scan4.py`; outputs `jsp_scan3.json/.out`, `jsp_scan4.json/.out`) and every hit file opened; (ii) plby (all trees), `prior/*` clones (FormalConjectures-Bench incl. `oracles/`, conjectures-io, aristotle-math-problems, lean-genius excerpts), pinned Mathlib `Mathlib/`, `Archive/`, `Counterexamples/` grepped by name and vocabulary; (iii) formal-conjectures `main` re-fetched: still at the pinned commit `df3f12d` (2026-10-01), no `formal_proof` tag on any target; (iv) GitHub code search for the nine exact theorem names (incl. E617 `r_eq_3`) (`final/ghsearch_adv.txt`, 194 hit files downloaded and tested by `final/gh_check_adv.py` -> `gh_check_adv.tsv`: no proved copy except the two Aristotle E942 files, whose main theorem rests on a `sorry` lemma) and generic searches ('Hadwiger Nelson', 'Moser spindle', 'Petersen bridgeless IsPerfectMatching', 'bridgeless cubic perfect matching', 'Schönberger', lean-pool-scoped searches), which found Vilin97/lean-pool `HadwigerNelsonBounds`, KunalRelia/VCCBG and (via web search) KokunoYumeto/lean-theorems-1; (v) mathlib4 PR and issue search for Petersen / Schoenberger: no hits; (vi) web search for a formalization of Petersen's theorem in any proof assistant: none found (only the Lean Tutte-theorem paper arXiv:2504.18146).
+     External proofs were read, not compiled by us; the four JSP submissions (#270, #516, #580, #299) carry their own `verification.txt` with `#print axioms` lines `[propext, Classical.choice, Quot.sound]`, and the Bench oracle file has no `sorry`.
+  7. v1 error found in this pass: the plby file for problem 649 contains `sampaio_counterexample` and `tong_counterexamples`; v1 had classified `erdos_649.variants.sampaio` as NEW. The other v1 'NEW' verdicts were spot-checked again against the plby theorem lists (E123, E292, E395, E698, E703, E748: plby proves only the main theorems; E44, E295, E918, E939: no plby file) but were not otherwise re-audited.
+  Limits: private repositories, Zulip, and the erdosproblems.com forum attachments were not searched; GitHub code search is not exhaustive. 'NEW' means 'no prior formal proof found by the above', nothing stronger.
+- Reproducibility limitations: none known; each Erdos file compiles standalone in about a minute (E757 a few minutes, kernel `decide` over 1001 four-subsets). `Star6Simple.lean` needs the star6 library (see `STAR6_DEPENDENCY.md`); that library is so far only in local, unpublished repositories.
+
+## 8. Publication authority (handbook 8.4)
+
+- Attribution approval and permission to release under the competition terms: **TODO(operator)**. formal-conjectures is Apache-2.0; bundle files are derived from it and keep its header.
+
+## 9. Operator TODO list
+
+- [ ] Autolab owner / workspace, submission ID(s), Hill hash/version and Climb link (if the competition Hill applies to M2), final commit, evaluator report.
+- [ ] Roster, entrant class, affiliations, resource classification; each human's contribution.
+- [ ] Human checking statement (currently: none). Recommended minimum: one human reads the section 1 statements + correspondence notes and re-runs VERIFY.md on a clean checkout.
+- [ ] Decide: include the section 2 minor list or not; claim the section 3 optional families (with disclosure) or not.
+- [ ] G-PM: confirm that citing the star6 library in this M2 packet is compatible with the separate star6 submission (same Lean artifact used in two packets); publish or attach the star6 artifact so that `Star6Simple.lean` can be rebuilt by reviewers (it needs the 100 modules of `STAR6_DEPENDENCY.md`); keep the wording 'connected case' for Petersen; confirm that the Schönberger module (dated 2026-09-29 on the server) is event-window work relative to the declared star6 baseline.
+- [ ] E649: v1 of this packet (and any text derived from it) called `erdos_649.variants.sampaio` a new formalization; that is wrong (plby). Remove E649 from any substantive list already circulated.
+- [ ] The local repository `openmath/erdos_m2_artifact/` has no remote; decide whether and where to publish it (operator action only).
+- [ ] Decide whether E939 r = 7 should be claimed given its degenerate witness (summand 1); r = 8 alone still carries the family.
+- [ ] Model version / compute / credit disclosure; outside help and conflicts statement.
+- [ ] Publication authority: attribution approval and release permission under the competition terms.
+- [ ] If M2 targets must be registered/admitted as families before scoring (handbook 3.1, 4.1), register E<n> ids with the organisers.

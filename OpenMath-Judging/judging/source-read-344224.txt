@@ -1,0 +1,59 @@
+# Exact result and scope
+
+## Certified descent theorem
+
+For each rule `(k, r, [e1, ..., es])` in the unchanged `solution.json`, let `E = e1 + ... + es`, `A = 3^s`, and define `B0 = 0`, `E0 = 0`, `Bi = 3*B(i-1) + 2^E(i-1)`. Let `B = Bs` and `D = 2^E`.
+
+For **every positive integer** `n = r + 2^k*t`, with integer `t >= 0`, all of the prescribed valuations are exact, and
+
+```
+C(n) = (3*n+1) / 2^v2(3*n+1)
+C^s(n) = (A*n+B)/D < n.
+```
+
+This is a family of finite descent lemmas for entire infinite congruence classes, not merely a check of small representatives. Each rule checks `k >= E+1`, the exact valuations along the representative `r`, `A < D`, and `A*r+B < D*r`.
+
+Why these checks suffice: before step i, the difference between the orbit from `r+2^k*t` and the orbit from r is `3^(i-1)*2^(k-E(i-1))*t`. Consequently the step numerator changes by a multiple of `2^(ei+1)`, since `k >= E+1`. Its exact valuation stays ei. Induction gives the affine formula. Finally `(D-A)*n-B >= (D-A)*r-B > 0` proves strict descent for all t >= 0.
+
+Assumptions are positive integer arithmetic, odd normalized residues `0 < r < 2^k`, the standard definition of v2, and the exact certificate data. No probabilistic or unproved Collatz assumption is used. The executable verification depends on the Python runtime, public schema loader, and checker being correct; it is not a Lean kernel proof.
+
+## Exact covered set and range
+
+The rule list in `solution.json` is the authoritative class specification. Powers range from **4 to 12**, with at most **6 accelerated steps** in this artifact. There is no upper bound on n within a certified class.
+
+An equivalent exact description of the union is:
+
+```
+U = {n > 0 : n mod 4096 is in R}
+R = local-check.json["finest_modulus_union"]["covered_residues"]
+```
+
+R lists all **1,765** covered odd residues explicitly. The union has density `1765/2048` among odd residues (and `1765/4096` among all integers). The other **283** odd residues modulo 4096 are outside this certificate's union. This does not imply they fail eventual descent.
+
+For public target classes `(p,r)` with `8 <= p <= 12`, odd `0 < r < 2^p`, a target is counted only if the *entire class* is a subclass of a certified rule: some `(k,q,...)` satisfies `p >= k` and `r mod 2^k = q`. The exact per-power lists are `local-check.json["public_classes"]`. This counts **3,352/3,968** classes; **616** are not covered by that criterion. The count spans several resolutions and is not a density of integers. A coarser uncovered class can contain some covered finer subclasses.
+
+`local-check.json["rule_witnesses"]` gives A, B, D, C^s(r), and exact contraction margin `1-A/D` for each rule in submitted order. These witnesses and lists were derived from the preserved artifact during review preparation; they are local analysis, not a new official report.
+
+## Official evaluation
+
+`validation-report.json` records `coverage_ppm=1000000`, `min_descent_ppm=525390`, `rule_count=512`, `passed=true`, `official=true`, `final=false`. The 20 private validation targets have total and covered weight 639. The public evaluator scores weighted coverage and, for each covered target, chooses the greatest matching contraction margin; it then takes the minimum across those targets and floors to ppm. The contraction coefficient margin is not the fractional drop at the least representative, because the affine map also has a positive constant.
+
+The private targets are excluded. The report is preserved as evidence; its score cannot be regenerated from public data alone. No final/test score is available.
+
+## Added scope beyond baselines
+
+Both baseline JSON files are preserved under `history/` and independently checked by the offline checker:
+
+| Certificate | Rules | Covered public classes | Additional classes in preserved result | Lost classes |
+| --- | ---: | ---: | ---: | ---: |
+| Organizer's public example | 2 | 992 | 2360 | 0 |
+| Earlier local candidate | 22 | 2883 | 469 | 0 |
+| Preserved 351d2794 | 512 | 3352 | — | — |
+
+These comparisons use the public universe above, not a private score. Historical V4 has the same public coverage. The preserved revision removes `(8,113,[2])` and adds `(5,17,[2])`, broadening that one rule's support while preserving rule count. The historical final-candidate note records an official minimum-margin increase from 525300 to 525390 ppm over V4; only the 351d2794 full signed report is packaged as the primary official result.
+
+## Limitations and unfinished pieces
+
+This certificate does not cover all positive odd integers, establish eventual arrival at 1, exclude all divergent trajectories, or exclude all nontrivial cycles. Repeated descent lemmas alone do not complete an induction unless the remaining cases are also handled. Even numbers are not directly covered by the stated odd-class theorem. The fixed point 1 is not a strict descent case.
+
+A newly written technical report documents this fixed result under `paper/`. No full Collatz proof, Lean formalization, final/test evaluation, competition acceptance, or global novelty determination is supplied. Historical search claims about exhaustive enumeration or optimality are records of prior local analysis and were not rerun in packet preparation. In particular, no global optimality theorem for this 512-rule certificate is claimed. The historical `search_v4.py` contains a staged-debug objective; its broad descriptive claims must not be read as independently verified optimality results. Private score and HMAC authentication require organizer verification context.

@@ -1,0 +1,799 @@
+METHODOLOGY AND OPERATOR GUIDE
+Open Problem Difficulty Profile
+OPDP v1.0
+A multi-axis difficulty system for Ulam / UnsolvedMath
+Complete first-pass assessment of dataset v1.2.0
+5,426
+records assessed
+9
+scored axes
+5
+public tiers
+7
+workbook views
+Assessment date: 2026-07-31
+Snapshot SHA-256: 954E1151491871B831B6FC3084957E790075ED9AD739FE715328863EBE710515
+Companion ledger: Ulam_UnsolvedMath_Difficulty_Atlas_v1.2.xlsx
+Executive brief
+What this system changes and what it does not claim
+Decision  
+Replace a single difficulty label with a versioned profile: status gate, intrinsic difficulty, AI-relative difficulty, human effort and exposure, tractability, verification, formalization, prerequisites, tool leverage, uncertainty, and a one-line audit trail for every axis.
+2,108
+source-claimed open
+3,300
+status unclear
+1,390
+C2 profiles
+4,018
+needs curation
+The operating principles
+Profile, not prestige ranking. A public tier summarizes D, but the other axes remain visible because different users care about different bottlenecks.
+Status before difficulty. A problem that is solved, ill-posed, duplicated, or stale cannot become a valid benchmark merely because it received a hard score.
+Evidence before certainty. Automated assessments stop at C2; independently reviewed `verified_open` and C3 are deliberately empty in this first pass.
+Human and machine difficulty are different questions. AI difficulty is dated to a stated tool-and-scaffolding protocol and must be refreshed as systems change.
+Short rationales are the audit trail. Each line states an observable cue, its scoring mechanism, and the material uncertainty; the ledger does not expose hidden chain-of-thought.
+How to use the two deliverables
+Workbook: 
+The complete 5,426-record assessment, formulas, per-axis rationales, source text, QA flags, and editable inputs.
+This guide: 
+The definitions, scoring rules, calibration protocol, corpus audit, governance controls, and representative examples needed to defend or revise the ledger.
+Guardrail  
+An opportunity tag is a high-precision inclusion rule, not a complete search result. Absence of a tag is not evidence that a problem is unsuitable.
+1. Governing model
+Gate first; score second; publish only with provenance
+1.1 Status gate
+The gate answers whether the record is eligible to function as an open-problem target. It is independent of intrinsic difficulty. Duplication is an orthogonal QA flag because two records can represent one genuinely open problem.
+Gate
+Records
+Operational rule
+verified_open
+0
+Independently checked against current primary literature or an authoritative maintainer. Reserved in this pass.
+source_claimed_open
+2,108
+The dataset or named source presents the target as open; no current-literature audit has been completed.
+status_unclear
+3,300
+The record carries review notes, stale/resolution cues, provenance gaps, or other evidence that blocks confident open status.
+solved
+9
+The catalog marks the item solved. Historical difficulty may remain useful, but tractability as an open target is not scored.
+ill_posed
+9
+The statement is programmatic, lacks a decisive success criterion, or cannot yet support a bounded evaluation.
+Interpretation  
+Catalog status and assessment gate are separate. The source snapshot contains 5,156 open, 261 partially solved, and 9 solved records; partial status does not by itself prove current openness.
+1.2 Confidence and uncertainty
+Level
+Records
+Evidence standard
+Base D half-width
+C0
+17
+Damaged or materially insufficient record; score is only a placeholder prior.
++/-2.5
+C1
+4,019
+Automated/source-only evidence, default labels, review notes, or thin context.
++/-1.8
+C2
+1,390
+Rich contextual evidence supports the rule pass, but no independent expert adjudication.
++/-1.2
+C3
+0
+Independent source/expert review completed. Reserved; automation cannot assign it.
++/-0.8
+Compound scope adds 0.4 to the D half-width. AI ranges add another 0.5 because no repeated model episodes were run. All ranges are clamped to 0-10.
+2. Intrinsic difficulty D
+A weighted judgment for a fully prepared specialist or team
+Definition  
+D is expected difficulty from the current literature for a fully prepared specialist or team using ordinary modern tools. It is not fame, importance, age, or the record's legacy label.
+D = round(2.5 x (0.30 CG + 0.20 RG + 0.20 TD + 0.20 KB + 0.10 SS), 1)
+Code
+Weight
+Factor
+0 anchor
+2 anchor
+4 anchor
+CG
+30%
+Conceptual gap
+Near-mechanical extension or audit
+Nontrivial synthesis
+New conceptual bridge or reframing appears necessary
+RG
+20%
+Route gap
+Known route with a bounded missing step
+Several partial routes; decisive step unresolved
+No credible route or repeated method failure
+TD
+20%
+Technical depth
+Textbook machinery
+Specialized modern theory
+Rare frontier machinery or deep cross-field stack
+KB
+20%
+Known barrier
+Little documented resistance
+Multi-year literature and meaningful partial results
+Canonical decades-long resistance, explicit barriers, or failed programs
+SS
+10%
+Search scale
+Small finite or directly checkable space
+Large but structured family
+Unbounded, continuous, infinite-dimensional, or combinatorially explosive space
+Collection and legacy metadata are confined to the Known Barrier prior, preventing the same prestige cue from being counted in conceptual gap, technical depth, and resistance. Millennium records receive an explicit barrier floor; every other source is feature-scored.
+2.1 Public tiers
+Tier
+D range
+Operational meaning
+T1 Accessible/Audit
+0.0-2.4
+Bounded proof, computation, verification, or curation target; meaningful resolution may be directly checkable.
+T2 Research Sprint
+2.5-4.4
+Focused research result or decisive subcase is plausible on a short project horizon.
+T3 Serious Project
+4.5-6.4
+Substantial specialist project; publishable partial results are plausible, but full resolution is not presumed.
+T4 Frontier Challenge
+6.5-8.4
+Sustained frontier program with material conceptual, technical, or resistance barriers.
+T5 Grand Challenge
+8.5-10.0
+Landmark or foundational barrier; a complete solution would likely reshape a field.
+Anchor points: D0 direct audit; D3 short research result; D5 substantial project; D7 sustained frontier challenge; D9 landmark breakthrough; D10 foundational barrier.
+3. AI-relative difficulty
+A dated machine-side adjustment, never a timeless property
+Protocol snapshot  
+Frontier generalist agent; retrieval, code/CAS, search, and theorem-prover tools allowed; no unpublished expert oracle; human scaffolding level 1; assessment date 2026-07-31.
+AI difficulty = clamp(D + AI relative, 0, 10)
+Predictor
+Coding rule
+Formal fit
+-1 when the statement maps cleanly to symbolic/formal objects; +1 when formalization or ambiguity is high.
+Verification feedback
+-1 when candidate outputs are cheaply and exactly checked; +1 when both proof directions require heavy specialist review.
+Tool leverage
+-1 when computation, CAS, SAT/SMT, search, or proof assistants supply a tight loop; +1 when tools offer little direct signal.
+Context load
+-1 for a compact literature footprint; +1 for a large, fragmented, or highly interdependent literature.
+Reasoning horizon
+-1 for bounded targets; +1 for long-horizon, high-D, or programmatic work.
+Tacit / experimental insight
+-1 where explicit computation dominates; +1 where geometric, physical, experimental, or field-tacit insight appears central.
+Each predictor is coded -1 favorable, 0 mixed, or +1 hostile. Their sum is multiplied by 0.5, giving an AI-relative range of -3 to +3. AI-favored is <= -1; AI-hostile is >= +1; everything between is neutral/mixed.
+What this score can and cannot say
+It can prioritize problems with exact feedback, compact context, and manageable verification relative to similarly human-rated problems.
+It cannot certify that an AI will solve a problem. These are editorial estimates, not benchmark runs, and therefore never exceed C2.
+It must be versioned by model, tools, retrieval corpus, budget, human scaffolding, and date. A protocol change creates a new score series.
+4. Human effort H and exposure X
+Separate documented work from visibility
+Human effort H  
+An order-of-magnitude estimate of cumulative effective specialist-hours spent directly on the problem or its immediate bottlenecks. It is not the time required to solve the problem and cannot observe unpublished attempts.
+Band
+Specialist-hours
+Band
+Specialist-hours
+H0
+<10
+H1
+10-30
+H2
+30-100
+H3
+100-300
+H4
+300-1,000
+H5
+1,000-3,000
+H6
+3,000-10,000
+H7
+10,000-30,000
+H8
+30,000-100,000
+H9
+100,000-300,000
+H10
+>300,000
+Evidence cues include explicit references, proposal year, documented resistance, partial-solution history, and iconic/prize status as a conservative floor. Age and exposure never substitute for effort evidence.
+Exposure X (0-5)
+Level
+Visibility anchor
+X0
+Private, newly posed, or effectively unseen
+X1
+Source-list visibility only
+X2
+Recognized specialist collection or modest citation footprint
+X3
+Broad program, challenge list, or substantial specialist visibility
+X4
+Canonical cross-field collection or major historical prominence
+X5
+Globally iconic, prize-backed, or household-name mathematical problem
+Why separate them  
+A low-X, low-H problem can be neglected rather than easy. A high-X problem may be famous without having a defensible effort estimate. Keeping the axes separate prevents circular difficulty claims.
+5. Tractability and supporting axes
+Forecast partial progress; price the cost of checking it
+5.1 Tractability T
+Forecast target  
+The probability band that 100 combined hours from a prepared expert plus the dated frontier-AI protocol produce a novel, independently checked partial result at outcome level 3 or higher. T does not forecast full resolution.
+Band
+Probability
+Band
+Probability
+T0
+<1%
+T1
+1-3%
+T2
+3-7%
+T3
+7-15%
+T4
+15-25%
+T5
+25-40%
+T6
+40-55%
+T7
+55-70%
+T8
+70-85%
+T9
+85-95%
+T10
+>95%
+Editorial model: round(clamp(9 - 0.80 AI difficulty + 0.20 tool leverage - 0.15 mean(V_true,V_false) + 0.60 if H<=4 + 0.50 if partially solved - 1.00 gate penalty, 0, 10)). Solved and ill-posed records receive N/A.
+5.2 Verification, formalization, prerequisites, and tools
+Axis
+Scale
+Operational definition
+V_true / V_false
+0-10
+Independent checking burden for a claimed positive and negative answer. V0 is an immediate formal certificate; V5 a multi-reviewer technical proof; V8 community-scale machinery; V10 lacks a decisive criterion.
+F
+0-10
+Burden to encode the statement and prerequisites, not the unknown proof. F0 already formal; F3 modest infrastructure; F6 major specialist libraries; F9 reformulation needed.
+P
+0-10
+Preparation required to contribute. P1 undergraduate; P5 early PhD; P7 active specialist; P9 rare cross-field expertise.
+B
+0-5
+Breadth: number of materially interacting fields or major technical areas.
+L
+0-10
+Tool leverage from exact computation, CAS, SAT/SMT, search, simulation, or proof assistants. Unlike burden axes, higher is favorable.
+Notation warning  
+V means verification burden - not value, impact, or expected importance. The profile intentionally does not score scientific importance because that requires a separate stakeholder-dependent model.
+6. Rationale standard
+A reproducible audit trail in one or two lines per axis
+Every problem receives separate rationales for D, the five D factors, AI difficulty, tool leverage, H/X, T, verification, formalization, prerequisites, and status/data quality. The target is 18-45 words whenever practical.
+Required sentence shape
+1
+observable cue
+2
+scoring mechanism
+3
+uncertainty
+Template  
+[Score and range]/[confidence] - [Observable statement, source, or metadata fact]; [why that fact changes this axis]; [missing evidence or protocol caveat].
+Acceptable evidence
+Statement form: exact value, bound, construction, classification, proof/disproof, experimental, or programmatic target.
+Scope: atomic, family, compound, or programmatic; compound and programmatic records widen uncertainty or trigger curation.
+Background cues: explicit reductions, partial cases, no-known-route language, resistance, references, dates, and current status evidence.
+Machine cues: formal fit, exact feedback, tool loop, context load, reasoning horizon, and tacit/experimental burden.
+Corpus cues: missing or malformed text, rights/status notes, duplicate signals, source recovery, and fallback provenance.
+Prohibited shortcuts
+Hard because famous, easy because readable, or important because old.
+Treating a legacy collection label as an expert judgment about the individual record.
+Presenting AI estimates as empirical performance or human-hour bands as observed labor totals.
+Using a problem number as the join key; problem numbers collide across and within collections.
+7. First-pass scoring pipeline
+Deterministic, source-aware, and explicitly provisional
+Normalize and preserve.
+ Load the frozen problems.json snapshot, preserve Dataset ID, clean display text without overwriting source content, and recover source/fallback URLs.
+Gate and flag.
+ Apply catalog status, source review notes, malformed-text checks, duplicate signals, truncation checks, and programmatic-scope rules before opportunity ranking.
+Classify the target.
+ Detect answer type, scope, mathematical objects, prerequisite category, literature cues, dates, references, and computation/formalization signals.
+Score inputs.
+ Assign factor inputs, H/X, V, F, P/B, and tool leverage from documented rules; cap automated confidence at C2.
+Derive outputs.
+ Compute D, tier, AI relative/difficulty, uncertainty ranges, T, route, high-precision tags, review priority, and short per-axis rationales.
+Verify and version.
+ Run formula and visual QA, record rule version, dataset version, date, and SHA-256, then route exceptions to manual review.
+Why this is an editorial first pass
+The rule pass reads the supplied corpus; it is not 5,426 independent literature reviews. Its purpose is to replace inconsistent source labels with a transparent baseline, expose uncertainty, and create a review queue that experts can improve without reverse-engineering hidden judgments.
+Version contract  
+Rule version OPDP-1.0-rulepass-2026-07-31; dataset v1.2.0; assessment date 2026-07-31; problems.json SHA-256 954E1151491871B831B6FC3084957E790075ED9AD739FE715328863EBE710515.
+8. Corpus audit
+Difficulty quality is bounded by identity, status, rights, and statement quality
+The audit separates record-quality defects from mathematical difficulty. Counts below refer to the frozen v1.2.0 snapshot and are not mutually exclusive.
+Audit issue
+Observed count
+Scoring risk
+Required action
+AMR review debt
+~2,814 status and ~2,789 rights NEEDS_REVIEW notes
+Blocks verified-open use and redistribution confidence
+P0: resolve source-by-source; retain provenance and reviewer/date
+Serialized import tails
+597 Erdős records
+Statement/background can contain imported JSON fragments
+P0: reparse source fields; quarantine affected text before model evaluation
+Duplicate problem numbers
+35 groups / 86 rows
+Problem number is not a safe identifier
+Join on Dataset ID; manually reconcile identity clusters
+Probable duplicate union
+69 clusters / 148 rows / 79 surplus
+Double-counts targets and benchmark attempts
+Review normalized title/statement clusters; retain aliases
+Control characters
+22 characters across 7 records
+Can break parsers, rendering, and exact matching
+Strip only after byte-preserving archive and record-level audit
+Truncation
+134 titles; 8 statements
+Can change scope or make a target unverifiable
+Recover from primary source; otherwise gate as unclear
+Context residue
+78 source-label placeholders; 85 context-dependent statements; 20 figure/table references
+Target cannot stand alone reliably
+Restore referenced definitions/figures or link an authoritative source
+Missing background
+17 records
+Weakens status, age, barrier, and prerequisite evidence
+Set C0/C1 and prioritize source recovery
+Collection links
+360 missing set_id; 26 dangling nested-set objects
+Source summaries and joins can drift
+Normalize foreign keys and validate referential integrity
+Proposer metadata
+proposed_by present in 26.5%; proposed_year in 20.0%
+Human-effort and age priors remain weak
+Add provenance-backed fields; never impute as fact
+Engagement fields
+Views/favorites are batch-biased
+Not valid evidence of visibility or research effort
+Exclude from H, X, D, and prioritization until collection process is fixed
+Legacy-label diagnosis  
+A collection-majority label predicts approximately 92.1% of legacy difficulty values; for example, all 3,342 AMR records and all 366 Kirby records are L3. That makes the old label primarily source-driven, not an individual-problem assessment.
+9. First-pass results
+A conservative baseline shaped by a frontier-only corpus and substantial review debt
+5.7
+mean intrinsic D
+5.5
+mean AI difficulty
+4.7
+mean tractability T
+5,171
+records with QA flags
+Tier distribution
+Tier
+Records
+Share
+T1 Accessible/Audit
+0
+0.0%
+T2 Research Sprint
+83
+1.5%
+T3 Serious Project
+4,711
+86.8%
+T4 Frontier Challenge
+626
+11.5%
+T5 Grand Challenge
+6
+0.1%
+No record landed in T1. This is plausible for a corpus selected specifically for open research targets, and the pass avoids manufacturing easy examples from curation defects.
+AI fit and confidence
+AI fit
+Records
+Confidence
+Records
+AI-favored
+1,427
+C0
+17
+AI-neutral/mixed
+3,121
+C1
+4,019
+AI-hostile
+878
+C2
+1,390
+C3
+0
+High-precision opportunity and curation tags
+Tag
+Records
+AI-assisted progress candidate
+46
+Frontier benchmark
+196
+Neglected gem
+809
+Formalization target
+37
+Grand challenge
+6
+Needs curation
+4,018
+Opportunity tags require an open gate, C2 difficulty confidence, and no critical curation blocker. They intentionally trade recall for precision. Needs curation is broader and can coexist with difficulty scores.
+10. Database and versioning contract
+Store judgments, evidence, and derived outputs so every change is reversible
+Group
+Fields
+Mode
+Rule
+Identity
+dataset_id
+Stored
+Stable primary join key. Never join on problem_number alone.
+Identity
+problem_number, title
+Stored
+Display fields; collisions and truncation are independently flagged.
+Provenance
+source_url, fallback_url
+Stored
+Record the recovered canonical source when available; otherwise keep the Ulam problem URL as fallback and label it as such.
+Snapshot
+dataset_version, sha256, assessed_at
+Stored
+Pins every score to an immutable corpus state.
+Gate
+assessment_gate, gate_confidence
+Stored
+verified_open and C3 require independent reviewer evidence.
+Intrinsic
+CG, RG, TD, KB, SS, D_confidence
+Stored inputs
+D, range, and public tier are formula-derived.
+AI
+six predictors, protocol_id
+Stored inputs
+AI relative, difficulty, range, and fit label are derived and protocol-specific.
+Human
+H, H_confidence, X
+Stored
+Keep effort evidence separate from exposure.
+Support
+T, V_true, V_false, F, P, B, tool_leverage
+Mixed
+T is derived; supporting axes retain their evidence confidence.
+Audit trail
+axis_rationales, evidence_codes
+Stored
+Short public justification; never store hidden chain-of-thought.
+Operations
+tags, review_priority, qa_flags
+Derived/stored
+Regenerate after input edits; record reviewer override separately.
+Governance
+rule_version, reviewer_id, reviewed_at, override_reason
+Stored
+Supports diffing, rollback, and expert adjudication.
+Critical maintenance rule  
+Manual edits in Scoring Inputs can update formula-linked D, tier, AI difficulty, and T, but tags, prose rationales, review priorities, and Dashboard totals can become stale. Rerun the generator and QA checks before publishing an edited release.
+11. Workbook operating guide
+Seven views, one stable Dataset ID
+Sheet
+What it contains
+Primary use
+Dashboard
+Snapshot KPIs, tier/gate/AI-fit distributions, source mix, and release notes.
+Presentation and release sanity check
+Atlas
+One row per problem with core profile, route, tags, priority, and QA summary.
+Filtering, ranking, and portfolio selection
+Axis Rationales
+Per-axis one- or two-line justifications, evidence codes, and source/fallback URL.
+Audit, expert review, and recategorization
+Scoring Inputs
+Editable factor inputs and formula-linked derived scores.
+Calibration experiments; rerun generator afterward
+Source Index
+Full statement, background excerpt, source/rights/status provenance, and URLs.
+Identity and source recovery
+QA Flags
+Records with curation blockers or quality warnings, sorted for review.
+Triage and release gating
+Rubric
+Definitions, anchors, formulas, uncertainty bands, and editable parameters.
+Governance and reviewer training
+Recommended review workflow
+Filter QA Flags to P0 and resolve identity, rights, statement, and status issues before evaluating mathematical promise.
+Open Axis Rationales by Dataset ID; compare the score line with the Source Index statement and provenance.
+Edit documented inputs only when the reviewer can name the evidence and an override reason.
+Rerun the generator, recalculate formulas, refresh tags/rationales/dashboard, and render all workbook views.
+Publish a new rule version or reviewed snapshot; never silently overwrite a score series used in an evaluation.
+12. Calibration and validation plan
+Move from transparent baseline to expert-reviewed measurement
+12.1 Gold-set design
+Select 120-150 records stratified by source, category, answer type, scope, gate, confidence, and score range; oversample C0/C1 and extreme scores.
+Use three independent raters. Blind them to the legacy difficulty label and to each other's scores.
+Create anchor cards for every D factor and supporting axis, including counterexamples that separate fame, visibility, effort, and intrinsic difficulty.
+Adjudicate all gate disagreements, D disagreements above 1.5 points, and any opportunity tag that depends on a disputed threshold.
+12.2 Reliability targets
+Measure
+Statistic
+Release criterion
+Assessment gate
+Weighted/Fleiss kappa
+>=0.80 before production use
+D tier
+Quadratic weighted kappa
+>=0.70 for first calibrated release; target >=0.80
+Ordinal axes
+Krippendorff alpha (ordinal)
+>=0.67 for exploratory use; >=0.80 for consequential ranking
+Continuous D
+Median absolute disagreement
+<=1.0 point overall and <=1.5 within each source
+Tags
+Precision on adjudicated sample
+>=0.80; preserve high precision even if recall is lower
+12.3 Empirical AI protocol
+Freeze model/version, context limit, retrieval corpus, tools, token and wall-clock budget, human scaffolding, and random seeds.
+Run at least three independent episodes per calibration problem; log tool calls and artifacts while keeping evaluator access separate.
+Score outcomes on a fixed ladder: 0 no progress, 1 useful restatement, 2 checked known result, 3 novel checked partial result, 4 full independently checked resolution.
+Calibrate AI relative and T against observed outcome rates; never back-fit D to make model performance look smooth.
+12.4 Maintenance cadence
+Recalibrate after each 1,000 reviewed records, any major source ingest, or any material AI protocol change. Publish confusion tables, disagreement cases, parameter diffs, and a changelog. Preserve old snapshots so benchmark claims remain reproducible.
+13. Limitations and governance
+What must be reviewed before this becomes a public benchmark standard
+Limitation
+Why it matters
+Control
+Literature status
+No independent current-literature audit was performed for every record.
+Use source_claimed_open/status_unclear; reserve verified_open for documented review.
+Rule-pass bias
+Text cues and source metadata cannot recover tacit field knowledge.
+Keep C0-C2, wide ranges, and expert override reasons.
+Human hours
+Unpublished attempts and distributed background work are unobserved.
+Treat H as an order-of-magnitude prior, not an observed labor total.
+AI estimates
+No repeated benchmark episodes were run in this release.
+Treat AI/T as protocol-dated forecasts; validate empirically.
+Corpus integrity
+Malformed, duplicated, context-dependent, and rights/status-review records remain.
+Complete P0 curation before public evaluation or redistribution.
+Importance
+The profile does not score scientific, social, or strategic value.
+Add a separate stakeholder-specific impact model if needed; do not overload V.
+Manual edits
+Some derived presentation fields are not live formulas.
+Regenerate the full workbook before release.
+Recommended adoption sequence
+Adopt OPDP v1.0 as a transparent provisional baseline, not as an expert-certified truth set.
+Clear P0 corpus issues and build the 120-150 problem gold set.
+Calibrate rater agreement, revise anchor cards, and lock OPDP v1.1 parameters.
+Run the frozen AI protocol on the gold set and recalibrate AI relative/T.
+Publish reviewed score diffs, reviewer evidence, and stable snapshot identifiers.
+Appendix A. Representative ledger entries
+Six profiles showing score, opportunity, curation, and solved-record behavior
+The rationales below are copied from the generated ledger except for line wrapping. They illustrate the required audit style; the workbook contains the same axis-by-axis structure for all 5,426 records.
+Case 1. MPP-001 - P versus NP Problem
+Field
+Value
+Dataset ID
+1
+Source
+Millennium Prize Problems
+Gate
+source_claimed_open
+Profile
+D9.6 | T5 Grand Challenge | AI 10.0 (+0.5) | H9 / X5 | T2
+Tags
+Grand challenge
+QA flags
+None
+Axis
+Generated rationale
+Intrinsic D
+D9.6 [8.4-10.0]/C2 - This atomic algorithm target concerns algorithms and complexity; documented longevity or canonical resistance raises the barrier prior, and no narrow route is visible in the supplied context.
+AI difficulty
+AI+0.5 -> 10.0 [8.3-10.0]/C2 - a crisp symbolic target and strong code/CAS/search leverage helps, while a large or fragmented literature load and long-horizon global reasoning limits current frontier agents; this is a protocol-dated estimate, not a run result.
+Human effort / exposure
+H9/X5/C1 - Iconic or prize-backed status supplies a conservative H9 floor; the record has 0 explicit citation signals and an age basis of 1971 (explicit proposed_year); 100,000-300,000 specialist-hours is an order-of-magnitude prior because unpublished attempts are unobserved.
+Tractability
+T2 (3-7%) - With tool leverage 8.3/10 and outcome-average verification 4.9/10, material checked progress in 100 combined expert+AI hours is unlikely; full resolution is not being forecast.
+Status / data
+open -> source_claimed_open/C1 - the dataset/source presents the item as open, without an independent current-literature audit. Status should be rechecked before publishing a benchmark result.
+Source / fallback URL: 
+https://www.unsolvedmath.com/problems/MPP-001
+Case 2. GREEN-006 - Sum-Free Subsets of [N]^d
+Field
+Value
+Dataset ID
+98
+Source
+Ben Green's 100 Open Problems
+Gate
+source_claimed_open
+Profile
+D3.4 | T2 Research Sprint | AI 0.9 (-2.5) | H1 / X2 | T10
+Tags
+AI-assisted progress candidate, Neglected gem, Formalization target
+QA flags
+None
+Axis
+Generated rationale
+Intrinsic D
+D3.4 [2.2-4.6]/C2 - This atomic exact value target concerns combinatorics; the record shows little documented resistance, and the target appears to reduce to a bounded local step.
+AI difficulty
+AI-2.5 -> 0.9 [0.0-2.6]/C2 - a crisp symbolic target and cheap exact feedback helps, while no dominant AI-specific obstacle limits current frontier agents; this is a protocol-dated estimate, not a run result.
+Human effort / exposure
+H1/X2/C0 - the record has 0 explicit citation signals and an age basis of no defensible proposal year; 10-30 specialist-hours is an order-of-magnitude prior because unpublished attempts are unobserved.
+Tractability
+T10 (>95%) - With tool leverage 7.3/10 and outcome-average verification 2.7/10, material checked progress in 100 combined expert+AI hours is plausible; full resolution is not being forecast.
+Status / data
+open -> source_claimed_open/C1 - the dataset/source presents the item as open, without an independent current-literature audit. Status should be rechecked before publishing a benchmark result.
+Source / fallback URL: 
+https://www.unsolvedmath.com/problems/GREEN-006
+Case 3. GREEN-001 - Large Sum-Free Sets
+Field
+Value
+Dataset ID
+92
+Source
+Ben Green's 100 Open Problems
+Gate
+source_claimed_open
+Profile
+D6.5 | T4 Frontier Challenge | AI 5.5 (-1.0) | H2 / X2 | T6
+Tags
+Frontier benchmark, Neglected gem
+QA flags
+None
+Axis
+Generated rationale
+Intrinsic D
+D6.5 [5.3-7.7]/C2 - This family proof disproof target concerns combinatorics; the available record shows a nontrivial but incompletely documented barrier, and no narrow route is visible in the supplied context.
+AI difficulty
+AI-1.0 -> 5.5 [3.8-7.2]/C2 - a crisp symbolic target helps, while no dominant AI-specific obstacle limits current frontier agents; this is a protocol-dated estimate, not a run result.
+Human effort / exposure
+H2/X2/C0 - the record has 0 explicit citation signals and an age basis of no defensible proposal year; 30-100 specialist-hours is an order-of-magnitude prior because unpublished attempts are unobserved.
+Tractability
+T6 (40-55%) - With tool leverage 5.3/10 and outcome-average verification 4.7/10, material checked progress in 100 combined expert+AI hours is possible but uncertain; full resolution is not being forecast.
+Status / data
+open -> source_claimed_open/C1 - the dataset/source presents the item as open, without an independent current-literature audit. Status should be rechecked before publishing a benchmark result.
+Source / fallback URL: 
+https://www.unsolvedmath.com/problems/GREEN-001
+Case 4. AMR-005-0001 - Baker's Dozen — Commuting billiard maps
+Field
+Value
+Dataset ID
+600001
+Source
+AMR Open Problem Lists
+Gate
+status_unclear
+Profile
+D5.6 | T3 Serious Project | AI 5.6 (+0.0) | H1 / X1 | T4
+Tags
+Needs curation
+QA flags
+status_NEEDS_REVIEW, rights_NEEDS_REVIEW, legacy_default_L3, proposal_year_semantics_uncertain
+Axis
+Generated rationale
+Intrinsic D
+D5.6 [3.8-7.4]/C1 - This atomic proof disproof target concerns dynamical systems; the record shows little documented resistance, and partial structure exists but the decisive step remains open.
+AI difficulty
+AI+0.0 -> 5.6 [3.3-7.9]/C1 - no decisive machine-side advantage helps, while tacit geometric or cross-domain insight limits current frontier agents; this is a protocol-dated estimate, not a run result.
+Human effort / exposure
+H1/X1/C1 - the record has 0 explicit citation signals and an age basis of 2015 (inferred from source/background wording); 10-30 specialist-hours is an order-of-magnitude prior because unpublished attempts are unobserved.
+Tractability
+T4 (15-25%) - With tool leverage 4.0/10 and outcome-average verification 5.7/10, material checked progress in 100 combined expert+AI hours is possible but uncertain; full resolution is not being forecast.
+Status / data
+open -> status_unclear/C1 - the source explicitly says NEEDS_REVIEW. Status should be rechecked before publishing a benchmark result.
+Source / fallback URL: 
+https://amj.math.stonybrook.edu/html-articles/Files-2015-2024/14-01/
+Case 5. EP-1 - Erdős Problem #1
+Field
+Value
+Dataset ID
+1878
+Source
+Erdős Problems
+Gate
+source_claimed_open
+Profile
+D6.6 | T4 Frontier Challenge | AI 6.1 (-0.5) | H7 / X3 | T4
+Tags
+Needs curation
+QA flags
+malformed_import_fragment, proposal_year_semantics_uncertain
+Axis
+Generated rationale
+Intrinsic D
+D6.6 [4.8-8.4]/C1 - This family proof disproof target concerns graphs; the available record shows a nontrivial but incompletely documented barrier, and partial structure exists but the decisive step remains open.
+AI difficulty
+AI-0.5 -> 6.1 [3.8-8.4]/C1 - a crisp symbolic target helps, while no dominant AI-specific obstacle limits current frontier agents; this is a protocol-dated estimate, not a run result.
+Human effort / exposure
+H7/X3/C1 - the record has 12 explicit citation signals and an age basis of 1931 (inferred from source/background wording); 10,000-30,000 specialist-hours is an order-of-magnitude prior because unpublished attempts are unobserved.
+Tractability
+T4 (15-25%) - With tool leverage 4.5/10 and outcome-average verification 5.1/10, material checked progress in 100 combined expert+AI hours is possible but uncertain; full resolution is not being forecast.
+Status / data
+open -> source_claimed_open/C1 - the imported background contains a serialization fragment. Status should be rechecked before publishing a benchmark result.
+Source / fallback URL: 
+https://www.unsolvedmath.com/problems/EP-1
+Case 6. KOU-21.8 - Kourovka Notebook Problem 21.8
+Field
+Value
+Dataset ID
+2517
+Source
+Kourovka Notebook - New Problems, Issue 21
+Gate
+solved
+Profile
+D5.6 | T3 Serious Project | AI 5.1 (-0.5) | H1 / X2 | TN/A
+Tags
+No opportunity tag
+QA flags
+catalog_solved_record
+Axis
+Generated rationale
+Intrinsic D
+D5.6 [4.4-6.8]/C2 - This family proof disproof target concerns groups and group actions; the record shows little documented resistance, and partial structure exists but the decisive step remains open.
+AI difficulty
+AI-0.5 -> 5.1 [3.4-6.8]/C2 - no decisive machine-side advantage helps, while no dominant AI-specific obstacle limits current frontier agents; this is a protocol-dated estimate, not a run result.
+Human effort / exposure
+H1/X2/C1 - the record has 0 explicit citation signals and an age basis of 2026 (explicit proposed_year); 10-30 specialist-hours is an order-of-magnitude prior because unpublished attempts are unobserved.
+Tractability
+T N/A - not scored because the target is not an actionable open item; status or scope must be repaired before a progress forecast is meaningful.
+Status / data
+solved -> solved/C2 - no contrary status signal appears in the supplied record. Status should be rechecked before publishing a benchmark result.
+Source / fallback URL: 
+https://arxiv.org/abs/2604.12553
+Appendix B. Sources and reproducibility
+Primary project links and frozen snapshot identifiers
+UnsolvedMath browser. 
+https://www.unsolvedmath.com/
+ - Public problem browser and per-record fallback pages.
+UnsolvedMath dataset. 
+https://huggingface.co/datasets/ulamai/UnsolvedMath
+ - Dataset card, version information, files, and CC BY 4.0 declaration.
+Frozen problems.json. 
+https://huggingface.co/datasets/ulamai/UnsolvedMath/resolve/main/problems.json
+ - Source file used for the v1.2.0 assessment snapshot.
+Open Mathematical Problems as an AI Reasoning Benchmark. 
+https://www.ulam.ai/research/open-math.pdf
+ - Project white paper describing the benchmark motivation.
+Dataset announcement. 
+https://x.com/prz_chojecki/status/2083261987937825199
+ - Project release context.
+Difficulty-system note. 
+https://x.com/prz_chojecki/status/2083274896293990432
+ - Project context for replacing the preliminary difficulty scheme.
+Creative Commons Attribution 4.0. 
+https://creativecommons.org/licenses/by/4.0/
+ - License terms referenced by the dataset card.
+Snapshot record
+Dataset: 
+UnsolvedMath v1.2.0
+Assessment date: 
+2026-07-31
+Record count: 
+5,426
+problems.json SHA-256: 
+954E1151491871B831B6FC3084957E790075ED9AD739FE715328863EBE710515
+Rule version: 
+OPDP-1.0-rulepass-2026-07-31
+Reproducibility  
+A future release should preserve this file hash, the workbook, the rule implementation, and all expert override records. A new dataset file or AI protocol requires a new versioned assessment.

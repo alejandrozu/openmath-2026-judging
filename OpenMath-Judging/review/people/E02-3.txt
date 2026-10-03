@@ -1,0 +1,169 @@
+PERSON: Wenyi Wang
+No per-author theorem/work allocation supplied; shared packet attribution only. Do not invent an individual point split.
+
+E02 Rachel Teo / Wenyi Wang / Hamdi Abderrahmene
+AUTHORS: Rachel Teo, Wenyi Wang, Hamdi Abderrahmene
+PROPOSED S=1697.401122 / A=308.025 / M2 families=10 (adjusted ranking value 10)
+Broadest original-result portfolio. Prioritize the two OEIS complete targets, then sharp pre-existing subquestions and uniform bounds. Its22Claim cards and5Focus cards are27dossiers, not27open solutions. Separate10known-math formalizations, four completed narrower targets and unfinished parent problems. On-time PDF05:57 and ZIP06:19 require a documented fixed-before-cutoff transfer decision.
+Review budget: 20 minutes. Numerical proposals are contingent on acceptance and the listed checks.
+
+E02-a100475 | A100475: no positive prime-reversal cycle
+Let p_n be the nth prime with p_1=2, and T(n) the decimal digit reversal of p_n. For every natural x>0, the orbit starting at x under T is not ultimately periodic. Thus False iff there exists x>0, x≠1, whose orbit is ultimately periodic.
+Assessment: The positive-start restriction is essential. Growth of the prime-index map plus finite exceptional checks can rule out periodic tails for every positive start. Zero-start totalization would answer a different question. This is a complete target candidate, with a substantial source chain for a deceptively short statement.
+Novelty: Candidate original resolution; bounded searches found no exact positive-start solution. Ball–Coxeter and the 2004 SeqFan discussion remain specific priority checks, so novelty is medium confidence rather than certified.
+Formal: Packet evidence: Independent complete 84-module replay completed 2026-10-01T13:03:31.027744Z; source receipt records byte identity with user ZIP; final theorem standard axioms. Endpoint signatures and declared axioms are recorded below; author/internal replay is not this reviewer’s fresh rebuild.
+Proposal: M3A; D=541; p=1; family points=292.681. Full evidence/checks: entries/E02-a100475.txt
+
+E02-a060957 | A060957: refutation and arbitrarily long prime-exponent gaps
+Original refutation: ∃ n,m,p∈N with m>0, p prime, p≤n, m∈P(n), p^5 m∈P(n), and p^4 m∉P(n). Stronger: ∀ g≥1 and B∈N, ∃ n,p,d,h∈N with p prime, B<p≤n, d>0, p∤d, and for every e∈N, p^e d∈P(n) iff e lies in {h,h+1,h+2,h+3,h+g+4,h+g+5,h+g+6,h+g+7}. Hence g consecutive missing levels between attainable endpoints.
+Assessment: This refutes the actual whole-interval distinct-subset-product interpolation assertion, not an arbitrary restricted factor set. The arbitrary-gap theorem is materially stronger but stays in this family. Prime-coordinate encoding and the exact eight-level fibre are the useful reusable mechanism.
+Novelty: Strong original-result candidate against the 2020 OEIS conjecture; the located prior work supplies methods, not this complete-interval counterexample. First-publication priority remains a bounded-search conclusion.
+Formal: Packet evidence: Combined 45-module 4.33.1 replay and aggregate passed 2026-10-01 around16:08UTC. Generalized24-module closure also passed4.34.1 around16:01 and4.33.1 around16:05. Standard final axioms; no unproved graph-existence premise.. Endpoint signatures and declared axioms are recorded below;…
+Proposal: M3A; D=527; p=1; family points=277.729. Full evidence/checks: entries/E02-a060957.txt
+
+E02-a000224 | A000224: verified squarefree three-prime exclusion
+For every three primes 2<p<q<r, let n=pqr and let a(n) count all square residues modulo n, including zero, exactly as in the upstream definition. Then a(n)(a(n)-1) does not divide n²-1. Consequently the original conjectured equivalence holds for this entire unbounded factorization family.
+Assessment: The uniform product-of-three-distinct-odd-primes theorem removes an infinite subcase. It does not handle repeated prime powers, four or more factors, or the entire OEIS equivalence. The exact definition counts zero as a square residue.
+Novelty: Plausible new infinite-family advance; the located prior Pell scan is bounded and does not imply this theorem.
+Formal: Packet evidence: All 171 intended modules were recorded checked on 4.34.1, dependency-ordered and incremental; nine prime modules were reused after source/output hash checks. A separate complete 4.33.1 replay passed all 171 modules, with 164 successful certificate records and seven retrospective core…
+Proposal: M3A; D=622; p=0.15; family points=58.0326. Full evidence/checks: entries/E02-a000224.txt
+
+E02-ferrers-hierarchy | Ferrers general deficiency hierarchy (44-module dual replay)
+For 1≤r≤k and 0≤e<r, a finite Ferrers graph with matching-union ranks α_r=rk−e and α_(r+1)=(r+1)k−r−e has α_1=k. Every supplied optimal degree-r factor is retained while r−e disjoint matching colors of size k−r are appended. For 0≤h≤r−e, α_(r+h)=rk−e+h(k−r). Balanced e=0 yields simultaneous first 2r CDS colors; e=1 yields first…
+Assessment: Preservation of an arbitrary supplied optimal factor is stronger than mere existence of one convenient factor. The hierarchy determines later matching-union ranks, while the e>1 case does not realize every individual early CDS colour. That last limitation prevents a full Latin-tableau conclusion.
+Novelty: Candidate new structural extension beyond known boundary cases. Some factor-theory full texts remain an explicit literature gap.
+Formal: Packet evidence: 44-source strict replay receipts on both pins; source hashes match both recorded receipts. Actual YoungDiagram graph/rank transport and all selected final standard-axiom audits included.. Endpoint signatures and declared axioms are recorded below; author/internal replay is not this…
+Proposal: M3A; D=650; p=0.15; family points=63.375. Full evidence/checks: entries/E02-ferrers-hierarchy.txt
+
+E02-erdos169-fourap | Explicit four-AP-free reciprocal sum >111/25
+Let D={0,1,2,4,5,9,10,11,14,16,17,18,21,24,30,37,39,41,42,45,47}, M=55³=166375, U={26286,26726,26737,120061,120501,120512}, and T_j={Σ_(i=0)^(j−1) d_i55^i:d_i∈D}, T_0={0}. Let E=T_22 ∪ ⋃_(u∈U)(u+M T_21), A={e+1:e∈E}. Every a∈A is positive; A contains no nonconstant four-term arithmetic progression over Z;…
+Assessment: The same finite set is used in positivity, four-AP freeness and the rational harmonic sum. A sum above4.44 is stronger than Walker's4.43975 and the located later4.4397534742 claim. It supplies a better lower bound, not unbounded sums or a solution of Erdős3.
+Novelty: Candidate new numerical bound with exact formal witness; digit-restricted and block-combination methods are prior mathematics.
+Formal: Packet evidence: Fresh Linux full build completed8950jobs and final axiom audit. Exact same finite set appears in positivity, AP-free and rational-sum clauses. Mathematical source manifest matches; later README change is documentation only.. Endpoint signatures and declared axioms are recorded below;…
+Proposal: M3A; D=538; p=0.05; family points=14.4722. Full evidence/checks: entries/E02-erdos169-fourap.txt
+
+E02-opdp13-quartic | Quartic exact exponent classification and sharp boundary scale
+For H_t(z)=(1+|z|²)^4−t|z|⁴ and 6<t≤7, H_t^N (N positive integer) is a finite sum of |holomorphic polynomial|² iff N=2, or N≥4, or N=3 and 924−210t+18t²−t³≥0. For 6<t<8 any such N obeys 12N(8−t)≥t(10−t). For 7≤t<8 it obeys 81N t^(4N)≤614656(16−t)^(4N), plus explicit logarithmic lower bound. Writing δ=8−t, for every ε>0…
+Assessment: The precise quartic family has both an exact exponent-semigroup classification and a matching asymptotic threshold delta*N/log(1/delta) tending to one. The source uses a function-level holomorphic squared-norm representation, which is stronger than a coefficient-only claim.
+Novelty: Original variation candidate. Tan–To's inspected appendix concerns multiplication by R^m, a different operation, but its main theorem and Handelman full text still need the named comparison.
+Formal: Packet evidence: Final standalone40-proof-module and aggregate build completed3553jobs with exit0; source SHA records match; endpoint axioms standard. Earlier dependency-graph refresh and stale18-file README count are superseded by this evidence.. Endpoint signatures and declared axioms are recorded below;…
+Proposal: M3B; D=644; p=1; family points=207.368. Full evidence/checks: entries/E02-opdp13-quartic.txt
+
+E02-opdp43-halfturn | Sharp half-turn symmetry defect gap
+For A⊆{0,…,n−1}² with |A|=2n and no three collinear, let R(x,y)=(n−1−x,n−1−y). The one-sided miss count |{p∈A:R(p)∉A}| is 0 or ≥4. An explicit ten-point 5×5 witness has miss exactly4, proving global sharpness. Symmetric-difference cardinality is twice the one-sided miss.
+Assessment: A 2n-point no-three-collinear grid set has exactly two points per row and column. The incidence discrepancy with its half-turn image has zero row and column balances, so a nonempty discrepancy must include an alternating cycle and at least four one-sided misses. The ten-point 5x5 witness attains four; symmetric difference is eight.
+Novelty: The near-symmetry question is present on the pre-event Bielefeld source. The argument is short and has material folklore risk, but that is not proof of prior publication.
+Formal: Packet evidence: Clean4-module standalone release build completed3097jobs; source SHA entries match; final universal theorem includes n0,1,2 and exact witness geometry; standard axioms only.. Endpoint signatures and declared axioms are recorded below; author/internal replay is not this reviewer’s fresh…
+Proposal: M3A; D=330; p=1; family points=108.9. Full evidence/checks: entries/E02-opdp43-halfturn.txt
+
+E02-erdos1060-uniform-partial | Erdős 1060 uniform quantitative partial bound
+Let sigma(k) be the sum of positive divisors of k, and let f(n) count positive integers k satisfying k sigma(k) = n. With C = log(2539/1000)/3 + log(10/9)/2, for every epsilon > 0 there is N such that every n >= N satisfies f(n) <= exp((C+epsilon) log(n)/log(log(n))). The formal count is exactly the finite set {k <= n : k…
+Assessment: The proposed uniform exponent constant is about.363272, below log(3)/3 about.366204. The separately located odd-target constant log(2)/2 about.346574 applies only to odd n and does not subsume this all-target theorem. A positive constant still misses the requested little-o exponent.
+Novelty: Candidate new all-target refinement; isolate the all-n domain from prior odd-only bounds and known powerful-core machinery.
+Formal: Packet evidence: Fresh isolated Lean 4.33.1 compilation passed all 10 own source modules, with no own olean reuse. Before/after source hashes agree and final canonical theorem types and axiom lists were printed. Only propext, Classical.choice and Quot.sound occur. Exact package evidence is retained;…
+Proposal: M3A; D=574; p=0.05; family points=16.4738. Full evidence/checks: entries/E02-erdos1060-uniform-partial.txt
+
+E02-erdos21-sharp-residual | Erdős Lovász sharp residual cover bound
+For every finite intersecting r-uniform hypergraph J of maximum vertex degree at most 3, 4 tau(J) <= |J| + r + 3. Degree-four peeling yields the same inequality without a degree restriction and hence 3r <= |H| + 3 whenever tau(H)=r; for r=8 this gives |H|>=21. The additive constant 3 is optimal, with a separately checked known…
+Assessment: The +3 residual question is explicitly asked in the July2026 paper, so it predates the competition. Closing it changes the elementary all-r bound from3r-4 to3r-3. The source's stronger approximately3.053r asymptotic bound is not improved. Imported matching infrastructure must remain attributed.
+Novelty: Strong explicit-subquestion candidate: the inspected primary paper asks for +3 after its +4 lemma. The known triangle sharpness example and imported author prefix are supporting prior work.
+Formal: Packet evidence: An independent isolated Lean 4.34.1 replay passed all 18 Main-closure modules. The proof-output directory began empty, source hashes stayed unchanged, nine external revisions were pinned and clean, and the separate endpoint-definition audit passed. Final endpoints use only propext,…
+Proposal: M3A; D=555; p=1; family points=308.025. Full evidence/checks: entries/E02-erdos21-sharp-residual.txt
+
+E02-erdos944-order-bound | Erdős 944 finite order obstruction
+For a finite simple graph G with n vertices and an integer r >= 1, suppose its chromatic number is 4, deleting any vertex lowers that number, and deleting any set of at most r edges does not lower it. Then 27r+19 <= 4n. The same hypotheses give 27(r+1)(n-1) <= (2n+1)^2 and 9b(r+1) <= (2b+1)(n-b), where b=floor((n+1)/3). These…
+Assessment: The linear constraint n>=(27r+19)/4 beats5r+6 for integer r>=1 after rounding, tying at r=1. The source's n/(log n)^c asymptotic restriction remains stronger eventually. This is a useful explicit finite-regime necessary condition, not a new construction or full existence answer.
+Novelty: Candidate finite-regime improvement over the explicit prior bound. Existing r=1 graph constructions and classical coding inequalities receive no new-mathematics credit.
+Formal: Packet evidence: Independent isolated Lean 4.34.1 replay compiled three proof modules and the separate TargetAudit.lean from unchanged frozen sources. Its own output directory began empty and earlier project proof caches were excluded; pinned third-party caches were reused. Exact target definitions and…
+Proposal: M3A; D=721; p=0.05; family points=25.99205. Full evidence/checks: entries/E02-erdos944-order-bound.txt
+
+E02-opdp89-parity-local-maxima | OPDP89 sharp four parity likelihood classification
+For pure four-parity data Q_rho(s)=(1+rho*s1*s2*s3*s4)/16 with 0<|rho|<=1, consider the normalized four-visible, one-hidden spin RBM P_(b,c,w)(s) proportional to exp(b dot s)*cosh(c+w dot s), and its expected log likelihood ell_rho. At every collapsed point (0,c0,0), with c0 any finite real, every affine parameter-direction…
+Assessment: The theorem concerns the full nine-dimensional four-visible/one-hidden RBM, not only a one-dimensional ray. The strict threshold region has non-strict local maxima; equality and beyond are saddles. Every collapsed point is still suboptimal globally. The degenerate higher-order analysis is the substantive contribution.
+Novelty: Candidate exact new threshold; collapsed stationarity, singular mixture lines and interaction formulas are prior work. No claim for general training landscapes or n>=5 is supported by this formal closure.
+Formal: Packet evidence: Fresh post-recovery source-only replay completed 2026-10-02T18:45:45.269248+00:00 in 108.552 seconds. All 17 frozen source modules passed with no warnings or errors; all original source SHA256 values and nine dependency pins were unchanged before/after. No old own-module oleans were reused.…
+Proposal: M3B; D=727; p=1; family points=264.2645. Full evidence/checks: entries/E02-opdp89-parity-local-maxima.txt
+
+E02-erdos829-log-five-thirds | Erdős 829 verified log(5/3) partial bound
+Let R(n) count ordered nonnegative integer pairs (x,y) satisfying x^3+y^3=n. For every real epsilon>0 there exists a natural N such that, for every natural n>=N, R(n) <= exp((log(5/3)+epsilon)*log(n)/log(log(n))). Zero coordinates are included and swapping unequal coordinates gives distinct representations. There is no…
+Assessment: The all-target bound uses coefficient log(5/3), about.510826, rather than the earlier same-family log(7/4), about.559616. The located.556477 comparison is only cubefree and does not cover all targets. Including zero coordinates and ordered pairs preserves the original count. The existential threshold is not effective.
+Novelty: Candidate new uniform bound built from prior ratio-root, determinant and coding methods. Earlier intermediate coefficients are revisions, not additional families.
+Formal: Packet evidence: Fresh separately orchestrated source-only Lean 4.33.1 replay completed 2026-10-02T18:54:57.202016+00:00. All 33 proof modules and two semantic/axiom audit modules exited 0. The final active sources comprise 28 historical exact modules and five reconstructed/repaired variants, all freshly…
+Proposal: M3A; D=530; p=0.05; family points=14.045. Full evidence/checks: entries/E02-erdos829-log-five-thirds.txt
+
+E02-FOCUS-E3 | Erdős 3: finite diagonal-pullback nonoptimality
+At modulus 13, the supplied 79-point subset B of (Z/13Z)^2 avoids (x,y), (x,y+d), (x,y+2d), (x+d,y) for every nonzero d. The maximum size of a cyclic four-AP-free subset A of Z/13Z is exactly 6, attained by {0,1,2,4,5,7}. Hence |B|=79>78>=13|A| for every such A. In particular, every diagonal pullback S_A={(x,y):x-y belongs to…
+Assessment: The modulus13 witness79 beats the best diagonal-pullback capacity78. It disproves that proposed finite auxiliary extremal ansatz. It supplies no divergent infinite set and no theorem forcing longer arithmetic progressions.
+Novelty: Candidate finite obstruction to a particular ansatz; direct original-problem pivotality is limited.
+Formal: The cyclic sharpness certificate and source-faithful diagonal-pullback bridge passed Lean 4.33.1 / Mathlib 0df444a360eaa60ab8c11dca51a86af692955474 with standard axioms only. The bridge passed a fresh seven-module source-only replay on 3 October 2026, with no reused project-local compiled objects. It checks…
+Proposal: M1; D=674; p=0.01; family points=4.997036. Full evidence/checks: entries/E02-FOCUS-E3.txt
+
+E02-FOCUS-GROTH | Grothendieck: restricted sign-matrix bounds
+For every n and every 3-by-n sign matrix A, Q_V(A)<=sqrt(3/2) C(A) in every real inner-product space V. Additionally Q_V(A)<=sqrt(2) C(A) for the four literal archived matrices A_6x6_106, A_6x8_690, A_7x8_53110 and A_s8x8_1705. Q_V is the unit-vector objective supremum, with Q_V(A)=0 for an empty feasible set, and C is its real…
+Assessment: Three-row sign matrices and four archived finite matrices cannot control all real-coefficient Grothendieck instances. The exact finite inequalities are reusable certificates, but no new bound on the universal constant follows.
+Novelty: No original universal-constant advance established. A new formalization may be M2 only after source and prior-library comparison.
+Formal: Fresh Row3Granular and four-case SemanticTestGranular checks passed in Lean 4.33.1 with standard axioms only. Row3 mathematical body is byte-identical after import adjustment; the four-case file retains statements and certificate data with eight arithmetic tactic repairs and explicit imports.
+Proposal: M1; D=561; p=0; family points=0.0. Full evidence/checks: entries/E02-FOCUS-GROTH.txt
+
+E02-FOCUS-MATRIX | Matrix multiplication: one-leg rigidity
+For each of the three stored 139-support HKS seeds, every 81-by-23 rational matrix formed from columnwise products of two 23-by-9 factor lists has column rank 23. Thus fixing any two factor lists uniquely determines the third through the coefficient equations; changing only that list cannot reduce support while retaining the…
+Assessment: The rank23 paired-factor matrices give uniqueness of the remaining factor at three known support139 seeds. This is a precise obstruction to changing only one factor list. It does not prohibit simultaneous changes of all lists, so it is compatible with Chandra's138-support claim.
+Novelty: Candidate new exact method obstruction; the seeds are known and the linear-algebra route is classical.
+Formal: All three stored HKS139 seeds have standard-kernel certificates for the UV, UW and VW rational injectivity and remaining-factor uniqueness statements. Seed 0 retains its recorded certificate; the two additional seeds passed fresh 71-module Lean 4.33.1 replays on 3 October 2026. Endpoint axioms are only…
+Proposal: M1; D=724; p=0.01; family points=5.765936. Full evidence/checks: entries/E02-FOCUS-MATRIX.txt
+
+E02-FOCUS-RAMSEY | Ramsey: exact weighted construction and formal lifting
+The literal symmetric 1024-block binary template has positive integer weights summing to Q=47,314,248 and ordered weighted monochromatic K4 probability P=75525646867723584998137743109/2505750190359427899123170347008. Exact computation gives P<20480989/679477248, the archived hill threshold. The general formal lifting theorem…
+Assessment: The weighted bound is below the McKay reference0.0301422734319. HTPeo's reported rational is smaller again. Each has a reusable finite-to-limit lifting argument; independent sealed provenance, rather than merely uploading after the other, controls duplicate entrant credit.
+Novelty: Exact bound improvement over the located2024 final-note reference. A bounded search found no stronger prior source; a separate Technion lead remains unresolved.
+Formal: The numerator is independently checked by exact C++/Python arithmetic and matches a nonfinal validation receipt. The general count-to-limit development freshly compiled after four compatibility edits in Lean 4.33.1, with standard axioms only. The concrete 1024-block numerator is not evaluated in Lean;…
+Proposal: M3A; D=840; p=0.05; family points=35.28. Full evidence/checks: entries/E02-FOCUS-RAMSEY.txt
+
+E02-FOCUS-BB6 | Busy Beaver 6: exact halting witness
+Starting on a bi-infinite blank tape in state A, the six-state two-symbol machine 1RB0LC_1RD1RB_0LH1LE_1LA1LD_0LA1LF_0LE0RD executes exactly 1,235,211 transitions to H with 1,519 ones on its final tape and no earlier halted prefix. Every state A–F is visited by step 40. Separate exact simulators give final head -2001 and…
+Assessment: The six-state witness halts after1,235,211 steps with1,519 ones. That is a finite exact run, not maximality among all six-state machines. Head and visited span were separate simulator measurements, not the claimed kernel endpoint.
+Novelty: No new original Busy Beaver frontier demonstrated; a reusable newly formalized simulator would require an explicit M2 claim and prior-library check.
+Formal: A new standard-kernel certificate in Lean 4.33.1 successfully checks the literal machine, exact run, final ones count, absence of an earlier halt and all-six-states visitation. Claims.lean endpoints exact_halting_witness and visits_all_six_states have only propext and Quot.sound in their printed axiom sets.…
+Proposal: M1; D=974; p=0; family points=0.0. Full evidence/checks: entries/E02-FOCUS-BB6.txt
+
+KNOWN-THEOREM FORMALIZATIONS
+One family per admitted source theorem or reusable formal target; supporting lemmas remain in its union.
+Known mathematical results; potential credit is new faithful reusable formalization, with baseline overlap and pinned closure checked separately.
+E02-a046969-i | A046969 Conjecture I: exact Bernoulli denominator | For a(n)=den(B_(2n)/(2n(2n−1))) when n>0 (a(0)=0), if p>3 and both p and 2p−1 are prime, then a(p)=12(2p−1); consequently a(p)/12 is prime. | entries/E02-a046969-i.txt
+E02-opdp67-quaternion | OPDP67 explicit two-witness quaternion scalar definition | For every linearly ordered commutative ring R satisfying CommRing, LinearOrder and IsStrictOrderedRing, a Hamilton quaternion q over R is scalar iff there exist unrestricted quaternions u,v with… | entries/E02-opdp67-quaternion.txt
+E02-a135508 | A135508: prime-index gcd criterion and residue classes | Set x(0)=0, x(1)=1 and x(n+1)=2x(n)+lcm(x(n),n+1) for n>=1; for n>0 let a(n)=x(n+1)/x(n)−2. For each prime p>3, a(p−1)=p iff gcd(x(p−3),p−2)>1. If p≥7 is prime and p mod 3=2 or p mod 5=2, then a(p−1)=p. More… | entries/E02-a135508.txt
+E02-apery-odd-formalization | A005258 Apéry prime-power irreducibility | For B_n(X)=Σ_(k=0)^n binom(n,k)^2 binom(n+k,k)X^k in Q[X], every odd prime p and r≥1 satisfying p² ∤ 2^(p−1)−1 has Irreducible(B_(p^r)). This card requests review only of any genuinely new useful formalization… | entries/E02-apery-odd-formalization.txt
+E02-m2-research-base3-reverse-add | Base three reverse and add carry obstruction | If x plus its canonical base-3 digit reversal has palindromic base-3 digits, then x already has palindromic base-3 digits or every pair of mirrored input digits sums to less than 3. | entries/E02-m2-research-base3-reverse-add.txt
+E02-m2-research-theta-half-sum | Theta half sum negative inverse cancellation | For an odd prime k and odd natural a,b with 1 ≤ a,b < k and ab mod k = k−1, define H(k,a)=Σ from j=1 to (k−1)/2 of (−1)^floor(aj/k). Then H(k,a)+H(k,b)=0. | entries/E02-m2-research-theta-half-sum.txt
+E02-m2-research-wolstenholme | Reciprocal square numerator arithmetic | For every m ≥ 1, the rational sum Σ from k=1 to m of 1/k² has nonpositive 2-adic and 3-adic valuations. The selected bridge excludes a prime from its numerator when the valuation is nonpositive; for every… | entries/E02-m2-research-wolstenholme.txt
+E02-m2-research-a060841 | A060841 reciprocal determinant integrality | For n ≥ 1, the inverse determinant of the n by n matrix with entries 1/lcm(i+1,j+1) is an integer exactly when n belongs to {1,…,34,36,38}. | entries/E02-m2-research-a060841.txt
+E02-m2-research-erdos887 | Erdős and Rosenfeld four nearby divisors | There are infinitely many natural n with at least four distinct divisors d in the open real interval (sqrt(n), sqrt(n)+40 n^(1/4)). The preserved statement uses equivalent floor/ceiling integer endpoints. | entries/E02-m2-research-erdos887.txt
+E02-m2-research-regular-polygon | Regular polygon chord and distance multiplicity | For every even n ≥ 5 and every distance d occurring between distinct vertices of the regular n-gon, the number of unordered vertex pairs at distance d is at most n. | entries/E02-m2-research-regular-polygon.txt
+
+PRIORITY SIGN-OFF
+Late ZIP 06:19:17 versus on-time PDF 05:57:20: prove fixed cutoff artifact or organizer admin-transfer decision
+Exact source/library closure fresh independent build and semantic review
+Target admission/open-at-freeze/novelty and canonicalD mapping
+Ball–Coxeter 13th edition, pp.14–15
+November and December 2004 SeqFan archive messages
+Some factor-theory full texts remain uninspected as specified in the dated audits
+Tan–To2021 main Theorem2.1 and detailed constants
+Handelman original full text and remaining To–Yeung coverage described in dated review
+A comprehensive historic folklore/priority dossier is not available
+Powell–Frame1983/full book coverage
+Formal code-provenance and exact useful formal delta review
+Exact library/formal artifact overlap and whether unconditional criterion is a substantive prior-unproved statement
+Sun2021 book remains unread, but identified overlap already defeats a confident first-result claim
+Formalization delta beyond all baseline public formal artifacts/libraries
+Bounded comparison does not certify first formalization or absence of all prior public work
+Current official forum discussion reads returned HTTP 403. No exact overlapping proof located in bounded permitted-source searches; first-discovery priority is not certified.
+Bounded source review; no universal novelty or publication-priority certificate.
+Bounded source review only; no comprehensive novelty, all-prior-formalization or publication-priority certification.
+Late ZIP / cutoff, fixed source and proof closure
+Fresh independent verification of the selected endpoint
+Novelty status and frozen family D
+Distinguish native_decide compiled alternative from standard-axiom kernel certificate; verify exact selected closure and all nine pairs.
+
+Repo: SakanaAI/autolab-100
+Pinned commit: None
+Individual authors share the packet; no unsupported per-author point split. File summaries are visible under Classified files.

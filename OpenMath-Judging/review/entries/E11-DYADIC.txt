@@ -1,0 +1,21 @@
+E11-DYADIC | Per-length extremal equivalence
+
+Exact contribution: For everyK≥3, dyadic rK(2^j)/2^j summability iff every divergent set containsK-term AP.
+
+Assessment: The equivalence isolates the correct extremal-summability bottleneck for each progression length. Earlier source leaves a full goal sorry; the separately closed converse/equivalence endpoint has to be selected explicitly. Wilson proves an overlapping exact equivalence.
+
+Novelty: Candidate reusable formalization/reformulation; sealed independence or distinct extension controls separate entrant credit.
+
+Formalization: Converse.lean provides named closed maxCardDyadicSummable_iff. Earlier lean/equivalence/solution.lean ends in a real sorry on the parent goal; do not advertise that as full proof or reject the separately closed Converse endpoint.
+
+Proposal: One possible M2 family, with exact closed endpoint and no all-length solution credit.
+
+OPDP target OPENMATH-M2-E3-DYADIC | intrinsic 3.1/10 | competition D proposal 436/1000
+
+Modality M2 | p 1 | b 1 | m 1 | numerical family points M2 separate family count
+
+Specific remaining checks: Fresh named endpoint + imported Dyadic closure; Check gluing uses sparse8^jwindows and handlesK≥3; Compare overlap/exposure with Wilson
+
+Key files: 346232 lean/climb1-library/Converse.lean; 346252 lean/equivalence/solution.lean
+
+Primary/source locators: 

@@ -1,0 +1,23 @@
+# Contribution and novelty statement
+
+## Motivation
+
+The public Collatz hill asks for exact descent certificates for odd dyadic residue classes under a 512-rule budget. Broad support and strong per-target contraction compete under that limit. A finite inspectable certificate can supply reusable descent lemmas and make that tradeoff concrete.
+
+## Exact contribution
+
+The contribution submitted for review is the preserved 512-rule certificate evaluated in experiment 351d2794, with official validation metrics 1000000 / 525390 / 512. Its independently inspectable content is the finite rule collection and the exact affine descent lemmas it encodes. Public inspection checks 3352/3968 target classes, compared with 992 for the organizer's two-rule example and 2883 for the earlier local 22-rule candidate. The exact broadening from V4 replaces `(8,113,[2])` with `(5,17,[2])`.
+
+The repository also supplies a dependency-free offline replay, exact residue lists, affine witnesses, original evaluator source and signed report, immutable Git object evidence, and preserved historical code/data. The replay checker and derived witnesses were added during review preparation; they are not additional mathematics submitted to AutoLab.
+
+## Relation to prior work
+
+The accelerated Collatz map, dyadic valuation patterns, and affine composition are the mathematical framework already specified by the organizer's public hill (`public-hill/README.md` and `eval.py`). No invention of those methods is claimed. The comparison to existing work that this packet establishes directly is to that organizer baseline, the local 22-rule baseline, and the historical V2/V3/V4 candidates preserved in `history/`.
+
+The packet does not establish priority over the broader Collatz literature or provide a completed literature review. Whether this particular finite rule set constitutes a publishable novelty remains for expert review. It is not a new proof of the conjecture, a record for general Collatz verification, or a claimed optimal solution of the full modular descent problem.
+
+## Work completed in the event workflow
+
+The local records dated 2026-09-29 document candidate enumeration, exact verification, selection under the rule limit, V3/V4 construction, diagnostic candidate changes and the controlled one-rule revision ultimately evaluated as 351d2794. Historical notes also record replacement and swap analyses. These are existing event-workflow records; their execution and optimality claims were not revalidated by rerunning searches. Event attendance/eligibility is not established by those files.
+
+The frozen certificate and its passing official validation report are completed artifacts. Packet preparation adds documentation and inspection tools only, including a newly written technical report under `paper/`. Formal Lean development, independent literature validation and a final/test report remain absent. No new optimization experiments were run for this review packet.

@@ -1,0 +1,35 @@
+# Erdős #3, machine-checked
+
+Erdős problem #3 (open since 1936, $5,000 prize) asks: if the reciprocals of a set of whole numbers sum to infinity, must the set contain arithmetic progressions of every length? In one session we ran several AI agents in parallel on [AutoLab](https://app.autolab.ai), each scored by a Lean 4 proof checker (Lean v4.33.1, the Mathlib pinned by [formal-conjectures](https://github.com/google-deepmind/formal-conjectures)). Every result below compiled on AutoLab with only Lean's standard axioms (`propext`, `Classical.choice`, `Quot.sound`); every remaining gap is an explicit, labelled `sorry`.
+
+## Results
+
+Write rₖ(N) for the largest size of a subset of {1, …, N} with no k-term progression (`Set.IsAPOfLengthFree.maxCard k N`).
+
+| Result | Status | Where |
+|---|---|---|
+| **3-term case**: every set with divergent reciprocal sum contains a 3-term progression (formal-conjectures' `erdos_3.variants.three`) | Proved, no gaps (AutoLab experiment 751f08e4) | [`lean/three-term/`](lean/three-term/) |
+| **Equivalence**: Erdős 3 holds iff ∑ⱼ rₖ(2ʲ)/2ʲ < ∞ for every k ≥ 3 | Proved (afa010ee) | [`lean/equivalence/`](lean/equivalence/) |
+| **Per length**: for each K ≥ 3, every divergent set has a K-term progression iff ∑ⱼ r_K(2ʲ)/2ʲ < ∞ (`maxCardDyadicSummable_iff`) | Compiles with no `sorry` (fcf00fa3) | [`lean/climb1-library/Converse.lean`](lean/climb1-library/Converse.lean) |
+| **Counterexample audit**: polynomially sparse, Behrend-type and near-logarithmic sets have convergent reciprocal sums | Proved (2eeb6745, 0e5b938a) | [`lean/counterexample-audit/`](lean/counterexample-audit/) |
+| **Length-4 groundwork**: generalized von Neumann inequality for 4-term progressions in ℤ/n (`norm_apCount4_pow8_le_gowers3`) | Compiles with no `sorry` (fcf00fa3) | [`lean/climb1-library/VonNeumann4.lean`](lean/climb1-library/VonNeumann4.lean) |
+| **Dyadic reduction on the original hill**: lengths 0–2 proved; length 3 from a stated Kelley–Meka bound; lengths ≥ 4 open | Compiles; two labelled gaps (ca627ee3) | [`lean/erdos3-hill/`](lean/erdos3-hill/) |
+| **4-AP-free sets of large reciprocal sum** up to 10⁶ (counterexample side of length 4) | Best certified score 4.314 (ccf62f9b), from Walker's construction plus greedy completion | [`harmonic/`](harmonic/), [`hills/erdos-3-four-term-harmonic/`](hills/erdos-3-four-term-harmonic/) |
+
+"Compiles with no `sorry`" means AutoLab compiled the module with no errors and no `sorry` warning; its axioms were not listed individually. Still open: progressions of length 4 and up, which need a density bound stronger than Green–Tao's. See [`docs/erdos3-formal-status.md`](docs/erdos3-formal-status.md) for the full write-up and questions for mathematicians.
+
+## Layout
+
+- `lean/erdos3-hill/`: the steered solution for AutoLab's single-proof Erdős 3 hill.
+- `lean/three-term/`: the complete 3-term proof. `Solution.lean` plus vendored APAP and AddCombi (Apache-2.0). Run `python fetch_plby.py` to download the 44 files from Boris Alexeev's [plby/lean-proofs](https://github.com/plby/lean-proofs) that it imports; that repository has no license, so they are not included here. See `ATTRIBUTION.md`.
+- `lean/equivalence/`, `lean/counterexample-audit/`, `lean/climb1-library/`: written by AutoLab's autonomous agents in our climbs, copied unchanged.
+- `hills/`: the two AutoLab hills we built. `erdos-3-three-term` accepts multi-file Lean projects and checks the theorem's type and axioms without running submission code; `erdos-3-four-term-harmonic` certifies 4-AP-free sets and scores their reciprocal sum.
+- `harmonic/generate.py`: the generator behind the best harmonic score.
+
+## Checking the 3-term proof yourself
+
+You need Lean v4.33.1 with formal-conjectures and its pinned Mathlib built. Then run `python lean/three-term/fetch_plby.py`, add the hill's `lean/Erdos3ThreeTerm/Statement.lean`, and compile the modules in import order; `hills/erdos-3-three-term/eval.py` does exactly this and then checks `theorem Erdos3ThreeTerm.checked : Erdos3ThreeTerm.Statement := _root_.solution`.
+
+## Credits and licenses
+
+Built on Mathlib and formal-conjectures (Apache-2.0); Boris Alexeev's formalisation of the Kelley–Meka bound (plby/lean-proofs, not redistributed); APAP by Yaël Dillies and Bhavik Mehta and add-combi (Apache-2.0, vendored with notices); Alexander Walker's 4-AP-free construction (arXiv:2203.06045). Lean code by Claude Code (Claude Opus 5.5) working with the repository owner, and by AutoLab's agents. Our own code is licensed under Apache-2.0 (`LICENSE`).

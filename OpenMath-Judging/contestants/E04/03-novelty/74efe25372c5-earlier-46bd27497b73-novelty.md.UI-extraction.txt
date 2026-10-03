@@ -1,0 +1,62 @@
+Source: https://github.com/ChandraguptSharma07/matrix-multiplication-tensor-3x3/blob/479c2416b6261ee841052eef4881df0e40054f3f/paper/novelty.md
+Observed: 2026-10-03T04:49:00.098Z
+Representation: rendered GitHub UI extraction; may be incomplete, not original bytes.
+
+Files
+479c2416b6261ee841052eef4881df0e40054f3f
+t
+T
+novelty.md
+Breadcrumbs
+matrix-multiplication-tensor-3x3/paper
+/novelty.md
+Latest commit
+ 
+History
+History
+File metadata and controls
+Preview
+Code
+Blame
+43 lines (28 loc) · 10.3 KB
+Raw
+Motivation and novelty: a rank-23 scheme for 3x3 matrix multiplication with 138 nonzero coefficients
+
+Chandragupt Sharma
+
+2026-10-02
+
+Motivation
+
+A bilinear scheme for 3x3 matrix multiplication with 23 products is written as three 23 x 9 coefficient matrices U, V, W. Its rank (23) fixes the number of multiplications; its support, the number of nonzero coefficients in U, V and W together, fixes the number of additions in the naive accounting (support minus 55). The rank of 3x3 matrix multiplication is one of the best-known open problems of algebraic complexity: 23 since Laderman 1976, lower bound 19 (Blaser 2003), and rank 22 open. The support is the practical cost at rank 23, and it is also the metric of the search task this work was submitted to: schemes are scored by rank first and support second, verified by all 729 Brent identities over the exact rationals.
+
+Smirnov's scheme of 2013, with support 139 (84 additions), had been the sparsest published rank-23 scheme for thirteen years. Every method used for sparsity since then reproduced it and nothing below it: the 17,376-scheme SAT collection of Heule, Kauers and Seidl, the 15,316-scheme neural-network collection of 2026 (Hell's Bells), Perminov's sparsity-directed ternary flip graphs (best 143), AlphaTensor (165), AlphaEvolve (150) and Benson and Ballard's numerical schemes (142 and up). The reason, as this work established, is structural: all of these methods generate schemes with coefficients in {0, ±1} or reduce their candidates modulo 2, so they explore exactly the world of GF(2)-valid nonzero patterns, and in that world the bottom is rigid: exactly nine symmetry classes at support 141 or below, and nothing at 138 in any neighbourhood that exact SAT sweeps could decide. A scheme that needs coefficients ±2 or ±1/2 has a pattern that is not a GF(2) scheme at all, so no GF(2)-based method can represent it.
+
+The contribution
+One new rank-23 scheme with support 138, exact over the rationals, verified by two independent dependency-free checkers (exact rational arithmetic in Python, integer arithmetic in C) and by the official evaluator of the task (experiment b8e0716a, 2026-09-30: PASSED, rank 23, support 138, 729 identities and 2 private replays checked). After an exact optimal rescaling it has 126 coefficients ±1 and 12 coefficients ±2 or ±1/2: 83 additions and 12 bit shifts, against 84 additions for Smirnov's scheme, with the same float64 accuracy. It is inequivalent to Smirnov's scheme and to every scheme in a collection of 17,387 verified published schemes (its multiset of factor-rank triples differs: 15 of type (1,1,1), 4 of type (1,1,2) and 4 of type (2,2,2), against Smirnov's 11, 8 and 4), and a literature search found no published or posted scheme at 138 or below.
+The method: a support-capped random walk over GF(3) with Smirnov's core planted (the 81 factor entries of the 27 needed products fixed to 1 and a hard cap on the number of nonzeros), followed by a numerical lift of the resulting zero pattern over the reals, snapping to powers of two and an exact repair over the rationals. The walk is deterministic (seed 3158 of walk3 at cap 138) and the pipeline reproduces the scheme in about 12 seconds on a laptop. Modulo 3 the coefficients ±2 and ±1/2 are units, so the walk sees the class of schemes that modulo 2 cannot. No published work had combined a planted core with a support cap, run a capped search over a non-binary field, or explored the power-of-2 coefficient class for sparsity.
+A structural account of the scheme and of the landscape around it, computed exactly where possible: an exact order-2 symmetry (Smirnov's 139 has one on its zero pattern only); a one-parameter family that is an explicit rational curve in a parameter s with the 138 at s = -1, degenerating at its three ends; local optimality under removal of any one coefficient (numerical, 40 starts per entry); and a classification of everything the walk finds at supports 139 to 142 into 68 symmetry classes, in which every GF(2)-valid class at 140 and 141 is a known published scheme and every mod-2-invisible class at 140 and 141 is a partial-sum rewrite (a change of basis on two or three terms that share a factor) of the 138 or of Smirnov's 139. The same construction, applied to Smirnov's 139, reproduces both known published 140s and four of the six known 141s exactly.
+A census of all 1,811 inequivalent pairing cores of the type shared by every known sparse scheme, over GF(2) and over GF(3): in both censuses only Smirnov's core yields anything below 142; over GF(3) exactly one other core (core 1809) yielded any scheme at support 144 or below, and over GF(2) three other cores responded at 142 to 144, all of them already published.
+A second new, inequivalent rank-23 scheme at support 143 on core 1809, exact with coefficients in {±1, ±2, ±1/2}, whose mod-2 pattern matches none of the 137 known scheme files and which shares at most 4 of 23 terms with any scheme on Smirnov's core. It is locally optimal in the same sense as the 138 and its family floors at 143.
+Exact negative results with no published counterpart: over GF(2), all 33,649 5-term replacements around the 139 and all 70,840 4-term replacements around the eight known 140 and 141 classes are unsatisfiable at support 138, as are all 6-term replacements within the perfect-pairing class around all nine known classes; and the sparsest equivalent form of all 17,376 Heule, Kauers and Seidl schemes and all 15,316 Hell's Bells schemes was computed over all 4.74 million GF(2) basis changes (minimum 139). The search for 137 (416,104 GF(3) walks at cap 137, 110,344 GF(5) walks at cap 138, the full core census) found nothing; this part is empirical, not a proof.
+Relation to prior work
+
+The scheme keeps Smirnov's core, that is, the pairing of the 27 needed products into terms, and the skeleton of four two-product terms and nineteen one-product terms that every known sparse scheme shares. What it changes is the cancellation of the unwanted products: Smirnov's 139 has a perfect pairing in which each unwanted product is cancelled between exactly two terms, and the 138 cancels four unwanted products across three terms each, which is only possible with coefficients outside ±1. After alignment on the common core, 4 of the 23 terms coincide with Smirnov's and 19 differ, so it is a 19-term rewrite, not a small edit. The walker is a GF(3) version of Palladinos' 2026 "semantic" local search on the factor bits over GF(2), with the planted core and the hard support cap added; the lift follows a numerical-then-exact route (least squares, snapping, exact solution of the last factor) like Smirnov's 2013 search. The nearest published uses of GF(3) and GF(5) in flip graphs (Kauers and Wood 2025; Khoruzhii, Gelss and Pokutta 2026) aimed at rank or at structured formats, not at the sparsity of the general 3x3 problem. The only earlier rational-coefficient source for 3x3 at rank 23, Johnson and McLoughlin 1986, never had a nonzero count published.
+
+What was completed during the event
+
+The pre-event baseline is the published state of the art, Smirnov's 139 (2013); the search task started from Laderman's scheme at support 153. All work in the repository was done during the event period shown by the commit dates: the first commit is from 2026-09-27 and the last from 2026-10-02.
+
+date	what was done	state
+2026-09-27	First commit (22:12): a cyclically symmetric Levenberg-Marquardt search with exact rational repair and a sparsifier, written from scratch. First rank-23 scheme from random starts at support 220 (22:24), then 147 (22:57; the task's baseline was 153). Rank-22 probes: no exact solution, near-misses shown to be border-rank artifacts.	147, official
+2026-09-28	Flip-graph walk over GF(2) with a sparsity bias and sign lifting (01:57), giving 141 (02:27); the same walk in C (02:53) giving 139, identified as Smirnov's class modulo 2. Tabu walker and SAT neighbourhood encoder (11:52); exhaustive 5-term SAT sweep around the 139, all 33,649 subsets unsatisfiable (12:51); 17,387 published schemes downloaded and verified (15:42); GF(3) flip walker, floored at 139 (21:30).	139, official
+2026-09-29	Exhaustive 4-term SAT sweep around all eight known 140 and 141 classes, all 70,840 subsets unsatisfiable (00:59); deep rational pattern exchange (02:15); literature re-check (08:59). Afternoon round: sparsest forms of all 17,376 Heule, Kauers and Seidl schemes and all 15,316 Hell's Bells schemes (minimum 139), the 139's order-2 pattern symmetry and the perfect-pairing structure found, the pairing-class SAT encoding built; 6-term sweeps around all nine known classes started (908,523 subsets, all unsatisfiable, finished on 2026-09-30).	stuck at 139
+2026-09-30	The GF(2) census of all 1,811 cores (four cores respond, all published; nothing at cap 138). The capped walk over GF(3) with Smirnov's core planted at cap 138: one hit in 316 seeds (seed 3158). Lifted numerically, snapped, repaired exactly, verified, and submitted; official evaluation PASSED at 05:18:26Z (experiment b8e0716a). Literature checks for a prior 138 (none found). GF(3) census of all cores at cap 145.	138, official
+2026-10-01	Batch waves 1 to 3 on free notebook compute: the cap-138 walk has a single attractor; cap 137 empty in 185,192 seeds; the exotic 139 lifted exactly and shown to be the 138 with one pair of terms rewritten.	analysis
+2026-10-02	Classification of everything found at 139 to 142 (68 symmetry classes); wave 4 (cap 137 empty under three more walker settings, 416,104 seeds in total); the GF(3) census of all 1,811 cores completed (two responsive cores); the core-1809 scheme at 143 lifted and shown new; the GF(5) wave (same objects, nothing with a 3 in a denominator). Verifiers, evaluator report, README and the reproduction committed.	analysis
+
+The exact and empirical negative results of 2026-09-28 and 2026-09-29 are what pointed the search at coefficient classes outside ±1; the find of 2026-09-30 and the analysis of 2026-10-01 and 2026-10-02 followed from that reading.
+
+Disclosures
+
+Most of the code and analysis was written with Claude (Anthropic's Claude Code, models Opus 5.5 and Fable 5.1) under the author's direction; AutoLab agent jobs used glm-5.2 for the agent coding step. Compute was a laptop, rented CPU nodes and free notebook compute. Nothing here bears on tensor rank 22, and 138 is not proven minimal.

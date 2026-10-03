@@ -1,0 +1,314 @@
+# Structure of the support-138 scheme (analysis of 2026-09-30)
+
+Object: `solutions/support_138/solution.json` (rank 23, support 138, exact over Q, coefficients ±2^k with k in −4..4). It is compared with `solutions/official_139/` (Smirnov's class, support 139) and with Laderman 1976, which was rebuilt from the literature in `common.py` and has support 153. All three pass `brent.brent_errors == 0`. All scripts and outputs are in `~/Projects/mm3-kaggle/analysis/`. The research repo was not modified.
+
+Convention: factors are 3x3 matrices stored row-major, for A (i,j), B (j,k) and C (k,i), with the tensor tr(ABC), as in `src/brent.py`. The symmetries used are:
+
+- the sandwich A → PAQ⁻¹, B → QBR⁻¹, C → RCP⁻¹, which acts on a factor u as Pᵀ u Q⁻ᵀ;
+- the cyclic shift of the three slots;
+- the transpose (u, v, w) → (wᵀ, vᵀ, uᵀ).
+
+Each was checked exactly to preserve validity. "Gauge" means term rescaling (u·a, v·b, w/(ab)) combined with a diagonal sandwich.
+
+## Headline
+
+1. **Exact symmetry.** The 138 has an exact symmetry of order 2: it fixes 3 terms and swaps 10 pairs. The 139 has a symmetry of the same shape on its zero pattern only; no choice of signs or diagonal scalings makes it exact.
+2. **Few constants after rescaling.** Up to gauge, the 138 needs only 12 non-±1 coefficients, all ±2 or ±1/2. This is an exact MILP optimum, and it stays 12 even when real (non-dyadic) diagonal scalings are allowed. The stored form has 73. The rescaled form is in `support_138_gauged/solution.json`, verified independently: 0 failing identities, support 138, 12 non-±1 entries.
+3. **The family is essentially a curve.** The 7-dimensional tangent family consists of 6 diagonal-gauge directions and 1 genuine direction. The genuine direction is an explicit rational curve in a parameter s, with the 138 at s = −1. All three ends of the curve (s → 0, −2, ∞) are degenerate. No support-137 scheme lies on the family or at its boundary.
+4. **No entry or term can be removed** (experiment B). The best residual after forcing an entry to zero was 1.2e-5. It approaches zero only while coefficients grow like residual^(−1/6), which is a border-rank-type approach, not a real scheme.
+5. **Not a small edit of the 139.** After aligning the two schemes on their common core, 4 of the 23 terms are identical and 19 differ.
+6. **Practical cost.** The 138 needs 83 additions, against 84 for the 139 and 98 for Laderman. Its 12 constants are all powers of 2, so they are bit shifts. In float64 the rescaled form is as accurate as the 139 and Laderman.
+
+## A1. Structure
+
+Scripts: `structure.py` (output in `structure_out.txt`, `structure.json`) and `structure2.py` (output in `structure2_out.txt`).
+
+| quantity | 138 | 139 | Laderman |
+|---|---|---|---|
+| support (U, V, W) | 138 (47, 47, 44) | 139 (49, 45, 45) | 153 (51, 51, 51) |
+| sorted nnz triples | (1,1,2):3 (1,2,2):4 (1,2,3):6 (1,3,3):3 (2,2,3):7 | (1,1,2):2 (1,2,2):6 (1,2,3):4 (1,2,4):4 (1,3,3):3 (2,2,2):2 (2,3,3):2 | (1,1,1):5 (1,1,7):6 (2,2,2):8 (3,3,3):4 |
+| factor-rank triples | (1,1,1):15 (1,1,2):4 (2,2,2):4 | (1,1,1):11 (1,1,2):8 (2,2,2):4 | (1,1,1):13 (1,1,3):6 (2,2,2):4 |
+| single-entry factors (of 69) | 19 | 21 | 27 |
+| elementary terms | 0 | 0 | 5 |
+| uses per coordinate U / V / W | (3,3,3,5,5,6,7,7,8) ×2 / (3,3,3,3,5,5,7,7,8) | (3,3,5,5,5,5,7,7,9) / (3,3,5,5,5,5,6,6,7) ×2 | (3,5,5,5,5,7,7,7,7) ×3 |
+| terms producing each needed product | 1 (all 27) | 1 (all 27) | 1 for 23, 3 for 4 |
+| unwanted products, multiplicity: count | 2: 65, 3: 4 (69) | 2: 68 | 2: 92 |
+| pattern automorphisms (permutation sandwich × 6 slot maps = 1296) | 2 | 2 | 24 |
+| of those, exact with a signed diagonal | 2 | 1 (identity only) | 24 |
+| continuous stabilizer in GL3³ (Lie dimension, mod scalars) | 0 | 0 | 0 |
+
+Laderman's 24 counts only the permutation-and-diagonal part of its symmetry group.
+
+**Coefficients of the stored 138.** 1: 60, −1: 5, ±2: 12, ±4: 3, ±8: 22, ±16: 6, ±1/2: 6, ±1/4: 6, ±1/8: 14, ±1/16: 4. That is 73 non-±1 entries spread over 22 terms; only term 16 is all ±1.
+
+**Coefficients after the optimal gauge** (`gauge_min.py`, output in `gauge_min_out.txt` and `support_138_gauged/solution.json`). Twelve non-±1 entries remain: u[1][5]=1/2, u[2][5]=−1/2, u[3][5]=−1/2, u[8][0]=2, u[12][5]=1/2, u[14][5]=−1/2, v[1][7]=−2, v[4][7]=−2, v[13][6]=−2, v[15][2]=1/2, v[15][5]=−1/2, w[14][1]=2.
+
+**Core.** All 81 planted entries of `census3/smirnov_fix.txt` are nonzero in the 138, and 44 of them equal 1. In both the 138 and the 139, 4 terms produce two needed products each and 19 produce one. The 138 breaks the 139's "perfect pairing": 4 unwanted products are each covered by 3 terms, and they cancel through coefficients outside ±1.
+
+**The exact order-2 symmetry of the 138.**
+- The map is the slot transform ((rot 2, transpose), P = (1,2,0), Q = (1,0,2), R = (2,0,1)) followed by the diagonal P = diag(−1, 16, 8), Q = diag(1, 1, 4), R = diag(−1, −1/2, 1/16).
+- The image equals the 138 as a set of rank-1 tensors, checked exactly.
+- Fixed terms: 9, 14, 21.
+- Swapped pairs: (0,3) (1,2) (4,20) (5,12) (6,17) (7,15) (8,22) (10,13) (11,18) (16,19).
+
+## A2. The 138 compared with the 139, term by term
+
+- As stored, the two schemes share 0 identical rank-1 terms and 0 terms with proportional factors.
+- A greedy search over the 1296 maps plus a free signed diagonal finds at most 4 equal terms.
+- Exactly 2 of the 1296 maps send the 139's core onto the 138's core: ((0,1),(0,2,1),(2,0,1),(0,2,1)) and ((1,0),(1,0,2),(2,1,0),(2,1,0)).
+- In that frame, with diagonal (1,−8,8 | 1,16,8 | 1,1/2,1/2), terms 8, 9, 21 and 22 are identical. The other 19 terms have different zero patterns.
+
+Pattern differences per term. "+" marks an entry only in the 138, "−" an entry only in the 139; entries are indexed 3·row+col.
+
+| term | differences |
+|---|---|
+| 0 | u −3; v +6; w −3 |
+| 1 | v +6 |
+| 2 | u +5 |
+| 3 | u +5; v −3; w −8 |
+| 4 | v +4 −0 |
+| 5 | u +4 |
+| 6 | u −3 −4 |
+| 7 | u +0 |
+| 10 | u +5; w +7 −0 −3 −4 |
+| 11 | v +0 −4 |
+| 12 | v +0 |
+| 13 | v +6; w +0 −2 −7 −8 |
+| 14 | u +4; v +0; w +2 +4 −6 |
+| 15 | v +5 |
+| 16 | v −4 |
+| 17 | v −0 −3 |
+| 18 | u +4 −6 |
+| 19 | u −6 |
+| 20 | u +6 −4 |
+
+In total, 20 entries appear only in the 138 and 21 only in the 139. The aligned 139 is printed in `structure2_out.txt`.
+
+## A3. The family
+
+Scripts: `family.py`, `curve.py`, `curve_exact.py`, `curve_rational.py`, `tropical.py`.
+
+The Jacobian was computed exactly over Q (with flint), with the first nonzero of U and of V in each term pinned:
+
+| scheme | free coefficients | rank | null dimension | diagonal-gauge part | genuine directions |
+|---|---|---|---|---|---|
+| 138 | 92 | 85 | 7 | 6 | 1 |
+| 139 | 93 | 84 | 9 | 6 | 3 |
+| Laderman | 107 | 95 | 12 | 6 | 6 |
+
+**The curve, exactly.** Pinning u[0][4], u[1][5], u[2][5], u[2][8], v[0][4] and v[1][6] removes the diagonal gauge. What remains is a single curve, parametrised by s = u[12][6].
+- It was reconstructed from 60 exact rational points at s = −k/32 by rational interpolation.
+- It was then checked on all 729 identities at 22 fresh rational values of s. Every degree involved is at most 2, so this proves the identities hold for every s.
+
+The 42 coefficients that move along the curve:
+- **u:** u[3][6]=−8(s+2), u[7][1]=s/(8(s+2)), u[7][2]=1/(4(s+2)), u[9][8]=−8s, u[10][4]=s/(8(s+2)), u[10][5]=1/(4(s+2)), u[11][6]=−8s, u[12][6]=s, u[18][7]=−8s, u[20][7]=s/(8(s+2)), u[20][8]=1/(4(s+2)).
+- **v:** v[0][6]=−4(s+2), v[1][7]=−8/(s+2), v[2][6]=s/(4(s+2)), v[3][5]=16(s+2)²/s, v[5][6]=−s/2, v[9][8]=v[11][2]=v[12][2]=v[18][5]=2(s+2), v[14][6]=−4(s+2), v[17][5]=−8(s+2)/s, v[22][8]=−s/2.
+- **w:** w[1][4]=−(s+2)/8, w[2][2]=(s+2)/(4s), w[3][2]=−1/(8(s+2)), w[3][7]=s/(16(s+2)²), w[5][2]=1/(8s), w[7][0]=4(s+2), w[8][6]=8/(s+2), w[9][6]=1/(2(s+2)), w[10][7]=−1/(2(s+2)), w[12][7]=1/(2(s+2)), w[14][1]=1/(4(s+2)), w[14][2]=1/(8(s+2)), w[16][4]=w[17][7]=−s, w[18][2]=−1/(8s), w[20][2]=−16(s+2)²/s, w[20][8]=8(s+2)/s, w[21][6]=−8s/(s+2), w[22][8]=−2/s.
+
+What this means:
+- The moving coefficients sit in 18 terms: 0, 1, 2, 3, 5, 7, 8, 9, 10, 11, 12, 14, 16, 17, 18, 20, 21, 22. The other 50 free coefficients and the 46 pinned ones stay constant.
+- For every s other than 0, −2 and ∞, all 138 coefficients are nonzero.
+- At s = −1 every coefficient is dyadic (a power of 2). Other rational values of s bring in denominators such as 3, 5 and 7. Exact points are in `family_points/`.
+
+**Ends of the curve** (`tropical_out.txt`). At s → 0, −2 and ∞, the best combined diagonal and term gauge still leaves a minimum coefficient exponent of −1/6: whatever the gauge, some coefficient grows like |s−s₀|^(−1/6). All three ends are therefore border-rank-type degenerations, not schemes. Numerical continuation (`curve_out.txt`) agrees.
+
+## B. Forcing one entry or one term to zero
+
+Scripts: `local_opt.py` and `run_local_opt.sh` (outputs `local_opt_entries.jsonl`, `local_opt_terms.jsonl`, `local_opt_table.md`), plus `followup.py` and `probe_limit.py`.
+
+**Setup.**
+- For each of the 138 entries, that entry was set to 0, the other 137 were left free, and everything outside the pattern was held at 0.
+- Each run used 40 starts:
+  - 8 near the family: the 138 point and 7 exact family points, with the entry zeroed; half of them with 5% multiplicative noise;
+  - 32 random: 16 Gaussian, and 16 with the 138's signs and magnitudes 2^U(−2,2).
+- Solver: Levenberg-Marquardt on the normal equations, 400 iterations per start (`lsq.solve_fast`). Each entry took about 100–230 s on 4 workers.
+
+**Results for single entries.**
+- No entry reached a residual below 1e-6, so none reached the 1e-10 candidate threshold. There were no 137 candidates, so no snap or exact repair was needed.
+- 81 entries end at best residual 1.000 (within 1.2e-6): one identity cannot be satisfied.
+- 57 entries reach best residuals between 1.21e-5 and 1.86e-3, always from random starts, and were still falling when stopped. Two were followed up with longer runs:
+
+| entry | residual, start → end | extra iterations | max\|coef\|, start → end | log-log slope of max\|coef\| against residual |
+|---|---|---|---|---|
+| w[21][6] | 1.21e-5 → 4.38e-6 | 8000 | 12.2 → 14.5 | −0.17 |
+| u[7][0] | 1.57e-4 → 3.30e-6 | 15000 | 12.5 → 23.8 | −0.166 |
+
+- Both slopes match the exact −1/6 exponent at the ends of the family, so these are border-type approaches, not schemes.
+- For w[21][6], almost all of the residual sits in one unwanted-product identity, index (8,7,6). Dropping its small entries and re-solving leaves the residual at 4.43e-6.
+- The "gauge-optimal max" column printed by `followup.py` is not meaningful: re-gauging also rescales the residual (to 0.47 for w[21][6]).
+
+The 57 small-residual entries, as best residual (max|coef| at best): w[21][6] 1.21e-05 (12); u[7][0] 1.57e-04 (12); u[2][5] 1.58e-04 (18); v[1][6] 1.65e-04 (12); v[15][5] 1.77e-04 (16); u[3][5] 1.82e-04 (12); v[0][6] 1.83e-04 (14); v[13][0] 4.72e-04 (303); u[5][4] 4.72e-04 (79); u[12][6] 4.72e-04 (76); u[20][6] 4.74e-04 (39); v[4][4] 4.80e-04 (46); v[17][5] 4.83e-04 (38); u[6][0] 5.39e-04 (45); w[17][7] 5.68e-04 (194); u[12][5] 5.94e-04 (24); v[5][6] 6.16e-04 (30); w[10][7] 6.30e-04 (1002); v[13][6] 6.69e-04 (85); w[8][6] 7.12e-04 (291); w[19][2] 7.17e-04 (88); w[15][6] 7.24e-04 (129); u[11][6] 7.50e-04 (67); v[9][7] 7.56e-04 (217); u[9][5] 7.60e-04 (79); v[18][4] 7.65e-04 (18); w[16][4] 8.20e-04 (16); w[22][6] 8.31e-04 (63); w[6][0] 8.59e-04 (22); u[18][4] 8.64e-04 (147); v[14][0] 8.85e-04 (163); u[9][8] 8.95e-04 (44); v[15][2] 9.21e-04 (42); w[14][4] 9.77e-04 (22); w[14][2] 9.95e-04 (19); v[4][7] 1.02e-03 (32); u[11][0] 1.03e-03 (139); w[4][4] 1.04e-03 (75); w[13][0] 1.07e-03 (336); v[22][5] 1.07e-03 (32); v[18][5] 1.09e-03 (36); u[7][1] 1.11e-03 (30); w[20][2] 1.13e-03 (112); u[20][8] 1.14e-03 (37); u[10][5] 1.16e-03 (134); v[11][0] 1.19e-03 (29); u[10][4] 1.21e-03 (43); v[11][2] 1.25e-03 (53); u[18][1] 1.27e-03 (24); u[8][0] 1.29e-03 (19); v[9][6] 1.30e-03 (17); v[5][4] 1.31e-03 (28); w[7][6] 1.33e-03 (16); w[12][4] 1.45e-03 (159); v[12][0] 1.72e-03 (19); u[14][4] 1.73e-03 (954); w[5][2] 1.86e-03 (45).
+
+The per-entry table for all 138 entries is in `local_opt_table.md`.
+
+**Whole terms (a rank-22 test).** 23 runs of 40 starts each. Terms 4–22 end at best residual 1.000 and terms 0–3 at 1.414 (√2). None trends towards 0, so there is no rank-22 border approach inside this pattern. The first run hit the 20-minute limit, so the last terms were finished with an extra chunk (`local_opt.py terms 20 23`).
+
+## C. Practical metrics
+
+Script: `metrics.py` (output in `metrics_out.txt`).
+
+Definitions:
+- **Additions:** the sum over terms of (nnz(u)−1)+(nnz(v)−1), plus the sum over the 9 outputs of (number of contributing terms − 1). For every scheme here this equals support − 55.
+- **Growth factor e:** the maximum over outputs of Σ_k |w_k[c]|·‖u_k‖₁·‖v_k‖₁. Term rescaling leaves it unchanged; diagonal gauge changes it. The "minimum over diagonal gauge" row uses Nelder-Mead with 20 starts.
+- **Relative error:** 10,000 trials with A and B uniform in [−1,1] (seed 7), evaluated in float64 and compared with the exact product in Fractions. The measure is max_ik |ΔC| / (max|A|·max|B|).
+
+| metric | 138 stored | 138 rescaled | 139 | Laderman |
+|---|---|---|---|---|
+| additions (linear forms + outputs) | 83 (48+35) | 83 (48+35) | 84 (48+36) | 98 (56+42) |
+| non-±1 coefficients | 73 (±2^k, \|k\| ≤ 4) | 12 (±2, ±1/2) | 0 | 0 |
+| growth factor e | 156.5 | 34.0 | 31.0 | 35.0 |
+| minimum e over diagonal gauge | 30.77 | 30.77 | 26.17 | 31.07 |
+| Σ ‖u‖₁‖v‖₁‖w‖₁ | 449.6 | 167 | 163 | 219 |
+| worst relative error | 1.09e-14 | 1.68e-15 | 1.50e-15 | 2.12e-15 |
+| mean relative error | 1.68e-15 | 2.99e-16 | 2.45e-16 | 2.89e-16 |
+
+For reference, numpy's own A@B gives a worst error of 4.1e-16 on the same trials. For floating-point use, take the rescaled form: the stored form is about 7 times less accurate.
+
+## D. Kaggle wave 1 (cap 138, Smirnov's core planted)
+
+Script: `dedup138.py`.
+
+Five notebooks ran 16,240 seeds and produced 14 new GF(3) schemes at support 138. All 14 patterns are invalid as GF(2) schemes. Together with the original seed 3158, all 15 hits are the same GF(3) scheme up to term order and term scaling. With Smirnov's core planted, the cap-138 walk has a single attractor, at about 1 hit per 1,160 seeds on Kaggle.
+
+## Files
+
+- Scripts: `common.py`, `structure.py`, `structure2.py`, `family.py`, `lsq.py`, `curve.py`, `curve_exact.py`, `curve_rational.py`, `tropical.py`, `gauge_min.py`, `local_opt.py`, `run_local_opt.sh`, `followup.py`, `probe_limit.py`, `summarise_b.py`, `metrics.py`, `dedup138.py`.
+- Outputs: the `*_out.txt` files, `family.json`, `family_rational.json`, `structure.json`, `local_opt_*.jsonl` and `.log`, `local_opt_table.md`, `followup_e15.*`, `followup_e135.*`, `probe_limit_e135.txt`, `family_points/`, `support_138_gauged/solution.json`.
+
+## E. Kaggle waves 1 and 2, full results (2026-10-01)
+
+Scripts: `dedup_w2.py`, `match139.py`; outputs `distinct_schemes.json`.
+
+| wave | notebooks | core planted | cap | seeds | hits | distinct GF(3) schemes |
+|---|---|---|---|---|---|---|
+| 1 | 5 | Smirnov | 138 | 16,240 | 14 | 1 (the known 138) |
+| 1 | 10 | Smirnov | 137 | 185,192 | 0 | – |
+| 2 | 2 | Smirnov | 139 | 31,512 | 5,186 at 139, 14 at 138 | 139: 4; 138: 1 |
+| 2 | 2 | none | 138 | 38,512 | 0 | – |
+| 2 | 1 | none | 141 | 18,600 | 0 | – |
+
+Findings:
+- Cap 137 on Smirnov's core: 0 hits in 185,192 seeds (plus 300 earlier on the laptop). At cap 138 the hit rate is about 1 per 1,160 seeds, so a 137 reachable by this walk at a comparable rate would have appeared about 160 times. Strong evidence that no 137 is reachable from Smirnov's core by the GF(3) capped walk.
+- Every 138 hit so far (29 from three independent runs) is the same GF(3) scheme up to term order and term scaling. The cap-138 walk has a single attractor.
+- At cap 139 the walk finds exactly 4 distinct GF(3) schemes: two whose pattern is Smirnov's (the official 139's mod-2 pattern under one group map; they are two mod-3 sign assignments of it, 2,594 and 2,574 hits), and two "exotic" 139s (9 hits each) whose patterns are not GF(2) schemes and are not in the orbit of the official 139 under the 1,296 permutation and slot maps. These are new objects of the 138's kind; their exact lift is reported in `lift139/`.
+- Without the planted core the walk reaches neither 138 nor 141 in 57,112 seeds: the planted core is essential at this budget (1M steps per seed).
+
+## F. The exotic 139s are the 138 in disguise (2026-10-01)
+
+Full report: `lift139/REPORT_lift139.md`. Both exotic 139 classes lift to exact rational schemes (0 failing identities, support 139, 16 non-±1 coefficients, denominators 1 and 2 only; re-verified independently). They are one scheme up to symmetry: the 138's order-2 symmetry maps class A onto class B. In the 138's own frame, class A shares 21 of 23 terms with the 138 exactly; the other two terms on each side share the factor v = E_{3,2}, sum to the same rank-2 tensor, and differ only by a GL(2) change of basis on that pair. The 138 (7 nonzeros in those four factors) and the exotic 139 (8 nonzeros) are the two sparsest points of that rank-2 fibre; on the union pattern (support 140) the exact family has dimension 2 and contains both. Smirnov's 139 is unrelated (44 pattern entries away). The 138 stays the unique known scheme below 139, and the only known mod-2-invisible family at this level.
+
+## G. Kaggle wave 3: census at caps 140, 141, 142 (2026-10-01)
+
+15 notebooks (5 per cap), Smirnov's core planted, 6 h each, 186,296 seeds, 57,017 hits. Deduplication (`dedup_w2.py`) is by GF(3) values up to term order and per-term scaling; it does not yet merge schemes related by the 1,296 permutation and slot maps, so the counts below are upper bounds on symmetry classes. "Invisible mod 2" means the nonzero pattern is not a valid GF(2) scheme.
+
+| support | distinct GF(3) schemes, GF(2)-valid pattern | distinct, invisible mod 2 | hits (GF(2)-valid / invisible) |
+|---|---|---|---|
+| 138 | 0 | 1 | 0 / 85 |
+| 139 | 2 | 2 | 12,070 / 107 |
+| 140 | 8 | 6 | 17,617 / 127 |
+| 141 | 18 | 19 | 12,041 / 8,031 |
+| 142 | 22 | 50 | 3,368 / 8,786 |
+
+Observations:
+- Across waves 1-3 (about 390,000 seeds at caps 138-142) every 138 hit (85) is the same scheme.
+- The mod-2-invisible share grows with support: 1 of 1 at 138, 2 of 4 at 139, 6 of 14 at 140, 19 of 37 at 141, 50 of 72 at 142. At 141-142 the invisible schemes are the majority of distinct schemes, and at 141 they are 40% of hits. The GF(2) world is a minority of what the walk can reach even one or two levels above the record.
+- The coarse profile (per-term nonzeros and GF(3) ranks) splits the 139 GF(2)-valid schemes into one class of 2 (Smirnov's two mod-3 sign variants) and the 140 GF(2)-valid ones into two classes of 4; symmetry-aware classification and exact lifts of the invisible 140s are reported in `census140/`.
+
+## H. Classification of everything found at 139-142 (2026-10-02)
+
+Full report: `census140/REPORT_census140.md` (generated by `census140/report.py`). The 128 distinct GF(3) schemes from waves 1-3 were merged under the 1,296 permutation and slot maps combined with signed diagonal sandwiches and per-term scaling, giving 68 symmetry classes. Every scheme passes an independent GF(3) Brent check. Spot checks of the exact lifts were repeated independently (`lift_140_140i1`, `140i3`, `141_141i9`: 0 failing identities, denominators 1 and 2; the dyadic representatives `140i2_dyadic`, `141i1_dyadic`: 0 failing identities).
+
+| support | classes | GF(2)-valid: known published / new | invisible mod 2: 138-rewrite / Smirnov-rewrite / other | exact lifts |
+|---|---|---|---|---|
+| 139 | 2 | 1 / 0 | 1 / 0 / 0 | dyadic representative built |
+| 140 | 7 | 4 / 0 | 3 / 0 / 0 | 3 of 3 exact |
+| 141 | 19 | 9 / 0 | 5 / 4 / 1 | 4 exact (plus dyadic representatives for the rest) |
+| 142 | 39 | 10 / 1 | 8 / 14 / 6 | not attempted |
+
+Findings:
+1. **Nothing new in the GF(2) world at 140-141.** Every GF(2)-valid class at 140 has the mod-2 pattern of one of the 2 known published 140s, and every one at 141 of one of 5 of the 6 known 141s (the walk never reached the sixth, `official_141`). This agrees with the exact GF(2) sweeps of the previous round. Side finding: one GF(2)-valid pattern at 142 (class 142g9, 62 hits) is absent from the 17,387-scheme published collection, which lists exactly 7 patterns at 142.
+2. **No new mod-2-invisible family at 140 or 141.** Every invisible class there is a rewrite of the 138 (3 of 3 at 140; 6 of 10 at 141, one of them rewritten in two places) or of Smirnov's 139 (4 of 10 at 141, with 7,968 hits between them).
+3. **One construction generates nearly all of it.** Take two terms that share a factor; their sum is (shared factor) ⊗ M with M of rank 2, and any 2×2 change of basis on the pair gives another valid scheme. Applied to the exact 138 this reproduces, exactly and with dyadic coefficients, the exotic 139, 140i1, 140i2, 141i5-i7 and two classes at 142. Applied to Smirnov's 139 it reproduces **both known published 140s**, four of the known 141s, all four high-volume invisible 141 classes, and four classes at 142 (`census140/dyadic_pairs_all.py`; representatives `lift_<support>_<class>_dyadic/solution.json`, all verified). The remaining 138-rewrites use 3-term groups and rest on exact numeric lifts (`140i3`, `141i9`).
+4. **Family dimensions** (exact Jacobian over Q, 6 gauge directions removed): the 138 and its one-pair rewrites have dimension 1-2; Smirnov's 139, the known 140s and their rewrites 3-4. Some numeric family points of the 141 classes are non-dyadic (denominator 3, or √2 for 141i1), but every class has a dyadic exact point.
+
+Reading: below 143, with Smirnov's core planted, the GF(3) walk sees exactly two sources, the 138's family and Smirnov's family, and everything else is a partial-sum rewrite of one of them. "Invisible mod 2" at these levels means "a pair rewrite with ±2^k coefficients", not new combinatorics. The 138 remains the unique known point below 139.
+
+## I. Kaggle wave 4: the cap-137 negative is robust to the walker's settings (2026-10-02)
+
+15 notebooks, 11 h each, Smirnov's core planted. Three walker settings (initial density `den` and temperature `beta`), each with one control notebook at cap 138 and four at cap 137.
+
+| setting | cap 138 control: seeds, hits (rate) | cap 137: seeds, hits |
+|---|---|---|
+| den 6, beta 1.5 | 15,720, 18 (1 per 870) | 63,104, 0 |
+| den 24, beta 1.5 | 15,720, 7 (1 per 2,250) | 76,408, 0 |
+| den 12, beta 2.5 | 17,008, 162 (1 per 105) | 91,400, 0 |
+| (earlier: den 12, beta 1.5) | 16,240, 14 (1 per 1,160) | 185,192, 0 |
+
+- Every control re-found the 138, and all 187 new hits are the known 138 (272 hits in total since the first find, one scheme).
+- Cap 137: 0 hits in 230,912 seeds here, 416,104 with wave 1. Under the beta-2.5 setting alone, a 137 reachable at the 138's rate would have produced about 870 hits in the 91,400 seeds; none appeared.
+- Beta 2.5 raises the cap-138 hit rate about 11-fold over the default 1.5. Wave 5 uses it and sweeps beta further (3.5, 5.0).
+
+Conclusion: with Smirnov's core planted, no support-137 scheme is reachable by the GF(3) capped walk at 1M steps per seed, independently of the walker's density and temperature settings.
+
+## J. Kaggle wave 5: census of all cores over GF(3), and the temperature sweep (2026-10-02)
+
+**Census.** 12 notebooks, 2.75 h each, cap 144, 40 seeds per core, beta 2.5, over the 1,811 index-disjoint cores (the pairing classes of needed products, `cores_disjoint.json`). The walk takes about 11 s per failing seed on Kaggle, so the notebooks covered 1,208 cores before their deadline; the remaining 603 (including the slice that holds Smirnov's core, index 1808) run in wave 5b with Smirnov's core as a positive control in every notebook (`analysis/w5_census_cover.json`).
+
+- Solved cores among the 1,208: **none**. No core other than Smirnov's has yielded a scheme at support <= 144 in this census, matching the earlier 10-seed census at cap 145 (only Smirnov's core and core 1685 responded there).
+- Nearest misses (minimum residual over 40 seeds): core 1685 reaches residual 1 (one violated identity); cores 1701, 1729, 1732 and 1741 reach 2; 15 cores reach 3; the other 1,188 never get below 4.
+
+**Temperature sweep** at cap 138 on Smirnov's core (3 notebooks, 2.75 h):
+
+| setting | seeds | hits at 138 | rate |
+|---|---|---|---|
+| beta 2.5, den 6 | 4,136 | 36 | 1 per 115 |
+| beta 3.5, den 12 | 4,304 | 6 | 1 per 717 |
+| beta 5.0, den 12 | 8,056 | 2 | 1 per 4,028 |
+| (wave 4: beta 2.5, den 12) | 17,008 | 162 | 1 per 105 |
+| (wave 1: beta 1.5, den 12) | 16,240 | 14 | 1 per 1,160 |
+
+Beta 2.5 is the sweet spot for this walker; higher temperatures run more seeds per hour but find far less. All 44 new hits are the known 138: 316 hits of support 138 so far, one scheme, one pattern.
+
+## K. The census of all 1,811 cores is complete: two responsive cores (2026-10-02)
+
+Waves 5 and 5b together: every one of the 1,811 index-disjoint cores was planted (all 81 entries of its needed products fixed to 1 over GF(3)) and walked with 40 seeds at cap 144, beta 2.5, 1M steps per seed (`analysis/w5_census_cover.json`, `w5b_census_cover.json`). Wave 5b placed Smirnov's core (1808) first in each of its 15 notebooks as a positive control.
+
+- Control: Smirnov's core solved in all 15 notebooks, 14-27 of 40 seeds each, minimum supports 139-142.
+- The other 1,810 cores: exactly **one** solved, core 1809, 2 of 40 seeds, both at support 143 with mod-2-invisible patterns. Core 1809 is not in the symmetry orbit of Smirnov's core (the 1,811 cores are pairwise inequivalent under index permutations and slot maps; checked).
+- Nearest misses: core 1685 reaches residual 1 (one violated identity), cores 1627, 1701, 1729, 1732 and 1741 reach residual 2, and 29 more reach 3; the remaining 1,774 cores never get below 4 in 40 seeds.
+
+Reading: the pairing structure of the needed products (the "core") is the decisive choice. With this walker and budget, only 2 of 1,811 cores support any rank-23 scheme at support <= 144, and only Smirnov's reaches below 143. Core 1809's schemes are lifted and related to the known ones in `analysis/core1809/`; wave 7 walks core 1809 at caps 140-142 to see how low it goes.
+
+## L. Core 1809: a new, mod-2-invisible rank-23 scheme at support 143 (2026-10-02)
+
+Full report: `core1809/REPORT_core1809.md` (+ `.docx`). The two census hits on core 1809 are one scheme: the second is the image of the first under one of the six symmetries of core 1809 (Smirnov's core has two). The exact lift succeeded (8 of 64 starts, residual 1.2e-15, every parameter snapped to the dyadic grid, exact repair): **0 failing identities, support 143, 35 non-±1 coefficients, denominators 1 and 2 only** (re-verified independently for both frames, `core1809/lift_143_1/solution.json`, `lift_143_2/`). Exact family dimension 1, like the 138.
+
+Why it is new:
+- Its mod-2 pattern matches none of the 137 known scheme files, including the 14 published schemes at support 143, under any of the 1,296 maps.
+- It is not a rewrite of anything on Smirnov's core: the best alignment shares only 4 of 23 terms with the 138 (pattern difference 43) and 2 with Smirnov's 139 (68); the nearest published scheme shares 4 terms (difference 42). The exact term-level test confirms 4 of 23 terms equal as tensors versus the 138, all of them single-product terms.
+- It lives on a different core: a different pairing of the 27 needed products into shared terms, inequivalent to Smirnov's under all symmetries.
+
+Structure: the same skeleton as the 138 and the 139 (4 pair-terms carrying the planted pairs, 19 single-product terms, every needed product made by exactly one term), with 78 distinct unwanted products (162 incidences, 72 of multiplicity 2 and 6 of multiplicity 3; the 138 has 69/142, the 139 has 68/136). The pattern has a trivial automorphism group.
+
+Local optimality: forcing any one of its 143 nonzeros to zero and re-solving (40 starts each) never reaches residual below 8.5e-7; the 81 needed-product entries give residual 1, the 62 cancellation entries give 8.5e-7 to 1.6e-3, and the two smallest are border-type limits (the residual stalls while coefficients drift to infinity, the same signature as the 138's near-misses). Tracing its 1-parameter family in both directions, no entry vanishes at finite distance. So it is locally optimal, like the 138.
+
+Reading: the first scheme found by this method that is neither Smirnov's family nor the 138's. It is invisible mod 2 (not a valid GF(2) pattern), so no GF(2) search could have found it. At 143 it is not sparse by the leaderboard's standard, but it shows the mod-3 landscape holds families on other cores. Wave 7 walks core 1809 at caps 140-142 to see whether this family goes lower.
+
+## M. Waves 6 and 7: the GF(5) view, and the floor of core 1809 (2026-10-02)
+
+**Wave 6, GF(5) walker (`src/walk5.c`), Smirnov's core planted as nonzero-but-free, 10 notebooks, 11 h, 139,888 seeds.** Mod 5 sees every coefficient whose denominator is not a multiple of 5, in particular denominators 3 that mod 3 cannot see.
+
+| cap | notebooks | seeds | hits at 139 | hits at 138 |
+|---|---|---|---|---|
+| 139 (controls) | 2 | 29,544 | 2,279 | 5 |
+| 138 | 8 | 110,344 | – | 4 |
+
+- All 9 GF(5) hits at support 138 have one nonzero pattern, the known 138's (checked against its 648-pattern symmetry orbit, `analysis/match_known.py`). The GF(5) values differ between hits only by the diagonal gauge.
+- The 2,279 hits at 139 are all Smirnov's pattern except one, whose pattern is the exotic 139 (the 138 rewritten on one pair of terms, section F).
+- The GF(5) hit rate at 138 is about 1 per 27,000 seeds, against 1 per 105 for GF(3) at beta 2.5: the larger value space costs a factor of about 250. Nothing with a denominator 3 appeared at 138 or 139.
+
+Reading: the mod-5 search sees exactly the same objects at 138-139 as the mod-3 search (Smirnov's family, the 138's family), only more slowly. There is no evidence of a sub-139 scheme that needs a 3 in a denominator.
+
+**Wave 7, core 1809 at caps 142, 141, 141, 140, 140 over GF(3), beta 2.5, 5 notebooks, 11 h, 82,744 seeds: no hits.** Core 1809 yields support 143 (2 of 40 seeds at cap 144) and nothing below it at this budget, so the new family of section L floors at 143.
+
+Stop-rule status: the 137 hunt is negative under GF(3) with three walker settings (416,104 seeds), under GF(5) (110,344 seeds at cap 138 found only the known 138), and on every one of the 1,811 cores (only Smirnov's core reaches below 143 at all). Further waves now map the landscape rather than hunt: wave 8 collects the support-143 family of core 1809 (cap 143) and probes the six near-miss cores (1685, 1627, 1701, 1729, 1732, 1741) at cap 146 with 12,000 seeds each.

@@ -1,0 +1,96 @@
+OPENMATH-OPDP13-QUARTIC
+Canonical target: For H_t(z)=(1+|z|²)^4−t|z|⁴ and 6<t≤7, H_t^N (N positive integer) is a finite sum of |holomorphic polynomial|² iff N=2, or N≥4, or N=3 and 924−210t+18t²−t³≥0. For 6<t<8 any such N obeys 12N(8−t)≥t(10−t). For 7≤t<8 it obeys 81N t^(4N)≤614656(16−t)^(4N), plus explicit logarithmic lower bound. Writing δ=8−t, for every ε>0 sufficiently small δ>0 forces all admissible N to satisfy δN≥(1−ε)log(1/δ), while every N≥(1+ε)log(1/δ)/δ has strictly positive coefficients in every degree 0,…,4N and gives a function-level squared-norm representation. The defined least positive admissible index exists and has normalized ratio δ index/log(1/δ) between 1−ε and 1+ε near 0.
+D proposal=644/1000; intrinsic=5.0/10
+New local OPDP extension with CFSD1000 formula; one editorial assessor, not the required three-assessor median.
+
+FRONTIER: Quartic exact exponent classification and sharp boundary scale: For H_t(z)=(1+|z|²)^4−t|z|⁴ and 6<t≤7, H_t^N (N positive integer) is a finite sum of |holomorphic polynomial|² iff N=2, or N≥4, or N=3 and 924−210t+18t²−t³≥0. For 6<t<8 any such N obeys 12N(8−t)≥t(10−t). For 7≤t<8 it obe
+
+INTERACTION: Supporting lemmas and corollaries belong to the same scope union. Any transfer to a parent or another problem requires a proved scope-preserving bridge.
+
+PAPER: Candidate building block only; preserve source hypotheses, exact priority comparison, proof closure and contribution-based authorship.
+
+COLLECTIVE: Virtual family representative E02-opdp13-quartic; conservative one-family points 207.368. M2 is separate when applicable.
+
+CONTRIBUTION MAP
+
+E02-opdp13-quartic / Rachel Teo / Wenyi Wang / Hamdi Abderrahmene
+For H_t(z)=(1+|z|²)^4−t|z|⁴ and 6<t≤7, H_t^N (N positive integer) is a finite sum of |holomorphic polynomial|² iff N=2, or N≥4, or N=3 and 924−210t+18t²−t³≥0. For 6<t<8 any such N obeys 12N(8−t)≥t(10−t). For 7≤t<8 it obeys 81N t^(4N)≤614656(16−t)^(4N), plus explicit logarithmic lower bound. Writing δ=8−t, for every ε>0 sufficiently small δ>0 forces all admissible N to satisfy δN≥(1−ε)log(1/δ), while every N≥(1+ε)log(1/δ)/δ has strictly positive coefficients in every degree 0,…,4N and gives a function-level squared-norm representation. The defined least positive admissible index exists and has normalized ratio δ index/log(1/δ) between 1−ε and 1+ε near 0.
+The precise quartic family has both an exact exponent-semigroup classification and a matching asymptotic threshold delta*N/log(1/delta) tending to one. The source uses a function-level holomorphic squared-norm representation, which is stronger than a coefficient-only claim.
+Novelty: Original variation candidate. Tan–To's inspected appendix concerns multiplication by R^m, a different operation, but its main theorem and Handelman full text still need the named comparison.
+Formalization: Packet evidence: Final standalone40-proof-module and aggregate build completed3553jobs with exit0; source SHA records match; endpoint axioms standard. Earlier dependency-graph refresh and stale18-file README count are superseded by this evidence.. Endpoint signatures and declared axioms are recorded below; author/internal replay is not this reviewer’s fresh rebuild. 
+Proposed M3B; p=1; points=207.368; full review: entries/E02-opdp13-quartic.txt
+
+OPDP INPUTS AND RATIONALE
+{
+  "inputs": {
+    "H": 5,
+    "X": 3,
+    "T": 4,
+    "Vtrue": 5,
+    "Vfalse": 3,
+    "F": 6,
+    "P": 7,
+    "B": 3,
+    "L": 7,
+    "literature": 7,
+    "ambiguity": 2,
+    "context": 1,
+    "horizon": 1,
+    "D": 5.0,
+    "AI": 5.0
+  },
+  "calculation": {
+    "normalized_components": {
+      "ai_relative_core": 0.5,
+      "intrinsic_difficulty": 0.5,
+      "human_resistance": 0.5,
+      "inverse_tractability": 0.6,
+      "verification_burden": 0.4,
+      "formalization_burden": 0.6,
+      "prerequisite_load": 0.65,
+      "context_and_ambiguity": 0.69,
+      "tool_constraint": 0.30000000000000004
+    },
+    "weighted_points": {
+      "ai_relative_core": 200.0,
+      "intrinsic_difficulty": 85.0,
+      "human_resistance": 45.0,
+      "inverse_tractability": 90.0,
+      "verification_burden": 18.0,
+      "formalization_burden": 21.0,
+      "prerequisite_load": 26.0,
+      "context_and_ambiguity": 27.599999999999998,
+      "tool_constraint": 9.000000000000002
+    },
+    "linear_barrier": 521.6,
+    "transform_exponent": 1.4,
+    "final_value": 644
+  },
+  "intrinsic_factors": {
+    "conceptual_gap": 2,
+    "route_gap": 2,
+    "technical_depth": 2.5,
+    "known_barrier": 1.5,
+    "search_scale": 2
+  },
+  "axis_rationales": {
+    "intrinsic": "Complete specified one-parameter quartic classification/asymptotic threshold only; own child difficulty, not full parent OPDP13.",
+    "AI": "Statement has specialist analytic/formal dependencies; the dated tool-assisted protocol is an estimate, not an empirical solve run.",
+    "attention": "H/X are historical-effort/exposure priors, not contestant hours. The chosen bands are single-assessor estimates; no labor total was observed.",
+    "tractability": "Known targets use N/A and neutral full-resolution component; otherwise the band is an editorial chance of useful100-hour partial progress, not full resolution.",
+    "verification": "Positive checking uses the stated specialist semantic or analytic argument; a negative/global resolution can have a different burden. No fresh Lean build is claimed.",
+    "formalization": "Statement encoding and libraries require 6/10 burden; this is the target burden, not the quality of a submitted proof.",
+    "prerequisites": "The target needs its Real algebraic geometry / polynomial positivity background; preparation and breadth refer to a prepared researcher, not entrant prestige.",
+    "tools": "Higher L means favorable exact-feedback/search/prover leverage. It does not turn a leaderboard number into a theorem.",
+    "status": "Source-claimed pre-event open target or explicitly parent-linked variation; no independently certified verified_open status invented."
+  },
+  "parent_links": [
+    "OPDP row13: holomorphic squared-norm/exponent problem"
+  ],
+  "sources": [
+    "https://aimath.org/WWN/complexitycrmap/complexitycrmap.pdf",
+    "https://arxiv.org/abs/1012.2479",
+    "https://doi.org/10.1007/s12220-019-00334-9",
+    "https://doi.org/10.1007/s12220-025-02228-5"
+  ]
+}

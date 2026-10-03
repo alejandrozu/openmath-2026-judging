@@ -1,0 +1,105 @@
+OPENMATH-ERDOS829
+Canonical target: Bound the number of ordered nonnegative integer representations x^3+y^3=n by a fixed power of log n. A smaller constant in a subexponential bound is partial progress.
+D proposal=530/1000; intrinsic=5.4/10
+Existing published CFSD1000 value, reused without rescaling or changing its frozen source profile.
+
+FRONTIER: Erdős 829 verified log(5/3) partial bound: Let R(n) count ordered nonnegative integer pairs (x,y) satisfying x^3+y^3=n. For every real epsilon>0 there exists a natural N such that, for every natural n>=N, R(n) <= exp((log(5/3)+epsilon)*log(n)/log(log(n))). Zero c
+
+INTERACTION: Supporting lemmas and corollaries belong to the same scope union. Any transfer to a parent or another problem requires a proved scope-preserving bridge.
+
+PAPER: Candidate building block only; preserve source hypotheses, exact priority comparison, proof closure and contribution-based authorship.
+
+COLLECTIVE: Virtual family representative E02-erdos829-log-five-thirds; conservative one-family points 14.045. M2 is separate when applicable.
+
+CONTRIBUTION MAP
+
+E02-erdos829-log-five-thirds / Rachel Teo / Wenyi Wang / Hamdi Abderrahmene
+Let R(n) count ordered nonnegative integer pairs (x,y) satisfying x^3+y^3=n. For every real epsilon>0 there exists a natural N such that, for every natural n>=N, R(n) <= exp((log(5/3)+epsilon)*log(n)/log(log(n))). Zero coordinates are included and swapping unequal coordinates gives distinct representations. There is no primitive-pair or cubefree-target restriction. The existential threshold is not given numerically.
+The all-target bound uses coefficient log(5/3), about.510826, rather than the earlier same-family log(7/4), about.559616. The located.556477 comparison is only cubefree and does not cover all targets. Including zero coordinates and ordered pairs preserves the original count. The existential threshold is not effective.
+Novelty: Candidate new uniform bound built from prior ratio-root, determinant and coding methods. Earlier intermediate coefficients are revisions, not additional families.
+Formalization: Packet evidence: Fresh separately orchestrated source-only Lean 4.33.1 replay completed 2026-10-02T18:54:57.202016+00:00. All 33 proof modules and two semantic/axiom audit modules exited 0. The final active sources comprise 28 historical exact modules and five reconstructed/repaired variants, all freshly verified. No old own-module oleans were used; nine third-party dependency pins matched. Endpoint transitive axioms are only propext, Classical.choice and Quot.sound. The semantic audit checks the exact expanded catalog expression and ordered nonnegative coordinate count; it does not import the catalog conjecture. This is internal AI-assisted formal-check/semantic evidence, not appointed jury or external peer review.. Endpoint signatures and declared axioms are recorded below; author/internal replay is not this reviewer’s fresh rebuild. 
+Proposed M3A; p=0.05; points=14.045; full review: entries/E02-erdos829-log-five-thirds.txt
+
+OPDP INPUTS AND RATIONALE
+{
+  "inputs": {
+    "catalog_status": "open",
+    "assessment_gate": "source_claimed_open",
+    "scope": "atomic",
+    "answer_type": "proof_disproof",
+    "intrinsic_difficulty_0_10": 5.4,
+    "intrinsic_tier_code": "T3",
+    "intrinsic_tier_label": "Serious Project",
+    "ai_relative_difficulty_0_10": 4.4,
+    "human_effort_1_9": 2,
+    "human_exposure_1_5": 2,
+    "tractability_status": "scored",
+    "tractability_0_10": 6,
+    "verification_if_true_0_10": 5.1,
+    "verification_if_false_0_10": 4.4,
+    "formalization_0_10": 3.7,
+    "prerequisite_preparation_0_10": 5.2,
+    "prerequisite_breadth_1_5": 1,
+    "tool_leverage_0_10_higher_is_favorable": 4.5,
+    "ambiguity_0_10": 1.6,
+    "literature_load_0_10": 2.5,
+    "ai_context_load_predictor_minus1_to_plus1": -1,
+    "ai_reasoning_horizon_predictor_minus1_to_plus1": 0,
+    "recommended_route": "Expert-guided proof search"
+  },
+  "calculation": {
+    "normalized_barriers_0_1": {
+      "ai_relative_core": 0.44,
+      "intrinsic_difficulty": 0.54,
+      "human_resistance": 0.15,
+      "inverse_tractability": 0.4,
+      "verification_burden": 0.48,
+      "formalization_burden": 0.37,
+      "prerequisite_load": 0.39,
+      "context_and_ambiguity": 0.23,
+      "tool_constraint": 0.55
+    },
+    "weighted_component_points": {
+      "ai_relative_core": 176,
+      "intrinsic_difficulty": 91.8,
+      "human_resistance": 13.5,
+      "inverse_tractability": 60,
+      "verification_burden": 21.38,
+      "formalization_burden": 12.95,
+      "prerequisite_load": 15.6,
+      "context_and_ambiguity": 9.28,
+      "tool_constraint": 16.5
+    },
+    "linear_barrier_points_0_1000": 417.01,
+    "complete_solution_transform_exponent": 1.4,
+    "complete_solution_uplift_points": 112.99,
+    "final_score_0_1000": 530
+  },
+  "intrinsic_factors": {
+    "conceptual_gap": 2.5,
+    "route_gap": 2.5,
+    "technical_depth": 2,
+    "known_barrier": 1,
+    "search_scale": 3
+  },
+  "axis_rationales": {
+    "intrinsic": "Improves leading constant for all sums of cubes; polylogarithmicarithmicarithmic target remains. Earlierlog7/4version same family.",
+    "AI": "Statement has exact finite certificate feedback; the dated tool-assisted protocol is an estimate, not an empirical solve run.",
+    "attention": "H/X are historical-effort/exposure priors, not contestant hours. Insufficient documentation: neutral normalized .5 used for scoring.",
+    "tractability": "Known targets use N/A and neutral full-resolution component; otherwise the band is an editorial chance of useful100-hour partial progress, not full resolution.",
+    "verification": "Positive checking uses the stated exact finite data/proof chain; a negative/global resolution can have a different burden. No fresh Lean build is claimed.",
+    "formalization": "Statement encoding and libraries require 4/10 burden; this is the target burden, not the quality of a submitted proof.",
+    "prerequisites": "The target needs its Analytic number theory / representations as sums of cubes background; preparation and breadth refer to a prepared researcher, not entrant prestige.",
+    "tools": "Higher L means favorable exact-feedback/search/prover leverage. It does not turn a leaderboard number into a theorem.",
+    "status": "Source-claimed pre-event open target or explicitly parent-linked variation; no independently certified verified_open status invented."
+  },
+  "parent_links": [],
+  "sources": [
+    "https://www.erdosproblems.com/829",
+    "https://github.com/google-deepmind/formal-conjectures/blob/main/FormalConjectures/ErdosProblems/829.lean",
+    "https://github.com/google-deepmind/formal-conjectures/blob/main/FormalConjecturesForMathlib/Combinatorics/Additive/Convolution.lean",
+    "https://arxiv.org/html/2112.03617",
+    "https://arxiv.org/html/2207.12487v2",
+    "https://github.com/alejandrozu/ulam-opdp-difficulty-atlas"
+  ]
+}

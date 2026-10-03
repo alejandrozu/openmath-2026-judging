@@ -1,0 +1,21 @@
+E02-erdos944-order-bound | Erdős 944 finite order obstruction
+
+Exact contribution: For a finite simple graph G with n vertices and an integer r >= 1, suppose its chromatic number is 4, deleting any vertex lowers that number, and deleting any set of at most r edges does not lower it. Then 27r+19 <= 4n. The same hypotheses give 27(r+1)(n-1) <= (2n+1)^2 and 9b(r+1) <= (2b+1)(n-b), where b=floor((n+1)/3). These necessary conditions form one family.
+
+Assessment: The linear constraint n>=(27r+19)/4 beats5r+6 for integer r>=1 after rounding, tying at r=1. The source's n/(log n)^c asymptotic restriction remains stronger eventually. This is a useful explicit finite-regime necessary condition, not a new construction or full existence answer.
+
+Novelty: Candidate finite-regime improvement over the explicit prior bound. Existing r=1 graph constructions and classical coding inequalities receive no new-mathematics credit.
+
+Formalization: Packet evidence: Independent isolated Lean 4.34.1 replay compiled three proof modules and the separate TargetAudit.lean from unchanged frozen sources. Its own output directory began empty and earlier project proof caches were excluded; pinned third-party caches were reused. Exact target definitions and conjunction were audited. Every final endpoint uses only propext, Classical.choice and Quot.sound. Packaging validates identities without claiming a further Lean replay.. Endpoint signatures and declared axioms are recorded below; author/internal replay is not this reviewer’s fresh rebuild. 
+
+Proposal: P2 p=.05; count the linear and quadratic inequalities once.
+
+OPDP target OPENMATH-ERDOS944 | intrinsic 6.8/10 | competition D proposal 721/1000
+
+Modality M3A | p 0.05 | b 1 | m 1 | numerical family points 25.99205
+
+Specific remaining checks: Late ZIP 06:19:17 versus on-time PDF 05:57:20: prove fixed cutoff artifact or organizer admin-transfer decision; Exact source/library closure fresh independent build and semantic review; Target admission/open-at-freeze/novelty and canonicalD mapping; Bounded source review; no universal novelty or publication-priority certificate.
+
+Key files: 349518 Claim_Evidence/proofs/erdos944-order-bound/OpHack/Erdos944Bounds.lean; 349518 Claim_Evidence/proofs/erdos944-order-bound/OpHack/Erdos944Bounds.lean; 349518 Claim_Evidence/proofs/erdos944-order-bound/OpHack/Erdos944Bounds.lean; 349523 Claim_Evidence/proofs/erdos944-order-bound/verification/independent-replay-receipt.json; 349521 Claim_Evidence/proofs/erdos944-order-bound/verification/Erdos944Graph.log; 349519 Claim_Evidence/proofs/erdos944-order-bound/verification/CriticalCodeBound.log; 349520 Claim_Evidence/proofs/erdos944-order-bound/verification/Erdos944Bounds.log; 349522 Claim_Evidence/proofs/erdos944-order-bound/verification/TargetAudit.log
+
+Primary/source locators: https://www.erdosproblems.com/944; https://arxiv.org/html/2508.08703; https://github.com/google-deepmind/formal-conjectures/blob/main/FormalConjectures/ErdosProblems/944.lean; https://github.com/KitaKen1/erdos-944-dirac-k4-lean; https://arxiv.org/abs/2606.18462; https://github.com/alejandrozu/ulam-opdp-difficulty-atlas

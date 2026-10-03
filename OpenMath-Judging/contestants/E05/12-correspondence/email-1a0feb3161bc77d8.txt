@@ -1,0 +1,93 @@
+Re: OpenMath: Collatz descent packet and final submission details
+Date: Fri, 2 Oct 2026 17:18:53 -0500
+From: Chaewon Yoon <[REDACTED CONTACT]>
+To: Alejandro Zarzuelo <[REDACTED CONTACT]>
+Receipt/message id: 1a0feb3161bc77d8
+
+BODY
+
+Hello Alejandro,
+
+Thanks for confirming receipt.
+
+The current Collatz review packet on main is at commit:
+9bc116919c27e63db193e03ae6b567a9f2a09579
+
+I checked the submission status again. Experiment
+351d2794-d842-41a1-aa86-83e11fbca2fa has a preserved signed report with
+passed=true, official=true, and final=false. The immutable submission
+commit is 57c1ad7f2af78339260fcc4d8498a05dda4cfc77.
+
+I do not yet have a separate final-submission receipt. The local tooling
+shows hills eval <candidate-directory> -H <committed-hill> --final as the
+command for a new held-out final/test evaluation, while autolab hills
+submit <report> is documented separately for publishing an existing report.
+
+I have not run the --final evaluation yet because I wanted to confirm the
+intended competition workflow before triggering it. Could you or Serge
+confirm whether I should run that command for this preserved Collatz
+result, and whether there is any additional submission or receipt step
+afterward? Once confirmed, I can run it immediately and send the resulting
+final report/reference.
+
+The Busy Beaver work is separate from the Collatz result. It uses a
+different hill and AutoLab project/workstream and is not part of experiment
+351d2794 or the Collatz review packet. I would treat it as a separate
+submission/workstream.
+
+Thanks,
+Chaewon
+
+On Fri, Oct 2, 2026 at 4:49 PM Alejandro Zarzuelo <
+[REDACTED CONTACT]> wrote:
+
+> Thanks, Chaewon, I’ve received the repository and the expanded report,
+> certificate and reproduction materials; I’ll review them shortly.
+> The evaluator report still says final=false: please send the final
+> submission reference/receipt, or describe the exact step that is blocking
+> you.
+> Please also confirm the final commit and whether the Busy Beaver work is a
+> separate submission.
+>
+> On Fri, 02 Oct 2026 09:40:10 -0500, Chaewon Yoon <
+> [REDACTED CONTACT]> wrote:
+>
+> Hello Alejandro, Thanks for reaching out and for the detailed guidance.
+> Here is my current GitHub repository for the Collatz result:
+> https://github.com/chaewon-research/openmath-2026 I’m still organizing
+> and polishing the full packet for experiment 351d2794, including the exact
+> solution artifact, evaluator report, checker/certificate files, replay
+> instructions, provenance, disclosures, and the explanation of the
+> mathematical result and its limitations. I’ll keep updating the repository
+> and aim to have it substantially polished by the end of Friday. I also
+> understand that the GitHub repository is separate from the official
+> competition submission and receipt process. Thanks, Chaewon On Fri, Oct 2,
+> 2026 at 7:07 AM Alejandro Zarzuelo < [REDACTED CONTACT]> wrote:
+> > Hi Chaewon, > > I would like to review the complete result associated
+> with experiment > 351d2794. Please include the immutable commit, full
+> signed evaluator > report, solution.json, Lean/checker files, certificates
+> and exact replay > instructions. State precisely the covered range or
+> residue classes, the > descent theorem established, and the assumptions
+> needed. Please distinguish > that result from a proof of the full Collatz
+> conjecture, and explain what > your new rules add beyond the baseline. Your
+> final-submission workflow > question was forwarded to Serge; please include
+> the official submission > receipt/status separately, since sharing a GitHub
+> packet does not replace > the competition's final submission process. > >
+> Please send your current GitHub repository now and aim to have it mostly >
+> polished by the end of Friday, while respecting the official competition >
+> cutoff. Include all Lean files, other code and certificates; the paper in >
+> PDF and editable source; and a motivation/novelty document explaining the >
+> exact contribution, why it matters, its relation to prior work, and what >
+> was completed during the event. Add pinned dependencies, reproducible >
+> commands, data/logs, the full evaluator report and submission identifiers,
+> > author credits, and AI/model/compute disclosures. Clearly label
+> unfinished > proofs and limitations. A private repository is fine if we can
+> access it > and you permit review by both judges. > > Stephen Wolfram is
+> the other judge, and we want to put the most > interesting, well-supported
+> submissions in front of him. We would also like > to explore developing
+> strong results into papers together where the work > and our contributions
+> justify that. Please make the packet easy to inspect > independently. > >
+> Thanks, > Alejandro >
+>
+>
+

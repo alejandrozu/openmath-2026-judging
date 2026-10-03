@@ -1,0 +1,25 @@
+PERSON: Matt Bowring
+No per-author theorem/work allocation supplied; shared packet attribution only. Do not invent an individual point split.
+
+E03 Matt Bowring
+AUTHORS: Matt Bowring
+PROPOSED S=0 / A=0 / M2 families=0 (adjusted ranking value 0)
+Interesting synthesis coefficient, but presently fails the formal-only rule. Review the exact claimed scope and move on; numerical circuits do not justify a provisional mathematical award.
+Review budget: 10 minutes. Numerical proposals are contingent on acceptance and the listed checks.
+
+E03-SYNTHESIS | Improved synthesis bound
+Claimed (21/48)4^n − (3/2)2^n + 2 CNOTs; n=3:18 CX; n=4:90 CX.
+Assessment: The21/48 formula would improve the2024 constructive22/48 bound, but numerical18-CNOT three-qubit fits do not establish coverage of every unitary. A generic Jacobian rank check gives at most local coverage, and parameters equal to the target dimension do not prove global surjectivity. The contestant acknowledges incomplete rigorous proof and no Lean.
+Novelty: Potential new coefficient if proved. Compare to Krol–Al-Ars2024, not only the older23/48 baseline.
+Formal: Author acknowledges no Lean and incomplete rigorous proof; numerical circuits and parameter counting cannot establish generic all-n coverage.
+Proposal: M3A; D=824; p=0; family points=0. Full evidence/checks: entries/E03-SYNTHESIS.txt
+
+
+PRIORITY SIGN-OFF
+Rigorous constructive proof and approved formalization
+Generic surjectivity/exceptional parameter treatment
+Cutoff version: 57d6c969, later 68122d1 is not automatically eligible
+
+Repo: bowrango/lean-unitary
+Pinned commit: 57d6c96992a58f43d48d61c2a44353d902813cda
+Individual authors share the packet; no unsupported per-author point split. File summaries are visible under Classified files.

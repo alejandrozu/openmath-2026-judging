@@ -1,0 +1,21 @@
+E02-opdp13-quartic | Quartic exact exponent classification and sharp boundary scale
+
+Exact contribution: For H_t(z)=(1+|z|²)^4−t|z|⁴ and 6<t≤7, H_t^N (N positive integer) is a finite sum of |holomorphic polynomial|² iff N=2, or N≥4, or N=3 and 924−210t+18t²−t³≥0. For 6<t<8 any such N obeys 12N(8−t)≥t(10−t). For 7≤t<8 it obeys 81N t^(4N)≤614656(16−t)^(4N), plus explicit logarithmic lower bound. Writing δ=8−t, for every ε>0 sufficiently small δ>0 forces all admissible N to satisfy δN≥(1−ε)log(1/δ), while every N≥(1+ε)log(1/δ)/δ has strictly positive coefficients in every degree 0,…,4N and gives a function-level squared-norm representation. The defined least positive admissible index exists and has normalized ratio δ index/log(1/δ) between 1−ε and 1+ε near 0.
+
+Assessment: The precise quartic family has both an exact exponent-semigroup classification and a matching asymptotic threshold delta*N/log(1/delta) tending to one. The source uses a function-level holomorphic squared-norm representation, which is stronger than a coefficient-only claim.
+
+Novelty: Original variation candidate. Tan–To's inspected appendix concerns multiplication by R^m, a different operation, but its main theorem and Handelman full text still need the named comparison.
+
+Formalization: Packet evidence: Final standalone40-proof-module and aggregate build completed3553jobs with exit0; source SHA records match; endpoint axioms standard. Earlier dependency-graph refresh and stale18-file README count are superseded by this evidence.. Endpoint signatures and declared axioms are recorded below; author/internal replay is not this reviewer’s fresh rebuild. 
+
+Proposal: One full M3B child family at p=1 with its own D. Do not borrow the general parent difficulty.
+
+OPDP target OPENMATH-OPDP13-QUARTIC | intrinsic 5.0/10 | competition D proposal 644/1000
+
+Modality M3B | p 1 | b 1 | m .5 | numerical family points 207.368
+
+Specific remaining checks: Late ZIP 06:19:17 versus on-time PDF 05:57:20: prove fixed cutoff artifact or organizer admin-transfer decision; Exact source/library closure fresh independent build and semantic review; Target admission/open-at-freeze/novelty and canonicalD mapping; Tan–To2021 main Theorem2.1 and detailed constants; Handelman original full text and remaining To–Yeung coverage described in dated review
+
+Key files: 349548 Claim_Evidence/proofs/opdp13/OpHack/PowerSemigroup/Evaluation.lean; 349547 Claim_Evidence/proofs/opdp13/OpHack/PowerMoment/Bound.lean; 349546 Claim_Evidence/proofs/opdp13/OpHack/PowerFourier/Growth.lean; 349549 Claim_Evidence/proofs/opdp13/OpHack/PowerUpper/Function.lean; 349550 Claim_Evidence/proofs/opdp13/OpHack/PowerUpper/LeastIndex.lean; 349551 Claim_Evidence/proofs/opdp13/verification/final-build.log; 349552 Claim_Evidence/proofs/opdp13/verification/root-least-index-build.log
+
+Primary/source locators: https://aimath.org/WWN/complexitycrmap/complexitycrmap.pdf; https://arxiv.org/abs/1012.2479; https://doi.org/10.1007/s12220-019-00334-9; https://doi.org/10.1007/s12220-025-02228-5

@@ -1,0 +1,21 @@
+E02-FOCUS-GROTH | Grothendieck: restricted sign-matrix bounds
+
+Exact contribution: For every n and every 3-by-n sign matrix A, Q_V(A)<=sqrt(3/2) C(A) in every real inner-product space V. Additionally Q_V(A)<=sqrt(2) C(A) for the four literal archived matrices A_6x6_106, A_6x8_690, A_7x8_53110 and A_s8x8_1705. Q_V is the unit-vector objective supremum, with Q_V(A)=0 for an empty feasible set, and C is its real scalar specialization. These supporting cases form one review family.
+
+Assessment: Three-row sign matrices and four archived finite matrices cannot control all real-coefficient Grothendieck instances. The exact finite inequalities are reusable certificates, but no new bound on the universal constant follows.
+
+Novelty: No original universal-constant advance established. A new formalization may be M2 only after source and prior-library comparison.
+
+Formalization: Fresh Row3Granular and four-case SemanticTestGranular checks passed in Lean 4.33.1 with standard axioms only. Row3 mathematical body is byte-identical after import adjustment; the four-case file retains statements and certificate data with eight arithmetic tactic repairs and explicit imports.
+
+Proposal: Open score0; keep supporting formal material, with no automatic extra M2 family.
+
+OPDP target OPENMATH-GROTHENDIECK | intrinsic 5.4/10 | competition D proposal 561/1000
+
+Modality M1 | p 0 | b 1.1 | m 1 | numerical family points 0.0
+
+Specific remaining checks: Late ZIP / cutoff, fixed source and proof closure; Fresh independent verification of the selected endpoint; Novelty status and frozen family D
+
+Key files: 
+
+Primary/source locators: https://github.com/alejandrozu/ulam-opdp-difficulty-atlas

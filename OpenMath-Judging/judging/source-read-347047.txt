@@ -1,0 +1,36 @@
+# What the Lean files prove
+
+The full reciprocal-divergence conjecture is not proved. The modules below formalize known elementary results, connect them to the exact AutoLab definitions, and isolate an explicit remaining research assumption.
+
+| Module | Checked scope |
+| --- | --- |
+| `Erdos3SpecialCases.lean` | Fourteen elementary results: cofinite sets, affine tails, multiples, prefixes, supersets, two-term progressions, and the powers-of-two obstruction. Imports only `Std`. |
+| `Erdos3Bridge.lean` | Five forward bridges: explicit positive-step witnesses give the hill's exact `Set.IsAPOfLength`; arbitrary lengths give its filter conclusion. Cofinite and affine-tail cases now use those exact definitions. |
+| `Erdos3Divergence.lean` | Reciprocal non-summability forces infinitude and unboundedness, and therefore a two-term progression in the hill's definition. |
+| `Erdos3Reduction.lean` | A conditional proof of the elaborated full hill, assuming `APFreeSummability`. That assumption remains unproved. |
+| `Erdos3Blocks.lean` | Four lemmas for finite logarithm blocks, reciprocal bounds, and their total mass. Zero is handled explicitly. |
+| `Erdos3Dyadic.lean` | A summability criterion from block counts, its p>1 envelope consequence, and a conditional full-hill implication retaining an unproved AP-free bound. |
+| `Erdos3ThreeCase.lean` | Five declarations: Formal Conjectures' `erdos_3.variants.kelley_meka` (and the weaker Bloom–Sisask log-barrier form) implies `erdos_3.variants.three`. Statements copied verbatim; the bound itself is an unproved hypothesis. |
+| `Erdos3RothBridge.lean` | Seven declarations: `IsAPOfLengthFree 3 ↔ ThreeAPFree`, `maxCard 3 N = rothNumberNat N`, the `kelley_meka` variant restated with `rothNumberNat`, and a uniform Finset bound (the shape of a corrected APAP integer theorem) implying `erdos_3.variants.three`. |
+| `Erdos3CrossScale.lean` | Twenty-two declarations proving the exact hill **equivalent** to convergence of ∑ⱼ rₖ(2ʲ)/2ʲ for every k ≥ 4, where rₖ is the imported `Set.IsAPOfLengthFree.maxCard`. Includes the separated-block union lemma, shift and length monotonicity, attainment and r(2n) ≤ 2r(n), both transfer directions, and a verbatim-hill fidelity theorem. Neither side is proved. |
+
+The original predicate `ContainsAP A k` supplies a start `a`, a positive step `d`, and membership of all terms `a + i*d` for `i < k`. The bridge constructs the range of `Fin k`, proves it has exactly `k` distinct elements, and checks the imported progression definition. This handles length zero too. It proves the forward direction; it does not claim an equivalence of the two definitions.
+
+The cofinite and affine-tail assumptions are stronger than reciprocal divergence. The two-term consequence cannot be extended to every length using unboundedness alone: the original module proves powers of two are unbounded yet have no nonconstant three-term progression. Their reciprocal convergence is explanatory mathematics, not yet a theorem in these files.
+
+`APFreeSummability` says that, for every `k ≥ 3`, a set containing no `k`-term progression has summable reciprocals. The reduction accepts this as a theorem parameter. An axiom audit cannot turn an unproved parameter into an established theorem; the parameter is explicitly printed in the verification record. Supplying it would settle the full hill.
+
+The new analytic criterion says that if `Σ j, (logBlock A j).ncard / 2^j` is summable, then A's reciprocals are summable. The block at j=0 includes zero when present, whose reciprocal is zero. `APFreePowerEnvelope` requires a stronger sufficient bound C/(j+1)ᵖ with p>1, uniformly over all progression-free sets for each fixed length. That counting bound is an unproved parameter; only the implication from it to the full hill is checked. [Detailed attempt and limits](../research/proof-attempt-2026-09-27.md).
+
+`Erdos3CrossScale.hill_statement_iff_extremal` restates the frozen hill verbatim, including `answer(sorry)`, and is proved by `hill_iff_extremal`. This checks that the equivalence is about the real target, not a paraphrase. Its right side uses the library's own extremal function, so the open obstacle is now a standard statement: for each k ≥ 4, rₖ(N)/N must decay fast enough along powers of two for the series to converge. The one step that needs k ≥ 4 is `sepBlock_union_free`: for k = 3, {1} and {4, 7} lie in separated blocks yet form 1, 4, 7. [Proof groups, obstacle and literature](../research/full-proof-graph/extremal-equivalence.md).
+
+From the repository root, run all modules against the exact pinned image:
+
+```sh
+python3 scripts/local_evaluator.py start
+python3 scripts/local_evaluator.py check-lean
+```
+
+[Executed module evidence](../artifacts/mathlib-verification.json) records source hashes, Lean 4.33.1, each theorem's axiom dependencies, and each module's scope. The checker compiles fresh module copies in a temporary directory and permits only `propext`, `Classical.choice`, and `Quot.sound`. No proof uses an admission or `native_decide`.
+
+For just the original dependency-free fourteen theorems, run `python3 scripts/verify_lean.py` with Lean 4.33.1 on the host. To test the unfinished full target, run `python3 scripts/local_evaluator.py eval submissions/current`. That attempt still exits `2`: it reaches the unproved reciprocal-summability claim for a progression-free set. The supporting modules are not substituted for the fixed hill.

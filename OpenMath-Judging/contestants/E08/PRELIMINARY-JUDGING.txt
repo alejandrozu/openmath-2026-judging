@@ -1,0 +1,473 @@
+E08 HTPeo — Woohyuk Kang / Hyunjin Lee / Sanghyeon Lee / Youchan Oh
+Team (roster/resource classification pending)
+S (conditional): 0.000055 × D[RAMSEY-K4]² + 0.000011 × D[KOBON]² + 0.00015 × D[DMS]²
+A (conditional): max(0.000055 × D[RAMSEY-K4]², 0.000011 × D[KOBON]², 0.00015 × D[DMS]²)
+Priced candidate subtotal: S=52.995300; A=49.42140; unpriced families=1
+M2 possible family ceiling=17; accepted count unawarded. A ceiling is not an endorsement of every trivial helper.
+
+E08-RAMSEY — Weighted K4 upper bound
+1. Problem: Extremal graph theory
+c4 ≤ 200137750014677779172692777477/6640289795261907019148161833841, Q=50762939,1024 blocks;30139911990ppt.
+Difficulty: intrinsic OPDP 8.4/10; Known graph templates and exact blow-up bounds improve one side only; no exact value or matching lower bound supplied.
+Factor profile: {'conceptual_gap': 3.5, 'route_gap': 3, 'technical_depth': 3.5, 'known_barrier': 3.5, 'search_scale': 3}
+Competition D: unmatched; keep symbolic
+2. Improvement: P1 upper boundary; proposed p=0.05
+Written justification: exact improvement of a classical bound plus reusable arbitrary-template blow-up/limit theorem. Small decrease, no matching lower bound or new central structural idea; fallback p=.01 if record novelty/relevance not established.
+3. Formalization / correctness: 2158 HTPeo formal source texts scanned, including final v2. Native.lean is explicitly separate, not imported by main claimed chain; do not reject main result for that cross-check. Packet reports standard-axiom kernel count and lifting, no fresh independent full build.
+Acceptance checks: Fresh endpoint closure build; Verify JSON→Lean identity and oracle density convention; Official receipt: report official=true, final=false; Current primary bound/independence and target D freeze
+Conditional formula: 0.000055 × D[RAMSEY-K4]²; candidate points None
+Source catalogue IDs: 7582, 1238, 5461
+Official acceptance and score: UNAWARDED
+
+E08-KOBON39 — 471-triangle straight-line construction
+1. Problem: Discrete geometry
+K(39)≥471 via39 exact lines and disjoint bounded triangular faces.
+Difficulty: intrinsic OPDP 5.4/10; Construction and global upper-bound geometry are different tasks; finite n certificates are partial in the all-n parent. Atlas title-only target requires curation.
+Factor profile: {'conceptual_gap': 2.5, 'route_gap': 2.5, 'technical_depth': 2, 'known_barrier': 1, 'search_scale': 3}
+Competition D: published candidate 570; event binding unverified
+2. Improvement: P1; proposed p=0.01
+Narrow explicit lower-bound certificate, not maximum481 or an all-n solution. Upper P1 would need a written significance decision; start at .01.
+3. Formalization / correctness: Independent integer geometry recount gives471, no duplicate lines. Submitted Lean existence/certificate described; fresh kernel build and source-to-geometric fidelity still pending.
+Acceptance checks: Clean Lean build, embedding/disjoint-face fidelity; Historical novelty and independent-sealed provenance; Exact approved target and receipt
+Conditional formula: 0.000011 × D[KOBON]²; candidate points 3.573900
+Source catalogue IDs: 1207
+Official acceptance and score: UNAWARDED
+
+E08-DMS — Infinite special families and finite classification
+1. Problem: Graph theory / edge colouring
+Five-colour proofs for specified snark/Petersen/Möbius/inflation families; six colours for bridgeless cubic loopless multigraphs≤14; unconditional reductions and equivalence, remaining ≥16/open hypotheses.
+Difficulty: intrinsic OPDP 5.4/10; Infinite snark/Petersen/Möbius families and finite classifications are meaningful special cases; arbitrary subcubic graphs remain open. Loopless multigraph/simple-graph correspondence requires review.
+Factor profile: {'conceptual_gap': 2.5, 'route_gap': 2.5, 'technical_depth': 2, 'known_barrier': 1, 'search_scale': 3}
+Competition D: published candidate 574; event binding unverified
+2. Improvement: P3; proposed p=0.15
+Meaningful infinite families plus nontrivial reductions remove test-class obstacles; general target remains open. Start at lower P3; fallback P2=.05 if claimed classes are known or not obstacle-removing.
+3. Formalization / correctness: Packet provides125-source five-colour checks and98-module reduction library with axiom logs. An unused baseline native_decide lemma is not in claimed closure. Team declares no human line-by-line review; independent rebuild and graph convention review required.
+Acceptance checks: Unconditional vs OPEN parameter endpoints; Simple graph vs loopless multigraph, bridges and inflation correspondence; Prior special-family results and general-reduction novelty; Two mathematical reviewers and fresh selected closures
+Conditional formula: 0.00015 × D[DMS]²; candidate points 49.42140
+Source catalogue IDs: 53, 58
+Official acceptance and score: UNAWARDED
+
+E08-G-PM — Petersen / Schönberger perfect matchings
+1. Problem: Graph theory / perfect matchings
+def Star6.Bridgeless (G : SimpleGraph V) : Prop := ∀ e ∈ G.edgeSet, ¬ G.IsBridge e
+theorem Star6.simple_schoenberger (hconn : G.Connected) (hreg : G.IsRegularOfDegree 3) (hbr : Bridgeless G)
+    {e : Sym2 V} (he : e ∈ G.edgeSet) :
+    (∃ M : G.Subgraph, M.IsPerfectMatching ∧ e ∈ M.edgeSet) ∧ (∃ M : G.Subgraph, M.IsPerfectMatching ∧ e ∉ M.edgeSet)
+theorem Star6.simple_petersen_connected (hconn : G.Connected) (hreg : G.IsRegularOfDegree 3) (hbr : Bridgeless G) :
+    ∃ M : G.Subgraph, M.IsPerfectMatching
+
+Difficulty: intrinsic OPDP 1.5/10; Known source theorem, no open-problem credit; main work is faithful library/formal proof construction. Substantive source statement still needs prior formal-library search.
+Factor profile: {'conceptual_gap': 0.5, 'route_gap': 0, 'technical_depth': 2, 'known_barrier': 0, 'search_scale': 0.5}
+Competition D: unmatched; keep symbolic
+2. Improvement: Known exact statement / M2; proposed p=1
+Tentative substantive M2 family; source theorems inside family count once.
+3. Formalization / correctness: Packet reports pinned builds and standard axioms; source correspondence and full novelty remain review tasks. Some same-file declarations are explicitly unclaimed duplicates.
+Acceptance checks: Clean selected endpoint closure and two fidelity reviews; Independent scoped prior-formalization search; Useful/reusable test
+Conditional formula: None; candidate points None
+Source catalogue IDs: 743
+Official acceptance and score: UNAWARDED
+
+E08-E942 — Unbounded powerful-number counts between consecutive squares
+1. Problem: Number theory / powerful numbers and Diophantine approximation
+@[category textbook, AMS 11] theorem erdos_942.variants.limsup : atTop.limsup (((fun (n : ℕ) ↦ (n : ℕ∞)) ∘ erdos_942.h)) = ⊤
+
+Difficulty: intrinsic OPDP 1.5/10; Known source theorem, no open-problem credit; main work is faithful library/formal proof construction. Substantive source statement still needs prior formal-library search.
+Factor profile: {'conceptual_gap': 0.5, 'route_gap': 0, 'technical_depth': 2, 'known_barrier': 0, 'search_scale': 0.5}
+Competition D: unmatched; keep symbolic
+2. Improvement: Known exact statement / M2; proposed p=1
+Tentative substantive M2 family; source theorems inside family count once.
+3. Formalization / correctness: Packet reports pinned builds and standard axioms; source correspondence and full novelty remain review tasks. Some same-file declarations are explicitly unclaimed duplicates.
+Acceptance checks: Clean selected endpoint closure and two fidelity reviews; Independent scoped prior-formalization search; Useful/reusable test
+Conditional formula: None; candidate points None
+Source catalogue IDs: 743
+Official acceptance and score: UNAWARDED
+
+E08-E44 — Greedy Sidon lower bound N ≤ |A|³
+1. Problem: Additive combinatorics / Sidon sets
+@[category textbook, AMS 5 11] theorem greedy_sidon_construction (N : ℕ) (hN : 1 ≤ N) : ∃ᵉ (A ⊆ Finset.Icc 1 N), IsSidon (A : Set ℕ) ∧ N ≤ A.card ^ 3
+
+Difficulty: intrinsic OPDP 1.5/10; Known source theorem, no open-problem credit; main work is faithful library/formal proof construction. Substantive source statement still needs prior formal-library search.
+Factor profile: {'conceptual_gap': 0.5, 'route_gap': 0, 'technical_depth': 2, 'known_barrier': 0, 'search_scale': 0.5}
+Competition D: unmatched; keep symbolic
+2. Improvement: Known exact statement / M2; proposed p=1
+Tentative substantive M2 family; source theorems inside family count once.
+3. Formalization / correctness: Packet reports pinned builds and standard axioms; source correspondence and full novelty remain review tasks. Some same-file declarations are explicitly unclaimed duplicates.
+Acceptance checks: Clean selected endpoint closure and two fidelity reviews; Independent scoped prior-formalization search; Useful/reusable test
+Conditional formula: None; candidate points None
+Source catalogue IDs: 743
+Official acceptance and score: UNAWARDED
+
+E08-E123 — d-completeness of powers of2 and3
+1. Problem: Additive number theory / complete multiplicative sets
+@[category research solved, AMS 11] theorem erdos_123.variants.powers_2_3 : IsDComplete (↑(powers 2) * ↑(powers 3))
+
+Difficulty: intrinsic OPDP 1.5/10; Known source theorem, no open-problem credit; main work is faithful library/formal proof construction. Substantive source statement still needs prior formal-library search.
+Factor profile: {'conceptual_gap': 0.5, 'route_gap': 0, 'technical_depth': 2, 'known_barrier': 0, 'search_scale': 0.5}
+Competition D: unmatched; keep symbolic
+2. Improvement: Known exact statement / M2; proposed p=1
+Tentative substantive M2 family; source theorems inside family count once.
+3. Formalization / correctness: Packet reports pinned builds and standard axioms; source correspondence and full novelty remain review tasks. Some same-file declarations are explicitly unclaimed duplicates.
+Acceptance checks: Clean selected endpoint closure and two fidelity reviews; Independent scoped prior-formalization search; Useful/reusable test
+Conditional formula: None; candidate points None
+Source catalogue IDs: 743
+Official acceptance and score: UNAWARDED
+
+E08-E918 — Impossible exact countable chromatic restrictions
+1. Problem: Infinite graph theory / chromatic cardinals
+@[category textbook, AMS 5] theorem erdos_918.variants.eq_aleph_0.parts.i : ¬∃ (V : Type u) (G : SimpleGraph V), #V = ℵ_ 2 ∧ G.chromaticCardinal = ℵ_ 2 ∧ ∀ (W : Set V) (_ : #W = ℵ₁), (G.induce W).chromaticCardinal = ℵ₀
+@[category textbook, AMS 5] theorem erdos_918.variants.eq_aleph_0_all_subgraphs.parts.i : ¬∃ (V : Type u) (G : SimpleGraph V), #V = ℵ_ 2 ∧ G.chromaticCardinal = ℵ_ 2 ∧ ∀ (H : G.Subgraph) (_ : #H.verts = ℵ₁), H.coe.chromaticCardinal = ℵ₀
+@[category textbook, AMS 5] theorem erdos_918.variants.eq_aleph_0_all_subgraphs.parts.ii : ¬∃ (V : Type u) (G : SimpleGraph V), #V = ℵ_ (ω + 1) ∧ G.chromaticCardinal = ℵ₁ ∧ ∀ (H : G.Subgraph) (_ : #H.verts = ℵ_ ω), H.coe.chromaticCardinal = ℵ₀
+
+Difficulty: intrinsic OPDP 1.5/10; Known source theorem, no open-problem credit; main work is faithful library/formal proof construction. Substantive source statement still needs prior formal-library search.
+Factor profile: {'conceptual_gap': 0.5, 'route_gap': 0, 'technical_depth': 2, 'known_barrier': 0, 'search_scale': 0.5}
+Competition D: unmatched; keep symbolic
+2. Improvement: Known exact statement / M2; proposed p=1
+Tentative substantive M2 family; source theorems inside family count once.
+3. Formalization / correctness: Packet reports pinned builds and standard axioms; source correspondence and full novelty remain review tasks. Some same-file declarations are explicitly unclaimed duplicates.
+Acceptance checks: Clean selected endpoint closure and two fidelity reviews; Independent scoped prior-formalization search; Useful/reusable test
+Conditional formula: None; candidate points None
+Source catalogue IDs: 743
+Official acceptance and score: UNAWARDED
+
+E08-E292 — Multiplicative closure / doubling / no prime powers
+1. Problem: Number theory / arithmetic set closure
+@[category research solved, AMS 11] theorem erdos_292.variants.mul : ∀ m ∈ A, ∀ n ∈ A, m * n ∈ A
+@[category research solved, AMS 11] theorem erdos_292.variants.two_mul : ∀ n ∈ A, 1 < n → 2 * n ∈ A
+@[category research solved, AMS 11] theorem erdos_292.variants.prime_pow : ∀ n ∈ A, ¬ IsPrimePow n
+
+Difficulty: intrinsic OPDP 1.5/10; Known source theorem, no open-problem credit; main work is faithful library/formal proof construction. Substantive source statement still needs prior formal-library search.
+Factor profile: {'conceptual_gap': 0.5, 'route_gap': 0, 'technical_depth': 2, 'known_barrier': 0, 'search_scale': 0.5}
+Competition D: unmatched; keep symbolic
+2. Improvement: Known exact statement / M2; proposed p=1
+Tentative substantive M2 family; source theorems inside family count once.
+3. Formalization / correctness: Packet reports pinned builds and standard axioms; source correspondence and full novelty remain review tasks. Some same-file declarations are explicitly unclaimed duplicates.
+Acceptance checks: Clean selected endpoint closure and two fidelity reviews; Independent scoped prior-formalization search; Useful/reusable test
+Conditional formula: None; candidate points None
+Source catalogue IDs: 743
+Official acceptance and score: UNAWARDED
+
+E08-E395 — Radius-one reverse Littlewood–Offord counterexample
+1. Problem: Probability / reverse Littlewood–Offord inequalities
+@[category research solved, AMS 5 60] theorem erdos_395.variants.one : answer(False) ↔ ∃ c : ℝ, 0 < c ∧ ∀ n : ℕ, 0 < n → ∀ z : Fin n → ℂ, (∀ i, ‖z i‖ = 1) → c / n ≤ (signedSumCount z 1 : ℝ) / 2 ^ n
+
+Difficulty: intrinsic OPDP 1.5/10; Known source theorem, no open-problem credit; main work is faithful library/formal proof construction. Substantive source statement still needs prior formal-library search.
+Factor profile: {'conceptual_gap': 0.5, 'route_gap': 0, 'technical_depth': 2, 'known_barrier': 0, 'search_scale': 0.5}
+Competition D: unmatched; keep symbolic
+2. Improvement: Known exact statement / M2; proposed p=1
+Tentative substantive M2 family; source theorems inside family count once.
+3. Formalization / correctness: Packet reports pinned builds and standard axioms; source correspondence and full novelty remain review tasks. Some same-file declarations are explicitly unclaimed duplicates.
+Acceptance checks: Clean selected endpoint closure and two fidelity reviews; Independent scoped prior-formalization search; Useful/reusable test
+Conditional formula: None; candidate points None
+Source catalogue IDs: 743
+Official acceptance and score: UNAWARDED
+
+E08-E698 — Erdős–Szekeres binomial gcd inequality
+1. Problem: Number theory / binomial gcd inequalities
+@[category research solved, AMS 5 11] theorem erdos_698.variants.erdos_szekeres (n i j : ℕ) (hi : 1 ≤ i) (hij : i < j) (hj : j ≤ n / 2) : (n.choose i : ℝ) / (j.choose i : ℝ) ≤ (Nat.gcd (n.choose i) (n.choose j) : ℝ) ∧ (2 : ℝ) ^ i ≤ (n.choose i : ℝ) / (j.choose i : ℝ)
+
+Difficulty: intrinsic OPDP 1.5/10; Known source theorem, no open-problem credit; main work is faithful library/formal proof construction. Substantive source statement still needs prior formal-library search.
+Factor profile: {'conceptual_gap': 0.5, 'route_gap': 0, 'technical_depth': 2, 'known_barrier': 0, 'search_scale': 0.5}
+Competition D: unmatched; keep symbolic
+2. Improvement: Known exact statement / M2; proposed p=1
+Tentative substantive M2 family; source theorems inside family count once.
+3. Formalization / correctness: Packet reports pinned builds and standard axioms; source correspondence and full novelty remain review tasks. Some same-file declarations are explicitly unclaimed duplicates.
+Acceptance checks: Clean selected endpoint closure and two fidelity reviews; Independent scoped prior-formalization search; Useful/reusable test
+Conditional formula: None; candidate points None
+Source catalogue IDs: 743
+Official acceptance and score: UNAWARDED
+
+E08-E939 — Known r=7,8 powerful-number sum examples
+1. Problem: Number theory / sums of powerful numbers
+@[category research solved, AMS 11] theorem erdos_939.variants.seven : (Erdos939Sums 7).Nonempty
+@[category research solved, AMS 11] theorem erdos_939.variants.eight : (Erdos939Sums 8).Nonempty
+
+Difficulty: intrinsic OPDP 1.5/10; Known source theorem, no open-problem credit; main work is faithful library/formal proof construction. Substantive source statement still needs prior formal-library search.
+Factor profile: {'conceptual_gap': 0.5, 'route_gap': 0, 'technical_depth': 2, 'known_barrier': 0, 'search_scale': 0.5}
+Competition D: unmatched; keep symbolic
+2. Improvement: Known exact statement / M2; proposed p=1
+Tentative substantive M2 family; source theorems inside family count once.
+3. Formalization / correctness: Packet reports pinned builds and standard axioms; source correspondence and full novelty remain review tasks. Some same-file declarations are explicitly unclaimed duplicates.
+Acceptance checks: Clean selected endpoint closure and two fidelity reviews; Independent scoped prior-formalization search; Useful/reusable test
+Conditional formula: None; candidate points None
+Source catalogue IDs: 743
+Official acceptance and score: UNAWARDED
+
+E08-E477 — Known polynomial-range additive nonunique representation
+1. Problem: Additive number theory / polynomial ranges
+@[category research solved, AMS 12] theorem erdos_477.variants.S_sq :
+    letI f := X ^ 2
+    ∀ A : Set ℤ, ∃ z, ¬ ∃! a ∈ A ×ˢ (Set.range f.eval), z = a.1 + a.2
+@[category research solved, AMS 12] theorem erdos_477.variants.degree_two_dvd_condition_b_ne_zero {a b c : ℤ} (ha : a ≠ 0) (hb : b ≠ 0) (hab : a ∣ b) :
+    let f := a • X ^ 2 + b • X + C c
+    ∀ A : Set ℤ, ∃ z, ¬ ∃! a ∈ A ×ˢ (Set.range f.eval), z = a.1 + a.2
+
+Difficulty: intrinsic OPDP 1.5/10; Known source theorem, no open-problem credit; main work is faithful library/formal proof construction. Substantive source statement still needs prior formal-library search.
+Factor profile: {'conceptual_gap': 0.5, 'route_gap': 0, 'technical_depth': 2, 'known_barrier': 0, 'search_scale': 0.5}
+Competition D: unmatched; keep symbolic
+2. Improvement: Known exact statement / M2; proposed p=1
+Tentative substantive M2 family; source theorems inside family count once.
+3. Formalization / correctness: Packet reports pinned builds and standard axioms; source correspondence and full novelty remain review tasks. Some same-file declarations are explicitly unclaimed duplicates.
+Acceptance checks: Clean selected endpoint closure and two fidelity reviews; Independent scoped prior-formalization search; Useful/reusable test
+Conditional formula: None; candidate points None
+Source catalogue IDs: 743
+Official acceptance and score: UNAWARDED
+
+E08-E295 — Egyptian fraction existence helper
+1. Problem: Number theory / Egyptian fractions
+@[category textbook, AMS 5 11] lemma exists_k (N : ℕ) : ∃ (k : ℕ) (n : Fin k → ℕ), (∀ i, N ≤ n i) ∧ StrictMono n ∧ ∑ i, (1 / n i : ℝ) = 1
+
+Difficulty: intrinsic OPDP 1.0/10; Known source theorem, no open-problem credit; main work is faithful library/formal proof construction. Helper/trivial statement needs explicit usefulness and reusable family admission.
+Factor profile: {'conceptual_gap': 0.5, 'route_gap': 0, 'technical_depth': 1, 'known_barrier': 0, 'search_scale': 0.5}
+Competition D: unmatched; keep symbolic
+2. Improvement: Known exact statement / M2; proposed p=1
+Minor/sanity candidate; do not automatically count an exact wrapper or a trivial example as useful new reusable family.
+3. Formalization / correctness: Packet reports pinned builds and standard axioms; source correspondence and full novelty remain review tasks. Some same-file declarations are explicitly unclaimed duplicates.
+Acceptance checks: Clean selected endpoint closure and two fidelity reviews; Independent scoped prior-formalization search; Useful/reusable test
+Conditional formula: None; candidate points None
+Source catalogue IDs: 743
+Official acceptance and score: UNAWARDED
+
+E08-E703 — Known intersecting-family t=0 value
+1. Problem: Extremal combinatorics / intersecting set families
+@[category textbook, AMS 5] theorem erdos_703.variants.zero (n : ℕ) (hn : 1 ≤ n) : T n 0 = 2 ^ (n - 1)
+
+Difficulty: intrinsic OPDP 1.0/10; Known source theorem, no open-problem credit; main work is faithful library/formal proof construction. Helper/trivial statement needs explicit usefulness and reusable family admission.
+Factor profile: {'conceptual_gap': 0.5, 'route_gap': 0, 'technical_depth': 1, 'known_barrier': 0, 'search_scale': 0.5}
+Competition D: unmatched; keep symbolic
+2. Improvement: Known exact statement / M2; proposed p=1
+Minor/sanity candidate; do not automatically count an exact wrapper or a trivial example as useful new reusable family.
+3. Formalization / correctness: Packet reports pinned builds and standard axioms; source correspondence and full novelty remain review tasks. Some same-file declarations are explicitly unclaimed duplicates.
+Acceptance checks: Clean selected endpoint closure and two fidelity reviews; Independent scoped prior-formalization search; Useful/reusable test
+Conditional formula: None; candidate points None
+Source catalogue IDs: 743
+Official acceptance and score: UNAWARDED
+
+E08-E748 — Known sum-free-set lower bound
+1. Problem: Additive combinatorics / sum-free sets
+@[category textbook, AMS 5 11] theorem erdos_748.variants.lower_bound (n : ℕ) : (2 : ℝ) ^ ((n : ℝ) / 2) ≤ (f n : ℝ)
+
+Difficulty: intrinsic OPDP 1.0/10; Known source theorem, no open-problem credit; main work is faithful library/formal proof construction. Helper/trivial statement needs explicit usefulness and reusable family admission.
+Factor profile: {'conceptual_gap': 0.5, 'route_gap': 0, 'technical_depth': 1, 'known_barrier': 0, 'search_scale': 0.5}
+Competition D: unmatched; keep symbolic
+2. Improvement: Known exact statement / M2; proposed p=1
+Minor/sanity candidate; do not automatically count an exact wrapper or a trivial example as useful new reusable family.
+3. Formalization / correctness: Packet reports pinned builds and standard axioms; source correspondence and full novelty remain review tasks. Some same-file declarations are explicitly unclaimed duplicates.
+Acceptance checks: Clean selected endpoint closure and two fidelity reviews; Independent scoped prior-formalization search; Useful/reusable test
+Conditional formula: None; candidate points None
+Source catalogue IDs: 743
+Official acceptance and score: UNAWARDED
+
+E08-E1136 — Multiples-of-three density baseline
+1. Problem: Additive number theory / density and forbidden sums
+@[category research solved, AMS 11] theorem erdos_1136.variants.multiples_of_three : AvoidsPowersOfTwo {n : ℕ | 3 ∣ n} ∧ Set.HasDensity {n : ℕ | 3 ∣ n} (1 / 3)
+
+Difficulty: intrinsic OPDP 1.0/10; Known source theorem, no open-problem credit; main work is faithful library/formal proof construction. Helper/trivial statement needs explicit usefulness and reusable family admission.
+Factor profile: {'conceptual_gap': 0.5, 'route_gap': 0, 'technical_depth': 1, 'known_barrier': 0, 'search_scale': 0.5}
+Competition D: unmatched; keep symbolic
+2. Improvement: Known exact statement / M2; proposed p=1
+Minor/sanity candidate; do not automatically count an exact wrapper or a trivial example as useful new reusable family.
+3. Formalization / correctness: Packet reports pinned builds and standard axioms; source correspondence and full novelty remain review tasks. Some same-file declarations are explicitly unclaimed duplicates.
+Acceptance checks: Clean selected endpoint closure and two fidelity reviews; Independent scoped prior-formalization search; Useful/reusable test
+Conditional formula: None; candidate points None
+Source catalogue IDs: 743
+Official acceptance and score: UNAWARDED
+
+E08-E358 — Sylvester consecutive sums / odd divisors
+1. Problem: Number theory / consecutive sums and divisors
+@[category textbook, AMS 5 11] theorem f_id : f id = fun n ↦ #{d ∈ n.divisors | Odd d}
+
+Difficulty: intrinsic OPDP 1.0/10; Known source theorem, no open-problem credit; main work is faithful library/formal proof construction. Helper/trivial statement needs explicit usefulness and reusable family admission.
+Factor profile: {'conceptual_gap': 0.5, 'route_gap': 0, 'technical_depth': 1, 'known_barrier': 0, 'search_scale': 0.5}
+Competition D: unmatched; keep symbolic
+2. Improvement: Known exact statement / M2; proposed p=1
+Minor/sanity candidate; do not automatically count an exact wrapper or a trivial example as useful new reusable family.
+3. Formalization / correctness: Packet reports pinned builds and standard axioms; source correspondence and full novelty remain review tasks. Some same-file declarations are explicitly unclaimed duplicates.
+Acceptance checks: Clean selected endpoint closure and two fidelity reviews; Independent scoped prior-formalization search; Useful/reusable test; source n=0 cardinality convention must be disclosed
+Conditional formula: None; candidate points None
+Source catalogue IDs: 743
+Official acceptance and score: UNAWARDED
+
+E08-E619 — Maximal triangle-free supergraph diameter bound
+1. Problem: Graph theory / triangle-free supergraphs
+@[category research solved, AMS 5] theorem erdos_619.variants.add_edges_diam_three {V : Type*} [Fintype V] (G : SimpleGraph V) (hG : G.Connected) (hG' : G.CliqueFree 3) :
+    ∃ H : SimpleGraph V, G ≤ H ∧ H.CliqueFree 3 ∧ H.ediam ≤ 3
+
+Difficulty: intrinsic OPDP 1.0/10; Known source theorem, no open-problem credit; main work is faithful library/formal proof construction. Helper/trivial statement needs explicit usefulness and reusable family admission.
+Factor profile: {'conceptual_gap': 0.5, 'route_gap': 0, 'technical_depth': 1, 'known_barrier': 0, 'search_scale': 0.5}
+Competition D: unmatched; keep symbolic
+2. Improvement: Known exact statement / M2; proposed p=1
+Minor/sanity candidate; do not automatically count an exact wrapper or a trivial example as useful new reusable family.
+3. Formalization / correctness: Packet reports pinned builds and standard axioms; source correspondence and full novelty remain review tasks. Some same-file declarations are explicitly unclaimed duplicates.
+Acceptance checks: Clean selected endpoint closure and two fidelity reviews; Independent scoped prior-formalization search; Useful/reusable test
+Conditional formula: None; candidate points None
+Source catalogue IDs: 743
+Official acceptance and score: UNAWARDED
+
+E08-E1148 — Known difference-of-squares weaker bound
+1. Problem: Number theory / quadratic representations
+@[category research solved, AMS 11] theorem erdos_1148.variants.weaker : ∀ n, erdos_1148_weaker_prop n
+
+Difficulty: intrinsic OPDP 1.0/10; Known source theorem, no open-problem credit; main work is faithful library/formal proof construction. Helper/trivial statement needs explicit usefulness and reusable family admission.
+Factor profile: {'conceptual_gap': 0.5, 'route_gap': 0, 'technical_depth': 1, 'known_barrier': 0, 'search_scale': 0.5}
+Competition D: unmatched; keep symbolic
+2. Improvement: Known exact statement / M2; proposed p=1
+Minor/sanity candidate; do not automatically count an exact wrapper or a trivial example as useful new reusable family.
+3. Formalization / correctness: Packet reports pinned builds and standard axioms; source correspondence and full novelty remain review tasks. Some same-file declarations are explicitly unclaimed duplicates.
+Acceptance checks: Clean selected endpoint closure and two fidelity reviews; Independent scoped prior-formalization search; Useful/reusable test
+Conditional formula: None; candidate points None
+Source catalogue IDs: 743
+Official acceptance and score: UNAWARDED
+
+E08-EXCLUDED-E757 — E757 — not claimed
+1. Problem: Known mathematics / unclaimed
+Optional known-math wrappers or pre-event/duplicate formalization; see packet exclusions.
+Difficulty: intrinsic OPDP 1.0/10; Optional or explicitly excluded prior formal work; do not add to claimed-family count.
+Factor profile: {'conceptual_gap': 0.5, 'route_gap': 0, 'technical_depth': 1, 'known_barrier': 0, 'search_scale': 0.5}
+Competition D: unmatched; keep symbolic
+2. Improvement: Excluded / unclaimed; proposed p=None
+No automatic eligible family. Preserve source provenance and excluded declarations without inflating totals.
+3. Formalization / correctness: No acceptance claimed.
+Acceptance checks: Only a distinct genuinely new admitted delta could alter disposition
+Conditional formula: None; candidate points None
+Source catalogue IDs: 743
+Official acceptance and score: UNAWARDED
+
+E08-EXCLUDED-E261 — E261 — not claimed
+1. Problem: Known mathematics / unclaimed
+Optional known-math wrappers or pre-event/duplicate formalization; see packet exclusions.
+Difficulty: intrinsic OPDP 1.0/10; Optional or explicitly excluded prior formal work; do not add to claimed-family count.
+Factor profile: {'conceptual_gap': 0.5, 'route_gap': 0, 'technical_depth': 1, 'known_barrier': 0, 'search_scale': 0.5}
+Competition D: unmatched; keep symbolic
+2. Improvement: Excluded / unclaimed; proposed p=None
+No automatic eligible family. Preserve source provenance and excluded declarations without inflating totals.
+3. Formalization / correctness: No acceptance claimed.
+Acceptance checks: Only a distinct genuinely new admitted delta could alter disposition
+Conditional formula: None; candidate points None
+Source catalogue IDs: 743
+Official acceptance and score: UNAWARDED
+
+E08-EXCLUDED-E36 — E36 — not claimed
+1. Problem: Known mathematics / unclaimed
+Optional known-math wrappers or pre-event/duplicate formalization; see packet exclusions.
+Difficulty: intrinsic OPDP 1.0/10; Optional or explicitly excluded prior formal work; do not add to claimed-family count.
+Factor profile: {'conceptual_gap': 0.5, 'route_gap': 0, 'technical_depth': 1, 'known_barrier': 0, 'search_scale': 0.5}
+Competition D: unmatched; keep symbolic
+2. Improvement: Excluded / unclaimed; proposed p=None
+No automatic eligible family. Preserve source provenance and excluded declarations without inflating totals.
+3. Formalization / correctness: No acceptance claimed.
+Acceptance checks: Only a distinct genuinely new admitted delta could alter disposition
+Conditional formula: None; candidate points None
+Source catalogue IDs: 743
+Official acceptance and score: UNAWARDED
+
+E08-EXCLUDED-E649 — E649 — not claimed
+1. Problem: Known mathematics / unclaimed
+Optional known-math wrappers or pre-event/duplicate formalization; see packet exclusions.
+Difficulty: intrinsic OPDP 1.0/10; Optional or explicitly excluded prior formal work; do not add to claimed-family count.
+Factor profile: {'conceptual_gap': 0.5, 'route_gap': 0, 'technical_depth': 1, 'known_barrier': 0, 'search_scale': 0.5}
+Competition D: unmatched; keep symbolic
+2. Improvement: Excluded / unclaimed; proposed p=None
+No automatic eligible family. Preserve source provenance and excluded declarations without inflating totals.
+3. Formalization / correctness: No acceptance claimed.
+Acceptance checks: Only a distinct genuinely new admitted delta could alter disposition
+Conditional formula: None; candidate points None
+Source catalogue IDs: 743
+Official acceptance and score: UNAWARDED
+
+E08-EXCLUDED-E508 — E508 — not claimed
+1. Problem: Known mathematics / unclaimed
+Optional known-math wrappers or pre-event/duplicate formalization; see packet exclusions.
+Difficulty: intrinsic OPDP 1.0/10; Optional or explicitly excluded prior formal work; do not add to claimed-family count.
+Factor profile: {'conceptual_gap': 0.5, 'route_gap': 0, 'technical_depth': 1, 'known_barrier': 0, 'search_scale': 0.5}
+Competition D: unmatched; keep symbolic
+2. Improvement: Excluded / unclaimed; proposed p=None
+No automatic eligible family. Preserve source provenance and excluded declarations without inflating totals.
+3. Formalization / correctness: No acceptance claimed.
+Acceptance checks: Only a distinct genuinely new admitted delta could alter disposition
+Conditional formula: None; candidate points None
+Source catalogue IDs: 743
+Official acceptance and score: UNAWARDED
+
+E08-EXCLUDED-E1038 — E1038 — not claimed
+1. Problem: Known mathematics / unclaimed
+Optional known-math wrappers or pre-event/duplicate formalization; see packet exclusions.
+Difficulty: intrinsic OPDP 1.0/10; Optional or explicitly excluded prior formal work; do not add to claimed-family count.
+Factor profile: {'conceptual_gap': 0.5, 'route_gap': 0, 'technical_depth': 1, 'known_barrier': 0, 'search_scale': 0.5}
+Competition D: unmatched; keep symbolic
+2. Improvement: Excluded / unclaimed; proposed p=None
+No automatic eligible family. Preserve source provenance and excluded declarations without inflating totals.
+3. Formalization / correctness: No acceptance claimed.
+Acceptance checks: Only a distinct genuinely new admitted delta could alter disposition
+Conditional formula: None; candidate points None
+Source catalogue IDs: 743
+Official acceptance and score: UNAWARDED
+
+E08-BB6 — Finite six-state baseline witness
+1. Problem: Computability
+249881steps554ones735span, no global record
+Difficulty: intrinsic OPDP 10.0/10; A single halting trace gives a finite witness; maximum requires ruling out all other machines and nonhalters. No submitted global resolution.
+Factor profile: {'conceptual_gap': 4, 'route_gap': 4, 'technical_depth': 4, 'known_barrier': 4, 'search_scale': 4}
+Competition D: unmatched; keep symbolic
+2. Improvement: P0; proposed p=0
+Baseline or prior known mathematics, no independently new open advance; possible useful new formalization must be separately admitted as M2.
+3. Formalization / correctness: Exact arithmetic certificates/source available for review; independent Collatz check234/234. No fresh full kernel acceptance.
+Acceptance checks: M2 novelty/usefulness if claimed; Independent-sealed exposure chronology
+Conditional formula: 0.0 × D[BB6]²; candidate points None
+Source catalogue IDs: 893
+Official acceptance and score: UNAWARDED
+
+E08-CHSH — Known CHSH witness
+1. Problem: Functional analysis
+√2-scale rational certificate; not new general bound
+Difficulty: intrinsic OPDP 5.4/10; Small CHSH witnesses and restricted sign-matrix estimates do not determine the arbitrary-real-coefficient constant.
+Factor profile: {'conceptual_gap': 2.5, 'route_gap': 2.5, 'technical_depth': 2, 'known_barrier': 1, 'search_scale': 3}
+Competition D: published candidate 561; event binding unverified
+2. Improvement: P0; proposed p=0
+Baseline or prior known mathematics, no independently new open advance; possible useful new formalization must be separately admitted as M2.
+3. Formalization / correctness: Exact arithmetic certificates/source available for review; independent Collatz check234/234. No fresh full kernel acceptance.
+Acceptance checks: M2 novelty/usefulness if claimed; Independent-sealed exposure chronology
+Conditional formula: 0.0 × D[GROTHENDIECK]²; candidate points 0.0
+Source catalogue IDs: 936
+Official acceptance and score: UNAWARDED
+
+E08-MATRIX139 — Known support139 tensor
+1. Problem: Algebra / algorithms
+Rank23/support139 baseline
+Difficulty: intrinsic OPDP 7.4/10; Fixed tensor rank 23/support reduction is not asymptotic exponent two. Requires 729 tensor identities, correct gauge normalization and invariant comparison.
+Factor profile: {'conceptual_gap': 3, 'route_gap': 3, 'technical_depth': 3, 'known_barrier': 3, 'search_scale': 2.5}
+Competition D: unmatched; keep symbolic
+2. Improvement: P0; proposed p=0
+Baseline or prior known mathematics, no independently new open advance; possible useful new formalization must be separately admitted as M2.
+3. Formalization / correctness: Exact arithmetic certificates/source available for review; independent Collatz check234/234. No fresh full kernel acceptance.
+Acceptance checks: M2 novelty/usefulness if claimed; Independent-sealed exposure chronology
+Conditional formula: 0.0 × D[MATRIX-3]²; candidate points None
+Source catalogue IDs: 1224
+Official acceptance and score: UNAWARDED
+
+E08-COLLATZ234 — 234-rule baseline-equivalent coverage
+1. Problem: Number theory / dynamics
+234rules, independently1765odd classes mod4096: exactly Chaewon union
+Difficulty: intrinsic OPDP 6.8/10; Infinite convergence is unsolved; exact residue-class certificates do not bridge all odd classes or unbounded trajectories.
+Factor profile: {'conceptual_gap': 3, 'route_gap': 2.5, 'technical_depth': 2.5, 'known_barrier': 2.5, 'search_scale': 3}
+Competition D: published candidate 772; event binding unverified
+2. Improvement: P0; proposed p=0
+Baseline or prior known mathematics, no independently new open advance; possible useful new formalization must be separately admitted as M2.
+3. Formalization / correctness: Exact arithmetic certificates/source available for review; independent Collatz check234/234. No fresh full kernel acceptance.
+Acceptance checks: M2 novelty/usefulness if claimed; Independent-sealed exposure chronology
+Conditional formula: 0.0 × D[COLLATZ]²; candidate points 0.0
+Source catalogue IDs: 901
+Official acceptance and score: UNAWARDED
+
+E08-KOBON18 — Known n18=93 reconstruction
+1. Problem: Discrete geometry
+n18=93, known lower bound
+Difficulty: intrinsic OPDP 5.4/10; Construction and global upper-bound geometry are different tasks; finite n certificates are partial in the all-n parent. Atlas title-only target requires curation.
+Factor profile: {'conceptual_gap': 2.5, 'route_gap': 2.5, 'technical_depth': 2, 'known_barrier': 1, 'search_scale': 3}
+Competition D: published candidate 570; event binding unverified
+2. Improvement: P0; proposed p=0
+Baseline or prior known mathematics, no independently new open advance; possible useful new formalization must be separately admitted as M2.
+3. Formalization / correctness: Exact arithmetic certificates/source available for review; independent Collatz check234/234. No fresh full kernel acceptance.
+Acceptance checks: M2 novelty/usefulness if claimed; Independent-sealed exposure chronology
+Conditional formula: 0.0 × D[KOBON]²; candidate points 0.0
+Source catalogue IDs: 1212
+Official acceptance and score: UNAWARDED

@@ -1,0 +1,195 @@
+# NOVELTY — literature check for star6_partial.tex
+
+Checked 2026-10-01 by helper-novelty. Nothing written to the server; the .tex was not modified.
+Sources: arXiv abstract/HTML/TeX-source pages, Crossref and Semantic Scholar metadata, the
+Lei–Shi survey (arXiv:2009.08017), and the DMS paper's TeX source (arXiv:1011.3376v2), all
+opened directly. Where a claim rests only on a search-engine snippet or on another paper's
+summary, the row says so. Verdicts: **known**, **partly known**, **appears new** (nothing
+found; the search is described below), **unclear**.
+
+Search coverage: every arXiv paper whose abstract or title contains "star edge colo(u)ring",
+"star edge-coloring" or "star chromatic index" (arXiv API; 19 hits, all math ones reviewed by
+abstract); every paper that Semantic Scholar lists as citing DMS 2013 (about 55, reviewed by
+title, and the relevant ones opened); web searches for snarks, generalized Petersen graphs,
+covers, cubic/bridgeless reductions and perfect matchings. **Not accessible:** the full text of
+Deng–Liu–Feng 2025 (Springer, paywalled/bot-blocked), Zhu–Shao 2021 (seen only through the
+summaries in OD24 and in the Lei–Shi survey), and Pradeep–Vijayalakshmi 2016/2019. Chinese
+master theses were not searched.
+
+## 1. Verdict table
+
+| # | Draft result (fact) | Verdict | Evidence / what is known | What is new |
+|---|---|---|---|---|
+| 1 | Thm 3.1: (I)∧(II) ⇔ DMS for loopless multigraphs (a13aecc6, 974f7197) | **appears new (the method is standard)** | Minimal-counterexample reductions (connected, no bridge, no degree-2 path, parallel edges) are in DMS 2013 §3, but only for **7** colours, where a bridge is handled by a free 7th colour. LSS 2018 give structure of star k-critical subcubic multigraphs with δ ≤ 2 (k = 5, 6), used for mad bounds. No paper found that reduces the **6**-colour conjecture to bridgeless cubic multigraphs plus a leaf case. | An exact 6-colour equivalence: a bridge-gluing lemma plus the leaf graph T(G0,g). Present it as a routine but new reduction and cite DMS §3 and LSS for the method. |
+| 2 | Thm 3.2: CubicSharp5_s ⇒ DMS (b22aa112, d1ef48fd) | **appears new** (implication only) | No paper found that reduces DMS to star 5-colourability of simple bridgeless cubic graphs. DMS mention only that χ'_s(K3,3)=6 and that the Heawood graph needs at most 6. **Caution:** Deng–Liu–Feng 2025 (BMMS 48(4), art. 93) reportedly construct "an infinite sequence of cubic graphs with χ'_s = ch'_s = 6". This is from a search snippet only; the full text was not opened. If those graphs are simple, connected and bridgeless, the hypothesis CubicSharp5_s is **false** and Open Problem 8.6 is already answered. The implication would still be valid, but vacuous. The project's imported sweep says no such graph exists with n ≤ 22 (other than K3,3 and the prism), so their examples would have to be larger or have bridges or parallel edges. **Must be checked before submission.** | The implication, if the hypothesis survives DLF 2025. |
+| 3 | Thm 3.3: HOLE ⇒ DMS (5c1eb3f5, Lean) | **appears new** | Nothing similar found. | All of it. |
+| 4 | Thm 3.4/3.5: EX1 reduction; a PM as a colour class ("MC" colourings) | **appears new; related ideas published** | Splitting off a perfect matching is the standard tool. DMS 2013 prove the bound 7 by colouring a Kaiser–Škrekovski PM M with 4 colours and the 2-factor G−M with 3. Casselgren–Granholm–Raspaud 2021 (Prop. 3.2) prove χ'_s ≤ 6 for planar subcubic graphs of girth ≥ 7 that have a PM, using a strong 3-colouring of M plus a 3-colour star colouring of G−M. Nothing found with **one** PM as a single colour class and 5 colours on the rest, nor on the EX1 "for every edge g and t" strengthening. | The MC/EX1 formulation and the reductions. Cite DMS and CGR as precedents for PM-based splitting. |
+| 5 | Thm 3.6: RH2, (H)∧(II)⇒DMS, (H)∧(II_D)⇒DMS (6bfcd4d5, 52408ddd, Lean) | **appears new** | No reductions to 2-cut-reduced / digon-inserted hosts found in the star-edge literature. | All of it. |
+| 6 | Thm 3.8 / Main Thm 3.9 ROOT-CS4; far-exchange sets, pole dominance, (TD), 3-cut brick (6010cb59, 71dbf09e, 87fba731, 898eb5ab, 7d38a456) | **appears new** | No star-edge-colouring paper found that uses cyclic 4-edge-connectivity, 3-cut gluing or poles. Cyclic-connectivity reductions are standard for snarks and nowhere-zero flows, but no star-colouring analogue was found. | All of it. Say that 3-edge-cut and 2-edge-cut reductions are classical techniques in cubic-graph colouring problems, applied here for the first time as far as we found. |
+| 7 | Thm 3.12 (Lean formalization of the chain) | **appears new** | No formalization of star edge colouring found (no Lean or Mathlib hits in the search). | All of it. |
+| 8 | Section 4 finite certificates (BASE12, SIMPLE14, B14-D, SMALLHOST-D, LMC8/14, SMALL-PD) | **appears new** (as stated) | These are statements about MC/EX1 colourings and poles, which nobody else defines. | All of it. |
+| 9 | §7 imported sweep (30.7M graphs star 6-colourable; exact χ'_s for cubic n ≤ 18) | **unclear / not published** | No published census of star chromatic indices of cubic graphs found. The only related published data are single examples: K3,3 and the prism need 6 (DMS; LSS); K4 with one edge subdivided needs 6 (LSS acknowledgement). **Heawood graph:** DMS show only "at most 6"; the LSS acknowledgement says a referee pointed out it is star 5-edge-colourable; the DLF 2025 search snippet calls it an example with index 6. We independently found a valid star 5-edge-colouring of the Heawood graph (LCF [5,−5]^7) with a small exhaustive search, checked independently. | The sweep, if published with an artifact. Note the Heawood discrepancy in the literature. |
+| 10 | Thm 6.1: GP(k,2), k ≥ 5, has a star 6-edge-colouring with the spokes as colour class 6 (1262231d, Lean) | **appears new; weaker than known for some k** | Nothing found with the spokes as a **single** colour class. OD24's construction colours the spokes with **two** colours {3,4} and the cycles with {0,1,2} (5 colours in total). As a plain bound, star 5-colourability of GP(k,2) is **known** for k ≡ 0 (mod 6) (Zhu–Shao 2021), for k even under OD24 Thm 2 (d = 2), and for k = 5, 10 (OD24 Lemma 5). It is open in print for the other k (all odd k ≥ 7, and some even k). | The spokes-as-colour-class (MC) property. Present it as an MC-type statement, not as a χ'_s bound. |
+| 11 | Thm 6.2(a): flower snarks J_n star 5-colourable (c97931f9) | **appears new** | No paper found on the star **edge** chromatic index of flower snarks. The literature on snarks covers circular chromatic index and normal (Petersen) 5-edge-colourings (Sedlar–Škrekovski 2024, etc.). Renuga et al. 2025 (JIFS) study the star **vertex** chromatic number of snarks, a different notion. **Related technique:** the fact's "good edge" (m(x)∩m(y)=∅) is exactly a *rich* edge in the normal-colouring sense. A proper 5-colouring in which every edge is rich is automatically a star colouring. Cite the normal-colouring literature (Jaeger; Sedlar–Škrekovski) for the notion. | The result. The rich-edge criterion should be credited as connected to normal colourings. |
+| 12 | Thm 6.2(b): Goldberg snarks star 5-colourable (32a017c1) | **appears new** | Same search as #11; nothing found. | The result. |
+| 13 | Thm 6.2(c): covers of the Petersen graph and of K4 are star 5-colourable; pull-back along covers (1bac0482, b9036846, e306b2d9, 7935d329) | **known in essence (immediate from DMS)** | DMS 2013, proof of Thm 3.1(b), lift a star colouring of Q3 along a covering map and show in general that covers preserve 4-paths and 4-cycles, i.e. pull-back is DMS's argument. DMS also show χ'_s(Petersen) = 5. χ'_s(K4) = 5 (our check: not 4, yes 5). So "covers of P and K4 are star 5-colourable" is a one-line corollary of DMS. | Only the multigraph (parallel-respecting) version of pull-back and its Lean proof. Rephrase as "by the lifting argument of [DMS13]". |
+| 14 | Thm 6.2(d): GP(2m,k), m ≥ 3, k odd < m; GP(4m,k), m ≥ 2, k odd < 2m (9d871dcf, b9036846) | **known** | Every instance is covered by published results: Zhu–Shao 2021 (n even, k odd, gcd(n,k)=1; and k=1) or OD24 (gcd(n,k) ≥ 3). Checked by script for all m < 120: 3539 + 7139 instances, **0 uncovered**. Moreover Zhu–Shao prove χ'_s(GP(n,k)) = **4** iff n ≡ 0 (mod 4) and k odd, so the GP(4m,k) part (and GP(2m,k) with m even) is **weaker than known**. | Nothing. Drop, or state as "recovers [Zhu21, OD24]". |
+| 15 | Thm 6.2(e): GP(10m,4), GP(14m,6), GP(17m,8), GP(22m,10), GP(26m,12), GP(30m,14), all m ≥ 1 (f8e1edfe, 6309f733, a491fe56) | **partly known** | Coverage by Zhu–Shao and OD24 (d ≥ 3; OD24 Thm 2 for d = 2; OD24 Lemma 5 for n/d ∈ {2,5}; isomorphisms GP(n,k) ≅ GP(n,k') with kk' ≡ ±1 considered), m < 120: GP(30m,14) **fully known**; GP(10m,4): 80/119 known, new for m odd with 3∤m; GP(14m,6): 66/119 known; GP(17m,8): 49/119 known (e.g. GP(17,8), GP(51,8) new); GP(22m,10): 71/119; GP(26m,12): 92/119 known. | The uncovered subfamilies only (mostly the cases with gcd = 1 and n odd, and some gcd-2 cases outside OD24 Thm 2). Drop GP(30m,14) as a claim, or mark it known. |
+| 16 | Thm 6.2(f): Petersen-type vertex inflation / all-good inflation (aa607ed0) | **appears new (elementary)** | Nothing found. Related: superposition constructions in the normal-colouring literature (Sedlar–Škrekovski "superpositioned by the Petersen graph / flower snarks"). An all-good (all-rich) colouring is the normal-colouring notion. | The inflation lemma. |
+| 17 | Excluded (disputed) GP(n,2) all n ≥ 5 and GP(n,3) all n ≥ 7 (f4aa886c, 7f9ca7cc) | **partly known** | GP(n,2), n < 400: 132/395 covered (Zhu–Shao n ≡ 0 mod 6; OD24 Thm 2(3); Lemma 5); **n odd ≥ 7 not covered**. GP(n,3): all n divisible by 3 (d ≥ 3, OD24) and all even n (Zhu–Shao) covered; **n odd, 3∤n not covered**. | If later re-verified, the odd-n cases would be new and would answer part of the Zhu–Shao conjecture χ'_s(GP(n,k)) ≤ 5 (except GP(3,1)). |
+| 18 | Thm 5.1 (POLE ≤ 16 v, II_D ≤ 14 v), Thm 5.2 (RL/DEEP) | **appears new** | Statements about notions defined only in this project. | All of it. |
+
+## 2. Current state of the art (what the intro must say)
+
+- DMS 2013: χ'_s ≤ 7 for all subcubic (multi)graphs; conjecture ≤ 6. For simple cubic graphs χ'_s ≥ 4, with equality iff G covers Q3. χ'_s(K3,3) = 6, χ'_s(Petersen) = 5.
+- LSS 2018 (JGT 88(4)): χ'_s ≤ 6 if mad < 5/2; χ'_s ≤ 5 if mad < 24/11; NP-completeness of χ'_s ≤ 3. They also point out an unfixable-looking error in Pradeep–Vijayalakshmi (ENDM 53, 2016), Thm 2.3 (mad < 11/5 ⇒ 5).
+- **LSSW 2018 (Discrete Math. 341(4))**: χ'_s ≤ 5 if mad < **12/5**. This improves 24/11. The draft's intro sentence ("bound 5 below 24/11 ... see also LSSW18") understates it.
+- Kerdjoudj–Kostochka–Raspaud 2018 (DMGT 38(4)): list version, star list-5 for mad < 7/3, list-6 for mad < 5/2, list-8 for all subcubic graphs. Lužar–Mockovčiaková–Soták 2019 (JGT 90): list star chromatic index of subcubic graphs ≤ 7.
+- Special classes: subcubic outerplanar ≤ 5 (Bezegová et al. 2016); cubic Halin ≤ 6 (Casselgren–Granholm–Raspaud 2021; Hou–Li–Wang arXiv 2020); cubic Halin with caterpillar or complete tree = 5, except N_{e2} (Hu–Tang 2025/26); planar subcubic of girth ≥ 7 with a PM ≤ 6 (CGR 2021). Generalized Petersen graphs: χ'_s = 4 iff n ≡ 0 (mod 4), k odd, and ≤ 5 in many cases (Zhu–Shao 2021); ≤ 5 for all gcd(n,k) ≥ 3, plus partial gcd = 2 results (Omoomi–Vahid Dastjerdi 2024, arXiv only). Zhu–Shao conjecture: χ'_s(GP(n,k)) ≤ 5 except GP(3,1).
+- Deng–Liu–Feng 2025 (BMMS 48(4), art. 93): an infinite family of cubic graphs with χ'_s = ch'_s = 6 (full text not opened; see #2).
+- Survey: Lei–Shi, arXiv:2009.08017 (2020).
+- The conjecture is open. No paper was found that reduces it to cubic bridgeless / cyclically 4-edge-connected graphs or to perfect-matching colour classes.
+
+## 3. Required changes to the draft
+
+1. **Bibliography fixes.** [Zhu21] is E. Zhu and Z. Shao, "On the star chromatic index of generalized Petersen graphs", Discuss. Math. Graph Theory 41(2) (2021), first page **427**, DOI 10.7151/dmgt.2195. "1265" is wrong: it came from OD24's garbled citation, and 1265 is a page number of a different paper. Add DOIs to DMS13 (10.1002/jgt.21644), LSS18 (10.1002/jgt.22230, JGT 88(4)) and LSSW18 (10.1016/j.disc.2017.12.008, 341(4)); these are all verified via Crossref.
+2. **Intro:** give LSSW's 12/5 bound for star 5-colourability. Add CGR 2021 (Halin; planar girth 7 with a PM), Bezegová et al. 2016, KKR 2018 / LMS 2019 (list versions), Hu–Tang, DLF 2025 and the Lei–Shi survey.
+3. **Thm 6.2(c) and "pull-back":** credit the covering-lift argument to DMS 2013 (proof of Thm 3.1(b)). Covers of the Petersen graph and of K4 are then immediate. Keep only the multigraph/Lean version as a contribution.
+4. **Thm 6.2(d):** mark as known (Zhu–Shao; OD24), or remove it. Note that Zhu–Shao give χ'_s = 4 for n ≡ 0 (mod 4), k odd.
+5. **Thm 6.2(e):** mark GP(30m,14) as known. For the other five families, state that the result is new only for the subfamilies not covered by Zhu–Shao / OD24 (list them, or say "partly known").
+6. **Thm 6.1:** present it as an MC-type (PM colour class) statement. Do not present it as a bound on χ'_s(GP(k,2)); note that OD24 use two colours on the spokes.
+7. **Thm 6.2(a),(b),(f):** claim them as new ("we found no reference"). Mention that "good edge" = rich edge of normal colourings (Jaeger; Sedlar–Škrekovski) and that all-rich 5-colourings are star colourings.
+8. **CubicSharp5_s (Thm 3.2, Open Problem 8.6):** before submission, obtain Deng–Liu–Feng 2025 and check whether their χ'_s = 6 cubic graphs are simple and bridgeless. If they are, the hypothesis is false: the paper must say so and drop the open problem. Also add a footnote on the Heawood graph: DMS give ≤ 6; LSS, on a referee's remark, say 5; DLF (snippet) say 6. We found an explicit star 5-colouring.
+9. **§9.4 Novelty paragraph:** replace it with a summary of this table. The reduction chain (Thms 3.1–3.12), the MC/EX1/far-exchange/pole machinery, the Lean formalization and the flower/Goldberg snark results appear new after this search. The class results in (c),(d) are known and (e) is partly known.
+10. Optional: mention the public "vibemathing" GitHub repository `problem-opg-37271-star-chromatic-index-cubic`, an automated harness on the same problem (not peer-reviewed; contents not checked).
+
+## 4. Verified bibliography (BibTeX)
+
+Bibliographic data was taken from Crossref / arXiv / Semantic Scholar records opened on 2026-10-01.
+Page ranges marked "first page only" had no last page in the record I opened.
+
+```bibtex
+@article{DMS13,
+  author  = {Dvo{\v{r}}{\'a}k, Zden{\v{e}}k and Mohar, Bojan and {\v{S}}{\'a}mal, Robert},
+  title   = {Star chromatic index},
+  journal = {Journal of Graph Theory},
+  volume  = {72}, number = {3}, pages = {313--326}, year = {2013},
+  doi     = {10.1002/jgt.21644}, eprint = {1011.3376}, archivePrefix = {arXiv}
+}
+@article{LSS18,
+  author  = {Lei, Hui and Shi, Yongtang and Song, Zi-Xia},
+  title   = {Star chromatic index of subcubic multigraphs},
+  journal = {Journal of Graph Theory},
+  volume  = {88}, number = {4}, pages = {566--576}, year = {2018},
+  doi     = {10.1002/jgt.22230}, eprint = {1701.04105}, archivePrefix = {arXiv}
+}
+@article{LSSW18,
+  author  = {Lei, Hui and Shi, Yongtang and Song, Zi-Xia and Wang, Tao},
+  title   = {Star 5-edge-colorings of subcubic multigraphs},
+  journal = {Discrete Mathematics},
+  volume  = {341}, number = {4}, pages = {950--956}, year = {2018},
+  doi     = {10.1016/j.disc.2017.12.008}, eprint = {1707.08892}, archivePrefix = {arXiv}
+}
+@article{ZS21,
+  author  = {Zhu, Enqiang and Shao, Zehui},
+  title   = {On the star chromatic index of generalized {P}etersen graphs},
+  journal = {Discussiones Mathematicae Graph Theory},
+  volume  = {41}, number = {2}, pages = {427--}, year = {2021},
+  doi     = {10.7151/dmgt.2195},
+  note    = {first page only in Crossref record; full text not opened}
+}
+@misc{OD24,
+  author  = {Omoomi, Behnaz and Vahid Dastjerdi, Marzieh},
+  title   = {Star edge coloring of generalized {P}etersen graphs},
+  year    = {2024}, eprint = {2410.15024}, archivePrefix = {arXiv}
+}
+@misc{HLW20,
+  author  = {Hou, Xuling and Li, Lingxi and Wang, Tao},
+  title   = {Star edge-coloring of some special graphs},
+  year    = {2020}, eprint = {2010.14349}, archivePrefix = {arXiv}
+}
+@article{CGR21,
+  author  = {Casselgren, Carl Johan and Granholm, Jonas B. and Raspaud, Andr{\'e}},
+  title   = {On star edge colorings of bipartite and subcubic graphs},
+  journal = {Discrete Applied Mathematics},
+  volume  = {298}, pages = {21--33}, year = {2021},
+  doi     = {10.1016/j.dam.2021.03.007}, eprint = {1912.02467}, archivePrefix = {arXiv}
+}
+@article{BLMSS16,
+  author  = {Bezegov{\'a}, {\v{L}}udmila and Lu{\v{z}}ar, Borut and Mockov{\v{c}}iakov{\'a}, Martina and Sot{\'a}k, Roman and {\v{S}}krekovski, Riste},
+  title   = {Star edge coloring of some classes of graphs},
+  journal = {Journal of Graph Theory},
+  volume  = {81}, number = {1}, pages = {73--82}, year = {2016},
+  doi     = {10.1002/jgt.21862}, eprint = {1307.1242}, archivePrefix = {arXiv}
+}
+@article{KKR18,
+  author  = {Kerdjoudj, Samia and Kostochka, Alexandr V. and Raspaud, Andr{\'e}},
+  title   = {List star edge-coloring of subcubic graphs},
+  journal = {Discussiones Mathematicae Graph Theory},
+  volume  = {38}, number = {4}, pages = {1037--1054}, year = {2018},
+  doi     = {10.7151/dmgt.2037}
+}
+@article{LMS19,
+  author  = {Lu{\v{z}}ar, Borut and Mockov{\v{c}}iakov{\'a}, Martina and Sot{\'a}k, Roman},
+  title   = {Note on list star edge-coloring of subcubic graphs},
+  journal = {Journal of Graph Theory},
+  volume  = {90}, pages = {304--310}, year = {2019},
+  doi     = {10.1002/jgt.22402}, eprint = {1709.03293}, archivePrefix = {arXiv}
+}
+@article{LMS17endm,
+  author  = {Lu{\v{z}}ar, Borut and Mockov{\v{c}}iakov{\'a}, Martina and Sot{\'a}k, Roman},
+  title   = {On a star chromatic index of subcubic graphs},
+  journal = {Electronic Notes in Discrete Mathematics},
+  volume  = {61}, pages = {835--839}, year = {2017},
+  doi     = {10.1016/j.endm.2017.07.043},
+  note    = {abstract not available to us}
+}
+@article{PV16,
+  author  = {Pradeep, Kavita and Vijayalakshmi, V.},
+  title   = {Star chromatic index of subcubic graphs},
+  journal = {Electronic Notes in Discrete Mathematics},
+  volume  = {53}, pages = {155--164}, year = {2016},
+  doi     = {10.1016/j.endm.2016.05.014},
+  note    = {LSS18 report an error in the proof of its Thm 2.3}
+}
+@misc{LS20survey,
+  author  = {Lei, Hui and Shi, Yongtang},
+  title   = {A survey on star edge-coloring of graphs},
+  year    = {2020}, eprint = {2009.08017}, archivePrefix = {arXiv}
+}
+@article{HT25,
+  author  = {Hu, Xingxing and Tang, Yunfang},
+  title   = {The star edge coloring of cubic {H}alin graphs with star chromatic index 5},
+  journal = {AIMS Mathematics}, year = {2026},
+  doi     = {10.3934/math.2026124}, eprint = {2511.13140}, archivePrefix = {arXiv},
+  note    = {journal DOI from Semantic Scholar; volume/pages not checked}
+}
+@article{DLF25,
+  author  = {Deng, Xingchao and Liu, Yan and Feng, Xin},
+  title   = {Star Edge Coloring of Outerplanar and Cubic Graphs: Bounds and Constructions},
+  journal = {Bulletin of the Malaysian Mathematical Sciences Society},
+  volume  = {48}, number = {4}, pages = {Art. 93}, year = {2025},
+  doi     = {10.1007/s40840-025-01875-9},
+  note    = {metadata from Crossref; full text NOT opened}
+}
+@article{SS24flower,
+  author  = {Sedlar, Jelena and {\v{S}}krekovski, Riste},
+  title   = {Normal 5-edge-coloring of some snarks superpositioned by Flower snarks},
+  journal = {European Journal of Combinatorics},
+  volume  = {122}, pages = {104038}, year = {2024},
+  doi     = {10.1016/j.ejc.2024.104038}
+}
+@article{SS24petersen,
+  author  = {Sedlar, Jelena and {\v{S}}krekovski, Riste},
+  title   = {Normal 5-edge-coloring of some snarks superpositioned by the {P}etersen graph},
+  journal = {Applied Mathematics and Computation},
+  volume  = {467}, pages = {128493}, year = {2024},
+  doi     = {10.1016/j.amc.2023.128493}
+}
+```
+
+## 5. Reproducibility of my own checks
+
+The scripts are in the helper scratchpad (not in the project):
+- `heawood.py`: exhaustive backtracking star-k-colourability. Sanity results: K3,3 5-no/6-yes; prism 5-no; Q3 4-yes; Petersen 4-no/5-yes; K4 4-no/5-yes. Heawood 5-yes; the colouring was re-verified by an independent 4-walk check.
+- `gpcover.py`: coverage of the GP families by Zhu–Shao (as summarized in OD24 §1 and in the Lei–Shi survey, Thms 7.8–7.9) and OD24 (Thm 1, d ≥ 3; Thm 2, d = 2; Lemma 5), closed under GP(n,k) ≅ GP(n,k′) for k′ ≡ ±k, kk′ ≡ ±1 (mod n). It depends on my reading of those theorem statements. Zhu–Shao's own text was not opened.

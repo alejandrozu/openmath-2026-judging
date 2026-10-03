@@ -1,0 +1,98 @@
+{
+  "schema_version": "1.0.0",
+  "record_id": "OM26-H4-SECTION8-DRAFT-001",
+  "state": "TECHNICAL_AND_HUMAN_PACKET_PREPARED__OFFICIAL_ROUTE_EVALUATOR_AND_ORGANIZER_REVIEW_PENDING",
+  "identity_target": {
+    "campaign": "OPENMATH-2026",
+    "hill_id": "alejandrozu/collatz-modular-descent",
+    "hill_tree_hash": "7414e19511b2b99954a3898beed545401b79a571",
+    "hill_commit": "ad2b555cf91d7d4250bbdb6f94b30fac07e3d512",
+    "family_id": "PENDING_COMPETITION_NAMESPACE",
+    "problem_id": "OM26-H4",
+    "primary_modality": "M1_FORMALIZED_PARTIAL__P1_OR_P2_PENDING_MATHEMATICAL_REVIEW",
+    "registered_human_roster": [
+      "Jamie Steeg"
+    ],
+    "entrant_class": "Individual",
+    "affiliations": [],
+    "resource_classification": "SELF_RESOURCED"
+  },
+  "exact_claim": {
+    "text": "Each of the 23 retained rules is an exact stable accelerated-Collatz residue-class descent certificate. The 23-rule payload is exactly the deterministic containment reduction of the independently reconstructed bounded catalog over modulus powers k=2..8 and trajectory depths 1..4.",
+    "completeness": "FINITE_BOUNDED_CLASSIFICATION_ONLY",
+    "exclusions": [
+      "No proof of global Collatz convergence",
+      "No claim of completeness beyond k<=8 and depth<=4",
+      "No hidden-target coverage or score claim",
+      "No independent assertion that the finite catalog is novel"
+    ]
+  },
+  "artifact": {
+    "solution_path": "work_packages/OPENMATH_2026/CONTEST_CANDIDATES/H4/solution.json",
+    "solution_sha256": "b14c4804dae95df88ffa7dcef865205edd295e1f2e8c4daeba75333053a6673a",
+    "native_project_id": "f6ba9e4d-e3f1-412c-a1e9-37ba95675de6",
+    "native_climb_slug": "gcl-2026-h4-fixed-b14c4804dae9",
+    "native_job_id": "9fbb4512-e7c3-41e7-8e53-06fd887a320d",
+    "official_submission_id": null,
+    "official_final_report": null,
+    "immutable_final_commit": "187ce0debe76cb960724a6078b16660a11531941"
+  },
+  "formal_replay": {
+    "exact_rule_semantics_source": "work_packages/OPENMATH_2026/AUTHORITATIVE_SOURCE_POOL/collatz-modular-descent/PUBLIC_SOURCE/eval.py",
+    "trusted_replay_source": "work_packages/OPENMATH_2026/OM26_H4_COLLATZ_MODULAR_DESCENT/trusted_replay_h4.py",
+    "trusted_replay_pr": "grandchallenge/MATHSOLVE#593",
+    "observed_pass_run": 36877035405,
+    "observed_pass_job": 110418981039,
+    "bounded_prefixes_checked": 1016,
+    "valid_bounded_rules": 309,
+    "retained_rules": 23,
+    "catalog_sha256": "951521f5064f0842993e895648b2b8bde2b29dda0d47c9d586ddac498bfa4f55",
+    "independent_implementations": [
+      "direct accelerated trajectory verifier",
+      "affine coefficient verifier"
+    ],
+    "official_checker": "PENDING_ORGANIZER_WORKFLOW"
+  },
+  "provenance": {
+    "baseline": "Organizer source examples plus protected source/evaluator lock before event work",
+    "event_window_delta": "Independent worker enumerated the bounded exact rule family and produced a deterministic 23-rule reduced catalog during the competition window; GCL then independently reconstructed and replayed the entire bounded catalog and exact reduction.",
+    "external_contributor": {
+      "dispatch_id": "OM26-H4-WP01-IA-001",
+      "agent_ref": "INDEPENDENT-AGENT-004",
+      "raw_return": "contributions/OPENMATH-2026/OM26-H4/WP01/raw/OM26-H4-WP01-IA-001/github-comment-5921309643.md"
+    },
+    "original_adjudication": "ACCEPTED_EVIDENCE_WITHOUT_CLAIM_PROMOTION",
+    "replay_closure": "PR_593_MERGED__PROTECTED_HEAD_187ce0debe76cb960724a6078b16660a11531941",
+    "status_review": "work_packages/OPENMATH_2026/OM26_H4_COLLATZ_MODULAR_DESCENT/TARGET_CORRESPONDENCE_AND_STATUS.json"
+  },
+  "literature_status": {
+    "mechanism_prior": true,
+    "exact_catalog_novelty": "UNRESOLVED__NO_EXACT_MATCH_FOUND_IN_SEARCHED_SOURCES",
+    "reviewed_context": [
+      "Terras 1976 stopping-time residue methods",
+      "Everett 1977 iteration/stopping-time work",
+      "OEIS A177789 residue classes by stopping time",
+      "Winkler 2014/2015 stopping-time analyses",
+      "2026 modular pre-descent context"
+    ],
+    "competition_review_required": true
+  },
+  "trust_dependencies": {
+    "arithmetic": "Python arbitrary-precision integers and fractions.Fraction exact rationals",
+    "hidden_private_targets": "NOT_USED_FOR_MATHEMATICAL_VALIDITY_CLAIM",
+    "proof_holes": false
+  },
+  "disclosures": {
+    "tools_ai_compute": "See shared SECTION8_SHARED_DRAFT.json and exact GitHub/agent provenance above.",
+    "outside_help": "Independent zero-context agent contribution explicitly identified above.",
+    "conflicts": "none",
+    "publication_authority": "AUTHORIZED__SEE_HUMAN_AUTHORITY_DECLARATION.json"
+  },
+  "remaining_before_external_submission": [
+    "official competition evaluator report",
+    "organizer submission ID/workflow",
+    "organizer novelty/scope adjudication"
+  ],
+  "claim_boundary": "Draft competition packet only; no official submission, score, acceptance, novelty determination, or MATHCERT certification.",
+  "authority_receipt": "work_packages/OPENMATH_2026/COMPETITION_PACKETS/HUMAN_AUTHORITY_DECLARATION.json"
+}

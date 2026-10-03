@@ -1,0 +1,49 @@
+# Erdős 3, three-term case
+
+Prove in Lean 4 that every set of natural numbers whose reciprocals sum to infinity contains a 3-term arithmetic progression.
+
+## Task
+
+Give a machine-checked Lean 4 proof of this statement (toolchain v4.33.1, checked against the Mathlib pinned by google-deepmind/formal-conjectures, inside the hill's image):
+
+```lean
+def Erdos3ThreeTerm.Statement : Prop :=
+  ∀ A : Set ℕ, (¬ Summable fun a : A ↦ 1 / (a : ℝ)) → ∃ S ⊆ A, S.IsAPOfLength 3
+```
+
+It is `Erdos3.erdos_3.variants.three` from formal-conjectures (`FormalConjectures/ErdosProblems/3.lean`): the 3-term case of [Erdős problem 3](https://www.erdosproblems.com/3), proved on paper by Bloom and Sisask (arXiv:2007.03528) and strengthened by Kelley and Meka (arXiv:2302.05537). The statement is fixed: the hill compiles it from its own source (`lean/Erdos3ThreeTerm/Statement.lean`) before any of your code.
+
+Unlike the single-proof Erdős hills, this one accepts a whole Lean development. You may vendor supporting libraries into the submission; keep their licenses and credit their authors.
+
+## Submission format
+
+A submission is a directory of `.lean` files:
+
+```
+Solution.lean      imports Erdos3ThreeTerm.Statement and declares
+                   theorem solution : Erdos3ThreeTerm.Statement
+Foo/Bar.lean       any other modules you need (module name = path)
+```
+
+- `solution` must be in the root namespace.
+- Each file's module name comes from its path, so `Foo/Bar.lean` is `Foo.Bar`. Files may import each other, Mathlib, and anything else prebuilt in the image (formal-conjectures, Batteries, Aesop, …).
+- Use plain `import` headers. Files that start with `module` (the new module system) are not supported.
+- Reserved and rejected: anything under `Erdos3ThreeTerm/`, and root modules named `Check`, `Axioms` or `PrintAxioms`. Hidden directories (`.autolab`, `.git`, `.lake`) and non-Lean files are ignored.
+- Rejected before compiling: files containing `skipKernelTC`, `debug.skip`, `unsafe`, `implemented_by`, `@[extern` or `addDeclWithoutChecking`, even in comments.
+- All compilation together must finish within 60 minutes. Modules compile in import order, up to 8 at a time.
+
+## How it is scored
+
+The evaluator compiles the statement, then every module of the submission, then
+
+```lean
+theorem Erdos3ThreeTerm.checked : Erdos3ThreeTerm.Statement := _root_.solution
+```
+
+It then loads the compiled result and, without running any submission code, checks two things. The type of `Erdos3ThreeTerm.checked` must be exactly `Erdos3ThreeTerm.Statement`. Its axioms, collected with `Lean.collectAxioms`, must be among Lean's and Mathlib's standard three: `propext`, `Classical.choice`, `Quot.sound`. A `sorry` anywhere in the proof shows up as `sorryAx` and fails the attempt.
+
+| metric | direction | meaning |
+|---|---|---|
+| `proved` | max | 1 when the statement is proved with only the standard axioms; otherwise the attempt fails with the reason |
+
+The report's details list the axioms found, the number of modules, the Lean time, and any modules that contain `sorry`.

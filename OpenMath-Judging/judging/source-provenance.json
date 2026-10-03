@@ -1,0 +1,89 @@
+{
+  "handbook": {
+    "local_source": "contestants/EVENT/02-papers/competition_handbook_final.pdf",
+    "sha256": "b1b7b3c98c8c498e145811ac74b549dbc9b4a8afcbd7e89dbcdeb6c42528772a",
+    "web_source": "https://rsihouse.ai/openmath",
+    "scoring_pages": [
+      3,
+      4,
+      5,
+      6
+    ],
+    "formula": "F=b*m*p*D^2/1000; S=sum distinct family F; A=max family F",
+    "M1": {
+      "b": "1.1",
+      "m": "1"
+    },
+    "M3A": {
+      "b": "1",
+      "m": "1"
+    },
+    "M3B": {
+      "b": "1",
+      "m": ".5"
+    },
+    "M2": "Separate integer count of accepted new faithful useful reusable families; excluded from S/A/tie-breaks",
+    "progress_bands": {
+      "P0": "0",
+      "P1": ".01–.05",
+      "P2": ".05–.15",
+      "P3": ".15–.35",
+      "P4": ".35–.60",
+      "P5": ".60–.85",
+      "P6": ".85–.95",
+      "Full": "1; none between.95and1"
+    },
+    "cutoff": "2026-10-03T06:00:00+02:00",
+    "baseline": "2026-09-27T16:00:00Z",
+    "review_requirement": "Two independent progress/fidelity judges; new D three independent assessments median; no simulated reviewer count"
+  },
+  "atlas": {
+    "repository": "https://github.com/alejandrozu/ulam-opdp-difficulty-atlas",
+    "commit": "e0e18186a142fb4f61cfc06716aac4fb31bc3b81",
+    "commit_time": "2026-09-19T23:47:03Z",
+    "companion_field": "chatgpt_difficulty_0_1000",
+    "record_count": 5426,
+    "full_atlas_count": 102819,
+    "methodology": "Ulam_OPDP_Methodology_v1.0.docx"
+  },
+  "reference_files": [
+    {
+      "file": "opdp-week-math-100-problems.json",
+      "bytes": 192665,
+      "sha256": "5c6c6ffe11e936b10476d4875e66a5f762938b96bc8544a8a46885613ea301c1"
+    },
+    {
+      "file": "README.md",
+      "bytes": 26428,
+      "sha256": "3854785936689b281a0a51c997b140b4cf226fac2715bc39dd92e23b12b129dd"
+    },
+    {
+      "file": "Ulam_MathDB_ProofAtlas_OPDP_Assessments_v1.8.json.gz",
+      "bytes": 62168329,
+      "sha256": "588153f0f188722c8876399930262ab989d197eb10fdf95c26db0ee4dbe910e5"
+    },
+    {
+      "file": "Ulam_OPDP_Methodology_v1.0.docx",
+      "bytes": 64027,
+      "sha256": "4623cd7bde8fd83c7126331d0ead6c9381074275f2bfa6b03224157060cb21d1"
+    },
+    {
+      "file": "Ulam_UnsolvedMath_ChatGPT_5.6_Sol_Ultra_Difficulty_v1.0.json",
+      "bytes": 2808912,
+      "sha256": "5066a895da4dd377bd30220cee264c0ddc85c71b17b4bf2cb96eb430b2bf03c0"
+    },
+    {
+      "file": "Ulam_UnsolvedMath_ChatGPT_5.6_Sol_Ultra_Rationales_v1.0.json",
+      "bytes": 16134223,
+      "sha256": "3142cb5a3af593fc648a36dc8f0b898ccf6bce283eda903eb47147bd3aaba4f5"
+    },
+    {
+      "file": "Ulam_UnsolvedMath_OPDP_Assessments_v1.5.json.gz",
+      "bytes": 8573010,
+      "sha256": "3017572c6b15739c9e018191e68b2eb25777877d606b5a36adfcc956b1f3bd29"
+    }
+  ],
+  "reading_ledger": "source-reading-ledger.json",
+  "formal_scan": "static-formal-source-audit.json",
+  "source_links_are_primary": "Contestant evidence, official event handbook and author-maintained OPDP repository. Historical prior claims remain unresolved where indicated."
+}

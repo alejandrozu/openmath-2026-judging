@@ -1,0 +1,180 @@
+Source: https://github.com/ChandraguptSharma07/matrix-multiplication-tensor-3x3/blob/479c2416b6261ee841052eef4881df0e40054f3f/lean/MM3/Certificates.lean
+Observed: 2026-10-03T04:49:51.068Z
+Representation: rendered GitHub UI extraction; may be incomplete, not original bytes.
+
+Files
+479c2416b6261ee841052eef4881df0e40054f3f
+t
+T
+evaluation
+kaggle
+lean
+MM3
+Brent.lean
+Certificates.lean
+Scheme138.lean
+Scheme138Gauged.lean
+Scheme139Exotic.lean
+Scheme143Core1809.lean
+.gitignore
+MM3.lean
+README.md
+gen.py
+lake-manifest.json
+lakefile.toml
+lean-toolchain
+paper
+reports
+reproduce
+results
+solutions
+src
+verify
+.gitignore
+HANDOFF.md
+README.md
+journal.html
+Breadcrumbs
+matrix-multiplication-tensor-3x3/lean/MM3
+/Certificates.lean
+Latest commit
+ 
+History
+History
+File metadata and controls
+Code
+Blame
+82 lines (64 loc) · 3.04 KB
+Raw
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+/-
+Certificates for the four schemes. Each `_valid` theorem is closed by `decide`:
+the Lean kernel evaluates `brentOK` on the data and checks that the result is
+`true`. No `native_decide` (compiler trust) is used anywhere. Each `_identities`
+theorem restates the result as the 729 Brent identities through `brentOK_sound`,
+and each `_support` theorem counts the nonzero entries.
+-/
+import MM3.Brent
+import MM3.Scheme138
+import MM3.Scheme138Gauged
+import MM3.Scheme139Exotic
+import MM3.Scheme143Core1809
+
+
+namespace MM3
+
+
+/-! ## solutions/support_138/solution.json -/
+
+
+theorem scheme138_valid :
+    brentOK Scheme138.su Scheme138.sv Scheme138.sw Scheme138.u Scheme138.v Scheme138.w = true := by
+  decide
+
+
+theorem scheme138_identities :
+    ∀ a b c : Nat, a < 9 → b < 9 → c < 9 →
+      coeff (terms Scheme138.u Scheme138.v Scheme138.w) a b c =
+        Scheme138.su * Scheme138.sv * Scheme138.sw * target a b c :=
+  brentOK_sound _ _ _ _ _ _ scheme138_valid
+
+
+theorem scheme138_support : support Scheme138.u Scheme138.v Scheme138.w = 138 := by
+  decide
+
+
+/-! ## solutions/support_138_gauged/solution.json -/
+
+
+theorem scheme138Gauged_valid :
+    brentOK Scheme138Gauged.su Scheme138Gauged.sv Scheme138Gauged.sw
+      Scheme138Gauged.u Scheme138Gauged.v Scheme138Gauged.w = true := by
+  decide
+
+
+theorem scheme138Gauged_identities :
+    ∀ a b c : Nat, a < 9 → b < 9 → c < 9 →
+      coeff (terms Scheme138Gauged.u Scheme138Gauged.v Scheme138Gauged.w) a b c =
+        Scheme138Gauged.su * Scheme138Gauged.sv * Scheme138Gauged.sw * target a b c :=
+  brentOK_sound _ _ _ _ _ _ scheme138Gauged_valid
+
+
+theorem scheme138Gauged_support :
+    support Scheme138Gauged.u Scheme138Gauged.v Scheme138Gauged.w = 138 := by
+  decide
+
+
+/-! ## solutions/exotic_139_support_139/solution.json -/
+
+
+theorem scheme139Exotic_valid :
+    brentOK Scheme139Exotic.su Scheme139Exotic.sv Scheme139Exotic.sw
+      Scheme139Exotic.u Scheme139Exotic.v Scheme139Exotic.w = true := by
+  decide
+
+
+theorem scheme139Exotic_identities :
+    ∀ a b c : Nat, a < 9 → b < 9 → c < 9 →
+      coeff (terms Scheme139Exotic.u Scheme139Exotic.v Scheme139Exotic.w) a b c =
+        Scheme139Exotic.su * Scheme139Exotic.sv * Scheme139Exotic.sw * target a b c :=
+  brentOK_sound _ _ _ _ _ _ scheme139Exotic_valid
+

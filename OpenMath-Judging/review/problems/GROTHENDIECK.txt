@@ -1,0 +1,135 @@
+OPENMATH-GROTHENDIECK
+Canonical target: Determine the real Grothendieck constant
+D proposal=561/1000; intrinsic=5.4/10
+Existing published CFSD1000 value, reused without rescaling or changing its frozen source profile.
+
+FRONTIER: CHSH and tiny finite sign enumerations are known/baseline results. Sakana proves a three-row square-root1.5 bound and a four-point square-root2 enumeration; the universal constant remains untouched.
+
+INTERACTION: Classify restricted dimensions/sign domains and compare exact finite certificates. A restricted proof is not a universal Grothendieck improvement.
+
+PAPER: Only a distinctly new reusable restricted formal theorem might justify a library note; current packets do not support a new universal-constant paper.
+
+COLLECTIVE: Original-family0; known restricted formalization credit must clear baseline overlap before M2 admission.
+
+CONTRIBUTION MAP
+
+E08-CHSH / HTPeo — Woohyuk Kang / Hyunjin Lee / Sanghyeon Lee / Youchan Oh
+√2-scale rational certificate; not new general bound
+Baseline or prior known mathematics, no independently new open advance; possible useful new formalization must be separately admitted as M2.
+Novelty: No eligible original mathematical delta established in the available packet. This is not a finding that all underlying work lacks novelty.
+Formalization: Exact arithmetic certificates/source available for review; independent Collatz check234/234. No fresh full kernel acceptance.
+Proposed M1; p=0; points=0.0; full review: entries/E08-CHSH.txt
+
+E10-H5 / Jamie Steeg / grandchallenge / GCL
+275807/195025 ratio, known √2 scale
+Prior benchmark only; no new open advance identified.
+Novelty: No eligible original mathematical delta established in the available packet. This is not a finding that all underlying work lacks novelty.
+Formalization: Queued native reports and prepared packet are not official final receipts.
+Proposed M1; p=0; points=0.0; full review: entries/E10-H5.txt
+
+E35-HILL1 / aaronatlan
+Grothendieck gap 1.414213 with area 4 and 80-bit certificate: compatible with the known two-by-two CHSH witness, not evidence of improving the best general lower bound.
+Baseline tie, inferior benchmark, finite nonrecord machine or unspecified claim supplies no new original problem credit.
+Novelty: No eligible original mathematical delta established in the available packet. This is not a finding that all underlying work lacks novelty.
+Formalization: Only board metadata/access leads; no original mathematical proof or exact final packet. 
+Proposed M1; p=0; points=0; full review: entries/E35-HILL1.txt
+
+E44-HILL1 / ebaenamar
+Grothendieck gap 1.414213, area 4, 80 bits: known small witness scale; no new general lower-bound advance established.
+Baseline tie, inferior benchmark, finite nonrecord machine or unspecified claim supplies no new original problem credit.
+Novelty: No eligible original mathematical delta established in the available packet. This is not a finding that all underlying work lacks novelty.
+Formalization: Only board metadata/access leads; no original mathematical proof or exact final packet. 
+Proposed M1; p=0; points=0; full review: entries/E44-HILL1.txt
+
+E61-HILL2 / solal24
+Kobon n=18: 93 tie; Grothendieck gap 1.414213, area 4, 80 bits. Both are baseline-level benchmark results.
+Baseline tie, inferior benchmark, finite nonrecord machine or unspecified claim supplies no new original problem credit.
+Novelty: No eligible original mathematical delta established in the available packet. This is not a finding that all underlying work lacks novelty.
+Formalization: Only board metadata/access leads; no original mathematical proof or exact final packet. 
+Proposed M1; p=0; points=0; full review: entries/E61-HILL2.txt
+
+E02-FOCUS-GROTH / Rachel Teo / Wenyi Wang / Hamdi Abderrahmene
+For every n and every 3-by-n sign matrix A, Q_V(A)<=sqrt(3/2) C(A) in every real inner-product space V. Additionally Q_V(A)<=sqrt(2) C(A) for the four literal archived matrices A_6x6_106, A_6x8_690, A_7x8_53110 and A_s8x8_1705. Q_V is the unit-vector objective supremum, with Q_V(A)=0 for an empty feasible set, and C is its real scalar specialization. These supporting cases form one review family.
+Three-row sign matrices and four archived finite matrices cannot control all real-coefficient Grothendieck instances. The exact finite inequalities are reusable certificates, but no new bound on the universal constant follows.
+Novelty: No original universal-constant advance established. A new formalization may be M2 only after source and prior-library comparison.
+Formalization: Fresh Row3Granular and four-case SemanticTestGranular checks passed in Lean 4.33.1 with standard axioms only. Row3 mathematical body is byte-identical after import adjustment; the four-case file retains statements and certificate data with eight arithmetic tactic repairs and explicit imports.
+Proposed M1; p=0; points=0.0; full review: entries/E02-FOCUS-GROTH.txt
+
+OPDP INPUTS AND RATIONALE
+{
+  "inputs": {
+    "catalog_status": "open",
+    "assessment_gate": "status_unclear",
+    "scope": "atomic",
+    "answer_type": "proof_disproof",
+    "intrinsic_difficulty_0_10": 5.4,
+    "intrinsic_tier_code": "T3",
+    "intrinsic_tier_label": "Serious Project",
+    "ai_relative_difficulty_0_10": 4.9,
+    "human_effort_1_9": 1,
+    "human_exposure_1_5": 1,
+    "tractability_status": "scored",
+    "tractability_0_10": 5,
+    "verification_if_true_0_10": 5.4,
+    "verification_if_false_0_10": 4.7,
+    "formalization_0_10": 4.2,
+    "prerequisite_preparation_0_10": 5.9,
+    "prerequisite_breadth_1_5": 1,
+    "tool_leverage_0_10_higher_is_favorable": 4.5,
+    "ambiguity_0_10": 3,
+    "literature_load_0_10": 2.5,
+    "ai_context_load_predictor_minus1_to_plus1": -1,
+    "ai_reasoning_horizon_predictor_minus1_to_plus1": 0,
+    "recommended_route": "Status and literature audit"
+  },
+  "calculation": {
+    "normalized_barriers_0_1": {
+      "ai_relative_core": 0.49,
+      "intrinsic_difficulty": 0.54,
+      "human_resistance": 0,
+      "inverse_tractability": 0.5,
+      "verification_burden": 0.51,
+      "formalization_burden": 0.42,
+      "prerequisite_load": 0.44,
+      "context_and_ambiguity": 0.26,
+      "tool_constraint": 0.55
+    },
+    "weighted_component_points": {
+      "ai_relative_core": 196,
+      "intrinsic_difficulty": 91.8,
+      "human_resistance": 0,
+      "inverse_tractability": 75,
+      "verification_burden": 22.73,
+      "formalization_burden": 14.7,
+      "prerequisite_load": 17.7,
+      "context_and_ambiguity": 10.4,
+      "tool_constraint": 16.5
+    },
+    "linear_barrier_points_0_1000": 444.83,
+    "complete_solution_transform_exponent": 1.4,
+    "complete_solution_uplift_points": 116.17,
+    "final_score_0_1000": 561
+  },
+  "intrinsic_factors": {
+    "conceptual_gap": 2.5,
+    "route_gap": 2.5,
+    "technical_depth": 2,
+    "known_barrier": 1,
+    "search_scale": 3
+  },
+  "axis_rationales": {
+    "intrinsic": "Small CHSH witnesses and restricted sign-matrix estimates do not determine the arbitrary-real-coefficient constant.",
+    "AI": "Statement has exact finite certificate feedback; the dated tool-assisted protocol is an estimate, not an empirical solve run.",
+    "attention": "H/X are historical-effort/exposure priors, not contestant hours. Insufficient documentation: neutral normalized .5 used for scoring.",
+    "tractability": "Known targets use N/A and neutral full-resolution component; otherwise the band is an editorial chance of useful100-hour partial progress, not full resolution.",
+    "verification": "Positive checking uses the stated exact finite data/proof chain; a negative/global resolution can have a different burden. No fresh Lean build is claimed.",
+    "formalization": "Statement encoding and libraries require 4/10 burden; this is the target burden, not the quality of a submitted proof.",
+    "prerequisites": "The target needs its Functional analysis background; preparation and breadth refer to a prepared researcher, not entrant prestige.",
+    "tools": "Higher L means favorable exact-feedback/search/prover leverage. It does not turn a leaderboard number into a theorem.",
+    "status": "Source-claimed pre-event open target or explicitly parent-linked variation; no independently certified verified_open status invented."
+  },
+  "parent_links": [],
+  "sources": [
+    "https://github.com/alejandrozu/ulam-opdp-difficulty-atlas"
+  ]
+}

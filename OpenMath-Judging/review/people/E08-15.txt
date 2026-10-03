@@ -1,0 +1,109 @@
+PERSON: Hyunjin Lee
+No per-author theorem/work allocation supplied; shared packet attribution only. Do not invent an individual point split.
+
+E08 HTPeo — Woohyuk Kang / Hyunjin Lee / Sanghyeon Lee / Youchan Oh
+AUTHORS: Woohyuk Kang, Hyunjin Lee, Sanghyeon Lee, Youchan Oh
+PROPOSED S=88.2753 / A=49.4214 / M2 families=10 (adjusted ranking value 10)
+Strong multi-problem packet: weighted Ramsey bound, exact Kobon construction and DMS families/reductions. M2 candidate list has17claimedfamilies but seven minor/sanity entries should be held for usefulness; six explicit excluded wrappers do not count. Baseline Collatz/BB6/CHSH/matrix reconstructions earn no open points.
+Review budget: 20 minutes. Numerical proposals are contingent on acceptance and the listed checks.
+
+E08-RAMSEY | Weighted K4 upper bound
+c4 ≤ 200137750014677779172692777477/6640289795261907019148161833841, Q=50762939,1024 blocks;30139911990ppt.
+Assessment: The exact weighted rational is about.030139912 rather than the McKay.030142273 reference, and is smaller than Sakana's reported bound. The generic lifting theorem matters because the finite weighted objective must imply an infinite graph-family bound. Native cross-check modules do not determine the main proof's axioms unless imported.
+Novelty: Candidate exact new upper bound. Stronger prior bounds and independent sealed development still require the named audit.
+Formal: 2158 HTPeo formal source texts scanned, including final v2. Native.lean is explicitly separate, not imported by main claimed chain; do not reject main result for that cross-check. Packet reports standard-axiom kernel count and lifting, no fresh independent full build.
+Proposal: M3A; D=840; p=0.05; family points=35.28. Full evidence/checks: entries/E08-RAMSEY.txt
+
+E08-KOBON39 | 471-triangle straight-line construction
+K(39)≥471 via39 exact lines and disjoint bounded triangular faces.
+Assessment: The independent integer geometry recount confirms471 bounded triangular faces for39 lines. This improves Rohith's470 witness by one at that order. It is a lower bound, with no proof that471 is optimal or that the general upper481 is attainable.
+Novelty: Candidate new construction at n39; compare to historical straight-line arrangements, not just missing values in a gallery.
+Formal: Independent integer geometry recount gives471, no duplicate lines. Submitted Lean existence/certificate described; fresh kernel build and source-to-geometric fidelity still pending.
+Proposal: M1; D=570; p=0.01; family points=3.5739. Full evidence/checks: entries/E08-KOBON39.txt
+
+E08-DMS | Infinite special families and finite classification
+Five-colour proofs for specified snark/Petersen/Möbius/inflation families; six colours for bridgeless cubic loopless multigraphs≤14; unconditional reductions and equivalence, remaining ≥16/open hypotheses.
+Assessment: Infinite five-colour special families, finite six-colour classification up to14 vertices, and reduction/equivalence infrastructure are materially useful. Separate unconditional endpoints from modules that retain OPEN hypotheses. Bridgeless loopless cubic multigraphs are not interchangeable with every subcubic simple graph without a proved reduction.
+Novelty: Candidate obstacle-removing special-family/reduction advance; previously known five-colour classes must be subtracted.
+Formal: Packet provides125-source five-colour checks and98-module reduction library with axiom logs. An unused baseline native_decide lemma is not in claimed closure. Team declares no human line-by-line review; independent rebuild and graph convention review required.
+Proposal: M3A; D=574; p=0.15; family points=49.4214. Full evidence/checks: entries/E08-DMS.txt
+
+E08-BB6 | Finite six-state baseline witness
+249881steps554ones735span, no global record
+Assessment: Baseline or prior known mathematics, no independently new open advance; possible useful new formalization must be separately admitted as M2.
+Novelty: No eligible original mathematical delta established in the available packet. This is not a finding that all underlying work lacks novelty.
+Formal: Exact arithmetic certificates/source available for review; independent Collatz check234/234. No fresh full kernel acceptance.
+Proposal: M1; D=974; p=0; family points=0.0. Full evidence/checks: entries/E08-BB6.txt
+
+E08-CHSH | Known CHSH witness
+√2-scale rational certificate; not new general bound
+Assessment: Baseline or prior known mathematics, no independently new open advance; possible useful new formalization must be separately admitted as M2.
+Novelty: No eligible original mathematical delta established in the available packet. This is not a finding that all underlying work lacks novelty.
+Formal: Exact arithmetic certificates/source available for review; independent Collatz check234/234. No fresh full kernel acceptance.
+Proposal: M1; D=561; p=0; family points=0.0. Full evidence/checks: entries/E08-CHSH.txt
+
+E08-MATRIX139 | Known support139 tensor
+Rank23/support139 baseline
+Assessment: Baseline or prior known mathematics, no independently new open advance; possible useful new formalization must be separately admitted as M2.
+Novelty: No eligible original mathematical delta established in the available packet. This is not a finding that all underlying work lacks novelty.
+Formal: Exact arithmetic certificates/source available for review; independent Collatz check234/234. No fresh full kernel acceptance.
+Proposal: M1; D=724; p=0; family points=0.0. Full evidence/checks: entries/E08-MATRIX139.txt
+
+E08-COLLATZ234 | 234-rule baseline-equivalent coverage
+234rules, independently1765odd classes mod4096: exactly Chaewon union
+Assessment: Baseline or prior known mathematics, no independently new open advance; possible useful new formalization must be separately admitted as M2.
+Novelty: No eligible original mathematical delta established in the available packet. This is not a finding that all underlying work lacks novelty.
+Formal: Exact arithmetic certificates/source available for review; independent Collatz check234/234. No fresh full kernel acceptance.
+Proposal: M1; D=772; p=0; family points=0.0. Full evidence/checks: entries/E08-COLLATZ234.txt
+
+E08-KOBON18 | Known n18=93 reconstruction
+n18=93, known lower bound
+Assessment: Baseline or prior known mathematics, no independently new open advance; possible useful new formalization must be separately admitted as M2.
+Novelty: No eligible original mathematical delta established in the available packet. This is not a finding that all underlying work lacks novelty.
+Formal: Exact arithmetic certificates/source available for review; independent Collatz check234/234. No fresh full kernel acceptance.
+Proposal: M1; D=570; p=0; family points=0.0. Full evidence/checks: entries/E08-KOBON18.txt
+
+KNOWN-THEOREM FORMALIZATIONS
+Ten substantive claimed families proposed; seven minor/sanity helpers held for usefulness/new-library delta; six explicitly unclaimed wrappers excluded.
+Known mathematical results; potential credit is new faithful reusable formalization, with baseline overlap and pinned closure checked separately.
+E08-G-PM | Petersen / Schönberger perfect matchings | def Star6.Bridgeless (G : SimpleGraph V) : Prop := ∀ e ∈ G.edgeSet, ¬ G.IsBridge e theorem Star6.simple_schoenberger (hconn : G.Connected) (hreg : G.IsRegularOfDegree 3) (hbr : Bridgeless G) {e : Sym2 V} (he :… | entries/E08-G-PM.txt
+E08-E942 | Unbounded powerful-number counts between consecutive squares | @[category textbook, AMS 11] theorem erdos_942.variants.limsup : atTop.limsup (((fun (n : ℕ) ↦ (n : ℕ∞)) ∘ erdos_942.h)) = ⊤ | entries/E08-E942.txt
+E08-E44 | Greedy Sidon lower bound N ≤ |A|³ | @[category textbook, AMS 5 11] theorem greedy_sidon_construction (N : ℕ) (hN : 1 ≤ N) : ∃ᵉ (A ⊆ Finset.Icc 1 N), IsSidon (A : Set ℕ) ∧ N ≤ A.card ^ 3 | entries/E08-E44.txt
+E08-E123 | d-completeness of powers of2 and3 | @[category research solved, AMS 11] theorem erdos_123.variants.powers_2_3 : IsDComplete (↑(powers 2) * ↑(powers 3)) | entries/E08-E123.txt
+E08-E918 | Impossible exact countable chromatic restrictions | @[category textbook, AMS 5] theorem erdos_918.variants.eq_aleph_0.parts.i : ¬∃ (V : Type u) (G : SimpleGraph V), #V = ℵ_ 2 ∧ G.chromaticCardinal = ℵ_ 2 ∧ ∀ (W : Set V) (_ : #W = ℵ₁), (G.induce… | entries/E08-E918.txt
+E08-E292 | Multiplicative closure / doubling / no prime powers | @[category research solved, AMS 11] theorem erdos_292.variants.mul : ∀ m ∈ A, ∀ n ∈ A, m * n ∈ A @[category research solved, AMS 11] theorem erdos_292.variants.two_mul : ∀ n ∈ A, 1 < n → 2 * n ∈ A @[category… | entries/E08-E292.txt
+E08-E395 | Radius-one reverse Littlewood–Offord counterexample | @[category research solved, AMS 5 60] theorem erdos_395.variants.one : answer(False) ↔ ∃ c : ℝ, 0 < c ∧ ∀ n : ℕ, 0 < n → ∀ z : Fin n → ℂ, (∀ i, ‖z i‖ = 1) → c / n ≤ (signedSumCount z 1 : ℝ) / 2 ^ n | entries/E08-E395.txt
+E08-E698 | Erdős–Szekeres binomial gcd inequality | @[category research solved, AMS 5 11] theorem erdos_698.variants.erdos_szekeres (n i j : ℕ) (hi : 1 ≤ i) (hij : i < j) (hj : j ≤ n / 2) : (n.choose i : ℝ) / (j.choose i : ℝ) ≤ (Nat.gcd (n.choose i) (n.choose… | entries/E08-E698.txt
+E08-E939 | Known r=7,8 powerful-number sum examples | @[category research solved, AMS 11] theorem erdos_939.variants.seven : (Erdos939Sums 7).Nonempty @[category research solved, AMS 11] theorem erdos_939.variants.eight : (Erdos939Sums 8).Nonempty | entries/E08-E939.txt
+E08-E477 | Known polynomial-range additive nonunique representation | @[category research solved, AMS 12] theorem erdos_477.variants.S_sq : letI f := X ^ 2 ∀ A : Set ℤ, ∃ z, ¬ ∃! a ∈ A ×ˢ (Set.range f.eval), z = a.1 + a.2 @[category research solved, AMS 12] theorem… | entries/E08-E477.txt
+E08-E295 | Egyptian fraction existence helper | @[category textbook, AMS 5 11] lemma exists_k (N : ℕ) : ∃ (k : ℕ) (n : Fin k → ℕ), (∀ i, N ≤ n i) ∧ StrictMono n ∧ ∑ i, (1 / n i : ℝ) = 1 | entries/E08-E295.txt
+E08-E703 | Known intersecting-family t=0 value | @[category textbook, AMS 5] theorem erdos_703.variants.zero (n : ℕ) (hn : 1 ≤ n) : T n 0 = 2 ^ (n - 1) | entries/E08-E703.txt
+E08-E748 | Known sum-free-set lower bound | @[category textbook, AMS 5 11] theorem erdos_748.variants.lower_bound (n : ℕ) : (2 : ℝ) ^ ((n : ℝ) / 2) ≤ (f n : ℝ) | entries/E08-E748.txt
+E08-E1136 | Multiples-of-three density baseline | @[category research solved, AMS 11] theorem erdos_1136.variants.multiples_of_three : AvoidsPowersOfTwo {n : ℕ | 3 ∣ n} ∧ Set.HasDensity {n : ℕ | 3 ∣ n} (1 / 3) | entries/E08-E1136.txt
+E08-E358 | Sylvester consecutive sums / odd divisors | @[category textbook, AMS 5 11] theorem f_id : f id = fun n ↦ #{d ∈ n.divisors | Odd d} | entries/E08-E358.txt
+E08-E619 | Maximal triangle-free supergraph diameter bound | @[category research solved, AMS 5] theorem erdos_619.variants.add_edges_diam_three {V : Type*} [Fintype V] (G : SimpleGraph V) (hG : G.Connected) (hG' : G.CliqueFree 3) : ∃ H : SimpleGraph V, G ≤ H ∧… | entries/E08-E619.txt
+E08-E1148 | Known difference-of-squares weaker bound | @[category research solved, AMS 11] theorem erdos_1148.variants.weaker : ∀ n, erdos_1148_weaker_prop n | entries/E08-E1148.txt
+
+PRIORITY SIGN-OFF
+Fresh endpoint closure build
+Verify JSON→Lean identity and oracle density convention
+Official receipt: report official=true, final=false
+Current primary bound/independence and target D freeze
+Clean Lean build, embedding/disjoint-face fidelity
+Historical novelty and independent-sealed provenance
+Exact approved target and receipt
+Unconditional vs OPEN parameter endpoints
+Simple graph vs loopless multigraph, bridges and inflation correspondence
+Prior special-family results and general-reduction novelty
+Two mathematical reviewers and fresh selected closures
+Clean selected endpoint closure and two fidelity reviews
+Independent scoped prior-formalization search
+Useful/reusable test
+Useful/reusable test; source n=0 cardinality convention must be disclosed
+Only a distinct genuinely new admitted delta could alter disposition
+M2 novelty/usefulness if claimed
+Independent-sealed exposure chronology
+
+Repo: lavaskiller/openmath-2026-htpeo
+Pinned commit: 76c63b8e425e551a930060a6871b84fe3b4780db
+Individual authors share the packet; no unsupported per-author point split. File summaries are visible under Classified files.

@@ -1,0 +1,94 @@
+OPENMATH-NO3-HALFTURN
+Canonical target: Determine the least positive one-sided half-turn miss of a2n-point no-three-collinear subset of the n by n integer grid, uniformly in n, and supply a sharp witness. The pre-event source asks why the minimum known miss is4 instead of2.
+D proposal=330/1000; intrinsic=3.8/10
+New local OPDP extension with CFSD1000 formula; one editorial assessor, not the required three-assessor median.
+
+FRONTIER: Sharp half-turn symmetry defect gap: For A⊆{0,…,n−1}² with |A|=2n and no three collinear, let R(x,y)=(n−1−x,n−1−y). The one-sided miss count |{p∈A:R(p)∉A}| is 0 or ≥4. An explicit ten-point 5×5 witness has miss exactly4, proving global sharpness. Symmetric-
+
+INTERACTION: Supporting lemmas and corollaries belong to the same scope union. Any transfer to a parent or another problem requires a proved scope-preserving bridge.
+
+PAPER: Candidate building block only; preserve source hypotheses, exact priority comparison, proof closure and contribution-based authorship.
+
+COLLECTIVE: Virtual family representative E02-opdp43-halfturn; conservative one-family points 108.9. M2 is separate when applicable.
+
+CONTRIBUTION MAP
+
+E02-opdp43-halfturn / Rachel Teo / Wenyi Wang / Hamdi Abderrahmene
+For A⊆{0,…,n−1}² with |A|=2n and no three collinear, let R(x,y)=(n−1−x,n−1−y). The one-sided miss count |{p∈A:R(p)∉A}| is 0 or ≥4. An explicit ten-point 5×5 witness has miss exactly4, proving global sharpness. Symmetric-difference cardinality is twice the one-sided miss.
+A 2n-point no-three-collinear grid set has exactly two points per row and column. The incidence discrepancy with its half-turn image has zero row and column balances, so a nonempty discrepancy must include an alternating cycle and at least four one-sided misses. The ten-point 5x5 witness attains four; symmetric difference is eight.
+Novelty: The near-symmetry question is present on the pre-event Bielefeld source. The argument is short and has material folklore risk, but that is not proof of prior publication.
+Formalization: Packet evidence: Clean4-module standalone release build completed3097jobs; source SHA entries match; final universal theorem includes n0,1,2 and exact witness geometry; standard axioms only.. Endpoint signatures and declared axioms are recorded below; author/internal replay is not this reviewer’s fresh rebuild. 
+Proposed M3A; p=1; points=108.9; full review: entries/E02-opdp43-halfturn.txt
+
+OPDP INPUTS AND RATIONALE
+{
+  "inputs": {
+    "H": 3,
+    "X": 2,
+    "T": 8,
+    "Vtrue": 1,
+    "Vfalse": 1,
+    "F": 2,
+    "P": 3,
+    "B": 1,
+    "L": 8,
+    "literature": 3,
+    "ambiguity": 1,
+    "context": 0,
+    "horizon": 0,
+    "D": 3.8,
+    "AI": 2.3
+  },
+  "calculation": {
+    "normalized_components": {
+      "ai_relative_core": 0.22999999999999998,
+      "intrinsic_difficulty": 0.38,
+      "human_resistance": 0.25,
+      "inverse_tractability": 0.19999999999999996,
+      "verification_burden": 0.1,
+      "formalization_burden": 0.2,
+      "prerequisite_load": 0.225,
+      "context_and_ambiguity": 0.32,
+      "tool_constraint": 0.19999999999999996
+    },
+    "weighted_points": {
+      "ai_relative_core": 92.0,
+      "intrinsic_difficulty": 64.6,
+      "human_resistance": 22.5,
+      "inverse_tractability": 29.999999999999993,
+      "verification_burden": 4.5,
+      "formalization_burden": 7.0,
+      "prerequisite_load": 9.0,
+      "context_and_ambiguity": 12.8,
+      "tool_constraint": 5.999999999999998
+    },
+    "linear_barrier": 248.39999999999998,
+    "transform_exponent": 1.4,
+    "final_value": 330
+  },
+  "intrinsic_factors": {
+    "conceptual_gap": 1.5,
+    "route_gap": 1.5,
+    "technical_depth": 2,
+    "known_barrier": 1,
+    "search_scale": 1.5
+  },
+  "axis_rationales": {
+    "intrinsic": "Sharp subquestion: zero or at least four missed points, with a 5×5 witness; rotation symmetric-difference is8. No full no-three-in-line result.",
+    "AI": "Statement has exact finite certificate feedback; the dated tool-assisted protocol is an estimate, not an empirical solve run.",
+    "attention": "H/X are historical-effort/exposure priors, not contestant hours. The chosen bands are single-assessor estimates; no labor total was observed.",
+    "tractability": "Known targets use N/A and neutral full-resolution component; otherwise the band is an editorial chance of useful100-hour partial progress, not full resolution.",
+    "verification": "Positive checking uses the stated exact finite data/proof chain; a negative/global resolution can have a different burden. No fresh Lean build is claimed.",
+    "formalization": "Statement encoding and libraries require 2/10 burden; this is the target burden, not the quality of a submitted proof.",
+    "prerequisites": "The target needs its Discrete geometry / grid configurations background; preparation and breadth refer to a prepared researcher, not entrant prestige.",
+    "tools": "Higher L means favorable exact-feedback/search/prover leverage. It does not turn a leaderboard number into a theorem.",
+    "status": "Source-claimed pre-event open target or explicitly parent-linked variation; no independently certified verified_open status invented."
+  },
+  "parent_links": [
+    "OPDP row43: no-three-in-line problem; pre-existing near-half-turn subquestion"
+  ],
+  "sources": [
+    "https://wwwhomes.uni-bielefeld.de/achim/no3in/symmetry_remarks.html",
+    "https://www.unsolvedmath.com/problems/GREEN-045"
+  ]
+}

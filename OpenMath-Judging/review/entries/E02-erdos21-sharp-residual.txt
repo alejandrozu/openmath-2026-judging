@@ -1,0 +1,21 @@
+E02-erdos21-sharp-residual | Erdős Lovász sharp residual cover bound
+
+Exact contribution: For every finite intersecting r-uniform hypergraph J of maximum vertex degree at most 3, 4 tau(J) <= |J| + r + 3. Degree-four peeling yields the same inequality without a degree restriction and hence 3r <= |H| + 3 whenever tau(H)=r; for r=8 this gives |H|>=21. The additive constant 3 is optimal, with a separately checked known triangle example.
+
+Assessment: The +3 residual question is explicitly asked in the July2026 paper, so it predates the competition. Closing it changes the elementary all-r bound from3r-4 to3r-3. The source's stronger approximately3.053r asymptotic bound is not improved. Imported matching infrastructure must remain attributed.
+
+Novelty: Strong explicit-subquestion candidate: the inspected primary paper asks for +3 after its +4 lemma. The known triangle sharpness example and imported author prefix are supporting prior work.
+
+Formalization: Packet evidence: An independent isolated Lean 4.34.1 replay passed all 18 Main-closure modules. The proof-output directory began empty, source hashes stayed unchanged, nine external revisions were pinned and clean, and the separate endpoint-definition audit passed. Final endpoints use only propext, Classical.choice and Quot.sound; no Kahn hypothesis, hidden packing lemma or extra mathematical assumption is present. The known triangle witness was separately checked against the rebuilt core, outside the 18-module replay.. Endpoint signatures and declared axioms are recorded below; author/internal replay is not this reviewer’s fresh rebuild. 
+
+Proposal: Propose M3A p=1 for the exact pre-event +3 question, with own difficulty, not M3B solely because it is parent-linked. Do not score Kahn's solved O(r) target or stack the peeling corollary.
+
+OPDP target OPENMATH-ERDOS21-VARIANT | intrinsic 5.0/10 | competition D proposal 555/1000
+
+Modality M3A | p 1 | b 1 | m 1 | numerical family points 308.025
+
+Specific remaining checks: Late ZIP 06:19:17 versus on-time PDF 05:57:20: prove fixed cutoff artifact or organizer admin-transfer decision; Exact source/library closure fresh independent build and semantic review; Target admission/open-at-freeze/novelty and canonicalD mapping; Current official forum discussion reads returned HTTP 403. No exact overlapping proof located in bounded permitted-source searches; first-discovery priority is not certified.
+
+Key files: 349501 Claim_Evidence/proofs/erdos21-sharp-residual/OpHack/Erdos21/Main.lean; 349501 Claim_Evidence/proofs/erdos21-sharp-residual/OpHack/Erdos21/Main.lean; 349501 Claim_Evidence/proofs/erdos21-sharp-residual/OpHack/Erdos21/Main.lean; 349501 Claim_Evidence/proofs/erdos21-sharp-residual/OpHack/Erdos21/Main.lean; 349501 Claim_Evidence/proofs/erdos21-sharp-residual/OpHack/Erdos21/Main.lean; 349505 Claim_Evidence/proofs/erdos21-sharp-residual/replay-receipt/manifest.json; 349503 Claim_Evidence/proofs/erdos21-sharp-residual/replay-receipt/Main.log; 349502 Claim_Evidence/proofs/erdos21-sharp-residual/replay-receipt/EndpointAudit.log; 349504 Claim_Evidence/proofs/erdos21-sharp-residual/replay-receipt/TriangleSharpness.log; 349506 Claim_Evidence/proofs/erdos21-sharp-residual/verified-main-output.txt
+
+Primary/source locators: https://arxiv.org/html/2606.24878v2; https://arxiv.org/abs/2606.24878; https://www.erdosproblems.com/21; https://arxiv.org/src/2606.24878v2/anc/lean-proof/RequestProject/Theorem1.lean

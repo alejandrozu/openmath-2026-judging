@@ -1,0 +1,96 @@
+OPENMATH-ERDOS21-VARIANT
+Canonical target: For every finite intersecting r-uniform hypergraph J of maximum degree at most3, prove4*tau(J)<=|J|+r+3 and sharpness of the additive3. This exact question is asked in the July2026 source after its +4 lemma.
+D proposal=555/1000; intrinsic=5.0/10
+New local OPDP extension with CFSD1000 formula; one editorial assessor, not the required three-assessor median.
+
+FRONTIER: Erdős Lovász sharp residual cover bound: For every finite intersecting r-uniform hypergraph J of maximum vertex degree at most 3, 4 tau(J) <= |J| + r + 3. Degree-four peeling yields the same inequality without a degree restriction and hence 3r <= |H| + 3 whenev
+
+INTERACTION: Supporting lemmas and corollaries belong to the same scope union. Any transfer to a parent or another problem requires a proved scope-preserving bridge.
+
+PAPER: Candidate building block only; preserve source hypotheses, exact priority comparison, proof closure and contribution-based authorship.
+
+COLLECTIVE: Virtual family representative E02-erdos21-sharp-residual; conservative one-family points 308.025. M2 is separate when applicable.
+
+CONTRIBUTION MAP
+
+E02-erdos21-sharp-residual / Rachel Teo / Wenyi Wang / Hamdi Abderrahmene
+For every finite intersecting r-uniform hypergraph J of maximum vertex degree at most 3, 4 tau(J) <= |J| + r + 3. Degree-four peeling yields the same inequality without a degree restriction and hence 3r <= |H| + 3 whenever tau(H)=r; for r=8 this gives |H|>=21. The additive constant 3 is optimal, with a separately checked known triangle example.
+The +3 residual question is explicitly asked in the July2026 paper, so it predates the competition. Closing it changes the elementary all-r bound from3r-4 to3r-3. The source's stronger approximately3.053r asymptotic bound is not improved. Imported matching infrastructure must remain attributed.
+Novelty: Strong explicit-subquestion candidate: the inspected primary paper asks for +3 after its +4 lemma. The known triangle sharpness example and imported author prefix are supporting prior work.
+Formalization: Packet evidence: An independent isolated Lean 4.34.1 replay passed all 18 Main-closure modules. The proof-output directory began empty, source hashes stayed unchanged, nine external revisions were pinned and clean, and the separate endpoint-definition audit passed. Final endpoints use only propext, Classical.choice and Quot.sound; no Kahn hypothesis, hidden packing lemma or extra mathematical assumption is present. The known triangle witness was separately checked against the rebuilt core, outside the 18-module replay.. Endpoint signatures and declared axioms are recorded below; author/internal replay is not this reviewer’s fresh rebuild. 
+Proposed M3A; p=1; points=308.025; full review: entries/E02-erdos21-sharp-residual.txt
+
+OPDP INPUTS AND RATIONALE
+{
+  "inputs": {
+    "H": 5,
+    "X": 3,
+    "T": 6,
+    "Vtrue": 3,
+    "Vfalse": 2,
+    "F": 5,
+    "P": 5,
+    "B": 2,
+    "L": 8,
+    "literature": 5,
+    "ambiguity": 1,
+    "context": 0,
+    "horizon": 0,
+    "D": 5.0,
+    "AI": 4.5
+  },
+  "calculation": {
+    "normalized_components": {
+      "ai_relative_core": 0.45,
+      "intrinsic_difficulty": 0.5,
+      "human_resistance": 0.5,
+      "inverse_tractability": 0.4,
+      "verification_burden": 0.25,
+      "formalization_burden": 0.5,
+      "prerequisite_load": 0.4375,
+      "context_and_ambiguity": 0.42000000000000004,
+      "tool_constraint": 0.19999999999999996
+    },
+    "weighted_points": {
+      "ai_relative_core": 180.0,
+      "intrinsic_difficulty": 85.0,
+      "human_resistance": 45.0,
+      "inverse_tractability": 60.0,
+      "verification_burden": 11.25,
+      "formalization_burden": 17.5,
+      "prerequisite_load": 17.5,
+      "context_and_ambiguity": 16.8,
+      "tool_constraint": 5.999999999999998
+    },
+    "linear_barrier": 439.05,
+    "transform_exponent": 1.4,
+    "final_value": 555
+  },
+  "intrinsic_factors": {
+    "conceptual_gap": 2,
+    "route_gap": 2,
+    "technical_depth": 2.5,
+    "known_barrier": 1.5,
+    "search_scale": 2
+  },
+  "axis_rationales": {
+    "intrinsic": "Sharp specified residual / peeling theorem at maximum degree 3 is new variation only if open and admitted; parent O(r) target already solved by Kahn, no full parentcredit.",
+    "AI": "Statement has exact finite certificate feedback; the dated tool-assisted protocol is an estimate, not an empirical solve run.",
+    "attention": "H/X are historical-effort/exposure priors, not contestant hours. The chosen bands are single-assessor estimates; no labor total was observed.",
+    "tractability": "Known targets use N/A and neutral full-resolution component; otherwise the band is an editorial chance of useful100-hour partial progress, not full resolution.",
+    "verification": "Positive checking uses the stated exact finite data/proof chain; a negative/global resolution can have a different burden. No fresh Lean build is claimed.",
+    "formalization": "Statement encoding and libraries require 5/10 burden; this is the target burden, not the quality of a submitted proof.",
+    "prerequisites": "The target needs its Extremal combinatorics / hypergraph cover numbers background; preparation and breadth refer to a prepared researcher, not entrant prestige.",
+    "tools": "Higher L means favorable exact-feedback/search/prover leverage. It does not turn a leaderboard number into a theorem.",
+    "status": "Source-claimed pre-event open target or explicitly parent-linked variation; no independently certified verified_open status invented."
+  },
+  "parent_links": [
+    "Erdos21: intersecting-hypergraph cover bound; pre-existing +3 residual question"
+  ],
+  "sources": [
+    "https://arxiv.org/html/2606.24878v2",
+    "https://arxiv.org/abs/2606.24878",
+    "https://www.erdosproblems.com/21",
+    "https://arxiv.org/src/2606.24878v2/anc/lean-proof/RequestProject/Theorem1.lean"
+  ]
+}

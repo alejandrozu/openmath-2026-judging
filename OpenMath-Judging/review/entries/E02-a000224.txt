@@ -1,0 +1,21 @@
+E02-a000224 | A000224: verified squarefree three-prime exclusion
+
+Exact contribution: For every three primes 2<p<q<r, let n=pqr and let a(n) count all square residues modulo n, including zero, exactly as in the upstream definition. Then a(n)(a(n)-1) does not divide n²-1. Consequently the original conjectured equivalence holds for this entire unbounded factorization family.
+
+Assessment: The uniform product-of-three-distinct-odd-primes theorem removes an infinite subcase. It does not handle repeated prime powers, four or more factors, or the entire OEIS equivalence. The exact definition counts zero as a square residue.
+
+Novelty: Plausible new infinite-family advance; the located prior Pell scan is bounded and does not imply this theorem.
+
+Formalization: Packet evidence: All 171 intended modules were recorded checked on 4.34.1, dependency-ordered and incremental; nine prime modules were reused after source/output hash checks. A separate complete 4.33.1 replay passed all 171 modules, with 164 successful certificate records and seven retrospective core source/log/exit receipts. Both versions report only propext, Classical.choice and Quot.sound for all three endpoints. The 4.33.1 replay reused no own compiled artifacts across versions; 170 source files are byte-identical and Bounds.lean has precisely three tactic-only compatibility changes, with no definition or theorem-statement changes. The core receipt creation timestamps are retrospective, not original build times. This is a second version of Lean, not an independent compiler implementation or external referee check. The existing target definition is whitespace-normalized identical to the immutable upstream snapshot. The convenience aggregate OpHack.lean wrapper is not separately checked.. Endpoint signatures and declared axioms are recorded below; author/internal replay is not this reviewer’s fresh rebuild. 
+
+Proposal: Retain P3 p=.15 on the original family, not p=1 on a conveniently narrowed restatement.
+
+OPDP target OPENMATH-OEIS-A000224 | intrinsic 5.9/10 | competition D proposal 622/1000
+
+Modality M3A | p 0.15 | b 1 | m 1 | numerical family points 58.0326
+
+Specific remaining checks: Late ZIP 06:19:17 versus on-time PDF 05:57:20: prove fixed cutoff artifact or organizer admin-transfer decision; Exact source/library closure fresh independent build and semantic review; Target admission/open-at-freeze/novelty and canonicalD mapping
+
+Key files: 349465 Claim_Evidence/proofs/a000224/OpHack/QuadraticResidue224/Target224.lean; 349465 Claim_Evidence/proofs/a000224/OpHack/QuadraticResidue224/Target224.lean; 349465 Claim_Evidence/proofs/a000224/OpHack/QuadraticResidue224/Target224.lean; 349474 Claim_Evidence/proofs/a000224/verification/4.34.1/STATUS.json; 349475 Claim_Evidence/proofs/a000224/verification/4.34.1/Target224.log; 349476 Claim_Evidence/proofs/a000224/verification/4.34.1/core-receipts.json; 349468 Claim_Evidence/proofs/a000224/target-source/CORRESPONDENCE.json; 349469 Claim_Evidence/proofs/a000224/target-source/OEIS224.lean.txt; 349470 Claim_Evidence/proofs/a000224/verification/4.33.1/STATUS.json; 349471 Claim_Evidence/proofs/a000224/verification/4.33.1/Target224.log; 349472 Claim_Evidence/proofs/a000224/verification/4.33.1/core-receipts.json; 349473 Claim_Evidence/proofs/a000224/verification/4.33.1/split-build-results.json; 349466 Claim_Evidence/proofs/a000224/compatibility/4.33.1/BUILD_ORDER.json; 349467 Claim_Evidence/proofs/a000224/compatibility/4.33.1/Bounds.patch
+
+Primary/source locators: https://oeis.org/A000224; https://github.com/umaia1234/agentic-conjectures/blob/96ea0039d9dc3a1940b9d5ec1cbe616ed58d1da2/problems/oeis-a000224/DETAILS.md; https://github.com/umaia1234/agentic-conjectures/blob/96ea0039d9dc3a1940b9d5ec1cbe616ed58d1da2/problems/oeis-a000224/pell_quotient_scan.py

@@ -1,0 +1,21 @@
+E02-erdos829-log-five-thirds | Erdős 829 verified log(5/3) partial bound
+
+Exact contribution: Let R(n) count ordered nonnegative integer pairs (x,y) satisfying x^3+y^3=n. For every real epsilon>0 there exists a natural N such that, for every natural n>=N, R(n) <= exp((log(5/3)+epsilon)*log(n)/log(log(n))). Zero coordinates are included and swapping unequal coordinates gives distinct representations. There is no primitive-pair or cubefree-target restriction. The existential threshold is not given numerically.
+
+Assessment: The all-target bound uses coefficient log(5/3), about.510826, rather than the earlier same-family log(7/4), about.559616. The located.556477 comparison is only cubefree and does not cover all targets. Including zero coordinates and ordered pairs preserves the original count. The existential threshold is not effective.
+
+Novelty: Candidate new uniform bound built from prior ratio-root, determinant and coding methods. Earlier intermediate coefficients are revisions, not additional families.
+
+Formalization: Packet evidence: Fresh separately orchestrated source-only Lean 4.33.1 replay completed 2026-10-02T18:54:57.202016+00:00. All 33 proof modules and two semantic/axiom audit modules exited 0. The final active sources comprise 28 historical exact modules and five reconstructed/repaired variants, all freshly verified. No old own-module oleans were used; nine third-party dependency pins matched. Endpoint transitive axioms are only propext, Classical.choice and Quot.sound. The semantic audit checks the exact expanded catalog expression and ordered nonnegative coordinate count; it does not import the catalog conjecture. This is internal AI-assisted formal-check/semantic evidence, not appointed jury or external peer review.. Endpoint signatures and declared axioms are recorded below; author/internal replay is not this reviewer’s fresh rebuild. 
+
+Proposal: P2 p=.05 on Erdős829; no polylogarithmic or complete-target credit.
+
+OPDP target OPENMATH-ERDOS829 | intrinsic 5.4/10 | competition D proposal 530/1000
+
+Modality M3A | p 0.05 | b 1 | m 1 | numerical family points 14.045
+
+Specific remaining checks: Late ZIP 06:19:17 versus on-time PDF 05:57:20: prove fixed cutoff artifact or organizer admin-transfer decision; Exact source/library closure fresh independent build and semantic review; Target admission/open-at-freeze/novelty and canonicalD mapping; Bounded source review only; no comprehensive novelty, all-prior-formalization or publication-priority certification.
+
+Key files: 349507 Claim_Evidence/proofs/erdos829-log-five-thirds/FiveThirdsCanonical.lean; 349507 Claim_Evidence/proofs/erdos829-log-five-thirds/FiveThirdsCanonical.lean; 349517 Claim_Evidence/proofs/erdos829-log-five-thirds/verification/verification.json; 349511 Claim_Evidence/proofs/erdos829-log-five-thirds/verification/independent-audit/independent-receipt.json; 349512 Claim_Evidence/proofs/erdos829-log-five-thirds/verification/logs/FiveThirdsCanonical.log; 349513 Claim_Evidence/proofs/erdos829-log-five-thirds/verification/logs/FiveThirdsFinalTypeAudit.log; 349515 Claim_Evidence/proofs/erdos829-log-five-thirds/verification/logs/IndependentFiveThirdsSemanticAudit.log; 349514 Claim_Evidence/proofs/erdos829-log-five-thirds/verification/logs/FreshSemanticAndAxiomAudit.log; 349516 Claim_Evidence/proofs/erdos829-log-five-thirds/verification/source-hashes.json; 349510 Claim_Evidence/proofs/erdos829-log-five-thirds/dependency-pins.json; 349508 Claim_Evidence/proofs/erdos829-log-five-thirds/PACKAGE_MANIFEST.json; 349509 Claim_Evidence/proofs/erdos829-log-five-thirds/VERIFICATION.md
+
+Primary/source locators: https://www.erdosproblems.com/829; https://github.com/google-deepmind/formal-conjectures/blob/main/FormalConjectures/ErdosProblems/829.lean; https://github.com/google-deepmind/formal-conjectures/blob/main/FormalConjecturesForMathlib/Combinatorics/Additive/Convolution.lean; https://arxiv.org/html/2112.03617; https://arxiv.org/html/2207.12487v2; https://github.com/alejandrozu/ulam-opdp-difficulty-atlas

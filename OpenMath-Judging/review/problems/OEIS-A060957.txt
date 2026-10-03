@@ -1,0 +1,92 @@
+OPENMATH-OEIS-A060957
+Canonical target: Original refutation: ∃ n,m,p∈N with m>0, p prime, p≤n, m∈P(n), p^5 m∈P(n), and p^4 m∉P(n). Stronger: ∀ g≥1 and B∈N, ∃ n,p,d,h∈N with p prime, B<p≤n, d>0, p∤d, and for every e∈N, p^e d∈P(n) iff e lies in {h,h+1,h+2,h+3,h+g+4,h+g+5,h+g+6,h+g+7}. Hence g consecutive missing levels between attainable endpoints.
+D proposal=527/1000; intrinsic=5.4/10
+New local OPDP extension with CFSD1000 formula; one editorial assessor, not the required three-assessor median.
+
+FRONTIER: A060957: refutation and arbitrarily long prime-exponent gaps: Original refutation: ∃ n,m,p∈N with m>0, p prime, p≤n, m∈P(n), p^5 m∈P(n), and p^4 m∉P(n). Stronger: ∀ g≥1 and B∈N, ∃ n,p,d,h∈N with p prime, B<p≤n, d>0, p∤d, and for every e∈N, p^e d∈P(n) iff e lies in {h,h+1,h+2,h+3,h+
+
+INTERACTION: Supporting lemmas and corollaries belong to the same scope union. Any transfer to a parent or another problem requires a proved scope-preserving bridge.
+
+PAPER: Candidate building block only; preserve source hypotheses, exact priority comparison, proof closure and contribution-based authorship.
+
+COLLECTIVE: Virtual family representative E02-a060957; conservative one-family points 277.729. M2 is separate when applicable.
+
+CONTRIBUTION MAP
+
+E02-a060957 / Rachel Teo / Wenyi Wang / Hamdi Abderrahmene
+Original refutation: ∃ n,m,p∈N with m>0, p prime, p≤n, m∈P(n), p^5 m∈P(n), and p^4 m∉P(n). Stronger: ∀ g≥1 and B∈N, ∃ n,p,d,h∈N with p prime, B<p≤n, d>0, p∤d, and for every e∈N, p^e d∈P(n) iff e lies in {h,h+1,h+2,h+3,h+g+4,h+g+5,h+g+6,h+g+7}. Hence g consecutive missing levels between attainable endpoints.
+This refutes the actual whole-interval distinct-subset-product interpolation assertion, not an arbitrary restricted factor set. The arbitrary-gap theorem is materially stronger but stays in this family. Prime-coordinate encoding and the exact eight-level fibre are the useful reusable mechanism.
+Novelty: Strong original-result candidate against the 2020 OEIS conjecture; the located prior work supplies methods, not this complete-interval counterexample. First-publication priority remains a bounded-search conclusion.
+Formalization: Packet evidence: Combined 45-module 4.33.1 replay and aggregate passed 2026-10-01 around16:08UTC. Generalized24-module closure also passed4.34.1 around16:01 and4.33.1 around16:05. Standard final axioms; no unproved graph-existence premise.. Endpoint signatures and declared axioms are recorded below; author/internal replay is not this reviewer’s fresh rebuild. 
+Proposed M3A; p=1; points=277.729; full review: entries/E02-a060957.txt
+
+OPDP INPUTS AND RATIONALE
+{
+  "inputs": {
+    "H": 3,
+    "X": 2,
+    "T": 6,
+    "Vtrue": 3,
+    "Vfalse": 2,
+    "F": 5,
+    "P": 5,
+    "B": 2,
+    "L": 9,
+    "literature": 4,
+    "ambiguity": 1,
+    "context": 0,
+    "horizon": 0,
+    "D": 5.4,
+    "AI": 4.4
+  },
+  "calculation": {
+    "normalized_components": {
+      "ai_relative_core": 0.44000000000000006,
+      "intrinsic_difficulty": 0.54,
+      "human_resistance": 0.25,
+      "inverse_tractability": 0.4,
+      "verification_burden": 0.25,
+      "formalization_burden": 0.5,
+      "prerequisite_load": 0.4375,
+      "context_and_ambiguity": 0.37,
+      "tool_constraint": 0.09999999999999998
+    },
+    "weighted_points": {
+      "ai_relative_core": 176.00000000000003,
+      "intrinsic_difficulty": 91.80000000000001,
+      "human_resistance": 22.5,
+      "inverse_tractability": 60.0,
+      "verification_burden": 11.25,
+      "formalization_burden": 17.5,
+      "prerequisite_load": 17.5,
+      "context_and_ambiguity": 14.8,
+      "tool_constraint": 2.999999999999999
+    },
+    "linear_barrier": 414.35,
+    "transform_exponent": 1.4,
+    "final_value": 527
+  },
+  "intrinsic_factors": {
+    "conceptual_gap": 2.5,
+    "route_gap": 2,
+    "technical_depth": 2.5,
+    "known_barrier": 1.5,
+    "search_scale": 2
+  },
+  "axis_rationales": {
+    "intrinsic": "Counterexample refutes exact interpolation conjecture; arbitrary-gap strengthening unions into same family, not additional full points.",
+    "AI": "Statement has exact finite certificate feedback; the dated tool-assisted protocol is an estimate, not an empirical solve run.",
+    "attention": "H/X are historical-effort/exposure priors, not contestant hours. The chosen bands are single-assessor estimates; no labor total was observed.",
+    "tractability": "Known targets use N/A and neutral full-resolution component; otherwise the band is an editorial chance of useful100-hour partial progress, not full resolution.",
+    "verification": "Positive checking uses the stated exact finite data/proof chain; a negative/global resolution can have a different burden. No fresh Lean build is claimed.",
+    "formalization": "Statement encoding and libraries require 5/10 burden; this is the target burden, not the quality of a submitted proof.",
+    "prerequisites": "The target needs its Multiplicative combinatorics / subset products background; preparation and breadth refer to a prepared researcher, not entrant prestige.",
+    "tools": "Higher L means favorable exact-feedback/search/prover leverage. It does not turn a leaderboard number into a theorem.",
+    "status": "Source-claimed pre-event open target or explicitly parent-linked variation; no independently certified verified_open status invented."
+  },
+  "parent_links": [],
+  "sources": [
+    "https://oeis.org/A060957",
+    "https://arxiv.org/abs/2501.02695"
+  ]
+}

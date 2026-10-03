@@ -1,0 +1,86 @@
+{
+  "group_id": "E57",
+  "name": "Rohith Poola — Kobon only",
+  "classification": "Identified work group / named lead",
+  "is_potential_entrant_unit": true,
+  "identified_work_group": true,
+  "has_review_material_or_manifests": true,
+  "source_record_ids": [
+    "E57"
+  ],
+  "authors": [
+    "Rohith Poola"
+  ],
+  "accounts": [
+    "rohith18p"
+  ],
+  "possible_alias_not_merged": null,
+  "status": "Pinned final packet received by email",
+  "claims": [
+    "R1: K(39)≥470 via explicit integer-line arrangement, adding one line to an attributed 38-line 450-triangle gallery base; no optimality claim.",
+    "R2: 46 proposed first lower bounds at previously unpublished n values, exact arrangements retained; not officially evaluated. R3 n18=93 ties known record.",
+    "R4 generalized Blanc bound is an unproved conjecture; SAT pseudolines at 481 and 475–480 are not straight-line realizations.",
+    "Final submission explicitly excludes Ramsey."
+  ],
+  "gaps": [
+    "Confirm freeze using email pin rather than earlier tag",
+    "Official final acceptance; proof/certificate protocol and novelty review",
+    "Gallery/base attribution and publication permission limitations",
+    "Do not score excluded Ramsey run or unstraightened pseudolines as line results"
+  ],
+  "repo": "Rohith18p/rsi-kobon-triangles",
+  "immutable_commit": "f462d8e18aea2a458376c523c9b6c2980237071f",
+  "leaderboard_runs": [
+    {
+      "account": "rohith18p",
+      "hill": "alejandrozu/kobon-triangles",
+      "values": {
+        "#": "8",
+        "Climber": "rohith18p",
+        "triangles": "93",
+        "When": "2026-09-27"
+      },
+      "table_context": "n=18",
+      "observed": "2026-10-03T08:37:03.553Z",
+      "source_url": "https://app.autolab.ai/hills/alejandrozu/kobon-triangles/leaderboard"
+    },
+    {
+      "account": "rohith18p",
+      "hill": "alejandrozu/clique-cluster-ramsey-multiplicity",
+      "values": {
+        "#": "11",
+        "Climber": "rohith18p",
+        "reference_beaten": "0",
+        "density_ppt": "30142314506",
+        "When": "2026-09-28"
+      },
+      "table_context": "validation",
+      "observed": "2026-10-03T08:37:04.848Z",
+      "source_url": "https://app.autolab.ai/hills/alejandrozu/clique-cluster-ramsey-multiplicity/leaderboard"
+    },
+    {
+      "account": "rohith18p",
+      "hill": "alejandrozu/kobon-triangles",
+      "values": {
+        "#": "2",
+        "Climber": "rohith18p",
+        "triangles": "470",
+        "When": "2026-09-27"
+      },
+      "table_context": "arithmetic = exact-rational · geometry = bounded-triangular-faces · n = 39",
+      "observed": "2026-10-03T08:37:39.406Z",
+      "source_url": "https://app.autolab.ai/hills/alejandrozu/kobon-triangles/leaderboard"
+    }
+  ],
+  "final_packet_received": true,
+  "official_acceptance_confirmed": false,
+  "score_policy": null,
+  "source_routes": [
+    {
+      "record_id": "E57",
+      "route": "https://mail.google.com/mail/u/0/#sent/1a0fec671468fa24",
+      "latest_evidence": "Public rsi-kobon-triangles repository has exact arrangements, counters/search tools, slide deck and notes. Official scores n=39: 470 and n=18: 93. Additional 46 claimed first listed constructions are development results, not all officially submitted. README’s #1 claim is stale: Woohyuk now has 471.",
+      "receipt_notes": "Email 04:08:20 CEST. R1 official validation report experiment 23e84fc7, 2026-09-27T19:45:26Z, tree 7d3f1d91dcb8be8d0eef20be763557bd6d876707, passed=true, official=true; final=false. Exact JSON SHA256 85ce027ccddc91365ff1f798702fc8ae19838c0d244cd426406f2d3f9b3aa352. HMAC not authenticated. Tag final-submission points to earlier bcd2b86ccea38d26c7715b319fc745c55f90e0f7, not email-designated f462d8e; keep both."
+    }
+  ]
+}

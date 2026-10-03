@@ -1,0 +1,89 @@
+OPENMATH-M2-POLYGON
+Canonical target: For every even n ≥ 5 and every distance d occurring between distinct vertices of the regular n-gon, the number of unordered vertex pairs at distance d is at most n.
+D proposal=354/1000; intrinsic=2.0/10
+New local OPDP extension with CFSD1000 formula; one editorial assessor, not the required three-assessor median.
+
+FRONTIER: Regular polygon chord and distance multiplicity: For every even n ≥ 5 and every distance d occurring between distinct vertices of the regular n-gon, the number of unordered vertex pairs at distance d is at most n.
+
+INTERACTION: Supporting lemmas and corollaries belong to the same scope union. This known mathematics may support reusable libraries; there is no original-result synergy bonus.
+
+PAPER: Candidate building block only; preserve source hypotheses, exact priority comparison, proof closure and contribution-based authorship.
+
+COLLECTIVE: Virtual family representative None; conservative one-family points 0. M2 is separate when applicable.
+
+CONTRIBUTION MAP
+
+E02-m2-research-regular-polygon / Rachel Teo / Wenyi Wang / Hamdi Abderrahmene
+For every even n ≥ 5 and every distance d occurring between distinct vertices of the regular n-gon, the number of unordered vertex pairs at distance d is at most n.
+Even regular-polygon multiplicity bound; not general convex sets or Erdős #94.
+Novelty: Generic two-circle-intersection uniqueness is already in pinned Mathlib The selected case is the complete regular-polygon geometry/counting family; the final inequality or proof length alone does not certify novelty
+Formalization: Packet evidence: The additional exact-source Lean 4.33.1 replay passed all 235 own-source dependency modules and seven independent selected proof files. Individual source hashes and selected endpoint standard-axiom reports are retained. Original archival passes remain separate. The source replay continued across scheduling restarts using hash-matched successful dependency receipts and exact pinned external-library caches. Each proof ran in a separate process; no aggregate importability, independent compiler implementation or official checker acceptance is asserted.. Endpoint signatures and declared axioms are recorded below; author/internal replay is not this reviewer’s fresh rebuild. Known theorem route: only genuinely new faithful useful reusable formal delta can qualify.
+Proposed M2; p=1; points=None; full review: entries/E02-m2-research-regular-polygon.txt
+
+OPDP INPUTS AND RATIONALE
+{
+  "inputs": {
+    "H": null,
+    "X": null,
+    "T": null,
+    "Vtrue": 1.4,
+    "Vfalse": 2,
+    "F": 4,
+    "P": 3,
+    "B": 2,
+    "L": 8,
+    "literature": 4,
+    "ambiguity": 1,
+    "context": 0,
+    "horizon": 0,
+    "D": 2.0,
+    "AI": 1.5
+  },
+  "calculation": {
+    "normalized_components": {
+      "ai_relative_core": 0.15,
+      "intrinsic_difficulty": 0.2,
+      "human_resistance": 0.5,
+      "inverse_tractability": 0.5,
+      "verification_burden": 0.16999999999999998,
+      "formalization_burden": 0.4,
+      "prerequisite_load": 0.2875,
+      "context_and_ambiguity": 0.37,
+      "tool_constraint": 0.19999999999999996
+    },
+    "weighted_points": {
+      "ai_relative_core": 60.0,
+      "intrinsic_difficulty": 34.0,
+      "human_resistance": 45.0,
+      "inverse_tractability": 75.0,
+      "verification_burden": 7.6499999999999995,
+      "formalization_burden": 14.0,
+      "prerequisite_load": 11.5,
+      "context_and_ambiguity": 14.8,
+      "tool_constraint": 5.999999999999998
+    },
+    "linear_barrier": 267.95,
+    "transform_exponent": 1.4,
+    "final_value": 354
+  },
+  "intrinsic_factors": {
+    "conceptual_gap": 1,
+    "route_gap": 0,
+    "technical_depth": 2,
+    "known_barrier": 0,
+    "search_scale": 1
+  },
+  "axis_rationales": {
+    "intrinsic": "Even regular-polygon multiplicity bound; not general convex sets or Erdős #94.",
+    "AI": "Statement has exact finite certificate feedback; the dated tool-assisted protocol is an estimate, not an empirical solve run.",
+    "attention": "H/X are historical-effort/exposure priors, not contestant hours. Insufficient documentation: neutral normalized .5 used for scoring.",
+    "tractability": "Known targets use N/A and neutral full-resolution component; otherwise the band is an editorial chance of useful100-hour partial progress, not full resolution.",
+    "verification": "Positive checking uses the stated exact finite data/proof chain; a negative/global resolution can have a different burden. No fresh Lean build is claimed.",
+    "formalization": "Statement encoding and libraries require 4/10 burden; this is the target burden, not the quality of a submitted proof.",
+    "prerequisites": "The target needs its Euclidean geometry / distance multiplicities background; preparation and breadth refer to a prepared researcher, not entrant prestige.",
+    "tools": "Higher L means favorable exact-feedback/search/prover leverage. It does not turn a leaderboard number into a theorem.",
+    "status": "Known/source theorem"
+  },
+  "parent_links": [],
+  "sources": []
+}

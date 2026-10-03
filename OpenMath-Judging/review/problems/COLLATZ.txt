@@ -1,0 +1,121 @@
+OPENMATH-COLLATZ
+Canonical target: Universal Collatz convergence
+D proposal=772/1000; intrinsic=6.8/10
+Existing published CFSD1000 value, reused without rescaling or changing its frozen source profile.
+
+FRONTIER: E05 and E08 cover exactly the same1765 odd residue classes modulo4096; E10 covers1504 classes, all within that union. E66 lacks a complete inspectable packet. This is partial certified descent, not all-integer Collatz.
+
+INTERACTION: Compare the depth/descent inequalities and canonical rule basis, not counts of rules or private weighted oracle scores. Compression and bounded-classification lemmas may differ while convergence coverage is identical.
+
+PAPER: One shared exact checker/coverage paper is more credible than three papers claiming the same region. Include independent provenance and genuinely different bounded-classification or compression methods.
+
+COLLECTIVE: Virtual family credit stays p=.01, 6.555824 with thefocus bonus; duplicate/subset coverage adds zero. Individual sealed-provenance credit is a separate eligibility decision.
+
+CONTRIBUTION MAP
+
+E05-RULES / Chaewon Yoon
+512 stable accelerated descent rules; 1765 of2048 odd residues mod4096;3352/3968 public target classes.
+All512 rules passed independent exact arithmetic and cover1765/2048 odd residues mod4096. The3352/3968 public test score is a different denominator and must not be called86% of Collatz. HTPeo's234 rules yield exactly the same residue union; combining them adds nothing.
+Novelty: Finite certificate collection may be new independently sealed work; the descent mechanism is classical and the union must be checked against the frozen public baseline.
+Formalization: Independent exact arithmetic check:512/512 valid, union1765/2048. No Lean theorem; official trust-boundary approval and mathematical novelty not established.
+Proposed M1; p=0.01; points=6.555824; full review: entries/E05-RULES.txt
+
+E08-COLLATZ234 / HTPeo — Woohyuk Kang / Hyunjin Lee / Sanghyeon Lee / Youchan Oh
+234rules, independently1765odd classes mod4096: exactly Chaewon union
+Baseline or prior known mathematics, no independently new open advance; possible useful new formalization must be separately admitted as M2.
+Novelty: No eligible original mathematical delta established in the available packet. This is not a finding that all underlying work lacks novelty.
+Formalization: Exact arithmetic certificates/source available for review; independent Collatz check234/234. No fresh full kernel acceptance.
+Proposed M1; p=0; points=0.0; full review: entries/E08-COLLATZ234.txt
+
+E10-H4 / Jamie Steeg / grandchallenge / GCL
+309 valid rules among1016bounded prefixes, reduced to23; k≤8depth≤4.
+The23-rule union independently covers1504 of the1765 classes already covered by Chaewon/HTPeo. The bounded depth<=4 and k<=8 classification may be a distinct method result, but its examples do not expand the collective convergence region.
+Novelty: Potential new bounded-classification formal result; no new collective residue coverage.
+Formalization: Exact integer certificate passes our check;94odd classes mod256, all inside Chaewon/HTPeo union. Full309/1016catalogue enumeration not independently replayed; no official submission ID.
+Proposed M1; p=0.01; points=6.555824; full review: entries/E10-H4.txt
+
+E66-HILL2 / yavol
+Ramsey 0.030141721098 beats frozen reference, but dated September 21. Collatz 100% weighted target coverage with three rules and BB6 246,872 steps are also pre-event. Identity is blank; do not equate yavol with Yev Barkalov.
+Baseline tie, inferior benchmark, finite nonrecord machine or unspecified claim supplies no new original problem credit.
+Novelty: No eligible original mathematical delta established in the available packet. This is not a finding that all underlying work lacks novelty.
+Formalization: Only board metadata/access leads; no original mathematical proof or exact final packet. Observed run predates event; later eligible delta not established.
+Proposed M1; p=0; points=0; full review: entries/E66-HILL2.txt
+
+OPDP INPUTS AND RATIONALE
+{
+  "inputs": {
+    "catalog_status": "open",
+    "assessment_gate": "source_claimed_open",
+    "scope": "atomic",
+    "answer_type": "proof_disproof",
+    "intrinsic_difficulty_0_10": 6.8,
+    "intrinsic_tier_code": "T4",
+    "intrinsic_tier_label": "Frontier Challenge",
+    "ai_relative_difficulty_0_10": 6.8,
+    "human_effort_1_9": 9,
+    "human_exposure_1_5": 5,
+    "tractability_status": "scored",
+    "tractability_0_10": 4,
+    "verification_if_true_0_10": 5.1,
+    "verification_if_false_0_10": 4.4,
+    "formalization_0_10": 3.5,
+    "prerequisite_preparation_0_10": 5.7,
+    "prerequisite_breadth_1_5": 1,
+    "tool_leverage_0_10_higher_is_favorable": 5.3,
+    "ambiguity_0_10": 1.5,
+    "literature_load_0_10": 6,
+    "ai_context_load_predictor_minus1_to_plus1": 0,
+    "ai_reasoning_horizon_predictor_minus1_to_plus1": 0,
+    "recommended_route": "Expert-guided proof search"
+  },
+  "calculation": {
+    "normalized_barriers_0_1": {
+      "ai_relative_core": 0.68,
+      "intrinsic_difficulty": 0.68,
+      "human_resistance": 1,
+      "inverse_tractability": 0.6,
+      "verification_burden": 0.48,
+      "formalization_burden": 0.35,
+      "prerequisite_load": 0.43,
+      "context_and_ambiguity": 0.48,
+      "tool_constraint": 0.47
+    },
+    "weighted_component_points": {
+      "ai_relative_core": 272,
+      "intrinsic_difficulty": 115.6,
+      "human_resistance": 90,
+      "inverse_tractability": 90,
+      "verification_burden": 21.38,
+      "formalization_burden": 12.25,
+      "prerequisite_load": 17.1,
+      "context_and_ambiguity": 19.2,
+      "tool_constraint": 14.1
+    },
+    "linear_barrier_points_0_1000": 651.63,
+    "complete_solution_transform_exponent": 1.4,
+    "complete_solution_uplift_points": 120.37,
+    "final_score_0_1000": 772
+  },
+  "intrinsic_factors": {
+    "conceptual_gap": 3,
+    "route_gap": 2.5,
+    "technical_depth": 2.5,
+    "known_barrier": 2.5,
+    "search_scale": 3
+  },
+  "axis_rationales": {
+    "intrinsic": "Infinite convergence is unsolved; exact residue-class certificates do not bridge all odd classes or unbounded trajectories.",
+    "AI": "Statement has exact finite certificate feedback; the dated tool-assisted protocol is an estimate, not an empirical solve run.",
+    "attention": "H/X are historical-effort/exposure priors, not contestant hours. Insufficient documentation: neutral normalized .5 used for scoring.",
+    "tractability": "Known targets use N/A and neutral full-resolution component; otherwise the band is an editorial chance of useful100-hour partial progress, not full resolution.",
+    "verification": "Positive checking uses the stated specialist semantic or analytic argument; a negative/global resolution can have a different burden. No fresh Lean build is claimed.",
+    "formalization": "Statement encoding and libraries require 5.0/10 burden; this is the target burden, not the quality of a submitted proof.",
+    "prerequisites": "The target needs its Number theory / dynamics background; preparation and breadth refer to a prepared researcher, not entrant prestige.",
+    "tools": "Higher L means favorable exact-feedback/search/prover leverage. It does not turn a leaderboard number into a theorem.",
+    "status": "Source-claimed pre-event open target or explicitly parent-linked variation; no independently certified verified_open status invented."
+  },
+  "parent_links": [],
+  "sources": [
+    "https://github.com/alejandrozu/ulam-opdp-difficulty-atlas"
+  ]
+}

@@ -1,0 +1,764 @@
+
+SOURCE 7657 NOVELTY.md
+# Contribution and novelty
+
+## The problem and what was known
+
+K(n) is the largest number of bounded triangular faces in an arrangement of n lines (the Kobon triangle problem).
+At n = 18, before this work:
+- **Lower bound 93.** Many arrangements are known; the Utkin–Parpalak gallery holds about 3,000.
+- **Simple arrangements** (no three lines concurrent): 93 is optimal (Blanc, arXiv:0801.2845). The value 94 found
+  in tables (OEIS A006066 and elsewhere) comes from the earlier simple-arrangement bound of Bartholdi–Blanc–Loisel
+  (arXiv:0706.0723).
+- **Arbitrary arrangements:** every known even-n record uses triple points, and here we know only Tamura's 96 and an
+  unpublished 95 (Clément–Bader). So K(18) ∈ {93, 94, 95, 96}.
+
+## What is new here
+
+1. **New upper bound: K(18) ≤ 94 for all arrangements.** This holds for lines and pseudolines, with points of any
+   multiplicity. It is the first bound below 95 that allows multiple points (computer-assisted; paper Thm 1).
+2. **New theorem: T ≤ 93 for multiplicity ≤ 3.** This extends Blanc's optimality of 93 from simple arrangements to
+   arrangements with triple points (paper Thm 2).
+3. **New exact value K(14) = 54, for all arrangements.**
+   - Previously only the simple case was proved, and there Blanc's bound is 53; the 54-triangle record uses triple
+     points.
+   - Our multiplicity ≥ 4 certificate also verifies at n = 14, and there the slack suffices.
+4. **The Bartholdi–Blanc–Loisel bound for triple points.** T ≤ ⌊n(n − 7/3)/3⌋ for every even n from 6 to 40, for
+   multiplicity ≤ 3; that bound was previously proved for simple arrangements only.
+   - It is exact at n = 6, 8, 10, 12, 14, 16, 20, so K(16) = 72 and K(20) = 117 hold for multiplicity ≤ 3.
+   - These values appear in OEIS as exact, but the published proofs cover only simple arrangements.
+5. **Structure of a hypothetical 94.** Vertex-maximal: only triple points and three "bad" fourfold types. No 11101110
+   point, and necessarily an all-8 point. Local pair and triple constraints (paper Thm 3).
+6. **A reduction of K(18) = 93 to one inequality in nonnegative local credits** in the all-8 case (paper §6). The
+   bad-wedge forest lemma gives a short new proof of the simple-arrangement baseline Λ ≥ n/3. The open case splits
+   into two stages:
+   - **Stage 1** is the inequality (B). It is proved for most component types (the capacity inequality LC holds
+     whenever a component has at most one point other than a 110110 triple); the rest is open.
+   - **Stage 2** is the zero-credit corner. It is reduced by hand to a single local configuration, the isolated
+     double-case-B star. Its forced structure is largely determined, and 281 of its 416 SAT cubes are UNSAT with
+     none SAT.
+7. **Method.** The Bartholdi–Blanc–Loisel charging argument is made into an exact, machine-checkable form for
+   non-simple arrangements:
+   - an exact budget identity;
+   - transfer rules with LP weights;
+   - an exact DP over a finite automaton of all possible line views, with SAT-certified local facts in a
+     cutting-plane loop;
+   - rational certificates.
+
+   Local optimality lemmas come from exhaustive enumeration of local redrawings.
+
+## What is not new
+
+- **The 93 constructions.** Our 93 (no multiple points) is a new arrangement, found by our own unseeded search. But
+  93 is the known record value, so this is a reproduction of the record, not a new bound. The second 93 is taken from
+  the published gallery.
+- The n = 15 value 65 is a known optimum.
+
+## Why it matters
+
+- K(18) was the smallest open case with this kind of gap: 93 attained against 96/95 for general arrangements.
+- Result 1 narrows it to 93 or 94. The structural results say exactly what a 94 would have to look like.
+- The certificate method applies to other n.
+
+## Dates
+
+All results were completed between 2026-09-27 and 2026-10-02. No competition cutoff was specified to us, so each item
+is date-stamped for the judges.
+
+| Date | Result |
+|---|---|
+| 2026-09-27 | 93-triangle arrangement found by unseeded search; official evaluator score 93 |
+| 2026-09-30 | certificate FC: T ≤ 94 for multiplicity ≤ 3 |
+| 2026-09-30 | T ≤ 93 for multiplicity ≤ 3 (with DRAT proofs; independent audit passed) |
+| 2026-09-30 | perturbation lemma and pair lemma |
+| 2026-09-30 | certificate FC-M: **T ≤ 94 for all arrangements** |
+| 2026-10-01 | 11101110 points excluded; 11111110 points excluded without an all-8 point |
+| 2026-10-01 | credit identity in the all-8 case (payments, K₁ lemma) |
+| 2026-10-02 | bad-wedge forest identity Λ = π + U + ½ΣS° + K₃ + 2K₄ + ½Δ |
+| 2026-10-02 | BBL bound for multiplicity ≤ 3 at every even n ≤ 40 (exact at 6–16, 20) |
+| 2026-10-02 | K(14) = 54 for all arrangements |
+| 2026-10-02 | K(10) = 25 for all arrangements (independent certificate); special-column identities proved for all multiplicities |
+| 2026-10-02 | Stage 2 reduced to the double-B star (path type excluded); star apices and V± forced triple; LC for components with at most one non-110110 point |
+
+
+SOURCE 345968 work_packages/OPENMATH_2026/COMPETITION_PACKETS/H4_SECTION8_DRAFT.json
+{
+  "schema_version": "1.0.0",
+  "record_id": "OM26-H4-SECTION8-DRAFT-001",
+  "state": "TECHNICAL_AND_HUMAN_PACKET_PREPARED__OFFICIAL_ROUTE_EVALUATOR_AND_ORGANIZER_REVIEW_PENDING",
+  "identity_target": {
+    "campaign": "OPENMATH-2026",
+    "hill_id": "alejandrozu/collatz-modular-descent",
+    "hill_tree_hash": "7414e19511b2b99954a3898beed545401b79a571",
+    "hill_commit": "ad2b555cf91d7d4250bbdb6f94b30fac07e3d512",
+    "family_id": "PENDING_COMPETITION_NAMESPACE",
+    "problem_id": "OM26-H4",
+    "primary_modality": "M1_FORMALIZED_PARTIAL__P1_OR_P2_PENDING_MATHEMATICAL_REVIEW",
+    "registered_human_roster": [
+      "Jamie Steeg"
+    ],
+    "entrant_class": "Individual",
+    "affiliations": [],
+    "resource_classification": "SELF_RESOURCED"
+  },
+  "exact_claim": {
+    "text": "Each of the 23 retained rules is an exact stable accelerated-Collatz residue-class descent certificate. The 23-rule payload is exactly the deterministic containment reduction of the independently reconstructed bounded catalog over modulus powers k=2..8 and trajectory depths 1..4.",
+    "completeness": "FINITE_BOUNDED_CLASSIFICATION_ONLY",
+    "exclusions": [
+      "No proof of global Collatz convergence",
+      "No claim of completeness beyond k<=8 and depth<=4",
+      "No hidden-target coverage or score claim",
+      "No independent assertion that the finite catalog is novel"
+    ]
+  },
+  "artifact": {
+    "solution_path": "work_packages/OPENMATH_2026/CONTEST_CANDIDATES/H4/solution.json",
+    "solution_sha256": "b14c4804dae95df88ffa7dcef865205edd295e1f2e8c4daeba75333053a6673a",
+    "native_project_id": "f6ba9e4d-e3f1-412c-a1e9-37ba95675de6",
+    "native_climb_slug": "gcl-2026-h4-fixed-b14c4804dae9",
+    "native_job_id": "9fbb4512-e7c3-41e7-8e53-06fd887a320d",
+    "official_submission_id": null,
+    "official_final_report": null,
+    "immutable_final_commit": "187ce0debe76cb960724a6078b16660a11531941"
+  },
+  "formal_replay": {
+    "exact_rule_semantics_source": "work_packages/OPENMATH_2026/AUTHORITATIVE_SOURCE_POOL/collatz-modular-descent/PUBLIC_SOURCE/eval.py",
+    "trusted_replay_source": "work_packages/OPENMATH_2026/OM26_H4_COLLATZ_MODULAR_DESCENT/trusted_replay_h4.py",
+    "trusted_replay_pr": "grandchallenge/MATHSOLVE#593",
+    "observed_pass_run": 36877035405,
+    "observed_pass_job": 110418981039,
+    "bounded_prefixes_checked": 1016,
+    "valid_bounded_rules": 309,
+    "retained_rules": 23,
+    "catalog_sha256": "951521f5064f0842993e895648b2b8bde2b29dda0d47c9d586ddac498bfa4f55",
+    "independent_implementations": [
+      "direct accelerated trajectory verifier",
+      "affine coefficient verifier"
+    ],
+    "official_checker": "PENDING_ORGANIZER_WORKFLOW"
+  },
+  "provenance": {
+    "baseline": "Organizer source examples plus protected source/evaluator lock before event work",
+    "event_window_delta": "Independent worker enumerated the bounded exact rule family and produced a deterministic 23-rule reduced catalog during the competition window; GCL then independently reconstructed and replayed the entire bounded catalog and exact reduction.",
+    "external_contributor": {
+      "dispatch_id": "OM26-H4-WP01-IA-001",
+      "agent_ref": "INDEPENDENT-AGENT-004",
+      "raw_return": "contributions/OPENMATH-2026/OM26-H4/WP01/raw/OM26-H4-WP01-IA-001/github-comment-5921309643.md"
+    },
+    "original_adjudication": "ACCEPTED_EVIDENCE_WITHOUT_CLAIM_PROMOTION",
+    "replay_closure": "PR_593_MERGED__PROTECTED_HEAD_187ce0debe76cb960724a6078b16660a11531941",
+    "status_review": "work_packages/OPENMATH_2026/OM26_H4_COLLATZ_MODULAR_DESCENT/TARGET_CORRESPONDENCE_AND_STATUS.json"
+  },
+  "literature_status": {
+    "mechanism_prior": true,
+    "exact_catalog_novelty": "UNRESOLVED__NO_EXACT_MATCH_FOUND_IN_SEARCHED_SOURCES",
+    "reviewed_context": [
+      "Terras 1976 stopping-time residue methods",
+      "Everett 1977 iteration/stopping-time work",
+      "OEIS A177789 residue classes by stopping time",
+      "Winkler 2014/2015 stopping-time analyses",
+      "2026 modular pre-descent context"
+    ],
+    "competition_review_required": true
+  },
+  "trust_dependencies": {
+    "arithmetic": "Python arbitrary-precision integers and fractions.Fraction exact rationals",
+    "hidden_private_targets": "NOT_USED_FOR_MATHEMATICAL_VALIDITY_CLAIM",
+    "proof_holes": false
+  },
+  "disclosures": {
+    "tools_ai_compute": "See shared SECTION8_SHARED_DRAFT.json and exact GitHub/agent provenance above.",
+    "outside_help": "Independent zero-context agent contribution explicitly identified above.",
+    "conflicts": "none",
+    "publication_authority": "AUTHORIZED__SEE_HUMAN_AUTHORITY_DECLARATION.json"
+  },
+  "remaining_before_external_submission": [
+    "official competition evaluator report",
+    "organizer submission ID/workflow",
+    "organizer novelty/scope adjudication"
+  ],
+  "claim_boundary": "Draft competition packet only; no official submission, score, acceptance, novelty determination, or MATHCERT certification.",
+  "authority_receipt": "work_packages/OPENMATH_2026/COMPETITION_PACKETS/HUMAN_AUTHORITY_DECLARATION.json"
+}
+
+
+SOURCE 345976 work_packages/OPENMATH_2026/COMPETITION_PACKETS/SECTION8_EVIDENCE_REVIEW_QUEUE.json
+{
+  "record_type": "SECTION8_EVIDENCE_REVIEW_QUEUE",
+  "items": [
+    {
+      "dispatch_id": "OM26-H1-WP03-IA-001",
+      "assignment_id": "OM26-H1-WP03",
+      "hill": "OM26-H1",
+      "raw_path": "contributions/OPENMATH-2026/OM26-H1/WP03/raw/OM26-H1-WP03-IA-001/github-comment-5942369182.md",
+      "receipt_path": "contributions/OPENMATH-2026/OM26-H1/WP03/receipts/OM26-H1-WP03-IA-001/github-comment-5942369182.json",
+      "declared_disposition": "PROVED_REDUCTION",
+      "comment_created_at": "2026-10-01T23:02:32Z",
+      "authenticated_actor": "fyremael",
+      "state": "PENDING_EXACT_MATHEMATICAL_REPLAY_AND_NOVELTY_REVIEW",
+      "claim_effect": "NONE"
+    },
+    {
+      "dispatch_id": "OM26-H7-WP04-IA-001",
+      "assignment_id": "OM26-H7-WP04",
+      "hill": "OM26-H7",
+      "raw_path": "contributions/OPENMATH-2026/OM26-H7/WP04/raw/OM26-H7-WP04-IA-001/github-comment-5942424919.md",
+      "receipt_path": "contributions/OPENMATH-2026/OM26-H7/WP04/receipts/OM26-H7-WP04-IA-001/github-comment-5942424919.json",
+      "declared_disposition": "PROVED_REDUCTION",
+      "comment_created_at": "2026-10-01T23:07:36Z",
+      "authenticated_actor": "fyremael",
+      "state": "PENDING_EXACT_MATHEMATICAL_REPLAY_AND_NOVELTY_REVIEW",
+      "claim_effect": "NONE"
+    },
+    {
+      "dispatch_id": "OM26-H2-WP05-IA-001",
+      "assignment_id": "OM26-H2-WP05",
+      "hill": "OM26-H2",
+      "raw_path": "contributions/OPENMATH-2026/OM26-H2/WP05/raw/OM26-H2-WP05-IA-001/github-comment-5942546441.md",
+      "receipt_path": "contributions/OPENMATH-2026/OM26-H2/WP05/receipts/OM26-H2-WP05-IA-001/github-comment-5942546441.json",
+      "declared_disposition": "NO_MATERIAL_DELTA",
+      "comment_created_at": "2026-10-01T23:18:33Z",
+      "authenticated_actor": "fyremael",
+      "state": "PENDING_EXACT_MATHEMATICAL_REPLAY_AND_NOVELTY_REVIEW",
+      "claim_effect": "NONE"
+    },
+    {
+      "dispatch_id": "OM26-H1-WP60-IA-001",
+      "assignment_id": "OM26-H1-WP60",
+      "hill": "OM26-H1",
+      "raw_path": "contributions/OPENMATH-2026/OM26-H1/WP60/raw/OM26-H1-WP60-IA-001/github-comment-5942760286.md",
+      "receipt_path": "contributions/OPENMATH-2026/OM26-H1/WP60/receipts/OM26-H1-WP60-IA-001/github-comment-5942760286.json",
+      "declared_disposition": "NO_MATERIAL_DELTA",
+      "comment_created_at": "2026-10-01T23:37:27Z",
+      "authenticated_actor": "fyremael",
+      "state": "PENDING_EXACT_MATHEMATICAL_REPLAY_AND_NOVELTY_REVIEW",
+      "claim_effect": "NONE"
+    },
+    {
+      "dispatch_id": "OM26-H4-WP03-IA-001",
+      "assignment_id": "OM26-H4-WP03",
+      "hill": "OM26-H4",
+      "raw_path": "contributions/OPENMATH-2026/OM26-H4/WP03/raw/OM26-H4-WP03-IA-001/github-comment-5942549290.md",
+      "receipt_path": "contributions/OPENMATH-2026/OM26-H4/WP03/receipts/OM26-H4-WP03-IA-001/github-comment-5942549290.json",
+      "declared_disposition": "EXACT_CERTIFICATE",
+      "comment_created_at": "2026-10-01T23:18:48Z",
+      "authenticated_actor": "fyremael",
+      "state": "PENDING_EXACT_MATHEMATICAL_REPLAY_AND_NOVELTY_REVIEW",
+      "claim_effect": "NONE"
+    },
+    {
+      "dispatch_id": "OM26-H1-WP30-IA-001",
+      "assignment_id": "OM26-H1-WP30",
+      "hill": "OM26-H1",
+      "raw_path": "contributions/OPENMATH-2026/OM26-H1/WP30/raw/OM26-H1-WP30-IA-001/github-comment-5942381467.md",
+      "receipt_path": "contributions/OPENMATH-2026/OM26-H1/WP30/receipts/OM26-H1-WP30-IA-001/github-comment-5942381467.json",
+      "declared_disposition": "PROVED_REDUCTION",
+      "comment_created_at": "2026-10-01T23:03:37Z",
+      "authenticated_actor": "fyremael",
+      "state": "PENDING_EXACT_MATHEMATICAL_REPLAY_AND_NOVELTY_REVIEW",
+      "claim_effect": "NONE"
+    },
+    {
+      "dispatch_id": "OM26-H3-WP04-IA-001",
+      "assignment_id": "OM26-H3-WP04",
+      "hill": "OM26-H3",
+      "raw_path": "contributions/OPENMATH-2026/OM26-H3/WP04/raw/OM26-H3-WP04-IA-001/github-comment-5942509690.md",
+      "receipt_path": "contributions/OPENMATH-2026/OM26-H3/WP04/receipts/OM26-H3-WP04-IA-001/github-comment-5942509690.json",
+      "declared_disposition": "PROVED_REDUCTION",
+      "comment_created_at": "2026-10-01T23:15:09Z",
+      "authenticated_actor": "fyremael",
+      "state": "PENDING_EXACT_MATHEMATICAL_REPLAY_AND_NOVELTY_REVIEW",
+      "claim_effect": "NONE"
+    },
+    {
+      "dispatch_id": "OM26-H5-WP03-IA-001",
+      "assignment_id": "OM26-H5-WP03",
+      "hill": "OM26-H5",
+      "raw_path": "contributions/OPENMATH-2026/OM26-H5/WP03/raw/OM26-H5-WP03-IA-001/github-comment-5942558283.md",
+      "receipt_path": "contributions/OPENMATH-2026/OM26-H5/WP03/receipts/OM26-H5-WP03-IA-001/github-comment-5942558283.json",
+      "declared_disposition": "NO_MATERIAL_DELTA",
+      "comment_created_at": "2026-10-01T23:19:36Z",
+      "authenticated_actor": "fyremael",
+      "state": "PENDING_EXACT_MATHEMATICAL_REPLAY_AND_NOVELTY_REVIEW",
+      "claim_effect": "NONE"
+    },
+    {
+      "dispatch_id": "OM26-H6-WP04-IA-001",
+      "assignment_id": "OM26-H6-WP04",
+      "hill": "OM26-H6",
+      "raw_path": "contributions/OPENMATH-2026/OM26-H6/WP04/raw/OM26-H6-WP04-IA-001/github-comment-5942614522.md",
+      "receipt_path": "contributions/OPENMATH-2026/OM26-H6/WP04/receipts/OM26-H6-WP04-IA-001/github-comment-5942614522.json",
+      "declared_disposition": "NO_MATERIAL_DELTA",
+      "comment_created_at": "2026-10-01T23:24:55Z",
+      "authenticated_actor": "fyremael",
+      "state": "PENDING_EXACT_MATHEMATICAL_REPLAY_AND_NOVELTY_REVIEW",
+      "claim_effect": "NONE"
+    },
+    {
+      "dispatch_id": "OM26-H1-WP61-IA-001",
+      "assignment_id": "OM26-H1-WP61",
+      "hill": "OM26-H1",
+      "raw_path": "contributions/OPENMATH-2026/OM26-H1/WP61/raw/OM26-H1-WP61-IA-001/github-comment-5951670304.md",
+      "receipt_path": "contributions/OPENMATH-2026/OM26-H1/WP61/receipts/OM26-H1-WP61-IA-001/github-comment-5951670304.json",
+      "declared_disposition": "REPLAY_CLOSURE_VALIDATED",
+      "comment_created_at": "2026-10-02T11:45:41Z",
+      "authenticated_actor": "fyremael",
+      "state": "PENDING_EXACT_MATHEMATICAL_REPLAY_AND_NOVELTY_REVIEW",
+      "claim_effect": "NONE"
+    },
+    {
+      "dispatch_id": "OM26-H6-WP05-IA-001",
+      "assignment_id": "OM26-H6-WP05",
+      "hill": "OM26-H6",
+      "raw_path": "contributions/OPENMATH-2026/OM26-H6/WP05/raw/OM26-H6-WP05-IA-001/github-comment-5951785225.md",
+      "receipt_path": "contributions/OPENMATH-2026/OM26-H6/WP05/receipts/OM26-H6-WP05-IA-001/github-comment-5951785225.json",
+      "declared_disposition": "REPLAY_CLOSURE_VALIDATED",
+      "comment_created_at": "2026-10-02T11:52:29Z",
+      "authenticated_actor": "fyremael",
+      "state": "PENDING_EXACT_MATHEMATICAL_REPLAY_AND_NOVELTY_REVIEW",
+      "claim_effect": "NONE"
+    },
+    {
+      "dispatch_id": "OM26-H1-WP04-IA-001",
+      "assignment_id": "OM26-H1-WP04",
+      "hill": "OM26-H1",
+      "raw_path": "contributions/OPENMATH-2026/OM26-H1/WP04/raw/OM26-H1-WP04-IA-001/github-comment-5951370398.md",
+      "receipt_path": "contributions/OPENMATH-2026/OM26-H1/WP04/receipts/OM26-H1-WP04-IA-001/github-comment-5951370398.json",
+      "declared_disposition": "REPLAY_CLOSURE_VALIDATED",
+      "comment_created_at": "2026-10-02T11:26:28Z",
+      "authenticated_actor": "fyremael",
+      "state": "PENDING_EXACT_MATHEMATICAL_REPLAY_AND_NOVELTY_REVIEW",
+      "claim_effect": "NONE"
+    },
+    {
+      "dispatch_id": "OM26-H2-WP06-IA-001",
+      "assignment_id": "OM26-H2-WP06",
+      "hill": "OM26-H2",
+      "raw_path": "contributions/OPENMATH-2026/OM26-H2/WP06/raw/OM26-H2-WP06-IA-001/github-comment-5951254072.md",
+      "receipt_path": "contributions/OPENMATH-2026/OM26-H2/WP06/receipts/OM26-H2-WP06-IA-001/github-comment-5951254072.json",
+      "declared_disposition": "REPLAY_CLOSURE_VALIDATED",
+      "comment_created_at": "2026-10-02T11:21:09Z",
+      "authenticated_actor": "fyremael",
+      "state": "PENDING_EXACT_MATHEMATICAL_REPLAY_AND_NOVELTY_REVIEW",
+      "claim_effect": "NONE"
+    },
+    {
+      "dispatch_id": "OM26-H4-WP04-IA-001",
+      "assignment_id": "OM26-H4-WP04",
+      "hill": "OM26-H4",
+      "raw_path": "contributions/OPENMATH-2026/OM26-H4/WP04/raw/OM26-H4-WP04-IA-001/github-comment-5951254588.md",
+      "receipt_path": "contributions/OPENMATH-2026/OM26-H4/WP04/receipts/OM26-H4-WP04-IA-001/github-comment-5951254588.json",
+      "declared_disposition": "REPLAY_CLOSURE_VALIDATED",
+      "comment_created_at": "2026-10-02T11:21:11Z",
+      "authenticated_actor": "fyremael",
+      "state": "PENDING_EXACT_MATHEMATICAL_REPLAY_AND_NOVELTY_REVIEW",
+      "claim_effect": "NONE"
+    },
+    {
+      "dispatch_id": "OM26-H1-WP05-IA-001",
+      "assignment_id": "OM26-H1-WP05",
+      "hill": "OM26-H1",
+      "raw_path": "contributions/OPENMATH-2026/OM26-H1/WP05/raw/OM26-H1-WP05-IA-001/github-comment-5962893430.md",
+      "receipt_path": "contributions/OPENMATH-2026/OM26-H1/WP05/receipts/OM26-H1-WP05-IA-001/github-comment-5962893430.json",
+      "declared_disposition": "REPLAY_CLOSURE_VALIDATED",
+      "comment_created_at": "2026-10-02T23:09:28Z",
+      "authenticated_actor": "fyremael",
+      "state": "PENDING_EXACT_MATHEMATICAL_REPLAY_AND_NOVELTY_REVIEW",
+      "claim_effect": "NONE"
+    },
+    {
+      "dispatch_id": "OM26-H2-WP07-IA-001",
+      "assignment_id": "OM26-H2-WP07",
+      "hill": "OM26-H2",
+      "raw_path": "contributions/OPENMATH-2026/OM26-H2/WP07/raw/OM26-H2-WP07-IA-001/github-comment-5962895622.md",
+      "receipt_path": "contributions/OPENMATH-2026/OM26-H2/WP07/receipts/OM26-H2-WP07-IA-001/github-comment-5962895622.json",
+      "declared_disposition": "REPLAY_CLOSURE_VALIDATED",
+      "comment_created_at": "2026-10-02T23:09:41Z",
+      "authenticated_actor": "fyremael",
+      "state": "PENDING_EXACT_MATHEMATICAL_REPLAY_AND_NOVELTY_REVIEW",
+      "claim_effect": "NONE"
+    },
+    {
+      "dispatch_id": "OM26-H1-WP32-IA-001",
+      "assignment_id": "OM26-H1-WP32",
+      "hill": "OM26-H1",
+      "raw_path": "contributions/OPENMATH-2026/OM26-H1/WP32/raw/OM26-H1-WP32-IA-001/github-comment-5963053469.md",
+      "receipt_path": "contributions/OPENMATH-2026/OM26-H1/WP32/receipts/OM26-H1-WP32-IA-001/github-comment-5963053469.json",
+      "declared_disposition": "REPLAY_CLOSURE_VALIDATED",
+      "comment_created_at": "2026-10-02T23:26:07Z",
+      "authenticated_actor": "fyremael",
+      "state": "PENDING_EXACT_MATHEMATICAL_REPLAY_AND_NOVELTY_REVIEW",
+      "claim_effect": "NONE"
+    },
+    {
+      "dispatch_id": "OM26-H1-WP62-IA-001",
+      "assignment_id": "OM26-H1-WP62",
+      "hill": "OM26-H1",
+      "raw_path": "contributions/OPENMATH-2026/OM26-H1/WP62/raw/OM26-H1-WP62-IA-001/github-comment-5963069868.md",
+      "receipt_path": "contributions/OPENMATH-2026/OM26-H1/WP62/receipts/OM26-H1-WP62-IA-001/github-comment-5963069868.json",
+      "declared_disposition": "REPLAY_CLOSURE_VALIDATED",
+      "comment_created_at": "2026-10-02T23:27:57Z",
+      "authenticated_actor": "fyremael",
+      "state": "PENDING_EXACT_MATHEMATICAL_REPLAY_AND_NOVELTY_REVIEW",
+   
+
+SOURCE 351696 OPENMATH_SUBMISSION.md
+# OpenMath final submission: checked certificates and exact proof boundaries for Černý research
+## Target and contribution
+paths, a literal six-state Kari obstruction to inverse monotonicity and its
+base length/phase facts, and a finite-depth reflection-hole certificate.
+The authoritative exact statements are reproduced verbatim from the actual
+authoritative compilation units**, including repeated helper declarations in
+## FORMALLY VERIFIED submission core
+| Result and exact scope | Principal checked theorems | Authoritative source |
+|---|---|---|
+| For arbitrary step systems, local potential inequalities telescope along every list; a zero-potential goal forces word length ≥ initial potential. The cardinality-slope lemma is conditional on its stated slope assumptions. | `Orion.potential_along_word`, `Orion.lower_bound`, `Orion.cardinality_limit` | [lean/CertificateCore.lean](lean/CertificateCore.lean) |
+| Arbitrary relational walks and existential quotient-edge local transfer; inclusion-type monotone simulation; finite dyadic timing lower bounds, optimal-tail rigidity and buffer arithmetic; eventual constancy of decreasing natural sequences. The genealogy timing assumptions are explicit. | `OrionResearch.potential_lower_bound`, `OrionResearch.quotient_local`, `OrionResearch.monotone_simulation_transfer`, `OrionResearch.genealogy_clock_lower_finite`, `OrionResearch.genealogy_tail_rigidity`, `OrionResearch.buffer_two_realizable`, `OrionResearch.sharp_buffer_split`, `OrionResearch.sharp_buffer_nonsplit`, `OrionResearch.sharp_capacity_obstructio
+| Symbolic two-/three-anchor rotation and merge inequalities for all valid cardinalities and bits, and the full three-anchor potential value for n≥5. | `OrionAnchors.p2_rotation`, `OrionAnchors.p2_merge`, `OrionAnchors.p3_rotation`, `OrionAnchors.p3_merge`, `OrionAnchors.p3_full_value` | [AnchorPotentials.lean](post_baseline/lean_sprint/AnchorPotentials.lean) |
+| In the explicitly defined count/window graph, any walk from the full feature to a cardinality-one goal has length ≥3n−4, n≥5. This is a lower bound in that graph, not the general exact quotient formula. | `OrionThreeGraph.one_step`, `OrionThreeGraph.full_lower_bound` | [ThreeAnchorGraph.lean](post_baseline/lean_sprint/ThreeAnchorGraph.lean) |
+| In the separately defined finite C3 and C4 powerset tables, the listed witnesses attain the singleton goal and every goal-reaching list is at least as long: lengths 4 and 9 respectively. Every table edge has a checked one-step concrete subset-image correspondence. | `OrionExample.one_step_fidelity`, `OrionExample.optimal_subset_path` (separate namespaces in separate compilation units) | [Cerny3Checked.lean](post_baseline/lean_sprint/Cerny3Checked.lean), [Cerny4Checked.lean](post_baseline/lean_sprint/Cerny4Checked.lean) |
+| For any `LayeredCertificate` satisfying all local index, internal/entrance-potential and K/U entrance hypotheses, the five invariants hold along every path. A path ending in K or U followed by its collapse letter costs at least the requested bound. | `Orion.DirectAttack.layered_invariants`, `Orion.DirectAttack.first_collapse_cost` | [LayeredPairBarrier.lean](direct_attack/LayeredPairBarrier.lean) |
+| For the literal six-state preimage-mask system, no cardinality-nondecreasing inverse word takes any singleton to the full mask. Every inverse word reaching full has ≥1 decreasing step; a specific length-25 inverse word from singleton4 reaches full with exactly one decrease. | `KariInverseShrink.literal_preimage_correct`, `KariInverseShrink.no_monotone_inverse_reset`, `KariInverseShrink.reset_needs_shrink`, `KariInverseShrink.witness_resets`, `KariInverseShrink.witness_one_shrink`, `KariInverseShrink.witness_cost` | [KariInverseShrink.lean](direct_attack/KariInverseShrink.lean) |
+| In that same literal base system, every singleton-to-full inverse word has length ≥25. The last decreasing edge is 45→44 or 47→60; a sole decrease is 47→60. The stated prefix/monotone-suffix hypotheses at 45/44 force cost ≥27; phase witnesses attain costs 25/27. | `KariProductBase.reset_length_lower`, `KariProductBase.to45_length_lower`, `KariProductBase.mono44_length_lower`, `KariProductBase.last44_length_lower`, `KariProductBase.last_negative_word`, `KariProductBase.single_negative_word`, `KariProductBase.one_phase_witness`, `KariProductBase.two_phase_witness` | [KariShrinkProducts.lean](direct_attack/KariShrinkProducts.lean) |
+| In the abstract integer-hole recurrence, checked layers close through eight steps; every word of length ≤8 has `SafeRun`. The specified eight-letter prefix ends with holes [0,1,3], which are unsafe. | `ReflectionCoreCut.cut_closed`, `ReflectionCoreCut.run_in_layers`, `ReflectionCoreCut.no_avoid_first_eight`, `ReflectionCoreCut.witness_prefix_holes`, `ReflectionCoreCut.witness_final_unsafe` | [ReflectionCoreCut.lean](direct_attack/ReflectionCoreCut.lean) |
+in **inverse** order; the corresponding original word has reversed letters.
+at a ninth concrete letter is a paper argument. The formal reflection file
+## Paper proof and computational evidence: retained context only
+| Status | Retained result/context | Source and boundary |
+|---|---|---|
+| **Paper proof** | For contiguous anchors r≥2, n≥r+2, L=⌊log₂(r−1)⌋: B_r(n)=3n+Lr−2^(L+1)−3. Capacity-two construction, genealogy bridge, exact language thresholds and layout results. | [ALL_PARAMETER_PROOF.md](post_baseline/ALL_PARAMETER_PROOF.md), [GENEALOGY_LOWER_BOUND.md](post_baseline/GENEALOGY_LOWER_BOUND.md), [SPRINT_REPRODUCTION.md](post_baseline/SPRINT_REPRODUCTION.md). B_r is an existential feature-quotient distance; representatives may change between edges. The general formula, concrete quotient bridge and attaining construction are not fully formalized. |
+| **Paper proof** | Concrete all-p layered Figure3-family instantiation and specified-state threshold; Kari Cartesian products (n=6^d) and shrink/cost tradeoffs; reflection-family avoidance/support metrics and linear reset 5n−11. | [COMPRESS_OTHER_EXACT_LOWER.md](direct_attack/COMPRESS_OTHER_EXACT_LOWER.md), [KARI_PRODUCT_SHRINK_TRADEOFF.md](direct_attack/KARI_PRODUCT_SHRINK_TRADEOFF.md), [REFLECTION_CORE_TRADEOFF.md](direct_attack/REFLECTION_CORE_TRADEOFF.md). Only their exact abstract/base components above are formal. |
+| **Paper proof** | Explicit fixed-root, defect-balancing and moving-root subclass square/strict-square criteria, including arbitrary high-order core permutations and short original root returns. | [RESULTS.md](direct_attack/RESULTS.md), [MOVING_ROOT_ALL_HIGH_ORDER.md](direct_attack/MOVING_ROOT_ALL_HIGH_ORDER.md), [SHORT_ROOT_RETURN_SQUARE.md](direct_attack/SHORT_ROOT_RETURN_SQUARE.md), [PROOF_AUDIT.md](direct_attack/PROOF_AUDIT.md). Their hypotheses do not cover all synchronizing automata; none is a Lean all-n reset theorem. |
+| **Computational evidence** | Exact finite subset/Bellman certificates, baseline C2…C10 calculations, 83 baseline certificates, exhaustive small automata scopes, corruption rejection controls and deterministic replays. | `reference_results/`, `post_baseline/`, `direct_attack/data/`; final run receipts in `submission/`. Acceptance by Python/C++ is not Lean verification, even when output says VERIFIED. A local certificate family valid for infinitely many parameters still has a computational checker trust boundary unless its universal soundness is formalized. |
+| **Exploratory / conjectured / open** | Saved pressure runs without independently audited coverage; general-layout formulas, remaining order-two/mixed-core targets, and the unrestricted conjecture. | Existing notes in `direct_attack/data/` and `RESULTS.md`. No new search, coverage extrapolation, or promotion to a universal theorem is made here. |
+steps. Finite controls and successful reproduction do not replace that missing
+formalization or an independent mathematical review.
+## Prior work and novelty
+The classical Černý-family threshold, the Kari six-state automaton, powerset
+critical automaton nor a newly discovered threshold25. The bounded existing
+The contribution is these particular formal artifacts, explicit hypotheses,
+## Repository baseline versus final contribution
+| Layer | Immutable revision | Existing content versus final preparation |
+|---|---|---|
+| Imported AI-assisted kit | `b36adeac34a5088a7e2cd588f8c55221d04bd6eb` (`baseline/imported`) | 125 manifest entries, baseline Python code/certificates, paper two-anchor proof and uncompiled Lean drafts. These are pre-existing imported content, not discoveries of this preparation. |
+| Completed anchor sprint / baseline of direct attack | `168ffff8f8c0de968ecde3fd7fcea4bea6e364b6` | General anchor paper results and five checked sprint modules already existed before the direct-attack branch. |
+| Research snapshot entering this audit | `f30afd64643d785dff7ec5d44c730cb36a80dce6` | Existing direct-attack results and four direct Lean sources. This is the mathematical input snapshot. |
+| Final submission preparation | The Git commit containing this document and its sealed inventory | Proof-status audit, exact statement inventory, selected formal core, compiler portability and Windows-launcher fixes, existing exporter repair, isolated reproduction harness and fresh check receipts. No theorem was weakened, and no new all-n proof was attempted. |
+## Toolchain, dependencies and trust boundary
+  downloaded package, SMT solver or native evaluation is required by the formal
+  its standard library/toolchain and these standard axioms form the formal
+## Exact reproduction commands
+python submission/check.py --suite formal
+& $PythonExe submission/check.py --suite formal --lean $LeanExe
+Outputs go to ignored `results/openmath/`. The direct suite copies the current
+The formal suite prints every theorem/axiom and records the two expected
+archival compilation failures as exclusions; any failure in an authoritative
+## Check receipts and immutable identity
+`b8d7362e3466d17b1dc611a7ef1bead90c878074` as authoritative. Its
+in the formal receipt describe the actual bytes compiled on this machine;
+python submission/package.py --verify-zip results/openmath/openmath-final.zip
+unchanged validated sources do not require another formal build. The original
+formal execution receipts remain authoritative. The script creates
+`results/openmath/openmath-final.zip`, `openmath-final.COMPLETION.json` and
+`openmath-final.zip.sha256`. The detached JSON records the full ZIP SHA-256,
+git bundle create ../openmath-final.bundle research/cerny-direct-attack baseline/imported
+git bundle verify ../openmath-final.bundle
+git clone ../openmath-final.bundle openmath-reproduction
+## AI and tool-use disclosure
+For this preparation, OpenAI Codex performed source/document audit, proof-status
+research retrieval, SMT discovery run or new formalization was used; repository
+Lean validates the submitted formal terms; it does not certify originality,
+## Remaining submission limitations
+formalizations remain open or unformalized as specified above. This package is
+ready only as a partial, explicitly scoped formal contribution. It cannot be
+
+SOURCE 743 entries/erdos-m2-formalizations/PACKET.md
+# OpenMath 2026 -- M2 formalization packet, FINAL DRAFT v2 (not submitted)
+## Team, human review and publication (added 2026-10-03 KST; supersedes the corresponding TODO(operator) items below)
+## 0. Summary
+- **Claimed set: 17 families** = 10 substantive (section 1: G-PM + 9 Erdos families, 15 Erdos theorems) + 7 minor/sanity (section 2, 7 theorems, team to decide). E477 (section 1.10) and E358, E619, E1148 (sections 2.5-2.7) were added on 2026-10-03; until then the claimed set was 13 families.
+  - Minor / sanity: E295, E703, E748, E1136, E358, E619, E1148
+- Excluded as duplicates (section 4): E508 `HadwigerNelsonAtLeast4`, E138, E770, E273, E1136 `mueller` (this pass); E1063, E859, E835, E1074, E1193, E282, E291, E302, E317, E367, E423, E865, E885, E1008 (earlier); inside claimed/optional families `erdos_698.variants.erdos_szekeres_sharp`, `erdos_1136.variants.upper_bound` and `HadwigerNelsonAtLeast4` stay proved in the files but are not claimed. E723 and E120 were skipped by the proving sessions as duplicates of conjectures-io contributions. E617 `r_eq_3`: still in progress (session adv5) when this packet was generated; not included.
+## 1. Substantive families (ordered by level)
+### 1.1. Family G-PM -- Schoenberger's theorem and Petersen's theorem (connected case), Mathlib `SimpleGraph` form
+### 1.2. Family E942 -- Erdos problem 942
+### 1.3. Family E44 -- Erdos problem 44
+### 1.4. Family E123 -- Erdos problem 123
+### 1.5. Family E918 -- Erdos problem 918
+### 1.6. Family E292 -- Erdos problem 292
+### 1.7. Family E395 -- Erdos problem 395
+### 1.8. Family E698 -- Erdos problem 698
+### 1.9. Family E939 -- Erdos problem 939
+- Significance tier: Minor-to-substantive (explicit certificates).
+### 1.10. Family E477 -- Erdos problem 477
+## 2. Minor / sanity (no prior formal proof found, but trivial or helper-level -- team decides whether to include)
+### 2.1. Family E295 -- Erdos problem 295
+- Significance tier: Minor (helper lemma), although the proof is not short.
+### 2.2. Family E703 -- Erdos problem 703
+- Significance tier: Minor / trivial per the source.
+### 2.3. Family E748 -- Erdos problem 748
+- Significance tier: Minor / trivial per the source.
+### 2.4. Family E1136 -- Erdos problem 1136
+- Significance tier: Minor / trivial.
+### 2.5. Family E358 -- Erdos problem 358
+- Significance tier: Minor / textbook.
+### 2.6. Family E619 -- Erdos problem 619
+- Significance tier: Minor.
+### 2.7. Family E1148 -- Erdos problem 1148
+- Significance tier: Minor / trivial.
+## 3. Optional families -- FC statement new, mathematics already formalized elsewhere (NOT claimed by default)
+### 3.1. Family E757 -- Erdos problem 757
+  > Lean checks by `decide` that each four-element subset has at least 11 differences. It also checks that every nine-element subset contains one of twelve listed three-term arithmetic progressions. Each such progression violates the Sidon property, so every Sidon subset of `A` has at most eight elements. The integer set and its difference set are mapped injectively to real numbers. Thus any admissible `c` satisfies `14c ≤ 8`, giving `sSup {c | IsAdmissible c} ≤ 4/7 < 3/5`.
+### 3.2. Family E261 -- Erdos problem 261
+### 3.3. Family E36 -- Erdos problem 36
+- Significance tier: Minor / trivial; core not a first formalization.
+### 3.4. Family E649 -- Erdos problem 649
+### 3.5. Family E508 -- Erdos problem 508
+## 4. Excluded families (duplicates / rejected) -- for the record
+| E494 | `erdos_494.variants.k_eq_2_card_not_pow_two` (Selfridge-Straus) | DUPLICATE | https://github.com/TheJustinSunPrize/awards/pull/127 (2026-09-16); proved again on 2026-10-03 (`artifact/logs/extra3/`), not claimed |
+| E825 | `erdos_825.variants.necessary_cond` (weird number 70) | DUPLICATE | https://github.com/TheJustinSunPrize/awards/pull/685 and https://github.com/TheJustinSunPrize/awards/pull/400; proved again on 2026-10-03, not claimed |
+| E36 | `minimum_overlap.variants.upper.erdos_1955` | DUPLICATE | https://github.com/TheJustinSunPrize/awards/pull/304 (exact FC statement, 2026-09-16) |
+| E138 | `monoAP_guarantee_set_nonempty` | DUPLICATE | https://github.com/TheJustinSunPrize/awards/pull/516 (2026-09-17, exact FC statement `monoAP_guarantee_set_nonempty`, same Hales-Jewett derivation) ; https://github.com/AllenGrahamHart/FormalConjectures-Bench/blob/0d031f72/oracles/erdosproblems-138-difference/Submission.lean (`vdw_nonempty (r k) : (monoAP_guarantee_set r k).Nonempty`, l. 197; the proof linked from FC's `formal_proof` tag of `erdos_138.variants.difference`). Also a thin wrapper: Mathlib has Hales-Jewett `Combinatorics.Line.exists_mono_in_high_dimension` and the van der Waerden corollary `Combinatorics.exists_mono_homotheti
+| E273 | `erdos_273.variants.three` | DUPLICATE | https://github.com/TheJustinSunPrize/awards/pull/299 (2026-09-16, `erdos_273_three`, Selfridge's twelve moduli dividing 360, exact FC content) , https://github.com/TheJustinSunPrize/awards/pull/281 (`variants_three`, `exact_public_statement`) |
+| E282 | `erdos_282.variants.fibonacci` | DUPLICATE | https://github.com/TheJustinSunPrize/awards/pull/583 |
+| E291 | `erdos_291.parts.ii` | DUPLICATE | https://github.com/TheJustinSunPrize/awards/pull/216 |
+| E302 | `erdos_302.parts.ii` | DUPLICATE | https://github.com/TheJustinSunPrize/awards/pull/301 (corollary of the 5/8 bound) |
+| E302 | `erdos_302.variants.lower_five_eighths` | DUPLICATE | https://github.com/TheJustinSunPrize/awards/pull/301 |
+| E302 | `erdos_302.variants.lower_half` | DUPLICATE | https://github.com/TheJustinSunPrize/awards/pull/301 |
+| E317 | `claim2_inequality` | DUPLICATE | https://github.com/TheJustinSunPrize/awards/pull/493 |
+| E367 | `erdos_367.variants.k_le_two` | DUPLICATE | https://github.com/TheJustinSunPrize/awards/pull/455 |
+| E409 | `erdos_409.variants.termination` | REJECTED | proof already present in FC, nothing contributed |
+| E423 | `erdos_423.variants.nondecreasing` | DUPLICATE | https://github.com/TheJustinSunPrize/awards/pull/415 , https://github.com/baobingzhang/jsp-000348-erdos423-lean |
+| E508 | `HadwigerNelsonAtLeast4` | DUPLICATE | https://github.com/TheJustinSunPrize/awards/pull/270 (2026-09-16, `hadwiger_nelson_at_least_four : 4 ≤ (UnitDistancePlaneGraph Set.univ).chromaticNumber`, Moser spindle, exact FC shape); subsumed by https://github.com/Vilin97/lean-pool/blob/c77d19c49b/LeanPool/HadwigerNelsonBounds.lean (5 ≤ χ) |
+| E602 | `erdos_602.variants.two_sets` | REJECTED | proof already present in FC, nothing contributed |
+| E698 | `erdos_698.variants.erdos_szekeres_sharp` | DUPLICATE | https://github.com/TheJustinSunPrize/awards/pull/589 (exact FC statement, 2026-09-17) |
+| E770 | `Nat.Prime.h_eq_add_one` | DUPLICATE | https://github.com/TheJustinSunPrize/awards/pull/580 (2026-09-17, exact FC statement `Erdos770.Nat.Prime.h_eq_add_one`) |
+| E835 | `property_iff_chromaticNumber` | DUPLICATE | https://github.com/conjectures-io/conjectures-contribution/tree/be220ff/contributions/erdos-835 (exact statement); FC category `test` |
+| E859 | `erdos_859.variants.positive_density` | DUPLICATE | https://github.com/conjectures-io/conjectures-contribution/tree/be220ff/contributions/erdos-859 (`positive_density (t) : (DivisorSumSet t).HasPosDensity`, exact FC statement); FC itself calls it 'an easy sanity check' |
+| E865 | `erdos_865.variants.k2` | DUPLICATE | https://github.com/TheJustinSunPrize/awards/pull/658 |
+| E885 | `erdos_885.variants.k_eq_2` | DUPLICATE | https://github.com/TheJustinSunPrize/awards/pull/297 |
+| E885 | `erdos_885.variants.k_eq_3` | DUPLICATE | https://github.com/TheJustinSunPrize/awards/pull/297 |
+| E1008 | `erdos_1008.variants.lower_bound` | DUPLICATE | https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos1008.lean (stronger m^(2/3) bound) ; https://github.com/TheJustinSunPrize/awards/pull/662 |
+| E1063 | `erdos_1063.variants.exists_exception` | DUPLICATE | https://github.com/TheJustinSunPrize/awards/pull/631 (exact FC statement `erdos_1063.variants.exists_exception`, 2026-09-17) |
+| E1063 | `erdos_1063.variants.monier_upper_bound` | DUPLICATE | https://github.com/TheJustinSunPrize/awards/pull/56 , https://github.com/TheJustinSunPrize/awards/pull/406 (Monier bound, 2026-09-16); subsumed by https://github.com/pcycho/erdos1063-cambie |
+| E1074 | `erdos_1074.variants.EHSNumbers_init` | DUPLICATE | https://github.com/conjectures-io/conjectures-contribution/tree/be220ff/contributions/erdos-1074-variants-ehsnumbers-one-half and https://github.com/williamjblair/lean-proofs/blob/HEAD/ErdosProblems/Erdos1074.lean ; FC category `test` |
+| E1074 | `erdos_1074.variants.PillaiPrimes_init` | DUPLICATE | https://github.com/conjectures-io/conjectures-contribution/tree/be220ff/contributions/erdos-1074-variants-ehsnumbers-one-half ; FC category `test` |
+| E1136 | `erdos_1136.variants.mueller` | DUPLICATE | https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos1136.lean (Mueller's set, sum-freeness and density 1/2: `A_sumfree`, `A_density_half`). The adv5 file copies ~370 lines of that plby file as `namespace MuellerAux` and adds only a ~70-line bridge to the FC definitions `muellerSet` / `HasDensity` |
+| E1136 | `erdos_1136.variants.upper_bound` | DUPLICATE | https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos1136.lean (2nd conjunct: upper density <= 1/2 for every such set; subsumes) |
+| E1193 | `erdos_1193.parts.i` | DUPLICATE-CORE | https://github.com/plby/lean-proofs/blob/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos1193.lean (`not_erdos_1193`) and https://github.com/TheJustinSunPrize/awards/pull/26 (density-one statements for A = N, g(n) = n+1); also TRIVIAL (source: 'the answer is trivially no') |
+| E1193 | `erdos_1193.parts.ii` | DUPLICATE-CORE | as parts.i |
+| E1193 | `erdos_1193.variants.upper_density_pos` | DUPLICATE-CORE | as parts.i |
+## 5. Identity / target (handbook 8.1)
+## 6. Artifact / proof (handbook 8.2)
+## 7. Provenance (handbook 8.3)
+## 8. Publication authority (handbook 8.4)
+## 9. Operator TODO list
+- [ ] Decide: include the section 2 minor list or not; claim the section 3 optional families (with disclosure) or not.
+
+SOURCE 53 entries/dms-star6/PACKET.md
+# OpenMath 2026 submission packet — partial progress on the Dvořák–Mohar–Šámal conjecture (star chromatic index of subcubic graphs)
+
+## Team, human review and publication (added 2026-10-03 KST; supersedes the corresponding TODO(operator) items below)
+
+* **Team:** HTPeo (team entrant). Autolab owner/account `lavaskiller`.
+* **Roster** (each member fills in their own row; see `TEAM.md` at the repository root):
+
+  | Name | Affiliation | E-mail | Role / contribution |
+  |---|---|---|---|
+  | Woohyuk Kang | HTPeo, KyungHee Univ. CS&E | [REDACTED CONTACT] | harness operator; Ramsey search and certificate; Erdős formalizations; packets |
+  | Hyunjin Lee (@hl728) | University of Cambridge | [REDACTED CONTACT] | K4 Ramsey hill (validation and final-board evaluation); separate local research on Erdős #1038 and the 3x3 tensor hill |
+  | Sanghyeon Lee (@n0rang2) | Korea Univ. Security | [REDACTED CONTACT] | Busy Beaver 6 hill (machine, Lean certificates, maximality computation); K4 Ramsey hill; Erdős #1038 with @hl728 |
+  | Youchan Oh (@thomasoh0408) | Seoul National Univ. TI | [REDACTED CONTACT] | Kobon triangles hill (n = 18) |
+
+* **Human review:** none. No team member reviewed the proofs or the statement-correspondence notes of this packet line by line; Woohyuk Kang (@lavaskiller) and Hyunjin Lee (@hl728) declared on 2026-10-03 that they did no human review, and the other members di
+### 1.6 Requested progress band (advisory; "a requested p is advisory", handbook §8.1)
+
+**Requested: p = 0.15, as an explicit choice of the lower end of band P3; fallback P2 with p = 0.10.** We do not
+request more.
+
+Rationale, written to be conservative:
+
+* **What supports P2** ("nontrivial lemma, reduction, reformulation, finite classification, or improvement short
+  of the central obstacle", .05–.15). T3 is a nontrivial reduction (98 kernel-checked modules) and T2 item 5 is an
+  unconditional reformulation; T4 and T2 items 1–4 are finite classifications with formal certificates. This part
+  is solid on its own: it does not depend on any novelty claim about the families, and the literature check found
+  no published reduction of the 6-colour conjecture to cubic graphs (section 2.6). We consider the upper half of
+  P2 justified by the reductions and the equivalence together.
+* **What supports the step to P3** ("meaningful infinite family, special case, bound, or structural advance
+  removing a recognized obstacle", .15–.35). T1 proves the conjecture — with one colour to spare — for infinite
+  families that are standard test classes for colouring conjectures on cubic graphs: the two classical infinite
+  snark families (flower, Goldberg), all generalized Petersen graphs with k ≤ 15, Möbius ladders, and an inflation
+  operation applicable to every cubic multigraph. Rows A, B, F, G
+# measured: 125/125 rc=0, 930 s of compiler time, largest process 2.05 GB; writes axioms.log, build/summary.txt
+python3 sanity_check.py                               # plain Python: edge lists vs textbook, snark checks, brute force
+
+# Lean-core file (HOLE => DMS, CubicSharp5 => DMS, covers, RH2 layers 1-5)
+cd ../pack2/lean433 && lean StarDMS2.lean             # 73 s, 2.8 GB peak; log: StarDMS2.log
+```
+
+`run433.sh`, `c.sh` and `build5.sh` find the compiler through `LEAN433` (default
+`$HOME/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean`) and pack3 through `PACK3` (default `../pack3`).
+The scripts lost their executable bit in this repository (it was assembled on Windows); call them with `bash`.
+
+### 2.3 Axioms
+
+* **T3/T4** (`lean/pack3/build/axioms.log`, 18 `#print axioms` lines, the same 18 in `lake_build.log`): all
+  `[propext, Classical.choice, Quot.sound]`.
+* **Whole-closure audit** (`lean/pack3/build/audit_all.tsv`: `collectAxioms` on each of the 4 924 theorems of
+  the 98 modules): standard axioms only, with **one** exception, `MGraph.k4subdiv_star6` in the baseline module
+  `StarCert` (`native_decide`; its axiom is `MGraph.k4subdiv_star6._native.native_decide.ax_1_1`). **It is not
+  used by any claimed theorem.** Checked for this packet against the logs: (a) it is the only row of
+  `audit_all.tsv` with a non-standard axiom, so no other theorem of the 98 modules depe
+### 2.3 Axioms
+
+* **T3/T4** (`lean/pack3/build/axioms.log`, 18 `#print axioms` lines, the same 18 in `lake_build.log`): all
+  `[propext, Classical.choice, Quot.sound]`.
+* **Whole-closure audit** (`lean/pack3/build/audit_all.tsv`: `collectAxioms` on each of the 4 924 theorems of
+  the 98 modules): standard axioms only, with **one** exception, `MGraph.k4subdiv_star6` in the baseline module
+  `StarCert` (`native_decide`; its axiom is `MGraph.k4subdiv_star6._native.native_decide.ax_1_1`). **It is not
+  used by any claimed theorem.** Checked for this packet against the logs: (a) it is the only row of
+  `audit_all.tsv` with a non-standard axiom, so no other theorem of the 98 modules depends on it; (b) the name
+  `k4subdiv_star6` occurs in no source file of `pack3/src`, `pack4/src`, `pack5/src` other than its definition
+  (`StarCert.lean`, line 66); (c) every `#print axioms` line of pack4 and pack5 is standard. In
+  `StarDMS2.lean` the same statement is re-proved by kernel `decide` (`[propext, Quot.sound]`).
+* **T2** (`lean/pack5/logs/*.out`): 39 `#print axioms` lines (32 + 3 + 4; `Star6Bounded.out` prints none, its
+  theorems are covered through `Star6Corollaries`), all standard.
+* **T1** (`lean/pack4/axioms.log`): 33 lines `[propext, Classical.choice, Quot.sound]` and 3 lines "does not
+  depend on any axioms" (`BlockStar.colourable_of_star`, `BlockStar.dms_iff`, `starFamily_dms`).
+*
+### 2.7 Trust dependencies and disclosed deviations
+
+1. **Lean kernel and Mathlib v4.33.1** (downloaded olean cache; Mathlib is not recompiled). Three modules
+   import Mathlib directly (`SimpleGraph.Tutte`, `BigOperators.Fin`, `Sym2`/`Fintype`/`Cardinal.Finite`);
+   pack4's `Families`/`All` import `Mathlib`. [**TODO(operator)**: confirm with the organisers that a Mathlib
+   dependency is acceptable.]
+2. **Port 4.20 → 4.33.1, compatibility options.** The chain was written and gate-checked on Lean 4.20.0 +
+   Mathlib v4.20.0 and ported: 15 proof hunks in 8 modules (`lean/pack3/patches/*.patch`), the line
+   `set_option backward.isDefEq.respectTransparency false` at the top of 73 modules (`patches/compat.txt`), and
+   `set_option maxRecDepth 200000` in the 13 certificate modules of layers 36–37 and before two theorems
+   (`patches/recdepth.txt`). These options affect elaboration only; the kernel checks the resulting terms. A
+   header check over 6 124 declarations finds no changed statement (`check_headers.out`).
+3. **Per-module builds for pack4 and pack5.** They are not lake targets: `c.sh` / `build5.sh` call `lean -o`
+   module by module against `pack3/build/*.olean` (produced by `run433.sh`, not by `lake build`). The lake
+   alternative described in `lean/pack5/README.md` (add the files to `pack3/src` and to `roots`) was **not run**.
+4. **Graph-family fidelity (T1).** The fami
+
+SOURCE 1238 entries/ramsey-k4-multiplicity/PACKET.md
+### 1.3 Requested progress band (advisory; "a requested p is advisory", handbook §8.1)
+
+**Requested: band P1, p = 0.05 (upper end of P1), explicitly not more than the lower end of P2.**
+
+Rationale, written to be conservative:
+
+* By the band table the contribution is a "narrow certified computation ... or reusable fact" (P1) or at most
+  an "improvement short of the central obstacle" (P2). It is not a structural advance and removes no
+  recognised obstacle (so not P3 or above).
+* Size of the advance: the new bound lowers the hill reference by 2.34·10^-6 and Theorem 1.1 of
+  arXiv:2206.04036 (4551721·2^-24·3^-2 ≈ 0.0301449) by 4.92·10^-6. The gap between the reference and the
+  lower bound 0.0296 is ≈ 5.4·10^-4, so this closes about 0.43 % of the known gap. That is small, and the
+  method (local search on blow-ups of the known 768-vertex Cayley construction) is the method of the cited
+  paper and of McKay, not a new idea.
+* Why the upper end of P1 rather than the lower end (the handbook default is the lower end unless a written
+  rationale supports more): (i) the bound is, to our knowledge, below every published value, i.e. it is a new
+  record for a classical constant and not only a verification; (ii) the statement is about c_4 itself — the
+  blow-up lemma for arbitrary symmetric weighted templates (`ramseyMultK4_le_density`), monotonicity and
+  existence of the limit are formal
+### 2.6 Axioms
+
+`#print axioms` (`lean/logs/RamseyCert.Main.log`, `RamseyCert.Final.log`, `Summary.log`) for `sol_density`,
+`sol_lt_ref`, `sol_ppt`, `sol_symm`, `ramseyMultK4_le_sol`, `ramseyMultK4_lt_ref`,
+`minMonoK4_density_le_sol`, `ramseyMultK4_limit_lt_ref`: `[propext, Classical.choice, Quot.sound]`.
+No `sorry`, no `axiom`, no `native_decide` in the import closure of `Main.lean` / `Final.lean`.
+`Native.lean` (uses `native_decide`) is a separate cross-check imported by nothing.
+
+### 2.7 Trust dependencies (stated frankly)
+
+1. **Lean 4.33.1 kernel, including its GMP-accelerated `Nat` arithmetic** (`Nat.land`, `Nat.mod`,
+   `Nat.mul`, `Nat.shiftRight`, ... on 32768-bit literals). The whole finite computation rests on these
+   kernel extensions via `decide +kernel`. This is standard kernel functionality, but it is a larger trusted
+   base than pure reduction, and whether `decide +kernel` at this scale is inside the verification chair's
+   allowed trust boundary is for the chair to say. **TODO(operator)**: ask.
+2. **Mathlib v4.33.1.**
+3. **JSON → Lean transcription** by `tools/gen.py` (not verified in Lean; independent re-check with
+   `tools/check_data.py`). All generated files are in the repository, so the reviewer checks what is there;
+   the generator need not be trusted except for this correspondence.
+4. **Per-module build instead of a single `lake build`.** The 2112 modul
+### 2.7 Trust dependencies (stated frankly)
+
+1. **Lean 4.33.1 kernel, including its GMP-accelerated `Nat` arithmetic** (`Nat.land`, `Nat.mod`,
+   `Nat.mul`, `Nat.shiftRight`, ... on 32768-bit literals). The whole finite computation rests on these
+   kernel extensions via `decide +kernel`. This is standard kernel functionality, but it is a larger trusted
+   base than pure reduction, and whether `decide +kernel` at this scale is inside the verification chair's
+   allowed trust boundary is for the chair to say. **TODO(operator)**: ask.
+2. **Mathlib v4.33.1.**
+3. **JSON → Lean transcription** by `tools/gen.py` (not verified in Lean; independent re-check with
+   `tools/check_data.py`). All generated files are in the repository, so the reviewer checks what is there;
+   the generator need not be trusted except for this correspondence.
+4. **Per-module build instead of a single `lake build`.** The 2112 modules were compiled one by one with
+   `lean -o` by `tools/build.sh` in dependency layers (`layers.txt`), because each chunk file needs ≈ 1.6 GB
+   private memory. A full-size `lake build` was **not** run. Every module's exit status is in
+   `build_status.txt`. The partial rebuild at 12:23–12:24 UTC (after `Mono.lean` and two corollaries were
+   added to `Final.lean`) re-ran layers from 3 upward; modules whose dependencies were unchanged were not
+   recompiled. An organiser rerun from s
+FULL SOURCE READS 20 LEAN TEXT FILES 3486
+FLAG E08 5461 entries/ramsey-k4-multiplicity/artifact/lean_v2/RamseyCert/Native.lean {'sorry': 0, 'admit': 0, 'axiom': 0, 'native_decide': 2, 'unsafe': 0, 'implemented_by': 0, 'skipKernelTC': 0}
+FLAG E11 346252 lean/equivalence/solution.lean {'sorry': 1, 'admit': 0, 'axiom': 0, 'native_decide': 0, 'unsafe': 0, 'implemented_by': 0, 'skipKernelTC': 0}
+FLAG E65 347040 lean/Erdos3CrossScale.lean {'sorry': 1, 'admit': 0, 'axiom': 0, 'native_decide': 0, 'unsafe': 0, 'implemented_by': 0, 'skipKernelTC': 0}
+FLAG E02 349908 Focus_Evidence/evidence/FOCUS-MATRIX/MatrixRigidityCompiled.lean {'sorry': 0, 'admit': 0, 'axiom': 0, 'native_decide': 3, 'unsafe': 0, 'implemented_by': 0, 'skipKernelTC': 0}
+FLAG E02 351077 Reproduction_Sources/m2-research/projects/formal-conjectures/FormalConjectures/Arxiv/2501.03234/ArithmeticSumS.lean {'sorry': 5, 'admit': 0, 'axiom': 0, 'native_decide': 0, 'unsafe': 0, 'implemented_by': 0, 'skipKernelTC': 0}
+FLAG E02 351080 Reproduction_Sources/m2-research/projects/formal-conjectures/FormalConjectures/OEIS/60841.lean {'sorry': 2, 'admit': 0, 'axiom': 0, 'native_decide': 0, 'unsafe': 0, 'implemented_by': 0, 'skipKernelTC': 0}
+FLAG E02 351081 Reproduction_Sources/m2-research/projects/formal-conjectures/FormalConjectures/OEIS/7406.lean {'sorry': 1, 'admit': 0, 'axiom': 0, 'native_decide': 0, 'unsafe': 0, 'implemented_by': 0, 'skipKernelTC': 0}
+FLAG E02 351082 Reproduction_Sources/m2-research/projects/formal-conjectures/FormalConjectures/OEIS/77408.lean {'sorry': 1, 'admit': 0, 'axiom': 0, 'native_decide': 0, 'unsafe': 0, 'implemented_by': 0, 'skipKernelTC': 0}
+FLAG E02 351193 Reproduction_Sources/m2-research/projects/formal-conjectures/FormalConjecturesForMathlib/Data/Nat/Full.lean {'sorry': 0, 'admit': 0, 'axiom': 0, 'native_decide': 0, 'unsafe': 1, 'implemented_by': 0, 'skipKernelTC': 0}
+FLAG E02 351295 Reproduction_Sources/m2-research/projects/formal-conjectures/FormalConjecturesUtil/Answer.lean {'sorry': 2, 'admit': 0, 'axiom': 0, 'native_decide': 0, 'unsafe': 0, 'implemented_by': 0, 'skipKernelTC': 0}
+FLAG E02 351296 Reproduction_Sources/m2-research/projects/formal-conjectures/FormalConjecturesUtil/Attributes/AMS.lean {'sorry': 0, 'admit': 0, 'axiom': 0, 'native_decide': 0, 'unsafe': 1, 'implemented_by': 0, 'skipKernelTC': 0}
+FLAG E02 351297 Reproduction_Sources/m2-research/projects/formal-conjectures/FormalConjecturesUtil/Attributes/Basic.lean {'sorry': 1, 'admit': 0, 'axiom': 0, 'native_decide': 0, 'unsafe': 3, 'implemented_by': 0, 'skipKernelTC': 0}
+FLAG E02 351299 Reproduction_Sources/m2-research/projects/formal-conjectures/FormalConjecturesUtil/Linters/AnswerLinter.lean {'sorry': 3, 'admit': 0, 'axiom': 0, 'native_decide': 0, 'unsafe': 0, 'implemented_by': 0, 'skipKernelTC': 0}
+FLAG E02 351300 Reproduction_Sources/m2-research/projects/formal-conjectures/FormalConjecturesUtil/Linters/CategoryAnswerLinter.lean {'sorry': 3, 'admit': 0, 'axiom': 0, 'native_decide': 0, 'unsafe': 0, 'implemented_by': 0, 'skipKernelTC': 0}
+FLAG E02 351302 Reproduction_Sources/m2-research/projects/formal-conjectures/FormalConjecturesUtil/Linters/CategoryLinter.lean {'sorry': 1, 'admit': 0, 'axiom': 0, 'native_decide': 0, 'unsafe': 0, 'implemented_by': 0, 'skipKernelTC': 0}
+FLAG E02 351305 Reproduction_Sources/m2-research/projects/formal-conjectures/FormalConjecturesUtil/Linters/FormalProofLinter.lean {'sorry': 4, 'admit': 0, 'axiom': 0, 'native_decide': 0, 'unsafe': 0, 'implemented_by': 0, 'skipKernelTC': 0}
+FLAG E02 351306 Reproduction_Sources/m2-research/projects/formal-conjectures/FormalConjecturesUtil/Linters/ImportLinter.lean {'sorry': 0, 'admit': 0, 'axiom': 0, 'native_decide': 1, 'unsafe': 0, 'implemented_by': 0, 'skipKernelTC': 0}
+FLAG E02 351310 Reproduction_Sources/m2-research/projects/formal-conjectures/FormalConjecturesUtil/Linters/StubLinter.lean {'sorry': 4, 'admit': 0, 'axiom': 2, 'native_decide': 0, 'unsafe': 0, 'implemented_by': 0, 'skipKernelTC': 0}
+FLAG E02 351078 Reproduction_Sources/m2-research/projects/formal-conjectures/FormalConjectures/ErdosProblems/887.lean {'sorry': 5, 'admit': 0, 'axiom': 0, 'native_decide': 0, 'unsafe': 0, 'implemented_by': 0, 'skipKernelTC': 0}
+FLAG E02 351079 Reproduction_Sources/m2-research/projects/formal-conjectures/FormalConjectures/ErdosProblems/94.lean {'sorry': 3, 'admit': 0, 'axiom': 0, 'native_decide': 0, 'unsafe': 0, 'implemented_by': 0, 'skipKernelTC': 0}
+D 1971 EP-169 Erdős Problem #169 538 Let $k\geq 3$ and $f(k)$ be the supremum of $\sum_{n\in A}\frac{1}{n}$ as $A$ ranges over all sets of positive integers which do not contain a $k$-term arithmetic progression. Estimate $f(k)$.
+Is $ \lim_{k\to \infty}\frac{f(k)}{\log W(k)}=\infty $ where $W(k)$ is the van der Waerden number?
+D 2328 EP-829 Erdős Problem #829 530 Let $A\subset\mathbb{N}$ be the set of cubes. Is it true that $ 1_A\ast 1_A(n) \ll (\log n)^{O(1)}? $ 
+D 2366 EP-887 Erdős Problem #887 541 Is there an absolute constant $K$ such that, for every $C>0$, if $n$ is sufficiently large then $n$ has at most $K$ divisors in $(n^{1/2},n^{1/2}+C n^{1/4})$.
+D 2398 EP-944 Erdős Problem #944 721 A critical vertex, edge, or set of edges, is one whose deletion lowers the chromatic number.
+Let $k\geq 4$ and $r\geq 1$. Must there exist a graph $G$ with chromatic number $k$ such that every vertex is critical, yet every critical set of edges has size $>r$?
+D 2926 KP-4.50 Kirby Problem 4.50 939 Classify closed topological 4-manifolds (orientable and not) with finite fundamental group, up to homeomorphism. The following infinite families of fundamental groups are of particular interest.
+
+(a) Dihedral groups.
+
+(b) Quaternionic groups.
+
+(c) Abelian groups with two or three generators. A significant starting point would be to complete the classification for 4-manifolds with fundamental group of order at most eight.
+D 3115 OPG-37271 Star chromatic index of cubic graphs 574 The star chromatic index $\chi_s'(G)$ of a graph $G$ is the minimum number of colors needed to properly color the edges of the graph so that no path or cycle of length four is bi-colored.
+
+Question Is it true that for every (sub)cubic graph $G$, we have $\chi_s'(G) \le 6$?
+D 2200013 AMR-021-0013 Problems Around Polynomials — Conjecture 8 561 [J. Forsg\aa rd, B. Sh., seems good, see ] Let $f(z) = \sum_{k=0}^n a_k z^k$ be a polynomial with positive coefficients, and consider the related (weighted) tropical polynomial \[ f_{trop}(x) =\max_{k}\left(\Log(a_k)+k x + \Log{n\choose k}\right). \] Then the number of real zeros of $f(z)$ does not exceed the number of points in the tropical variety defined by $f_{trop}$, i.e. the number of corners of the continuous piecewise-linear function $ f_{trop}(x),\; x\in \mathbb{R}$.
+D 2200014 AMR-021-0014 Problems Around Polynomials — Conjecture 9 517 [J. Forsg\aa rd, B. Sh., seems good, see ] Let $f(z) = \sum_{k=0}^n a_k z^k$ be a polynomial with positive coefficients. Consider the differences \[ \tilde c_k = (k+1)a_k^2 - k a_{k-1}a_{k+1}, \] where $a_{-1} = a_{n+1} = 0$. Let $0=k_1 < k_2 < \dots < k_m = n$ be the sequence of indices such that $\tilde c_{k_i}$ is positive, and let $v(f)$ be the number of changes in the sequence $\{k_i \mod 2\}_{i=0}^m$. Then the number of real zeros of $f(z)$ does not exceed $v(f)$.
+D 2200015 AMR-021-0015 Problems Around Polynomials — Conjecture 10 517 [J. Forsg\aa rd, B. Sh., seems good, see ]] Let $f(z) = \sum_{k=0}^n a_k z^k$ be a polynomial with positive coefficients. Consider the differences \[ c_k = a_k^2 - a_{k-1}a_{k+1}, \] where $a_{-1} = a_{n+1} = 0$. Let $0=k_1 < k_2 < \dots < k_m = n$ be the sequence of indices such that $c_{k_i}$ is non-negative, and let $v(f)$ be the number of changes in the sequence $\{k_i \mod 2\}_{i=0}^m$. Then the number of real zeros of $f(z)$ does not exceed $v(f)$.
+D 2305059 AMR-022-5059 Research Problems in Function Theory — Problem 5.59 573 (Subordination and extreme point problem) Let $g(z)=\sum^\infty_{n=0}B_nz^n$ be analytic in $\mathbb{D}$. Denote by $S_g$ the family of functions $f(z)$ subordinate to $g$. Find general conditions on $g$ so that the only extreme points of the closed convex hull of $S_g$ are the functions $g(ze^{it})(0\leq t<2\pi)$. This is known for certain functions $g$, see Clunie , for example: [(a)] ; $g(z)=[(1+cz)/(1-z)]^\alpha$ where $|c|\leq1,\alpha\geq1$; ; $g(z)=\exp[(1+z)/(1-z)]$. Sheil-Small can prove it for a functions of the form \linebreak\mbox{$g
+D 2307034 AMR-022-7034 Research Problems in Function Theory — Problem 7.34 546 Let $\beta_j\in\mathbb{R}^+$ and $\zeta_j\in\mathbb{C}$, and for suitable small $z$ define $$ f(z)=\prod^n_{j=1}(1-\zeta_jz)^{\beta_j}=1+a_1z+a_2z^2+\ldots $$ Suppose further that the $a_k$ are all real. Then there exists $N=N(\beta_1, \beta_2, \beta_3, \ldots, \beta_n)<\infty$, independent of the $\zeta_j$, such that $\min(a_1, a_2, \ldots, a_N)\leq0$. Find a sharp, or good, upper bound for $N$ as a function of the $\beta$'s. This would be significant for Tur\'an's power sum method. To see that $N<\infty$: if the $\beta_j$'s are all integers, 
+D 6700022 AMR-066-0022 Scalar Curvature Question [?21]: Evaluate σ○(X0) and σ◻(X0) for "simple" Riemannian manifolds X0 = (X,g 0) 596 Problem. Evaluate σ○(X0) and σ◻(X0) for "simple" Riemannian manifolds X0 = (X,g 0). ###◻Dirac operators, because they are invariant under isometries, often deliver optimal geometric inequalitiesfor manifolds withSc ≥σ. For instance, σ○(X0) and σ◻(X0) are equal toSc(X0) for many (conjecturally for all) compact symmetric spaces(X0), see sections 17, but this seems hard, if possible at all, to prove with minimal hypersurfaces. Even in the most transparent case, where we know by Llarull’s theorem, that if a smooth Riemannian metricg on X = Sn is gr
+D 10600001 AMR-105-0001 Virtual-knot problem 1 — Recognising the Kishino Knot 676 Recognising the Kishino Knot: There have been invented many
+ways to recognize the Kishino virtual knot (from the unknot): The
+$3$–strand Jones polynomial, i.e. the Jones polynomial of the
+$3$–strand cabling of the knot , the $\Xi$–polynomial,
+see , the quaternionic biquandle , and the
+surface bracket polynomial (Dye and Kauffman ).
+In Kadokami proves the knot is non-trivial by
+examining the immersion class of a shadow curve in genus two. One
+can use the Manturov parity bracket to
+show that essentially the flat Kishino diagram is its own invaria
+D 10600007 AMR-105-0007 Virtual-knot problem 7 — Long Knots and Long Flat Knots 631 Long Knots and Long Flat Knots: Enlarge the long knot
+invariant structure proposed in . Can one get new
+classical knot invariants from the approach in this paper? Bring
+together the ideas from with the biquandle
+construction from to obtain more powerful invariants of
+long knots. Long flat virtual knots can be studied via a powerful
+remark due to Turaev (in conversation) to the effect that one can
+associate to a given long flat virtual knot diagram $F$ a descending diagram $D(F)$ (by always going over before going under
+in resolving the flat (no

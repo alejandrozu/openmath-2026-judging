@@ -1,0 +1,21 @@
+E02-a100475 | A100475: no positive prime-reversal cycle
+
+Exact contribution: Let p_n be the nth prime with p_1=2, and T(n) the decimal digit reversal of p_n. For every natural x>0, the orbit starting at x under T is not ultimately periodic. Thus False iff there exists x>0, x≠1, whose orbit is ultimately periodic.
+
+Assessment: The positive-start restriction is essential. Growth of the prime-index map plus finite exceptional checks can rule out periodic tails for every positive start. Zero-start totalization would answer a different question. This is a complete target candidate, with a substantial source chain for a deceptively short statement.
+
+Novelty: Candidate original resolution; bounded searches found no exact positive-start solution. Ball–Coxeter and the 2004 SeqFan discussion remain specific priority checks, so novelty is medium confidence rather than certified.
+
+Formalization: Packet evidence: Independent complete 84-module replay completed 2026-10-01T13:03:31.027744Z; source receipt records byte identity with user ZIP; final theorem standard axioms. Endpoint signatures and declared axioms are recorded below; author/internal replay is not this reviewer’s fresh rebuild. 
+
+Proposal: Approve p=1 on the exact positive-start target if priority and frozen proof closure are confirmed; otherwise reclassify the genuinely new formalization to M2.
+
+OPDP target OPENMATH-OEIS-A100475 | intrinsic 5.4/10 | competition D proposal 541/1000
+
+Modality M3A | p 1 | b 1 | m 1 | numerical family points 292.681
+
+Specific remaining checks: Late ZIP 06:19:17 versus on-time PDF 05:57:20: prove fixed cutoff artifact or organizer admin-transfer decision; Exact source/library closure fresh independent build and semantic review; Target admission/open-at-freeze/novelty and canonicalD mapping; Ball–Coxeter 13th edition, pp.14–15; November and December 2004 SeqFan archive messages
+
+Key files: 349485 Claim_Evidence/proofs/a100475/A100475.lean; 349485 Claim_Evidence/proofs/a100475/A100475.lean; 349445 Claim_Evidence/evidence/lean-cloud/user-attempt-replay/A100475-independent-replay-summary.json; 349446 Claim_Evidence/evidence/lean-cloud/user-attempt-replay/reports/A100475-replay.json; 349450 Claim_Evidence/evidence/lean-cloud/user-attempt-replay/reports/build-a100475/A100475.log; 349447 Claim_Evidence/evidence/lean-cloud/user-attempt-replay/reports/A100475-source-correspondence.json
+
+Primary/source locators: https://oeis.org/A100475; https://github.com/google-deepmind/formal-conjectures/pull/5567; https://dlmf.nist.gov/27.12#E2

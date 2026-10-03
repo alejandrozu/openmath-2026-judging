@@ -1,0 +1,91 @@
+OPENMATH-UNITARY
+Canonical target: Determine the least worst-case number C(n) of CNOT gates needed to realize every n-qubit unitary exactly, with arbitrary one-qubit gates free. A rigorously uniform constructive upper bound is partial progress.
+D proposal=824/1000; intrinsic=7.8/10
+New local OPDP extension with CFSD1000 formula; one editorial assessor, not the required three-assessor median.
+
+FRONTIER: Matt proposes asymptotic21/48*4^n versus the located published22/48 baseline. The n3 circuit experiments do not prove exact surjectivity for every unitary, and the inductive manuscript is nonrigorous.
+
+INTERACTION: Bridge exact circuit construction, worst-case completeness and uniform induction; numerical synthesis examples are useful experiments only.
+
+PAPER: A methods/experimental note is possible; a new worst-case bound awaits an actual proof and formalized universal construction.
+
+COLLECTIVE: Current formal-only0; no score from the claimed coefficient alone.
+
+CONTRIBUTION MAP
+
+E03-SYNTHESIS / Matt Bowring
+Claimed (21/48)4^n − (3/2)2^n + 2 CNOTs; n=3:18 CX; n=4:90 CX.
+The21/48 formula would improve the2024 constructive22/48 bound, but numerical18-CNOT three-qubit fits do not establish coverage of every unitary. A generic Jacobian rank check gives at most local coverage, and parameters equal to the target dimension do not prove global surjectivity. The contestant acknowledges incomplete rigorous proof and no Lean.
+Novelty: Potential new coefficient if proved. Compare to Krol–Al-Ars2024, not only the older23/48 baseline.
+Formalization: Author acknowledges no Lean and incomplete rigorous proof; numerical circuits and parameter counting cannot establish generic all-n coverage.
+Proposed M3A; p=0; points=0; full review: entries/E03-SYNTHESIS.txt
+
+OPDP INPUTS AND RATIONALE
+{
+  "inputs": {
+    "H": 7,
+    "X": 4,
+    "T": 4,
+    "Vtrue": 6,
+    "Vfalse": 5,
+    "F": 6,
+    "P": 7,
+    "B": 3,
+    "L": 7,
+    "literature": 7,
+    "ambiguity": 2,
+    "context": 1,
+    "horizon": 1,
+    "D": 7.8,
+    "AI": 7.8
+  },
+  "calculation": {
+    "normalized_components": {
+      "ai_relative_core": 0.78,
+      "intrinsic_difficulty": 0.78,
+      "human_resistance": 0.7500000000000001,
+      "inverse_tractability": 0.6,
+      "verification_burden": 0.55,
+      "formalization_burden": 0.6,
+      "prerequisite_load": 0.65,
+      "context_and_ambiguity": 0.69,
+      "tool_constraint": 0.30000000000000004
+    },
+    "weighted_points": {
+      "ai_relative_core": 312.0,
+      "intrinsic_difficulty": 132.6,
+      "human_resistance": 67.50000000000001,
+      "inverse_tractability": 90.0,
+      "verification_burden": 24.750000000000004,
+      "formalization_burden": 21.0,
+      "prerequisite_load": 26.0,
+      "context_and_ambiguity": 27.599999999999998,
+      "tool_constraint": 9.000000000000002
+    },
+    "linear_barrier": 710.45,
+    "transform_exponent": 1.4,
+    "final_value": 824
+  },
+  "intrinsic_factors": {
+    "conceptual_gap": 3,
+    "route_gap": 3,
+    "technical_depth": 3.5,
+    "known_barrier": 3,
+    "search_scale": 3
+  },
+  "axis_rationales": {
+    "intrinsic": "Asymptotic leading-coefficient improvement can be meaningful, but parameter counts, constructive recursion and all-n proof must be rigorous; no formal packet.",
+    "AI": "Statement has specialist analytic/formal dependencies; the dated tool-assisted protocol is an estimate, not an empirical solve run.",
+    "attention": "H/X are historical-effort/exposure priors, not contestant hours. The chosen bands are single-assessor estimates; no labor total was observed.",
+    "tractability": "Known targets use N/A and neutral full-resolution component; otherwise the band is an editorial chance of useful100-hour partial progress, not full resolution.",
+    "verification": "Positive checking uses the stated specialist semantic or analytic argument; a negative/global resolution can have a different burden. No fresh Lean build is claimed.",
+    "formalization": "Statement encoding and libraries require 6/10 burden; this is the target burden, not the quality of a submitted proof.",
+    "prerequisites": "The target needs its Quantum algorithms background; preparation and breadth refer to a prepared researcher, not entrant prestige.",
+    "tools": "Higher L means favorable exact-feedback/search/prover leverage. It does not turn a leaderboard number into a theorem.",
+    "status": "Source-claimed pre-event open target or explicitly parent-linked variation; no independently certified verified_open status invented."
+  },
+  "parent_links": [],
+  "sources": [
+    "https://arxiv.org/abs/2403.13692"
+  ]
+}

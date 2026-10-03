@@ -1,0 +1,1461 @@
+{
+  "$schema": "../schemas/openmath_2026_campaign_state.schema.json",
+  "schema_version": "1.0.0",
+  "record_type": "OPENMATH_2026_CANONICAL_CAMPAIGN_STATE",
+  "campaign_id": "OPENMATH-2026",
+  "canonical_authority": {
+    "repository": "grandchallenge/MATH-PROGRAMME",
+    "path": "governance/openmath_2026_campaign_state.json",
+    "governing_issue": "grandchallenge/MATH-PROGRAMME#1072",
+    "rule": "This is the sole Programme current-state authority for OPENMATH-2026. Domain repositories remain authoritative for their bound artifacts.",
+    "topology": {
+      "lane_model": "SEVEN_FIRST_CLASS_HILLS",
+      "hills": [
+        "OM26-H1",
+        "OM26-H2",
+        "OM26-H3",
+        "OM26-H4",
+        "OM26-H5",
+        "OM26-H6",
+        "OM26-H7"
+      ],
+      "grouped_current_lanes": [],
+      "rule": "Current OPENMATH-2026 authority is seven peer hill lanes. Aggregate H2-H7 labels are historical provenance only."
+    }
+  },
+  "status": "ACTIVE__CONTROL_PLANE_COHERENT",
+  "effective_condition": "protected_merge_of_this_exact_record",
+  "standards": {
+    "core_clarity": {
+      "id": "GCL-CC-00",
+      "version": "0.1.0",
+      "repository": "grandchallenge/gcl-standards",
+      "protected_commit": "6704b4037161133a1efeedddcb69060a79cb7bc7",
+      "standard_blob": "b166204c6204ec96dcbf48c48c8688cca3a4cce4",
+      "admission_blob": "8adca06e54833fa3e37ba82ce4c2facd278f4d76"
+    },
+    "campaign_execution": {
+      "id": "GCL-CEX-01",
+      "version": "0.1.0",
+      "adopted": true
+    },
+    "github_operations": {
+      "id": "GCL-GHOS-00",
+      "version": "0.2.0",
+      "adopted": true
+    },
+    "topology_deprecation": {
+      "id": "CURRENT_TOPOLOGY_NO_H2_H7_GROUPING",
+      "version": "1.0.0",
+      "path": "governance/openmath_2026_deprecated_topology_policy.json",
+      "adopted": true
+    }
+  },
+  "domain_bindings": {
+    "forge": {
+      "repository": "grandchallenge/MATHFORGE",
+      "observed_main": "782b80c8c57d4e77356d8c77c50ee1fffdcd92b8",
+      "artifacts": [
+        {
+          "path": "reports/discovery/openmath_2026/hill_source_locks.json",
+          "git_blob_sha1": "2334bb7e67b5863c2110b6e21b6e47cfd5061d4d"
+        },
+        {
+          "path": "reports/discovery/openmath_2026/SEMANTIC_PACKS.json",
+          "git_blob_sha1": "aaf8aa9b65d2218943b5dc9f3840cb16751a1ef0"
+        },
+        {
+          "path": "reports/discovery/openmath_2026/SEMANTIC_PACK_READBACK.json",
+          "git_blob_sha1": "e3a92514009c04b5d53964fc0dd7c94cecb9f34a"
+        }
+      ]
+    },
+    "solve": {
+      "repository": "grandchallenge/MATHSOLVE",
+      "observed_main": "4d56fb23baf9b5112cd9df79b9c21330cf340f5a",
+      "artifacts": [
+        {
+          "path": "work_packages/OPENMATH_2026/HILL_LANES.json",
+          "git_blob_sha1": "585a53e3e1953b60910819d5fc1cfbe9fca1617e"
+        },
+        {
+          "path": ".gcl/campaigns/OPENMATH-2026/CEX_ASSIGNMENTS.json",
+          "git_blob_sha1": "86397cfcbdbccb35c524bb4b8386136034c67798"
+        },
+        {
+          "path": ".gcl/completions/OM26-CORE-CLARITY-RECONCILE-001/COMPLETION_RECEIPT.json",
+          "git_blob_sha1": "edb7a573640806c38c262186eea8b0bee49cbfdc"
+        },
+        {
+          "path": "work_packages/OPENMATH_2026/OM26_H1_KOBON_TRIANGLES/H1_12_STATUS.json",
+          "git_blob_sha1": "30245084cb79e1200ed6232d87554a6110c64526"
+        },
+        {
+          "path": "work_packages/OPENMATH_2026/OM26_H1_KOBON_TRIANGLES/H1_07_RH_BADER93_REPLAY_RECEIPT.json",
+          "git_blob_sha1": "cc6a593953de2ce523e19e16022dce60e562dc99"
+        },
+        {
+          "path": "work_packages/OPENMATH_2026/OM26_H1_KOBON_TRIANGLES/CLAIM_LEDGER.json",
+          "git_blob_sha1": "4a7a52d635b4d9a87ec47eedd48f65be5fe757f7"
+        },
+        {
+          "path": ".gcl/completions/OM26-H1-H1-12-ADJ-001/COMPLETION_RECEIPT.json",
+          "git_blob_sha1": "e37a5e224702b6cfd187b8752bf787a2cc51d4d0"
+        },
+        {
+          "path": "work_packages/OPENMATH_2026/HISTORICAL_TRANCHE_REGISTRY.json",
+          "git_blob_sha1": "4f35fc50d79d1d276d2e1153dc085f82d4b7c627"
+        },
+        {
+          "path": ".gcl/operations/OM26-SEVEN-HILL-CONSOLIDATION-001/CHECKPOINT.json",
+          "git_blob_sha1": "67220979545f1dd1af007d592a2918cf97591fbe"
+        },
+        {
+          "path": "handoffs/OPENMATH-2026/CEX_TRANSPORT_CONTRACT.md",
+          "git_blob_sha1": "ca7dda9fffcbc8206edd94fb91d2ae7c073892b4"
+        },
+        {
+          "path": ".gcl/completions/OM26-H2-WP01-ADJ-001/COMPLETION_RECEIPT.json",
+          "git_blob_sha1": "1b8a28e49c3c6736cc2ebdb7060bf20280604647"
+        },
+        {
+          "path": ".gcl/completions/OM26-H2-WP02-INSTANTIATE/COMPLETION_RECEIPT.json",
+          "git_blob_sha1": "39cb0dcdd61feae7e075264fe407539d33a8166c"
+        },
+        {
+          "path": ".gcl/completions/OM26-H2-WP02-ADJ-001/COMPLETION_RECEIPT.json",
+          "git_blob_sha1": "7366968340f54eee6b6a1368eab3116c4fb5ef34"
+        },
+        {
+          "path": "contributions/OPENMATH-2026/OM26-H2/WP02/adjudications/OM26-H2-WP02-ADJ-001.json",
+          "git_blob_sha1": "1d87c19cbf99082866b814d4a84f3758812ace95"
+        },
+        {
+          "path": "handoffs/OPENMATH-2026/launch/OM26-H2-WP03.md",
+          "git_blob_sha1": "3e25afafa28b166fee0b7aff70e34fad6d5ce977"
+        },
+        {
+          "path": ".gcl/campaigns/OPENMATH-2026/LIFECYCLE_CONTRACT.json",
+          "git_blob_sha1": "c3f4fc75424210def1ad025e20da36b7fce6257f"
+        },
+        {
+          "path": "contributions/OPENMATH-2026/OM26-H3/WP01/lifecycle/OM26-H3-WP01-IA-001/MANIFEST.json",
+          "git_blob_sha1": "a419c6080ddebdead02d218dce5e1fcea3f77c43"
+        },
+        {
+          "path": "contributions/OPENMATH-2026/OM26-H3/WP01/lifecycle/OM26-H3-WP01-IA-001/PROGRAMME_PROJECTION.json",
+          "git_blob_sha1": "ac00fe4215146dcb030e5af80858be6f886af7b6"
+        },
+        {
+          "path": "contributions/OPENMATH-2026/OM26-H6/WP01/lifecycle/OM26-H6-WP01-IA-001/MANIFEST.json",
+          "git_blob_sha1": "270df5465de01835f93228797a8bbdfa762b7293"
+        },
+        {
+          "path": "contributions/OPENMATH-2026/OM26-H6/WP01/lifecycle/OM26-H6-WP01-IA-001/PROGRAMME_PROJECTION.json",
+          "git_blob_sha1": "17bb9cbca6bfe0d66d4d1962e035b9e4bdc1a1a5"
+        },
+        {
+          "path": "contributions/OPENMATH-2026/OM26-H7/WP01/lifecycle/OM26-H7-WP01-IA-001/MANIFEST.json",
+          "git_blob_sha1": "8e8ac14b8aa61514703320f343d1078e19b8f84c"
+        },
+        {
+          "path": "contributions/OPENMATH-2026/OM26-H7/WP01/lifecycle/OM26-H7-WP01-IA-001/PROGRAMME_PROJECTION.json",
+          "git_blob_sha1": "ee884f82d32edb2fdb849b8c5a685b770422317f"
+        },
+        {
+          "path": "handoffs/OPENMATH-2026/jobs/OM26-H1-WP01-IA-001.md",
+          "git_blob_sha1": "76a5f2820b82923c529f810664dc3b7b796db31d"
+        },
+        {
+          "path": "handoffs/OPENMATH-2026/launch/OM26-H1-WP01.md",
+          "git_blob_sha1": "411ca0c9945058acf92e2118a344928cdb53b9f8"
+        },
+        {
+          "path": "contributions/OPENMATH-2026/OM26-H1/WP01/dispatches/OM26-H1-WP01-IA-001.json",
+          "git_blob_sha1": "bdb7c7cd28b606b78c9398b6ff300f91aa4cd276"
+        },
+        {
+          "path": ".gcl/operations/OM26-H1-WP01-IA-001/OPERATION.json",
+          "git_blob_sha1": "7411137ab4820321dfeae9eb7e6f21c3d6462590"
+        },
+        {
+          "path": "contributions/OPENMATH-2026/OM26-H6/WP02/lifecycle/OM26-H6-WP02-IA-001/MANIFEST.json",
+          "git_blob_sha1": "d5640c2fdbaa2166099ee15d2f41e0442e9b947d"
+        },
+        {
+          "path": "contributions/OPENMATH-2026/OM26-H6/WP02/lifecycle/OM26-H6-WP02-IA-001/PROGRAMME_PROJECTION.json",
+          "git_blob_sha1": "1d9bd80c51499194c6ed39f548e9521098237982"
+        },
+        {
+          "path": "contributions/OPENMATH-2026/OM26-H2/WP03/lifecycle/OM26-H2-WP03-IA-001/MANIFEST.json",
+          "git_blob_sha1": "eb777fb7cbacedf0720459268ee5a41636883c5c"
+        },
+        {
+          "path": "contributions/OPENMATH-2026/OM26-H2/WP03/lifecycle/OM26-H2-WP03-IA-001/PROGRAMME_PROJECTION.json",
+          "git_blob_sha1": "1646170723b9da34e739ce8c6d5d7f0a2fe6f131"
+        },
+        {
+          "path": "contributions/OPENMATH-2026/OM26-H3/WP02/lifecycle/OM26-H3-WP02-IA-001/MANIFEST.json",
+          "git_blob_sha1": "818154a357a032d305d72842519674f1698e1bd6"
+        },
+        {
+          "path": "contributions/OPENMATH-2026/OM26-H3/WP02/lifecycle/OM26-H3-WP02-IA-001/PROGRAMME_PROJECTION.json",
+          "git_blob_sha1": "b9c4f4a24b721a75379ffedd22fa3093bab800a8"
+        },
+        {
+          "path": "contributions/OPENMATH-2026/OM26-H4/WP01/lifecycle/OM26-H4-WP01-IA-001/MANIFEST.json",
+          "git_blob_sha1": "5a0595d5950bbe1aebbf656c6c7402b1e6ed20fe"
+        },
+        {
+          "path": "contributions/OPENMATH-2026/OM26-H4/WP01/lifecycle/OM26-H4-WP01-IA-001/PROGRAMME_PROJECTION.json",
+          "git_blob_sha1": "be810041730b6f49da1008f7f39f1015e0b5520f"
+        },
+        {
+          "path": "contributions/OPENMATH-2026/OM26-H5/WP01/lifecycle/OM26-H5-WP01-IA-001/MANIFEST.json",
+          "git_blob_sha1": "bc9d0559125535b1a285fe6ae13770a4a05e70a0"
+        },
+        {
+          "path": "contributions/OPENMATH-2026/OM26-H5/WP01/lifecycle/OM26-H5-WP01-IA-001/PROGRAMME_PROJECTION.json",
+          "git_blob_sha1": "5a655e7203b9ab39fd70ed1029fbee1390a8b87e"
+        },
+        {
+          "path": "contributions/OPENMATH-2026/OM26-H7/WP02/lifecycle/OM26-H7-WP02-IA-001/MANIFEST.json",
+          "git_blob_sha1": "9991087a0e8d5054c256df3ba7ee37eae8c35d30"
+        },
+        {
+          "path": "contributions/OPENMATH-2026/OM26-H7/WP02/lifecycle/OM26-H7-WP02-IA-001/PROGRAMME_PROJECTION.json",
+          "git_blob_sha1": "207b4032ceafa42116578d3be1fb2998ca7f471b"
+        },
+        {
+          "path": "contributions/OPENMATH-2026/OM26-H1/WP01/lifecycle/OM26-H1-WP01-IA-001/PROGRAMME_PROJECTION.json",
+          "git_blob_sha1": "550c03224b18ab92e6fa70a5a63390a392b53d22"
+        },
+        {
+          "path": "contributions/OPENMATH-2026/OM26-H1/WP01/lifecycle/OM26-H1-WP01-IA-001/MANIFEST.json",
+          "git_blob_sha1": "6254180c3a070c55080fc7eae89a6a138e070a62"
+        },
+        {
+          "path": "ci/validate_openmath_h1_q6_replay.py",
+          "git_blob_sha1": "6e6f51f26ec15f15a1b58bf23c44e777207218a3"
+        },
+        {
+          "path": "work_packages/OPENMATH_2026/OM26_H1_KOBON_TRIANGLES/H1_Q6_INTERNAL_REPLAY_RECEIPT.json",
+          "git_blob_sha1": "3ffbc584ecf62920df7aa0c7c22c46652d8759b7"
+        },
+        {
+          "path": "work_packages/OPENMATH_2026/OM26_H1_KOBON_TRIANGLES/H1_Q6_INTERNAL_REPLAY.md",
+          "git_blob_sha1": "6306dee5bd10fbe129440cb80cd1f128ff8b4828"
+        },
+        {
+          "path": "ci/validate_openmath_h1_geometric_premises.py",
+          "git_blob_sha1": "9ce14a58c4c8e965072b33c4999df403aaeb8102"
+        },
+        {
+          "path": "work_packages/OPENMATH_2026/OM26_H1_KOBON_TRIANGLES/H1_SIX_CORE_PREMISE_PROOF.md",
+          "git_blob_sha1": "6d2e46c0dedd58a88fff58f833a8293a7564aab0"
+        },
+        {
+          "path": "work_packages/OPENMATH_2026/OM26_H1_KOBON_TRIANGLES/H1_SIX_CORE_PREMISE_AUDIT_RECEIPT.json",
+          "git_blob_sha1": "b70f5e6950ce62c300825da694d84cd8b8d9a753"
+        },
+        {
+          "path": "ci/validate_openmath_h1_prism_obstruction.py",
+          "git_blob_sha1": "852285a2371aa1a99cbc54147d9f8e67adbf88f5"
+        },
+        {
+          "path": "work_packages/OPENMATH_2026/OM26_H1_KOBON_TRIANGLES/H1_SATURATED_PRISM_OBSTRUCTION.md",
+          "git_blob_sha1": "a7ebd33dedf942ab4f4003e0118c111c53e09d84"
+        },
+        {
+          "path": "work_packages/OPENMATH_2026/OM26_H1_KOBON_TRIANGLES/H1_SATURATED_PRISM_OBSTRUCTION_RECEIPT.json",
+          "git_blob_sha1": "51af778c78c9758805704a2ce23f562d310ebc93"
+        },
+        {
+          "path": "handoffs/OPENMATH-2026/event-window/ACTIVATION.json",
+          "git_blob_sha1": "5c073fca3a0d53abb5cd420008e9a4dd0e59e51a"
+        },
+        {
+          "path": "ci/openmath_lifecycle_candidate.py",
+          "git_blob_sha1": "d594ba5d9eb0c96b5de207aad9ac24e7379ea6c0"
+        },
+        {
+          "path": "ci/openmath_cex_github_contribution_intake.py",
+          "git_blob_sha1": "bb049f97bd2341571d6e2d4245f4f36f7d4d7dd5"
+        },
+        {
+          "path": "ci/validate_openmath_event_window_activation.py",
+          "git_blob_sha1": "c79a1ac5531c2791d58dc3c218870f37bc3b1e3c"
+        },
+        {
+          "path": "work_packages/OPENMATH_2026/OM26_H7_ERDOS_3/H7_D3_PROOF_RECEIPT.json",
+          "git_blob_sha1": "dd6a58b6e3cb34035665b6c0cb6ac6d2c3338d1e"
+        },
+        {
+          "path": "work_packages/OPENMATH_2026/OM26_H7_ERDOS_3/H7_D4_PROOF_RECEIPT.json",
+          "git_blob_sha1": "7ec3e7bb182b9b275a7d72d8a634f5b5ee7df5b1"
+        },
+        {
+          "path": "work_packages/OPENMATH_2026/OM26_H4_COLLATZ_MODULAR_DESCENT/TARGET_CORRESPONDENCE_AND_STATUS.json",
+          "git_blob_sha1": "eeb2c446af139f97d49084ae70af18ee4efe8fb8"
+        },
+        {
+          "path": "handoffs/OPENMATH-2026/launch/OM26-H1-WP03.md",
+          "git_blob_sha1": "63d8add260ed3ca78c4b941c4f695c4e55cc4a71"
+        },
+        {
+          "path": "handoffs/OPENMATH-2026/jobs/OM26-H1-WP03-IA-001.md",
+          "git_blob_sha1": "4c44eefc7d44ecd9c0ee1d2f3b257f9dd1831afc"
+        },
+        {
+          "path": "contributions/OPENMATH-2026/OM26-H1/WP03/dispatches/OM26-H1-WP03-IA-001.json",
+          "git_blob_sha1": "e2dde01c07391e2afa9587d1465ac51a43b38bb1"
+        },
+        {
+          "path": ".gcl/operations/OM26-H1-WP03-IA-001/OPERATION.json",
+          "git_blob_sha1": "5610759a76cc11e9a65164b480ac0270c3dfc811"
+        },
+        {
+          "path": "handoffs/OPENMATH-2026/launch/OM26-H1-WP30.md",
+          "git_blob_sha1": "a1d7304adbc2c4c90a61e29e1e0fe47adba7dc58"
+        },
+        {
+          "path": "handoffs/OPENMATH-2026/jobs/OM26-H1-WP30-IA-001.md",
+          "git_blob_sha1": "f2e2fd735e693de956ff9c5f6e0dcdaa903176a0"
+        },
+        {
+          "path": "contributions/OPENMATH-2026/OM26-H1/WP30/dispatches/OM26-H1-WP30-IA-001.json",
+          "git_blob_sha1": "4e3edf2901498c9b8a274769f27a692dde1b2cee"
+        },
+        {
+          "path": ".gcl/operations/OM26-H1-WP30-IA-001/OPERATION.json",
+          "git_blob_sha1": "58b77999358bfcf7ee722d35efea11fe05c631c5"
+        },
+        {
+          "path": "handoffs/OPENMATH-2026/launch/OM26-H1-WP60.md",
+          "git_blob_sha1": "18840c4b95b977c6cd79f5a023ac560957b2e4c2"
+        },
+        {
+          "path": "handoffs/OPENMATH-2026/jobs/OM26-H1-WP60-IA-001.md",
+          "git_blob_sha1": "d7e922483de18798c8e337bf2e37eae1f9959eec"
+        },
+        {
+          "path": "contributions/OPENMATH-2026/OM26-H1/WP60/dispatches/OM26-H1-WP60-IA-001.json",
+          "git_blob_sha1": "1b6e471106686528d4b587704fc6b844476a187a"
+        },
+        {
+          "path": ".gcl/operations/OM26-H1-WP60-IA-001/OPERATION.json",
+          "git_blob_sha1": "8b65e9cd09e32e3d33044fbfcccb4b3eed99ae00"
+        },
+        {
+          "path": "handoffs/OPENMATH-2026/launch/OM26-H7-WP04.md",
+          "git_blob_sha1": "033f926ad3a68c08a2ccf7406727ad0cc5937dd2"
+        },
+        {
+          "path": "handoffs/OPENMATH-2026/jobs/OM26-H7-WP04-IA-001.md",
+          "git_blob_sha1": "432a6c0239dd76e8b0b78714b807267885fc0d90"
+        },
+        {
+          "path": "contributions/OPENMATH-2026/OM26-H7/WP04/dispatches/OM26-H7-WP04-IA-001.json",
+          "git_blob_sha1": "e062004811e6943620560a4665c7759be2f7e13a"
+        },
+        {
+          "path": ".gcl/operations/OM26-H7-WP04-IA-001/OPERATION.json",
+          "git_blob_sha1": "8b4b3747d85f3a40129d6f0b58d4d96cb0ae7497"
+        },
+        {
+          "path": "handoffs/OPENMATH-2026/launch/OM26-H4-WP03.md",
+          "git_blob_sha1": "ea80ac9b5ba98988c556bcd45db4b12bedc2b99d"
+        },
+        {
+          "path": "handoffs/OPENMATH-2026/jobs/OM26-H4-WP03-IA-001.md",
+          "git_blob_sha1": "8ec4ddd3a071ee6876c475988cc17efdf942c298"
+        },
+        {
+          "path": "contributions/OPENMATH-2026/OM26-H4/WP03/dispatches/OM26-H4-WP03-IA-001.json",
+          "git_blob_sha1": "42fc34fb1e005bddabd4535d6a3028f469e4d8a2"
+        },
+        {
+          "path": ".gcl/operations/OM26-H4-WP03-IA-001/OPERATION.json",
+          "git_blob_sha1": "d8461978d8cb3bfa4550cea6ee8af73e6b756bfa"
+        },
+        {
+          "path": "handoffs/OPENMATH-2026/launch/OM26-H3-WP04.md",
+          "git_blob_sha1": "1ed4b4eb12d3357466b68292c92e83a07a77e650"
+        },
+        {
+          "path": "handoffs/OPENMATH-2026/jobs/OM26-H3-WP04-IA-001.md",
+          "git_blob_sha1": "1ef9965f0b4937cb7638a1a93efaf34de4fa76d1"
+        },
+        {
+          "path": "contributions/OPENMATH-2026/OM26-H3/WP04/dispatches/OM26-H3-WP04-IA-001.json",
+          "git_blob_sha1": "61b4c5596a1576f2be0c8d7e4e62bf6ae3f993ac"
+        },
+        {
+          "path": ".gcl/operations/OM26-H3-WP04-IA-001/OPERATION.json",
+          "git_blob_sha1": "225c3b4740b439b35f49625660f8e3aac4dc34f3"
+        },
+        {
+          "path": "handoffs/OPENMATH-2026/launch/OM26-H6-WP04.md",
+          "git_blob_sha1": "75253de04267910ef61aa709976c7eda3d0f1593"
+        },
+        {
+          "path": "handoffs/OPENMATH-2026/jobs/OM26-H6-WP04-IA-001.md",
+          "git_blob_sha1": "51f6916d528d423684b1a2a91db5c64d7280ea82"
+        },
+        {
+          "path": "contributions/OPENMATH-2026/OM26-H6/WP04/dispatches/OM26-H6-WP04-IA-001.json",
+          "git_blob_sha1": "31da10cab51950f551fded09938701b1bba92ec6"
+        },
+        {
+          "path": ".gcl/operations/OM26-H6-WP04-IA-001/OPERATION.json",
+          "git_blob_sha1": "83775e24ebf7a87b26a3b739b0283bdb3fd0439e"
+        },
+        {
+          "path": "handoffs/OPENMATH-2026/launch/OM26-H5-WP03.md",
+          "git_blob_sha1": "937d55c8dea08ef57ed568d5a9c0f20086d09631"
+        },
+        {
+          "path": "handoffs/OPENMATH-2026/jobs/OM26-H5-WP03-IA-001.md",
+          "git_blob_sha1": "1090b5e996a3aad4d47e9c9dee723d8b65e5ac23"
+        },
+        {
+          "path": "contributions/OPENMATH-2026/OM26-H5/WP03/dispatches/OM26-H5-WP03-IA-001.json",
+          "git_blob_sha1": "9a02926594b600e5364fbbd12fa15b5ecbff9201"
+        },
+        {
+          "path": ".gcl/operations/OM26-H5-WP03-IA-001/OPERATION.json",
+          "git_blob_sha1": "43021bf250d877a04a7be5b07b6ed98b31ab29b6"
+        },
+        {
+          "path": "handoffs/OPENMATH-2026/launch/OM26-H2-WP05.md",
+          "git_blob_sha1": "ea70d7534f6187993ecb8a23d0d59762a057fa69"
+        },
+        {
+          "path": "handoffs/OPENMATH-2026/jobs/OM26-H2-WP05-IA-001.md",
+          "git_blob_sha1": "63a794231b87a5e220d3a8e8866bc916a2c091e5"
+        },
+        {
+          "path": "contributions/OPENMATH-2026/OM26-H2/WP05/dispatches/OM26-H2-WP05-IA-001.json",
+          "git_blob_sha1": "d17934823cf63dcfca17273579c475a4f8bbc969"
+        },
+        {
+          "path": ".gcl/operations/OM26-H2-WP05-IA-001/OPERATION.json",
+          "git_blob_sha1": "770f2a2f864a0179cdaa95a58090152ec40a820f"
+        },
+        {
+          "path": "contributions/OPENMATH-2026/OM26-H1/WP03/lifecycle/OM26-H1-WP03-IA-001/MANIFEST.json",
+          "git_blob_sha1": "33f7d258149975a871ffdc7b70d3d072e55f43df"
+        },
+        {
+          "path": "contributions/OPENMATH-2026/OM26-H1/WP03/lifecycle/OM26-H1-WP03-IA-001/PROGRAMME_PROJECTION.json",
+          "git_blob_sha1": "2d8a4cc610c1c7104138312c7823b2017c072f23"
+        },
+        {
+          "path": "contributions/OPENMATH-2026/OM26-H7/WP04/lifecycle/OM26-H7-WP04-IA-001/MANIFEST.json",
+          "git_blob_sha1": "1bc06936fbede93ae2f2434a4a95b4a5009da9bc"
+        },
+        {
+          "path": "contributions/OPENMATH-2026/OM26-H7/WP04/lifecycle/OM26-H7-WP04-IA-001/PROGRAMME_PROJECTION.json",
+          "git_blob_sha1": "fc53e82b2832e7d4ce481b5787fc1532fcb73d2b"
+        },
+        {
+          "path": "contributions/OPENMATH-2026/OM26-H2/WP05/lifecycle/OM26-H2-WP05-IA-001/MANIFEST.json",
+          "git_blob_sha1": "fbc28daefbcda086b95b8e13a236822746fc916d"
+        },
+        {
+          "path": "contributions/OPENMATH-2026/OM26-H2/WP05/lifecycle/OM26-H2-WP05-IA-001/PROGRAMME_PROJECTION.json",
+          "git_blob_sha1": "c878b409bed5ae2ee548d028d11733b8015a2a6b"
+        },
+        {
+          "path": "contributions/OPENMATH-2026/OM26-H1/WP60/lifecycle/OM26-H1-WP60-IA-001/MANIFEST.json",
+          "git_blob_sha1": "bfe50df78d8525cafc2bf84371a2912ee32240c2"
+        },
+        {
+          "path": "contributions/OPENMATH-2026/OM26-H1/WP60/lifecycle/OM26-H1-WP60-IA-001/PROGRAMME_PROJECTION.json",
+          "git_blob_sha1": "14b8cf744d3c62771276fbe0d663a776aea0d7e6"
+        },
+        {
+          "path": "contributions/OPENMATH-2026/OM26-H4/WP03/lifecycle/OM26-H4-WP03-IA-001/MANIFEST.json",
+          "git_blob_sha1": "7c04555931b1817f1c4a0f3ef52c1639f0abc0b0"
+        },
+        {
+          "path": "contributions/OPENMATH-2026/OM26-H4/WP03/lifecycle/OM26-H4-WP03-IA-001/PROGRAMME_PROJECTION.json",
+          "git_blob_sha1": "5a2291f12e9efe18b356222a5057b901c5eade16"
+        },
+        {
+          "path": "contributions/OPENMATH-2026/OM26-H1/WP30/lifecycle/OM26-H1-WP30-IA-001/MANIFEST.json",
+          "git_blob_sha1": "280669e6367fa745b3db6950bf6e06497a15ce13"
+        },
+        {
+          "path": "contributions/OPENMATH-2026/OM26-H1/WP30/lifecycle/OM26-H1-WP30-IA-001/PROGRAMME_PROJECTION.json",
+          "git_blob_sha1": "399ca4bc832aaf4225124ba165b5e0c5f33c5b45"
+        },
+        {
+          "path": "contributions/OPENMATH-2026/OM26-H3/WP04/lifecycle/OM26-H3-WP04-IA-001/MANIFEST.json",
+          "git_blob_sha1": "4482379564d829ffaef7f488111a6bf83a10a9a1"
+        },
+        {
+          "path": "contributions/OPENMATH-2026/OM26-H3/WP04/lifecycle/OM26-H3-WP04-IA-001/PROGRAMME_PROJECTION.json",
+          "git_blob_sha1": "c510af6f96a808f298062faedc521d270533a6df"
+        },
+        {
+          "path": "contributions/OPENMATH-2026/OM26-H5/WP03/lifecycle/OM26-H5-WP03-IA-001/MANIFEST.json",
+          "git_blob_sha1": "f393c761c668a6f8a2add59f30522aa5434b9bf2"
+        },
+        {
+          "path": "contributions/OPENMATH-2026/OM26-H5/WP03/lifecycle/OM26-H5-WP03-IA-001/PROGRAMME_PROJECTION.json",
+          "git_blob_sha1": "40a6c98effdcac4c30b9f07d21106bfd024494aa"
+        },
+        {
+          "path": "contributions/OPENMATH-2026/OM26-H6/WP04/lifecycle/OM26-H6-WP04-IA-001/MANIFEST.json",
+          "git_blob_sha1": "16933f21326f06a8c4e47baeef096aed8bb0274b"
+        },
+        {
+          "path": "contributions/OPENMATH-2026/OM26-H6/WP04/lifecycle/OM26-H6-WP04-IA-001/PROGRAMME_PROJECTION.json",
+          "git_blob_sha1": "599c5789aee4a5ad0d4c574bb7688aea71491d52"
+        },
+        {
+          "path": "contributions/OPENMATH-2026/OM26-H1/WP61/lifecycle/OM26-H1-WP61-IA-001/MANIFEST.json",
+          "git_blob_sha1": "a50aa68fc00a2f8abae54e3aad26922c44aaba88"
+        },
+        {
+          "path": "contributions/OPENMATH-2026/OM26-H1/WP61/lifecycle/OM26-H1-WP61-IA-001/PROGRAMME_PROJECTION.json",
+          "git_blob_sha1": "835bda5fc16821233e83994ea61ef8d37b67b7bf"
+        },
+        {
+          "path": "contributions/OPENMATH-2026/OM26-H6/WP05/lifecycle/OM26-H6-WP05-IA-001/MANIFEST.json",
+          "git_blob_sha1": "52eab2af1985a967aca73667c9eeea4399bbfa90"
+        },
+        {
+          "path": "contributions/OPENMATH-2026/OM26-H6/WP05/lifecycle/OM26-H6-WP05-IA-001/PROGRAMME_PROJECTION.json",
+          "git_blob_sha1": "1796dbdd139c0828fe96e787ee42c540369304f2"
+        },
+        {
+          "path": "contributions/OPENMATH-2026/OM26-H1/WP04/lifecycle/OM26-H1-WP04-IA-001/MANIFEST.json",
+          "git_blob_sha1": "2363db6a5fedb974e35c23be61fac3bde8869841"
+        },
+        {
+          "path": "contributions/OPENMATH-2026/OM26-H1/WP04/lifecycle/OM26-H1-WP04-IA-001/PROGRAMME_PROJECTION.json",
+          "git_blob_sha1": "f94b426b848f5cd7a833bed2d00be23e8efdf594"
+        },
+        {
+          "path": "contributions/OPENMATH-2026/OM26-H2/WP06/lifecycle/OM26-H2-WP06-IA-001/MANIFEST.json",
+          "git_blob_sha1": "19f6ade09f7c9bcf459eb393dd18317bc48b6c48"
+        },
+        {
+          "path": "contributions/OPENMATH-2026/OM26-H2/WP06/lifecycle/OM26-H2-WP06-IA-001/PROGRAMME_PROJECTION.json",
+          "git_blob_sha1": "93fe5a742c7e642955fbb5f2c212c8cd136b9839"
+        },
+        {
+          "path": "contributions/OPENMATH-2026/OM26-H4/WP04/lifecycle/OM26-H4-WP04-IA-001/MANIFEST.json",
+          "git_blob_sha1": "d07c6130f9136da2e2f30d939bb6bc22676585e6"
+        },
+        {
+          "path": "contributions/OPENMATH-2026/OM26-H4/WP04/lifecycle/OM26-H4-WP04-IA-001/PROGRAMME_PROJECTION.json",
+          "git_blob_sha1": "4b84349f1ddfca3af4d1d05431e69f4c30b596ce"
+        }
+      ]
+    },
+    "cert": {
+      "repository": "grandchallenge/MATHCERT",
+      "observed_main": "8a2610215989bec15474f0a088945c0a1b6d8172",
+      "artifacts": [
+        {
+          "path": "evidence/openmath_2026/OM26-H1/INTAKE.json",
+          "git_blob_sha1": "dbd2098d3891c9a0c5050993d8a82b736330c5f4"
+        },
+        {
+          "path": "evidence/openmath_2026/OM26-H1/RH_BADER93_INTAKE.json",
+          "git_blob_sha1": "89d406dbdfacb4cf4f4c0b5048218850c1fe4e9a"
+        }
+      ]
+    }
+  },
+  "superseded_current_state_surfaces": [
+    {
+      "path": "governance/openmath_2026_external_state.json",
+      "git_blob_sha1": "d355be89d5ed4c5f1a70dff9d20026451a17c8db",
+      "status": "SUPERSEDED_FOR_CURRENT_STATE",
+      "historical_only": true,
+      "reason": "Bootstrap external-state snapshot predates exact seven-hill source locks, leases, lifecycle recovery, and current competition state."
+    },
+    {
+      "path": "governance/openmath_2026_campaign_binding.json",
+      "git_blob_sha1": "36d89557ba5aab589cdf03b099df1d7778a74267",
+      "status": "SUPERSEDED_FOR_CURRENT_STATE",
+      "historical_only": true,
+      "reason": "Earlier cross-pillar binding predates current Forge release, Solve Core Clarity reconciliation, Agent 001 recovery, and explicit competition lifecycle."
+    }
+  ],
+  "summary": {
+    "hill_count": 7,
+    "source_locked_hills": 7,
+    "solve_released_hills": 7,
+    "external_agents": {
+      "captured_pending_adjudication": 0,
+      "leased_not_launched": 9,
+      "launched_without_return": 0,
+      "accepted": 27
+    },
+    "certification": {
+      "h1": "PENDING_INDEPENDENT_CERT_EXECUTOR",
+      "h2": "NOT_YET_ELIGIBLE",
+      "h3": "NOT_YET_ELIGIBLE",
+      "h4": "NOT_YET_ELIGIBLE",
+      "h5": "NOT_YET_ELIGIBLE",
+      "h6": "NOT_YET_ELIGIBLE",
+      "h7": "NOT_YET_ELIGIBLE",
+      "certified_hills": 0
+    },
+    "competition": {
+      "locally_verified_candidates": 1,
+      "submitted_hills": 0,
+      "accepted_hills": 0,
+      "rule": "No local evaluator, CI, Solve replay, intake, or Cert-pending state is an official competition submission.",
+      "native_registration": {
+        "record_id": "OPENMATH-2026-JIMSTEEG-NATIVE-REGISTRATION-001",
+        "account": "jimsteeg",
+        "source_repository": "grandchallenge/MATHSOLVE",
+        "source_commit": "a0f9dd4d4f268c265502a0284b01be45d38b158e",
+        "workflow_run": 36852787271,
+        "workflow_job": 110338161715,
+        "artifact_id": 11155429268,
+        "state": "FIVE_NATIVE_FIXED_JOBS_QUEUED__SCORING_PAUSED_FOR_BUDGET",
+        "entries": [
+          {
+            "hill": "H1",
+            "hill_id": "alejandrozu/kobon-triangles",
+            "solution_sha256": "e606799ad6c1296deedb475440d1eecbe86daba8a3af625718f55726f93da4d5",
+            "project_id": "e225e313-bc51-4522-9ce1-dd57938b115a",
+            "slug": "gcl-2026-h1-fixed-e606799ad6c1",
+            "url": "https://app.autolab.ai/projects/jimsteeg/gcl-2026-h1-fixed-e606799ad6c1",
+            "project_status": "paused",
+            "hill_version": {
+              "slug": "alejandrozu/kobon-triangles",
+              "tree_hash": "7d3f1d91dcb8be8d0eef20be763557bd6d876707",
+              "commit": "17737195485728d244b0d1f30db55db42df60366"
+            },
+            "stage": "NATIVE_JOB_REGISTERED__OFFICIAL_EVALUATION_PENDING",
+            "job_id": "5c6779f5-5f3d-474c-9cf8-310a0d679efb",
+            "job_status": "queued",
+            "commit_sha": ""
+          },
+          {
+            "hill": "H2",
+            "hill_id": "alejandrozu/busy-beaver-6-certificates",
+            "solution_sha256": "f8eaa4dbcbc3ecb18f8ddd1734cffe0079457ff3e26a51a25e81f3f6e988ead2",
+            "project_id": "e87c5699-911f-479b-83d2-d34e8d0e71de",
+            "slug": "gcl-2026-h2-fixed-f8eaa4dbcbc3",
+            "url": "https://app.autolab.ai/projects/jimsteeg/gcl-2026-h2-fixed-f8eaa4dbcbc3",
+            "project_status": "paused",
+            "hill_version": {
+              "slug": "alejandrozu/busy-beaver-6-certificates",
+              "tree_hash": "86931c1b2f99d69c7bb19598f36739670768fe95",
+              "commit": "dcd25c7a099fbc2d9ba55c5537bb2e767218ffa4"
+            },
+            "stage": "NATIVE_JOB_REGISTERED__OFFICIAL_EVALUATION_PENDING",
+            "job_id": "0469555d-5246-4bbe-ae13-514304defc85",
+            "job_status": "queued",
+            "commit_sha": ""
+          },
+          {
+            "hill": "H4",
+            "hill_id": "alejandrozu/collatz-modular-descent",
+            "solution_sha256": "b14c4804dae95df88ffa7dcef865205edd295e1f2e8c4daeba75333053a6673a",
+            "project_id": "f6ba9e4d-e3f1-412c-a1e9-37ba95675de6",
+            "slug": "gcl-2026-h4-fixed-b14c4804dae9",
+            "url": "https://app.autolab.ai/projects/jimsteeg/gcl-2026-h4-fixed-b14c4804dae9",
+            "project_status": "paused",
+            "hill_version": {
+              "slug": "alejandrozu/collatz-modular-descent",
+              "tree_hash": "7414e19511b2b99954a3898beed545401b79a571",
+              "commit": "ad2b555cf91d7d4250bbdb6f94b30fac07e3d512"
+            },
+            "stage": "NATIVE_JOB_REGISTERED__OFFICIAL_EVALUATION_PENDING",
+            "job_id": "9fbb4512-e7c3-41e7-8e53-06fd887a320d",
+            "job_status": "queued",
+            "commit_sha": ""
+          },
+          {
+            "hill": "H5",
+            "hill_id": "alejandrozu/grothendieck-constant-witnesses",
+            "solution_sha256": "72703ab868d55a460f8adbfdd137afbbdd044a0aea5f2267516c4805b541901e",
+            "project_id": "c6628b21-cda2-4114-84e6-1d747b4893f8",
+            "slug": "gcl-2026-h5-fixed-72703ab868d5",
+            "url": "https://app.autolab.ai/projects/jimsteeg/gcl-2026-h5-fixed-72703ab868d5",
+            "project_status": "paused",
+            "hill_version": {
+              "slug": "alejandrozu/grothendieck-constant-witnesses",
+              "tree_hash": "14a20a4674b3262fd4b93e935da7f660afbd2c11",
+              "commit": "ece3beae9d4a04cc5166503b312d6f8c7ba31050"
+            },
+            "stage": "NATIVE_JOB_REGISTERED__OFFICIAL_EVALUATION_PENDING",
+            "job_id": "db1f326c-a4c0-4ab1-b601-7fa50e8e0c36",
+            "job_status": "queued",
+            "commit_sha": ""
+          },
+          {
+            "hill": "H6",
+            "hill_id": "alejandrozu/matrix-multiplication-tensor-3x3",
+            "solution_sha256": "164aec58e19c2bdd45cddc54c52ab66f5f91f5d0562e875709b1c6eb820ac79f",
+            "project_id": "151bb7d4-656c-46fe-a82f-373a281d0d47",
+            "slug": "gcl-2026-h6-fixed-164aec58e19c",
+            "url": "https://app.autolab.ai/projects/jimsteeg/gcl-2026-h6-fixed-164aec58e19c",
+            "project_status": "paused",
+            "hill_version": {
+              "slug": "alejandrozu/matrix-multiplication-tensor-3x3",
+              "tree_hash": "526770e74b465dbd444049d169e2f373eeb0339d",
+              "commit": "63260ee2b02247200888cb63faf3ada44e6cffeb"
+            },
+            "stage": "NATIVE_JOB_REGISTERED__OFFICIAL_EVALUATION_PENDING",
+            "job_id": "7b8b10f5-6aab-46a3-9b27-0638cd147e56",
+            "job_status": "queued",
+            "commit_sha": ""
+          }
+        ],
+        "h1_execution_probe": {
+          "status_state": "needs_attention",
+          "status_message": "Budget reached",
+          "status_detail": "Per-project LLM spend \\$0.00 reached the \\$0.00 budget cap.",
+          "project_status": "active",
+          "agent_status": "needs_attention",
+          "auto_generate": false
+        },
+        "native_jobs_registered": 5,
+        "official_scored_hills": 0,
+        "organizer_accepted_hills": 0,
+        "blocking_boundary": "FINANCIAL_AUTHORIZATION_REQUIRED__STRICT_ZERO_DOLLAR_LLM_CAP_REACHED",
+        "next_action": "Obtain an explicit AutoLab LLM spending limit. Proposed limit: USD 5 total, at most USD 1 per registered Climb. After authorization, attach a bounded ephemeral CPU runner, disable generated ideas and rented compute, run the five locked candidates, retain official reports, and read back leaderboard acceptance. Do not duplicate the registered jobs.",
+        "H3": "Published seed only; no improved retained candidate ready",
+        "H7": "No compiled complete proof; no proof-hole submission",
+        "claim_boundary": "Native queued jobs are not official scored submissions, independent certification or organizer acceptance. H1 and H6 retain published-prior-work attribution; H5 is a rational CHSH approximation.",
+        "receipt_repository": "grandchallenge/MATHSOLVE",
+        "receipt_path": "work_packages/OPENMATH_2026/OM26_H1_KOBON_TRIANGLES/NATIVE_SUBMISSION_RECEIPT.json",
+        "receipt_commit": "50b88f51032a14aeae5c3969e14dd8c5a8728bac"
+      }
+    },
+    "current_topology": {
+      "lane_model": "SEVEN_FIRST_CLASS_HILLS",
+      "hill_count": 7,
+      "grouped_current_lanes": 0
+    },
+    "historical_tranches": {
+      "H2-H7": {
+        "status": "HISTORICAL_PROVENANCE_ONLY",
+        "current_authority": false
+      }
+    }
+  },
+  "hills": [
+    {
+      "hill_slot": "OM26-H1",
+      "title": "Kobon triangles",
+      "external_hill_id": "alejandrozu/kobon-triangles",
+      "source": {
+        "state": "SOURCE_LOCKED_CONTENT_ADDRESSED",
+        "forge_source_lock_blob": "7a90cd6eeb54e8e4c5b63c5977e40a1ab5bcaa2c",
+        "solve_release": "RESEARCH_AND_CANDIDATE_CONSTRUCTION"
+      },
+      "solve": {
+        "state": "WP05_LEASED_NOT_LAUNCHED",
+        "campaign_best_observed": 93,
+        "best_candidate": "RH_BADER_RECONSTRUCTION_093",
+        "frontier": "Q_GE_6__SOURCE_CONDITIONAL",
+        "frontier_changed_by_agent001": true,
+        "replay_closure": "AUTOMATED_REPLAY_CLOSURE_REQUIRED"
+      },
+      "external_agent": {
+        "assignment_id": "OM26-H1-WP05",
+        "dispatch_id": "OM26-H1-WP05-IA-001",
+        "agent_ref": "INDEPENDENT-AGENT-105",
+        "issue_number": 641,
+        "lifecycle": "LEASED_NOT_LAUNCHED",
+        "launch_evidence": null,
+        "return_evidence": null,
+        "adjudication": "NOT_STARTED",
+        "predecessor": {
+          "assignment_id": "OM26-H1-WP04",
+          "agent_ref": "INDEPENDENT-AGENT-104",
+          "issue_number": 607,
+          "lifecycle": "ACCEPTED",
+          "adjudication": "ACCEPTED_EVIDENCE_WITHOUT_CLAIM_PROMOTION",
+          "accepted_claims": [],
+          "predecessor": {
+            "assignment_id": "OM26-H1-WP03",
+            "agent_ref": "INDEPENDENT-AGENT-103",
+            "issue_number": 597,
+            "lifecycle": "ACCEPTED",
+            "adjudication": "ACCEPTED_EVIDENCE_WITHOUT_CLAIM_PROMOTION",
+            "accepted_claims": [],
+            "predecessor": {
+              "assignment_id": "OM26-H1-WP02",
+              "dispatch_id": "OM26-H1-WP02-IA-001",
+              "agent_ref": "INDEPENDENT-AGENT-102",
+              "issue_number": 563,
+              "lifecycle": "SUPERSEDED",
+              "launch_evidence": null,
+              "return_evidence": null,
+              "adjudication": "NOT_APPLICABLE_UNLAUNCHED_TASK_REPLACED",
+              "predecessor": {
+                "assignment_id": "OM26-H1-WP01",
+                "agent_ref": "INDEPENDENT-AGENT-101",
+                "issue_number": 553,
+                "lifecycle": "ACCEPTED",
+                "adjudication": "ACCEPTED_EVIDENCE_WITHOUT_CLAIM_PROMOTION",
+                "accepted_claims": [],
+                "predecessor": {
+                  "assignment_id": "OM26-H1-H1-12",
+                  "dispatch_id": "OM26-H1-H1-12-IA-001",
+                  "agent_ref": "INDEPENDENT-AGENT-001",
+                  "issue_number": 498,
+                  "lifecycle": "ACCEPTED",
+                  "return_comment_id": 5881108260,
+                  "capture_state": "CAPTURED_RECOVERED_ADJUDICATED",
+                  "adjudication": "ACCEPTED_SOURCE_CONDITIONAL_REDUCTION",
+                  "accepted_claim": "OM26-H1-RED-023",
+                  "adjudication_operation": "OM26-H1-H1-12-ADJ-001"
+                }
+              },
+              "accepted_claims": [],
+              "superseded_by": "OM26-H1-WP03"
+            }
+          }
+        }
+      },
+      "cert": {
+        "state": "ADMITTED_PENDING_INDEPENDENT_CERT_EXECUTOR",
+        "certification_effect": false,
+        "targets": [
+          "OM26-H1-THM-001",
+          "OM26-H1-CON-001",
+          "OM26-H1-CON-002"
+        ]
+      },
+      "competition": {
+        "lifecycle": "CERT_PENDING",
+        "candidate": "RH_BADER_RECONSTRUCTION_093",
+        "local_score": 93,
+        "local_verification": "PASS",
+        "public_evaluator_replay": "PASS__UNOFFICIAL_LOCAL_SCORE",
+        "official_submission": "NOT_SUBMITTED",
+        "official_acceptance": "NONE",
+        "native_job": {
+          "project_id": "e225e313-bc51-4522-9ce1-dd57938b115a",
+          "slug": "gcl-2026-h1-fixed-e606799ad6c1",
+          "job_id": "5c6779f5-5f3d-474c-9cf8-310a0d679efb",
+          "job_status": "queued",
+          "solution_sha256": "e606799ad6c1296deedb475440d1eecbe86daba8a3af625718f55726f93da4d5",
+          "hill_version": {
+            "slug": "alejandrozu/kobon-triangles",
+            "tree_hash": "7d3f1d91dcb8be8d0eef20be763557bd6d876707",
+            "commit": "17737195485728d244b0d1f30db55db42df60366"
+          }
+        }
+      },
+      "next_action": "RECEIVE_VOLUNTARY_RETURN__OM26-H1-WP05__IMMUTABLE_LINK_IN_RELAY_OUT",
+      "topology_role": "FIRST_CLASS_HILL_LANE",
+      "supporting_agents": {
+        "H1-Q6": {
+          "assignment_id": "OM26-H1-WP31",
+          "dispatch_id": "OM26-H1-WP31-IA-001",
+          "agent_ref": "INDEPENDENT-AGENT-131",
+          "issue_number": 608,
+          "lifecycle": "LEASED_NOT_LAUNCHED",
+          "launch_evidence": null,
+          "return_evidence": null,
+          "adjudication": "NOT_STARTED",
+          "predecessor": {
+            "assignment_id": "OM26-H1-WP30",
+            "agent_ref": "INDEPENDENT-AGENT-130",
+            "issue_number": 598,
+            "lifecycle": "ACCEPTED",
+            "adjudication": "ACCEPTED_EVIDENCE_WITHOUT_CLAIM_PROMOTION",
+            "accepted_claims": [],
+            "predecessor": null
+          }
+        },
+        "H1-ADVERSARY": {
+          "assignment_id": "OM26-H1-WP62",
+          "dispatch_id": "OM26-H1-WP62-IA-001",
+          "agent_ref": "INDEPENDENT-AGENT-162",
+          "issue_number": 632,
+          "lifecycle": "LEASED_NOT_LAUNCHED",
+          "launch_evidence": null,
+          "return_evidence": null,
+          "adjudication": "NOT_STARTED",
+          "predecessor": {
+            "assignment_id": "OM26-H1-WP61",
+            "agent_ref": "INDEPENDENT-AGENT-161",
+            "issue_number": 620,
+            "lifecycle": "ACCEPTED",
+            "adjudication": "ACCEPTED_EVIDENCE_WITHOUT_CLAIM_PROMOTION",
+            "accepted_claims": [],
+            "predecessor": {
+              "assignment_id": "OM26-H1-WP60",
+              "agent_ref": "INDEPENDENT-AGENT-160",
+              "issue_number": 599,
+              "lifecycle": "ACCEPTED",
+              "adjudication": "ACCEPTED_EVIDENCE_WITHOUT_CLAIM_PROMOTION",
+              "accepted_claims": [],
+              "predecessor": null
+            }
+          }
+        }
+      }
+    },
+    {
+      "hill_slot": "OM26-H2",
+      "title": "Busy Beaver 6 certificates",
+      "external_hill_id": "alejandrozu/busy-beaver-6-certificates",
+      "source": {
+        "state": "SOURCE_LOCKED_SLOT_BOUND__SEMANTIC_PACK_PROTECTED__SOLVE_RELEASED",
+        "forge_source_lock_blob": "d590cf562f562a81df64d403ff5d9aa01e25626c",
+        "solve_release": "DECOMPOSITION_AND_BOUNDED_RESEARCH"
+      },
+      "solve": {
+        "state": "WP07_LEASED_NOT_LAUNCHED",
+        "predecessor_wp01": "ACCEPTED_SCORER_CONCORDANCE_WITH_SEARCH_NARROWING",
+        "predecessor_wp02": "ACCEPTED_WITNESSES_WITH_EXACT_SEARCH_REPLAY_REJECTED",
+        "accepted_witnesses": [
+          {
+            "steps": 89911,
+            "ones": 185,
+            "tape_span": 541
+          },
+          {
+            "steps": 8021,
+            "ones": 41,
+            "tape_span": 122,
+            "first_write": 0
+          }
+        ],
+        "frontier": "AUTOMATED_REPLAY_CLOSURE_REQUIRED",
+        "replay_closure": "AUTOMATED_REPLAY_CLOSURE_REQUIRED"
+      },
+      "external_agent": {
+        "assignment_id": "OM26-H2-WP07",
+        "dispatch_id": "OM26-H2-WP07-IA-001",
+        "agent_ref": "INDEPENDENT-AGENT-207",
+        "issue_number": 630,
+        "lifecycle": "LEASED_NOT_LAUNCHED",
+        "launch_evidence": null,
+        "return_evidence": null,
+        "adjudication": "NOT_STARTED",
+        "predecessor": {
+          "assignment_id": "OM26-H2-WP06",
+          "agent_ref": "INDEPENDENT-AGENT-206",
+          "issue_number": 614,
+          "lifecycle": "ACCEPTED",
+          "adjudication": "ACCEPTED_EVIDENCE_WITHOUT_CLAIM_PROMOTION",
+          "accepted_claims": [],
+          "predecessor": {
+            "assignment_id": "OM26-H2-WP05",
+            "agent_ref": "INDEPENDENT-AGENT-205",
+            "issue_number": 605,
+            "lifecycle": "ACCEPTED",
+            "adjudication": "ACCEPTED_EVIDENCE_WITHOUT_CLAIM_PROMOTION",
+            "accepted_claims": [],
+            "predecessor": {
+              "assignment_id": "OM26-H2-WP04",
+              "dispatch_id": "OM26-H2-WP04-IA-001",
+              "agent_ref": "INDEPENDENT-AGENT-204",
+              "issue_number": 561,
+              "lifecycle": "SUPERSEDED",
+              "launch_evidence": null,
+              "return_evidence": null,
+              "adjudication": "NOT_APPLICABLE_UNLAUNCHED_TASK_REPLACED",
+              "predecessor": {
+                "assignment_id": "OM26-H2-WP03",
+                "agent_ref": "INDEPENDENT-AGENT-009",
+                "issue_number": 537,
+                "lifecycle": "ACCEPTED",
+                "adjudication": "ACCEPTED_EVIDENCE_WITHOUT_CLAIM_PROMOTION",
+                "accepted_claims": []
+              },
+              "accepted_claims": [],
+              "superseded_by": "OM26-H2-WP05"
+            }
+          }
+        }
+      },
+      "cert": {
+        "state": "NOT_YET_ELIGIBLE",
+        "certification_effect": false
+      },
+      "competition": {
+        "lifecycle": "NO_PROMOTED_CANDIDATE",
+        "candidate": null,
+        "verified_solve_witnesses": 2,
+        "official_submission": "NOT_SUBMITTED",
+        "official_acceptance": "NONE",
+        "native_job": {
+          "project_id": "e87c5699-911f-479b-83d2-d34e8d0e71de",
+          "slug": "gcl-2026-h2-fixed-f8eaa4dbcbc3",
+          "job_id": "0469555d-5246-4bbe-ae13-514304defc85",
+          "job_status": "queued",
+          "solution_sha256": "f8eaa4dbcbc3ecb18f8ddd1734cffe0079457ff3e26a51a25e81f3f6e988ead2",
+          "hill_version": {
+            "slug": "alejandrozu/busy-beaver-6-certificates",
+            "tree_hash": "86931c1b2f99d69c7bb19598f36739670768fe95",
+            "commit": "dcd25c7a099fbc2d9ba55c5537bb2e767218ffa4"
+          }
+        }
+      },
+      "next_action": "RECEIVE_VOLUNTARY_RETURN__OM26-H2-WP07__IMMUTABLE_LINK_IN_RELAY_OUT",
+      "topology_role": "FIRST_CLASS_HILL_LANE"
+    },
+    {
+      "hill_slot": "OM26-H3",
+      "title": "Clique-cluster Ramsey multiplicity",
+      "external_hill_id": "alejandrozu/clique-cluster-ramsey-multiplicity",
+      "source": {
+        "state": "SOURCE_LOCKED_SLOT_BOUND__SEMANTIC_PACK_PROTECTED__SOLVE_RELEASED",
+        "forge_source_lock_blob": "11d2a15fac721495bc0cc9b7f638a364ad55a719",
+        "solve_release": "DECOMPOSITION_AND_BOUNDED_RESEARCH"
+      },
+      "solve": {
+        "state": "WP05_LEASED_NOT_LAUNCHED",
+        "frontier": "AUTOMATED_REPLAY_CLOSURE_REQUIRED",
+        "replay_closure": "AUTOMATED_REPLAY_CLOSURE_REQUIRED"
+      },
+      "external_agent": {
+        "assignment_id": "OM26-H3-WP05",
+        "dispatch_id": "OM26-H3-WP05-IA-001",
+        "agent_ref": "INDEPENDENT-AGENT-305",
+        "issue_number": 613,
+        "lifecycle": "LEASED_NOT_LAUNCHED",
+        "launch_evidence": null,
+        "return_evidence": null,
+        "adjudication": "NOT_STARTED",
+        "predecessor": {
+          "assignment_id": "OM26-H3-WP04",
+          "agent_ref": "INDEPENDENT-AGENT-304",
+          "issue_number": 602,
+          "lifecycle": "ACCEPTED",
+          "adjudication": "ACCEPTED_EVIDENCE_WITHOUT_CLAIM_PROMOTION",
+          "accepted_claims": [],
+          "predecessor": {
+            "assignment_id": "OM26-H3-WP03",
+            "dispatch_id": "OM26-H3-WP03-IA-001",
+            "agent_ref": "INDEPENDENT-AGENT-303",
+            "issue_number": 562,
+            "lifecycle": "SUPERSEDED",
+            "launch_evidence": null,
+            "return_evidence": null,
+            "adjudication": "NOT_APPLICABLE_UNLAUNCHED_TASK_REPLACED",
+            "predecessor": {
+              "assignment_id": "OM26-H3-WP02",
+              "agent_ref": "INDEPENDENT-AGENT-302",
+              "issue_number": 545,
+              "lifecycle": "ACCEPTED",
+              "adjudication": "ACCEPTED_EVIDENCE_WITHOUT_CLAIM_PROMOTION",
+              "accepted_claims": []
+            },
+            "accepted_claims": [],
+            "superseded_by": "OM26-H3-WP04"
+          }
+        }
+      },
+      "cert": {
+        "state": "NOT_YET_ELIGIBLE",
+        "certification_effect": false
+      },
+      "competition": {
+        "lifecycle": "NO_CANDIDATE",
+        "candidate": null,
+        "official_submission": "NOT_SUBMITTED",
+        "official_acceptance": "NONE"
+      },
+      "next_action": "RECEIVE_VOLUNTARY_RETURN__OM26-H3-WP05__IMMUTABLE_LINK_IN_RELAY_OUT",
+      "topology_role": "FIRST_CLASS_HILL_LANE"
+    },
+    {
+      "hill_slot": "OM26-H4",
+      "title": "Collatz modular descent",
+      "external_hill_id": "alejandrozu/collatz-modular-descent",
+      "source": {
+        "state": "SOURCE_LOCKED_SLOT_BOUND__SEMANTIC_PACK_PROTECTED__SOLVE_RELEASED",
+        "forge_source_lock_blob": "4ec9e0cdad3bc572b4577809d0323f9c670a379c",
+        "solve_release": "DECOMPOSITION_AND_BOUNDED_RESEARCH"
+      },
+      "solve": {
+        "state": "WP05_LEASED_NOT_LAUNCHED",
+        "frontier": "AUTOMATED_REPLAY_CLOSURE_REQUIRED",
+        "replay_closure": "AUTOMATED_REPLAY_CLOSURE_REQUIRED"
+      },
+      "external_agent": {
+        "assignment_id": "OM26-H4-WP05",
+        "dispatch_id": "OM26-H4-WP05-IA-001",
+        "agent_ref": "INDEPENDENT-AGENT-405",
+        "issue_number": 631,
+        "lifecycle": "LEASED_NOT_LAUNCHED",
+        "launch_evidence": null,
+        "return_evidence": null,
+        "adjudication": "NOT_STARTED",
+        "predecessor": {
+          "assignment_id": "OM26-H4-WP04",
+          "agent_ref": "INDEPENDENT-AGENT-404",
+          "issue_number": 615,
+          "lifecycle": "ACCEPTED",
+          "adjudication": "ACCEPTED_EVIDENCE_WITHOUT_CLAIM_PROMOTION",
+          "accepted_claims": [],
+          "predecessor": {
+            "assignment_id": "OM26-H4-WP03",
+            "agent_ref": "INDEPENDENT-AGENT-403",
+            "issue_number": 601,
+            "lifecycle": "ACCEPTED",
+            "adjudication": "ACCEPTED_EVIDENCE_WITHOUT_CLAIM_PROMOTION",
+            "accepted_claims": [],
+            "predecessor": {
+              "assignment_id": "OM26-H4-WP02",
+              "dispatch_id": "OM26-H4-WP02-IA-001",
+              "agent_ref": "INDEPENDENT-AGENT-402",
+              "issue_number": 559,
+              "lifecycle": "SUPERSEDED",
+              "launch_evidence": null,
+              "return_evidence": null,
+              "adjudication": "NOT_APPLICABLE_UNLAUNCHED_TASK_REPLACED",
+              "predecessor": {
+                "assignment_id": "OM26-H4-WP01",
+                "agent_ref": "INDEPENDENT-AGENT-004",
+                "issue_number": 507,
+                "lifecycle": "ACCEPTED",
+                "adjudication": "ACCEPTED_EVIDENCE_WITHOUT_CLAIM_PROMOTION",
+                "accepted_claims": []
+              },
+              "accepted_claims": [],
+              "superseded_by": "OM26-H4-WP03"
+            }
+          }
+        }
+      },
+      "cert": {
+        "state": "NOT_YET_ELIGIBLE",
+        "certification_effect": false
+      },
+      "competition": {
+        "lifecycle": "NO_CANDIDATE",
+        "candidate": null,
+        "official_submission": "NOT_SUBMITTED",
+        "official_acceptance": "NONE",
+        "native_job": {
+          "project_id": "f6ba9e4d-e3f1-412c-a1e9-37ba95675de6",
+          "slug": "gcl-2026-h4-fixed-b14c4804dae9",
+          "job_id": "9fbb4512-e7c3-41e7-8e53-06fd887a320d",
+          "job_status": "queued",
+          "solution_sha256": "b14c4804dae95df88ffa7dcef865205edd295e1f2e8c4daeba75333053a6673a",
+          "hill_version": {
+            "slug": "alejandrozu/collatz-modular-descent",
+            "tree_hash": "7414e19511b2b99954a3898beed545401b79a571",
+            "commit": "ad2b555cf91d7d4250bbdb6f94b30fac07e3d512"
+          }
+        }
+      },
+      "next_action": "RECEIVE_VOLUNTARY_RETURN__OM26-H4-WP05__IMMUTABLE_LINK_IN_RELAY_OUT",
+      "topology_role": "FIRST_CLASS_HILL_LANE"
+    },
+    {
+      "hill_slot": "OM26-H5",
+      "title": "Grothendieck constant witnesses",
+      "external_hill_id": "alejandrozu/grothendieck-constant-witnesses",
+      "source": {
+        "state": "SOURCE_LOCKED_SLOT_BOUND__SEMANTIC_PACK_PROTECTED__SOLVE_RELEASED",
+        "forge_source_lock_blob": "c5c72c4b00fdf1d12eafa6673ed0752a76d66a26",
+        "solve_release": "DECOMPOSITION_AND_BOUNDED_RESEARCH"
+      },
+      "solve": {
+        "state": "WP04_LEASED_NOT_LAUNCHED",
+        "frontier": "AUTOMATED_REPLAY_CLOSURE_REQUIRED",
+        "replay_closure": "AUTOMATED_REPLAY_CLOSURE_REQUIRED"
+      },
+      "external_agent": {
+        "assignment_id": "OM26-H5-WP04",
+        "dispatch_id": "OM26-H5-WP04-IA-001",
+        "agent_ref": "INDEPENDENT-AGENT-504",
+        "issue_number": 616,
+        "lifecycle": "LEASED_NOT_LAUNCHED",
+        "launch_evidence": null,
+        "return_evidence": null,
+        "adjudication": "NOT_STARTED",
+        "predecessor": {
+          "assignment_id": "OM26-H5-WP03",
+          "agent_ref": "INDEPENDENT-AGENT-503",
+          "issue_number": 604,
+          "lifecycle": "ACCEPTED",
+          "adjudication": "ACCEPTED_EVIDENCE_WITHOUT_CLAIM_PROMOTION",
+          "accepted_claims": [],
+          "predecessor": {
+            "assignment_id": "OM26-H5-WP02",
+            "dispatch_id": "OM26-H5-WP02-IA-001",
+            "agent_ref": "INDEPENDENT-AGENT-502",
+            "issue_number": 560,
+            "lifecycle": "SUPERSEDED",
+            "launch_evidence": null,
+            "return_evidence": null,
+            "adjudication": "NOT_APPLICABLE_UNLAUNCHED_TASK_REPLACED",
+            "predecessor": {
+              "assignment_id": "OM26-H5-WP01",
+              "agent_ref": "INDEPENDENT-AGENT-005",
+              "issue_number": 508,
+              "lifecycle": "ACCEPTED",
+              "adjudication": "ACCEPTED_EVIDENCE_WITHOUT_CLAIM_PROMOTION",
+              "accepted_claims": []
+            },
+            "accepted_claims": [],
+            "superseded_by": "OM26-H5-WP03"
+          }
+        }
+      },
+      "cert": {
+        "state": "NOT_YET_ELIGIBLE",
+        "certification_effect": false
+      },
+      "competition": {
+        "lifecycle": "NO_CANDIDATE",
+        "candidate": null,
+        "official_submission": "NOT_SUBMITTED",
+        "official_acceptance": "NONE",
+        "native_job": {
+          "project_id": "c6628b21-cda2-4114-84e6-1d747b4893f8",
+          "slug": "gcl-2026-h5-fixed-72703ab868d5",
+          "job_id": "db1f326c-a4c0-4ab1-b601-7fa50e8e0c36",
+          "job_status": "queued",
+          "solution_sha256": "72703ab868d55a460f8adbfdd137afbbdd044a0aea5f2267516c4805b541901e",
+          "hill_version": {
+            "slug": "alejandrozu/grothendieck-constant-witnesses",
+            "tree_hash": "14a20a4674b3262fd4b93e935da7f660afbd2c11",
+            "commit": "ece3beae9d4a04cc5166503b312d6f8c7ba31050"
+          }
+        }
+      },
+      "next_action": "RECEIVE_VOLUNTARY_RETURN__OM26-H5-WP04__IMMUTABLE_LINK_IN_RELAY_OUT",
+      "topology_role": "FIRST_CLASS_HILL_LANE"
+    },
+    {
+      "hill_slot": "OM26-H6",
+      "title": "3x3 matrix multiplication tensor",
+      "external_hill_id": "alejandrozu/matrix-multiplication-tensor-3x3",
+      "source": {
+        "state": "SOURCE_LOCKED_SLOT_BOUND__SEMANTIC_PACK_PROTECTED__SOLVE_RELEASED",
+        "forge_source_lock_blob": "a7ec3fc86696698ba729632ae16397e05189221b",
+        "solve_release": "DECOMPOSITION_AND_BOUNDED_RESEARCH"
+      },
+      "solve": {
+        "state": "WP06_LEASED_NOT_LAUNCHED",
+        "frontier": "AUTOMATED_REPLAY_CLOSURE_REQUIRED",
+        "replay_closure": "AUTOMATED_REPLAY_CLOSURE_REQUIRED"
+      },
+      "external_agent": {
+        "assignment_id": "OM26-H6-WP06",
+        "dispatch_id": "OM26-H6-WP06-IA-001",
+        "agent_ref": "INDEPENDENT-AGENT-606",
+        "issue_number": 633,
+        "lifecycle": "LEASED_NOT_LAUNCHED",
+        "launch_evidence": null,
+        "return_evidence": null,
+        "adjudication": "NOT_STARTED",
+        "predecessor": {
+          "assignment_id": "OM26-H6-WP05",
+          "agent_ref": "INDEPENDENT-AGENT-605",
+          "issue_number": 618,
+          "lifecycle": "ACCEPTED",
+          "adjudication": "ACCEPTED_EVIDENCE_WITHOUT_CLAIM_PROMOTION",
+          "accepted_claims": [],
+          "predecessor": {
+            "assignment_id": "OM26-H6-WP04",
+            "agent_ref": "INDEPENDENT-AGENT-604",
+            "issue_number": 603,
+            "lifecycle": "ACCEPTED",
+            "adjudication": "ACCEPTED_EVIDENCE_WITHOUT_CLAIM_PROMOTION",
+            "accepted_claims": [],
+            "predecessor": {
+              "assignment_id": "OM26-H6-WP03",
+              "dispatch_id": "OM26-H6-WP03-IA-001",
+              "agent_ref": "INDEPENDENT-AGENT-603",
+              "issue_number": 556,
+              "lifecycle": "SUPERSEDED",
+              "launch_evidence": null,
+              "return_evidence": null,
+              "adjudication": "NOT_APPLICABLE_UNLAUNCHED_TASK_REPLACED",
+              "predecessor": {
+                "assignment_id": "OM26-H6-WP02",
+                "agent_ref": "INDEPENDENT-AGENT-602",
+                "issue_number": 548,
+                "lifecycle": "ACCEPTED",
+                "adjudication": "ACCEPTED_EVIDENCE_WITHOUT_CLAIM_PROMOTION",
+                "accepted_claims": []
+              },
+              "accepted_claims": [],
+              "superseded_by": "OM26-H6-WP04"
+            }
+          }
+        }
+      },
+      "cert": {
+        "state": "NOT_YET_ELIGIBLE",
+        "certification_effect": false
+      },
+      "competition": {
+        "lifecycle": "NO_CANDIDATE",
+        "candidate": null,
+        "official_submission": "NOT_SUBMITTED",
+        "official_acceptance": "NONE",
+        "native_job": {
+          "project_id": "151bb7d4-656c-46fe-a82f-373a281d0d47",
+          "slug": "gcl-2026-h6-fixed-164aec58e19c",
+          "job_id": "7b8b10f5-6aab-46a3-9b27-0638cd147e56",
+          "job_status": "queued",
+          "solution_sha256": "164aec58e19c2bdd45cddc54c52ab66f5f91f5d0562e875709b1c6eb820ac79f",
+          "hill_version": {
+            "slug": "alejandrozu/matrix-multiplication-tensor-3x3",
+            "tree_hash": "526770e74b465dbd444049d169e2f373eeb0339d",
+            "commit": "63260ee2b02247200888cb63faf3ada44e6cffeb"
+          }
+        }
+      },
+      "next_action": "RECEIVE_VOLUNTARY_RETURN__OM26-H6-WP06__IMMUTABLE_LINK_IN_RELAY_OUT",
+      "topology_role": "FIRST_CLASS_HILL_LANE"
+    },
+    {
+      "hill_slot": "OM26-H7",
+      "title": "Erdős Problem 3",
+      "external_hill_id": "ottogin/erdos-3",
+      "source": {
+        "state": "SOURCE_LOCKED_SLOT_BOUND__SEMANTIC_PACK_PROTECTED__SOLVE_RELEASED",
+        "forge_source_lock_blob": "2e3551cf7be57f1920382296bbb0d6ebea4379d6",
+        "solve_release": "DECOMPOSITION_AND_BOUNDED_RESEARCH"
+      },
+      "solve": {
+        "state": "WP05_LEASED_NOT_LAUNCHED",
+        "frontier": "AUTOMATED_REPLAY_CLOSURE_REQUIRED",
+        "replay_closure": "AUTOMATED_REPLAY_CLOSURE_REQUIRED"
+      },
+      "external_agent": {
+        "assignment_id": "OM26-H7-WP05",
+        "dispatch_id": "OM26-H7-WP05-IA-001",
+        "agent_ref": "INDEPENDENT-AGENT-705",
+        "issue_number": 610,
+        "lifecycle": "LEASED_NOT_LAUNCHED",
+        "launch_evidence": null,
+        "return_evidence": null,
+        "adjudication": "NOT_STARTED",
+        "predecessor": {
+          "assignment_id": "OM26-H7-WP04",
+          "agent_ref": "INDEPENDENT-AGENT-704",
+          "issue_number": 600,
+          "lifecycle": "ACCEPTED",
+          "adjudication": "ACCEPTED_EVIDENCE_WITHOUT_CLAIM_PROMOTION",
+          "accepted_claims": [],
+          "predecessor": {
+            "assignment_id": "OM26-H7-WP03",
+            "dispatch_id": "OM26-H7-WP03-IA-001",
+            "agent_ref": "INDEPENDENT-AGENT-703",
+            "issue_number": 557,
+            "lifecycle": "SUPERSEDED",
+            "launch_evidence": null,
+            "return_evidence": null,
+            "adjudication": "NOT_APPLICABLE_UNLAUNCHED_TASK_REPLACED",
+            "predecessor": {
+              "assignment_id": "OM26-H7-WP02",
+              "agent_ref": "INDEPENDENT-AGENT-702",
+              "issue_number": 551,
+              "lifecycle": "ACCEPTED",
+              "adjudication": "ACCEPTED_EVIDENCE_WITHOUT_CLAIM_PROMOTION",
+              "accepted_claims": []
+            },
+            "accepted_claims": [],
+            "superseded_by": "OM26-H7-WP04"
+          }
+        }
+      },
+      "cert": {
+        "state": "NOT_YET_ELIGIBLE",
+        "certification_effect": false
+      },
+      "competition": {
+        "lifecycle": "NO_CANDIDATE",
+        "candidate": null,
+        "official_submission": "NOT_SUBMITTED",
+        "official_acceptance": "NONE"
+      },
+      "next_action": "RECEIVE_VOLUNTARY_RETURN__OM26-H7-WP05__IMMUTABLE_LINK_IN_RELAY_OUT",
+      "topology_role": "FIRST_CLASS_HILL_LANE"
+    }
+  ],
+  "next_action": {
+    "id": "event_window_new_mathematics_first",
+    "selection_rule": "Publish distinct protected tasks for voluntary participants; allocate compute in mathematical priority order, not to keep every hill busy.",
+    "currently_selected": [
+      "OM26-H1",
+      "OM26-H2",
+      "OM26-H3",
+      "OM26-H4",
+      "OM26-H5",
+      "OM26-H6",
+      "OM26-H7"
+    ],
+    "description": "Maximize defensible event-window contributions. Execute H1 premise closure and the remaining q>=6 attack, with H7 as the parallel formal lane; use bounded delta gates for lower-priority hills.",
+    "completion_test": "Every eligible return reaches durable capture and protected advancement; mathematical promotion requires exact replay/formal checking, novelty review and a Section 8 update.",
+    "research_direction": {
+      "objective": "Produce stronger exact constructions, reductions, proofs or falsifications on seven peer hills through Forge → Solve → Cert.",
+      "agenda": "docs/campaigns/OPENMATH_2026_RESEARCH_AGENDA.md",
+      "infrastructure_disposition": "Baseline unattended acceptance is protected; operate the existing intake and repair demonstrated failures. Outside participation is voluntary and is not a gate on internal research.",
+      "internal_priority": "H1: independently discharge or replace remaining source-scoped geometric premises, then attack q>=6; first finite stratum is 333335 at D2=7. H7 runs as the parallel formal lane.",
+      "parallel_cert_target": "MATHCERT #345: fresh non-authoring exact replay of OM26-H1-CON-002 (93-triangle construction). This does not certify the six-core upper-bound premises.",
+      "public_assignment_policy": "Nine distinct tasks are registered: seven primary lanes and two supporting H1 slots. Old unlaunched replay-only assignments are superseded; no worker launch or claim promotion is inferred.",
+      "claim_boundary": "Internal finite replay is bounded evidence; no unconditional score bound, realizability, certification, optimality or competition submission is inferred.",
+      "premise_audit": {
+        "state": "PAPER_PROOF_CANDIDATE__INDEPENDENT_GEOMETRIC_REVIEW_PENDING",
+        "record": "OM26-H1-SIX-CORE-PREMISE-AUDIT-001",
+        "solve_artifact": "work_packages/OPENMATH_2026/OM26_H1_KOBON_TRIANGLES/H1_SIX_CORE_PREMISE_PROOF.md",
+        "finite_checks": "Eight exact eighteen-line six-core fixtures passed; tests do not prove the general theorem.",
+        "claim_promotion": false
+      },
+      "prism_obstruction": {
+        "state": "CONDITIONAL_PAPER_PROOF__INDEPENDENT_GEOMETRIC_REVIEW_PENDING",
+        "record": "OM26-H1-SATURATED-PRISM-OBSTRUCTION-001",
+        "solve_artifact": "work_packages/OPENMATH_2026/OM26_H1_KOBON_TRIANGLES/H1_SATURATED_PRISM_OBSTRUCTION.md",
+        "prism_candidates_excluded": 60,
+        "remaining_q6_profiles": [
+          "333333",
+          "333334",
+          "333335",
+          "333344"
+        ],
+        "claim_promotion": false
+      },
+      "secondary_internal_target": "H4 finite classification extension only after stronger H1/H7 targets; bounded H3/H6/H5/H2 delta gates follow.",
+      "priority_order": [
+        "H1",
+        "H7",
+        "H4",
+        "H3",
+        "H6",
+        "H5",
+        "H2"
+      ],
+      "organizer_route_blocker": "EXTERNAL__NOT_A_DEPENDENCY_OF_MATHEMATICAL_WORK",
+      "parallel_formal_target": "H7: pinned Lean lemmas using reciprocal-sum divergence, starting with finite-deletion/tail stability and residue-class localization. Standard analytic facts require formal-family novelty review."
+    }
+  },
+  "claim_boundaries": {
+    "agent001_mathematics_adjudicated": true,
+    "h1_optimality_claim": false,
+    "mathematical_certification": false,
+    "competition_submission": false,
+    "competition_acceptance": false,
+    "novelty_or_priority": false,
+    "publication_authority": false,
+    "h2_wp02_mathematics_adjudicated": true
+  },
+  "automation": {
+    "openmath_lifecycle": {
+      "contract": "READY→LAUNCHED→RETURNED→CAPTURED→REPLAYED→ADJUDICATED→ADVANCED",
+      "last_transition_dispatch": "OM26-H4-WP04-IA-001",
+      "last_transition_hill": "OM26-H4",
+      "last_transition_result": "ADVANCED",
+      "manual_transport_required": false,
+      "manual_controller_wake_required": false
+    }
+  }
+}

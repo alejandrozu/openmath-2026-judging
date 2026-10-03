@@ -1,0 +1,113 @@
+OPENMATH-DMS
+Canonical target: Star chromatic index ≤6 for every subcubic graph
+D proposal=574/1000; intrinsic=5.4/10
+Existing published CFSD1000 value, reused without rescaling or changing its frozen source profile.
+
+FRONTIER: HTPeo gives125-source special-family five-colour work and98-module reductions, finite six-colour classification up to14 vertices and endpoints retaining OPEN hypotheses. Not every subcubic graph is covered.
+
+INTERACTION: Petersen/perfect-matching infrastructure supports concrete reductions. Container formalization is a prospective combinatorics resource, with no demonstrated DMS consequence this event.
+
+PAPER: A formal special-family/reduction library is plausible if claimed novelty survives known-class comparison. Separate original endpoints, known theorem formalization and still-open general lifting.
+
+COLLECTIVE: Conservative proposed P3=.15 at D574:49.4214; fallback P2=.05 gives16.4738 if only the narrower new scope is admitted.
+
+CONTRIBUTION MAP
+
+E08-DMS / HTPeo — Woohyuk Kang / Hyunjin Lee / Sanghyeon Lee / Youchan Oh
+Five-colour proofs for specified snark/Petersen/Möbius/inflation families; six colours for bridgeless cubic loopless multigraphs≤14; unconditional reductions and equivalence, remaining ≥16/open hypotheses.
+Infinite five-colour special families, finite six-colour classification up to14 vertices, and reduction/equivalence infrastructure are materially useful. Separate unconditional endpoints from modules that retain OPEN hypotheses. Bridgeless loopless cubic multigraphs are not interchangeable with every subcubic simple graph without a proved reduction.
+Novelty: Candidate obstacle-removing special-family/reduction advance; previously known five-colour classes must be subtracted.
+Formalization: Packet provides125-source five-colour checks and98-module reduction library with axiom logs. An unused baseline native_decide lemma is not in claimed closure. Team declares no human line-by-line review; independent rebuild and graph convention review required.
+Proposed M3A; p=0.15; points=49.4214; full review: entries/E08-DMS.txt
+
+E08-G-PM / HTPeo — Woohyuk Kang / Hyunjin Lee / Sanghyeon Lee / Youchan Oh
+def Star6.Bridgeless (G : SimpleGraph V) : Prop := ∀ e ∈ G.edgeSet, ¬ G.IsBridge e
+theorem Star6.simple_schoenberger (hconn : G.Connected) (hreg : G.IsRegularOfDegree 3) (hbr : Bridgeless G)
+    {e : Sym2 V} (he : e ∈ G.edgeSet) :
+    (∃ M : G.Subgraph, M.IsPerfectMatching ∧ e ∈ M.edgeSet) ∧ (∃ M : G.Subgraph, M.IsPerfectMatching ∧ e ∉ M.edgeSet)
+theorem Star6.simple_petersen_connected (hconn : G.Connected) (hreg : G.IsRegularOfDegree 3) (hbr : Bridgeless G) :
+    ∃ M : G.Subgraph, M.IsPerfectMatching
+
+Tentative substantive M2 family; source theorems inside family count once.
+Novelty: Known mathematics; only a genuinely new, faithful, useful, reusable event-window formalization may count. Exact prior-library overlap is not yet independently cleared.
+Formalization: Packet reports pinned builds and standard axioms; source correspondence and full novelty remain review tasks. Some same-file declarations are explicitly unclaimed duplicates.
+Proposed M2; p=1; points=None; full review: entries/E08-G-PM.txt
+
+OPDP INPUTS AND RATIONALE
+{
+  "inputs": {
+    "catalog_status": "open",
+    "assessment_gate": "source_claimed_open",
+    "scope": "family",
+    "answer_type": "proof_disproof",
+    "intrinsic_difficulty_0_10": 5.4,
+    "intrinsic_tier_code": "T3",
+    "intrinsic_tier_label": "Serious Project",
+    "ai_relative_difficulty_0_10": 4.9,
+    "human_effort_1_9": 3,
+    "human_exposure_1_5": 2,
+    "tractability_status": "scored",
+    "tractability_0_10": 6,
+    "verification_if_true_0_10": 5,
+    "verification_if_false_0_10": 4.3,
+    "formalization_0_10": 3.5,
+    "prerequisite_preparation_0_10": 5.1,
+    "prerequisite_breadth_1_5": 3,
+    "tool_leverage_0_10_higher_is_favorable": 4.5,
+    "ambiguity_0_10": 0.8,
+    "literature_load_0_10": 4.8,
+    "ai_context_load_predictor_minus1_to_plus1": 0,
+    "ai_reasoning_horizon_predictor_minus1_to_plus1": 0,
+    "recommended_route": "Expert-guided proof search"
+  },
+  "calculation": {
+    "normalized_barriers_0_1": {
+      "ai_relative_core": 0.49,
+      "intrinsic_difficulty": 0.54,
+      "human_resistance": 0.25,
+      "inverse_tractability": 0.4,
+      "verification_burden": 0.47,
+      "formalization_burden": 0.35,
+      "prerequisite_load": 0.51,
+      "context_and_ambiguity": 0.41,
+      "tool_constraint": 0.55
+    },
+    "weighted_component_points": {
+      "ai_relative_core": 196,
+      "intrinsic_difficulty": 91.8,
+      "human_resistance": 22.5,
+      "inverse_tractability": 60,
+      "verification_burden": 20.93,
+      "formalization_burden": 12.25,
+      "prerequisite_load": 20.3,
+      "context_and_ambiguity": 16.24,
+      "tool_constraint": 16.5
+    },
+    "linear_barrier_points_0_1000": 456.52,
+    "complete_solution_transform_exponent": 1.4,
+    "complete_solution_uplift_points": 117.48,
+    "final_score_0_1000": 574
+  },
+  "intrinsic_factors": {
+    "conceptual_gap": 2.5,
+    "route_gap": 2.5,
+    "technical_depth": 2,
+    "known_barrier": 1,
+    "search_scale": 3
+  },
+  "axis_rationales": {
+    "intrinsic": "Infinite snark/Petersen/Möbius families and finite classifications are meaningful special cases; arbitrary subcubic graphs remain open. Loopless multigraph/simple-graph correspondence requires review.",
+    "AI": "Statement has exact finite certificate feedback; the dated tool-assisted protocol is an estimate, not an empirical solve run.",
+    "attention": "H/X are historical-effort/exposure priors, not contestant hours. Insufficient documentation: neutral normalized .5 used for scoring.",
+    "tractability": "Known targets use N/A and neutral full-resolution component; otherwise the band is an editorial chance of useful100-hour partial progress, not full resolution.",
+    "verification": "Positive checking uses the stated exact finite data/proof chain; a negative/global resolution can have a different burden. No fresh Lean build is claimed.",
+    "formalization": "Statement encoding and libraries require 4/10 burden; this is the target burden, not the quality of a submitted proof.",
+    "prerequisites": "The target needs its Graph theory / edge colouring background; preparation and breadth refer to a prepared researcher, not entrant prestige.",
+    "tools": "Higher L means favorable exact-feedback/search/prover leverage. It does not turn a leaderboard number into a theorem.",
+    "status": "Source-claimed pre-event open target or explicitly parent-linked variation; no independently certified verified_open status invented."
+  },
+  "parent_links": [],
+  "sources": [
+    "https://github.com/alejandrozu/ulam-opdp-difficulty-atlas"
+  ]
+}

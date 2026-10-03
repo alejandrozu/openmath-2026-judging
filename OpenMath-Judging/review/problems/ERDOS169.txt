@@ -1,0 +1,110 @@
+OPENMATH-ERDOS169
+Canonical target: Estimate maximal reciprocal sums of AP-free sets
+D proposal=538/1000; intrinsic=4.9/10
+Existing published CFSD1000 value, reused without rescaling or changing its frozen source profile.
+
+FRONTIER: Sakana finite4-AP-free positive set has harmonic sum>4.44; Leon/Cameron report4.314 in a fixed-N benchmark. The located prior numerical claim4.4397534742 is smaller than4.44.
+
+INTERACTION: Compare exact same-domain reciprocal sums; N-dependent benchmarks require matching size/domain. Unbounded harmonic sums do not follow from these finite examples.
+
+PAPER: A formal finite construction and reusable AP-free certificate method may merit a short paper. Preserve lower-scoring fixed-N work only with a distinct algorithmic/formal contribution.
+
+COLLECTIVE: One original-family P2=.05 frontier at D538:14.4722, not two independent summed scientific bounds.
+
+CONTRIBUTION MAP
+
+E11-HARMONIC / Leon Koerbs / Cameron Fen — Erdős #3 Token Burner
+Certified finite reciprocal sum4.314 atN≤10^6.
+Below packet-cited existing infinite4.43975; no new bound on f(4) established. FiniteN benchmark relevance needs its own admitted target/D, not borrowing parentD.
+Novelty: No eligible original mathematical delta established in the available packet. This is not a finding that all underlying work lacks novelty.
+Formalization: Hill integer/bitmap checks reported; finite harmonic sum not a divergent series.
+Proposed M3A; p=0; points=0; full review: entries/E11-HARMONIC.txt
+
+E02-erdos169-fourap / Rachel Teo / Wenyi Wang / Hamdi Abderrahmene
+Let D={0,1,2,4,5,9,10,11,14,16,17,18,21,24,30,37,39,41,42,45,47}, M=55³=166375, U={26286,26726,26737,120061,120501,120512}, and T_j={Σ_(i=0)^(j−1) d_i55^i:d_i∈D}, T_0={0}. Let E=T_22 ∪ ⋃_(u∈U)(u+M T_21), A={e+1:e∈E}. Every a∈A is positive; A contains no nonconstant four-term arithmetic progression over Z; Σ_(a∈A)1/a>111/25=4.44, as an exact rational finite sum over distinct elements.
+The same finite set is used in positivity, four-AP freeness and the rational harmonic sum. A sum above4.44 is stronger than Walker's4.43975 and the located later4.4397534742 claim. It supplies a better lower bound, not unbounded sums or a solution of Erdős3.
+Novelty: Candidate new numerical bound with exact formal witness; digit-restricted and block-combination methods are prior mathematics.
+Formalization: Packet evidence: Fresh Linux full build completed8950jobs and final axiom audit. Exact same finite set appears in positivity, AP-free and rational-sum clauses. Mathematical source manifest matches; later README change is documentation only.. Endpoint signatures and declared axioms are recorded below; author/internal replay is not this reviewer’s fresh rebuild. 
+Proposed M3A; p=0.05; points=14.4722; full review: entries/E02-erdos169-fourap.txt
+
+OPDP INPUTS AND RATIONALE
+{
+  "inputs": {
+    "catalog_status": "open",
+    "assessment_gate": "source_claimed_open",
+    "scope": "atomic",
+    "answer_type": "bound",
+    "intrinsic_difficulty_0_10": 4.9,
+    "intrinsic_tier_code": "T3",
+    "intrinsic_tier_label": "Serious Project",
+    "ai_relative_difficulty_0_10": 4.4,
+    "human_effort_1_9": 3,
+    "human_exposure_1_5": 3,
+    "tractability_status": "scored",
+    "tractability_0_10": 6,
+    "verification_if_true_0_10": 4.6,
+    "verification_if_false_0_10": 4.6,
+    "formalization_0_10": 3.5,
+    "prerequisite_preparation_0_10": 5.7,
+    "prerequisite_breadth_1_5": 1,
+    "tool_leverage_0_10_higher_is_favorable": 5.3,
+    "ambiguity_0_10": 1.6,
+    "literature_load_0_10": 3.3,
+    "ai_context_load_predictor_minus1_to_plus1": 0,
+    "ai_reasoning_horizon_predictor_minus1_to_plus1": 0,
+    "recommended_route": "Expert-guided proof search"
+  },
+  "calculation": {
+    "normalized_barriers_0_1": {
+      "ai_relative_core": 0.44,
+      "intrinsic_difficulty": 0.49,
+      "human_resistance": 0.3,
+      "inverse_tractability": 0.4,
+      "verification_burden": 0.46,
+      "formalization_burden": 0.35,
+      "prerequisite_load": 0.43,
+      "context_and_ambiguity": 0.35,
+      "tool_constraint": 0.47
+    },
+    "weighted_component_points": {
+      "ai_relative_core": 176,
+      "intrinsic_difficulty": 83.3,
+      "human_resistance": 27,
+      "inverse_tractability": 60,
+      "verification_burden": 20.7,
+      "formalization_burden": 12.25,
+      "prerequisite_load": 17.1,
+      "context_and_ambiguity": 13.88,
+      "tool_constraint": 14.1
+    },
+    "linear_barrier_points_0_1000": 424.33,
+    "complete_solution_transform_exponent": 1.4,
+    "complete_solution_uplift_points": 113.67,
+    "final_score_0_1000": 538
+  },
+  "intrinsic_factors": {
+    "conceptual_gap": 2,
+    "route_gap": 1.5,
+    "technical_depth": 2.5,
+    "known_barrier": 1.5,
+    "search_scale": 2.5
+  },
+  "axis_rationales": {
+    "intrinsic": "A finite four-AP-free sum proves a lower bound on f(4), not f(4)=infinity or the all-k asymptotic.",
+    "AI": "Statement has exact finite certificate feedback; the dated tool-assisted protocol is an estimate, not an empirical solve run.",
+    "attention": "H/X are historical-effort/exposure priors, not contestant hours. Insufficient documentation: neutral normalized .5 used for scoring.",
+    "tractability": "Known targets use N/A and neutral full-resolution component; otherwise the band is an editorial chance of useful100-hour partial progress, not full resolution.",
+    "verification": "Positive checking uses the stated exact finite data/proof chain; a negative/global resolution can have a different burden. No fresh Lean build is claimed.",
+    "formalization": "Statement encoding and libraries require 5.0/10 burden; this is the target burden, not the quality of a submitted proof.",
+    "prerequisites": "The target needs its Additive combinatorics / finite constructions background; preparation and breadth refer to a prepared researcher, not entrant prestige.",
+    "tools": "Higher L means favorable exact-feedback/search/prover leverage. It does not turn a leaderboard number into a theorem.",
+    "status": "Source-claimed pre-event open target or explicitly parent-linked variation; no independently certified verified_open status invented."
+  },
+  "parent_links": [],
+  "sources": [
+    "https://www.erdosproblems.com/169",
+    "https://arxiv.org/abs/2203.06045",
+    "https://computoergosum.com/en/principia/erdos-169.html",
+    "https://github.com/alejandrozu/ulam-opdp-difficulty-atlas"
+  ]
+}

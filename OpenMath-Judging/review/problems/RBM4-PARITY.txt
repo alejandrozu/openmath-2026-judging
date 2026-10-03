@@ -1,0 +1,96 @@
+OPENMATH-RBM4-PARITY
+Canonical target: For pure four-parity data Q_rho(s)=(1+rho*s1*s2*s3*s4)/16 with 0<|rho|<=1, consider the normalized four-visible, one-hidden spin RBM P_(b,c,w)(s) proportional to exp(b dot s)*cosh(c+w dot s), and its expected log likelihood ell_rho. At every collapsed point (0,c0,0), with c0 any finite real, every affine parameter-direction derivative is zero. It is a local maximum in the full nine-dimensional parameter space if and only if tanh(c0)^2 < (3+2|rho|)/(3+6|rho|). At equality or beyond, every full parameter neighborhood has both a strictly higher and a strictly lower likelihood point. Every collapsed point has a strictly better finite RBM and distinct equal-likelihood points in every neighborhood; the local maxima are non-strict.
+D proposal=727/1000; intrinsic=5.9/10
+New local OPDP extension with CFSD1000 formula; one editorial assessor, not the required three-assessor median.
+
+FRONTIER: OPDP89 sharp four parity likelihood classification: For pure four-parity data Q_rho(s)=(1+rho*s1*s2*s3*s4)/16 with 0<|rho|<=1, consider the normalized four-visible, one-hidden spin RBM P_(b,c,w)(s) proportional to exp(b dot s)*cosh(c+w dot s), and its expected log likelih
+
+INTERACTION: Supporting lemmas and corollaries belong to the same scope union. Any transfer to a parent or another problem requires a proved scope-preserving bridge.
+
+PAPER: Candidate building block only; preserve source hypotheses, exact priority comparison, proof closure and contribution-based authorship.
+
+COLLECTIVE: Virtual family representative E02-opdp89-parity-local-maxima; conservative one-family points 264.2645. M2 is separate when applicable.
+
+CONTRIBUTION MAP
+
+E02-opdp89-parity-local-maxima / Rachel Teo / Wenyi Wang / Hamdi Abderrahmene
+For pure four-parity data Q_rho(s)=(1+rho*s1*s2*s3*s4)/16 with 0<|rho|<=1, consider the normalized four-visible, one-hidden spin RBM P_(b,c,w)(s) proportional to exp(b dot s)*cosh(c+w dot s), and its expected log likelihood ell_rho. At every collapsed point (0,c0,0), with c0 any finite real, every affine parameter-direction derivative is zero. It is a local maximum in the full nine-dimensional parameter space if and only if tanh(c0)^2 < (3+2|rho|)/(3+6|rho|). At equality or beyond, every full parameter neighborhood has both a strictly higher and a strictly lower likelihood point. Every collapsed point has a strictly better finite RBM and distinct equal-likelihood points in every neighborhood; the local maxima are non-strict.
+The theorem concerns the full nine-dimensional four-visible/one-hidden RBM, not only a one-dimensional ray. The strict threshold region has non-strict local maxima; equality and beyond are saddles. Every collapsed point is still suboptimal globally. The degenerate higher-order analysis is the substantive contribution.
+Novelty: Candidate exact new threshold; collapsed stationarity, singular mixture lines and interaction formulas are prior work. No claim for general training landscapes or n>=5 is supported by this formal closure.
+Formalization: Packet evidence: Fresh post-recovery source-only replay completed 2026-10-02T18:45:45.269248+00:00 in 108.552 seconds. All 17 frozen source modules passed with no warnings or errors; all original source SHA256 values and nine dependency pins were unchanged before/after. No old own-module oleans were reused. A supplemental semantic/type audit passed at 18:48:24 UTC. The final transitive axioms are only propext, Classical.choice and Quot.sound. Historical sharp raw logs remain unavailable; their absence is not filled with invented logs. The new dated PASS receipt and genuine fresh logs supersede historical pending status in byte-preserved recovery snapshots. Earlier strict-region proof and original raw evidence remain unchanged. This is internal AI-assisted formal/semantic review, not appointed jury or external peer review.. Endpoint signatures and declared axioms are recorded below; author/internal replay is not this reviewer’s fresh rebuild. 
+Proposed M3B; p=1; points=264.2645; full review: entries/E02-opdp89-parity-local-maxima.txt
+
+OPDP INPUTS AND RATIONALE
+{
+  "inputs": {
+    "H": 5,
+    "X": 3,
+    "T": 4,
+    "Vtrue": 6,
+    "Vfalse": 4,
+    "F": 7,
+    "P": 7,
+    "B": 3,
+    "L": 6,
+    "literature": 7,
+    "ambiguity": 2,
+    "context": 1,
+    "horizon": 1,
+    "D": 5.9,
+    "AI": 6.4
+  },
+  "calculation": {
+    "normalized_components": {
+      "ai_relative_core": 0.64,
+      "intrinsic_difficulty": 0.5900000000000001,
+      "human_resistance": 0.5,
+      "inverse_tractability": 0.6,
+      "verification_burden": 0.5,
+      "formalization_burden": 0.7,
+      "prerequisite_load": 0.65,
+      "context_and_ambiguity": 0.69,
+      "tool_constraint": 0.4
+    },
+    "weighted_points": {
+      "ai_relative_core": 256.0,
+      "intrinsic_difficulty": 100.30000000000001,
+      "human_resistance": 45.0,
+      "inverse_tractability": 90.0,
+      "verification_burden": 22.5,
+      "formalization_burden": 24.5,
+      "prerequisite_load": 26.0,
+      "context_and_ambiguity": 27.599999999999998,
+      "tool_constraint": 12.0
+    },
+    "linear_barrier": 603.9,
+    "transform_exponent": 1.4,
+    "final_value": 727
+  },
+  "intrinsic_factors": {
+    "conceptual_gap": 2.5,
+    "route_gap": 2.5,
+    "technical_depth": 3,
+    "known_barrier": 1.5,
+    "search_scale": 2
+  },
+  "axis_rationales": {
+    "intrinsic": "Exact local-maximum / saddle classification in the nine-parameter fibre with four visible and one hidden unit, not high-dimensional training or general OPDP89.",
+    "AI": "Statement has specialist analytic/formal dependencies; the dated tool-assisted protocol is an estimate, not an empirical solve run.",
+    "attention": "H/X are historical-effort/exposure priors, not contestant hours. The chosen bands are single-assessor estimates; no labor total was observed.",
+    "tractability": "Known targets use N/A and neutral full-resolution component; otherwise the band is an editorial chance of useful100-hour partial progress, not full resolution.",
+    "verification": "Positive checking uses the stated specialist semantic or analytic argument; a negative/global resolution can have a different burden. No fresh Lean build is claimed.",
+    "formalization": "Statement encoding and libraries require 7/10 burden; this is the target burden, not the quality of a submitted proof.",
+    "prerequisites": "The target needs its Mathematical statistics / singular mixture and RBM geometry background; preparation and breadth refer to a prepared researcher, not entrant prestige.",
+    "tools": "Higher L means favorable exact-feedback/search/prover leverage. It does not turn a leaderboard number into a theorem.",
+    "status": "Source-claimed pre-event open target or explicitly parent-linked variation; no independently certified verified_open status invented."
+  },
+  "parent_links": [
+    "OPDP row89: Boltzmann-machine likelihood landscape"
+  ],
+  "sources": [
+    "http://aimpl.org/boltzmann/2/",
+    "https://raw.githubusercontent.com/alejandrozu/opdp-week-math-100/main/data/problems.json",
+    "https://proceedings.neurips.cc/paper_files/paper/2002/file/2d3acd3e240c61820625fff66a19938f-Paper.pdf",
+    "https://arxiv.org/html/2605.19178"
+  ]
+}

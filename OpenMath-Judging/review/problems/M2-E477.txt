@@ -1,0 +1,98 @@
+OPENMATH-M2-E477
+Canonical target: Known polynomial-range additive nonunique representation
+D proposal=317/1000; intrinsic=1.5/10
+New local OPDP extension with CFSD1000 formula; one editorial assessor, not the required three-assessor median.
+
+FRONTIER: Known polynomial-range additive nonunique representation: @[category research solved, AMS 12] theorem erdos_477.variants.S_sq :
+    letI f := X ^ 2
+    ∀ A : Set ℤ, ∃ z, ¬ ∃! a ∈ A ×ˢ (Set.range f.eval), z = a.1 + a.2
+@[category research solved, AMS 12] theorem erdos_477.varian
+
+INTERACTION: Supporting lemmas and corollaries belong to the same scope union. This known mathematics may support reusable libraries; there is no original-result synergy bonus.
+
+PAPER: Candidate building block only; preserve source hypotheses, exact priority comparison, proof closure and contribution-based authorship.
+
+COLLECTIVE: Virtual family representative None; conservative one-family points 0. M2 is separate when applicable.
+
+CONTRIBUTION MAP
+
+E08-E477 / HTPeo — Woohyuk Kang / Hyunjin Lee / Sanghyeon Lee / Youchan Oh
+@[category research solved, AMS 12] theorem erdos_477.variants.S_sq :
+    letI f := X ^ 2
+    ∀ A : Set ℤ, ∃ z, ¬ ∃! a ∈ A ×ˢ (Set.range f.eval), z = a.1 + a.2
+@[category research solved, AMS 12] theorem erdos_477.variants.degree_two_dvd_condition_b_ne_zero {a b c : ℤ} (ha : a ≠ 0) (hb : b ≠ 0) (hab : a ∣ b) :
+    let f := a • X ^ 2 + b • X + C c
+    ∀ A : Set ℤ, ∃ z, ¬ ∃! a ∈ A ×ˢ (Set.range f.eval), z = a.1 + a.2
+
+Tentative substantive M2 family; source theorems inside family count once.
+Novelty: Known mathematics; only a genuinely new, faithful, useful, reusable event-window formalization may count. Exact prior-library overlap is not yet independently cleared.
+Formalization: Packet reports pinned builds and standard axioms; source correspondence and full novelty remain review tasks. Some same-file declarations are explicitly unclaimed duplicates.
+Proposed M2; p=1; points=None; full review: entries/E08-E477.txt
+
+OPDP INPUTS AND RATIONALE
+{
+  "inputs": {
+    "H": null,
+    "X": null,
+    "T": null,
+    "Vtrue": 1,
+    "Vfalse": 2,
+    "F": 4,
+    "P": 3,
+    "B": 2,
+    "L": 8,
+    "literature": 4,
+    "ambiguity": 1,
+    "context": 0,
+    "horizon": 0,
+    "D": 1.5,
+    "AI": 1.0
+  },
+  "calculation": {
+    "normalized_components": {
+      "ai_relative_core": 0.1,
+      "intrinsic_difficulty": 0.15,
+      "human_resistance": 0.5,
+      "inverse_tractability": 0.5,
+      "verification_burden": 0.15,
+      "formalization_burden": 0.4,
+      "prerequisite_load": 0.2875,
+      "context_and_ambiguity": 0.37,
+      "tool_constraint": 0.19999999999999996
+    },
+    "weighted_points": {
+      "ai_relative_core": 40.0,
+      "intrinsic_difficulty": 25.5,
+      "human_resistance": 45.0,
+      "inverse_tractability": 75.0,
+      "verification_burden": 6.75,
+      "formalization_burden": 14.0,
+      "prerequisite_load": 11.5,
+      "context_and_ambiguity": 14.8,
+      "tool_constraint": 5.999999999999998
+    },
+    "linear_barrier": 238.55,
+    "transform_exponent": 1.4,
+    "final_value": 317
+  },
+  "intrinsic_factors": {
+    "conceptual_gap": 0.5,
+    "route_gap": 0,
+    "technical_depth": 2,
+    "known_barrier": 0,
+    "search_scale": 0.5
+  },
+  "axis_rationales": {
+    "intrinsic": "Known source theorem, no open-problem credit; main work is faithful library/formal proof construction. Substantive source statement still needs prior formal-library search.",
+    "AI": "Statement has exact finite certificate feedback; the dated tool-assisted protocol is an estimate, not an empirical solve run.",
+    "attention": "H/X are historical-effort/exposure priors, not contestant hours. Insufficient documentation: neutral normalized .5 used for scoring.",
+    "tractability": "Known targets use N/A and neutral full-resolution component; otherwise the band is an editorial chance of useful100-hour partial progress, not full resolution.",
+    "verification": "Positive checking uses the stated exact finite data/proof chain; a negative/global resolution can have a different burden. No fresh Lean build is claimed.",
+    "formalization": "Statement encoding and libraries require 4/10 burden; this is the target burden, not the quality of a submitted proof.",
+    "prerequisites": "The target needs its Additive number theory / polynomial ranges background; preparation and breadth refer to a prepared researcher, not entrant prestige.",
+    "tools": "Higher L means favorable exact-feedback/search/prover leverage. It does not turn a leaderboard number into a theorem.",
+    "status": "Known/source theorem"
+  },
+  "parent_links": [],
+  "sources": []
+}

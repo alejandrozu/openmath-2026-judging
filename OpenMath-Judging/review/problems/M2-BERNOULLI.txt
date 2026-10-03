@@ -1,0 +1,93 @@
+OPENMATH-M2-BERNOULLI
+Canonical target: For a(n)=den(B_(2n)/(2n(2n−1))) when n>0 (a(0)=0), if p>3 and both p and 2p−1 are prime, then a(p)=12(2p−1); consequently a(p)/12 is prime.
+D proposal=346/1000; intrinsic=1.9/10
+New local OPDP extension with CFSD1000 formula; one editorial assessor, not the required three-assessor median.
+
+FRONTIER: A046969 Conjecture I: exact Bernoulli denominator: For a(n)=den(B_(2n)/(2n(2n−1))) when n>0 (a(0)=0), if p>3 and both p and 2p−1 are prime, then a(p)=12(2p−1); consequently a(p)/12 is prime.
+
+INTERACTION: Supporting lemmas and corollaries belong to the same scope union. This known mathematics may support reusable libraries; there is no original-result synergy bonus.
+
+PAPER: Candidate building block only; preserve source hypotheses, exact priority comparison, proof closure and contribution-based authorship.
+
+COLLECTIVE: Virtual family representative None; conservative one-family points 0. M2 is separate when applicable.
+
+CONTRIBUTION MAP
+
+E02-a046969-i / Rachel Teo / Wenyi Wang / Hamdi Abderrahmene
+For a(n)=den(B_(2n)/(2n(2n−1))) when n>0 (a(0)=0), if p>3 and both p and 2p−1 are prime, then a(p)=12(2p−1); consequently a(p)/12 is prime.
+Known denominator mathematics; formal delta only pending novelty/library audit.
+Novelty: Strong classical mathematical overlap; exact prior published ConjectureI theorem still unresolved Targeted Mathlib Bernoulli source inspection did not find this exact prime-pair formula, but found preexisting basic formal theory
+Formalization: Packet evidence: Independent5-module replay completed2026-10-01T13:09:42.764394Z, standard final formula and target axioms; exact source correspondence recorded.. Endpoint signatures and declared axioms are recorded below; author/internal replay is not this reviewer’s fresh rebuild. Known theorem route: only genuinely new faithful useful reusable formal delta can qualify.
+Proposed M2; p=1; points=None; full review: entries/E02-a046969-i.txt
+
+OPDP INPUTS AND RATIONALE
+{
+  "inputs": {
+    "H": null,
+    "X": null,
+    "T": null,
+    "Vtrue": 1.3,
+    "Vfalse": 2,
+    "F": 4,
+    "P": 3,
+    "B": 2,
+    "L": 8,
+    "literature": 4,
+    "ambiguity": 1,
+    "context": 0,
+    "horizon": 0,
+    "D": 1.9,
+    "AI": 1.4
+  },
+  "calculation": {
+    "normalized_components": {
+      "ai_relative_core": 0.13999999999999999,
+      "intrinsic_difficulty": 0.19,
+      "human_resistance": 0.5,
+      "inverse_tractability": 0.5,
+      "verification_burden": 0.16499999999999998,
+      "formalization_burden": 0.4,
+      "prerequisite_load": 0.2875,
+      "context_and_ambiguity": 0.37,
+      "tool_constraint": 0.19999999999999996
+    },
+    "weighted_points": {
+      "ai_relative_core": 55.99999999999999,
+      "intrinsic_difficulty": 32.3,
+      "human_resistance": 45.0,
+      "inverse_tractability": 75.0,
+      "verification_burden": 7.424999999999999,
+      "formalization_burden": 14.0,
+      "prerequisite_load": 11.5,
+      "context_and_ambiguity": 14.8,
+      "tool_constraint": 5.999999999999998
+    },
+    "linear_barrier": 262.025,
+    "transform_exponent": 1.4,
+    "final_value": 346
+  },
+  "intrinsic_factors": {
+    "conceptual_gap": 1,
+    "route_gap": 0,
+    "technical_depth": 2,
+    "known_barrier": 0,
+    "search_scale": 0.5
+  },
+  "axis_rationales": {
+    "intrinsic": "Known denominator mathematics; formal delta only pending novelty/library audit.",
+    "AI": "Statement has exact finite certificate feedback; the dated tool-assisted protocol is an estimate, not an empirical solve run.",
+    "attention": "H/X are historical-effort/exposure priors, not contestant hours. Insufficient documentation: neutral normalized .5 used for scoring.",
+    "tractability": "Known targets use N/A and neutral full-resolution component; otherwise the band is an editorial chance of useful100-hour partial progress, not full resolution.",
+    "verification": "Positive checking uses the stated exact finite data/proof chain; a negative/global resolution can have a different burden. No fresh Lean build is claimed.",
+    "formalization": "Statement encoding and libraries require 4/10 burden; this is the target burden, not the quality of a submitted proof.",
+    "prerequisites": "The target needs its Number theory / Bernoulli denominators background; preparation and breadth refer to a prepared researcher, not entrant prestige.",
+    "tools": "Higher L means favorable exact-feedback/search/prover leverage. It does not turn a leaderboard number into a theorem.",
+    "status": "Known/source theorem"
+  },
+  "parent_links": [],
+  "sources": [
+    "https://oeis.org/A046969",
+    "https://dlmf.nist.gov/24.10",
+    "https://github.com/google-deepmind/formal-conjectures/pull/5745"
+  ]
+}

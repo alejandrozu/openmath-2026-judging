@@ -1,0 +1,93 @@
+OPENMATH-LATIN-TABLEAU
+Canonical target: For every finite Young diagram, form a graph on its cells with adjacency for cells in a common row or column. Prove there is a proper coloring such that, for each positive k, the first k color classes occupy as many cells as the largest union of k independent sets. The factor-preservation hierarchy supplies only partial rank realization.
+D proposal=650/1000; intrinsic=6.1/10
+New local OPDP extension with CFSD1000 formula; one editorial assessor, not the required three-assessor median.
+
+FRONTIER: Ferrers general deficiency hierarchy (44-module dual replay): For 1≤r≤k and 0≤e<r, a finite Ferrers graph with matching-union ranks α_r=rk−e and α_(r+1)=(r+1)k−r−e has α_1=k. Every supplied optimal degree-r factor is retained while r−e disjoint matching colors of size k−r are appen
+
+INTERACTION: Supporting lemmas and corollaries belong to the same scope union. Any transfer to a parent or another problem requires a proved scope-preserving bridge.
+
+PAPER: Candidate building block only; preserve source hypotheses, exact priority comparison, proof closure and contribution-based authorship.
+
+COLLECTIVE: Virtual family representative E02-ferrers-hierarchy; conservative one-family points 63.375. M2 is separate when applicable.
+
+CONTRIBUTION MAP
+
+E02-ferrers-hierarchy / Rachel Teo / Wenyi Wang / Hamdi Abderrahmene
+For 1≤r≤k and 0≤e<r, a finite Ferrers graph with matching-union ranks α_r=rk−e and α_(r+1)=(r+1)k−r−e has α_1=k. Every supplied optimal degree-r factor is retained while r−e disjoint matching colors of size k−r are appended. For 0≤h≤r−e, α_(r+h)=rk−e+h(k−r). Balanced e=0 yields simultaneous first 2r CDS colors; e=1 yields first 2r−1. For e>1 no individual first-r CDS-color realization is asserted for arbitrary supplied colorings.
+Preservation of an arbitrary supplied optimal factor is stronger than mere existence of one convenient factor. The hierarchy determines later matching-union ranks, while the e>1 case does not realize every individual early CDS colour. That last limitation prevents a full Latin-tableau conclusion.
+Novelty: Candidate new structural extension beyond known boundary cases. Some factor-theory full texts remain an explicit literature gap.
+Formalization: Packet evidence: 44-source strict replay receipts on both pins; source hashes match both recorded receipts. Actual YoungDiagram graph/rank transport and all selected final standard-axiom audits included.. Endpoint signatures and declared axioms are recorded below; author/internal replay is not this reviewer’s fresh rebuild. 
+Proposed M3A; p=0.15; points=63.375; full review: entries/E02-ferrers-hierarchy.txt
+
+OPDP INPUTS AND RATIONALE
+{
+  "inputs": {
+    "H": 5,
+    "X": 3,
+    "T": 5,
+    "Vtrue": 4,
+    "Vfalse": 2,
+    "F": 5,
+    "P": 6,
+    "B": 2,
+    "L": 8,
+    "literature": 6,
+    "ambiguity": 2,
+    "context": 1,
+    "horizon": 0,
+    "D": 6.1,
+    "AI": 5.6
+  },
+  "calculation": {
+    "normalized_components": {
+      "ai_relative_core": 0.5599999999999999,
+      "intrinsic_difficulty": 0.61,
+      "human_resistance": 0.5,
+      "inverse_tractability": 0.5,
+      "verification_burden": 0.3,
+      "formalization_burden": 0.5,
+      "prerequisite_load": 0.5125,
+      "context_and_ambiguity": 0.565,
+      "tool_constraint": 0.19999999999999996
+    },
+    "weighted_points": {
+      "ai_relative_core": 223.99999999999997,
+      "intrinsic_difficulty": 103.7,
+      "human_resistance": 45.0,
+      "inverse_tractability": 75.0,
+      "verification_burden": 13.5,
+      "formalization_burden": 17.5,
+      "prerequisite_load": 20.5,
+      "context_and_ambiguity": 22.599999999999998,
+      "tool_constraint": 5.999999999999998
+    },
+    "linear_barrier": 527.8,
+    "transform_exponent": 1.4,
+    "final_value": 650
+  },
+  "intrinsic_factors": {
+    "conceptual_gap": 2.5,
+    "route_gap": 2.5,
+    "technical_depth": 2.5,
+    "known_barrier": 2.5,
+    "search_scale": 2
+  },
+  "axis_rationales": {
+    "intrinsic": "Structural hierarchy for supplied optimal r-factors; partial parent theorem, not arbitrary missing colour realization.",
+    "AI": "Statement has exact finite certificate feedback; the dated tool-assisted protocol is an estimate, not an empirical solve run.",
+    "attention": "H/X are historical-effort/exposure priors, not contestant hours. The chosen bands are single-assessor estimates; no labor total was observed.",
+    "tractability": "Known targets use N/A and neutral full-resolution component; otherwise the band is an editorial chance of useful100-hour partial progress, not full resolution.",
+    "verification": "Positive checking uses the stated exact finite data/proof chain; a negative/global resolution can have a different burden. No fresh Lean build is claimed.",
+    "formalization": "Statement encoding and libraries require 5/10 burden; this is the target burden, not the quality of a submitted proof.",
+    "prerequisites": "The target needs its Combinatorics / bipartite matching and Latin tableaux background; preparation and breadth refer to a prepared researcher, not entrant prestige.",
+    "tools": "Higher L means favorable exact-feedback/search/prover leverage. It does not turn a leaderboard number into a theorem.",
+    "status": "Source-claimed pre-event open target or explicitly parent-linked variation; no independently certified verified_open status invented."
+  },
+  "parent_links": [],
+  "sources": [
+    "https://arxiv.org/abs/2408.04086",
+    "https://www.combinatorics.org/ojs/index.php/eljc/article/download/v32i2p48/pdf/",
+    "https://github.com/google-deepmind/formal-conjectures/blob/main/FormalConjectures/Paper/LatinTableau.lean"
+  ]
+}

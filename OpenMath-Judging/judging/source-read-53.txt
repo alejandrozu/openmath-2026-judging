@@ -1,0 +1,665 @@
+# OpenMath 2026 submission packet — partial progress on the Dvořák–Mohar–Šámal conjecture (star chromatic index of subcubic graphs)
+
+## Team, human review and publication (added 2026-10-03 KST; supersedes the corresponding TODO(operator) items below)
+
+* **Team:** HTPeo (team entrant). Autolab owner/account `lavaskiller`.
+* **Roster** (each member fills in their own row; see `TEAM.md` at the repository root):
+
+  | Name | Affiliation | E-mail | Role / contribution |
+  |---|---|---|---|
+  | Woohyuk Kang | HTPeo, KyungHee Univ. CS&E | [REDACTED CONTACT] | harness operator; Ramsey search and certificate; Erdős formalizations; packets |
+  | Hyunjin Lee (@hl728) | University of Cambridge | [REDACTED CONTACT] | K4 Ramsey hill (validation and final-board evaluation); separate local research on Erdős #1038 and the 3x3 tensor hill |
+  | Sanghyeon Lee (@n0rang2) | Korea Univ. Security | [REDACTED CONTACT] | Busy Beaver 6 hill (machine, Lean certificates, maximality computation); K4 Ramsey hill; Erdős #1038 with @hl728 |
+  | Youchan Oh (@thomasoh0408) | Seoul National Univ. TI | [REDACTED CONTACT] | Kobon triangles hill (n = 18) |
+
+* **Human review:** none. No team member reviewed the proofs or the statement-correspondence notes of this packet line by line; Woohyuk Kang (@lavaskiller) and Hyunjin Lee (@hl728) declared on 2026-10-03 that they did no human review, and the other members did not state one. The checks are the Lean kernel, the build and axiom logs, scripts, and cross-checks by AI models.
+* **Repository:** https://github.com/lavaskiller/openmath-2026-htpeo (private to the team until the competition deadline; it will be opened, or access given to the organisers, on request / after the deadline) — this entry is the folder `entries/dms-star6`; the submitted state is fixed by the git tag `dms-v1` (https://github.com/lavaskiller/openmath-2026-htpeo/tree/dms-v1/entries/dms-star6). The commit hashes quoted further below refer to the earlier local artifact repository with the same file contents (checked by `SHA256SUMS`).
+* **Publication authority:** the materials are held in the team repository above (private until the deadline). Permission to release: Woohyuk Kang (@lavaskiller), 2026-10-03 . Attribution approval by every roster member: @lavaskiller 2026-10-03; @hl728 (Hyunjin Lee) 2026-10-03; @n0rang2 (Sanghyeon Lee) and @thomasoh0408 (Youchan Oh) 2026-10-03, recorded by the team lead on their behalf (`TEAM.md`) .
+
+Packet version: **final v1 (2026-10-02)**; it replaces the drafts v1–v3 and absorbs the two addenda of
+2026-10-02. State: **nothing has been submitted by the writers of this packet; operator TODOs are listed in
+section 6.** Structure follows handbook section 8.
+
+**We do not claim that the conjecture is proved.** Every claim below is either an unconditional theorem about
+special cases / small orders / an equivalent reformulation, or a theorem of the form "named open hypotheses ⇒
+conjecture". Material that is not Lean-checked is in section 3 and is labelled as such.
+
+Every item marked **TODO(operator)** is something the writers of this packet could not determine or are not
+entitled to decide.
+
+---
+
+## 1. Identity / target
+
+| field | value |
+|---|---|
+| Submission / version | `star6-dms` final v1. Competition submission ID: **TODO(operator)** |
+| Entrant | **TODO(operator)**: team name; class **Team**; roster, affiliations, resource classification, each human's contribution. AutoLab owner `lavaskiller`; commit author Woohyuk Kang |
+| Target | Open Problem Garden, "Star chromatic index of cubic graphs" (OPDP atlas **OPG-37271**; v3 of this packet recorded "intrinsic difficulty 5.4 in atlas v1.5" — the handbook uses a 0–1000 scale D(P), so the frozen D must be confirmed: **TODO(operator)**). Question (Dvořák–Mohar–Šámal 2013, "DMS"): is χ′ₛ(G) ≤ 6 for every subcubic graph G? Open at the status freeze (2026-09-27 16:00 UTC); best published bound 7 (DMS 2013); K₃,₃ shows 6 would be tight |
+| Problem / family IDs, snapshot | OPG-37271. Canonical OPDP family ID and source snapshot ID: **TODO(operator)** (from the organisers) |
+| Proposed modality | **M3A**, pending admission (an original open problem that predates the event; not a variation, not a formalization of known mathematics). Admission of proposed problems is decided by the organisers when the entries are judged; we have no admission record |
+| Source | Z. Dvořák, B. Mohar, R. Šámal, *Star chromatic index*, J. Graph Theory 72(3) (2013) 313–326, arXiv:1011.3376; http://www.openproblemgarden.org/op/star_chromatic_index_of_cubic_graphs |
+| Scope of the formal statements | finite **loopless multigraphs** with Δ ≤ 3 (and all their sub-multigraphs). Every simple subcubic graph is one, so every "⇒ DMS" below implies the simple-graph question |
+| Claimed completeness | **partial** (section 1.5) |
+
+### 1.1 The formal statement of the conjecture
+
+```lean
+def RH2F.DMS : Prop :=
+  ∀ (G : MGraph), G.Subcubic → G.Loopless → ∀ (P : Fin G.m → Prop), MGraph.Colourable P 6
+```
+
+Every loopless multigraph with maximum degree at most 3, and every sub-multigraph of it (edge set `P`), has a star
+edge colouring with 6 colours. With `P = fun _ => True` and `G` simple this is the Open Problem Garden statement.
+`Star6.dms_iff_plain : DMS ↔ RH2Fid.DMSP` proves it equivalent to an independently written statement in
+Mathlib vocabulary (`en : E → Sym2 V`, `Fintype`), and `BlockStar.dms_iff : RH2F.DMS ↔ ∀ G, DMSfor G` (by
+`Iff.rfl`) splits it into its instances. How to read `MGraph`, `Star`, `Colourable`, `Subcubic`, `Loopless`:
+section 2.4.
+
+**`RH2F.DMS` is not proved anywhere in the artifact.** It appears only as a hypothesis, as a conclusion of
+conditional theorems, and on one side of equivalences.
+
+### 1.2 Tier T1 — unconditional infinite families (special cases of the conjecture)
+
+Lean 4.33.1 + Mathlib v4.33.1, `lean/pack4/` (125 modules). Axioms of every theorem: `[propext, Classical.choice,
+Quot.sound]` (`lean/pack4/axioms.log`). Statements verbatim (`#check` output in `axioms.log`):
+
+```lean
+FlowerSnark.flower_star       : ∀ (n : ℕ), n % 2 = 1 → 5 ≤ n → MGraph.Star 5 (FlowerSnark.flowerCol n)
+FlowerSnark.flower_family     : ∀ (n : ℕ), n % 2 = 1 → 5 ≤ n → StarFamily (FlowerSnark.flowerSnark n) 5
+GoldbergSnark.goldberg_star   : ∀ (k : ℕ), k % 2 = 1 → 5 ≤ k → MGraph.Star 5 (GoldbergSnark.goldbergCol k)
+GoldbergSnark.goldberg_family : ∀ (k : ℕ), k % 2 = 1 → 5 ≤ k → StarFamily (GoldbergSnark.goldbergSnark k) 5
+GPetersen2.gp2_star           : ∀ (k : ℕ), 5 ≤ k → MGraph.Star 6 (GPetersen2.gpCol k)
+GPetersen2.gp2_spokes         : ∀ (k : ℕ) (e : Fin (GPetersen2.gp2 k).m), ↑(GPetersen2.gpCol k e) = 5 ↔ ↑e % 3 = 1
+GP2Five.star5                 : ∀ (n : ℕ), 5 ≤ n → MGraph.Star 5 (GP2Five.col n)
+GP3Five.star5                 : ∀ (n : ℕ), 7 ≤ n → MGraph.Star 5 (GP3Five.col n)
+GPk.star4                     : ∀ (m : ℕ), MGraph.Star 5 (GPk.pcol GPk.tab4)          -- on gp (10 * m) 4
+GPk.family4                   : ∀ (m : ℕ), 1 ≤ m → GPk.StarFam (GPk.gp (10 * m) 4) 5  -- likewise 6, 8, 10, 12, 14
+gp_star5  : ∀ (k n : ℕ), 1 ≤ k → k ≤ 15 → 2 * k + 1 ≤ n → ¬(n = 3 ∧ k = 1) →
+              ∃ c : Fin (GPk.gp n k).m → Fin 5, MGraph.Star 5 c
+gp_family : ∀ (k n : ℕ), 1 ≤ k → k ≤ 15 → 2 * k + 1 ≤ n → ¬(n = 3 ∧ k = 1) → GPk.StarFam (GPk.gp n k) 5
+Inflation.inflate_star5 : ∀ (H : MGraph), H.Loopless → ∀ (slot : Fin H.m → Bool → Fin 3),
+              Inflation.PortsInj H slot → ∃ c : Fin (Inflation.inflate H slot).m → Fin 5, MGraph.Star 5 c
+Mobius.star5                  : ∀ (n : ℕ), 4 ≤ n → MGraph.Star 5 (Mobius.col n)
+Mobius.mobius_family          : ∀ (n : ℕ), 4 ≤ n → StarFamily (Mobius.mobius n) 5
+```
+
+`StarFamily G k` (= `GPk.StarFam G k`) is
+`G.Subcubic ∧ G.Loopless ∧ (∀ P, MGraph.Colourable P k) ∧ (∀ P, MGraph.Colourable P 6)`, and
+`starFamily_dms : StarFamily G k → DMSfor G`. So each `…_family` theorem is literally the instance of `RH2F.DMS`
+for the graphs of the family — proved with 5 colours instead of 6.
+
+In plain words (graph definitions: `lean/pack4/README.md` §2; novelty: section 2.6):
+
+| | Family | Range | Colours | Literature status |
+|---|---|---|---|---|
+| A | flower snarks J_n (Isaacs) | every odd n ≥ 5 | 5 | appears new |
+| B | Goldberg snarks G_k | every odd k ≥ 5 | 5 | appears new |
+| C | GP(k,2), with the spokes as one colour class | every k ≥ 5 | 6 (class 6 = the spokes) | appears new as a perfect-matching-class statement |
+| D | GP(n,2), n ≥ 5; GP(n,3), n ≥ 7; GP(10m,4), GP(14m,6), GP(17m,8), GP(22m,10), GP(26m,12), GP(30m,14), m ≥ 1 | all | 5 | contained in E; kept because they formalize the informal facts of the run |
+| E | generalized Petersen graphs GP(n,k), **1 ≤ k ≤ 15, every n ≥ 2k+1**, except GP(3,1) (the prism, χ′ₛ = 6) | all | 5 | the Zhu–Shao conjecture for k ≤ 15; **partly new**: new exactly for the (n,k) with gcd(n,k) ≤ 2 not covered in print (section 2.6) |
+| F | Petersen-type vertex inflation of **any** loopless multigraph H with an injective port assignment (each vertex replaced by the Petersen graph minus a vertex) | all such H | 5 | appears new (elementary) |
+| G | Möbius ladders M_n (2n vertices: the cycle c_0 … c_{2n−1} with the chords c_i c_{i+n}) | every n ≥ 4 | 5 | nothing found in the literature (M_3 = K₃,₃ needs 6) |
+
+Also unconditional, in the Lean-core file `lean/pack2/lean433/StarDMS2.lean`: `P06Lean.cover_main` — star
+colourings pull back along locally injective homomorphisms, so every cover of K₃,₃ is star 6-edge-colourable and
+every cover of the Petersen graph star 5-edge-colourable. This is a formalization of a **known** argument
+(DMS 2013, proof of Thm 5.1(b), arXiv v2 numbering); it is listed for completeness and **not** claimed as an advance.
+
+### 1.3 Tier T2 — unconditional small-order theorems, the equivalence, and the shape of a counterexample
+
+Lean 4.33.1 + Mathlib v4.33.1, `lean/pack5/src/` (4 modules on top of the chain). Axioms: `[propext,
+Classical.choice, Quot.sound]` (`lean/pack5/logs/*.out`). Verbatim (namespace `Star6`; the library's
+namespaces `MGraph`, `RH2F` are open, so `DMS` is `RH2F.DMS`):
+
+```lean
+theorem star6_cubic_bridgeless_le14 (X : MGraph) (P : Fin X.m → Prop) (hL : Loopless X) (hB : BridgelessOn P)
+    (hK : CubicOn P) (h14 : vcount P ≤ 14) : Colourable P 6
+theorem matching_colour_class_10_14 (X : MGraph) (P : Fin X.m → Prop) (hG : InG X P) (h10 : 10 ≤ vcount P)
+    (h14 : vcount P ≤ 14) (g : Fin X.m) (hg : P g) :
+    (∃ N c, PMOn P N ∧ N g ∧ StarOn P 6 c ∧ ClassOn P N c) ∧ (∃ N c, PMOn P N ∧ ¬ N g ∧ StarOn P 6 c ∧ ClassOn P N c)
+theorem star6_leaf_le14 (X : MGraph) (P : Fin X.m → Prop) (hG : InG X P) (h14 : vcount P ≤ 14) (g : Fin X.m)
+    (hg : P g) : Colourable (leafSet P g) 6
+theorem star6_subcubic_le7 (G : MGraph) (hsub : Subcubic G) (hloop : Loopless G) (h7 : G.n ≤ 7)
+    (P : Fin G.m → Prop) : Colourable P 6
+theorem bounded_reduction (N : Nat) (hH : HypLE N) (hD : IIDLE N) :
+    (∀ X P, Loopless X → BridgelessOn P → CubicOn P → vcount P ≤ N → Colourable P 6) ∧
+    (∀ X P, InG X P → 10 ≤ vcount P → vcount P ≤ N → EX1On P) ∧
+    (∀ X P, InG X P → vcount P ≤ N → ∀ g, P g → Colourable (leafSet P g) 6) ∧
+    (∀ G, Subcubic G → Loopless G → 2 * G.n ≤ N → ∀ P : Fin G.m → Prop, Colourable P 6)
+
+theorem dms_iff_cubic16 :
+    DMS ↔ ∀ (X : MGraph) (P : Fin X.m → Prop), InG X P → 16 ≤ vcount P →
+      Colourable P 6 ∧ ∀ g, P g → Colourable (leafSet P g) 6
+
+def Hyp16 : Prop := ∀ X P, InG X P → 16 ≤ vcount P → TwoCutReducedOn P → EX1On P
+theorem dms_of_hyp16_iid16 (hH : Hyp16) (hD : IID16) : DMS
+theorem counterexample_cubic16 (h : ¬ DMS) :
+    (∃ X P, InG X P ∧ 16 ≤ vcount P ∧ ¬ Colourable P 6) ∨
+    (∃ X P g, InG X P ∧ 16 ≤ vcount P ∧ P g ∧ ¬ Colourable (leafSet P g) 6)
+theorem counterexample_reduced16 (h : ¬ DMS) :
+    (∃ X P, InG X P ∧ 16 ≤ vcount P ∧ TwoCutReducedOn P ∧ ¬ EX1On P) ∨
+    (∃ X P g, InG X P ∧ 16 ≤ vcount P ∧ TwoCutReducedOn P ∧ Eligible P g ∧ ¬ Colourable (leafSet P g) 6)
+theorem smallest_not_ex1 (X : MGraph) (P : Fin X.m → Prop) (hG : InG X P) (h10 : 10 ≤ vcount P)
+    (hbad : ¬ EX1On P) (hmin : ∀ Y Q, InG Y Q → 10 ≤ vcount Q → vcount Q < vcount P → EX1On Q) :
+    TwoCutReducedOn P ∧ 16 ≤ vcount P
+theorem minimal_counterexample (G : MGraph) (hsub : Subcubic G) (hloop : Loopless G) (Q : Fin G.m → Prop)
+    (hmin : MinimalCounterexample Q 6) :
+    ConnectedOn Q ∧ 8 ≤ G.n ∧ (CubicOn Q → BridgelessOn Q ∧ 16 ≤ vcount Q)
+```
+
+In plain words (`InG X P` = "`P` is a connected bridgeless cubic edge set of the loopless multigraph `X`";
+`leafSet P g` = the leaf graph T(P, g): delete the edge `g = st`, add a vertex `x` joined to `s` and `t`, and a
+pendant edge at `x`):
+
+1. Every bridgeless cubic loopless multigraph with at most **14** vertices is star 6-edge-colourable.
+2. In a connected one with 10–14 vertices, every edge lies in a perfect matching that is a colour class of a star
+   6-edge-colouring, and is avoided by such a perfect matching.
+3. Every leaf graph of a connected bridgeless cubic loopless multigraph with ≤ 14 vertices is star
+   6-edge-colourable.
+4. DMS holds for all loopless subcubic multigraphs with at most **7** vertices.
+5. (`dms_iff_cubic16`) **DMS holds if and only if every connected bridgeless cubic loopless multigraph on at
+   least 16 vertices is star 6-edge-colourable and so is each of its leaf graphs.**
+6. If DMS fails, a counterexample of that shape exists; a smallest connected bridgeless cubic multigraph that is not
+   "EX1-good" is 2-cut-reduced and has ≥ 16 vertices; an edge-minimal counterexample is connected, lives on ≥ 8
+   vertices, and if cubic is bridgeless with ≥ 16 vertices.
+7. `bounded_reduction`: for every N, the two hypotheses of the chain restricted to order ≤ N give 1–4 for order ≤ N
+   (≤ N/2 for general subcubic graphs); the induction never looks at larger graphs.
+
+The same in `Sym2`/`Fintype` vocabulary (`Star6.plain_star6_cubic_bridgeless_le14`, `plain_star6_subcubic_le7`,
+`plain_ex1_10_14`, `plain_star6_leaf_le14`) and for Mathlib's `SimpleGraph`:
+
+```lean
+theorem Star6.simple_star6_cubic_bridgeless_le14 (hreg : G.IsRegularOfDegree 3) (hbr : Bridgeless G)
+    (hn : Fintype.card V ≤ 14) : ∃ c : G.edgeSet → Fin 6, IsStarEdgeColouring G c
+theorem Star6.simple_star6_subcubic_le7 (hdeg : ∀ v, G.degree v ≤ 3) (hn : Fintype.card V ≤ 7) :
+    ∃ c : G.edgeSet → Fin 6, IsStarEdgeColouring G c
+```
+
+Honest limits of T2: the bound for general subcubic graphs is 7, not 14 (the reduction for two vertices of
+degree < 3 doubles the graph); "a minimum counterexample is cubic" is **not** proved (the correct statement is
+item 5: cubic graphs *and their leaf graphs*); nothing unconditional about colourability at 16 vertices. T2 contains
+no mathematics beyond T3/T4: it is the chain's induction run with bounded hypotheses plus vocabulary translations
+(`lean/pack5/README.md`, "What is new and what is not").
+
+### 1.4 Tier T3 — the conditional reduction chain, and Tier T4 — finite certificates
+
+Lean 4.33.1 + Mathlib v4.33.1, `lean/pack3/` (98 modules). Top theorem, verbatim (axioms: `[propext,
+Classical.choice, Quot.sound]`, `lean/pack3/build/axioms.log`; `Main.lean` re-elaborates the statement):
+
+```lean
+theorem RH2F.layer37 :
+    BASE12 ∧ SIMPLE14 ∧ B14D ∧ FEEXIST16 ∧ (IID16 → IID) ∧ (FEEXISTD18 → FEEXISTD10) ∧
+    (FEEXTTNE16 → FEEXIST0NE16 → IID16) ∧
+    (FEEXTD10 → FEEXISTD18 → POLE → TDTRI → IID16 → DMS) ∧
+    (FEEXTD10 → FEEXISTD18 → WEXT → TDLTRI → IID16 → DMS) ∧
+    (FEEXTD10 → FEEXISTD18 → POLE → TDTRI → FEEXTTNE16 → FEEXIST0NE16 → DMS)
+```
+
+**T3 (conditional).** Parts 8–10 are reductions of DMS to named hypotheses (`star6_dms_conditional_A`:
+`FEEXTD10 → FEEXISTD18 → POLE → TDTRI → FEEXTTNE16 → FEEXIST0NE16 → DMS`; `star6_dms_conditional_B`:
+`FEEXTD10 → FEEXISTD18 → WEXT → TDLTRI → IID16 → DMS`). Each hypothesis is an ordinary Lean `def … : Prop`
+appearing as an explicit hypothesis; **none is proved; each is an infinite statement about cubic multigraphs**:
+
+| Hypothesis | Plain words |
+|---|---|
+| `FEEXTD10` | far-exchange **extension**: for a cyclically 4-edge-connected simple cubic graph Q on ≥ 10 vertices with digons inserted on a set D of edges (Q^D on ≥ 16 vertices), every perfect matching M of Q^D that has a "far-exchange set" C extends to a star 6-colouring with colour classes M and C |
+| `FEEXISTD18` | far-exchange **existence**: for such Q^D on ≥ 18 vertices, every edge and every status (in / out) is attained by a perfect matching that has a far-exchange set (the 16-vertex case is the theorem `feexist16`) |
+| `POLE` | every "pole" of a 2-cut-reduced connected bridgeless cubic multigraph on ≥ 10 vertices is dominant (a statement about 3-edge-cut sides) |
+| `TDTRI` | a restricted matching-colour-class property at a triangle side of a simple, 3-edge-connected, not cyclically 4-edge-connected cubic graph carrying exactly one digon edge |
+| `FEEXTTNE16`, `FEEXIST0NE16` | the "leaf engine" on ≥ 16 vertices: extension and existence of far-exchange structures avoiding a prescribed eligible edge g, giving star 6-colourings of the leaf graph T(P, g) |
+| `IID16` | the leaf case for hosts with ≥ 16 vertices (implied by the previous two) |
+| `WEXT`, `TDLTRI` | route-B replacements of `POLE`, `TDTRI` |
+
+Further conditional theorems: `RH2F.rh2_final : Hyp → II → DMS` (`Hyp`: every 2-cut-reduced connected bridgeless
+cubic multigraph on ≥ 10 vertices is EX1-good; `II`: every leaf graph is star 6-colourable), and in the Lean-core
+file `StarDMS2.lean`: `MGraph.dms_of_hole` (**HOLE ⇒ DMS**), `P05Lean.cubicSharp5_dms` (**CubicSharp5 ⇒ DMS**:
+if every connected bridgeless loopless cubic multigraph other than K₃,₃, the prism and M₆ is star
+5-edge-colourable, then DMS), `DmsIIsLean.cs5s_dms` (the same from the *simple* bridgeless cubic case alone),
+`RH2F.layer4` / `star6_rh2_conditional`, `star6_ex1red_conditional`.
+
+**T4 (unconditional finite certificates; kernel `decide`, no `native_decide`).**
+
+| Theorem | Content |
+|---|---|
+| `RH2F.base12 : BASE12` | every 2-cut-reduced connected bridgeless cubic multigraph with 10 or 12 vertices is EX1-good (every perfect-matching status of every edge is realised by a colour class of a star 6-edge-colouring) |
+| `RH2F.simple14 : SIMPLE14` | the same for every simple 3-edge-connected cubic graph on 14 vertices |
+| `RH2F.b14d : B14D` | the same for every non-simple 2-cut-reduced one on 14 vertices |
+| `RH2F.feexist16 : FEEXIST16` | far-exchange existence for all digon insertions with exactly 16 vertices |
+| `layer37` part 5 (`IID16 → IID`) | the leaf case holds for all hosts with at most 14 vertices |
+| `RH2F.cls16c` | every cyclically 4-edge-connected simple cubic graph on 16 vertices is isomorphic to one of 607 listed graphs |
+| `RH2Fid.fidelity_bundle` | `(Hyp ↔ HP) ∧ (II ↔ IIP) ∧ (DMS ↔ DMSP)` plus sanity instances (K₄, K₃,₃, prism, Petersen, a digon graph: explicit star colourings and explicit non-star colourings) |
+| `RH2P.layerP` | Schönberger's theorem for cubic multigraphs, from Mathlib's Tutte theorem (a **known** theorem; see section 5) |
+
+### 1.5 Claimed completeness
+
+**Partial advance, not a solution.** What is complete and formal: (i) DMS for explicit infinite families, mostly
+with 5 colours (T1); (ii) DMS for all bridgeless cubic multigraphs up to 14 vertices and all subcubic multigraphs
+up to 7 vertices, and an unconditional equivalence that localises the conjecture to cubic graphs on ≥ 16
+vertices and their leaf graphs (T2); (iii) a kernel-checked reduction of DMS to named open hypotheses (T3) with
+its finite base (T4). What is open: every hypothesis of T3; DMS itself.
+
+### 1.6 Requested progress band (advisory; "a requested p is advisory", handbook §8.1)
+
+**Requested: p = 0.15, as an explicit choice of the lower end of band P3; fallback P2 with p = 0.10.** We do not
+request more.
+
+Rationale, written to be conservative:
+
+* **What supports P2** ("nontrivial lemma, reduction, reformulation, finite classification, or improvement short
+  of the central obstacle", .05–.15). T3 is a nontrivial reduction (98 kernel-checked modules) and T2 item 5 is an
+  unconditional reformulation; T4 and T2 items 1–4 are finite classifications with formal certificates. This part
+  is solid on its own: it does not depend on any novelty claim about the families, and the literature check found
+  no published reduction of the 6-colour conjecture to cubic graphs (section 2.6). We consider the upper half of
+  P2 justified by the reductions and the equivalence together.
+* **What supports the step to P3** ("meaningful infinite family, special case, bound, or structural advance
+  removing a recognized obstacle", .15–.35). T1 proves the conjecture — with one colour to spare — for infinite
+  families that are standard test classes for colouring conjectures on cubic graphs: the two classical infinite
+  snark families (flower, Goldberg), all generalized Petersen graphs with k ≤ 15, Möbius ladders, and an inflation
+  operation applicable to every cubic multigraph. Rows A, B, F, G and the uncovered part of row E are, as far as
+  our literature check goes, new mathematics and not only formalization; row E proves a published conjecture
+  (Zhu–Shao 2021) for k ≤ 15. This matches the wording "meaningful infinite family, special case".
+* **Why only the lower end of P3, and what is not justified.** (a) None of the families removes an obstacle to
+  the general conjecture: they are special cases proved by explicit periodic colourings, and the bound 5 for them
+  says nothing about the graphs that need 6. (b) The reduction chain is conditional; its hypotheses carry the
+  central burden, are open from 16 vertices on, and one natural strengthening that we studied informally is
+  refuted (section 3.3). No "recognized obstacle" is removed. (c) The small-order theorems reach 14 vertices,
+  while an informal computer search before the event already found no counterexample among ≈ 30.7 M graphs
+  (cubic n ≤ 22); the formal theorems are certificates for a range in which nobody expected a counterexample.
+  (d) Part of row E and all of rows D and the cover theorem are known in print. For these reasons **P4 or more is
+  not justified** ("major cases or components carrying a substantial part of the logical burden" does not apply),
+  and within P3 only the handbook default, the lower end, is requested.
+* If the judges do not regard the families as "meaningful" in the sense of P3, or find them known, the
+  contribution is the reductions, the equivalence and the finite theorems: band P2, where we would argue for
+  p = 0.10 and not object to the lower end.
+* Informal material (section 3) is offered as context only. We ask for no credit for anything that is not
+  Lean-checked, following the organisers' guidance that formalization of every score-bearing claim is "not
+  necessarily [required] but extremely encouraged".
+
+---
+
+## 2. Artifact / proof
+
+| field | value |
+|---|---|
+| Autolab owner | `lavaskiller` |
+| Hill hash/version, Climb, evaluator report | **TODO(operator)**: none exists. This target has no committed competition Hill known to us; the artifact is a Lean repository. If the organisers commit a Hill for OPG-37271, the claim must be attached to it |
+| Final commit | Artifact repository `star6_artifact/`, local commit `1a02f649cf95556fd0e37a26d19b56320aebc2e9` (author Woohyuk Kang). **This is a local commit; it is not published and has no remote.** A later commit in the same repository only inserts this hash into the packet and refreshes `SHA256SUMS`. Immutable public commit URL: **TODO(operator)** |
+| Formal source | `lean/` in the repository, section 2.1 |
+
+### 2.1 Repository layout
+
+| Path | Content |
+|---|---|
+| `star6_packet_final.md` | this packet |
+| `README.md` | what is where; how to verify each tier |
+| `SHA256SUMS` | sha256 of every other file of the repository |
+| `lean/pack3/` | **T3, T4**: lake project `star6` (`lean-toolchain`, `lakefile.toml`, `lake-manifest.json`), `src/` (98 modules + `Main.lean` + `order.txt`), `orig/` (the Lean 4.20 originals), `base/`, `patches/` (every edit of the 4.20 → 4.33.1 port), `apply3.py`, `check_headers3.py` → `check_headers.out`, build scripts, logs: `build/axioms.log`, `build/audit_all.tsv`, `build/build.log`, `build/*.out`, `lake_build.log`, `setup.log`; `README.md`, `STATUS.md` |
+| `lean/pack5/` | **T2**: `src/Star6Bounded.lean` (generated by `gen5.py`), `Star6Corollaries.lean`, `Star6Equiv.lean`, `Star6Simple.lean`; `build5.sh`; `logs/*.out`; `README.md` (all statements), `STATUS.md` |
+| `lean/pack4/` | **T1**: `src/` (125 modules), `order.txt`, `build_all.sh`, `c.sh`, generators (`gen_gp.py`, `gen_gpper.py`, `gen_all.py`, `search/gen_gpk.py`, `search/gen_ml.py`), SAT search scripts and their results (`search/`), `axioms.log`, `build/*.out`, `build/summary.txt`, `sanity_check.py`, `sanity.out`, `gpt_inflate/` (prompt and status of the GPT session), `README.md`, `STATUS.md` |
+| `lean/pack2/` | Lean-core single file `lean433/StarDMS2.lean` (20 180 lines, no imports, sha256 `07abf56995f9cd1b86b260ffd0f71080bf406179954c9f6bb22b9e505d49f218`) + `StarDMS2.log`; `STATEMENTS.md`, `INVENTORY.md`, `README.md` (written 2026-10-01, before the Mathlib port; where they say "not ported to 4.33.1" they are superseded by `lean/pack3/README.md`) |
+| `docs/` | `star6_statement_correspondence.md`, the two addenda of 2026-10-02, `star6_m2_candidates.md`, `NOVELTY.md` (literature assessment of 2026-10-01) |
+| `paper/` | `star6_partial.tex`, `.pdf`: partial-results paper draft of 2026-09-30 (**not** updated to the state of this packet; not reviewed by a human) |
+| `informal/` | reports of the informal studies cited in section 3 (**not formalized**) |
+
+Not in the repository: `.lake/` (Mathlib and its olean cache, 7.5 GB, fetched by `lake`), compiled `.olean`
+files, the fact graph and the evidence store (section 3).
+
+### 2.2 Environment and reproduction
+
+Toolchain: **Lean 4.33.1** (commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6), **Mathlib tag `v4.33.1`** (commit
+0df444a360eaa60ab8c11dca51a86af692955474), pinned in `lean/pack3/lean-toolchain` and `lake-manifest.json`.
+`StarDMS2.lean` needs Lean core only. All measurements: one Linux server, 2026-10-01/02.
+
+```bash
+# T3 + T4 (the chain): lake project, Mathlib oleans are downloaded, not compiled
+cd lean/pack3
+lake update && lake exe cache get && lake build      # 98 modules + Main; the 18 `#print axioms` lines are in the output
+# measured: clean build, one worker, 20 min wall; log: lake_build.log (rc=0, "Build completed successfully")
+
+# the same, per module (this is the build that pack4/pack5 link against: it writes build/*.olean)
+bash setup.sh && bash run433.sh                       # then Main.lean -> build/axioms.log, audit -> build/audit_all.tsv
+python3 check_headers3.py                             # statements unchanged against the Lean 4.20 originals
+# measured: 98/98 modules, 0 errors, 1 422 s of module time, largest process 3.2 GB
+
+# T2 (corollaries): needs lean/pack3/build/*.olean from run433.sh
+cd ../pack5 && python3 gen5.py && bash build5.sh      # about 20 s per module, < 3 GB
+tail -n 1 logs/*.out                                  # rc=0 four times
+grep -h "depends on axioms" logs/*.out | grep -v "\[propext, Classical.choice, Quot.sound\]"   # empty
+
+# T1 (families): needs lean/pack3/build/*.olean from run433.sh
+cd ../pack4 && bash build_all.sh                      # 125 modules, one process at a time
+# measured: 125/125 rc=0, 930 s of compiler time, largest process 2.05 GB; writes axioms.log, build/summary.txt
+python3 sanity_check.py                               # plain Python: edge lists vs textbook, snark checks, brute force
+
+# Lean-core file (HOLE => DMS, CubicSharp5 => DMS, covers, RH2 layers 1-5)
+cd ../pack2/lean433 && lean StarDMS2.lean             # 73 s, 2.8 GB peak; log: StarDMS2.log
+```
+
+`run433.sh`, `c.sh` and `build5.sh` find the compiler through `LEAN433` (default
+`$HOME/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean`) and pack3 through `PACK3` (default `../pack3`).
+The scripts lost their executable bit in this repository (it was assembled on Windows); call them with `bash`.
+
+### 2.3 Axioms
+
+* **T3/T4** (`lean/pack3/build/axioms.log`, 18 `#print axioms` lines, the same 18 in `lake_build.log`): all
+  `[propext, Classical.choice, Quot.sound]`.
+* **Whole-closure audit** (`lean/pack3/build/audit_all.tsv`: `collectAxioms` on each of the 4 924 theorems of
+  the 98 modules): standard axioms only, with **one** exception, `MGraph.k4subdiv_star6` in the baseline module
+  `StarCert` (`native_decide`; its axiom is `MGraph.k4subdiv_star6._native.native_decide.ax_1_1`). **It is not
+  used by any claimed theorem.** Checked for this packet against the logs: (a) it is the only row of
+  `audit_all.tsv` with a non-standard axiom, so no other theorem of the 98 modules depends on it; (b) the name
+  `k4subdiv_star6` occurs in no source file of `pack3/src`, `pack4/src`, `pack5/src` other than its definition
+  (`StarCert.lean`, line 66); (c) every `#print axioms` line of pack4 and pack5 is standard. In
+  `StarDMS2.lean` the same statement is re-proved by kernel `decide` (`[propext, Quot.sound]`).
+* **T2** (`lean/pack5/logs/*.out`): 39 `#print axioms` lines (32 + 3 + 4; `Star6Bounded.out` prints none, its
+  theorems are covered through `Star6Corollaries`), all standard.
+* **T1** (`lean/pack4/axioms.log`): 33 lines `[propext, Classical.choice, Quot.sound]` and 3 lines "does not
+  depend on any axioms" (`BlockStar.colourable_of_star`, `BlockStar.dms_iff`, `starFamily_dms`).
+* **Lean-core file** (`StarDMS2.log`): 12 lines; `P06Lean.cover_main` and `MGraph.k4subdiv_star6`:
+  `[propext, Quot.sound]`; the others standard.
+* No `sorry` (no `sorryAx` in any log), no `axiom` declaration. The word `native_decide` occurs in `pack3/src`, `pack4/src`, `pack5/src`
+  only at `StarCert.lean:66` and in three comments of baseline modules. All certificate checks of the claimed
+  theorems are `decide` / `decide +kernel` (evaluation by the Lean kernel).
+
+### 2.4 Statement-correspondence note
+
+Full note: `docs/star6_statement_correspondence.md` (objects and the 09-28 theorems; its line numbers refer to
+the earlier bundle `StarDMS.lean`), `lean/pack2/STATEMENTS.md` (the chain), `lean/pack4/README.md` §2 (families),
+`lean/pack5/README.md` (vocabulary). Summary:
+
+| Lean | Mathematics |
+|---|---|
+| `structure MGraph` : `n m : Nat`, `ends : Fin m → Fin n × Fin n` | finite multigraph, vertices `Fin n`, edges `Fin m`; only the unordered pair of ends is used; parallel edges are distinct elements of `Fin m` |
+| `Loopless G` | no edge has equal ends |
+| `Subcubic G` | no vertex has 4 distinct incident edges (Δ ≤ 3) |
+| `P : Fin G.m → Prop` | an edge set = the sub-multigraph it spans; `fun _ => True` is G itself |
+| `Adj a b` | edges a ≠ b share an endpoint (parallel edges are adjacent) |
+| `Walk4`, `Bicol c w` | a walk v0 e1 v1 e2 v2 e3 v3 e4 v4 with v0..v3 pairwise distinct and v1..v4 pairwise distinct, i.e. a path with 4 edges or a 4-cycle; bicoloured: c e1 = c e3 and c e2 = c e4 |
+| `Star k c` / `StarOn P k c` | c is proper (on P) and no `Walk4` (with all edges in P) is bicoloured — the OPG definition "no path or cycle of length four is bi-colored" |
+| `Colourable P k` | some `c : Fin m → Fin k` has `StarOn P k c`; for simple G and P = everything: χ′ₛ(G) ≤ k |
+| `RH2F.DMS` | section 1.1 |
+| `Star6.dms_iff_plain : DMS ↔ RH2Fid.DMSP` | `DMSP := ∀ (V E : Type) [Fintype V] [Fintype E] (en : E → Sym2 V), LooplessP en → MaxDeg3 en → Star6P en` — the same conjecture written independently with `Sym2` incidences, `deg en x ≤ 3`, colours 1..6, and separate clauses for 4-edge paths and 4-cycles (`RH2Fid.StarP`) |
+| `BlockStar.dms_iff : RH2F.DMS ↔ ∀ G, DMSfor G` | `DMSfor G := G.Subcubic → G.Loopless → ∀ P, MGraph.Colourable P 6`; each T1 family theorem proves `DMSfor G` for its graphs |
+| `Star6.IsStarEdgeColouring (G : SimpleGraph V) c` | `StarP (edgeEn G) c` with `edgeEn G : G.edgeSet → Sym2 V`; used by the `simple_…` theorems, together with `G.IsRegularOfDegree 3`, `G.degree v ≤ 3`, `Star6.Bridgeless G := ∀ e ∈ G.edgeSet, ¬ G.IsBridge e` |
+
+No hidden hypotheses: all of the above are `def`s and `structure`s of the library. Not formalized: a statement
+"DMS for all Mathlib `SimpleGraph`s" as such (the `SimpleGraph` theorems are the small-order ones), and the
+converse passage from simple graphs to multigraphs.
+
+### 2.5 Derivation summary
+
+* **T3/T4.** Perfect matchings exist with prescribed status at any edge (Schönberger, `layerP`). DMS reduces to
+  cubic bridgeless multigraphs plus a leaf case ((I) ∧ (II)); the cubic case is strengthened to "EX1-good" and
+  reduced along 2-edge-cuts to 2-cut-reduced graphs (`Hyp → II → DMS`); these are reduced along 3-edge-cuts
+  (poles, triangles) and digon suppression to digon insertions of cyclically 4-edge-connected simple hosts, where
+  the two far-exchange hypotheses produce the colourings. The finite base (10, 12, 14 vertices; small hosts;
+  16-vertex existence) is certified by generated tables checked with `decide +kernel`.
+* **T2.** The same inductions with all hypotheses restricted to order ≤ N; at N = 14 the hypotheses are the T4
+  theorems. The converse direction of `dms_iff_cubic16` applies DMS to sub-multigraphs.
+* **T1.** `BlockStar.star_of_windows`: for a cyclic block graph with jumps ≤ D, if every window of 3D+1
+  consecutive blocks passes a Boolean check, the block-wise colouring is a star colouring. The colourings are
+  "periodic part + seam", so (lemmas by `omega`) every window of every n occurs for one of finitely many small
+  n, and those are checked by `decide +kernel`. Rows E and G have no informal proof: the colourings were found
+  by SAT search (`search/`), and the Lean proof is the proof.
+
+### 2.6 References and literature status
+
+Sources of the assessment: `docs/NOVELTY.md` (2026-10-01; reduction chain, families A–D, F) and a check made for
+this packet on 2026-10-02 for rows E and G. "Verified" = the source was opened by us; "unverified" = known only
+through another paper's summary or a search snippet.
+
+* **DMS is open.** Verified: arXiv listing by the phrases "star edge colo(u)ring" / "star chromatic index"
+  (arXiv API, 2026-10-02): the newest papers are arXiv:2511.13140 (Hu–Tang, cubic Halin graphs, Nov 2025) and
+  arXiv:2410.15024; nothing later; both call the conjecture open.
+* **Row E (generalized Petersen graphs).**
+  - Verified (abstract and introduction of arXiv:2410.15024, Omoomi–Vahid Dastjerdi, 19 Oct 2024, v1; no
+    journal version found): Zhu–Shao (Discuss. Math. Graph Theory 41(2) (2021), DOI 10.7151/dmgt.2195) proved
+    χ′ₛ(GP(n,k)) = 4 iff n ≡ 0 (mod 4) and k odd; χ′ₛ ≤ 5 for d = gcd(n,k) ≥ 3 except when d = 3, k ≠ 3 and
+    n/3 ≡ 1 (mod 3); for n even, k odd, d = 1; for k = 1, n ≥ 5; for k = 2, n ≡ 0 (mod 6); χ′ₛ(GP(3,1)) = 6; and
+    they **conjectured χ′ₛ(GP(n,k)) ≤ 5 for all n > 2k except GP(3,1)**. Omoomi–Vahid Dastjerdi prove the
+    conjecture for all d ≥ 3; for d = 2 when n ≡ 0 (mod 6), or n ≡ 2 (mod 6) and t ≡ 2 (mod 3), or n ≡ 4 (mod 6)
+    and t ≡ 1 (mod 3) (t minimal with tk ≡ 2 mod n); and for n/d ∈ {2, 5}.
+  - Unverified: the text of Zhu–Shao 2021 itself (known to us through the summary above and the Lei–Shi survey).
+  - **Which of our instances (1 ≤ k ≤ 15, n ≥ 2k+1) are new**, relative to these results closed under the
+    isomorphisms GP(n,k) ≅ GP(n,k′) (k′ ≡ ±k or kk′ ≡ ±1 mod n): **(a) all n odd with gcd(n,k) = 1 and 2 ≤ k ≤ 15,
+    except GP(5,2)** (the Petersen graph) — infinitely many n for every k; **(b) gcd(n,k) = 2 (so k ∈ {2, 4, …,
+    14}) outside the three d = 2 cases above and n/2 ∉ {2, 5}** — e.g. GP(8,2), GP(14,2), GP(14,4), GP(16,6).
+    Known in print: k = 1; n even with k odd and gcd 1; gcd ≥ 3; the listed gcd-2 cases. By a script over
+    n ≤ 400: 2 611 of the 5 760 pairs (n,k) are not covered in print (k = 1: 0; k = 2: 263 of 396; k = 3: 131 of
+    394; k = 15: 98 of 370). So `gp_family` proves the Zhu–Shao conjecture for k ≤ 15, of which roughly 45 % of
+    the instances are new.
+  - Note: the abstract of arXiv:2410.15024 says its results "also prove [the DMS] conjecture for the generalized
+    Petersen graphs"; this can only refer to the parameter classes it covers (the string "6-star" does not
+    occur in its text). v3 of this packet said "DMS for generalised Petersen graphs is published … we make no
+    claim about it"; that sentence is withdrawn. For the cases (a), (b) we found no published bound better than
+    the general 7.
+* **Row G (Möbius ladders).** Nothing found on star edge colourings of Möbius ladders (web searches of
+  2026-10-02, the arXiv listing above, the Lei–Shi survey abstract). Nearby results, none covering M_n:
+  Cartesian products of paths and cycles incl. prisms (Omoomi–Roshanbin–Vahid Dastjerdi, arXiv:1802.01300);
+  ladders P_n □ K₂ (Fernando–Athapattu, Asian Res. J. Math. 21(9) (2025) 37–43 — unverified, search snippet
+  only). DMS 2013: χ′ₛ(K₃,₃) = 6 and a simple cubic graph has χ′ₛ = 4 iff it covers Q₃ (verified in NOVELTY.md).
+  Status: **appears new; elementary** (a periodic colouring).
+* **Rows A, B (flower and Goldberg snarks).** Re-checked 2026-10-02 (web search; arXiv listing): still no
+  paper on the star *edge* chromatic index of snarks. The literature on these snarks concerns normal
+  5-edge-colourings (Sedlar–Škrekovski 2024), circular chromatic index, and star *vertex* colourings. The "good
+  edge" of our informal proofs is the *rich edge* of normal colourings (Jaeger). Status: **appears new**.
+* **Rows C, D, F, covers, the reductions, the finite certificates:** `docs/NOVELTY.md` rows #1–#18. In short:
+  the reductions (T3), the EX1 / far-exchange machinery, and T4 appear new; pulling star colourings back along
+  covers is DMS's own argument (known); GP(30m,14) fully and the other D families partly known.
+* **Checked, no conflict:** Deng–Liu–Feng, Bull. Malays. Math. Sci. Soc. 48(4) (2025) art. 93, construct
+  infinitely many cubic graphs with χ′ₛ = 6; by their Thm 3.1 these have connectivity 1, hence a bridge, so the
+  hypotheses of CubicSharp5 / CubicSharp5_s (bridgeless graphs) are untouched (as recorded in v3).
+* A public GitHub repository, `vibemathing/problem-opg-37271-star-chromatic-index-cubic`, is another AI attempt
+  at the same problem; not literature; disclosed for priority; contents not reviewed by us.
+
+Bibliography with DOIs: `docs/NOVELTY.md` §4.
+
+### 2.7 Trust dependencies and disclosed deviations
+
+1. **Lean kernel and Mathlib v4.33.1** (downloaded olean cache; Mathlib is not recompiled). Three modules
+   import Mathlib directly (`SimpleGraph.Tutte`, `BigOperators.Fin`, `Sym2`/`Fintype`/`Cardinal.Finite`);
+   pack4's `Families`/`All` import `Mathlib`. [**TODO(operator)**: confirm with the organisers that a Mathlib
+   dependency is acceptable.]
+2. **Port 4.20 → 4.33.1, compatibility options.** The chain was written and gate-checked on Lean 4.20.0 +
+   Mathlib v4.20.0 and ported: 15 proof hunks in 8 modules (`lean/pack3/patches/*.patch`), the line
+   `set_option backward.isDefEq.respectTransparency false` at the top of 73 modules (`patches/compat.txt`), and
+   `set_option maxRecDepth 200000` in the 13 certificate modules of layers 36–37 and before two theorems
+   (`patches/recdepth.txt`). These options affect elaboration only; the kernel checks the resulting terms. A
+   header check over 6 124 declarations finds no changed statement (`check_headers.out`).
+3. **Per-module builds for pack4 and pack5.** They are not lake targets: `c.sh` / `build5.sh` call `lean -o`
+   module by module against `pack3/build/*.olean` (produced by `run433.sh`, not by `lake build`). The lake
+   alternative described in `lean/pack5/README.md` (add the files to `pack3/src` and to `roots`) was **not run**.
+4. **Graph-family fidelity (T1).** The families are explicit edge lists (`BlockStar.BG_ends` is the read-back
+   theorem). That these lists are the textbook graphs is checked by `sanity_check.py` (plain Python, J_5, J_7,
+   G_5, M_5, GP(5,2) and one inflation), **not** by a formal isomorphism with a textbook or Mathlib definition.
+   `Subcubic` and `Loopless` are proved; "simple" and "cubic" are not formalized for the families. The Goldberg
+   edge list follows the block description of arXiv:2511.08664 and was not compared with Goldberg's 1981 paper.
+5. **Generated sources.** The certificate modules of pack3, most modules of pack4 and `Star6Bounded.lean` are
+   generated; the generators are included, but those of pack4 rows D need the project's fact files, which are
+   not in the repository. The generated Lean text is what is checked.
+6. **Inflation (row F)** is formalized only for the Petersen piece, not for the general "all-good pieces" form
+   of the informal fact.
+7. **Statements unchanged by GPT-written proofs.** `InflationA–E`, `Inflation`, `Star6Equiv`, `Star6Simple`
+   were written by GPT against statements fixed beforehand by Claude and re-checked afterwards.
+8. `lean/pack2/STATEMENTS.md`, `INVENTORY.md`, `README.md` describe the state of 2026-10-01 (chain on Lean
+   4.20 only; audit of 4 903 theorems); the 4.33.1 state is in `lean/pack3/README.md` (4 924 theorems).
+
+---
+
+## 3. Supporting material that is NOT formalized
+
+**Verification level of everything in this section: none of it is Lean-checked, and no human has checked it.**
+"Verified fact" below means: accepted by an LLM verifier (Claude Opus), and for most facts also passed a
+cross-check audit by a second model family (GPT). That is evidence, not proof (handbook §7.1: "model agreement
+… is not proof"). Computations are Python/C/SAT scripts run once on our server; "exhaustive" describes the
+script's intent and was not independently re-run. **No credit is requested for this section.**
+
+### 3.1 The fact graph (informal lemmas)
+
+Project store on our server (`fact_graph/`, not in the repository; available on request): **786 facts** (3 more
+were revoked). Status records read from the store on 2026-10-02 (789 records, 3 of them marked "cited"): 732
+verified by the LLM verifier + GPT cross-check audit (141 of them also passed the Lean 4.20 gate), 45 by the LLM
+verifier only, 9 Lean-gate facts without audit; the field `human_approved` is empty for all. Over all audit runs the GPT auditor returned 627 × "correct", 37 × "wrong", 10 × "error";
+disputed facts were repaired or superseded (some disputes are still open, e.g. LEAF-FLIP, CORE-FE; see
+`informal/ROADMAP_2026-09-30.md`). The informal versions of T3 (ROOT-CS4: DMS ⇐ P18 ∧ P16 ∧ P14 ∧ P23 ∧ P19)
+and of the families A–D, F are facts of this graph; their Lean counterparts are the theorems above.
+
+Informal results that go beyond the Lean artifact (examples; ids are fact ids): POLE-16 `3462e827` (pole
+dominance for 10–16 vertices), LMC14 `18134123` (leaf case ≤ 14 vertices; the Lean version is `layer37` part 5),
+the reductions P14-RED `2612f169`, W-RED `1a864fdc`, REPAIR-SU `1dec6fb9`, TD-RED `b4e4863f` (reviewed in
+`informal/p23-check_REPORT.md`), II-RED3 `8ae2e62b`.
+
+### 3.2 Exhaustive computations (evidence store)
+
+* Imported baseline (before the event, section 4.1): no counterexample among ≈ 30.7 M graphs (cubic n ≤ 22,
+  subcubic n ≤ 17, multigraphs n ≤ 18/10).
+* **PMU** (`informal/c4c-ext_REPORT.md`, evidence `071a1c01e5f8f204`). Statement: for every cyclically
+  4-edge-connected simple cubic graph G on ≥ 10 vertices and **every** perfect matching M, some star 6-edge-colouring
+  of G has M as a colour class. Evidence: 0 failures over all 193 521 perfect matchings of all such graphs with
+  10 ≤ n ≤ 18 (exhaustive), 0 in 88 144 sampled matchings at n = 20/24/30/40; it fails only for K₃,₃ (all 6
+  matchings) and for 5 of 16 matchings at n = 8. PMU is a conjecture; nothing about it is proved.
+* Removable-edge criterion "Lemma NR" with an informal proof, and a 4-cycle reduction for matchings without a
+  removable edge (`informal/c4c-norem_REPORT.md`, evidence `8a775f2914586165`): covers 678/678 such pairs at
+  n = 16, 18 and 445/445 sampled at n = 20–28; false at n = 14 (2 pairs), so the base would have to include 14.
+* Cyclic 4-edge-cut reduction by a K₂ gadget for sides on 8–12 vertices
+  (`informal/c4c-4cut_REPORT.md`, evidence `6000f3309454e62b`); pole censuses
+  (`informal/p23-pole_REPORT.md`, evidence `06e97298e91d0b57`); far-exchange census at 20 vertices
+  (`informal/p16_REPORT.md`, evidence `09b68e4e0508283c`).
+
+### 3.3 Negative results (informal, by explicit witnesses)
+
+* **Fixed-radius repair is refuted** (`informal/c4c-ball_REPORT.md`). The induction step "every star
+  6-colouring of G′ = G − e (suppressed) with a prescribed perfect-matching class extends to G by recolouring
+  within radius r of e" is false at r = 2 for all 8 local shapes tested and at r = 3 for 6 of 8, by explicit
+  cyclically 4-edge-connected graphs (n = 258–574; witnesses in the report's json files on the server). In every
+  realised case one Kempe swap rescues. So an induction for PMU needs "for some colouring" or unbounded
+  recolouring. PMU itself is untouched by this.
+* (FE-ALLPM-D) at 20 vertices is refuted (two classes of bad perfect matchings; `informal/p16_REPORT.md`);
+  TD-RED-POLE with threshold 10 is false, with threshold 12 it holds on everything tested
+  (`informal/p23-pole_REPORT.md`).
+* The baseline ledger lists 49 refuted or abandoned approaches ("every local / bounded-repair route is dead").
+
+### 3.4 The paper draft
+
+`paper/star6_partial.tex` / `.pdf` (10 pages, written by a Claude helper on 2026-09-30 from a fact-graph snapshot
+of 374 facts): informal statements and proof sketches of the reduction chain and of families A–D, F. It
+predates layers 32–37 in Lean (its abstract still lists three finite hypotheses as unformalized, which are now
+the theorems `base12`, `simple14`, `b14d`), does not contain rows E and G or T2, and lists covers of the
+Petersen graph and GP(2m,k) results that `docs/NOVELTY.md` identifies as known. Authors are a placeholder. It
+is included as a reading aid, not as a claim.
+
+---
+
+## 4. Provenance
+
+### 4.1 Baseline vs event delta
+
+* **Baseline (before the freeze) — declared, not claimed as event work:**
+  - the Lean library `lean/Star*.lean` (20 modules, core Lean 4.20, imported 2026-09-27); 12 of them are in
+    the artifact (StarCore, StarCert, StarSix, StarReduce, StarLeaf, StarRigid, StarBottleneck, StarChecker,
+    StarCompose, StarMatching, StarVizing, StarExtension);
+  - the research notes imported with it: the handoff ledger `reference/handoff.md` (718 lines, sha256
+    b438fdff327d…) with its reports and scripts. It records a pre-event investigation in which DMS stayed open:
+    a machine-checked reduction layer (the baseline Lean library), about 30.7 M graphs verified star
+    6-colourable by computer, a ledger of refuted routes, and three live routes. The event work started from
+    this ledger. **TODO(operator)**: timestamped baseline commit hash; confirm with the team which ideas of the
+    RH2 route, if any, were already in the handoff.
+* **New during the event** (all accepted by the project's Lean gate; module dates 2026-09-27 23:24 UTC to
+  2026-10-01 UTC):
+  - 09-28, in `StarDMS2.lean`: 5c1eb3f583cf643f (HOLE ⇒ DMS), 63b9e393de697bd5 (P05), d1ef48fd75072624
+    (CubicSharp5_s ⇒ DMS), 7935d329f8fb5b2d (P06), and supporting lemmas 1a8aa1c2b8a6bb8e, d9fbe3906514b798,
+    3a172a440dfeed42, 7bae7837ff8807e2, f3a50a27efdf0d7f, 974f7197c1be8069, a41e8f0a9a642563, 9c01b9b4366b1bad,
+    58c4b6496df1dd82, 4da62a86a36e387e;
+  - 09-28 to 10-01, the RH2 chain: 86 modules of `lean/pack3`, from 7d291f6ca774e1da (layer 1) to
+    ba4d9c5abd0afd83 (layer 37); the list with sizes is `lean/pack2/INVENTORY.md`;
+  - the Lean 4.20 → 4.33.1 port of all 98 modules (10-01/02 KST): proof edits only (section 2.7).
+  - Further modules exist in the library (layers 38a, 38a1, 38e_0–3: partial finite checks of the 16-vertex
+    leaf case). They are not part of this packet.
+* **Produced on 2026-10-01/02 (UTC), after draft v3:**
+  - `lean/pack5` (T2), 2026-10-02 13:04–13:21 UTC: `Star6Bounded` (generated), `Star6Corollaries` (Claude),
+    `Star6Equiv` and `Star6Simple` (GPT);
+  - `lean/pack4` (T1), 2026-10-02 13:07–14:13 UTC: Lean proofs of the informal facts c97931f9caaa7c8b,
+    32a017c12a0c87eb, aa607ed0bc83ecf0 (2026-09-27), f8e1edfe45707104, 6309f733d6da8cd6, a491fe56b9f2d831
+    (09-28), 1262231d03310f70 (09-29), 2f8113cb26f31818, cab2712392b5deec (09-30); rows E and G entirely new on
+    10-02 (SAT-found colourings; no informal predecessor);
+  - the informal studies of section 3.2–3.3 (10-01/02) and the literature notes (10-01, 10-02).
+  **TODO(operator)**: the informal facts of rows A, B, F are dated 2026-09-27; confirm that their time stamps
+  are inside the competition window.
+
+### 4.2 Overlap with other submissions
+
+* The Schönberger / Petersen formalization (section 5) is claimed in the team's separate M2 packet, not here.
+* The team's other packets (Ramsey multiplicity; Erdős/M2) concern unrelated targets.
+* Other entrants: unknown to us. The public repository named in section 2.6 targets the same problem.
+  **TODO(operator)**: check the dashboard for active work on OPG-37271.
+
+### 4.3 AI / tool / compute disclosure
+
+* **Proof search and informal mathematics:** an automated multi-agent harness (a fork of Danus) on the team's
+  server, with Claude Code workers (Claude Opus / Sonnet).
+* **Verification inside the harness:** an LLM verifier (Claude Opus), a cross-check audit on another model
+  family (GPT, recorded as "GPT-5.6-sol" in v3), and the Lean gate (Lean 4.20 + Mathlib v4.20.0 during the run).
+  The authoritative check of everything claimed is the Lean 4.33.1 kernel.
+* **Lean proofs:** Claude (the chain; pack4 except inflation; `Star6Corollaries`); GPT via codex sessions on the
+  server (recorded as "gpt-6-sol" in the pack READMEs) for `InflationA–E`, `Inflation`, `Star6Equiv`,
+  `Star6Simple`. **TODO(operator)**: confirm the exact GPT model name/version (the two records differ).
+* **Packaging:** Claude Code helper sessions (the 4.33.1 port, pack4, pack5, the literature notes, this packet and
+  the repository).
+* **Other tools:** Python 3, pysat/CaDiCaL (SAT searches for rows E, G and the informal studies), small C helpers.
+* **Compute:** one Linux server and a laptop; subscription plans; no paid API beyond them. **TODO(operator)**:
+  confirm, and state funding/credit sources.
+* **Human checking:** **none so far.** No human has verified any proof, statement correspondence, literature
+  claim or computation in this packet. **TODO(operator)**: record anything the team checks by hand.
+* **Outside help / conflicts:** **TODO(operator)**.
+
+### 4.4 Reproducibility limitations
+
+* The builds were run on one machine only; no independent rerun. The repository was assembled from the server
+  copies; `SHA256SUMS` of pack4 (311 files), pack5 and the 100 source files of pack3 were re-verified after the
+  copy.
+* pack4 and pack5 need the per-module build of pack3 (section 2.7, item 3).
+* The SAT searches are not needed for the proofs and are not deterministic; their outputs (`search/*.json`)
+  are included.
+* The fact graph, the evidence store and the witness files of section 3 are not in the repository.
+* Documents in the repository mention paths of our server (`/home/lead/…` in build logs, `~/danus-projects/star6`,
+  `~/m_harness/harness`, `~/.venvs/mh`, `~/erdos-fc/work`); they are not needed for reproduction.
+
+---
+
+## 5. Mode M2 candidates from this library (cross-reference only)
+
+The library contains formalizations of two classical theorems that are absent from Mathlib v4.33.1: **Schönberger's
+theorem** (every edge of a connected bridgeless cubic (multi)graph lies in a perfect matching, and is avoided by
+one) and **Petersen's theorem, connected case** — `RH2P.schoenberger`, `RH2P.pstat`, `Star6.schoenberger_in/out`,
+`Star6.petersen`, `Star6.plain_schoenberger`, and in Mathlib `SimpleGraph` vocabulary `Star6.simple_schoenberger`,
+`Star6.simple_petersen_connected`. They are **not claimed in this packet**; they are claimed in the team's separate
+Erdős/M2 packet. Details: `docs/star6_m2_candidates.md`. Likewise the cover theorem `P06Lean.cover_main` is
+known mathematics and at most an M2 item.
+
+---
+
+## 6. Publication authority and operator TODOs
+
+**Publication authority.** **TODO(operator)**: attribution approval by all team members and permission to
+release the materials under the competition terms. The repository is local and unpublished; nothing was pushed
+or submitted by the writers of this packet.
+
+**TODO list for the operator**
+
+1. Team name, roster, class, affiliations, resource classification, contributions (section 1).
+2. Submission ID; OPDP family ID and source snapshot; frozen difficulty D on the handbook's 0–1000 scale (v3
+   recorded "5.4, atlas v1.5"); admission of the target as M3A.
+3. Hill / Climb / evaluator report: none exists; ask the organisers which route applies to a Lean repository
+   for a target without a committed Hill.
+4. Publish the repository and replace the local commit hash by an immutable URL.
+5. Ask whether the Mathlib dependency and the per-module builds of pack4/pack5 are acceptable.
+6. Baseline: timestamped baseline commit; which RH2 ideas were in the handoff; competition-window check of the
+   09-27 facts.
+7. Confirm the GPT model name, the compute and funding statement, outside help and conflicts.
+8. Human checking: at least the statement correspondence of section 1.1–1.3 and the Goldberg-snark edge list
+   (against Goldberg 1981) should be read by a team member before submission.
+9. Decide whether to keep the requested p = 0.15 (lower end of P3) or to request P2.
+10. Literature: obtain Zhu–Shao 2021 and confirm the coverage list of section 2.6; optionally a second search
+    for Möbius ladders in non-indexed journals.
+11. Publication authority (above).

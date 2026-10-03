@@ -1,0 +1,150 @@
+# Results proved
+
+This file maps each result of the paper to the Lean declaration that proves it, so the
+correspondence can be inspected independently. Everything below refers to commit
+`816f7e31a9edec91db5be9a218fd29406fbaa1e3`, where [`logs/`](logs/) was recorded.
+
+**Paper.** M. Campos and W. Samotij, *Towards an Optimal Hypergraph Container Lemma*,
+Combinatorica **46** (2026), no. 3, Article 24,
+[doi:10.1007/s00493-026-00214-1](https://doi.org/10.1007/s00493-026-00214-1). Result numbers and
+page numbers below follow the preprint arXiv:2408.06617v2 (19 Sep 2024); see
+[`paper/README.md`](paper/README.md) for the PDF and LaTeX source. The published version numbers
+the results the same way (checked by the owner, 2026-10-02); only the page numbers are specific to
+arXiv v2.
+
+## 1. Paper ↔ Lean
+
+### 1.1 Main results
+
+| Paper (section, page) | Lean declaration | File | Status |
+|---|---|---|---|
+| **Theorem B** (§1, p. 3), hard-core container lemma | `theoremB_unconditional : TheoremBStatement` | [`TheoremB.lean:114`](CamposSamotij/TheoremB.lean#L114) | ✅ Proved, no hypotheses |
+| Theorem B, with Prop. 2.2 as a hypothesis | `theoremB (hProp22 : Prop22Statement) : TheoremBStatement` | [`TheoremB.lean:91`](CamposSamotij/TheoremB.lean#L91) | ✅ Proved; kept so the dependency stays visible |
+| **Proposition 2.2** (§2, p. 7; proofs in Appendix A, p. 21) | `prop22 : Prop22Statement` | [`Prop22/Proof/Induction.lean:156`](CamposSamotij/Prop22/Proof/Induction.lean#L156) | ✅ Proved (new proof route; see D12) |
+| **Lemma 4.1** (§4.2, p. 12) | `lemma41` | [`Section4/Lemma41.lean:99`](CamposSamotij/Section4/Lemma41.lean#L99) | ✅ Proved (slightly stronger; see D10) |
+| **Lemma 4.2** (§4.2, p. 12) | `lemma42` | [`Section4/Lemma42.lean:101`](CamposSamotij/Section4/Lemma42.lean#L101) | ✅ Proved |
+| **Lemma 4.3** (§4.2, p. 13) | `lemma43` (takes `hProp22`, discharged by `prop22` in `theoremB_unconditional`) | [`Section4/Lemma43.lean:200`](CamposSamotij/Section4/Lemma43.lean#L200) | ✅ Proved |
+
+The two **frozen statements** are the only Lean you have to compare with the paper by hand. They
+were reviewed and approved by the owner on 2026-09-29:
+
+- `TheoremBStatement`: [`Statement.lean:43`](CamposSamotij/Statement.lean#L43)
+- `Prop22Statement`: [`Prop22/Statement.lean:42`](CamposSamotij/Prop22/Statement.lean#L42)
+
+They rely on these definitions: `Hypergraph`, `IsIndep`
+([`Hypergraph/Basic.lean:39-43`](CamposSamotij/Hypergraph/Basic.lean#L39-L43)), `probOn` and `condExp`
+([`Probability/RandomSubset.lean:47-60`](CamposSamotij/Probability/RandomSubset.lean#L47-L60)).
+
+### 1.2 Statements side by side
+
+**Theorem B.** Paper: let $H$ be a hypergraph on a finite vertex set $V$ and $0<p\le\delta<1$.
+Then there are $\mathcal S\subseteq 2^V$, $g:\mathcal I(H)\to\mathcal S$ and
+$f:\mathcal S\to 2^V$ such that (a) $g(I)\subseteq I\subseteq f(g(I))$; (b) $|S|\le p|V|/\delta$
+for every $S\in\mathcal S$; (c) $\Pr(S\cup C_p\in\mathcal I(H))\ge(1-p)^{\delta|C\setminus S|}$
+with $C=f(S)$, for every $S\in\mathcal S$.
+
+```lean
+def TheoremBStatement : Prop :=
+  ∀ {V : Type u} [Fintype V] [LinearOrder V] (H : Hypergraph V) (p δ : ℝ),
+    0 < p → p ≤ δ → δ < 1 →
+    ∃ (𝒮 : Finset (Finset V)) (g f : Finset V → Finset V),
+      (∀ I, IsIndep H I → g I ∈ 𝒮) ∧
+      (∀ I, IsIndep H I → g I ⊆ I ∧ I ⊆ f (g I)) ∧
+      (∀ S ∈ 𝒮, (S.card : ℝ) ≤ p * Fintype.card V / δ) ∧
+      (∀ S ∈ 𝒮, (1 - p) ^ (δ * ((f S \ S).card : ℝ)) ≤
+        probOn (f S) p (fun A ↦ IsIndep H (S ∪ A)))
+```
+
+**Proposition 2.2.** Paper: $C$ finite, $\mathcal I\subseteq 2^C$ decreasing, $p\in(0,1)$ ⟹
+$\log\Pr(C_p\in\mathcal I)\ge\bigl(|C|-\mathbb E[|C_p|\mid C_p\in\mathcal I]/p\bigr)\log(1-p)$.
+
+```lean
+def Prop22Statement : Prop :=
+  ∀ {V : Type u} [DecidableEq V] (C : Finset V) (𝓘 : Finset (Finset V)) (p : ℝ),
+    0 < p → p < 1 →
+    IsLowerSet (𝓘 : Set (Finset V)) → 𝓘 ⊆ C.powerset → 𝓘.Nonempty →
+    ((C.card : ℝ) - condExp C p (fun A ↦ (A.card : ℝ)) (· ∈ 𝓘) / p) * Real.log (1 - p) ≤
+      Real.log (probOn C p (· ∈ 𝓘))
+```
+
+**Lemmas 4.1–4.3** are about the algorithm of §4.1 (`Algorithm/Defs.lean`). The fingerprint is
+$S$ = `fingerprint p δ H I` and the container is $C$ = `containerOf p δ H I`.
+
+| Paper | Lean conclusion |
+|---|---|
+| 4.1: $S_i\subseteq I\in\mathcal I(H_i)$ and $I'\in\mathcal I(H_i)\iff S_i\cup I'\in\mathcal I(H_i)$ | `Invariant H I (stage p δ H I i)` for every `i : ℕ`; `Invariant` has the fields `S_subset`, `indep`, `indep_iff`, plus `H_subset : H ⊆ Hᵢ` ([`Lemma41.lean`](CamposSamotij/Section4/Lemma41.lean)) |
+| 4.2: $\delta\lvert S\rvert\le p\lvert V\rvert$ | `δ * (fingerprint p δ H I).card ≤ p * Fintype.card V` |
+| 4.3: $\Pr(S\cup C_p\in\mathcal I(H))\ge(1-p)^{\delta\lvert C\setminus S\rvert}$ | `(1 - p) ^ (δ * ((C \ S).card : ℝ)) ≤ probOn C p (fun A ↦ IsIndep H (S ∪ A))` |
+
+### 1.3 Supporting results that make explicit what the paper leaves implicit
+
+| Paper | Lean declaration | File |
+|---|---|---|
+| §4.1: the algorithm stops after at most $\lvert V\rvert$ steps | `run_stopped` | [`Algorithm/Defs.lean:238`](CamposSamotij/Algorithm/Defs.lean#L238) |
+| §4.2: "$H_i$ depends on $S_i$ only", so $f$ is well-defined | `stage_fingerprint`, `containerOf_fingerprint` | [`TheoremB.lean:61`](CamposSamotij/TheoremB.lean#L61), [`:84`](CamposSamotij/TheoremB.lean#L84) |
+| Lemma 4.1 at the final stage | `lemma41_run` | [`Section4/Lemma41.lean:105`](CamposSamotij/Section4/Lemma41.lean#L105) |
+| Prop. 2.2, exponentiated (the form Lemma 4.3 uses) | `prop22_rpow` | [`Prop22/Statement.lean:51`](CamposSamotij/Prop22/Statement.lean#L51) |
+| Coupling identity in the proof of Lemma 4.3 | `condProb_coupling` | [`Section4/Lemma43.lean:93`](CamposSamotij/Section4/Lemma43.lean#L93) |
+| Real inequality used in Lemma 4.2 | `mul_log_one_sub_le`, `delta_mul_le_of_pow_le` | [`Probability/RealAux.lean`](CamposSamotij/Probability/RealAux.lean) |
+
+### 1.4 Not formalized
+
+These results of the paper have **no** Lean counterpart: Theorem A and its proof (§3,
+Lemmas 3.1–3.11, Corollary 3.8), Proposition 1.1, Theorems C, D, E and F, Theorem 2.1 and
+Proposition 2.3. [`MOTIVATION.md`](MOTIVATION.md) §6 explains what we intend to do next.
+
+## 2. Axiom output
+
+The output of `lake env lean logs/Axioms.lean`, verbatim (see [`logs/axioms.log`](logs/axioms.log);
+the script is [`logs/Axioms.lean`](logs/Axioms.lean)):
+
+```text
+'CamposSamotij.theoremB_unconditional' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CamposSamotij.theoremB' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CamposSamotij.prop22' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CamposSamotij.lemma41' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CamposSamotij.lemma42' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CamposSamotij.lemma43' depends on axioms: [propext, Classical.choice, Quot.sound]
+```
+
+These are Lean's three standard axioms, which mathlib uses throughout. `sorryAx` does not appear,
+so no proof these theorems depend on contains a `sorry`. No project-specific axiom appears
+either.
+
+## 3. Remaining `sorry`s
+
+**None.** Command and output (see [`logs/sorry-check.log`](logs/sorry-check.log)):
+
+```text
+$ grep -rnwE "sorry|admit|axiom" CamposSamotij --include=*.lean
+CamposSamotij/Prop22/Statement.lean:8:Never an `axiom`. **Frozen** (approved 2026-09-29; see `divergence.md` D1, D2).
+```
+
+The one match is a doc comment, not code. The full build ([`logs/build.log`](logs/build.log))
+has no `declaration uses 'sorry'` warning. [`REPRODUCE.md`](REPRODUCE.md) explains how to rerun
+both checks.
+
+## 4. Assumptions and divergences from the paper
+
+**Theorem B uses exactly the paper's hypotheses** ($H$ a hypergraph on a finite $V$,
+$0<p\le\delta<1$) and nothing else. The Lean statement differs from the paper only in these
+modelling choices. The full record, with the reasons, is in [`divergence.md`](divergence.md).
+
+| # | What | Effect on the result |
+|---|---|---|
+| D1 | `Prop22Statement` requires `𝓘.Nonempty` | The paper's expression is undefined when $\mathcal I=\varnothing$ ($\log 0$, and conditioning on a null event). Lemma 4.3 only uses nonempty families. |
+| D3 | `[LinearOrder V]` in Theorem B; $v_i$ is the *least* eligible vertex | None: every finite type has a linear order, and the theorem is existential in $g,f,\mathcal S$. |
+| D4 | The loop runs exactly $\lvert V\rvert$ iterations | None: `run_stopped` proves that the algorithm has stopped by then. |
+| D5, D9 | Probability as finite sums (`probOn`); real exponent via `Real.rpow` | None where the paper's expressions are defined. `condProb` and `condExp` are `0` on null events, and every use carries a positivity proof. |
+| D6 | `Hypergraph V := Finset (Finset V)`; vertex set = the whole type `V` | None. |
+| D8 | `g`, `f` are total functions; `g : 𝓘(H) → 𝒮` becomes `∀ I, IsIndep H I → g I ∈ 𝒮` | None: restricting them gives the paper's functions, and the paper's functions extend to total ones. |
+| D10 | `lemma41` holds for all `i : ℕ` and adds `H ⊆ Hᵢ` | A strengthening. |
+| D11 | `f` is defined by rerunning the algorithm on $S$ | None: this is the paper's argument made explicit. |
+| D12 | Prop. 2.2 is proved by induction on $\lvert C\rvert$, not by any of the paper's three proofs | None on the statements. |
+
+D2 and D7 are representation notes with no effect. See [`divergence.md`](divergence.md).
+
+**What is not machine-checked:** whether `TheoremBStatement` and `Prop22Statement`, with the
+definitions they use, say what the paper says. Only people have checked this, by reading them: the
+owner (both statements), and Matheus and Tiago (`TheoremBStatement`; see [`CREDITS.md`](CREDITS.md) §1).
+That is why §1.2 shows both statements next to the paper's.

@@ -1,0 +1,1135 @@
+FILE 349425 Claim_Evidence/cards/a100475.md
+# A100475: no positive prime-reversal cycle
+
+Completed result and evidence record.
+
+Claim ID: `a100475`. Family: `oeis-a100475`.
+## Our contribution
+
+We supply the complete positive-start prime-reversal nonperiodicity proof, joining analytic growth with checked finite exceptions to rule out every periodic tail, including the start one. The independent 84-module Lean 4.33.1 replay verifies the exact original target with standard axioms and source identity.
+
+## Exact preserved statement and scope
+
+Let p_n be the nth prime with p_1=2, and T(n) the decimal digit reversal of p_n. For every natural x>0, the orbit starting at x under T is not ultimately periodic. Thus False iff there exists x>0, x≠1, whose orbit is ultimately periodic.
+
+Complete refutation of the positive-start original question
+
+Not claimed:
+- Zero-start totalization as new mathematics
+- Separate credit for x=1, sieve modules or intermediate growth estimates
+
+## Contribution and prior overlap
+
+Proposed classification: M3A complete original-target refutation; M1 only if organizer assigns focus status. No acceptance or credit asserted.
+
+- Rules out every positive periodic tail, joining analytic growth with checked finite exceptions
+
+
+Recorded overlap:
+- Nth-prime growth estimates, decimal reversal facts and finite-exception strategy are classical background
+- The public zero-start counterexample concerns a different totalization
+
+Recorded bounded prior-art comparison:
+- No exact prior positive-start solution located in recorded bounded review; elementary/folklore risk remains
+- Classical derivability alone is not proof that this exact target was known
+
+## Formal proof source
+
+Paths below are relative to `Claim_Evidence/` in this bundle. Exact source bytes, declaration lines and verification evidence are preserved. Dependency versions and the inspection/build boundary are described in the bundle README.
+
+### OeisA100475.not_periodic
+
+Source: `proofs/a100475/A100475.lean`, line 17. SHA-256 `e22c200d87ed0a15a25d4760e3f37aaf0005b48aa5b734e79fb0776599c04c95`.
+
+```lean
+theorem not_periodic {x : ℕ} (hx : 0 < x) : ¬ IsUltimatelyPeriodic (aStartAt x)
+```
+
+### OeisA100475.conjecture
+
+Source: `proofs/a100475/A100475.lean`, line 20. SHA-256 `e22c200d87ed0a15a25d4760e3f37aaf0005b48aa5b734e79fb0776599c04c95`.
+
+```lean
+theorem conjecture :
+    False ↔ ∃ x : ℕ, 0 < x ∧ x ≠ 1 ∧ IsUltimatelyPeriodic (aStartAt x)
+```
+
+## Verification evidence
+
+Independent complete 84-module replay completed 2026-10-01T13:03:31.027744Z; source receipt records byte identity with user ZIP; final theorem standard axioms
+
+Recorded environments:
+- {'lean': '4.33.1', 'lean_commit': '819816b2e0a3bf405af45ae5c7af2491d8f5bee6', 'mathlib': '0df444a360eaa60ab8c11dca51a86af692955474'}
+
+- `evidence/lean-cloud/user-attempt-replay/A100475-independent-replay-summary.json` (existing retained artifact; SHA-256 `85d0e4a2f07f11f1c95ba2eccbf2a2d37e832259bbd6c0bc5a9cc6b98fcb3c86`).
+- `evidence/lean-cloud/user-attempt-replay/reports/A100475-replay.json` (existing retained artifact; SHA-256 `f217c891d59ecd2757c11589cc9ace77cc593e34f10c21f8528f4b96cb108ce8`).
+- `evidence/lean-cloud/user-attempt-replay/reports/build-a100475/A100475.log` (existing retained artifact; SHA-256 `f881ba28f46de6fd2b5da9e93c16bd6e38d4f08808a714e83b92da4630eb2839`).
+- `evidence/lean-cloud/user-attempt-replay/reports/A100475-source-correspondence.json` (existing retained artifact; SHA-256 `4483b4b94ad2ff180523aa5206f32256357248cd1a98563df0428b04c54bceb6`).
+
+
+## Entrant declaration
+
+The entrants declare that all supplied results are their team's work produced during the competition. Original source and replay timestamps are preserved as artifact history.
+
+
+FILE 349424 Claim_Evidence/cards/a060957.md
+# A060957: refutation and arbitrarily long prime-exponent gaps
+
+Completed result and evidence record.
+
+Claim ID: `a060957`. Family: `oeis-a060957`.
+## Our contribution
+
+We supply the complete distinct-factor interpolation refutation and its exact arbitrary-gap strengthening, realizing the eight-level exponent fibre with primes above any prescribed bound. The recorded 45-module Lean 4.33.1 replay and dual-version generalized checks certify the construction with standard axioms and no unproved graph-existence premise, building on known encoding and semigroup-hole methods.
+
+## Exact preserved statement and scope
+
+Original refutation: ∃ n,m,p∈N with m>0, p prime, p≤n, m∈P(n), p^5 m∈P(n), and p^4 m∉P(n). Stronger: ∀ g≥1 and B∈N, ∃ n,p,d,h∈N with p prime, B<p≤n, d>0, p∤d, and for every e∈N, p^e d∈P(n) iff e lies in {h,h+1,h+2,h+3,h+g+4,h+g+5,h+g+6,h+g+7}. Hence g consecutive missing levels between attainable endpoints.
+
+Complete refutation, with stronger same-family exact arbitrary-gap theorem
+
+Not claimed:
+- Minimum counterexample size
+- A fixed prime working for every gap length
+- Every sufficiently large interval
+- Independent family credit for each g or the strengthening
+
+## Contribution and prior overlap
+
+Proposed classification: M3A complete refutation; strengthening in same family union. No acceptance or credit asserted.
+
+- Whole-interval distinct-factor counterexample and all-size prescribed gaps with exact fiber
+
+
+Recorded overlap:
+- Prime-coordinate encoding, exposed faces, graph constructions and semigroup-hole context are prior methods
+
+Recorded bounded prior-art comparison:
+- No exact earlier complete-interval distinct-factor counterexample or arbitrary-gap fiber theorem found in recorded bounded audits
+
+## Formal proof source
+
+Paths below are relative to `Claim_Evidence/` in this bundle. Exact source bytes, declaration lines and verification evidence are preserved. Dependency versions and the inspection/build boundary are described in the bundle README.
+
+### SubsetProductGap.subset_product_counterexample
+
+Source: `proofs/a060957/OpHack/SubsetProducts/Main.lean`, line 89. SHA-256 `5b9d85abd44f036bbbfa11f241b62ebe8dce01a2ffd89305caa965669c72b0fc`.
+
+```lean
+theorem subset_product_counterexample : ∃ n p m : ℕ, p.Prime ∧ p ≤ n ∧ 0 < m ∧
+    m ∈ productsOfSubsets n ∧ p^5*m ∈ productsOfSubsets n ∧ p^4*m ∉ productsOfSubsets n
+```
+
+### SubsetProductGap.interpolation_conjecture_false
+
+Source: `proofs/a060957/OpHack/SubsetProducts/Main.lean`, line 97. SHA-256 `5b9d85abd44f036bbbfa11f241b62ebe8dce01a2ffd89305caa965669c72b0fc`.
+
+```lean
+theorem interpolation_conjecture_false : ¬ (∀ (n p : ℕ), p.Prime → p ≤ n →
+    ∀ (m a : ℕ), m ∈ productsOfSubsets n → p^a*m ∈ productsOfSubsets n →
+    ∀ k : ℕ, 0 < k → k < a → p^k*m ∈ productsOfSubsets n)
+```
+
+### SubsetProductGap.Generic.arbitrary_gap_eight_levels_above
+
+Source: `proofs/a060957/OpHack/SubsetProducts/Generic/Final.lean`, line 90. SHA-256 `a2e26af97d551980ecca1eb62f5db1362f75ada87f28795f99fe526651007d53`.
+
+```lean
+theorem arbitrary_gap_eight_levels_above (g : ℕ) (hg : 1 ≤ g) (lower : ℕ) :
+    ∃ n p d h : ℕ, p.Prime ∧ lower < p ∧ p ≤ n ∧ 0 < d ∧ ¬ p ∣ d ∧
+      ∀ e : ℕ, p^e * d ∈ productsOfSubsets n ↔
+        e = h ∨ e = h + 1 ∨ e = h + 2 ∨ e = h + 3 ∨
+          e = h + g + 4 ∨ e = h + g + 5 ∨ e = h + g + 6 ∨ e = h + g + 7
+```
+
+### SubsetProductGap.Generic.arbitrary_gap_consecutive_above
+
+Source: `proofs/a060957/OpHack/SubsetProducts/Generic/Final.lean`, line 113. SHA-256 `a2e26af97d551980ecca1eb62f5db1362f75ada87f28795f99fe526651007d53`.
+
+```lean
+theorem arbitrary_gap_consecutive_above (g : ℕ) (hg : 1 ≤ g) (lower : ℕ) :
+    ∃ n p M : ℕ, p.Prime ∧ lower < p ∧ p ≤ n ∧ 0 < M ∧
+      M ∈ productsOfSubsets n ∧ p^(g + 1) * M ∈ productsOfSubsets n ∧
+        ∀ j : ℕ, 1 ≤ j → j ≤ g → p^j * M ∉ productsOfSubsets n
+```
+
+## Verification evidence
+
+Combined 45-module 4.33.1 replay and aggregate passed 2026-10-01 around16:08UTC. Generalized24-module closure also passed4.34.1 around16:01 and4.33.1 around16:05. Standard final axioms; no unproved graph-existence premise.
+
+Recorded environments:
+- {'lean': '4.33.1', 'lean_commit': '819816b2e0a3bf405af45ae5c7af2491d8f5bee6', 'mathlib': '0df444a360eaa60ab8c11dca51a86af692955474'}
+- {'lean': '4.34.1', 'lean_commit': '5045d0056413266e57c625dcd7c365b10e377c52', 'mathlib': 'd13f23b723b8a846827a245b89c10fc7d3f11612'}
+
+- `proofs/a060957/verification/full-verification.json` (existing retained artifact; SHA-256 `46dea1e382439f2896ecfac4d899f321d8c2b7755352bd0b5ad54b877619ea26`).
+- `proofs/a060957/verification/arbitrary-gaps-4341-verification.json` (existing retained artifact; SHA-256 `296169581dd7ed22fe3f0c0a30762f5d31e3a32c8ce54a22929c6bc0007c45d9`).
+- `proofs/a060957/verification/arbitrary-gaps-pinned-verification.json` (existing retained artifact; SHA-256 `84f27897af19af13b3321b158f2eeec611688b230fc1e4f1e2615933a803b0bb`).
+- `proofs/a060957/verification/full-replay/OpHack_SubsetProducts_Main.log` (existing retained artifact; SHA-256 `37d666456acd4e1d756ed767265f43576bb7db3e21bc8596f1ae8d575a88577e`).
+- `proofs/a060957/verification/full-replay/OpHack_SubsetProducts_Generic_Final.log` (existing retained artifact; SHA-256 `45181294c9ab47a9ea8e4b2fbadd87d3d616b8e6536d1d10457061760892a767`).
+
+
+## Entrant declaration
+
+The entrants declare that all supplied results are their team's work produced during the competition. Original source and replay timestamps are preserved as artifact history.
+
+
+FILE 350548 Focus_Evidence/evidence/FOCUS-RAMSEY/hill-reference/SOURCES.md
+# Sources, selection, and frozen research baseline
+
+Literature check: 2026-09-19. This is evidence for choosing a research target, not a complete mathematical review or a guarantee of novelty. Recheck status before the competition freeze and review every result against prior work.
+
+## Primary research
+
+- Olaf Parczyk, Sebastian Pokutta, Christoph Spiegel and Tibor Szabo, *New Ramsey Multiplicity Bounds and Search Heuristics*, arXiv:2206.04036v3, 13 September 2024; Foundations of Computational Mathematics 25 (2025), 1777-1814. https://arxiv.org/html/2206.04036v3 and https://doi.org/10.1007/s10208-024-09675-6 . Section 1 defines c4 and records the open exact-value problem; section 3 gives constructive search methods and blow-ups. The FINAL NOTE records McKay's improved upper bound 10486266368/768^4, used here rather than the weaker headline theorem.
+- Their openly supplied construction data: https://doi.org/10.5281/zenodo.6364588 , resolving to record 6602512. The 768-vertex graph in graphs/c4.graph6.txt is provided as an attributed starting construction. It is prior work and does not beat the final-note reference. The hill does not assert that this seed is McKay's later graph.
+- Juanjo Rue and Christoph Spiegel, *The Rado multiplicity problem in vector spaces over finite fields*, Finite Fields and Their Applications 111 (2026), 102782, introduction. https://doi.org/10.1016/j.ffa.2025.102782 . This later paper still describes the unresolved gap for clique multiplicities beyond triangles. It does not claim a new c4 upper bound.
+
+Searches for later K4 Ramsey multiplicity improvements, the exact McKay numerator, and the quoted density found no stronger c4 bound in the primary sources inspected. This bounded search does not prove the absence of a newer result. The evaluator deliberately names its milestone reference_beaten rather than world_record or conjecture_solved.
+
+## Connection to the organizer's work
+
+- Alejandro Zarzuelo Urdiales, *Clique-Size Dominance Threshold Distribution: Enumerating Labeled Graphs by Clique Number and the Minimum Coding Clique Size*, May 2026. https://doi.org/10.5281/zenodo.20004703 . The introduction describes replacing multigraph vertices with coding cliques and discusses clique counts and Ramsey theory.
+- Associated code and statements: https://github.com/alejandrozu/Clique-OEIS ; research overview: https://alejandrozarzuelo.com/ . These establish the thematic connection. This hill uses its own explicit weighted blow-up semantics and assumes none of the organizer's embedding theorems.
+
+## Why this target was selected
+
+The old linear-arboricity hill contains a solved small catalog, and adding more sampled cases would still not certify a theorem beyond those cases. Small Ramsey-number records are very famous but often supply little gradual feedback. Broad list-coloring or linear-arboricity theorems need a precisely chosen unsolved class and a general proof checker before they can become honest automatic hills.
+
+The selected c4 construction problem has a sourced open frontier, an exact objective, reusable public seeds, visual clique clusters, and a simple proven passage from a finite artifact to an unbounded graph family. This makes a concentrated week of AI-assisted search and certification plausible. It does not establish that a research breakthrough will happen in one week; the best-known bound is a serious target.
+
+No OPDP competition difficulty, novelty ruling, or focus-set admission is invented here. Those require the handbook's independent assessment and review. This is a construction hill aimed at partial progress on the original problem, not a claim that choosing a finite template creates a new famous open problem.
+
+
+FILE 349430 Claim_Evidence/cards/erdos21-sharp-residual.md
+# Erdős Lovász sharp residual cover bound
+
+Completed result and evidence record.
+
+Claim ID: `erdos21-sharp-residual`. Family: `erdos21-sharp-residual-cover`.
+## Our contribution
+
+We close the source paper's explicit +3 residual-cover question through refined colored-link budgets and equality-case exclusions, then derives the all-r bound with additive constant three. The isolated 18-module Lean 4.34.1 replay and separate triangle check certify the result and sharpness, building on the credited matching infrastructure and +4 theorem.
+
+## Exact preserved statement and scope
+
+For every finite intersecting r-uniform hypergraph J of maximum vertex degree at most 3, 4 tau(J) <= |J| + r + 3. Degree-four peeling yields the same inequality without a degree restriction and hence 3r <= |H| + 3 whenever tau(H)=r; for r=8 this gives |H|>=21. The additive constant 3 is optimal, with a separately checked known triangle example.
+
+Complete proof of the explicit +3 refinement asked after Lemma 2 of arXiv 2606.24878v2; one provisional non-M2 new-target mathematical family.
+
+Not claimed:
+- No resolution of the original O(r) Erdős 21 question, already solved by Kahn
+- No determination of g(r) or improvement of the source paper asymptotic coefficient (41-sqrt(19))/12
+- No separate claim for lower_three_sub, r=8, triangle sharpness or infrastructure
+- No certified first-publication priority
+
+## Contribution and prior overlap
+
+Proposed classification: Provisional non-M2 new-target mathematical claim. No acceptance or credit asserted.
+
+- The source paper’s residual bound has +4 and explicitly asks for +3. Refined colored-link edge budgets and finite equality-case exclusions establish +3, and the same family improves its explicit all-r bound from 3r-4 to 3r-3.
+
+
+Recorded overlap:
+- Varun Sivashankar, An Improved Lower Bound for the Erdős–Lovász Cover Number Problem, arXiv 2606.24878v2, 29 July 2026 supplies the unconditional matching/witness infrastructure, +4 theorem and known sharpness examples.
+- The paper’s stronger asymptotic coefficient about 3.053 is prior work and is not improved. Its ancillary source prefix is reused with explicit attribution and only the documented Lean 4.34.1 compatibility changes. The entire Kahn-dependent asymptotic section is excluded.
+
+Recorded bounded prior-art comparison:
+- Varun Sivashankar, An Improved Lower Bound for the Erdős–Lovász Cover Number Problem, arXiv 2606.24878v2, 29 July 2026 supplies the unconditional matching/witness infrastructure, +4 theorem and known sharpness examples.
+- The paper’s stronger asymptotic coefficient about 3.053 is prior work and is not improved. Its ancillary source prefix is reused with explicit attribution and only the documented Lean 4.34.1 compatibility changes. The entire Kahn-dependent asymptotic section is excluded.
+
+## Formal proof source
+
+Paths below are relative to `Claim_Evidence/` in this bundle. Exact source bytes, declaration lines and verification evidence are preserved. Dependency versions and the inspection/build boundary are described in the bundle README.
+
+### ErdosLovasz.residual_cover_bound_sharp
+
+Source: `proofs/erdos21-sharp-residual/OpHack/Erdos21/Main.lean`, line 25. SHA-256 `9314ae7ba95b6fd9922ccfea882f1d33a6c11c9a40d750109014c8184ab7e414`.
+
+```lean
+theorem residual_cover_bound_sharp (r : ℕ) (J : Finset (Finset V))
+    (huni : IsUniform r J) (hint : Intersecting J)
+    (hdeg : ∀ v, edgeDeg J v ≤ 3) :
+    4 * coverNum J ≤ J.card + r + 3
+```
+
+### ErdosLovasz.cover_bound_sharp
+
+Source: `proofs/erdos21-sharp-residual/OpHack/Erdos21/Main.lean`, line 33. SHA-256 `9314ae7ba95b6fd9922ccfea882f1d33a6c11c9a40d750109014c8184ab7e414`.
+
+```lean
+theorem cover_bound_sharp (r : ℕ) (H : Finset (Finset V))
+    (huni : IsUniform r H) (hint : Intersecting H) :
+    4 * coverNum H ≤ H.card + r + 3
+```
+
+### ErdosLovasz.erdos_lovasz_lower_three
+
+Source: `proofs/erdos21-sharp-residual/OpHack/Erdos21/Main.lean`, line 41. SHA-256 `9314ae7ba95b6fd9922ccfea882f1d33a6c11c9a40d750109014c8184ab7e414`.
+
+```lean
+theorem erdos_lovasz_lower_three (r : ℕ) (H : Finset (Finset V))
+    (huni : IsUniform r H) (hint : Intersecting H) (hcover : coverNum H = r) :
+    3 * r ≤ H.card + 3
+```
+
+### ErdosLovasz.erdos_lovasz_lower_three_sub
+
+Source: `proofs/erdos21-sharp-residual/OpHack/Erdos21/Main.lean`, line 49. SHA-256 `9314ae7ba95b6fd9922ccfea882f1d33a6c11c9a40d750109014c8184ab7e414`.
+
+```lean
+theorem erdos_lovasz_lower_three_sub (r : ℕ) (H : Finset (Finset V))
+    (huni : IsUniform r H) (hint : Intersecting H) (hcover : coverNum H = r) :
+    3 * r - 3 ≤ H.card
+```
+
+### ErdosLovasz.erdos_lovasz_eight_lower
+
+Source: `proofs/erdos21-sharp-residual/OpHack/Erdos21/Main.lean`, line 56. SHA-256 `9314ae7ba95b6fd9922ccfea882f1d33a6c11c9a40d750109014c8184ab7e414`.
+
+```lean
+theorem erdos_lovasz_eight_lower (H : Finset (Finset V))
+    (huni : IsUniform 8 H) (hint : Intersecting H) (hcover : coverNum H = 8) :
+    21 ≤ H.card
+```
+
+## Verification evidence
+
+An independent isolated Lean 4.34.1 replay passed all 18 Main-closure modules. The proof-output directory began empty, source hashes stayed unchanged, nine external revisions were pinned and clean, and the separate endpoint-definition audit passed. Final endpoints use only propext, Classical.choice and Quot.sound; no Kahn hypothesis, hidden packing lemma or extra mathematical assumption is present. The known triangle witness was separately checked against the rebuilt core, outside the 18-module replay.
+
+Recorded environments:
+- {'lean': '4.34.1', 'mathlib': 'd13f23b723b8a846827a245b89c10fc7d3f11612'}
+
+- `proofs/erdos21-sharp-residual/replay-receipt/manifest.json` (existing retained artifact; SHA-256 `5dc4e129bd723dc0b914ec12a711d31ff63151dc1d56956fbab17f0098dfca2e`).
+- `proofs/erdos21-sharp-residual/replay-receipt/Main.log` (existing retained artifact; SHA-256 `94d78809809af1486c48477b5dfb3166a48af05fa5597da2e872ac652ef0db42`).
+- `proofs/erdos21-sharp-residual/replay-receipt/EndpointAudit.log` (existing retained artifact; SHA-256 `930313bcac1c89a8010b052ce64adfa6305e2d2579afdf6e6095bdd46c95a4d6`).
+- `proofs/erdos21-sharp-residual/replay-receipt/TriangleSharpness.log` (existing retained artifact; SHA-256 `1433ba0035a9c0578b46db873b88a7b5bd275ed2e833700f4a3b3ca9c5f3e75e`).
+- `proofs/erdos21-sharp-residual/verified-main-output.txt` (existing retained artifact; SHA-256 `94d78809809af1486c48477b5dfb3166a48af05fa5597da2e872ac652ef0db42`).
+
+
+## Entrant declaration
+
+The entrants declare that all supplied results are their team's work produced during the competition. Original source and replay timestamps are preserved as artifact history.
+
+
+FILE 349443 Claim_Evidence/cards/opdp89-parity-local-maxima.md
+# OPDP89 sharp four parity likelihood classification
+
+Completed result and evidence record.
+
+Claim ID: `opdp89-parity-local-maxima`. Family: `opdp89-parity-rbm`.
+## Our contribution
+
+We supply the sharp collapsed-fibre local-maximum threshold for the four-visible, one-hidden pure-parity RBM, including stationarity and both signs of variation at and beyond the boundary in every full parameter neighborhood. The fresh 17-module replay and semantic audit verify this higher-order classification with standard axioms, extending the known singular-stationarity setting.
+
+## Exact preserved statement and scope
+
+For pure four-parity data Q_rho(s)=(1+rho*s1*s2*s3*s4)/16 with 0<|rho|<=1, consider the normalized four-visible, one-hidden spin RBM P_(b,c,w)(s) proportional to exp(b dot s)*cosh(c+w dot s), and its expected log likelihood ell_rho. At every collapsed point (0,c0,0), with c0 any finite real, every affine parameter-direction derivative is zero. It is a local maximum in the full nine-dimensional parameter space if and only if tanh(c0)^2 < (3+2|rho|)/(3+6|rho|). At equality or beyond, every full parameter neighborhood has both a strictly higher and a strictly lower likelihood point. Every collapsed point has a strictly better finite RBM and distinct equal-likelihood points in every neighborhood; the local maxima are non-strict.
+
+One provisional non-M2 mathematical family giving the exact finite collapsed-fiber classification for the four-visible, one-hidden parity RBM.
+
+Not claimed:
+- No higher-dimensional n>=5 or arbitrary four-wise-uniform-data formal endpoint
+- Exactly one hidden unit and pure four-parity data
+- No distribution-space local maximum, strict optimization trap, attraction basin, EM convergence or training-time theorem
+- No complete resolution of the broad OPDP89 learning-structures prompt
+- No extra family credit for the earlier strict region, balanced fallback, stationary fiber or ordinary extensions
+- Historical sharp raw logs remain unavailable; the separate dated fresh post-recovery PASS receipt/logs are retained without altering historical snapshots
+- Novelty, eligibility and accepted credit remain unestablished
+
+## Contribution and prior overlap
+
+Proposed classification: Provisional non-M2 mathematical partial. No acceptance or credit asserted.
+
+- This upgrades the existing strict-region family to a sharp if-and-only-if threshold, with stationarity in every affine parameter direction and both signs of likelihood variation in every full neighborhood at and outside the boundary. Boundary passage is proved along the likelihood-flat collapsed fiber. It remains one family.
+
+
+Recorded overlap:
+- Collapsed stationarity, singular mixture critical lines and familiar RBM interaction formulas are prior mathematics. The bounded comparison with Fukumizu, Akaho and Amari (NIPS 2002) identifies a degenerate case where the second-derivative splitting matrix vanishes; the higher-order full-neighborhood result is the candidate contribution.
+- Bounded primary-source review did not locate the exact parity threshold result; it does not certify novelty.
+- The earlier strict-region proof and broader ordinary OPDP89 record remain same-family support. The exact 17-module sharp closure now also has fresh post-recovery verification; n>=5 and four-wise-uniform extensions remain ordinary-only.
+
+Recorded bounded prior-art comparison:
+- Collapsed stationarity, singular mixture critical lines and familiar RBM interaction formulas are prior mathematics. The bounded comparison with Fukumizu, Akaho and Amari (NIPS 2002) identifies a degenerate case where the second-derivative splitting matrix vanishes; the higher-order full-neighborhood result is the candidate contribution.
+- Bounded primary-source review did not locate the exact parity threshold result; it does not certify novelty.
+- The earlier strict-region proof and broader ordinary OPDP89 record remain same-family support. The exact 17-module sharp closure now also has fresh post-recovery verification; n>=5 and four-wise-uniform extensions remain ordinary-only.
+
+## Formal proof source
+
+Paths below are relative to `Claim_Evidence/` in this bundle. Exact source bytes, declaration lines and verification evidence are preserved. Dependency versions and the inspection/build boundary are described in the bundle README.
+
+### ParityFour.sharp_parity_classification
+
+Source: `proofs/opdp89-parity-sharp/SharpClassification.lean`, line 40. SHA-256 `15ef1ad86c585c87e7ac4fabdc3a58702c915e69dbf6aa80d701258bc9efc602`.
+
+```lean
+theorem sharp_parity_classification (ρ c₀ : ℝ) (hρ : 0 < |ρ|) (hρ1 : |ρ| ≤ 1) :
+    (∀ (b : Fin 4 → ℝ) (d : ℝ) (w : Fin 4 → ℝ),
+      HasDerivAt (fun t => objective ρ (affineParameterRay c₀ b d w t)) 0 0) ∧
+    (IsLocalMax (objective ρ) (nullParameter c₀) ↔
+      Real.tanh c₀ ^ 2 < (3+2*|ρ|)/(3+6*|ρ|)) ∧
+    ((3+2*|ρ|)/(3+6*|ρ|) ≤ Real.tanh c₀ ^ 2 → ParameterSaddle ρ (nullParameter c₀)) ∧
+    (∃ θ : Parameters, objective ρ (nullParameter c₀) < objective ρ θ) ∧
+    (∀ U : Set Parameters, U ∈ nhds (nullParameter c₀) →
+      ∃ θ : Parameters, θ ∈ U ∧ θ ≠ nullParameter c₀ ∧
+        objective ρ θ = objective ρ (nullParameter c₀))
+```
+
+### ParityFour.collapsed_local_max_iff
+
+Source: `proofs/opdp89-parity-sharp/SharpClassification.lean`, line 22. SHA-256 `15ef1ad86c585c87e7ac4fabdc3a58702c915e69dbf6aa80d701258bc9efc602`.
+
+```lean
+theorem collapsed_local_max_iff (ρ c₀ : ℝ) (hρ : 0 < |ρ|) (hρ1 : |ρ| ≤ 1) :
+    IsLocalMax (objective ρ) (nullParameter c₀) ↔
+      Real.tanh c₀ ^ 2 < (3+2*|ρ|)/(3+6*|ρ|)
+```
+
+### ParityFour.nonstable_parameter_saddle
+
+Source: `proofs/opdp89-parity-sharp/SharpClassification.lean`, line 33. SHA-256 `15ef1ad86c585c87e7ac4fabdc3a58702c915e69dbf6aa80d701258bc9efc602`.
+
+```lean
+theorem nonstable_parameter_saddle (ρ c₀ : ℝ) (hρ : 0 < |ρ|) (hρ1 : |ρ| ≤ 1)
+    (houtside : (3+2*|ρ|)/(3+6*|ρ|) ≤ Real.tanh c₀ ^ 2) :
+    ParameterSaddle ρ (nullParameter c₀)
+```
+
+## Verification evidence
+
+Fresh post-recovery source-only replay completed 2026-10-02T18:45:45.269248+00:00 in 108.552 seconds. All 17 frozen source modules passed with no warnings or errors; all original source SHA256 values and nine dependency pins were unchanged before/after. No old own-module oleans were reused. A supplemental semantic/type audit passed at 18:48:24 UTC. The final transitive axioms are only propext, Classical.choice and Quot.sound. Historical sharp raw logs remain unavailable; their absence is not filled with invented logs. The new dated PASS receipt and genuine fresh logs supersede historical pending status in byte-preserved recovery snapshots. Earlier strict-region proof and original raw evidence remain unchanged. This is internal AI-assisted formal/semantic review, not appointed jury or external peer review.
+
+Recorded environments:
+- {'lean': '4.33.1', 'mathlib': '0df444a360eaa60ab8c11dca51a86af692955474'}
+
+- `proofs/opdp89-parity-local-maxima/verification/independent-replay/REPLAY.json` (existing retained artifact; SHA-256 `4836e9b11a247d1cb1b4a83294167029245f75a0a396807b8a7b3031e9fe938b`).
+- `proofs/opdp89-parity-local-maxima/verification/independent-replay/logs/Main.log` (existing retained artifact; SHA-256 `b7d002b1db5e7e5d5efb5939ff5e6dd40457478888e0bcb92ebdb14e6632d32f`).
+- `proofs/opdp89-parity-local-maxima/verification/independent-replay/logs/AxiomAudit.log` (existing retained artifact; SHA-256 `147408b72d34539e1285a08e9419b4bf5d530480bc2d840cb037124e11ae0070`).
+- `proofs/opdp89-parity-local-maxima/verification/author-replay/REPLAY.json` (existing retained artifact; SHA-256 `e8fece7b1d9b00b2e8e02f6b8110f6cfcdf3e107e3fa894ab5c8b5ded6e7736d`).
+- `proofs/opdp89-parity-sharp/RESULT.json` (existing retained artifact; SHA-256 `e5ca9d67c3dd2b5ddb0674f6c57d8a5f653373f36cdd8fbbda651a39a369d89e`).
+- `proofs/opdp89-parity-sharp/RECOVERY_PROVENANCE.json` (existing retained artifact; SHA-256 `e1153d2434c964477fd6260ef8cfaa540b5c2d0c96c5790317f20ca4bcb9a269`).
+- `proofs/opdp89-parity-sharp/VERIFICATION.md` (existing retained artifact; SHA-256 `2bc11c186ec19b509cc78a6381fee2d4dfdab4a7847cf7ada2d599e29b147ded`).
+- `proofs/opdp89-parity-sharp/SEMANTIC_SCOPE.md` (existing retained artifact; SHA-256 `776ffd82ffcc9fdc90a6ef8bfcbadd17cbbcef356584bd5bcc890544c3163b1f`).
+- `proofs/opdp89-parity-sharp/SOURCE_MANIFEST.json` (existing retained artifact; SHA-256 `a9107e9c4c546451166108f1faab9e25cf4ac73926e766ef0659638d2463ae7b`).
+- `evidence/opdp89-sharp-revalidation-20261002/VERIFICATION_RECEIPT.json` (existing retained artifact; SHA-256 `38ace5540df3a7684453c21e6558c35a773cba1c7dbdca87d92801acf6d19af1`).
+- `evidence/opdp89-sharp-revalidation-20261002/fresh-replay/REPLAY.json` (existing retained artifact; SHA-256 `c469ec4e66869f015af4df1f91002d3dc933528d679dc78c3982eacf0c3e39b5`).
+- `evidence/opdp89-sharp-revalidation-20261002/fresh-replay/logs/SharpClassification.log` (existing retained artifact; SHA-256 `c241e8d517f5f7a4f19fa62f3870e0b0dd598c10003fbf4a7597f727a6564bf5`).
+- `evidence/opdp89-sharp-revalidation-20261002/fresh-replay/logs/SharpAxiomAudit.log` (existing retained artifact; SHA-256 `b53ee9c6349e2db9b8c73625f4be0a06b247b1c94e0074f1a811de21649a53df`).
+- `evidence/opdp89-sharp-revalidation-20261002/supplemental-audit/SemanticTypeAudit.log` (existing retained artifact; SHA-256 `f4f44e7043de5b679f015f0eb1546b926edf9bc8369f038491be25cc6955b802`).
+- `evidence/opdp89-sharp-revalidation-20261002/supplemental-audit/RESULT.json` (existing retained artifact; SHA-256 `96581517c38656d5e7e9077ae8354ef5767a321b40e71de411ee66c37e3f83d4`).
+- `evidence/opdp89-sharp-revalidation-20261002/SEMANTIC_REVIEW.md` (existing retained artifact; SHA-256 `f28005106a7f99f674c4879830a59d63bfa94475483f43fbb65f82c4ee83fd06`).
+- `evidence/opdp89-sharp-revalidation-20261002/PREFLIGHT.json` (existing retained artifact; SHA-256 `9309cdfc7e72e9ce3659cb7e9b8ce4365031706f76614277b51e6dd7d73ac284`).
+- `evidence/opdp89-sharp-revalidation-20261002/POSTFLIGHT.json` (existing retained artifact; SHA-256 `35158f6261722db29ce897446ac4c34511d861086bd44504ca442609f1ed7db6`).
+- `evidence/opdp89-sharp-revalidation-20261002/COMMANDS.sh` (existing retained artifact; SHA-256 `2c0d67b15679c0ebde012f739c33abe6754d1f29b1b6d530f8ffea7243ec5658`).
+
+
+## Entrant declaration
+
+The entrants declare that all supplied results are their team's work produced during the competition. Original source and replay timestamps are preserved as artifact history.
+
+
+FILE 351603 lean/MM3/Brent.lean [UI text capture]
+Source: https://github.com/ChandraguptSharma07/matrix-multiplication-tensor-3x3/blob/479c2416b6261ee841052eef4881df0e40054f3f/lean/MM3/Brent.lean
+Observed: 2026-10-03T04:49:49.136Z
+Representation: rendered GitHub UI extraction; may be incomplete, not original bytes.
+
+Files
+479c241
+t
+T
+evaluation
+kaggle
+lean
+MM3
+Brent.lean
+Certificates.lean
+Scheme138.lean
+Scheme138Gauged.lean
+Scheme139Exotic.lean
+Scheme143Core1809.lean
+.gitignore
+MM3.lean
+README.md
+gen.py
+lake-manifest.json
+lakefile.toml
+lean-toolchain
+paper
+reports
+reproduce
+results
+solutions
+src
+verify
+.gitignore
+HANDOFF.md
+README.md
+journal.html
+Breadcrumbs
+matrix-multiplication-tensor-3x3/lean/MM3
+/Brent.lean
+Latest commit
+ 
+History
+History
+File metadata and controls
+Code
+Blame
+98 lines (78 loc) · 3.67 KB
+Raw
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+/-
+Brent identities for 3x3 matrix-multiplication schemes.
+A scheme of rank R consists of three R x 9 coefficient matrices u, v, w. Term t
+computes (sum_e u[t][e] * A_e) * (sum_e v[t][e] * B_e), and output entry f of
+C receives sum_t w[t][f] * term_t. Entries of A and B are indexed row-major
+(A_e = A[e / 3][e % 3]) and entries of C as 3 * column + row (C_f = C[f % 3][f / 3]).
+The scheme computes the product of two 3x3 matrices if and only if, for all
+a, b, c in 0..8,
+    sum_t u[t][a] * v[t][b] * w[t][c] = T[a][b][c],
+where T[3i+j][3j+k][3k+i] = 1 and all other entries of T are 0.
+The data files hold integer matrices obtained from the rational scheme by
+scaling u, v, w by positive integers su, sv, sw (the least common multiples of
+the denominators), so the identity that is checked reads
+    sum_t u[t][a] * v[t][b] * w[t][c] = su * sv * sw * T[a][b][c].
+Everything below is structurally recursive on lists and natural numbers so
+that the kernel can evaluate `brentOK` and `support` by `decide`.
+-/
+
+
+namespace MM3
+
+
+/-- The rank of the schemes certified here (number of terms). -/
+def rank : Nat := 23
+
+
+/-- The target tensor of 3x3 matrix multiplication: `T a b c = 1` if and only if
+`a = 3i + j`, `b = 3j + k`, `c = 3k + i` for some `i j k`, and `0` otherwise. -/
+def target (a b c : Nat) : Int :=
+  if b / 3 == a % 3 && c / 3 == b % 3 && c % 3 == a / 3 then 1 else 0
+
+
+/-- Entry `i` of a row, `0` when out of range. -/
+def nth : List Int → Nat → Int
+  | [], _ => 0
+  | x :: _, 0 => x
+  | _ :: xs, n + 1 => nth xs n
+
+
+/-- One triple of rows per term. -/
+def terms (u v w : List (List Int)) : List (List Int × List Int × List Int) :=
+  u.zip (v.zip w)
+
+
+/-- The coefficient of `A_a * B_b` in output entry `c`: `sum_t u[t][a] * v[t][b] * w[t][c]`. -/
+def coeff (ts : List (List Int × List Int × List Int)) (a b c : Nat) : Int :=
+  match ts with
+  | [] => 0
+  | (ut, vt, wt) :: rest => nth ut a * nth vt b * nth wt c + coeff rest a b c
+
+
+/-- A matrix has `rank` rows of 9 entries each. -/
+def shapeOK (m : List (List Int)) : Bool :=
+  m.length == rank && m.all fun row => row.length == 9
+
+
+/-- All 729 identities `coeff a b c = su * sv * sw * target a b c`. -/
+def identitiesOK (su sv sw : Int) (u v w : List (List Int)) : Bool :=
+  let ts := terms u v w
+  let s := su * sv * sw
+  (List.range 9).all fun a =>
+    (List.range 9).all fun b =>
+
+FILE 351604 lean/MM3/Certificates.lean [UI text capture]
+Source: https://github.com/ChandraguptSharma07/matrix-multiplication-tensor-3x3/blob/479c2416b6261ee841052eef4881df0e40054f3f/lean/MM3/Certificates.lean
+Observed: 2026-10-03T04:49:51.068Z
+Representation: rendered GitHub UI extraction; may be incomplete, not original bytes.
+
+Files
+479c2416b6261ee841052eef4881df0e40054f3f
+t
+T
+evaluation
+kaggle
+lean
+MM3
+Brent.lean
+Certificates.lean
+Scheme138.lean
+Scheme138Gauged.lean
+Scheme139Exotic.lean
+Scheme143Core1809.lean
+.gitignore
+MM3.lean
+README.md
+gen.py
+lake-manifest.json
+lakefile.toml
+lean-toolchain
+paper
+reports
+reproduce
+results
+solutions
+src
+verify
+.gitignore
+HANDOFF.md
+README.md
+journal.html
+Breadcrumbs
+matrix-multiplication-tensor-3x3/lean/MM3
+/Certificates.lean
+Latest commit
+ 
+History
+History
+File metadata and controls
+Code
+Blame
+82 lines (64 loc) · 3.04 KB
+Raw
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+/-
+Certificates for the four schemes. Each `_valid` theorem is closed by `decide`:
+the Lean kernel evaluates `brentOK` on the data and checks that the result is
+`true`. No `native_decide` (compiler trust) is used anywhere. Each `_identities`
+theorem restates the result as the 729 Brent identities through `brentOK_sound`,
+and each `_support` theorem counts the nonzero entries.
+-/
+import MM3.Brent
+import MM3.Scheme138
+import MM3.Scheme138Gauged
+import MM3.Scheme139Exotic
+import MM3.Scheme143Core1809
+
+
+namespace MM3
+
+
+/-! ## solutions/support_138/solution.json -/
+
+
+theorem scheme138_valid :
+    brentOK Scheme138.su Scheme138.sv Scheme138.sw Scheme138.u Scheme138.v Scheme138.w = true := by
+  decide
+
+
+theorem scheme138_identities :
+    ∀ a b c : Nat, a < 9 → b < 9 → c < 9 →
+      coeff (terms Scheme138.u Scheme138.v Scheme138.w) a b c =
+        Scheme138.su * Scheme138.sv * Scheme138.sw * target a b c :=
+  brentOK_sound _ _ _ _ _ _ scheme138_valid
+
+
+theorem scheme138_support : support Scheme138.u Scheme138.v Scheme138.w = 138 := by
+  decide
+
+
+/-! ## solutions/support_138_gauged/solution.json -/
+
+
+theorem scheme138Gauged_valid :
+    brentOK Scheme138Gauged.su Scheme138Gauged.sv Scheme138Gauged.sw
+      Scheme138Gauged.u Scheme138Gauged.v Scheme138Gauged.w = true := by
+  decide
+
+
+theorem scheme138Gauged_identities :
+    ∀ a b c : Nat, a < 9 → b < 9 → c < 9 →
+      coeff (terms Scheme138Gauged.u Scheme138Gauged.v Scheme138Gauged.w) a b c =
+        Scheme138Gauged.su * Scheme138Gauged.sv * Scheme138Gauged.sw * target a b c :=
+  brentOK_sound _ _ _ _ _ _ scheme138Gauged_valid
+
+
+theorem scheme138Gauged_support :
+    support Scheme138Gauged.u Scheme138Gauged.v Scheme138Gauged.w = 138 := by
+  decide
+
+
+/-! ## solutions/exotic_139_support_139/solution.json -/
+
+
+theorem scheme139Exotic_valid :
+    brentOK Scheme139Exotic.su Scheme139Exotic.sv Scheme139Exotic.sw
+      Scheme139Exotic.u Scheme139Exotic.v Scheme139Exotic.w = true := by
+  decide
+
+
+theorem scheme139Exotic_identities :
+    ∀ a b c : Nat, a < 9 → b < 9 → c < 9 →
+      coeff (terms Scheme139Exotic.u Scheme139Exotic.v Scheme139Exotic.w) a b c =
+        Scheme139Exotic.su * Scheme139Exotic.sv * Scheme139Exotic.sw * target a b c :=
+  brentOK_sound _ _ _ _ _ _ scheme139Exotic_valid
+
+
+
+FILE 351605 lean/MM3/Scheme138.lean [UI text capture]
+Source: https://github.com/ChandraguptSharma07/matrix-multiplication-tensor-3x3/blob/479c2416b6261ee841052eef4881df0e40054f3f/lean/MM3/Scheme138.lean
+Observed: 2026-10-03T04:49:53.406Z
+Representation: rendered GitHub UI extraction; may be incomplete, not original bytes.
+
+Files
+479c241
+t
+T
+evaluation
+kaggle
+lean
+MM3
+Brent.lean
+Certificates.lean
+Scheme138.lean
+Scheme138Gauged.lean
+Scheme139Exotic.lean
+Scheme143Core1809.lean
+.gitignore
+MM3.lean
+README.md
+gen.py
+lake-manifest.json
+lakefile.toml
+lean-toolchain
+paper
+reports
+reproduce
+results
+solutions
+src
+verify
+.gitignore
+HANDOFF.md
+README.md
+journal.html
+Breadcrumbs
+matrix-multiplication-tensor-3x3/lean/MM3
+/Scheme138.lean
+Latest commit
+ 
+History
+History
+File metadata and controls
+Code
+Blame
+99 lines (91 loc) · 2.91 KB
+Raw
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+/-
+Generated by lean/gen.py from solutions/support_138/solution.json. Do not edit by hand.
+Each factor matrix was scaled by the least common multiple of its denominators:
+u by 8, v by 4, w by 16.
+-/
+
+
+namespace MM3.Scheme138
+
+
+/-- Scale factor applied to `u`. -/
+def su : Int := 8
+
+
+/-- Scale factor applied to `v`. -/
+def sv : Int := 4
+
+
+/-- Scale factor applied to `w`. -/
+def sw : Int := 16
+
+
+/-- The u matrix, 23 rows of 9 integer entries. -/
+def u : List (List Int) := [
+  [8, 0, 0, 0, 8, 0, 0, 0, 0],
+  [8, 0, 0, 0, 0, 8, 0, 0, 0],
+  [0, 8, 0, 0, 0, (-64), 0, 0, 128],
+  [0, 0, 0, 0, 8, (-8), (-64), 0, 0],
+  [8, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 8, 0, 0, (-64), 0, 0, 0, 0],
+  [8, 1, 0, 0, 0, 0, 0, 0, 0],
+  [8, (-1), 2, 0, 0, 0, 0, 0, 0],
+  [8, 0, 1, 0, 0, 0, 0, 0, 0],
+  [0, 0, 8, 0, 0, (-64), 0, 0, 64],
+  [0, 0, 0, 8, (-1), 2, 0, 0, 0],
+  [8, 0, 0, (-64), 0, 0, 64, 0, 0],
+  [0, 0, 0, 8, 0, 1, (-8), 0, 0],
+  [0, 0, 0, 0, 8, 0, 0, 0, 0],
+  [0, 0, 0, 0, 8, (-8), 0, 0, 0],
+  [0, 0, 0, 0, 0, 8, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 8, 0, 0],
+  [0, 0, 0, 0, 0, 0, 8, 0, 0],
+  [0, 8, 0, 0, (-64), 0, 0, 64, 0],
+  [0, 0, 0, 0, 0, 0, 0, 8, 0],
+  [0, 0, 0, 0, 0, 0, 8, (-1), 2],
+  [0, 0, 0, 0, 0, 0, 0, 0, 8],
+  [0, 0, 0, 0, 0, 0, 0, 0, 8]
+]
+
+
+/-- The v matrix, 23 rows of 9 integer entries. -/
+def v : List (List Int) := [
+  [4, 0, 0, 0, (-64), 0, (-16), 0, 0],
+  [0, 0, 4, 0, 0, 0, 8, (-32), 0],
+  [0, 0, 0, 0, 0, 4, (-1), 0, 0],
+  [4, 0, 0, 0, 0, (-64), 0, 0, 0],
+  [0, 4, 0, 0, (-32), 0, 0, (-32), 0],
+  [0, 0, 0, 4, (-8), 0, 2, 0, 0],
+  [0, 0, 0, 0, 4, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 4, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 4, 0],
+  [0, 0, 0, 0, 0, 0, 4, (-8), 8],
+  [4, 0, 0, 0, 0, 0, 0, 0, 0],
+  [4, (-8), 8, 0, 0, 0, 0, 0, 0],
+  [4, 0, 8, 0, 0, 0, 0, 0, 0],
+  [4, 0, 0, (-32), 0, 0, (-32), 0, 0],
+
+FILE 351606 lean/MM3/Scheme138Gauged.lean [UI text capture]
+Source: https://github.com/ChandraguptSharma07/matrix-multiplication-tensor-3x3/blob/479c2416b6261ee841052eef4881df0e40054f3f/lean/MM3/Scheme138Gauged.lean
+Observed: 2026-10-03T04:49:55.125Z
+Representation: rendered GitHub UI extraction; may be incomplete, not original bytes.
+
+Files
+479c2416b6261ee841052eef4881df0e40054f3f
+t
+T
+evaluation
+kaggle
+lean
+MM3
+Brent.lean
+Certificates.lean
+Scheme138.lean
+Scheme138Gauged.lean
+Scheme139Exotic.lean
+Scheme143Core1809.lean
+.gitignore
+MM3.lean
+README.md
+gen.py
+lake-manifest.json
+lakefile.toml
+lean-toolchain
+paper
+reports
+reproduce
+results
+solutions
+src
+verify
+.gitignore
+HANDOFF.md
+README.md
+journal.html
+Breadcrumbs
+matrix-multiplication-tensor-3x3/lean/MM3
+/Scheme138Gauged.lean
+Latest commit
+ 
+History
+History
+File metadata and controls
+Code
+Blame
+99 lines (91 loc) · 2.87 KB
+Raw
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+/-
+Generated by lean/gen.py from solutions/support_138_gauged/solution.json. Do not edit by hand.
+Each factor matrix was scaled by the least common multiple of its denominators:
+u by 2, v by 2, w by 1.
+-/
+
+
+namespace MM3.Scheme138Gauged
+
+
+/-- Scale factor applied to `u`. -/
+def su : Int := 2
+
+
+/-- Scale factor applied to `v`. -/
+def sv : Int := 2
+
+
+/-- Scale factor applied to `w`. -/
+def sw : Int := 1
+
+
+/-- The u matrix, 23 rows of 9 integer entries. -/
+def u : List (List Int) := [
+  [2, 0, 0, 0, 2, 0, 0, 0, 0],
+  [2, 0, 0, 0, 0, 1, 0, 0, 0],
+  [0, 2, 0, 0, 0, (-1), 0, 0, 2],
+  [0, 0, 0, 0, 2, (-1), (-2), 0, 0],
+  [2, 0, 0, 0, 0, 0, 0, 0, 0],
+  [0, 2, 0, 0, (-2), 0, 0, 0, 0],
+  [2, 2, 0, 0, 0, 0, 0, 0, 0],
+  [2, (-2), 2, 0, 0, 0, 0, 0, 0],
+  [4, 0, 2, 0, 0, 0, 0, 0, 0],
+  [0, 0, 2, 0, 0, (-2), 0, 0, 2],
+  [0, 0, 0, 2, (-2), 2, 0, 0, 0],
+  [2, 0, 0, (-2), 0, 0, 2, 0, 0],
+  [0, 0, 0, 2, 0, 1, (-2), 0, 0],
+  [0, 0, 0, 0, 2, 0, 0, 0, 0],
+  [0, 0, 0, 0, 2, (-1), 0, 0, 0],
+  [0, 0, 0, 0, 0, 2, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 2, 0, 0],
+  [0, 0, 0, 0, 0, 0, 2, 0, 0],
+  [0, 2, 0, 0, (-2), 0, 0, 2, 0],
+  [0, 0, 0, 0, 0, 0, 0, 2, 0],
+  [0, 0, 0, 0, 0, 0, 2, (-2), 2],
+  [0, 0, 0, 0, 0, 0, 0, 0, 2],
+  [0, 0, 0, 0, 0, 0, 0, 0, 2]
+]
+
+
+/-- The v matrix, 23 rows of 9 integer entries. -/
+def v : List (List Int) := [
+  [2, 0, 0, 0, (-2), 0, (-2), 0, 0],
+  [0, 0, 2, 0, 0, 0, 2, (-4), 0],
+  [0, 0, 0, 0, 0, 2, (-2), 0, 0],
+  [2, 0, 0, 0, 0, (-2), 0, 0, 0],
+  [0, 2, 0, 0, (-2), 0, 0, (-4), 0],
+  [0, 0, 0, 2, (-2), 0, 2, 0, 0],
+  [0, 0, 0, 0, 2, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 2, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0, 2, 0],
+  [0, 0, 0, 0, 0, 0, 2, (-2), 2],
+  [2, 0, 0, 0, 0, 0, 0, 0, 0],
+  [2, (-2), 2, 0, 0, 0, 0, 0, 0],
+  [2, 0, 2, 0, 0, 0, 0, 0, 0],
+  [2, 0, 0, (-2), 0, 0, (-4), 0, 0],

@@ -1,0 +1,3012 @@
+{
+  "format": "opdp-week-math-100/v1",
+  "source": {
+    "release": "OPDP v1.6",
+    "assessment_date": "2026-07-31",
+    "source_path": "Ulam_UnsolvedMath_OPDP_Assessments_v1.6.json.gz",
+    "sha256": "49e9be65788e8d5cbfdcba63436eedebc50965ea5b815bb3fee08cf00e7118f3",
+    "selected_problem_count": 100
+  },
+  "records": [
+    {
+      "rank": 1,
+      "source_problem_id": 1156,
+      "source_problem_number": "ALG-016",
+      "title": "The Babai Conjecture on Graph Isomorphism",
+      "statement": "Can graph isomorphism be decided in quasi-polynomial time for all graphs?",
+      "field": "Algebra",
+      "source_collection": "Unassigned",
+      "source_url": "https://www.unsolvedmath.com/problems/ALG-016",
+      "canonical_source_url": null,
+      "status": {
+        "catalog_status": "open",
+        "assessment_gate": "source_claimed_open",
+        "snapshot_assessment_date": "2026-07-31"
+      },
+      "opdp": {
+        "tractability_band": "T7",
+        "tractability_probability": "55-70%",
+        "target_combined_hours": 100,
+        "intrinsic_difficulty": 6,
+        "ai_difficulty": 4.5,
+        "tool_leverage": 8.3,
+        "verification_if_true": 4.8,
+        "verification_if_false": 5
+      },
+      "weekly_track": "Choose the smallest unresolved rank, degree, or characteristic range isolated by the source statement; seek a theorem, obstruction, or explicit family before widening parameters.",
+      "deliverable": "A precise proposition for the selected range, a proof or counterexample, and reproducible computer-algebra calculations when used.",
+      "verification_plan": "Independent symbolic computation plus line-by-line review of reductions, with exact rather than floating-point arithmetic.",
+      "visual_hook": "A parameter lattice showing proved, disproved, and unclassified regions."
+    },
+    {
+      "rank": 2,
+      "source_problem_id": 95,
+      "source_problem_number": "GREEN-005",
+      "title": "Product-Free Sets in Finite Groups",
+      "statement": "Which finite groups have the smallest largest product-free sets?",
+      "field": "Algebra",
+      "source_collection": "Ben Green's 100 Open Problems",
+      "source_url": "https://www.unsolvedmath.com/problems/GREEN-005",
+      "canonical_source_url": null,
+      "status": {
+        "catalog_status": "open",
+        "assessment_gate": "source_claimed_open",
+        "snapshot_assessment_date": "2026-07-31"
+      },
+      "opdp": {
+        "tractability_band": "T7",
+        "tractability_probability": "55-70%",
+        "target_combined_hours": 100,
+        "intrinsic_difficulty": 5.1,
+        "ai_difficulty": 4.6,
+        "tool_leverage": 6.8,
+        "verification_if_true": 4.9,
+        "verification_if_false": 4.9
+      },
+      "weekly_track": "Choose the smallest unresolved rank, degree, or characteristic range isolated by the source statement; seek a theorem, obstruction, or explicit family before widening parameters.",
+      "deliverable": "A precise proposition for the selected range, a proof or counterexample, and reproducible computer-algebra calculations when used.",
+      "verification_plan": "Independent symbolic computation plus line-by-line review of reductions, with exact rather than floating-point arithmetic.",
+      "visual_hook": "A parameter lattice showing proved, disproved, and unclassified regions."
+    },
+    {
+      "rank": 3,
+      "source_problem_id": 20002738,
+      "source_problem_number": "AIM-REPRESENTATION_THEORY-0010",
+      "title": "Boecherer central values determine autocorrelation, not Fourier phases",
+      "statement": "Computing Fourier coefficients from $L$-values Let $d$ be a positive integer and let $F$ be a Siegel modular form with Fourier coefficients $a(F)$. In many cases, we know the (generalized) B\\\"{o}cherer conjecture: \\[ \\left \\lvert \\sum_{S \\in \\mathrm{Cl}_d} a(F, S) \\Lambda(S) \\right \\rvert^2 = L\\big(\\pi_F \\times \\theta_\\Lambda, \\frac{1}{2}\\big) = L\\big(\\mathrm{BC}_{K/\\mathbb{Q}} (\\pi_F) \\times \\Lambda, \\frac{1}{2}\\big). \\] Knowing this equality and values of $L(\\pi_F \\times \\theta_\\Lambda, \\frac{1}{2})$ for many $\\Lambda$, can we compute the Fourier coefficients $a(F, S)$?",
+      "field": "Algebra",
+      "source_collection": "AIM Workshop Problem Lists",
+      "source_url": "http://aimpl.org/aagaautomorphic/5/",
+      "canonical_source_url": "http://aimpl.org/aagaautomorphic/5/",
+      "status": {
+        "catalog_status": "partially_solved",
+        "assessment_gate": "source_claimed_open",
+        "snapshot_assessment_date": "2026-08-18"
+      },
+      "opdp": {
+        "tractability_band": "T7",
+        "tractability_probability": "55-70%",
+        "target_combined_hours": 100,
+        "intrinsic_difficulty": 6,
+        "ai_difficulty": 5,
+        "tool_leverage": 6.8,
+        "verification_if_true": 5.5,
+        "verification_if_false": 4.7
+      },
+      "weekly_track": "Choose the smallest unresolved rank, degree, or characteristic range isolated by the source statement; seek a theorem, obstruction, or explicit family before widening parameters.",
+      "deliverable": "A precise proposition for the selected range, a proof or counterexample, and reproducible computer-algebra calculations when used.",
+      "verification_plan": "Independent symbolic computation plus line-by-line review of reductions, with exact rather than floating-point arithmetic.",
+      "visual_hook": "A parameter lattice showing proved, disproved, and unclassified regions."
+    },
+    {
+      "rank": 4,
+      "source_problem_id": 20002813,
+      "source_problem_number": "AIM-REPRESENTATION_THEORY-0085",
+      "title": "Canonical supercharacter products: an exact divisibility criterion",
+      "statement": "Problem 1.1. Let G be a finite group. Let X be a partition of Irr (G) (such that it forms a supercharacter theory). Let σX = ∑χ∈X χ(1) χ. When is it true that the product of two of these σ's is a positive integer combination of σ's?",
+      "field": "Algebra",
+      "source_collection": "AIM Workshop Problem Lists",
+      "source_url": "https://aimath.org/WWN/supercharacters/supercharacters.pdf",
+      "canonical_source_url": "https://aimath.org/WWN/supercharacters/supercharacters.pdf",
+      "status": {
+        "catalog_status": "partially_solved",
+        "assessment_gate": "source_claimed_open",
+        "snapshot_assessment_date": "2026-08-18"
+      },
+      "opdp": {
+        "tractability_band": "T7",
+        "tractability_probability": "55-70%",
+        "target_combined_hours": 100,
+        "intrinsic_difficulty": 5.8,
+        "ai_difficulty": 4.8,
+        "tool_leverage": 6.8,
+        "verification_if_true": 5.4,
+        "verification_if_false": 4.6
+      },
+      "weekly_track": "Choose the smallest unresolved rank, degree, or characteristic range isolated by the source statement; seek a theorem, obstruction, or explicit family before widening parameters.",
+      "deliverable": "A precise proposition for the selected range, a proof or counterexample, and reproducible computer-algebra calculations when used.",
+      "verification_plan": "Independent symbolic computation plus line-by-line review of reductions, with exact rather than floating-point arithmetic.",
+      "visual_hook": "A parameter lattice showing proved, disproved, and unclassified regions."
+    },
+    {
+      "rank": 5,
+      "source_problem_id": 20002211,
+      "source_problem_number": "AIM-LINEAR_ALGEBRA-0005",
+      "title": "Sharp degree-two coefficientwise-preserver criteria and local Turan-power families",
+      "statement": "\\begin{itemize} \\item (i) Let $\\mathcal{P}_d := \\left\\{f(z)= \\sum\\limits_{j=0}^{d}a_j z^j \\ | \\ a_j \\geq 0~ \\forall j, ~~f(z)=0 \\implies z \\in \\mathbb{R}\\right\\}$. Which functions $F: \\mathbb{R}_+ \\longrightarrow \\mathbb{R}_+$ such that $F(0)=0$ map $\\mathcal{P}_d$ into itself, where $F[f](z) := \\sum\\limits_{j=0}^{d}F(a_j)z^j$? Equivalently, let \\[ T_{\\bf a} := {\\scriptsize \\begin{pmatrix} a_0 & 0 & 0 & \\cdots\\\\ a_1 & a_0 & 0 & \\cdots\\\\ a_2 & a_1 & a_0 & \\cdots\\\\ \\vdots & \\vdots & \\vdots & \\ddots \\end{pmatrix}} \\in TN, \\] where ${\\bf a}= (a_0,\\ldots,a_d)\\in (0,\\infty)^{d+1}$. When is $F[T_{\\bf a}]\\in TN$ for all such $\\bf a$? \\item (ii) The same question for fixed $d$. \\item (iii) One can replace $\\mathcal{P}_d$ with $\\tilde{\\mathcal{P}}_d:=\\left\\{f(z)= \\sum\\limits_{j=0}^{d}\\frac{a_jz^j}{j !}~|~a_j\\geq 0~ \\forall j, ~~f(z)=0 \\implies z \\in \\mathbb{R}\\right\\}$ or replace $F[f](z)$ with $\\tilde{F}[f](z):=\\sum\\limits_{j=0}^{d}\\frac{F(a_j)z^j}{j !}$ and consider the above questions (four possible cases). \\item (iv) What about preservers of the form $F_g[f](z)=\\sum\\limits_{j=0}^{d}g(j)F(a_j)z^j$? Such $g$ are called multiplier sequences and have been classified (P\\'olya, Laguerre and Schur). \\item (v) Let $h: \\mathbb{R}^3 \\longrightarrow \\mathbb{R}$ and let $F_h[\\sum\\limits_{j=0}^{d}a_jz^j]=\\sum\\limits_{j=0}^{d}h(a_{j-1},a_j,a_{j+1})z^j$, where $a_{-1}=a_{d+1}=0$. E.g., if $h(x,y,z)=y^2-xz$, then $F_h[-]$ preserves real rooted polynomials. What other $h$ work? What about higher order determinants? \\end{itemize}",
+      "field": "Algebra",
+      "source_collection": "AIM Workshop Problem Lists",
+      "source_url": "http://aimpl.org/totalpos/1/",
+      "canonical_source_url": "http://aimpl.org/totalpos/1/",
+      "status": {
+        "catalog_status": "partially_solved",
+        "assessment_gate": "source_claimed_open",
+        "snapshot_assessment_date": "2026-08-18"
+      },
+      "opdp": {
+        "tractability_band": "T7",
+        "tractability_probability": "55-70%",
+        "target_combined_hours": 100,
+        "intrinsic_difficulty": 5.6,
+        "ai_difficulty": 4.6,
+        "tool_leverage": 6.8,
+        "verification_if_true": 5.2,
+        "verification_if_false": 4.5
+      },
+      "weekly_track": "Choose the smallest unresolved rank, degree, or characteristic range isolated by the source statement; seek a theorem, obstruction, or explicit family before widening parameters.",
+      "deliverable": "A precise proposition for the selected range, a proof or counterexample, and reproducible computer-algebra calculations when used.",
+      "verification_plan": "Independent symbolic computation plus line-by-line review of reductions, with exact rather than floating-point arithmetic.",
+      "visual_hook": "A parameter lattice showing proved, disproved, and unclassified regions."
+    },
+    {
+      "rank": 6,
+      "source_problem_id": 3031,
+      "source_problem_number": "OPG-57824",
+      "title": "Graphs of exact colorings",
+      "statement": "Conjecture For $c \\geq m \\geq 1$, let $P(c,m)$ be the statement that given any exact $c$-coloring of the edges of a complete countably infinite graph (that is, a coloring with $c$ colors all of which must be used at least once), there exists an exactly $m$-colored countably infinite complete subgraph. Then $P(c,m)$ is true if and only if $m=1$, $m=2$, or $c=m$.",
+      "field": "Algebra",
+      "source_collection": "OpenGarden",
+      "source_url": "http://www.openproblemgarden.org/op/graphs_of_exact_colorings",
+      "canonical_source_url": "http://www.openproblemgarden.org/op/graphs_of_exact_colorings",
+      "status": {
+        "catalog_status": "open",
+        "assessment_gate": "source_claimed_open",
+        "snapshot_assessment_date": "2026-07-31"
+      },
+      "opdp": {
+        "tractability_band": "T7",
+        "tractability_probability": "55-70%",
+        "target_combined_hours": 100,
+        "intrinsic_difficulty": 5.5,
+        "ai_difficulty": 4.5,
+        "tool_leverage": 6.8,
+        "verification_if_true": 5.3,
+        "verification_if_false": 4.6
+      },
+      "weekly_track": "Choose the smallest unresolved rank, degree, or characteristic range isolated by the source statement; seek a theorem, obstruction, or explicit family before widening parameters.",
+      "deliverable": "A precise proposition for the selected range, a proof or counterexample, and reproducible computer-algebra calculations when used.",
+      "verification_plan": "Independent symbolic computation plus line-by-line review of reductions, with exact rather than floating-point arithmetic.",
+      "visual_hook": "A parameter lattice showing proved, disproved, and unclassified regions."
+    },
+    {
+      "rank": 7,
+      "source_problem_id": 20000075,
+      "source_problem_number": "AIM-ALGEBRAIC_GEOMETRY-0075",
+      "title": "A residual parity-defect criterion for the fourth grading on HHH",
+      "statement": "On HHH$^\\text{geom}$ of a braid $\\beta$ there is a mysterious 4th $\\mathbb{Z}$-grading coming from the $\\mathbb{Z}/2$-grading on matrix factorizations. Construct the analog for HHH of $\\beta$.",
+      "field": "Algebraic Geometry",
+      "source_collection": "AIM Workshop Problem Lists",
+      "source_url": "http://aimpl.org/catheckehilbert/1/",
+      "canonical_source_url": "http://aimpl.org/catheckehilbert/1/",
+      "status": {
+        "catalog_status": "partially_solved",
+        "assessment_gate": "source_claimed_open",
+        "snapshot_assessment_date": "2026-08-18"
+      },
+      "opdp": {
+        "tractability_band": "T7",
+        "tractability_probability": "55-70%",
+        "target_combined_hours": 100,
+        "intrinsic_difficulty": 5.8,
+        "ai_difficulty": 4.8,
+        "tool_leverage": 8.3,
+        "verification_if_true": 4,
+        "verification_if_false": 6.8
+      },
+      "weekly_track": "Work in the first nontrivial dimension, degree, or moduli stratum not covered by the source; compute invariants and turn the observed pattern into a statement with hypotheses.",
+      "deliverable": "Explicit equations or moduli data, a theorem for one stratum, and a portable CAS notebook.",
+      "verification_plan": "Independent Gröbner, cohomology, or intersection-theory replay together with a referee-readable derivation.",
+      "visual_hook": "A moduli-stratum diagram with boundary degenerations."
+    },
+    {
+      "rank": 8,
+      "source_problem_id": 20000172,
+      "source_problem_number": "AIM-ALGEBRAIC_GEOMETRY-0172",
+      "title": "Genuine versus normed equivariant elliptic cohomology and a cyclic Frobenius constraint",
+      "statement": "For a finite group $G$, Lurie constructs equivariant elliptic cohomology in commutative naive $G$-spectra and in genuine $G$-spectra compatibly \\cite{MR2597740}. Can this construction be extended to commutative genuine $G$-spectra or $G$-commutative genuine $G$-spectra?",
+      "field": "Algebraic Geometry",
+      "source_collection": "AIM Workshop Problem Lists",
+      "source_url": "http://aimpl.org/equideralggeom/5/",
+      "canonical_source_url": "http://aimpl.org/equideralggeom/5/",
+      "status": {
+        "catalog_status": "partially_solved",
+        "assessment_gate": "source_claimed_open",
+        "snapshot_assessment_date": "2026-08-18"
+      },
+      "opdp": {
+        "tractability_band": "T7",
+        "tractability_probability": "55-70%",
+        "target_combined_hours": 100,
+        "intrinsic_difficulty": 5.5,
+        "ai_difficulty": 4.5,
+        "tool_leverage": 8.3,
+        "verification_if_true": 4,
+        "verification_if_false": 6.8
+      },
+      "weekly_track": "Work in the first nontrivial dimension, degree, or moduli stratum not covered by the source; compute invariants and turn the observed pattern into a statement with hypotheses.",
+      "deliverable": "Explicit equations or moduli data, a theorem for one stratum, and a portable CAS notebook.",
+      "verification_plan": "Independent Gröbner, cohomology, or intersection-theory replay together with a referee-readable derivation.",
+      "visual_hook": "A moduli-stratum diagram with boundary degenerations."
+    },
+    {
+      "rank": 9,
+      "source_problem_id": 20000224,
+      "source_problem_number": "AIM-ALGEBRAIC_GEOMETRY-0224",
+      "title": "Exact line-arrangement operation formulas and a rich-line construction barrier",
+      "statement": "Problem 5.1. Is h C bounded below uniformly? If this is true, then the Bounded Negativity Conjecture holds for rational surfaces in characteristic 0. (In characteristic p > 0, h is not bounded below. One could ask what the interesting statement would be in characteristic p.) It is known that if C is a union of lines, then h(C) > −4, while the best achieved example is something like −3.36. The point is to find a configuration of lines with many high-multiplicity intersections (basically, the point is that you want to avoid simple crossings).",
+      "field": "Algebraic Geometry",
+      "source_collection": "AIM Workshop Problem Lists",
+      "source_url": "https://aimath.org/pastworkshops/degenalggeomproblems.pdf",
+      "canonical_source_url": "https://aimath.org/pastworkshops/degenalggeomproblems.pdf",
+      "status": {
+        "catalog_status": "partially_solved",
+        "assessment_gate": "source_claimed_open",
+        "snapshot_assessment_date": "2026-08-18"
+      },
+      "opdp": {
+        "tractability_band": "T7",
+        "tractability_probability": "55-70%",
+        "target_combined_hours": 100,
+        "intrinsic_difficulty": 5.5,
+        "ai_difficulty": 4.5,
+        "tool_leverage": 8.3,
+        "verification_if_true": 3.8,
+        "verification_if_false": 6.7
+      },
+      "weekly_track": "Work in the first nontrivial dimension, degree, or moduli stratum not covered by the source; compute invariants and turn the observed pattern into a statement with hypotheses.",
+      "deliverable": "Explicit equations or moduli data, a theorem for one stratum, and a portable CAS notebook.",
+      "verification_plan": "Independent Gröbner, cohomology, or intersection-theory replay together with a referee-readable derivation.",
+      "visual_hook": "A moduli-stratum diagram with boundary degenerations."
+    },
+    {
+      "rank": 10,
+      "source_problem_id": 20000190,
+      "source_problem_number": "AIM-ALGEBRAIC_GEOMETRY-0190",
+      "title": "A root-free focal-positivity certificate for a seven-point pencil",
+      "statement": "The focal lengths of a pair of cameras can be written as a function of their fundamental matrix. During reconstruction fundamental matrices are constructed for which these focal lengths are complex. Is there an efficient way to detect if the this will occur before computing the fundamental matrix?",
+      "field": "Algebraic Geometry",
+      "source_collection": "AIM Workshop Problem Lists",
+      "source_url": "http://aimpl.org/algvision/1/",
+      "canonical_source_url": "http://aimpl.org/algvision/1/",
+      "status": {
+        "catalog_status": "partially_solved",
+        "assessment_gate": "source_claimed_open",
+        "snapshot_assessment_date": "2026-08-18"
+      },
+      "opdp": {
+        "tractability_band": "T7",
+        "tractability_probability": "55-70%",
+        "target_combined_hours": 100,
+        "intrinsic_difficulty": 5.6,
+        "ai_difficulty": 5.1,
+        "tool_leverage": 6.8,
+        "verification_if_true": 3.3,
+        "verification_if_false": 6.7
+      },
+      "weekly_track": "Work in the first nontrivial dimension, degree, or moduli stratum not covered by the source; compute invariants and turn the observed pattern into a statement with hypotheses.",
+      "deliverable": "Explicit equations or moduli data, a theorem for one stratum, and a portable CAS notebook.",
+      "verification_plan": "Independent Gröbner, cohomology, or intersection-theory replay together with a referee-readable derivation.",
+      "visual_hook": "A moduli-stratum diagram with boundary degenerations."
+    },
+    {
+      "rank": 11,
+      "source_problem_id": 20000280,
+      "source_problem_number": "AIM-ALGEBRAIC_GEOMETRY-0280",
+      "title": "An extremal bracket, a Segre correction, and a cubic-scroll family",
+      "statement": "Fix $d$. What is the maximum value of the $F$-pure threshold of $\\mathfrak{m}$ of a non-$\\Q$-Gorenstein local ring $(R, \\mathfrak{m})$ of dimension $d$?",
+      "field": "Algebraic Geometry",
+      "source_collection": "AIM Workshop Problem Lists",
+      "source_url": "http://aimpl.org/testandmultiplierideals/1/",
+      "canonical_source_url": "http://aimpl.org/testandmultiplierideals/1/",
+      "status": {
+        "catalog_status": "partially_solved",
+        "assessment_gate": "source_claimed_open",
+        "snapshot_assessment_date": "2026-08-18"
+      },
+      "opdp": {
+        "tractability_band": "T7",
+        "tractability_probability": "55-70%",
+        "target_combined_hours": 100,
+        "intrinsic_difficulty": 4.8,
+        "ai_difficulty": 4.8,
+        "tool_leverage": 6.5,
+        "verification_if_true": 4.1,
+        "verification_if_false": 4.1
+      },
+      "weekly_track": "Work in the first nontrivial dimension, degree, or moduli stratum not covered by the source; compute invariants and turn the observed pattern into a statement with hypotheses.",
+      "deliverable": "Explicit equations or moduli data, a theorem for one stratum, and a portable CAS notebook.",
+      "verification_plan": "Independent Gröbner, cohomology, or intersection-theory replay together with a referee-readable derivation.",
+      "visual_hook": "A moduli-stratum diagram with boundary degenerations."
+    },
+    {
+      "rank": 12,
+      "source_problem_id": 20000546,
+      "source_problem_number": "AIM-ANALYSIS-0078",
+      "title": "A deterministic dense unequal-norm Weaver partition algorithm",
+      "statement": "Find an algorithm for Weaver's conjecture/equivalence/theorem (or call it the vector partitioning problem), similarly for Paving Conjecture",
+      "field": "Analysis",
+      "source_collection": "AIM Workshop Problem Lists",
+      "source_url": "https://docs.google.com/document/d/1XRw0WyG5PshqboCp99tovCRD1GCK0jXZiNLH_nw618c/edit",
+      "canonical_source_url": "https://docs.google.com/document/d/1XRw0WyG5PshqboCp99tovCRD1GCK0jXZiNLH_nw618c/edit",
+      "status": {
+        "catalog_status": "partially_solved",
+        "assessment_gate": "source_claimed_open",
+        "snapshot_assessment_date": "2026-08-18"
+      },
+      "opdp": {
+        "tractability_band": "T7",
+        "tractability_probability": "55-70%",
+        "target_combined_hours": 100,
+        "intrinsic_difficulty": 5.4,
+        "ai_difficulty": 4.4,
+        "tool_leverage": 7.5,
+        "verification_if_true": 5.5,
+        "verification_if_false": 5.7
+      },
+      "weekly_track": "Normalize a concrete family of functions, operators, or measures and improve one endpoint, sharp constant, or obstruction with rigorous estimates.",
+      "deliverable": "A stated estimate or counterexample with hypotheses, constants, and a notebook that reproduces every numerical claim.",
+      "verification_plan": "A second derivation of inequalities and interval-certified computation where numerics enter.",
+      "visual_hook": "A phase diagram of parameter ranges and the proposed endpoint."
+    },
+    {
+      "rank": 13,
+      "source_problem_id": 20002884,
+      "source_problem_number": "AIM-SEVERAL_COMPLEX_VARIABLES-0042",
+      "title": "Equality rigidity and low-rank structure for roots of polynomial squared norms",
+      "statement": "2. The radical of the set of squared norms of polynomial mappings.(Proposed by John D'Angelo and Dror Varolin) Let P denote the set of Hermitian symmetric polynomials R(z, w ), and let S ⊂ P denote the set of squared norms of holomorphic polynomial mappings. For R ∈ P, give a necessary and sufficient condition for the existence of an integer N such that RN ∈ S.In other words, when do there exist an N and holomorphic polynomials pj such that: R(z, z )N = > k ∑ > j=1 |pj (z)|2. It is known that, if RN ∈ S, then R satisfies the inequality |R(z, w )|2 ≤ R(z, z )R(w, w ). This inequality can hold without R being a squared norm. The following is a necessary and sufficient condition for R ∈ S: For all choices of points {zj } ∈ Cn, and for all k, the k by k matrix with ( i, j ) entry equal to R(zi, z j ) is nonnegative definite. See [CD] and [DV] for related additional information. Another necessary and sufficient condition in the case N = 1: write [ A] = (A1, A 2,..., A n) where the Ai are r × r commuting matrices. Then R can be written as a sum of square norms of polynomials if and only if R([ A], [A∗]) ≥ 0holds for all possible choices of such commuting A′ > j s. (Convention: write adjoints first in the calculation of R([ A], [A∗]).) 1OPEN PROBLEMS 2",
+      "field": "Analysis",
+      "source_collection": "AIM Workshop Problem Lists",
+      "source_url": "https://aimath.org/WWN/complexitycrmap/complexitycrmap.pdf",
+      "canonical_source_url": "https://aimath.org/WWN/complexitycrmap/complexitycrmap.pdf",
+      "status": {
+        "catalog_status": "partially_solved",
+        "assessment_gate": "source_claimed_open",
+        "snapshot_assessment_date": "2026-08-18"
+      },
+      "opdp": {
+        "tractability_band": "T7",
+        "tractability_probability": "55-70%",
+        "target_combined_hours": 100,
+        "intrinsic_difficulty": 5.8,
+        "ai_difficulty": 5.3,
+        "tool_leverage": 6.8,
+        "verification_if_true": 2.9,
+        "verification_if_false": 6.1
+      },
+      "weekly_track": "Normalize a concrete family of functions, operators, or measures and improve one endpoint, sharp constant, or obstruction with rigorous estimates.",
+      "deliverable": "A stated estimate or counterexample with hypotheses, constants, and a notebook that reproduces every numerical claim.",
+      "verification_plan": "A second derivation of inequalities and interval-certified computation where numerics enter.",
+      "visual_hook": "A phase diagram of parameter ranges and the proposed endpoint."
+    },
+    {
+      "rank": 14,
+      "source_problem_id": 20000557,
+      "source_problem_number": "AIM-ANALYSIS-0089",
+      "title": "Induced ell-p paving endpoints and simultaneous all-p conference paving",
+      "statement": "Is paving true for $\\ell_p^n$? Specifically: Suppose $1\\le p<\\infty$. $Pav_p$: Does there exist for every $\\epsilon > 0$ a constant $k=k(\\epsilon, p)$ s.t. for every $n$ and every $n$ by $n$ zero diagonal matrix $A$ for which $\\|A\\|_p = 1$, there is a partition $\\sigma(1), \\dots, \\sigma(k) of $\\{1,\\dots,n\\}$ s.t. $$ \\|\\sum_{j=1}^k P_{\\sigma(j)} A P_{\\sigma(j)} \\|_p = \\max_j \\| P_{\\sigma(j)} A P_{\\sigma(j)} \\|_p \\le \\epsilon . $$ Here $\\|\\dot \\|_$ is the operator norm for operators on $\\ell_p^n$, NOT the Schatten $p$-class norm. $Pav_1$, due IIRC to Bourgain has been known for a long time and is relatively easy. It is more-or-less equivalent to $Pav_2$ for matrices that have non-negative entries, a result that is contained in Berman, Kenneth; Halpern, Herbert; Kaftal, Victor; Weiss, Gary; Matrix norm inequalities and the relative Dixmier property. Integral Equations Operator Theory 11 (1988), no. 1, 28-48. In their original paper, Bourgain and Tzafriri proved restricted invertibility for $\\ell_p^n$, but they got optimal estimates only for $p=2$.",
+      "field": "Analysis",
+      "source_collection": "AIM Workshop Problem Lists",
+      "source_url": "https://docs.google.com/document/d/1XRw0WyG5PshqboCp99tovCRD1GCK0jXZiNLH_nw618c/edit",
+      "canonical_source_url": "https://docs.google.com/document/d/1XRw0WyG5PshqboCp99tovCRD1GCK0jXZiNLH_nw618c/edit",
+      "status": {
+        "catalog_status": "partially_solved",
+        "assessment_gate": "source_claimed_open",
+        "snapshot_assessment_date": "2026-08-18"
+      },
+      "opdp": {
+        "tractability_band": "T7",
+        "tractability_probability": "55-70%",
+        "target_combined_hours": 100,
+        "intrinsic_difficulty": 5.5,
+        "ai_difficulty": 5,
+        "tool_leverage": 6.8,
+        "verification_if_true": 2.9,
+        "verification_if_false": 6
+      },
+      "weekly_track": "Normalize a concrete family of functions, operators, or measures and improve one endpoint, sharp constant, or obstruction with rigorous estimates.",
+      "deliverable": "A stated estimate or counterexample with hypotheses, constants, and a notebook that reproduces every numerical claim.",
+      "verification_plan": "A second derivation of inequalities and interval-certified computation where numerics enter.",
+      "visual_hook": "A phase diagram of parameter ranges and the proposed endpoint."
+    },
+    {
+      "rank": 15,
+      "source_problem_id": 20001454,
+      "source_problem_number": "AIM-FUNCTIONAL_ANALYSIS-0013",
+      "title": "Block-line sections and a covariance criterion for diagonal ell_p dilations",
+      "statement": "Let $p > 1$ and $H \\subset \\R^n$ of dimension $k$. Consider a map $$ f(t_1, \\dots, t_n) = \\left| \\begin{pmatrix} e^{t_1} & 0 & \\cdots & 0 \\\\ 0 & e^{t_2} & \\cdots & 0 \\\\ \\vdots & \\vdots & \\ddots & \\vdots \\\\ 0 & 0 & \\cdots & e^{t_n} \\end{pmatrix} B_p^n \\cap H \\right|_k, $$ where $B_p^n = \\{ x\\in \\R^n: \\ \\sqrt[p]{|x_1|^p + \\cdots + |x_n|^p} \\leq 1\\}$. Is $f$ log-concave jointly in $t_1, \\dots, t_n$?",
+      "field": "Analysis",
+      "source_collection": "AIM Workshop Problem Lists",
+      "source_url": "http://aimpl.org/symconvgeomineq/2/",
+      "canonical_source_url": "http://aimpl.org/symconvgeomineq/2/",
+      "status": {
+        "catalog_status": "partially_solved",
+        "assessment_gate": "source_claimed_open",
+        "snapshot_assessment_date": "2026-08-18"
+      },
+      "opdp": {
+        "tractability_band": "T7",
+        "tractability_probability": "55-70%",
+        "target_combined_hours": 100,
+        "intrinsic_difficulty": 5.5,
+        "ai_difficulty": 5,
+        "tool_leverage": 6.8,
+        "verification_if_true": 6.3,
+        "verification_if_false": 5.4
+      },
+      "weekly_track": "Normalize a concrete family of functions, operators, or measures and improve one endpoint, sharp constant, or obstruction with rigorous estimates.",
+      "deliverable": "A stated estimate or counterexample with hypotheses, constants, and a notebook that reproduces every numerical claim.",
+      "verification_plan": "A second derivation of inequalities and interval-certified computation where numerics enter.",
+      "visual_hook": "A phase diagram of parameter ranges and the proposed endpoint."
+    },
+    {
+      "rank": 16,
+      "source_problem_id": 20002854,
+      "source_problem_number": "AIM-SEVERAL_COMPLEX_VARIABLES-0012",
+      "title": "Rank spectra for Hermitian squared norms divisible by norm powers",
+      "statement": "Let $R(z,\\overline{z})$ be a Hermitian polynomial that is a sum of squares (SOS) $$R(z,\\overline{z})=\\sum_{j=1}^m|p_j(z)|^2,$$ where $p_j(z)$'s are linearly independent holomorphic polynomials. Suppose that $R(z,\\overline{z})$ is divisible by $||z||^2$ (i.e. $R(z,\\overline{z})=||z||^2A(z,\\overline{z})$). What are the possible values of $m$? $\\bullet$ Huang's lemma \\cite{MR1703603} implies that $m$ is either 0 or at least $n$. $\\bullet$ See \\cite{MR2869101} for a generalization of the Huang's lemma when $||z||^2$ is replaced by $||z||^{2d}$. Consider the same question in this case.",
+      "field": "Analysis",
+      "source_collection": "AIM Workshop Problem Lists",
+      "source_url": "http://aimpl.org/crscv/3/",
+      "canonical_source_url": "http://aimpl.org/crscv/3/",
+      "status": {
+        "catalog_status": "partially_solved",
+        "assessment_gate": "source_claimed_open",
+        "snapshot_assessment_date": "2026-08-18"
+      },
+      "opdp": {
+        "tractability_band": "T7",
+        "tractability_probability": "55-70%",
+        "target_combined_hours": 100,
+        "intrinsic_difficulty": 5.5,
+        "ai_difficulty": 5,
+        "tool_leverage": 6.8,
+        "verification_if_true": 6.2,
+        "verification_if_false": 5.3
+      },
+      "weekly_track": "Normalize a concrete family of functions, operators, or measures and improve one endpoint, sharp constant, or obstruction with rigorous estimates.",
+      "deliverable": "A stated estimate or counterexample with hypotheses, constants, and a notebook that reproduces every numerical claim.",
+      "verification_plan": "A second derivation of inequalities and interval-certified computation where numerics enter.",
+      "visual_hook": "A phase diagram of parameter ranges and the proposed endpoint."
+    },
+    {
+      "rank": 17,
+      "source_problem_id": 20000479,
+      "source_problem_number": "AIM-ANALYSIS-0011",
+      "title": "Nonperiodic 2-by-2 products: a literal factorization diagnostic, exact commuting asymptotics, and a no-limit obstruction",
+      "statement": "Consider \\[\\prod_{i=1}^N \\begin{bmatrix} 1 & a_iz \\\\ b_i & 1 \\\\ \\end{bmatrix},\\] for constants \\(a_i, b_i\\). Suppose Wiener-Hopf factorization has no partial indices. Study the behavior as \\(N \\rightarrow \\infty\\). The asymptotics are known if the \\(a_i\\)'s and \\(b_i\\)'s are periodic. What happens in the more general case?",
+      "field": "Analysis",
+      "source_collection": "AIM Workshop Problem Lists",
+      "source_url": "http://aimpl.org/riemhilberttoeplitz/2/",
+      "canonical_source_url": "http://aimpl.org/riemhilberttoeplitz/2/",
+      "status": {
+        "catalog_status": "partially_solved",
+        "assessment_gate": "source_claimed_open",
+        "snapshot_assessment_date": "2026-08-18"
+      },
+      "opdp": {
+        "tractability_band": "T7",
+        "tractability_probability": "55-70%",
+        "target_combined_hours": 100,
+        "intrinsic_difficulty": 5.4,
+        "ai_difficulty": 4.9,
+        "tool_leverage": 6.1,
+        "verification_if_true": 5.5,
+        "verification_if_false": 5.5
+      },
+      "weekly_track": "Normalize a concrete family of functions, operators, or measures and improve one endpoint, sharp constant, or obstruction with rigorous estimates.",
+      "deliverable": "A stated estimate or counterexample with hypotheses, constants, and a notebook that reproduces every numerical claim.",
+      "verification_plan": "A second derivation of inequalities and interval-certified computation where numerics enter.",
+      "visual_hook": "A phase diagram of parameter ranges and the proposed endpoint."
+    },
+    {
+      "rank": 18,
+      "source_problem_id": 20000508,
+      "source_problem_number": "AIM-ANALYSIS-0040",
+      "title": "Nontrivial Bergman space versus the plurisubharmonic Liouville property",
+      "statement": "Is there a pseudoconvex domain $\\Omega$ with ${\\rm dim} \\, A^2(\\Omega) \\neq 0$ such that there is no bounded plurisubharmonic function $\\phi$ on $\\Omega$.",
+      "field": "Analysis",
+      "source_collection": "AIM Workshop Problem Lists",
+      "source_url": "http://aimpl.org/scvproblems/1/",
+      "canonical_source_url": "http://aimpl.org/scvproblems/1/",
+      "status": {
+        "catalog_status": "partially_solved",
+        "assessment_gate": "source_claimed_open",
+        "snapshot_assessment_date": "2026-08-18"
+      },
+      "opdp": {
+        "tractability_band": "T7",
+        "tractability_probability": "55-70%",
+        "target_combined_hours": 100,
+        "intrinsic_difficulty": 5.4,
+        "ai_difficulty": 4.9,
+        "tool_leverage": 5.3,
+        "verification_if_true": 3.3,
+        "verification_if_false": 6.5
+      },
+      "weekly_track": "Normalize a concrete family of functions, operators, or measures and improve one endpoint, sharp constant, or obstruction with rigorous estimates.",
+      "deliverable": "A stated estimate or counterexample with hypotheses, constants, and a notebook that reproduces every numerical claim.",
+      "verification_plan": "A second derivation of inequalities and interval-certified computation where numerics enter.",
+      "visual_hook": "A phase diagram of parameter ranges and the proposed endpoint."
+    },
+    {
+      "rank": 19,
+      "source_problem_id": 2449,
+      "source_problem_number": "EP-1038",
+      "title": "Erdős Problem #1038",
+      "statement": "Determine the infimum and supremum of $ \\lvert \\{ x\\in \\mathbb{R} : \\lvert f(x)\\rvert < 1\\}\\rvert $ as $f\\in \\mathbb{R}[x]$ ranges over all non-constant monic polynomials, all of whose roots are real and in the interval $[-1,1]$.",
+      "field": "Combinatorics",
+      "source_collection": "Erdős Problems",
+      "source_url": "https://www.unsolvedmath.com/problems/EP-1038",
+      "canonical_source_url": null,
+      "status": {
+        "catalog_status": "open",
+        "assessment_gate": "source_claimed_open",
+        "snapshot_assessment_date": "2026-07-31"
+      },
+      "opdp": {
+        "tractability_band": "T7",
+        "tractability_probability": "55-70%",
+        "target_combined_hours": 100,
+        "intrinsic_difficulty": 6,
+        "ai_difficulty": 4.5,
+        "tool_leverage": 6.8,
+        "verification_if_true": 4.2,
+        "verification_if_false": 4.2
+      },
+      "weekly_track": "Close a finite parameter case beyond the published frontier, either by an extremal construction or a proof of impossibility.",
+      "deliverable": "A construction or bound, exact enumerator/checker, and a concise proof explaining why the finite computation is exhaustive.",
+      "verification_plan": "Independent replay of the enumerator and a certificate checker separated from the search code.",
+      "visual_hook": "A small extremal object, with forbidden patterns highlighted."
+    },
+    {
+      "rank": 20,
+      "source_problem_id": 2150,
+      "source_problem_number": "EP-509",
+      "title": "Erdős Problem #509",
+      "statement": "Let $f(z)\\in\\mathbb{C}[z]$ be a monic non-constant polynomial. Can the set $ \\{ z\\in \\mathbb{C} : \\lvert f(z)\\rvert \\leq 1\\} $ be covered by a set of circles the sum of whose radii is $\\leq 2$?",
+      "field": "Combinatorics",
+      "source_collection": "Erdős Problems",
+      "source_url": "https://www.unsolvedmath.com/problems/EP-509",
+      "canonical_source_url": null,
+      "status": {
+        "catalog_status": "open",
+        "assessment_gate": "source_claimed_open",
+        "snapshot_assessment_date": "2026-07-31"
+      },
+      "opdp": {
+        "tractability_band": "T7",
+        "tractability_probability": "55-70%",
+        "target_combined_hours": 100,
+        "intrinsic_difficulty": 5.2,
+        "ai_difficulty": 3.7,
+        "tool_leverage": 6.8,
+        "verification_if_true": 5,
+        "verification_if_false": 4.3
+      },
+      "weekly_track": "Close a finite parameter case beyond the published frontier, either by an extremal construction or a proof of impossibility.",
+      "deliverable": "A construction or bound, exact enumerator/checker, and a concise proof explaining why the finite computation is exhaustive.",
+      "verification_plan": "Independent replay of the enumerator and a certificate checker separated from the search code.",
+      "visual_hook": "A small extremal object, with forbidden patterns highlighted."
+    },
+    {
+      "rank": 21,
+      "source_problem_id": 1132,
+      "source_problem_number": "COMB-004",
+      "title": "Singmaster's Conjecture",
+      "statement": "Does there exist a finite upper bound on how many times a number (other than 1) can appear in Pascal's triangle?",
+      "field": "Combinatorics",
+      "source_collection": "Unassigned",
+      "source_url": "https://www.unsolvedmath.com/problems/COMB-004",
+      "canonical_source_url": null,
+      "status": {
+        "catalog_status": "open",
+        "assessment_gate": "source_claimed_open",
+        "snapshot_assessment_date": "2026-07-31"
+      },
+      "opdp": {
+        "tractability_band": "T7",
+        "tractability_probability": "55-70%",
+        "target_combined_hours": 100,
+        "intrinsic_difficulty": 5.1,
+        "ai_difficulty": 4.1,
+        "tool_leverage": 5.3,
+        "verification_if_true": 4.6,
+        "verification_if_false": 4.6
+      },
+      "weekly_track": "Close a finite parameter case beyond the published frontier, either by an extremal construction or a proof of impossibility.",
+      "deliverable": "A construction or bound, exact enumerator/checker, and a concise proof explaining why the finite computation is exhaustive.",
+      "verification_plan": "Independent replay of the enumerator and a certificate checker separated from the search code.",
+      "visual_hook": "A small extremal object, with forbidden patterns highlighted."
+    },
+    {
+      "rank": 22,
+      "source_problem_id": 1972,
+      "source_problem_number": "EP-170",
+      "title": "Erdős Problem #170",
+      "statement": "Let $F(N)$ be the smallest possible size of $A\\subset \\{0,1,\\ldots,N\\}$ such that $\\{0,1,\\ldots,N\\}\\subset A-A$. Find the value of $ \\lim_{N\\to \\infty}\\frac{F(N)}{N^{1/2}}. $",
+      "field": "Combinatorics",
+      "source_collection": "Erdős Problems",
+      "source_url": "https://blog.wolfram.com/2020/02/12/hitting-all-the-marks-exploring-new-bounds-for-sparse-rulers-and-a-wolfram-language-proof/",
+      "canonical_source_url": "https://blog.wolfram.com/2020/02/12/hitting-all-the-marks-exploring-new-bounds-for-sparse-rulers-and-a-wolfram-language-proof/",
+      "status": {
+        "catalog_status": "open",
+        "assessment_gate": "source_claimed_open",
+        "snapshot_assessment_date": "2026-07-31"
+      },
+      "opdp": {
+        "tractability_band": "T7",
+        "tractability_probability": "55-70%",
+        "target_combined_hours": 100,
+        "intrinsic_difficulty": 4.9,
+        "ai_difficulty": 3.9,
+        "tool_leverage": 5.3,
+        "verification_if_true": 4.6,
+        "verification_if_false": 4.6
+      },
+      "weekly_track": "Close a finite parameter case beyond the published frontier, either by an extremal construction or a proof of impossibility.",
+      "deliverable": "A construction or bound, exact enumerator/checker, and a concise proof explaining why the finite computation is exhaustive.",
+      "verification_plan": "Independent replay of the enumerator and a certificate checker separated from the search code.",
+      "visual_hook": "A small extremal object, with forbidden patterns highlighted."
+    },
+    {
+      "rank": 23,
+      "source_problem_id": 2306,
+      "source_problem_number": "EP-789",
+      "title": "Erdős Problem #789",
+      "statement": "Let $h(n)$ be maximal such that if $A\\subseteq \\mathbb{Z}$ with $\\lvert A\\rvert=n$ then there is $B\\subseteq A$ with $\\lvert B\\rvert \\geq h(n)$ such that if $a_1+\\cdots+a_r=b_1+\\cdots+b_s$ with $a_i,b_i\\in B$ then $r=s$. Estimate $h(n)$.",
+      "field": "Combinatorics",
+      "source_collection": "Erdős Problems",
+      "source_url": "https://www.unsolvedmath.com/problems/EP-789",
+      "canonical_source_url": null,
+      "status": {
+        "catalog_status": "open",
+        "assessment_gate": "source_claimed_open",
+        "snapshot_assessment_date": "2026-07-31"
+      },
+      "opdp": {
+        "tractability_band": "T7",
+        "tractability_probability": "55-70%",
+        "target_combined_hours": 100,
+        "intrinsic_difficulty": 4.9,
+        "ai_difficulty": 3.9,
+        "tool_leverage": 4.5,
+        "verification_if_true": 4.7,
+        "verification_if_false": 4.7
+      },
+      "weekly_track": "Close a finite parameter case beyond the published frontier, either by an extremal construction or a proof of impossibility.",
+      "deliverable": "A construction or bound, exact enumerator/checker, and a concise proof explaining why the finite computation is exhaustive.",
+      "verification_plan": "Independent replay of the enumerator and a certificate checker separated from the search code.",
+      "visual_hook": "A small extremal object, with forbidden patterns highlighted."
+    },
+    {
+      "rank": 24,
+      "source_problem_id": 2345,
+      "source_problem_number": "EP-857",
+      "title": "Erdős Problem #857",
+      "statement": "Let $m=m(n,k)$ be minimal such that in any collection of sets $A_1,\\ldots,A_m\\subseteq \\{1,\\ldots,n\\}$ there must exist a sunflower of size $k$ - that is, some collection of $k$ of the $A_i$ which pairwise have the same intersection. Estimate $m(n,k)$, or even better, give an asymptotic formula.",
+      "field": "Combinatorics",
+      "source_collection": "Erdős Problems",
+      "source_url": "https://www.unsolvedmath.com/problems/EP-857",
+      "canonical_source_url": null,
+      "status": {
+        "catalog_status": "open",
+        "assessment_gate": "source_claimed_open",
+        "snapshot_assessment_date": "2026-07-31"
+      },
+      "opdp": {
+        "tractability_band": "T7",
+        "tractability_probability": "55-70%",
+        "target_combined_hours": 100,
+        "intrinsic_difficulty": 4.9,
+        "ai_difficulty": 3.9,
+        "tool_leverage": 3.8,
+        "verification_if_true": 4.7,
+        "verification_if_false": 4.7
+      },
+      "weekly_track": "Close a finite parameter case beyond the published frontier, either by an extremal construction or a proof of impossibility.",
+      "deliverable": "A construction or bound, exact enumerator/checker, and a concise proof explaining why the finite computation is exhaustive.",
+      "verification_plan": "Independent replay of the enumerator and a certificate checker separated from the search code.",
+      "visual_hook": "A small extremal object, with forbidden patterns highlighted."
+    },
+    {
+      "rank": 25,
+      "source_problem_id": 2474,
+      "source_problem_number": "EP-1083",
+      "title": "Erdős Problem #1083",
+      "statement": "Let $d\\geq 3$, and let $f_d(n)$ be the minimal $m$ such that every set of $n$ points in $\\mathbb{R}^d$ determines at least $m$ distinct distances. Estimate $f_d(n)$ - in particular, is it true that $ f_d(n)=n^{\\frac{2}{d}-o(1)}? $",
+      "field": "Combinatorics",
+      "source_collection": "Erdős Problems",
+      "source_url": "https://www.unsolvedmath.com/problems/EP-1083",
+      "canonical_source_url": null,
+      "status": {
+        "catalog_status": "open",
+        "assessment_gate": "source_claimed_open",
+        "snapshot_assessment_date": "2026-07-31"
+      },
+      "opdp": {
+        "tractability_band": "T7",
+        "tractability_probability": "55-70%",
+        "target_combined_hours": 100,
+        "intrinsic_difficulty": 4.9,
+        "ai_difficulty": 3.9,
+        "tool_leverage": 4.5,
+        "verification_if_true": 4.7,
+        "verification_if_false": 4.7
+      },
+      "weekly_track": "Close a finite parameter case beyond the published frontier, either by an extremal construction or a proof of impossibility.",
+      "deliverable": "A construction or bound, exact enumerator/checker, and a concise proof explaining why the finite computation is exhaustive.",
+      "verification_plan": "Independent replay of the enumerator and a certificate checker separated from the search code.",
+      "visual_hook": "A small extremal object, with forbidden patterns highlighted."
+    },
+    {
+      "rank": 26,
+      "source_problem_id": 1966,
+      "source_problem_number": "EP-160",
+      "title": "Erdős Problem #160",
+      "statement": "Let $h(N)$ be the smallest $k$ such that $\\{1,\\ldots,N\\}$ can be coloured with $k$ colours so that every four-term arithmetic progression must contain at least three distinct colours. Estimate $h(N)$.",
+      "field": "Combinatorics",
+      "source_collection": "Erdős Problems",
+      "source_url": "https://www.unsolvedmath.com/problems/EP-160",
+      "canonical_source_url": null,
+      "status": {
+        "catalog_status": "open",
+        "assessment_gate": "source_claimed_open",
+        "snapshot_assessment_date": "2026-07-31"
+      },
+      "opdp": {
+        "tractability_band": "T7",
+        "tractability_probability": "55-70%",
+        "target_combined_hours": 100,
+        "intrinsic_difficulty": 4.6,
+        "ai_difficulty": 3.6,
+        "tool_leverage": 5.3,
+        "verification_if_true": 4.6,
+        "verification_if_false": 4.6
+      },
+      "weekly_track": "Close a finite parameter case beyond the published frontier, either by an extremal construction or a proof of impossibility.",
+      "deliverable": "A construction or bound, exact enumerator/checker, and a concise proof explaining why the finite computation is exhaustive.",
+      "verification_plan": "Independent replay of the enumerator and a certificate checker separated from the search code.",
+      "visual_hook": "A small extremal object, with forbidden patterns highlighted."
+    },
+    {
+      "rank": 27,
+      "source_problem_id": 3406,
+      "source_problem_number": "OPG-36884",
+      "title": "Refuting random 3SAT-instances on $O(n)$ clauses (weak form)",
+      "statement": "Conjecture For every rational $\\epsilon > 0$ and every rational $\\Delta$, there is no polynomial-time algorithm for the following problem. Given is a 3SAT (3CNF) formula $I$ on $n$ variables, for some $n$, and $m = \\floor{\\Delta n}$ clauses drawn uniformly at random from the set of formulas on $n$ variables. Return with probability at least 0.5 (over the instances) that $I$ is typical without returning typical for any instance with at least $(1 - \\epsilon)m$ simultaneously satisfiable clauses.",
+      "field": "Computer Science",
+      "source_collection": "OpenGarden",
+      "source_url": "http://www.openproblemgarden.org/op/refuting_random_3sat_instances_on_o_n_clauses_weak_form",
+      "canonical_source_url": "http://www.openproblemgarden.org/op/refuting_random_3sat_instances_on_o_n_clauses_weak_form",
+      "status": {
+        "catalog_status": "open",
+        "assessment_gate": "source_claimed_open",
+        "snapshot_assessment_date": "2026-07-31"
+      },
+      "opdp": {
+        "tractability_band": "T7",
+        "tractability_probability": "55-70%",
+        "target_combined_hours": 100,
+        "intrinsic_difficulty": 5.8,
+        "ai_difficulty": 4.3,
+        "tool_leverage": 8.3,
+        "verification_if_true": 4.5,
+        "verification_if_false": 4.8
+      },
+      "weekly_track": "Isolate one bounded model, parameter regime, or reduction boundary and prove an algorithmic improvement, lower bound, or exact classification for it.",
+      "deliverable": "Pseudocode or reduction, complexity analysis, benchmark instances, and reproducible evaluation.",
+      "verification_plan": "Independent implementation plus adversarial tests of correctness and asymptotic assumptions.",
+      "visual_hook": "A state-space or complexity tradeoff plot."
+    },
+    {
+      "rank": 28,
+      "source_problem_id": 3402,
+      "source_problem_number": "OPG-36892",
+      "title": "P vs. PSPACE",
+      "statement": "Problem Is there a problem that can be computed by a Turing machine in polynomial space and unbounded time but not in polynomial time? More formally, does P = PSPACE?",
+      "field": "Computer Science",
+      "source_collection": "OpenGarden",
+      "source_url": "http://www.openproblemgarden.org/op/p_vs_pspace",
+      "canonical_source_url": "http://www.openproblemgarden.org/op/p_vs_pspace",
+      "status": {
+        "catalog_status": "open",
+        "assessment_gate": "source_claimed_open",
+        "snapshot_assessment_date": "2026-07-31"
+      },
+      "opdp": {
+        "tractability_band": "T7",
+        "tractability_probability": "55-70%",
+        "target_combined_hours": 100,
+        "intrinsic_difficulty": 5,
+        "ai_difficulty": 4,
+        "tool_leverage": 8.3,
+        "verification_if_true": 4.8,
+        "verification_if_false": 5
+      },
+      "weekly_track": "Isolate one bounded model, parameter regime, or reduction boundary and prove an algorithmic improvement, lower bound, or exact classification for it.",
+      "deliverable": "Pseudocode or reduction, complexity analysis, benchmark instances, and reproducible evaluation.",
+      "verification_plan": "Independent implementation plus adversarial tests of correctness and asymptotic assumptions.",
+      "visual_hook": "A state-space or complexity tradeoff plot."
+    },
+    {
+      "rank": 29,
+      "source_problem_id": 48,
+      "source_problem_number": "SMA-004",
+      "title": "Smale's 4th Problem: Integer Zeros of Polynomials",
+      "statement": "Find efficient algorithms for deciding whether a polynomial with integer coefficients has an integer root.",
+      "field": "Computer Science",
+      "source_collection": "Smale's Problems",
+      "source_url": "https://www.unsolvedmath.com/problems/SMA-004",
+      "canonical_source_url": null,
+      "status": {
+        "catalog_status": "open",
+        "assessment_gate": "source_claimed_open",
+        "snapshot_assessment_date": "2026-07-31"
+      },
+      "opdp": {
+        "tractability_band": "T7",
+        "tractability_probability": "55-70%",
+        "target_combined_hours": 100,
+        "intrinsic_difficulty": 5.3,
+        "ai_difficulty": 4.3,
+        "tool_leverage": 8.3,
+        "verification_if_true": 4.8,
+        "verification_if_false": 5
+      },
+      "weekly_track": "Isolate one bounded model, parameter regime, or reduction boundary and prove an algorithmic improvement, lower bound, or exact classification for it.",
+      "deliverable": "Pseudocode or reduction, complexity analysis, benchmark instances, and reproducible evaluation.",
+      "verification_plan": "Independent implementation plus adversarial tests of correctness and asymptotic assumptions.",
+      "visual_hook": "A state-space or complexity tradeoff plot."
+    },
+    {
+      "rank": 30,
+      "source_problem_id": 3398,
+      "source_problem_number": "OPG-163",
+      "title": "Subset-sums equality (pigeonhole version)",
+      "statement": "Problem Let $a_1,a_2,\\ldots,a_n$ be natural numbers with $\\sum_{i=1}^n a_i < 2^n - 1$. It follows from the pigeon-hole principle that there exist distinct subsets $I,J \\subseteq \\{1,\\ldots,n\\}$ with $\\sum_{i \\in I} a_i = \\sum_{j \\in J} a_j$. Is it possible to find such a pair $I,J$ in polynomial time?",
+      "field": "Computer Science",
+      "source_collection": "OpenGarden",
+      "source_url": "http://www.openproblemgarden.org/op/theoretical_computer_science/subset_sums_equality",
+      "canonical_source_url": "http://www.openproblemgarden.org/op/theoretical_computer_science/subset_sums_equality",
+      "status": {
+        "catalog_status": "open",
+        "assessment_gate": "source_claimed_open",
+        "snapshot_assessment_date": "2026-07-31"
+      },
+      "opdp": {
+        "tractability_band": "T7",
+        "tractability_probability": "55-70%",
+        "target_combined_hours": 100,
+        "intrinsic_difficulty": 4.8,
+        "ai_difficulty": 4.3,
+        "tool_leverage": 8.3,
+        "verification_if_true": 4.8,
+        "verification_if_false": 5
+      },
+      "weekly_track": "Isolate one bounded model, parameter regime, or reduction boundary and prove an algorithmic improvement, lower bound, or exact classification for it.",
+      "deliverable": "Pseudocode or reduction, complexity analysis, benchmark instances, and reproducible evaluation.",
+      "verification_plan": "Independent implementation plus adversarial tests of correctness and asymptotic assumptions.",
+      "visual_hook": "A state-space or complexity tradeoff plot."
+    },
+    {
+      "rank": 31,
+      "source_problem_id": 20001250,
+      "source_problem_number": "AIM-COMPUTATION-0088",
+      "title": "Cyclic-binomial structure in an early Agrawal conjecture",
+      "statement": "Conjecture 3 Chapter A: Lecture Notes Lecture notes were TeXed in real time by John Voight. #A.1 Agrawal: A Polynomial Time Algorithm for Testing Primality The primality testing algorithm we present is based upon the following identity: n is prime if and only if (1 + X)n ≡ 1 + Xn (mod n), where we consider this congruence as an identity in the polynomial ring ( Z/n Z)[ X]. This easily gives a randomized algorithm which runs in polynomial time: rather than verifying it completely (which would be far too expensive), you verify it modulo a randomly chosen degree log n polynomial Q(X); repeating this sufficiently often, you expect to witness a failure of this congruence to hold fairly quickly if n is composite. Conjecture. To prove that n is prime, it is enough to let Q(X) run over the set {X − 1, X 2 − 1,..., X log 2 n − 1}. We were unable to prove this conjecture, but, instead the modified conjecture, which is then a proposition: Proposition (Modified conjecture). To prove that n is prime, it is enough to let Q(X) run over the set R = {(X + a)r − 1: 1 ≤ r ≤ 16(log n)5, 1 ≤ a ≤ 8(log n)7/2}, except when n has a 'small' prime factor ( ≤ (log n)5).",
+      "field": "Computer Science",
+      "source_collection": "AIM Workshop Problem Lists",
+      "source_url": "https://aimath.org/WWN/primesinp/primesinp.pdf",
+      "canonical_source_url": "https://aimath.org/WWN/primesinp/primesinp.pdf",
+      "status": {
+        "catalog_status": "partially_solved",
+        "assessment_gate": "source_claimed_open",
+        "snapshot_assessment_date": "2026-08-18"
+      },
+      "opdp": {
+        "tractability_band": "T7",
+        "tractability_probability": "55-70%",
+        "target_combined_hours": 100,
+        "intrinsic_difficulty": 6.1,
+        "ai_difficulty": 4.6,
+        "tool_leverage": 8.3,
+        "verification_if_true": 5,
+        "verification_if_false": 5.3
+      },
+      "weekly_track": "Isolate one bounded model, parameter regime, or reduction boundary and prove an algorithmic improvement, lower bound, or exact classification for it.",
+      "deliverable": "Pseudocode or reduction, complexity analysis, benchmark instances, and reproducible evaluation.",
+      "verification_plan": "Independent implementation plus adversarial tests of correctness and asymptotic assumptions.",
+      "visual_hook": "A state-space or complexity tradeoff plot."
+    },
+    {
+      "rank": 32,
+      "source_problem_id": 20001254,
+      "source_problem_number": "AIM-COMPUTATION-0092",
+      "title": "Prime-factor advice in power-residue quotients",
+      "statement": "These questions are motivated by the questions posed by AKS concerning finding quadratic nonresidues modulo a prime \\(p\\). (a) It is known that finding a single quadratic nonresidue for a given prime is polynomially equivalent to solving all quadratic equations. How far can one do this for finding a single bit of data (or few bits of data) for higher degrees? (b) We do not know yet that there is a deterministic polynomial time algorithm for finding quadratic nonresidues. Is there a subexponential algorithm?",
+      "field": "Computer Science",
+      "source_collection": "AIM Workshop Problem Lists",
+      "source_url": "https://aimath.org/WWN/primesinp/primesinp.pdf",
+      "canonical_source_url": "https://aimath.org/WWN/primesinp/primesinp.pdf",
+      "status": {
+        "catalog_status": "partially_solved",
+        "assessment_gate": "source_claimed_open",
+        "snapshot_assessment_date": "2026-08-18"
+      },
+      "opdp": {
+        "tractability_band": "T7",
+        "tractability_probability": "55-70%",
+        "target_combined_hours": 100,
+        "intrinsic_difficulty": 6.5,
+        "ai_difficulty": 5.5,
+        "tool_leverage": 8.3,
+        "verification_if_true": 5.1,
+        "verification_if_false": 5.3
+      },
+      "weekly_track": "Isolate one bounded model, parameter regime, or reduction boundary and prove an algorithmic improvement, lower bound, or exact classification for it.",
+      "deliverable": "Pseudocode or reduction, complexity analysis, benchmark instances, and reproducible evaluation.",
+      "verification_plan": "Independent implementation plus adversarial tests of correctness and asymptotic assumptions.",
+      "visual_hook": "A state-space or complexity tradeoff plot."
+    },
+    {
+      "rank": 33,
+      "source_problem_id": 20001214,
+      "source_problem_number": "AIM-COMPUTATION-0052",
+      "title": "A precise probabilistic repair and algebraic criteria for interval cell spectra",
+      "statement": "Question 38. With respect to some distribution is the set of tables whose range of cell entries are intervals dense among all tables? Joseph Landsberg Ilias Kotsireas Challenge problem in Gr¨ obner bases of polynomial ideals. The system of polynomial equations given in 3 different formats at http://www.cargo.wlu.ca/hi/had7.cocoa http://www.cargo.wlu.ca/hi/had7.maple http://www.cargo.wlu.ca/hi/had7.reduce has 41 equations in the 27 variables a1,..., a27.Prove that this system of polynomial equations, does not have any solutions. This would constitute an algebraic proof of the combinatorial result of L. D. Baumert: there are no Hadamard matrices of order 28 with one circulant core.9 Moreover, it is of interest to write down the effective Nullstellensatz for this ideal, i.e. write down explicitly a linear combination of (some of) the generators of the ideal, which is equal to 1. Similar algebraic proofs could then be devised for Hadamard matrices with one circulant core of bigger order. Reference: Ilias Kotsireas, Christos Koukouvinos, Jennifer Seberry, Hadamard ideals and Hadamard matrices with one circulant core. Submitted, November 2003. Ideas that were suggested during the workshop: • (Bernd Sturmfels) Devise some kind of incremental process to write down the effective Nullstellensatz. e.g. break the system into pieces, write the effective Nullstellensatz for each piece separately and then combine the results to obtain the effective Null-stellensatz for the whole system; • (Beth Arnold) Use CoCoA and her own mod p Gr¨ obner implementation, to see if the Gr¨ obner basis can be computed. • (Nick Eriksson) Use 4ti2, to see if the Grobner basis can be computed. Design efficient heuristics in binary trees. Given sets of binary vectors in a set of binary trees with given depths, design efficient heuristics to predict the positions of the analogous vectors in binary trees of bigger depth. The adjective \"analogous\" can take on various meanings. In our context, it designates solu-tions of the associated polynomial system. Ideas that were suggested during the workshop: (Persi Diaconis) first of all obtain graphical visualizations and then analyze the data with DFT and other transforms. Work in progress. Indicator function approach for Hadamard Equivalence. Check data sets of Hadamard matrices of big orders to identify the inequivalent Hadamard matrices. Ideas that were suggested during the workshop: (Maria Piera Rogantin) A JSPI paper by Fontana-Pistone-Rogantin contains a description of the indicator function approach to check Hadamard equivalence. In general, one needs to compute the indicator function which has exponentially many monomials. However, this approach is especially efficient for Hadamard matrices with some structure, e.g. with one circulant core. The main reason for this is that the exponentially many monomials fall naturally in a few categories and we only need to check equality of the coefficients of one representative from these categories. Work in progress. First Open Problem Session",
+      "field": "Computer Science",
+      "source_collection": "AIM Workshop Problem Lists",
+      "source_url": "https://aimath.org/WWN/compalgstat/compalgstat.pdf",
+      "canonical_source_url": "https://aimath.org/WWN/compalgstat/compalgstat.pdf",
+      "status": {
+        "catalog_status": "partially_solved",
+        "assessment_gate": "source_claimed_open",
+        "snapshot_assessment_date": "2026-08-18"
+      },
+      "opdp": {
+        "tractability_band": "T7",
+        "tractability_probability": "55-70%",
+        "target_combined_hours": 100,
+        "intrinsic_difficulty": 5.9,
+        "ai_difficulty": 4.9,
+        "tool_leverage": 6.8,
+        "verification_if_true": 5.4,
+        "verification_if_false": 4.7
+      },
+      "weekly_track": "Isolate one bounded model, parameter regime, or reduction boundary and prove an algorithmic improvement, lower bound, or exact classification for it.",
+      "deliverable": "Pseudocode or reduction, complexity analysis, benchmark instances, and reproducible evaluation.",
+      "verification_plan": "Independent implementation plus adversarial tests of correctness and asymptotic assumptions.",
+      "visual_hook": "A state-space or complexity tradeoff plot."
+    },
+    {
+      "rank": 34,
+      "source_problem_id": 3405,
+      "source_problem_number": "OPG-51618",
+      "title": "P vs. BPP",
+      "statement": "Conjecture Can all problems that can be computed by a probabilistic Turing machine (with error probability < 1/3) in polynomial time be solved by a deterministic Turing machine in polynomial time? That is, does P = BPP?",
+      "field": "Computer Science",
+      "source_collection": "OpenGarden",
+      "source_url": "http://www.openproblemgarden.org/op/p_vs_bpp",
+      "canonical_source_url": "http://www.openproblemgarden.org/op/p_vs_bpp",
+      "status": {
+        "catalog_status": "open",
+        "assessment_gate": "source_claimed_open",
+        "snapshot_assessment_date": "2026-07-31"
+      },
+      "opdp": {
+        "tractability_band": "T7",
+        "tractability_probability": "55-70%",
+        "target_combined_hours": 100,
+        "intrinsic_difficulty": 5.8,
+        "ai_difficulty": 4.8,
+        "tool_leverage": 8.3,
+        "verification_if_true": 4.8,
+        "verification_if_false": 5
+      },
+      "weekly_track": "Isolate one bounded model, parameter regime, or reduction boundary and prove an algorithmic improvement, lower bound, or exact classification for it.",
+      "deliverable": "Pseudocode or reduction, complexity analysis, benchmark instances, and reproducible evaluation.",
+      "verification_plan": "Independent implementation plus adversarial tests of correctness and asymptotic assumptions.",
+      "visual_hook": "A state-space or complexity tradeoff plot."
+    },
+    {
+      "rank": 35,
+      "source_problem_id": 3397,
+      "source_problem_number": "OPG-445",
+      "title": "The robustness of the tensor product",
+      "statement": "Problem Given two codes $R,C$, their Tensor Product $R \\otimes C$ is the code that consists of the matrices whose rows are codewords of $R$ and whose columns are codewords of $C$. The product $R \\otimes C$ is said to be robust if whenever a matrix $M$ is far from $R \\otimes C$, the rows (columns) of $M$ are far from $R$ ( $C$, respectively). The problem is to give a characterization of the pairs $R,C$ whose tensor product is robust.",
+      "field": "Computer Science",
+      "source_collection": "OpenGarden",
+      "source_url": "http://www.openproblemgarden.org/op/the_robustness_of_the_tensor_product_0",
+      "canonical_source_url": "http://www.openproblemgarden.org/op/the_robustness_of_the_tensor_product_0",
+      "status": {
+        "catalog_status": "open",
+        "assessment_gate": "source_claimed_open",
+        "snapshot_assessment_date": "2026-07-31"
+      },
+      "opdp": {
+        "tractability_band": "T7",
+        "tractability_probability": "55-70%",
+        "target_combined_hours": 100,
+        "intrinsic_difficulty": 5.5,
+        "ai_difficulty": 4.5,
+        "tool_leverage": 6.8,
+        "verification_if_true": 5.3,
+        "verification_if_false": 4.5
+      },
+      "weekly_track": "Isolate one bounded model, parameter regime, or reduction boundary and prove an algorithmic improvement, lower bound, or exact classification for it.",
+      "deliverable": "Pseudocode or reduction, complexity analysis, benchmark instances, and reproducible evaluation.",
+      "verification_plan": "Independent implementation plus adversarial tests of correctness and asymptotic assumptions.",
+      "visual_hook": "A state-space or complexity tradeoff plot."
+    },
+    {
+      "rank": 36,
+      "source_problem_id": 4800010,
+      "source_problem_number": "AMR-047-0010",
+      "title": "Multiple ergodic averages — Problem 10",
+      "statement": "Suppose that the sequence of $\\ell$-tuples of polynomials $(p_{1,N},\\ldots, p_{\\ell,N})$ is good. Show that for every ergodic system $(X,\\mathcal X,\\mu,T)$ and functions $f_1,\\ldots,f_\\ell\\in L^\\infty(\\mu)$ we have $$ \\lim_{N\\to\\infty}\\frac{1}{N}\\sum_{n=1}^N\\, T^{[p_{1,N}(n)]}f_1\\cdots T^{[p_{\\ell,N}(n)]}f_\\ell=\\int f_1\\, d\\mu\\, \\cdots \\int f_\\ell\\, d\\mu $$ where convergence takes place in $L^2(\\mu)$.",
+      "field": "Dynamical Systems",
+      "source_collection": "AMR Open Problem Lists",
+      "source_url": "https://arxiv.org/abs/1103.3808",
+      "canonical_source_url": "https://arxiv.org/abs/1103.3808",
+      "status": {
+        "catalog_status": "partially_solved",
+        "assessment_gate": "source_claimed_open",
+        "snapshot_assessment_date": "2026-07-31"
+      },
+      "opdp": {
+        "tractability_band": "T6",
+        "tractability_probability": "40-55%",
+        "target_combined_hours": 100,
+        "intrinsic_difficulty": 5.9,
+        "ai_difficulty": 5.4,
+        "tool_leverage": 6.8,
+        "verification_if_true": 6.1,
+        "verification_if_false": 5.2
+      },
+      "weekly_track": "Classify a finite parameter slice or orbit family exactly, then turn any discovered pattern into a theorem, counterexample, or explicit obstruction.",
+      "deliverable": "A parameterized orbit dataset, exact recurrence or invariant, and a proof for the selected slice.",
+      "verification_plan": "Exact-arithmetic replay of trajectories and an independent proof check of the claimed invariant.",
+      "visual_hook": "An orbit portrait or bifurcation-style parameter plot."
+    },
+    {
+      "rank": 37,
+      "source_problem_id": 20001364,
+      "source_problem_number": "AIM-DYNAMICAL_SYSTEMS-0022",
+      "title": "An intrinsic level-4 obstruction and a discriminant sieve",
+      "statement": "\\begin{enumerate} \\item For $p|N,$ $X^{\\text{dyn}}(N)$ has bad reduction at $p$ for the standard model, but evidence suggests there exists a different model with good reduction. Is this true? If not, why not? Is there a ``reason\" for this to be true? \\item(Silverman) In general, what are the primes of bad reduction and why? \\end{enumerate}",
+      "field": "Dynamical Systems",
+      "source_collection": "AIM Workshop Problem Lists",
+      "source_url": "http://aimpl.org/galarithdyn/4/",
+      "canonical_source_url": "http://aimpl.org/galarithdyn/4/",
+      "status": {
+        "catalog_status": "partially_solved",
+        "assessment_gate": "source_claimed_open",
+        "snapshot_assessment_date": "2026-08-18"
+      },
+      "opdp": {
+        "tractability_band": "T6",
+        "tractability_probability": "40-55%",
+        "target_combined_hours": 100,
+        "intrinsic_difficulty": 6.1,
+        "ai_difficulty": 6.1,
+        "tool_leverage": 6,
+        "verification_if_true": 3.3,
+        "verification_if_false": 6.6
+      },
+      "weekly_track": "Classify a finite parameter slice or orbit family exactly, then turn any discovered pattern into a theorem, counterexample, or explicit obstruction.",
+      "deliverable": "A parameterized orbit dataset, exact recurrence or invariant, and a proof for the selected slice.",
+      "verification_plan": "Exact-arithmetic replay of trajectories and an independent proof check of the claimed invariant.",
+      "visual_hook": "An orbit portrait or bifurcation-style parameter plot."
+    },
+    {
+      "rank": 38,
+      "source_problem_id": 20001432,
+      "source_problem_number": "AIM-DYNAMICAL_SYSTEMS-0090",
+      "title": "PCF descent, higher-dimensional sparsity, and a finite-stratum certificate",
+      "statement": "Notions of PCF $f:\\mathbb{P}^N \\to \\mathbb{P}^N$ morphism. \\begin{enumerate} \\item Defn: PCF if the orbit of the ramification locus $C$, $V=\\bigcup_{n \\geq 0} f^n(C)$ is a proper algebraic subvariety of $\\mathbb{P}^N$. \\item Defn: ``PCF all the way down'': If the restriction of $f$ to every periodic component of the post-critical component $V$ is PCF. \\end{enumerate} \\begin{enumerate} \\item Does (1) imply (2)? \\item Are PCF (1) or (2) Zariski dense in $M_d^N$? \\item Is there are more general definition than (\\ref{it1}) such that: a) ``there are more of them''? (i.e. less restrictive) b) they are dense in any reasonable topology c) Andre-Oort property \\end{enumerate}",
+      "field": "Dynamical Systems",
+      "source_collection": "AIM Workshop Problem Lists",
+      "source_url": "http://aimpl.org/finitedynamics/5/",
+      "canonical_source_url": "http://aimpl.org/finitedynamics/5/",
+      "status": {
+        "catalog_status": "partially_solved",
+        "assessment_gate": "source_claimed_open",
+        "snapshot_assessment_date": "2026-08-18"
+      },
+      "opdp": {
+        "tractability_band": "T6",
+        "tractability_probability": "40-55%",
+        "target_combined_hours": 100,
+        "intrinsic_difficulty": 6.1,
+        "ai_difficulty": 6.1,
+        "tool_leverage": 6,
+        "verification_if_true": 3.3,
+        "verification_if_false": 6.6
+      },
+      "weekly_track": "Classify a finite parameter slice or orbit family exactly, then turn any discovered pattern into a theorem, counterexample, or explicit obstruction.",
+      "deliverable": "A parameterized orbit dataset, exact recurrence or invariant, and a proof for the selected slice.",
+      "verification_plan": "Exact-arithmetic replay of trajectories and an independent proof check of the claimed invariant.",
+      "visual_hook": "An orbit portrait or bifurcation-style parameter plot."
+    },
+    {
+      "rank": 39,
+      "source_problem_id": 20001421,
+      "source_problem_number": "AIM-DYNAMICAL_SYSTEMS-0079",
+      "title": "Critical orbit relations and simultaneous PCF quadratic parameters",
+      "statement": "Critical orbit relations An algebraic subvariety in $M_d$ has a Zariski dense subset of PCF maps if and only if that subvariety is defined by critical orbit relations. \\begin{enumerate} \\item Let $X \\subset \\mathbb{A}^2$ be a curve. Is it true that you have infinitely many points $(c_1,c_2) \\in X$ such that $z^2+c_1$ and $z^2+c_2$ are both PCF if and only if it is vertical line, a horizontal line, or the diagonal? \\end{enumerate}",
+      "field": "Dynamical Systems",
+      "source_collection": "AIM Workshop Problem Lists",
+      "source_url": "http://aimpl.org/finitedynamics/2/",
+      "canonical_source_url": "http://aimpl.org/finitedynamics/2/",
+      "status": {
+        "catalog_status": "partially_solved",
+        "assessment_gate": "source_claimed_open",
+        "snapshot_assessment_date": "2026-08-18"
+      },
+      "opdp": {
+        "tractability_band": "T6",
+        "tractability_probability": "40-55%",
+        "target_combined_hours": 100,
+        "intrinsic_difficulty": 6,
+        "ai_difficulty": 6,
+        "tool_leverage": 6.8,
+        "verification_if_true": 6.2,
+        "verification_if_false": 5.4
+      },
+      "weekly_track": "Classify a finite parameter slice or orbit family exactly, then turn any discovered pattern into a theorem, counterexample, or explicit obstruction.",
+      "deliverable": "A parameterized orbit dataset, exact recurrence or invariant, and a proof for the selected slice.",
+      "verification_plan": "Exact-arithmetic replay of trajectories and an independent proof check of the claimed invariant.",
+      "visual_hook": "An orbit portrait or bifurcation-style parameter plot."
+    },
+    {
+      "rank": 40,
+      "source_problem_id": 20001374,
+      "source_problem_number": "AIM-DYNAMICAL_SYSTEMS-0032",
+      "title": "Two square-class tests for finite-level agreement of quadratic arboreal representations",
+      "statement": "To what level can the representation associated to two quadratic polynomials agree?",
+      "field": "Dynamical Systems",
+      "source_collection": "AIM Workshop Problem Lists",
+      "source_url": "http://aimpl.org/galarithdyn/9/",
+      "canonical_source_url": "http://aimpl.org/galarithdyn/9/",
+      "status": {
+        "catalog_status": "partially_solved",
+        "assessment_gate": "source_claimed_open",
+        "snapshot_assessment_date": "2026-08-18"
+      },
+      "opdp": {
+        "tractability_band": "T6",
+        "tractability_probability": "40-55%",
+        "target_combined_hours": 100,
+        "intrinsic_difficulty": 5.8,
+        "ai_difficulty": 5.8,
+        "tool_leverage": 6.8,
+        "verification_if_true": 6.3,
+        "verification_if_false": 5.5
+      },
+      "weekly_track": "Classify a finite parameter slice or orbit family exactly, then turn any discovered pattern into a theorem, counterexample, or explicit obstruction.",
+      "deliverable": "A parameterized orbit dataset, exact recurrence or invariant, and a proof for the selected slice.",
+      "verification_plan": "Exact-arithmetic replay of trajectories and an independent proof check of the claimed invariant.",
+      "visual_hook": "An orbit portrait or bifurcation-style parameter plot."
+    },
+    {
+      "rank": 41,
+      "source_problem_id": 1215,
+      "source_problem_number": "GEO-024",
+      "title": "The Heilbronn Triangle Problem",
+      "statement": "What is the largest minimum area of a triangle determined by $n$ points in a unit square?",
+      "field": "Geometry",
+      "source_collection": "Unassigned",
+      "source_url": "https://www.unsolvedmath.com/problems/GEO-024",
+      "canonical_source_url": null,
+      "status": {
+        "catalog_status": "open",
+        "assessment_gate": "source_claimed_open",
+        "snapshot_assessment_date": "2026-07-31"
+      },
+      "opdp": {
+        "tractability_band": "T7",
+        "tractability_probability": "55-70%",
+        "target_combined_hours": 100,
+        "intrinsic_difficulty": 5.3,
+        "ai_difficulty": 4.3,
+        "tool_leverage": 7.3,
+        "verification_if_true": 3.5,
+        "verification_if_false": 3.5
+      },
+      "weekly_track": "Target the first unresolved dimension, cardinality, or symmetry class and seek an exact construction, lower bound, or certified obstruction.",
+      "deliverable": "Coordinates or a combinatorial encoding, a theorem for the selected case, and a robust verifier.",
+      "verification_plan": "Independent geometric predicate checks using exact arithmetic or validated intervals.",
+      "visual_hook": "The extremal configuration with contacts, areas, or incidences annotated."
+    },
+    {
+      "rank": 42,
+      "source_problem_id": 46,
+      "source_problem_number": "HIL-016",
+      "title": "Hilbert's 16th Problem: Topology of Algebraic Curves and Limit Cycles",
+      "statement": "Determine the maximum number and relative positions of limit cycles for polynomial vector fields of degree $n$, and investigate the topology of real algebraic curves and surfaces.",
+      "field": "Geometry",
+      "source_collection": "Hilbert's 23 Problems",
+      "source_url": "https://www.unsolvedmath.com/problems/HIL-016",
+      "canonical_source_url": null,
+      "status": {
+        "catalog_status": "open",
+        "assessment_gate": "source_claimed_open",
+        "snapshot_assessment_date": "2026-07-31"
+      },
+      "opdp": {
+        "tractability_band": "T7",
+        "tractability_probability": "55-70%",
+        "target_combined_hours": 100,
+        "intrinsic_difficulty": 5.3,
+        "ai_difficulty": 4.8,
+        "tool_leverage": 8.8,
+        "verification_if_true": 3.2,
+        "verification_if_false": 3.2
+      },
+      "weekly_track": "Target the first unresolved dimension, cardinality, or symmetry class and seek an exact construction, lower bound, or certified obstruction.",
+      "deliverable": "Coordinates or a combinatorial encoding, a theorem for the selected case, and a robust verifier.",
+      "verification_plan": "Independent geometric predicate checks using exact arithmetic or validated intervals.",
+      "visual_hook": "The extremal configuration with contacts, areas, or incidences annotated."
+    },
+    {
+      "rank": 43,
+      "source_problem_id": 133,
+      "source_problem_number": "GREEN-045",
+      "title": "No Three in Line in [N]^2",
+      "statement": "What is the largest subset of the grid $[N]^2$ with no three points on a line? In particular, for $N$ sufficiently large, is it impossible to have a set of size $2N$ with this property?",
+      "field": "Geometry",
+      "source_collection": "Ben Green's 100 Open Problems",
+      "source_url": "https://www.unsolvedmath.com/problems/GREEN-045",
+      "canonical_source_url": null,
+      "status": {
+        "catalog_status": "open",
+        "assessment_gate": "source_claimed_open",
+        "snapshot_assessment_date": "2026-07-31"
+      },
+      "opdp": {
+        "tractability_band": "T7",
+        "tractability_probability": "55-70%",
+        "target_combined_hours": 100,
+        "intrinsic_difficulty": 5.5,
+        "ai_difficulty": 4.5,
+        "tool_leverage": 7.3,
+        "verification_if_true": 3.6,
+        "verification_if_false": 3.6
+      },
+      "weekly_track": "Target the first unresolved dimension, cardinality, or symmetry class and seek an exact construction, lower bound, or certified obstruction.",
+      "deliverable": "Coordinates or a combinatorial encoding, a theorem for the selected case, and a robust verifier.",
+      "verification_plan": "Independent geometric predicate checks using exact arithmetic or validated intervals.",
+      "visual_hook": "The extremal configuration with contacts, areas, or incidences annotated."
+    },
+    {
+      "rank": 44,
+      "source_problem_id": 1335,
+      "source_problem_number": "GEOM-007",
+      "title": "Kakeya Conjecture",
+      "statement": "Must a Kakeya set in $\\mathbb{R}^n$ have Hausdorff and Minkowski dimension $n$?",
+      "field": "Geometry",
+      "source_collection": "Unassigned",
+      "source_url": "https://www.unsolvedmath.com/problems/GEOM-007",
+      "canonical_source_url": null,
+      "status": {
+        "catalog_status": "open",
+        "assessment_gate": "source_claimed_open",
+        "snapshot_assessment_date": "2026-07-31"
+      },
+      "opdp": {
+        "tractability_band": "T5",
+        "tractability_probability": "25-40%",
+        "target_combined_hours": 100,
+        "intrinsic_difficulty": 5.9,
+        "ai_difficulty": 5.9,
+        "tool_leverage": 4.5,
+        "verification_if_true": 6,
+        "verification_if_false": 5.2
+      },
+      "weekly_track": "Target the first unresolved dimension, cardinality, or symmetry class and seek an exact construction, lower bound, or certified obstruction.",
+      "deliverable": "Coordinates or a combinatorial encoding, a theorem for the selected case, and a robust verifier.",
+      "verification_plan": "Independent geometric predicate checks using exact arithmetic or validated intervals.",
+      "visual_hook": "The extremal configuration with contacts, areas, or incidences annotated."
+    },
+    {
+      "rank": 45,
+      "source_problem_id": 20001277,
+      "source_problem_number": "AIM-CONVEX_GEOMETRY-0009",
+      "title": "A necessary moment order and a scale obstruction",
+      "statement": "1. (Identifiability from moments) Let the k-th moment tensor of a con-vex body be the k-th moment tensor of the uniform distribution on it. For any positive integer t, is there k = k(t) (independent of d) so that the following map is injective: The map that takes a d-dimensional polytope with dt facets and maps it to its first k moment tensors. Known: 5(a) [GLPR] Can recover a d-dimensional polytope with n vertices from O(dn ) moments along d random directions. (b) [FJK] Can estimate a parallelepiped efficiently from first 4 mo-ment tensors. (c) [AGR] Can estimate any simplex efficiently from first 3 moment tensors. In the affirmative case, is there an efficient reconstruction algorithm? Namely, is there an algorithm running in time polynomial in n whose input are the first k moment tensors of any given polytope P as before, and that outputs a polytope within 1/10 Hausdorff distance of P? What if the tensors are not known exactly but come from a sample approximation from a sample of size polynomial in n for any fixed t?",
+      "field": "Geometry",
+      "source_collection": "AIM Workshop Problem Lists",
+      "source_url": "https://aimath.org/pastworkshops/sectionsconvexproblems.pdf",
+      "canonical_source_url": "https://aimath.org/pastworkshops/sectionsconvexproblems.pdf",
+      "status": {
+        "catalog_status": "partially_solved",
+        "assessment_gate": "source_claimed_open",
+        "snapshot_assessment_date": "2026-08-18"
+      },
+      "opdp": {
+        "tractability_band": "T7",
+        "tractability_probability": "55-70%",
+        "target_combined_hours": 100,
+        "intrinsic_difficulty": 5.4,
+        "ai_difficulty": 4.4,
+        "tool_leverage": 8.3,
+        "verification_if_true": 5.5,
+        "verification_if_false": 5.7
+      },
+      "weekly_track": "Target the first unresolved dimension, cardinality, or symmetry class and seek an exact construction, lower bound, or certified obstruction.",
+      "deliverable": "Coordinates or a combinatorial encoding, a theorem for the selected case, and a robust verifier.",
+      "verification_plan": "Independent geometric predicate checks using exact arithmetic or validated intervals.",
+      "visual_hook": "The extremal configuration with contacts, areas, or incidences annotated."
+    },
+    {
+      "rank": 46,
+      "source_problem_id": 20001278,
+      "source_problem_number": "AIM-CONVEX_GEOMETRY-0010",
+      "title": "Explicit conditioned stability for relative central sections",
+      "statement": "2. (Stability of reconstruction from relative central sectional areas) Is it true that for any positive integer t there is a positive integer t′ = t′(t) such that for any two isotropic centrally symmetric d-dimensional polytopes P, Q with at most dt facets we have: If for all θ ∈ Sd−1 ∣∣∣∣∣ Vol n−1(P ∩ θ⊥) Vol (P ) − Vol n−1(Q ∩ θ⊥) Vol (Q) ∣∣∣∣∣ ≤ 1 dt′, then the Hausdorff distance between P and Q is at most 1/10?In the affirmative case, is there an efficient reconstruction algorithm? Namely, is there an algorithm running in time polynomial in n that when given access to the value of relative central sectional areas of any given polytope P as before, to within additive error 1/d t′, it outputs a polytope within 1/10 Hausdorff distance of P? #References > [AGR] Joseph Anderson, Navin Goyal, and Luis Rademacher, Efficient learning of simplices (2012). [FJK] Alan Frieze, Mark Jerrum, and Ravi Kannan, Learning linear transformations,Foundations of computer science, 1996. proceedings., 37th annual symposium on, 1996, pp. 359-368. [G] Richard J Gardner, Geometric tomography, Vol. 58, Cambridge University Press Cambridge, 1995. [GGZ] Richard J Gardner, Paolo Gronchi, and Chuanming Zong, Sums, projections, and sections of lattice sets, and the discrete covariogram, Discrete & Com-putational Geometry 34 (2005), no. 3, 391-409. 6[GLPR] Nick Gravin, Jean Lasserre, Dmitrii V Pasechnik, and Sinai Robins, The inverse moment problem for convex polytopes, Discrete & Computational Geome-try 48 (2012), no. 3, 596-621. [R] Dmitry Ryabogin, On the continual rubik's cube, Advances in Mathematics 231 (2012), no. 6, 3429-3444. 7",
+      "field": "Geometry",
+      "source_collection": "AIM Workshop Problem Lists",
+      "source_url": "https://aimath.org/pastworkshops/sectionsconvexproblems.pdf",
+      "canonical_source_url": "https://aimath.org/pastworkshops/sectionsconvexproblems.pdf",
+      "status": {
+        "catalog_status": "partially_solved",
+        "assessment_gate": "source_claimed_open",
+        "snapshot_assessment_date": "2026-08-18"
+      },
+      "opdp": {
+        "tractability_band": "T7",
+        "tractability_probability": "55-70%",
+        "target_combined_hours": 100,
+        "intrinsic_difficulty": 5.4,
+        "ai_difficulty": 4.4,
+        "tool_leverage": 8.3,
+        "verification_if_true": 5.3,
+        "verification_if_false": 5.5
+      },
+      "weekly_track": "Target the first unresolved dimension, cardinality, or symmetry class and seek an exact construction, lower bound, or certified obstruction.",
+      "deliverable": "Coordinates or a combinatorial encoding, a theorem for the selected case, and a robust verifier.",
+      "verification_plan": "Independent geometric predicate checks using exact arithmetic or validated intervals.",
+      "visual_hook": "The extremal configuration with contacts, areas, or incidences annotated."
+    },
+    {
+      "rank": 47,
+      "source_problem_id": 20001770,
+      "source_problem_number": "AIM-GEOMETRY-0108",
+      "title": "A compact finite-shell reduction for lattice soft packings",
+      "statement": "Lattice Packings It is know that the problem of finding the densest lattice packing of spheres in a fixed dimension is a solvable by a finite algorithm (Voronoi, Minkowski). Can the lattice soft ball packing problem be solved by a finite algorithm? Amongst lattice packings of unit balls, which maximizes the density with respect to soft balls?",
+      "field": "Geometry",
+      "source_collection": "AIM Workshop Problem Lists",
+      "source_url": "http://aimpl.org/softpack/1/",
+      "canonical_source_url": "http://aimpl.org/softpack/1/",
+      "status": {
+        "catalog_status": "partially_solved",
+        "assessment_gate": "source_claimed_open",
+        "snapshot_assessment_date": "2026-08-18"
+      },
+      "opdp": {
+        "tractability_band": "T7",
+        "tractability_probability": "55-70%",
+        "target_combined_hours": 100,
+        "intrinsic_difficulty": 5.4,
+        "ai_difficulty": 4.4,
+        "tool_leverage": 8.3,
+        "verification_if_true": 5.5,
+        "verification_if_false": 5.7
+      },
+      "weekly_track": "Target the first unresolved dimension, cardinality, or symmetry class and seek an exact construction, lower bound, or certified obstruction.",
+      "deliverable": "Coordinates or a combinatorial encoding, a theorem for the selected case, and a robust verifier.",
+      "verification_plan": "Independent geometric predicate checks using exact arithmetic or validated intervals.",
+      "visual_hook": "The extremal configuration with contacts, areas, or incidences annotated."
+    },
+    {
+      "rank": 48,
+      "source_problem_id": 2177,
+      "source_problem_number": "EP-560",
+      "title": "Erdős Problem #560",
+      "statement": "Let $\\hat{R}(G)$ denote the size Ramsey number, the minimal number of edges $m$ such that there is a graph $H$ with $m$ edges such that in any $2$-colouring of the edges of $H$ there is a monochromatic copy of $G$. Determine $ \\hat{R}(K_{n,n}), $ where $K_{n,n}$ is the complete bipartite graph with $n$ vertices in each component.",
+      "field": "Graph Theory",
+      "source_collection": "Erdős Problems",
+      "source_url": "https://www.unsolvedmath.com/problems/EP-560",
+      "canonical_source_url": null,
+      "status": {
+        "catalog_status": "open",
+        "assessment_gate": "source_claimed_open",
+        "snapshot_assessment_date": "2026-07-31"
+      },
+      "opdp": {
+        "tractability_band": "T7",
+        "tractability_probability": "55-70%",
+        "target_combined_hours": 100,
+        "intrinsic_difficulty": 4.9,
+        "ai_difficulty": 3.4,
+        "tool_leverage": 6,
+        "verification_if_true": 4.3,
+        "verification_if_false": 4.3
+      },
+      "weekly_track": "Fix a meaningful structural restriction or order range and improve a bound, find an extremal example, or prove a reducible configuration lemma.",
+      "deliverable": "A graph family or theorem, a certificate checker, and an exhaustive-search audit if computation is used.",
+      "verification_plan": "Independent graph generation and verification, with isomorphism handling documented.",
+      "visual_hook": "A colored or weighted graph exposing the obstruction or construction."
+    },
+    {
+      "rank": 49,
+      "source_problem_id": 2498,
+      "source_problem_number": "EP-1111",
+      "title": "Erdős Problem #1111",
+      "statement": "If $G$ is a finite graph and $A,B$ are disjoint sets of vertices then we call $A,B$ anticomplete if there are no edges between $A$ and $B$. If $t,c\\geq 1$ then there exists $d\\geq 1$ such that if $\\chi(G)\\geq d$ and $\\omega(G)<t$ then there are anticomplete sets $A,B$ with $\\chi(A)\\geq \\chi(B)\\geq c$.",
+      "field": "Graph Theory",
+      "source_collection": "Erdős Problems",
+      "source_url": "https://www.unsolvedmath.com/problems/EP-1111",
+      "canonical_source_url": null,
+      "status": {
+        "catalog_status": "open",
+        "assessment_gate": "source_claimed_open",
+        "snapshot_assessment_date": "2026-07-31"
+      },
+      "opdp": {
+        "tractability_band": "T7",
+        "tractability_probability": "55-70%",
+        "target_combined_hours": 100,
+        "intrinsic_difficulty": 5.4,
+        "ai_difficulty": 4.4,
+        "tool_leverage": 6.8,
+        "verification_if_true": 4.9,
+        "verification_if_false": 4.2
+      },
+      "weekly_track": "Fix a meaningful structural restriction or order range and improve a bound, find an extremal example, or prove a reducible configuration lemma.",
+      "deliverable": "A graph family or theorem, a certificate checker, and an exhaustive-search audit if computation is used.",
+      "verification_plan": "Independent graph generation and verification, with isomorphism handling documented.",
+      "visual_hook": "A colored or weighted graph exposing the obstruction or construction."
+    },
+    {
+      "rank": 50,
+      "source_problem_id": 2290,
+      "source_problem_number": "EP-750",
+      "title": "Erdős Problem #750",
+      "statement": "Let $f(m)$ be some function such that $f(m)\\to \\infty$ as $m\\to \\infty$. Does there exist a graph $G$ of infinite chromatic number such that every subgraph on $m$ vertices contains an independent set of size at least $\\frac{m}{2}-f(m)$?",
+      "field": "Graph Theory",
+      "source_collection": "Erdős Problems",
+      "source_url": "https://www.unsolvedmath.com/problems/EP-750",
+      "canonical_source_url": null,
+      "status": {
+        "catalog_status": "open",
+        "assessment_gate": "source_claimed_open",
+        "snapshot_assessment_date": "2026-07-31"
+      },
+      "opdp": {
+        "tractability_band": "T7",
+        "tractability_probability": "55-70%",
+        "target_combined_hours": 100,
+        "intrinsic_difficulty": 5.2,
+        "ai_difficulty": 4.2,
+        "tool_leverage": 5.3,
+        "verification_if_true": 2.3,
+        "verification_if_false": 4.9
+      },
+      "weekly_track": "Fix a meaningful structural restriction or order range and improve a bound, find an extremal example, or prove a reducible configuration lemma.",
+      "deliverable": "A graph family or theorem, a certificate checker, and an exhaustive-search audit if computation is used.",
+      "verification_plan": "Independent graph generation and verification, with isomorphism handling documented.",
+      "visual_hook": "A colored or weighted graph exposing the obstruction or construction."
+    },
+    {
+      "rank": 51,
+      "source_problem_id": 1918,
+      "source_problem_number": "EP-82",
+      "title": "Erdős Problem #82",
+      "statement": "Let $F(n)$ be maximal such that every graph on $n$ vertices contains a regular induced subgraph on at least $F(n)$ vertices. Prove that $F(n)/\\log n\\to \\infty$.",
+      "field": "Graph Theory",
+      "source_collection": "Erdős Problems",
+      "source_url": "https://www.unsolvedmath.com/problems/EP-82",
+      "canonical_source_url": null,
+      "status": {
+        "catalog_status": "open",
+        "assessment_gate": "source_claimed_open",
+        "snapshot_assessment_date": "2026-07-31"
+      },
+      "opdp": {
+        "tractability_band": "T7",
+        "tractability_probability": "55-70%",
+        "target_combined_hours": 100,
+        "intrinsic_difficulty": 4.9,
+        "ai_difficulty": 3.9,
+        "tool_leverage": 4.5,
+        "verification_if_true": 4.5,
+        "verification_if_false": 4.5
+      },
+      "weekly_track": "Fix a meaningful structural restriction or order range and improve a bound, find an extremal example, or prove a reducible configuration lemma.",
+      "deliverable": "A graph family or theorem, a certificate checker, and an exhaustive-search audit if computation is used.",
+      "verification_plan": "Independent graph generation and verification, with isomorphism handling documented.",
+      "visual_hook": "A colored or weighted graph exposing the obstruction or construction."
+    },
+    {
+      "rank": 52,
+      "source_problem_id": 2210,
+      "source_problem_number": "EP-610",
+      "title": "Erdős Problem #610",
+      "statement": "For a graph $G$ let $\\tau(G)$ denote the minimal number of vertices that include at least one from each maximal clique of $G$ (sometimes called the clique transversal number). Estimate $\\tau(G)$. In particular, is it true that if $G$ has $n$ vertices then $ \\tau(G) \\leq n-\\omega(n)\\sqrt{n} $ for some $\\omega(n)\\to \\infty$, or even $ \\tau(G) \\leq n-c\\sqrt{n\\log n} $ for some absolute constant $c>0$?",
+      "field": "Graph Theory",
+      "source_collection": "Erdős Problems",
+      "source_url": "https://www.unsolvedmath.com/problems/EP-610",
+      "canonical_source_url": null,
+      "status": {
+        "catalog_status": "open",
+        "assessment_gate": "source_claimed_open",
+        "snapshot_assessment_date": "2026-07-31"
+      },
+      "opdp": {
+        "tractability_band": "T7",
+        "tractability_probability": "55-70%",
+        "target_combined_hours": 100,
+        "intrinsic_difficulty": 4.9,
+        "ai_difficulty": 3.9,
+        "tool_leverage": 4.5,
+        "verification_if_true": 4.6,
+        "verification_if_false": 4.6
+      },
+      "weekly_track": "Fix a meaningful structural restriction or order range and improve a bound, find an extremal example, or prove a reducible configuration lemma.",
+      "deliverable": "A graph family or theorem, a certificate checker, and an exhaustive-search audit if computation is used.",
+      "verification_plan": "Independent graph generation and verification, with isomorphism handling documented.",
+      "visual_hook": "A colored or weighted graph exposing the obstruction or construction."
+    },
+    {
+      "rank": 53,
+      "source_problem_id": 2222,
+      "source_problem_number": "EP-629",
+      "title": "Erdős Problem #629",
+      "statement": "The list chromatic number $\\chi_L(G)$ is defined to be the minimal $k$ such that for any assignment of a list of $k$ colours to each vertex of $G$ (perhaps different lists for different vertices) a colouring of each vertex by a colour on its list can be chosen such that adjacent vertices receive distinct colours. Determine the minimal number of vertices $n(k)$ of a bipartite graph $G$ such that $\\chi_L(G)>k$.",
+      "field": "Graph Theory",
+      "source_collection": "Erdős Problems",
+      "source_url": "https://www.unsolvedmath.com/problems/EP-629",
+      "canonical_source_url": null,
+      "status": {
+        "catalog_status": "open",
+        "assessment_gate": "source_claimed_open",
+        "snapshot_assessment_date": "2026-07-31"
+      },
+      "opdp": {
+        "tractability_band": "T7",
+        "tractability_probability": "55-70%",
+        "target_combined_hours": 100,
+        "intrinsic_difficulty": 4.9,
+        "ai_difficulty": 3.9,
+        "tool_leverage": 4.5,
+        "verification_if_true": 4.6,
+        "verification_if_false": 4.6
+      },
+      "weekly_track": "Fix a meaningful structural restriction or order range and improve a bound, find an extremal example, or prove a reducible configuration lemma.",
+      "deliverable": "A graph family or theorem, a certificate checker, and an exhaustive-search audit if computation is used.",
+      "verification_plan": "Independent graph generation and verification, with isomorphism handling documented.",
+      "visual_hook": "A colored or weighted graph exposing the obstruction or construction."
+    },
+    {
+      "rank": 54,
+      "source_problem_id": 2444,
+      "source_problem_number": "EP-1029",
+      "title": "Erdős Problem #1029",
+      "statement": "If $R(k)$ is the Ramsey number for $K_k$, the minimal $n$ such that every $2$-colouring of the edges of $K_n$ contains a monochromatic copy of $K_k$, then $ \\frac{R(k)}{k2^{k/2}}\\to \\infty. $",
+      "field": "Graph Theory",
+      "source_collection": "Erdős Problems",
+      "source_url": "https://www.unsolvedmath.com/problems/EP-1029",
+      "canonical_source_url": null,
+      "status": {
+        "catalog_status": "open",
+        "assessment_gate": "source_claimed_open",
+        "snapshot_assessment_date": "2026-07-31"
+      },
+      "opdp": {
+        "tractability_band": "T7",
+        "tractability_probability": "55-70%",
+        "target_combined_hours": 100,
+        "intrinsic_difficulty": 4.9,
+        "ai_difficulty": 3.9,
+        "tool_leverage": 6,
+        "verification_if_true": 4.4,
+        "verification_if_false": 4.4
+      },
+      "weekly_track": "Fix a meaningful structural restriction or order range and improve a bound, find an extremal example, or prove a reducible configuration lemma.",
+      "deliverable": "A graph family or theorem, a certificate checker, and an exhaustive-search audit if computation is used.",
+      "verification_plan": "Independent graph generation and verification, with isomorphism handling documented.",
+      "visual_hook": "A colored or weighted graph exposing the obstruction or construction."
+    },
+    {
+      "rank": 55,
+      "source_problem_id": 2196,
+      "source_problem_number": "EP-589",
+      "title": "Erdős Problem #589",
+      "statement": "Let $g(n)$ be maximal such that in any set of $n$ points in $\\mathbb{R}^2$ with no four points on a line there exists a subset on $g(n)$ points with no three points on a line. Estimate $g(n)$.",
+      "field": "Graph Theory",
+      "source_collection": "Erdős Problems",
+      "source_url": "https://www.unsolvedmath.com/problems/EP-589",
+      "canonical_source_url": null,
+      "status": {
+        "catalog_status": "open",
+        "assessment_gate": "source_claimed_open",
+        "snapshot_assessment_date": "2026-07-31"
+      },
+      "opdp": {
+        "tractability_band": "T7",
+        "tractability_probability": "55-70%",
+        "target_combined_hours": 100,
+        "intrinsic_difficulty": 4.6,
+        "ai_difficulty": 3.6,
+        "tool_leverage": 4.5,
+        "verification_if_true": 4.5,
+        "verification_if_false": 4.5
+      },
+      "weekly_track": "Fix a meaningful structural restriction or order range and improve a bound, find an extremal example, or prove a reducible configuration lemma.",
+      "deliverable": "A graph family or theorem, a certificate checker, and an exhaustive-search audit if computation is used.",
+      "verification_plan": "Independent graph generation and verification, with isomorphism handling documented.",
+      "visual_hook": "A colored or weighted graph exposing the obstruction or construction."
+    },
+    {
+      "rank": 56,
+      "source_problem_id": 1937,
+      "source_problem_number": "EP-114",
+      "title": "Erdős Problem #114",
+      "statement": "If $p(z)\\in\\mathbb{C}[z]$ is a monic polynomial of degree $n$ then is the length of the curve $\\{ z\\in \\mathbb{C} : \\lvert p(z)\\rvert=1\\}$ maximised when $p(z)=z^n-1$?",
+      "field": "Graph Theory",
+      "source_collection": "Erdős Problems",
+      "source_url": "https://www.unsolvedmath.com/problems/EP-114",
+      "canonical_source_url": null,
+      "status": {
+        "catalog_status": "open",
+        "assessment_gate": "source_claimed_open",
+        "snapshot_assessment_date": "2026-07-31"
+      },
+      "opdp": {
+        "tractability_band": "T6",
+        "tractability_probability": "40-55%",
+        "target_combined_hours": 100,
+        "intrinsic_difficulty": 5.8,
+        "ai_difficulty": 4.8,
+        "tool_leverage": 6.8,
+        "verification_if_true": 4.6,
+        "verification_if_false": 4
+      },
+      "weekly_track": "Fix a meaningful structural restriction or order range and improve a bound, find an extremal example, or prove a reducible configuration lemma.",
+      "deliverable": "A graph family or theorem, a certificate checker, and an exhaustive-search audit if computation is used.",
+      "verification_plan": "Independent graph generation and verification, with isomorphism handling documented.",
+      "visual_hook": "A colored or weighted graph exposing the obstruction or construction."
+    },
+    {
+      "rank": 57,
+      "source_problem_id": 1100602,
+      "source_problem_number": "AMR-010-0602",
+      "title": "Questions in Geometric Group Theory — Q 6.2",
+      "statement": "(Ian Leary) Is there a group of finite vcd that does not act with finite stabilizers on an acyclic complex of dimension equal to its vcd?",
+      "field": "Group Theory",
+      "source_collection": "AMR Open Problem Lists",
+      "source_url": "https://www.math.utah.edu/~bestvina/eprints/questions-updated.pdf",
+      "canonical_source_url": "https://www.math.utah.edu/~bestvina/eprints/questions-updated.pdf",
+      "status": {
+        "catalog_status": "partially_solved",
+        "assessment_gate": "source_claimed_open",
+        "snapshot_assessment_date": "2026-07-31"
+      },
+      "opdp": {
+        "tractability_band": "T7",
+        "tractability_probability": "55-70%",
+        "target_combined_hours": 100,
+        "intrinsic_difficulty": 4.9,
+        "ai_difficulty": 4.4,
+        "tool_leverage": 5.3,
+        "verification_if_true": 2.8,
+        "verification_if_false": 5.6
+      },
+      "weekly_track": "Restrict to a bounded presentation, finite quotient, or low-complexity family and establish a structural lemma or sharp classification boundary.",
+      "deliverable": "A proposition with explicit presentations or quotients, proof, and GAP/Sage transcript where useful.",
+      "verification_plan": "Independent finite-quotient computations and human review of all group-theoretic reductions.",
+      "visual_hook": "A Cayley or quotient graph with subgroup structure marked."
+    },
+    {
+      "rank": 58,
+      "source_problem_id": 1100603,
+      "source_problem_number": "AMR-010-0603",
+      "title": "Questions in Geometric Group Theory — Q 6.3",
+      "statement": "(Peter Kropholler) If G is FP over the rationals, is there a bound on the orders of finite subgroups of G?",
+      "field": "Group Theory",
+      "source_collection": "AMR Open Problem Lists",
+      "source_url": "https://www.math.utah.edu/~bestvina/eprints/questions-updated.pdf",
+      "canonical_source_url": "https://www.math.utah.edu/~bestvina/eprints/questions-updated.pdf",
+      "status": {
+        "catalog_status": "partially_solved",
+        "assessment_gate": "source_claimed_open",
+        "snapshot_assessment_date": "2026-07-31"
+      },
+      "opdp": {
+        "tractability_band": "T7",
+        "tractability_probability": "55-70%",
+        "target_combined_hours": 100,
+        "intrinsic_difficulty": 4.9,
+        "ai_difficulty": 4.4,
+        "tool_leverage": 5.3,
+        "verification_if_true": 2.8,
+        "verification_if_false": 5.6
+      },
+      "weekly_track": "Restrict to a bounded presentation, finite quotient, or low-complexity family and establish a structural lemma or sharp classification boundary.",
+      "deliverable": "A proposition with explicit presentations or quotients, proof, and GAP/Sage transcript where useful.",
+      "verification_plan": "Independent finite-quotient computations and human review of all group-theoretic reductions.",
+      "visual_hook": "A Cayley or quotient graph with subgroup structure marked."
+    },
+    {
+      "rank": 59,
+      "source_problem_id": 1100702,
+      "source_problem_number": "AMR-010-0702",
+      "title": "Questions in Geometric Group Theory — Q 7.2",
+      "statement": "(Swarup) Starting with a finitely presented group $G$, take maximal graph-of-groups decompositions alternately over finite and over two-ended edge groups, each time continuing with the resulting vertex groups. Conjecture 1: there is a finitely presented group for which this process never terminates. Conjecture 2 (Strong Accessibility): for hyperbolic groups, and for CAT(0) groups, this process always terminates.",
+      "field": "Group Theory",
+      "source_collection": "AMR Open Problem Lists",
+      "source_url": "https://www.math.utah.edu/~bestvina/eprints/questions-updated.pdf",
+      "canonical_source_url": "https://www.math.utah.edu/~bestvina/eprints/questions-updated.pdf",
+      "status": {
+        "catalog_status": "partially_solved",
+        "assessment_gate": "source_claimed_open",
+        "snapshot_assessment_date": "2026-07-31"
+      },
+      "opdp": {
+        "tractability_band": "T7",
+        "tractability_probability": "55-70%",
+        "target_combined_hours": 100,
+        "intrinsic_difficulty": 4.9,
+        "ai_difficulty": 4.4,
+        "tool_leverage": 5.3,
+        "verification_if_true": 5.1,
+        "verification_if_false": 5.1
+      },
+      "weekly_track": "Restrict to a bounded presentation, finite quotient, or low-complexity family and establish a structural lemma or sharp classification boundary.",
+      "deliverable": "A proposition with explicit presentations or quotients, proof, and GAP/Sage transcript where useful.",
+      "verification_plan": "Independent finite-quotient computations and human review of all group-theoretic reductions.",
+      "visual_hook": "A Cayley or quotient graph with subgroup structure marked."
+    },
+    {
+      "rank": 60,
+      "source_problem_id": 1100808,
+      "source_problem_number": "AMR-010-0808",
+      "title": "Questions in Geometric Group Theory — Q 8.8",
+      "statement": "Compute the asymptotic dimension of CAT(0) groups, Out(Fn), mapping class groups, nonuniform lattices, Thompson’s group. Is there a group of finite type whose asymptotic dimension is infinite?",
+      "field": "Group Theory",
+      "source_collection": "AMR Open Problem Lists",
+      "source_url": "https://www.math.utah.edu/~bestvina/eprints/questions-updated.pdf",
+      "canonical_source_url": "https://www.math.utah.edu/~bestvina/eprints/questions-updated.pdf",
+      "status": {
+        "catalog_status": "partially_solved",
+        "assessment_gate": "source_claimed_open",
+        "snapshot_assessment_date": "2026-07-31"
+      },
+      "opdp": {
+        "tractability_band": "T7",
+        "tractability_probability": "55-70%",
+        "target_combined_hours": 100,
+        "intrinsic_difficulty": 4.9,
+        "ai_difficulty": 4.4,
+        "tool_leverage": 6.1,
+        "verification_if_true": 5.1,
+        "verification_if_false": 5.1
+      },
+      "weekly_track": "Restrict to a bounded presentation, finite quotient, or low-complexity family and establish a structural lemma or sharp classification boundary.",
+      "deliverable": "A proposition with explicit presentations or quotients, proof, and GAP/Sage transcript where useful.",
+      "verification_plan": "Independent finite-quotient computations and human review of all group-theoretic reductions.",
+      "visual_hook": "A Cayley or quotient graph with subgroup structure marked."
+    },
+    {
+      "rank": 61,
+      "source_problem_id": 1101310,
+      "source_problem_number": "AMR-010-1310",
+      "title": "Questions in Geometric Group Theory — Q 13.10",
+      "statement": "Let $G$ be a one-relator group whose relator $W$ is a cyclically reduced word in the generators, and let $P$ be the submonoid of $G$ generated by all prefixes of $W$. Is the membership problem for $P$ in $G$ decidable?",
+      "field": "Group Theory",
+      "source_collection": "AMR Open Problem Lists",
+      "source_url": "https://www.math.utah.edu/~bestvina/eprints/questions-updated.pdf",
+      "canonical_source_url": "https://www.math.utah.edu/~bestvina/eprints/questions-updated.pdf",
+      "status": {
+        "catalog_status": "partially_solved",
+        "assessment_gate": "source_claimed_open",
+        "snapshot_assessment_date": "2026-07-31"
+      },
+      "opdp": {
+        "tractability_band": "T7",
+        "tractability_probability": "55-70%",
+        "target_combined_hours": 100,
+        "intrinsic_difficulty": 4.9,
+        "ai_difficulty": 4.4,
+        "tool_leverage": 6,
+        "verification_if_true": 5.1,
+        "verification_if_false": 5.3
+      },
+      "weekly_track": "Restrict to a bounded presentation, finite quotient, or low-complexity family and establish a structural lemma or sharp classification boundary.",
+      "deliverable": "A proposition with explicit presentations or quotients, proof, and GAP/Sage transcript where useful.",
+      "verification_plan": "Independent finite-quotient computations and human review of all group-theoretic reductions.",
+      "visual_hook": "A Cayley or quotient graph with subgroup structure marked."
+    },
+    {
+      "rank": 62,
+      "source_problem_id": 20001604,
+      "source_problem_number": "AIM-GEOMETRIC_GROUP_THEORY-0113",
+      "title": "Obstruction package for amenable hereditary just-infinite groups",
+      "statement": "\\textbf{Definition:} A \\emph{hereditary just-infinite} group $G$ is a residually finite group such that every finite index subgroup of it is just-infinite. Is there an amenable hereditary just-infinite group that is not elementary amenable? Is there a finitely presented one?",
+      "field": "Group Theory",
+      "source_collection": "AIM Workshop Problem Lists",
+      "source_url": "http://aimpl.org/amenablediscrete/4/",
+      "canonical_source_url": "http://aimpl.org/amenablediscrete/4/",
+      "status": {
+        "catalog_status": "partially_solved",
+        "assessment_gate": "source_claimed_open",
+        "snapshot_assessment_date": "2026-08-18"
+      },
+      "opdp": {
+        "tractability_band": "T7",
+        "tractability_probability": "55-70%",
+        "target_combined_hours": 100,
+        "intrinsic_difficulty": 6.1,
+        "ai_difficulty": 5.1,
+        "tool_leverage": 6.8,
+        "verification_if_true": 2.4,
+        "verification_if_false": 5.3
+      },
+      "weekly_track": "Restrict to a bounded presentation, finite quotient, or low-complexity family and establish a structural lemma or sharp classification boundary.",
+      "deliverable": "A proposition with explicit presentations or quotients, proof, and GAP/Sage transcript where useful.",
+      "verification_plan": "Independent finite-quotient computations and human review of all group-theoretic reductions.",
+      "visual_hook": "A Cayley or quotient graph with subgroup structure marked."
+    },
+    {
+      "rank": 63,
+      "source_problem_id": 20002355,
+      "source_problem_number": "AIM-LOGIC-0131",
+      "title": "A promise-to-total bridge for effective bounds on finite integral point sets",
+      "statement": "Question 18 (Rojas). Is there a computable bound (in function of f ) on the size of the largest integer solution to f (x, y ) = 0, when there are finitely many solutions? This is already done for genus 1 curves. There exists an algorithm to decide finiteness of the set of solutions. For rational points, there are papers by Minhyong Kim from Arizona: \"Relating decision and search algorithms for rational points on curves of higher genus\", Arch. Math. Logic 42 (2003), no. 6, 563-568 PROBLEMS RELATED TO \"EXTENSIONS OF HILBERT'S TENTH PROBLEM\" 5 \"On relative computability for curves\", ArXiv:math.NT/0502224",
+      "field": "Logic",
+      "source_collection": "AIM Workshop Problem Lists",
+      "source_url": "https://aimath.org/WWN/hilberts10th/hilberts10th.pdf",
+      "canonical_source_url": "https://aimath.org/WWN/hilberts10th/hilberts10th.pdf",
+      "status": {
+        "catalog_status": "partially_solved",
+        "assessment_gate": "source_claimed_open",
+        "snapshot_assessment_date": "2026-08-18"
+      },
+      "opdp": {
+        "tractability_band": "T7",
+        "tractability_probability": "55-70%",
+        "target_combined_hours": 100,
+        "intrinsic_difficulty": 5.4,
+        "ai_difficulty": 4.4,
+        "tool_leverage": 6.8,
+        "verification_if_true": 4.9,
+        "verification_if_false": 4.9
+      },
+      "weekly_track": "Find a bounded fragment, reduction, or model-theoretic barrier that yields a new decidability, definability, or proof-complexity fact.",
+      "deliverable": "A fully quantified statement, reduction or model construction, and a machine-checkable artifact whenever the formal system is available.",
+      "verification_plan": "Independent formalization or proof-assistant check of the finite core, plus a conventional proof audit.",
+      "visual_hook": "A reduction graph between theories or fragments."
+    },
+    {
+      "rank": 64,
+      "source_problem_id": 3339,
+      "source_problem_number": "OPG-37440",
+      "title": "Monadic second-order logic with cardinality predicates",
+      "statement": "The problem concerns the extension of Monadic Second Order Logic (over a binary relation representing the edge relation) with the following atomic formulas: - $\\text{\"}\\,\\mathrm{Card}(X) = \\mathrm{Card}(Y)\\,\\text{\"}$ - $\\text{\"}\\,\\mathrm{Card}(X) \\text{ belongs to } A\\,\\text{\"}$ where $A$ is a fixed recursive set of integers. Let us fix $k$ and a closed formula $F$ in this language. Conjecture Is it true that the validity of $F$ for a graph $G$ of tree-width at most $k$ can be tested in polynomial time in the size of $G$?",
+      "field": "Logic",
+      "source_collection": "OpenGarden",
+      "source_url": "http://www.openproblemgarden.org/op/monadic_second_order_logic_with_cardinality_predicates",
+      "canonical_source_url": "http://www.openproblemgarden.org/op/monadic_second_order_logic_with_cardinality_predicates",
+      "status": {
+        "catalog_status": "open",
+        "assessment_gate": "source_claimed_open",
+        "snapshot_assessment_date": "2026-07-31"
+      },
+      "opdp": {
+        "tractability_band": "T7",
+        "tractability_probability": "55-70%",
+        "target_combined_hours": 100,
+        "intrinsic_difficulty": 5.3,
+        "ai_difficulty": 3.8,
+        "tool_leverage": 8.3,
+        "verification_if_true": 5,
+        "verification_if_false": 5.3
+      },
+      "weekly_track": "Find a bounded fragment, reduction, or model-theoretic barrier that yields a new decidability, definability, or proof-complexity fact.",
+      "deliverable": "A fully quantified statement, reduction or model construction, and a machine-checkable artifact whenever the formal system is available.",
+      "verification_plan": "Independent formalization or proof-assistant check of the finite core, plus a conventional proof audit.",
+      "visual_hook": "A reduction graph between theories or fragments."
+    },
+    {
+      "rank": 65,
+      "source_problem_id": 20002266,
+      "source_problem_number": "AIM-LOGIC-0042",
+      "title": "A forcing-axiom sieve and countable-condition reduction at omega two",
+      "statement": "$\\kappa \\rightarrow (\\alpha,\\beta)^n$ means that for every coloring $F:[\\kappa]^n \\rightarrow \\{0,1\\}$, then then there is either a homogeneous set $H_0$ of order-type $\\alpha$ such that $F\"H_0=\\{0\\}$, or else a homogeneous set $H_1$ such that $F\"H_1=\\{1\\}$. Can $\\omega_2 \\rightarrow (\\omega_2,\\alpha)^2$ be deduced from one of the forcing axioms at $\\aleph_2$.",
+      "field": "Logic",
+      "source_collection": "AIM Workshop Problem Lists",
+      "source_url": "http://aimpl.org/highlowforcing/1/",
+      "canonical_source_url": "http://aimpl.org/highlowforcing/1/",
+      "status": {
+        "catalog_status": "partially_solved",
+        "assessment_gate": "source_claimed_open",
+        "snapshot_assessment_date": "2026-08-18"
+      },
+      "opdp": {
+        "tractability_band": "T7",
+        "tractability_probability": "55-70%",
+        "target_combined_hours": 100,
+        "intrinsic_difficulty": 5.9,
+        "ai_difficulty": 4.9,
+        "tool_leverage": 6,
+        "verification_if_true": 5.6,
+        "verification_if_false": 4.9
+      },
+      "weekly_track": "Find a bounded fragment, reduction, or model-theoretic barrier that yields a new decidability, definability, or proof-complexity fact.",
+      "deliverable": "A fully quantified statement, reduction or model construction, and a machine-checkable artifact whenever the formal system is available.",
+      "verification_plan": "Independent formalization or proof-assistant check of the finite core, plus a conventional proof audit.",
+      "visual_hook": "A reduction graph between theories or fragments."
+    },
+    {
+      "rank": 66,
+      "source_problem_id": 20002291,
+      "source_problem_number": "AIM-LOGIC-0067",
+      "title": "Existential graph coding and empty-graph coordinate rigidity",
+      "statement": "Question 7 (Miller). Given a countable graph ( V, E ), find a field K (of characteristic 0), polynomials P ∈ Q[x, t ], Q, R ∈ Q[x, y, z ] and a bijection α: V → { x ∈ K | (∃t ∈ K)( P (x, t ) = 0) } such that for all v, w ∈ V:1. ( v, w ) ∈ E ↔ (∃z)( R(α(v), α (w), z ) = 0). 2. ( v, w ) 6 ∈ E ↔ (∃z)( Q(α(v), α (w), z ) = 0). Poonen: let P define a curve without non-trivial automorphism. For the empty graph: Find a polynomial P ∈ Q[x, t ] such that K is a field generated by x1, x 2,..., t 1, t 2,... such that all {x1, x 2,... } are algebraically independent and such that P (xi, t i) = 0 for all i and such that 1. For every permutation π of N there is a unique automorphism σπ of K such that σπ(xi) = xπ(i).2. {xi | i ∈ N} = {y ∈ K | (∃t)( P (y, t ) = 0) }.",
+      "field": "Logic",
+      "source_collection": "AIM Workshop Problem Lists",
+      "source_url": "https://aimath.org/pastworkshops/definabilityinntproblems.pdf",
+      "canonical_source_url": "https://aimath.org/pastworkshops/definabilityinntproblems.pdf",
+      "status": {
+        "catalog_status": "partially_solved",
+        "assessment_gate": "source_claimed_open",
+        "snapshot_assessment_date": "2026-08-18"
+      },
+      "opdp": {
+        "tractability_band": "T7",
+        "tractability_probability": "55-70%",
+        "target_combined_hours": 100,
+        "intrinsic_difficulty": 5.9,
+        "ai_difficulty": 4.9,
+        "tool_leverage": 6.8,
+        "verification_if_true": 5.5,
+        "verification_if_false": 4.8
+      },
+      "weekly_track": "Find a bounded fragment, reduction, or model-theoretic barrier that yields a new decidability, definability, or proof-complexity fact.",
+      "deliverable": "A fully quantified statement, reduction or model construction, and a machine-checkable artifact whenever the formal system is available.",
+      "verification_plan": "Independent formalization or proof-assistant check of the finite core, plus a conventional proof audit.",
+      "visual_hook": "A reduction graph between theories or fragments."
+    },
+    {
+      "rank": 67,
+      "source_problem_id": 20002344,
+      "source_problem_number": "AIM-LOGIC-0120",
+      "title": "One-equation reductions for the rational Hamilton quaternions and Lipschitz order",
+      "statement": "Question 7 (Davis). Let H be the quaternions over Q, and O = Z + iZ + jZ + kZ (1) Is there an algorithm to decide whether a noncommutative polynomial equation f (x1,..., x n) = 0 with coefficients in Q has a solution in H? (2) Is there an algorithm to decide whether a noncommutative polynomial equation f (x1,..., x n) = 0 with coefficients in Q has a solution in O?PROBLEMS RELATED TO \"EXTENSIONS OF HILBERT'S TENTH PROBLEM\" 3 (3) Is there an algorithm to decide whether a noncommutative polynomial equation f (x1,..., x n) = 0 with coefficients in H has a solution in H? (4) Is there an algorithm to decide whether a noncommutative polynomial equation f (x1,..., x n) = 0 with coefficients in H has a solution in O?Is Z existentially definable in O? This probably works: x ∈ Z ⇐⇒ (∃I, J, K )( I2 = −1 ∧ J2 = −1 ∧ IJ = −JI ∧ xI = Ix ∧ xJ = Jx ) Very likely done by D. Tunc. This solves the problems 2 and 4. In an analogous way, Q should be Diophantine in H. So, 1 and 3 are equivalent with Hilbert's Tenth Problem over Q.Same questions for the matrix rings Mn(Z) and Mn(Q).",
+      "field": "Logic",
+      "source_collection": "AIM Workshop Problem Lists",
+      "source_url": "https://aimath.org/WWN/hilberts10th/hilberts10th.pdf",
+      "canonical_source_url": "https://aimath.org/WWN/hilberts10th/hilberts10th.pdf",
+      "status": {
+        "catalog_status": "partially_solved",
+        "assessment_gate": "source_claimed_open",
+        "snapshot_assessment_date": "2026-08-18"
+      },
+      "opdp": {
+        "tractability_band": "T7",
+        "tractability_probability": "55-70%",
+        "target_combined_hours": 100,
+        "intrinsic_difficulty": 5.9,
+        "ai_difficulty": 4.9,
+        "tool_leverage": 8.3,
+        "verification_if_true": 5.4,
+        "verification_if_false": 5.6
+      },
+      "weekly_track": "Find a bounded fragment, reduction, or model-theoretic barrier that yields a new decidability, definability, or proof-complexity fact.",
+      "deliverable": "A fully quantified statement, reduction or model construction, and a machine-checkable artifact whenever the formal system is available.",
+      "verification_plan": "Independent formalization or proof-assistant check of the finite core, plus a conventional proof audit.",
+      "visual_hook": "A reduction graph between theories or fragments."
+    },
+    {
+      "rank": 68,
+      "source_problem_id": 20002499,
+      "source_problem_number": "AIM-PHYSICS-0007",
+      "title": "The sharp Laptev-Safronov threshold and a Lorentz-stable tube obstruction",
+      "statement": "7. Rupert L. Frank 7.1. Laptev-Safronov conjecture. Consider a Schr¨ odinger operator −∆ + V in Rd with a complex po-tential V. Open problems: i) What is the largest p such that all non-real eigenvalues lie in a disk around 0 of radius D(∫ > Rd |V |p dx)(p−d/ 2) −1 (the constant D > 0 shall not depend on V )? ii) What happens to embedded eigenvalues of self-adjoint Schr¨ odinger operators under non-self-adjoint perturbations? Both problems are related to the Laptev-Safronov conjecture which states that for every d ∈ N and 0 < γ ≤ d/ 2 there exists a constant Dγ,d > 0 such that for every potential V every non-real eigenvalue λ satisfies |λ|γ ≤ Dγ,d ∫ > Rd |V |γ+ d > 2 dx;here γ = p − d/ 2 with p from problem i). The Laptev-Safronov conjecture is known to be true in dimension d = 1 if γ = 1 /2 and in dimension d ≥ 2 if 0 < γ ≤ 1/2. 8. Marcel Hansmann 8.1. Tensor trick for perturbed operators. Let A be a bounded self-adjoint operator in a Hilbert space and let K be a perturbation which is of trace class. Assume that for any ε > 0 there exists a constant C(ε) > 0 such that ∑ > λ∈σd(A+K) dist( λ, σ (A)) 1+ ε ≤ C(ε)‖K‖1+ ε > 1+ ε. Open problem: Does it follow that there exists C > 0 such that ∑ > λ∈σd(A+K) dist( λ, σ (A)) ≤ C‖K‖1?9. Michael Hitrik 9.1. Upper bounds on the norm of the resolvent. It is well known that the spectrum of a non-self-adjoint operator does not control its resolvent and that the latter may become very large far from the spectrum. Some general upper bounds on resolvents are provided by the abstract operator theory, and restricting the attention to the setting of semiclassical operators on Rn, let us give a rough statement of such bounds. Assume that P = pw(x, hD x) is the semiclassical Weyl quantization on Rn of a nice symbol p with Re p ≥ 0, say. Then the norm of the resolvent of P is bounded from above by a quantity of the form O(1) exp ( O(1) h−n), provided that z ∈ neigh(0, C) is not too close to the spectrum of P. On the other hand, the available lower bounds on the resolvent of P, in the interior of the range of the symbol, coming from the pseudospectral considerations, are typically of the form C−1 > N h−N, N ∈ N, or (1 /C )e1/(Ch ), provided that p enjoys some analyticity properties, [DSZ04]. There appears to be therefore a substantial gap between the available upper and lower bounds on the resolvent, especially when n ≥ 2, which, to the best of my knowledge, has so far only been bridged in the very special case of elliptic quadratic differential operators, see [HSV13]. Open problem: Is the upper bound sharp (especially for dimension n ≥ 2)? 10. David Krejˇ ciˇ r´ ık 10.1. Semiclassical pseudomodes of Schr¨ odinger operators with discontinuous potentials. For smooth potentials there exists a quite general theory on the construction of semiclassical pseudomodes, see [DSZ04]. Open problem: Can the technique be adapted to discontinuous potentials? In my joint paper with Henry [HK15] we have a non-trivial pseudospectrum in a toy model (complex Heaviside-type potential). However, our technique is restricted to the particular situation and the non-trivial pseudospectrum is rather generated by the behavior of the potential at infinity. > 4",
+      "field": "Mathematical Physics",
+      "source_collection": "AIM Workshop Problem Lists",
+      "source_url": "https://aimath.org/pastworkshops/nonselfadjointproblems.pdf",
+      "canonical_source_url": "https://aimath.org/pastworkshops/nonselfadjointproblems.pdf",
+      "status": {
+        "catalog_status": "partially_solved",
+        "assessment_gate": "source_claimed_open",
+        "snapshot_assessment_date": "2026-08-18"
+      },
+      "opdp": {
+        "tractability_band": "T7",
+        "tractability_probability": "55-70%",
+        "target_combined_hours": 100,
+        "intrinsic_difficulty": 5.1,
+        "ai_difficulty": 5.1,
+        "tool_leverage": 7.3,
+        "verification_if_true": 4.4,
+        "verification_if_false": 4.4
+      },
+      "weekly_track": "Work in a symmetric, low-dimensional, or perturbative regime where an analytic bound and validated computation can be made fully explicit.",
+      "deliverable": "A theorem or obstruction for the regime, normalization conventions, and reproducible symbolic or interval calculations.",
+      "verification_plan": "Independent derivation of the governing equations and certified replay of numerical steps.",
+      "visual_hook": "A phase portrait, spectrum, or geometric configuration tied to the proposed regime."
+    },
+    {
+      "rank": 69,
+      "source_problem_id": 20002500,
+      "source_problem_number": "AIM-PHYSICS-0008",
+      "title": "Axis and low-dimensional cases of Levitin's disk-intersection conjecture",
+      "statement": "11. Michael Levitin 11.1. Complex eigenvalues of indefinite pencil. For 0 < c < 2 define the 2 n × 2n matrices A:=  c 11 c 11 c......... 11 c , B:=  1...1 −1... −1  where the numbers of 1 and −1 in B coincide (equal to n). The eigenvalues of the pencil λ 7 → A − λB are the eigenvalues of B−1A = BA. The spectrum is symmetric with respect to both R and i R. The non-real eigenvalues are contained in the union of the two closed disks {λ ∈ C: |λ ± c| ≤ 2} whereas numerical examples suggest that they lie in their intersection. Open problem: Prove that |λ − c| ≤ 2 and |λ + c| ≤ 2 holds for all λ ∈ σ(BA )\\R.11.2. Indefinite Sturm-Liouville. Recently, we have proved some conjectures related to the generalized eigenvalue problem ( − d2 > dx 2 + c > 1+ |x| )ψ = λsgn( x)ψ. Open problem: Replace the potential term by a more general function. 12. Marco Marletta 12.1. Zeros and poles of Nevanlinna functions. Let m1, m 2,... be an infinite sequence of meromorphic functions with Im mj (λ) > 0 if Im λ > 0 and Im mj (λ) < 0 if Im λ < 0 (Nevanlinna functions). Suppose that there exists a non-empty interval I ⊆ R such that for every non-empty subinterval J ⊆ I holds lim > j→∞ #{pole of mj in J} = ∞. Let g be a function which is analytic in a complex neighborhood of I. Open problems: i) Show that for every open complex neighborhood U of J,lim > j→∞ #{zero of ( mj − g) in U } = ∞. ii) Show that there exists a constant C > 0, independent of j, such that for every open complex neighborhood U of J, ∣∣#{zero of ( mj − g) in U } − #{pole of mj in U }∣∣ ≤ C. The result is known to hold if μ(J):= lim j→∞ j−1 #{pole of mj in J} exists. 13. Boris Mityagin 13.1. Schauder basis for Schr¨ odinger operators with periodic boundary conditions. Consider the Schr¨ odinger operator −d2/dx2 + V on (0, π ) with periodic boundary conditions, where the potential V is a trigonometric polynomial, i.e., V (x) = > m ∑ > k=−m vke2ikx; vk ∈ C, |k| ≤ m. Open Problem: For which sets of coefficients {vk}mk=−m do the eigenfunctions form a Schauder basis for L2(0, π )? Known Case: Let V (x):= e−2ix + be 2ix. Then the answer is \"yes\" if and only if |b| = 1. > 5",
+      "field": "Mathematical Physics",
+      "source_collection": "AIM Workshop Problem Lists",
+      "source_url": "https://aimath.org/pastworkshops/nonselfadjointproblems.pdf",
+      "canonical_source_url": "https://aimath.org/pastworkshops/nonselfadjointproblems.pdf",
+      "status": {
+        "catalog_status": "partially_solved",
+        "assessment_gate": "source_claimed_open",
+        "snapshot_assessment_date": "2026-08-18"
+      },
+      "opdp": {
+        "tractability_band": "T6",
+        "tractability_probability": "40-55%",
+        "target_combined_hours": 100,
+        "intrinsic_difficulty": 6.1,
+        "ai_difficulty": 6.1,
+        "tool_leverage": 6.8,
+        "verification_if_true": 6.7,
+        "verification_if_false": 5.8
+      },
+      "weekly_track": "Work in a symmetric, low-dimensional, or perturbative regime where an analytic bound and validated computation can be made fully explicit.",
+      "deliverable": "A theorem or obstruction for the regime, normalization conventions, and reproducible symbolic or interval calculations.",
+      "verification_plan": "Independent derivation of the governing equations and certified replay of numerical steps.",
+      "visual_hook": "A phase portrait, spectrum, or geometric configuration tied to the proposed regime."
+    },
+    {
+      "rank": 70,
+      "source_problem_id": 20002541,
+      "source_problem_number": "AIM-PHYSICS-0049",
+      "title": "Fourier obstructions to unequally phased single-trace motions",
+      "statement": "Problem 12. Existence of choreographies with distinct time shifts.",
+      "field": "Mathematical Physics",
+      "source_collection": "AIM Workshop Problem Lists",
+      "source_url": "https://aimath.org/WWN/varcelest/varcelest.pdf",
+      "canonical_source_url": "https://aimath.org/WWN/varcelest/varcelest.pdf",
+      "status": {
+        "catalog_status": "partially_solved",
+        "assessment_gate": "source_claimed_open",
+        "snapshot_assessment_date": "2026-08-18"
+      },
+      "opdp": {
+        "tractability_band": "T6",
+        "tractability_probability": "40-55%",
+        "target_combined_hours": 100,
+        "intrinsic_difficulty": 5.6,
+        "ai_difficulty": 5.6,
+        "tool_leverage": 4.5,
+        "verification_if_true": 3.8,
+        "verification_if_false": 7.2
+      },
+      "weekly_track": "Work in a symmetric, low-dimensional, or perturbative regime where an analytic bound and validated computation can be made fully explicit.",
+      "deliverable": "A theorem or obstruction for the regime, normalization conventions, and reproducible symbolic or interval calculations.",
+      "verification_plan": "Independent derivation of the governing equations and certified replay of numerical steps.",
+      "visual_hook": "A phase portrait, spectrum, or geometric configuration tied to the proposed regime."
+    },
+    {
+      "rank": 71,
+      "source_problem_id": 20002553,
+      "source_problem_number": "AIM-PHYSICS-0061",
+      "title": "Quantitative collinear finiteness and maximal-dimensional simplex rigidity",
+      "statement": "Problem 24. For the n-body problem, n ≥ 4, show that the number of central configurations is finite for all choices of masses mi > 0 (or find a counterexample). (Rick Moeckel, Marshall Hampton)",
+      "field": "Mathematical Physics",
+      "source_collection": "AIM Workshop Problem Lists",
+      "source_url": "https://aimath.org/WWN/varcelest/varcelest.pdf",
+      "canonical_source_url": "https://aimath.org/WWN/varcelest/varcelest.pdf",
+      "status": {
+        "catalog_status": "partially_solved",
+        "assessment_gate": "source_claimed_open",
+        "snapshot_assessment_date": "2026-08-18"
+      },
+      "opdp": {
+        "tractability_band": "T6",
+        "tractability_probability": "40-55%",
+        "target_combined_hours": 100,
+        "intrinsic_difficulty": 5.6,
+        "ai_difficulty": 6.1,
+        "tool_leverage": 6.8,
+        "verification_if_true": 6,
+        "verification_if_false": 6
+      },
+      "weekly_track": "Work in a symmetric, low-dimensional, or perturbative regime where an analytic bound and validated computation can be made fully explicit.",
+      "deliverable": "A theorem or obstruction for the regime, normalization conventions, and reproducible symbolic or interval calculations.",
+      "verification_plan": "Independent derivation of the governing equations and certified replay of numerical steps.",
+      "visual_hook": "A phase portrait, spectrum, or geometric configuration tied to the proposed regime."
+    },
+    {
+      "rank": 72,
+      "source_problem_id": 20002535,
+      "source_problem_number": "AIM-PHYSICS-0043",
+      "title": "Coercivity and collision boundaries for the Broucke-Henon class (1,0,1)",
+      "statement": "Problem 6. Prove the existence of Broucke-H´ enon orbit for the planar 3-body problem. Do Broucke-H´ enon orbits exist for small + big masses? Is the Broucke-H´ enon solution a minimizer in the class (1, 0, 1)? (Andrea Venturelli)",
+      "field": "Mathematical Physics",
+      "source_collection": "AIM Workshop Problem Lists",
+      "source_url": "https://aimath.org/WWN/varcelest/varcelest.pdf",
+      "canonical_source_url": "https://aimath.org/WWN/varcelest/varcelest.pdf",
+      "status": {
+        "catalog_status": "partially_solved",
+        "assessment_gate": "source_claimed_open",
+        "snapshot_assessment_date": "2026-08-18"
+      },
+      "opdp": {
+        "tractability_band": "T5",
+        "tractability_probability": "25-40%",
+        "target_combined_hours": 100,
+        "intrinsic_difficulty": 6.6,
+        "ai_difficulty": 6.6,
+        "tool_leverage": 4.5,
+        "verification_if_true": 4,
+        "verification_if_false": 7.5
+      },
+      "weekly_track": "Work in a symmetric, low-dimensional, or perturbative regime where an analytic bound and validated computation can be made fully explicit.",
+      "deliverable": "A theorem or obstruction for the regime, normalization conventions, and reproducible symbolic or interval calculations.",
+      "verification_plan": "Independent derivation of the governing equations and certified replay of numerical steps.",
+      "visual_hook": "A phase portrait, spectrum, or geometric configuration tied to the proposed regime."
+    },
+    {
+      "rank": 73,
+      "source_problem_id": 2420,
+      "source_problem_number": "EP-975",
+      "title": "Erdős Problem #975",
+      "statement": "Let $f\\in \\mathbb{Z}[x]$ be an irreducible non-constant polynomial such that $f(n)\\geq 1$ for all large $n\\in\\mathbb{N}$. Does there exist a constant $c=c(f)>0$ such that $ \\sum_{n\\leq X} \\tau(f(n))\\sim cX\\log X, $ where $\\tau$ is the divisor function?",
+      "field": "Number Theory",
+      "source_collection": "Erdős Problems",
+      "source_url": "https://www.unsolvedmath.com/problems/EP-975",
+      "canonical_source_url": null,
+      "status": {
+        "catalog_status": "open",
+        "assessment_gate": "source_claimed_open",
+        "snapshot_assessment_date": "2026-07-31"
+      },
+      "opdp": {
+        "tractability_band": "T7",
+        "tractability_probability": "55-70%",
+        "target_combined_hours": 100,
+        "intrinsic_difficulty": 5.5,
+        "ai_difficulty": 4.5,
+        "tool_leverage": 6.8,
+        "verification_if_true": 2,
+        "verification_if_false": 4.6
+      },
+      "weekly_track": "Choose a controlled modulus, degree, or family and prove a new local-to-global statement, exact bound, or certified computation that survives independent replay.",
+      "deliverable": "A theorem for the selected family, exact data or construction, and a checker for every arithmetic assertion.",
+      "verification_plan": "Independent exact-integer or finite-field computation plus review of the analytic or algebraic reduction.",
+      "visual_hook": "A residue-class map, factorization pattern, or distribution plot."
+    },
+    {
+      "rank": 74,
+      "source_problem_id": 1292,
+      "source_problem_number": "NT-084",
+      "title": "Bunyakovsky Conjecture",
+      "statement": "Does an irreducible integer polynomial with no fixed prime divisor produce infinitely many primes?",
+      "field": "Number Theory",
+      "source_collection": "Unassigned",
+      "source_url": "https://www.unsolvedmath.com/problems/NT-084",
+      "canonical_source_url": null,
+      "status": {
+        "catalog_status": "open",
+        "assessment_gate": "source_claimed_open",
+        "snapshot_assessment_date": "2026-07-31"
+      },
+      "opdp": {
+        "tractability_band": "T7",
+        "tractability_probability": "55-70%",
+        "target_combined_hours": 100,
+        "intrinsic_difficulty": 6,
+        "ai_difficulty": 4.5,
+        "tool_leverage": 6.8,
+        "verification_if_true": 5.1,
+        "verification_if_false": 4.4
+      },
+      "weekly_track": "Choose a controlled modulus, degree, or family and prove a new local-to-global statement, exact bound, or certified computation that survives independent replay.",
+      "deliverable": "A theorem for the selected family, exact data or construction, and a checker for every arithmetic assertion.",
+      "verification_plan": "Independent exact-integer or finite-field computation plus review of the analytic or algebraic reduction.",
+      "visual_hook": "A residue-class map, factorization pattern, or distribution plot."
+    },
+    {
+      "rank": 75,
+      "source_problem_id": 2431,
+      "source_problem_number": "EP-996",
+      "title": "Erdős Problem #996",
+      "statement": "Let $n_1<n_2<\\cdots$ be a lacunary sequence of integers, and let $f\\in L^2([0,1])$. Let $f_n$ be the $n$th partial sum of the Fourier series of $f(x)$. Is there an absolute constant $C>0$ such that, if $ \\| f-f_n\\|_2 \\ll \\frac{1}{(\\log\\log\\log n)^{C}} $ then $ \\lim_{N\\to\\infty}\\frac{1}{N}\\sum_{k\\leq N}f(\\{\\alpha n_k\\})=\\int_0^1 f(x)\\mathrm{d}x $ for almost every $\\alpha$?",
+      "field": "Number Theory",
+      "source_collection": "Erdős Problems",
+      "source_url": "https://www.unsolvedmath.com/problems/EP-996",
+      "canonical_source_url": null,
+      "status": {
+        "catalog_status": "open",
+        "assessment_gate": "source_claimed_open",
+        "snapshot_assessment_date": "2026-07-31"
+      },
+      "opdp": {
+        "tractability_band": "T7",
+        "tractability_probability": "55-70%",
+        "target_combined_hours": 100,
+        "intrinsic_difficulty": 5.5,
+        "ai_difficulty": 4.5,
+        "tool_leverage": 5.3,
+        "verification_if_true": 2.4,
+        "verification_if_false": 5
+      },
+      "weekly_track": "Choose a controlled modulus, degree, or family and prove a new local-to-global statement, exact bound, or certified computation that survives independent replay.",
+      "deliverable": "A theorem for the selected family, exact data or construction, and a checker for every arithmetic assertion.",
+      "verification_plan": "Independent exact-integer or finite-field computation plus review of the analytic or algebraic reduction.",
+      "visual_hook": "A residue-class map, factorization pattern, or distribution plot."
+    },
+    {
+      "rank": 76,
+      "source_problem_id": 2421,
+      "source_problem_number": "EP-976",
+      "title": "Erdős Problem #976",
+      "statement": "Let $f\\in \\mathbb{Z}[x]$ be an irreducible polynomial of degree $d\\geq 2$. Let $F_f(n)$ be maximal such that there exists $1\\leq m\\leq n$ with $f(m)$ is divisible by a prime $\\geq F_f(n)$. Equivalently, $F_f(n)$ is the greatest prime divisor of $ \\prod_{1\\leq m\\leq n}f(m). $ Estimate $F_f(n)$. In particular, is it true that $F_f(n)\\gg n^{1+c}$ for some constant $c>0$? Or even $\\gg n^d$?",
+      "field": "Number Theory",
+      "source_collection": "Erdős Problems",
+      "source_url": "https://www.unsolvedmath.com/problems/EP-976",
+      "canonical_source_url": null,
+      "status": {
+        "catalog_status": "open",
+        "assessment_gate": "source_claimed_open",
+        "snapshot_assessment_date": "2026-07-31"
+      },
+      "opdp": {
+        "tractability_band": "T7",
+        "tractability_probability": "55-70%",
+        "target_combined_hours": 100,
+        "intrinsic_difficulty": 5.1,
+        "ai_difficulty": 4.1,
+        "tool_leverage": 6.8,
+        "verification_if_true": 4.4,
+        "verification_if_false": 4.4
+      },
+      "weekly_track": "Choose a controlled modulus, degree, or family and prove a new local-to-global statement, exact bound, or certified computation that survives independent replay.",
+      "deliverable": "A theorem for the selected family, exact data or construction, and a checker for every arithmetic assertion.",
+      "verification_plan": "Independent exact-integer or finite-field computation plus review of the analytic or algebraic reduction.",
+      "visual_hook": "A residue-class map, factorization pattern, or distribution plot."
+    },
+    {
+      "rank": 77,
+      "source_problem_id": 1980,
+      "source_problem_number": "EP-183",
+      "title": "Erdős Problem #183",
+      "statement": "Let $R(3;k)$ be the minimal $n$ such that if the edges of $K_n$ are coloured with $k$ colours then there must exist a monochromatic triangle. Determine $ \\lim_{k\\to \\infty}R(3;k)^{1/k}. $",
+      "field": "Number Theory",
+      "source_collection": "Erdős Problems",
+      "source_url": "https://www.unsolvedmath.com/problems/EP-183",
+      "canonical_source_url": null,
+      "status": {
+        "catalog_status": "open",
+        "assessment_gate": "source_claimed_open",
+        "snapshot_assessment_date": "2026-07-31"
+      },
+      "opdp": {
+        "tractability_band": "T7",
+        "tractability_probability": "55-70%",
+        "target_combined_hours": 100,
+        "intrinsic_difficulty": 4.9,
+        "ai_difficulty": 3.9,
+        "tool_leverage": 4.5,
+        "verification_if_true": 4.8,
+        "verification_if_false": 4.8
+      },
+      "weekly_track": "Choose a controlled modulus, degree, or family and prove a new local-to-global statement, exact bound, or certified computation that survives independent replay.",
+      "deliverable": "A theorem for the selected family, exact data or construction, and a checker for every arithmetic assertion.",
+      "verification_plan": "Independent exact-integer or finite-field computation plus review of the analytic or algebraic reduction.",
+      "visual_hook": "A residue-class map, factorization pattern, or distribution plot."
+    },
+    {
+      "rank": 78,
+      "source_problem_id": 2038,
+      "source_problem_number": "EP-304",
+      "title": "Erdős Problem #304",
+      "statement": "For integers $1\\leq a<b$ let $N(a,b)$ denote the minimal $k$ such that there exist integers $1<n_1<\\cdots<n_k$ with $ \\frac{a}{b}=\\frac{1}{n_1}+\\cdots+\\frac{1}{n_k}. $ Estimate $N(b)=\\max_{1\\leq a<b}N(a,b)$. Is it true that $N(b) \\ll \\log\\log b$?",
+      "field": "Number Theory",
+      "source_collection": "Erdős Problems",
+      "source_url": "https://www.unsolvedmath.com/problems/EP-304",
+      "canonical_source_url": null,
+      "status": {
+        "catalog_status": "open",
+        "assessment_gate": "source_claimed_open",
+        "snapshot_assessment_date": "2026-07-31"
+      },
+      "opdp": {
+        "tractability_band": "T7",
+        "tractability_probability": "55-70%",
+        "target_combined_hours": 100,
+        "intrinsic_difficulty": 4.9,
+        "ai_difficulty": 3.9,
+        "tool_leverage": 5.3,
+        "verification_if_true": 4.6,
+        "verification_if_false": 4.6
+      },
+      "weekly_track": "Choose a controlled modulus, degree, or family and prove a new local-to-global statement, exact bound, or certified computation that survives independent replay.",
+      "deliverable": "A theorem for the selected family, exact data or construction, and a checker for every arithmetic assertion.",
+      "verification_plan": "Independent exact-integer or finite-field computation plus review of the analytic or algebraic reduction.",
+      "visual_hook": "A residue-class map, factorization pattern, or distribution plot."
+    },
+    {
+      "rank": 79,
+      "source_problem_id": 2059,
+      "source_problem_number": "EP-336",
+      "title": "Erdős Problem #336",
+      "statement": "For $r\\geq 2$ let $h(r)$ be the maximal finite $k$ such that there exists a basis $A\\subseteq \\mathbb{N}$ of order $r$ (so every large integer is the sum of at most $r$ integers from $A$) and exact order $k$ (so every large integer is the sum of exactly $k$ integers from $A$). Find the value of $ \\lim_r \\frac{h(r)}{r^2}. $",
+      "field": "Number Theory",
+      "source_collection": "Erdős Problems",
+      "source_url": "https://www.unsolvedmath.com/problems/EP-336",
+      "canonical_source_url": null,
+      "status": {
+        "catalog_status": "open",
+        "assessment_gate": "source_claimed_open",
+        "snapshot_assessment_date": "2026-07-31"
+      },
+      "opdp": {
+        "tractability_band": "T7",
+        "tractability_probability": "55-70%",
+        "target_combined_hours": 100,
+        "intrinsic_difficulty": 4.9,
+        "ai_difficulty": 3.9,
+        "tool_leverage": 5.3,
+        "verification_if_true": 4.6,
+        "verification_if_false": 4.6
+      },
+      "weekly_track": "Choose a controlled modulus, degree, or family and prove a new local-to-global statement, exact bound, or certified computation that survives independent replay.",
+      "deliverable": "A theorem for the selected family, exact data or construction, and a checker for every arithmetic assertion.",
+      "verification_plan": "Independent exact-integer or finite-field computation plus review of the analytic or algebraic reduction.",
+      "visual_hook": "A residue-class map, factorization pattern, or distribution plot."
+    },
+    {
+      "rank": 80,
+      "source_problem_id": 2161,
+      "source_problem_number": "EP-530",
+      "title": "Erdős Problem #530",
+      "statement": "Let $\\ell(N)$ be maximal such that in any finite set $A\\subset \\mathbb{R}$ of size $N$ there exists a Sidon subset $S$ of size $\\ell(N)$ (i.e. the only solutions to $a+b=c+d$ in $S$ are the trivial ones). Determine the order of $\\ell(N)$.",
+      "field": "Number Theory",
+      "source_collection": "Erdős Problems",
+      "source_url": "https://www.unsolvedmath.com/problems/EP-530",
+      "canonical_source_url": null,
+      "status": {
+        "catalog_status": "open",
+        "assessment_gate": "source_claimed_open",
+        "snapshot_assessment_date": "2026-07-31"
+      },
+      "opdp": {
+        "tractability_band": "T7",
+        "tractability_probability": "55-70%",
+        "target_combined_hours": 100,
+        "intrinsic_difficulty": 4.9,
+        "ai_difficulty": 3.9,
+        "tool_leverage": 5.3,
+        "verification_if_true": 4.6,
+        "verification_if_false": 4.6
+      },
+      "weekly_track": "Choose a controlled modulus, degree, or family and prove a new local-to-global statement, exact bound, or certified computation that survives independent replay.",
+      "deliverable": "A theorem for the selected family, exact data or construction, and a checker for every arithmetic assertion.",
+      "verification_plan": "Independent exact-integer or finite-field computation plus review of the analytic or algebraic reduction.",
+      "visual_hook": "A residue-class map, factorization pattern, or distribution plot."
+    },
+    {
+      "rank": 81,
+      "source_problem_id": 2274,
+      "source_problem_number": "EP-711",
+      "title": "Erdős Problem #711",
+      "statement": "Let $f(n,m)$ be minimal such that in $(m,m+f(n,m))$ there exist distinct integers $a_1,\\ldots,a_n$ such that $k\\mid a_k$ for all $1\\leq k\\leq n$. Prove that $ \\max_m f(n,m) \\leq n^{1+o(1)} $ and that $ \\max_m (f(n,m)-f(n,n))\\to \\infty. $",
+      "field": "Number Theory",
+      "source_collection": "Erdős Problems",
+      "source_url": "https://www.unsolvedmath.com/problems/EP-711",
+      "canonical_source_url": null,
+      "status": {
+        "catalog_status": "open",
+        "assessment_gate": "source_claimed_open",
+        "snapshot_assessment_date": "2026-07-31"
+      },
+      "opdp": {
+        "tractability_band": "T7",
+        "tractability_probability": "55-70%",
+        "target_combined_hours": 100,
+        "intrinsic_difficulty": 4.9,
+        "ai_difficulty": 3.9,
+        "tool_leverage": 5.3,
+        "verification_if_true": 4.6,
+        "verification_if_false": 4.6
+      },
+      "weekly_track": "Choose a controlled modulus, degree, or family and prove a new local-to-global statement, exact bound, or certified computation that survives independent replay.",
+      "deliverable": "A theorem for the selected family, exact data or construction, and a checker for every arithmetic assertion.",
+      "verification_plan": "Independent exact-integer or finite-field computation plus review of the analytic or algebraic reduction.",
+      "visual_hook": "A residue-class map, factorization pattern, or distribution plot."
+    },
+    {
+      "rank": 82,
+      "source_problem_id": 20002464,
+      "source_problem_number": "AIM-PDES-0076",
+      "title": "A boundary-work concentration diagnostic for shear-band blow-up",
+      "statement": "A.11 Katsaounis, Theodoros Balance laws appear as mathematical models in a great number of applications areas such as gas dynamics, mechanics, geophysics, biology. In recent years there has been enor-mous activity on developing numerical methods for capturing correctly the properties and features of the analytical solutions. I am particularly interested in developing numerical schemes for balance laws using relaxation approximation. The starting point of our approach is the class of relaxation schemes, introduced in [JX], which are based on the relaxation approximation to the nonlinear conservation law, that has a linear convection term and needs neither a Riemann solver nor the characteristic decomposition and thus enjoys great simplicity in the expense of increasing the number of unknowns. The stabilization mechanisms are the regularization by wave operators. The idea is to use a local relaxation approximation to construct linear hyperbolic system with a stiff lower order term that approximates the original nonlinear system with a small dissipative correction. Relaxation is a flux approximation and relaxation linearizes the Riemann prob-lem. This simplicity can be of great significance when one has to solve large-scale engineering problems. The numerical schemes are based on finite volume and finite element discretizations of the relaxation models. In [DK1], [DK2] the finite volume(difference) method is used to descritize the relaxation approximation of the shallow water equations in one and two space dimensions respectively. The source term is treated in two different ways. The numerical schemes are of first or second order in space and time, do not need Riemann solvers, they are able to treat the dry bed case(vacuum case) with no extra effort, and satisfy the steady states, an important feature of the analytical solution, within the accuracy of the relaxation parameter ≤.In [DK3] the numerical schemes presented in [DK1], [DK2] are used to compute the transport and diffusion of a passive pollutant by a water flow. The flow is modeled by the well-known shallow water equations and the pollutant propagation is described by a transport equation. It's worth mentioning that that no special treatment is needed for the transport equation in order to obtain accurate results. The relaxation approximation of conservation laws provide a natural setting for apply-ing the finite element method. We apply the standard finite element method combined with appropriate Runge-Kutta methods for the time discretization. Adaptive mesh refinement strategies based on a-posteriori indicators and inverse inequalities are employed for resolv-ing accurately regions with shocks. The resulting schemes have a regularization mechanism with finite speed of propagation, do not need the solution of approximate local Riemann problems, can be formulated as low order or high order schemes, or even a combination of them (h-p methods), and can be extended in multi-dimensions by using the finite element framework, [AKM], [KM], [GM]. Some properties of these schemes, concerning stability and convergence are presented in [AMT]. Simulating a shear band(a narrow layer of intense shearing in a material, not a crack though) is another topic of interest. The mathematical model consists of a system of con-servation laws, close related to that of elastodynamics. The highly nonlinear model has a internal diffusion mechanism which collapses on the shear band. The temperature and the strain rate grow (blow up?) while the velocity develops a δ-function behavior. It is an 9 open question whether the temperature and the strain rate blow up in finite or infinite time. Numerical simulation of this singular behavior is a challenge, [BKT].",
+      "field": "Partial Differential Equations",
+      "source_collection": "AIM Workshop Problem Lists",
+      "source_url": "https://aimath.org/WWN/balancelaws/balancelaws.pdf",
+      "canonical_source_url": "https://aimath.org/WWN/balancelaws/balancelaws.pdf",
+      "status": {
+        "catalog_status": "partially_solved",
+        "assessment_gate": "source_claimed_open",
+        "snapshot_assessment_date": "2026-08-18"
+      },
+      "opdp": {
+        "tractability_band": "T6",
+        "tractability_probability": "40-55%",
+        "target_combined_hours": 100,
+        "intrinsic_difficulty": 5.8,
+        "ai_difficulty": 5.8,
+        "tool_leverage": 8.3,
+        "verification_if_true": 4.3,
+        "verification_if_false": 7.3
+      },
+      "weekly_track": "Fix a normalized domain, symmetry class, or initial-data family and prove a quantitative estimate, construct a diagnostic example, or establish a validated numerical barrier.",
+      "deliverable": "A precise PDE proposition, assumptions, error bounds, and reproducible discretization or interval analysis when used.",
+      "verification_plan": "Mesh-refinement and error-control audit plus a separate proof check of the analytic argument.",
+      "visual_hook": "A flow, level-set, or error-convergence visualization."
+    },
+    {
+      "rank": 83,
+      "source_problem_id": 2400014,
+      "source_problem_number": "AMR-023-0014",
+      "title": "Vlasov–Maxwell regularity",
+      "statement": "Establish global regularity, or exhibit breakdown, for solutions of the Vlasov–Maxwell equations from appropriate smooth initial data.",
+      "field": "Partial Differential Equations",
+      "source_collection": "AMR Open Problem Lists",
+      "source_url": "https://en.wikipedia.org/w/index.php?title=List_of_unsolved_problems_in_mathematics&oldid=1366636767",
+      "canonical_source_url": "https://en.wikipedia.org/w/index.php?title=List_of_unsolved_problems_in_mathematics&oldid=1366636767",
+      "status": {
+        "catalog_status": "open",
+        "assessment_gate": "source_claimed_open",
+        "snapshot_assessment_date": "2026-07-31"
+      },
+      "opdp": {
+        "tractability_band": "T6",
+        "tractability_probability": "40-55%",
+        "target_combined_hours": 100,
+        "intrinsic_difficulty": 5.3,
+        "ai_difficulty": 5.3,
+        "tool_leverage": 6,
+        "verification_if_true": 4.2,
+        "verification_if_false": 7.1
+      },
+      "weekly_track": "Fix a normalized domain, symmetry class, or initial-data family and prove a quantitative estimate, construct a diagnostic example, or establish a validated numerical barrier.",
+      "deliverable": "A precise PDE proposition, assumptions, error bounds, and reproducible discretization or interval analysis when used.",
+      "verification_plan": "Mesh-refinement and error-control audit plus a separate proof check of the analytic argument.",
+      "visual_hook": "A flow, level-set, or error-convergence visualization."
+    },
+    {
+      "rank": 84,
+      "source_problem_id": 20002456,
+      "source_problem_number": "AIM-PDES-0068",
+      "title": "Uniform-time matrix-viscosity estimates at a fully damped equilibrium",
+      "statement": "A.3 Christoforou, Cleopatra My area of interest is the theory of hyperbolic conservation laws. My current research is an application of the method of vanishing viscosity: The aim is to construct solutions of hyperbolic systems of balance laws with dissipative source terms ut + ( f (u)) x + g(u) = 0 as limits of solutions of parabolic systems u≤t + ( f (u≤)) x + g(u≤) = ≤u ≤xx with viscosity ≤ tending to zero. The analysis of the vanishing viscosity method of Bianchini and Bressan [BiB] is extended to this class of systems. Because of the presence of the dissipative source terms, supplementary Lyapunov functionals are constructed and additional techniques are employed to those already devised in [BiB]. Moreover, an exponential decay of the total variation of vanishing viscosity approximations is established. I am interested in applying these techniques to other systems of conservation laws. A very challenging question would be the case of systems with physical viscosity. Finally, I am very interested in increasing my knowledge in mathematical biology. It is a challenging, fast-growing area that together with numerical methods will introduce me to new tools and assist me to improve my ability to work with physical problems.",
+      "field": "Partial Differential Equations",
+      "source_collection": "AIM Workshop Problem Lists",
+      "source_url": "https://aimath.org/WWN/balancelaws/balancelaws.pdf",
+      "canonical_source_url": "https://aimath.org/WWN/balancelaws/balancelaws.pdf",
+      "status": {
+        "catalog_status": "partially_solved",
+        "assessment_gate": "source_claimed_open",
+        "snapshot_assessment_date": "2026-08-18"
+      },
+      "opdp": {
+        "tractability_band": "T6",
+        "tractability_probability": "40-55%",
+        "target_combined_hours": 100,
+        "intrinsic_difficulty": 5.5,
+        "ai_difficulty": 6,
+        "tool_leverage": 6,
+        "verification_if_true": 4.1,
+        "verification_if_false": 7.1
+      },
+      "weekly_track": "Fix a normalized domain, symmetry class, or initial-data family and prove a quantitative estimate, construct a diagnostic example, or establish a validated numerical barrier.",
+      "deliverable": "A precise PDE proposition, assumptions, error bounds, and reproducible discretization or interval analysis when used.",
+      "verification_plan": "Mesh-refinement and error-control audit plus a separate proof check of the analytic argument.",
+      "visual_hook": "A flow, level-set, or error-convergence visualization."
+    },
+    {
+      "rank": 85,
+      "source_problem_id": 2700005,
+      "source_problem_number": "AMR-026-0005",
+      "title": "Five Open Problems — Regular reflection without irrotationality",
+      "statement": "Prove existence of a regular reflection for compressible flow against a wedge without assuming that the flow is irrotational.",
+      "field": "Partial Differential Equations",
+      "source_collection": "AMR Open Problem Lists",
+      "source_url": "https://perso.ens-lyon.fr/denis.serre/DPF/Ouverts.pdf",
+      "canonical_source_url": "https://perso.ens-lyon.fr/denis.serre/DPF/Ouverts.pdf",
+      "status": {
+        "catalog_status": "open",
+        "assessment_gate": "source_claimed_open",
+        "snapshot_assessment_date": "2026-07-31"
+      },
+      "opdp": {
+        "tractability_band": "T5",
+        "tractability_probability": "25-40%",
+        "target_combined_hours": 100,
+        "intrinsic_difficulty": 5.8,
+        "ai_difficulty": 5.8,
+        "tool_leverage": 4.5,
+        "verification_if_true": 3.7,
+        "verification_if_false": 7
+      },
+      "weekly_track": "Fix a normalized domain, symmetry class, or initial-data family and prove a quantitative estimate, construct a diagnostic example, or establish a validated numerical barrier.",
+      "deliverable": "A precise PDE proposition, assumptions, error bounds, and reproducible discretization or interval analysis when used.",
+      "verification_plan": "Mesh-refinement and error-control audit plus a separate proof check of the analytic argument.",
+      "visual_hook": "A flow, level-set, or error-convergence visualization."
+    },
+    {
+      "rank": 86,
+      "source_problem_id": 20002472,
+      "source_problem_number": "AIM-PDES-0084",
+      "title": "A full-support certificate for excluding Denjoy dynamics on invariant twist-map curves",
+      "statement": "9. (John Mather) Does there exist a C3 twist map f: T × R → T × R which has an invariant curve Γ with irrational rotation number and such that f |Γ is not conjugate to a rotation? By the Denjoy example there exist C1 maps of a circle with irrational rotation number not conjugate to a rotation. Can this happen for invariant curves of twist maps? 1",
+      "field": "Partial Differential Equations",
+      "source_collection": "AIM Workshop Problem Lists",
+      "source_url": "https://aimath.org/WWN/dynpde/dynpde.pdf",
+      "canonical_source_url": "https://aimath.org/WWN/dynpde/dynpde.pdf",
+      "status": {
+        "catalog_status": "partially_solved",
+        "assessment_gate": "source_claimed_open",
+        "snapshot_assessment_date": "2026-08-18"
+      },
+      "opdp": {
+        "tractability_band": "T5",
+        "tractability_probability": "25-40%",
+        "target_combined_hours": 100,
+        "intrinsic_difficulty": 6.4,
+        "ai_difficulty": 6.9,
+        "tool_leverage": 4.5,
+        "verification_if_true": 3.9,
+        "verification_if_false": 7.3
+      },
+      "weekly_track": "Fix a normalized domain, symmetry class, or initial-data family and prove a quantitative estimate, construct a diagnostic example, or establish a validated numerical barrier.",
+      "deliverable": "A precise PDE proposition, assumptions, error bounds, and reproducible discretization or interval analysis when used.",
+      "verification_plan": "Mesh-refinement and error-control audit plus a separate proof check of the analytic argument.",
+      "visual_hook": "A flow, level-set, or error-convergence visualization."
+    },
+    {
+      "rank": 87,
+      "source_problem_id": 20002452,
+      "source_problem_number": "AIM-PDES-0064",
+      "title": "A symmetry obstruction and reversible two-mode diagnostic for vortex-pattern return",
+      "statement": "Problem: By what mechanism does this happen and how can one capture the general dynamics? H. Warchall: (Stability of Encapsulated-Vortex Solutions) Setup:Consider the equations Ju t = ∆ u + g(u) (NLS) utt = ∆ u + g(u) (NLKG) where u ∈ RN +1 → RM, g: RM → RM continuous satisfying g(y) = h(|y|2)ˆ y, with h: [0, ∞) → R and ˆy ≡ y/ |y|. J is an invertible M × M skew symmetric matrix. Consider standing-wave solutions to (NLS) and (NLKG) of the form u(x, t ) = eμKt ˆψ(ˆ x)w(r)with μ ∈ R a constant, and K a real skew-symmetric M × M matrix with K = J−1 for (NLS) K2 = −I for (NLKG) where w: [0, ∞) → R and ˆψ: SN −1 → SM −1. Here ˆψ is a unit vector valued eigenfunction of the Laplacian on the sphere SN −1 ⊂ RN, with ∆S ˆψ = −l(l + N − 2) ˆψ We remark that the possible values of l are limited by the dimension M of range space (see J. Iaia & H.A. Warchall, Encapsulated-vortex solutions to equivariant wave equations: existence, SIAM J. Math. Anal., 30 (1999), 118-139). If u satisfies (NLS) or (NLKG) then the spatial profile w satisfies w′′ + N − 1 r w′ − l(l + N − 2) r2 w + f (w) = 0 where f (y) = g(y) + ωy with ω = { μ for (NLS) μ2 for (NLKG) Note: Traveling waves are generated by Galilean or Lorentz boosts. The idea is to generalize, e.g. standing wave solutions u(x, t ) = eiωt eimθ w(r) of −iu t − ∆u = g(u) whose stability was analysed by R.L. Pego & H.A.Warchall (Spectrally stable encapsulated vortices for nonlinear Schr¨ odinger equations, J.Nonlinear Sci., 12 (2002), 347-394). Under appropriate conditions on f there exist smooth exponentially localized solutions w to the profile ODE. One essentially needs f ′(0) < 0 F (t) = ∫ t > 0 f (s) ds > 0 for some t > 0",
+      "field": "Partial Differential Equations",
+      "source_collection": "AIM Workshop Problem Lists",
+      "source_url": "https://aimath.org/WWN/multidimwaves/multidimwaves.pdf",
+      "canonical_source_url": "https://aimath.org/WWN/multidimwaves/multidimwaves.pdf",
+      "status": {
+        "catalog_status": "partially_solved",
+        "assessment_gate": "source_claimed_open",
+        "snapshot_assessment_date": "2026-08-18"
+      },
+      "opdp": {
+        "tractability_band": "T5",
+        "tractability_probability": "25-40%",
+        "target_combined_hours": 100,
+        "intrinsic_difficulty": 6,
+        "ai_difficulty": 6.5,
+        "tool_leverage": 6.8,
+        "verification_if_true": 6.6,
+        "verification_if_false": 5.6
+      },
+      "weekly_track": "Fix a normalized domain, symmetry class, or initial-data family and prove a quantitative estimate, construct a diagnostic example, or establish a validated numerical barrier.",
+      "deliverable": "A precise PDE proposition, assumptions, error bounds, and reproducible discretization or interval analysis when used.",
+      "verification_plan": "Mesh-refinement and error-control audit plus a separate proof check of the analytic argument.",
+      "visual_hook": "A flow, level-set, or error-convergence visualization."
+    },
+    {
+      "rank": 88,
+      "source_problem_id": 20002611,
+      "source_problem_number": "AIM-PROBABILITY-0053",
+      "title": "Sharp Gibbs status and exact proposal-sensitive Metropolis benchmarks",
+      "statement": "Metropolis on $[0,1]^2$ Consider the stationary distribution on $[0,1]^2$ given by \\[\\pi_A(p_1,p_2)=\\mathcal Z^{-1} \\exp(-A|p_1-p_2|^2) \\] parametrized by $A\\in [10,1000]$. Obtain a good bound on the mixing time of the Metropolis algorithm for this stationary distribution in terms of $A$. Generalize this to $[0,1]^d$.",
+      "field": "Probability",
+      "source_collection": "AIM Workshop Problem Lists",
+      "source_url": "http://aimpl.org/markovmixing/6/",
+      "canonical_source_url": "http://aimpl.org/markovmixing/6/",
+      "status": {
+        "catalog_status": "partially_solved",
+        "assessment_gate": "source_claimed_open",
+        "snapshot_assessment_date": "2026-08-18"
+      },
+      "opdp": {
+        "tractability_band": "T7",
+        "tractability_probability": "55-70%",
+        "target_combined_hours": 100,
+        "intrinsic_difficulty": 6.3,
+        "ai_difficulty": 5.3,
+        "tool_leverage": 7.5,
+        "verification_if_true": 5.4,
+        "verification_if_false": 5.6
+      },
+      "weekly_track": "Close one finite model, threshold regime, or constant case using a proof-backed simulation or a new concentration/coupling estimate.",
+      "deliverable": "A theorem or rigorous bound, reproducible experiments clearly separated from proof, and an exact random-instance generator.",
+      "verification_plan": "Independent seed-controlled replication and scrutiny of every probabilistic inequality.",
+      "visual_hook": "A threshold curve with confidence or rigorous-bound bands."
+    },
+    {
+      "rank": 89,
+      "source_problem_id": 20002564,
+      "source_problem_number": "AIM-PROBABILITY-0006",
+      "title": "Algebraic score equations and an independence saddle for RBM learning",
+      "statement": "What are the algebraic structures relevant for studying learning algorithms for RBMs? What are the algebraic structures relevant for studying learning algorithms for RBMs?",
+      "field": "Probability",
+      "source_collection": "AIM Workshop Problem Lists",
+      "source_url": "http://aimpl.org/boltzmann/2/",
+      "canonical_source_url": "http://aimpl.org/boltzmann/2/",
+      "status": {
+        "catalog_status": "partially_solved",
+        "assessment_gate": "source_claimed_open",
+        "snapshot_assessment_date": "2026-08-18"
+      },
+      "opdp": {
+        "tractability_band": "T7",
+        "tractability_probability": "55-70%",
+        "target_combined_hours": 100,
+        "intrinsic_difficulty": 5.4,
+        "ai_difficulty": 4.4,
+        "tool_leverage": 7.5,
+        "verification_if_true": 5.6,
+        "verification_if_false": 5.7
+      },
+      "weekly_track": "Close one finite model, threshold regime, or constant case using a proof-backed simulation or a new concentration/coupling estimate.",
+      "deliverable": "A theorem or rigorous bound, reproducible experiments clearly separated from proof, and an exact random-instance generator.",
+      "verification_plan": "Independent seed-controlled replication and scrutiny of every probabilistic inequality.",
+      "visual_hook": "A threshold curve with confidence or rigorous-bound bands."
+    },
+    {
+      "rank": 90,
+      "source_problem_id": 20002565,
+      "source_problem_number": "AIM-PROBABILITY-0007",
+      "title": "Exact training oracles from sparse RBM topology",
+      "statement": "Efficient methods to train RBMs with fixed, sparse connectivity What are the most efficient learning algorithms for training sparsely connected RBMs?",
+      "field": "Probability",
+      "source_collection": "AIM Workshop Problem Lists",
+      "source_url": "http://aimpl.org/boltzmann/3/",
+      "canonical_source_url": "http://aimpl.org/boltzmann/3/",
+      "status": {
+        "catalog_status": "partially_solved",
+        "assessment_gate": "source_claimed_open",
+        "snapshot_assessment_date": "2026-08-18"
+      },
+      "opdp": {
+        "tractability_band": "T7",
+        "tractability_probability": "55-70%",
+        "target_combined_hours": 100,
+        "intrinsic_difficulty": 5.4,
+        "ai_difficulty": 4.4,
+        "tool_leverage": 7.5,
+        "verification_if_true": 5.5,
+        "verification_if_false": 5.7
+      },
+      "weekly_track": "Close one finite model, threshold regime, or constant case using a proof-backed simulation or a new concentration/coupling estimate.",
+      "deliverable": "A theorem or rigorous bound, reproducible experiments clearly separated from proof, and an exact random-instance generator.",
+      "verification_plan": "Independent seed-controlled replication and scrutiny of every probabilistic inequality.",
+      "visual_hook": "A threshold curve with confidence or rigorous-bound bands."
+    },
+    {
+      "rank": 91,
+      "source_problem_id": 20002714,
+      "source_problem_number": "AIM-PROBABILITY-0156",
+      "title": "Three obstructions to a naive dual BN-pair",
+      "statement": "Problem 3. 4. (D. Bessis) Is there a structure theory of Lie groups and algebraic groups that is analogous to the dual braid monoid [6]? Is there some dual notion of BN -pairs? 4. Garside Structures As mentioned, the lattice of noncrossing partitions N C W in its full generality was defined by David Bessis [6] and Tom Brady [12] in order to study the Artin group A(W )corresponding to the Coxeter group W. It turns out that the properties of the poset N C W have many consequences for the group theory, including a nice algorithmic solution to the word and conjugacy problems. In general, every poset P together with a labelling of the edges in its Hasse diagram generates a monoid M (P ) and a group G(P ). When this labelling has certain properties, P is called a combinatorial Garside structure. Having such a Garside structure gives a powerful tool for studying the monoid M (P ) and the group G(P ). This is an emerging subject with interest to combinatorics and group theory. The survey article [35] by Jon McCammond gives a good introduction to these topics.",
+      "field": "Probability",
+      "source_collection": "AIM Workshop Problem Lists",
+      "source_url": "https://aimath.org/WWN/braidgroups/braidgroups.pdf",
+      "canonical_source_url": "https://aimath.org/WWN/braidgroups/braidgroups.pdf",
+      "status": {
+        "catalog_status": "partially_solved",
+        "assessment_gate": "source_claimed_open",
+        "snapshot_assessment_date": "2026-08-18"
+      },
+      "opdp": {
+        "tractability_band": "T7",
+        "tractability_probability": "55-70%",
+        "target_combined_hours": 100,
+        "intrinsic_difficulty": 5.4,
+        "ai_difficulty": 4.4,
+        "tool_leverage": 7.5,
+        "verification_if_true": 5.7,
+        "verification_if_false": 5.8
+      },
+      "weekly_track": "Close one finite model, threshold regime, or constant case using a proof-backed simulation or a new concentration/coupling estimate.",
+      "deliverable": "A theorem or rigorous bound, reproducible experiments clearly separated from proof, and an exact random-instance generator.",
+      "verification_plan": "Independent seed-controlled replication and scrutiny of every probabilistic inequality.",
+      "visual_hook": "A threshold curve with confidence or rigorous-bound bands."
+    },
+    {
+      "rank": 92,
+      "source_problem_id": 20002727,
+      "source_problem_number": "AIM-PROBABILITY-0169",
+      "title": "Exact matrix recurrence and the irrational-exponent obstruction in noncrystallographic type",
+      "statement": "Problem 6. 4. (D. Bessis, C. Kriloff ) There is no construction of a cluster algebra in the noncrystallographic finite types. What happens when one applies matrix mutations to the Cartan matrix of a noncrystallographic finite Coxeter group? Are there recurrences? 13",
+      "field": "Probability",
+      "source_collection": "AIM Workshop Problem Lists",
+      "source_url": "https://aimath.org/WWN/braidgroups/braidgroups.pdf",
+      "canonical_source_url": "https://aimath.org/WWN/braidgroups/braidgroups.pdf",
+      "status": {
+        "catalog_status": "partially_solved",
+        "assessment_gate": "source_claimed_open",
+        "snapshot_assessment_date": "2026-08-18"
+      },
+      "opdp": {
+        "tractability_band": "T7",
+        "tractability_probability": "55-70%",
+        "target_combined_hours": 100,
+        "intrinsic_difficulty": 5.4,
+        "ai_difficulty": 4.4,
+        "tool_leverage": 8.3,
+        "verification_if_true": 3.6,
+        "verification_if_false": 6.3
+      },
+      "weekly_track": "Close one finite model, threshold regime, or constant case using a proof-backed simulation or a new concentration/coupling estimate.",
+      "deliverable": "A theorem or rigorous bound, reproducible experiments clearly separated from proof, and an exact random-instance generator.",
+      "verification_plan": "Independent seed-controlled replication and scrutiny of every probabilistic inequality.",
+      "visual_hook": "A threshold curve with confidence or rigorous-bound bands."
+    },
+    {
+      "rank": 93,
+      "source_problem_id": 20002596,
+      "source_problem_number": "AIM-PROBABILITY-0038",
+      "title": "Dyadic critical mixing solved and an exact general flip-graph reduction",
+      "statement": "Edge-flip chain on dyadic tilings and rectangular dissections (Sarah Cannon) Consider rectangular dissections of an $n\\times n$ lattice into $n$ rectangles of area $n$, where $n=2^k$. The edge-flip chain proceeds by picking an edge bordering two rectangles and replacing it by its bisector. In the \\emph{dyadic} case, the edge is flipped provided the resulting tiling remains dyadic. In the weighted setting, a parameter $\\lambda>0$ is fixed, and the weight of a dissection is given by $$ \\pi(\\sigma)=\\frac{\\lambda^{|\\sigma |}}{Z} , $$ where $|\\sigma|$ is the total edge-length. The chains (in the dyadic and general cases) then correspond to the Glauber dynamics. For $\\lambda=1$, can we establish a polynomial upper-bound (fast-mixing) for the mixing time of the edge-flip chain on dyadic tilings or on rectangular dissections?",
+      "field": "Probability",
+      "source_collection": "AIM Workshop Problem Lists",
+      "source_url": "http://aimpl.org/markovmixing/2/",
+      "canonical_source_url": "http://aimpl.org/markovmixing/2/",
+      "status": {
+        "catalog_status": "partially_solved",
+        "assessment_gate": "source_claimed_open",
+        "snapshot_assessment_date": "2026-08-18"
+      },
+      "opdp": {
+        "tractability_band": "T7",
+        "tractability_probability": "55-70%",
+        "target_combined_hours": 100,
+        "intrinsic_difficulty": 5.5,
+        "ai_difficulty": 5,
+        "tool_leverage": 6.8,
+        "verification_if_true": 6,
+        "verification_if_false": 5.1
+      },
+      "weekly_track": "Close one finite model, threshold regime, or constant case using a proof-backed simulation or a new concentration/coupling estimate.",
+      "deliverable": "A theorem or rigorous bound, reproducible experiments clearly separated from proof, and an exact random-instance generator.",
+      "verification_plan": "Independent seed-controlled replication and scrutiny of every probabilistic inequality.",
+      "visual_hook": "A threshold curve with confidence or rigorous-bound bands."
+    },
+    {
+      "rank": 94,
+      "source_problem_id": 1354,
+      "source_problem_number": "ST-008",
+      "title": "Strongly Compact vs Supercompact Cardinals",
+      "statement": "Does the consistency of a strongly compact cardinal imply the consistent existence of a supercompact cardinal?",
+      "field": "Set Theory",
+      "source_collection": "Unassigned",
+      "source_url": "https://www.unsolvedmath.com/problems/ST-008",
+      "canonical_source_url": null,
+      "status": {
+        "catalog_status": "open",
+        "assessment_gate": "source_claimed_open",
+        "snapshot_assessment_date": "2026-07-31"
+      },
+      "opdp": {
+        "tractability_band": "T5",
+        "tractability_probability": "25-40%",
+        "target_combined_hours": 100,
+        "intrinsic_difficulty": 6.9,
+        "ai_difficulty": 6.4,
+        "tool_leverage": 4.5,
+        "verification_if_true": 3.2,
+        "verification_if_false": 6.3
+      },
+      "weekly_track": "Pin down a bounded consistency implication, forcing reduction, or definability consequence, with every large-cardinal assumption stated explicitly.",
+      "deliverable": "A precise implication or separation result, a forcing/model outline, and references for every imported consistency strength.",
+      "verification_plan": "Specialist review of the forcing argument and partial formalization of the combinatorial core when feasible.",
+      "visual_hook": "An implication diagram between axioms and cardinal characteristics."
+    },
+    {
+      "rank": 95,
+      "source_problem_id": 41,
+      "source_problem_number": "SET-002",
+      "title": "Singular Cardinals Hypothesis",
+      "statement": "If $\\kappa$ is a singular strong limit cardinal, then $2^\\kappa = \\kappa^+$.",
+      "field": "Set Theory",
+      "source_collection": "Unassigned",
+      "source_url": "https://www.unsolvedmath.com/problems/SET-002",
+      "canonical_source_url": null,
+      "status": {
+        "catalog_status": "open",
+        "assessment_gate": "source_claimed_open",
+        "snapshot_assessment_date": "2026-07-31"
+      },
+      "opdp": {
+        "tractability_band": "T5",
+        "tractability_probability": "25-40%",
+        "target_combined_hours": 100,
+        "intrinsic_difficulty": 6.1,
+        "ai_difficulty": 5.6,
+        "tool_leverage": 4.5,
+        "verification_if_true": 6.2,
+        "verification_if_false": 5.3
+      },
+      "weekly_track": "Pin down a bounded consistency implication, forcing reduction, or definability consequence, with every large-cardinal assumption stated explicitly.",
+      "deliverable": "A precise implication or separation result, a forcing/model outline, and references for every imported consistency strength.",
+      "verification_plan": "Specialist review of the forcing argument and partial formalization of the combinatorial core when feasible.",
+      "visual_hook": "An implication diagram between axioms and cardinal characteristics."
+    },
+    {
+      "rank": 96,
+      "source_problem_id": 1347,
+      "source_problem_number": "ST-001",
+      "title": "Partition Principle Implies Axiom of Choice",
+      "statement": "Does the partition principle (PP) imply the axiom of choice (AC)?",
+      "field": "Set Theory",
+      "source_collection": "Unassigned",
+      "source_url": "https://www.unsolvedmath.com/problems/ST-001",
+      "canonical_source_url": null,
+      "status": {
+        "catalog_status": "open",
+        "assessment_gate": "source_claimed_open",
+        "snapshot_assessment_date": "2026-07-31"
+      },
+      "opdp": {
+        "tractability_band": "T5",
+        "tractability_probability": "25-40%",
+        "target_combined_hours": 100,
+        "intrinsic_difficulty": 6.1,
+        "ai_difficulty": 5.6,
+        "tool_leverage": 4.5,
+        "verification_if_true": 6.2,
+        "verification_if_false": 5.3
+      },
+      "weekly_track": "Pin down a bounded consistency implication, forcing reduction, or definability consequence, with every large-cardinal assumption stated explicitly.",
+      "deliverable": "A precise implication or separation result, a forcing/model outline, and references for every imported consistency strength.",
+      "verification_plan": "Specialist review of the forcing argument and partial formalization of the combinatorial core when feasible.",
+      "visual_hook": "An implication diagram between axioms and cardinal characteristics."
+    },
+    {
+      "rank": 97,
+      "source_problem_id": 2769,
+      "source_problem_number": "KP-2.21",
+      "title": "Kirby Problem 2.21",
+      "statement": "What is the minimum number, $m_{g,b}$, of right-handed Dehn twists along essential curves into which the boundary multi-twist, $\\Delta:= T_{\\delta_{1}} \\cdots T_{\\delta_{b}}$, can be factorized in $\\operatorname{Mod}(S_{g}^{b})$? Find factorizations realizing the minimum.",
+      "field": "Topology",
+      "source_collection": "Kirby's Problems in Low-Dimensional Topology",
+      "source_url": "https://msp.org/obs/2022/5-1/p09.xhtml",
+      "canonical_source_url": "https://msp.org/obs/2022/5-1/p09.xhtml",
+      "status": {
+        "catalog_status": "open",
+        "assessment_gate": "source_claimed_open",
+        "snapshot_assessment_date": "2026-07-31"
+      },
+      "opdp": {
+        "tractability_band": "T5",
+        "tractability_probability": "25-40%",
+        "target_combined_hours": 100,
+        "intrinsic_difficulty": 5.3,
+        "ai_difficulty": 6.3,
+        "tool_leverage": 6.5,
+        "verification_if_true": 4.1,
+        "verification_if_false": 4.1
+      },
+      "weekly_track": "Settle a low-complexity manifold, knot, or homotopy case by an explicit invariant computation, construction, or obstruction.",
+      "deliverable": "A stated low-complexity result, explicit diagrams or complexes, and software input sufficient for independent replay.",
+      "verification_plan": "Independent invariant computation and a conventional proof check of topological moves and hypotheses.",
+      "visual_hook": "A triangulation, surgery diagram, or knot/link picture."
+    },
+    {
+      "rank": 98,
+      "source_problem_id": 20002985,
+      "source_problem_number": "AIM-TOPOLOGY-0073",
+      "title": "Orbifold Hilbert schemes and the missing lens-link sector",
+      "statement": "Construct link invariants for links in lens spaces using Hilb$([\\mathbb{C}^2/(\\mathbb{Z}/l\\mathbb{Z}])$ and relate to wreath Macdonald polynomials.",
+      "field": "Topology",
+      "source_collection": "AIM Workshop Problem Lists",
+      "source_url": "http://aimpl.org/agclinkhom/4/",
+      "canonical_source_url": "http://aimpl.org/agclinkhom/4/",
+      "status": {
+        "catalog_status": "partially_solved",
+        "assessment_gate": "source_claimed_open",
+        "snapshot_assessment_date": "2026-08-18"
+      },
+      "opdp": {
+        "tractability_band": "T7",
+        "tractability_probability": "55-70%",
+        "target_combined_hours": 100,
+        "intrinsic_difficulty": 5.5,
+        "ai_difficulty": 4.5,
+        "tool_leverage": 8.3,
+        "verification_if_true": 3.8,
+        "verification_if_false": 6.6
+      },
+      "weekly_track": "Settle a low-complexity manifold, knot, or homotopy case by an explicit invariant computation, construction, or obstruction.",
+      "deliverable": "A stated low-complexity result, explicit diagrams or complexes, and software input sufficient for independent replay.",
+      "verification_plan": "Independent invariant computation and a conventional proof check of topological moves and hypotheses.",
+      "visual_hook": "A triangulation, surgery diagram, or knot/link picture."
+    },
+    {
+      "rank": 99,
+      "source_problem_id": 20002978,
+      "source_problem_number": "AIM-TOPOLOGY-0066",
+      "title": "Minimal-rank locus and exact signed families for Jucys--Murphy braid closures",
+      "statement": "Compute $JM_1^{t_1}\\dots JM_n^{t_n}$ for Khovanov homology.",
+      "field": "Topology",
+      "source_collection": "AIM Workshop Problem Lists",
+      "source_url": "http://aimpl.org/agclinkhom/3/",
+      "canonical_source_url": "http://aimpl.org/agclinkhom/3/",
+      "status": {
+        "catalog_status": "partially_solved",
+        "assessment_gate": "source_claimed_open",
+        "snapshot_assessment_date": "2026-08-18"
+      },
+      "opdp": {
+        "tractability_band": "T7",
+        "tractability_probability": "55-70%",
+        "target_combined_hours": 100,
+        "intrinsic_difficulty": 5.4,
+        "ai_difficulty": 4.9,
+        "tool_leverage": 6,
+        "verification_if_true": 5.8,
+        "verification_if_false": 5.8
+      },
+      "weekly_track": "Settle a low-complexity manifold, knot, or homotopy case by an explicit invariant computation, construction, or obstruction.",
+      "deliverable": "A stated low-complexity result, explicit diagrams or complexes, and software input sufficient for independent replay.",
+      "verification_plan": "Independent invariant computation and a conventional proof check of topological moves and hypotheses.",
+      "visual_hook": "A triangulation, surgery diagram, or knot/link picture."
+    },
+    {
+      "rank": 100,
+      "source_problem_id": 20003063,
+      "source_problem_number": "AIM-TOPOLOGY-0151",
+      "title": "Circular order and fixed-puncture subgroup obstructions",
+      "statement": "Give an example of a pair $(S, G)$ of a surface and a countable group such that $G$ is not a subgroup of $\\operatorname{Map}(S)$. What obstructions exist barring countable groups from being subgroups of families of big mapping class groups?",
+      "field": "Topology",
+      "source_collection": "AIM Workshop Problem Lists",
+      "source_url": "http://aimpl.org/genusinfinity/4/",
+      "canonical_source_url": "http://aimpl.org/genusinfinity/4/",
+      "status": {
+        "catalog_status": "partially_solved",
+        "assessment_gate": "source_claimed_open",
+        "snapshot_assessment_date": "2026-08-18"
+      },
+      "opdp": {
+        "tractability_band": "T7",
+        "tractability_probability": "55-70%",
+        "target_combined_hours": 100,
+        "intrinsic_difficulty": 5.3,
+        "ai_difficulty": 4.8,
+        "tool_leverage": 6,
+        "verification_if_true": 3.9,
+        "verification_if_false": 6.7
+      },
+      "weekly_track": "Settle a low-complexity manifold, knot, or homotopy case by an explicit invariant computation, construction, or obstruction.",
+      "deliverable": "A stated low-complexity result, explicit diagrams or complexes, and software input sufficient for independent replay.",
+      "verification_plan": "Independent invariant computation and a conventional proof check of topological moves and hypotheses.",
+      "visual_hook": "A triangulation, surgery diagram, or knot/link picture."
+    }
+  ]
+}

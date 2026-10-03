@@ -1,0 +1,105 @@
+OPENMATH-ERDOS944
+Canonical target: The pre-existing critical-edge-set problem for vertex-critical four-chromatic finite simple graphs. Necessary finite order constraints are partial progress, not a complete graph-existence answer.
+D proposal=721/1000; intrinsic=6.8/10
+Existing published CFSD1000 value, reused without rescaling or changing its frozen source profile.
+
+FRONTIER: Erdős 944 finite order obstruction: For a finite simple graph G with n vertices and an integer r >= 1, suppose its chromatic number is 4, deleting any vertex lowers that number, and deleting any set of at most r edges does not lower it. Then 27r+19 <= 4n. 
+
+INTERACTION: Supporting lemmas and corollaries belong to the same scope union. Any transfer to a parent or another problem requires a proved scope-preserving bridge.
+
+PAPER: Candidate building block only; preserve source hypotheses, exact priority comparison, proof closure and contribution-based authorship.
+
+COLLECTIVE: Virtual family representative E02-erdos944-order-bound; conservative one-family points 25.99205. M2 is separate when applicable.
+
+CONTRIBUTION MAP
+
+E02-erdos944-order-bound / Rachel Teo / Wenyi Wang / Hamdi Abderrahmene
+For a finite simple graph G with n vertices and an integer r >= 1, suppose its chromatic number is 4, deleting any vertex lowers that number, and deleting any set of at most r edges does not lower it. Then 27r+19 <= 4n. The same hypotheses give 27(r+1)(n-1) <= (2n+1)^2 and 9b(r+1) <= (2b+1)(n-b), where b=floor((n+1)/3). These necessary conditions form one family.
+The linear constraint n>=(27r+19)/4 beats5r+6 for integer r>=1 after rounding, tying at r=1. The source's n/(log n)^c asymptotic restriction remains stronger eventually. This is a useful explicit finite-regime necessary condition, not a new construction or full existence answer.
+Novelty: Candidate finite-regime improvement over the explicit prior bound. Existing r=1 graph constructions and classical coding inequalities receive no new-mathematics credit.
+Formalization: Packet evidence: Independent isolated Lean 4.34.1 replay compiled three proof modules and the separate TargetAudit.lean from unchanged frozen sources. Its own output directory began empty and earlier project proof caches were excluded; pinned third-party caches were reused. Exact target definitions and conjunction were audited. Every final endpoint uses only propext, Classical.choice and Quot.sound. Packaging validates identities without claiming a further Lean replay.. Endpoint signatures and declared axioms are recorded below; author/internal replay is not this reviewer’s fresh rebuild. 
+Proposed M3A; p=0.05; points=25.99205; full review: entries/E02-erdos944-order-bound.txt
+
+OPDP INPUTS AND RATIONALE
+{
+  "inputs": {
+    "catalog_status": "open",
+    "assessment_gate": "source_claimed_open",
+    "scope": "atomic",
+    "answer_type": "proof_disproof",
+    "intrinsic_difficulty_0_10": 6.8,
+    "intrinsic_tier_code": "T4",
+    "intrinsic_tier_label": "Frontier Challenge",
+    "ai_relative_difficulty_0_10": 6.3,
+    "human_effort_1_9": 5,
+    "human_exposure_1_5": 3,
+    "tractability_status": "scored",
+    "tractability_0_10": 4,
+    "verification_if_true_0_10": 5.5,
+    "verification_if_false_0_10": 4.7,
+    "formalization_0_10": 4,
+    "prerequisite_preparation_0_10": 6.8,
+    "prerequisite_breadth_1_5": 4,
+    "tool_leverage_0_10_higher_is_favorable": 4.5,
+    "ambiguity_0_10": 1.6,
+    "literature_load_0_10": 3.5,
+    "ai_context_load_predictor_minus1_to_plus1": 0,
+    "ai_reasoning_horizon_predictor_minus1_to_plus1": 0,
+    "recommended_route": "Expert-guided proof search"
+  },
+  "calculation": {
+    "normalized_barriers_0_1": {
+      "ai_relative_core": 0.63,
+      "intrinsic_difficulty": 0.68,
+      "human_resistance": 0.5,
+      "inverse_tractability": 0.6,
+      "verification_burden": 0.51,
+      "formalization_burden": 0.4,
+      "prerequisite_load": 0.7,
+      "context_and_ambiguity": 0.36,
+      "tool_constraint": 0.55
+    },
+    "weighted_component_points": {
+      "ai_relative_core": 252,
+      "intrinsic_difficulty": 115.6,
+      "human_resistance": 45,
+      "inverse_tractability": 90,
+      "verification_burden": 22.95,
+      "formalization_burden": 14,
+      "prerequisite_load": 27.9,
+      "context_and_ambiguity": 14.28,
+      "tool_constraint": 16.5
+    },
+    "linear_barrier_points_0_1000": 598.23,
+    "complete_solution_transform_exponent": 1.4,
+    "complete_solution_uplift_points": 122.77,
+    "final_score_0_1000": 721
+  },
+  "intrinsic_factors": {
+    "conceptual_gap": 3,
+    "route_gap": 2.5,
+    "technical_depth": 3,
+    "known_barrier": 2,
+    "search_scale": 3
+  },
+  "axis_rationales": {
+    "intrinsic": "Finite necessary-order lower bound, not existence/full problem. Compare prior5r+6atfinite r and strongerasymptotic n/log^cnconstraint.",
+    "AI": "Statement has exact finite certificate feedback; the dated tool-assisted protocol is an estimate, not an empirical solve run.",
+    "attention": "H/X are historical-effort/exposure priors, not contestant hours. Insufficient documentation: neutral normalized .5 used for scoring.",
+    "tractability": "Known targets use N/A and neutral full-resolution component; otherwise the band is an editorial chance of useful100-hour partial progress, not full resolution.",
+    "verification": "Positive checking uses the stated specialist semantic or analytic argument; a negative/global resolution can have a different burden. No fresh Lean build is claimed.",
+    "formalization": "Statement encoding and libraries require 6/10 burden; this is the target burden, not the quality of a submitted proof.",
+    "prerequisites": "The target needs its Graph theory / critical edge sets background; preparation and breadth refer to a prepared researcher, not entrant prestige.",
+    "tools": "Higher L means favorable exact-feedback/search/prover leverage. It does not turn a leaderboard number into a theorem.",
+    "status": "Source-claimed pre-event open target or explicitly parent-linked variation; no independently certified verified_open status invented."
+  },
+  "parent_links": [],
+  "sources": [
+    "https://www.erdosproblems.com/944",
+    "https://arxiv.org/html/2508.08703",
+    "https://github.com/google-deepmind/formal-conjectures/blob/main/FormalConjectures/ErdosProblems/944.lean",
+    "https://github.com/KitaKen1/erdos-944-dirac-k4-lean",
+    "https://arxiv.org/abs/2606.18462",
+    "https://github.com/alejandrozu/ulam-opdp-difficulty-atlas"
+  ]
+}

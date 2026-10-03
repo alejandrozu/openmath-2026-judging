@@ -1,0 +1,211 @@
+# Literature check: is a rank-23 3x3 scheme with support <= 138 already known? (2026-09-30)
+
+Agent E. Read-only web/API research; no repo changes except this file's copy at
+results/round_2026-09-29b/lit_138_check.md. Nothing spent (AutoLab leaderboard read via GET only).
+
+Definitions: support = nnz(U)+nnz(V)+nnz(W) for the 23x9 factor tables in the standard basis;
+naive additions = support - 55. Smirnov 2013 = support 139 = "84 additions". Our new scheme:
+support 138 (83 naive additions), coefficients +-2^k, k = -4..4, found by a support-capped
+local search over GF(3) with Smirnov's type-3 core planted, then lifted to exact rationals.
+
+Prior notes NOT repeated here (already cover Smirnov 2013, Benson-Ballard, Beniamini et al. 2020,
+Perminov 2511.20317/2512.21980/2606.02480, Hell's Bells 2026/1688, Martensson 2601.05272,
+Stapleton 2508.03857, Sun 2604.27645, Karunaratne 2607.28676, Nielsen 2609.06588, Palladinos
+2607.29291, HKS 1905.10192, AlphaEvolve, Kauers-Moosbauer, Tichavsky 1603.01372, JM 1986):
+results/literature_2026-09-29/support_notes.md, results/round_2026-09-29b/agent_sources/notes.md,
+results/round_2026-09-29b/agent_methods/notes.md.
+
+## Verdict
+
+Q1: NOT FOUND. No published or posted rank-23 3x3 scheme with support <= 138, and no claim of
+"83 additions" / "83 naive additions" / "138 nonzero" / "support 138" for 3x3, anywhere searched.
+The only (23, 138) entry in existence is our own submission on the AutoLab hub leaderboard
+(owner chandraguptsharma07 = this user's AutoLab account, timestamp 2026-09-30T05:18:26Z).
+Every other public source floors at 139 (Smirnov's class) or higher.
+
+## Searches performed (all 2026-09-30)
+
+Web search (English), exact phrases and combinations:
+- "3x3 matrix multiplication" "83 additions"; "83 naive additions" OR "83 additions" 23 multiplications;
+  "support 138" OR "138 nonzero" OR "138 non-zero" "matrix multiplication" 3x3 rank 23;
+  "3x3" rank 23 "138" nonzero coefficients; "Smirnov" 3x3 "139" nonzero improved sparser;
+  "naively requires 84 additions" OR "84 additions" Smirnov improved 2026;
+  arXiv 2026 3x3 23 multiplications sparsest fewest additions.
+  Hits: only the CSE-record papers (60/59/58/56/55/52/51 additions, all with support >= 152 and
+  {-1,0,1} coefficients) and the yhinai/openmath PR (support 153). No 138.
+- Method queries: local search "GF(3)" OR "F_3" OR "mod 3" lifting sparsity rank 23 Hensel;
+  OpenEvolve/ShinkaEvolve/AlphaEvolve 3x3 sparsity; Kauers/Moosbauer/Wood 2026 sparse 3x3;
+  Tichavsky 3x3 "1/2" nonzero; "1/2" OR "powers of two" 3x3 rank 23 sparsity.
+- Russian: "Смирнов билинейный алгоритм умножение матриц 3x3 23 умножения ненулевых коэффициентов
+  сложений"; "Несколько билинейных алгоритмов умножения матриц" / "билинейной сложности" 139;
+  "139 ненулевых" OR "84 сложения" OR "83 сложения"; Лысиков Чокаев симметрии Смирнова.
+  Hits: Smirnov 2013 (mathnet), Alekseev-Smirnov 2013 (4x2 x 2x2), Alekseev cheb433, Lysikov-Chokaev
+  (symmetries of 21-term decompositions, cs.msu.ru), Makarov 22 commutative. Nothing on sparsity < 139.
+- Chinese: "3x3矩阵乘法 23次乘法 双线性算法 非零系数 加法次数 最少"; "3×3 矩阵乘法 23次乘法 Smirnov
+  84次加法 稀疏 张量分解 非零系数"; "3×3矩阵乘法 秩23 Laderman 稀疏 非零元". Hits: Chinese mirrors of
+  Perminov 58-addition paper (chatpaper.ai), alphaxiv 2609.22054 (lower bound <3,2,m>), textbooks. Nothing.
+- Google Scholar (fetched directly): '"3x3" "matrix multiplication" "83 additions" OR "138 nonzero"
+  OR "138 non-zero" OR "support 138"' -> 1 irrelevant hit (TUM edge-AI thesis).
+  'Smirnov "3x3" "84 additions" rank 23 sparsest nonzero coefficients' since 2025 -> 0 hits.
+  '"3 × 3" "23 multiplications" "nonzero coefficients" OR "naive additions"' since 2025 -> Perminov
+  2512.21980, Hell's Bells 2026/1688, Lacelle catalog 2606.13408, one unrelated. Nothing below 139.
+- arXiv API (export.arxiv.org): all:"3x3 matrix multiplication" OR "rank 23" sorted by date (40 newest);
+  abs:"matrix multiplication" AND (additions|sparsity|nonzero|sparsest) (60 newest, to 2026-09-29);
+  au:Smirnov_A AND "matrix multiplication" (0 results: Smirnov is not on arXiv). Also scraped the
+  arXiv cs.SC September-2026 listing. New items found: 2609.32388 (Stapleton-Perminov, 51-addition
+  alternative-basis kernel, 2026-09-26), 2609.13596 (48-term 4x4 barriers), 2609.12027 (Dumas
+  <4x4x4:48>), 2609.18722 and 2609.06725 (F2 lower bound 21), 2609.17533 (GPU flip graph over F2,
+  7x7). None concerns 3x3 support.
+- Zenodo API: "matrix multiplication 3x3 rank 23" (25 newest) and "matrix multiplication" AND
+  (additions|sparsity|"nonzero coefficients") (20 hits). Found: Rudich-Rousseau 2026-09-29 "Lower
+  Bound of 22 for 3x3 Matrix Multiplication over the Integers" (paper + Lean proof,
+  https://zenodo.org/records/23048287, https://zenodo.org/records/23047901); Karunaratne 55-addition
+  artifacts https://zenodo.org/records/21240904. No sparsity record.
+- IACR ePrint (site search): only 2024/2063 (Number of the Beast), 2026/1688 (Hell's Bells); nothing new.
+- MathOverflow (site search): no thread on 3x3 additions/sparsity.
+- GitHub (web search; no gh CLI on this box, no authenticated code search): "3x3x3_m23" OR
+  "smirnov333" OR "333-23"; "matrix-multiplication-tensor-3x3" support 139 OR 138. Hits: Perminov
+  FastMatrixMultiplication (3x3x3 best naive c88 unchanged; issues page has 1 issue, unrelated),
+  ternary_flip_graph (Z2/Z3/ZT only; no 3x3 table), sunyinqi0508/3by3r23-56a, yhinai/openmath PR #1/#2
+  (support 153), grandchallenge/MATHSOLVE issue #509 and PR #492 (OPENMATH-2026 dispatch of the same
+  AutoLab hill; schoolbook rank 27 / support 81 baseline; "rank 23 known, <= 22 open"; no support
+  numbers), solven-eu/matmulcatalog (Lacelle 2606.13408; only laderman_1976-3x3x3_m23_a98.json for
+  3x3x3; "addition count ... recorded as metadata", not a target).
+- Personal pages / catalogues: Sedoglavic https://fmm.univ-lille.fr/3x3x3.html (Laderman 1976 and
+  Karunaratne-Idamekorala 2026 only); HKS Linz collection http://www.algebra.uni-linz.ac.at/research/
+  matrix-multiplication/ (curl -k: "17376 schemes in repository; last update on 2020-08-06 11:43:36");
+  mkauers/matrix-multiplication (folders 257..667 + structured; no 3x3x3); Smirnov mathnet profile
+  https://www.mathnet.ru/php/person.phtml?option_lang=eng&personid=81030 (3 papers: 2013 x2, 2015);
+  mathnet forward-citation list of Smirnov 2013 (82 citing papers; 2024-2026 items listed below).
+- AutoLab hub leaderboard GET https://app.autolab.ai/api/v1/hills/alejandrozu/matrix-multiplication-tensor-3x3/leaderboard
+  (read-only, Bearer token, best-per-user): (23,138) chandraguptsharma07 2026-09-30T05:18:26Z [us];
+  (23,139) 1c1jp5dhwy 09-21, a-hamdi 09-25, advaith-appajodu 09-28, wilsonwu-ai 09-27;
+  (23,153) connorbuchheit, ottogin, srirangam-r. No other user at 138.
+
+Not reachable / not verified: ResearchGate and Academia.edu full texts (HTTP 403), Springer article
+pages (login redirect), Semantic Scholar API (returned empty/zero counts, apparently rate-limited),
+scholar.archive.org (bot puzzle).
+
+## Q2. Hits with support <= 138 and their methods
+
+None. Nothing to cite. Regarding the specific method question:
+
+- Support-capped local search over GF(3) (or any non-binary field) with lifting: NOT found anywhere.
+  Closest published items, all different:
+  * HKS 2019 (SAT'19 / JSC 2021): SAT over GF(2) with streamlining ("for each summand ... type-3
+    pairing"), weight = number of expansion terms, not support; no cap. Already in notes.
+  * Palladinos 2607.29291: semantic local search on the 621 factor bits over GF(2), planted type-3
+    core ("MM-23-2-2-2-2-A"); no sparsity cap; GF(2) only.
+  * Perminov 2511.20317 / ternary_flip_graph: flips + "plus-transitions" over ZT / Z3 / Z2 with
+    `optimize_scheme` maximising zeros; `lift` = Hensel lifting Z2/Z3 -> Z/Q. Best 3x3x3 naive 88
+    (support 143). No cap, no planted core.
+  * Kauers-Wood 2510.19787 sec. 4: "flip graphs over Z3 and Z5 implemented to reach schemes with
+    1/2 ... Unfortunately, these efforts were in vein" (rank objective, not sparsity).
+  * Khoruzhii-Gelss-Pokutta 2511.10786 (ISSAC 2026): "F3 flip graphs" + Hensel lifting to discover
+    structured-matrix schemes "that fundamentally require the inverse of 2"; formats 2x2..5x5
+    structured (symmetric, triangular, skew); NOT general 3x3 rank 23; no sparsity objective.
+  * Hell's Bells 2026/1688: NN with L1 sparsity + ternary penalty; 15,316 ternary 3x3x3 rank-23
+    schemes, minimum support 139 (130 files, all Smirnov's pattern class; own count in agent_sources
+    notes). Scholar snippet mentions "46 naive additions" - that figure is for another format,
+    UNVERIFIED which (ePrint abstract page has no such text).
+  * Smirnov 2013: regularised ALS with L0-style "keep the M largest coefficients" model values
+    (see agent_methods notes); found the 139 scheme; not a cap in the SAT/local-search sense.
+- "Planted core / fixed type-3 monomials" streamlining together with a sparsity cap: NOT found.
+  Planted cores appear in HKS 2019 (streamlining), Palladinos 2607.29291 (81 unit clauses), and
+  Zaru's F2 walker; none combines them with a support cap. Our combination (GF(3) walk + planted
+  Smirnov core + hard cap 138 + rational lifting) has no published precedent that I could find.
+
+## Q3. Published rank-23 3x3 schemes with power-of-2 coefficients (1/2, 2, ...) at support 139-145
+
+None found with a stated support in 139-145. What exists with non-ternary coefficients:
+- Johnson-McLoughlin 1986 (SIAM J. Comput. 15(2):595-603): two families over Q with entries 1/2, 1/3,
+  2/3, 3/2, 2, 3 (and rational functions of parameters). Support never computed by anyone; HKS say
+  it "lament[s] ... fractional coefficients such as 1/2 and 1/3". Beniamini et al. list JM at
+  original 153 nonzeros only for the {-1,0,1} specialisation (UNVERIFIED which member). Not in the
+  HKS +-1 collection; invisible to GF(2) and GF(3) searches. Support at 139-145: unknown, no claim.
+- Ballard-Ikenmeyer-Landsberg-Ryder 1801.00843 (BILR): Z3-/Z4-symmetric rank-23 decompositions
+  found by ALS "encouraging sparsity"; "the nonzero values tend towards a discrete set of values
+  (usually +-1)". Their listed decompositions are integer (+-1); no support numbers stated in the
+  paper; our earlier hash-check found them at >= 141 (agent_sources notes, BILR schemes). Nothing
+  with 1/2.
+- Berger et al. 1902.03950 (10,000 numerical rank-23 decompositions): "most of the decompositions
+  are not equivalent to a discrete decomposition with coefficients in {0, +-1/2, +-1}" - discusses
+  the {0,+-1/2,+-1} class as the discretisation target but publishes no sparse member and no support.
+- Tichavsky-Phan-Cichocki 1603.01372: discretisation falls back to "2, 1/2" entries; 3x3 used only
+  for rank estimate; no 3x3 scheme with support stated.
+- Kauers-Wood 2510.19787: Z3/Z5 flip graphs aimed at 1/2-schemes, rank objective, "no improvement";
+  no 3x3 sparsity data.
+- Khoruzhii-Gelss-Pokutta 2511.10786: Q-schemes needing 1/2 via F3 flip graphs, structured formats
+  only.
+- Perminov FastMatrixMultiplication has Q/Z/ZT result folders; 3x3x3 entries are ZT (c88) and
+  Z (Smirnov-333-23-139.m); no Q-only 3x3x3 rank-23 scheme with a lower count.
+- Lacelle catalog 2606.13408 records `fields` (F2, F3, Z, Q, R, C) per scheme and flat `additions`;
+  the only 3x3x3 rank-23 file is Laderman (a98 = support 153). "raw addition counts are an
+  unreliable cross-scheme comparison" (their words); no target on sparsity.
+Conclusion: the power-of-2 coefficient class at rank 23 has never been explored for sparsity in
+print. All sparsity work since 2013 (Benson-Ballard, HKS, Hell's Bells, Perminov, AlphaEvolve,
+Palladinos, Zaru) is {-1,0,1} or GF(2)-based.
+
+## Q4. Smirnov: does he report any other 3x3 rank-23 scheme, and does he call 84 minimal?
+
+Sources: Russian original Zh. Vychisl. Mat. Mat. Fiz. 53(12):1970-1984 (2013), free PDF
+https://www.mathnet.ru/php/getFT.phtml?jrnid=zvmmf&paperid=9955&what=fullt&option_lang=eng
+(page https://www.mathnet.ru/eng/zvmmf9955); English Comput. Math. Math. Phys. 53(12):1781-1795,
+doi 10.1134/S0965542513120129. Primary text was read by agent B (agent_methods notes, translated
+quotes); confirmed today against the mathnet abstract page.
+- English abstract (mathnet, exact): "A method for deriving bilinear algorithms for matrix
+  multiplication is proposed. New estimates for the bilinear complexity of a number of problems of
+  the exact and approximate multiplication of rectangular matrices are obtained. In particular, the
+  estimate for the boundary rank of multiplying 3×3 matrices is improved and a practical algorithm
+  for the exact multiplication of square n×n matrices is proposed. The asymptotic arithmetic
+  complexity of this algorithm is O(n^2.7743)."
+- Only ONE exact 3x3 rank-23 scheme in the paper: Table 3, caption (translation from the Russian,
+  agent B): "Algorithm for exact multiplication of 3x3 matrices with 23 active multiplications and
+  the number of nonzero coefficients equal to 139"; per group gamma 45, alpha 49, beta 45. Text:
+  "In the exact solution (3,3,3;23) we managed to reduce the number of nonzero coefficients. In the
+  algorithm given below the number of nonzero coefficients is smaller than in the solutions of
+  [13], [14]" (Laderman 153; Johnson-McLoughlin). "Trivial optimisation by removing duplicated
+  computations lowers the number of inactive operations ... for (3,3,3;23) from 84 to 64."
+- He does NOT state that 84 (or 139) is minimal or best possible; the claim is only "smaller than"
+  Laderman and JM. No conjecture, no bound. (Hell's Bells 2026/1688 paraphrase: "Smirnov found an
+  algorithm that naively requires 84 additions"; Martensson et al. 2601.05272: "Smirnov pointed out
+  that the number of additions for his algorithm can be lowered, but he did not perform such an
+  optimization" - Scholar snippet, consistent with the "84 to 64" sentence.)
+- Later Smirnov works (none contains a second 3x3 rank-23 scheme, none re-visits 3x3 sparsity):
+  * 2015, CMMP 55(4): "A bilinear algorithm of length 22 for approximate multiplication of 2x7 and
+    7x2 matrices" (mathnet profile).
+  * 2017 tech report "Several bilinear algorithms for matrix multiplication" (Academia.edu
+    36266758, ResearchGate; both HTTP 403 here). Search snippets: "proposes the coefficients of
+    exact bilinear algorithms <3,3,4;29>, <3,3,5;36>, <3,4,4;38>, <2,5,5;40> and <3,4,5;48>".
+    No (3,3,3) item. Content UNVERIFIED (not read).
+  * ResearchGate 366989954 "Bilinear Algorithm <4,4,6;73> for Matrix Multiplication" (403; not 3x3).
+  * Nazarov-Smirnov 2023, Moscow Univ. Comput. Math. Cybern. 47(2): approximate bilinear complexity
+    of 2xn by nx4 (mathnet citation list). Not 3x3.
+  * Smirnov has no arXiv papers (arXiv API au:Smirnov_A AND "matrix multiplication": 0 results) and
+    no personal website found; his mathnet profile lists only the three 2013/2015 items.
+- HKS 2019 (heule19b.pdf, verified today via curl -k): "As far as we know, there are so far only
+  three other schemes with this additional property [coefficients +-1, valid over any ring], they
+  are due to Smirnov (2013), Oh et al. (2013), and Courtois et al. (2011)"; "The number of
+  parameters we managed to introduce into the known solutions by Laderman, Courtois et al., Oh et
+  al., and Smirnov are 0, 6, 10, and 14, respectively." Extensive tables "compiled by Smirnov (2013,
+  2017)" are cited for larger sizes only.
+
+## Other new-to-us items seen today (context, not sparsity)
+- Rudich-Rousseau, Zenodo 2026-09-29: "We prove a lower bound of 22 multiplications for any 3x3
+  recursive algorithm with integer constants ... The proof is in Lean" (builds on Wang's 496
+  subproblems; 365 solved exactly). If correct, rank 23 is optimal over Z only if the remaining
+  gap 22 is closed; the record says 22 is a lower bound, i.e. rank 22 over Z still not excluded.
+  https://zenodo.org/records/23048287 (paper), https://zenodo.org/records/23047901 (Lean).
+- Stapleton-Perminov 2609.32388 (2026-09-26): 51 additions in alternative bases, 56 in ordinary
+  coordinates; abstract has no support/naive number.
+- Burichenko 2026, Math. Notes 119(2): automorphism group of a possible rank-22 3x3 algorithm.
+- Lysikov-Chokaev (cs.msu.ru chokaev.pdf): symmetries of 21-term (would-be) decompositions.
+- 2018 Moscow Univ. Comput. Math. Cybern. "Two Bilinear (3x3)-Matrix Multiplication Algorithms of
+  Complexity 25" (doi 10.3103/S027864191801003X): rank 25, not relevant (abstract not fetched).
+
+## Bottom line for the hill
+Support 138 at rank 23 over Q appears to be new: no paper, preprint, repository, catalogue, or
+leaderboard entry other than ours reports <= 138, and no published work has searched the
+power-of-2 coefficient class for sparsity or combined a planted type-3 core with a hard support
+cap over GF(3). Caveat: paywalled full texts (Smirnov 2017 report, ResearchGate items) were not
+read; their search snippets show no 3x3x3 content.

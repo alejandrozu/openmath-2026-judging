@@ -1,0 +1,21 @@
+E03-SYNTHESIS | Improved synthesis bound
+
+Exact contribution: Claimed (21/48)4^n − (3/2)2^n + 2 CNOTs; n=3:18 CX; n=4:90 CX.
+
+Assessment: The21/48 formula would improve the2024 constructive22/48 bound, but numerical18-CNOT three-qubit fits do not establish coverage of every unitary. A generic Jacobian rank check gives at most local coverage, and parameters equal to the target dimension do not prove global surjectivity. The contestant acknowledges incomplete rigorous proof and no Lean.
+
+Novelty: Potential new coefficient if proved. Compare to Krol–Al-Ars2024, not only the older23/48 baseline.
+
+Formalization: Author acknowledges no Lean and incomplete rigorous proof; numerical circuits and parameter counting cannot establish generic all-n coverage.
+
+Proposal: Score0 under formal-only rules. Record the potential P3=.15 calculation separately for future research; no expectation-of-repair points.
+
+OPDP target OPENMATH-UNITARY | intrinsic 7.8/10 | competition D proposal 824/1000
+
+Modality M3A | p 0 | b 1 | m 1 | numerical family points 0
+
+Specific remaining checks: Rigorous constructive proof and approved formalization; Generic surjectivity/exceptional parameter treatment; Cutoff version: 57d6c969, later 68122d1 is not automatically eligible
+
+Key files: 
+
+Primary/source locators: https://arxiv.org/abs/2403.13692

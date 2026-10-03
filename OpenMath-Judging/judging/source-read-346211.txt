@@ -1,0 +1,44 @@
+# Erdős 3, four-term harmonic sums
+
+Find a set of whole numbers up to N with no four evenly spaced members whose reciprocals add up to as much as possible.
+
+## Task
+
+Choose A ⊆ {1, …, N} (N = 1,000,000 by default) containing no 4-term arithmetic progression a, a+d, a+2d, a+3d with d ≥ 1, and make the reciprocal sum ∑_{a∈A} 1/a as large as you can.
+
+Why it matters: write f(4) for the supremum of ∑ 1/a over all sets with no 4-term progression ([Erdős problem #169](https://www.erdosproblems.com/169)). Erdős problem 3 fails for 4-term progressions exactly when f(4) = ∞, which happens exactly when the best finite values for N grow without bound as N grows. The best infinite set known has ∑ 1/a ≥ 4.43975 (Walker 2025). Walker also showed that digit-restricted "Kempner" sets suffice for approaching the supremum. A finite set inside {1, …, N} scores less than its infinite extension would; comparing the best scores at different N is the point.
+
+## Submission format
+
+A submission is a directory containing either
+
+```
+generate.py      run as `python generate.py N`; prints the elements of A to stdout, separated by whitespace
+```
+
+or
+
+```
+solution.json    {"elements": [a1, a2, ...]}
+```
+
+If both exist, `generate.py` is used. It runs in a copy of the submission directory, with numpy available, and must finish within `gen_timeout_s` seconds (1200 by default).
+
+## How it is scored
+
+The evaluator checks that the elements are distinct integers in 1..N. It then certifies that A has no 4-term progression by testing every difference d from 1 to (N − 1)/3 on a bitmap of A, and computes the reciprocal sum itself.
+
+| metric | direction | meaning |
+|---|---|---|
+| `harmonic_sum` | max | ∑_{a∈A} 1/a for a certified 4-AP-free A ⊆ {1, …, N} |
+
+A set with a progression, a repeated element or an element outside 1..N is rejected, and the report names the problem (for a progression, the first one found).
+
+## Parameters
+
+| param | default | meaning |
+|---|---|---|
+| `n_max` | 1000000 | N, the range {1, …, N}; between 1,000 and 2,000,000. Scores only rank against the same N. |
+| `gen_timeout_s` | 1200 | time limit for generate.py, in seconds |
+
+The baseline (numbers whose base-5 digits are all 0, 1 or 2) scores about 3.37 at N = 200,000.

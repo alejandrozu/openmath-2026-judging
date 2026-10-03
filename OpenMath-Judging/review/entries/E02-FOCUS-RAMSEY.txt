@@ -1,0 +1,21 @@
+E02-FOCUS-RAMSEY | Ramsey: exact weighted construction and formal lifting
+
+Exact contribution: The literal symmetric 1024-block binary template has positive integer weights summing to Q=47,314,248 and ordered weighted monochromatic K4 probability P=75525646867723584998137743109/2505750190359427899123170347008. Exact computation gives P<20480989/679477248, the archived hill threshold. The general formal lifting theorem gives c4<=P; for t>0 and tQ>=4 the finite blow-up density differs from P by at most 6/(tQ).
+
+Assessment: The weighted bound is below the McKay reference0.0301422734319. HTPeo's reported rational is smaller again. Each has a reusable finite-to-limit lifting argument; independent sealed provenance, rather than merely uploading after the other, controls duplicate entrant credit.
+
+Novelty: Exact bound improvement over the located2024 final-note reference. A bounded search found no stronger prior source; a separate Technion lead remains unresolved.
+
+Formalization: The numerator is independently checked by exact C++/Python arithmetic and matches a nonfinal validation receipt. The general count-to-limit development freshly compiled after four compatibility edits in Lean 4.33.1, with standard axioms only. The concrete 1024-block numerator is not evaluated in Lean; approved end-to-end computational acceptance is unestablished.
+
+Proposal: P1 p=.05 with written small-record-improvement and generic-lifting rationale, if the baseline/independence is confirmed. If Ramsey focus status is not frozen, use M3A and remove the1.1 multiplier. Conservative b=1 until inclusion in the frozen focus set is verified; confirmed M1 would multiply these points by1.1.
+
+OPDP target OPENMATH-RAMSEY-K4 | intrinsic 8.4/10 | competition D proposal 840/1000
+
+Modality M3A | p 0.05 | b 1 | m 1 | numerical family points 35.28
+
+Specific remaining checks: Late ZIP / cutoff, fixed source and proof closure; Fresh independent verification of the selected endpoint; Novelty status and frozen family D
+
+Key files: 
+
+Primary/source locators: https://arxiv.org/pdf/2206.04036; https://app.autolab.ai/hills/alejandrozu/clique-cluster-ramsey-multiplicity

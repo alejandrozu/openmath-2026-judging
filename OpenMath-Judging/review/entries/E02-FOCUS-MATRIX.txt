@@ -1,0 +1,21 @@
+E02-FOCUS-MATRIX | Matrix multiplication: one-leg rigidity
+
+Exact contribution: For each of the three stored 139-support HKS seeds, every 81-by-23 rational matrix formed from columnwise products of two 23-by-9 factor lists has column rank 23. Thus fixing any two factor lists uniquely determines the third through the coefficient equations; changing only that list cannot reduce support while retaining the same tensor. The standard-kernel formal certificates prove all three pairings and remaining-factor uniqueness for each of the three stored seeds.
+
+Assessment: The rank23 paired-factor matrices give uniqueness of the remaining factor at three known support139 seeds. This is a precise obstruction to changing only one factor list. It does not prohibit simultaneous changes of all lists, so it is compatible with Chandra's138-support claim.
+
+Novelty: Candidate new exact method obstruction; the seeds are known and the linear-algebra route is classical.
+
+Formalization: All three stored HKS139 seeds have standard-kernel certificates for the UV, UW and VW rational injectivity and remaining-factor uniqueness statements. Seed 0 retains its recorded certificate; the two additional seeds passed fresh 71-module Lean 4.33.1 replays on 3 October 2026. Endpoint axioms are only propext, Classical.choice and Quot.sound. The original factors, selected minors, integer inverse tables and all 729 tensor coefficients match their source data. The independent exact rank checks are also retained. Independent integer check confirms three 23×23 left-inverse products for the first seed. The compiled alternative file349908 explicitly uses native_decide, so that file is not itself a standard-axiom-only kernel proof. Final kernel alternatives and remaining seeds require endpoint-specific review. Independent integer check confirms three 23×23 left-inverse products for the first seed. The compiled alternative file349908 explicitly uses native_decide, so that file is not itself a standard-axiom-only kernel proof. Final kernel alternatives and remaining seeds require endpoint-specific review. Independent integer check confirms three 23×23 left-inverse products for the first seed. The compiled alternative file349908 explicitly uses native_decide, so that file is not itself a standard-axiom-only kernel proof. Final kernel alternatives and remaining seeds require endpoint-specific review.
+
+Proposal: P1 p=.01 on the admitted optimization family; no global support minimum or rank lower bound.
+
+OPDP target OPENMATH-MATRIX-3 | intrinsic 7.4/10 | competition D proposal 724/1000
+
+Modality M1 | p 0.01 | b 1.1 | m 1 | numerical family points 5.765936
+
+Specific remaining checks: Late ZIP / cutoff, fixed source and proof closure; Fresh independent verification of the selected endpoint; Novelty status and frozen family D; Distinguish native_decide compiled alternative from standard-axiom kernel certificate; verify exact selected closure and all nine pairs.; Distinguish native_decide compiled alternative from standard-axiom kernel certificate; verify exact selected closure and all nine pairs.; Distinguish native_decide compiled alternative from standard-axiom kernel certificate; verify exact selected closure and all nine pairs.
+
+Key files: 
+
+Primary/source locators: 

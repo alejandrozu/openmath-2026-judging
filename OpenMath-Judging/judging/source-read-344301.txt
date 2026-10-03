@@ -1,0 +1,140 @@
+# Divergences from the paper
+
+Every place where the Lean formalization differs from Campos–Samotij,
+*Towards an Optimal Hypergraph Container Lemma* (Combinatorica 46 (2026), Art. 24; page numbers follow arXiv:2408.06617v2). The paper is
+authoritative (CLAUDE.md rule 6). An entry here records a deliberate,
+approved difference. It is not a license to change a statement.
+
+Each entry lists: **paper**, **Lean**, **why**, **effect on the result**, **status**.
+
+Status values:
+
+- **Approved (date)**: signed off by the human.
+- **Pending**: needs a human decision before the affected statement is frozen.
+- **Representation**: a modelling choice that does not change the mathematical content.
+
+---
+
+## D1. Proposition 2.2: nonempty family
+
+- **Paper (p. 7):** $C$ finite, $\mathcal I\subseteq 2^C$ decreasing, $p\in(0,1)$ ⟹
+  $\log\Pr(C_p\in\mathcal I)\ge\big(|C|-\mathbb E[|C_p|\mid C_p\in\mathcal I]/p\big)\log(1-p)$.
+- **Lean (`Prop22Statement`, `Prop22/Statement.lean`):** the same statement with the extra
+  hypothesis `𝓘.Nonempty`.
+- **Why:** for $\mathcal I=\varnothing$ the left side is $\log 0$ and the conditional
+  expectation is undefined. The paper leaves nonemptiness implicit.
+- **Effect:** `Prop22Statement` is *weaker* than the paper's proposition, and it is an assumed
+  hypothesis, so we assume less. Lemma 4.3 only applies it to a nonempty family, since
+  $\varnothing\in\mathcal F$.
+- **Status:** Approved (2026-09-29).
+
+## D2. Proposition 2.2: ground set inside a type
+
+- **Paper:** $C$ is an arbitrary finite set.
+- **Lean:** `C : Finset V` for a type `V : Type u` with `DecidableEq V`, and
+  `𝓘 : Finset (Finset V)` with `𝓘 ⊆ C.powerset`. The statement is universe-polymorphic.
+- **Effect:** none. Every finite set is a `Finset` of some type.
+- **Status:** Representation.
+
+## D3. Algorithm: choice of $v_i$
+
+- **Paper (§4.1, step (2a)):** "let $v_i$ be *some* such vertex".
+- **Lean (`nextVertex`, `Algorithm/Defs.lean`):** the *least* eligible vertex under a fixed
+  `[LinearOrder V]`.
+- **Why:** makes $v_i$ an explicit function of $(H_i,S_i)$. The paper's proof needs this
+  (§4.2: "$H_i$ depends on $S_i$ only") for $f$ to be well-defined.
+- **Effect:** none on Theorem B. The theorem is existential in $g,f,\mathcal S$, and any choice rule works.
+- **Status:** Approved (2026-09-29, README §7).
+
+## D4. Algorithm: loop as a fixed number of iterations
+
+- **Paper:** "for $i=0,1,\dots$" until STOP at stage $J$.
+- **Lean:** `run = (step p δ I)^[|V|] (H, ∅)`, where `step` is the identity once no vertex is
+  eligible. `run_stopped` proves that the result is stopped, i.e. that it is stage $J$.
+- **Why:** no well-founded recursion is needed. The paper's remark $J\le|V|$ becomes a lemma.
+- **Effect:** none. $J$ itself is not a named object in Lean.
+- **Status:** Approved (2026-09-29, README §7).
+
+## D5. Probabilities as finite sums
+
+- **Paper:** $X_p$ is a random subset. $\Pr$ and $\mathbb E$ are with respect to its law.
+- **Lean:** `probOn X p E = ∑_{A ⊆ X, E A} p^|A| (1-p)^|X∖A|`, with `condProb` and `condExp` as
+  quotients (`Probability/RandomSubset.lean`). No measure is built.
+- **Junk value:** `condProb`/`condExp` are `0` when the conditioning event has
+  probability `0` (Lean's `x / 0 = 0`). The paper only conditions on events of positive
+  probability. Every use must carry the positivity proof.
+- **Effect:** none where the paper's expressions are defined.
+- **Status:** Approved (2026-09-29, README §7).
+
+## D6. Hypergraphs
+
+- **Paper:** $H$ is a hypergraph with finite vertex set $V$.
+- **Lean:** `Hypergraph V := Finset (Finset V)` over `[Fintype V]`. The vertex set is the whole
+  type `V`, so isolated vertices are allowed, and so is the empty edge.
+- **Effect:** none. This matches the paper's usage, where $V$ is fixed and edges are subsets of $V$.
+- **Status:** Representation.
+
+## D7. Theorem B: quantifier in (b), (c)
+
+- **Paper:** (b) and (c) quantify over $S\in\mathcal S$.
+- **README §2:** states them per input $I$, with $S=g(I)$.
+- **Effect:** equivalent for $\mathcal S := g(\mathcal I(H))$, the paper's own choice.
+  `TheoremBStatement` (`Statement.lean`) follows the paper and quantifies over $S\in\mathcal S$.
+- **Status:** Resolved (2026-09-29): Lean follows the paper; only README §2 used the per-$I$ form.
+
+## D8. Theorem B: total functions $g$, $f$
+
+- **Paper (p. 3):** $\mathcal S\subseteq 2^V$, $g:\mathcal I(H)\to\mathcal S$, $f:\mathcal S\to 2^V$.
+- **Lean (`TheoremBStatement`, `Statement.lean`):** `𝒮 : Finset (Finset V)`, with
+  `g f : Finset V → Finset V` total. The typing of `g` becomes `∀ I, IsIndep H I → g I ∈ 𝒮`.
+  (a) is required only for independent `I`, and (b), (c) only for `S ∈ 𝒮`.
+- **Why:** subtypes for the domains add coercions everywhere and no content.
+- **Effect:** none. Restricting the total functions gives the paper's $g,f$. Conversely, the paper's
+  $g,f$ extend to total functions (by any value off the domain).
+- **Status:** Approved (2026-09-29).
+
+## D9. Theorem B: exponent and probability
+
+- **Paper:** $\Pr(S\cup C_p\in\mathcal I(H))\ge(1-p)^{\delta|C\setminus S|}$, with $C_p$ the
+  $p$-random subset of $C$.
+- **Lean:** `(1 - p) ^ (δ * ((f S \ S).card : ℝ)) ≤ probOn (f S) p (fun A ↦ IsIndep H (S ∪ A))`.
+  The power is `Real.rpow`, and (b) is `(S.card : ℝ) ≤ p * |V| / δ`, as in the paper.
+- **Effect:** none (D5 applies to `probOn`).
+- **Status:** Representation.
+
+## D10. Lemma 4.1: extra conjunct and all stages
+
+- **Paper:** for each $i$ (implicitly $i\le J$): $S_i\subseteq I\in\mathcal I(H_i)$ and
+  $I'\in\mathcal I(H_i)\iff S_i\cup I'\in\mathcal I(H_i)$.
+- **Lean (`lemma41`, `Section4/Lemma41.lean`):** the same statement for every `i : ℕ`, over
+  `stage p δ H I i`, plus the conjunct $H\subseteq H_i$.
+- **Why:** under D4, stages after $J$ equal stage $J$. The paper uses $H\subseteq H_i$ without
+  proof at the start of Lemma 4.3.
+- **Effect:** a strengthening. Nothing is assumed beyond the paper.
+- **Status:** Representation.
+
+## D11. Theorem B: $f$ defined by rerunning the algorithm on $S$
+
+- **Paper (§4.2):** $H_i$ depends only on $S_i$, so the container $C$ is a function of the
+  fingerprint $S$, and this defines $f$.
+- **Lean (`TheoremB.lean`):** `g := fingerprint p δ H`, `f := containerOf p δ H` (the algorithm run
+  with input $S$), and `𝒮 := g(𝓘(H))`. The replay lemma `stage_fingerprint` shows that the runs
+  on $I$ and on $S = g(I)$ agree up to stage $|V|$, hence `f (g I) = containerOf p δ H I`.
+- **Why:** gives $f$ as an explicit function, with no choice or quotient (README §4.6).
+- **Effect:** none. This is the paper's argument made explicit.
+- **Status:** Representation.
+
+## D12. Proposition 2.2: proof route
+
+- **Paper (Appendix A):** three proofs: the chain rule for relative entropy with convexity of
+  $i_p$; compression plus Kruskal–Katona; and Kahn–Kalai edge-isoperimetry.
+- **Lean (`prop22`, `Prop22/Proof/Induction.lean`):** induction on $|C|$, splitting on one
+  vertex $v$ into $\mathcal I_0=\{A\in\mathcal I: v\notin A\}$ and
+  $\mathcal I_1=\{B: B\cup\{v\}\in\mathcal I\}\subseteq\mathcal I_0$. The invariant is the
+  unnormalized form $\log(1-p)\,(|C|P - M/p)\le P\log P$, and the step is the one-variable
+  inequality `two_point`. This is the first proof with the chain rule applied one coordinate at a
+  time. The convexity of $i_p$ is replaced by concavity of $\log$.
+- **Why:** it needs only finite sums (D5), with no KL divergence or conditional entropy API.
+- **Effect:** none on statements. `Prop22Statement` is unchanged, and the proof does not use its
+  hypotheses `𝓘 ⊆ C.powerset` and `𝓘.Nonempty` beyond positivity of $P$.
+- **Status:** Representation.

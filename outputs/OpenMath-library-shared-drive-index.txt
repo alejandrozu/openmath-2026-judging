@@ -1,0 +1,146 @@
+- region
+- navigation:
+  - button "Passer au contenu principal":
+    - generic: Passer au contenu principal
+  - button "Raccourcis clavier":
+    - generic: Raccourcis clavier
+  - button "Commentaires sur l'accessibilité":
+    - generic: Commentaires sur l'accessibilité
+- banner:
+  - link "Drive":
+    - /url: https://drive.google.com/?tab=oo&authuser=0
+    - generic: Drive
+  - search:
+    - combobox "Obtenez des réponses à partir de Drive"
+    - button:
+    - button "Obtenez des réponses à partir de Drive":
+  - button "Demander à Gemini"
+  - tooltip: Demander à Gemini
+  - button "Applications Google":
+  - button "Compte Google Alejandro Zarzuelo ([REDACTED CONTACT]), Abonnement Google":
+- button "Nouveau" [disabled]:
+  - generic: Nouveau
+- navigation:
+  - heading "Dossiers et vues" [level=2]
+  - tree "Dossiers et vues":
+    - treeitem "Accueil":
+      - link "Accueil":
+        - group "Accueil":
+          - generic "Accueil"
+    - treeitem "Mon Drive":
+      - link "Mon Drive":
+        - group "Mon Drive":
+          - generic "Mon Drive"
+    - treeitem "Partagés avec moi":
+      - link "Partagés avec moi":
+        - group "Partagés avec moi":
+          - generic "Partagés avec moi"
+    - treeitem "Récents":
+      - link "Récents":
+        - group "Récents":
+          - generic "Récents"
+    - treeitem "Suivis":
+      - link "Suivis":
+        - group "Suivis":
+          - generic "Suivis"
+    - treeitem "Spam":
+      - link "Spam":
+        - group "Spam":
+          - generic "Spam"
+    - treeitem "Corbeille":
+      - link "Corbeille":
+        - group "Corbeille":
+          - generic "Corbeille"
+    - treeitem "Espace de stockage":
+      - link "Espace de stockage":
+        - group "Espace de stockage":
+          - generic "Espace de stockage"
+- main:
+  - region:
+    - grid:
+      - 'button "Trier par : A to Z"':
+        - generic: Name
+      - tooltip: "Trier par : A to Z"
+      - row:
+        - gridcell "6 problems.pptx Microsoft PowerPoint More info (Alt + →)":
+          - generic: 6 problems.pptx
+          - button:
+          - tooltip: More actions
+        - gridcell "20 Sep - OpenMath 2026.pptx Microsoft PowerPoint More info (Alt + →)":
+          - generic: 20 Sep - OpenMath 2026.pptx
+          - button:
+          - tooltip: More actions
+        - gridcell "AI_Mathematics_Hackathon_Guest_List_300_WITH_CONTACTS_WORKING_DRAFT_2026-09-04.xlsm Microsoft Excel More info (Alt + →)":
+          - generic: AI_Mathematics_Hackathon_Guest_List_300_WITH_CONTACTS_WORKING_DRAFT_2026-09-04.xlsm
+          - button:
+          - tooltip: More actions
+        - gridcell "Artem_Emails_-_judge_-_filled_1.csv CSV More info (Alt + →)":
+          - generic: Artem_Emails_-_judge_-_filled_1.csv
+          - button:
+          - tooltip: More actions
+        - gridcell "Guests_for_open_maths_problems_rsi_hack Google Sheets More info (Alt + →)":
+          - generic: Guests_for_open_maths_problems_rsi_hack
+          - button:
+          - tooltip: More actions
+        - gridcell "Mathematics Beyond the Human Mind — Alejandro Zarzuelo Urdiales - v2.pptx Microsoft PowerPoint More info (Alt + →)":
+          - generic: Mathematics Beyond the Human Mind — Alejandro Zarzuelo Urdiales - v2.pptx
+          - button:
+          - tooltip: More actions
+        - gridcell "Mathematics Beyond the Human Mind — Alejandro Zarzuelo Urdiales.pptx Microsoft PowerPoint More info (Alt + →)":
+          - generic: Mathematics Beyond the Human Mind — Alejandro Zarzuelo Urdiales.pptx
+          - button:
+          - tooltip: More actions
+        - gridcell "Open Maths Problems Hack @ MIT with RSIhouse, Sundai, Autolab Google Docs More info (Alt + →)":
+          - generic: Open Maths Problems Hack @ MIT with RSIhouse, Sundai, Autolab
+          - button:
+          - tooltip: More actions
+        - gridcell "Open Problems Hack at MIT — Competition and Judging Handbook.pdf PDF More info (Alt + →)":
+          - generic: Open Problems Hack at MIT — Competition and Judging Handbook.pdf
+          - button:
+          - tooltip: More actions
+        - gridcell "Open Problems Hack at MIT — Organizer Q&A and Persuasion Reference Google Docs More info (Alt + →)":
+          - generic: Open Problems Hack at MIT — Organizer Q&A and Persuasion Reference
+          - button:
+          - tooltip: More actions
+        - gridcell "OPEN_MATHS_HACK_AT_MIT_RSI_AUTORESEARCH_SHARED_WITH_INVITED_SPEAKERS_AND_PRESENTERS Google Docs More info (Alt + →)":
+          - generic: OPEN_MATHS_HACK_AT_MIT_RSI_AUTORESEARCH_SHARED_WITH_INVITED_SPEAKERS_AND_PRESENTERS
+          - button:
+          - tooltip: More actions
+        - gridcell "OpenMath — Lean and Formalized Mathematics (12 minutes) - v2 .pptx Microsoft PowerPoint More info (Alt + →)":
+          - generic: OpenMath — Lean and Formalized Mathematics (12 minutes) - v2 .pptx
+          - button:
+          - tooltip: More actions
+        - gridcell "OpenMath — Lean and Formalized Mathematics (12 minutes).pptx Microsoft PowerPoint More info (Alt + →)":
+          - generic: OpenMath — Lean and Formalized Mathematics (12 minutes).pptx
+          - button:
+          - tooltip: More actions
+        - gridcell "OpenMath — Outreach Tracker Google Sheets More info (Alt + →)":
+          - generic: OpenMath — Outreach Tracker
+          - button:
+          - tooltip: More actions
+        - gridcell "OpenMath 2026 — Event Presentation Microsoft PowerPoint More info (Alt + →)":
+          - generic: OpenMath 2026 — Event Presentation
+          - button:
+          - tooltip: More actions
+        - gridcell "OpenMath Challenge 2026 — Outreach Routes and Recruitment Plan Google Docs More info (Alt + →)":
+          - generic: OpenMath Challenge 2026 — Outreach Routes and Recruitment Plan
+          - button:
+          - tooltip: More actions
+        - gridcell "OpenMath Challenge 2026 — Website, Luma, Messaging, and Launch Blueprint Google Docs More info (Alt + →)":
+          - generic: OpenMath Challenge 2026 — Website, Luma, Messaging, and Launch Blueprint
+          - button:
+          - tooltip: More actions
+        - gridcell "OpenMath_Six_Problems_Lean.zip Compressed archive More info (Alt + →)":
+          - generic: OpenMath_Six_Problems_Lean.zip
+          - button:
+          - tooltip: More actions
+        - gridcell "OpenMath_Speaker_Notes.md Markdown More info (Alt + →)":
+          - generic: OpenMath_Speaker_Notes.md
+          - button:
+          - tooltip: More actions
+        - gridcell "TODO Google Docs More info (Alt + →)":
+          - generic: TODO
+          - button:
+          - tooltip: More actions
+    - progressbar:
+- navigation

@@ -1,0 +1,98 @@
+OPENMATH-M2-E3-DYADIC
+Canonical target: Erdős3 ↔ normalized dyadic extremal summability
+D proposal=436/1000; intrinsic=3.1/10
+New local OPDP extension with CFSD1000 formula; one editorial assessor, not the required three-assessor median.
+
+FRONTIER: Per-length extremal equivalence: For everyK≥3, dyadic rK(2^j)/2^j summability iff every divergent set containsK-term AP. Exact hill/extremal equivalence: Original hill iff Σj r_k(2^j)/2^j converges for everyk≥4; neither side proved.
+
+INTERACTION: Supporting lemmas and corollaries belong to the same scope union. This known mathematics may support reusable libraries; there is no original-result synergy bonus.
+
+PAPER: Candidate building block only; preserve source hypotheses, exact priority comparison, proof closure and contribution-based authorship.
+
+COLLECTIVE: Virtual family representative None; conservative one-family points 0. M2 is separate when applicable.
+
+CONTRIBUTION MAP
+
+E11-DYADIC / Leon Koerbs / Cameron Fen — Erdős #3 Token Burner
+For everyK≥3, dyadic rK(2^j)/2^j summability iff every divergent set containsK-term AP.
+The equivalence isolates the correct extremal-summability bottleneck for each progression length. Earlier source leaves a full goal sorry; the separately closed converse/equivalence endpoint has to be selected explicitly. Wilson proves an overlapping exact equivalence.
+Novelty: Candidate reusable formalization/reformulation; sealed independence or distinct extension controls separate entrant credit.
+Formalization: Converse.lean provides named closed maxCardDyadicSummable_iff. Earlier lean/equivalence/solution.lean ends in a real sorry on the parent goal; do not advertise that as full proof or reject the separately closed Converse endpoint.
+Proposed M2; p=1; points=None; full review: entries/E11-DYADIC.txt
+
+E65-DYADIC / Wilson Wu — Erdős supporting formalizations
+Original hill iff Σj r_k(2^j)/2^j converges for everyk≥4; neither side proved.
+This closed equivalence replaces the conjecture with summability of normalized extremal dyadic counts. Neither side is discharged. The answer(sorry) syntax in the imported target is a proposition elaborator here, not proof admission. Explicit conditional density envelopes remain hypotheses.
+Novelty: Candidate useful formal bridge, overlapping Leon/Cameron's family. Supplied pinned-image checks and the separate equivalence hill are evidence for this theorem, not the original hill.
+Formalization: Nine local Lean texts scanned; sole sorry token in exact hill restatement is answer(sorry), not a proof admission. Author axiom logs report standard3. No fresh independent build.
+Proposed M2; p=1; points=None; full review: entries/E65-DYADIC.txt
+
+OPDP INPUTS AND RATIONALE
+{
+  "inputs": {
+    "H": null,
+    "X": null,
+    "T": null,
+    "Vtrue": 2.2,
+    "Vfalse": 2,
+    "F": 5.0,
+    "P": 3,
+    "B": 2,
+    "L": 8,
+    "literature": 4,
+    "ambiguity": 1,
+    "context": 0,
+    "horizon": 0,
+    "D": 3.1,
+    "AI": 2.6
+  },
+  "calculation": {
+    "normalized_components": {
+      "ai_relative_core": 0.26,
+      "intrinsic_difficulty": 0.31,
+      "human_resistance": 0.5,
+      "inverse_tractability": 0.5,
+      "verification_burden": 0.21000000000000002,
+      "formalization_burden": 0.5,
+      "prerequisite_load": 0.2875,
+      "context_and_ambiguity": 0.37,
+      "tool_constraint": 0.19999999999999996
+    },
+    "weighted_points": {
+      "ai_relative_core": 104.0,
+      "intrinsic_difficulty": 52.7,
+      "human_resistance": 45.0,
+      "inverse_tractability": 75.0,
+      "verification_burden": 9.450000000000001,
+      "formalization_burden": 17.5,
+      "prerequisite_load": 11.5,
+      "context_and_ambiguity": 14.8,
+      "tool_constraint": 5.999999999999998
+    },
+    "linear_barrier": 335.95,
+    "transform_exponent": 1.4,
+    "final_value": 436
+  },
+  "intrinsic_factors": {
+    "conceptual_gap": 1.5,
+    "route_gap": 1,
+    "technical_depth": 2.5,
+    "known_barrier": 0,
+    "search_scale": 1
+  },
+  "axis_rationales": {
+    "intrinsic": "Proof of an equivalence leaves both open sides unproved. Nontrivial gluing/translation compatibility and convergence details justify reusable formalization, not an original conjecture solution.",
+    "AI": "Statement has exact finite certificate feedback; the dated tool-assisted protocol is an estimate, not an empirical solve run.",
+    "attention": "H/X are historical-effort/exposure priors, not contestant hours. Insufficient documentation: neutral normalized .5 used for scoring.",
+    "tractability": "Known targets use N/A and neutral full-resolution component; otherwise the band is an editorial chance of useful100-hour partial progress, not full resolution.",
+    "verification": "Positive checking uses the stated exact finite data/proof chain; a negative/global resolution can have a different burden. No fresh Lean build is claimed.",
+    "formalization": "Statement encoding and libraries require 5.0/10 burden; this is the target burden, not the quality of a submitted proof.",
+    "prerequisites": "The target needs its Additive combinatorics / analytic bridge background; preparation and breadth refer to a prepared researcher, not entrant prestige.",
+    "tools": "Higher L means favorable exact-feedback/search/prover leverage. It does not turn a leaderboard number into a theorem.",
+    "status": "Known/source theorem"
+  },
+  "parent_links": [
+    "ERDOS3"
+  ],
+  "sources": []
+}

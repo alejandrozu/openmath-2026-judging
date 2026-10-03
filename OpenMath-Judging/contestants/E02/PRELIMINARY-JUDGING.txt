@@ -1,0 +1,384 @@
+E02 Rachel Teo / Wenyi Wang / Hamdi Abderrahmene
+Company (provisional resource classification)
+S (conditional): 0.001 × D[OEIS-A100475]² + 0.001 × D[OEIS-A060957]² + 0.00015 × D[OEIS-A000224]² + 0.00015 × D[LATIN-TABLEAU]² + 0.00005 × D[ERDOS169]² + 0.0005 × D[OPDP13-QUARTIC]² + 0.0005 × D[NO3-HALFTURN]² + 0.00005 × D[ERDOS1060]² + 0.0005 × D[ERDOS21-VARIANT]² + 0.00005 × D[ERDOS944]² + 0.0005 × D[RBM4-PARITY]² + 0.00005 × D[ERDOS829]² + 0.000011 × D[ERDOS3]² + 0.000011 × D[MATRIX-3]² + 0.000055 × D[RAMSEY-K4]²
+A (conditional): max(0.001 × D[OEIS-A100475]², 0.001 × D[OEIS-A060957]², 0.00015 × D[OEIS-A000224]², 0.00015 × D[LATIN-TABLEAU]², 0.00005 × D[ERDOS169]², 0.0005 × D[OPDP13-QUARTIC]², 0.0005 × D[NO3-HALFTURN]², 0.00005 × D[ERDOS1060]², 0.0005 × D[ERDOS21-VARIANT]², 0.00005 × D[ERDOS944]², 0.0005 × D[RBM4-PARITY]², 0.00005 × D[ERDOS829]², 0.000011 × D[ERDOS3]², 0.000011 × D[MATRIX-3]², 0.000055 × D[RAMSEY-K4]²)
+Priced candidate subtotal: S=75.980086; A=25.99205; unpriced families=10
+M2 possible family ceiling=10; accepted count unawarded. A ceiling is not an endorsement of every trivial helper.
+
+E02-a100475 — A100475: no positive prime-reversal cycle
+1. Problem: Number theory / digit dynamics
+Let p_n be the nth prime with p_1=2, and T(n) the decimal digit reversal of p_n. For every natural x>0, the orbit starting at x under T is not ultimately periodic. Thus False iff there exists x>0, x≠1, whose orbit is ultimately periodic.
+Difficulty: intrinsic OPDP 5.4/10; Complete positive-start orbit refutation if definitions, novelty and deadline closure hold. No separate zero-start credit.
+Factor profile: {'conceptual_gap': 2.5, 'route_gap': 2, 'technical_depth': 2.5, 'known_barrier': 1.5, 'search_scale': 2}
+Competition D: unmatched; keep symbolic
+2. Improvement: Full; proposed p=1
+Complete positive-start orbit refutation if definitions, novelty and deadline closure hold. No separate zero-start credit.
+3. Formalization / correctness: Packet evidence: Independent complete 84-module replay completed 2026-10-01T13:03:31.027744Z; source receipt records byte identity with user ZIP; final theorem standard axioms. Endpoint signatures and declared axioms are recorded below; author/internal replay is not this reviewer’s fresh rebuild. 
+Acceptance checks: Late ZIP 06:19:17 versus on-time PDF 05:57:20: prove fixed cutoff artifact or organizer admin-transfer decision; Exact source/library closure fresh independent build and semantic review; Target admission/open-at-freeze/novelty and canonicalD mapping; Ball–Coxeter 13th edition, pp.14–15; November and December 2004 SeqFan archive messages
+Conditional formula: 0.001 × D[OEIS-A100475]²; candidate points None
+Source catalogue IDs: 
+Official acceptance and score: UNAWARDED
+
+E02-a060957 — A060957: refutation and arbitrarily long prime-exponent gaps
+1. Problem: Multiplicative combinatorics / subset products
+Original refutation: ∃ n,m,p∈N with m>0, p prime, p≤n, m∈P(n), p^5 m∈P(n), and p^4 m∉P(n). Stronger: ∀ g≥1 and B∈N, ∃ n,p,d,h∈N with p prime, B<p≤n, d>0, p∤d, and for every e∈N, p^e d∈P(n) iff e lies in {h,h+1,h+2,h+3,h+g+4,h+g+5,h+g+6,h+g+7}. Hence g consecutive missing levels between attainable endpoints.
+Difficulty: intrinsic OPDP 5.4/10; Counterexample refutes exact interpolation conjecture; arbitrary-gap strengthening unions into same family, not additional full points.
+Factor profile: {'conceptual_gap': 2.5, 'route_gap': 2, 'technical_depth': 2.5, 'known_barrier': 1.5, 'search_scale': 2}
+Competition D: unmatched; keep symbolic
+2. Improvement: Full; proposed p=1
+Counterexample refutes exact interpolation conjecture; arbitrary-gap strengthening unions into same family, not additional full points.
+3. Formalization / correctness: Packet evidence: Combined 45-module 4.33.1 replay and aggregate passed 2026-10-01 around16:08UTC. Generalized24-module closure also passed4.34.1 around16:01 and4.33.1 around16:05. Standard final axioms; no unproved graph-existence premise.. Endpoint signatures and declared axioms are recorded below; author/internal replay is not this reviewer’s fresh rebuild. 
+Acceptance checks: Late ZIP 06:19:17 versus on-time PDF 05:57:20: prove fixed cutoff artifact or organizer admin-transfer decision; Exact source/library closure fresh independent build and semantic review; Target admission/open-at-freeze/novelty and canonicalD mapping
+Conditional formula: 0.001 × D[OEIS-A060957]²; candidate points None
+Source catalogue IDs: 
+Official acceptance and score: UNAWARDED
+
+E02-a000224 — A000224: verified squarefree three-prime exclusion
+1. Problem: Number theory / quadratic residues
+For every three primes 2<p<q<r, let n=pqr and let a(n) count all square residues modulo n, including zero, exactly as in the upstream definition. Then a(n)(a(n)-1) does not divide n²-1. Consequently the original conjectured equivalence holds for this entire unbounded factorization family.
+Difficulty: intrinsic OPDP 5.9/10; Uniform infinite distinct-three-prime subclass; repeated powers and≥4 factors remain. Not full square-residue classification.
+Factor profile: {'conceptual_gap': 2.5, 'route_gap': 2.5, 'technical_depth': 2.5, 'known_barrier': 2, 'search_scale': 2}
+Competition D: unmatched; keep symbolic
+2. Improvement: P3; proposed p=0.15
+Uniform infinite distinct-three-prime subclass; repeated powers and≥4 factors remain. Not full square-residue classification.
+3. Formalization / correctness: Packet evidence: All 171 intended modules were recorded checked on 4.34.1, dependency-ordered and incremental; nine prime modules were reused after source/output hash checks. A separate complete 4.33.1 replay passed all 171 modules, with 164 successful certificate records and seven retrospective core source/log/exit receipts. Both versions report only propext, Classical.choice and Quot.sound for all three endpoints. The 4.33.1 replay reused no own compiled artifacts across versions; 170 source files are byte-identical and Bounds.lean has precisely three tactic-only compatibility changes, with no definition or theorem-statement changes. The core receipt creation timestamps are retrospective, not original build times. This is a second version of Lean, not an independent compiler implementation or external referee check. The existing target definition is whitespace-normalized identical to the immutable upstream snapshot. The convenience aggregate OpHack.lean wrapper is not separately checked.. Endpoint signatures and declared axioms are recorded below; author/internal replay is not this reviewer’s fresh rebuild. 
+Acceptance checks: Late ZIP 06:19:17 versus on-time PDF 05:57:20: prove fixed cutoff artifact or organizer admin-transfer decision; Exact source/library closure fresh independent build and semantic review; Target admission/open-at-freeze/novelty and canonicalD mapping
+Conditional formula: 0.00015 × D[OEIS-A000224]²; candidate points None
+Source catalogue IDs: 
+Official acceptance and score: UNAWARDED
+
+E02-ferrers-hierarchy — Ferrers general deficiency hierarchy (44-module dual replay)
+1. Problem: Combinatorics / bipartite matching and Latin tableaux
+For 1≤r≤k and 0≤e<r, a finite Ferrers graph with matching-union ranks α_r=rk−e and α_(r+1)=(r+1)k−r−e has α_1=k. Every supplied optimal degree-r factor is retained while r−e disjoint matching colors of size k−r are appended. For 0≤h≤r−e, α_(r+h)=rk−e+h(k−r). Balanced e=0 yields simultaneous first 2r CDS colors; e=1 yields first 2r−1. For e>1 no individual first-r CDS-color realization is asserted for arbitrary supplied colorings.
+Difficulty: intrinsic OPDP 6.1/10; Structural hierarchy for supplied optimal r-factors; partial parent theorem, not arbitrary missing colour realization.
+Factor profile: {'conceptual_gap': 2.5, 'route_gap': 2.5, 'technical_depth': 2.5, 'known_barrier': 2.5, 'search_scale': 2}
+Competition D: unmatched; keep symbolic
+2. Improvement: P3; proposed p=0.15
+Structural hierarchy for supplied optimal r-factors; partial parent theorem, not arbitrary missing colour realization.
+3. Formalization / correctness: Packet evidence: 44-source strict replay receipts on both pins; source hashes match both recorded receipts. Actual YoungDiagram graph/rank transport and all selected final standard-axiom audits included.. Endpoint signatures and declared axioms are recorded below; author/internal replay is not this reviewer’s fresh rebuild. 
+Acceptance checks: Late ZIP 06:19:17 versus on-time PDF 05:57:20: prove fixed cutoff artifact or organizer admin-transfer decision; Exact source/library closure fresh independent build and semantic review; Target admission/open-at-freeze/novelty and canonicalD mapping; Some factor-theory full texts remain uninspected as specified in the dated audits
+Conditional formula: 0.00015 × D[LATIN-TABLEAU]²; candidate points None
+Source catalogue IDs: 
+Official acceptance and score: UNAWARDED
+
+E02-erdos169-fourap — Explicit four-AP-free reciprocal sum >111/25
+1. Problem: Additive combinatorics / finite constructions
+Let D={0,1,2,4,5,9,10,11,14,16,17,18,21,24,30,37,39,41,42,45,47}, M=55³=166375, U={26286,26726,26737,120061,120501,120512}, and T_j={Σ_(i=0)^(j−1) d_i55^i:d_i∈D}, T_0={0}. Let E=T_22 ∪ ⋃_(u∈U)(u+M T_21), A={e+1:e∈E}. Every a∈A is positive; A contains no nonconstant four-term arithmetic progression over Z; Σ_(a∈A)1/a>111/25=4.44, as an exact rational finite sum over distinct elements.
+Difficulty: intrinsic OPDP 4.9/10; A finite four-AP-free sum proves a lower bound on f(4), not f(4)=infinity or the all-k asymptotic.
+Factor profile: {'conceptual_gap': 2, 'route_gap': 1.5, 'technical_depth': 2.5, 'known_barrier': 1.5, 'search_scale': 2.5}
+Competition D: published candidate 538; event binding unverified
+2. Improvement: P2; proposed p=0.05
+Explicit finite bound>4.44is a nontrivial bounded improvement if novel; does not show f(4)=infinity or resolve asymptotic all-k target.
+3. Formalization / correctness: Packet evidence: Fresh Linux full build completed8950jobs and final axiom audit. Exact same finite set appears in positivity, AP-free and rational-sum clauses. Mathematical source manifest matches; later README change is documentation only.. Endpoint signatures and declared axioms are recorded below; author/internal replay is not this reviewer’s fresh rebuild. 
+Acceptance checks: Late ZIP 06:19:17 versus on-time PDF 05:57:20: prove fixed cutoff artifact or organizer admin-transfer decision; Exact source/library closure fresh independent build and semantic review; Target admission/open-at-freeze/novelty and canonicalD mapping
+Conditional formula: 0.00005 × D[ERDOS169]²; candidate points 14.47220
+Source catalogue IDs: 
+Official acceptance and score: UNAWARDED
+
+E02-opdp13-quartic — Quartic exact exponent classification and sharp boundary scale
+1. Problem: Real algebraic geometry / polynomial positivity
+For H_t(z)=(1+|z|²)^4−t|z|⁴ and 6<t≤7, H_t^N (N positive integer) is a finite sum of |holomorphic polynomial|² iff N=2, or N≥4, or N=3 and 924−210t+18t²−t³≥0. For 6<t<8 any such N obeys 12N(8−t)≥t(10−t). For 7≤t<8 it obeys 81N t^(4N)≤614656(16−t)^(4N), plus explicit logarithmic lower bound. Writing δ=8−t, for every ε>0 sufficiently small δ>0 forces all admissible N to satisfy δN≥(1−ε)log(1/δ), while every N≥(1+ε)log(1/δ)/δ has strictly positive coefficients in every degree 0,…,4N and gives a function-level squared-norm representation. The defined least positive admissible index exists and has normalized ratio δ index/log(1/δ) between 1−ε and 1+ε near 0.
+Difficulty: intrinsic OPDP 5.0/10; Complete specified one-parameter quartic classification/asymptotic threshold only; own child difficulty, not full parent OPDP13.
+Factor profile: {'conceptual_gap': 2, 'route_gap': 2, 'technical_depth': 2.5, 'known_barrier': 1.5, 'search_scale': 2}
+Competition D: unmatched; keep symbolic
+2. Improvement: Full child / M3B; proposed p=1
+Complete specified one-parameter quartic classification/asymptotic threshold only; own child difficulty, not full parent OPDP13.
+3. Formalization / correctness: Packet evidence: Final standalone40-proof-module and aggregate build completed3553jobs with exit0; source SHA records match; endpoint axioms standard. Earlier dependency-graph refresh and stale18-file README count are superseded by this evidence.. Endpoint signatures and declared axioms are recorded below; author/internal replay is not this reviewer’s fresh rebuild. 
+Acceptance checks: Late ZIP 06:19:17 versus on-time PDF 05:57:20: prove fixed cutoff artifact or organizer admin-transfer decision; Exact source/library closure fresh independent build and semantic review; Target admission/open-at-freeze/novelty and canonicalD mapping; Tan–To2021 main Theorem2.1 and detailed constants; Handelman original full text and remaining To–Yeung coverage described in dated review
+Conditional formula: 0.0005 × D[OPDP13-QUARTIC]²; candidate points None
+Source catalogue IDs: 
+Official acceptance and score: UNAWARDED
+
+E02-opdp43-halfturn — Sharp half-turn symmetry defect gap
+1. Problem: Discrete geometry / grid configurations
+For A⊆{0,…,n−1}² with |A|=2n and no three collinear, let R(x,y)=(n−1−x,n−1−y). The one-sided miss count |{p∈A:R(p)∉A}| is 0 or ≥4. An explicit ten-point 5×5 witness has miss exactly4, proving global sharpness. Symmetric-difference cardinality is twice the one-sided miss.
+Difficulty: intrinsic OPDP 3.8/10; Sharp subquestion: zero or at least four missed points, with a 5×5 witness; rotation symmetric-difference is8. No full no-three-in-line result.
+Factor profile: {'conceptual_gap': 1.5, 'route_gap': 1.5, 'technical_depth': 2, 'known_barrier': 1, 'search_scale': 1.5}
+Competition D: unmatched; keep symbolic
+2. Improvement: Full child / M3B; proposed p=1
+Sharp subquestion: zero or at least four missed points, with a 5×5 witness; rotation symmetric-difference is8. No full no-three-in-line result.
+3. Formalization / correctness: Packet evidence: Clean4-module standalone release build completed3097jobs; source SHA entries match; final universal theorem includes n0,1,2 and exact witness geometry; standard axioms only.. Endpoint signatures and declared axioms are recorded below; author/internal replay is not this reviewer’s fresh rebuild. 
+Acceptance checks: Late ZIP 06:19:17 versus on-time PDF 05:57:20: prove fixed cutoff artifact or organizer admin-transfer decision; Exact source/library closure fresh independent build and semantic review; Target admission/open-at-freeze/novelty and canonicalD mapping; A comprehensive historic folklore/priority dossier is not available
+Conditional formula: 0.0005 × D[NO3-HALFTURN]²; candidate points None
+Source catalogue IDs: 
+Official acceptance and score: UNAWARDED
+
+E02-a046969-i — A046969 Conjecture I: exact Bernoulli denominator
+1. Problem: Number theory / Bernoulli denominators
+For a(n)=den(B_(2n)/(2n(2n−1))) when n>0 (a(0)=0), if p>3 and both p and 2p−1 are prime, then a(p)=12(2p−1); consequently a(p)/12 is prime.
+Difficulty: intrinsic OPDP 1.9/10; Known denominator mathematics; formal delta only pending novelty/library audit.
+Factor profile: {'conceptual_gap': 1, 'route_gap': 0, 'technical_depth': 2, 'known_barrier': 0, 'search_scale': 0.5}
+Competition D: unmatched; keep symbolic
+2. Improvement: Known formula / M2; proposed p=1
+Known denominator mathematics; formal delta only pending novelty/library audit.
+3. Formalization / correctness: Packet evidence: Independent5-module replay completed2026-10-01T13:09:42.764394Z, standard final formula and target axioms; exact source correspondence recorded.. Endpoint signatures and declared axioms are recorded below; author/internal replay is not this reviewer’s fresh rebuild. Known theorem route: only genuinely new faithful useful reusable formal delta can qualify.
+Acceptance checks: Late ZIP 06:19:17 versus on-time PDF 05:57:20: prove fixed cutoff artifact or organizer admin-transfer decision; Exact source/library closure fresh independent build and semantic review; Target admission/open-at-freeze/novelty and canonicalD mapping; Powell–Frame1983/full book coverage; Formal code-provenance and exact useful formal delta review
+Conditional formula: None; candidate points None
+Source catalogue IDs: 
+Official acceptance and score: UNAWARDED
+
+E02-opdp67-quaternion — OPDP67 explicit two-witness quaternion scalar definition
+1. Problem: Diophantine logic / quaternion algebra
+For every linearly ordered commutative ring R satisfying CommRing, LinearOrder and IsStrictOrderedRing, a Hamilton quaternion q over R is scalar iff there exist unrestricted quaternions u,v with ((uv−vu)^2+4)^2−(qu−uq)^2−(qv−vq)^2=0. Specializations define scalar Z in the Lipschitz order and scalar Q in rational Hamilton quaternions.
+Difficulty: intrinsic OPDP 2.1/10; Known quaternion Diophantine encoding, not a solution of H10(Q).
+Factor profile: {'conceptual_gap': 1, 'route_gap': 0, 'technical_depth': 2.5, 'known_barrier': 0, 'search_scale': 0.5}
+Competition D: unmatched; keep symbolic
+2. Improvement: Known scalar encoding / M2; proposed p=1
+Known quaternion Diophantine encoding, not a solution of H10(Q).
+3. Formalization / correctness: Packet evidence: Recorded two-witness module build and explicit final generic/rational/integer axiom audit; only standard axioms. No independent clean second replay claimed.. Endpoint signatures and declared axioms are recorded below; author/internal replay is not this reviewer’s fresh rebuild. Known theorem route: only genuinely new faithful useful reusable formal delta can qualify.
+Acceptance checks: Late ZIP 06:19:17 versus on-time PDF 05:57:20: prove fixed cutoff artifact or organizer admin-transfer decision; Exact source/library closure fresh independent build and semantic review; Target admission/open-at-freeze/novelty and canonicalD mapping
+Conditional formula: None; candidate points None
+Source catalogue IDs: 
+Official acceptance and score: UNAWARDED
+
+E02-a135508 — A135508: prime-index gcd criterion and residue classes
+1. Problem: Number theory / arithmetic recurrences
+Set x(0)=0, x(1)=1 and x(n+1)=2x(n)+lcm(x(n),n+1) for n>=1; for n>0 let a(n)=x(n+1)/x(n)−2. For each prime p>3, a(p−1)=p iff gcd(x(p−3),p−2)>1. If p≥7 is prime and p mod 3=2 or p mod 5=2, then a(p−1)=p. More generally an acquired divisor d>1 dividing x(m) and p−2, with 1≤m≤p−3, suffices.
+Difficulty: intrinsic OPDP 2.0/10; Conservative known-method classification; no full recurrence target. If admitted new original result classification must be revisited once, not stacked.
+Factor profile: {'conceptual_gap': 1, 'route_gap': 0, 'technical_depth': 2, 'known_barrier': 0, 'search_scale': 1}
+Competition D: unmatched; keep symbolic
+2. Improvement: Known/classification pending M2; proposed p=1
+Conservative known-method classification; no full recurrence target. If admitted new original result classification must be revisited once, not stacked.
+3. Formalization / correctness: Packet evidence: Strict4.33.1 replay passed2026-10-02T01:22:25Z. Four in-source axiom reports standard; later expanded-axioms.log also explicitly audits the acquired-divisor theorem with standard axioms.. Endpoint signatures and declared axioms are recorded below; author/internal replay is not this reviewer’s fresh rebuild. Known theorem route: only genuinely new faithful useful reusable formal delta can qualify.
+Acceptance checks: Late ZIP 06:19:17 versus on-time PDF 05:57:20: prove fixed cutoff artifact or organizer admin-transfer decision; Exact source/library closure fresh independent build and semantic review; Target admission/open-at-freeze/novelty and canonicalD mapping; Exact library/formal artifact overlap and whether unconditional criterion is a substantive prior-unproved statement
+Conditional formula: None; candidate points None
+Source catalogue IDs: 
+Official acceptance and score: UNAWARDED
+
+E02-apery-odd-formalization — A005258 Apéry prime-power irreducibility
+1. Problem: Number theory / polynomial irreducibility
+For B_n(X)=Σ_(k=0)^n binom(n,k)^2 binom(n+k,k)X^k in Q[X], every odd prime p and r≥1 satisfying p² ∤ 2^(p−1)−1 has Irreducible(B_(p^r)). This card requests review only of any genuinely new useful formalization beyond the prior exposed mathematical sketch; it asserts no original-open novelty.
+Difficulty: intrinsic OPDP 2.5/10; Known exposed irreducibility sketch formalized; exclude existing binary-power helper.
+Factor profile: {'conceptual_gap': 1, 'route_gap': 0, 'technical_depth': 3, 'known_barrier': 0, 'search_scale': 1}
+Competition D: unmatched; keep symbolic
+2. Improvement: Known odd-prime powers / M2; proposed p=1
+Known exposed irreducibility sketch formalized; exclude existing binary-power helper.
+3. Formalization / correctness: Packet evidence: Seven modules checked successfully on both pins; retained successful first-five logs and patched final-two logs are stated honestly. Source hashes match both receipts; final target standard axioms.. Endpoint signatures and declared axioms are recorded below; author/internal replay is not this reviewer’s fresh rebuild. Known theorem route: only genuinely new faithful useful reusable formal delta can qualify.
+Acceptance checks: Late ZIP 06:19:17 versus on-time PDF 05:57:20: prove fixed cutoff artifact or organizer admin-transfer decision; Exact source/library closure fresh independent build and semantic review; Target admission/open-at-freeze/novelty and canonicalD mapping; Sun2021 book remains unread, but identified overlap already defeats a confident first-result claim; Formalization delta beyond all baseline public formal artifacts/libraries
+Conditional formula: None; candidate points None
+Source catalogue IDs: 
+Official acceptance and score: UNAWARDED
+
+E02-m2-research-base3-reverse-add — Base three reverse and add carry obstruction
+1. Problem: Digit combinatorics / reversal-add dynamics
+If x plus its canonical base-3 digit reversal has palindromic base-3 digits, then x already has palindromic base-3 digits or every pair of mirrored input digits sums to less than 3.
+Difficulty: intrinsic OPDP 1.9/10; One-step palindrome / no-carry criterion, not perpetual reversal-add trajectory.
+Factor profile: {'conceptual_gap': 1, 'route_gap': 0, 'technical_depth': 2, 'known_barrier': 0, 'search_scale': 0.5}
+Competition D: unmatched; keep symbolic
+2. Improvement: Known finite-step criterion / M2; proposed p=1
+One-step palindrome / no-carry criterion, not perpetual reversal-add trajectory.
+3. Formalization / correctness: Packet evidence: The additional exact-source Lean 4.33.1 replay passed all 235 own-source dependency modules and seven independent selected proof files. Individual source hashes and selected endpoint standard-axiom reports are retained. Original archival passes remain separate. The source replay continued across scheduling restarts using hash-matched successful dependency receipts and exact pinned external-library caches. Each proof ran in a separate process; no aggregate importability, independent compiler implementation or official checker acceptance is asserted.. Endpoint signatures and declared axioms are recorded below; author/internal replay is not this reviewer’s fresh rebuild. Known theorem route: only genuinely new faithful useful reusable formal delta can qualify.
+Acceptance checks: Late ZIP 06:19:17 versus on-time PDF 05:57:20: prove fixed cutoff artifact or organizer admin-transfer decision; Exact source/library closure fresh independent build and semantic review; Target admission/open-at-freeze/novelty and canonicalD mapping; Bounded comparison does not certify first formalization or absence of all prior public work
+Conditional formula: None; candidate points None
+Source catalogue IDs: 
+Official acceptance and score: UNAWARDED
+
+E02-m2-research-theta-half-sum — Theta half sum negative inverse cancellation
+1. Problem: Number theory / finite floor-sign sums
+For an odd prime k and odd natural a,b with 1 ≤ a,b < k and ab mod k = k−1, define H(k,a)=Σ from j=1 to (k−1)/2 of (−1)^floor(aj/k). Then H(k,a)+H(k,b)=0.
+Difficulty: intrinsic OPDP 2.1/10; Exact half-sum identity only; known mathematics formalization.
+Factor profile: {'conceptual_gap': 1, 'route_gap': 0, 'technical_depth': 2.5, 'known_barrier': 0, 'search_scale': 0.5}
+Competition D: unmatched; keep symbolic
+2. Improvement: Known identity / M2; proposed p=1
+Exact half-sum identity only; known mathematics formalization.
+3. Formalization / correctness: Packet evidence: The additional exact-source Lean 4.33.1 replay passed all 235 own-source dependency modules and seven independent selected proof files. Individual source hashes and selected endpoint standard-axiom reports are retained. Original archival passes remain separate. The source replay continued across scheduling restarts using hash-matched successful dependency receipts and exact pinned external-library caches. Each proof ran in a separate process; no aggregate importability, independent compiler implementation or official checker acceptance is asserted.. Endpoint signatures and declared axioms are recorded below; author/internal replay is not this reviewer’s fresh rebuild. Known theorem route: only genuinely new faithful useful reusable formal delta can qualify.
+Acceptance checks: Late ZIP 06:19:17 versus on-time PDF 05:57:20: prove fixed cutoff artifact or organizer admin-transfer decision; Exact source/library closure fresh independent build and semantic review; Target admission/open-at-freeze/novelty and canonicalD mapping; Bounded comparison does not certify first formalization or absence of all prior public work
+Conditional formula: None; candidate points None
+Source catalogue IDs: 
+Official acceptance and score: UNAWARDED
+
+E02-m2-research-wolstenholme — Reciprocal square numerator arithmetic
+1. Problem: Number theory / p-adic valuations and congruences
+For every m ≥ 1, the rational sum Σ from k=1 to m of 1/k² has nonpositive 2-adic and 3-adic valuations. The selected bridge excludes a prime from its numerator when the valuation is nonpositive; for every prime p>3, gcd(p,A007406(p−1))=p.
+Difficulty: intrinsic OPDP 2.2/10; Prime denominator statement and valuations at 2 and 3; not the full composite or stronger Wolstenholme target.
+Factor profile: {'conceptual_gap': 1, 'route_gap': 0, 'technical_depth': 2.5, 'known_barrier': 0, 'search_scale': 1}
+Competition D: unmatched; keep symbolic
+2. Improvement: Known restricted identities / M2; proposed p=1
+Prime denominator statement and valuations at 2 and 3; not the full composite or stronger Wolstenholme target.
+3. Formalization / correctness: Packet evidence: The additional exact-source Lean 4.33.1 replay passed all 235 own-source dependency modules and seven independent selected proof files. Individual source hashes and selected endpoint standard-axiom reports are retained. Original archival passes remain separate. The source replay continued across scheduling restarts using hash-matched successful dependency receipts and exact pinned external-library caches. Each proof ran in a separate process; no aggregate importability, independent compiler implementation or official checker acceptance is asserted.. Endpoint signatures and declared axioms are recorded below; author/internal replay is not this reviewer’s fresh rebuild. Known theorem route: only genuinely new faithful useful reusable formal delta can qualify.
+Acceptance checks: Late ZIP 06:19:17 versus on-time PDF 05:57:20: prove fixed cutoff artifact or organizer admin-transfer decision; Exact source/library closure fresh independent build and semantic review; Target admission/open-at-freeze/novelty and canonicalD mapping; Bounded comparison does not certify first formalization or absence of all prior public work
+Conditional formula: None; candidate points None
+Source catalogue IDs: 
+Official acceptance and score: UNAWARDED
+
+E02-m2-research-a060841 — A060841 reciprocal determinant integrality
+1. Problem: Arithmetic linear algebra / LCM matrices
+For n ≥ 1, the inverse determinant of the n by n matrix with entries 1/lcm(i+1,j+1) is an integer exactly when n belongs to {1,…,34,36,38}.
+Difficulty: intrinsic OPDP 2.2/10; Known inverse-integrality classification1..34,36,38; no new open solution.
+Factor profile: {'conceptual_gap': 1, 'route_gap': 0, 'technical_depth': 2.5, 'known_barrier': 0, 'search_scale': 1}
+Competition D: unmatched; keep symbolic
+2. Improvement: Known exact classification / M2; proposed p=1
+Known inverse-integrality classification1..34,36,38; no new open solution.
+3. Formalization / correctness: Packet evidence: The additional exact-source Lean 4.33.1 replay passed all 235 own-source dependency modules and seven independent selected proof files. Individual source hashes and selected endpoint standard-axiom reports are retained. Original archival passes remain separate. The source replay continued across scheduling restarts using hash-matched successful dependency receipts and exact pinned external-library caches. Each proof ran in a separate process; no aggregate importability, independent compiler implementation or official checker acceptance is asserted.. Endpoint signatures and declared axioms are recorded below; author/internal replay is not this reviewer’s fresh rebuild. Known theorem route: only genuinely new faithful useful reusable formal delta can qualify.
+Acceptance checks: Late ZIP 06:19:17 versus on-time PDF 05:57:20: prove fixed cutoff artifact or organizer admin-transfer decision; Exact source/library closure fresh independent build and semantic review; Target admission/open-at-freeze/novelty and canonicalD mapping; Bounded comparison does not certify first formalization or absence of all prior public work
+Conditional formula: None; candidate points None
+Source catalogue IDs: 
+Official acceptance and score: UNAWARDED
+
+E02-m2-research-erdos887 — Erdős and Rosenfeld four nearby divisors
+1. Problem: Analytic number theory / nearby divisors
+There are infinitely many natural n with at least four distinct divisors d in the open real interval (sqrt(n), sqrt(n)+40 n^(1/4)). The preserved statement uses equivalent floor/ceiling integer endpoints.
+Difficulty: intrinsic OPDP 2.2/10; Four nearby divisors atconstant40notconstant16orfull parentmaximality.
+Factor profile: {'conceptual_gap': 1, 'route_gap': 0, 'technical_depth': 2.5, 'known_barrier': 0, 'search_scale': 1}
+Competition D: unmatched; keep symbolic
+2. Improvement: Known nearby divisors / M2; proposed p=1
+Four nearby divisors atconstant40notconstant16orfull parentmaximality.
+3. Formalization / correctness: Packet evidence: The additional exact-source Lean 4.33.1 replay passed all 235 own-source dependency modules and seven independent selected proof files. Individual source hashes and selected endpoint standard-axiom reports are retained. Original archival passes remain separate. The source replay continued across scheduling restarts using hash-matched successful dependency receipts and exact pinned external-library caches. Each proof ran in a separate process; no aggregate importability, independent compiler implementation or official checker acceptance is asserted.. Endpoint signatures and declared axioms are recorded below; author/internal replay is not this reviewer’s fresh rebuild. Known theorem route: only genuinely new faithful useful reusable formal delta can qualify.
+Acceptance checks: Late ZIP 06:19:17 versus on-time PDF 05:57:20: prove fixed cutoff artifact or organizer admin-transfer decision; Exact source/library closure fresh independent build and semantic review; Target admission/open-at-freeze/novelty and canonicalD mapping; Bounded comparison does not certify first formalization or absence of all prior public work
+Conditional formula: None; candidate points None
+Source catalogue IDs: 
+Official acceptance and score: UNAWARDED
+
+E02-m2-research-regular-polygon — Regular polygon chord and distance multiplicity
+1. Problem: Euclidean geometry / distance multiplicities
+For every even n ≥ 5 and every distance d occurring between distinct vertices of the regular n-gon, the number of unordered vertex pairs at distance d is at most n.
+Difficulty: intrinsic OPDP 2.0/10; Even regular-polygon multiplicity bound; not general convex sets or Erdős #94.
+Factor profile: {'conceptual_gap': 1, 'route_gap': 0, 'technical_depth': 2, 'known_barrier': 0, 'search_scale': 1}
+Competition D: unmatched; keep symbolic
+2. Improvement: Known regular polygons / M2; proposed p=1
+Even regular-polygon multiplicity bound; not general convex sets or Erdős #94.
+3. Formalization / correctness: Packet evidence: The additional exact-source Lean 4.33.1 replay passed all 235 own-source dependency modules and seven independent selected proof files. Individual source hashes and selected endpoint standard-axiom reports are retained. Original archival passes remain separate. The source replay continued across scheduling restarts using hash-matched successful dependency receipts and exact pinned external-library caches. Each proof ran in a separate process; no aggregate importability, independent compiler implementation or official checker acceptance is asserted.. Endpoint signatures and declared axioms are recorded below; author/internal replay is not this reviewer’s fresh rebuild. Known theorem route: only genuinely new faithful useful reusable formal delta can qualify.
+Acceptance checks: Late ZIP 06:19:17 versus on-time PDF 05:57:20: prove fixed cutoff artifact or organizer admin-transfer decision; Exact source/library closure fresh independent build and semantic review; Target admission/open-at-freeze/novelty and canonicalD mapping; Bounded comparison does not certify first formalization or absence of all prior public work
+Conditional formula: None; candidate points None
+Source catalogue IDs: 
+Official acceptance and score: UNAWARDED
+
+E02-erdos1060-uniform-partial — Erdős 1060 uniform quantitative partial bound
+1. Problem: Analytic number theory / divisor-sum representation counts
+Let sigma(k) be the sum of positive divisors of k, and let f(n) count positive integers k satisfying k sigma(k) = n. With C = log(2539/1000)/3 + log(10/9)/2, for every epsilon > 0 there is N such that every n >= N satisfies f(n) <= exp((C+epsilon) log(n)/log(log(n))). The formal count is exactly the finite set {k <= n : k sigma(k) = n}. The strict comparison C < log(3)/3 is also proved.
+Difficulty: intrinsic OPDP 5.6/10; Improved leading constant in subexponential upper bound, no targetlittle-ouniform limit or polylogarithmicarithmicarithmic. Start P2unless structural novelty justifies P3.
+Factor profile: {'conceptual_gap': 2.5, 'route_gap': 2.5, 'technical_depth': 2.5, 'known_barrier': 1, 'search_scale': 3}
+Competition D: published candidate 574; event binding unverified
+2. Improvement: P2; proposed p=0.05
+Improved leading constant in subexponential upper bound, no targetlittle-ouniform limit or polylogarithmicarithmicarithmic. Start P2unless structural novelty justifies P3.
+3. Formalization / correctness: Packet evidence: Fresh isolated Lean 4.33.1 compilation passed all 10 own source modules, with no own olean reuse. Before/after source hashes agree and final canonical theorem types and axiom lists were printed. Only propext, Classical.choice and Quot.sound occur. Exact package evidence is retained; integration performs file-identity validation, not another replay.. Endpoint signatures and declared axioms are recorded below; author/internal replay is not this reviewer’s fresh rebuild. 
+Acceptance checks: Late ZIP 06:19:17 versus on-time PDF 05:57:20: prove fixed cutoff artifact or organizer admin-transfer decision; Exact source/library closure fresh independent build and semantic review; Target admission/open-at-freeze/novelty and canonicalD mapping; Current official forum discussion reads returned HTTP 403. No exact overlapping proof located in bounded permitted-source searches; first-discovery priority is not certified.
+Conditional formula: 0.00005 × D[ERDOS1060]²; candidate points 16.47380
+Source catalogue IDs: 
+Official acceptance and score: UNAWARDED
+
+E02-erdos21-sharp-residual — Erdős Lovász sharp residual cover bound
+1. Problem: Extremal combinatorics / hypergraph cover numbers
+For every finite intersecting r-uniform hypergraph J of maximum vertex degree at most 3, 4 tau(J) <= |J| + r + 3. Degree-four peeling yields the same inequality without a degree restriction and hence 3r <= |H| + 3 whenever tau(H)=r; for r=8 this gives |H|>=21. The additive constant 3 is optimal, with a separately checked known triangle example.
+Difficulty: intrinsic OPDP 5.0/10; Sharp specified residual / peeling theorem at maximum degree 3 is new variation only if open and admitted; parent O(r) target already solved by Kahn, no full parentcredit.
+Factor profile: {'conceptual_gap': 2, 'route_gap': 2, 'technical_depth': 2.5, 'known_barrier': 1.5, 'search_scale': 2}
+Competition D: unmatched; keep symbolic
+2. Improvement: Full child / M3B; proposed p=1
+Sharp specified residual / peeling theorem at maximum degree 3 is new variation only if open and admitted; parent O(r) target already solved by Kahn, no full parentcredit.
+3. Formalization / correctness: Packet evidence: An independent isolated Lean 4.34.1 replay passed all 18 Main-closure modules. The proof-output directory began empty, source hashes stayed unchanged, nine external revisions were pinned and clean, and the separate endpoint-definition audit passed. Final endpoints use only propext, Classical.choice and Quot.sound; no Kahn hypothesis, hidden packing lemma or extra mathematical assumption is present. The known triangle witness was separately checked against the rebuilt core, outside the 18-module replay.. Endpoint signatures and declared axioms are recorded below; author/internal replay is not this reviewer’s fresh rebuild. 
+Acceptance checks: Late ZIP 06:19:17 versus on-time PDF 05:57:20: prove fixed cutoff artifact or organizer admin-transfer decision; Exact source/library closure fresh independent build and semantic review; Target admission/open-at-freeze/novelty and canonicalD mapping; Current official forum discussion reads returned HTTP 403. No exact overlapping proof located in bounded permitted-source searches; first-discovery priority is not certified.
+Conditional formula: 0.0005 × D[ERDOS21-VARIANT]²; candidate points None
+Source catalogue IDs: 
+Official acceptance and score: UNAWARDED
+
+E02-erdos944-order-bound — Erdős 944 finite order obstruction
+1. Problem: Graph theory / critical edge sets
+For a finite simple graph G with n vertices and an integer r >= 1, suppose its chromatic number is 4, deleting any vertex lowers that number, and deleting any set of at most r edges does not lower it. Then 27r+19 <= 4n. The same hypotheses give 27(r+1)(n-1) <= (2n+1)^2 and 9b(r+1) <= (2b+1)(n-b), where b=floor((n+1)/3). These necessary conditions form one family.
+Difficulty: intrinsic OPDP 6.8/10; Finite necessary-order lower bound, not existence/full problem. Compare prior5r+6atfinite r and strongerasymptotic n/log^cnconstraint.
+Factor profile: {'conceptual_gap': 3, 'route_gap': 2.5, 'technical_depth': 3, 'known_barrier': 2, 'search_scale': 3}
+Competition D: published candidate 721; event binding unverified
+2. Improvement: P2; proposed p=0.05
+Finite necessary-order lower bound, not existence/full problem. Compare prior5r+6atfinite r and strongerasymptotic n/log^cnconstraint.
+3. Formalization / correctness: Packet evidence: Independent isolated Lean 4.34.1 replay compiled three proof modules and the separate TargetAudit.lean from unchanged frozen sources. Its own output directory began empty and earlier project proof caches were excluded; pinned third-party caches were reused. Exact target definitions and conjunction were audited. Every final endpoint uses only propext, Classical.choice and Quot.sound. Packaging validates identities without claiming a further Lean replay.. Endpoint signatures and declared axioms are recorded below; author/internal replay is not this reviewer’s fresh rebuild. 
+Acceptance checks: Late ZIP 06:19:17 versus on-time PDF 05:57:20: prove fixed cutoff artifact or organizer admin-transfer decision; Exact source/library closure fresh independent build and semantic review; Target admission/open-at-freeze/novelty and canonicalD mapping; Bounded source review; no universal novelty or publication-priority certificate.
+Conditional formula: 0.00005 × D[ERDOS944]²; candidate points 25.99205
+Source catalogue IDs: 
+Official acceptance and score: UNAWARDED
+
+E02-opdp89-parity-local-maxima — OPDP89 sharp four parity likelihood classification
+1. Problem: Mathematical statistics / singular mixture and RBM geometry
+For pure four-parity data Q_rho(s)=(1+rho*s1*s2*s3*s4)/16 with 0<|rho|<=1, consider the normalized four-visible, one-hidden spin RBM P_(b,c,w)(s) proportional to exp(b dot s)*cosh(c+w dot s), and its expected log likelihood ell_rho. At every collapsed point (0,c0,0), with c0 any finite real, every affine parameter-direction derivative is zero. It is a local maximum in the full nine-dimensional parameter space if and only if tanh(c0)^2 < (3+2|rho|)/(3+6|rho|). At equality or beyond, every full parameter neighborhood has both a strictly higher and a strictly lower likelihood point. Every collapsed point has a strictly better finite RBM and distinct equal-likelihood points in every neighborhood; the local maxima are non-strict.
+Difficulty: intrinsic OPDP 5.9/10; Exact local-maximum / saddle classification in the nine-parameter fibre with four visible and one hidden unit, not high-dimensional training or general OPDP89.
+Factor profile: {'conceptual_gap': 2.5, 'route_gap': 2.5, 'technical_depth': 3, 'known_barrier': 1.5, 'search_scale': 2}
+Competition D: unmatched; keep symbolic
+2. Improvement: Full child / M3B; proposed p=1
+Exact local-maximum / saddle classification in the nine-parameter fibre with four visible and one hidden unit, not high-dimensional training or general OPDP89.
+3. Formalization / correctness: Packet evidence: Fresh post-recovery source-only replay completed 2026-10-02T18:45:45.269248+00:00 in 108.552 seconds. All 17 frozen source modules passed with no warnings or errors; all original source SHA256 values and nine dependency pins were unchanged before/after. No old own-module oleans were reused. A supplemental semantic/type audit passed at 18:48:24 UTC. The final transitive axioms are only propext, Classical.choice and Quot.sound. Historical sharp raw logs remain unavailable; their absence is not filled with invented logs. The new dated PASS receipt and genuine fresh logs supersede historical pending status in byte-preserved recovery snapshots. Earlier strict-region proof and original raw evidence remain unchanged. This is internal AI-assisted formal/semantic review, not appointed jury or external peer review.. Endpoint signatures and declared axioms are recorded below; author/internal replay is not this reviewer’s fresh rebuild. 
+Acceptance checks: Late ZIP 06:19:17 versus on-time PDF 05:57:20: prove fixed cutoff artifact or organizer admin-transfer decision; Exact source/library closure fresh independent build and semantic review; Target admission/open-at-freeze/novelty and canonicalD mapping; Bounded source review; no universal novelty or publication-priority certificate.
+Conditional formula: 0.0005 × D[RBM4-PARITY]²; candidate points None
+Source catalogue IDs: 
+Official acceptance and score: UNAWARDED
+
+E02-erdos829-log-five-thirds — Erdős 829 verified log(5/3) partial bound
+1. Problem: Analytic number theory / representations as sums of cubes
+Let R(n) count ordered nonnegative integer pairs (x,y) satisfying x^3+y^3=n. For every real epsilon>0 there exists a natural N such that, for every natural n>=N, R(n) <= exp((log(5/3)+epsilon)*log(n)/log(log(n))). Zero coordinates are included and swapping unequal coordinates gives distinct representations. There is no primitive-pair or cubefree-target restriction. The existential threshold is not given numerically.
+Difficulty: intrinsic OPDP 5.4/10; Improves leading constant for all sums of cubes; polylogarithmicarithmicarithmic target remains. Earlierlog7/4version same family.
+Factor profile: {'conceptual_gap': 2.5, 'route_gap': 2.5, 'technical_depth': 2, 'known_barrier': 1, 'search_scale': 3}
+Competition D: published candidate 530; event binding unverified
+2. Improvement: P2; proposed p=0.05
+Improves leading constant for all sums of cubes; polylogarithmicarithmicarithmic target remains. Earlierlog7/4version same family.
+3. Formalization / correctness: Packet evidence: Fresh separately orchestrated source-only Lean 4.33.1 replay completed 2026-10-02T18:54:57.202016+00:00. All 33 proof modules and two semantic/axiom audit modules exited 0. The final active sources comprise 28 historical exact modules and five reconstructed/repaired variants, all freshly verified. No old own-module oleans were used; nine third-party dependency pins matched. Endpoint transitive axioms are only propext, Classical.choice and Quot.sound. The semantic audit checks the exact expanded catalog expression and ordered nonnegative coordinate count; it does not import the catalog conjecture. This is internal AI-assisted formal-check/semantic evidence, not appointed jury or external peer review.. Endpoint signatures and declared axioms are recorded below; author/internal replay is not this reviewer’s fresh rebuild. 
+Acceptance checks: Late ZIP 06:19:17 versus on-time PDF 05:57:20: prove fixed cutoff artifact or organizer admin-transfer decision; Exact source/library closure fresh independent build and semantic review; Target admission/open-at-freeze/novelty and canonicalD mapping; Bounded source review only; no comprehensive novelty, all-prior-formalization or publication-priority certification.
+Conditional formula: 0.00005 × D[ERDOS829]²; candidate points 14.04500
+Source catalogue IDs: 
+Official acceptance and score: UNAWARDED
+
+E02-FOCUS-E3 — Erdős 3: finite diagonal-pullback nonoptimality
+1. Problem: Additive combinatorics
+At modulus 13, the supplied 79-point subset B of (Z/13Z)^2 avoids (x,y), (x,y+d), (x,y+2d), (x+d,y) for every nonzero d. The maximum size of a cyclic four-AP-free subset A of Z/13Z is exactly 6, attained by {0,1,2,4,5,7}. Hence |B|=79>78>=13|A| for every such A. In particular, every diagonal pullback S_A={(x,y):x-y belongs to A} has size 13|A|<=78 and is beaten by B. The source-faithful bridge kernel-checks the original pullback cardinality identity |S_A|=13|A|, the L-free transfer and its strict comparison with B.
+Difficulty: intrinsic OPDP 7/10; Known length-three case and representation bridges do not settle lengths ≥4.
+Factor profile: {'conceptual_gap': 3, 'route_gap': 3, 'technical_depth': 2.5, 'known_barrier': 2.5, 'search_scale': 3}
+Competition D: published candidate 674; event binding unverified
+2. Improvement: P1; proposed p=0.01
+Narrow finite counterexample to auxiliary diagonal-pullback optimality,not Erdős #3. Reconstructed bridge / cyclic upper proof dates need cutoff review.
+3. Formalization / correctness: The cyclic sharpness certificate and source-faithful diagonal-pullback bridge passed Lean 4.33.1 / Mathlib 0df444a360eaa60ab8c11dca51a86af692955474 with standard axioms only. The bridge passed a fresh seven-module source-only replay on 3 October 2026, with no reused project-local compiled objects. It checks the actual pullback cardinality, its L-free transfer and the strict comparison with the retained 79-point witness. No native_decide or admitted theorem occurs in the successful chain.
+Acceptance checks: Late ZIP / cutoff, fixed source and proof closure; Fresh independent verification of the selected endpoint; Novelty status and frozen family D
+Conditional formula: 0.000011 × D[ERDOS3]²; candidate points 4.997036
+Source catalogue IDs: 
+Official acceptance and score: UNAWARDED
+
+E02-FOCUS-GROTH — Grothendieck: restricted sign-matrix bounds
+1. Problem: Functional analysis
+For every n and every 3-by-n sign matrix A, Q_V(A)<=sqrt(3/2) C(A) in every real inner-product space V. Additionally Q_V(A)<=sqrt(2) C(A) for the four literal archived matrices A_6x6_106, A_6x8_690, A_7x8_53110 and A_s8x8_1705. Q_V is the unit-vector objective supremum, with Q_V(A)=0 for an empty feasible set, and C is its real scalar specialization. These supporting cases form one review family.
+Difficulty: intrinsic OPDP 5.4/10; Small CHSH witnesses and restricted sign-matrix estimates do not determine the arbitrary-real-coefficient constant.
+Factor profile: {'conceptual_gap': 2.5, 'route_gap': 2.5, 'technical_depth': 2, 'known_barrier': 1, 'search_scale': 3}
+Competition D: published candidate 561; event binding unverified
+2. Improvement: P0; proposed p=0
+Restrictedsign-matrixestimateknown / classification unresolved; no demonstrated new bound for the arbitrary-real-coefficient constant. Possible M2 formalization only.
+3. Formalization / correctness: Fresh Row3Granular and four-case SemanticTestGranular checks passed in Lean 4.33.1 with standard axioms only. Row3 mathematical body is byte-identical after import adjustment; the four-case file retains statements and certificate data with eight arithmetic tactic repairs and explicit imports.
+Acceptance checks: Late ZIP / cutoff, fixed source and proof closure; Fresh independent verification of the selected endpoint; Novelty status and frozen family D
+Conditional formula: 0.0 × D[GROTHENDIECK]²; candidate points 0.0
+Source catalogue IDs: 
+Official acceptance and score: UNAWARDED
+
+E02-FOCUS-MATRIX — Matrix multiplication: one-leg rigidity
+1. Problem: Algebra / algorithms
+For each of the three stored 139-support HKS seeds, every 81-by-23 rational matrix formed from columnwise products of two 23-by-9 factor lists has column rank 23. Thus fixing any two factor lists uniquely determines the third through the coefficient equations; changing only that list cannot reduce support while retaining the same tensor. The standard-kernel formal certificates prove all three pairings and remaining-factor uniqueness for each of the three stored seeds.
+Difficulty: intrinsic OPDP 7.4/10; Fixed tensor rank 23/support reduction is not asymptotic exponent two. Requires 729 tensor identities, correct gauge normalization and invariant comparison.
+Factor profile: {'conceptual_gap': 3, 'route_gap': 3, 'technical_depth': 3, 'known_barrier': 3, 'search_scale': 2.5}
+Competition D: unmatched; keep symbolic
+2. Improvement: P1; proposed p=0.01
+Finite one-leg obstruction for three known seeds, no new138tensor and no global rank or support impossibility.
+3. Formalization / correctness: All three stored HKS139 seeds have standard-kernel certificates for the UV, UW and VW rational injectivity and remaining-factor uniqueness statements. Seed 0 retains its recorded certificate; the two additional seeds passed fresh 71-module Lean 4.33.1 replays on 3 October 2026. Endpoint axioms are only propext, Classical.choice and Quot.sound. The original factors, selected minors, integer inverse tables and all 729 tensor coefficients match their source data. The independent exact rank checks are also retained. Independent integer check confirms three 23×23 left-inverse products for the first seed. The compiled alternative file349908 explicitly uses native_decide, so that file is not itself a standard-axiom-only kernel proof. Final kernel alternatives and remaining seeds require endpoint-specific review. Independent integer check confirms three 23×23 left-inverse products for the first seed. The compiled alternative file349908 explicitly uses native_decide, so that file is not itself a standard-axiom-only kernel proof. Final kernel alternatives and remaining seeds require endpoint-specific review. Independent integer check confirms three 23×23 left-inverse products for the first seed. The compiled alternative file349908 explicitly uses native_decide, so that file is not itself a standard-axiom-only kernel proof. Final kernel alternatives and remaining seeds require endpoint-specific review.
+Acceptance checks: Late ZIP / cutoff, fixed source and proof closure; Fresh independent verification of the selected endpoint; Novelty status and frozen family D; Distinguish native_decide compiled alternative from standard-axiom kernel certificate; verify exact selected closure and all nine pairs.; Distinguish native_decide compiled alternative from standard-axiom kernel certificate; verify exact selected closure and all nine pairs.; Distinguish native_decide compiled alternative from standard-axiom kernel certificate; verify exact selected closure and all nine pairs.
+Conditional formula: 0.000011 × D[MATRIX-3]²; candidate points None
+Source catalogue IDs: 
+Official acceptance and score: UNAWARDED
+
+E02-FOCUS-RAMSEY — Ramsey: exact weighted construction and formal lifting
+1. Problem: Extremal graph theory
+The literal symmetric 1024-block binary template has positive integer weights summing to Q=47,314,248 and ordered weighted monochromatic K4 probability P=75525646867723584998137743109/2505750190359427899123170347008. Exact computation gives P<20480989/679477248, the archived hill threshold. The general formal lifting theorem gives c4<=P; for t>0 and tQ>=4 the finite blow-up density differs from P by at most 6/(tQ).
+Difficulty: intrinsic OPDP 8.4/10; Known graph templates and exact blow-up bounds improve one side only; no exact value or matching lower bound supplied.
+Factor profile: {'conceptual_gap': 3.5, 'route_gap': 3, 'technical_depth': 3.5, 'known_barrier': 3.5, 'search_scale': 3}
+Competition D: unmatched; keep symbolic
+2. Improvement: P1 upper boundary; proposed p=0.05
+Exact small bound improvement plus generic lifting; upper P1 only with record / novelty justification. Potential stronger Technion prior unresolved.
+3. Formalization / correctness: The numerator is independently checked by exact C++/Python arithmetic and matches a nonfinal validation receipt. The general count-to-limit development freshly compiled after four compatibility edits in Lean 4.33.1, with standard axioms only. The concrete 1024-block numerator is not evaluated in Lean; approved end-to-end computational acceptance is unestablished.
+Acceptance checks: Late ZIP / cutoff, fixed source and proof closure; Fresh independent verification of the selected endpoint; Novelty status and frozen family D
+Conditional formula: 0.000055 × D[RAMSEY-K4]²; candidate points None
+Source catalogue IDs: 
+Official acceptance and score: UNAWARDED
+
+E02-FOCUS-BB6 — Busy Beaver 6: exact halting witness
+1. Problem: Computability
+Starting on a bi-infinite blank tape in state A, the six-state two-symbol machine 1RB0LC_1RD1RB_0LH1LE_1LA1LD_0LA1LF_0LE0RD executes exactly 1,235,211 transitions to H with 1,519 ones on its final tape and no earlier halted prefix. Every state A–F is visited by step 40. Separate exact simulators give final head -2001 and visited span 2,028 (minimum -2001, maximum 26, including the post-halting head); head and span are not kernel-certified claims.
+Difficulty: intrinsic OPDP 10.0/10; A single halting trace gives a finite witness; maximum requires ruling out all other machines and nonhalters. No submitted global resolution.
+Factor profile: {'conceptual_gap': 4, 'route_gap': 4, 'technical_depth': 4, 'known_barrier': 4, 'search_scale': 4}
+Competition D: unmatched; keep symbolic
+2. Improvement: P0; proposed p=0
+Finite halting witness: 1,235,211 steps and 1,519 ones, no global record; cannot award original global progress for a known or subrecord machine.
+3. Formalization / correctness: A new standard-kernel certificate in Lean 4.33.1 successfully checks the literal machine, exact run, final ones count, absence of an earlier halt and all-six-states visitation. Claims.lean endpoints exact_halting_witness and visits_all_six_states have only propext and Quot.sound in their printed axiom sets. The 129-source-module closure uses no native_decide, custom axiom or admission, and requires no Mathlib. Semantics.lean proves the tape-cell equations for both move directions. Original dictionary- and set-tape simulator records are preserved as independent evidence.
+Acceptance checks: Late ZIP / cutoff, fixed source and proof closure; Fresh independent verification of the selected endpoint; Novelty status and frozen family D
+Conditional formula: 0.0 × D[BB6]²; candidate points None
+Source catalogue IDs: 
+Official acceptance and score: UNAWARDED

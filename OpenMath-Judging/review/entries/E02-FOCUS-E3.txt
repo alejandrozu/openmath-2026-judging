@@ -1,0 +1,21 @@
+E02-FOCUS-E3 | Erdős 3: finite diagonal-pullback nonoptimality
+
+Exact contribution: At modulus 13, the supplied 79-point subset B of (Z/13Z)^2 avoids (x,y), (x,y+d), (x,y+2d), (x+d,y) for every nonzero d. The maximum size of a cyclic four-AP-free subset A of Z/13Z is exactly 6, attained by {0,1,2,4,5,7}. Hence |B|=79>78>=13|A| for every such A. In particular, every diagonal pullback S_A={(x,y):x-y belongs to A} has size 13|A|<=78 and is beaten by B. The source-faithful bridge kernel-checks the original pullback cardinality identity |S_A|=13|A|, the L-free transfer and its strict comparison with B.
+
+Assessment: The modulus13 witness79 beats the best diagonal-pullback capacity78. It disproves that proposed finite auxiliary extremal ansatz. It supplies no divergent infinite set and no theorem forcing longer arithmetic progressions.
+
+Novelty: Candidate finite obstruction to a particular ansatz; direct original-problem pivotality is limited.
+
+Formalization: The cyclic sharpness certificate and source-faithful diagonal-pullback bridge passed Lean 4.33.1 / Mathlib 0df444a360eaa60ab8c11dca51a86af692955474 with standard axioms only. The bridge passed a fresh seven-module source-only replay on 3 October 2026, with no reused project-local compiled objects. It checks the actual pullback cardinality, its L-free transfer and the strict comparison with the retained 79-point witness. No native_decide or admitted theorem occurs in the successful chain.
+
+Proposal: Retain narrow P1 p=.01 only if admitted as useful original-family partial work. Otherwise use a separately admitted child with its own D, not full Erdős3.
+
+OPDP target OPENMATH-ERDOS3 | intrinsic 7/10 | competition D proposal 674/1000
+
+Modality M1 | p 0.01 | b 1.1 | m 1 | numerical family points 4.997036
+
+Specific remaining checks: Late ZIP / cutoff, fixed source and proof closure; Fresh independent verification of the selected endpoint; Novelty status and frozen family D
+
+Key files: 
+
+Primary/source locators: https://github.com/alejandrozu/ulam-opdp-difficulty-atlas
