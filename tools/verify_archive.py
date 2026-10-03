@@ -16,7 +16,7 @@ def main():
         elif p.stat().st_size!=e['bytes'] or sha(p)!=e['sha256']:errors.append('Changed '+e['path'])
     d=ROOT/'OpenMath-Judging/catalogue.sqlite'
     if d.exists():
-        c=sqlite3.connect('file:'+d.as_posix()+'?mode=ro',uri=True)
+        c=sqlite3.connect('file:'+d.as_posix().removeprefix('//?/')+'?mode=ro',uri=True)
         if c.execute('pragma integrity_check').fetchone()[0]!='ok':errors.append('SQLite integrity failure')
         for table,key in [('files','file_entries'),('file_reviews','file_summaries')]:
             if c.execute('select count(*) from '+table).fetchone()[0]!=m['counts'][key]:errors.append('Unexpected '+table+' count')

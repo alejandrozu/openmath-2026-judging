@@ -34,3 +34,7 @@ Python 3 with Tkinter is required for the native app. Restoration and checksum v
 - User-confirmed permission to publish affected private and unaccepted packets. Contributors retain ownership and their original licenses; no blanket license is imposed on submissions.
 
 Read [STRUCTURE.md](STRUCTURE.md) for the document map, [coverage and gaps](docs/COVERAGE.md) for limitations, and [publication-manifest.json](publication-manifest.json) for every included path, original/publication hash, release placement and exclusions. Unnecessary private contact details are redacted from loose copies. Original packet archives remain intact after credential scanning. UI receipt screenshots with personal details are represented by preserved structured/text evidence rather than public screenshots. Unrelated obligations and company/personal records are excluded.
+
+## Verified snapshot
+
+[GitHub publication verification](docs/PUBLICATION-VERIFICATION.json) records the verified archive commit, anonymous public access, exact Git tree and all four server-side release hashes. [Full restore and native app verification](docs/RESTORE-VERIFICATION.json) records successful restoration and hashing of all 14,328 preserved paths, SQLite integrity and read-only app startup. The verification records are added after the archive commit they check.
