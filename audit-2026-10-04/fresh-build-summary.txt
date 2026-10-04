@@ -1,0 +1,140 @@
+OpenMath 2026 audit - fresh Lean builds (4 Oct 2026)
+Method: entrant sources from the archived packets; pinned lean-toolchain; Mathlib at the recorded commit with the official cache
+(lake exe cache get); selected endpoint modules built from source; '#print axioms' on every endpoint. No entrant .olean used.
+
+=== erdos21 [leanprover/lean4:v4.34.1]
+Build completed successfully (3113 jobs). BUILD_EXIT 0 
+'ErdosLovasz.ThreeLinkPacking.support_barrier' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ErdosLovasz.residual_cover_bound_sharp' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ErdosLovasz.cover_bound_sharp' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ErdosLovasz.erdos_lovasz_lower_three' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ErdosLovasz.erdos_lovasz_eight_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== a100475 [leanprover/lean4:v4.33.1]
+Build completed successfully (2843 jobs). BUILD_EXIT 0 AUDIT_EXIT 0 
+'OeisA100475.not_periodic' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OeisA100475.conjecture' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== a060957 [leanprover/lean4:v4.33.1]
+Build completed successfully (3174 jobs). BUILD_EXIT 0 AUDIT_EXIT 0 
+'SubsetProductGap.subset_product_counterexample' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SubsetProductGap.interpolation_conjecture_false' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SubsetProductGap.Generic.arbitrary_gap_eight_levels_above' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SubsetProductGap.Generic.arbitrary_gap_consecutive_above' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== opdp13 [leanprover/lean4:v4.34.1]
+Build completed successfully (3551 jobs). BUILD_EXIT 0 AUDIT_EXIT 0 
+'PowerSemigroup.function_exact_exponent_semigroup' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PowerMoment.function_exponent_lower_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PowerFourier.function_logarithmic_growth' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PowerUpper.function_near_boundary_upper' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PowerUpper.LeastIndex.leastPositiveIndex_squeeze' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== opdp89-parity-sharp [leanprover/lean4:v4.33.1]
+Build completed successfully (2184 jobs). BUILD_EXIT 0 AUDIT_EXIT 0 
+'ParityFour.sharp_parity_classification' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ParityFour.collapsed_local_max_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ParityFour.nonstable_parameter_saddle' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== opdp43 [leanprover/lean4:v4.34.1]
+Build completed successfully (3095 jobs). BUILD_EXIT 0 AUDIT_EXIT 0 
+'NoThreeSymmetry.grid_half_turn_gap' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NoThreeSymmetry.sharp_half_turn_gap' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== ferrers [leanprover/lean4:v4.33.1]
+Build completed successfully (3071 jobs). BUILD_EXIT 0 AUDIT_EXIT 0 
+'FerrersArm.TightDefectCorner.defect_preserves_factor' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FerrersArm.YoungDiagramBridge.defect_indepNumK_later_ranks' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FerrersArm.YoungDiagramBridge.one_defect_independent_sets' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FerrersArm.YoungDiagramBridge.first_two_r_independent_sets' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== erdos169-fourap [leanprover/lean4:v4.34.1]
+Build completed successfully (8945 jobs). BUILD_EXIT 0 AUDIT_EXIT 0 
+'Erdos3Candidate.explicit_four_ap_free_reciprocal_gt' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== erdos944-order-bound [leanprover/lean4:v4.34.1]
+Build completed successfully (1136 jobs). BUILD_EXIT 0 AUDIT_EXIT 0 
+'Erdos944Bounds.erdos944_order_linear' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos944Bounds.erdos944_order_quadratic' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos944Bounds.erdos944_order_exact' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== erdos1060-uniform-partial [leanprover/lean4:v4.33.1]
+Build completed successfully (1979 jobs). BUILD_EXIT 0 AUDIT_EXIT 0 
+'Erdos1060.canonical_count_eventually_upper' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos1060.canonical_count_upper' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos1060Partial.entropyConstant_lt_old' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== erdos829-log-five-thirds [leanprover/lean4:v4.33.1]
+Build completed successfully (2337 jobs). BUILD_EXIT 0 AUDIT_EXIT 0 
+'Erdos829FiveThirds.canonicalCubeCount_eventually_exp' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos829FiveThirds.canonicalCubeCount_eventual_threshold' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== FOCUS-GROTH [leanprover/lean4:v4.33.1]
+Build completed successfully (2441 jobs). BUILD_EXIT 0 AUDIT_EXIT 0 
+'GrothSymmetry.row3_Q_le_sqrt_three_halves_mul_C' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GrothSemantic.semantic_6x6_106' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GrothSemantic.semantic_6x8_690' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GrothSemantic.semantic_7x8_53110' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GrothSemantic.semantic_s8x8_1705' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== FOCUS-E3 [leanprover/lean4:v4.33.1]
+Build completed successfully (1193 jobs). BUILD_EXIT 0 AUDIT_EXIT 0 
+'Erdos3Completion.explicit_L_witness_beats_every_cyclic_AP_free_set' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Cyclic13Kernel.cyclic_four_AP_extremum_is_six' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Cyclic13Kernel.cyclic4Free_card_le_six' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos3R17.B_card' depends on axioms: [propext, Quot.sound]
+'Erdos3R17.B_Lfree' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== FOCUS-E3-pullback [leanprover/lean4:v4.33.1]
+Build completed successfully (1201 jobs). BUILD_EXIT 0 AUDIT_EXIT 0 
+'Fugu3Lshape.card_SA' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos3PullbackBridge.card_diagonal_pullback_le_78' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos3PullbackBridge.retained_witness_beats_every_diagonal_pullback' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== FOCUS-RAMSEY [leanprover/lean4:v4.33.1]
+Build completed successfully (1214 jobs). BUILD_EXIT 0 AUDIT_EXIT 0 
+'Lea.RamseyLifting.density_sub_P_abs_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Lea.RamseyLifting.lifting_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Lea.RamseyLifting.density_tendsto' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Lea.RamseyC4.c4_le_Pval' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== chandragupt-support138 (core Lean 4.34.1, no Mathlib) [leanprover/lean4:v4.34.1]
+Build completed successfully (9 jobs). gen.py --check: data modules match solution JSON files.
+'MM3.scheme138_valid' does not depend on any axioms
+'MM3.scheme138_identities' depends on axioms: [propext, Quot.sound]
+'MM3.scheme138_support' does not depend on any axioms
+
+=== htpeo-ramsey generic lifting (RamseyCert.Limit) [leanprover/lean4:v4.33.1]
+info: RamseyCert/Limit.lean:465:0: 'RamseyCert.blowup_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: RamseyCert/Limit.lean:466:0: 'RamseyCert.minMonoK4_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: RamseyCert/Limit.lean:467:0: 'RamseyCert.ramseyMultK4_le_density' depends on axioms: [propext, Classical.choice, Quot.sound]
+Build completed successfully (8707 jobs).
+BUILD_EXIT 0
+'RamseyCert.ramseyMultK4_le_density' depends on axioms: [propext, Classical.choice, Quot.sound]
+RamseyCert.ramseyMultK4_le_density : ∀ (T : RamseyCert.Template),
+  T.Symmetric → 0 < T.total → RamseyCert.ramseyMultK4 ≤ ↑T.density
+AUDIT_EXIT 0
+Note: the 2,048 per-chunk kernel-count modules (about 4 h on this machine) were not rebuilt; the exact numerator
+200137750014677779172692777477 over 50762939^4 was recomputed independently (scripts/ramsey_exact_numerator.py, multi-modular, exact).
+
+=== htpeo-kobon39 (KobonCert) [leanprover/lean4:v4.33.1]
+Build completed successfully (1145 jobs). BUILD_EXIT 0 
+'Kobon.kobon_nonoverlapping' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Kobon.triFaces_disjoint' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Kobon.certificate' depends on axioms: [propext]
+'Kobon.sol_simple' does not depend on any axioms
+'Kobon.triCheck_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Kobon.sol_triFaces' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Kobon.kobon_lower_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== FOCUS-MATRIX-seed0 [leanprover/lean4:v4.33.1]
+Build completed successfully (1764 jobs). BUILD_EXIT 0 AUDIT_EXIT 0
+'RecoveredMMTKernel.rational_injective_uv' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RecoveredMMTKernel.rational_injective_uw' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RecoveredMMTKernel.rational_injective_vw' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RecoveredMMTKernel.remaining_factor_unique_uv' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RecoveredMMTKernel.remaining_factor_unique_uw' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RecoveredMMTKernel.remaining_factor_unique_vw' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+Not rebuilt in this audit: Sakana A000224 (171 modules, stopped for time), Sakana FOCUS-MATRIX seeds 1-2, Sakana M2 projects,
+HTPeo DMS (packs 2-5, ~250 modules) and HTPeo M2, Leanification, Leon/Cameron, Wilson, Jamie M2, Rohith's catalogue.
