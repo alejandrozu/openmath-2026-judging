@@ -19,6 +19,8 @@ The [complete downloadable review-package release](https://github.com/alejandroz
 
 ## Publication decision and verification limits
 
+[Public upload verification](UPLOAD_VERIFICATION.json) records anonymous access, all 3,648 package-file Git identities, the main PDF hashes and the server-reported complete-ZIP digest. The [dated chair decision](CHAIR_DECISION_2026-10-05.json) records the authorized upload and remaining-runs waiver.
+
 On 5 October 2026 the chair authorized uploading the current papers and judging material to this public archive and waived the remaining proof runs for this upload. This is a publication decision, not a completed-proof or novelty verdict. Actual successful checks, unrun requests, failures, admitted assumptions and native-computation trust remain recorded separately.
 
 - **HTPeo Ramsey:** the qualified partial replay covers 2083 of 2103 source modules. Twenty sources and the original and supplemental final audit routes remain unrun; the selected 24-endpoint scope is not qualified as complete. Earlier successful rows and both resource-stop attempts remain preserved.
