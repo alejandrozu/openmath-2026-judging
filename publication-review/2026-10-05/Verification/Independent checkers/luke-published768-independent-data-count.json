@@ -1,0 +1,50 @@
+{
+  "status": "PASS_INDEPENDENT_EXACT_KNOWN_CERTIFICATE_DATA_RECOUNT",
+  "started_utc": "2026-10-05T01:57:44.888505+00:00",
+  "finished_utc": "2026-10-05T01:57:52.855275+00:00",
+  "seconds": 7.969,
+  "script_sha256": "e95a7cf6c2c0c58b07efb380b2cb0c9f752b4335b03695f5231d17a5b5988c4a",
+  "input_source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-k4-ramsey-current-native\\K4Ramsey\\Constructions\\Published768\\Data.lean",
+  "parsed_source_sha256": "b5de696edd6947b5da2250b466e5eead3e9ff3ee8818cc197a6bbc8c651f3494",
+  "row_count": 768,
+  "working_integer_row_bit_storage_upper_bound_bytes": 147456,
+  "combined_common_vertex_iteration_upper_bound": 75202816,
+  "counts_use_python_arbitrary_precision": true,
+  "no_entrant_executable_or_Lean_compiler_or_DLL_load": true,
+  "arithmetic_worker_threads": 1,
+  "red": {
+    "unordered_edges": 148608,
+    "unordered_triangles": 9581824,
+    "unordered_four_cliques": 216079680,
+    "common_vertex_iterations": 9581824
+  },
+  "blue": {
+    "unordered_edges": 145920,
+    "unordered_triangles": 9149952,
+    "unordered_four_cliques": 207075456,
+    "common_vertex_iterations": 9149952
+  },
+  "numerator": 10487165184,
+  "denominator": 347892350976,
+  "reduced_density_numerator": 4551721,
+  "reduced_density_denominator": 150994944,
+  "decimal_density": "0.030144857035742864",
+  "mckay_known_numerator": 10486266368,
+  "mckay_is_strictly_smaller": true,
+  "guard_minimum_counters": {
+    "disk_free_bytes": 6629109760,
+    "physical_available_bytes": 8363597824,
+    "available_commit_bytes": 3531071488,
+    "commit_limit_bytes": 60542980096
+  },
+  "guard_samples": 98,
+  "peak_rss_bytes": 22204416,
+  "current_private_bytes": 12808192,
+  "finite_small_graph_checks": {
+    "two_color_graphs_checked": 64,
+    "literal_ordered_tuples_per_graph": 256,
+    "purpose": "Finite corroboration of the ordinary equality-pattern identity; not universal Lean theorem certification."
+  },
+  "ordinary_identity_argument": "Blue diagonal blocks give n for all four equal; each unordered blue edge gives 8 tuples of multiplicity3+1 and6 of2+2; each blue triangle gives36 of2+1+1; each red or blue four-clique gives24 distinct ordered tuples. These exhaust the equality partitions of four positions.",
+  "scope_notice": "An independent exact data recount and ordinary mathematical argument for the known768 certificate. Does not replace source replay, establish new Ramsey priority, or make the submitted universal formula-to-tuple equivalence Lean-proved."
+}

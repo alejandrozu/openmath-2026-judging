@@ -1,0 +1,103 @@
+{
+  "started_utc": "2026-10-04T23:01:41.462140+00:00",
+  "status": "PASS_MATCH",
+  "method": "Independent frozen-data centered expansion with vertex permutation multiplicities and rigorously bounded int64 limb contractions; arbitrary-size Python integer recombination",
+  "not_lean_verification": true,
+  "entrant_executable_invoked": false,
+  "floating_point_used": false,
+  "process_and_thread_policy": "One process; all BLAS/OMP environment worker settings set to 1; no extra Python worker threads",
+  "resource_policy": {
+    "minimum_free_bytes": 1000000000,
+    "maximum_rss_bytes": 268435456,
+    "wall_seconds_limit": 900
+  },
+  "phases": [
+    {
+      "name": "payload_and_overflow_bounds_checked",
+      "utc": "2026-10-04T23:01:41.734780+00:00",
+      "peak_rss_bytes": 41775104
+    },
+    {
+      "name": "small_contraction_pilot_pass",
+      "utc": "2026-10-04T23:01:41.814982+00:00",
+      "tetrahedron": [
+        0,
+        16,
+        32,
+        48
+      ],
+      "pilot_seconds": 0.063,
+      "one_tetrahedron_exact_value": "-221106058961363670033006840480",
+      "independent_python_big_integer_comparison": true
+    },
+    {
+      "name": "base_root_recount_complete",
+      "utc": "2026-10-04T23:01:43.402052+00:00",
+      "root_red_plus_blue": "16900976074237415212752904166866944",
+      "raw_base_contribution": "519197985000573395335769216006152519680000"
+    },
+    {
+      "name": "triangles_complete",
+      "utc": "2026-10-04T23:01:43.459470+00:00",
+      "triangleAt_sum": "-913739402682219723549439492767744000",
+      "unordered_triangles": 1152
+    },
+    {
+      "name": "cycles_and_diamonds_complete",
+      "utc": "2026-10-04T23:01:52.407948+00:00",
+      "cycleAt_sum": "673343683824595177491095273268293120",
+      "diamondAt_sum": "14172788087305876019210639278512640",
+      "path_cache_bytes": 55910400
+    },
+    {
+      "name": "tetrahedra_complete",
+      "utc": "2026-10-04T23:01:58.131929+00:00",
+      "tetrahedronAt_sum": "-2737724451410292081085558982653440",
+      "unordered_tetrahedra": 288
+    }
+  ],
+  "portable_input_sha256": "5ea4d69dd06cbf34520acbbaa4f5c573258aeab40698d5e8cae34e9a3c6fa9ba",
+  "minimum_observed_free_bytes": 6697676800,
+  "integer_bounds": {
+    "maximum_absolute_centered_entry": 51064,
+    "path_20M2": 52150641920,
+    "triangle_8000M3": 1065208151601152000,
+    "triangle_coefficient_192Q3": 54043195528445952,
+    "triple_edge_product_M3": 133151018950144,
+    "base_triple_Q3": 281474976710656,
+    "tetra_or_base_limb_dot_160000R20sq": 175921860444160000,
+    "cycle_limb_dot_400R13sq": 26843545600,
+    "diamond_limb_dot_400MR13sq": 1370738812518400,
+    "int64_limit_exclusive": 9223372036854775808
+  },
+  "multiplicity_checks": {
+    "ordered_triangles": 6912,
+    "ordered_tetrahedra": 6912,
+    "canonical_path_matrices": 17472,
+    "ordered_paths": 32448,
+    "ordered_cycles": 161472,
+    "ordered_diamonds": 36864
+  },
+  "seconds": 16.672,
+  "memory": {
+    "rss_bytes": 107991040,
+    "peak_rss_bytes": 122081280,
+    "private_bytes": 96886784,
+    "peak_private_bytes": 111087616
+  },
+  "raw_numerator": "519196432373018212667371525712277942005760",
+  "raw_denominator": "17226794825372509712833339501233265704960000",
+  "reduced_density_numerator": "8450462766487926638466333426306607129",
+  "reduced_density_denominator": "280384030360880691940646801777885184000",
+  "raw_numerator_matches_submitted_claim": true,
+  "reduced_density_matches_submitted_claim": true,
+  "contributions": {
+    "base": "519197985000573395335769216006152519680000",
+    "four_triangle": "-3654957610728878894197757971070976000",
+    "three_cycle": "2020031051473785532473285819804879360",
+    "six_diamond": "85036728523835256115263835671075840",
+    "tetrahedron": "-2737724451410292081085558982653440"
+  },
+  "finished_utc": "2026-10-04T23:01:58.137926+00:00",
+  "script_sha256": "3d1f623744656d27344a2bf02db81bbd68c06262342e9a3eb23dd5d1ccd9947a"
+}

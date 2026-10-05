@@ -1,0 +1,68 @@
+--- C:\Users\Propietario\Documents\Codex\2026-10-01\loo\work\publication\verification\qualify_original_e65_multilease_composite_199plusStd.py
++++ C:\Users\Propietario\Documents\Codex\2026-10-01\loo\work\publication\verification\qualify_original_e65_multilease_timestamp_aware_composite_199plusStd.py
+@@ -10,7 +10,7 @@
+ from collections import Counter
+ from contextlib import ExitStack
+ import argparse, configparser, hashlib, json, msvcrt, re
+-from datetime import datetime, timezone
++from datetime import datetime, timezone, timedelta
+ 
+ BASE = Path(__file__).resolve().parent
+ PROJECT = 'sundai-erdos3-original-image-source'
+@@ -250,6 +250,25 @@
+     stamp = datetime.fromisoformat(value.replace('Z', '+00:00'))
+     require(stamp.tzinfo is not None, 'Actual UTC-aware timestamp required')
+     return stamp.astimezone(timezone.utc)
++
++
++
++def checkpoint_covers_prior_timestamp(checkpoint_value, actual_value):
++    """Respect the precision actually stored by the unchanged replay runner.
++
++    A literal whole-second checkpoint is a recorded interval [t,t+1s), not
++    an invented exact finish instant. Fractional-second checkpoints retain
++    exact comparison, including an explicitly written .000000 timestamp.
++    The guard/source timestamps and all raw receipts remain unchanged.
++    """
++    checkpoint = iso_utc(checkpoint_value)
++    actual = iso_utc(actual_value)
++    whole_second = re.fullmatch(
++        r'\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:Z|[+-]\d{2}:\d{2})',
++        checkpoint_value) is not None
++    if whole_second:
++        return actual < checkpoint + timedelta(seconds=1)
++    return actual <= checkpoint
+ 
+ 
+ def validate_dispatch_chain(actual, actual_sha, review, report_file, previous_attempts,
+@@ -366,15 +385,18 @@
+         lease_time = iso_utc(lease['checked_utc'])
+         start_time = iso_utc(start['finished_utc'])
+         end_time = iso_utc(end['finished_utc'])
+-        require(start_time <= approval_time and start_time <= lease_time and approval_time <= end_time and lease_time <= end_time,
+-                'Approval/lease timestamps do not follow a completed checkpoint')
++        require(start_time <= approval_time and start_time <= lease_time and
++                checkpoint_covers_prior_timestamp(end['finished_utc'], approval['checked_utc']) and
++                checkpoint_covers_prior_timestamp(end['finished_utc'], lease['checked_utc']),
++                'Approval/lease timestamps do not follow a completed checkpoint at its recorded resolution')
+         new_names = set(end_rows) - set(start_rows)
+         require(new_names <= whole | own_audits, 'Restart manufactured new granular or external Std rows')
+         for name in new_names:
+             row = end_rows[name]
+             require(name not in covered_new_rows and approval_time <= iso_utc(row['started_utc']) and
+-                    lease_time <= iso_utc(row['started_utc']) <= iso_utc(row['finished_utc']) <= end_time,
+-                    'A whole/audit invocation is duplicated or falls outside its approved sole lease interval')
++                    lease_time <= iso_utc(row['started_utc']) <= iso_utc(row['finished_utc']) and
++                    checkpoint_covers_prior_timestamp(end['finished_utc'], row['finished_utc']),
++                    'A whole/audit invocation is duplicated or falls outside its approved sole lease interval at the recorded checkpoint resolution')
+             expected_cap = row['own_job_resource_receipt']['resource_policy']
+             require(expected_cap['own_job_private_bytes'] == 10*GIB and expected_cap['initial_available_commit_bytes'] == 11*GIB,
+                     'Corresponding actual invocation did not use the sole10/11 guard')
+@@ -610,6 +632,7 @@
+             'preserved_prior_attempts': previous_attempts, 'actual_sole_lease_sha256': whole_settings['lease_sha256'],
+             'actual_reviewed_sole_dispatch_chain': dispatch_chain,
+             'each_whole_and_audit_actual_row_covered_by_exact_reviewed_sole10_11_lease': True,
++            'checkpoint_timestamp_resolution_qualification': 'A literal whole-second checkpoint records [t,t+1s); guard/source finish timestamps must precede its exclusive upper bound. Fractional-second checkpoint timestamps use exact comparison. Approval and lease still precede every actual new invocation. Raw times are preserved; an exact checkpoint finish instant is not inferred.',
+             'exact_compiler_binary_sha256': COMPILER_SHA, 'exact_nine_package_HEAD_origin_rechecks': packages,
+             'official_cache_PASS_receipt_sha256': CACHE_SHA, 'recorded_official_provider_closure_rechecks': official_checks,
+             'new_complete_official_Mathlib_umbrella_artifact_scan_performed': False,

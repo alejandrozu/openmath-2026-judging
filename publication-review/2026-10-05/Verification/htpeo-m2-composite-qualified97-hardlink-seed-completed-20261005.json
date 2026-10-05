@@ -1,0 +1,4485 @@
+{
+  "status": "EXACT97_PREVIOUS_OWN_DMS_COLD_OUTPUT_LINK_SEED_COMPLETE_NO_NEW_COMPILATION",
+  "started_utc": "2026-10-05T06:35:14.846177+00:00",
+  "approval_receipt": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\root-HTM2-composite97-seed-only-approval-20261005.json",
+  "approval_receipt_sha256": "7c83e9948f200488e46867666ad035c3421376f3d01e2999518b3665014631f2",
+  "policy_sha256": "faa229d9236aef36d384f11d12e575cbd7893540a4d80c5386e6db10e3eece7b",
+  "seed_helper_sha256": "e5abf550dcac01c207663e69279f6f0b34f84dd885a9c52c6b0a32beb3a82c47",
+  "DMS_complete_route_id": "htpeo-dms-current-import-pruned-v4-vector",
+  "DMS_complete_route_qualification_receipt": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dms-v4-vector-composite-supplement-final-qualification-20261005.json",
+  "DMS_complete_route_qualification_receipt_sha256": "7d401ae5c7003a1520dac33288b2335645bbd095a3327cc8ddefb2d17aa417ab",
+  "DMS_complete_route_qualification_status": "QUALIFIED_BODY_IDENTICAL_SOURCES_WITH_221_PREVIOUS_OWN_PASSES_AND_FRESH_ORGANIZER_SUPPLEMENT_STANDARD_ENDPOINTS",
+  "preserved_failed_DMS_v2_history": {
+    "actual_checkpoint_receipt": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\htpeo-dms-current-import-pruned-modeq-v2-fresh-build.json",
+    "actual_checkpoint_receipt_sha256": "664b36b905611c46616af5b67bd98d593f62c03dd3c04e13b6d7325fb7946bea",
+    "immutable_checkpoint_snapshot": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\m2_gate_snapshots\\v2-checkpoint.664b36b905611c46616af5b67bd98d593f62c03dd3c04e13b6d7325fb7946bea.json",
+    "immutable_checkpoint_snapshot_sha256": "664b36b905611c46616af5b67bd98d593f62c03dd3c04e13b6d7325fb7946bea",
+    "recorded_status": "SCHEDULED_RESOURCE_CHECKPOINT",
+    "finished_utc": "2026-10-05T03:50:37Z",
+    "failed_module": "BlockProps",
+    "actual_exit": 1,
+    "actual_resource_stop_reason": null,
+    "actual_diagnostic": "BlockProps.lean:33:58: error(lean.unknownIdentifier): Unknown constant `Fin.castLE_injective`\n",
+    "interpretation": "Import-exposure source failure in unchanged scientific body; failed/checkpointed route, not a completed qualified route or a resource failure.",
+    "preserved_v2_exact99_seed_receipt": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dms-modeq-v2-original99-hardlink-seed-completed-20261005.json",
+    "preserved_v2_exact99_seed_receipt_sha256": "a5ce596e15b1c35a9c67bbda9ae912e83341c0f1956cbd4c069637587271815b",
+    "v2_postseed_link_count_lock_requires_separate_root_release": true,
+    "completed_other_DMS_route_not_yet_asserted": true
+  },
+  "DMS_v2_link_count_lock_release_receipt": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\root-HTM2-composite97-originalV2-linkcount-release-20261005.json",
+  "DMS_v2_link_count_lock_release_receipt_sha256": "f2e1e56156d857ef46095dfff481ce8ab842d0e9342dd5eb7f98b3d114dacf5d",
+  "source_plan_sha256": "d75af96c5e21e79909e7a95646d0bf766609a46dd40bb0fc44e6308a6eb60ef6",
+  "original119_receipt_sha256": "feb37da0178c7ad7f259096eba604ab43ae253bcaaac5212d66a2748ffc84238",
+  "M2_StarCore_pilot_sha256": "c658e5eb47ebbff4f5e3c511d78f3db4eed6c357317bc4ef5d221f05719f91bd",
+  "eligible97_module_names": [
+    "MhFact_024845889158353d",
+    "MhFact_046773df0a672922",
+    "MhFact_06139ad5904fa064",
+    "MhFact_066dc781a8de9c11",
+    "MhFact_09796da8a434e150",
+    "MhFact_0e0e37a38e3c97d5",
+    "MhFact_144fd607d85ac5da",
+    "MhFact_1b2e17f98116d9aa",
+    "MhFact_1f8ebb817a59b41d",
+    "MhFact_256b4143cc30000f",
+    "MhFact_2e993e3b07378767",
+    "MhFact_2f482379fe24b1cb",
+    "MhFact_30194dab4e05fdcf",
+    "MhFact_33aabc50b1cec1ba",
+    "MhFact_341b6e5e1be16205",
+    "MhFact_345a55d7429fd4b1",
+    "MhFact_38b6f78a47fdf12e",
+    "MhFact_3c53e18d818a023b",
+    "MhFact_3e79907cfcc0085b",
+    "MhFact_413193082c4b8758",
+    "MhFact_4b6dbe605eac3a1d",
+    "MhFact_4b7436a78212f56a",
+    "MhFact_4e4dfbfc10836500",
+    "MhFact_4e63409f7b05a806",
+    "MhFact_4f913d5550e57c85",
+    "MhFact_51ff9480dc00823f",
+    "MhFact_5343a2db598602a9",
+    "MhFact_54ed0ff9a1ed26b6",
+    "MhFact_55368cd7a0c74072",
+    "MhFact_57ea4db232a2b7f5",
+    "MhFact_59c06cb7808fc140",
+    "MhFact_5c1eb3f583cf643f",
+    "MhFact_5e8f7a0c3cb04161",
+    "MhFact_643ccea3769075c0",
+    "MhFact_6460e64b00785972",
+    "MhFact_657e581f1145250f",
+    "MhFact_66a4a19c81528d5b",
+    "MhFact_6882aa6fa76ff8ed",
+    "MhFact_6b1f8729194e23a3",
+    "MhFact_6c78409a046a3fe7",
+    "MhFact_6e44d3c2232b5736",
+    "MhFact_7217c8f0517c24a9",
+    "MhFact_724d35f964ae6f7d",
+    "MhFact_75fc19c47ee38b89",
+    "MhFact_77a5aa23394eb0f0",
+    "MhFact_77e9ac7f87ab804f",
+    "MhFact_78a34517ee1a6fff",
+    "MhFact_78d98836f6372f68",
+    "MhFact_79ac08d5cf0788b9",
+    "MhFact_7b9500b9ad8bca15",
+    "MhFact_7c9b506b16bbaf73",
+    "MhFact_7d291f6ca774e1da",
+    "MhFact_81c52cea8147de67",
+    "MhFact_83263f8970f3987b",
+    "MhFact_85780d9a54267261",
+    "MhFact_90b4662cdeba097d",
+    "MhFact_916ccd41e9db4312",
+    "MhFact_923511b69a46047e",
+    "MhFact_96b352680829f174",
+    "MhFact_974f7197c1be8069",
+    "MhFact_9e7dda3374e6b172",
+    "MhFact_a030b9ec722eb795",
+    "MhFact_a8bfe25dadf921db",
+    "MhFact_b536c7d8a4f139e4",
+    "MhFact_b71709db7a82637a",
+    "MhFact_ba4d9c5abd0afd83",
+    "MhFact_bde9371a01dd2855",
+    "MhFact_c03bb6e1daa663e4",
+    "MhFact_c156979f912a0408",
+    "MhFact_c1bad3abf5f2e5e8",
+    "MhFact_c3375be11cf311ee",
+    "MhFact_c35583f86422a75a",
+    "MhFact_c64b6bd62b78d841",
+    "MhFact_cc801c1ba060f9c7",
+    "MhFact_d39e578650322db3",
+    "MhFact_def3ba43f6eccb6d",
+    "MhFact_e1599bf3f3c26bdb",
+    "MhFact_e63e13afc71071cb",
+    "MhFact_e68d717a207ff44f",
+    "MhFact_ebeb33c568dfe4e4",
+    "MhFact_eff6661027b6cbd2",
+    "MhFact_f4c06558ba3030b8",
+    "MhFact_f645e06d2ce727a3",
+    "MhFact_f7fb58786d241d68",
+    "MhFact_fbae65436c8cc8bf",
+    "MhFact_fe45f583e0b81581",
+    "StarBottleneck",
+    "StarCert",
+    "StarChecker",
+    "StarCompose",
+    "StarExtension",
+    "StarLeaf",
+    "StarMatching",
+    "StarReduce",
+    "StarRigid",
+    "StarSix",
+    "StarVizing"
+  ],
+  "output_links": [
+    {
+      "module": "MhFact_024845889158353d",
+      "original_owned_output": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current\\MhFact_024845889158353d.olean",
+      "M2_target": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-erdos-m2\\MhFact_024845889158353d.olean",
+      "sha256": "f42cbd787ab89c87a8350fe9ad65a6391b2821a1ddcbbd7fe96e1ca6cce8334d",
+      "bytes": 7505776,
+      "artifact_kind": ".olean",
+      "original_NTFS_identity_at_policy": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2082919,
+        "link_count": 2,
+        "bytes": 7505776,
+        "attributes": 2080
+      },
+      "dated_link_count_is_not_a_future_exact_prerequisite": true,
+      "classification": "PREVIOUS_OWN_DMS_ORIGINAL_ROUTE_COLD_OUTPUT_NOT_NEW_M2_COMPILATION",
+      "original_NTFS_identity_before_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2082919,
+        "link_count": 2,
+        "bytes": 7505776,
+        "attributes": 2080
+      },
+      "original_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2082919,
+        "link_count": 3,
+        "bytes": 7505776,
+        "attributes": 2080
+      },
+      "M2_target_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2082919,
+        "link_count": 3,
+        "bytes": 7505776,
+        "attributes": 2080
+      },
+      "original_sha256_after_link": "f42cbd787ab89c87a8350fe9ad65a6391b2821a1ddcbbd7fe96e1ca6cce8334d",
+      "M2_target_sha256": "f42cbd787ab89c87a8350fe9ad65a6391b2821a1ddcbbd7fe96e1ca6cce8334d"
+    },
+    {
+      "module": "MhFact_046773df0a672922",
+      "original_owned_output": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current\\MhFact_046773df0a672922.olean",
+      "M2_target": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-erdos-m2\\MhFact_046773df0a672922.olean",
+      "sha256": "c39054048537f08fb7d0c6e323932b33405931b0d39979a9a21f72467c7ab148",
+      "bytes": 1154752,
+      "artifact_kind": ".olean",
+      "original_NTFS_identity_at_policy": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2062042,
+        "link_count": 2,
+        "bytes": 1154752,
+        "attributes": 2080
+      },
+      "dated_link_count_is_not_a_future_exact_prerequisite": true,
+      "classification": "PREVIOUS_OWN_DMS_ORIGINAL_ROUTE_COLD_OUTPUT_NOT_NEW_M2_COMPILATION",
+      "original_NTFS_identity_before_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2062042,
+        "link_count": 2,
+        "bytes": 1154752,
+        "attributes": 2080
+      },
+      "original_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2062042,
+        "link_count": 3,
+        "bytes": 1154752,
+        "attributes": 2080
+      },
+      "M2_target_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2062042,
+        "link_count": 3,
+        "bytes": 1154752,
+        "attributes": 2080
+      },
+      "original_sha256_after_link": "c39054048537f08fb7d0c6e323932b33405931b0d39979a9a21f72467c7ab148",
+      "M2_target_sha256": "c39054048537f08fb7d0c6e323932b33405931b0d39979a9a21f72467c7ab148"
+    },
+    {
+      "module": "MhFact_06139ad5904fa064",
+      "original_owned_output": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current\\MhFact_06139ad5904fa064.olean",
+      "M2_target": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-erdos-m2\\MhFact_06139ad5904fa064.olean",
+      "sha256": "6244aef6abe8c35a5fe94b7939b245ddbaff132f7c59795339ec5ca437ef75a9",
+      "bytes": 5353872,
+      "artifact_kind": ".olean",
+      "original_NTFS_identity_at_policy": {
+        "volume_serial": 1980967165,
+        "file_index_high": 458752,
+        "file_index_low": 2083328,
+        "link_count": 2,
+        "bytes": 5353872,
+        "attributes": 2080
+      },
+      "dated_link_count_is_not_a_future_exact_prerequisite": true,
+      "classification": "PREVIOUS_OWN_DMS_ORIGINAL_ROUTE_COLD_OUTPUT_NOT_NEW_M2_COMPILATION",
+      "original_NTFS_identity_before_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 458752,
+        "file_index_low": 2083328,
+        "link_count": 2,
+        "bytes": 5353872,
+        "attributes": 2080
+      },
+      "original_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 458752,
+        "file_index_low": 2083328,
+        "link_count": 3,
+        "bytes": 5353872,
+        "attributes": 2080
+      },
+      "M2_target_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 458752,
+        "file_index_low": 2083328,
+        "link_count": 3,
+        "bytes": 5353872,
+        "attributes": 2080
+      },
+      "original_sha256_after_link": "6244aef6abe8c35a5fe94b7939b245ddbaff132f7c59795339ec5ca437ef75a9",
+      "M2_target_sha256": "6244aef6abe8c35a5fe94b7939b245ddbaff132f7c59795339ec5ca437ef75a9"
+    },
+    {
+      "module": "MhFact_066dc781a8de9c11",
+      "original_owned_output": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current\\MhFact_066dc781a8de9c11.olean",
+      "M2_target": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-erdos-m2\\MhFact_066dc781a8de9c11.olean",
+      "sha256": "1bf271106ecdc8bec252fecec2584319c47e9a423c2559ae976176c748d9c50f",
+      "bytes": 3695712,
+      "artifact_kind": ".olean",
+      "original_NTFS_identity_at_policy": {
+        "volume_serial": 1980967165,
+        "file_index_high": 196608,
+        "file_index_low": 2063364,
+        "link_count": 2,
+        "bytes": 3695712,
+        "attributes": 2080
+      },
+      "dated_link_count_is_not_a_future_exact_prerequisite": true,
+      "classification": "PREVIOUS_OWN_DMS_ORIGINAL_ROUTE_COLD_OUTPUT_NOT_NEW_M2_COMPILATION",
+      "original_NTFS_identity_before_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 196608,
+        "file_index_low": 2063364,
+        "link_count": 2,
+        "bytes": 3695712,
+        "attributes": 2080
+      },
+      "original_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 196608,
+        "file_index_low": 2063364,
+        "link_count": 3,
+        "bytes": 3695712,
+        "attributes": 2080
+      },
+      "M2_target_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 196608,
+        "file_index_low": 2063364,
+        "link_count": 3,
+        "bytes": 3695712,
+        "attributes": 2080
+      },
+      "original_sha256_after_link": "1bf271106ecdc8bec252fecec2584319c47e9a423c2559ae976176c748d9c50f",
+      "M2_target_sha256": "1bf271106ecdc8bec252fecec2584319c47e9a423c2559ae976176c748d9c50f"
+    },
+    {
+      "module": "MhFact_09796da8a434e150",
+      "original_owned_output": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current\\MhFact_09796da8a434e150.olean",
+      "M2_target": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-erdos-m2\\MhFact_09796da8a434e150.olean",
+      "sha256": "93ef8138ea6aa54960e78f473731c3baa4ff8f477725ccdaa1d6d0d41aa105a7",
+      "bytes": 5571664,
+      "artifact_kind": ".olean",
+      "original_NTFS_identity_at_policy": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2062471,
+        "link_count": 2,
+        "bytes": 5571664,
+        "attributes": 2080
+      },
+      "dated_link_count_is_not_a_future_exact_prerequisite": true,
+      "classification": "PREVIOUS_OWN_DMS_ORIGINAL_ROUTE_COLD_OUTPUT_NOT_NEW_M2_COMPILATION",
+      "original_NTFS_identity_before_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2062471,
+        "link_count": 2,
+        "bytes": 5571664,
+        "attributes": 2080
+      },
+      "original_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2062471,
+        "link_count": 3,
+        "bytes": 5571664,
+        "attributes": 2080
+      },
+      "M2_target_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2062471,
+        "link_count": 3,
+        "bytes": 5571664,
+        "attributes": 2080
+      },
+      "original_sha256_after_link": "93ef8138ea6aa54960e78f473731c3baa4ff8f477725ccdaa1d6d0d41aa105a7",
+      "M2_target_sha256": "93ef8138ea6aa54960e78f473731c3baa4ff8f477725ccdaa1d6d0d41aa105a7"
+    },
+    {
+      "module": "MhFact_0e0e37a38e3c97d5",
+      "original_owned_output": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current\\MhFact_0e0e37a38e3c97d5.olean",
+      "M2_target": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-erdos-m2\\MhFact_0e0e37a38e3c97d5.olean",
+      "sha256": "efc6ad92d363d28668df5897118bfffdc2803f36cafeea827c1754bfc267574f",
+      "bytes": 23089768,
+      "artifact_kind": ".olean",
+      "original_NTFS_identity_at_policy": {
+        "volume_serial": 1980967165,
+        "file_index_high": 196608,
+        "file_index_low": 2208115,
+        "link_count": 2,
+        "bytes": 23089768,
+        "attributes": 2080
+      },
+      "dated_link_count_is_not_a_future_exact_prerequisite": true,
+      "classification": "PREVIOUS_OWN_DMS_ORIGINAL_ROUTE_COLD_OUTPUT_NOT_NEW_M2_COMPILATION",
+      "original_NTFS_identity_before_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 196608,
+        "file_index_low": 2208115,
+        "link_count": 2,
+        "bytes": 23089768,
+        "attributes": 2080
+      },
+      "original_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 196608,
+        "file_index_low": 2208115,
+        "link_count": 3,
+        "bytes": 23089768,
+        "attributes": 2080
+      },
+      "M2_target_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 196608,
+        "file_index_low": 2208115,
+        "link_count": 3,
+        "bytes": 23089768,
+        "attributes": 2080
+      },
+      "original_sha256_after_link": "efc6ad92d363d28668df5897118bfffdc2803f36cafeea827c1754bfc267574f",
+      "M2_target_sha256": "efc6ad92d363d28668df5897118bfffdc2803f36cafeea827c1754bfc267574f"
+    },
+    {
+      "module": "MhFact_144fd607d85ac5da",
+      "original_owned_output": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current\\MhFact_144fd607d85ac5da.olean",
+      "M2_target": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-erdos-m2\\MhFact_144fd607d85ac5da.olean",
+      "sha256": "7638d835f33ff8e8a6f53f1efc97b4e68d30af72270a515eaa6d71d2d3ab37b5",
+      "bytes": 10418912,
+      "artifact_kind": ".olean",
+      "original_NTFS_identity_at_policy": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2083915,
+        "link_count": 2,
+        "bytes": 10418912,
+        "attributes": 2080
+      },
+      "dated_link_count_is_not_a_future_exact_prerequisite": true,
+      "classification": "PREVIOUS_OWN_DMS_ORIGINAL_ROUTE_COLD_OUTPUT_NOT_NEW_M2_COMPILATION",
+      "original_NTFS_identity_before_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2083915,
+        "link_count": 2,
+        "bytes": 10418912,
+        "attributes": 2080
+      },
+      "original_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2083915,
+        "link_count": 3,
+        "bytes": 10418912,
+        "attributes": 2080
+      },
+      "M2_target_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2083915,
+        "link_count": 3,
+        "bytes": 10418912,
+        "attributes": 2080
+      },
+      "original_sha256_after_link": "7638d835f33ff8e8a6f53f1efc97b4e68d30af72270a515eaa6d71d2d3ab37b5",
+      "M2_target_sha256": "7638d835f33ff8e8a6f53f1efc97b4e68d30af72270a515eaa6d71d2d3ab37b5"
+    },
+    {
+      "module": "MhFact_1b2e17f98116d9aa",
+      "original_owned_output": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current\\MhFact_1b2e17f98116d9aa.olean",
+      "M2_target": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-erdos-m2\\MhFact_1b2e17f98116d9aa.olean",
+      "sha256": "f3520e55ca45dc80dacc20f1e76ed3e93b800f6bd7690e59e241cf74e851cc3c",
+      "bytes": 53608,
+      "artifact_kind": ".olean",
+      "original_NTFS_identity_at_policy": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2091078,
+        "link_count": 2,
+        "bytes": 53608,
+        "attributes": 2080
+      },
+      "dated_link_count_is_not_a_future_exact_prerequisite": true,
+      "classification": "PREVIOUS_OWN_DMS_ORIGINAL_ROUTE_COLD_OUTPUT_NOT_NEW_M2_COMPILATION",
+      "original_NTFS_identity_before_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2091078,
+        "link_count": 2,
+        "bytes": 53608,
+        "attributes": 2080
+      },
+      "original_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2091078,
+        "link_count": 3,
+        "bytes": 53608,
+        "attributes": 2080
+      },
+      "M2_target_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2091078,
+        "link_count": 3,
+        "bytes": 53608,
+        "attributes": 2080
+      },
+      "original_sha256_after_link": "f3520e55ca45dc80dacc20f1e76ed3e93b800f6bd7690e59e241cf74e851cc3c",
+      "M2_target_sha256": "f3520e55ca45dc80dacc20f1e76ed3e93b800f6bd7690e59e241cf74e851cc3c"
+    },
+    {
+      "module": "MhFact_1f8ebb817a59b41d",
+      "original_owned_output": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current\\MhFact_1f8ebb817a59b41d.olean",
+      "M2_target": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-erdos-m2\\MhFact_1f8ebb817a59b41d.olean",
+      "sha256": "e9b9492f05703128c418bcd42f0d971216e291e91d6ff071c92550130fc0aac9",
+      "bytes": 10239168,
+      "artifact_kind": ".olean",
+      "original_NTFS_identity_at_policy": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2090038,
+        "link_count": 2,
+        "bytes": 10239168,
+        "attributes": 2080
+      },
+      "dated_link_count_is_not_a_future_exact_prerequisite": true,
+      "classification": "PREVIOUS_OWN_DMS_ORIGINAL_ROUTE_COLD_OUTPUT_NOT_NEW_M2_COMPILATION",
+      "original_NTFS_identity_before_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2090038,
+        "link_count": 2,
+        "bytes": 10239168,
+        "attributes": 2080
+      },
+      "original_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2090038,
+        "link_count": 3,
+        "bytes": 10239168,
+        "attributes": 2080
+      },
+      "M2_target_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2090038,
+        "link_count": 3,
+        "bytes": 10239168,
+        "attributes": 2080
+      },
+      "original_sha256_after_link": "e9b9492f05703128c418bcd42f0d971216e291e91d6ff071c92550130fc0aac9",
+      "M2_target_sha256": "e9b9492f05703128c418bcd42f0d971216e291e91d6ff071c92550130fc0aac9"
+    },
+    {
+      "module": "MhFact_256b4143cc30000f",
+      "original_owned_output": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current\\MhFact_256b4143cc30000f.olean",
+      "M2_target": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-erdos-m2\\MhFact_256b4143cc30000f.olean",
+      "sha256": "d48493773c5b1065907802456056b602f00e1dacaf11469d556ae2fd81b765fc",
+      "bytes": 9991288,
+      "artifact_kind": ".olean",
+      "original_NTFS_identity_at_policy": {
+        "volume_serial": 1980967165,
+        "file_index_high": 131072,
+        "file_index_low": 2082596,
+        "link_count": 2,
+        "bytes": 9991288,
+        "attributes": 2080
+      },
+      "dated_link_count_is_not_a_future_exact_prerequisite": true,
+      "classification": "PREVIOUS_OWN_DMS_ORIGINAL_ROUTE_COLD_OUTPUT_NOT_NEW_M2_COMPILATION",
+      "original_NTFS_identity_before_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 131072,
+        "file_index_low": 2082596,
+        "link_count": 2,
+        "bytes": 9991288,
+        "attributes": 2080
+      },
+      "original_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 131072,
+        "file_index_low": 2082596,
+        "link_count": 3,
+        "bytes": 9991288,
+        "attributes": 2080
+      },
+      "M2_target_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 131072,
+        "file_index_low": 2082596,
+        "link_count": 3,
+        "bytes": 9991288,
+        "attributes": 2080
+      },
+      "original_sha256_after_link": "d48493773c5b1065907802456056b602f00e1dacaf11469d556ae2fd81b765fc",
+      "M2_target_sha256": "d48493773c5b1065907802456056b602f00e1dacaf11469d556ae2fd81b765fc"
+    },
+    {
+      "module": "MhFact_2e993e3b07378767",
+      "original_owned_output": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current\\MhFact_2e993e3b07378767.olean",
+      "M2_target": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-erdos-m2\\MhFact_2e993e3b07378767.olean",
+      "sha256": "b6e2d7c1747463f13fe6fd70dc576eb073d3bfbd52bd8b9389dc072e50294935",
+      "bytes": 10581888,
+      "artifact_kind": ".olean",
+      "original_NTFS_identity_at_policy": {
+        "volume_serial": 1980967165,
+        "file_index_high": 720896,
+        "file_index_low": 1699395,
+        "link_count": 2,
+        "bytes": 10581888,
+        "attributes": 2080
+      },
+      "dated_link_count_is_not_a_future_exact_prerequisite": true,
+      "classification": "PREVIOUS_OWN_DMS_ORIGINAL_ROUTE_COLD_OUTPUT_NOT_NEW_M2_COMPILATION",
+      "original_NTFS_identity_before_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 720896,
+        "file_index_low": 1699395,
+        "link_count": 2,
+        "bytes": 10581888,
+        "attributes": 2080
+      },
+      "original_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 720896,
+        "file_index_low": 1699395,
+        "link_count": 3,
+        "bytes": 10581888,
+        "attributes": 2080
+      },
+      "M2_target_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 720896,
+        "file_index_low": 1699395,
+        "link_count": 3,
+        "bytes": 10581888,
+        "attributes": 2080
+      },
+      "original_sha256_after_link": "b6e2d7c1747463f13fe6fd70dc576eb073d3bfbd52bd8b9389dc072e50294935",
+      "M2_target_sha256": "b6e2d7c1747463f13fe6fd70dc576eb073d3bfbd52bd8b9389dc072e50294935"
+    },
+    {
+      "module": "MhFact_2f482379fe24b1cb",
+      "original_owned_output": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current\\MhFact_2f482379fe24b1cb.olean",
+      "M2_target": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-erdos-m2\\MhFact_2f482379fe24b1cb.olean",
+      "sha256": "d035d191e968c0e452f818926ec6255115e92cd9e2e6e63e2b22becfd6a7019e",
+      "bytes": 8355936,
+      "artifact_kind": ".olean",
+      "original_NTFS_identity_at_policy": {
+        "volume_serial": 1980967165,
+        "file_index_high": 131072,
+        "file_index_low": 2068338,
+        "link_count": 2,
+        "bytes": 8355936,
+        "attributes": 2080
+      },
+      "dated_link_count_is_not_a_future_exact_prerequisite": true,
+      "classification": "PREVIOUS_OWN_DMS_ORIGINAL_ROUTE_COLD_OUTPUT_NOT_NEW_M2_COMPILATION",
+      "original_NTFS_identity_before_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 131072,
+        "file_index_low": 2068338,
+        "link_count": 2,
+        "bytes": 8355936,
+        "attributes": 2080
+      },
+      "original_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 131072,
+        "file_index_low": 2068338,
+        "link_count": 3,
+        "bytes": 8355936,
+        "attributes": 2080
+      },
+      "M2_target_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 131072,
+        "file_index_low": 2068338,
+        "link_count": 3,
+        "bytes": 8355936,
+        "attributes": 2080
+      },
+      "original_sha256_after_link": "d035d191e968c0e452f818926ec6255115e92cd9e2e6e63e2b22becfd6a7019e",
+      "M2_target_sha256": "d035d191e968c0e452f818926ec6255115e92cd9e2e6e63e2b22becfd6a7019e"
+    },
+    {
+      "module": "MhFact_30194dab4e05fdcf",
+      "original_owned_output": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current\\MhFact_30194dab4e05fdcf.olean",
+      "M2_target": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-erdos-m2\\MhFact_30194dab4e05fdcf.olean",
+      "sha256": "d4b5f6290d4c9a6a0b2e7aa6897189a00a50aa9a9b154fc269950a2b231ff93b",
+      "bytes": 3228672,
+      "artifact_kind": ".olean",
+      "original_NTFS_identity_at_policy": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2066431,
+        "link_count": 2,
+        "bytes": 3228672,
+        "attributes": 2080
+      },
+      "dated_link_count_is_not_a_future_exact_prerequisite": true,
+      "classification": "PREVIOUS_OWN_DMS_ORIGINAL_ROUTE_COLD_OUTPUT_NOT_NEW_M2_COMPILATION",
+      "original_NTFS_identity_before_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2066431,
+        "link_count": 2,
+        "bytes": 3228672,
+        "attributes": 2080
+      },
+      "original_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2066431,
+        "link_count": 3,
+        "bytes": 3228672,
+        "attributes": 2080
+      },
+      "M2_target_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2066431,
+        "link_count": 3,
+        "bytes": 3228672,
+        "attributes": 2080
+      },
+      "original_sha256_after_link": "d4b5f6290d4c9a6a0b2e7aa6897189a00a50aa9a9b154fc269950a2b231ff93b",
+      "M2_target_sha256": "d4b5f6290d4c9a6a0b2e7aa6897189a00a50aa9a9b154fc269950a2b231ff93b"
+    },
+    {
+      "module": "MhFact_33aabc50b1cec1ba",
+      "original_owned_output": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current\\MhFact_33aabc50b1cec1ba.olean",
+      "M2_target": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-erdos-m2\\MhFact_33aabc50b1cec1ba.olean",
+      "sha256": "df551a911dd06ee94c50f9ced27ff4ca570af305025742d7e60e2c0f0769c11f",
+      "bytes": 3639720,
+      "artifact_kind": ".olean",
+      "original_NTFS_identity_at_policy": {
+        "volume_serial": 1980967165,
+        "file_index_high": 196608,
+        "file_index_low": 2066130,
+        "link_count": 2,
+        "bytes": 3639720,
+        "attributes": 2080
+      },
+      "dated_link_count_is_not_a_future_exact_prerequisite": true,
+      "classification": "PREVIOUS_OWN_DMS_ORIGINAL_ROUTE_COLD_OUTPUT_NOT_NEW_M2_COMPILATION",
+      "original_NTFS_identity_before_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 196608,
+        "file_index_low": 2066130,
+        "link_count": 2,
+        "bytes": 3639720,
+        "attributes": 2080
+      },
+      "original_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 196608,
+        "file_index_low": 2066130,
+        "link_count": 3,
+        "bytes": 3639720,
+        "attributes": 2080
+      },
+      "M2_target_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 196608,
+        "file_index_low": 2066130,
+        "link_count": 3,
+        "bytes": 3639720,
+        "attributes": 2080
+      },
+      "original_sha256_after_link": "df551a911dd06ee94c50f9ced27ff4ca570af305025742d7e60e2c0f0769c11f",
+      "M2_target_sha256": "df551a911dd06ee94c50f9ced27ff4ca570af305025742d7e60e2c0f0769c11f"
+    },
+    {
+      "module": "MhFact_341b6e5e1be16205",
+      "original_owned_output": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current\\MhFact_341b6e5e1be16205.olean",
+      "M2_target": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-erdos-m2\\MhFact_341b6e5e1be16205.olean",
+      "sha256": "cb61ac16c4eaaf12469470d290db1ee601bd7aee0853ef44df5d2ab8f29ff4d5",
+      "bytes": 2291352,
+      "artifact_kind": ".olean",
+      "original_NTFS_identity_at_policy": {
+        "volume_serial": 1980967165,
+        "file_index_high": 131072,
+        "file_index_low": 2061330,
+        "link_count": 2,
+        "bytes": 2291352,
+        "attributes": 2080
+      },
+      "dated_link_count_is_not_a_future_exact_prerequisite": true,
+      "classification": "PREVIOUS_OWN_DMS_ORIGINAL_ROUTE_COLD_OUTPUT_NOT_NEW_M2_COMPILATION",
+      "original_NTFS_identity_before_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 131072,
+        "file_index_low": 2061330,
+        "link_count": 2,
+        "bytes": 2291352,
+        "attributes": 2080
+      },
+      "original_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 131072,
+        "file_index_low": 2061330,
+        "link_count": 3,
+        "bytes": 2291352,
+        "attributes": 2080
+      },
+      "M2_target_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 131072,
+        "file_index_low": 2061330,
+        "link_count": 3,
+        "bytes": 2291352,
+        "attributes": 2080
+      },
+      "original_sha256_after_link": "cb61ac16c4eaaf12469470d290db1ee601bd7aee0853ef44df5d2ab8f29ff4d5",
+      "M2_target_sha256": "cb61ac16c4eaaf12469470d290db1ee601bd7aee0853ef44df5d2ab8f29ff4d5"
+    },
+    {
+      "module": "MhFact_345a55d7429fd4b1",
+      "original_owned_output": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current\\MhFact_345a55d7429fd4b1.olean",
+      "M2_target": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-erdos-m2\\MhFact_345a55d7429fd4b1.olean",
+      "sha256": "029cad3724603eb55342337b457f52ebfe4847148eb6091de02cc08dbd40f054",
+      "bytes": 1128880,
+      "artifact_kind": ".olean",
+      "original_NTFS_identity_at_policy": {
+        "volume_serial": 1980967165,
+        "file_index_high": 262144,
+        "file_index_low": 2065698,
+        "link_count": 2,
+        "bytes": 1128880,
+        "attributes": 2080
+      },
+      "dated_link_count_is_not_a_future_exact_prerequisite": true,
+      "classification": "PREVIOUS_OWN_DMS_ORIGINAL_ROUTE_COLD_OUTPUT_NOT_NEW_M2_COMPILATION",
+      "original_NTFS_identity_before_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 262144,
+        "file_index_low": 2065698,
+        "link_count": 2,
+        "bytes": 1128880,
+        "attributes": 2080
+      },
+      "original_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 262144,
+        "file_index_low": 2065698,
+        "link_count": 3,
+        "bytes": 1128880,
+        "attributes": 2080
+      },
+      "M2_target_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 262144,
+        "file_index_low": 2065698,
+        "link_count": 3,
+        "bytes": 1128880,
+        "attributes": 2080
+      },
+      "original_sha256_after_link": "029cad3724603eb55342337b457f52ebfe4847148eb6091de02cc08dbd40f054",
+      "M2_target_sha256": "029cad3724603eb55342337b457f52ebfe4847148eb6091de02cc08dbd40f054"
+    },
+    {
+      "module": "MhFact_38b6f78a47fdf12e",
+      "original_owned_output": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current\\MhFact_38b6f78a47fdf12e.olean",
+      "M2_target": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-erdos-m2\\MhFact_38b6f78a47fdf12e.olean",
+      "sha256": "5bb68afb11293b81cc59f83fcc4ea525a79f30802f261cb714b7d48c6f4eb5c2",
+      "bytes": 453376,
+      "artifact_kind": ".olean",
+      "original_NTFS_identity_at_policy": {
+        "volume_serial": 1980967165,
+        "file_index_high": 5505024,
+        "file_index_low": 983833,
+        "link_count": 2,
+        "bytes": 453376,
+        "attributes": 2080
+      },
+      "dated_link_count_is_not_a_future_exact_prerequisite": true,
+      "classification": "PREVIOUS_OWN_DMS_ORIGINAL_ROUTE_COLD_OUTPUT_NOT_NEW_M2_COMPILATION",
+      "original_NTFS_identity_before_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 5505024,
+        "file_index_low": 983833,
+        "link_count": 2,
+        "bytes": 453376,
+        "attributes": 2080
+      },
+      "original_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 5505024,
+        "file_index_low": 983833,
+        "link_count": 3,
+        "bytes": 453376,
+        "attributes": 2080
+      },
+      "M2_target_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 5505024,
+        "file_index_low": 983833,
+        "link_count": 3,
+        "bytes": 453376,
+        "attributes": 2080
+      },
+      "original_sha256_after_link": "5bb68afb11293b81cc59f83fcc4ea525a79f30802f261cb714b7d48c6f4eb5c2",
+      "M2_target_sha256": "5bb68afb11293b81cc59f83fcc4ea525a79f30802f261cb714b7d48c6f4eb5c2"
+    },
+    {
+      "module": "MhFact_3c53e18d818a023b",
+      "original_owned_output": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current\\MhFact_3c53e18d818a023b.olean",
+      "M2_target": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-erdos-m2\\MhFact_3c53e18d818a023b.olean",
+      "sha256": "6e30cf9eaacc24575534a8b90e294a56bdbbadca06d733291c1cae1c411f36be",
+      "bytes": 17610888,
+      "artifact_kind": ".olean",
+      "original_NTFS_identity_at_policy": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2091661,
+        "link_count": 2,
+        "bytes": 17610888,
+        "attributes": 2080
+      },
+      "dated_link_count_is_not_a_future_exact_prerequisite": true,
+      "classification": "PREVIOUS_OWN_DMS_ORIGINAL_ROUTE_COLD_OUTPUT_NOT_NEW_M2_COMPILATION",
+      "original_NTFS_identity_before_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2091661,
+        "link_count": 2,
+        "bytes": 17610888,
+        "attributes": 2080
+      },
+      "original_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2091661,
+        "link_count": 3,
+        "bytes": 17610888,
+        "attributes": 2080
+      },
+      "M2_target_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2091661,
+        "link_count": 3,
+        "bytes": 17610888,
+        "attributes": 2080
+      },
+      "original_sha256_after_link": "6e30cf9eaacc24575534a8b90e294a56bdbbadca06d733291c1cae1c411f36be",
+      "M2_target_sha256": "6e30cf9eaacc24575534a8b90e294a56bdbbadca06d733291c1cae1c411f36be"
+    },
+    {
+      "module": "MhFact_3e79907cfcc0085b",
+      "original_owned_output": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current\\MhFact_3e79907cfcc0085b.olean",
+      "M2_target": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-erdos-m2\\MhFact_3e79907cfcc0085b.olean",
+      "sha256": "7a7225a82ffe35d8e047c21e14d40b2feb870046368afe7f942607fea240ef8b",
+      "bytes": 1770608,
+      "artifact_kind": ".olean",
+      "original_NTFS_identity_at_policy": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2063586,
+        "link_count": 2,
+        "bytes": 1770608,
+        "attributes": 2080
+      },
+      "dated_link_count_is_not_a_future_exact_prerequisite": true,
+      "classification": "PREVIOUS_OWN_DMS_ORIGINAL_ROUTE_COLD_OUTPUT_NOT_NEW_M2_COMPILATION",
+      "original_NTFS_identity_before_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2063586,
+        "link_count": 2,
+        "bytes": 1770608,
+        "attributes": 2080
+      },
+      "original_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2063586,
+        "link_count": 3,
+        "bytes": 1770608,
+        "attributes": 2080
+      },
+      "M2_target_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2063586,
+        "link_count": 3,
+        "bytes": 1770608,
+        "attributes": 2080
+      },
+      "original_sha256_after_link": "7a7225a82ffe35d8e047c21e14d40b2feb870046368afe7f942607fea240ef8b",
+      "M2_target_sha256": "7a7225a82ffe35d8e047c21e14d40b2feb870046368afe7f942607fea240ef8b"
+    },
+    {
+      "module": "MhFact_413193082c4b8758",
+      "original_owned_output": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current\\MhFact_413193082c4b8758.olean",
+      "M2_target": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-erdos-m2\\MhFact_413193082c4b8758.olean",
+      "sha256": "3c685ffd53628a35b35fe359ad964e30e558e7849910d2f87465528f5a9979a5",
+      "bytes": 907744,
+      "artifact_kind": ".olean",
+      "original_NTFS_identity_at_policy": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2064746,
+        "link_count": 2,
+        "bytes": 907744,
+        "attributes": 2080
+      },
+      "dated_link_count_is_not_a_future_exact_prerequisite": true,
+      "classification": "PREVIOUS_OWN_DMS_ORIGINAL_ROUTE_COLD_OUTPUT_NOT_NEW_M2_COMPILATION",
+      "original_NTFS_identity_before_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2064746,
+        "link_count": 2,
+        "bytes": 907744,
+        "attributes": 2080
+      },
+      "original_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2064746,
+        "link_count": 3,
+        "bytes": 907744,
+        "attributes": 2080
+      },
+      "M2_target_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2064746,
+        "link_count": 3,
+        "bytes": 907744,
+        "attributes": 2080
+      },
+      "original_sha256_after_link": "3c685ffd53628a35b35fe359ad964e30e558e7849910d2f87465528f5a9979a5",
+      "M2_target_sha256": "3c685ffd53628a35b35fe359ad964e30e558e7849910d2f87465528f5a9979a5"
+    },
+    {
+      "module": "MhFact_4b6dbe605eac3a1d",
+      "original_owned_output": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current\\MhFact_4b6dbe605eac3a1d.olean",
+      "M2_target": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-erdos-m2\\MhFact_4b6dbe605eac3a1d.olean",
+      "sha256": "6755da4a7814d1f1c8303f10e45249df6f275a24069711707556f56642520ab0",
+      "bytes": 7578616,
+      "artifact_kind": ".olean",
+      "original_NTFS_identity_at_policy": {
+        "volume_serial": 1980967165,
+        "file_index_high": 983040,
+        "file_index_low": 1699223,
+        "link_count": 2,
+        "bytes": 7578616,
+        "attributes": 2080
+      },
+      "dated_link_count_is_not_a_future_exact_prerequisite": true,
+      "classification": "PREVIOUS_OWN_DMS_ORIGINAL_ROUTE_COLD_OUTPUT_NOT_NEW_M2_COMPILATION",
+      "original_NTFS_identity_before_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 983040,
+        "file_index_low": 1699223,
+        "link_count": 2,
+        "bytes": 7578616,
+        "attributes": 2080
+      },
+      "original_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 983040,
+        "file_index_low": 1699223,
+        "link_count": 3,
+        "bytes": 7578616,
+        "attributes": 2080
+      },
+      "M2_target_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 983040,
+        "file_index_low": 1699223,
+        "link_count": 3,
+        "bytes": 7578616,
+        "attributes": 2080
+      },
+      "original_sha256_after_link": "6755da4a7814d1f1c8303f10e45249df6f275a24069711707556f56642520ab0",
+      "M2_target_sha256": "6755da4a7814d1f1c8303f10e45249df6f275a24069711707556f56642520ab0"
+    },
+    {
+      "module": "MhFact_4b7436a78212f56a",
+      "original_owned_output": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current\\MhFact_4b7436a78212f56a.olean",
+      "M2_target": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-erdos-m2\\MhFact_4b7436a78212f56a.olean",
+      "sha256": "3fe62882c57b2813b674b6c817d42a5e6aad68c8428aa02020b1454a7edc414f",
+      "bytes": 26843608,
+      "artifact_kind": ".olean",
+      "original_NTFS_identity_at_policy": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2155356,
+        "link_count": 2,
+        "bytes": 26843608,
+        "attributes": 2080
+      },
+      "dated_link_count_is_not_a_future_exact_prerequisite": true,
+      "classification": "PREVIOUS_OWN_DMS_ORIGINAL_ROUTE_COLD_OUTPUT_NOT_NEW_M2_COMPILATION",
+      "original_NTFS_identity_before_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2155356,
+        "link_count": 2,
+        "bytes": 26843608,
+        "attributes": 2080
+      },
+      "original_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2155356,
+        "link_count": 3,
+        "bytes": 26843608,
+        "attributes": 2080
+      },
+      "M2_target_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2155356,
+        "link_count": 3,
+        "bytes": 26843608,
+        "attributes": 2080
+      },
+      "original_sha256_after_link": "3fe62882c57b2813b674b6c817d42a5e6aad68c8428aa02020b1454a7edc414f",
+      "M2_target_sha256": "3fe62882c57b2813b674b6c817d42a5e6aad68c8428aa02020b1454a7edc414f"
+    },
+    {
+      "module": "MhFact_4e4dfbfc10836500",
+      "original_owned_output": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current\\MhFact_4e4dfbfc10836500.olean",
+      "M2_target": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-erdos-m2\\MhFact_4e4dfbfc10836500.olean",
+      "sha256": "4d0abad8c98decbac187d124a4f4fe2ba69e1e09cf67e7ba589d47545816119e",
+      "bytes": 9050712,
+      "artifact_kind": ".olean",
+      "original_NTFS_identity_at_policy": {
+        "volume_serial": 1980967165,
+        "file_index_high": 196608,
+        "file_index_low": 2082601,
+        "link_count": 2,
+        "bytes": 9050712,
+        "attributes": 2080
+      },
+      "dated_link_count_is_not_a_future_exact_prerequisite": true,
+      "classification": "PREVIOUS_OWN_DMS_ORIGINAL_ROUTE_COLD_OUTPUT_NOT_NEW_M2_COMPILATION",
+      "original_NTFS_identity_before_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 196608,
+        "file_index_low": 2082601,
+        "link_count": 2,
+        "bytes": 9050712,
+        "attributes": 2080
+      },
+      "original_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 196608,
+        "file_index_low": 2082601,
+        "link_count": 3,
+        "bytes": 9050712,
+        "attributes": 2080
+      },
+      "M2_target_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 196608,
+        "file_index_low": 2082601,
+        "link_count": 3,
+        "bytes": 9050712,
+        "attributes": 2080
+      },
+      "original_sha256_after_link": "4d0abad8c98decbac187d124a4f4fe2ba69e1e09cf67e7ba589d47545816119e",
+      "M2_target_sha256": "4d0abad8c98decbac187d124a4f4fe2ba69e1e09cf67e7ba589d47545816119e"
+    },
+    {
+      "module": "MhFact_4e63409f7b05a806",
+      "original_owned_output": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current\\MhFact_4e63409f7b05a806.olean",
+      "M2_target": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-erdos-m2\\MhFact_4e63409f7b05a806.olean",
+      "sha256": "6a9fb80cedaa86dc896f636390937d3973ef0700092d196878b6adcd0801a6ab",
+      "bytes": 27242560,
+      "artifact_kind": ".olean",
+      "original_NTFS_identity_at_policy": {
+        "volume_serial": 1980967165,
+        "file_index_high": 131072,
+        "file_index_low": 2132949,
+        "link_count": 2,
+        "bytes": 27242560,
+        "attributes": 2080
+      },
+      "dated_link_count_is_not_a_future_exact_prerequisite": true,
+      "classification": "PREVIOUS_OWN_DMS_ORIGINAL_ROUTE_COLD_OUTPUT_NOT_NEW_M2_COMPILATION",
+      "original_NTFS_identity_before_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 131072,
+        "file_index_low": 2132949,
+        "link_count": 2,
+        "bytes": 27242560,
+        "attributes": 2080
+      },
+      "original_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 131072,
+        "file_index_low": 2132949,
+        "link_count": 3,
+        "bytes": 27242560,
+        "attributes": 2080
+      },
+      "M2_target_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 131072,
+        "file_index_low": 2132949,
+        "link_count": 3,
+        "bytes": 27242560,
+        "attributes": 2080
+      },
+      "original_sha256_after_link": "6a9fb80cedaa86dc896f636390937d3973ef0700092d196878b6adcd0801a6ab",
+      "M2_target_sha256": "6a9fb80cedaa86dc896f636390937d3973ef0700092d196878b6adcd0801a6ab"
+    },
+    {
+      "module": "MhFact_4f913d5550e57c85",
+      "original_owned_output": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current\\MhFact_4f913d5550e57c85.olean",
+      "M2_target": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-erdos-m2\\MhFact_4f913d5550e57c85.olean",
+      "sha256": "d6603fb1a2b3207632d0d7e1f85c58e20af951dd18cec95d47876143010e4060",
+      "bytes": 10767160,
+      "artifact_kind": ".olean",
+      "original_NTFS_identity_at_policy": {
+        "volume_serial": 1980967165,
+        "file_index_high": 3014656,
+        "file_index_low": 1828400,
+        "link_count": 2,
+        "bytes": 10767160,
+        "attributes": 2080
+      },
+      "dated_link_count_is_not_a_future_exact_prerequisite": true,
+      "classification": "PREVIOUS_OWN_DMS_ORIGINAL_ROUTE_COLD_OUTPUT_NOT_NEW_M2_COMPILATION",
+      "original_NTFS_identity_before_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 3014656,
+        "file_index_low": 1828400,
+        "link_count": 2,
+        "bytes": 10767160,
+        "attributes": 2080
+      },
+      "original_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 3014656,
+        "file_index_low": 1828400,
+        "link_count": 3,
+        "bytes": 10767160,
+        "attributes": 2080
+      },
+      "M2_target_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 3014656,
+        "file_index_low": 1828400,
+        "link_count": 3,
+        "bytes": 10767160,
+        "attributes": 2080
+      },
+      "original_sha256_after_link": "d6603fb1a2b3207632d0d7e1f85c58e20af951dd18cec95d47876143010e4060",
+      "M2_target_sha256": "d6603fb1a2b3207632d0d7e1f85c58e20af951dd18cec95d47876143010e4060"
+    },
+    {
+      "module": "MhFact_51ff9480dc00823f",
+      "original_owned_output": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current\\MhFact_51ff9480dc00823f.olean",
+      "M2_target": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-erdos-m2\\MhFact_51ff9480dc00823f.olean",
+      "sha256": "0c7740e56ebc7948bae6441c3f18143903bddc48d2be93a8f93da5ebc252482d",
+      "bytes": 33557888,
+      "artifact_kind": ".olean",
+      "original_NTFS_identity_at_policy": {
+        "volume_serial": 1980967165,
+        "file_index_high": 524288,
+        "file_index_low": 956688,
+        "link_count": 2,
+        "bytes": 33557888,
+        "attributes": 2080
+      },
+      "dated_link_count_is_not_a_future_exact_prerequisite": true,
+      "classification": "PREVIOUS_OWN_DMS_ORIGINAL_ROUTE_COLD_OUTPUT_NOT_NEW_M2_COMPILATION",
+      "original_NTFS_identity_before_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 524288,
+        "file_index_low": 956688,
+        "link_count": 2,
+        "bytes": 33557888,
+        "attributes": 2080
+      },
+      "original_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 524288,
+        "file_index_low": 956688,
+        "link_count": 3,
+        "bytes": 33557888,
+        "attributes": 2080
+      },
+      "M2_target_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 524288,
+        "file_index_low": 956688,
+        "link_count": 3,
+        "bytes": 33557888,
+        "attributes": 2080
+      },
+      "original_sha256_after_link": "0c7740e56ebc7948bae6441c3f18143903bddc48d2be93a8f93da5ebc252482d",
+      "M2_target_sha256": "0c7740e56ebc7948bae6441c3f18143903bddc48d2be93a8f93da5ebc252482d"
+    },
+    {
+      "module": "MhFact_5343a2db598602a9",
+      "original_owned_output": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current\\MhFact_5343a2db598602a9.olean",
+      "M2_target": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-erdos-m2\\MhFact_5343a2db598602a9.olean",
+      "sha256": "49273a3c7aa2f9bc69857ab43483521e34a64ae48052f9e52df2f8e57fe86b3f",
+      "bytes": 10904456,
+      "artifact_kind": ".olean",
+      "original_NTFS_identity_at_policy": {
+        "volume_serial": 1980967165,
+        "file_index_high": 458752,
+        "file_index_low": 2083279,
+        "link_count": 2,
+        "bytes": 10904456,
+        "attributes": 2080
+      },
+      "dated_link_count_is_not_a_future_exact_prerequisite": true,
+      "classification": "PREVIOUS_OWN_DMS_ORIGINAL_ROUTE_COLD_OUTPUT_NOT_NEW_M2_COMPILATION",
+      "original_NTFS_identity_before_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 458752,
+        "file_index_low": 2083279,
+        "link_count": 2,
+        "bytes": 10904456,
+        "attributes": 2080
+      },
+      "original_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 458752,
+        "file_index_low": 2083279,
+        "link_count": 3,
+        "bytes": 10904456,
+        "attributes": 2080
+      },
+      "M2_target_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 458752,
+        "file_index_low": 2083279,
+        "link_count": 3,
+        "bytes": 10904456,
+        "attributes": 2080
+      },
+      "original_sha256_after_link": "49273a3c7aa2f9bc69857ab43483521e34a64ae48052f9e52df2f8e57fe86b3f",
+      "M2_target_sha256": "49273a3c7aa2f9bc69857ab43483521e34a64ae48052f9e52df2f8e57fe86b3f"
+    },
+    {
+      "module": "MhFact_54ed0ff9a1ed26b6",
+      "original_owned_output": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current\\MhFact_54ed0ff9a1ed26b6.olean",
+      "M2_target": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-erdos-m2\\MhFact_54ed0ff9a1ed26b6.olean",
+      "sha256": "e81a1e44b64dc9c77b4be81c238a47886323e59b99e13d74aab6c8cd81faac01",
+      "bytes": 5693408,
+      "artifact_kind": ".olean",
+      "original_NTFS_identity_at_policy": {
+        "volume_serial": 1980967165,
+        "file_index_high": 589824,
+        "file_index_low": 1699232,
+        "link_count": 2,
+        "bytes": 5693408,
+        "attributes": 2080
+      },
+      "dated_link_count_is_not_a_future_exact_prerequisite": true,
+      "classification": "PREVIOUS_OWN_DMS_ORIGINAL_ROUTE_COLD_OUTPUT_NOT_NEW_M2_COMPILATION",
+      "original_NTFS_identity_before_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 589824,
+        "file_index_low": 1699232,
+        "link_count": 2,
+        "bytes": 5693408,
+        "attributes": 2080
+      },
+      "original_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 589824,
+        "file_index_low": 1699232,
+        "link_count": 3,
+        "bytes": 5693408,
+        "attributes": 2080
+      },
+      "M2_target_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 589824,
+        "file_index_low": 1699232,
+        "link_count": 3,
+        "bytes": 5693408,
+        "attributes": 2080
+      },
+      "original_sha256_after_link": "e81a1e44b64dc9c77b4be81c238a47886323e59b99e13d74aab6c8cd81faac01",
+      "M2_target_sha256": "e81a1e44b64dc9c77b4be81c238a47886323e59b99e13d74aab6c8cd81faac01"
+    },
+    {
+      "module": "MhFact_55368cd7a0c74072",
+      "original_owned_output": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current\\MhFact_55368cd7a0c74072.olean",
+      "M2_target": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-erdos-m2\\MhFact_55368cd7a0c74072.olean",
+      "sha256": "957ed42ac79fd09a05b703be4ddcc0e4ee8336b71c6094dc63609af2706e1e4f",
+      "bytes": 11116032,
+      "artifact_kind": ".olean",
+      "original_NTFS_identity_at_policy": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2086451,
+        "link_count": 2,
+        "bytes": 11116032,
+        "attributes": 2080
+      },
+      "dated_link_count_is_not_a_future_exact_prerequisite": true,
+      "classification": "PREVIOUS_OWN_DMS_ORIGINAL_ROUTE_COLD_OUTPUT_NOT_NEW_M2_COMPILATION",
+      "original_NTFS_identity_before_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2086451,
+        "link_count": 2,
+        "bytes": 11116032,
+        "attributes": 2080
+      },
+      "original_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2086451,
+        "link_count": 3,
+        "bytes": 11116032,
+        "attributes": 2080
+      },
+      "M2_target_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2086451,
+        "link_count": 3,
+        "bytes": 11116032,
+        "attributes": 2080
+      },
+      "original_sha256_after_link": "957ed42ac79fd09a05b703be4ddcc0e4ee8336b71c6094dc63609af2706e1e4f",
+      "M2_target_sha256": "957ed42ac79fd09a05b703be4ddcc0e4ee8336b71c6094dc63609af2706e1e4f"
+    },
+    {
+      "module": "MhFact_57ea4db232a2b7f5",
+      "original_owned_output": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current\\MhFact_57ea4db232a2b7f5.olean",
+      "M2_target": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-erdos-m2\\MhFact_57ea4db232a2b7f5.olean",
+      "sha256": "d661bff242157ee74e45c6503a1c6d10edf5d9b071f545109742d28729fe112e",
+      "bytes": 6308840,
+      "artifact_kind": ".olean",
+      "original_NTFS_identity_at_policy": {
+        "volume_serial": 1980967165,
+        "file_index_high": 131072,
+        "file_index_low": 2067370,
+        "link_count": 2,
+        "bytes": 6308840,
+        "attributes": 2080
+      },
+      "dated_link_count_is_not_a_future_exact_prerequisite": true,
+      "classification": "PREVIOUS_OWN_DMS_ORIGINAL_ROUTE_COLD_OUTPUT_NOT_NEW_M2_COMPILATION",
+      "original_NTFS_identity_before_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 131072,
+        "file_index_low": 2067370,
+        "link_count": 2,
+        "bytes": 6308840,
+        "attributes": 2080
+      },
+      "original_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 131072,
+        "file_index_low": 2067370,
+        "link_count": 3,
+        "bytes": 6308840,
+        "attributes": 2080
+      },
+      "M2_target_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 131072,
+        "file_index_low": 2067370,
+        "link_count": 3,
+        "bytes": 6308840,
+        "attributes": 2080
+      },
+      "original_sha256_after_link": "d661bff242157ee74e45c6503a1c6d10edf5d9b071f545109742d28729fe112e",
+      "M2_target_sha256": "d661bff242157ee74e45c6503a1c6d10edf5d9b071f545109742d28729fe112e"
+    },
+    {
+      "module": "MhFact_59c06cb7808fc140",
+      "original_owned_output": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current\\MhFact_59c06cb7808fc140.olean",
+      "M2_target": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-erdos-m2\\MhFact_59c06cb7808fc140.olean",
+      "sha256": "936ccabdd97476e8460ab22080b37ed3d3d9363695ae4ee86ff31b93bea2ad47",
+      "bytes": 7566744,
+      "artifact_kind": ".olean",
+      "original_NTFS_identity_at_policy": {
+        "volume_serial": 1980967165,
+        "file_index_high": 3276800,
+        "file_index_low": 198031,
+        "link_count": 2,
+        "bytes": 7566744,
+        "attributes": 2080
+      },
+      "dated_link_count_is_not_a_future_exact_prerequisite": true,
+      "classification": "PREVIOUS_OWN_DMS_ORIGINAL_ROUTE_COLD_OUTPUT_NOT_NEW_M2_COMPILATION",
+      "original_NTFS_identity_before_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 3276800,
+        "file_index_low": 198031,
+        "link_count": 2,
+        "bytes": 7566744,
+        "attributes": 2080
+      },
+      "original_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 3276800,
+        "file_index_low": 198031,
+        "link_count": 3,
+        "bytes": 7566744,
+        "attributes": 2080
+      },
+      "M2_target_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 3276800,
+        "file_index_low": 198031,
+        "link_count": 3,
+        "bytes": 7566744,
+        "attributes": 2080
+      },
+      "original_sha256_after_link": "936ccabdd97476e8460ab22080b37ed3d3d9363695ae4ee86ff31b93bea2ad47",
+      "M2_target_sha256": "936ccabdd97476e8460ab22080b37ed3d3d9363695ae4ee86ff31b93bea2ad47"
+    },
+    {
+      "module": "MhFact_5c1eb3f583cf643f",
+      "original_owned_output": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current\\MhFact_5c1eb3f583cf643f.olean",
+      "M2_target": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-erdos-m2\\MhFact_5c1eb3f583cf643f.olean",
+      "sha256": "5ce60d52aa89bd1820dce6da3540929ccc58507a5d1d82b25acf7fc5e3665c42",
+      "bytes": 3690720,
+      "artifact_kind": ".olean",
+      "original_NTFS_identity_at_policy": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2060642,
+        "link_count": 2,
+        "bytes": 3690720,
+        "attributes": 2080
+      },
+      "dated_link_count_is_not_a_future_exact_prerequisite": true,
+      "classification": "PREVIOUS_OWN_DMS_ORIGINAL_ROUTE_COLD_OUTPUT_NOT_NEW_M2_COMPILATION",
+      "original_NTFS_identity_before_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2060642,
+        "link_count": 2,
+        "bytes": 3690720,
+        "attributes": 2080
+      },
+      "original_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2060642,
+        "link_count": 3,
+        "bytes": 3690720,
+        "attributes": 2080
+      },
+      "M2_target_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2060642,
+        "link_count": 3,
+        "bytes": 3690720,
+        "attributes": 2080
+      },
+      "original_sha256_after_link": "5ce60d52aa89bd1820dce6da3540929ccc58507a5d1d82b25acf7fc5e3665c42",
+      "M2_target_sha256": "5ce60d52aa89bd1820dce6da3540929ccc58507a5d1d82b25acf7fc5e3665c42"
+    },
+    {
+      "module": "MhFact_5e8f7a0c3cb04161",
+      "original_owned_output": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current\\MhFact_5e8f7a0c3cb04161.olean",
+      "M2_target": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-erdos-m2\\MhFact_5e8f7a0c3cb04161.olean",
+      "sha256": "b33205ae0ab86e2bcdbb5edbcbf797a2c51627653b45f93b32536ba8bd00f55c",
+      "bytes": 10093288,
+      "artifact_kind": ".olean",
+      "original_NTFS_identity_at_policy": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2089532,
+        "link_count": 2,
+        "bytes": 10093288,
+        "attributes": 2080
+      },
+      "dated_link_count_is_not_a_future_exact_prerequisite": true,
+      "classification": "PREVIOUS_OWN_DMS_ORIGINAL_ROUTE_COLD_OUTPUT_NOT_NEW_M2_COMPILATION",
+      "original_NTFS_identity_before_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2089532,
+        "link_count": 2,
+        "bytes": 10093288,
+        "attributes": 2080
+      },
+      "original_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2089532,
+        "link_count": 3,
+        "bytes": 10093288,
+        "attributes": 2080
+      },
+      "M2_target_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2089532,
+        "link_count": 3,
+        "bytes": 10093288,
+        "attributes": 2080
+      },
+      "original_sha256_after_link": "b33205ae0ab86e2bcdbb5edbcbf797a2c51627653b45f93b32536ba8bd00f55c",
+      "M2_target_sha256": "b33205ae0ab86e2bcdbb5edbcbf797a2c51627653b45f93b32536ba8bd00f55c"
+    },
+    {
+      "module": "MhFact_643ccea3769075c0",
+      "original_owned_output": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current\\MhFact_643ccea3769075c0.olean",
+      "M2_target": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-erdos-m2\\MhFact_643ccea3769075c0.olean",
+      "sha256": "8d4a3dcef6aad55a7bb2be301a930969a9117c7ec536de75312bdee75121cb09",
+      "bytes": 9932640,
+      "artifact_kind": ".olean",
+      "original_NTFS_identity_at_policy": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2061612,
+        "link_count": 2,
+        "bytes": 9932640,
+        "attributes": 2080
+      },
+      "dated_link_count_is_not_a_future_exact_prerequisite": true,
+      "classification": "PREVIOUS_OWN_DMS_ORIGINAL_ROUTE_COLD_OUTPUT_NOT_NEW_M2_COMPILATION",
+      "original_NTFS_identity_before_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2061612,
+        "link_count": 2,
+        "bytes": 9932640,
+        "attributes": 2080
+      },
+      "original_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2061612,
+        "link_count": 3,
+        "bytes": 9932640,
+        "attributes": 2080
+      },
+      "M2_target_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2061612,
+        "link_count": 3,
+        "bytes": 9932640,
+        "attributes": 2080
+      },
+      "original_sha256_after_link": "8d4a3dcef6aad55a7bb2be301a930969a9117c7ec536de75312bdee75121cb09",
+      "M2_target_sha256": "8d4a3dcef6aad55a7bb2be301a930969a9117c7ec536de75312bdee75121cb09"
+    },
+    {
+      "module": "MhFact_6460e64b00785972",
+      "original_owned_output": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current\\MhFact_6460e64b00785972.olean",
+      "M2_target": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-erdos-m2\\MhFact_6460e64b00785972.olean",
+      "sha256": "bbe9016898e222a6a4e8342c758b7ee6af474db53fa1b93600eb1c470960fea6",
+      "bytes": 10488784,
+      "artifact_kind": ".olean",
+      "original_NTFS_identity_at_policy": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2087999,
+        "link_count": 2,
+        "bytes": 10488784,
+        "attributes": 2080
+      },
+      "dated_link_count_is_not_a_future_exact_prerequisite": true,
+      "classification": "PREVIOUS_OWN_DMS_ORIGINAL_ROUTE_COLD_OUTPUT_NOT_NEW_M2_COMPILATION",
+      "original_NTFS_identity_before_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2087999,
+        "link_count": 2,
+        "bytes": 10488784,
+        "attributes": 2080
+      },
+      "original_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2087999,
+        "link_count": 3,
+        "bytes": 10488784,
+        "attributes": 2080
+      },
+      "M2_target_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2087999,
+        "link_count": 3,
+        "bytes": 10488784,
+        "attributes": 2080
+      },
+      "original_sha256_after_link": "bbe9016898e222a6a4e8342c758b7ee6af474db53fa1b93600eb1c470960fea6",
+      "M2_target_sha256": "bbe9016898e222a6a4e8342c758b7ee6af474db53fa1b93600eb1c470960fea6"
+    },
+    {
+      "module": "MhFact_657e581f1145250f",
+      "original_owned_output": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current\\MhFact_657e581f1145250f.olean",
+      "M2_target": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-erdos-m2\\MhFact_657e581f1145250f.olean",
+      "sha256": "564a8a24d001554b8d4ccba2295016ed634bbfbe6a902dd2d89a25192a2293b0",
+      "bytes": 2011168,
+      "artifact_kind": ".olean",
+      "original_NTFS_identity_at_policy": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2061179,
+        "link_count": 2,
+        "bytes": 2011168,
+        "attributes": 2080
+      },
+      "dated_link_count_is_not_a_future_exact_prerequisite": true,
+      "classification": "PREVIOUS_OWN_DMS_ORIGINAL_ROUTE_COLD_OUTPUT_NOT_NEW_M2_COMPILATION",
+      "original_NTFS_identity_before_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2061179,
+        "link_count": 2,
+        "bytes": 2011168,
+        "attributes": 2080
+      },
+      "original_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2061179,
+        "link_count": 3,
+        "bytes": 2011168,
+        "attributes": 2080
+      },
+      "M2_target_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2061179,
+        "link_count": 3,
+        "bytes": 2011168,
+        "attributes": 2080
+      },
+      "original_sha256_after_link": "564a8a24d001554b8d4ccba2295016ed634bbfbe6a902dd2d89a25192a2293b0",
+      "M2_target_sha256": "564a8a24d001554b8d4ccba2295016ed634bbfbe6a902dd2d89a25192a2293b0"
+    },
+    {
+      "module": "MhFact_66a4a19c81528d5b",
+      "original_owned_output": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current\\MhFact_66a4a19c81528d5b.olean",
+      "M2_target": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-erdos-m2\\MhFact_66a4a19c81528d5b.olean",
+      "sha256": "7073976b615cc0fe6e21129fcea4a7d3cb9194355a7dea96cd15ea51e18884c7",
+      "bytes": 3860560,
+      "artifact_kind": ".olean",
+      "original_NTFS_identity_at_policy": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2090834,
+        "link_count": 2,
+        "bytes": 3860560,
+        "attributes": 2080
+      },
+      "dated_link_count_is_not_a_future_exact_prerequisite": true,
+      "classification": "PREVIOUS_OWN_DMS_ORIGINAL_ROUTE_COLD_OUTPUT_NOT_NEW_M2_COMPILATION",
+      "original_NTFS_identity_before_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2090834,
+        "link_count": 2,
+        "bytes": 3860560,
+        "attributes": 2080
+      },
+      "original_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2090834,
+        "link_count": 3,
+        "bytes": 3860560,
+        "attributes": 2080
+      },
+      "M2_target_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2090834,
+        "link_count": 3,
+        "bytes": 3860560,
+        "attributes": 2080
+      },
+      "original_sha256_after_link": "7073976b615cc0fe6e21129fcea4a7d3cb9194355a7dea96cd15ea51e18884c7",
+      "M2_target_sha256": "7073976b615cc0fe6e21129fcea4a7d3cb9194355a7dea96cd15ea51e18884c7"
+    },
+    {
+      "module": "MhFact_6882aa6fa76ff8ed",
+      "original_owned_output": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current\\MhFact_6882aa6fa76ff8ed.olean",
+      "M2_target": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-erdos-m2\\MhFact_6882aa6fa76ff8ed.olean",
+      "sha256": "0b4a6291c992e733a5f91ed3d810ba6046bb06f7708e9ac7d0f6bfb905c19a9c",
+      "bytes": 12208328,
+      "artifact_kind": ".olean",
+      "original_NTFS_identity_at_policy": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2087105,
+        "link_count": 2,
+        "bytes": 12208328,
+        "attributes": 2080
+      },
+      "dated_link_count_is_not_a_future_exact_prerequisite": true,
+      "classification": "PREVIOUS_OWN_DMS_ORIGINAL_ROUTE_COLD_OUTPUT_NOT_NEW_M2_COMPILATION",
+      "original_NTFS_identity_before_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2087105,
+        "link_count": 2,
+        "bytes": 12208328,
+        "attributes": 2080
+      },
+      "original_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2087105,
+        "link_count": 3,
+        "bytes": 12208328,
+        "attributes": 2080
+      },
+      "M2_target_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2087105,
+        "link_count": 3,
+        "bytes": 12208328,
+        "attributes": 2080
+      },
+      "original_sha256_after_link": "0b4a6291c992e733a5f91ed3d810ba6046bb06f7708e9ac7d0f6bfb905c19a9c",
+      "M2_target_sha256": "0b4a6291c992e733a5f91ed3d810ba6046bb06f7708e9ac7d0f6bfb905c19a9c"
+    },
+    {
+      "module": "MhFact_6b1f8729194e23a3",
+      "original_owned_output": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current\\MhFact_6b1f8729194e23a3.olean",
+      "M2_target": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-erdos-m2\\MhFact_6b1f8729194e23a3.olean",
+      "sha256": "d6a19b2092f20992c223670fd90170d050a6f48560a8d02febf0631654065876",
+      "bytes": 359848,
+      "artifact_kind": ".olean",
+      "original_NTFS_identity_at_policy": {
+        "volume_serial": 1980967165,
+        "file_index_high": 720896,
+        "file_index_low": 602465,
+        "link_count": 2,
+        "bytes": 359848,
+        "attributes": 2080
+      },
+      "dated_link_count_is_not_a_future_exact_prerequisite": true,
+      "classification": "PREVIOUS_OWN_DMS_ORIGINAL_ROUTE_COLD_OUTPUT_NOT_NEW_M2_COMPILATION",
+      "original_NTFS_identity_before_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 720896,
+        "file_index_low": 602465,
+        "link_count": 2,
+        "bytes": 359848,
+        "attributes": 2080
+      },
+      "original_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 720896,
+        "file_index_low": 602465,
+        "link_count": 3,
+        "bytes": 359848,
+        "attributes": 2080
+      },
+      "M2_target_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 720896,
+        "file_index_low": 602465,
+        "link_count": 3,
+        "bytes": 359848,
+        "attributes": 2080
+      },
+      "original_sha256_after_link": "d6a19b2092f20992c223670fd90170d050a6f48560a8d02febf0631654065876",
+      "M2_target_sha256": "d6a19b2092f20992c223670fd90170d050a6f48560a8d02febf0631654065876"
+    },
+    {
+      "module": "MhFact_6c78409a046a3fe7",
+      "original_owned_output": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current\\MhFact_6c78409a046a3fe7.olean",
+      "M2_target": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-erdos-m2\\MhFact_6c78409a046a3fe7.olean",
+      "sha256": "ec8a38c94d13042848a94e53e859d4b9ace6ab1dfa68cf9c7aa260a4b02cd6dc",
+      "bytes": 4047880,
+      "artifact_kind": ".olean",
+      "original_NTFS_identity_at_policy": {
+        "volume_serial": 1980967165,
+        "file_index_high": 196608,
+        "file_index_low": 2065408,
+        "link_count": 2,
+        "bytes": 4047880,
+        "attributes": 2080
+      },
+      "dated_link_count_is_not_a_future_exact_prerequisite": true,
+      "classification": "PREVIOUS_OWN_DMS_ORIGINAL_ROUTE_COLD_OUTPUT_NOT_NEW_M2_COMPILATION",
+      "original_NTFS_identity_before_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 196608,
+        "file_index_low": 2065408,
+        "link_count": 2,
+        "bytes": 4047880,
+        "attributes": 2080
+      },
+      "original_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 196608,
+        "file_index_low": 2065408,
+        "link_count": 3,
+        "bytes": 4047880,
+        "attributes": 2080
+      },
+      "M2_target_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 196608,
+        "file_index_low": 2065408,
+        "link_count": 3,
+        "bytes": 4047880,
+        "attributes": 2080
+      },
+      "original_sha256_after_link": "ec8a38c94d13042848a94e53e859d4b9ace6ab1dfa68cf9c7aa260a4b02cd6dc",
+      "M2_target_sha256": "ec8a38c94d13042848a94e53e859d4b9ace6ab1dfa68cf9c7aa260a4b02cd6dc"
+    },
+    {
+      "module": "MhFact_6e44d3c2232b5736",
+      "original_owned_output": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current\\MhFact_6e44d3c2232b5736.olean",
+      "M2_target": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-erdos-m2\\MhFact_6e44d3c2232b5736.olean",
+      "sha256": "f300293a212b922ee720f084c705cd0fd74476fcd6769ffe9467321c31e6a1bd",
+      "bytes": 3759688,
+      "artifact_kind": ".olean",
+      "original_NTFS_identity_at_policy": {
+        "volume_serial": 1980967165,
+        "file_index_high": 131072,
+        "file_index_low": 2062805,
+        "link_count": 2,
+        "bytes": 3759688,
+        "attributes": 2080
+      },
+      "dated_link_count_is_not_a_future_exact_prerequisite": true,
+      "classification": "PREVIOUS_OWN_DMS_ORIGINAL_ROUTE_COLD_OUTPUT_NOT_NEW_M2_COMPILATION",
+      "original_NTFS_identity_before_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 131072,
+        "file_index_low": 2062805,
+        "link_count": 2,
+        "bytes": 3759688,
+        "attributes": 2080
+      },
+      "original_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 131072,
+        "file_index_low": 2062805,
+        "link_count": 3,
+        "bytes": 3759688,
+        "attributes": 2080
+      },
+      "M2_target_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 131072,
+        "file_index_low": 2062805,
+        "link_count": 3,
+        "bytes": 3759688,
+        "attributes": 2080
+      },
+      "original_sha256_after_link": "f300293a212b922ee720f084c705cd0fd74476fcd6769ffe9467321c31e6a1bd",
+      "M2_target_sha256": "f300293a212b922ee720f084c705cd0fd74476fcd6769ffe9467321c31e6a1bd"
+    },
+    {
+      "module": "MhFact_7217c8f0517c24a9",
+      "original_owned_output": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current\\MhFact_7217c8f0517c24a9.olean",
+      "M2_target": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-erdos-m2\\MhFact_7217c8f0517c24a9.olean",
+      "sha256": "3c085d207c6661155649a71db152397254baec953cc9d5102202c5f48994b00c",
+      "bytes": 11616016,
+      "artifact_kind": ".olean",
+      "original_NTFS_identity_at_policy": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2085449,
+        "link_count": 2,
+        "bytes": 11616016,
+        "attributes": 2080
+      },
+      "dated_link_count_is_not_a_future_exact_prerequisite": true,
+      "classification": "PREVIOUS_OWN_DMS_ORIGINAL_ROUTE_COLD_OUTPUT_NOT_NEW_M2_COMPILATION",
+      "original_NTFS_identity_before_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2085449,
+        "link_count": 2,
+        "bytes": 11616016,
+        "attributes": 2080
+      },
+      "original_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2085449,
+        "link_count": 3,
+        "bytes": 11616016,
+        "attributes": 2080
+      },
+      "M2_target_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2085449,
+        "link_count": 3,
+        "bytes": 11616016,
+        "attributes": 2080
+      },
+      "original_sha256_after_link": "3c085d207c6661155649a71db152397254baec953cc9d5102202c5f48994b00c",
+      "M2_target_sha256": "3c085d207c6661155649a71db152397254baec953cc9d5102202c5f48994b00c"
+    },
+    {
+      "module": "MhFact_724d35f964ae6f7d",
+      "original_owned_output": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current\\MhFact_724d35f964ae6f7d.olean",
+      "M2_target": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-erdos-m2\\MhFact_724d35f964ae6f7d.olean",
+      "sha256": "9ce201ec86faa9a4ed0e72739b3031957acd761c480b487274426c37daf29727",
+      "bytes": 7585024,
+      "artifact_kind": ".olean",
+      "original_NTFS_identity_at_policy": {
+        "volume_serial": 1980967165,
+        "file_index_high": 1114112,
+        "file_index_low": 1699396,
+        "link_count": 2,
+        "bytes": 7585024,
+        "attributes": 2080
+      },
+      "dated_link_count_is_not_a_future_exact_prerequisite": true,
+      "classification": "PREVIOUS_OWN_DMS_ORIGINAL_ROUTE_COLD_OUTPUT_NOT_NEW_M2_COMPILATION",
+      "original_NTFS_identity_before_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 1114112,
+        "file_index_low": 1699396,
+        "link_count": 2,
+        "bytes": 7585024,
+        "attributes": 2080
+      },
+      "original_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 1114112,
+        "file_index_low": 1699396,
+        "link_count": 3,
+        "bytes": 7585024,
+        "attributes": 2080
+      },
+      "M2_target_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 1114112,
+        "file_index_low": 1699396,
+        "link_count": 3,
+        "bytes": 7585024,
+        "attributes": 2080
+      },
+      "original_sha256_after_link": "9ce201ec86faa9a4ed0e72739b3031957acd761c480b487274426c37daf29727",
+      "M2_target_sha256": "9ce201ec86faa9a4ed0e72739b3031957acd761c480b487274426c37daf29727"
+    },
+    {
+      "module": "MhFact_75fc19c47ee38b89",
+      "original_owned_output": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current\\MhFact_75fc19c47ee38b89.olean",
+      "M2_target": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-erdos-m2\\MhFact_75fc19c47ee38b89.olean",
+      "sha256": "19e3058e655886efc9a88ac09b5de80bcca47f0e8d32cf4b82795520250fa426",
+      "bytes": 2424800,
+      "artifact_kind": ".olean",
+      "original_NTFS_identity_at_policy": {
+        "volume_serial": 1980967165,
+        "file_index_high": 131072,
+        "file_index_low": 2063818,
+        "link_count": 2,
+        "bytes": 2424800,
+        "attributes": 2080
+      },
+      "dated_link_count_is_not_a_future_exact_prerequisite": true,
+      "classification": "PREVIOUS_OWN_DMS_ORIGINAL_ROUTE_COLD_OUTPUT_NOT_NEW_M2_COMPILATION",
+      "original_NTFS_identity_before_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 131072,
+        "file_index_low": 2063818,
+        "link_count": 2,
+        "bytes": 2424800,
+        "attributes": 2080
+      },
+      "original_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 131072,
+        "file_index_low": 2063818,
+        "link_count": 3,
+        "bytes": 2424800,
+        "attributes": 2080
+      },
+      "M2_target_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 131072,
+        "file_index_low": 2063818,
+        "link_count": 3,
+        "bytes": 2424800,
+        "attributes": 2080
+      },
+      "original_sha256_after_link": "19e3058e655886efc9a88ac09b5de80bcca47f0e8d32cf4b82795520250fa426",
+      "M2_target_sha256": "19e3058e655886efc9a88ac09b5de80bcca47f0e8d32cf4b82795520250fa426"
+    },
+    {
+      "module": "MhFact_77a5aa23394eb0f0",
+      "original_owned_output": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current\\MhFact_77a5aa23394eb0f0.olean",
+      "M2_target": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-erdos-m2\\MhFact_77a5aa23394eb0f0.olean",
+      "sha256": "3742ebb88f4470909eb03235df0893dcf15d004d40af818c8b0c00cdc9ca1195",
+      "bytes": 8356672,
+      "artifact_kind": ".olean",
+      "original_NTFS_identity_at_policy": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2087548,
+        "link_count": 2,
+        "bytes": 8356672,
+        "attributes": 2080
+      },
+      "dated_link_count_is_not_a_future_exact_prerequisite": true,
+      "classification": "PREVIOUS_OWN_DMS_ORIGINAL_ROUTE_COLD_OUTPUT_NOT_NEW_M2_COMPILATION",
+      "original_NTFS_identity_before_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2087548,
+        "link_count": 2,
+        "bytes": 8356672,
+        "attributes": 2080
+      },
+      "original_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2087548,
+        "link_count": 3,
+        "bytes": 8356672,
+        "attributes": 2080
+      },
+      "M2_target_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2087548,
+        "link_count": 3,
+        "bytes": 8356672,
+        "attributes": 2080
+      },
+      "original_sha256_after_link": "3742ebb88f4470909eb03235df0893dcf15d004d40af818c8b0c00cdc9ca1195",
+      "M2_target_sha256": "3742ebb88f4470909eb03235df0893dcf15d004d40af818c8b0c00cdc9ca1195"
+    },
+    {
+      "module": "MhFact_77e9ac7f87ab804f",
+      "original_owned_output": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current\\MhFact_77e9ac7f87ab804f.olean",
+      "M2_target": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-erdos-m2\\MhFact_77e9ac7f87ab804f.olean",
+      "sha256": "e5497cd504c57854fda521021a577066cfcd029c5b27c6b43fd28c2b1ffa67a9",
+      "bytes": 13948544,
+      "artifact_kind": ".olean",
+      "original_NTFS_identity_at_policy": {
+        "volume_serial": 1980967165,
+        "file_index_high": 589824,
+        "file_index_low": 2068628,
+        "link_count": 2,
+        "bytes": 13948544,
+        "attributes": 2080
+      },
+      "dated_link_count_is_not_a_future_exact_prerequisite": true,
+      "classification": "PREVIOUS_OWN_DMS_ORIGINAL_ROUTE_COLD_OUTPUT_NOT_NEW_M2_COMPILATION",
+      "original_NTFS_identity_before_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 589824,
+        "file_index_low": 2068628,
+        "link_count": 2,
+        "bytes": 13948544,
+        "attributes": 2080
+      },
+      "original_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 589824,
+        "file_index_low": 2068628,
+        "link_count": 3,
+        "bytes": 13948544,
+        "attributes": 2080
+      },
+      "M2_target_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 589824,
+        "file_index_low": 2068628,
+        "link_count": 3,
+        "bytes": 13948544,
+        "attributes": 2080
+      },
+      "original_sha256_after_link": "e5497cd504c57854fda521021a577066cfcd029c5b27c6b43fd28c2b1ffa67a9",
+      "M2_target_sha256": "e5497cd504c57854fda521021a577066cfcd029c5b27c6b43fd28c2b1ffa67a9"
+    },
+    {
+      "module": "MhFact_78a34517ee1a6fff",
+      "original_owned_output": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current\\MhFact_78a34517ee1a6fff.olean",
+      "M2_target": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-erdos-m2\\MhFact_78a34517ee1a6fff.olean",
+      "sha256": "2c234ead3f36cdca4ce77df25a769b981e7aa8b143bfd3409209dba6974ae3b8",
+      "bytes": 21775856,
+      "artifact_kind": ".olean",
+      "original_NTFS_identity_at_policy": {
+        "volume_serial": 1980967165,
+        "file_index_high": 131072,
+        "file_index_low": 2207567,
+        "link_count": 2,
+        "bytes": 21775856,
+        "attributes": 2080
+      },
+      "dated_link_count_is_not_a_future_exact_prerequisite": true,
+      "classification": "PREVIOUS_OWN_DMS_ORIGINAL_ROUTE_COLD_OUTPUT_NOT_NEW_M2_COMPILATION",
+      "original_NTFS_identity_before_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 131072,
+        "file_index_low": 2207567,
+        "link_count": 2,
+        "bytes": 21775856,
+        "attributes": 2080
+      },
+      "original_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 131072,
+        "file_index_low": 2207567,
+        "link_count": 3,
+        "bytes": 21775856,
+        "attributes": 2080
+      },
+      "M2_target_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 131072,
+        "file_index_low": 2207567,
+        "link_count": 3,
+        "bytes": 21775856,
+        "attributes": 2080
+      },
+      "original_sha256_after_link": "2c234ead3f36cdca4ce77df25a769b981e7aa8b143bfd3409209dba6974ae3b8",
+      "M2_target_sha256": "2c234ead3f36cdca4ce77df25a769b981e7aa8b143bfd3409209dba6974ae3b8"
+    },
+    {
+      "module": "MhFact_78d98836f6372f68",
+      "original_owned_output": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current\\MhFact_78d98836f6372f68.olean",
+      "M2_target": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-erdos-m2\\MhFact_78d98836f6372f68.olean",
+      "sha256": "0c36b5ea0285abb03ac023c4e2e1fb8aaad7aa9098fadb72c01e4225ceedfb6c",
+      "bytes": 26948792,
+      "artifact_kind": ".olean",
+      "original_NTFS_identity_at_policy": {
+        "volume_serial": 1980967165,
+        "file_index_high": 131072,
+        "file_index_low": 2108429,
+        "link_count": 2,
+        "bytes": 26948792,
+        "attributes": 2080
+      },
+      "dated_link_count_is_not_a_future_exact_prerequisite": true,
+      "classification": "PREVIOUS_OWN_DMS_ORIGINAL_ROUTE_COLD_OUTPUT_NOT_NEW_M2_COMPILATION",
+      "original_NTFS_identity_before_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 131072,
+        "file_index_low": 2108429,
+        "link_count": 2,
+        "bytes": 26948792,
+        "attributes": 2080
+      },
+      "original_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 131072,
+        "file_index_low": 2108429,
+        "link_count": 3,
+        "bytes": 26948792,
+        "attributes": 2080
+      },
+      "M2_target_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 131072,
+        "file_index_low": 2108429,
+        "link_count": 3,
+        "bytes": 26948792,
+        "attributes": 2080
+      },
+      "original_sha256_after_link": "0c36b5ea0285abb03ac023c4e2e1fb8aaad7aa9098fadb72c01e4225ceedfb6c",
+      "M2_target_sha256": "0c36b5ea0285abb03ac023c4e2e1fb8aaad7aa9098fadb72c01e4225ceedfb6c"
+    },
+    {
+      "module": "MhFact_79ac08d5cf0788b9",
+      "original_owned_output": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current\\MhFact_79ac08d5cf0788b9.olean",
+      "M2_target": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-erdos-m2\\MhFact_79ac08d5cf0788b9.olean",
+      "sha256": "ea6896fe0cbd29dfbf701c0e83a7ea09d7f801b0f9ffd1287b0b48cea4f3d7fe",
+      "bytes": 10800560,
+      "artifact_kind": ".olean",
+      "original_NTFS_identity_at_policy": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2085921,
+        "link_count": 2,
+        "bytes": 10800560,
+        "attributes": 2080
+      },
+      "dated_link_count_is_not_a_future_exact_prerequisite": true,
+      "classification": "PREVIOUS_OWN_DMS_ORIGINAL_ROUTE_COLD_OUTPUT_NOT_NEW_M2_COMPILATION",
+      "original_NTFS_identity_before_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2085921,
+        "link_count": 2,
+        "bytes": 10800560,
+        "attributes": 2080
+      },
+      "original_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2085921,
+        "link_count": 3,
+        "bytes": 10800560,
+        "attributes": 2080
+      },
+      "M2_target_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2085921,
+        "link_count": 3,
+        "bytes": 10800560,
+        "attributes": 2080
+      },
+      "original_sha256_after_link": "ea6896fe0cbd29dfbf701c0e83a7ea09d7f801b0f9ffd1287b0b48cea4f3d7fe",
+      "M2_target_sha256": "ea6896fe0cbd29dfbf701c0e83a7ea09d7f801b0f9ffd1287b0b48cea4f3d7fe"
+    },
+    {
+      "module": "MhFact_7b9500b9ad8bca15",
+      "original_owned_output": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current\\MhFact_7b9500b9ad8bca15.olean",
+      "M2_target": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-erdos-m2\\MhFact_7b9500b9ad8bca15.olean",
+      "sha256": "a120be3a00d7aa61b164862ac6887c3d6da346665354666f564596b1c9aa1ddf",
+      "bytes": 8594384,
+      "artifact_kind": ".olean",
+      "original_NTFS_identity_at_policy": {
+        "volume_serial": 1980967165,
+        "file_index_high": 131072,
+        "file_index_low": 2083292,
+        "link_count": 2,
+        "bytes": 8594384,
+        "attributes": 2080
+      },
+      "dated_link_count_is_not_a_future_exact_prerequisite": true,
+      "classification": "PREVIOUS_OWN_DMS_ORIGINAL_ROUTE_COLD_OUTPUT_NOT_NEW_M2_COMPILATION",
+      "original_NTFS_identity_before_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 131072,
+        "file_index_low": 2083292,
+        "link_count": 2,
+        "bytes": 8594384,
+        "attributes": 2080
+      },
+      "original_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 131072,
+        "file_index_low": 2083292,
+        "link_count": 3,
+        "bytes": 8594384,
+        "attributes": 2080
+      },
+      "M2_target_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 131072,
+        "file_index_low": 2083292,
+        "link_count": 3,
+        "bytes": 8594384,
+        "attributes": 2080
+      },
+      "original_sha256_after_link": "a120be3a00d7aa61b164862ac6887c3d6da346665354666f564596b1c9aa1ddf",
+      "M2_target_sha256": "a120be3a00d7aa61b164862ac6887c3d6da346665354666f564596b1c9aa1ddf"
+    },
+    {
+      "module": "MhFact_7c9b506b16bbaf73",
+      "original_owned_output": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current\\MhFact_7c9b506b16bbaf73.olean",
+      "M2_target": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-erdos-m2\\MhFact_7c9b506b16bbaf73.olean",
+      "sha256": "11daeae7ac2ad5debcc2acdaee22a5e67598968bf64acc121f3a821249b79466",
+      "bytes": 7329040,
+      "artifact_kind": ".olean",
+      "original_NTFS_identity_at_policy": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2090541,
+        "link_count": 2,
+        "bytes": 7329040,
+        "attributes": 2080
+      },
+      "dated_link_count_is_not_a_future_exact_prerequisite": true,
+      "classification": "PREVIOUS_OWN_DMS_ORIGINAL_ROUTE_COLD_OUTPUT_NOT_NEW_M2_COMPILATION",
+      "original_NTFS_identity_before_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2090541,
+        "link_count": 2,
+        "bytes": 7329040,
+        "attributes": 2080
+      },
+      "original_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2090541,
+        "link_count": 3,
+        "bytes": 7329040,
+        "attributes": 2080
+      },
+      "M2_target_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2090541,
+        "link_count": 3,
+        "bytes": 7329040,
+        "attributes": 2080
+      },
+      "original_sha256_after_link": "11daeae7ac2ad5debcc2acdaee22a5e67598968bf64acc121f3a821249b79466",
+      "M2_target_sha256": "11daeae7ac2ad5debcc2acdaee22a5e67598968bf64acc121f3a821249b79466"
+    },
+    {
+      "module": "MhFact_7d291f6ca774e1da",
+      "original_owned_output": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current\\MhFact_7d291f6ca774e1da.olean",
+      "M2_target": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-erdos-m2\\MhFact_7d291f6ca774e1da.olean",
+      "sha256": "383128069d4d35fa1bd6b7c6a697384c786227195820ee00274969e3a62debda",
+      "bytes": 2610368,
+      "artifact_kind": ".olean",
+      "original_NTFS_identity_at_policy": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2060826,
+        "link_count": 2,
+        "bytes": 2610368,
+        "attributes": 2080
+      },
+      "dated_link_count_is_not_a_future_exact_prerequisite": true,
+      "classification": "PREVIOUS_OWN_DMS_ORIGINAL_ROUTE_COLD_OUTPUT_NOT_NEW_M2_COMPILATION",
+      "original_NTFS_identity_before_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2060826,
+        "link_count": 2,
+        "bytes": 2610368,
+        "attributes": 2080
+      },
+      "original_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2060826,
+        "link_count": 3,
+        "bytes": 2610368,
+        "attributes": 2080
+      },
+      "M2_target_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2060826,
+        "link_count": 3,
+        "bytes": 2610368,
+        "attributes": 2080
+      },
+      "original_sha256_after_link": "383128069d4d35fa1bd6b7c6a697384c786227195820ee00274969e3a62debda",
+      "M2_target_sha256": "383128069d4d35fa1bd6b7c6a697384c786227195820ee00274969e3a62debda"
+    },
+    {
+      "module": "MhFact_81c52cea8147de67",
+      "original_owned_output": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current\\MhFact_81c52cea8147de67.olean",
+      "M2_target": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-erdos-m2\\MhFact_81c52cea8147de67.olean",
+      "sha256": "0447f106d0122de60495003040ee3cb987f5060e5b20daf3c58ab1528592de49",
+      "bytes": 3046648,
+      "artifact_kind": ".olean",
+      "original_NTFS_identity_at_policy": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2065002,
+        "link_count": 2,
+        "bytes": 3046648,
+        "attributes": 2080
+      },
+      "dated_link_count_is_not_a_future_exact_prerequisite": true,
+      "classification": "PREVIOUS_OWN_DMS_ORIGINAL_ROUTE_COLD_OUTPUT_NOT_NEW_M2_COMPILATION",
+      "original_NTFS_identity_before_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2065002,
+        "link_count": 2,
+        "bytes": 3046648,
+        "attributes": 2080
+      },
+      "original_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2065002,
+        "link_count": 3,
+        "bytes": 3046648,
+        "attributes": 2080
+      },
+      "M2_target_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2065002,
+        "link_count": 3,
+        "bytes": 3046648,
+        "attributes": 2080
+      },
+      "original_sha256_after_link": "0447f106d0122de60495003040ee3cb987f5060e5b20daf3c58ab1528592de49",
+      "M2_target_sha256": "0447f106d0122de60495003040ee3cb987f5060e5b20daf3c58ab1528592de49"
+    },
+    {
+      "module": "MhFact_83263f8970f3987b",
+      "original_owned_output": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current\\MhFact_83263f8970f3987b.olean",
+      "M2_target": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-erdos-m2\\MhFact_83263f8970f3987b.olean",
+      "sha256": "3ed9287619a90ec8c01227c8eb882c98c6186f27abd6bfcec457ba983836411f",
+      "bytes": 1367856,
+      "artifact_kind": ".olean",
+      "original_NTFS_identity_at_policy": {
+        "volume_serial": 1980967165,
+        "file_index_high": 327680,
+        "file_index_low": 2066921,
+        "link_count": 2,
+        "bytes": 1367856,
+        "attributes": 2080
+      },
+      "dated_link_count_is_not_a_future_exact_prerequisite": true,
+      "classification": "PREVIOUS_OWN_DMS_ORIGINAL_ROUTE_COLD_OUTPUT_NOT_NEW_M2_COMPILATION",
+      "original_NTFS_identity_before_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 327680,
+        "file_index_low": 2066921,
+        "link_count": 2,
+        "bytes": 1367856,
+        "attributes": 2080
+      },
+      "original_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 327680,
+        "file_index_low": 2066921,
+        "link_count": 3,
+        "bytes": 1367856,
+        "attributes": 2080
+      },
+      "M2_target_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 327680,
+        "file_index_low": 2066921,
+        "link_count": 3,
+        "bytes": 1367856,
+        "attributes": 2080
+      },
+      "original_sha256_after_link": "3ed9287619a90ec8c01227c8eb882c98c6186f27abd6bfcec457ba983836411f",
+      "M2_target_sha256": "3ed9287619a90ec8c01227c8eb882c98c6186f27abd6bfcec457ba983836411f"
+    },
+    {
+      "module": "MhFact_85780d9a54267261",
+      "original_owned_output": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current\\MhFact_85780d9a54267261.olean",
+      "M2_target": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-erdos-m2\\MhFact_85780d9a54267261.olean",
+      "sha256": "ab2b5cee82bb2548e820cbcd8504d78046e4ef9562882751e14ccdedf311dfb2",
+      "bytes": 1198880,
+      "artifact_kind": ".olean",
+      "original_NTFS_identity_at_policy": {
+        "volume_serial": 1980967165,
+        "file_index_high": 196608,
+        "file_index_low": 2067012,
+        "link_count": 2,
+        "bytes": 1198880,
+        "attributes": 2080
+      },
+      "dated_link_count_is_not_a_future_exact_prerequisite": true,
+      "classification": "PREVIOUS_OWN_DMS_ORIGINAL_ROUTE_COLD_OUTPUT_NOT_NEW_M2_COMPILATION",
+      "original_NTFS_identity_before_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 196608,
+        "file_index_low": 2067012,
+        "link_count": 2,
+        "bytes": 1198880,
+        "attributes": 2080
+      },
+      "original_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 196608,
+        "file_index_low": 2067012,
+        "link_count": 3,
+        "bytes": 1198880,
+        "attributes": 2080
+      },
+      "M2_target_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 196608,
+        "file_index_low": 2067012,
+        "link_count": 3,
+        "bytes": 1198880,
+        "attributes": 2080
+      },
+      "original_sha256_after_link": "ab2b5cee82bb2548e820cbcd8504d78046e4ef9562882751e14ccdedf311dfb2",
+      "M2_target_sha256": "ab2b5cee82bb2548e820cbcd8504d78046e4ef9562882751e14ccdedf311dfb2"
+    },
+    {
+      "module": "MhFact_90b4662cdeba097d",
+      "original_owned_output": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current\\MhFact_90b4662cdeba097d.olean",
+      "M2_target": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-erdos-m2\\MhFact_90b4662cdeba097d.olean",
+      "sha256": "d784c40c48fabf27283bcd28a131eb2c65d7244edc4856ff20b48b7d39c3635e",
+      "bytes": 828464,
+      "artifact_kind": ".olean",
+      "original_NTFS_identity_at_policy": {
+        "volume_serial": 1980967165,
+        "file_index_high": 131072,
+        "file_index_low": 2064271,
+        "link_count": 2,
+        "bytes": 828464,
+        "attributes": 2080
+      },
+      "dated_link_count_is_not_a_future_exact_prerequisite": true,
+      "classification": "PREVIOUS_OWN_DMS_ORIGINAL_ROUTE_COLD_OUTPUT_NOT_NEW_M2_COMPILATION",
+      "original_NTFS_identity_before_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 131072,
+        "file_index_low": 2064271,
+        "link_count": 2,
+        "bytes": 828464,
+        "attributes": 2080
+      },
+      "original_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 131072,
+        "file_index_low": 2064271,
+        "link_count": 3,
+        "bytes": 828464,
+        "attributes": 2080
+      },
+      "M2_target_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 131072,
+        "file_index_low": 2064271,
+        "link_count": 3,
+        "bytes": 828464,
+        "attributes": 2080
+      },
+      "original_sha256_after_link": "d784c40c48fabf27283bcd28a131eb2c65d7244edc4856ff20b48b7d39c3635e",
+      "M2_target_sha256": "d784c40c48fabf27283bcd28a131eb2c65d7244edc4856ff20b48b7d39c3635e"
+    },
+    {
+      "module": "MhFact_916ccd41e9db4312",
+      "original_owned_output": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current\\MhFact_916ccd41e9db4312.olean",
+      "M2_target": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-erdos-m2\\MhFact_916ccd41e9db4312.olean",
+      "sha256": "400048a0c9d2f0066079e6fe84e504654fe9eec0ecbdfee8ee9c6b0bd5ed3ae4",
+      "bytes": 25640408,
+      "artifact_kind": ".olean",
+      "original_NTFS_identity_at_policy": {
+        "volume_serial": 1980967165,
+        "file_index_high": 131072,
+        "file_index_low": 2166970,
+        "link_count": 2,
+        "bytes": 25640408,
+        "attributes": 2080
+      },
+      "dated_link_count_is_not_a_future_exact_prerequisite": true,
+      "classification": "PREVIOUS_OWN_DMS_ORIGINAL_ROUTE_COLD_OUTPUT_NOT_NEW_M2_COMPILATION",
+      "original_NTFS_identity_before_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 131072,
+        "file_index_low": 2166970,
+        "link_count": 2,
+        "bytes": 25640408,
+        "attributes": 2080
+      },
+      "original_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 131072,
+        "file_index_low": 2166970,
+        "link_count": 3,
+        "bytes": 25640408,
+        "attributes": 2080
+      },
+      "M2_target_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 131072,
+        "file_index_low": 2166970,
+        "link_count": 3,
+        "bytes": 25640408,
+        "attributes": 2080
+      },
+      "original_sha256_after_link": "400048a0c9d2f0066079e6fe84e504654fe9eec0ecbdfee8ee9c6b0bd5ed3ae4",
+      "M2_target_sha256": "400048a0c9d2f0066079e6fe84e504654fe9eec0ecbdfee8ee9c6b0bd5ed3ae4"
+    },
+    {
+      "module": "MhFact_923511b69a46047e",
+      "original_owned_output": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current\\MhFact_923511b69a46047e.olean",
+      "M2_target": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-erdos-m2\\MhFact_923511b69a46047e.olean",
+      "sha256": "fd036804e7dacb059385ee53d9cf99f3e73c2c3588435d470e8d447f1b6d5faf",
+      "bytes": 12626776,
+      "artifact_kind": ".olean",
+      "original_NTFS_identity_at_policy": {
+        "volume_serial": 1980967165,
+        "file_index_high": 3604480,
+        "file_index_low": 302496,
+        "link_count": 2,
+        "bytes": 12626776,
+        "attributes": 2080
+      },
+      "dated_link_count_is_not_a_future_exact_prerequisite": true,
+      "classification": "PREVIOUS_OWN_DMS_ORIGINAL_ROUTE_COLD_OUTPUT_NOT_NEW_M2_COMPILATION",
+      "original_NTFS_identity_before_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 3604480,
+        "file_index_low": 302496,
+        "link_count": 2,
+        "bytes": 12626776,
+        "attributes": 2080
+      },
+      "original_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 3604480,
+        "file_index_low": 302496,
+        "link_count": 3,
+        "bytes": 12626776,
+        "attributes": 2080
+      },
+      "M2_target_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 3604480,
+        "file_index_low": 302496,
+        "link_count": 3,
+        "bytes": 12626776,
+        "attributes": 2080
+      },
+      "original_sha256_after_link": "fd036804e7dacb059385ee53d9cf99f3e73c2c3588435d470e8d447f1b6d5faf",
+      "M2_target_sha256": "fd036804e7dacb059385ee53d9cf99f3e73c2c3588435d470e8d447f1b6d5faf"
+    },
+    {
+      "module": "MhFact_96b352680829f174",
+      "original_owned_output": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current\\MhFact_96b352680829f174.olean",
+      "M2_target": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-erdos-m2\\MhFact_96b352680829f174.olean",
+      "sha256": "1f7fd994864da7a28e1929707f482138dea4b0d0c3918e7052fe24c237e51b17",
+      "bytes": 10697200,
+      "artifact_kind": ".olean",
+      "original_NTFS_identity_at_policy": {
+        "volume_serial": 1980967165,
+        "file_index_high": 393216,
+        "file_index_low": 2079943,
+        "link_count": 2,
+        "bytes": 10697200,
+        "attributes": 2080
+      },
+      "dated_link_count_is_not_a_future_exact_prerequisite": true,
+      "classification": "PREVIOUS_OWN_DMS_ORIGINAL_ROUTE_COLD_OUTPUT_NOT_NEW_M2_COMPILATION",
+      "original_NTFS_identity_before_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 393216,
+        "file_index_low": 2079943,
+        "link_count": 2,
+        "bytes": 10697200,
+        "attributes": 2080
+      },
+      "original_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 393216,
+        "file_index_low": 2079943,
+        "link_count": 3,
+        "bytes": 10697200,
+        "attributes": 2080
+      },
+      "M2_target_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 393216,
+        "file_index_low": 2079943,
+        "link_count": 3,
+        "bytes": 10697200,
+        "attributes": 2080
+      },
+      "original_sha256_after_link": "1f7fd994864da7a28e1929707f482138dea4b0d0c3918e7052fe24c237e51b17",
+      "M2_target_sha256": "1f7fd994864da7a28e1929707f482138dea4b0d0c3918e7052fe24c237e51b17"
+    },
+    {
+      "module": "MhFact_974f7197c1be8069",
+      "original_owned_output": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current\\MhFact_974f7197c1be8069.olean",
+      "M2_target": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-erdos-m2\\MhFact_974f7197c1be8069.olean",
+      "sha256": "b1f002d7a39fa01491111cb8b7c6f86324077e1501777f7f0339736e9877c008",
+      "bytes": 236784,
+      "artifact_kind": ".olean",
+      "original_NTFS_identity_at_policy": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2061194,
+        "link_count": 2,
+        "bytes": 236784,
+        "attributes": 2080
+      },
+      "dated_link_count_is_not_a_future_exact_prerequisite": true,
+      "classification": "PREVIOUS_OWN_DMS_ORIGINAL_ROUTE_COLD_OUTPUT_NOT_NEW_M2_COMPILATION",
+      "original_NTFS_identity_before_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2061194,
+        "link_count": 2,
+        "bytes": 236784,
+        "attributes": 2080
+      },
+      "original_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2061194,
+        "link_count": 3,
+        "bytes": 236784,
+        "attributes": 2080
+      },
+      "M2_target_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2061194,
+        "link_count": 3,
+        "bytes": 236784,
+        "attributes": 2080
+      },
+      "original_sha256_after_link": "b1f002d7a39fa01491111cb8b7c6f86324077e1501777f7f0339736e9877c008",
+      "M2_target_sha256": "b1f002d7a39fa01491111cb8b7c6f86324077e1501777f7f0339736e9877c008"
+    },
+    {
+      "module": "MhFact_9e7dda3374e6b172",
+      "original_owned_output": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current\\MhFact_9e7dda3374e6b172.olean",
+      "M2_target": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-erdos-m2\\MhFact_9e7dda3374e6b172.olean",
+      "sha256": "9827e254e6f30d5da4498a1d938a3474481faf539e3f6e77b784f94a441107dc",
+      "bytes": 1747896,
+      "artifact_kind": ".olean",
+      "original_NTFS_identity_at_policy": {
+        "volume_serial": 1980967165,
+        "file_index_high": 196608,
+        "file_index_low": 2064559,
+        "link_count": 2,
+        "bytes": 1747896,
+        "attributes": 2080
+      },
+      "dated_link_count_is_not_a_future_exact_prerequisite": true,
+      "classification": "PREVIOUS_OWN_DMS_ORIGINAL_ROUTE_COLD_OUTPUT_NOT_NEW_M2_COMPILATION",
+      "original_NTFS_identity_before_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 196608,
+        "file_index_low": 2064559,
+        "link_count": 2,
+        "bytes": 1747896,
+        "attributes": 2080
+      },
+      "original_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 196608,
+        "file_index_low": 2064559,
+        "link_count": 3,
+        "bytes": 1747896,
+        "attributes": 2080
+      },
+      "M2_target_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 196608,
+        "file_index_low": 2064559,
+        "link_count": 3,
+        "bytes": 1747896,
+        "attributes": 2080
+      },
+      "original_sha256_after_link": "9827e254e6f30d5da4498a1d938a3474481faf539e3f6e77b784f94a441107dc",
+      "M2_target_sha256": "9827e254e6f30d5da4498a1d938a3474481faf539e3f6e77b784f94a441107dc"
+    },
+    {
+      "module": "MhFact_a030b9ec722eb795",
+      "original_owned_output": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current\\MhFact_a030b9ec722eb795.olean",
+      "M2_target": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-erdos-m2\\MhFact_a030b9ec722eb795.olean",
+      "sha256": "8cecea878d3ba9b95faec41d76812e2bda39cb8d0e51b06332d1b9e64c4ebc5f",
+      "bytes": 6857072,
+      "artifact_kind": ".olean",
+      "original_NTFS_identity_at_policy": {
+        "volume_serial": 1980967165,
+        "file_index_high": 196608,
+        "file_index_low": 2064140,
+        "link_count": 2,
+        "bytes": 6857072,
+        "attributes": 2080
+      },
+      "dated_link_count_is_not_a_future_exact_prerequisite": true,
+      "classification": "PREVIOUS_OWN_DMS_ORIGINAL_ROUTE_COLD_OUTPUT_NOT_NEW_M2_COMPILATION",
+      "original_NTFS_identity_before_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 196608,
+        "file_index_low": 2064140,
+        "link_count": 2,
+        "bytes": 6857072,
+        "attributes": 2080
+      },
+      "original_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 196608,
+        "file_index_low": 2064140,
+        "link_count": 3,
+        "bytes": 6857072,
+        "attributes": 2080
+      },
+      "M2_target_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 196608,
+        "file_index_low": 2064140,
+        "link_count": 3,
+        "bytes": 6857072,
+        "attributes": 2080
+      },
+      "original_sha256_after_link": "8cecea878d3ba9b95faec41d76812e2bda39cb8d0e51b06332d1b9e64c4ebc5f",
+      "M2_target_sha256": "8cecea878d3ba9b95faec41d76812e2bda39cb8d0e51b06332d1b9e64c4ebc5f"
+    },
+    {
+      "module": "MhFact_a8bfe25dadf921db",
+      "original_owned_output": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current\\MhFact_a8bfe25dadf921db.olean",
+      "M2_target": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-erdos-m2\\MhFact_a8bfe25dadf921db.olean",
+      "sha256": "748abd8bc449d84d930d5baf9fc15b96e4fa729606623a3f2af3dd1a0d6ac0dd",
+      "bytes": 8430824,
+      "artifact_kind": ".olean",
+      "original_NTFS_identity_at_policy": {
+        "volume_serial": 1980967165,
+        "file_index_high": 393216,
+        "file_index_low": 2082598,
+        "link_count": 2,
+        "bytes": 8430824,
+        "attributes": 2080
+      },
+      "dated_link_count_is_not_a_future_exact_prerequisite": true,
+      "classification": "PREVIOUS_OWN_DMS_ORIGINAL_ROUTE_COLD_OUTPUT_NOT_NEW_M2_COMPILATION",
+      "original_NTFS_identity_before_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 393216,
+        "file_index_low": 2082598,
+        "link_count": 2,
+        "bytes": 8430824,
+        "attributes": 2080
+      },
+      "original_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 393216,
+        "file_index_low": 2082598,
+        "link_count": 3,
+        "bytes": 8430824,
+        "attributes": 2080
+      },
+      "M2_target_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 393216,
+        "file_index_low": 2082598,
+        "link_count": 3,
+        "bytes": 8430824,
+        "attributes": 2080
+      },
+      "original_sha256_after_link": "748abd8bc449d84d930d5baf9fc15b96e4fa729606623a3f2af3dd1a0d6ac0dd",
+      "M2_target_sha256": "748abd8bc449d84d930d5baf9fc15b96e4fa729606623a3f2af3dd1a0d6ac0dd"
+    },
+    {
+      "module": "MhFact_b536c7d8a4f139e4",
+      "original_owned_output": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current\\MhFact_b536c7d8a4f139e4.olean",
+      "M2_target": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-erdos-m2\\MhFact_b536c7d8a4f139e4.olean",
+      "sha256": "9e44e18e03ec0310f1b194f666bcebf0f5a8b1ebf8ecf6ec2e58ac4df89dad6b",
+      "bytes": 11279800,
+      "artifact_kind": ".olean",
+      "original_NTFS_identity_at_policy": {
+        "volume_serial": 1980967165,
+        "file_index_high": 6553600,
+        "file_index_low": 203462,
+        "link_count": 2,
+        "bytes": 11279800,
+        "attributes": 2080
+      },
+      "dated_link_count_is_not_a_future_exact_prerequisite": true,
+      "classification": "PREVIOUS_OWN_DMS_ORIGINAL_ROUTE_COLD_OUTPUT_NOT_NEW_M2_COMPILATION",
+      "original_NTFS_identity_before_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 6553600,
+        "file_index_low": 203462,
+        "link_count": 2,
+        "bytes": 11279800,
+        "attributes": 2080
+      },
+      "original_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 6553600,
+        "file_index_low": 203462,
+        "link_count": 3,
+        "bytes": 11279800,
+        "attributes": 2080
+      },
+      "M2_target_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 6553600,
+        "file_index_low": 203462,
+        "link_count": 3,
+        "bytes": 11279800,
+        "attributes": 2080
+      },
+      "original_sha256_after_link": "9e44e18e03ec0310f1b194f666bcebf0f5a8b1ebf8ecf6ec2e58ac4df89dad6b",
+      "M2_target_sha256": "9e44e18e03ec0310f1b194f666bcebf0f5a8b1ebf8ecf6ec2e58ac4df89dad6b"
+    },
+    {
+      "module": "MhFact_b71709db7a82637a",
+      "original_owned_output": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current\\MhFact_b71709db7a82637a.olean",
+      "M2_target": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-erdos-m2\\MhFact_b71709db7a82637a.olean",
+      "sha256": "537c40cbbf15863622a8146ac8cb5cb8cbef17a933ee55bc15983bb8f70b5d34",
+      "bytes": 10443192,
+      "artifact_kind": ".olean",
+      "original_NTFS_identity_at_policy": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2088955,
+        "link_count": 2,
+        "bytes": 10443192,
+        "attributes": 2080
+      },
+      "dated_link_count_is_not_a_future_exact_prerequisite": true,
+      "classification": "PREVIOUS_OWN_DMS_ORIGINAL_ROUTE_COLD_OUTPUT_NOT_NEW_M2_COMPILATION",
+      "original_NTFS_identity_before_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2088955,
+        "link_count": 2,
+        "bytes": 10443192,
+        "attributes": 2080
+      },
+      "original_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2088955,
+        "link_count": 3,
+        "bytes": 10443192,
+        "attributes": 2080
+      },
+      "M2_target_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2088955,
+        "link_count": 3,
+        "bytes": 10443192,
+        "attributes": 2080
+      },
+      "original_sha256_after_link": "537c40cbbf15863622a8146ac8cb5cb8cbef17a933ee55bc15983bb8f70b5d34",
+      "M2_target_sha256": "537c40cbbf15863622a8146ac8cb5cb8cbef17a933ee55bc15983bb8f70b5d34"
+    },
+    {
+      "module": "MhFact_ba4d9c5abd0afd83",
+      "original_owned_output": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current\\MhFact_ba4d9c5abd0afd83.olean",
+      "M2_target": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-erdos-m2\\MhFact_ba4d9c5abd0afd83.olean",
+      "sha256": "09b7c6f8ab4c3f5e075630305913a5003dbe6affa8b85b9795048d7d6725d7a2",
+      "bytes": 45760,
+      "artifact_kind": ".olean",
+      "original_NTFS_identity_at_policy": {
+        "volume_serial": 1980967165,
+        "file_index_high": 2031616,
+        "file_index_low": 1489056,
+        "link_count": 2,
+        "bytes": 45760,
+        "attributes": 2080
+      },
+      "dated_link_count_is_not_a_future_exact_prerequisite": true,
+      "classification": "PREVIOUS_OWN_DMS_ORIGINAL_ROUTE_COLD_OUTPUT_NOT_NEW_M2_COMPILATION",
+      "original_NTFS_identity_before_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 2031616,
+        "file_index_low": 1489056,
+        "link_count": 2,
+        "bytes": 45760,
+        "attributes": 2080
+      },
+      "original_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 2031616,
+        "file_index_low": 1489056,
+        "link_count": 3,
+        "bytes": 45760,
+        "attributes": 2080
+      },
+      "M2_target_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 2031616,
+        "file_index_low": 1489056,
+        "link_count": 3,
+        "bytes": 45760,
+        "attributes": 2080
+      },
+      "original_sha256_after_link": "09b7c6f8ab4c3f5e075630305913a5003dbe6affa8b85b9795048d7d6725d7a2",
+      "M2_target_sha256": "09b7c6f8ab4c3f5e075630305913a5003dbe6affa8b85b9795048d7d6725d7a2"
+    },
+    {
+      "module": "MhFact_bde9371a01dd2855",
+      "original_owned_output": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current\\MhFact_bde9371a01dd2855.olean",
+      "M2_target": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-erdos-m2\\MhFact_bde9371a01dd2855.olean",
+      "sha256": "26195b6856fc5ad2f30a668f86cb7698c9e75f804312340f378ac7fe4b6ea21f",
+      "bytes": 1743464,
+      "artifact_kind": ".olean",
+      "original_NTFS_identity_at_policy": {
+        "volume_serial": 1980967165,
+        "file_index_high": 327680,
+        "file_index_low": 2066445,
+        "link_count": 2,
+        "bytes": 1743464,
+        "attributes": 2080
+      },
+      "dated_link_count_is_not_a_future_exact_prerequisite": true,
+      "classification": "PREVIOUS_OWN_DMS_ORIGINAL_ROUTE_COLD_OUTPUT_NOT_NEW_M2_COMPILATION",
+      "original_NTFS_identity_before_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 327680,
+        "file_index_low": 2066445,
+        "link_count": 2,
+        "bytes": 1743464,
+        "attributes": 2080
+      },
+      "original_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 327680,
+        "file_index_low": 2066445,
+        "link_count": 3,
+        "bytes": 1743464,
+        "attributes": 2080
+      },
+      "M2_target_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 327680,
+        "file_index_low": 2066445,
+        "link_count": 3,
+        "bytes": 1743464,
+        "attributes": 2080
+      },
+      "original_sha256_after_link": "26195b6856fc5ad2f30a668f86cb7698c9e75f804312340f378ac7fe4b6ea21f",
+      "M2_target_sha256": "26195b6856fc5ad2f30a668f86cb7698c9e75f804312340f378ac7fe4b6ea21f"
+    },
+    {
+      "module": "MhFact_c03bb6e1daa663e4",
+      "original_owned_output": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current\\MhFact_c03bb6e1daa663e4.olean",
+      "M2_target": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-erdos-m2\\MhFact_c03bb6e1daa663e4.olean",
+      "sha256": "e49ae9634b3a4ee031fa972f49ec10daa9814b031cfef39ffbab6c7e926fa338",
+      "bytes": 28423160,
+      "artifact_kind": ".olean",
+      "original_NTFS_identity_at_policy": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2091718,
+        "link_count": 2,
+        "bytes": 28423160,
+        "attributes": 2080
+      },
+      "dated_link_count_is_not_a_future_exact_prerequisite": true,
+      "classification": "PREVIOUS_OWN_DMS_ORIGINAL_ROUTE_COLD_OUTPUT_NOT_NEW_M2_COMPILATION",
+      "original_NTFS_identity_before_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2091718,
+        "link_count": 2,
+        "bytes": 28423160,
+        "attributes": 2080
+      },
+      "original_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2091718,
+        "link_count": 3,
+        "bytes": 28423160,
+        "attributes": 2080
+      },
+      "M2_target_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2091718,
+        "link_count": 3,
+        "bytes": 28423160,
+        "attributes": 2080
+      },
+      "original_sha256_after_link": "e49ae9634b3a4ee031fa972f49ec10daa9814b031cfef39ffbab6c7e926fa338",
+      "M2_target_sha256": "e49ae9634b3a4ee031fa972f49ec10daa9814b031cfef39ffbab6c7e926fa338"
+    },
+    {
+      "module": "MhFact_c156979f912a0408",
+      "original_owned_output": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current\\MhFact_c156979f912a0408.olean",
+      "M2_target": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-erdos-m2\\MhFact_c156979f912a0408.olean",
+      "sha256": "c9deda63a4fe113dab9b74f507896f258563d57e1da1942973c9525b069c1f3b",
+      "bytes": 12582192,
+      "artifact_kind": ".olean",
+      "original_NTFS_identity_at_policy": {
+        "volume_serial": 1980967165,
+        "file_index_high": 524288,
+        "file_index_low": 2071914,
+        "link_count": 2,
+        "bytes": 12582192,
+        "attributes": 2080
+      },
+      "dated_link_count_is_not_a_future_exact_prerequisite": true,
+      "classification": "PREVIOUS_OWN_DMS_ORIGINAL_ROUTE_COLD_OUTPUT_NOT_NEW_M2_COMPILATION",
+      "original_NTFS_identity_before_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 524288,
+        "file_index_low": 2071914,
+        "link_count": 2,
+        "bytes": 12582192,
+        "attributes": 2080
+      },
+      "original_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 524288,
+        "file_index_low": 2071914,
+        "link_count": 3,
+        "bytes": 12582192,
+        "attributes": 2080
+      },
+      "M2_target_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 524288,
+        "file_index_low": 2071914,
+        "link_count": 3,
+        "bytes": 12582192,
+        "attributes": 2080
+      },
+      "original_sha256_after_link": "c9deda63a4fe113dab9b74f507896f258563d57e1da1942973c9525b069c1f3b",
+      "M2_target_sha256": "c9deda63a4fe113dab9b74f507896f258563d57e1da1942973c9525b069c1f3b"
+    },
+    {
+      "module": "MhFact_c1bad3abf5f2e5e8",
+      "original_owned_output": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current\\MhFact_c1bad3abf5f2e5e8.olean",
+      "M2_target": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-erdos-m2\\MhFact_c1bad3abf5f2e5e8.olean",
+      "sha256": "5e7a3e9ac62fea62a9eeb81cf5b35b3095477643b2bdaf33302ec3e26cef421a",
+      "bytes": 7692376,
+      "artifact_kind": ".olean",
+      "original_NTFS_identity_at_policy": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2083528,
+        "link_count": 2,
+        "bytes": 7692376,
+        "attributes": 2080
+      },
+      "dated_link_count_is_not_a_future_exact_prerequisite": true,
+      "classification": "PREVIOUS_OWN_DMS_ORIGINAL_ROUTE_COLD_OUTPUT_NOT_NEW_M2_COMPILATION",
+      "original_NTFS_identity_before_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2083528,
+        "link_count": 2,
+        "bytes": 7692376,
+        "attributes": 2080
+      },
+      "original_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2083528,
+        "link_count": 3,
+        "bytes": 7692376,
+        "attributes": 2080
+      },
+      "M2_target_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2083528,
+        "link_count": 3,
+        "bytes": 7692376,
+        "attributes": 2080
+      },
+      "original_sha256_after_link": "5e7a3e9ac62fea62a9eeb81cf5b35b3095477643b2bdaf33302ec3e26cef421a",
+      "M2_target_sha256": "5e7a3e9ac62fea62a9eeb81cf5b35b3095477643b2bdaf33302ec3e26cef421a"
+    },
+    {
+      "module": "MhFact_c3375be11cf311ee",
+      "original_owned_output": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current\\MhFact_c3375be11cf311ee.olean",
+      "M2_target": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-erdos-m2\\MhFact_c3375be11cf311ee.olean",
+      "sha256": "2f5e451337c6e58e7cb8cb774f668dd2db8633a36c88c178fbf604c5a0ac1631",
+      "bytes": 2864376,
+      "artifact_kind": ".olean",
+      "original_NTFS_identity_at_policy": {
+        "volume_serial": 1980967165,
+        "file_index_high": 655360,
+        "file_index_low": 1698946,
+        "link_count": 2,
+        "bytes": 2864376,
+        "attributes": 2080
+      },
+      "dated_link_count_is_not_a_future_exact_prerequisite": true,
+      "classification": "PREVIOUS_OWN_DMS_ORIGINAL_ROUTE_COLD_OUTPUT_NOT_NEW_M2_COMPILATION",
+      "original_NTFS_identity_before_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 655360,
+        "file_index_low": 1698946,
+        "link_count": 2,
+        "bytes": 2864376,
+        "attributes": 2080
+      },
+      "original_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 655360,
+        "file_index_low": 1698946,
+        "link_count": 3,
+        "bytes": 2864376,
+        "attributes": 2080
+      },
+      "M2_target_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 655360,
+        "file_index_low": 1698946,
+        "link_count": 3,
+        "bytes": 2864376,
+        "attributes": 2080
+      },
+      "original_sha256_after_link": "2f5e451337c6e58e7cb8cb774f668dd2db8633a36c88c178fbf604c5a0ac1631",
+      "M2_target_sha256": "2f5e451337c6e58e7cb8cb774f668dd2db8633a36c88c178fbf604c5a0ac1631"
+    },
+    {
+      "module": "MhFact_c35583f86422a75a",
+      "original_owned_output": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current\\MhFact_c35583f86422a75a.olean",
+      "M2_target": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-erdos-m2\\MhFact_c35583f86422a75a.olean",
+      "sha256": "44f618bb4d40189194b16e0263f878c3961f91edc3f7e7be26b00fddb50339d8",
+      "bytes": 28381768,
+      "artifact_kind": ".olean",
+      "original_NTFS_identity_at_policy": {
+        "volume_serial": 1980967165,
+        "file_index_high": 1245184,
+        "file_index_low": 296938,
+        "link_count": 2,
+        "bytes": 28381768,
+        "attributes": 2080
+      },
+      "dated_link_count_is_not_a_future_exact_prerequisite": true,
+      "classification": "PREVIOUS_OWN_DMS_ORIGINAL_ROUTE_COLD_OUTPUT_NOT_NEW_M2_COMPILATION",
+      "original_NTFS_identity_before_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 1245184,
+        "file_index_low": 296938,
+        "link_count": 2,
+        "bytes": 28381768,
+        "attributes": 2080
+      },
+      "original_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 1245184,
+        "file_index_low": 296938,
+        "link_count": 3,
+        "bytes": 28381768,
+        "attributes": 2080
+      },
+      "M2_target_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 1245184,
+        "file_index_low": 296938,
+        "link_count": 3,
+        "bytes": 28381768,
+        "attributes": 2080
+      },
+      "original_sha256_after_link": "44f618bb4d40189194b16e0263f878c3961f91edc3f7e7be26b00fddb50339d8",
+      "M2_target_sha256": "44f618bb4d40189194b16e0263f878c3961f91edc3f7e7be26b00fddb50339d8"
+    },
+    {
+      "module": "MhFact_c64b6bd62b78d841",
+      "original_owned_output": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current\\MhFact_c64b6bd62b78d841.olean",
+      "M2_target": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-erdos-m2\\MhFact_c64b6bd62b78d841.olean",
+      "sha256": "ec86e9e3d53653aa5fe4e7eb182338a4ef92f8ccb2d6cc23f6b6dcfb0baad47b",
+      "bytes": 2555080,
+      "artifact_kind": ".olean",
+      "original_NTFS_identity_at_policy": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2060994,
+        "link_count": 2,
+        "bytes": 2555080,
+        "attributes": 2080
+      },
+      "dated_link_count_is_not_a_future_exact_prerequisite": true,
+      "classification": "PREVIOUS_OWN_DMS_ORIGINAL_ROUTE_COLD_OUTPUT_NOT_NEW_M2_COMPILATION",
+      "original_NTFS_identity_before_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2060994,
+        "link_count": 2,
+        "bytes": 2555080,
+        "attributes": 2080
+      },
+      "original_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2060994,
+        "link_count": 3,
+        "bytes": 2555080,
+        "attributes": 2080
+      },
+      "M2_target_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2060994,
+        "link_count": 3,
+        "bytes": 2555080,
+        "attributes": 2080
+      },
+      "original_sha256_after_link": "ec86e9e3d53653aa5fe4e7eb182338a4ef92f8ccb2d6cc23f6b6dcfb0baad47b",
+      "M2_target_sha256": "ec86e9e3d53653aa5fe4e7eb182338a4ef92f8ccb2d6cc23f6b6dcfb0baad47b"
+    },
+    {
+      "module": "MhFact_cc801c1ba060f9c7",
+      "original_owned_output": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current\\MhFact_cc801c1ba060f9c7.olean",
+      "M2_target": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-erdos-m2\\MhFact_cc801c1ba060f9c7.olean",
+      "sha256": "754c4cd6977c25bfe98a98795e330ac4b897e70153eed0e43b9c8ec281edae4c",
+      "bytes": 15786616,
+      "artifact_kind": ".olean",
+      "original_NTFS_identity_at_policy": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2078221,
+        "link_count": 2,
+        "bytes": 15786616,
+        "attributes": 2080
+      },
+      "dated_link_count_is_not_a_future_exact_prerequisite": true,
+      "classification": "PREVIOUS_OWN_DMS_ORIGINAL_ROUTE_COLD_OUTPUT_NOT_NEW_M2_COMPILATION",
+      "original_NTFS_identity_before_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2078221,
+        "link_count": 2,
+        "bytes": 15786616,
+        "attributes": 2080
+      },
+      "original_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2078221,
+        "link_count": 3,
+        "bytes": 15786616,
+        "attributes": 2080
+      },
+      "M2_target_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2078221,
+        "link_count": 3,
+        "bytes": 15786616,
+        "attributes": 2080
+      },
+      "original_sha256_after_link": "754c4cd6977c25bfe98a98795e330ac4b897e70153eed0e43b9c8ec281edae4c",
+      "M2_target_sha256": "754c4cd6977c25bfe98a98795e330ac4b897e70153eed0e43b9c8ec281edae4c"
+    },
+    {
+      "module": "MhFact_d39e578650322db3",
+      "original_owned_output": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current\\MhFact_d39e578650322db3.olean",
+      "M2_target": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-erdos-m2\\MhFact_d39e578650322db3.olean",
+      "sha256": "d8dd7b5e7231b6427a8fb40b8f32d6dcb9d322c7a27dc5898dd0a70e50873415",
+      "bytes": 7533640,
+      "artifact_kind": ".olean",
+      "original_NTFS_identity_at_policy": {
+        "volume_serial": 1980967165,
+        "file_index_high": 1572864,
+        "file_index_low": 1699226,
+        "link_count": 2,
+        "bytes": 7533640,
+        "attributes": 2080
+      },
+      "dated_link_count_is_not_a_future_exact_prerequisite": true,
+      "classification": "PREVIOUS_OWN_DMS_ORIGINAL_ROUTE_COLD_OUTPUT_NOT_NEW_M2_COMPILATION",
+      "original_NTFS_identity_before_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 1572864,
+        "file_index_low": 1699226,
+        "link_count": 2,
+        "bytes": 7533640,
+        "attributes": 2080
+      },
+      "original_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 1572864,
+        "file_index_low": 1699226,
+        "link_count": 3,
+        "bytes": 7533640,
+        "attributes": 2080
+      },
+      "M2_target_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 1572864,
+        "file_index_low": 1699226,
+        "link_count": 3,
+        "bytes": 7533640,
+        "attributes": 2080
+      },
+      "original_sha256_after_link": "d8dd7b5e7231b6427a8fb40b8f32d6dcb9d322c7a27dc5898dd0a70e50873415",
+      "M2_target_sha256": "d8dd7b5e7231b6427a8fb40b8f32d6dcb9d322c7a27dc5898dd0a70e50873415"
+    },
+    {
+      "module": "MhFact_def3ba43f6eccb6d",
+      "original_owned_output": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current\\MhFact_def3ba43f6eccb6d.olean",
+      "M2_target": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-erdos-m2\\MhFact_def3ba43f6eccb6d.olean",
+      "sha256": "5eda0576b51cc6d09aa6f03ef73c2b39e9fd72ca4f3156924b04b15e0622ca63",
+      "bytes": 10158656,
+      "artifact_kind": ".olean",
+      "original_NTFS_identity_at_policy": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2081857,
+        "link_count": 2,
+        "bytes": 10158656,
+        "attributes": 2080
+      },
+      "dated_link_count_is_not_a_future_exact_prerequisite": true,
+      "classification": "PREVIOUS_OWN_DMS_ORIGINAL_ROUTE_COLD_OUTPUT_NOT_NEW_M2_COMPILATION",
+      "original_NTFS_identity_before_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2081857,
+        "link_count": 2,
+        "bytes": 10158656,
+        "attributes": 2080
+      },
+      "original_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2081857,
+        "link_count": 3,
+        "bytes": 10158656,
+        "attributes": 2080
+      },
+      "M2_target_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2081857,
+        "link_count": 3,
+        "bytes": 10158656,
+        "attributes": 2080
+      },
+      "original_sha256_after_link": "5eda0576b51cc6d09aa6f03ef73c2b39e9fd72ca4f3156924b04b15e0622ca63",
+      "M2_target_sha256": "5eda0576b51cc6d09aa6f03ef73c2b39e9fd72ca4f3156924b04b15e0622ca63"
+    },
+    {
+      "module": "MhFact_e1599bf3f3c26bdb",
+      "original_owned_output": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current\\MhFact_e1599bf3f3c26bdb.olean",
+      "M2_target": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-erdos-m2\\MhFact_e1599bf3f3c26bdb.olean",
+      "sha256": "73f0ca92c8838a48e3985f837a7fc57dcf02258e2dd2c4154b2c3a5d5758db8c",
+      "bytes": 6035096,
+      "artifact_kind": ".olean",
+      "original_NTFS_identity_at_policy": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2073220,
+        "link_count": 2,
+        "bytes": 6035096,
+        "attributes": 2080
+      },
+      "dated_link_count_is_not_a_future_exact_prerequisite": true,
+      "classification": "PREVIOUS_OWN_DMS_ORIGINAL_ROUTE_COLD_OUTPUT_NOT_NEW_M2_COMPILATION",
+      "original_NTFS_identity_before_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2073220,
+        "link_count": 2,
+        "bytes": 6035096,
+        "attributes": 2080
+      },
+      "original_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2073220,
+        "link_count": 3,
+        "bytes": 6035096,
+        "attributes": 2080
+      },
+      "M2_target_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2073220,
+        "link_count": 3,
+        "bytes": 6035096,
+        "attributes": 2080
+      },
+      "original_sha256_after_link": "73f0ca92c8838a48e3985f837a7fc57dcf02258e2dd2c4154b2c3a5d5758db8c",
+      "M2_target_sha256": "73f0ca92c8838a48e3985f837a7fc57dcf02258e2dd2c4154b2c3a5d5758db8c"
+    },
+    {
+      "module": "MhFact_e63e13afc71071cb",
+      "original_owned_output": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current\\MhFact_e63e13afc71071cb.olean",
+      "M2_target": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-erdos-m2\\MhFact_e63e13afc71071cb.olean",
+      "sha256": "1a3e1ccb3cc6063390f349b48ebeb4f609f5257aa16d98af4c0c595c877d3353",
+      "bytes": 10216232,
+      "artifact_kind": ".olean",
+      "original_NTFS_identity_at_policy": {
+        "volume_serial": 1980967165,
+        "file_index_high": 196608,
+        "file_index_low": 2088516,
+        "link_count": 2,
+        "bytes": 10216232,
+        "attributes": 2080
+      },
+      "dated_link_count_is_not_a_future_exact_prerequisite": true,
+      "classification": "PREVIOUS_OWN_DMS_ORIGINAL_ROUTE_COLD_OUTPUT_NOT_NEW_M2_COMPILATION",
+      "original_NTFS_identity_before_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 196608,
+        "file_index_low": 2088516,
+        "link_count": 2,
+        "bytes": 10216232,
+        "attributes": 2080
+      },
+      "original_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 196608,
+        "file_index_low": 2088516,
+        "link_count": 3,
+        "bytes": 10216232,
+        "attributes": 2080
+      },
+      "M2_target_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 196608,
+        "file_index_low": 2088516,
+        "link_count": 3,
+        "bytes": 10216232,
+        "attributes": 2080
+      },
+      "original_sha256_after_link": "1a3e1ccb3cc6063390f349b48ebeb4f609f5257aa16d98af4c0c595c877d3353",
+      "M2_target_sha256": "1a3e1ccb3cc6063390f349b48ebeb4f609f5257aa16d98af4c0c595c877d3353"
+    },
+    {
+      "module": "MhFact_e68d717a207ff44f",
+      "original_owned_output": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current\\MhFact_e68d717a207ff44f.olean",
+      "M2_target": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-erdos-m2\\MhFact_e68d717a207ff44f.olean",
+      "sha256": "05eb5668e4d812439d2d3fbf66cc51239e5162a74b5f5b756232bb1656c73d1a",
+      "bytes": 10005088,
+      "artifact_kind": ".olean",
+      "original_NTFS_identity_at_policy": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2084365,
+        "link_count": 2,
+        "bytes": 10005088,
+        "attributes": 2080
+      },
+      "dated_link_count_is_not_a_future_exact_prerequisite": true,
+      "classification": "PREVIOUS_OWN_DMS_ORIGINAL_ROUTE_COLD_OUTPUT_NOT_NEW_M2_COMPILATION",
+      "original_NTFS_identity_before_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2084365,
+        "link_count": 2,
+        "bytes": 10005088,
+        "attributes": 2080
+      },
+      "original_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2084365,
+        "link_count": 3,
+        "bytes": 10005088,
+        "attributes": 2080
+      },
+      "M2_target_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2084365,
+        "link_count": 3,
+        "bytes": 10005088,
+        "attributes": 2080
+      },
+      "original_sha256_after_link": "05eb5668e4d812439d2d3fbf66cc51239e5162a74b5f5b756232bb1656c73d1a",
+      "M2_target_sha256": "05eb5668e4d812439d2d3fbf66cc51239e5162a74b5f5b756232bb1656c73d1a"
+    },
+    {
+      "module": "MhFact_ebeb33c568dfe4e4",
+      "original_owned_output": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current\\MhFact_ebeb33c568dfe4e4.olean",
+      "M2_target": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-erdos-m2\\MhFact_ebeb33c568dfe4e4.olean",
+      "sha256": "fccbce1b883d329245e2c246707a04f31ce0de4a09870d824e3ad27b217b1706",
+      "bytes": 3032952,
+      "artifact_kind": ".olean",
+      "original_NTFS_identity_at_policy": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2062963,
+        "link_count": 2,
+        "bytes": 3032952,
+        "attributes": 2080
+      },
+      "dated_link_count_is_not_a_future_exact_prerequisite": true,
+      "classification": "PREVIOUS_OWN_DMS_ORIGINAL_ROUTE_COLD_OUTPUT_NOT_NEW_M2_COMPILATION",
+      "original_NTFS_identity_before_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2062963,
+        "link_count": 2,
+        "bytes": 3032952,
+        "attributes": 2080
+      },
+      "original_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2062963,
+        "link_count": 3,
+        "bytes": 3032952,
+        "attributes": 2080
+      },
+      "M2_target_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2062963,
+        "link_count": 3,
+        "bytes": 3032952,
+        "attributes": 2080
+      },
+      "original_sha256_after_link": "fccbce1b883d329245e2c246707a04f31ce0de4a09870d824e3ad27b217b1706",
+      "M2_target_sha256": "fccbce1b883d329245e2c246707a04f31ce0de4a09870d824e3ad27b217b1706"
+    },
+    {
+      "module": "MhFact_eff6661027b6cbd2",
+      "original_owned_output": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current\\MhFact_eff6661027b6cbd2.olean",
+      "M2_target": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-erdos-m2\\MhFact_eff6661027b6cbd2.olean",
+      "sha256": "e84ed2e2eb67df53c2104e1bcd22e3bdbc94595ac54331d87e9d84bfa7c24ecd",
+      "bytes": 3377224,
+      "artifact_kind": ".olean",
+      "original_NTFS_identity_at_policy": {
+        "volume_serial": 1980967165,
+        "file_index_high": 1769472,
+        "file_index_low": 1716751,
+        "link_count": 2,
+        "bytes": 3377224,
+        "attributes": 2080
+      },
+      "dated_link_count_is_not_a_future_exact_prerequisite": true,
+      "classification": "PREVIOUS_OWN_DMS_ORIGINAL_ROUTE_COLD_OUTPUT_NOT_NEW_M2_COMPILATION",
+      "original_NTFS_identity_before_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 1769472,
+        "file_index_low": 1716751,
+        "link_count": 2,
+        "bytes": 3377224,
+        "attributes": 2080
+      },
+      "original_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 1769472,
+        "file_index_low": 1716751,
+        "link_count": 3,
+        "bytes": 3377224,
+        "attributes": 2080
+      },
+      "M2_target_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 1769472,
+        "file_index_low": 1716751,
+        "link_count": 3,
+        "bytes": 3377224,
+        "attributes": 2080
+      },
+      "original_sha256_after_link": "e84ed2e2eb67df53c2104e1bcd22e3bdbc94595ac54331d87e9d84bfa7c24ecd",
+      "M2_target_sha256": "e84ed2e2eb67df53c2104e1bcd22e3bdbc94595ac54331d87e9d84bfa7c24ecd"
+    },
+    {
+      "module": "MhFact_f4c06558ba3030b8",
+      "original_owned_output": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current\\MhFact_f4c06558ba3030b8.olean",
+      "M2_target": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-erdos-m2\\MhFact_f4c06558ba3030b8.olean",
+      "sha256": "45a40eb67e645d9b0ab8e50c8599437094a551d27e00038050e0678ef01792a9",
+      "bytes": 8878888,
+      "artifact_kind": ".olean",
+      "original_NTFS_identity_at_policy": {
+        "volume_serial": 1980967165,
+        "file_index_high": 262144,
+        "file_index_low": 2059468,
+        "link_count": 2,
+        "bytes": 8878888,
+        "attributes": 2080
+      },
+      "dated_link_count_is_not_a_future_exact_prerequisite": true,
+      "classification": "PREVIOUS_OWN_DMS_ORIGINAL_ROUTE_COLD_OUTPUT_NOT_NEW_M2_COMPILATION",
+      "original_NTFS_identity_before_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 262144,
+        "file_index_low": 2059468,
+        "link_count": 2,
+        "bytes": 8878888,
+        "attributes": 2080
+      },
+      "original_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 262144,
+        "file_index_low": 2059468,
+        "link_count": 3,
+        "bytes": 8878888,
+        "attributes": 2080
+      },
+      "M2_target_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 262144,
+        "file_index_low": 2059468,
+        "link_count": 3,
+        "bytes": 8878888,
+        "attributes": 2080
+      },
+      "original_sha256_after_link": "45a40eb67e645d9b0ab8e50c8599437094a551d27e00038050e0678ef01792a9",
+      "M2_target_sha256": "45a40eb67e645d9b0ab8e50c8599437094a551d27e00038050e0678ef01792a9"
+    },
+    {
+      "module": "MhFact_f645e06d2ce727a3",
+      "original_owned_output": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current\\MhFact_f645e06d2ce727a3.olean",
+      "M2_target": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-erdos-m2\\MhFact_f645e06d2ce727a3.olean",
+      "sha256": "4cd439cb7baa547dada8ef18d715fda1db4ca5413604689e3e1c3f05c8fd9e27",
+      "bytes": 12991344,
+      "artifact_kind": ".olean",
+      "original_NTFS_identity_at_policy": {
+        "volume_serial": 1980967165,
+        "file_index_high": 131072,
+        "file_index_low": 2208384,
+        "link_count": 2,
+        "bytes": 12991344,
+        "attributes": 2080
+      },
+      "dated_link_count_is_not_a_future_exact_prerequisite": true,
+      "classification": "PREVIOUS_OWN_DMS_ORIGINAL_ROUTE_COLD_OUTPUT_NOT_NEW_M2_COMPILATION",
+      "original_NTFS_identity_before_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 131072,
+        "file_index_low": 2208384,
+        "link_count": 2,
+        "bytes": 12991344,
+        "attributes": 2080
+      },
+      "original_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 131072,
+        "file_index_low": 2208384,
+        "link_count": 3,
+        "bytes": 12991344,
+        "attributes": 2080
+      },
+      "M2_target_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 131072,
+        "file_index_low": 2208384,
+        "link_count": 3,
+        "bytes": 12991344,
+        "attributes": 2080
+      },
+      "original_sha256_after_link": "4cd439cb7baa547dada8ef18d715fda1db4ca5413604689e3e1c3f05c8fd9e27",
+      "M2_target_sha256": "4cd439cb7baa547dada8ef18d715fda1db4ca5413604689e3e1c3f05c8fd9e27"
+    },
+    {
+      "module": "MhFact_f7fb58786d241d68",
+      "original_owned_output": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current\\MhFact_f7fb58786d241d68.olean",
+      "M2_target": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-erdos-m2\\MhFact_f7fb58786d241d68.olean",
+      "sha256": "3f280608be299954a12f30808bb6ffe62e80a0cccc44ad2ef7fbb831b19cbfe6",
+      "bytes": 320504,
+      "artifact_kind": ".olean",
+      "original_NTFS_identity_at_policy": {
+        "volume_serial": 1980967165,
+        "file_index_high": 131072,
+        "file_index_low": 2065850,
+        "link_count": 2,
+        "bytes": 320504,
+        "attributes": 2080
+      },
+      "dated_link_count_is_not_a_future_exact_prerequisite": true,
+      "classification": "PREVIOUS_OWN_DMS_ORIGINAL_ROUTE_COLD_OUTPUT_NOT_NEW_M2_COMPILATION",
+      "original_NTFS_identity_before_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 131072,
+        "file_index_low": 2065850,
+        "link_count": 2,
+        "bytes": 320504,
+        "attributes": 2080
+      },
+      "original_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 131072,
+        "file_index_low": 2065850,
+        "link_count": 3,
+        "bytes": 320504,
+        "attributes": 2080
+      },
+      "M2_target_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 131072,
+        "file_index_low": 2065850,
+        "link_count": 3,
+        "bytes": 320504,
+        "attributes": 2080
+      },
+      "original_sha256_after_link": "3f280608be299954a12f30808bb6ffe62e80a0cccc44ad2ef7fbb831b19cbfe6",
+      "M2_target_sha256": "3f280608be299954a12f30808bb6ffe62e80a0cccc44ad2ef7fbb831b19cbfe6"
+    },
+    {
+      "module": "MhFact_fbae65436c8cc8bf",
+      "original_owned_output": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current\\MhFact_fbae65436c8cc8bf.olean",
+      "M2_target": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-erdos-m2\\MhFact_fbae65436c8cc8bf.olean",
+      "sha256": "1047acf51a674599bdf107420233039713a1ba3c372e464cd59703ef0cf76213",
+      "bytes": 6331696,
+      "artifact_kind": ".olean",
+      "original_NTFS_identity_at_policy": {
+        "volume_serial": 1980967165,
+        "file_index_high": 655360,
+        "file_index_low": 1699225,
+        "link_count": 2,
+        "bytes": 6331696,
+        "attributes": 2080
+      },
+      "dated_link_count_is_not_a_future_exact_prerequisite": true,
+      "classification": "PREVIOUS_OWN_DMS_ORIGINAL_ROUTE_COLD_OUTPUT_NOT_NEW_M2_COMPILATION",
+      "original_NTFS_identity_before_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 655360,
+        "file_index_low": 1699225,
+        "link_count": 2,
+        "bytes": 6331696,
+        "attributes": 2080
+      },
+      "original_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 655360,
+        "file_index_low": 1699225,
+        "link_count": 3,
+        "bytes": 6331696,
+        "attributes": 2080
+      },
+      "M2_target_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 655360,
+        "file_index_low": 1699225,
+        "link_count": 3,
+        "bytes": 6331696,
+        "attributes": 2080
+      },
+      "original_sha256_after_link": "1047acf51a674599bdf107420233039713a1ba3c372e464cd59703ef0cf76213",
+      "M2_target_sha256": "1047acf51a674599bdf107420233039713a1ba3c372e464cd59703ef0cf76213"
+    },
+    {
+      "module": "MhFact_fe45f583e0b81581",
+      "original_owned_output": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current\\MhFact_fe45f583e0b81581.olean",
+      "M2_target": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-erdos-m2\\MhFact_fe45f583e0b81581.olean",
+      "sha256": "d1ece8ae910eb1e5280801935867b12742f31de648162a966de5c005e02d356f",
+      "bytes": 14131352,
+      "artifact_kind": ".olean",
+      "original_NTFS_identity_at_policy": {
+        "volume_serial": 1980967165,
+        "file_index_high": 131072,
+        "file_index_low": 2068941,
+        "link_count": 2,
+        "bytes": 14131352,
+        "attributes": 2080
+      },
+      "dated_link_count_is_not_a_future_exact_prerequisite": true,
+      "classification": "PREVIOUS_OWN_DMS_ORIGINAL_ROUTE_COLD_OUTPUT_NOT_NEW_M2_COMPILATION",
+      "original_NTFS_identity_before_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 131072,
+        "file_index_low": 2068941,
+        "link_count": 2,
+        "bytes": 14131352,
+        "attributes": 2080
+      },
+      "original_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 131072,
+        "file_index_low": 2068941,
+        "link_count": 3,
+        "bytes": 14131352,
+        "attributes": 2080
+      },
+      "M2_target_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 131072,
+        "file_index_low": 2068941,
+        "link_count": 3,
+        "bytes": 14131352,
+        "attributes": 2080
+      },
+      "original_sha256_after_link": "d1ece8ae910eb1e5280801935867b12742f31de648162a966de5c005e02d356f",
+      "M2_target_sha256": "d1ece8ae910eb1e5280801935867b12742f31de648162a966de5c005e02d356f"
+    },
+    {
+      "module": "StarBottleneck",
+      "original_owned_output": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current\\StarBottleneck.olean",
+      "M2_target": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-erdos-m2\\StarBottleneck.olean",
+      "sha256": "e77cc971e94f630de7b33755531fc719974f876d534fdd395bc202483a1330e5",
+      "bytes": 504000,
+      "artifact_kind": ".olean",
+      "original_NTFS_identity_at_policy": {
+        "volume_serial": 1980967165,
+        "file_index_high": 131072,
+        "file_index_low": 2059906,
+        "link_count": 2,
+        "bytes": 504000,
+        "attributes": 2080
+      },
+      "dated_link_count_is_not_a_future_exact_prerequisite": true,
+      "classification": "PREVIOUS_OWN_DMS_ORIGINAL_ROUTE_COLD_OUTPUT_NOT_NEW_M2_COMPILATION",
+      "original_NTFS_identity_before_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 131072,
+        "file_index_low": 2059906,
+        "link_count": 2,
+        "bytes": 504000,
+        "attributes": 2080
+      },
+      "original_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 131072,
+        "file_index_low": 2059906,
+        "link_count": 3,
+        "bytes": 504000,
+        "attributes": 2080
+      },
+      "M2_target_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 131072,
+        "file_index_low": 2059906,
+        "link_count": 3,
+        "bytes": 504000,
+        "attributes": 2080
+      },
+      "original_sha256_after_link": "e77cc971e94f630de7b33755531fc719974f876d534fdd395bc202483a1330e5",
+      "M2_target_sha256": "e77cc971e94f630de7b33755531fc719974f876d534fdd395bc202483a1330e5"
+    },
+    {
+      "module": "StarCert",
+      "original_owned_output": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current\\StarCert.olean",
+      "M2_target": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-erdos-m2\\StarCert.olean",
+      "sha256": "54f2e44ca88d2b618bce284c2646cd986612e26c6ceb5e89f476b655ff6738b5",
+      "bytes": 255112,
+      "artifact_kind": ".olean",
+      "original_NTFS_identity_at_policy": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2059571,
+        "link_count": 2,
+        "bytes": 255112,
+        "attributes": 2080
+      },
+      "dated_link_count_is_not_a_future_exact_prerequisite": true,
+      "classification": "PREVIOUS_OWN_DMS_ORIGINAL_ROUTE_COLD_OUTPUT_NOT_NEW_M2_COMPILATION",
+      "original_NTFS_identity_before_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2059571,
+        "link_count": 2,
+        "bytes": 255112,
+        "attributes": 2080
+      },
+      "original_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2059571,
+        "link_count": 3,
+        "bytes": 255112,
+        "attributes": 2080
+      },
+      "M2_target_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2059571,
+        "link_count": 3,
+        "bytes": 255112,
+        "attributes": 2080
+      },
+      "original_sha256_after_link": "54f2e44ca88d2b618bce284c2646cd986612e26c6ceb5e89f476b655ff6738b5",
+      "M2_target_sha256": "54f2e44ca88d2b618bce284c2646cd986612e26c6ceb5e89f476b655ff6738b5"
+    },
+    {
+      "module": "StarChecker",
+      "original_owned_output": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current\\StarChecker.olean",
+      "M2_target": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-erdos-m2\\StarChecker.olean",
+      "sha256": "df70d80a8224a5ad062adc9e505214c74d5c9eabc7c66808e12d9706f3bbedf4",
+      "bytes": 538736,
+      "artifact_kind": ".olean",
+      "original_NTFS_identity_at_policy": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2059914,
+        "link_count": 2,
+        "bytes": 538736,
+        "attributes": 2080
+      },
+      "dated_link_count_is_not_a_future_exact_prerequisite": true,
+      "classification": "PREVIOUS_OWN_DMS_ORIGINAL_ROUTE_COLD_OUTPUT_NOT_NEW_M2_COMPILATION",
+      "original_NTFS_identity_before_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2059914,
+        "link_count": 2,
+        "bytes": 538736,
+        "attributes": 2080
+      },
+      "original_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2059914,
+        "link_count": 3,
+        "bytes": 538736,
+        "attributes": 2080
+      },
+      "M2_target_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2059914,
+        "link_count": 3,
+        "bytes": 538736,
+        "attributes": 2080
+      },
+      "original_sha256_after_link": "df70d80a8224a5ad062adc9e505214c74d5c9eabc7c66808e12d9706f3bbedf4",
+      "M2_target_sha256": "df70d80a8224a5ad062adc9e505214c74d5c9eabc7c66808e12d9706f3bbedf4"
+    },
+    {
+      "module": "StarCompose",
+      "original_owned_output": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current\\StarCompose.olean",
+      "M2_target": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-erdos-m2\\StarCompose.olean",
+      "sha256": "c43dcc4414aea0be14b377ba4e19769a5682030b4e8c1ebf9a466370942a7d83",
+      "bytes": 135840,
+      "artifact_kind": ".olean",
+      "original_NTFS_identity_at_policy": {
+        "volume_serial": 1980967165,
+        "file_index_high": 131072,
+        "file_index_low": 2059624,
+        "link_count": 2,
+        "bytes": 135840,
+        "attributes": 2080
+      },
+      "dated_link_count_is_not_a_future_exact_prerequisite": true,
+      "classification": "PREVIOUS_OWN_DMS_ORIGINAL_ROUTE_COLD_OUTPUT_NOT_NEW_M2_COMPILATION",
+      "original_NTFS_identity_before_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 131072,
+        "file_index_low": 2059624,
+        "link_count": 2,
+        "bytes": 135840,
+        "attributes": 2080
+      },
+      "original_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 131072,
+        "file_index_low": 2059624,
+        "link_count": 3,
+        "bytes": 135840,
+        "attributes": 2080
+      },
+      "M2_target_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 131072,
+        "file_index_low": 2059624,
+        "link_count": 3,
+        "bytes": 135840,
+        "attributes": 2080
+      },
+      "original_sha256_after_link": "c43dcc4414aea0be14b377ba4e19769a5682030b4e8c1ebf9a466370942a7d83",
+      "M2_target_sha256": "c43dcc4414aea0be14b377ba4e19769a5682030b4e8c1ebf9a466370942a7d83"
+    },
+    {
+      "module": "StarExtension",
+      "original_owned_output": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current\\StarExtension.olean",
+      "M2_target": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-erdos-m2\\StarExtension.olean",
+      "sha256": "fd355f347dae73df06ffe224481f70f20a2d34b8b278160fa40d5f4cbfe14e35",
+      "bytes": 241656,
+      "artifact_kind": ".olean",
+      "original_NTFS_identity_at_policy": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2060068,
+        "link_count": 2,
+        "bytes": 241656,
+        "attributes": 2080
+      },
+      "dated_link_count_is_not_a_future_exact_prerequisite": true,
+      "classification": "PREVIOUS_OWN_DMS_ORIGINAL_ROUTE_COLD_OUTPUT_NOT_NEW_M2_COMPILATION",
+      "original_NTFS_identity_before_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2060068,
+        "link_count": 2,
+        "bytes": 241656,
+        "attributes": 2080
+      },
+      "original_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2060068,
+        "link_count": 3,
+        "bytes": 241656,
+        "attributes": 2080
+      },
+      "M2_target_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2060068,
+        "link_count": 3,
+        "bytes": 241656,
+        "attributes": 2080
+      },
+      "original_sha256_after_link": "fd355f347dae73df06ffe224481f70f20a2d34b8b278160fa40d5f4cbfe14e35",
+      "M2_target_sha256": "fd355f347dae73df06ffe224481f70f20a2d34b8b278160fa40d5f4cbfe14e35"
+    },
+    {
+      "module": "StarLeaf",
+      "original_owned_output": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current\\StarLeaf.olean",
+      "M2_target": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-erdos-m2\\StarLeaf.olean",
+      "sha256": "9056cd9c4d95ee5898fe9e905f140ee33827351ce7f0c3ff321218866b768e75",
+      "bytes": 870704,
+      "artifact_kind": ".olean",
+      "original_NTFS_identity_at_policy": {
+        "volume_serial": 1980967165,
+        "file_index_high": 131072,
+        "file_index_low": 2058461,
+        "link_count": 2,
+        "bytes": 870704,
+        "attributes": 2080
+      },
+      "dated_link_count_is_not_a_future_exact_prerequisite": true,
+      "classification": "PREVIOUS_OWN_DMS_ORIGINAL_ROUTE_COLD_OUTPUT_NOT_NEW_M2_COMPILATION",
+      "original_NTFS_identity_before_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 131072,
+        "file_index_low": 2058461,
+        "link_count": 2,
+        "bytes": 870704,
+        "attributes": 2080
+      },
+      "original_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 131072,
+        "file_index_low": 2058461,
+        "link_count": 3,
+        "bytes": 870704,
+        "attributes": 2080
+      },
+      "M2_target_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 131072,
+        "file_index_low": 2058461,
+        "link_count": 3,
+        "bytes": 870704,
+        "attributes": 2080
+      },
+      "original_sha256_after_link": "9056cd9c4d95ee5898fe9e905f140ee33827351ce7f0c3ff321218866b768e75",
+      "M2_target_sha256": "9056cd9c4d95ee5898fe9e905f140ee33827351ce7f0c3ff321218866b768e75"
+    },
+    {
+      "module": "StarMatching",
+      "original_owned_output": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current\\StarMatching.olean",
+      "M2_target": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-erdos-m2\\StarMatching.olean",
+      "sha256": "66fe2126cb04b2c11a0611da21e18a8e86b44581fd05419898adef37aec6001c",
+      "bytes": 193816,
+      "artifact_kind": ".olean",
+      "original_NTFS_identity_at_policy": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2059948,
+        "link_count": 2,
+        "bytes": 193816,
+        "attributes": 2080
+      },
+      "dated_link_count_is_not_a_future_exact_prerequisite": true,
+      "classification": "PREVIOUS_OWN_DMS_ORIGINAL_ROUTE_COLD_OUTPUT_NOT_NEW_M2_COMPILATION",
+      "original_NTFS_identity_before_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2059948,
+        "link_count": 2,
+        "bytes": 193816,
+        "attributes": 2080
+      },
+      "original_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2059948,
+        "link_count": 3,
+        "bytes": 193816,
+        "attributes": 2080
+      },
+      "M2_target_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2059948,
+        "link_count": 3,
+        "bytes": 193816,
+        "attributes": 2080
+      },
+      "original_sha256_after_link": "66fe2126cb04b2c11a0611da21e18a8e86b44581fd05419898adef37aec6001c",
+      "M2_target_sha256": "66fe2126cb04b2c11a0611da21e18a8e86b44581fd05419898adef37aec6001c"
+    },
+    {
+      "module": "StarReduce",
+      "original_owned_output": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current\\StarReduce.olean",
+      "M2_target": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-erdos-m2\\StarReduce.olean",
+      "sha256": "415c60d9c2da4372d7ac9fd8caa8763620612d49537e7ed9a70ef3660a1e2961",
+      "bytes": 483408,
+      "artifact_kind": ".olean",
+      "original_NTFS_identity_at_policy": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2059625,
+        "link_count": 2,
+        "bytes": 483408,
+        "attributes": 2080
+      },
+      "dated_link_count_is_not_a_future_exact_prerequisite": true,
+      "classification": "PREVIOUS_OWN_DMS_ORIGINAL_ROUTE_COLD_OUTPUT_NOT_NEW_M2_COMPILATION",
+      "original_NTFS_identity_before_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2059625,
+        "link_count": 2,
+        "bytes": 483408,
+        "attributes": 2080
+      },
+      "original_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2059625,
+        "link_count": 3,
+        "bytes": 483408,
+        "attributes": 2080
+      },
+      "M2_target_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2059625,
+        "link_count": 3,
+        "bytes": 483408,
+        "attributes": 2080
+      },
+      "original_sha256_after_link": "415c60d9c2da4372d7ac9fd8caa8763620612d49537e7ed9a70ef3660a1e2961",
+      "M2_target_sha256": "415c60d9c2da4372d7ac9fd8caa8763620612d49537e7ed9a70ef3660a1e2961"
+    },
+    {
+      "module": "StarRigid",
+      "original_owned_output": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current\\StarRigid.olean",
+      "M2_target": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-erdos-m2\\StarRigid.olean",
+      "sha256": "e9d1617f8316ea0d19f6928e954d3b50bce4b5604e27868e5d141768aef37ec7",
+      "bytes": 1898184,
+      "artifact_kind": ".olean",
+      "original_NTFS_identity_at_policy": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2059904,
+        "link_count": 2,
+        "bytes": 1898184,
+        "attributes": 2080
+      },
+      "dated_link_count_is_not_a_future_exact_prerequisite": true,
+      "classification": "PREVIOUS_OWN_DMS_ORIGINAL_ROUTE_COLD_OUTPUT_NOT_NEW_M2_COMPILATION",
+      "original_NTFS_identity_before_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2059904,
+        "link_count": 2,
+        "bytes": 1898184,
+        "attributes": 2080
+      },
+      "original_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2059904,
+        "link_count": 3,
+        "bytes": 1898184,
+        "attributes": 2080
+      },
+      "M2_target_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2059904,
+        "link_count": 3,
+        "bytes": 1898184,
+        "attributes": 2080
+      },
+      "original_sha256_after_link": "e9d1617f8316ea0d19f6928e954d3b50bce4b5604e27868e5d141768aef37ec7",
+      "M2_target_sha256": "e9d1617f8316ea0d19f6928e954d3b50bce4b5604e27868e5d141768aef37ec7"
+    },
+    {
+      "module": "StarSix",
+      "original_owned_output": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current\\StarSix.olean",
+      "M2_target": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-erdos-m2\\StarSix.olean",
+      "sha256": "035b8574541208f5a84b617c0bfb2be2a642abb8d0e0e868484e5bf3df607a4a",
+      "bytes": 191144,
+      "artifact_kind": ".olean",
+      "original_NTFS_identity_at_policy": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2059598,
+        "link_count": 2,
+        "bytes": 191144,
+        "attributes": 2080
+      },
+      "dated_link_count_is_not_a_future_exact_prerequisite": true,
+      "classification": "PREVIOUS_OWN_DMS_ORIGINAL_ROUTE_COLD_OUTPUT_NOT_NEW_M2_COMPILATION",
+      "original_NTFS_identity_before_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2059598,
+        "link_count": 2,
+        "bytes": 191144,
+        "attributes": 2080
+      },
+      "original_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2059598,
+        "link_count": 3,
+        "bytes": 191144,
+        "attributes": 2080
+      },
+      "M2_target_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2059598,
+        "link_count": 3,
+        "bytes": 191144,
+        "attributes": 2080
+      },
+      "original_sha256_after_link": "035b8574541208f5a84b617c0bfb2be2a642abb8d0e0e868484e5bf3df607a4a",
+      "M2_target_sha256": "035b8574541208f5a84b617c0bfb2be2a642abb8d0e0e868484e5bf3df607a4a"
+    },
+    {
+      "module": "StarVizing",
+      "original_owned_output": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current\\StarVizing.olean",
+      "M2_target": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-erdos-m2\\StarVizing.olean",
+      "sha256": "17b66e24fe218e3ca446fb0d8ceaa1d35b117a801a355989dbccfc327f9abd55",
+      "bytes": 223688,
+      "artifact_kind": ".olean",
+      "original_NTFS_identity_at_policy": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2060011,
+        "link_count": 2,
+        "bytes": 223688,
+        "attributes": 2080
+      },
+      "dated_link_count_is_not_a_future_exact_prerequisite": true,
+      "classification": "PREVIOUS_OWN_DMS_ORIGINAL_ROUTE_COLD_OUTPUT_NOT_NEW_M2_COMPILATION",
+      "original_NTFS_identity_before_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2060011,
+        "link_count": 2,
+        "bytes": 223688,
+        "attributes": 2080
+      },
+      "original_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2060011,
+        "link_count": 3,
+        "bytes": 223688,
+        "attributes": 2080
+      },
+      "M2_target_NTFS_identity_after_link": {
+        "volume_serial": 1980967165,
+        "file_index_high": 65536,
+        "file_index_low": 2060011,
+        "link_count": 3,
+        "bytes": 223688,
+        "attributes": 2080
+      },
+      "original_sha256_after_link": "17b66e24fe218e3ca446fb0d8ceaa1d35b117a801a355989dbccfc327f9abd55",
+      "M2_target_sha256": "17b66e24fe218e3ca446fb0d8ceaa1d35b117a801a355989dbccfc327f9abd55"
+    }
+  ],
+  "new_Lean_compilations": 0,
+  "payload_bytes_copied": 0,
+  "source_routes_inactive_before": {
+    "checked_utc": "2026-10-05T06:35:14.839177+00:00",
+    "DMS_original_completed_diagnostic_and_other_M2_compilers_inactive": true,
+    "process_snapshot": [
+      {
+        "ProcessId": 15636,
+        "Name": "python.exe",
+        "CommandLine": "\"C:\\Users\\Propietario\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe\" \"C:/Users/Propietario/Documents/Codex/2026-10-01/mi/OpenMath-Judging/judging_app.py\""
+      },
+      {
+        "ProcessId": 54140,
+        "Name": "python.exe",
+        "CommandLine": "\"C:\\Users\\Propietario\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe\" -X utf8 work/publication/verification/run_original_e65_tactic_aware_source_plan.py sundai-erdos3-original-image-source 1 --guarded-third-slot --defer-whole-imports --original-e65-source-replay-authorized --resource-lease-confirmed --reviewed-runner-sha256=a2e5931c838e8b348de9fae4945b9f16ceb0883eaed51ca55f93e797deaa9e6d"
+      },
+      {
+        "ProcessId": 6980,
+        "Name": "python.exe",
+        "CommandLine": "\"C:\\Users\\Propietario\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe\" -X utf8 work/publication/verification/run_htpeo_ramsey2056_granular_continuation.py htpeo-ramsey-current 1 --guarded-third-slot --defer-whole-imports --with-reviewed-supplemental-audit --exact2056-granular-continuation --granular-continuation-scope-sha256 8bda2c65aa1200b2df93f99ba341cf0fa171b1bdc3dc1d9955b55ea13fe73579"
+      },
+      {
+        "ProcessId": 15464,
+        "Name": "lean.exe",
+        "CommandLine": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe -j1 -DmaxHeartbeats=0 -DmaxRecDepth=100000 -o RamseyCert\\Chunk\\R46.olean RamseyCert\\Chunk\\R46.lean"
+      },
+      {
+        "ProcessId": 39320,
+        "Name": "python.exe",
+        "CommandLine": "\"C:\\Users\\Propietario\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe\" -X utf8 work/publication/verification/htpeo_m2_composite_qualified97_hardlink_seed.py --seed-root-approved work/publication/verification/root-HTM2-composite97-seed-only-approval-20261005.json 7c83e9948f200488e46867666ad035c3421376f3d01e2999518b3665014631f2"
+      },
+      {
+        "ProcessId": 55560,
+        "Name": "lean.exe",
+        "CommandLine": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe -j1 -DmaxHeartbeats=0 -DmaxRecDepth=100000 -Dpp.unicode.fun=true -DautoImplicit=false -DrelaxedAutoImplicit=false -o FormalConjecturesForMathlib\\RingTheory\\Ideal\\Basic.olean FormalConjecturesForMathlib\\RingTheory\\Ideal\\Basic.lean"
+      }
+    ]
+  },
+  "minimum_disk_free_bytes": 5648117760,
+  "composite_protected221_and_originalV2_postseed_identity": {
+    "status": "ACTUAL_DMS_COMPOSITE_BODY_AND_PROTECTED221_RECHECKED_ORIGINALV2_ONLY_APPROVED97_INCREMENT",
+    "actual_composite_sha256": "7d401ae5c7003a1520dac33288b2335645bbd095a3327cc8ddefb2d17aa417ab",
+    "protected221_unchanged": true,
+    "originalV2_approved97_link_increment": 1
+  },
+  "source_routes_inactive_after": {
+    "checked_utc": "2026-10-05T06:35:30.766550+00:00",
+    "DMS_original_completed_diagnostic_and_other_M2_compilers_inactive": true,
+    "process_snapshot": [
+      {
+        "ProcessId": 15636,
+        "Name": "python.exe",
+        "CommandLine": "\"C:\\Users\\Propietario\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe\" \"C:/Users/Propietario/Documents/Codex/2026-10-01/mi/OpenMath-Judging/judging_app.py\""
+      },
+      {
+        "ProcessId": 54140,
+        "Name": "python.exe",
+        "CommandLine": "\"C:\\Users\\Propietario\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe\" -X utf8 work/publication/verification/run_original_e65_tactic_aware_source_plan.py sundai-erdos3-original-image-source 1 --guarded-third-slot --defer-whole-imports --original-e65-source-replay-authorized --resource-lease-confirmed --reviewed-runner-sha256=a2e5931c838e8b348de9fae4945b9f16ceb0883eaed51ca55f93e797deaa9e6d"
+      },
+      {
+        "ProcessId": 6980,
+        "Name": "python.exe",
+        "CommandLine": "\"C:\\Users\\Propietario\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe\" -X utf8 work/publication/verification/run_htpeo_ramsey2056_granular_continuation.py htpeo-ramsey-current 1 --guarded-third-slot --defer-whole-imports --with-reviewed-supplemental-audit --exact2056-granular-continuation --granular-continuation-scope-sha256 8bda2c65aa1200b2df93f99ba341cf0fa171b1bdc3dc1d9955b55ea13fe73579"
+      },
+      {
+        "ProcessId": 39320,
+        "Name": "python.exe",
+        "CommandLine": "\"C:\\Users\\Propietario\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe\" -X utf8 work/publication/verification/htpeo_m2_composite_qualified97_hardlink_seed.py --seed-root-approved work/publication/verification/root-HTM2-composite97-seed-only-approval-20261005.json 7c83e9948f200488e46867666ad035c3421376f3d01e2999518b3665014631f2"
+      },
+      {
+        "ProcessId": 49960,
+        "Name": "lean.exe",
+        "CommandLine": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe -j1 -DmaxHeartbeats=0 -DmaxRecDepth=100000 -o RamseyCert\\Chunk\\R47.olean RamseyCert\\Chunk\\R47.lean"
+      },
+      {
+        "ProcessId": 40412,
+        "Name": "lean.exe",
+        "CommandLine": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe -j1 -DmaxHeartbeats=0 -DmaxRecDepth=100000 -Dpp.unicode.fun=true -DautoImplicit=false -DrelaxedAutoImplicit=false -o FormalConjecturesForMathlib\\RingTheory\\Ideal\\Maximal.olean FormalConjecturesForMathlib\\RingTheory\\Ideal\\Maximal.lean"
+      }
+    ]
+  },
+  "finished_utc": "2026-10-05T06:35:30.766550+00:00"
+}

@@ -1,0 +1,59 @@
+{
+  "schema": "public-safe-bounded-personal-gmail-intake-v1",
+  "status": "ACTUAL_BOUNDED_SEARCH_COMPLETE_NO_NEW_COMPETITION_PACKET",
+  "checked_utc": "2026-10-05T17:54:50.000Z",
+  "finished_utc": "2026-10-05T17:55:33.2587510+00:00",
+  "scope": "Connected personal Gmail; bounded read-only intake check.",
+  "bounds": {
+    "after_epoch": 1791218920,
+    "before_epoch": 1791222890,
+    "after_utc": "2026-10-05T16:48:40.000Z",
+    "before_utc": "2026-10-05T17:54:50.000Z",
+    "previous_successful_before_epoch": 1791218930,
+    "overlap_seconds": 10,
+    "query": "in:anywhere after:1791218920 before:1791222890"
+  },
+  "search": {
+    "max_results_per_page": 100,
+    "pages": 1,
+    "all_pages_complete": true,
+    "returned_message_count": 6,
+    "terminal_pagination_token_absent": true,
+    "errors": 0
+  },
+  "targeted_search": {
+    "query": "in:anywhere after:1791218920 before:1791222890 {OpenMath \"Open Math\"}",
+    "pages": 1,
+    "all_pages_complete": true,
+    "returned_message_count": 0,
+    "terminal_pagination_token_absent": true,
+    "errors": 0
+  },
+  "assessment": {
+    "relevant_new_competition_packet_count": 0,
+    "new_packets": [],
+    "method": "Inspected the six returned metadata/snippets; none identifies a new competition result or source packet. A targeted OpenMath text search within the identical bounds returned no messages.",
+    "full_message_bodies_read": false,
+    "attachments_downloaded": false,
+    "score_change": null,
+    "score_change_reason": "No new competition packet was found in this bounded interval.",
+    "approved_amendments_applied_to_new_packet": false
+  },
+  "coverage_limits": {
+    "company_mailbox": {
+      "status": "UNAVAILABLE_NOT_ZERO",
+      "rechecked_this_run": false,
+      "message_count": null
+    },
+    "LinkedIn": {
+      "status": "UNAVAILABLE_NOT_ZERO",
+      "rechecked_this_run": false,
+      "message_count": null
+    },
+    "ongoing_monitoring": false
+  },
+  "private_evidence_sha256": "0ef4f216e401193cb991f93e99da3f0b84e214bf40f3192e4d664143b24ee60e",
+  "privacy": "No message identifiers, addresses, private message text, or private contextual details are included.",
+  "read_only": true,
+  "public_index_or_Desktop_changed": false
+}

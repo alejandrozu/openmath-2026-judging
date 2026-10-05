@@ -1,0 +1,13 @@
+--- run_m2_tactic_aware_granular_source_plan.prepared.7ccf460cc72d2385c4b5fd39615f512bee0121276b1fa32be3d14f86a79e2352.py
++++ run_m2_tactic_aware_granular_source_plan.py
+@@ -46,7 +46,9 @@
+ context=next(row for row in json.loads(Path(tactic_scope['contextual_custom_source_graph_file']).read_text(encoding='utf8')) if row['project_id']==project)
+ for row in context['exact_custom_nodes']:
+  assert m2_sha(row['source_file'])==row['source_sha256'], 'Contextual source changed: '+row['module']
+-original_prep=json.loads((BASE/'original-E65-source-replay-preparation-20261005.json').read_text(encoding='utf8'))
++original_prep_file=BASE/'original-E65-source-replay-preparation-20261005.json'
++assert m2_sha(original_prep_file)=='96f74d38af628c8763632c3a0869d7fa2404796ecf66de70fd13d6b0652e1e06', 'Exact nine-pin path preparation changed'
++original_prep=json.loads(original_prep_file.read_text(encoding='utf8'))
+ for packet in original_prep['exact_original_nine_packages']:
+  actual=subprocess.run(['git','rev-parse','HEAD'],cwd=packet['prepared_source_path'],capture_output=True,text=True,check=True).stdout.strip()
+  assert actual==tactic_scope['exact_original_nine_package_pins'][packet['name']], 'Exact official dependency pin changed'

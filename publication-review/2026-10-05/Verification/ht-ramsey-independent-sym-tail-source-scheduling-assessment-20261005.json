@@ -1,0 +1,259 @@
+{
+  "status": "READ_ONLY_SOURCE_SCHEDULING_ASSESSMENT_NO_SIDECAR_IMPLEMENTATION_OR_DISPATCH",
+  "prepared_utc": "2026-10-05T08:16:42.836032+00:00",
+  "bindings": {
+    "frozen_plan": {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\build-plan.json",
+      "sha256": "94beb20b98cceefe3e5a7aa0a9cec34b4a60c15dd740f675711371a5afd494d3",
+      "bytes": 852640
+    },
+    "exact_original_graph": {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\proposals\\htpeo-ramsey-current-original-provider-recheck-20261005\\exact-original2103-sources-and-import-graph.json",
+      "sha256": "6d4c3851db4c8753318edeed86c22cc1199b0341b2bb837f082c30add3ff3086",
+      "bytes": 3423201
+    },
+    "current_j2_controller_code_only": {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\run_ht_ramsey_kernel_j2_continuation_prepared.py",
+      "sha256": "e551e318748425f8672e73e670aaddda6533af58facefc0ebbef229bf42c6a23",
+      "bytes": 24940
+    },
+    "last_nine_assessment": {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\ht-ramsey-last-nine-granular-existing-serial-resume-assessment-20261005.json",
+      "sha256": "445dddb12a9844fc284f359d61c5df80d4b8e8336207ca01c8367325e7b521be",
+      "bytes": 83420
+    },
+    "Defs": {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert\\Defs.lean",
+      "sha256": "a6a1f68764262b4fe27b709c254d906afa458ccf79afa33122d265f23899ec74",
+      "bytes": 5341
+    },
+    "Data.Base": {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert\\Data\\Base.lean",
+      "sha256": "d03a73563de90d8db61c6859d2f08ebc83e158300716093be4e654f897f49f2a",
+      "bytes": 603636
+    }
+  },
+  "sources": [
+    {
+      "module": "RamseyCert.SymDefs",
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert\\SymDefs.lean",
+        "sha256": "a1e2d95e1e73603cb4eabc1664a669da704cc6bf9976615938a8f7736dd7ff86",
+        "bytes": 596
+      },
+      "direct_custom_imports": [
+        "RamseyCert.Defs"
+      ],
+      "full_custom_closure": [
+        "RamseyCert.Defs",
+        "RamseyCert.SymDefs"
+      ],
+      "any_chunk_imported": false,
+      "native_tokens": 0,
+      "certificate_proof": null
+    },
+    {
+      "module": "RamseyCert.SymChk0",
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert\\SymChk0.lean",
+        "sha256": "040d3670f942b889764967e3da4c42220a5fe0bf6ce0dfa530f0d406fd474377",
+        "bytes": 213
+      },
+      "direct_custom_imports": [
+        "RamseyCert.Data.Base",
+        "RamseyCert.SymDefs"
+      ],
+      "full_custom_closure": [
+        "RamseyCert.Data.Base",
+        "RamseyCert.Defs",
+        "RamseyCert.SymChk0",
+        "RamseyCert.SymDefs"
+      ],
+      "any_chunk_imported": false,
+      "native_tokens": 0,
+      "certificate_proof": "by decide +kernel"
+    },
+    {
+      "module": "RamseyCert.SymChk1",
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert\\SymChk1.lean",
+        "sha256": "54af0d504d947200418f3291be1232242ba5f0493106dfc430aef219c5ac031b",
+        "bytes": 217
+      },
+      "direct_custom_imports": [
+        "RamseyCert.Data.Base",
+        "RamseyCert.SymDefs"
+      ],
+      "full_custom_closure": [
+        "RamseyCert.Data.Base",
+        "RamseyCert.Defs",
+        "RamseyCert.SymChk1",
+        "RamseyCert.SymDefs"
+      ],
+      "any_chunk_imported": false,
+      "native_tokens": 0,
+      "certificate_proof": "by decide +kernel"
+    },
+    {
+      "module": "RamseyCert.SymChk2",
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert\\SymChk2.lean",
+        "sha256": "a693157d1072bf4818052fa8e1a4af05ef9689480d427e68f7ebacd3ec1ebec3",
+        "bytes": 217
+      },
+      "direct_custom_imports": [
+        "RamseyCert.Data.Base",
+        "RamseyCert.SymDefs"
+      ],
+      "full_custom_closure": [
+        "RamseyCert.Data.Base",
+        "RamseyCert.Defs",
+        "RamseyCert.SymChk2",
+        "RamseyCert.SymDefs"
+      ],
+      "any_chunk_imported": false,
+      "native_tokens": 0,
+      "certificate_proof": "by decide +kernel"
+    },
+    {
+      "module": "RamseyCert.SymChk3",
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert\\SymChk3.lean",
+        "sha256": "c46868016bd2075748d9429e8ea4c672863e4da151e6649ab40c082823091545",
+        "bytes": 217
+      },
+      "direct_custom_imports": [
+        "RamseyCert.Data.Base",
+        "RamseyCert.SymDefs"
+      ],
+      "full_custom_closure": [
+        "RamseyCert.Data.Base",
+        "RamseyCert.Defs",
+        "RamseyCert.SymChk3",
+        "RamseyCert.SymDefs"
+      ],
+      "any_chunk_imported": false,
+      "native_tokens": 0,
+      "certificate_proof": "by decide +kernel"
+    },
+    {
+      "module": "RamseyCert.SymChk4",
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert\\SymChk4.lean",
+        "sha256": "a72acf35a5e5f1f88d95132ac9d56313f2b472242090236a9bf4e41e0aef93e1",
+        "bytes": 217
+      },
+      "direct_custom_imports": [
+        "RamseyCert.Data.Base",
+        "RamseyCert.SymDefs"
+      ],
+      "full_custom_closure": [
+        "RamseyCert.Data.Base",
+        "RamseyCert.Defs",
+        "RamseyCert.SymChk4",
+        "RamseyCert.SymDefs"
+      ],
+      "any_chunk_imported": false,
+      "native_tokens": 0,
+      "certificate_proof": "by decide +kernel"
+    },
+    {
+      "module": "RamseyCert.SymChk5",
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert\\SymChk5.lean",
+        "sha256": "224750243e3c8c6b90ad2df18a469995e8280c85b60236c8b9d4384cf25569d5",
+        "bytes": 217
+      },
+      "direct_custom_imports": [
+        "RamseyCert.Data.Base",
+        "RamseyCert.SymDefs"
+      ],
+      "full_custom_closure": [
+        "RamseyCert.Data.Base",
+        "RamseyCert.Defs",
+        "RamseyCert.SymChk5",
+        "RamseyCert.SymDefs"
+      ],
+      "any_chunk_imported": false,
+      "native_tokens": 0,
+      "certificate_proof": "by decide +kernel"
+    },
+    {
+      "module": "RamseyCert.SymChk6",
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert\\SymChk6.lean",
+        "sha256": "75ffcf9a6e995545e38925b96c90843a31d854f64b690ddc5a4713d0b84eaf99",
+        "bytes": 217
+      },
+      "direct_custom_imports": [
+        "RamseyCert.Data.Base",
+        "RamseyCert.SymDefs"
+      ],
+      "full_custom_closure": [
+        "RamseyCert.Data.Base",
+        "RamseyCert.Defs",
+        "RamseyCert.SymChk6",
+        "RamseyCert.SymDefs"
+      ],
+      "any_chunk_imported": false,
+      "native_tokens": 0,
+      "certificate_proof": "by decide +kernel"
+    },
+    {
+      "module": "RamseyCert.SymChk7",
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert\\SymChk7.lean",
+        "sha256": "5f07f1b08cd08f0f9b50999160dcf69fe1fe629769909adfcbb3011c3f20ea4b",
+        "bytes": 217
+      },
+      "direct_custom_imports": [
+        "RamseyCert.Data.Base",
+        "RamseyCert.SymDefs"
+      ],
+      "full_custom_closure": [
+        "RamseyCert.Data.Base",
+        "RamseyCert.Defs",
+        "RamseyCert.SymChk7",
+        "RamseyCert.SymDefs"
+      ],
+      "any_chunk_imported": false,
+      "native_tokens": 0,
+      "certificate_proof": "by decide +kernel"
+    }
+  ],
+  "source_only_literal_data_checks": {
+    "rowsR_ids_exact_0_through_1023": true,
+    "literal_rows": 1024,
+    "maximum_literal_row_bit_length": 1024,
+    "matrix_symmetry_not_evaluated_by_this_assessment": true
+  },
+  "operation_counts_source_upper_bounds": {
+    "rows_per_check": 128,
+    "columns_per_row": 1024,
+    "maximum_bit_pair_comparisons_per_SymChk": 131072,
+    "maximum_tb_bit_reads_per_SymChk": 262144,
+    "all_eight_maximum_bit_pair_comparisons": 1048576,
+    "all_eight_maximum_tb_bit_reads": 2097152,
+    "all_eight_list_drop_steps": 3584,
+    "definition_tb": "Nat.beq (Nat.mod (Nat.shiftRight m i) 2) 1",
+    "qualification": "These are source-level operation counts assuming full traversal of1024 literal rows; Bool.and may short circuit. They are not kernel reduction counts, CPU timings, memory measurements or actual symmetry proof results."
+  },
+  "dependency_finding": "SymDefs needs only Defs; eachSymChk needs only Defs,Data.Base,SymDefs plus itself. Neither contains anyChunk import, and noChunk imports anySym module. Defs/Data.Base are already among the35 shared prerequisite modules; SymDefs itself remains a separate new prerequisite before eight independent checks.",
+  "sidecar_scientific_feasibility": "Separate source checks could preserve the same scientific bytes/options/trust and write disjoint SymDefs/SymChk outputs while aChunk worker reads only its own prerequisite set. Sym checks do not write the sharedDefs/Data.Base inputs; source-body independence is concrete.",
+  "existing_operational_obstructions": [
+    "Currente551 kernel continuation holds the project fresh-replay byte lock. The existingserial runner cannot run beside it without waiting; bypassing thatlock is not authorized by source independence.",
+    "Currente551 approved mode1 permits only its ownLean plus an identity-bound A000 tree. A separately ownedSym sidecar is an unbound foreignLean and would violate compiler_lease at lines60-95; its approval also requires all_non_kernel_HT_source_leases_held=true. Mode2 similarly allows only its own twoHT children.",
+    "A sidecar would require a separately root-reviewed controller/global-lease mode, natural boundary handoff, isolated immutable receipt and a subsequent root-reviewed join of exact sources/artifacts/CLI/guard rows bymodule. It must not mutate the livecanonical; current2092precondition cannot simplycount sidecar outputs as newcanonicalpasses.",
+    "Sameproject output paths are disjoint only if seriallast-nine/controller never dispatchesthe sameSym modules and everypreviousoutput is cold/orattributed. Artifactjoin must account for .olean/private/server/ilean/ir identities and preserve mixed literalcommands.",
+    "With A000+oneHT active, anysidecar is a thirdcompiler and is excluded. Futuremax2global, unchanged6/5guard/gates and exactabsence ofA000would needfreshverification; no A000/HTprocess is touchedhere."
+  ],
+  "practical_recommendation": "Retain the reviewed existing serial last-nine route as the default. The eight checks have a source-bounded total1,048,576 bit-pair comparisons and tiny proof bodies213–217bytes, much smaller in scope than the2048 packed-count certificate portfolio. NoSym timing/private measurement yet supportscalling the tail tiny or predicting a speedup; measureSymChk0 at its authorized futureserial dispatch before adding thelock/lease/join complexity. If its actual time is material, sourceindependence permits a future reviewed sidecar design, but existingactivecontroller doesnotpermit it.",
+  "actual_execution_or_mutation": {
+    "live_canonical_read": false,
+    "project_or_guard_imported": false,
+    "compiler_started": false,
+    "controller_implemented": false,
+    "proof_sources_or_outputs_or_flags_or_locks_changed": false,
+    "new_files": "This single metadataJSONonly."
+  }
+}

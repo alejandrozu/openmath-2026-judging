@@ -1,0 +1,326 @@
+{
+  "status": "READ_ONLY_FUTURE_THROUGHPUT_ASSESSMENT_NO_RUNTIME_EXPERIMENT_OR_CONTROLLER_PREPARATION",
+  "created_utc": "2026-10-05T07:56:11.703529+00:00",
+  "compiler": "Lean4.33.1 commit819816b2e0a3bf405af45ae5c7af2491d8f5bee6",
+  "local_pinned_primary_source_evidence": [
+    {
+      "file": "work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\src\\lean\\Lean\\Shell.lean",
+      "sha256": "4f584ae4d4cc859f39cdbb550df8e09417d1fd8e95046829ef821c2c95e2f940",
+      "line_start": 219,
+      "line_end": 224,
+      "finding": "CLI -j sets shell task-manager worker count; default uses hardware concurrency."
+    },
+    {
+      "file": "work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\src\\lean\\Lean\\Elab\\Frontend.lean",
+      "sha256": "e3e9037222c00308edc4fed589da83a80620bf5b35108779564fc485d8c17774",
+      "line_start": 286,
+      "line_end": 293,
+      "finding": "Ordinary CLI defaults Elab.async to true; no authored global override in these chunks."
+    },
+    {
+      "file": "work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\src\\lean\\Lean\\CoreM.lean",
+      "sha256": "0e94919972c60e8f2bdc73ecc9845a745c9a3373fce4069b9e27ae52560c0a7a",
+      "line_start": 35,
+      "line_end": 46,
+      "finding": "Async option controls elaboration, with CLI override described."
+    },
+    {
+      "file": "work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\src\\lean\\Lean\\Elab\\MutualDef.lean",
+      "sha256": "73a278e79b6fa2a355c3076c40eec8f0cd607c8b68f21e1fa344b56d14e6c3b9",
+      "line_start": 1235,
+      "line_end": 1246,
+      "finding": "Explicitly typed independent theorem declarations can use elabAsync."
+    },
+    {
+      "file": "work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\src\\lean\\Lean\\Elab\\MutualDef.lean",
+      "sha256": "73a278e79b6fa2a355c3076c40eec8f0cd607c8b68f21e1fa344b56d14e6c3b9",
+      "line_start": 1309,
+      "line_end": 1341,
+      "finding": "Theorem body gets its own async task, followed by environment/kernel completion."
+    },
+    {
+      "file": "work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\src\\lean\\Lean\\Elab\\Tactic\\Decide.lean",
+      "sha256": "99e84ce67778157e77d7261aa25b64ed72da16e9d1f60031cf2aa26f5ea6ee68",
+      "line_start": 103,
+      "line_end": 119,
+      "finding": "decide +kernel creates an auxiliary checked proof with Elab.async=false locally; it does not split a decision reduction into parallel subreductions."
+    },
+    {
+      "file": "work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\src\\lean\\Lean\\Meta\\Tactic\\AuxLemma.lean",
+      "sha256": "a48e1a8c42503bf86f0edc9682ab95eb628f6f5608fcb3a3a80abb9b8e6c3c88",
+      "line_start": 43,
+      "line_end": 66,
+      "finding": "mkAuxLemma constructs and adds the checked theorem; cache is branch-local."
+    },
+    {
+      "file": "work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\src\\lean\\Lean\\AddDecl.lean",
+      "sha256": "7e6e74107d8f0116dff7cde2de3e60ed556bbab3ca56309311ea90dfc931bd40",
+      "line_start": 169,
+      "line_end": 182,
+      "finding": "Async option selects deferred checking versus synchronous doAddAndCommit."
+    },
+    {
+      "file": "work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\src\\lean\\Lean\\Environment.lean",
+      "sha256": "ee364e4788ce0560c87f621eeb3c4c3dfec62e8db4e15e099fd80e6adc533b86",
+      "line_start": 1065,
+      "line_end": 1076,
+      "finding": "Checked environments and promises can block downstream operations; parallel task availability is not a promise of simultaneous independent kernel execution."
+    }
+  ],
+  "immutable_j2_actual_measurements": [
+    {
+      "module": "RamseyCert.Chunk.R99",
+      "immutable_receipt_file": "work\\publication\\verification\\ht-ramsey-actual136-one-R99-j2-source-pilot-immutable-20261005.json",
+      "immutable_receipt_sha256": "49006d0cb9905aef38a6058eca63fabe7bb596a208554c14cbff06b61221ea86",
+      "source_sha256": "84f81a75a12d5a7ef3789f4d76ee7fc6947e3e903b860e856be2d9f153676db6",
+      "actual_seconds": 20.531,
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+        "-j2",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "RamseyCert\\Chunk\\R99.olean",
+        "RamseyCert\\Chunk\\R99.lean"
+      ],
+      "state": "PASS",
+      "actual_job_peak_private_bytes": 3831664640,
+      "minimum_global_available_commit_bytes": 7826718720,
+      "minimum_global_available_physical_bytes": 7846187008,
+      "resource_policy": {
+        "initial_disk_bytes": 4000000000,
+        "initial_physical_bytes": 6442450944,
+        "initial_available_commit_bytes": 5368709120,
+        "continuous_disk_bytes": 1000000000,
+        "continuous_physical_bytes": 3221225472,
+        "continuous_available_commit_bytes": 1073741824,
+        "own_job_private_bytes": 6442450944,
+        "own_process_private_bytes": 6442450944,
+        "poll_seconds": 0.25,
+        "timeout_seconds": 3600
+      }
+    },
+    {
+      "module": "RamseyCert.Chunk.R99",
+      "immutable_receipt_file": "work\\publication\\verification\\ht-ramsey-actual138-two-R100-R101-j2-source-pilot-immutable-20261005.json",
+      "immutable_receipt_sha256": "91ac7d8306ea4640f4a126c1bf1aa4ed4b16c16a46cdfabeb768b7f21c66c88c",
+      "source_sha256": "84f81a75a12d5a7ef3789f4d76ee7fc6947e3e903b860e856be2d9f153676db6",
+      "actual_seconds": 20.531,
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+        "-j2",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "RamseyCert\\Chunk\\R99.olean",
+        "RamseyCert\\Chunk\\R99.lean"
+      ],
+      "state": "PASS",
+      "actual_job_peak_private_bytes": 3831664640,
+      "minimum_global_available_commit_bytes": 7826718720,
+      "minimum_global_available_physical_bytes": 7846187008,
+      "resource_policy": {
+        "initial_disk_bytes": 4000000000,
+        "initial_physical_bytes": 6442450944,
+        "initial_available_commit_bytes": 5368709120,
+        "continuous_disk_bytes": 1000000000,
+        "continuous_physical_bytes": 3221225472,
+        "continuous_available_commit_bytes": 1073741824,
+        "own_job_private_bytes": 6442450944,
+        "own_process_private_bytes": 6442450944,
+        "poll_seconds": 0.25,
+        "timeout_seconds": 3600
+      }
+    },
+    {
+      "module": "RamseyCert.Chunk.R101",
+      "immutable_receipt_file": "work\\publication\\verification\\ht-ramsey-actual138-two-R100-R101-j2-source-pilot-immutable-20261005.json",
+      "immutable_receipt_sha256": "91ac7d8306ea4640f4a126c1bf1aa4ed4b16c16a46cdfabeb768b7f21c66c88c",
+      "source_sha256": "69f2f0a1ac83411732b0ce2affe17efdc5244afc19f09573dc274857c5a59826",
+      "actual_seconds": 26.015,
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+        "-j2",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "RamseyCert\\Chunk\\R101.olean",
+        "RamseyCert\\Chunk\\R101.lean"
+      ],
+      "state": "PASS",
+      "actual_job_peak_private_bytes": 3883962368,
+      "minimum_global_available_commit_bytes": 3987587072,
+      "minimum_global_available_physical_bytes": 6126284800,
+      "resource_policy": {
+        "initial_disk_bytes": 4000000000,
+        "initial_physical_bytes": 6442450944,
+        "initial_available_commit_bytes": 5368709120,
+        "continuous_disk_bytes": 1000000000,
+        "continuous_physical_bytes": 3221225472,
+        "continuous_available_commit_bytes": 1073741824,
+        "own_job_private_bytes": 6442450944,
+        "own_process_private_bytes": 6442450944,
+        "poll_seconds": 0.25,
+        "timeout_seconds": 3600
+      }
+    },
+    {
+      "module": "RamseyCert.Chunk.R100",
+      "immutable_receipt_file": "work\\publication\\verification\\ht-ramsey-actual138-two-R100-R101-j2-source-pilot-immutable-20261005.json",
+      "immutable_receipt_sha256": "91ac7d8306ea4640f4a126c1bf1aa4ed4b16c16a46cdfabeb768b7f21c66c88c",
+      "source_sha256": "fe384399783751fa04afaffe6dfc4250c4e53a9ec698071b75b2276af57dd3de",
+      "actual_seconds": 27.953,
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+        "-j2",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "RamseyCert\\Chunk\\R100.olean",
+        "RamseyCert\\Chunk\\R100.lean"
+      ],
+      "state": "PASS",
+      "actual_job_peak_private_bytes": 3922317312,
+      "minimum_global_available_commit_bytes": 3987906560,
+      "minimum_global_available_physical_bytes": 6126284800,
+      "resource_policy": {
+        "initial_disk_bytes": 4000000000,
+        "initial_physical_bytes": 6442450944,
+        "initial_available_commit_bytes": 5368709120,
+        "continuous_disk_bytes": 1000000000,
+        "continuous_physical_bytes": 3221225472,
+        "continuous_available_commit_bytes": 1073741824,
+        "own_job_private_bytes": 6442450944,
+        "own_process_private_bytes": 6442450944,
+        "poll_seconds": 0.25,
+        "timeout_seconds": 3600
+      }
+    }
+  ],
+  "actual_selected_axiom_qualifications": [
+    {
+      "file": "work\\publication\\verification\\root-HT-actual-R99-j2-source-plus-selected3-audit-qualification-20261005.json",
+      "sha256": "54ff72e8ecdef4e9ff1a2516057e5e5117d874be10b1325272c19750dc4fd142",
+      "status": "QUALIFIED_ACTUAL_R99_J2_SOURCE_AND_SUPPLEMENTAL_SELECTED3_STANDARD_ONLY_AUDIT",
+      "axiom_rows": [
+        {
+          "endpoint": "RamseyCert.tR_99",
+          "axioms": [
+            "propext"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        },
+        {
+          "endpoint": "RamseyCert.nbOKR_99",
+          "axioms": [],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "AXIOM_FREE"
+        },
+        {
+          "endpoint": "RamseyCert.mkOKR_99",
+          "axioms": [],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "AXIOM_FREE"
+        }
+      ]
+    },
+    {
+      "file": "work\\publication\\verification\\root-HT-actual-R100-R101-two-j2-source-plus-selected6-audit-qualification-20261005.json",
+      "sha256": "a3ec776d67f2b9b142c9313fa5ed04048e681c91389786e59fe6926b713bdd70",
+      "status": "QUALIFIED_ACTUAL_TWO_R100_R101_J2_SOURCES_AND_SUPPLEMENTAL_SELECTED6_STANDARD_ONLY_AUDIT",
+      "axiom_rows": [
+        {
+          "endpoint": "RamseyCert.tR_100",
+          "axioms": [
+            "propext"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        },
+        {
+          "endpoint": "RamseyCert.tR_101",
+          "axioms": [
+            "propext"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        },
+        {
+          "endpoint": "RamseyCert.nbOKR_100",
+          "axioms": [],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "AXIOM_FREE"
+        },
+        {
+          "endpoint": "RamseyCert.mkOKR_100",
+          "axioms": [],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "AXIOM_FREE"
+        },
+        {
+          "endpoint": "RamseyCert.nbOKR_101",
+          "axioms": [],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "AXIOM_FREE"
+        },
+        {
+          "endpoint": "RamseyCert.mkOKR_101",
+          "axioms": [],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "AXIOM_FREE"
+        }
+      ]
+    }
+  ],
+  "three_typed_proofs_per_chunk": [
+    "nbOK: literal neighbourhood list equals filtered stored entities",
+    "mkOK: packed Ent fields equal their formula construction",
+    "t: packed kernel-friendly list-recursive weighted contribution equals its literal integer"
+  ],
+  "ordinary_computation_definition": {
+    "file": "work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert\\Defs.lean",
+    "sha256": "a6a1f68764262b4fe27b709c254d906afa458ccf79afa33122d265f23899ec74",
+    "lines": [
+      65,
+      123
+    ],
+    "finding": "pack, kInnerC and kInnerB use recursive Nat/list computations; no task spawning or internal parallel decision loop occurs here."
+  },
+  "conclusions": [
+    "More than2 task workers may overlap another available theorem/elaboration/checking task, but do not subdivide a single expensive decide +kernel reduction.",
+    "The existing2 workers can already overlap two expensive declaration tasks; the third task can queue or wait on checked-environment dependencies. Current receipts have no per-proof timings proving an idle-worker bottleneck.",
+    "A larger worker count adds stacks and may keep more reduction/checker state live. The measured j2 peak3.83–3.92GB leaves per-job headroom below6GiB, but extra allocation is not measured or reliably linear. Two simultaneous jobs already reached a dated3.99GB global available-commit minimum, so per-job headroom does not establish a global safe j3 margin.",
+    "Thread scheduling alone does not select native_decide, skipKernelTC, change theorem bodies or change the intended axiom trust boundary. Every new run still needs exact source/output/raw-axiom verification; more threads supply no mathematical or novelty evidence.",
+    "R99 and R100/R101 are different chunks and R100/R101 ran concurrently; their20.531/26.015/27.953-second measurements are not matched same-chunk j1/j2 or j2/j3 evidence. No speedup estimate is certified."
+  ],
+  "efficient_future_strategy": [
+    "Retain the currently measured2-process/-j2 approach under existing guards, source-locked continuous dispatch and dated bounded checkpoints rather than restarting a full setup for every pair.",
+    "Use actual completed timings/guard logs over more chunks to distinguish source complexity, CPU contention, import/receipt overhead and resource waits; no new performance instrumentation or source edits proposed here.",
+    "A simple workload planning model for1945 remaining chunks at roughly28seconds each and2 simultaneous jobs gives about7.6hours of compiler wall time before audits/import/receipt/checkpoint variability. This is arithmetic planning only, not a forecast or achieved throughput.",
+    "Root directs no j3 candidate or pilot now; such a change would need separate evidence, fresh memory/commit gates, explicit reviewed dispatch and source/axiom-preserving qualification."
+  ],
+  "uncertainty": [
+    "No same-chunk repeated experiment",
+    "No per-theorem CPU/memory profile",
+    "No measurement withj3+",
+    "Late blue/red neighbourhood/kernel complexity may differ from current three chunks",
+    "Independent task bodies may still wait on environment or auxiliary-proof completion"
+  ],
+  "actions": {
+    "compiler_invoked": false,
+    "controller_prepared_or_modified": false,
+    "source_or_receipt_modified": false,
+    "runtime_mutated": false,
+    "new_score_or_speedup_claim": false
+  }
+}

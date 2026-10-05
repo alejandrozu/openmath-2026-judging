@@ -1,0 +1,187 @@
+{
+  "title": "The sharp half-turn defect gap in full no-three-in-line grid configurations",
+  "blocks": [
+    {
+      "type": "title",
+      "text": "The sharp half-turn defect gap in full no-three-in-line grid configurations"
+    },
+    {
+      "type": "subtitle",
+      "text": "Provisional mathematical authors: Rachel Teo, Wenyi Wang, Hamdi Abderrahmene"
+    },
+    {
+      "type": "small",
+      "text": "Judging and evaluation record: the submissions discussed in this document have been judged and evaluated by Alejandro Zarzuelo Urdiales for OpenMath 2026. This dated review records the stated verification, classification and unresolved holds; it is a preliminary evaluation rather than a signed award decision."
+    },
+    {
+      "type": "small",
+      "text": "Event provenance: OpenMath 2026 ran 27 September–2 October 2026 with worldwide online participation. Detailed organizer listings specify Harvard Innovation Labs for the 27 September in-person event; the OpenMath programme advertises a hybrid kickoff at MIT. Sundai identifies its Harvard/MIT community. Organizer sources: https://rsihouse.ai/openmath ; https://luma.com/yzp9abvr ; https://www.sundai.club/events/boston/recursive-learning-hack-with-harvard-innovation-labs"
+    },
+    {
+      "type": "small",
+      "text": "Rachel Teo — Sakana AI."
+    },
+    {
+      "type": "small",
+      "text": "Wenyi Wang — Sakana AI."
+    },
+    {
+      "type": "small",
+      "text": "Hamdi Abderrahmene — Sakana AI."
+    },
+    {
+      "type": "small",
+      "text": "Affiliations follow the recorded author declarations or public institutional/profile sources. Preferred author names, author order and publication affiliations await author review. This editorial compilation does not establish anthology coauthorship."
+    },
+    {
+      "type": "subtitle",
+      "text": "Original-result working manuscript | OpenMath 2026 | 5 October 2026"
+    },
+    {
+      "type": "small",
+      "text": "Central source and adjudication archive: https://github.com/alejandrozu/openmath-2026-judging"
+    },
+    {
+      "type": "h2",
+      "text": "Abstract"
+    },
+    {
+      "type": "p",
+      "text": "A no-three-collinear set of2n points in an n×n grid is either invariant under the half-turn or has at least four points whose partners are absent. An exact ten-point5×5 example attains four, giving the global minimum positive one-sided defect."
+    },
+    {
+      "type": "h2",
+      "text": "Statement and counting convention"
+    },
+    {
+      "type": "p",
+      "text": "Let A⊆{0,...,n−1}² contain exactly2n points, with no three distinct points collinear. Let R(x,y)=(n−1−x,n−1−y), and define the one-sided defect D={p∈A:R(p)∉A}. The theorem is |D|=0 or |D|≥4. It is important to specify one-sided defect: |A△R(A)|=2|D|, so the sharp symmetric-difference value is eight."
+    },
+    {
+      "type": "p",
+      "text": "The theorem addresses the historically posed near-half-turn question for full grid configurations. It does not prove that a2n-point configuration exists for every n, nor that defect four is attainable at every order."
+    },
+    {
+      "type": "h2",
+      "text": "Geometric proof of the gap"
+    },
+    {
+      "type": "p",
+      "text": "No row or column can contain more than two points. Since there are n rows and2n points, each row contains exactly two, and the same holds for every column. Consequently the sum of the centred position vectors of all points of A is zero: its centroid is the grid centre."
+    },
+    {
+      "type": "p",
+      "text": "Cancel all opposite pairs under R, together with the central fixed point if present. The remaining unmatched vectors, namely D, still sum to zero. A single unmatched vector would have to be zero and would therefore be fixed, a contradiction. Two unmatched vectors summing to zero would be opposite and therefore paired, another contradiction."
+    },
+    {
+      "type": "p",
+      "text": "Suppose there were three unmatched points. The remaining centrally invariant part has2n−3 points, an odd number, so it contains the grid centre. For n≥3 this part has at least three points and therefore also contains a nonzero opposite pair. That pair and the centre are three collinear points, contradicting the hypothesis. The cases n=0,1,2 are handled separately. This centroid/parity geometry is necessary; row/column balance alone permits a two-miss alternating rectangle and does not prove the gap."
+    },
+    {
+      "type": "h2",
+      "text": "Exact sharp witness"
+    },
+    {
+      "type": "p",
+      "text": "The5×5 witness is {(1,0),(2,0),(0,1),(4,1),(3,2),(4,2),(0,3),(1,3),(2,4),(3,4)}. It has ten points. Exact determinants show that every triple of distinct points is noncollinear, and direct half-turn pairing gives four unmatched points. The formal proof checks those integer conditions and transports them to the grid geometry."
+    },
+    {
+      "type": "p",
+      "text": "Independent ordinary checking confirmed all120 distinct triples. Exhaustive enumeration through several small grids is consistent with the theorem but is supplementary, because the centroid argument proves all n. The universal theorem and witness are in the same contribution family."
+    },
+    {
+      "type": "h2",
+      "text": "Priority and formal status"
+    },
+    {
+      "type": "p",
+      "text": "The Bielefeld source records four as a minimum known example and asks about the nearest nonsymmetric cases. The no-positive-defect-below-four obstruction appears to answer that subsidiary question. Because its proof is elementary, historical and folklore comparison remains especially important; the absence of a located proof is not certification of first discovery."
+    },
+    {
+      "type": "p",
+      "text": "The archive records a clean four-module standalone release build with standard axioms. This is a natural short note with a complete ordinary proof, a simple diagram and a formal supplement. The original source site and known defect-four examples should be credited, and the paper title should avoid a claim to solve the broad no-three-in-line problem."
+    },
+    {
+      "type": "small",
+      "text": "This short manuscript records the construction and selected endpoints. The companion Original results anthology contains the extended ordinary proof exposition and its explicitly stated premises; the preserved Lean source remains the complete formal proof record."
+    },
+    {
+      "type": "h2",
+      "text": "Verification and reproducibility"
+    },
+    {
+      "type": "p",
+      "text": "Fresh execution: sakana-opdp43: PASS; 4/4 custom modules compiled successfully; receipt Verification/sakana-opdp43-fresh-build.json. Compiler pins, source hashes and endpoint axiom outputs are in Verification. Historical receipts and finite checks do not replace fresh replay."
+    },
+    {
+      "type": "keep_start",
+      "text": ""
+    },
+    {
+      "type": "h2",
+      "text": "NoThreeSymmetry.grid_half_turn_gap"
+    },
+    {
+      "type": "code",
+      "text": "theorem grid_half_turn_gap {n : ℕ} (A : Finset (GridPoint n))\n    (h : GridNoThree A) (hcard : A.card = 2*n) :\n    (gridDefect A).card = 0 ∨ 4 ≤ (gridDefect A).card"
+    },
+    {
+      "type": "small",
+      "text": "Source: proofs/opdp43/OpHack/NoThree/Main.lean:8."
+    },
+    {
+      "type": "small",
+      "text": "Source SHA-256: f8262d41b0933681b1db8dafb3d4302471dc28650b8ca950e3e1fc01f203c3d2"
+    },
+    {
+      "type": "keep_end",
+      "text": ""
+    },
+    {
+      "type": "keep_start",
+      "text": ""
+    },
+    {
+      "type": "h2",
+      "text": "NoThreeSymmetry.sharp_half_turn_gap"
+    },
+    {
+      "type": "code",
+      "text": "theorem sharp_half_turn_gap :\n    (∀ (n : ℕ) (A : Finset (GridPoint n)), GridNoThree A → A.card = 2*n →\n      (gridDefect A).card = 0 ∨ 4 ≤ (gridDefect A).card) ∧\n    (∃ A : Finset (GridPoint 5), A.card = 10 ∧ GridNoThree A ∧ (gridDefect A).card = 4)"
+    },
+    {
+      "type": "small",
+      "text": "Source: proofs/opdp43/OpHack/NoThree/Main.lean:56."
+    },
+    {
+      "type": "small",
+      "text": "Source SHA-256: f8262d41b0933681b1db8dafb3d4302471dc28650b8ca950e3e1fc01f203c3d2"
+    },
+    {
+      "type": "reference_list",
+      "text": "Sources and attribution",
+      "items": [
+        {
+          "text": "1. wwwhomes.uni-bielefeld.de / symmetry_remarks.html",
+          "url": "https://wwwhomes.uni-bielefeld.de/achim/no3in/symmetry_remarks.html"
+        },
+        {
+          "text": "2. www.unsolvedmath.com / GREEN-045",
+          "url": "https://www.unsolvedmath.com/problems/GREEN-045"
+        },
+        {
+          "text": "3. alejandrozu/openmath-2026-judging / E02-opdp43-halfturn.txt",
+          "url": "https://github.com/alejandrozu/openmath-2026-judging/blob/d0ed487f487fa7ec814ff705ab55249983fe8707/OpenMath-Judging/review/entries/E02-opdp43-halfturn.txt"
+        },
+        {
+          "text": "Central source and adjudication archive",
+          "url": "https://github.com/alejandrozu/openmath-2026-judging"
+        }
+      ]
+    },
+    {
+      "type": "keep_end",
+      "text": ""
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "status": "READ_ONLY_PEER_REVIEW_NO_ADDITIONAL_CONTROLLER_DEFECT_FOUND_AFTER_SCHEMA_ONLY_CORRECTION",
+  "created_utc": "2026-10-05T07:57:05.122039+00:00",
+  "controller": {
+    "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\run_ht_ramsey_kernel_j2_continuation_prepared.py",
+    "sha256": "e551e318748425f8672e73e670aaddda6533af58facefc0ebbef229bf42c6a23",
+    "bytes": 24940
+  },
+  "preparation": {
+    "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\ht-ramsey-kernel-j2-continuation-preparation-20261005.json",
+    "sha256": "abc3a76dbe912a2f9182a391f2dc593b36609348e392dc18f1a50672decabfe9"
+  },
+  "full_operational_diff_sha256": "2f58d015d6cc256a5900e03b2ea2c294d2ea2e82461387a0c933b0613c3e1916",
+  "review_method": "Read complete controller, full operational diff, preparation and unchanged own-job guard as source text. Passive stdlib hashing only; no candidate/guard/controller import or process registry/Lean invocation.",
+  "corrected_finding": {
+    "type": "APPROVAL_TEMPLATE_CONTROLLER_SHA_MISMATCH",
+    "prior_preparation_sha256": "e04830951dee19c08a38ec9e14e8ad56d63edda0cd452be4c1227b0db4d658fa",
+    "prior_template_controller_sha256": "33a346589713231318eabc1b64c6c1205308a5de604a82e7a1888caefbfb767c",
+    "current_template_controller_sha256": "e551e318748425f8672e73e670aaddda6533af58facefc0ebbef229bf42c6a23",
+    "resolution": "Producer corrected only preparation schema; controller unchanged. Root approval copied from the prior template would have been refused before source dispatch.",
+    "current_resolution_checked": true
+  },
+  "concrete_unresolved_defects": [],
+  "passive_identity_checks": {
+    "all_preparation_files_sha_and_size_match": true,
+    "original_sources_rehashed": 2103,
+    "prior_immutable_receipt_sha256": "91ac7d8306ea4640f4a126c1bf1aa4ed4b16c16a46cdfabeb768b7f21c66c88c",
+    "actual_prior_source_rows": 138,
+    "prior_artifact_files_rehashed": 138,
+    "prior_artifact_logical_bytes_rehashed": 132485672,
+    "literal_prior_commands": {
+      "-j1": 135,
+      "-j2": 3
+    },
+    "completed_kernel_sources": 103,
+    "cold_remaining_kernel_sources": 1945,
+    "all_pending_four_artifact_suffixes_and_ir_absent": true,
+    "all_kernel_custom_prerequisite_closures_already_passed_and_kernel_independent": true
+  },
+  "control_review": {
+    "mode_one": "One HT -j2 worker plus at most one foreign Lean descended from an optional exact PID/creationUTC/commandSHA/sourceSHA-bound A000 dispatcher. Zero companion is accepted. Detailed identity rechecked before each new HT source.",
+    "mode_two": "At most two own HT -j2 workers; companion must be null, root asserts actual A000 slot returned, and all foreign Lean/unbound A000 dispatchers are refused.",
+    "global_limit": "Toolhelp own-tree count and detailed pre-dispatch CIM identity enforce approved scheduler lease/max2 at snapshots. Does not reserve RAM or terminate foreign children; unexpected processes lead to drain/checkpoint.",
+    "scope": "Only manifest-bound still-cold independent Chunk sources. No automatic nine remaining granular, eleven whole imports, original/supplement endpoint audit, native build or storage operation.",
+    "history": "Prior actual rows remain byte-semantically identical as the full ordered prefix. Previous resource settings and policy are archived; new rows explicitly retain literal -j2 and LEAN_NUM_THREADS=2 without relabeling -j1 history.",
+    "guard": "Unchanged per-child suspended-before-own-job assignment, 6GiB private cap, 4GB/6GiB physical/5GiB commit initial and 1GB/3GiB physical/1GiB commit continuous floors;3600s. Parent repeats initial gates before dispatch.",
+    "hold": "Global root hold rechecked after CIM immediately before worker submission; active workers finish under guards; no further sources dispatch; parent alone atomically writes receipt.",
+    "no_attempt": "Guard gate without invocation reinserts same cold source and waits2s without a fake build row. No log files are opened by the guard in this state, so deterministic per-source log prefix remains cold on the next attempt.",
+    "failures": "Actual source failures remain explicit and are never retried automatically; independent chunks may continue. Guard stops/worker operational exceptions prevent new dispatch and drain existing work. Nonzero actual failures cannot produce a scientific PASS."
+  },
+  "qualification_limits": [
+    "This is a static operational peer review, not execution authorization or selected theorem verification.",
+    "End-of-controller sources_ready rechecks all original source hashes and preserved prior artifact hashes, while new output hashes are measured on completion. A later root qualification must independently rehash all new output/log/row identities.",
+    "Final global registry is recorded, not an exclusive OS lock. Root qualification should inspect any final registry violations; raw final scheduled source checkpoint is never a theorem PASS.",
+    "R100/R101 six selected audit observations are separate already-completed evidence and are not inserted into canonical source history by this controller."
+  ],
+  "no_current_global_process_counter_or_resource_snapshot_invoked": true,
+  "writes": "Only this new additive read-only review JSON.",
+  "source_receipt_controller_hold_output_pdf_or_canonical_mutations": false,
+  "compiler_invocations": 0,
+  "controller_or_guard_imports": 0
+}

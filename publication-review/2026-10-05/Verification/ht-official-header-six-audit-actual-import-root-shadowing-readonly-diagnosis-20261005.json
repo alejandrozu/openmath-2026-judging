@@ -1,0 +1,733 @@
+{
+  "status": "READ_ONLY_DIAGNOSIS_CONFIRMED_ISOLATED_NAMESPACE_ROOT_SHADOWING_NO_NEW_AUDIT_RESULTS",
+  "checked_utc": "2026-10-05T10:15:14.809453+00:00",
+  "actual_failed_audit_receipt": {
+    "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\isolated-header-pilots\\root-r141-header-seed-20261005-0913\\actual-six-endpoint-audits.json",
+    "sha256": "5f0148e8e048c59e56b2edec703aa8056914225f49a494624157b1d7a762dc55",
+    "bytes": 25588
+  },
+  "actual_failed_scope": {
+    "B_invocations": 1,
+    "B_child_exit": 1,
+    "C_invocations": 0,
+    "actual_printed_selected_outputs": 0,
+    "error": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\isolated-header-pilots\\root-r141-header-seed-20261005-0913\\six-endpoint-audits\\B\\FreshAuditR141.lean:1:0: error: object file 'C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\isolated-header-pilots\\root-r141-header-seed-20261005-0913\\B\\RamseyCert\\Data\\Ents.olean' of module RamseyCert.Data.Ents does not exist\n",
+    "mathematical_proof_failure_inferred": false,
+    "resource_limit_failure": false,
+    "receipt_and_outputs_unchanged": true,
+    "earlier_source_load_passes_not_revoked_or_promoted": true
+  },
+  "diagnosis": "LEAN_PATH searches by the first directory containing root RamseyCert. The B root supplies only the isolated chunk, but owns RamseyCert package-root resolution for every transitive import; missing Ents therefore never falls through to the subsequent canonical stage. C has the same namespace split. Reordering merely reverses which required module is hidden.",
+  "pinned_primary_evidence": [
+    {
+      "file_identity": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\src\\lean\\Lean\\Util\\Path.lean",
+        "sha256": "52cf9aa41a82db18d0d3c93bf6257d064f773af9e62b8b43be89ce1b0e00055f",
+        "bytes": 7382
+      },
+      "pinned_lean_commit": "819816b2e0a3bf405af45ae5c7af2491d8f5bee6",
+      "evidence_spans": [
+        {
+          "first_line": 6,
+          "last_line": 9,
+          "text": "Management of the Lean search path (`LEAN_PATH`), which is a list of\npaths containing package roots: an import `A.B.C` resolves to\n`path/A/B/C.olean` for the first entry `path` in `LEAN_PATH`\nwith a directory `A/`. `import A` resolves to `path/A.olean`."
+        },
+        {
+          "first_line": 58,
+          "last_line": 65,
+          "text": "/-- If the package of `mod` can be found in `sp`, return the path with extension\n`ext` (`lean` or `olean`) corresponding to `mod`. Otherwise, return `none`. Does\nnot check whether the returned path exists. -/\ndef findWithExt (sp : SearchPath) (ext : String) (mod : Name) : IO (Option FilePath) := do\n  let pkg := mod.getRoot.toString (escape := false)\n  let root? ← sp.findM? fun p =>\n    (p / pkg).isDir <||> ((p / pkg).addExtension ext).pathExists\n  return root?.map (modToFilePath · mod ext)"
+        },
+        {
+          "first_line": 116,
+          "last_line": 120,
+          "text": "/-- Find the compiled `.olean` of a module in the `LEAN_PATH` search path. -/\npartial def findOLean (mod : Name) : IO FilePath := do\n  let sp ← searchPathRef.get\n  if let some fname ← sp.findWithExt \"olean\" mod then\n    return fname"
+        }
+      ]
+    },
+    {
+      "file_identity": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\src\\lean\\Lean\\Environment.lean",
+        "sha256": "ee364e4788ce0560c87f621eeb3c4c3dfec62e8db4e15e099fd80e6adc533b86",
+        "bytes": 137725
+      },
+      "pinned_lean_commit": "819816b2e0a3bf405af45ae5c7af2491d8f5bee6",
+      "evidence_spans": [
+        {
+          "first_line": 2078,
+          "last_line": 2091,
+          "text": "private def readModuleDataPartsOfMod (mod : Name) : IO (Array (ModuleData × CompactedRegion)) := do\n  let mFile ← findOLean mod\n  unless (← mFile.pathExists) do\n    throw <| IO.userError s!\"object file '{mFile}' of module {mod} does not exist\"\n  let main ← unsafe CompactedRegion.read (α := ModuleData) mFile #[]\n  if !main.1.isModule then\n    return #[main]\n  -- Opportunistically load all available parts.\n  -- Necessary because the import level may be upgraded a later import.\n  let sFile := OLeanLevel.server.adjustFileName mFile\n  let server ← unsafe CompactedRegion.read (α := ModuleData) sFile #[main.2]\n  let pFile := OLeanLevel.private.adjustFileName mFile\n  let priv ← unsafe CompactedRegion.read (α := ModuleData) pFile #[main.2, server.2]\n  return #[main, server, priv]"
+        },
+        {
+          "first_line": 2093,
+          "last_line": 2105,
+          "text": "private def readIRPartsOfMod (mod : Name) : IO (Array (ModuleData × CompactedRegion)) := do\n  let mFile ← findOLean mod\n  let irSigFile := mFile.withExtension \"ir.sig\"\n  -- TODO: we don't (necessarily) know whether the module is a `module` or not, but file existence\n  -- checks are not great in the face of module-ness changes\n  unless (← irSigFile.pathExists) do\n    return #[]\n  let irSig ← unsafe CompactedRegion.read (α := ModuleData) irSigFile #[]\n  -- Opportunistically load all available parts.\n  -- Necessary because the import level may be upgraded a later import.\n  let irFile := mFile.withExtension \"ir\"\n  let ir ← unsafe CompactedRegion.read (α := ModuleData) irFile #[irSig.2]\n  return #[irSig, ir]"
+        },
+        {
+          "first_line": 2228,
+          "last_line": 2246,
+          "text": "        moduleNames := s.moduleNames.push i.module\n      }\n  -- .olean + .olean.server (optional) + .olean.private (optional)\n  loadData i := do\n    if let some arts := arts.find? i.module then\n      -- Opportunistically load all available parts.\n      -- Producer (e.g., Lake) should limit parts to the proper import level.\n      let fnames := arts.oleanParts (inServer := globalLevel ≥ .server)\n      readModuleDataParts fnames\n    else\n      readModuleDataPartsOfMod i.module\n  -- .ir.sig + .ir (optional)\n  loadIR i := do\n    if let some arts := arts.find? i.module then\n      -- Opportunistically load all available parts.\n      -- Producer (e.g., Lake) should limit parts to the proper import level.\n      readModuleDataParts arts.irParts\n    else\n      readIRPartsOfMod i.module"
+        }
+      ]
+    }
+  ],
+  "inspected_actual_dependency_metadata": {
+    "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\isolated-header-pilots\\root-r141-header-seed-20261005-0913\\readonly-evidence-root-a90a-20261005-0939\\complete-source-artifact-closure.json",
+    "sha256": "e51cbdb7e9bfc804308508406c01b895c8725208206f62eb3425aea3dd3323e8",
+    "bytes": 9873326
+  },
+  "shared_custom_provider_count": 35,
+  "shared_custom_provider_logical_bytes": 38221048,
+  "shared_custom_closure_closed": true,
+  "actual_common_source_and_artifact_hash_rechecks": "35 source files and 35 .olean files matched the completed actual seed closure; no official 2 GB re-scan",
+  "common_provider_role_inventory": [
+    {
+      "module": "RamseyCert.Data.Base",
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert\\Data\\Base.lean",
+        "sha256": "d03a73563de90d8db61c6859d2f08ebc83e158300716093be4e654f897f49f2a",
+        "bytes": 603636
+      },
+      "artifact": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert\\Data\\Base.olean",
+        "sha256": "438f7ca3cd7e0c5ee8335e2dcb14b792f9ec6ddcb0226e3f5111124a1ec41a4e",
+        "bytes": 7696456,
+        "mtime_ns": 1791179449988326000,
+        "native_stat_file_id": 562949955155149
+      },
+      "proposed_destination_relative_file": "RamseyCert/Data/Base.olean"
+    },
+    {
+      "module": "RamseyCert.Data.EntB0",
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert\\Data\\EntB0.lean",
+        "sha256": "ad2b17b0c67d6f68c27f0d6e31b64a65031dd9d72a574b765d2bc245af1bb17a",
+        "bytes": 1050644
+      },
+      "artifact": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert\\Data\\EntB0.olean",
+        "sha256": "bbea3a8ac54aeefb506c75d5aa4adfebf1e87677ae9e50beafcbf3fc93e5c8fc",
+        "bytes": 848920,
+        "mtime_ns": 1791179707444209300,
+        "native_stat_file_id": 1125899908577549
+      },
+      "proposed_destination_relative_file": "RamseyCert/Data/EntB0.olean"
+    },
+    {
+      "module": "RamseyCert.Data.EntB1",
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert\\Data\\EntB1.lean",
+        "sha256": "808837f60f4a0bcbef0e43779502b82f0ca89a6df9ddfc8f3cc05496dc47206b",
+        "bytes": 1050518
+      },
+      "artifact": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert\\Data\\EntB1.olean",
+        "sha256": "9d4448f83aaddce0154ea7aba18841b3125ac7121d30ed3152022d85807d7c48",
+        "bytes": 848856,
+        "mtime_ns": 1791179732925102700,
+        "native_stat_file_id": 844424931867195
+      },
+      "proposed_destination_relative_file": "RamseyCert/Data/EntB1.olean"
+    },
+    {
+      "module": "RamseyCert.Data.EntB10",
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert\\Data\\EntB10.lean",
+        "sha256": "3fb9db05dc9b507e09757e1968800e5d0547effe88e09fc400ba54cc67465f02",
+        "bytes": 1051042
+      },
+      "artifact": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert\\Data\\EntB10.olean",
+        "sha256": "86ea9cf7d6a49ed319b902646abe779a40b67c97f2453b1166a2f90ce8d27bc4",
+        "bytes": 849016,
+        "mtime_ns": 1791179870896662300,
+        "native_stat_file_id": 1970324838708756
+      },
+      "proposed_destination_relative_file": "RamseyCert/Data/EntB10.olean"
+    },
+    {
+      "module": "RamseyCert.Data.EntB11",
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert\\Data\\EntB11.lean",
+        "sha256": "b35653047b767555051b452ed6d2a44b2c64a8a30cacc165a7fe1373cd9acda0",
+        "bytes": 1050306
+      },
+      "artifact": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert\\Data\\EntB11.olean",
+        "sha256": "135f6f26924401bd2980a5b3c791562b07393e31abbced5923270dbd23149d43",
+        "bytes": 848632,
+        "mtime_ns": 1791179884269028200,
+        "native_stat_file_id": 844424931867265
+      },
+      "proposed_destination_relative_file": "RamseyCert/Data/EntB11.olean"
+    },
+    {
+      "module": "RamseyCert.Data.EntB12",
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert\\Data\\EntB12.lean",
+        "sha256": "bf6e23798e6f7c268fd3f2febac1a41d476c85db47db2760e4990c46738090fc",
+        "bytes": 1050370
+      },
+      "artifact": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert\\Data\\EntB12.olean",
+        "sha256": "b27e49fb3215ac7e99ed5fb029dd57ecd2c08a3e44728023ff65ae35306f0b44",
+        "bytes": 848712,
+        "mtime_ns": 1791179897717017400,
+        "native_stat_file_id": 1125899908578005
+      },
+      "proposed_destination_relative_file": "RamseyCert/Data/EntB12.olean"
+    },
+    {
+      "module": "RamseyCert.Data.EntB13",
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert\\Data\\EntB13.lean",
+        "sha256": "a1f7ebfbe917170f2e374dd726f126d4f4e15672228290cbd29f507a3abc9cbd",
+        "bytes": 1050482
+      },
+      "artifact": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert\\Data\\EntB13.olean",
+        "sha256": "68fd27ddf0369c3285db52af75788a3351db7b50045cfd6058430ca76536927f",
+        "bytes": 848744,
+        "mtime_ns": 1791179912529649300,
+        "native_stat_file_id": 562949955156849
+      },
+      "proposed_destination_relative_file": "RamseyCert/Data/EntB13.olean"
+    },
+    {
+      "module": "RamseyCert.Data.EntB14",
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert\\Data\\EntB14.lean",
+        "sha256": "f530eee465908a3072a31145ef27c2046ce101bcd5087021e0ab749595f30958",
+        "bytes": 1051074
+      },
+      "artifact": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert\\Data\\EntB14.olean",
+        "sha256": "06dcdee2ab7d61f6cc0056ba102e9b68e1b56c9d4934771a95a9cb13b6104fbd",
+        "bytes": 848984,
+        "mtime_ns": 1791179926082928700,
+        "native_stat_file_id": 562949955156862
+      },
+      "proposed_destination_relative_file": "RamseyCert/Data/EntB14.olean"
+    },
+    {
+      "module": "RamseyCert.Data.EntB15",
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert\\Data\\EntB15.lean",
+        "sha256": "4e8c2e660ad550215d7c90910da7d4b500f581167d0659c04f89823ab4e1bd5d",
+        "bytes": 1050906
+      },
+      "artifact": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert\\Data\\EntB15.olean",
+        "sha256": "8e78bde8d9812073ef7b10d0de495cd0e5ee8b122a135c360f06723c0a8a682d",
+        "bytes": 848696,
+        "mtime_ns": 1791179939704455000,
+        "native_stat_file_id": 844424931867522
+      },
+      "proposed_destination_relative_file": "RamseyCert/Data/EntB15.olean"
+    },
+    {
+      "module": "RamseyCert.Data.EntB2",
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert\\Data\\EntB2.lean",
+        "sha256": "a87cd04b5ff3cad4f535b2f07a7af5e55d43e05a98b0d36efb60fa502e9e1baf",
+        "bytes": 1051026
+      },
+      "artifact": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert\\Data\\EntB2.olean",
+        "sha256": "6087c06c1c39debd2e0d7a4cd9066d25b8a86a476755a578c1478d310d2dfc33",
+        "bytes": 848968,
+        "mtime_ns": 1791179753684633200,
+        "native_stat_file_id": 562949955156568
+      },
+      "proposed_destination_relative_file": "RamseyCert/Data/EntB2.olean"
+    },
+    {
+      "module": "RamseyCert.Data.EntB3",
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert\\Data\\EntB3.lean",
+        "sha256": "ab5a34cf34ee6c2dcdf3785d1c5bdde9bd4d229499d4ef93ee268b4ed3c35a56",
+        "bytes": 1050946
+      },
+      "artifact": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert\\Data\\EntB3.olean",
+        "sha256": "bb7acc77ca5bcbbf9ee8bbe11ef4c9440cf1350fe52ef37d704b97305c01b52e",
+        "bytes": 849016,
+        "mtime_ns": 1791179768184327200,
+        "native_stat_file_id": 2251799815418776
+      },
+      "proposed_destination_relative_file": "RamseyCert/Data/EntB3.olean"
+    },
+    {
+      "module": "RamseyCert.Data.EntB4",
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert\\Data\\EntB4.lean",
+        "sha256": "4a0cd2306ab86ac28f6a68cf9b3f7380e97d76625d7533f2333fcd936e020f33",
+        "bytes": 1050946
+      },
+      "artifact": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert\\Data\\EntB4.olean",
+        "sha256": "f1668169924ce5383f7ed9ae82e05057ba10abc1ab37f85d3574ff0140946e1a",
+        "bytes": 848776,
+        "mtime_ns": 1791179782524137100,
+        "native_stat_file_id": 7318349394676883
+      },
+      "proposed_destination_relative_file": "RamseyCert/Data/EntB4.olean"
+    },
+    {
+      "module": "RamseyCert.Data.EntB5",
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert\\Data\\EntB5.lean",
+        "sha256": "f152d429bb52895c087e28521186fcb49937466d158f44eba7b56bfd25f14cd8",
+        "bytes": 1050450
+      },
+      "artifact": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert\\Data\\EntB5.olean",
+        "sha256": "e496e4999a643147689d053798a5404f46d9e6e871cfe8a4c3c4fb7149a8b5de",
+        "bytes": 848680,
+        "mtime_ns": 1791179797002191900,
+        "native_stat_file_id": 120189815055499368
+      },
+      "proposed_destination_relative_file": "RamseyCert/Data/EntB5.olean"
+    },
+    {
+      "module": "RamseyCert.Data.EntB6",
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert\\Data\\EntB6.lean",
+        "sha256": "39599d542f056002a0ae8402666bbafb7f20ac5c26b3716c632881eb1954aa8f",
+        "bytes": 1050850
+      },
+      "artifact": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert\\Data\\EntB6.olean",
+        "sha256": "3f9cff3ad5e4b6ceec0f2f4da8a35dd9f85d190548981f5eed77ec956b92855b",
+        "bytes": 848760,
+        "mtime_ns": 1791179812919920200,
+        "native_stat_file_id": 844424931867306
+      },
+      "proposed_destination_relative_file": "RamseyCert/Data/EntB6.olean"
+    },
+    {
+      "module": "RamseyCert.Data.EntB7",
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert\\Data\\EntB7.lean",
+        "sha256": "e9bdad0417eb2718b203fe30621cf18c5a706a9477189bb452ed70a01110bbaa",
+        "bytes": 1050898
+      },
+      "artifact": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert\\Data\\EntB7.olean",
+        "sha256": "68b3c2e9caf8f4872173b605574f824e7e6908c928a1bf1d234c4243acde25ad",
+        "bytes": 848936,
+        "mtime_ns": 1791179828502091700,
+        "native_stat_file_id": 1407374885288194
+      },
+      "proposed_destination_relative_file": "RamseyCert/Data/EntB7.olean"
+    },
+    {
+      "module": "RamseyCert.Data.EntB8",
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert\\Data\\EntB8.lean",
+        "sha256": "3fb94510e8d652f84cf79d146b1b728da0b6187f35a269375f429f7937465fec",
+        "bytes": 1050546
+      },
+      "artifact": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert\\Data\\EntB8.olean",
+        "sha256": "a8ea596aa9c93b26844104aa5f3f70613f612a5a6a5c625d193d52c082b5e46f",
+        "bytes": 848536,
+        "mtime_ns": 1791179842083800500,
+        "native_stat_file_id": 844424931867079
+      },
+      "proposed_destination_relative_file": "RamseyCert/Data/EntB8.olean"
+    },
+    {
+      "module": "RamseyCert.Data.EntB9",
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert\\Data\\EntB9.lean",
+        "sha256": "9b624227a5bc532b9d514907e38d9724601bc9f3c92125f3af3735c4a2837c94",
+        "bytes": 1051090
+      },
+      "artifact": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert\\Data\\EntB9.olean",
+        "sha256": "437eef6aaed5d191541bfd2e60fd77f06b9798611a1a11f547fa24255e25fa0f",
+        "bytes": 849016,
+        "mtime_ns": 1791179855957816300,
+        "native_stat_file_id": 1407374885288445
+      },
+      "proposed_destination_relative_file": "RamseyCert/Data/EntB9.olean"
+    },
+    {
+      "module": "RamseyCert.Data.EntR0",
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert\\Data\\EntR0.lean",
+        "sha256": "017d6bf92655346add08ef0a4f88eca54c8c5ac386c1ed7c1f947514d7afd000",
+        "bytes": 1050580
+      },
+      "artifact": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert\\Data\\EntR0.olean",
+        "sha256": "f1eb3fec6dcda30c3cce02e5a1dd0c03e54aff36853ed0db656bc4e2e3f319ba",
+        "bytes": 848952,
+        "mtime_ns": 1791179464083854000,
+        "native_stat_file_id": 1688849861997731
+      },
+      "proposed_destination_relative_file": "RamseyCert/Data/EntR0.olean"
+    },
+    {
+      "module": "RamseyCert.Data.EntR1",
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert\\Data\\EntR1.lean",
+        "sha256": "6a31187ece223056e6fce9374e40013a46d399e53a5c1b42381083c8a4e28864",
+        "bytes": 1050662
+      },
+      "artifact": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert\\Data\\EntR1.olean",
+        "sha256": "26ec3133ce5cf504c372f745f6e06c80b57dd9b82db0eb1c8cdbbec43c2b6bb6",
+        "bytes": 848856,
+        "mtime_ns": 1791179478482155900,
+        "native_stat_file_id": 844424931865855
+      },
+      "proposed_destination_relative_file": "RamseyCert/Data/EntR1.olean"
+    },
+    {
+      "module": "RamseyCert.Data.EntR10",
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert\\Data\\EntR10.lean",
+        "sha256": "985698d74d2801dc74ac1b8e66d3ff99cbadccc4b225107905668a031d50c9c0",
+        "bytes": 1050754
+      },
+      "artifact": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert\\Data\\EntR10.olean",
+        "sha256": "b2d8262bc57951b5fda9d269432b514626d4f914449e00fa38494bea76c7b607",
+        "bytes": 848824,
+        "mtime_ns": 1791179613143272000,
+        "native_stat_file_id": 1125899908577358
+      },
+      "proposed_destination_relative_file": "RamseyCert/Data/EntR10.olean"
+    },
+    {
+      "module": "RamseyCert.Data.EntR11",
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert\\Data\\EntR11.lean",
+        "sha256": "6221eb36e1f950b6d78c211f53d2a69afb6df76da9ddface8be459783c1b0312",
+        "bytes": 1050818
+      },
+      "artifact": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert\\Data\\EntR11.olean",
+        "sha256": "509ad1c5d5f863898bf820deeffdca79a9f0508b4e6cdc3ceeae1fb79f7de968",
+        "bytes": 848968,
+        "mtime_ns": 1791179628128675200,
+        "native_stat_file_id": 1125899908576685
+      },
+      "proposed_destination_relative_file": "RamseyCert/Data/EntR11.olean"
+    },
+    {
+      "module": "RamseyCert.Data.EntR12",
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert\\Data\\EntR12.lean",
+        "sha256": "69d466a0d36162396168f60884f659d32c002579f92b8d09dfac491361e87786",
+        "bytes": 1051154
+      },
+      "artifact": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert\\Data\\EntR12.olean",
+        "sha256": "35ff72597c8dc7e6cacc8fb31d57d719a7ea19fefa4964047d599da6e88462d7",
+        "bytes": 849032,
+        "mtime_ns": 1791179643734197600,
+        "native_stat_file_id": 1125899908577331
+      },
+      "proposed_destination_relative_file": "RamseyCert/Data/EntR12.olean"
+    },
+    {
+      "module": "RamseyCert.Data.EntR13",
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert\\Data\\EntR13.lean",
+        "sha256": "d8a4d9113d4e9a34e62f60be857d091c3211797aa6377df342897576a0210293",
+        "bytes": 1051058
+      },
+      "artifact": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert\\Data\\EntR13.olean",
+        "sha256": "ac67a1df05d66b2382e8f792521fc081b63bd3e370e029cdddf7975939ea118d",
+        "bytes": 849016,
+        "mtime_ns": 1791179658837924300,
+        "native_stat_file_id": 1970324838708289
+      },
+      "proposed_destination_relative_file": "RamseyCert/Data/EntR13.olean"
+    },
+    {
+      "module": "RamseyCert.Data.EntR14",
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert\\Data\\EntR14.lean",
+        "sha256": "f3fb35708a56a8809b696ba9ed4e932c4f9d9b716da6534b0f7288604636a28a",
+        "bytes": 1050594
+      },
+      "artifact": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert\\Data\\EntR14.olean",
+        "sha256": "b977e90e51336021d82d2e3d6a321cb53525fd48e2db09e04b532d7e424bf528",
+        "bytes": 848840,
+        "mtime_ns": 1791179673763314000,
+        "native_stat_file_id": 1125899908577348
+      },
+      "proposed_destination_relative_file": "RamseyCert/Data/EntR14.olean"
+    },
+    {
+      "module": "RamseyCert.Data.EntR15",
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert\\Data\\EntR15.lean",
+        "sha256": "a24e9ae116dca6c561fdd81e221b59a475330a53c127c8033b7a0e1926a6f608",
+        "bytes": 1050938
+      },
+      "artifact": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert\\Data\\EntR15.olean",
+        "sha256": "c310aba2d8d869302de0b0ba07b4f81ed88a133ab4fd3102e6c69208435837f9",
+        "bytes": 848696,
+        "mtime_ns": 1791179688887143200,
+        "native_stat_file_id": 1125899908577533
+      },
+      "proposed_destination_relative_file": "RamseyCert/Data/EntR15.olean"
+    },
+    {
+      "module": "RamseyCert.Data.EntR2",
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert\\Data\\EntR2.lean",
+        "sha256": "d4add6ceb85c6c025e26ec2bbf8f5087203ef2cd42a1583362d35e8f25ebbc8a",
+        "bytes": 1050722
+      },
+      "artifact": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert\\Data\\EntR2.olean",
+        "sha256": "fbeaf464d88c9425ef834ab6a7d2d59b292d892df539b011deed626c03f110f0",
+        "bytes": 848920,
+        "mtime_ns": 1791179493686236400,
+        "native_stat_file_id": 562949955155292
+      },
+      "proposed_destination_relative_file": "RamseyCert/Data/EntR2.olean"
+    },
+    {
+      "module": "RamseyCert.Data.EntR3",
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert\\Data\\EntR3.lean",
+        "sha256": "d7db2d4418d237c44dd71a2974e964d64983728a68c3a9b9d67fa6a436e7b932",
+        "bytes": 1050866
+      },
+      "artifact": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert\\Data\\EntR3.olean",
+        "sha256": "ef3ddab41d0ad4210dabc1da93f99018d04eef8a019c219d2bfa3e8f7dafc28d",
+        "bytes": 848840,
+        "mtime_ns": 1791179508223426300,
+        "native_stat_file_id": 1125899908576635
+      },
+      "proposed_destination_relative_file": "RamseyCert/Data/EntR3.olean"
+    },
+    {
+      "module": "RamseyCert.Data.EntR4",
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert\\Data\\EntR4.lean",
+        "sha256": "8f27140954c1fc7c265ddbb1584f5a6136e40d3ef630ea6ff95bb0696004b374",
+        "bytes": 1050834
+      },
+      "artifact": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert\\Data\\EntR4.olean",
+        "sha256": "03c2f083f443403b052ba1ff83d473ce829192e6b7bf7c2da769fa21b5afcca9",
+        "bytes": 848744,
+        "mtime_ns": 1791179523329399900,
+        "native_stat_file_id": 844424931866091
+      },
+      "proposed_destination_relative_file": "RamseyCert/Data/EntR4.olean"
+    },
+    {
+      "module": "RamseyCert.Data.EntR5",
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert\\Data\\EntR5.lean",
+        "sha256": "2210526c64779ae1ce9f6f3297d6dfb8d31fec8f2f3af18837eeb06c05f18c6a",
+        "bytes": 1051154
+      },
+      "artifact": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert\\Data\\EntR5.olean",
+        "sha256": "829ca13f1964278c3372bf29cfe7c4b81a092bfb33ffb1dfae4b5a07e73c97df",
+        "bytes": 849032,
+        "mtime_ns": 1791179537790380000,
+        "native_stat_file_id": 562949955155469
+      },
+      "proposed_destination_relative_file": "RamseyCert/Data/EntR5.olean"
+    },
+    {
+      "module": "RamseyCert.Data.EntR6",
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert\\Data\\EntR6.lean",
+        "sha256": "ce47a8be2901b170d90ed5413a29f2abcd46f89971eb43963865cc27de4de3b3",
+        "bytes": 1051074
+      },
+      "artifact": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert\\Data\\EntR6.olean",
+        "sha256": "a45605ce9f32bd527dc7b93766d9ad979cb21429402b84724a2c7fd015dfab39",
+        "bytes": 848808,
+        "mtime_ns": 1791179552066134100,
+        "native_stat_file_id": 18014398509683055
+      },
+      "proposed_destination_relative_file": "RamseyCert/Data/EntR6.olean"
+    },
+    {
+      "module": "RamseyCert.Data.EntR7",
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert\\Data\\EntR7.lean",
+        "sha256": "2a1066199e60ffc5aaa8ec5184adbe82ef533df45515eb8303e80a250de94140",
+        "bytes": 1050530
+      },
+      "artifact": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert\\Data\\EntR7.olean",
+        "sha256": "d5ea45bc4cb742bfbac88ed69d3813376078b7f25b9727814a936ee2d9453066",
+        "bytes": 848808,
+        "mtime_ns": 1791179566075107900,
+        "native_stat_file_id": 562949955155798
+      },
+      "proposed_destination_relative_file": "RamseyCert/Data/EntR7.olean"
+    },
+    {
+      "module": "RamseyCert.Data.EntR8",
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert\\Data\\EntR8.lean",
+        "sha256": "b8b97258a9c8a87207e0f508384c7d0108e96a11e22b515936aaa00da5b3f256",
+        "bytes": 1051074
+      },
+      "artifact": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert\\Data\\EntR8.olean",
+        "sha256": "6d84b24f5e7f8f002f49c400604b2e0ae2388ef2fa6053eae6f64424eb2bde8e",
+        "bytes": 848888,
+        "mtime_ns": 1791179582565503200,
+        "native_stat_file_id": 562949955155864
+      },
+      "proposed_destination_relative_file": "RamseyCert/Data/EntR8.olean"
+    },
+    {
+      "module": "RamseyCert.Data.EntR9",
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert\\Data\\EntR9.lean",
+        "sha256": "3a5e5d1db352f9ba6cc5aede271531ba4781b0f499f16215f2217da58ca23015",
+        "bytes": 1050466
+      },
+      "artifact": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert\\Data\\EntR9.olean",
+        "sha256": "a444bba3967439f707bb0451c83685a036cb6202333fd994aae723f9ddaca045",
+        "bytes": 848696,
+        "mtime_ns": 1791179597061638900,
+        "native_stat_file_id": 1970324838708519
+      },
+      "proposed_destination_relative_file": "RamseyCert/Data/EntR9.olean"
+    },
+    {
+      "module": "RamseyCert.Data.Ents",
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert\\Data\\Ents.lean",
+        "sha256": "b724e5efa1880b86a2eceb9e0478ebd24a5650129548a491609818a9e4b5271f",
+        "bytes": 17532
+      },
+      "artifact": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert\\Data\\Ents.olean",
+        "sha256": "d436671d0ac846beec1b102776a0dc65d55793d11170201e79383946c69c03d3",
+        "bytes": 3021720,
+        "mtime_ns": 1791179948829997200,
+        "native_stat_file_id": 844424931867354
+      },
+      "proposed_destination_relative_file": "RamseyCert/Data/Ents.olean"
+    },
+    {
+      "module": "RamseyCert.Defs",
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert\\Defs.lean",
+        "sha256": "a6a1f68764262b4fe27b709c254d906afa458ccf79afa33122d265f23899ec74",
+        "bytes": 5341
+      },
+      "artifact": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert\\Defs.olean",
+        "sha256": "0cdaf0ee1a8193e7f2965eaccc07f16599a6c84438ee62066409daeade2e22d8",
+        "bytes": 339704,
+        "mtime_ns": 1791179067505593000,
+        "native_stat_file_id": 6755399441630760
+      },
+      "proposed_destination_relative_file": "RamseyCert/Defs.olean"
+    }
+  ],
+  "variants": [
+    {
+      "variant": "B",
+      "isolated_module": "RamseyCert.Chunk.R141",
+      "actual_source_receipt": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\isolated-header-pilots\\root-r141-header-seed-20261005-0913\\actual-load-B.json",
+        "sha256": "66ea493ee7cf6c273873aaa1e0a20b135fd6850cf07bbe76c14eb629a4f892cb",
+        "bytes": 23405
+      },
+      "frozen_original_source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert\\Chunk\\R141.lean",
+        "sha256": "d38f94725cbbe0294637f92e6b747ae1da6274de67f5af29b29317f901e1321e",
+        "bytes": 4495
+      },
+      "isolated_output": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\isolated-header-pilots\\root-r141-header-seed-20261005-0913\\B\\RamseyCert\\Chunk\\R141.olean",
+        "sha256": "64ba8661c3b67adf04f30bba027d1253f502135c0d90de7f16dd8edf20d8a2e9",
+        "bytes": 907592,
+        "mtime_ns": 1791193743815218200,
+        "native_stat_file_id": 11258999068642311,
+        "relative_file": "RamseyCert\\Chunk\\R141.olean"
+      },
+      "exact_proposed_plain_copy_count": 36,
+      "proposed_total_logical_bytes": 39128640,
+      "selected_requested_declarations": [
+        "RamseyCert.nbOKR_141",
+        "RamseyCert.mkOKR_141",
+        "RamseyCert.tR_141"
+      ],
+      "proposed_action_status": "READ_ONLY_PROPOSAL_NOT_COPIED_NOT_INVOKED"
+    },
+    {
+      "variant": "C",
+      "isolated_module": "RamseyCert.Chunk.R142",
+      "actual_source_receipt": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\isolated-header-pilots\\root-r141-header-seed-20261005-0913\\actual-load-C.json",
+        "sha256": "d891edce2d8f557a4cc9b4527ae22e962c1a6fb0430e5fb93f021c830485271e",
+        "bytes": 22880
+      },
+      "frozen_original_source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert\\Chunk\\R142.lean",
+        "sha256": "75e8d8fcd30c1f86571d3a6f21db13bdda43c6457bdf58abae6edd1b255b5b6f",
+        "bytes": 4468
+      },
+      "isolated_output": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\isolated-header-pilots\\root-r141-header-seed-20261005-0913\\C\\RamseyCert\\Chunk\\R142.olean",
+        "sha256": "a024bf98264b698a878a7be9c7750b2e68b55f7474f81e2aef09f0b32aac9d65",
+        "bytes": 900360,
+        "mtime_ns": 1791194117422804100,
+        "native_stat_file_id": 3377699722284363,
+        "relative_file": "RamseyCert\\Chunk\\R142.olean"
+      },
+      "exact_proposed_plain_copy_count": 36,
+      "proposed_total_logical_bytes": 39121408,
+      "selected_requested_declarations": [
+        "RamseyCert.nbOKR_142",
+        "RamseyCert.mkOKR_142",
+        "RamseyCert.tR_142"
+      ],
+      "proposed_action_status": "READ_ONLY_PROPOSAL_NOT_COPIED_NOT_INVOKED"
+    }
+  ],
+  "recommended_minimal_ordinary_cli_preserving_repair": {
+    "status": "FUTURE_SEPARATELY_REVIEWED_CONTROLLER_AND_EXPLICIT_ROOT_APPROVAL_REQUIRED",
+    "source_and_canonical_updates": false,
+    "B_C_original_output_updates": false,
+    "new_roots": "Create one fresh audit-provider-lib root for each variant under a newly named isolated retry directory. Plain-copy exactly common35 plus that variant isolated .olean, retaining module-relative paths.",
+    "no_overwrite_alias_or_chunk_promotion": true,
+    "LEAN_PATH": "One complete audit-provider-lib root first, followed by exact original official roots (omit canonical stage from this synthetic audit path to make provider identity unambiguous).",
+    "CLI": "Retain ordinary direct Lean -j2, original D flags, same synthetic #print axioms source and own audit cwd. No --incr-load, --incr-save, --setup, trust alteration or new source proof execution.",
+    "qualification_requirements": [
+      "Require exact prior source-load and runtime/source-role qualification receipts and root approval.",
+      "Rehash donor sources and compiled roles, assert exact36 source-backed mappings and no unexpected roles.",
+      "Copy bytes with exclusive target creation; ensure all target roles SHA/size equality, no links and distinct target identities.",
+      "Check exact source-closed custom prerequisites and original official provider roots.",
+      "Rehash donors and targets after audits; preserve old failed receipt/logs and require actual six unique printed classifications before any continuation.",
+      "Recheck actual updated whole lease/other dispatcher exit and restored root-owned hold; no audit while active A000 controller remains."
+    ]
+  },
+  "alternative_not_selected": "Lean --setup importArts can map exact module artifacts directly (Environment.lean bypasses search on mapped modules), but would add an audit operational option/schema review; an isolated complete plain-copy root preserves the previously reviewed ordinary CLI and trust options.",
+  "review_history": "Earlier independent fda code review checked cwd containment but missed this package-root shadowing. This additive diagnosis preserves that dated review and the actual import failure rather than relabelling it successful.",
+  "operations_performed": {
+    "read_sources_and_completed_metadata": true,
+    "hash_small_common_source_and_output_set": true,
+    "new_compiler_or_runner_import": false,
+    "provider_copy_or_alias": false,
+    "canonical_B_C_or_failed_receipt_mutation": false,
+    "hold_lease_or_active_A000_input_mutation": false
+  }
+}

@@ -1,0 +1,602 @@
+{
+  "id": "sakana-erdos21-sharp-residual",
+  "entrant": "E02",
+  "version": "4.34.1",
+  "mathlib_pin": "d13f23b723b8a846827a245b89c10fc7d3f11612",
+  "source_dir": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos21-sharp-residual",
+  "modules": [
+    {
+      "module": "OpHack.Erdos21.AuthorBaseline",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos21-sharp-residual\\OpHack\\Erdos21\\AuthorBaseline.lean",
+      "source": "Reproduction_Sources/erdos21-sharp-residual/OpHack/Erdos21/AuthorBaseline.lean",
+      "sha256": "83dc7618ab944ad2792771662b64dedccf6dd810cd482764b24be3d3d9988f62"
+    },
+    {
+      "module": "OpHack.Erdos21.PackingConfig",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos21-sharp-residual\\OpHack\\Erdos21\\PackingConfig.lean",
+      "source": "Reproduction_Sources/erdos21-sharp-residual/OpHack/Erdos21/PackingConfig.lean",
+      "sha256": "68a389cf824d13b7d1279e689c08bfdafef6c46dfe2150a8e75cd9efa0607d2f"
+    },
+    {
+      "module": "OpHack.Erdos21.ColoredLinks",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos21-sharp-residual\\OpHack\\Erdos21\\ColoredLinks.lean",
+      "source": "Reproduction_Sources/erdos21-sharp-residual/OpHack/Erdos21/ColoredLinks.lean",
+      "sha256": "95394d0160ff0c00ab97105c9142e9e1ee5df7b7340243ac3ff04cebfa959e1c"
+    },
+    {
+      "module": "OpHack.Erdos21.PackingBounds",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos21-sharp-residual\\OpHack\\Erdos21\\PackingBounds.lean",
+      "source": "Reproduction_Sources/erdos21-sharp-residual/OpHack/Erdos21/PackingBounds.lean",
+      "sha256": "f2cafc932b352bdc785bf666d0365a1fce09378110538d486ea72b88fcf6100e"
+    },
+    {
+      "module": "OpHack.Erdos21.PackingArithmetic",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos21-sharp-residual\\OpHack\\Erdos21\\PackingArithmetic.lean",
+      "source": "Reproduction_Sources/erdos21-sharp-residual/OpHack/Erdos21/PackingArithmetic.lean",
+      "sha256": "7470024716aeb84d55ac3a7c3f3c0cdd32bd2d68aeded0b5548fc177b42d7aa0"
+    },
+    {
+      "module": "OpHack.Erdos21.PackingGraphs",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos21-sharp-residual\\OpHack\\Erdos21\\PackingGraphs.lean",
+      "source": "Reproduction_Sources/erdos21-sharp-residual/OpHack/Erdos21/PackingGraphs.lean",
+      "sha256": "d4f44a72e3ee0c9fafd6c411c71f9f63cfc319b4508c38627acc6cb1d6a65d8c"
+    },
+    {
+      "module": "OpHack.Erdos21.SmallPackings",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos21-sharp-residual\\OpHack\\Erdos21\\SmallPackings.lean",
+      "source": "Reproduction_Sources/erdos21-sharp-residual/OpHack/Erdos21/SmallPackings.lean",
+      "sha256": "a0a03ab38e3c6fcadc87dd9ec9fc743513a671b7b45bf84912e1a1fa44b4055d"
+    },
+    {
+      "module": "OpHack.Erdos21.ColoredStructure",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos21-sharp-residual\\OpHack\\Erdos21\\ColoredStructure.lean",
+      "source": "Reproduction_Sources/erdos21-sharp-residual/OpHack/Erdos21/ColoredStructure.lean",
+      "sha256": "ccabebcbc26ff0f72877b8fa2c91f52f107caa350c8392fdfcfd445920689ecc"
+    },
+    {
+      "module": "OpHack.Erdos21.PackingStructure",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos21-sharp-residual\\OpHack\\Erdos21\\PackingStructure.lean",
+      "source": "Reproduction_Sources/erdos21-sharp-residual/OpHack/Erdos21/PackingStructure.lean",
+      "sha256": "14f8435e2e5e1108e8279c303be62b9ba05b357da7e567a09bbfd31dec16ca64"
+    },
+    {
+      "module": "OpHack.Erdos21.PackingFiveNine",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos21-sharp-residual\\OpHack\\Erdos21\\PackingFiveNine.lean",
+      "source": "Reproduction_Sources/erdos21-sharp-residual/OpHack/Erdos21/PackingFiveNine.lean",
+      "sha256": "0447d11c42a677405cbf7610b972429d6469215dbb3c2863b7f425280164db5e"
+    },
+    {
+      "module": "OpHack.Erdos21.ColoredSeven",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos21-sharp-residual\\OpHack\\Erdos21\\ColoredSeven.lean",
+      "source": "Reproduction_Sources/erdos21-sharp-residual/OpHack/Erdos21/ColoredSeven.lean",
+      "sha256": "feaeece467a677f8b51c71bebd90abdad20e1b7d4f8e1a2e45e9043a23df2340"
+    },
+    {
+      "module": "OpHack.Erdos21.PackingSevenThree",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos21-sharp-residual\\OpHack\\Erdos21\\PackingSevenThree.lean",
+      "source": "Reproduction_Sources/erdos21-sharp-residual/OpHack/Erdos21/PackingSevenThree.lean",
+      "sha256": "79080cced9a08f345cfbc5a750651785c293e24c214d66c185d2851c3a939dd8"
+    },
+    {
+      "module": "OpHack.Erdos21.PackingSevenFour",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos21-sharp-residual\\OpHack\\Erdos21\\PackingSevenFour.lean",
+      "source": "Reproduction_Sources/erdos21-sharp-residual/OpHack/Erdos21/PackingSevenFour.lean",
+      "sha256": "d17401255cd201514ec4dd217a6b24f050bab24f22b6163633e063795c1939e6"
+    },
+    {
+      "module": "OpHack.Erdos21.PackingBarrier",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos21-sharp-residual\\OpHack\\Erdos21\\PackingBarrier.lean",
+      "source": "Reproduction_Sources/erdos21-sharp-residual/OpHack/Erdos21/PackingBarrier.lean",
+      "sha256": "2f24b2df6d1b100a6d85fffb0428042bb38c76a8dab0dd728b3ecadafc14da17"
+    },
+    {
+      "module": "OpHack.Erdos21.LinkCounts",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos21-sharp-residual\\OpHack\\Erdos21\\LinkCounts.lean",
+      "source": "Reproduction_Sources/erdos21-sharp-residual/OpHack/Erdos21/LinkCounts.lean",
+      "sha256": "72f600f59db3b58ee97affd877d84365a92ccacb3ebce2dc9745da4949105d52"
+    },
+    {
+      "module": "OpHack.Erdos21.Peeling",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos21-sharp-residual\\OpHack\\Erdos21\\Peeling.lean",
+      "source": "Reproduction_Sources/erdos21-sharp-residual/OpHack/Erdos21/Peeling.lean",
+      "sha256": "2dfbf9c9f332ac43556945464722c2a1446becf7942fbd62acd35bcb4c7a2612"
+    },
+    {
+      "module": "OpHack.Erdos21.SharpEndpoint",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos21-sharp-residual\\OpHack\\Erdos21\\SharpEndpoint.lean",
+      "source": "Reproduction_Sources/erdos21-sharp-residual/OpHack/Erdos21/SharpEndpoint.lean",
+      "sha256": "181861a7800c55a00d7cffd05536029d0e50001abb7c5b26b63ed0ff78b18d01"
+    },
+    {
+      "module": "OpHack.Erdos21.Main",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos21-sharp-residual\\OpHack\\Erdos21\\Main.lean",
+      "source": "Reproduction_Sources/erdos21-sharp-residual/OpHack/Erdos21/Main.lean",
+      "sha256": "9314ae7ba95b6fd9922ccfea882f1d33a6c11c9a40d750109014c8184ab7e414"
+    }
+  ],
+  "endpoints": [
+    "ErdosLovasz.residual_cover_bound_sharp",
+    "ErdosLovasz.cover_bound_sharp",
+    "ErdosLovasz.erdos_lovasz_lower_three",
+    "ErdosLovasz.erdos_lovasz_lower_three_sub",
+    "ErdosLovasz.erdos_lovasz_eight_lower"
+  ],
+  "roots": [
+    "OpHack.Erdos21.Main"
+  ],
+  "audit_modules": [
+    "FreshAudit1.lean"
+  ],
+  "lean_options": {},
+  "static_review_contexts": [],
+  "status": "PASS",
+  "builds": [
+    {
+      "module": "OpHack.Erdos21.AuthorBaseline",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+        "-j2",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "OpHack\\Erdos21\\AuthorBaseline.olean",
+        "OpHack\\Erdos21\\AuthorBaseline.lean"
+      ],
+      "seconds": 210.67,
+      "exit": 0,
+      "stdout": "OpHack\\Erdos21\\AuthorBaseline.lean:157:40: warning: Variable name `he` is not explicitly referenced.\n\nHint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:\n  [apply] _he\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\nOpHack\\Erdos21\\AuthorBaseline.lean:157:58: warning: Variable name `hf` is not explicitly referenced.\n\nHint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:\n  [apply] _hf\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\nOpHack\\Erdos21\\AuthorBaseline.lean:186:17: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.\nIf you'd rather continue using `push_neg` in your project, you can implement it as follows:\n```\nopen Lean.Parser.Tactic in\nmacro \"push_neg\" cfg:optConfig loc:(location)? : tactic =>\n  `(tactic| push $cfg:optConfig Not $[$loc]?)\n```\nOpHack\\Erdos21\\AuthorBaseline.lean:346:85: warning: This simp argument is unused:\n  add_assoc\n\nHint: Omit it from the simp argument list.\n  [apply] simp_all +decide [add_comm, add_left_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\nOpHack\\Erdos21\\AuthorBaseline.lean:348:85: warning: This simp argument is unused:\n  add_assoc\n\nHint: Omit it from the simp argument list.\n  [apply] simp_all +decide [add_comm, add_left_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\nOpHack\\Erdos21\\AuthorBaseline.lean:443:22: warning: Variable name `hu` is not explicitly referenced.\n\nHint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:\n  [apply] _hu\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\nOpHack\\Erdos21\\AuthorBaseline.lean:483:73: warning: `Finset.le_iff_subset` has been deprecated: This is now a syntactic equality\nOpHack\\Erdos21\\AuthorBaseline.lean:536:21: warning: This simp argument is unused:\n  hv\n\nHint: Omit it from the simp argument list.\n  [apply] simp\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\nOpHack\\Erdos21\\AuthorBaseline.lean:542:65: warning: This simp argument is unused:\n  Finset.subset_iff\n\nHint: Omit it from the simp argument list.\n  [apply] simp_all +decide\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\nOpHack\\Erdos21\\AuthorBaseline.lean:616:10: warning: This simp argument is unused:\n  hx_card\n\nHint: Omit it from the simp argument list.\n  [apply] simp\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\nOpHack\\Erdos21\\AuthorBaseline.lean:996:26: warning: Variable name `hr` is not explicitly referenced.\n\nHint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:\n  [apply] _hr\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\n'ErdosLovasz.lemma4' depends on axioms: [propext, Classical.choice, Quot.sound]\n'ErdosLovasz.theorem1' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 4024356864,
+      "stop_reason": null,
+      "owned_process_stop_output": null
+    },
+    {
+      "module": "OpHack.Erdos21.PackingConfig",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+        "-j2",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "OpHack\\Erdos21\\PackingConfig.olean",
+        "OpHack\\Erdos21\\PackingConfig.lean"
+      ],
+      "seconds": 15.09,
+      "exit": 0,
+      "stdout": "",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 5091274752,
+      "stop_reason": null,
+      "owned_process_stop_output": null
+    },
+    {
+      "module": "OpHack.Erdos21.ColoredLinks",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+        "-j2",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "OpHack\\Erdos21\\ColoredLinks.olean",
+        "OpHack\\Erdos21\\ColoredLinks.lean"
+      ],
+      "seconds": 23.56,
+      "exit": 0,
+      "stdout": "OpHack\\Erdos21\\ColoredLinks.lean:89:5: warning: Variable name `he` is not explicitly referenced.\n\nHint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:\n  [apply] _he\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\nOpHack\\Erdos21\\ColoredLinks.lean:89:23: warning: Variable name `hf` is not explicitly referenced.\n\nHint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:\n  [apply] _hf\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\nOpHack\\Erdos21\\ColoredLinks.lean:213:17: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.\nIf you'd rather continue using `push_neg` in your project, you can implement it as follows:\n```\nopen Lean.Parser.Tactic in\nmacro \"push_neg\" cfg:optConfig loc:(location)? : tactic =>\n  `(tactic| push $cfg:optConfig Not $[$loc]?)\n```\n",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 5510537216,
+      "stop_reason": null,
+      "owned_process_stop_output": null
+    },
+    {
+      "module": "OpHack.Erdos21.PackingBounds",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+        "-j2",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "OpHack\\Erdos21\\PackingBounds.olean",
+        "OpHack\\Erdos21\\PackingBounds.lean"
+      ],
+      "seconds": 32.89,
+      "exit": 0,
+      "stdout": "",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 5666328576,
+      "stop_reason": null,
+      "owned_process_stop_output": null
+    },
+    {
+      "module": "OpHack.Erdos21.PackingArithmetic",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+        "-j2",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "OpHack\\Erdos21\\PackingArithmetic.olean",
+        "OpHack\\Erdos21\\PackingArithmetic.lean"
+      ],
+      "seconds": 29.98,
+      "exit": 0,
+      "stdout": "",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 5873377280,
+      "stop_reason": null,
+      "owned_process_stop_output": null
+    },
+    {
+      "module": "OpHack.Erdos21.PackingGraphs",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+        "-j2",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "OpHack\\Erdos21\\PackingGraphs.olean",
+        "OpHack\\Erdos21\\PackingGraphs.lean"
+      ],
+      "seconds": 15.25,
+      "exit": 0,
+      "stdout": "",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 6011273216,
+      "stop_reason": null,
+      "owned_process_stop_output": null
+    },
+    {
+      "module": "OpHack.Erdos21.SmallPackings",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+        "-j2",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "OpHack\\Erdos21\\SmallPackings.olean",
+        "OpHack\\Erdos21\\SmallPackings.lean"
+      ],
+      "seconds": 16.05,
+      "exit": 0,
+      "stdout": "OpHack\\Erdos21\\SmallPackings.lean:39:0: warning: automatically included section variable(s) unused in theorem `ErdosLovasz.SmallPackings.three_dvd_degree_of_clique_partition`:\n  [DecidableEq I]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [DecidableEq I] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`\nOpHack\\Erdos21\\SmallPackings.lean:83:0: warning: automatically included section variable(s) unused in theorem `ErdosLovasz.SmallPackings.subset_membership_union`:\n  [DecidableEq I]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [DecidableEq I] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`\n",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 6086979584,
+      "stop_reason": null,
+      "owned_process_stop_output": null
+    },
+    {
+      "module": "OpHack.Erdos21.ColoredStructure",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+        "-j2",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "OpHack\\Erdos21\\ColoredStructure.olean",
+        "OpHack\\Erdos21\\ColoredStructure.lean"
+      ],
+      "seconds": 13.95,
+      "exit": 0,
+      "stdout": "",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 6173347840,
+      "stop_reason": null,
+      "owned_process_stop_output": null
+    },
+    {
+      "module": "OpHack.Erdos21.PackingStructure",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+        "-j2",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "OpHack\\Erdos21\\PackingStructure.olean",
+        "OpHack\\Erdos21\\PackingStructure.lean"
+      ],
+      "seconds": 11.97,
+      "exit": 0,
+      "stdout": "",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 6227628032,
+      "stop_reason": null,
+      "owned_process_stop_output": null
+    },
+    {
+      "module": "OpHack.Erdos21.PackingFiveNine",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+        "-j2",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "OpHack\\Erdos21\\PackingFiveNine.olean",
+        "OpHack\\Erdos21\\PackingFiveNine.lean"
+      ],
+      "seconds": 19.98,
+      "exit": 0,
+      "stdout": "",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 6268153856,
+      "stop_reason": null,
+      "owned_process_stop_output": null
+    },
+    {
+      "module": "OpHack.Erdos21.ColoredSeven",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+        "-j2",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "OpHack\\Erdos21\\ColoredSeven.olean",
+        "OpHack\\Erdos21\\ColoredSeven.lean"
+      ],
+      "seconds": 12.88,
+      "exit": 0,
+      "stdout": "",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 6314299392,
+      "stop_reason": null,
+      "owned_process_stop_output": null
+    },
+    {
+      "module": "OpHack.Erdos21.PackingSevenThree",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+        "-j2",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "OpHack\\Erdos21\\PackingSevenThree.olean",
+        "OpHack\\Erdos21\\PackingSevenThree.lean"
+      ],
+      "seconds": 19.23,
+      "exit": 0,
+      "stdout": "",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 6327922688,
+      "stop_reason": null,
+      "owned_process_stop_output": null
+    },
+    {
+      "module": "OpHack.Erdos21.PackingSevenFour",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+        "-j2",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "OpHack\\Erdos21\\PackingSevenFour.olean",
+        "OpHack\\Erdos21\\PackingSevenFour.lean"
+      ],
+      "seconds": 12.34,
+      "exit": 0,
+      "stdout": "OpHack\\Erdos21\\PackingSevenFour.lean:29:4: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.\nIf you'd rather continue using `push_neg` in your project, you can implement it as follows:\n```\nopen Lean.Parser.Tactic in\nmacro \"push_neg\" cfg:optConfig loc:(location)? : tactic =>\n  `(tactic| push $cfg:optConfig Not $[$loc]?)\n```\n",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 6330699776,
+      "stop_reason": null,
+      "owned_process_stop_output": null
+    },
+    {
+      "module": "OpHack.Erdos21.PackingBarrier",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+        "-j2",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "OpHack\\Erdos21\\PackingBarrier.olean",
+        "OpHack\\Erdos21\\PackingBarrier.lean"
+      ],
+      "seconds": 14.25,
+      "exit": 0,
+      "stdout": "",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 6412365824,
+      "stop_reason": null,
+      "owned_process_stop_output": null
+    },
+    {
+      "module": "OpHack.Erdos21.LinkCounts",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+        "-j2",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "OpHack\\Erdos21\\LinkCounts.olean",
+        "OpHack\\Erdos21\\LinkCounts.lean"
+      ],
+      "seconds": 30.5,
+      "exit": 0,
+      "stdout": "",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 6407204864,
+      "stop_reason": null,
+      "owned_process_stop_output": null
+    },
+    {
+      "module": "OpHack.Erdos21.Peeling",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+        "-j2",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "OpHack\\Erdos21\\Peeling.olean",
+        "OpHack\\Erdos21\\Peeling.lean"
+      ],
+      "seconds": 41.34,
+      "exit": 0,
+      "stdout": "OpHack\\Erdos21\\Peeling.lean:48:41: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.\nIf you'd rather continue using `push_neg` in your project, you can implement it as follows:\n```\nopen Lean.Parser.Tactic in\nmacro \"push_neg\" cfg:optConfig loc:(location)? : tactic =>\n  `(tactic| push $cfg:optConfig Not $[$loc]?)\n```\n",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 6563110912,
+      "stop_reason": null,
+      "owned_process_stop_output": null
+    },
+    {
+      "module": "OpHack.Erdos21.SharpEndpoint",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+        "-j2",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "OpHack\\Erdos21\\SharpEndpoint.olean",
+        "OpHack\\Erdos21\\SharpEndpoint.lean"
+      ],
+      "seconds": 36.55,
+      "exit": 0,
+      "stdout": "",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 6867476480,
+      "stop_reason": null,
+      "owned_process_stop_output": null
+    },
+    {
+      "module": "OpHack.Erdos21.Main",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+        "-j2",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "OpHack\\Erdos21\\Main.olean",
+        "OpHack\\Erdos21\\Main.lean"
+      ],
+      "seconds": 32.2,
+      "exit": 0,
+      "stdout": "ErdosLovasz.residual_cover_bound_sharp.{u_1} {V : Type u_1} [DecidableEq V] (r : \u2115) (J : Finset (Finset V))\n  (huni : ErdosLovasz.IsUniform r J) (hint : ErdosLovasz.Intersecting J)\n  (hdeg : \u2200 (v : V), ErdosLovasz.edgeDeg J v \u2264 3) : 4 * ErdosLovasz.coverNum J \u2264 J.card + r + 3\nErdosLovasz.erdos_lovasz_lower_three.{u_1} {V : Type u_1} [DecidableEq V] (r : \u2115) (H : Finset (Finset V))\n  (huni : ErdosLovasz.IsUniform r H) (hint : ErdosLovasz.Intersecting H) (hcover : ErdosLovasz.coverNum H = r) :\n  3 * r \u2264 H.card + 3\n'ErdosLovasz.ThreeLinkPacking.support_barrier' depends on axioms: [propext, Classical.choice, Quot.sound]\n'ErdosLovasz.residual_cover_bound_sharp' depends on axioms: [propext, Classical.choice, Quot.sound]\n'ErdosLovasz.cover_bound_sharp' depends on axioms: [propext, Classical.choice, Quot.sound]\n'ErdosLovasz.erdos_lovasz_lower_three' depends on axioms: [propext, Classical.choice, Quot.sound]\n'ErdosLovasz.erdos_lovasz_eight_lower' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 7109660672,
+      "stop_reason": null,
+      "owned_process_stop_output": null
+    },
+    {
+      "module": "FreshAudit1.lean",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+        "-j2",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "FreshAudit1.olean",
+        "FreshAudit1.lean"
+      ],
+      "seconds": 28.55,
+      "exit": 0,
+      "stdout": "'ErdosLovasz.residual_cover_bound_sharp' depends on axioms: [propext, Classical.choice, Quot.sound]\n'ErdosLovasz.cover_bound_sharp' depends on axioms: [propext, Classical.choice, Quot.sound]\n'ErdosLovasz.erdos_lovasz_lower_three' depends on axioms: [propext, Classical.choice, Quot.sound]\n'ErdosLovasz.erdos_lovasz_lower_three_sub' depends on axioms: [propext, Classical.choice, Quot.sound]\n'ErdosLovasz.erdos_lovasz_eight_lower' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "is_endpoint_audit": true,
+      "minimum_free_bytes": 7296974848,
+      "stop_reason": null,
+      "owned_process_stop_output": null
+    }
+  ],
+  "compiler_version": "Lean (version 4.34.1, x86_64-w64-windows-gnu, commit 5045d0056413266e57c625dcd7c365b10e377c52, Release)",
+  "compilation_order": [
+    "OpHack.Erdos21.AuthorBaseline",
+    "OpHack.Erdos21.PackingConfig",
+    "OpHack.Erdos21.ColoredLinks",
+    "OpHack.Erdos21.PackingBounds",
+    "OpHack.Erdos21.PackingArithmetic",
+    "OpHack.Erdos21.PackingGraphs",
+    "OpHack.Erdos21.SmallPackings",
+    "OpHack.Erdos21.ColoredStructure",
+    "OpHack.Erdos21.PackingStructure",
+    "OpHack.Erdos21.PackingFiveNine",
+    "OpHack.Erdos21.ColoredSeven",
+    "OpHack.Erdos21.PackingSevenThree",
+    "OpHack.Erdos21.PackingSevenFour",
+    "OpHack.Erdos21.PackingBarrier",
+    "OpHack.Erdos21.LinkCounts",
+    "OpHack.Erdos21.Peeling",
+    "OpHack.Erdos21.SharpEndpoint",
+    "OpHack.Erdos21.Main"
+  ],
+  "started_utc": "2026-10-04T21:19:08Z",
+  "failed_invocations": [],
+  "selected_audit_axiom_review": [
+    {
+      "endpoint": "ErdosLovasz.residual_cover_bound_sharp",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    },
+    {
+      "endpoint": "ErdosLovasz.cover_bound_sharp",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    },
+    {
+      "endpoint": "ErdosLovasz.erdos_lovasz_lower_three",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    },
+    {
+      "endpoint": "ErdosLovasz.erdos_lovasz_lower_three_sub",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    },
+    {
+      "endpoint": "ErdosLovasz.erdos_lovasz_eight_lower",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    }
+  ],
+  "resource_settings": {
+    "LEAN_NUM_THREADS": 2,
+    "lean_shell_worker_flag": "-j2",
+    "maxHeartbeats": 0,
+    "maxRecDepth": 100000
+  },
+  "finished_utc": "2026-10-04T21:29:25Z"
+}

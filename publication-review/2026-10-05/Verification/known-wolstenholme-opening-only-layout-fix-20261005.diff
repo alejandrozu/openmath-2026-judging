@@ -1,0 +1,21 @@
+--- build_package.before.ebb9d84e743f7c272122e5e13bad5ace1f855c232fabefb73787e5bd2f3becfb
++++ build_package.WolstenholmeOpeningOnly.d60df020bfe9e6f820f9cb17ece41d3520457db073311682027a1537e7ff35cb
+@@ -253,6 +253,10 @@
+ known.append(block('p','This appendix preserves '+str(inventory['row_count'])+' lower-level formalization, baseline, unfinished and administrative records. These are evidence states, not '+str(inventory['row_count'])+' accepted theorems. Entries related to the original-results volume are cross-references rather than duplicate scientific claims. The source snapshot is October 3; the fresh verification ledger and October 4 decisions supersede older status language. Luke/Madhan’s newly recovered packet is treated in the original-results review.'))
+ for row_index,row in enumerate(inventory['rows']):
+     keep_final_record=row_index==len(inventory['rows'])-1
++    keep_wolstenholme_opening=row['id']=='E02-m2-research-wolstenholme'
++    if keep_wolstenholme_opening:
++        assert row.get('claim'), 'The reviewed opening group requires its first claim'
++        known.append(block('keep_start',''))
+     if keep_final_record:known.append(block('keep_start',''))
+     known.append(block('h2',row['id']+' — '+row['title']))
+     known.append(block('small','Contributors: '+', '.join(row.get('authors',[]))+' | Family: '+row.get('family_id','unassigned')))
+@@ -262,6 +266,7 @@
+             if keep_scoped_status:known.append(block('keep_start',''))
+             known.append(block('p','**'+label+':** '+row[key]))
+             if keep_scoped_status:known.append(block('keep_end',''))
++            if keep_wolstenholme_opening and key=='claim':known.append(block('keep_end',''))
+     if row.get('source_url'):known.append(block('small',row['source_url']))
+     if keep_final_record:known.append(block('keep_end',''))
+ emit('02_Known_results_and_formalizations.pdf',chunks[0],known,'OpenMath 2026 - known results and reusable formalizations')

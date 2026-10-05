@@ -1,3 +1,5 @@
+> Historical October 3 coverage snapshot. For the recovered late packets, fresh verification and amended judging proposals, use the [October 5 publication-review hub](../publication-review/README.md).
+
 # Coverage and source gaps
 
 This is a complete publication snapshot of the selected, collected OpenMath material, not a guarantee that every entrant delivered a packet or that private/unexposed hill artifacts were accessible.

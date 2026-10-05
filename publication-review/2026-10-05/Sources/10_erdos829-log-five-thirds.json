@@ -1,0 +1,211 @@
+{
+  "title": "A log(5/3) uniform bound for representations as two nonnegative cubes",
+  "blocks": [
+    {
+      "type": "title",
+      "text": "A log(5/3) uniform bound for representations as two nonnegative cubes"
+    },
+    {
+      "type": "subtitle",
+      "text": "Provisional mathematical authors: Rachel Teo, Wenyi Wang, Hamdi Abderrahmene"
+    },
+    {
+      "type": "small",
+      "text": "Judging and evaluation record: the submissions discussed in this document have been judged and evaluated by Alejandro Zarzuelo Urdiales for OpenMath 2026. This dated review records the stated verification, classification and unresolved holds; it is a preliminary evaluation rather than a signed award decision."
+    },
+    {
+      "type": "small",
+      "text": "Event provenance: OpenMath 2026 ran 27 September–2 October 2026 with worldwide online participation. Detailed organizer listings specify Harvard Innovation Labs for the 27 September in-person event; the OpenMath programme advertises a hybrid kickoff at MIT. Sundai identifies its Harvard/MIT community. Organizer sources: https://rsihouse.ai/openmath ; https://luma.com/yzp9abvr ; https://www.sundai.club/events/boston/recursive-learning-hack-with-harvard-innovation-labs"
+    },
+    {
+      "type": "small",
+      "text": "Rachel Teo — Sakana AI."
+    },
+    {
+      "type": "small",
+      "text": "Wenyi Wang — Sakana AI."
+    },
+    {
+      "type": "small",
+      "text": "Hamdi Abderrahmene — Sakana AI."
+    },
+    {
+      "type": "small",
+      "text": "Affiliations follow the recorded author declarations or public institutional/profile sources. Preferred author names, author order and publication affiliations await author review. This editorial compilation does not establish anthology coauthorship."
+    },
+    {
+      "type": "subtitle",
+      "text": "Original-result working manuscript | OpenMath 2026 | 5 October 2026"
+    },
+    {
+      "type": "small",
+      "text": "Central source and adjudication archive: https://github.com/alejandrozu/openmath-2026-judging"
+    },
+    {
+      "type": "h2",
+      "text": "Abstract"
+    },
+    {
+      "type": "p",
+      "text": "For ordered nonnegative representations x³+y³=n, the formal endpoint gives the eventual bound exp((log(5/3)+ε)log n/log log n). The entrant-supplied ordinary proof optimizes the same weighted ternary coding method to coefficient C=log3−H((2−√2)/3)−((2−√2)/3)log2≈0.4695030882. A gcd transfer and prime cutoff remove primitive and cube-free restrictions. The stronger ordinary endpoint is not asserted as Lean-checked."
+    },
+    {
+      "type": "h2",
+      "text": "Count and uniform theorem"
+    },
+    {
+      "type": "p",
+      "text": "Let R(n)=#{(x,y)∈ℕ²:x³+y³=n}, with ordered pairs and zero coordinates included. For every ε>0 there is N such that R(n)≤exp((log(5/3)+ε)log n/log log n) for every n≥N. No cubefree-target restriction or gcd-one restriction appears in the final theorem."
+    },
+    {
+      "type": "p",
+      "text": "The coefficient log(5/3)≈0.510826 improves the earlier same-family log(7/4)≈0.559616 endpoint. The located approximately0.556477 comparison applies only to cubefree targets. It therefore cannot be substituted as a stronger all-target theorem. The result still falls far short of a fixed polylogarithmic bound, which remains the original target."
+    },
+    {
+      "type": "h2",
+      "text": "Primitive ratios as a separated ternary code"
+    },
+    {
+      "type": "p",
+      "text": "For a primitive positive solution, the ratio of its coordinates is a unit modulo the relevant prime powers, with cube equal to minus one. The unit cube-root lemma gives at most three choices at each prime-power coordinate, including the ramified prime three. Distinct solutions are encoded by distinct ternary words."
+    },
+    {
+      "type": "p",
+      "text": "If two encoded words agree at selected prime-power coordinates, those moduli divide a cross determinant of the two solutions. An upper bound for the determinant and the target-size product force a weighted separation property. This converts an arithmetic representation problem into a weighted code problem without assuming the desired representation bound."
+    },
+    {
+      "type": "p",
+      "text": "Elias/Plotkin localization bounds the size of a separated code in a weighted ball. An exact binomial block certificate uses blocks of500 coordinates and support90, producing the rational base5/3 with an explicit finite multiplicative constant. The constant is harmless for the eventual leading exponent, but its proof is retained rather than replaced by a decimal numerical guess."
+    },
+    {
+      "type": "h2",
+      "text": "From primitive pairs to the canonical count"
+    },
+    {
+      "type": "p",
+      "text": "A general positive pair has gcd d and a primitive pair representing n/d³. The source proves the exact gcd-fibre identity and sums over positive cube divisors d. Coordinatewise multiplicative weights bound this sum uniformly across targets, including those with repeated prime factors."
+    },
+    {
+      "type": "p",
+      "text": "The prime cutoff and elementary log budgets control the resulting product. They reuse background modules from the kσ(k) development, while the cubic encoding and local-factor estimates are specific to this result. Finally at most two boundary pairs have a zero coordinate, and their contribution is absorbed. A semantic bridge identifies the resulting count with the original ordered cube-value representation definition; it does not import the open conjecture as a hypothesis."
+    },
+    {
+      "type": "h2",
+      "text": "Verification, prior work and manuscript obligations"
+    },
+    {
+      "type": "p",
+      "text": "The source contains33 proof modules and two semantic/axiom audit modules in the recorded replay. Some arithmetic files were reconstructed after a workspace replacement and are clearly labelled variants; the dated fresh archived receipt supersedes their stale pending comments, without pretending the missing historical bytes were recovered. The final transitive axioms in those records are standard only."
+    },
+    {
+      "type": "p",
+      "text": "Merikoski's ratio-root/determinant methods and classical coding/entropy bounds must be credited. The proposed new delta is the exact 5/3 formal weighted-code constant, the optimized ordinary coefficient 0.4695030882…, and their all-target transfer. This is a quantitative partial-bound paper, not a solution of Erdős829 or a signed-integer representation theorem. A human exposition should display the weighted-distance condition, the finite block inequality and the gcd factorization so that the formal chain remains intelligible."
+    },
+    {
+      "type": "h2",
+      "text": "Fresh independent verification of the displayed finite/formal scope"
+    },
+    {
+      "type": "p",
+      "text": "Fresh independent replay completed 2026-10-05T01:22:59Z: all 31 frozen authored sources compiled, including the archived entrant-delivered reconstructed variants, under exact Lean 4.33.1 and Mathlib 0df444a360eaa60ab8c11dca51a86af692955474. Both actual requested axiom prints, canonicalCubeCount_eventually_exp and canonicalCubeCount_eventual_threshold, are present and contain only propext, Classical.choice and Quot.sound, with no admitted, native-evaluation or unknown axioms. This verifies the displayed all-target log(5/3) endpoint; the sharper ordinary coefficient .46950308823856934 remains a separately explained source result. The replay proves the delivered reconstructed proof, without claiming recovery of the first lost source bytes. Receipt: Verification/sakana-erdos829-log-five-thirds-fresh-build.json."
+    },
+    {
+      "type": "small",
+      "text": "This short manuscript records the construction and selected endpoints. The companion Original results anthology contains the extended ordinary proof exposition and its explicitly stated premises; the preserved Lean source remains the complete formal proof record."
+    },
+    {
+      "type": "h2",
+      "text": "Verification and reproducibility"
+    },
+    {
+      "type": "p",
+      "text": "Fresh execution: sakana-erdos829-log-five-thirds: PASS; 31/31 custom modules compiled successfully; receipt Verification/sakana-erdos829-log-five-thirds-fresh-build.json. Compiler pins, source hashes and endpoint axiom outputs are in Verification. Historical receipts and finite checks do not replace fresh replay."
+    },
+    {
+      "type": "keep_start",
+      "text": ""
+    },
+    {
+      "type": "h2",
+      "text": "Erdos829FiveThirds.canonicalCubeCount_eventually_exp"
+    },
+    {
+      "type": "code",
+      "text": "theorem canonicalCubeCount_eventually_exp {ε : ℝ} (hε : 0<ε) :\n    ∀ᶠ n : ℕ in atTop, (canonicalCubeCount n : ℝ) ≤\n      Real.exp ((Real.log (5/3 : ℝ)+ε)*Real.log (n : ℝ)/Real.log (Real.log (n : ℝ)))"
+    },
+    {
+      "type": "small",
+      "text": "Source: proofs/erdos829-log-five-thirds/FiveThirdsCanonical.lean:8."
+    },
+    {
+      "type": "small",
+      "text": "Source SHA-256: 51541747f8104588463d8b7b051d69692876cee605c68a2f50df9da132e6a006"
+    },
+    {
+      "type": "keep_end",
+      "text": ""
+    },
+    {
+      "type": "keep_start",
+      "text": ""
+    },
+    {
+      "type": "h2",
+      "text": "Erdos829FiveThirds.canonicalCubeCount_eventual_threshold"
+    },
+    {
+      "type": "code",
+      "text": "theorem canonicalCubeCount_eventual_threshold {ε : ℝ} (hε : 0<ε) :\n    ∃ N : ℕ, ∀ n : ℕ, N≤n → (canonicalCubeCount n : ℝ) ≤\n      Real.exp ((Real.log (5/3 : ℝ)+ε)*Real.log (n : ℝ)/Real.log (Real.log (n : ℝ)))"
+    },
+    {
+      "type": "small",
+      "text": "Source: proofs/erdos829-log-five-thirds/FiveThirdsCanonical.lean:14."
+    },
+    {
+      "type": "small",
+      "text": "Source SHA-256: 51541747f8104588463d8b7b051d69692876cee605c68a2f50df9da132e6a006"
+    },
+    {
+      "type": "reference_list",
+      "text": "Sources and attribution",
+      "items": [
+        {
+          "text": "1. www.erdosproblems.com / 829",
+          "url": "https://www.erdosproblems.com/829"
+        },
+        {
+          "text": "2. google-deepmind/formal-conjectures / 829.lean",
+          "url": "https://github.com/google-deepmind/formal-conjectures/blob/main/FormalConjectures/ErdosProblems/829.lean"
+        },
+        {
+          "text": "3. google-deepmind/formal-conjectures / Convolution.lean",
+          "url": "https://github.com/google-deepmind/formal-conjectures/blob/main/FormalConjecturesForMathlib/Combinatorics/Additive/Convolution.lean"
+        },
+        {
+          "text": "4. arXiv source: 2112.03617",
+          "url": "https://arxiv.org/html/2112.03617"
+        },
+        {
+          "text": "5. arXiv source: 2207.12487v2",
+          "url": "https://arxiv.org/html/2207.12487v2"
+        },
+        {
+          "text": "6. alejandrozu/ulam-opdp-difficulty-atlas",
+          "url": "https://github.com/alejandrozu/ulam-opdp-difficulty-atlas"
+        },
+        {
+          "text": "7. alejandrozu/openmath-2026-judging / E02-erdos829-log-five-thirds.txt",
+          "url": "https://github.com/alejandrozu/openmath-2026-judging/blob/d0ed487f487fa7ec814ff705ab55249983fe8707/OpenMath-Judging/review/entries/E02-erdos829-log-five-thirds.txt"
+        },
+        {
+          "text": "Central source and adjudication archive",
+          "url": "https://github.com/alejandrozu/openmath-2026-judging"
+        }
+      ]
+    },
+    {
+      "type": "keep_end",
+      "text": ""
+    }
+  ]
+}

@@ -1,0 +1,905 @@
+{
+  "id": "sakana-FOCUS-E3",
+  "entrant": "E02",
+  "version": "4.33.1",
+  "mathlib_pin": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "source_dir": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-FOCUS-E3",
+  "modules": [
+    {
+      "module": "R17SplitReplay",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-FOCUS-E3\\R17SplitReplay.lean",
+      "source": "Focus_Evidence/evidence/FOCUS-E3/complete-certificate/R17SplitReplay.lean",
+      "sha256": "fe2f97e19892fa7a722500188366697949929b453f87914737c525b6fc2b6531"
+    },
+    {
+      "module": "BooleanTree",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-FOCUS-E3\\BooleanTree.lean",
+      "source": "Focus_Evidence/evidence/FOCUS-E3/complete-certificate/BooleanTree.lean",
+      "sha256": "57c77b258ba002ab59742e9f4cfdc065df437bdc1098d4e14cf1c2b7defddcc4"
+    },
+    {
+      "module": "CardBridge",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-FOCUS-E3\\CardBridge.lean",
+      "source": "Focus_Evidence/evidence/FOCUS-E3/complete-certificate/CardBridge.lean",
+      "sha256": "32330d3f2268ba1d23f5e8d0db50bf1a115e85b1b8be65c3418f2b4186e1c130"
+    },
+    {
+      "module": "CyclicUpper",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-FOCUS-E3\\CyclicUpper.lean",
+      "source": "Focus_Evidence/evidence/FOCUS-E3/complete-certificate/CyclicUpper.lean",
+      "sha256": "11e5d462866219ce6d13e7cde20de92f48eaf19f16cb68480072b2664ebba8d5"
+    },
+    {
+      "module": "CombinedObstruction",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-FOCUS-E3\\CombinedObstruction.lean",
+      "source": "Focus_Evidence/evidence/FOCUS-E3/complete-certificate/CombinedObstruction.lean",
+      "sha256": "3bec4ca43c026c51aa6b073fb640197cfeeac2060337dcbb1925d996cc918c13"
+    },
+    {
+      "module": "CyclicSharpness",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-FOCUS-E3\\CyclicSharpness.lean",
+      "source": "Focus_Evidence/evidence/FOCUS-E3/complete-certificate/CyclicSharpness.lean",
+      "sha256": "9264960904aa1dd2a0d428625e2a777455350d8de1edafecca4bedab9febfe38"
+    }
+  ],
+  "endpoints": [
+    "Erdos3Completion.explicit_L_witness_beats_every_cyclic_AP_free_set",
+    "Cyclic13Kernel.cyclic_four_AP_extremum_is_six",
+    "Cyclic13Kernel.cyclic4Free_card_le_six",
+    "Erdos3R17.B_card",
+    "Erdos3R17.B_Lfree"
+  ],
+  "roots": [
+    "CombinedObstruction",
+    "CyclicSharpness",
+    "CyclicUpper",
+    "R17SplitReplay"
+  ],
+  "audit_modules": [
+    "FreshAudit1.lean"
+  ],
+  "lean_options": {},
+  "static_review_contexts": [],
+  "status": "PASS",
+  "builds": [
+    {
+      "module": "R17SplitReplay",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "R17SplitReplay.olean",
+        "R17SplitReplay.lean"
+      ],
+      "seconds": 37.859,
+      "exit": 0,
+      "stdout": "'Erdos3R17.B_card' depends on axioms: [propext, Quot.sound]\n'Erdos3R17.B_Lfree' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 6191136768,
+      "stop_reason": null,
+      "started_utc": "2026-10-05T01:23:48.955050+00:00",
+      "finished_utc": "2026-10-05T01:24:26.810164+00:00",
+      "owned_process_stop_output": null,
+      "own_job_resource_receipt": {
+        "command": [
+          "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+          "-j1",
+          "-DmaxHeartbeats=0",
+          "-DmaxRecDepth=100000",
+          "-o",
+          "R17SplitReplay.olean",
+          "R17SplitReplay.lean"
+        ],
+        "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-FOCUS-E3",
+        "started_utc": "2026-10-05T01:23:48.955050+00:00",
+        "attempted": true,
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 5368709120,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 1073741824,
+          "own_job_private_bytes": 6442450944,
+          "own_process_private_bytes": 6442450944,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 3600
+        },
+        "minimum_disk_free_bytes": 6191136768,
+        "initial_system_memory_snapshot": {
+          "free_physical_bytes": 8314421248,
+          "total_physical_bytes": 34024419328,
+          "available_commit_bytes": 8966340608,
+          "total_commit_limit_bytes": 61075705856
+        },
+        "minimum_physical_available_bytes": 5603909632,
+        "minimum_available_commit_bytes": 4983717888,
+        "root_pid": 55984,
+        "own_job_assignment_before_resume": "PASS",
+        "exit": 0,
+        "job_peak_process_private_bytes": 4023390208,
+        "job_peak_aggregate_private_bytes": 4024623104,
+        "state": "PASS",
+        "finished_utc": "2026-10-05T01:24:26.810164+00:00",
+        "seconds": 37.859,
+        "polled_peak_tree_private_bytes": 4024164352,
+        "polled_peak_tree_rss_bytes": 2726563840,
+        "counter_samples": 138,
+        "observed_own_processes": {
+          "55984": {
+            "exe": "lean.exe",
+            "peak_private_bytes": 4022931456,
+            "peak_rss_bytes": 2719182848
+          },
+          "51068": {
+            "exe": "conhost.exe",
+            "peak_private_bytes": 1273856,
+            "peak_rss_bytes": 7860224
+          }
+        },
+        "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\sakana-FOCUS-E3-c880f36178d4ef9e-attempt-0.stdout.txt",
+        "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\sakana-FOCUS-E3-c880f36178d4ef9e-attempt-0.stderr.txt",
+        "stdout_sha256": "a2fb4a3de15a7820cf322e5b425c3be52cb588cb37d7c3a277cb6a1a306797ab",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_excerpt": "'Erdos3R17.B_card' depends on axioms: [propext, Quot.sound]\n'Erdos3R17.B_Lfree' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+        "stderr_excerpt": ""
+      },
+      "source_sha256": "fe2f97e19892fa7a722500188366697949929b453f87914737c525b6fc2b6531",
+      "third_worker_memory_observations": {
+        "minimum_free_physical_bytes": 5603909632,
+        "minimum_available_commit_bytes": 4983717888,
+        "peak_owned_private_bytes": 4024623104
+      },
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-FOCUS-E3\\R17SplitReplay.olean",
+          "sha256": "f6aa2e88f27b262af6dfa680f005b9bd4835e32bdcf1307d251999f1dc981d3b",
+          "bytes": 435952
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "BooleanTree",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "BooleanTree.olean",
+        "BooleanTree.lean"
+      ],
+      "seconds": 37.625,
+      "exit": 0,
+      "stdout": "'Cyclic13Kernel.boolean_certificate' does not depend on any axioms\n",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 6148141056,
+      "stop_reason": null,
+      "started_utc": "2026-10-05T01:24:41.173117+00:00",
+      "finished_utc": "2026-10-05T01:25:18.794744+00:00",
+      "owned_process_stop_output": null,
+      "own_job_resource_receipt": {
+        "command": [
+          "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+          "-j1",
+          "-DmaxHeartbeats=0",
+          "-DmaxRecDepth=100000",
+          "-o",
+          "BooleanTree.olean",
+          "BooleanTree.lean"
+        ],
+        "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-FOCUS-E3",
+        "started_utc": "2026-10-05T01:24:41.173117+00:00",
+        "attempted": true,
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 5368709120,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 1073741824,
+          "own_job_private_bytes": 6442450944,
+          "own_process_private_bytes": 6442450944,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 3600
+        },
+        "minimum_disk_free_bytes": 6148141056,
+        "initial_system_memory_snapshot": {
+          "free_physical_bytes": 8202747904,
+          "total_physical_bytes": 34024419328,
+          "available_commit_bytes": 8420323328,
+          "total_commit_limit_bytes": 61075705856
+        },
+        "minimum_physical_available_bytes": 3437387776,
+        "minimum_available_commit_bytes": 6403670016,
+        "root_pid": 55056,
+        "own_job_assignment_before_resume": "PASS",
+        "exit": 0,
+        "job_peak_process_private_bytes": 2355654656,
+        "job_peak_aggregate_private_bytes": 2356867072,
+        "state": "PASS",
+        "finished_utc": "2026-10-05T01:25:18.794744+00:00",
+        "seconds": 37.625,
+        "polled_peak_tree_private_bytes": 2341588992,
+        "polled_peak_tree_rss_bytes": 2130014208,
+        "counter_samples": 136,
+        "observed_own_processes": {
+          "55056": {
+            "exe": "lean.exe",
+            "peak_private_bytes": 2340376576,
+            "peak_rss_bytes": 2123427840
+          },
+          "30532": {
+            "exe": "conhost.exe",
+            "peak_private_bytes": 1249280,
+            "peak_rss_bytes": 7856128
+          }
+        },
+        "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\sakana-FOCUS-E3-9b7a3fef840a0cf4-attempt-1.stdout.txt",
+        "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\sakana-FOCUS-E3-9b7a3fef840a0cf4-attempt-1.stderr.txt",
+        "stdout_sha256": "bcfa8deece59a6efed3c1dc8ebe6b81f6bd29b551dcfd84c88c00910c3b0d985",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_excerpt": "'Cyclic13Kernel.boolean_certificate' does not depend on any axioms\n",
+        "stderr_excerpt": ""
+      },
+      "source_sha256": "57c77b258ba002ab59742e9f4cfdc065df437bdc1098d4e14cf1c2b7defddcc4",
+      "third_worker_memory_observations": {
+        "minimum_free_physical_bytes": 3437387776,
+        "minimum_available_commit_bytes": 6403670016,
+        "peak_owned_private_bytes": 2356867072
+      },
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-FOCUS-E3\\BooleanTree.olean",
+          "sha256": "b4b3aa772ae0bc707e31a4a546056dd04e7a9f3b27cb4154e931093144261a38",
+          "bytes": 32283216
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "CardBridge",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "CardBridge.olean",
+        "CardBridge.lean"
+      ],
+      "seconds": 15.094,
+      "exit": 0,
+      "stdout": "",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 6158225408,
+      "stop_reason": null,
+      "started_utc": "2026-10-05T01:25:18.862266+00:00",
+      "finished_utc": "2026-10-05T01:25:33.944275+00:00",
+      "owned_process_stop_output": null,
+      "own_job_resource_receipt": {
+        "command": [
+          "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+          "-j1",
+          "-DmaxHeartbeats=0",
+          "-DmaxRecDepth=100000",
+          "-o",
+          "CardBridge.olean",
+          "CardBridge.lean"
+        ],
+        "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-FOCUS-E3",
+        "started_utc": "2026-10-05T01:25:18.862266+00:00",
+        "attempted": true,
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 5368709120,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 1073741824,
+          "own_job_private_bytes": 6442450944,
+          "own_process_private_bytes": 6442450944,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 3600
+        },
+        "minimum_disk_free_bytes": 6158225408,
+        "initial_system_memory_snapshot": {
+          "free_physical_bytes": 6866575360,
+          "total_physical_bytes": 34024419328,
+          "available_commit_bytes": 8768024576,
+          "total_commit_limit_bytes": 61075705856
+        },
+        "minimum_physical_available_bytes": 5497569280,
+        "minimum_available_commit_bytes": 6092857344,
+        "root_pid": 52184,
+        "own_job_assignment_before_resume": "PASS",
+        "exit": 0,
+        "job_peak_process_private_bytes": 2407604224,
+        "job_peak_aggregate_private_bytes": 2408861696,
+        "state": "PASS",
+        "finished_utc": "2026-10-05T01:25:33.944275+00:00",
+        "seconds": 15.094,
+        "polled_peak_tree_private_bytes": 2399600640,
+        "polled_peak_tree_rss_bytes": 1092665344,
+        "counter_samples": 54,
+        "observed_own_processes": {
+          "52184": {
+            "exe": "lean.exe",
+            "peak_private_bytes": 2398343168,
+            "peak_rss_bytes": 1112727552
+          },
+          "56716": {
+            "exe": "conhost.exe",
+            "peak_private_bytes": 1257472,
+            "peak_rss_bytes": 7856128
+          }
+        },
+        "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\sakana-FOCUS-E3-b330f939bcd82079-attempt-1.stdout.txt",
+        "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\sakana-FOCUS-E3-b330f939bcd82079-attempt-1.stderr.txt",
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_excerpt": "",
+        "stderr_excerpt": ""
+      },
+      "source_sha256": "32330d3f2268ba1d23f5e8d0db50bf1a115e85b1b8be65c3418f2b4186e1c130",
+      "third_worker_memory_observations": {
+        "minimum_free_physical_bytes": 5497569280,
+        "minimum_available_commit_bytes": 6092857344,
+        "peak_owned_private_bytes": 2408861696
+      },
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-FOCUS-E3\\CardBridge.olean",
+          "sha256": "4c9da5c2f8d0d3128fe0dcb331a681a5cb098eb4f40e125f6d44b834facd53cb",
+          "bytes": 107688
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "CyclicUpper",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "CyclicUpper.olean",
+        "CyclicUpper.lean"
+      ],
+      "seconds": 27.953,
+      "exit": 0,
+      "stdout": "'Cyclic13Kernel.cyclic4Free_card_le_six' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 6164791296,
+      "stop_reason": null,
+      "started_utc": "2026-10-05T01:25:33.952283+00:00",
+      "finished_utc": "2026-10-05T01:26:01.910078+00:00",
+      "owned_process_stop_output": null,
+      "own_job_resource_receipt": {
+        "command": [
+          "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+          "-j1",
+          "-DmaxHeartbeats=0",
+          "-DmaxRecDepth=100000",
+          "-o",
+          "CyclicUpper.olean",
+          "CyclicUpper.lean"
+        ],
+        "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-FOCUS-E3",
+        "started_utc": "2026-10-05T01:25:33.952283+00:00",
+        "attempted": true,
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 5368709120,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 1073741824,
+          "own_job_private_bytes": 6442450944,
+          "own_process_private_bytes": 6442450944,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 3600
+        },
+        "minimum_disk_free_bytes": 6164791296,
+        "initial_system_memory_snapshot": {
+          "free_physical_bytes": 9653952512,
+          "total_physical_bytes": 34024419328,
+          "available_commit_bytes": 9033957376,
+          "total_commit_limit_bytes": 61075705856
+        },
+        "minimum_physical_available_bytes": 5393293312,
+        "minimum_available_commit_bytes": 6010736640,
+        "root_pid": 56892,
+        "own_job_assignment_before_resume": "PASS",
+        "exit": 0,
+        "job_peak_process_private_bytes": 2508058624,
+        "job_peak_aggregate_private_bytes": 2509324288,
+        "state": "PASS",
+        "finished_utc": "2026-10-05T01:26:01.910078+00:00",
+        "seconds": 27.953,
+        "polled_peak_tree_private_bytes": 2497515520,
+        "polled_peak_tree_rss_bytes": 1129943040,
+        "counter_samples": 98,
+        "observed_own_processes": {
+          "45704": {
+            "exe": "conhost.exe",
+            "peak_private_bytes": 1265664,
+            "peak_rss_bytes": 7860224
+          },
+          "56892": {
+            "exe": "lean.exe",
+            "peak_private_bytes": 2496249856,
+            "peak_rss_bytes": 1151475712
+          }
+        },
+        "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\sakana-FOCUS-E3-922925c90eb2e933-attempt-1.stdout.txt",
+        "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\sakana-FOCUS-E3-922925c90eb2e933-attempt-1.stderr.txt",
+        "stdout_sha256": "8d616e0de485ef8d7bdc20db78d911e10c01e6725ac054c464a57b900c6be6ba",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_excerpt": "'Cyclic13Kernel.cyclic4Free_card_le_six' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+        "stderr_excerpt": ""
+      },
+      "source_sha256": "11e5d462866219ce6d13e7cde20de92f48eaf19f16cb68480072b2664ebba8d5",
+      "third_worker_memory_observations": {
+        "minimum_free_physical_bytes": 5393293312,
+        "minimum_available_commit_bytes": 6010736640,
+        "peak_owned_private_bytes": 2509324288
+      },
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-FOCUS-E3\\CyclicUpper.olean",
+          "sha256": "c51c1cf9184027c8289c5bcc16686c080dc1c4908664012e14d79c2c8986f4d5",
+          "bytes": 810440
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "CombinedObstruction",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "CombinedObstruction.olean",
+        "CombinedObstruction.lean"
+      ],
+      "seconds": 15.25,
+      "exit": 0,
+      "stdout": "'Erdos3Completion.explicit_L_witness_beats_every_cyclic_AP_free_set' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 6164508672,
+      "stop_reason": null,
+      "started_utc": "2026-10-05T01:26:01.931125+00:00",
+      "finished_utc": "2026-10-05T01:26:17.180082+00:00",
+      "owned_process_stop_output": null,
+      "own_job_resource_receipt": {
+        "command": [
+          "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+          "-j1",
+          "-DmaxHeartbeats=0",
+          "-DmaxRecDepth=100000",
+          "-o",
+          "CombinedObstruction.olean",
+          "CombinedObstruction.lean"
+        ],
+        "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-FOCUS-E3",
+        "started_utc": "2026-10-05T01:26:01.931125+00:00",
+        "attempted": true,
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 5368709120,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 1073741824,
+          "own_job_private_bytes": 6442450944,
+          "own_process_private_bytes": 6442450944,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 3600
+        },
+        "minimum_disk_free_bytes": 6164508672,
+        "initial_system_memory_snapshot": {
+          "free_physical_bytes": 6673063936,
+          "total_physical_bytes": 34024419328,
+          "available_commit_bytes": 8625934336,
+          "total_commit_limit_bytes": 61075705856
+        },
+        "minimum_physical_available_bytes": 6347190272,
+        "minimum_available_commit_bytes": 6549516288,
+        "root_pid": 56056,
+        "own_job_assignment_before_resume": "PASS",
+        "exit": 0,
+        "job_peak_process_private_bytes": 2436857856,
+        "job_peak_aggregate_private_bytes": 2438115328,
+        "state": "PASS",
+        "finished_utc": "2026-10-05T01:26:17.180082+00:00",
+        "seconds": 15.25,
+        "polled_peak_tree_private_bytes": 2426810368,
+        "polled_peak_tree_rss_bytes": 1086824448,
+        "counter_samples": 54,
+        "observed_own_processes": {
+          "56056": {
+            "exe": "lean.exe",
+            "peak_private_bytes": 2425552896,
+            "peak_rss_bytes": 1106399232
+          },
+          "56760": {
+            "exe": "conhost.exe",
+            "peak_private_bytes": 1257472,
+            "peak_rss_bytes": 7856128
+          }
+        },
+        "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\sakana-FOCUS-E3-3cb24d4ae1c30f55-attempt-1.stdout.txt",
+        "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\sakana-FOCUS-E3-3cb24d4ae1c30f55-attempt-1.stderr.txt",
+        "stdout_sha256": "c400ea934ce85d67a92d10d6ae8f106c409d4b63d699cccc151d03ef8608fe93",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_excerpt": "'Erdos3Completion.explicit_L_witness_beats_every_cyclic_AP_free_set' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+        "stderr_excerpt": ""
+      },
+      "source_sha256": "3bec4ca43c026c51aa6b073fb640197cfeeac2060337dcbb1925d996cc918c13",
+      "third_worker_memory_observations": {
+        "minimum_free_physical_bytes": 6347190272,
+        "minimum_available_commit_bytes": 6549516288,
+        "peak_owned_private_bytes": 2438115328
+      },
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-FOCUS-E3\\CombinedObstruction.olean",
+          "sha256": "40982e409bcfdd49d533484846bafb56843aec45314bd32276848394ec4babb2",
+          "bytes": 24848
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "CyclicSharpness",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "CyclicSharpness.olean",
+        "CyclicSharpness.lean"
+      ],
+      "seconds": 15.469,
+      "exit": 0,
+      "stdout": "'Cyclic13Kernel.sixPointWitness_free' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Cyclic13Kernel.cyclic_four_AP_extremum_is_six' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 6164766720,
+      "stop_reason": null,
+      "started_utc": "2026-10-05T01:26:17.189597+00:00",
+      "finished_utc": "2026-10-05T01:26:32.660149+00:00",
+      "owned_process_stop_output": null,
+      "own_job_resource_receipt": {
+        "command": [
+          "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+          "-j1",
+          "-DmaxHeartbeats=0",
+          "-DmaxRecDepth=100000",
+          "-o",
+          "CyclicSharpness.olean",
+          "CyclicSharpness.lean"
+        ],
+        "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-FOCUS-E3",
+        "started_utc": "2026-10-05T01:26:17.189597+00:00",
+        "attempted": true,
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 5368709120,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 1073741824,
+          "own_job_private_bytes": 6442450944,
+          "own_process_private_bytes": 6442450944,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 3600
+        },
+        "minimum_disk_free_bytes": 6164766720,
+        "initial_system_memory_snapshot": {
+          "free_physical_bytes": 8466051072,
+          "total_physical_bytes": 34024419328,
+          "available_commit_bytes": 8949108736,
+          "total_commit_limit_bytes": 61075705856
+        },
+        "minimum_physical_available_bytes": 5633658880,
+        "minimum_available_commit_bytes": 6180892672,
+        "root_pid": 4068,
+        "own_job_assignment_before_resume": "PASS",
+        "exit": 0,
+        "job_peak_process_private_bytes": 2464866304,
+        "job_peak_aggregate_private_bytes": 2466131968,
+        "state": "PASS",
+        "finished_utc": "2026-10-05T01:26:32.660149+00:00",
+        "seconds": 15.469,
+        "polled_peak_tree_private_bytes": 2454110208,
+        "polled_peak_tree_rss_bytes": 1114656768,
+        "counter_samples": 55,
+        "observed_own_processes": {
+          "4068": {
+            "exe": "lean.exe",
+            "peak_private_bytes": 2452844544,
+            "peak_rss_bytes": 1134731264
+          },
+          "52740": {
+            "exe": "conhost.exe",
+            "peak_private_bytes": 1265664,
+            "peak_rss_bytes": 7860224
+          }
+        },
+        "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\sakana-FOCUS-E3-1eb9ee408e622021-attempt-1.stdout.txt",
+        "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\sakana-FOCUS-E3-1eb9ee408e622021-attempt-1.stderr.txt",
+        "stdout_sha256": "1e8b5a391d58316b5dcb6e64cbae24c74f617675e87553b4e9df521316674d6a",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_excerpt": "'Cyclic13Kernel.sixPointWitness_free' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Cyclic13Kernel.cyclic_four_AP_extremum_is_six' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+        "stderr_excerpt": ""
+      },
+      "source_sha256": "9264960904aa1dd2a0d428625e2a777455350d8de1edafecca4bedab9febfe38",
+      "third_worker_memory_observations": {
+        "minimum_free_physical_bytes": 5633658880,
+        "minimum_available_commit_bytes": 6180892672,
+        "peak_owned_private_bytes": 2466131968
+      },
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-FOCUS-E3\\CyclicSharpness.olean",
+          "sha256": "48d1a3e90dfa539cf344602911c5159b9e809e70a4ef938d3caac4e29a61d5e6",
+          "bytes": 67472
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "FreshAudit1.lean",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "FreshAudit1.olean",
+        "FreshAudit1.lean"
+      ],
+      "seconds": 13.36,
+      "exit": 0,
+      "stdout": "'Erdos3Completion.explicit_L_witness_beats_every_cyclic_AP_free_set' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'Cyclic13Kernel.cyclic_four_AP_extremum_is_six' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Cyclic13Kernel.cyclic4Free_card_le_six' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Erdos3R17.B_card' depends on axioms: [propext, Quot.sound]\n'Erdos3R17.B_Lfree' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "is_endpoint_audit": true,
+      "minimum_free_bytes": 6169718784,
+      "stop_reason": null,
+      "started_utc": "2026-10-05T01:26:32.672665+00:00",
+      "finished_utc": "2026-10-05T01:26:46.024621+00:00",
+      "owned_process_stop_output": null,
+      "own_job_resource_receipt": {
+        "command": [
+          "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+          "-j1",
+          "-DmaxHeartbeats=0",
+          "-DmaxRecDepth=100000",
+          "-o",
+          "FreshAudit1.olean",
+          "FreshAudit1.lean"
+        ],
+        "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-FOCUS-E3",
+        "started_utc": "2026-10-05T01:26:32.672665+00:00",
+        "attempted": true,
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 5368709120,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 1073741824,
+          "own_job_private_bytes": 6442450944,
+          "own_process_private_bytes": 6442450944,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 3600
+        },
+        "minimum_disk_free_bytes": 6169718784,
+        "initial_system_memory_snapshot": {
+          "free_physical_bytes": 6771335168,
+          "total_physical_bytes": 34024419328,
+          "available_commit_bytes": 8632246272,
+          "total_commit_limit_bytes": 61075705856
+        },
+        "minimum_physical_available_bytes": 5330436096,
+        "minimum_available_commit_bytes": 6053715968,
+        "root_pid": 39320,
+        "own_job_assignment_before_resume": "PASS",
+        "exit": 0,
+        "job_peak_process_private_bytes": 2440822784,
+        "job_peak_aggregate_private_bytes": 2442080256,
+        "state": "PASS",
+        "finished_utc": "2026-10-05T01:26:46.024621+00:00",
+        "seconds": 13.36,
+        "polled_peak_tree_private_bytes": 2431889408,
+        "polled_peak_tree_rss_bytes": 1077391360,
+        "counter_samples": 48,
+        "observed_own_processes": {
+          "39320": {
+            "exe": "lean.exe",
+            "peak_private_bytes": 2430631936,
+            "peak_rss_bytes": 1080569856
+          },
+          "50028": {
+            "exe": "conhost.exe",
+            "peak_private_bytes": 1257472,
+            "peak_rss_bytes": 7856128
+          }
+        },
+        "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\sakana-FOCUS-E3-6abcc70b865d6bea-attempt-1.stdout.txt",
+        "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\sakana-FOCUS-E3-6abcc70b865d6bea-attempt-1.stderr.txt",
+        "stdout_sha256": "79f06ca35556008cfde9279609c52fa32ae7f6e2bc60bfa3ce19afb4ea9f966a",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_excerpt": "'Erdos3Completion.explicit_L_witness_beats_every_cyclic_AP_free_set' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'Cyclic13Kernel.cyclic_four_AP_extremum_is_six' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Cyclic13Kernel.cyclic4Free_card_le_six' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Erdos3R17.B_card' depends on axioms: [propext, Quot.sound]\n'Erdos3R17.B_Lfree' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+        "stderr_excerpt": ""
+      },
+      "source_sha256": "15162dd73f73f6358f41f180f1103b2e52550a173e1cecde8105b3c18d706e85",
+      "third_worker_memory_observations": {
+        "minimum_free_physical_bytes": 5330436096,
+        "minimum_available_commit_bytes": 6053715968,
+        "peak_owned_private_bytes": 2442080256
+      },
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-FOCUS-E3\\FreshAudit1.olean",
+          "sha256": "dbbfff73d08876a556c00b87ec16ffa6353a7d19e1367ada84f0fdab4a3d444e",
+          "bytes": 1744
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION",
+      "selected_endpoint_print_coverage": {
+        "requested_endpoints": [
+          "Erdos3Completion.explicit_L_witness_beats_every_cyclic_AP_free_set",
+          "Cyclic13Kernel.cyclic_four_AP_extremum_is_six",
+          "Cyclic13Kernel.cyclic4Free_card_le_six",
+          "Erdos3R17.B_card",
+          "Erdos3R17.B_Lfree"
+        ],
+        "parsed_endpoints": [
+          "Cyclic13Kernel.cyclic4Free_card_le_six",
+          "Cyclic13Kernel.cyclic_four_AP_extremum_is_six",
+          "Erdos3Completion.explicit_L_witness_beats_every_cyclic_AP_free_set",
+          "Erdos3R17.B_Lfree",
+          "Erdos3R17.B_card"
+        ],
+        "missing_endpoints": [],
+        "status": "PASS"
+      }
+    }
+  ],
+  "compiler_version": "Lean (version 4.33.1, x86_64-w64-windows-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)",
+  "compilation_order": [
+    "R17SplitReplay",
+    "BooleanTree",
+    "CardBridge",
+    "CyclicUpper",
+    "CombinedObstruction",
+    "CyclicSharpness"
+  ],
+  "started_utc": "2026-10-05T01:24:40Z",
+  "failed_invocations": [],
+  "selected_audit_axiom_review": [
+    {
+      "endpoint": "Erdos3Completion.explicit_L_witness_beats_every_cyclic_AP_free_set",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    },
+    {
+      "endpoint": "Cyclic13Kernel.cyclic_four_AP_extremum_is_six",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    },
+    {
+      "endpoint": "Cyclic13Kernel.cyclic4Free_card_le_six",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    },
+    {
+      "endpoint": "Erdos3R17.B_card",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    },
+    {
+      "endpoint": "Erdos3R17.B_Lfree",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    }
+  ],
+  "resource_settings": {
+    "LEAN_NUM_THREADS": 1,
+    "lean_shell_worker_flag": "-j1",
+    "maxHeartbeats": 0,
+    "maxRecDepth": 100000,
+    "runner_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\run_source_plan.py",
+    "runner_source_sha256": "7d6e05618cb48494a792efc54c8a80e36c7bedb6f28415e78515b1c4f4caefc0",
+    "axiom_parser_source_sha256": "1ee59639204140430c088023539a648f9007cc26c1856cf8cd2e3c2e59d7143f",
+    "guarded_third_worker_continuation": {
+      "maximum_new_source_invocations": null,
+      "initial_disk_bytes": 4000000000,
+      "initial_free_physical_bytes": 6442450944,
+      "continuous_disk_reserve_bytes": 1000000000,
+      "continuous_free_physical_reserve_bytes": 3221225472,
+      "owned_compiler_private_memory_ceiling_bytes": 6442450944,
+      "initial_memory_snapshot": {
+        "free_physical_bytes": 8217001984,
+        "total_physical_bytes": 34024419328,
+        "available_commit_bytes": 8433238016,
+        "total_commit_limit_bytes": 61075705856
+      },
+      "qualification": "ROOT_AUTHORIZED_GUARDED_THIRD_WORKER_CONTINUATION",
+      "initial_available_commit_bytes": 5368709120,
+      "continuous_available_commit_reserve_bytes": 1073741824,
+      "owned_job_private_memory_ceiling_bytes": 6442450944,
+      "own_job_assignment_before_resume": "REQUIRED",
+      "resource_guard_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\matt_resource_guard.py",
+      "resource_guard_sha256": "ae0b64c7fbf47545365f3238977368042be342ddb973159ec65c98f64aa38a71"
+    }
+  },
+  "prior_attempt_receipts": [
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\sakana-FOCUS-E3-fresh-build-attempt-1.json",
+      "sha256": "168facc99083475aa5e71fc76bd90e80727da1718de1aa54d1b29c643a316136",
+      "status": "SCHEDULED_RESOURCE_CHECKPOINT"
+    }
+  ],
+  "resume_provenance": "OWN_FRESH_SUCCESSFUL_ARTIFACTS_AFTER_RESOURCE_INTERRUPTION",
+  "retained_successful_custom_modules": 1,
+  "finished_utc": "2026-10-05T01:26:46Z"
+}

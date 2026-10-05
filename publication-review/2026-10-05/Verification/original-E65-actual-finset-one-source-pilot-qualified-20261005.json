@@ -1,0 +1,146 @@
+{
+  "status": "PASS_EXACT_ONE_RECOVERED_FC_SOURCE_PILOT_NO_SELECTED_AUDIT",
+  "qualified_utc": "2026-10-05T04:15:40.688646+00:00",
+  "project_id": "sundai-erdos3-original-image-source",
+  "replay_receipt_sha256": "90a9243fde6f53452ac72da284b778469b5456ce72f9e98f9c633fce18780d8b",
+  "root_approval_sha256": "bb523d771fc36ac4467851bd69ecc185c51e70277b4a73662998d09134473f3b",
+  "actual_source_count": 1,
+  "actual_selected_audit_count": 0,
+  "actual_source_row": {
+    "module": "FormalConjecturesForMathlib.Algebra.GCDMonoid.Finset",
+    "command": [
+      "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+      "-j1",
+      "-DmaxHeartbeats=0",
+      "-DmaxRecDepth=100000",
+      "-Dpp.unicode.fun=true",
+      "-DautoImplicit=false",
+      "-DrelaxedAutoImplicit=false",
+      "-o",
+      "FormalConjecturesForMathlib\\Algebra\\GCDMonoid\\Finset.olean",
+      "FormalConjecturesForMathlib\\Algebra\\GCDMonoid\\Finset.lean"
+    ],
+    "seconds": 11.843,
+    "exit": 0,
+    "stdout": "",
+    "stderr": "",
+    "is_endpoint_audit": false,
+    "minimum_free_bytes": 5405634560,
+    "stop_reason": null,
+    "started_utc": "2026-10-05T04:14:57.203123+00:00",
+    "finished_utc": "2026-10-05T04:15:09.048462+00:00",
+    "owned_process_stop_output": null,
+    "own_job_resource_receipt": {
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-Dpp.unicode.fun=true",
+        "-DautoImplicit=false",
+        "-DrelaxedAutoImplicit=false",
+        "-o",
+        "FormalConjecturesForMathlib\\Algebra\\GCDMonoid\\Finset.olean",
+        "FormalConjecturesForMathlib\\Algebra\\GCDMonoid\\Finset.lean"
+      ],
+      "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sundai-erdos3-original-image-source",
+      "started_utc": "2026-10-05T04:14:57.203123+00:00",
+      "attempted": true,
+      "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+      "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+      "resource_policy": {
+        "initial_disk_bytes": 4000000000,
+        "initial_physical_bytes": 6442450944,
+        "initial_available_commit_bytes": 5368709120,
+        "continuous_disk_bytes": 1000000000,
+        "continuous_physical_bytes": 3221225472,
+        "continuous_available_commit_bytes": 1073741824,
+        "own_job_private_bytes": 6442450944,
+        "own_process_private_bytes": 6442450944,
+        "poll_seconds": 0.25,
+        "timeout_seconds": 3600
+      },
+      "minimum_disk_free_bytes": 5405634560,
+      "initial_system_memory_snapshot": {
+        "free_physical_bytes": 9943396352,
+        "total_physical_bytes": 34024419328,
+        "available_commit_bytes": 8562782208,
+        "total_commit_limit_bytes": 60437172224
+      },
+      "minimum_physical_available_bytes": 9552670720,
+      "minimum_available_commit_bytes": 6510088192,
+      "root_pid": 48636,
+      "own_job_assignment_before_resume": "PASS",
+      "exit": 0,
+      "job_peak_process_private_bytes": 1939595264,
+      "job_peak_aggregate_private_bytes": 1940840448,
+      "state": "PASS",
+      "finished_utc": "2026-10-05T04:15:09.048462+00:00",
+      "seconds": 11.843,
+      "polled_peak_tree_private_bytes": 1929261056,
+      "polled_peak_tree_rss_bytes": 528744448,
+      "counter_samples": 43,
+      "observed_own_processes": {
+        "55760": {
+          "exe": "conhost.exe",
+          "peak_private_bytes": 1245184,
+          "peak_rss_bytes": 7852032
+        },
+        "48636": {
+          "exe": "lean.exe",
+          "peak_private_bytes": 1928015872,
+          "peak_rss_bytes": 532570112
+        }
+      },
+      "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\sundai-erdos3-original-image-source-a30fc3129d586a35-attempt-0.stdout.txt",
+      "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\sundai-erdos3-original-image-source-a30fc3129d586a35-attempt-0.stderr.txt",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_excerpt": "",
+      "stderr_excerpt": ""
+    },
+    "source_sha256": "996f49245f3e5cc1d0beba2f575ebfe0e92413d826c11603575987026925e9b6",
+    "effective_lean_options": {
+      "pp.unicode.fun": true,
+      "autoImplicit": false,
+      "relaxedAutoImplicit": false
+    },
+    "semantic_option_qualification": "Explicit recovered FC strong options; entrant/audit options separately recorded, historical author invocation not inferred",
+    "third_worker_memory_observations": {
+      "minimum_free_physical_bytes": 9552670720,
+      "minimum_available_commit_bytes": 6510088192,
+      "peak_owned_private_bytes": 1940840448
+    },
+    "artifacts": [
+      {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sundai-erdos3-original-image-source\\FormalConjecturesForMathlib\\Algebra\\GCDMonoid\\Finset.olean",
+        "sha256": "78e0c7d7d0d31e948041af8c49241ffb465b3ab1a1ef1d179a4f2c569d3b740e",
+        "bytes": 17184
+      },
+      {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sundai-erdos3-original-image-source\\FormalConjecturesForMathlib\\Algebra\\GCDMonoid\\Finset.olean.private",
+        "sha256": "1a277351ded2ae4de01b60e7979dd97e0c480e3cff011efccb90aa027b9620a9",
+        "bytes": 4320
+      },
+      {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sundai-erdos3-original-image-source\\FormalConjecturesForMathlib\\Algebra\\GCDMonoid\\Finset.olean.server",
+        "sha256": "cc2e616ed09a3bbad9e85eda77a81c8d2ad095cdc1572a0e5f740032693cfc33",
+        "bytes": 880
+      },
+      {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sundai-erdos3-original-image-source\\FormalConjecturesForMathlib\\Algebra\\GCDMonoid\\Finset.ir",
+        "sha256": "261ed8c47215c2977039af7e7ea816e9c784192415c2cfe6b651de19da7a9d84",
+        "bytes": 5112
+      }
+    ],
+    "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+  },
+  "full_project_status": "SCHEDULED_RESOURCE_CHECKPOINT",
+  "full200_source56_selected_scope_complete": false,
+  "remaining188_granular_sources_not_run": true,
+  "ten_whole_sources_and_six_audits_still_deferred": true,
+  "separate_Std1source14audit_witness_accepted": false,
+  "original_container_executed": false,
+  "novelty_or_endpoint_certification_inferred_from_source_only_compilation": false,
+  "qualification": "The unchanged recovered FC helper source elaborated successfully in an independent pinned Windows source route with explicit recovered FC semantic options. No entrant theorem/audit was run by this pilot; it is not an original-container replay or whole-project PASS."
+}

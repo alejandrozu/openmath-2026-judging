@@ -1,0 +1,77 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,textcomp}
+\usepackage[margin=24mm]{geometry}
+\usepackage{longtable,booktabs,array,enumitem}
+\usepackage[hidelinks]{hyperref}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+\emergencystretch=3em
+\begin{document}
+{\LARGE\bfseries A sharp additive-three cover bound for intersecting uniform hypergraphs\par}\medskip
+{\small Provisional mathematical authors: Rachel Teo, Wenyi Wang, Hamdi Abderrahmene\par}\medskip
+{\small Judging and evaluation record: the submissions discussed in this document have been judged and evaluated by Alejandro Zarzuelo Urdiales for OpenMath 2026. This dated review records the stated verification, classification and unresolved holds; it is a preliminary evaluation rather than a signed award decision.\par}
+
+{\small Event provenance: OpenMath 2026 ran 27 September-2 October 2026 with worldwide online participation. Detailed organizer listings specify Harvard Innovation Labs for the 27 September in-person event; the OpenMath programme advertises a hybrid kickoff at MIT. Sundai identifies its Harvard/MIT community. Organizer sources: \url{https://rsihouse.ai/openmath} ; \url{https://luma.com/yzp9abvr} ; \url{https://www.sundai.club/events/boston/recursive-learning-hack-with-harvard-innovation-labs}\par}
+
+{\small Rachel Teo  -  Sakana AI.\par}
+
+{\small Wenyi Wang  -  Sakana AI.\par}
+
+{\small Hamdi Abderrahmene  -  Sakana AI.\par}
+
+{\small Affiliations follow the recorded author declarations or public institutional/profile sources. Preferred author names, author order and publication affiliations await author review. This editorial compilation does not establish anthology coauthorship.\par}
+
+{\small Original-result working manuscript | OpenMath 2026 | 5 October 2026\par}\medskip
+{\small Central source and adjudication archive: \url{https://github.com/alejandrozu/openmath-2026-judging}\par}
+
+\subsection{Abstract}
+For every finite intersecting r-uniform hypergraph H, 4\ensuremath{\tau}(H)\ensuremath{\leq}|H|+r+3. The degree-at-most-three residual bound closes the explicit additive-three question in Sivashankar's pre-event paper; degree-four peeling yields the unrestricted form and |H|\ensuremath{\geq}3r\ensuremath{-}3 whenever \ensuremath{\tau}(H)=r.
+
+\subsection{Statement and relation to the existing question}
+For a finite hypergraph H, \ensuremath{\tau}(H) is the minimum size of a vertex set meeting every edge. Intersecting means that every pair of edges has a common vertex. The new residual theorem asserts 4\ensuremath{\tau}(J)\ensuremath{\leq}|J|+r+3 for an intersecting r-uniform J in which every vertex lies in at most three edges.
+
+The source paper proves the analogous additive-four estimate and explicitly asks whether three is possible. The submitted proof answers that subsidiary question. A standard peeling argument then proves 4\ensuremath{\tau}(H)\ensuremath{\leq}|H|+r+3 without the degree restriction. When \ensuremath{\tau}(H)=r, rearrangement gives |H|\ensuremath{\geq}3r\ensuremath{-}3, and in particular |H|\ensuremath{\geq}21 at r=8. The triangle example supplies sharpness of the additive constant.
+
+\subsection{The residual packing improvement}
+The residual proof begins with the source paper's matching and witness machinery. A maximum matching organizes the edges and the uncovered remainder. Its associated link graphs form a three-link packing, encoding the ways covered vertices can meet the uncovered ground set.
+
+The older count leaves a potential equality case consistent with additive four. The new coloured-link budget proves a strict support-sum inequality when the uncovered ground set is odd and large enough relative to the number of packing blocks. The proof separates small configurations and develops structural/equality exclusions for the remaining coloured packings. Combining that strict inequality with the original selected-count identity rules out exactly the obstruction to additive three.
+
+SharpEndpoint initially presents the packing inequality as an explicit argument; the final Main endpoint supplies it from the Packing and Colored modules. This distinction matters: reading the bridge alone could suggest an assumed lemma, while the selected final closure is intended to be unconditional. The independent archived replay reports 18 Main-closure modules and a separate endpoint-definition audit, without importing the Kahn-dependent asymptotic section.
+
+\subsection{Peeling and the general consequence}
+If some vertex v has degree at least four, delete every edge containing v and call the remaining hypergraph H\ensuremath{^{\prime}}. It stays intersecting and r-uniform. A minimum cover of H\ensuremath{^{\prime}}, together with v, covers H, so \ensuremath{\tau}(H)\ensuremath{\leq}\ensuremath{\tau}(H\ensuremath{^{\prime}})+1. The deletion removes at least four edges, exactly compensating for the factor four in the cover inequality. Induction on the number of edges lifts the residual additive-three bound to all H.
+
+If no vertex has degree at least four, the residual theorem applies directly. This yields the unrestricted cover inequality and its lower-bound corollaries in the same family. The r=8 specialization and triangle sharpness should be presented as consequences, not independent breakthroughs.
+
+\subsection{Attribution, scope and publication}
+Varun Sivashankar's pre-event paper supplies the +4 theorem, matching/witness infrastructure and sharpness examples. Its ancillary Lean prefix is reused with explicit attribution and documented compatibility adjustments. The proposed original delta is the strict packing improvement to +3 and the resulting all-r elementary bound.
+
+The original O(r) Erdős 21 question was already resolved by Kahn, and the source paper's stronger approximately 3.053r asymptotic lower coefficient is not improved here. A title claiming a full solution of Erdős 21 would be misleading. A focused paper answering the explicit residual question, with the supplementary Lean closure and clear source attribution, is the right publication form.
+
+{\small This short manuscript records the construction and selected endpoints. The companion Original results anthology contains the extended ordinary proof exposition and its explicitly stated premises; the preserved Lean source remains the complete formal proof record.\par}
+
+\subsection{Verification and reproducibility}
+Fresh execution: sakana-erdos21-sharp-residual: PASS; 18/18 custom modules compiled successfully; receipt Verification/sakana-erdos21-sharp-residual-fresh-build.json. Compiler pins, source hashes and endpoint axiom outputs are in Verification. Historical receipts and finite checks do not replace fresh replay.
+
+\begin{samepage}
+\subsection{ErdosLovasz.residual\_cover\_bound\_sharp}
+\begin{quote}\small\ttfamily theorem residual\_cover\_bound\_sharp (r : \ensuremath{\mathbb{N}}) (J : Finset (Finset V))\newline     (huni : IsUniform r J) (hint : Intersecting J)\newline     (hdeg : \ensuremath{\forall} v, edgeDeg J v \ensuremath{\leq} 3) :\newline     4 * coverNum J \ensuremath{\leq} J.card + r + 3\end{quote}
+{\small Source: proofs/erdos21-sharp-residual/OpHack/Erdos21/Main.lean:25.\par}
+
+{\small Source SHA-256: 9314ae7ba95b6fd9922ccfea882f1d33a6c11c9a40d750109014c8184ab7e414\par}
+
+\end{samepage}
+\begin{samepage}
+\subsection{ErdosLovasz.cover\_bound\_sharp}
+\begin{quote}\small\ttfamily theorem cover\_bound\_sharp (r : \ensuremath{\mathbb{N}}) (H : Finset (Finset V))\newline     (huni : IsUniform r H) (hint : Intersecting H) :\newline     4 * coverNum H \ensuremath{\leq} H.card + r + 3\end{quote}
+{\small Source: proofs/erdos21-sharp-residual/OpHack/Erdos21/Main.lean:33.\par}
+
+{\small Source SHA-256: 9314ae7ba95b6fd9922ccfea882f1d33a6c11c9a40d750109014c8184ab7e414\par}
+
+{\small\textbf{Sources and attribution:} \href{https://arxiv.org/html/2606.24878v2}{1. arXiv source: 2606.24878v2}; \href{https://arxiv.org/abs/2606.24878}{2. arXiv source: 2606.24878}; \href{https://www.erdosproblems.com/21}{3. www.erdosproblems.com / 21}; \href{https://arxiv.org/src/2606.24878v2/anc/lean-proof/RequestProject/Theorem1.lean}{4. arXiv source: src/2606.24878v2/anc/lean-proof/RequestProject/Theorem1.lean}; \href{https://github.com/alejandrozu/openmath-2026-judging/blob/d0ed487f487fa7ec814ff705ab55249983fe8707/OpenMath-Judging/review/entries/E02-erdos21-sharp-residual.txt}{5. alejandrozu/openmath-2026-judging / E02-erdos21-sharp-residual.txt}; \href{https://github.com/alejandrozu/openmath-2026-judging}{Central source and adjudication archive}.\par}
+
+\end{samepage}
+\end{document}

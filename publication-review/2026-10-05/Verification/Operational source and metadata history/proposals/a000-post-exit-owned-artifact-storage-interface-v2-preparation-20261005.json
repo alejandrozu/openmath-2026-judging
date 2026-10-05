@@ -1,0 +1,1678 @@
+{
+  "status": "PREPARED_ONLY_SEPARATE_A000_POST_EXIT_STORAGE_V2_INTERFACE_AND_RUNNER_NO_EXECUTION",
+  "created_utc": "2026-10-05T06:03:07.830529+00:00",
+  "producer_sha256": "f98b128c52a1ade172de5d0cfba7fa8b326511a9a9ee0c3097eebc5a2f764aac",
+  "interface": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\a000_post_exit_lzx_interface_v2_prepared.py",
+  "interface_sha256": "03a6f7118d97e97e646b81cdb5508fab512eb23f65dc1465cd28d141d9cbd99b",
+  "prepared_runner": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\run_a000_source_plan_with_post_exit_storage_v2_prepared.py",
+  "prepared_runner_sha256": "d73aa5d2218f358e79d5479de20b5082b345a994d0d4dd35d0a23516876eda28",
+  "preserved_original_runner": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runner_versions\\run_source_plan.a000_post_exit_storage_parent.70ff209c7ac651c1e0ab25e9f629a9fc50c4b85ed1f510666e851e8f69c53534.py",
+  "preserved_original_runner_sha256": "70ff209c7ac651c1e0ab25e9f629a9fc50c4b85ed1f510666e851e8f69c53534",
+  "original_current_runner_unchanged": true,
+  "full_runner_diff": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\proposals\\a000-post-exit-LZX-separate-runner-full-diff-20261005.diff",
+  "full_runner_diff_sha256": "5a12b07b6cf2d1092d005547a660a7c16195fa70526b36864ecd600e142e3a12",
+  "native_metadata_helper_sha256": "fd06ef882489ca02a1fc421c9891a4970ead88d62249b26aec93d02a7f125e1d",
+  "exact_original_source_plan_modules": [
+    {
+      "module": "OpHack.QuadraticResidue224.Reduction",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\Reduction.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/Reduction.lean",
+      "sha256": "9e99fe23a3f959aebc92fcb13bca23fae98d37251e36023c9db8fa92acc99193"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.SplitCertificatePilot",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\SplitCertificatePilot.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/SplitCertificatePilot.lean",
+      "sha256": "ecd4a1b741fc7fdfb039a224d2ed23eea06884302bd86d7e21cac330063dc197"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP3",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP3.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP3.lean",
+      "sha256": "147ced05971cb683c40c50838675b3dc8f51b0199c8a9f155c7c0963e50abbda"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP5",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP5.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP5.lean",
+      "sha256": "169f6329822e4bf487ffd64bed66e1dc2afafe5f0e4c0c41be365312cfe7812a"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP7",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP7.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP7.lean",
+      "sha256": "4428053af5a307d288826d1c1f05c9e57bad7bcfef62bddc72b0d2bbee5b4841"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP11",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP11.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP11.lean",
+      "sha256": "c802384b2b0b25386a0581fe5950031566583b2c6caea12d3dee442baabc15fd"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP13",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP13.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP13.lean",
+      "sha256": "ff47cd7add096135b1b6adbe17e29f6e131df346fe67cee117c30b8ea0a08d7e"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP17",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP17.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP17.lean",
+      "sha256": "5bd878c2cc702f5efd20d9255950d650595e15795926832e0b0edf17270ab8d0"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP19",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP19.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP19.lean",
+      "sha256": "a986377419c02299d3b2a9b0c1f323df8b2188a12cb11018a104c76b701cebe2"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP23",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP23.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP23.lean",
+      "sha256": "fda9cec956f69ff2a935538b368d76b1b02b893bed954cf4687a8549136cb429"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP29",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP29.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP29.lean",
+      "sha256": "e6babb0ba0df3872658c0b7634648e5a71e92b293b71309dc3f882f46c591e1a"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP31Part0001",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP31Part0001.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP31Part0001.lean",
+      "sha256": "68efc8faa466839cebd692606ca01d8dce9a8bcfd286b0a33cccbed6f07e6055"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP31Part0002",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP31Part0002.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP31Part0002.lean",
+      "sha256": "43822a60b5ba7841f24c46722a5d45a66e8498ecaa1447d918d55f3dfe313698"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP31Part0003",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP31Part0003.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP31Part0003.lean",
+      "sha256": "c7b2ca338b1dc0e62fe9ffc60d64949d298ce3e7b4ce5899d4879bc738d22b29"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP31Part0004",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP31Part0004.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP31Part0004.lean",
+      "sha256": "21dd0e3797b2691b61cbce59dcf662b537996fd98e0aa458f12e64cb7f4e42d7"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP31",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP31.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP31.lean",
+      "sha256": "c44f72a72f58e41a717037bc0d0fdd4f26863c9048dc9c240b5a3527d4a44dc5"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP37",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP37.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP37.lean",
+      "sha256": "dafa5fc9b71acc722f346b61a45a4bd507926ea66c10a8f6c5c2ada57b648ba2"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP41",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP41.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP41.lean",
+      "sha256": "b3599aae75a82e1233380926ccaac5933b0e56523c38463a4e3ced0303311f90"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP43Part0001",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP43Part0001.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP43Part0001.lean",
+      "sha256": "6ed715619ab2290728b00b637eb8b4769234d029eefb200c376126d678287578"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP43Part0002",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP43Part0002.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP43Part0002.lean",
+      "sha256": "96f84e28407edf035ec2f4c83e3b189da45e9b381f8f3bc79263743c8857c86f"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP43Part0003",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP43Part0003.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP43Part0003.lean",
+      "sha256": "4a4134c03b621e2dbf820bb161566d922b787bf2aac9cdea508039467d4e8944"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP43",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP43.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP43.lean",
+      "sha256": "845cad738cca02540c6ac2451433aa91060fe359e20d09a1be07f5b4f722f179"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP47",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP47.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP47.lean",
+      "sha256": "28cf13fe7fa0c8f3bcb9be0353224244489b75e89013b9c9d82bc20a23f5c7b4"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP53",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP53.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP53.lean",
+      "sha256": "a31c7529d7847764d673ab92a04ed8370b1a64ce969b29c637b86a209ba055fa"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP59",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP59.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP59.lean",
+      "sha256": "9ddc605662335d0be89e4f7183b506db35976246d3860c386685d5ed3c2e9155"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP61",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP61.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP61.lean",
+      "sha256": "7423244937f54bd5186a98ad80f7fed4426837b11e4421d98e18d009f7e7c81a"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP67Part0001",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP67Part0001.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP67Part0001.lean",
+      "sha256": "c4649039ebf54cf4e030de1ff322a7d944f9af882fae1399134832acfd2f04f8"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP67Part0002",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP67Part0002.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP67Part0002.lean",
+      "sha256": "4d05ec8acfc2621ab8f1e22b409ff789b4d200dc6d7c099bd56cb10b7a45cbfb"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP67",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP67.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP67.lean",
+      "sha256": "725429d603d5949d73212dd666c465e69bc8f8b7b050bf1db634b3f86db14409"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP71Part0001",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP71Part0001.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP71Part0001.lean",
+      "sha256": "de715be30793bf4374b1bef23bf829c2466f2759c2f07a7e8956cd521913569e"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP71Part0002",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP71Part0002.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP71Part0002.lean",
+      "sha256": "485ec15315016d55c76324ac821de93510b3dca698371dd66a9ab99d523fe38d"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP71",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP71.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP71.lean",
+      "sha256": "9d5ca3dee162ab6e31e7917c501f3665e9b808bad9f3125b9036746db09306fb"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP73",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP73.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP73.lean",
+      "sha256": "ce0c960981a44c14c8f46447285ccda5ead99f42e77910309d3ee08fc4c6b3b9"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP79",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP79.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP79.lean",
+      "sha256": "b34d9bbc2c788f20410e7bf1b1a7fc5bb2a04f68bed91a6e8e066672a9ad789d"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP83",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP83.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP83.lean",
+      "sha256": "c9d875dc513d360b2f711770dd497c0bff2cdbba4a3e339c7b959b3a58359f44"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP89",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP89.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP89.lean",
+      "sha256": "9c31fde06a79863b3e5943c91748567811414dcbac3e3d9e32cad7513df80ee1"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP97",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP97.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP97.lean",
+      "sha256": "bd3cfdbdcb06ab5c9e7cc6769fe8b8905d0d544454173e864cf6f79125a634a3"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP101",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP101.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP101.lean",
+      "sha256": "2f70633a3b69ec899cca86833d9e608957ad4465a286c6e95d5689bdde235ce9"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP103",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP103.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP103.lean",
+      "sha256": "cbb71472f6fb39e80b86ef20c620de67ec1ef6aef95cae6fe084a6187f54d99e"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP107",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP107.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP107.lean",
+      "sha256": "8d865d04814abe023562078ebe048dd5e4bf6db4d9d4934fb1289c95593776b9"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP109",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP109.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP109.lean",
+      "sha256": "637e77d60413565d8cc831d199e6849c7dbdb674d6acbae2bf9899d2e2d43108"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP113",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP113.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP113.lean",
+      "sha256": "fe0a5af27bab231402c16f70d4a49419e1f48a272f360f32f0a4a31cb974d639"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP127Part0001",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127Part0001.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP127Part0001.lean",
+      "sha256": "2a67a343b53def4017ddb4b4aa48df3af5fec476d8336b8ee32b4e00ff10e2e9"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP127Part0002",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127Part0002.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP127Part0002.lean",
+      "sha256": "d160cc7b448a8512254ae92138fe7250443cf9b341af66bda5e3d4997d0191d1"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP127Part0003",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127Part0003.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP127Part0003.lean",
+      "sha256": "808f430168ded04c8dbf828e1154c1e730fe0831bc422304cb582dc0ca6f7666"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP127Part0004",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127Part0004.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP127Part0004.lean",
+      "sha256": "e596ab7fb67e155f447f990b853310b3fee1ebc1d29476dfda15cc9c0d2e3d55"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP127Part0005",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127Part0005.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP127Part0005.lean",
+      "sha256": "e4a5ace93475b2ed51a579fdb52cc7ccf2a55875db5ac52ccb804a864b95314f"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP127Part0006",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127Part0006.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP127Part0006.lean",
+      "sha256": "da462432da2d0505384975d82a7360f521396efa75d87003191ac957b7cbac03"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP127Part0007",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127Part0007.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP127Part0007.lean",
+      "sha256": "b6d613e149e7d54efbbfd970143cf420c773f0507064d795a01b861ed2237998"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP127Part0008",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127Part0008.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP127Part0008.lean",
+      "sha256": "2a43d790a26ecdfdf61f3578fd27079ec9ffce1732d534446a7018c6827c68a4"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP127Part0009",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127Part0009.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP127Part0009.lean",
+      "sha256": "dceb0a9353a258682a31cc7f0f17fdf64a925c0c413b146251e41430154944c0"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP127Part0010",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127Part0010.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP127Part0010.lean",
+      "sha256": "2f04c6c69ad4cd5d1fe6909cafa57d646cd6ded04f9360503ecd1ae11f85f8ef"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP127Part0011",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127Part0011.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP127Part0011.lean",
+      "sha256": "c16f4697a07ed148871d2dd3c7077d9afdf8eb572177210f402451257b9e213a"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP127Part0012",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127Part0012.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP127Part0012.lean",
+      "sha256": "9a0ffdf015c3a7dc26516a3d9d73e84114a1fa3fa73c4ce664556d6a36614810"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP127Part0013",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127Part0013.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP127Part0013.lean",
+      "sha256": "20251c34418cf989f929e7a30ca3a37a1c131995c48b08b33e16088d905037f1"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP127Part0014",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127Part0014.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP127Part0014.lean",
+      "sha256": "387bc1a1418f42583b85cd8119f25ac577fc4d77d0a600c35d34c1952b767120"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP127Part0015",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127Part0015.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP127Part0015.lean",
+      "sha256": "0330e599e8f35b8c920a76e8e3436554e18cf650b2b53728f97134ea3ac012e0"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP127Part0016",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127Part0016.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP127Part0016.lean",
+      "sha256": "c83e6483d26b5c888b30f736d69dbb2542edd43ab534367276fef0d3a94eb920"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP127Part0017",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127Part0017.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP127Part0017.lean",
+      "sha256": "0249a8410d753e9a8ebbcdce5603a8d2f335f7703fe2a61d9a1317c008ccadb0"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP127Part0018",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127Part0018.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP127Part0018.lean",
+      "sha256": "a52ed0aaa495257f6c3e9bab8e9621180e6d8cfb5e3a609d84223685c5ff2c28"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP127Part0019",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127Part0019.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP127Part0019.lean",
+      "sha256": "f067d2f8f6c978bc4053c4129d937bc60de9cf5efd4dbad4d0a6eec695bb6e54"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP127Part0020",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127Part0020.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP127Part0020.lean",
+      "sha256": "eebcb58d2b9f0e6c20c22668bb0076ff6ded2933b1a29871d3913f49236527a3"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP127Part0021",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127Part0021.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP127Part0021.lean",
+      "sha256": "81ffda5049d9fbe209d4c5c2e83421686cbc89b5f8431d9c5eeaf2e3d01d1526"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP127Part0022",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127Part0022.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP127Part0022.lean",
+      "sha256": "55755dcb8f927165a4a30c71f062e5dade063ada4d1e52cb64cd146752892e1f"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP127Part0023",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127Part0023.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP127Part0023.lean",
+      "sha256": "10816426920b97dd0277dfcb9770adb6d9ad6281d7a59537dec8a3c99a5afbb5"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP127Part0024",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127Part0024.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP127Part0024.lean",
+      "sha256": "0651568a88f07092dd9dd9ae1db792c3f798f3bb3f72b131f6697081df630078"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP127Part0025",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127Part0025.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP127Part0025.lean",
+      "sha256": "cc7a0c418d26c72d6bb681067481abe61d761558e3ff9498fad964b1b963bfb6"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP127Part0026",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127Part0026.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP127Part0026.lean",
+      "sha256": "7b13a21349aca63d236d94a5a5f0f5effcd9cfc616b118bf0743410a89dec02a"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP127Part0027",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127Part0027.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP127Part0027.lean",
+      "sha256": "5eeff83910edb64efe73cfc2b0670709901958666b8c7d359863f9c119f1b0b8"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP127Part0028",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127Part0028.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP127Part0028.lean",
+      "sha256": "115bfc5682bbc2967dc84110a1d1a0e4019be0578c19e345cbbc2720f9f54a80"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP127Part0029",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127Part0029.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP127Part0029.lean",
+      "sha256": "5efb22fdea0d7803ec10ae08c76ff8c705ff93127f9c14dea07575db8afc15e4"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP127Part0030",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127Part0030.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP127Part0030.lean",
+      "sha256": "97159592e8e7598be61ccc57ef817985f4ad71ec66249aef3c67658809cf7192"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP127Part0031",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127Part0031.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP127Part0031.lean",
+      "sha256": "164917c024cfc49583c1e09c387d1156147e4f12e66956f271cf2d7589a66e32"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP127Part0032",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127Part0032.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP127Part0032.lean",
+      "sha256": "22b3c2c24f4b5fedf60fd7936a58c637dd9be4d8f5cfce711c4be1ae8531632c"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP127Part0033",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127Part0033.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP127Part0033.lean",
+      "sha256": "052daf1085b32a49dec9ce75e69ad65ce286ea81d7d286d894d6d897af807855"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP127Part0034",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127Part0034.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP127Part0034.lean",
+      "sha256": "244ef58bc5143330f80b926b6a35ed213730538730de4a50063548021ff7bc84"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP127Part0035",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127Part0035.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP127Part0035.lean",
+      "sha256": "2900fd80273f2af79be05c57176b85fd0a168dc94ab0a96d9eb2cc8ccb112a5f"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP127Part0036",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127Part0036.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP127Part0036.lean",
+      "sha256": "359d278dbc779b25c79f89f74628e3cc0d997af591e901b409f7753b05dea09d"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP127Part0037",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127Part0037.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP127Part0037.lean",
+      "sha256": "7f2fe3fc664d5126c01267bf387a7d10480450e41e476e4dcabf1a0ad42fad6a"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP127Part0038",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127Part0038.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP127Part0038.lean",
+      "sha256": "f3ad60b6d8553509d7f8b4f9ac74bbf6969c23399d3483347f07e970fee931e8"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP127Part0039",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127Part0039.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP127Part0039.lean",
+      "sha256": "21cf9d8bd64c92c85f4a7ed93328cd19305187af332a9c63de93f53f6ab5a941"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP127Part0040",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127Part0040.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP127Part0040.lean",
+      "sha256": "fdfdfd79ffafaf86755d97b1b45bb5a2ead4612de95dc92660f358ced9c31f54"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP127Part0041",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127Part0041.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP127Part0041.lean",
+      "sha256": "66858c4701585ba0307dfe6fd80813dc131bc64d399a4583089ba07363a021ca"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP127Part0042",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127Part0042.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP127Part0042.lean",
+      "sha256": "968c5f2b0d1d6f41f82bef6ed2348785b99856fb394a84e5a43bd914621d0137"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP127Part0043",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127Part0043.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP127Part0043.lean",
+      "sha256": "8b28efd653b53734611e8b666b24f70bc277e4a6f19b4d71bc08c81d5d07ec33"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP127Part0044",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127Part0044.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP127Part0044.lean",
+      "sha256": "29cbcb069fef72e996d3c7d5352ab562508c03a7238395bf26b4d491ad83b3bc"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP127Part0045",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127Part0045.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP127Part0045.lean",
+      "sha256": "b99940c1e77e59446bd5c346d89bdd239b0af0098573a421d5ebae9054dd9c8e"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP127Part0046",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127Part0046.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP127Part0046.lean",
+      "sha256": "8b049c84970966355ac88828109417fe3745ade421379cc0f2d3adf7d60fcdb8"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP127Part0047",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127Part0047.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP127Part0047.lean",
+      "sha256": "4278d59d4c7aefd544b6bfc9ac81ddb61ce229bfa66b379e0bb187bac046fa59"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP127Part0048",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127Part0048.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP127Part0048.lean",
+      "sha256": "d87e873b4728be4e4c581decf0bb80ab5a43b4711118839cc405720d400e5e15"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP127Part0049",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127Part0049.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP127Part0049.lean",
+      "sha256": "6277061f06a51b1767b8bba1966399926451108e9f3b32819b1a0a4b57d8f414"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP127Part0050",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127Part0050.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP127Part0050.lean",
+      "sha256": "72acd346b3cc16d9e9368ac90e20e2213024ff17d08917e0adb1ddea0b3e2467"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP127Part0051",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127Part0051.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP127Part0051.lean",
+      "sha256": "66ad19be7f0307598e395e42ee560139c3acbd8a5cf282efbf801dc6140491a4"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP127Part0052",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127Part0052.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP127Part0052.lean",
+      "sha256": "5a37cad263b126052ca41e24f14d9c7096959bc75740e22d2ad855c3f647a65a"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP127Part0053",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127Part0053.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP127Part0053.lean",
+      "sha256": "2b2c018076f82984547ebf8704535a9a10296170e01590e52f2d42ecc17e03f9"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP127Part0054",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127Part0054.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP127Part0054.lean",
+      "sha256": "0fe449f454ef8d6ea64678d9ce4446413dde76674c85c6104b4720c2b7e1065c"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP127Part0055",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127Part0055.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP127Part0055.lean",
+      "sha256": "8da1be9d879fbdabc02e94ebc6cf94005dddb96ea32cd7925589ed07c7f99093"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP127Part0056",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127Part0056.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP127Part0056.lean",
+      "sha256": "fa826a5659811996ed088faecf65a7a2431f59ceb0f9efdf4f16bd64c96fbde8"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP127",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP127.lean",
+      "sha256": "4befb40d67a7d5fa1aab9e95b1b74aca723dd36afb11905f919117b0da3e805e"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP131Part0001",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP131Part0001.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP131Part0001.lean",
+      "sha256": "5d02003e7797ac804d60170cb043d9b5adc51d390203af85fb3e0ee8f90441fc"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP131Part0002",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP131Part0002.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP131Part0002.lean",
+      "sha256": "b6defbbaa0c6443af08e33efc68e441d4025975364986b446e43d66a3922c178"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP131Part0003",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP131Part0003.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP131Part0003.lean",
+      "sha256": "3c2d8839f50eaf3e617408352a14074ef8e3b63c1ac5148561a0c22c01fde291"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP131Part0004",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP131Part0004.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP131Part0004.lean",
+      "sha256": "4c7234dd84b0c038e7ec3099f0c1409d1abb0c2b69f837703a0746554ca64e9b"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP131Part0005",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP131Part0005.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP131Part0005.lean",
+      "sha256": "bee20b3b4fd3547ca4d1c6150f63ed8db6b14ba02c82f414abb5302f7c32f279"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP131Part0006",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP131Part0006.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP131Part0006.lean",
+      "sha256": "15228e19c61e4af0b151f7fd5eff1b525667c89278b761c26f3e338775b34209"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP131Part0007",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP131Part0007.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP131Part0007.lean",
+      "sha256": "c90eb716d0d4353f0813b581cf3f7669c757a7850a436a751db0040314c75484"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP131",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP131.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP131.lean",
+      "sha256": "791e98df04ba178e8986428f0461ca31ace34300e1a0f342c7e75af2971791f5"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP137Part0001",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP137Part0001.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP137Part0001.lean",
+      "sha256": "fd705e5a87cbc09caf9af141102bb15cba63fb4f9e6caae6e5b9e1c3b45cfc31"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP137Part0002",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP137Part0002.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP137Part0002.lean",
+      "sha256": "3fc8284475d67a569d80aca0b110b81d9baea34003e36a0175a5b6e50627c705"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP137Part0003",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP137Part0003.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP137Part0003.lean",
+      "sha256": "edd0406d0e3e9cfb4f8e1b9cc0063c9cf120b6f633f87e5b235481e50bed827b"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP137Part0004",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP137Part0004.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP137Part0004.lean",
+      "sha256": "898dbb7778963566539846f6986f6268cb3315abaa9e151ae044e4bf625b8fbb"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP137",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP137.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP137.lean",
+      "sha256": "8773b922d97e34ea7f1bf8b84f73a9635ebdc52e7217752731e18e7f5ce70e72"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP139Part0001",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP139Part0001.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP139Part0001.lean",
+      "sha256": "09d9c12aa008a67a69458e6596841d4916313d1c0c1a992ad1fe0e42e3efb90c"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP139Part0002",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP139Part0002.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP139Part0002.lean",
+      "sha256": "ccf747fa7224c71722ad3cd86caaa0f21afded83bf28f5969338e9ccd6ec62b1"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP139Part0003",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP139Part0003.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP139Part0003.lean",
+      "sha256": "a057b49768116131fa2726073ad72da07ec6cd0fd1a267b2fe02bdca24afb49a"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP139",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP139.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP139.lean",
+      "sha256": "7363bd9ffea67956b20559ee2604dacfcbf4d44bbea042b68bbe8a1d04c9070e"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP149Part0001",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP149Part0001.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP149Part0001.lean",
+      "sha256": "c088ce3bbe00086ed14aa5f75df0aef1be2e53c6f54fe54c4b89113bbe82eacb"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP149Part0002",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP149Part0002.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP149Part0002.lean",
+      "sha256": "bd80067f856903a8f6e76eb92e6fc39bb5aa9e84577f87305c234a16ab4a7462"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP149",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP149.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP149.lean",
+      "sha256": "99320b4e2bcf5d364d0c11560923628464ed6a101489d4f524b618395c296ee1"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP151Part0001",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP151Part0001.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP151Part0001.lean",
+      "sha256": "ec83b73e55e58dff1b074e8d27067fb4fc23c19e859ab4195ddaf41d164d93d0"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP151Part0002",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP151Part0002.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP151Part0002.lean",
+      "sha256": "86e940d7c7cc57de7343f21fcafc34839467a3885b575db67f221674e4831adb"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP151",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP151.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP151.lean",
+      "sha256": "184e82e331a025d85d56dc4860a21931331f034772c7488f8e9c6bfc07e6e053"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP157Part0001",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP157Part0001.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP157Part0001.lean",
+      "sha256": "91dce82bec06d4c30f12abfa11047a63924c5b55818d5eaff14152f290f34837"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP157Part0002",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP157Part0002.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP157Part0002.lean",
+      "sha256": "fc5dbf69d97c39b1deeaa0645dba0913c8947a80aa04c9b661d17a3785dc5e6b"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP157",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP157.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP157.lean",
+      "sha256": "5b388f2ea72dff60ae0bc8099ab94e608ca7d0a34d62ef7881b2468501c579b4"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP163Part0001",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP163Part0001.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP163Part0001.lean",
+      "sha256": "26f4d704ea4f5bdea729f2f03c8d381353e9d4051caadbca3e8d3cd575f7ee1c"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP163Part0002",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP163Part0002.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP163Part0002.lean",
+      "sha256": "dd754d8ba13d94979ae15c1177218d044e3522ca526d5c01c0ef0f09f1c12b69"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP163",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP163.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP163.lean",
+      "sha256": "b1e726b411a1e9c5d8427cc09460d4e434374b23fb23af284d92858320f7e595"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP167",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP167.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP167.lean",
+      "sha256": "33c6454912d80bac7279fe069bcc3172023f63ab95a361dec6e872995b316851"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP173",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP173.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP173.lean",
+      "sha256": "8db86ff855fcb9bc51d8edc15cc185b6e8ca135614a9fb4b639536b900eea013"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP179",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP179.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP179.lean",
+      "sha256": "f049b3eb6b9e67d8d1be59cdf8c216226cb701363a11cae1fb73832fbe31254a"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP181",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP181.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP181.lean",
+      "sha256": "4901da437f6b6862573db99198a0d75c8c36e98b654261357557b40b0cc3fe4c"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP191",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP191.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP191.lean",
+      "sha256": "2c522e2416fa6b21ede313e28c378a40f4eaa780f39f3fbbf75a8139049ee198"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP193",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP193.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP193.lean",
+      "sha256": "265ae77c9bc11f8aa38b2966de2eebe22fecb960189bc9d62102d31de0474578"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP197",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP197.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP197.lean",
+      "sha256": "9713e865e04d25985bd228702cb005c4ef6897f81f99166dd35a60b34a4ca40d"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP199",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP199.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP199.lean",
+      "sha256": "ce2bc72ec9ff52eff0646f3a2f839f52efba01046fd3166c9fcb328fe18e5faa"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP211",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP211.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP211.lean",
+      "sha256": "d72b2e0a3c25f742c65ea184d74489f7b1201a082f17f97325977fc0ea87d35c"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP223",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP223.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP223.lean",
+      "sha256": "09da56b89b8ed1d127dc61df03ad76d177a43bbc8d104481aac1d0acda51e404"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP227",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP227.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP227.lean",
+      "sha256": "935bba5c87306ecb06ee47c286833f1b3ec91e86aa82efc52732337293985aa0"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP229",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP229.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP229.lean",
+      "sha256": "78c26a992e04b7630ff06952f1e1d85d7c7188427f7fcb5300ce1b5b8ef31880"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP233",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP233.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP233.lean",
+      "sha256": "19f1bc714ed3044f49839f32ff3b72c1d45fb697c21d357ecf7f1a17dd269a1a"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP239",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP239.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP239.lean",
+      "sha256": "bd43ced84b65c429ace39c1c24b6eec4a674b81cb65594324e026752d11214bb"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP241",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP241.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP241.lean",
+      "sha256": "4fc284be7634ea272ef8362b7a2cdcd40a7d3215d0547e1f77df5dc9d8a3a8db"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP251",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP251.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP251.lean",
+      "sha256": "9421d0933a5f3ba1ab1fdcca47e79786c68085c3629253b7ea9483cfc73172a2"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP257",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP257.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP257.lean",
+      "sha256": "dd157f5282149eda3748c799e6e5c035fa3daebf5a2ed3e3b030c44e0e850934"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP263",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP263.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP263.lean",
+      "sha256": "15f4956b1f76b1f76f026020bbca2e633eee832b21bfa3bb9da6ec282bf4e1eb"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP269",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP269.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP269.lean",
+      "sha256": "f35f5d878c78bb14f4c1c103bb16b5bfd436e977db4d79a9e8d646d43c8ed7cf"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP271",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP271.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP271.lean",
+      "sha256": "d54840f917fa74f1ab9fb31d68f978e768219bb2b7206b6e59fab0a14b1e5f94"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP277",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP277.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP277.lean",
+      "sha256": "053c6f2d677d76b4da56691f389a911b81df061ed76490109e9f0dcba8f3f196"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP281",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP281.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP281.lean",
+      "sha256": "49c58a4fe8e0c8aaaf6ba3359c08c2575c16f36f31a09bb930f1f5f9af5707a4"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP283",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP283.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP283.lean",
+      "sha256": "93fefd8a8540622acea5fc581f7a9f9cf80c2efb587b44e6a45b645dc8c4dd68"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP293",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP293.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP293.lean",
+      "sha256": "be4f2fadb9508b6d85ac87eadb2bd799c320fa3169428654221148acd43f9b95"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP307",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP307.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP307.lean",
+      "sha256": "381bb660279290a131b2701198a502bc7ff11a3573ed201c9d9fa9715025729b"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP311",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP311.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP311.lean",
+      "sha256": "a97346d7b5a29f354c6087817e24dec31968080fce26221935943a22c1422190"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP313",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP313.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP313.lean",
+      "sha256": "9520d145144401f4ec15e01b97d558d637eab66597cc4c57888bf0f84a919b3b"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP317",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP317.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP317.lean",
+      "sha256": "ca4d9b158270a8a354bd22d6ab8e299c5f17036bb8569af43c435bfcbe0fccdf"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP331",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP331.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP331.lean",
+      "sha256": "7c7f89a78f1d88d6325196bea555893ea03364072fab1e1febb84da80ae31a1c"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP337",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP337.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP337.lean",
+      "sha256": "ef5012bcbe9eb4ae244aa47867db345ab88e0a51dbd65629605a5d55e80b73fa"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP347",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP347.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP347.lean",
+      "sha256": "70fbf41b40e453c8a24eda1548fbf9d48fb9ab0a64381f525d45b04a90713817"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP349",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP349.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP349.lean",
+      "sha256": "04be4a0e34be3b3e7d60e86a138798c5c77f55e9bba2ffc13dd11eb8502ed12b"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP353",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP353.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP353.lean",
+      "sha256": "0a37ac4b4b701a4b97987a2a09aee61c2b6f20deebcabb8c75353430c609dc28"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP359",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP359.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP359.lean",
+      "sha256": "3eb6ec97a3be534b883260b537a1a9ff13466709e852444d4fdd5d5a77bc8ce4"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP367",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP367.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP367.lean",
+      "sha256": "4f3abb9e3a0670a81397ce698b2122f63739354fe0c4e80b2dc90f8f1e617f1c"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP373",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP373.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP373.lean",
+      "sha256": "9fa0a7887c5c04da6fad7bdff1763e619099206ba3fccd7f167f40358084a95a"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.CertificateP379",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP379.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/CertificateP379.lean",
+      "sha256": "f8a761f3f69e002409aa40073dbfadd432f90fcccb43556ec55810be997688d3"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.GeneratedCertificate",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\GeneratedCertificate.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/GeneratedCertificate.lean",
+      "sha256": "cd31be62c8309fb16b5f4a517293250d0e7e10c6d42b499cefb26ebbf7e475a9"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.Bounds",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\Bounds.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/Bounds.lean",
+      "sha256": "61fa6ceae311eae5591a91698ed4421b89b15ecfc1d531d5f95c0b073d3c01d5"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.NecessaryBounds",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\NecessaryBounds.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/NecessaryBounds.lean",
+      "sha256": "7eea9ef0f641d8b096b75dfc01c9c18feb8747811bbf10a3af53661cef885e71"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.SquareTypes",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\SquareTypes.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/SquareTypes.lean",
+      "sha256": "68a970abf6b658c3bda5851041af4f3e14d6a982df1796624c1d7faacf7cd0fb"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.SquareCount",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\SquareCount.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/SquareCount.lean",
+      "sha256": "0e38d843b0c67cdb97b6c0c79f8282baa7d8fbe3697cef8e6f8d8859688bd093"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.Target224",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\Target224.lean",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/Target224.lean",
+      "sha256": "3b67f7494439886af3359a9e684433f49a6dccb7d10258d1d05dcc01de7886d0"
+    }
+  ],
+  "source_plan_sha256": "0f6338f72ff570e79847995bac7cf6f6c56c8a1c2cc8dedf55181bc764180fe7",
+  "source_hashes_by_module": {
+    "OpHack.QuadraticResidue224.Reduction": "9e99fe23a3f959aebc92fcb13bca23fae98d37251e36023c9db8fa92acc99193",
+    "OpHack.QuadraticResidue224.SplitCertificatePilot": "ecd4a1b741fc7fdfb039a224d2ed23eea06884302bd86d7e21cac330063dc197",
+    "OpHack.QuadraticResidue224.CertificateP3": "147ced05971cb683c40c50838675b3dc8f51b0199c8a9f155c7c0963e50abbda",
+    "OpHack.QuadraticResidue224.CertificateP5": "169f6329822e4bf487ffd64bed66e1dc2afafe5f0e4c0c41be365312cfe7812a",
+    "OpHack.QuadraticResidue224.CertificateP7": "4428053af5a307d288826d1c1f05c9e57bad7bcfef62bddc72b0d2bbee5b4841",
+    "OpHack.QuadraticResidue224.CertificateP11": "c802384b2b0b25386a0581fe5950031566583b2c6caea12d3dee442baabc15fd",
+    "OpHack.QuadraticResidue224.CertificateP13": "ff47cd7add096135b1b6adbe17e29f6e131df346fe67cee117c30b8ea0a08d7e",
+    "OpHack.QuadraticResidue224.CertificateP17": "5bd878c2cc702f5efd20d9255950d650595e15795926832e0b0edf17270ab8d0",
+    "OpHack.QuadraticResidue224.CertificateP19": "a986377419c02299d3b2a9b0c1f323df8b2188a12cb11018a104c76b701cebe2",
+    "OpHack.QuadraticResidue224.CertificateP23": "fda9cec956f69ff2a935538b368d76b1b02b893bed954cf4687a8549136cb429",
+    "OpHack.QuadraticResidue224.CertificateP29": "e6babb0ba0df3872658c0b7634648e5a71e92b293b71309dc3f882f46c591e1a",
+    "OpHack.QuadraticResidue224.CertificateP31Part0001": "68efc8faa466839cebd692606ca01d8dce9a8bcfd286b0a33cccbed6f07e6055",
+    "OpHack.QuadraticResidue224.CertificateP31Part0002": "43822a60b5ba7841f24c46722a5d45a66e8498ecaa1447d918d55f3dfe313698",
+    "OpHack.QuadraticResidue224.CertificateP31Part0003": "c7b2ca338b1dc0e62fe9ffc60d64949d298ce3e7b4ce5899d4879bc738d22b29",
+    "OpHack.QuadraticResidue224.CertificateP31Part0004": "21dd0e3797b2691b61cbce59dcf662b537996fd98e0aa458f12e64cb7f4e42d7",
+    "OpHack.QuadraticResidue224.CertificateP31": "c44f72a72f58e41a717037bc0d0fdd4f26863c9048dc9c240b5a3527d4a44dc5",
+    "OpHack.QuadraticResidue224.CertificateP37": "dafa5fc9b71acc722f346b61a45a4bd507926ea66c10a8f6c5c2ada57b648ba2",
+    "OpHack.QuadraticResidue224.CertificateP41": "b3599aae75a82e1233380926ccaac5933b0e56523c38463a4e3ced0303311f90",
+    "OpHack.QuadraticResidue224.CertificateP43Part0001": "6ed715619ab2290728b00b637eb8b4769234d029eefb200c376126d678287578",
+    "OpHack.QuadraticResidue224.CertificateP43Part0002": "96f84e28407edf035ec2f4c83e3b189da45e9b381f8f3bc79263743c8857c86f",
+    "OpHack.QuadraticResidue224.CertificateP43Part0003": "4a4134c03b621e2dbf820bb161566d922b787bf2aac9cdea508039467d4e8944",
+    "OpHack.QuadraticResidue224.CertificateP43": "845cad738cca02540c6ac2451433aa91060fe359e20d09a1be07f5b4f722f179",
+    "OpHack.QuadraticResidue224.CertificateP47": "28cf13fe7fa0c8f3bcb9be0353224244489b75e89013b9c9d82bc20a23f5c7b4",
+    "OpHack.QuadraticResidue224.CertificateP53": "a31c7529d7847764d673ab92a04ed8370b1a64ce969b29c637b86a209ba055fa",
+    "OpHack.QuadraticResidue224.CertificateP59": "9ddc605662335d0be89e4f7183b506db35976246d3860c386685d5ed3c2e9155",
+    "OpHack.QuadraticResidue224.CertificateP61": "7423244937f54bd5186a98ad80f7fed4426837b11e4421d98e18d009f7e7c81a",
+    "OpHack.QuadraticResidue224.CertificateP67Part0001": "c4649039ebf54cf4e030de1ff322a7d944f9af882fae1399134832acfd2f04f8",
+    "OpHack.QuadraticResidue224.CertificateP67Part0002": "4d05ec8acfc2621ab8f1e22b409ff789b4d200dc6d7c099bd56cb10b7a45cbfb",
+    "OpHack.QuadraticResidue224.CertificateP67": "725429d603d5949d73212dd666c465e69bc8f8b7b050bf1db634b3f86db14409",
+    "OpHack.QuadraticResidue224.CertificateP71Part0001": "de715be30793bf4374b1bef23bf829c2466f2759c2f07a7e8956cd521913569e",
+    "OpHack.QuadraticResidue224.CertificateP71Part0002": "485ec15315016d55c76324ac821de93510b3dca698371dd66a9ab99d523fe38d",
+    "OpHack.QuadraticResidue224.CertificateP71": "9d5ca3dee162ab6e31e7917c501f3665e9b808bad9f3125b9036746db09306fb",
+    "OpHack.QuadraticResidue224.CertificateP73": "ce0c960981a44c14c8f46447285ccda5ead99f42e77910309d3ee08fc4c6b3b9",
+    "OpHack.QuadraticResidue224.CertificateP79": "b34d9bbc2c788f20410e7bf1b1a7fc5bb2a04f68bed91a6e8e066672a9ad789d",
+    "OpHack.QuadraticResidue224.CertificateP83": "c9d875dc513d360b2f711770dd497c0bff2cdbba4a3e339c7b959b3a58359f44",
+    "OpHack.QuadraticResidue224.CertificateP89": "9c31fde06a79863b3e5943c91748567811414dcbac3e3d9e32cad7513df80ee1",
+    "OpHack.QuadraticResidue224.CertificateP97": "bd3cfdbdcb06ab5c9e7cc6769fe8b8905d0d544454173e864cf6f79125a634a3",
+    "OpHack.QuadraticResidue224.CertificateP101": "2f70633a3b69ec899cca86833d9e608957ad4465a286c6e95d5689bdde235ce9",
+    "OpHack.QuadraticResidue224.CertificateP103": "cbb71472f6fb39e80b86ef20c620de67ec1ef6aef95cae6fe084a6187f54d99e",
+    "OpHack.QuadraticResidue224.CertificateP107": "8d865d04814abe023562078ebe048dd5e4bf6db4d9d4934fb1289c95593776b9",
+    "OpHack.QuadraticResidue224.CertificateP109": "637e77d60413565d8cc831d199e6849c7dbdb674d6acbae2bf9899d2e2d43108",
+    "OpHack.QuadraticResidue224.CertificateP113": "fe0a5af27bab231402c16f70d4a49419e1f48a272f360f32f0a4a31cb974d639",
+    "OpHack.QuadraticResidue224.CertificateP127Part0001": "2a67a343b53def4017ddb4b4aa48df3af5fec476d8336b8ee32b4e00ff10e2e9",
+    "OpHack.QuadraticResidue224.CertificateP127Part0002": "d160cc7b448a8512254ae92138fe7250443cf9b341af66bda5e3d4997d0191d1",
+    "OpHack.QuadraticResidue224.CertificateP127Part0003": "808f430168ded04c8dbf828e1154c1e730fe0831bc422304cb582dc0ca6f7666",
+    "OpHack.QuadraticResidue224.CertificateP127Part0004": "e596ab7fb67e155f447f990b853310b3fee1ebc1d29476dfda15cc9c0d2e3d55",
+    "OpHack.QuadraticResidue224.CertificateP127Part0005": "e4a5ace93475b2ed51a579fdb52cc7ccf2a55875db5ac52ccb804a864b95314f",
+    "OpHack.QuadraticResidue224.CertificateP127Part0006": "da462432da2d0505384975d82a7360f521396efa75d87003191ac957b7cbac03",
+    "OpHack.QuadraticResidue224.CertificateP127Part0007": "b6d613e149e7d54efbbfd970143cf420c773f0507064d795a01b861ed2237998",
+    "OpHack.QuadraticResidue224.CertificateP127Part0008": "2a43d790a26ecdfdf61f3578fd27079ec9ffce1732d534446a7018c6827c68a4",
+    "OpHack.QuadraticResidue224.CertificateP127Part0009": "dceb0a9353a258682a31cc7f0f17fdf64a925c0c413b146251e41430154944c0",
+    "OpHack.QuadraticResidue224.CertificateP127Part0010": "2f04c6c69ad4cd5d1fe6909cafa57d646cd6ded04f9360503ecd1ae11f85f8ef",
+    "OpHack.QuadraticResidue224.CertificateP127Part0011": "c16f4697a07ed148871d2dd3c7077d9afdf8eb572177210f402451257b9e213a",
+    "OpHack.QuadraticResidue224.CertificateP127Part0012": "9a0ffdf015c3a7dc26516a3d9d73e84114a1fa3fa73c4ce664556d6a36614810",
+    "OpHack.QuadraticResidue224.CertificateP127Part0013": "20251c34418cf989f929e7a30ca3a37a1c131995c48b08b33e16088d905037f1",
+    "OpHack.QuadraticResidue224.CertificateP127Part0014": "387bc1a1418f42583b85cd8119f25ac577fc4d77d0a600c35d34c1952b767120",
+    "OpHack.QuadraticResidue224.CertificateP127Part0015": "0330e599e8f35b8c920a76e8e3436554e18cf650b2b53728f97134ea3ac012e0",
+    "OpHack.QuadraticResidue224.CertificateP127Part0016": "c83e6483d26b5c888b30f736d69dbb2542edd43ab534367276fef0d3a94eb920",
+    "OpHack.QuadraticResidue224.CertificateP127Part0017": "0249a8410d753e9a8ebbcdce5603a8d2f335f7703fe2a61d9a1317c008ccadb0",
+    "OpHack.QuadraticResidue224.CertificateP127Part0018": "a52ed0aaa495257f6c3e9bab8e9621180e6d8cfb5e3a609d84223685c5ff2c28",
+    "OpHack.QuadraticResidue224.CertificateP127Part0019": "f067d2f8f6c978bc4053c4129d937bc60de9cf5efd4dbad4d0a6eec695bb6e54",
+    "OpHack.QuadraticResidue224.CertificateP127Part0020": "eebcb58d2b9f0e6c20c22668bb0076ff6ded2933b1a29871d3913f49236527a3",
+    "OpHack.QuadraticResidue224.CertificateP127Part0021": "81ffda5049d9fbe209d4c5c2e83421686cbc89b5f8431d9c5eeaf2e3d01d1526",
+    "OpHack.QuadraticResidue224.CertificateP127Part0022": "55755dcb8f927165a4a30c71f062e5dade063ada4d1e52cb64cd146752892e1f",
+    "OpHack.QuadraticResidue224.CertificateP127Part0023": "10816426920b97dd0277dfcb9770adb6d9ad6281d7a59537dec8a3c99a5afbb5",
+    "OpHack.QuadraticResidue224.CertificateP127Part0024": "0651568a88f07092dd9dd9ae1db792c3f798f3bb3f72b131f6697081df630078",
+    "OpHack.QuadraticResidue224.CertificateP127Part0025": "cc7a0c418d26c72d6bb681067481abe61d761558e3ff9498fad964b1b963bfb6",
+    "OpHack.QuadraticResidue224.CertificateP127Part0026": "7b13a21349aca63d236d94a5a5f0f5effcd9cfc616b118bf0743410a89dec02a",
+    "OpHack.QuadraticResidue224.CertificateP127Part0027": "5eeff83910edb64efe73cfc2b0670709901958666b8c7d359863f9c119f1b0b8",
+    "OpHack.QuadraticResidue224.CertificateP127Part0028": "115bfc5682bbc2967dc84110a1d1a0e4019be0578c19e345cbbc2720f9f54a80",
+    "OpHack.QuadraticResidue224.CertificateP127Part0029": "5efb22fdea0d7803ec10ae08c76ff8c705ff93127f9c14dea07575db8afc15e4",
+    "OpHack.QuadraticResidue224.CertificateP127Part0030": "97159592e8e7598be61ccc57ef817985f4ad71ec66249aef3c67658809cf7192",
+    "OpHack.QuadraticResidue224.CertificateP127Part0031": "164917c024cfc49583c1e09c387d1156147e4f12e66956f271cf2d7589a66e32",
+    "OpHack.QuadraticResidue224.CertificateP127Part0032": "22b3c2c24f4b5fedf60fd7936a58c637dd9be4d8f5cfce711c4be1ae8531632c",
+    "OpHack.QuadraticResidue224.CertificateP127Part0033": "052daf1085b32a49dec9ce75e69ad65ce286ea81d7d286d894d6d897af807855",
+    "OpHack.QuadraticResidue224.CertificateP127Part0034": "244ef58bc5143330f80b926b6a35ed213730538730de4a50063548021ff7bc84",
+    "OpHack.QuadraticResidue224.CertificateP127Part0035": "2900fd80273f2af79be05c57176b85fd0a168dc94ab0a96d9eb2cc8ccb112a5f",
+    "OpHack.QuadraticResidue224.CertificateP127Part0036": "359d278dbc779b25c79f89f74628e3cc0d997af591e901b409f7753b05dea09d",
+    "OpHack.QuadraticResidue224.CertificateP127Part0037": "7f2fe3fc664d5126c01267bf387a7d10480450e41e476e4dcabf1a0ad42fad6a",
+    "OpHack.QuadraticResidue224.CertificateP127Part0038": "f3ad60b6d8553509d7f8b4f9ac74bbf6969c23399d3483347f07e970fee931e8",
+    "OpHack.QuadraticResidue224.CertificateP127Part0039": "21cf9d8bd64c92c85f4a7ed93328cd19305187af332a9c63de93f53f6ab5a941",
+    "OpHack.QuadraticResidue224.CertificateP127Part0040": "fdfdfd79ffafaf86755d97b1b45bb5a2ead4612de95dc92660f358ced9c31f54",
+    "OpHack.QuadraticResidue224.CertificateP127Part0041": "66858c4701585ba0307dfe6fd80813dc131bc64d399a4583089ba07363a021ca",
+    "OpHack.QuadraticResidue224.CertificateP127Part0042": "968c5f2b0d1d6f41f82bef6ed2348785b99856fb394a84e5a43bd914621d0137",
+    "OpHack.QuadraticResidue224.CertificateP127Part0043": "8b28efd653b53734611e8b666b24f70bc277e4a6f19b4d71bc08c81d5d07ec33",
+    "OpHack.QuadraticResidue224.CertificateP127Part0044": "29cbcb069fef72e996d3c7d5352ab562508c03a7238395bf26b4d491ad83b3bc",
+    "OpHack.QuadraticResidue224.CertificateP127Part0045": "b99940c1e77e59446bd5c346d89bdd239b0af0098573a421d5ebae9054dd9c8e",
+    "OpHack.QuadraticResidue224.CertificateP127Part0046": "8b049c84970966355ac88828109417fe3745ade421379cc0f2d3adf7d60fcdb8",
+    "OpHack.QuadraticResidue224.CertificateP127Part0047": "4278d59d4c7aefd544b6bfc9ac81ddb61ce229bfa66b379e0bb187bac046fa59",
+    "OpHack.QuadraticResidue224.CertificateP127Part0048": "d87e873b4728be4e4c581decf0bb80ab5a43b4711118839cc405720d400e5e15",
+    "OpHack.QuadraticResidue224.CertificateP127Part0049": "6277061f06a51b1767b8bba1966399926451108e9f3b32819b1a0a4b57d8f414",
+    "OpHack.QuadraticResidue224.CertificateP127Part0050": "72acd346b3cc16d9e9368ac90e20e2213024ff17d08917e0adb1ddea0b3e2467",
+    "OpHack.QuadraticResidue224.CertificateP127Part0051": "66ad19be7f0307598e395e42ee560139c3acbd8a5cf282efbf801dc6140491a4",
+    "OpHack.QuadraticResidue224.CertificateP127Part0052": "5a37cad263b126052ca41e24f14d9c7096959bc75740e22d2ad855c3f647a65a",
+    "OpHack.QuadraticResidue224.CertificateP127Part0053": "2b2c018076f82984547ebf8704535a9a10296170e01590e52f2d42ecc17e03f9",
+    "OpHack.QuadraticResidue224.CertificateP127Part0054": "0fe449f454ef8d6ea64678d9ce4446413dde76674c85c6104b4720c2b7e1065c",
+    "OpHack.QuadraticResidue224.CertificateP127Part0055": "8da1be9d879fbdabc02e94ebc6cf94005dddb96ea32cd7925589ed07c7f99093",
+    "OpHack.QuadraticResidue224.CertificateP127Part0056": "fa826a5659811996ed088faecf65a7a2431f59ceb0f9efdf4f16bd64c96fbde8",
+    "OpHack.QuadraticResidue224.CertificateP127": "4befb40d67a7d5fa1aab9e95b1b74aca723dd36afb11905f919117b0da3e805e",
+    "OpHack.QuadraticResidue224.CertificateP131Part0001": "5d02003e7797ac804d60170cb043d9b5adc51d390203af85fb3e0ee8f90441fc",
+    "OpHack.QuadraticResidue224.CertificateP131Part0002": "b6defbbaa0c6443af08e33efc68e441d4025975364986b446e43d66a3922c178",
+    "OpHack.QuadraticResidue224.CertificateP131Part0003": "3c2d8839f50eaf3e617408352a14074ef8e3b63c1ac5148561a0c22c01fde291",
+    "OpHack.QuadraticResidue224.CertificateP131Part0004": "4c7234dd84b0c038e7ec3099f0c1409d1abb0c2b69f837703a0746554ca64e9b",
+    "OpHack.QuadraticResidue224.CertificateP131Part0005": "bee20b3b4fd3547ca4d1c6150f63ed8db6b14ba02c82f414abb5302f7c32f279",
+    "OpHack.QuadraticResidue224.CertificateP131Part0006": "15228e19c61e4af0b151f7fd5eff1b525667c89278b761c26f3e338775b34209",
+    "OpHack.QuadraticResidue224.CertificateP131Part0007": "c90eb716d0d4353f0813b581cf3f7669c757a7850a436a751db0040314c75484",
+    "OpHack.QuadraticResidue224.CertificateP131": "791e98df04ba178e8986428f0461ca31ace34300e1a0f342c7e75af2971791f5",
+    "OpHack.QuadraticResidue224.CertificateP137Part0001": "fd705e5a87cbc09caf9af141102bb15cba63fb4f9e6caae6e5b9e1c3b45cfc31",
+    "OpHack.QuadraticResidue224.CertificateP137Part0002": "3fc8284475d67a569d80aca0b110b81d9baea34003e36a0175a5b6e50627c705",
+    "OpHack.QuadraticResidue224.CertificateP137Part0003": "edd0406d0e3e9cfb4f8e1b9cc0063c9cf120b6f633f87e5b235481e50bed827b",
+    "OpHack.QuadraticResidue224.CertificateP137Part0004": "898dbb7778963566539846f6986f6268cb3315abaa9e151ae044e4bf625b8fbb",
+    "OpHack.QuadraticResidue224.CertificateP137": "8773b922d97e34ea7f1bf8b84f73a9635ebdc52e7217752731e18e7f5ce70e72",
+    "OpHack.QuadraticResidue224.CertificateP139Part0001": "09d9c12aa008a67a69458e6596841d4916313d1c0c1a992ad1fe0e42e3efb90c",
+    "OpHack.QuadraticResidue224.CertificateP139Part0002": "ccf747fa7224c71722ad3cd86caaa0f21afded83bf28f5969338e9ccd6ec62b1",
+    "OpHack.QuadraticResidue224.CertificateP139Part0003": "a057b49768116131fa2726073ad72da07ec6cd0fd1a267b2fe02bdca24afb49a",
+    "OpHack.QuadraticResidue224.CertificateP139": "7363bd9ffea67956b20559ee2604dacfcbf4d44bbea042b68bbe8a1d04c9070e",
+    "OpHack.QuadraticResidue224.CertificateP149Part0001": "c088ce3bbe00086ed14aa5f75df0aef1be2e53c6f54fe54c4b89113bbe82eacb",
+    "OpHack.QuadraticResidue224.CertificateP149Part0002": "bd80067f856903a8f6e76eb92e6fc39bb5aa9e84577f87305c234a16ab4a7462",
+    "OpHack.QuadraticResidue224.CertificateP149": "99320b4e2bcf5d364d0c11560923628464ed6a101489d4f524b618395c296ee1",
+    "OpHack.QuadraticResidue224.CertificateP151Part0001": "ec83b73e55e58dff1b074e8d27067fb4fc23c19e859ab4195ddaf41d164d93d0",
+    "OpHack.QuadraticResidue224.CertificateP151Part0002": "86e940d7c7cc57de7343f21fcafc34839467a3885b575db67f221674e4831adb",
+    "OpHack.QuadraticResidue224.CertificateP151": "184e82e331a025d85d56dc4860a21931331f034772c7488f8e9c6bfc07e6e053",
+    "OpHack.QuadraticResidue224.CertificateP157Part0001": "91dce82bec06d4c30f12abfa11047a63924c5b55818d5eaff14152f290f34837",
+    "OpHack.QuadraticResidue224.CertificateP157Part0002": "fc5dbf69d97c39b1deeaa0645dba0913c8947a80aa04c9b661d17a3785dc5e6b",
+    "OpHack.QuadraticResidue224.CertificateP157": "5b388f2ea72dff60ae0bc8099ab94e608ca7d0a34d62ef7881b2468501c579b4",
+    "OpHack.QuadraticResidue224.CertificateP163Part0001": "26f4d704ea4f5bdea729f2f03c8d381353e9d4051caadbca3e8d3cd575f7ee1c",
+    "OpHack.QuadraticResidue224.CertificateP163Part0002": "dd754d8ba13d94979ae15c1177218d044e3522ca526d5c01c0ef0f09f1c12b69",
+    "OpHack.QuadraticResidue224.CertificateP163": "b1e726b411a1e9c5d8427cc09460d4e434374b23fb23af284d92858320f7e595",
+    "OpHack.QuadraticResidue224.CertificateP167": "33c6454912d80bac7279fe069bcc3172023f63ab95a361dec6e872995b316851",
+    "OpHack.QuadraticResidue224.CertificateP173": "8db86ff855fcb9bc51d8edc15cc185b6e8ca135614a9fb4b639536b900eea013",
+    "OpHack.QuadraticResidue224.CertificateP179": "f049b3eb6b9e67d8d1be59cdf8c216226cb701363a11cae1fb73832fbe31254a",
+    "OpHack.QuadraticResidue224.CertificateP181": "4901da437f6b6862573db99198a0d75c8c36e98b654261357557b40b0cc3fe4c",
+    "OpHack.QuadraticResidue224.CertificateP191": "2c522e2416fa6b21ede313e28c378a40f4eaa780f39f3fbbf75a8139049ee198",
+    "OpHack.QuadraticResidue224.CertificateP193": "265ae77c9bc11f8aa38b2966de2eebe22fecb960189bc9d62102d31de0474578",
+    "OpHack.QuadraticResidue224.CertificateP197": "9713e865e04d25985bd228702cb005c4ef6897f81f99166dd35a60b34a4ca40d",
+    "OpHack.QuadraticResidue224.CertificateP199": "ce2bc72ec9ff52eff0646f3a2f839f52efba01046fd3166c9fcb328fe18e5faa",
+    "OpHack.QuadraticResidue224.CertificateP211": "d72b2e0a3c25f742c65ea184d74489f7b1201a082f17f97325977fc0ea87d35c",
+    "OpHack.QuadraticResidue224.CertificateP223": "09da56b89b8ed1d127dc61df03ad76d177a43bbc8d104481aac1d0acda51e404",
+    "OpHack.QuadraticResidue224.CertificateP227": "935bba5c87306ecb06ee47c286833f1b3ec91e86aa82efc52732337293985aa0",
+    "OpHack.QuadraticResidue224.CertificateP229": "78c26a992e04b7630ff06952f1e1d85d7c7188427f7fcb5300ce1b5b8ef31880",
+    "OpHack.QuadraticResidue224.CertificateP233": "19f1bc714ed3044f49839f32ff3b72c1d45fb697c21d357ecf7f1a17dd269a1a",
+    "OpHack.QuadraticResidue224.CertificateP239": "bd43ced84b65c429ace39c1c24b6eec4a674b81cb65594324e026752d11214bb",
+    "OpHack.QuadraticResidue224.CertificateP241": "4fc284be7634ea272ef8362b7a2cdcd40a7d3215d0547e1f77df5dc9d8a3a8db",
+    "OpHack.QuadraticResidue224.CertificateP251": "9421d0933a5f3ba1ab1fdcca47e79786c68085c3629253b7ea9483cfc73172a2",
+    "OpHack.QuadraticResidue224.CertificateP257": "dd157f5282149eda3748c799e6e5c035fa3daebf5a2ed3e3b030c44e0e850934",
+    "OpHack.QuadraticResidue224.CertificateP263": "15f4956b1f76b1f76f026020bbca2e633eee832b21bfa3bb9da6ec282bf4e1eb",
+    "OpHack.QuadraticResidue224.CertificateP269": "f35f5d878c78bb14f4c1c103bb16b5bfd436e977db4d79a9e8d646d43c8ed7cf",
+    "OpHack.QuadraticResidue224.CertificateP271": "d54840f917fa74f1ab9fb31d68f978e768219bb2b7206b6e59fab0a14b1e5f94",
+    "OpHack.QuadraticResidue224.CertificateP277": "053c6f2d677d76b4da56691f389a911b81df061ed76490109e9f0dcba8f3f196",
+    "OpHack.QuadraticResidue224.CertificateP281": "49c58a4fe8e0c8aaaf6ba3359c08c2575c16f36f31a09bb930f1f5f9af5707a4",
+    "OpHack.QuadraticResidue224.CertificateP283": "93fefd8a8540622acea5fc581f7a9f9cf80c2efb587b44e6a45b645dc8c4dd68",
+    "OpHack.QuadraticResidue224.CertificateP293": "be4f2fadb9508b6d85ac87eadb2bd799c320fa3169428654221148acd43f9b95",
+    "OpHack.QuadraticResidue224.CertificateP307": "381bb660279290a131b2701198a502bc7ff11a3573ed201c9d9fa9715025729b",
+    "OpHack.QuadraticResidue224.CertificateP311": "a97346d7b5a29f354c6087817e24dec31968080fce26221935943a22c1422190",
+    "OpHack.QuadraticResidue224.CertificateP313": "9520d145144401f4ec15e01b97d558d637eab66597cc4c57888bf0f84a919b3b",
+    "OpHack.QuadraticResidue224.CertificateP317": "ca4d9b158270a8a354bd22d6ab8e299c5f17036bb8569af43c435bfcbe0fccdf",
+    "OpHack.QuadraticResidue224.CertificateP331": "7c7f89a78f1d88d6325196bea555893ea03364072fab1e1febb84da80ae31a1c",
+    "OpHack.QuadraticResidue224.CertificateP337": "ef5012bcbe9eb4ae244aa47867db345ab88e0a51dbd65629605a5d55e80b73fa",
+    "OpHack.QuadraticResidue224.CertificateP347": "70fbf41b40e453c8a24eda1548fbf9d48fb9ab0a64381f525d45b04a90713817",
+    "OpHack.QuadraticResidue224.CertificateP349": "04be4a0e34be3b3e7d60e86a138798c5c77f55e9bba2ffc13dd11eb8502ed12b",
+    "OpHack.QuadraticResidue224.CertificateP353": "0a37ac4b4b701a4b97987a2a09aee61c2b6f20deebcabb8c75353430c609dc28",
+    "OpHack.QuadraticResidue224.CertificateP359": "3eb6ec97a3be534b883260b537a1a9ff13466709e852444d4fdd5d5a77bc8ce4",
+    "OpHack.QuadraticResidue224.CertificateP367": "4f3abb9e3a0670a81397ce698b2122f63739354fe0c4e80b2dc90f8f1e617f1c",
+    "OpHack.QuadraticResidue224.CertificateP373": "9fa0a7887c5c04da6fad7bdff1763e619099206ba3fccd7f167f40358084a95a",
+    "OpHack.QuadraticResidue224.CertificateP379": "f8a761f3f69e002409aa40073dbfadd432f90fcccb43556ec55810be997688d3",
+    "OpHack.QuadraticResidue224.GeneratedCertificate": "cd31be62c8309fb16b5f4a517293250d0e7e10c6d42b499cefb26ebbf7e475a9",
+    "OpHack.QuadraticResidue224.Bounds": "61fa6ceae311eae5591a91698ed4421b89b15ecfc1d531d5f95c0b073d3c01d5",
+    "OpHack.QuadraticResidue224.NecessaryBounds": "7eea9ef0f641d8b096b75dfc01c9c18feb8747811bbf10a3af53661cef885e71",
+    "OpHack.QuadraticResidue224.SquareTypes": "68a970abf6b658c3bda5851041af4f3e14d6a982df1796624c1d7faacf7cd0fb",
+    "OpHack.QuadraticResidue224.SquareCount": "0e38d843b0c67cdb97b6c0c79f8282baa7d8fbe3697cef8e6f8d8859688bd093",
+    "OpHack.QuadraticResidue224.Target224": "3b67f7494439886af3359a9e684433f49a6dccb7d10258d1d05dcc01de7886d0"
+  },
+  "original76_source_pass_names": [
+    "OpHack.QuadraticResidue224.Reduction",
+    "OpHack.QuadraticResidue224.SplitCertificatePilot",
+    "OpHack.QuadraticResidue224.CertificateP3",
+    "OpHack.QuadraticResidue224.CertificateP5",
+    "OpHack.QuadraticResidue224.CertificateP7",
+    "OpHack.QuadraticResidue224.CertificateP11",
+    "OpHack.QuadraticResidue224.CertificateP13",
+    "OpHack.QuadraticResidue224.CertificateP17",
+    "OpHack.QuadraticResidue224.CertificateP19",
+    "OpHack.QuadraticResidue224.CertificateP23",
+    "OpHack.QuadraticResidue224.CertificateP29",
+    "OpHack.QuadraticResidue224.CertificateP31Part0001",
+    "OpHack.QuadraticResidue224.CertificateP31Part0002",
+    "OpHack.QuadraticResidue224.CertificateP31Part0003",
+    "OpHack.QuadraticResidue224.CertificateP31Part0004",
+    "OpHack.QuadraticResidue224.CertificateP31",
+    "OpHack.QuadraticResidue224.CertificateP37",
+    "OpHack.QuadraticResidue224.CertificateP41",
+    "OpHack.QuadraticResidue224.CertificateP43Part0001",
+    "OpHack.QuadraticResidue224.CertificateP43Part0002",
+    "OpHack.QuadraticResidue224.CertificateP43Part0003",
+    "OpHack.QuadraticResidue224.CertificateP43",
+    "OpHack.QuadraticResidue224.CertificateP47",
+    "OpHack.QuadraticResidue224.CertificateP53",
+    "OpHack.QuadraticResidue224.CertificateP59",
+    "OpHack.QuadraticResidue224.CertificateP61",
+    "OpHack.QuadraticResidue224.CertificateP67Part0001",
+    "OpHack.QuadraticResidue224.CertificateP67Part0002",
+    "OpHack.QuadraticResidue224.CertificateP67",
+    "OpHack.QuadraticResidue224.CertificateP71Part0001",
+    "OpHack.QuadraticResidue224.CertificateP71Part0002",
+    "OpHack.QuadraticResidue224.CertificateP71",
+    "OpHack.QuadraticResidue224.CertificateP73",
+    "OpHack.QuadraticResidue224.CertificateP79",
+    "OpHack.QuadraticResidue224.CertificateP83",
+    "OpHack.QuadraticResidue224.CertificateP89",
+    "OpHack.QuadraticResidue224.CertificateP97",
+    "OpHack.QuadraticResidue224.CertificateP101",
+    "OpHack.QuadraticResidue224.CertificateP103",
+    "OpHack.QuadraticResidue224.CertificateP107",
+    "OpHack.QuadraticResidue224.CertificateP109",
+    "OpHack.QuadraticResidue224.CertificateP113",
+    "OpHack.QuadraticResidue224.CertificateP127Part0001",
+    "OpHack.QuadraticResidue224.CertificateP127Part0002",
+    "OpHack.QuadraticResidue224.CertificateP127Part0003",
+    "OpHack.QuadraticResidue224.CertificateP127Part0004",
+    "OpHack.QuadraticResidue224.CertificateP127Part0005",
+    "OpHack.QuadraticResidue224.CertificateP127Part0006",
+    "OpHack.QuadraticResidue224.CertificateP127Part0007",
+    "OpHack.QuadraticResidue224.CertificateP127Part0008",
+    "OpHack.QuadraticResidue224.CertificateP127Part0009",
+    "OpHack.QuadraticResidue224.CertificateP127Part0010",
+    "OpHack.QuadraticResidue224.CertificateP127Part0011",
+    "OpHack.QuadraticResidue224.CertificateP127Part0012",
+    "OpHack.QuadraticResidue224.CertificateP127Part0013",
+    "OpHack.QuadraticResidue224.CertificateP127Part0014",
+    "OpHack.QuadraticResidue224.CertificateP127Part0015",
+    "OpHack.QuadraticResidue224.CertificateP127Part0016",
+    "OpHack.QuadraticResidue224.CertificateP127Part0017",
+    "OpHack.QuadraticResidue224.CertificateP127Part0018",
+    "OpHack.QuadraticResidue224.CertificateP127Part0019",
+    "OpHack.QuadraticResidue224.CertificateP127Part0020",
+    "OpHack.QuadraticResidue224.CertificateP127Part0021",
+    "OpHack.QuadraticResidue224.CertificateP127Part0022",
+    "OpHack.QuadraticResidue224.CertificateP127Part0023",
+    "OpHack.QuadraticResidue224.CertificateP127Part0024",
+    "OpHack.QuadraticResidue224.CertificateP127Part0025",
+    "OpHack.QuadraticResidue224.CertificateP127Part0026",
+    "OpHack.QuadraticResidue224.CertificateP127Part0027",
+    "OpHack.QuadraticResidue224.CertificateP127Part0028",
+    "OpHack.QuadraticResidue224.CertificateP127Part0029",
+    "OpHack.QuadraticResidue224.CertificateP127Part0030",
+    "OpHack.QuadraticResidue224.CertificateP127Part0031",
+    "OpHack.QuadraticResidue224.CertificateP127Part0032",
+    "OpHack.QuadraticResidue224.CertificateP127Part0033",
+    "OpHack.QuadraticResidue224.CertificateP127Part0034"
+  ],
+  "future_remaining95_source_names": [
+    "OpHack.QuadraticResidue224.CertificateP127Part0035",
+    "OpHack.QuadraticResidue224.CertificateP127Part0036",
+    "OpHack.QuadraticResidue224.CertificateP127Part0037",
+    "OpHack.QuadraticResidue224.CertificateP127Part0038",
+    "OpHack.QuadraticResidue224.CertificateP127Part0039",
+    "OpHack.QuadraticResidue224.CertificateP127Part0040",
+    "OpHack.QuadraticResidue224.CertificateP127Part0041",
+    "OpHack.QuadraticResidue224.CertificateP127Part0042",
+    "OpHack.QuadraticResidue224.CertificateP127Part0043",
+    "OpHack.QuadraticResidue224.CertificateP127Part0044",
+    "OpHack.QuadraticResidue224.CertificateP127Part0045",
+    "OpHack.QuadraticResidue224.CertificateP127Part0046",
+    "OpHack.QuadraticResidue224.CertificateP127Part0047",
+    "OpHack.QuadraticResidue224.CertificateP127Part0048",
+    "OpHack.QuadraticResidue224.CertificateP127Part0049",
+    "OpHack.QuadraticResidue224.CertificateP127Part0050",
+    "OpHack.QuadraticResidue224.CertificateP127Part0051",
+    "OpHack.QuadraticResidue224.CertificateP127Part0052",
+    "OpHack.QuadraticResidue224.CertificateP127Part0053",
+    "OpHack.QuadraticResidue224.CertificateP127Part0054",
+    "OpHack.QuadraticResidue224.CertificateP127Part0055",
+    "OpHack.QuadraticResidue224.CertificateP127Part0056",
+    "OpHack.QuadraticResidue224.CertificateP127",
+    "OpHack.QuadraticResidue224.CertificateP131Part0001",
+    "OpHack.QuadraticResidue224.CertificateP131Part0002",
+    "OpHack.QuadraticResidue224.CertificateP131Part0003",
+    "OpHack.QuadraticResidue224.CertificateP131Part0004",
+    "OpHack.QuadraticResidue224.CertificateP131Part0005",
+    "OpHack.QuadraticResidue224.CertificateP131Part0006",
+    "OpHack.QuadraticResidue224.CertificateP131Part0007",
+    "OpHack.QuadraticResidue224.CertificateP131",
+    "OpHack.QuadraticResidue224.CertificateP137Part0001",
+    "OpHack.QuadraticResidue224.CertificateP137Part0002",
+    "OpHack.QuadraticResidue224.CertificateP137Part0003",
+    "OpHack.QuadraticResidue224.CertificateP137Part0004",
+    "OpHack.QuadraticResidue224.CertificateP137",
+    "OpHack.QuadraticResidue224.CertificateP139Part0001",
+    "OpHack.QuadraticResidue224.CertificateP139Part0002",
+    "OpHack.QuadraticResidue224.CertificateP139Part0003",
+    "OpHack.QuadraticResidue224.CertificateP139",
+    "OpHack.QuadraticResidue224.CertificateP149Part0001",
+    "OpHack.QuadraticResidue224.CertificateP149Part0002",
+    "OpHack.QuadraticResidue224.CertificateP149",
+    "OpHack.QuadraticResidue224.CertificateP151Part0001",
+    "OpHack.QuadraticResidue224.CertificateP151Part0002",
+    "OpHack.QuadraticResidue224.CertificateP151",
+    "OpHack.QuadraticResidue224.CertificateP157Part0001",
+    "OpHack.QuadraticResidue224.CertificateP157Part0002",
+    "OpHack.QuadraticResidue224.CertificateP157",
+    "OpHack.QuadraticResidue224.CertificateP163Part0001",
+    "OpHack.QuadraticResidue224.CertificateP163Part0002",
+    "OpHack.QuadraticResidue224.CertificateP163",
+    "OpHack.QuadraticResidue224.CertificateP167",
+    "OpHack.QuadraticResidue224.CertificateP173",
+    "OpHack.QuadraticResidue224.CertificateP179",
+    "OpHack.QuadraticResidue224.CertificateP181",
+    "OpHack.QuadraticResidue224.CertificateP191",
+    "OpHack.QuadraticResidue224.CertificateP193",
+    "OpHack.QuadraticResidue224.CertificateP197",
+    "OpHack.QuadraticResidue224.CertificateP199",
+    "OpHack.QuadraticResidue224.CertificateP211",
+    "OpHack.QuadraticResidue224.CertificateP223",
+    "OpHack.QuadraticResidue224.CertificateP227",
+    "OpHack.QuadraticResidue224.CertificateP229",
+    "OpHack.QuadraticResidue224.CertificateP233",
+    "OpHack.QuadraticResidue224.CertificateP239",
+    "OpHack.QuadraticResidue224.CertificateP241",
+    "OpHack.QuadraticResidue224.CertificateP251",
+    "OpHack.QuadraticResidue224.CertificateP257",
+    "OpHack.QuadraticResidue224.CertificateP263",
+    "OpHack.QuadraticResidue224.CertificateP269",
+    "OpHack.QuadraticResidue224.CertificateP271",
+    "OpHack.QuadraticResidue224.CertificateP277",
+    "OpHack.QuadraticResidue224.CertificateP281",
+    "OpHack.QuadraticResidue224.CertificateP283",
+    "OpHack.QuadraticResidue224.CertificateP293",
+    "OpHack.QuadraticResidue224.CertificateP307",
+    "OpHack.QuadraticResidue224.CertificateP311",
+    "OpHack.QuadraticResidue224.CertificateP313",
+    "OpHack.QuadraticResidue224.CertificateP317",
+    "OpHack.QuadraticResidue224.CertificateP331",
+    "OpHack.QuadraticResidue224.CertificateP337",
+    "OpHack.QuadraticResidue224.CertificateP347",
+    "OpHack.QuadraticResidue224.CertificateP349",
+    "OpHack.QuadraticResidue224.CertificateP353",
+    "OpHack.QuadraticResidue224.CertificateP359",
+    "OpHack.QuadraticResidue224.CertificateP367",
+    "OpHack.QuadraticResidue224.CertificateP373",
+    "OpHack.QuadraticResidue224.CertificateP379",
+    "OpHack.QuadraticResidue224.GeneratedCertificate",
+    "OpHack.QuadraticResidue224.Bounds",
+    "OpHack.QuadraticResidue224.NecessaryBounds",
+    "OpHack.QuadraticResidue224.SquareTypes",
+    "OpHack.QuadraticResidue224.SquareCount",
+    "OpHack.QuadraticResidue224.Target224"
+  ],
+  "existing_five_whole_import_source_names_remain_separately_leased": {
+    "OpHack.QuadraticResidue224.Bounds": [
+      "OpHack.QuadraticResidue224.Bounds"
+    ],
+    "OpHack.QuadraticResidue224.NecessaryBounds": [
+      "OpHack.QuadraticResidue224.Bounds"
+    ],
+    "OpHack.QuadraticResidue224.SquareTypes": [
+      "OpHack.QuadraticResidue224.SquareTypes"
+    ],
+    "OpHack.QuadraticResidue224.SquareCount": [
+      "OpHack.QuadraticResidue224.SquareTypes"
+    ],
+    "OpHack.QuadraticResidue224.Target224": [
+      "OpHack.QuadraticResidue224.Bounds",
+      "OpHack.QuadraticResidue224.SquareTypes"
+    ]
+  },
+  "initial_granular_remaining": 90,
+  "protected_frozen_input_bindings": {
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\sakana-a000224-original76-storage-checkpoint-receipt-20261005.json": "d8226e2920788365d04ccd7c4a1cab829c5c0c192b4fa155aa4e4e4b11e3a552",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\build-plan.json": "0f6338f72ff570e79847995bac7cf6f6c56c8a1c2cc8dedf55181bc764180fe7",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\a000224-natural76-storage-boundary-summary-20261005.json": "67ad15e867e8c0cf6459bdd9bbb7be800b881141c1b4fbc56992bb2f225d1db6",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\assess_completed_own_artifact_storage_readonly.py": "fd06ef882489ca02a1fc421c9891a4970ead88d62249b26aec93d02a7f125e1d",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\root-own-A000-hold-release-Groth-continuation-20261005.json": "b2f9ac1daffb3ac043d74e0dc01a0a43b8a7bdbc24406f718062f3b9d2b6425e",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\lean-4.34.1-installation.json": "7b2cb4ed51467e6204fc952e93cf2a25cdf89a895b5fe5edf763a48d6b12a10a",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe": "fcc4a10077d5fdd575592cea5f2981c91cbd77c490c80bc74407908e57e8b87b",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\mathlib-4.34.1-cache-retry.json": "c318c6ab8b46901bc673a06795e8b2c0eef78d904f9b1b5b6ce8a4f8fe4f3a7b",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\Reduction.lean": "9e99fe23a3f959aebc92fcb13bca23fae98d37251e36023c9db8fa92acc99193",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\SplitCertificatePilot.lean": "ecd4a1b741fc7fdfb039a224d2ed23eea06884302bd86d7e21cac330063dc197",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP3.lean": "147ced05971cb683c40c50838675b3dc8f51b0199c8a9f155c7c0963e50abbda",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP5.lean": "169f6329822e4bf487ffd64bed66e1dc2afafe5f0e4c0c41be365312cfe7812a",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP7.lean": "4428053af5a307d288826d1c1f05c9e57bad7bcfef62bddc72b0d2bbee5b4841",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP11.lean": "c802384b2b0b25386a0581fe5950031566583b2c6caea12d3dee442baabc15fd",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP13.lean": "ff47cd7add096135b1b6adbe17e29f6e131df346fe67cee117c30b8ea0a08d7e",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP17.lean": "5bd878c2cc702f5efd20d9255950d650595e15795926832e0b0edf17270ab8d0",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP19.lean": "a986377419c02299d3b2a9b0c1f323df8b2188a12cb11018a104c76b701cebe2",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP23.lean": "fda9cec956f69ff2a935538b368d76b1b02b893bed954cf4687a8549136cb429",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP29.lean": "e6babb0ba0df3872658c0b7634648e5a71e92b293b71309dc3f882f46c591e1a",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP31Part0001.lean": "68efc8faa466839cebd692606ca01d8dce9a8bcfd286b0a33cccbed6f07e6055",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP31Part0002.lean": "43822a60b5ba7841f24c46722a5d45a66e8498ecaa1447d918d55f3dfe313698",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP31Part0003.lean": "c7b2ca338b1dc0e62fe9ffc60d64949d298ce3e7b4ce5899d4879bc738d22b29",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP31Part0004.lean": "21dd0e3797b2691b61cbce59dcf662b537996fd98e0aa458f12e64cb7f4e42d7",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP31.lean": "c44f72a72f58e41a717037bc0d0fdd4f26863c9048dc9c240b5a3527d4a44dc5",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP37.lean": "dafa5fc9b71acc722f346b61a45a4bd507926ea66c10a8f6c5c2ada57b648ba2",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP41.lean": "b3599aae75a82e1233380926ccaac5933b0e56523c38463a4e3ced0303311f90",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP43Part0001.lean": "6ed715619ab2290728b00b637eb8b4769234d029eefb200c376126d678287578",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP43Part0002.lean": "96f84e28407edf035ec2f4c83e3b189da45e9b381f8f3bc79263743c8857c86f",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP43Part0003.lean": "4a4134c03b621e2dbf820bb161566d922b787bf2aac9cdea508039467d4e8944",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP43.lean": "845cad738cca02540c6ac2451433aa91060fe359e20d09a1be07f5b4f722f179",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP47.lean": "28cf13fe7fa0c8f3bcb9be0353224244489b75e89013b9c9d82bc20a23f5c7b4",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP53.lean": "a31c7529d7847764d673ab92a04ed8370b1a64ce969b29c637b86a209ba055fa",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP59.lean": "9ddc605662335d0be89e4f7183b506db35976246d3860c386685d5ed3c2e9155",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP61.lean": "7423244937f54bd5186a98ad80f7fed4426837b11e4421d98e18d009f7e7c81a",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP67Part0001.lean": "c4649039ebf54cf4e030de1ff322a7d944f9af882fae1399134832acfd2f04f8",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP67Part0002.lean": "4d05ec8acfc2621ab8f1e22b409ff789b4d200dc6d7c099bd56cb10b7a45cbfb",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP67.lean": "725429d603d5949d73212dd666c465e69bc8f8b7b050bf1db634b3f86db14409",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP71Part0001.lean": "de715be30793bf4374b1bef23bf829c2466f2759c2f07a7e8956cd521913569e",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP71Part0002.lean": "485ec15315016d55c76324ac821de93510b3dca698371dd66a9ab99d523fe38d",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP71.lean": "9d5ca3dee162ab6e31e7917c501f3665e9b808bad9f3125b9036746db09306fb",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP73.lean": "ce0c960981a44c14c8f46447285ccda5ead99f42e77910309d3ee08fc4c6b3b9",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP79.lean": "b34d9bbc2c788f20410e7bf1b1a7fc5bb2a04f68bed91a6e8e066672a9ad789d",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP83.lean": "c9d875dc513d360b2f711770dd497c0bff2cdbba4a3e339c7b959b3a58359f44",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP89.lean": "9c31fde06a79863b3e5943c91748567811414dcbac3e3d9e32cad7513df80ee1",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP97.lean": "bd3cfdbdcb06ab5c9e7cc6769fe8b8905d0d544454173e864cf6f79125a634a3",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP101.lean": "2f70633a3b69ec899cca86833d9e608957ad4465a286c6e95d5689bdde235ce9",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP103.lean": "cbb71472f6fb39e80b86ef20c620de67ec1ef6aef95cae6fe084a6187f54d99e",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP107.lean": "8d865d04814abe023562078ebe048dd5e4bf6db4d9d4934fb1289c95593776b9",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP109.lean": "637e77d60413565d8cc831d199e6849c7dbdb674d6acbae2bf9899d2e2d43108",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP113.lean": "fe0a5af27bab231402c16f70d4a49419e1f48a272f360f32f0a4a31cb974d639",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127Part0001.lean": "2a67a343b53def4017ddb4b4aa48df3af5fec476d8336b8ee32b4e00ff10e2e9",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127Part0002.lean": "d160cc7b448a8512254ae92138fe7250443cf9b341af66bda5e3d4997d0191d1",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127Part0003.lean": "808f430168ded04c8dbf828e1154c1e730fe0831bc422304cb582dc0ca6f7666",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127Part0004.lean": "e596ab7fb67e155f447f990b853310b3fee1ebc1d29476dfda15cc9c0d2e3d55",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127Part0005.lean": "e4a5ace93475b2ed51a579fdb52cc7ccf2a55875db5ac52ccb804a864b95314f",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127Part0006.lean": "da462432da2d0505384975d82a7360f521396efa75d87003191ac957b7cbac03",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127Part0007.lean": "b6d613e149e7d54efbbfd970143cf420c773f0507064d795a01b861ed2237998",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127Part0008.lean": "2a43d790a26ecdfdf61f3578fd27079ec9ffce1732d534446a7018c6827c68a4",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127Part0009.lean": "dceb0a9353a258682a31cc7f0f17fdf64a925c0c413b146251e41430154944c0",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127Part0010.lean": "2f04c6c69ad4cd5d1fe6909cafa57d646cd6ded04f9360503ecd1ae11f85f8ef",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127Part0011.lean": "c16f4697a07ed148871d2dd3c7077d9afdf8eb572177210f402451257b9e213a",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127Part0012.lean": "9a0ffdf015c3a7dc26516a3d9d73e84114a1fa3fa73c4ce664556d6a36614810",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127Part0013.lean": "20251c34418cf989f929e7a30ca3a37a1c131995c48b08b33e16088d905037f1",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127Part0014.lean": "387bc1a1418f42583b85cd8119f25ac577fc4d77d0a600c35d34c1952b767120",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127Part0015.lean": "0330e599e8f35b8c920a76e8e3436554e18cf650b2b53728f97134ea3ac012e0",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127Part0016.lean": "c83e6483d26b5c888b30f736d69dbb2542edd43ab534367276fef0d3a94eb920",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127Part0017.lean": "0249a8410d753e9a8ebbcdce5603a8d2f335f7703fe2a61d9a1317c008ccadb0",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127Part0018.lean": "a52ed0aaa495257f6c3e9bab8e9621180e6d8cfb5e3a609d84223685c5ff2c28",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127Part0019.lean": "f067d2f8f6c978bc4053c4129d937bc60de9cf5efd4dbad4d0a6eec695bb6e54",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127Part0020.lean": "eebcb58d2b9f0e6c20c22668bb0076ff6ded2933b1a29871d3913f49236527a3",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127Part0021.lean": "81ffda5049d9fbe209d4c5c2e83421686cbc89b5f8431d9c5eeaf2e3d01d1526",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127Part0022.lean": "55755dcb8f927165a4a30c71f062e5dade063ada4d1e52cb64cd146752892e1f",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127Part0023.lean": "10816426920b97dd0277dfcb9770adb6d9ad6281d7a59537dec8a3c99a5afbb5",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127Part0024.lean": "0651568a88f07092dd9dd9ae1db792c3f798f3bb3f72b131f6697081df630078",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127Part0025.lean": "cc7a0c418d26c72d6bb681067481abe61d761558e3ff9498fad964b1b963bfb6",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127Part0026.lean": "7b13a21349aca63d236d94a5a5f0f5effcd9cfc616b118bf0743410a89dec02a",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127Part0027.lean": "5eeff83910edb64efe73cfc2b0670709901958666b8c7d359863f9c119f1b0b8",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127Part0028.lean": "115bfc5682bbc2967dc84110a1d1a0e4019be0578c19e345cbbc2720f9f54a80",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127Part0029.lean": "5efb22fdea0d7803ec10ae08c76ff8c705ff93127f9c14dea07575db8afc15e4",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127Part0030.lean": "97159592e8e7598be61ccc57ef817985f4ad71ec66249aef3c67658809cf7192",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127Part0031.lean": "164917c024cfc49583c1e09c387d1156147e4f12e66956f271cf2d7589a66e32",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127Part0032.lean": "22b3c2c24f4b5fedf60fd7936a58c637dd9be4d8f5cfce711c4be1ae8531632c",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127Part0033.lean": "052daf1085b32a49dec9ce75e69ad65ce286ea81d7d286d894d6d897af807855",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127Part0034.lean": "244ef58bc5143330f80b926b6a35ed213730538730de4a50063548021ff7bc84",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127Part0035.lean": "2900fd80273f2af79be05c57176b85fd0a168dc94ab0a96d9eb2cc8ccb112a5f",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127Part0036.lean": "359d278dbc779b25c79f89f74628e3cc0d997af591e901b409f7753b05dea09d",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127Part0037.lean": "7f2fe3fc664d5126c01267bf387a7d10480450e41e476e4dcabf1a0ad42fad6a",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127Part0038.lean": "f3ad60b6d8553509d7f8b4f9ac74bbf6969c23399d3483347f07e970fee931e8",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127Part0039.lean": "21cf9d8bd64c92c85f4a7ed93328cd19305187af332a9c63de93f53f6ab5a941",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127Part0040.lean": "fdfdfd79ffafaf86755d97b1b45bb5a2ead4612de95dc92660f358ced9c31f54",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127Part0041.lean": "66858c4701585ba0307dfe6fd80813dc131bc64d399a4583089ba07363a021ca",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127Part0042.lean": "968c5f2b0d1d6f41f82bef6ed2348785b99856fb394a84e5a43bd914621d0137",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127Part0043.lean": "8b28efd653b53734611e8b666b24f70bc277e4a6f19b4d71bc08c81d5d07ec33",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127Part0044.lean": "29cbcb069fef72e996d3c7d5352ab562508c03a7238395bf26b4d491ad83b3bc",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127Part0045.lean": "b99940c1e77e59446bd5c346d89bdd239b0af0098573a421d5ebae9054dd9c8e",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127Part0046.lean": "8b049c84970966355ac88828109417fe3745ade421379cc0f2d3adf7d60fcdb8",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127Part0047.lean": "4278d59d4c7aefd544b6bfc9ac81ddb61ce229bfa66b379e0bb187bac046fa59",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127Part0048.lean": "d87e873b4728be4e4c581decf0bb80ab5a43b4711118839cc405720d400e5e15",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127Part0049.lean": "6277061f06a51b1767b8bba1966399926451108e9f3b32819b1a0a4b57d8f414",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127Part0050.lean": "72acd346b3cc16d9e9368ac90e20e2213024ff17d08917e0adb1ddea0b3e2467",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127Part0051.lean": "66ad19be7f0307598e395e42ee560139c3acbd8a5cf282efbf801dc6140491a4",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127Part0052.lean": "5a37cad263b126052ca41e24f14d9c7096959bc75740e22d2ad855c3f647a65a",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127Part0053.lean": "2b2c018076f82984547ebf8704535a9a10296170e01590e52f2d42ecc17e03f9",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127Part0054.lean": "0fe449f454ef8d6ea64678d9ce4446413dde76674c85c6104b4720c2b7e1065c",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127Part0055.lean": "8da1be9d879fbdabc02e94ebc6cf94005dddb96ea32cd7925589ed07c7f99093",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127Part0056.lean": "fa826a5659811996ed088faecf65a7a2431f59ceb0f9efdf4f16bd64c96fbde8",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP127.lean": "4befb40d67a7d5fa1aab9e95b1b74aca723dd36afb11905f919117b0da3e805e",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP131Part0001.lean": "5d02003e7797ac804d60170cb043d9b5adc51d390203af85fb3e0ee8f90441fc",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP131Part0002.lean": "b6defbbaa0c6443af08e33efc68e441d4025975364986b446e43d66a3922c178",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP131Part0003.lean": "3c2d8839f50eaf3e617408352a14074ef8e3b63c1ac5148561a0c22c01fde291",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP131Part0004.lean": "4c7234dd84b0c038e7ec3099f0c1409d1abb0c2b69f837703a0746554ca64e9b",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP131Part0005.lean": "bee20b3b4fd3547ca4d1c6150f63ed8db6b14ba02c82f414abb5302f7c32f279",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP131Part0006.lean": "15228e19c61e4af0b151f7fd5eff1b525667c89278b761c26f3e338775b34209",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP131Part0007.lean": "c90eb716d0d4353f0813b581cf3f7669c757a7850a436a751db0040314c75484",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP131.lean": "791e98df04ba178e8986428f0461ca31ace34300e1a0f342c7e75af2971791f5",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP137Part0001.lean": "fd705e5a87cbc09caf9af141102bb15cba63fb4f9e6caae6e5b9e1c3b45cfc31",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP137Part0002.lean": "3fc8284475d67a569d80aca0b110b81d9baea34003e36a0175a5b6e50627c705",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP137Part0003.lean": "edd0406d0e3e9cfb4f8e1b9cc0063c9cf120b6f633f87e5b235481e50bed827b",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP137Part0004.lean": "898dbb7778963566539846f6986f6268cb3315abaa9e151ae044e4bf625b8fbb",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP137.lean": "8773b922d97e34ea7f1bf8b84f73a9635ebdc52e7217752731e18e7f5ce70e72",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP139Part0001.lean": "09d9c12aa008a67a69458e6596841d4916313d1c0c1a992ad1fe0e42e3efb90c",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP139Part0002.lean": "ccf747fa7224c71722ad3cd86caaa0f21afded83bf28f5969338e9ccd6ec62b1",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP139Part0003.lean": "a057b49768116131fa2726073ad72da07ec6cd0fd1a267b2fe02bdca24afb49a",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP139.lean": "7363bd9ffea67956b20559ee2604dacfcbf4d44bbea042b68bbe8a1d04c9070e",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP149Part0001.lean": "c088ce3bbe00086ed14aa5f75df0aef1be2e53c6f54fe54c4b89113bbe82eacb",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP149Part0002.lean": "bd80067f856903a8f6e76eb92e6fc39bb5aa9e84577f87305c234a16ab4a7462",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP149.lean": "99320b4e2bcf5d364d0c11560923628464ed6a101489d4f524b618395c296ee1",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP151Part0001.lean": "ec83b73e55e58dff1b074e8d27067fb4fc23c19e859ab4195ddaf41d164d93d0",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP151Part0002.lean": "86e940d7c7cc57de7343f21fcafc34839467a3885b575db67f221674e4831adb",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP151.lean": "184e82e331a025d85d56dc4860a21931331f034772c7488f8e9c6bfc07e6e053",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP157Part0001.lean": "91dce82bec06d4c30f12abfa11047a63924c5b55818d5eaff14152f290f34837",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP157Part0002.lean": "fc5dbf69d97c39b1deeaa0645dba0913c8947a80aa04c9b661d17a3785dc5e6b",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP157.lean": "5b388f2ea72dff60ae0bc8099ab94e608ca7d0a34d62ef7881b2468501c579b4",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP163Part0001.lean": "26f4d704ea4f5bdea729f2f03c8d381353e9d4051caadbca3e8d3cd575f7ee1c",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP163Part0002.lean": "dd754d8ba13d94979ae15c1177218d044e3522ca526d5c01c0ef0f09f1c12b69",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP163.lean": "b1e726b411a1e9c5d8427cc09460d4e434374b23fb23af284d92858320f7e595",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP167.lean": "33c6454912d80bac7279fe069bcc3172023f63ab95a361dec6e872995b316851",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP173.lean": "8db86ff855fcb9bc51d8edc15cc185b6e8ca135614a9fb4b639536b900eea013",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP179.lean": "f049b3eb6b9e67d8d1be59cdf8c216226cb701363a11cae1fb73832fbe31254a",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP181.lean": "4901da437f6b6862573db99198a0d75c8c36e98b654261357557b40b0cc3fe4c",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP191.lean": "2c522e2416fa6b21ede313e28c378a40f4eaa780f39f3fbbf75a8139049ee198",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP193.lean": "265ae77c9bc11f8aa38b2966de2eebe22fecb960189bc9d62102d31de0474578",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP197.lean": "9713e865e04d25985bd228702cb005c4ef6897f81f99166dd35a60b34a4ca40d",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP199.lean": "ce2bc72ec9ff52eff0646f3a2f839f52efba01046fd3166c9fcb328fe18e5faa",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP211.lean": "d72b2e0a3c25f742c65ea184d74489f7b1201a082f17f97325977fc0ea87d35c",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP223.lean": "09da56b89b8ed1d127dc61df03ad76d177a43bbc8d104481aac1d0acda51e404",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP227.lean": "935bba5c87306ecb06ee47c286833f1b3ec91e86aa82efc52732337293985aa0",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP229.lean": "78c26a992e04b7630ff06952f1e1d85d7c7188427f7fcb5300ce1b5b8ef31880",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP233.lean": "19f1bc714ed3044f49839f32ff3b72c1d45fb697c21d357ecf7f1a17dd269a1a",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP239.lean": "bd43ced84b65c429ace39c1c24b6eec4a674b81cb65594324e026752d11214bb",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP241.lean": "4fc284be7634ea272ef8362b7a2cdcd40a7d3215d0547e1f77df5dc9d8a3a8db",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP251.lean": "9421d0933a5f3ba1ab1fdcca47e79786c68085c3629253b7ea9483cfc73172a2",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP257.lean": "dd157f5282149eda3748c799e6e5c035fa3daebf5a2ed3e3b030c44e0e850934",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP263.lean": "15f4956b1f76b1f76f026020bbca2e633eee832b21bfa3bb9da6ec282bf4e1eb",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP269.lean": "f35f5d878c78bb14f4c1c103bb16b5bfd436e977db4d79a9e8d646d43c8ed7cf",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP271.lean": "d54840f917fa74f1ab9fb31d68f978e768219bb2b7206b6e59fab0a14b1e5f94",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP277.lean": "053c6f2d677d76b4da56691f389a911b81df061ed76490109e9f0dcba8f3f196",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP281.lean": "49c58a4fe8e0c8aaaf6ba3359c08c2575c16f36f31a09bb930f1f5f9af5707a4",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP283.lean": "93fefd8a8540622acea5fc581f7a9f9cf80c2efb587b44e6a45b645dc8c4dd68",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP293.lean": "be4f2fadb9508b6d85ac87eadb2bd799c320fa3169428654221148acd43f9b95",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP307.lean": "381bb660279290a131b2701198a502bc7ff11a3573ed201c9d9fa9715025729b",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP311.lean": "a97346d7b5a29f354c6087817e24dec31968080fce26221935943a22c1422190",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP313.lean": "9520d145144401f4ec15e01b97d558d637eab66597cc4c57888bf0f84a919b3b",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP317.lean": "ca4d9b158270a8a354bd22d6ab8e299c5f17036bb8569af43c435bfcbe0fccdf",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP331.lean": "7c7f89a78f1d88d6325196bea555893ea03364072fab1e1febb84da80ae31a1c",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP337.lean": "ef5012bcbe9eb4ae244aa47867db345ab88e0a51dbd65629605a5d55e80b73fa",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP347.lean": "70fbf41b40e453c8a24eda1548fbf9d48fb9ab0a64381f525d45b04a90713817",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP349.lean": "04be4a0e34be3b3e7d60e86a138798c5c77f55e9bba2ffc13dd11eb8502ed12b",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP353.lean": "0a37ac4b4b701a4b97987a2a09aee61c2b6f20deebcabb8c75353430c609dc28",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP359.lean": "3eb6ec97a3be534b883260b537a1a9ff13466709e852444d4fdd5d5a77bc8ce4",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP367.lean": "4f3abb9e3a0670a81397ce698b2122f63739354fe0c4e80b2dc90f8f1e617f1c",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP373.lean": "9fa0a7887c5c04da6fad7bdff1763e619099206ba3fccd7f167f40358084a95a",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP379.lean": "f8a761f3f69e002409aa40073dbfadd432f90fcccb43556ec55810be997688d3",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\GeneratedCertificate.lean": "cd31be62c8309fb16b5f4a517293250d0e7e10c6d42b499cefb26ebbf7e475a9",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\Bounds.lean": "61fa6ceae311eae5591a91698ed4421b89b15ecfc1d531d5f95c0b073d3c01d5",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\NecessaryBounds.lean": "7eea9ef0f641d8b096b75dfc01c9c18feb8747811bbf10a3af53661cef885e71",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\SquareTypes.lean": "68a970abf6b658c3bda5851041af4f3e14d6a982df1796624c1d7faacf7cd0fb",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\SquareCount.lean": "0e38d843b0c67cdb97b6c0c79f8282baa7d8fbe3697cef8e6f8d8859688bd093",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\Target224.lean": "3b67f7494439886af3359a9e684433f49a6dccb7d10258d1d05dcc01de7886d0",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runner_versions\\run_source_plan.a000_post_exit_storage_parent.70ff209c7ac651c1e0ab25e9f629a9fc50c4b85ed1f510666e851e8f69c53534.py": "70ff209c7ac651c1e0ab25e9f629a9fc50c4b85ed1f510666e851e8f69c53534",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\a000-original76-quiescent-owned-output-storage-proposal-20261005.json": "edf00e50525ecf5acdc227368403ddbbba1cdc952b8952402bc5b12692b2e5fc",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\FreshAudit1.lean": "c5e4477039688d0579f10457dae3ba29595d0f7cc05057f9fb63600e8b7d5547",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\native_resource_guard.py": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\matt_resource_guard.py": "ae0b64c7fbf47545365f3238977368042be342ddb973159ec65c98f64aa38a71",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\full_mathlib_resource_guard.py": "a4c76752e1e0afaf4ddff9368e4a5aa832bc56dcc7553182c5302e2c1c4e5c18",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\resource_metrics.py": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\receipt_io.py": "2e189122fe360f1925dda2e0409c321b775fe7eb6edf17c3f13ef067d1776362",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\audit_axioms.py": "1ee59639204140430c088023539a648f9007cc26c1856cf8cd2e3c2e59d7143f"
+  },
+  "compact_executable_sha256": "2814b34fd2df2113774034460cbe6ed20db59a0a0c0f47caaee6ef0fc948e00c",
+  "storage_resource_policy": {
+    "dispatch_disk_bytes": 4000000000,
+    "dispatch_physical_bytes": 6442450944,
+    "dispatch_available_commit_bytes": 5368709120,
+    "continuous_disk_bytes": 1000000000,
+    "continuous_physical_bytes": 3221225472,
+    "continuous_available_commit_bytes": 1073741824,
+    "own_process_and_job_private_cap_bytes": 268435456,
+    "timeout_seconds_per_command": 180,
+    "one_synchronous_compressor_between_actual_Lean_exit_and_next_dispatch": true,
+    "additional_per_file_free_minus_logical_size_at_least": 1000000000
+  },
+  "actual_A000_single_file_LZX_pilot": {
+    "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\20261005T054942002749Z-single-own-output-compress-actual.json",
+    "sha256": "325bec959997fb2b2f4ec8defe8f7d6776e5d35aee508b553591b53fc72613cc",
+    "allocation_saved_bytes": 8998912
+  },
+  "call_contract": "Only from exact SHA-reviewed caller holding original A000 replay byte lock; actual successful owned Lean job has exited, completed PASS row and .olean hash have already been saved. Callback is synchronous; no next Lean until it returns. Current source receipt bytes are only read and hash-bound during callback; old rows remain unchanged.",
+  "failure_contract": "Any interface/preflight/guard/compact/WOF/hash/inode/mtime error writes additive operational evidence and checkpoints the source queue. The successful Lean row remains exit0; no failure row, new proof axiom/classification or score inference is fabricated. No automatic rollback or guard relaxation.",
+  "future_root_approval_fields": {
+    "status": "ROOT_APPROVED_A000_POST_EXIT_OWN_OUTPUT_LZX_INTERFACE",
+    "interface_sha256": "03a6f7118d97e97e646b81cdb5508fab512eb23f65dc1465cd28d141d9cbd99b",
+    "runner_sha256": "d73aa5d2218f358e79d5479de20b5082b345a994d0d4dd35d0a23516876eda28",
+    "specification_sha256": "ROOT_BINDS_NEW_V2_COMPLETE_SPEC_SHA",
+    "actual_A000_single_file_pilot_receipt": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\20261005T054942002749Z-single-own-output-compress-actual.json",
+    "actual_A000_single_file_pilot_receipt_sha256": "325bec959997fb2b2f4ec8defe8f7d6776e5d35aee508b553591b53fc72613cc",
+    "allow_only_remaining_original95_modules": true,
+    "previous_original76_outputs_not_targets": true,
+    "separately_authorized_source_resource_modes": [
+      "granular-defer-whole"
+    ]
+  },
+  "future_granular_command_NOT_AUTHORIZATION": [
+    "PINNED_BUNDLED_PYTHON",
+    "-X",
+    "utf8",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\run_a000_source_plan_with_post_exit_storage_v2_prepared.py",
+    "sakana-a000224",
+    "1",
+    "--guarded-third-slot",
+    "--defer-whole-imports",
+    "--a000-post-exit-lzx-policy",
+    "EXACT_ROOT_APPROVAL_FILE",
+    "--a000-post-exit-lzx-policy-sha256",
+    "EXACT_ROOT_APPROVAL_SHA256"
+  ],
+  "future_whole_five_mode_note": "An interface policy never grants a scientific source lease. Original existing --full-mathlib-source-mode/--a000-whole-scope-only 10GiB owned/11GiB dispatch source guards and their separate whole-library lease remain byte-identical and mandatory. No such invocation is proposed now.",
+  "storage_savings_guaranteed_bytes": 0,
+  "storage_cannot_guarantee_all95_sources_finish_above4GB": true,
+  "scope_exclusions": [
+    "the original76 outputs, except separately approved existing75 storage pass",
+    "all171 scientific source bodies/options/comments and exact audits",
+    "all runtimes/official source/providers",
+    "all DMS/shared inodes",
+    "entrant source archives",
+    "all user/system/application files"
+  ],
+  "current_source_runner_receipt_source_output_PDF_mutations": 0,
+  "Lean_compact_or_interface_invocations": 0,
+  "syntax_AST_interface_and_separate_runner": "PASS",
+  "full_interface_v2_diff": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\proposals\\a000-post-exit-interface-v2-full-diff-20261005.diff",
+  "full_interface_v2_diff_sha256": "930c4c5d26b2284f6b92af3e1747ea2c63a2f3e6ee1e3670393caec2d971abb0",
+  "full_runner_v2_diff": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\proposals\\a000-post-exit-runner-v2-full-diff-20261005.diff",
+  "full_runner_v2_diff_sha256": "0a7bd40dc6df65291f9972424c4471c433249aa8cca0948460ccdf881cfc1487",
+  "preserved_old_interface_sha256": "b010a873a178f122056d3cc9181c95b9703002c3cbaee6ae865e930362e8814a",
+  "preserved_old_runner_sha256": "3d510201d4529a2dbf7f43d600bddbfe4df51d0dd054ed5564b77adb100c35b5",
+  "preserved_old_spec_sha256": "c4ed8eb74f6e1cffcf3f00f572ee20fcd13b03318a5277955663406d398e5f6b",
+  "additive_actual16_storage_classification": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\proposals\\a000-existing75-actual16-additive-storage-classification-20261005.json",
+  "additive_actual16_storage_classification_sha256": "ef27e2917aca10fdb7d78434516f4d6c1e66f67e71a844a2b38303db95aa9466",
+  "actual_storage_success_classes": [
+    "PASS_BYTE_IDENTICAL_A000_POST_EXIT_WOF_LZX",
+    "PASS_BYTE_IDENTICAL_A000_POST_EXIT_ORDINARY_NON_WOF_NONINCREASING_ALLOCATION"
+  ],
+  "mutable_future_canonical_source_receipt_NOT_frozen_across_iterations": true,
+  "immutable_original76_copy_is_frozen": true,
+  "dynamic_receipt_contract": "For each new completed source separately, bind its then-current canonical receipt SHA; read it unchanged during only that synchronous storage callback. Do not include the live canonical receipt in permanent protected_frozen_input_bindings. Only the immutable76copy remains permanently bound."
+}

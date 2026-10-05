@@ -1,0 +1,77 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,textcomp}
+\usepackage[margin=24mm]{geometry}
+\usepackage{longtable,booktabs,array,enumitem}
+\usepackage[hidelinks]{hyperref}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+\emergencystretch=3em
+\begin{document}
+{\LARGE\bfseries One-factor rigidity at three sparse 3\ensuremath{\times}3 matrix-multiplication seeds\par}\medskip
+{\small Provisional mathematical authors: Rachel Teo, Wenyi Wang, Hamdi Abderrahmene\par}\medskip
+{\small Judging and evaluation record: the submissions discussed in this document have been judged and evaluated by Alejandro Zarzuelo Urdiales for OpenMath 2026. This dated review records the stated verification, classification and unresolved holds; it is a preliminary evaluation rather than a signed award decision.\par}
+
+{\small Event provenance: OpenMath 2026 ran 27 September-2 October 2026 with worldwide online participation. Detailed organizer listings specify Harvard Innovation Labs for the 27 September in-person event; the OpenMath programme advertises a hybrid kickoff at MIT. Sundai identifies its Harvard/MIT community. Organizer sources: \url{https://rsihouse.ai/openmath} ; \url{https://luma.com/yzp9abvr} ; \url{https://www.sundai.club/events/boston/recursive-learning-hack-with-harvard-innovation-labs}\par}
+
+{\small Rachel Teo  -  Sakana AI.\par}
+
+{\small Wenyi Wang  -  Sakana AI.\par}
+
+{\small Hamdi Abderrahmene  -  Sakana AI.\par}
+
+{\small Affiliations follow the recorded author declarations or public institutional/profile sources. Preferred author names, author order and publication affiliations await author review. This editorial compilation does not establish anthology coauthorship.\par}
+
+{\small Original-result working manuscript | OpenMath 2026 | 5 October 2026\par}\medskip
+{\small Central source and adjudication archive: \url{https://github.com/alejandrozu/openmath-2026-judging}\par}
+
+\subsection{Abstract}
+At each of three stored 23-product, 139-support HKS seeds, all three paired-factor coefficient matrices have column rank 23. Consequently fixing any two factor lists uniquely determines the third, excluding a support reduction through a change to only one list at those seeds.
+
+For each archived HKS 139 seed, rank\_Q(M\_UV)=rank\_Q(M\_UW)=rank\_Q(M\_VW)=23; fixing two factor lists uniquely determines the third.
+
+\subsection{Tensor factors and the precise obstruction}
+A 23-product bilinear scheme writes the 3\ensuremath{\times}3 multiplication tensor as a sum of 23 simple tensors u\_i\ensuremath{\otimes}v\_i\ensuremath{\otimes}w\_i. Fixing u and v turns the coefficient equations into a linear system for w; analogous statements hold for the other pairs. The paired-factor matrix has 81 rows and 23 columns, with column i formed by the pairwise products of the chosen factor coefficients.
+
+At each of three literal known HKS 139 seeds, the UV, UW and VW matrices have column rank 23 over the rationals. Each corresponding linear system is injective. Since the stored third list is one solution, it is the unique solution. A change to only that list cannot lower support while preserving the tensor identity.
+
+\subsection{Certificates and quantifiers}
+The certificate supplies exact rank/injectivity evidence for all nine seed/pair combinations, followed by the uniqueness consequence. Independent rational elimination reproduced rank 23 for each of those matrices. The seeds themselves have total support 139 and are background constructions.
+
+The theorem fixes the selected two factor lists exactly. It does not prove local rigidity when multiple lists vary, global inequivalence of all schemes, absence of a continuous family, a minimum support 139, or impossibility of support 138 or 137. Chandragupt's 138 scheme is compatible with this result because it changes the construction jointly.
+
+\subsection{Research value and formal status}
+The underlying linear algebra is classical. The proposed new contribution is a specific exact method obstruction at useful sparse seeds, showing why a one-leg search cannot improve them. Its scientific weight is consequently narrower than a new multiplication scheme; this distinction should be reflected in both placement and paper wording.
+
+On 5 October 2026, all three frozen seed projects completed fresh Lean 4.33.1 replay at the exact Mathlib revision 0df444a360eaa60ab8c11dca51a86af692955474. Each project compiled all 71 source modules and printed all six selected declarations: the 18 requested prints used only propext, Classical.choice and Quot.sound, with no admitted, native-evaluation or unknown axioms. The audited statements establish rational injectivity of each literal 81-by-23 paired-factor matrix and equality of arbitrary remaining-factor matrices X and Y whenever B X = B Y. Full column rank 23 and the one-factor obstruction follow by ordinary linear algebra and the tensor coefficient correspondence explained here. The scope fixes the other two factor lists exactly; it does not establish multi-factor local rigidity, a minimum support of 139, or the impossibility of support 138 or 137. A standalone note should display the seed representation, the exact left-inverse certificate and the remaining-factor bridge. The three dated replay receipts and exact source statements are preserved in the common verification register.
+
+\subsection{Attribution and publication scope}
+Credit HKS for the seed decompositions and identify their literal versions. The note should explain why the tensor coefficient equations give the paired linear system, then prove the uniqueness corollary. Repository certificates can replace lengthy printed rational elimination tables while keeping the finite theorem reproducible.
+
+If subject review finds the same rank check already published or too routine as a mathematical novelty claim, it belongs in the nonnovel/useful-certificate paper. That possibility does not affect the correctness of the exact rank evidence.
+
+{\small This short manuscript records the construction and selected endpoints. The companion Original results anthology contains the extended ordinary proof exposition and its explicitly stated premises; the preserved Lean source remains the complete formal proof record.\par}
+
+\subsection{Verification and reproducibility}
+Fresh execution: sakana-FOCUS-MATRIX-seed0: PASS; 71/71 custom modules compiled successfully; receipt Verification/sakana-FOCUS-MATRIX-seed0-fresh-build.json. sakana-FOCUS-MATRIX-seed1: PASS; 71/71 custom modules compiled successfully; receipt Verification/sakana-FOCUS-MATRIX-seed1-fresh-build.json. sakana-FOCUS-MATRIX-seed2: PASS; 71/71 custom modules compiled successfully; receipt Verification/sakana-FOCUS-MATRIX-seed2-fresh-build.json. Compiler pins, source hashes and endpoint axiom outputs are in Verification. Historical receipts and finite checks do not replace fresh replay.
+
+\begin{samepage}
+\subsection{RecoveredMMTKernel.remaining\_factor\_unique\_uv}
+\begin{quote}\small\ttfamily theorem remaining\_factor\_unique\_uv \{p : Type*\}\newline     (X Y : Matrix (Fin 23) p \ensuremath{\mathbb{Q}})\newline     (h : (B\_uv.map (Int.castRingHom \ensuremath{\mathbb{Q}})) * X = (B\_uv.map (Int.castRingHom \ensuremath{\mathbb{Q}})) * Y) : X = Y\end{quote}
+{\small Source: Focus\_Evidence/evidence/FOCUS-MATRIX/kernel/KernelFinal.lean:192.\par}
+
+{\small Source SHA-256: a0e3432e3fa233f5d79d56cf8c90138310752bc3ed52a5f7f1eaab44bfab3fec\par}
+
+\end{samepage}
+\begin{samepage}
+\subsection{RecoveredMMTKernel.remaining\_factor\_unique\_uw}
+\begin{quote}\small\ttfamily theorem remaining\_factor\_unique\_uw \{p : Type*\}\newline     (X Y : Matrix (Fin 23) p \ensuremath{\mathbb{Q}})\newline     (h : (B\_uw.map (Int.castRingHom \ensuremath{\mathbb{Q}})) * X = (B\_uw.map (Int.castRingHom \ensuremath{\mathbb{Q}})) * Y) : X = Y\end{quote}
+{\small Source: Focus\_Evidence/evidence/FOCUS-MATRIX/kernel/KernelFinal.lean:204.\par}
+
+{\small Source SHA-256: a0e3432e3fa233f5d79d56cf8c90138310752bc3ed52a5f7f1eaab44bfab3fec\par}
+
+{\small\textbf{Sources and attribution:} \href{https://github.com/alejandrozu/openmath-2026-judging/blob/d0ed487f487fa7ec814ff705ab55249983fe8707/OpenMath-Judging/review/entries/E02-FOCUS-MATRIX.txt}{1. alejandrozu/openmath-2026-judging / E02-FOCUS-MATRIX.txt}; \href{https://github.com/alejandrozu/openmath-2026-judging}{Central source and adjudication archive}.\par}
+
+\end{samepage}
+\end{document}

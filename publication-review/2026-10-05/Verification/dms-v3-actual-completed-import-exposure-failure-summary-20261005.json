@@ -1,0 +1,769 @@
+{
+  "status": "ACTUAL_V3_IMPORT_EXPOSURE_FAILURE_NO_POSITIVE_QUALIFICATION",
+  "completed_receipt": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\htpeo-dms-current-import-pruned-v3-fresh-build.json",
+  "completed_receipt_sha256": "ff1dd1a5c1666631992bffb93f51271c6c4e162cb075f2ec80eddf15e741ccd4",
+  "finished_utc": "2026-10-05T05:16:24Z",
+  "previous_own_passes_reused_separately": 99,
+  "new_cold_source_passes": 122,
+  "new_failed_source_rows": [
+    {
+      "module": "InflationA",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "InflationA.olean",
+        "InflationA.lean"
+      ],
+      "seconds": 13.421,
+      "exit": 1,
+      "stdout": "InflationA.lean:5:35: error: Function expected at\n  [0, 1, 2, 2, 3, 4, 0, 2, 3, 4, 0, 1]\nbut this term has type\n  List ?m.41\n\nNote: Expected a function because this term is being applied to the argument\n  s\nInflationA.lean:6:31: error: Function expected at\n  [4, 3, 1]\nbut this term has type\n  List ?m.14\n\nNote: Expected a function because this term is being applied to the argument\n  i\nInflationA.lean:8:3: error: Function expected at\n  [{0, 2, 4}, {0, 1, 3}, {1, 2, 4}, {0, 2, 3}, {0, 1, 2}, {1, 2, 3}, {2, 3, 4}, {0, 3, 4}, {0, 1, 4}]\nbut this term has type\n  List ?m.149\n\nNote: Expected a function because this term is being applied to the argument\n  a\nInflationA.lean:12:66: error: Tactic `decide` failed for proposition\n  \u2200 (s : Fin 12), kappa s \u2208 seen (pe1 \u2191s) \u2227 kappa s \u2208 seen (pe2 \u2191s)\nbecause its `Decidable` instance\n  MGraph.decForallFin' fun s => kappa s \u2208 seen (pe1 \u2191s) \u2227 kappa s \u2208 seen (pe2 \u2191s)\ndid not reduce to `isTrue` or `isFalse`.\n\nAfter unfolding the instances `decidable_of_decidable_of_iff`, `decidable_of_iff`, `instDecidableAnd`, `Finset.decidableMem`, `MGraph.decForallFin'`, `Multiset.decidableMem`, and `Nat.decidableBallLT`, reduction got stuck at the `Decidable` instance\n  \u22ef \u25b8\n    (Quot.lift (Quot.indep fun a => (fun l => Multiset.decidableMem._aux_1 (kappa \u27e80, \u22ef\u27e9) l) a) \u22ef\n        (seen (pe1 \u2191\u27e80, \u22ef\u27e9)).val).snd\n\nHint: Reduction got stuck on `\u25b8` (Eq.rec), which suggests that one of the `Decidable` instances is defined using tactics such as `rw` or `simp`. To avoid tactics, make use of functions such as `\u00abinferInstanceAs\u00bb` or `decidable_of_decidable_of_iff` to alter a proposition.\nInflationA.lean:15:68: error: Tactic `decide` failed for proposition\n  \u2200 (s : Fin 12), \u2200 z \u2208 seen (pe1 \u2191s), z \u2208 seen (pe2 \u2191s) \u2192 z = kappa s\nbecause its `Decidable` instance\n  MGraph.decForallFin' fun s => \u2200 z \u2208 seen (pe1 \u2191s), z \u2208 seen (pe2 \u2191s) \u2192 z = kappa s\ndid not reduce to `isTrue` or `isFalse`.\n\nAfter unfolding the instances `decidable_of_decidable_of_iff`, `decidable_of_iff`, `forall_prop_decidable`, `Finset.decidableMem`, `MGraph.decForallFin'`, `Multiset.decidableMem`, and `Nat.decidableBallLT`, reduction got stuck at the `Decidable` instance\n  \u22ef \u25b8\n    (Quot.lift (Quot.indep fun a => (fun l => Multiset.decidableMem._aux_1 \u27e80, \u22ef\u27e9 l) a) \u22ef (seen (pe1 \u2191\u27e80, \u22ef\u27e9)).val).snd\n\nHint: Reduction got stuck on `\u25b8` (Eq.rec), which suggests that one of the `Decidable` instances is defined using tactics such as `rw` or `simp`. To avoid tactics, make use of functions such as `\u00abinferInstanceAs\u00bb` or `decidable_of_decidable_of_iff` to alter a proposition.\nInflationA.lean:19:62: error: Tactic `decide` failed for proposition\n  \u2200 (s t : Fin 12) (a : Fin 9), s \u2260 t \u2192 pe1 \u2191s = a \u2228 pe2 \u2191s = a \u2192 pe1 \u2191t = a \u2228 pe2 \u2191t = a \u2192 kappa s \u2260 kappa t\nbecause its `Decidable` instance\n  MGraph.decForallFin' fun s =>\n    \u2200 (t : Fin 12) (a : Fin 9), s \u2260 t \u2192 pe1 \u2191s = a \u2228 pe2 \u2191s = a \u2192 pe1 \u2191t = a \u2228 pe2 \u2191t = a \u2192 kappa s \u2260 kappa t\ndid not reduce to `isTrue` or `isFalse`.\n\nAfter unfolding the instances `decEq`, `decidable_of_decidable_of_iff`, `decidable_of_iff`, `forall_prop_decidable`, `instDecidableEqFin`, `instDecidableEqNat`, `instDecidableNot`, `instDecidableOr`, `MGraph.decForallFin'`, `Nat.decEq`, and `Nat.decidableBallLT`, reduction got stuck at the `Decidable` instance\n  match h : (\u2191(kappa \u27e80, \u22ef\u27e9)).beq \u2191(kappa \u27e81, \u22ef\u27e9) with\n  | true => isTrue \u22ef\n  | false => isFalse \u22ef\nInflationA.lean:21:66: error: Tactic `decide` failed for proposition\n  \u2200 (i : Fin 3), pi i \u2208 seen (portv i)\nbecause its `Decidable` instance\n  MGraph.decForallFin' fun i => pi i \u2208 seen (portv i)\ndid not reduce to `isTrue` or `isFalse`.\n\nAfter unfolding the instances `decidable_of_decidable_of_iff`, `decidable_of_iff`, `Finset.decidableMem`, `MGraph.decForallFin'`, `Multiset.decidableMem`, and `Nat.decidableBallLT`, reduction got stuck at the `Decidable` instance\n  \u22ef \u25b8\n    (Quot.lift (Quot.indep fun a => (fun l => Multiset.decidableMem._aux_1 (pi \u27e80, \u22ef\u27e9) l) a) \u22ef\n        (seen (portv \u27e80, \u22ef\u27e9)).val).snd\n\nHint: Reduction got stuck on `\u25b8` (Eq.rec), which suggests that one of the `Decidable` instances is defined using tactics such as `rw` or `simp`. To avoid tactics, make use of functions such as `\u00abinferInstanceAs\u00bb` or `decidable_of_decidable_of_iff` to alter a proposition.\nInflationA.lean:24:71: error: Tactic `decide` failed for proposition\n  \u2200 (i : Fin 3) (s : Fin 12), pe1 \u2191s = portv i \u2228 pe2 \u2191s = portv i \u2192 kappa s \u2260 pi i\nbecause its `Decidable` instance\n  MGraph.decForallFin' fun i => \u2200 (s : Fin 12), pe1 \u2191s = portv i \u2228 pe2 \u2191s = portv i \u2192 kappa s \u2260 pi i\ndid not reduce to `isTrue` or `isFalse`.\n\nAfter unfolding the instances `decEq`, `decidable_of_decidable_of_iff`, `decidable_of_iff`, `forall_prop_decidable`, `instDecidableEqFin`, `instDecidableEqNat`, `instDecidableNot`, `instDecidableOr`, `MGraph.decForallFin'`, `Nat.decEq`, and `Nat.decidableBallLT`, reduction got stuck at the `Decidable` instance\n  match h : (\u2191(kappa \u27e80, \u22ef\u27e9)).beq \u2191(pi \u27e80, \u22ef\u27e9) with\n  | true => isTrue \u22ef\n  | false => isFalse \u22ef\nInflationA.lean:27:51: error: Tactic `decide` failed for proposition\n  Function.Injective pi\nbecause its `Decidable` instance\n  Fintype.decidableInjectiveFintype pi\ndid not reduce to `isTrue` or `isFalse`.\n\nAfter unfolding the instances `decEq`, `decidable_of_decidable_of_iff`, `decidable_of_iff`, `instDecidableEqFin`, `instDecidableEqNat`, `instDecidableNot`, `Fintype.decidableInjectiveFintype`, `List.decidableBAll`, `List.instDecidablePairwise`, `List.nodupDecidable`, `Multiset.nodupDecidable`, and `Nat.decEq`, reduction got stuck at the `Decidable` instance\n  match h : (\u2191(pi ((fun i => i) \u27e81, \u22ef\u27e9))).beq \u2191(pi ((fun i => i) \u27e82, \u22ef\u27e9)) with\n  | true => isTrue \u22ef\n  | false => isFalse \u22ef\n",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 4143652864,
+      "stop_reason": null,
+      "started_utc": "2026-10-05T05:14:24.322597+00:00",
+      "finished_utc": "2026-10-05T05:14:37.740197+00:00",
+      "owned_process_stop_output": null,
+      "own_job_resource_receipt": {
+        "command": [
+          "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+          "-j1",
+          "-DmaxHeartbeats=0",
+          "-DmaxRecDepth=100000",
+          "-o",
+          "InflationA.olean",
+          "InflationA.lean"
+        ],
+        "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current-import-pruned-v3",
+        "started_utc": "2026-10-05T05:14:24.322597+00:00",
+        "attempted": true,
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 5368709120,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 1073741824,
+          "own_job_private_bytes": 6442450944,
+          "own_process_private_bytes": 6442450944,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 3600
+        },
+        "minimum_disk_free_bytes": 4143652864,
+        "initial_system_memory_snapshot": {
+          "free_physical_bytes": 8295489536,
+          "total_physical_bytes": 34024419328,
+          "available_commit_bytes": 6846652416,
+          "total_commit_limit_bytes": 60437172224
+        },
+        "minimum_physical_available_bytes": 7178706944,
+        "minimum_available_commit_bytes": 4502949888,
+        "root_pid": 41580,
+        "own_job_assignment_before_resume": "PASS",
+        "exit": 1,
+        "job_peak_process_private_bytes": 2225737728,
+        "job_peak_aggregate_private_bytes": 2226987008,
+        "state": "COMMAND_FAILED",
+        "finished_utc": "2026-10-05T05:14:37.740197+00:00",
+        "seconds": 13.421,
+        "polled_peak_tree_private_bytes": 2226987008,
+        "polled_peak_tree_rss_bytes": 982745088,
+        "counter_samples": 49,
+        "observed_own_processes": {
+          "39828": {
+            "exe": "conhost.exe",
+            "peak_private_bytes": 1249280,
+            "peak_rss_bytes": 7856128
+          },
+          "41580": {
+            "exe": "lean.exe",
+            "peak_private_bytes": 2225737728,
+            "peak_rss_bytes": 976855040
+          }
+        },
+        "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\htpeo-dms-current-import-pruned-v3-e68b466924b4041a-attempt-1.stdout.txt",
+        "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\htpeo-dms-current-import-pruned-v3-e68b466924b4041a-attempt-1.stderr.txt",
+        "stdout_sha256": "6734f2d91cc762163ad69c2307a199081c839a214d25a49f622c865c6d0da4e8",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_excerpt": "InflationA.lean:5:35: error: Function expected at\n  [0, 1, 2, 2, 3, 4, 0, 2, 3, 4, 0, 1]\nbut this term has type\n  List ?m.41\n\nNote: Expected a function because this term is being applied to the argument\n  s\nInflationA.lean:6:31: error: Function expected at\n  [4, 3, 1]\nbut this term has type\n  List ?m.14\n\nNote: Expected a function because this term is being applied to the argument\n  i\nInflationA.lean:8:3: error: Function expected at\n  [{0, 2, 4}, {0, 1, 3}, {1, 2, 4}, {0, 2, 3}, {0, 1, 2}, {1, 2, 3}, {2, 3, 4}, {0, 3, 4}, {0, 1, 4}]\nbut this term has type\n  List ?m.149\n\nNote: Expected a function because this term is being applied to the argument\n  a\nInflationA.lean:12:66: error: Tactic `decide` failed for proposition\n  \u2200 (s : Fin 12), kappa s \u2208 seen (pe1 \u2191s) \u2227 kappa s \u2208 seen (pe2 \u2191s)\nbecause its `Decidable` instance\n  MGraph.decForallFin' fun s => kappa s \u2208 seen (pe1 \u2191s) \u2227 kappa s \u2208 seen (pe2 \u2191s)\ndid not reduce to `isTrue` or `isFalse`.\n\nAfter unfolding the instances `decidable_of_decidable_of_iff`, `decidable_of_iff`, `instDecidableAnd`, `Finset.decidableMem`, `MGraph.decForallFin'`, `Multiset.decidableMem`, and `Nat.decidableBallLT`, reduction got stuck at the `Decidable` instance\n  \u22ef \u25b8\n    (Quot.lift (Quot.indep fun a => (fun l => Multiset.decidableMem._aux_1 (kappa \u27e80, \u22ef\u27e9) l) a) \u22ef\n        (seen (pe1 \u2191\u27e80, \u22ef\u27e9)).val).snd\n\nHint: Reduction got stuck on `\u25b8` (Eq.rec), which suggests that one of the `Decidable` instances is defined using tactics such as `rw` or `simp`. To avoid tactics, make use of functions such as `\u00abinferInstanceAs\u00bb` or `decidable_of_decidable_of_iff` to alter a proposition.\nInflationA.lean:15:68: error: Tactic `decide` failed for proposition\n  \u2200 (s : Fin 12), \u2200 z \u2208 seen (pe1 \u2191s), z \u2208 seen (pe2 \u2191s) \u2192 z = kappa s\nbecause its `Decidable` instance\n  MGraph.decForallFin' fun s => \u2200 z \u2208 seen (pe1 \u2191s), z \u2208 seen (pe2 \u2191s) \u2192 z = kappa s\ndid not reduce to `isTrue` or `isFalse`.\n\nAfter unfolding the instances `decidable_of_decidable_of_iff`, `decidable_of_iff`, `forall_prop_decidable`, `Finset.decidableMem`, `MGraph.decForallFin'`, `Multiset.decidableMem`, and `Nat.decidableBallLT`, reduction got stuck at the `Decidable` instance\n  \u22ef \u25b8\n    (Quot.lift (Quot.indep fun a => (fun l => Multiset.decidableMem._aux_1 \u27e80, \u22ef\u27e9 l) a) \u22ef (seen (pe1 \u2191\u27e80, \u22ef\u27e9)).val).snd\n\nHint: Reduction got stuck on `\u25b8` (Eq.rec), which suggests that one of the `Decidable` instances is defined using tactics such as `rw` or `simp`. To avoid tactics, make use of functions such as `\u00abinferInstanceAs\u00bb` or `decidable_of_decidable_of_iff` to alter a proposition.\nInflationA.lean:19:62: error: Tactic `decide` failed for proposition\n  \u2200 (s t : Fin 12) (a : Fin 9), s \u2260 t \u2192 pe1 \u2191s = a \u2228 pe2 \u2191s = a \u2192 pe1 \u2191t = a \u2228 pe2 \u2191t = a \u2192 kappa s \u2260 kappa t\nbecause its `Decidable` instance\n  MGraph.decForallFin' fun s =>\n    \u2200 (t : Fin 12) (a : Fin 9), s \u2260 t \u2192 pe1 \u2191s = a \u2228 pe2 \u2191s = a \u2192 pe1 \u2191t = a \u2228 pe2 \u2191t = a \u2192 kappa s \u2260 kappa t\ndid not reduce to `isTrue` or `isFalse`.\n\nAfter unfolding the instances `decEq`, `decidable_of_decidable_of_iff`, `decidable_of_iff`, `forall_prop_decidable`, `instDecidableEqFin`, `instDecidableEqNat`, `instDecidableNot`, `instDecidableOr`, `MGraph.decForallFin'`, `Nat.decEq`, and `Nat.decidableBallLT`, reduction got stuck at the `Decidable` instance\n  match h : (\u2191(kappa \u27e80, \u22ef\u27e9)).beq \u2191(kappa \u27e81, \u22ef\u27e9) with\n  | true => isTrue \u22ef\n  | false => isFalse \u22ef\nInflationA.lean:21:66: error: Tactic `decide` failed for proposition\n  \u2200 (i : Fin 3), pi i \u2208 seen (portv i)\nbecause its `Decidable` instance\n  MGraph.decForallFin' fun i => pi i \u2208 seen (portv i)\ndid not reduce to `isTrue` or `isFalse`.\n\nAfter unfolding the instances `decidable_of_decidable_of_iff`, `decidable_of_iff`, `Finset.decidableMem`, `MGraph.decForallFin'`, `Multiset.decidableMem`, and `Nat.decidableBallLT`, reduction got stuck at the `Decidable` instance\n  \u22ef \u25b8\n    (Quot.lift (Quot.indep fun a => (fun l => Multiset.decidableMem._aux_1 (pi \u27e80, \u22ef\u27e9) l) a) \u22ef\n        (seen (portv \u27e80, \u22ef\u27e9)).val).snd\n\nHint: Reduction got stuck on `\u25b8` (Eq.rec), which suggests that one of the `Decidable` instances is defined using tactics such as `rw` or `simp`. To avoid tactics, make use of functions such as `\u00abinferInstanceAs\u00bb` or `decidable_of_decidable_of_iff` to alter a proposition.\nInflationA.lean:24:71: error: Tactic `decide` failed for proposition\n  \u2200 (i : Fin 3) (s : Fin 12), pe1 \u2191s = portv i \u2228 pe2 \u2191s = portv i \u2192 kappa s \u2260 pi i\nbecause its `Decidable` instance\n  MGraph.decForallFin' fun i => \u2200 (s : Fin 12), pe1 \u2191s = portv i \u2228 pe2 \u2191s = portv i \u2192 kappa s \u2260 pi i\ndid not reduce to `isTrue` or `isFalse`.\n\nAfter unfolding the instances `decEq`, `decidable_of_decidable_of_iff`, `decidable_of_iff`, `forall_prop_decidable`, `instDecidableEqFin`, `instDecidableEqNat`, `instDecidableNot`, `instDecidableOr`, `MGraph.decForallFin'`, `Nat.decEq`, and `Nat.decidableBallLT`, reduction got stuck at the `Decidable` instance\n  match h : (\u2191(kappa \u27e80, \u22ef\u27e9)).beq \u2191(pi \u27e80, \u22ef\u27e9) with\n  | true => isTrue \u22ef\n  | false => isFalse \u22ef\nInflationA.lean:27:51: error: Tactic `decide` failed for proposition\n  Function.Injective pi\nbecause its `Decidable` instance\n  Fintype.decidableInjectiveFintype pi\ndid not reduce to `isTrue` or `isFalse`.\n\nAfter unfolding the instances `decEq`, `decidable_of_decidable_of_iff`, `decidable_of_iff`, `instDecidableEqFin`, `instDecidableEqNat`, `instDecidableNot`, `Fintype.decidableInjectiveFintype`, `List.decidableBAll`, `List.instDecidablePairwise`, `List.nodupDecidable`, `Multiset.nodupDecidable`, and `Nat.decEq`, reduction got stuck at the `Decidable` instance\n  match h : (\u2191(pi ((fun i => i) \u27e81, \u22ef\u27e9))).beq \u2191(pi ((fun i => i) \u27e82, \u22ef\u27e9)) with\n  | true => isTrue \u22ef\n  | false => isFalse \u22ef\n",
+        "stderr_excerpt": ""
+      },
+      "source_sha256": "0b4adac62d0dd32afbe9a129d71d29b7936ffe2652de3ed7f6b82d9eb2d1919d",
+      "third_worker_memory_observations": {
+        "minimum_free_physical_bytes": 7178706944,
+        "minimum_available_commit_bytes": 4502949888,
+        "peak_owned_private_bytes": 2226987008
+      }
+    },
+    {
+      "module": "InflationB",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "InflationB.olean",
+        "InflationB.lean"
+      ],
+      "seconds": 1.594,
+      "exit": 1,
+      "stdout": "InflationB.lean:1:0: error: unknown module prefix 'InflationA'\n\nNo directory 'InflationA' or file 'InflationA.olean' in the search path entries:\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current-import-pruned-v3\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\aesop\\.lake\\build\\lib\\lean\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\batteries\\.lake\\build\\lib\\lean\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\Cli\\.lake\\build\\lib\\lean\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\importGraph\\.lake\\build\\lib\\lean\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\LeanSearchClient\\.lake\\build\\lib\\lean\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\plausible\\.lake\\build\\lib\\lean\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\proofwidgets\\.lake\\build\\lib\\lean\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\Qq\\.lake\\build\\lib\\lean\nc:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\lib\\lean\n",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 4143669248,
+      "stop_reason": null,
+      "started_utc": "2026-10-05T05:14:38.043326+00:00",
+      "finished_utc": "2026-10-05T05:14:39.640501+00:00",
+      "owned_process_stop_output": null,
+      "own_job_resource_receipt": {
+        "command": [
+          "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+          "-j1",
+          "-DmaxHeartbeats=0",
+          "-DmaxRecDepth=100000",
+          "-o",
+          "InflationB.olean",
+          "InflationB.lean"
+        ],
+        "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current-import-pruned-v3",
+        "started_utc": "2026-10-05T05:14:38.043326+00:00",
+        "attempted": true,
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 5368709120,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 1073741824,
+          "own_job_private_bytes": 6442450944,
+          "own_process_private_bytes": 6442450944,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 3600
+        },
+        "minimum_disk_free_bytes": 4143669248,
+        "initial_system_memory_snapshot": {
+          "free_physical_bytes": 8148467712,
+          "total_physical_bytes": 34024419328,
+          "available_commit_bytes": 6696525824,
+          "total_commit_limit_bytes": 60437172224
+        },
+        "minimum_physical_available_bytes": 8023351296,
+        "minimum_available_commit_bytes": 6198677504,
+        "root_pid": 51324,
+        "own_job_assignment_before_resume": "PASS",
+        "exit": 1,
+        "job_peak_process_private_bytes": 455106560,
+        "job_peak_aggregate_private_bytes": 456372224,
+        "state": "COMMAND_FAILED",
+        "finished_utc": "2026-10-05T05:14:39.640501+00:00",
+        "seconds": 1.594,
+        "polled_peak_tree_private_bytes": 413392896,
+        "polled_peak_tree_rss_bytes": 73195520,
+        "counter_samples": 6,
+        "observed_own_processes": {
+          "6272": {
+            "exe": "conhost.exe",
+            "peak_private_bytes": 1265664,
+            "peak_rss_bytes": 7860224
+          },
+          "51324": {
+            "exe": "lean.exe",
+            "peak_private_bytes": 412127232,
+            "peak_rss_bytes": 73490432
+          }
+        },
+        "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\htpeo-dms-current-import-pruned-v3-38994f6055b19f3c-attempt-1.stdout.txt",
+        "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\htpeo-dms-current-import-pruned-v3-38994f6055b19f3c-attempt-1.stderr.txt",
+        "stdout_sha256": "cd83f6d788096852960768b515dedaf8455349eb33facb9a686d3f369a6e5d55",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_excerpt": "InflationB.lean:1:0: error: unknown module prefix 'InflationA'\n\nNo directory 'InflationA' or file 'InflationA.olean' in the search path entries:\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current-import-pruned-v3\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\aesop\\.lake\\build\\lib\\lean\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\batteries\\.lake\\build\\lib\\lean\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\Cli\\.lake\\build\\lib\\lean\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\importGraph\\.lake\\build\\lib\\lean\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\LeanSearchClient\\.lake\\build\\lib\\lean\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\plausible\\.lake\\build\\lib\\lean\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\proofwidgets\\.lake\\build\\lib\\lean\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\Qq\\.lake\\build\\lib\\lean\nc:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\lib\\lean\n",
+        "stderr_excerpt": ""
+      },
+      "source_sha256": "daed4d68838e497d9e696d69db8a92ab47bd4d3b019bebaf543734d8a931222e",
+      "third_worker_memory_observations": {
+        "minimum_free_physical_bytes": 8023351296,
+        "minimum_available_commit_bytes": 6198677504,
+        "peak_owned_private_bytes": 456372224
+      }
+    },
+    {
+      "module": "InflationC",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "InflationC.olean",
+        "InflationC.lean"
+      ],
+      "seconds": 1.938,
+      "exit": 1,
+      "stdout": "InflationC.lean:1:0: error: unknown module prefix 'InflationB'\n\nNo directory 'InflationB' or file 'InflationB.olean' in the search path entries:\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current-import-pruned-v3\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\aesop\\.lake\\build\\lib\\lean\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\batteries\\.lake\\build\\lib\\lean\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\Cli\\.lake\\build\\lib\\lean\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\importGraph\\.lake\\build\\lib\\lean\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\LeanSearchClient\\.lake\\build\\lib\\lean\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\plausible\\.lake\\build\\lib\\lean\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\proofwidgets\\.lake\\build\\lib\\lean\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\Qq\\.lake\\build\\lib\\lean\nc:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\lib\\lean\n",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 4143673344,
+      "stop_reason": null,
+      "started_utc": "2026-10-05T05:14:40.084613+00:00",
+      "finished_utc": "2026-10-05T05:14:42.031218+00:00",
+      "owned_process_stop_output": null,
+      "own_job_resource_receipt": {
+        "command": [
+          "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+          "-j1",
+          "-DmaxHeartbeats=0",
+          "-DmaxRecDepth=100000",
+          "-o",
+          "InflationC.olean",
+          "InflationC.lean"
+        ],
+        "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current-import-pruned-v3",
+        "started_utc": "2026-10-05T05:14:40.084613+00:00",
+        "attempted": true,
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 5368709120,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 1073741824,
+          "own_job_private_bytes": 6442450944,
+          "own_process_private_bytes": 6442450944,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 3600
+        },
+        "minimum_disk_free_bytes": 4143673344,
+        "initial_system_memory_snapshot": {
+          "free_physical_bytes": 8073834496,
+          "total_physical_bytes": 34024419328,
+          "available_commit_bytes": 6607220736,
+          "total_commit_limit_bytes": 60437172224
+        },
+        "minimum_physical_available_bytes": 7995334656,
+        "minimum_available_commit_bytes": 6182596608,
+        "root_pid": 36716,
+        "own_job_assignment_before_resume": "PASS",
+        "exit": 1,
+        "job_peak_process_private_bytes": 455614464,
+        "job_peak_aggregate_private_bytes": 456896512,
+        "state": "COMMAND_FAILED",
+        "finished_utc": "2026-10-05T05:14:42.031218+00:00",
+        "seconds": 1.938,
+        "polled_peak_tree_private_bytes": 437043200,
+        "polled_peak_tree_rss_bytes": 74993664,
+        "counter_samples": 7,
+        "observed_own_processes": {
+          "48112": {
+            "exe": "conhost.exe",
+            "peak_private_bytes": 1282048,
+            "peak_rss_bytes": 7864320
+          },
+          "36716": {
+            "exe": "lean.exe",
+            "peak_private_bytes": 435761152,
+            "peak_rss_bytes": 73543680
+          }
+        },
+        "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\htpeo-dms-current-import-pruned-v3-e97179597117f1a9-attempt-1.stdout.txt",
+        "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\htpeo-dms-current-import-pruned-v3-e97179597117f1a9-attempt-1.stderr.txt",
+        "stdout_sha256": "c3e563e0bb05919c59b4da7dce7e9c947adc16323364baadb99de45871ddf9ee",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_excerpt": "InflationC.lean:1:0: error: unknown module prefix 'InflationB'\n\nNo directory 'InflationB' or file 'InflationB.olean' in the search path entries:\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current-import-pruned-v3\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\aesop\\.lake\\build\\lib\\lean\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\batteries\\.lake\\build\\lib\\lean\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\Cli\\.lake\\build\\lib\\lean\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\importGraph\\.lake\\build\\lib\\lean\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\LeanSearchClient\\.lake\\build\\lib\\lean\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\plausible\\.lake\\build\\lib\\lean\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\proofwidgets\\.lake\\build\\lib\\lean\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\Qq\\.lake\\build\\lib\\lean\nc:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\lib\\lean\n",
+        "stderr_excerpt": ""
+      },
+      "source_sha256": "83ac89205ddc7a5256c7ba9a9608cc8d669f6dd964fea32c0fe0e247ea003c02",
+      "third_worker_memory_observations": {
+        "minimum_free_physical_bytes": 7995334656,
+        "minimum_available_commit_bytes": 6182596608,
+        "peak_owned_private_bytes": 456896512
+      }
+    },
+    {
+      "module": "InflationD",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "InflationD.olean",
+        "InflationD.lean"
+      ],
+      "seconds": 1.297,
+      "exit": 1,
+      "stdout": "InflationD.lean:1:0: error: unknown module prefix 'InflationC'\n\nNo directory 'InflationC' or file 'InflationC.olean' in the search path entries:\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current-import-pruned-v3\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\aesop\\.lake\\build\\lib\\lean\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\batteries\\.lake\\build\\lib\\lean\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\Cli\\.lake\\build\\lib\\lean\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\importGraph\\.lake\\build\\lib\\lean\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\LeanSearchClient\\.lake\\build\\lib\\lean\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\plausible\\.lake\\build\\lib\\lean\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\proofwidgets\\.lake\\build\\lib\\lean\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\Qq\\.lake\\build\\lib\\lean\nc:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\lib\\lean\n",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 4143661056,
+      "stop_reason": null,
+      "started_utc": "2026-10-05T05:14:42.426881+00:00",
+      "finished_utc": "2026-10-05T05:14:43.716832+00:00",
+      "owned_process_stop_output": null,
+      "own_job_resource_receipt": {
+        "command": [
+          "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+          "-j1",
+          "-DmaxHeartbeats=0",
+          "-DmaxRecDepth=100000",
+          "-o",
+          "InflationD.olean",
+          "InflationD.lean"
+        ],
+        "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current-import-pruned-v3",
+        "started_utc": "2026-10-05T05:14:42.426881+00:00",
+        "attempted": true,
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 5368709120,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 1073741824,
+          "own_job_private_bytes": 6442450944,
+          "own_process_private_bytes": 6442450944,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 3600
+        },
+        "minimum_disk_free_bytes": 4143661056,
+        "initial_system_memory_snapshot": {
+          "free_physical_bytes": 8074006528,
+          "total_physical_bytes": 34024419328,
+          "available_commit_bytes": 6623711232,
+          "total_commit_limit_bytes": 60437172224
+        },
+        "minimum_physical_available_bytes": 8019836928,
+        "minimum_available_commit_bytes": 6219329536,
+        "root_pid": 43088,
+        "own_job_assignment_before_resume": "PASS",
+        "exit": 1,
+        "job_peak_process_private_bytes": 455110656,
+        "job_peak_aggregate_private_bytes": 456364032,
+        "state": "COMMAND_FAILED",
+        "finished_utc": "2026-10-05T05:14:43.716832+00:00",
+        "seconds": 1.297,
+        "polled_peak_tree_private_bytes": 406110208,
+        "polled_peak_tree_rss_bytes": 72343552,
+        "counter_samples": 5,
+        "observed_own_processes": {
+          "43088": {
+            "exe": "lean.exe",
+            "peak_private_bytes": 404856832,
+            "peak_rss_bytes": 73510912
+          },
+          "38420": {
+            "exe": "conhost.exe",
+            "peak_private_bytes": 1253376,
+            "peak_rss_bytes": 7856128
+          }
+        },
+        "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\htpeo-dms-current-import-pruned-v3-ba54f0bdaa6212da-attempt-1.stdout.txt",
+        "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\htpeo-dms-current-import-pruned-v3-ba54f0bdaa6212da-attempt-1.stderr.txt",
+        "stdout_sha256": "b134f99a3c57423d0294a8543ba431eade1647bd2646b9ec2ca257b12a1bee58",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_excerpt": "InflationD.lean:1:0: error: unknown module prefix 'InflationC'\n\nNo directory 'InflationC' or file 'InflationC.olean' in the search path entries:\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current-import-pruned-v3\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\aesop\\.lake\\build\\lib\\lean\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\batteries\\.lake\\build\\lib\\lean\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\Cli\\.lake\\build\\lib\\lean\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\importGraph\\.lake\\build\\lib\\lean\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\LeanSearchClient\\.lake\\build\\lib\\lean\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\plausible\\.lake\\build\\lib\\lean\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\proofwidgets\\.lake\\build\\lib\\lean\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\Qq\\.lake\\build\\lib\\lean\nc:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\lib\\lean\n",
+        "stderr_excerpt": ""
+      },
+      "source_sha256": "49d5b31455c169e2e9eb252a22c68a5ae7db4a6a440c1075d9d2acb192811e55",
+      "third_worker_memory_observations": {
+        "minimum_free_physical_bytes": 8019836928,
+        "minimum_available_commit_bytes": 6219329536,
+        "peak_owned_private_bytes": 456364032
+      }
+    },
+    {
+      "module": "InflationE",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "InflationE.olean",
+        "InflationE.lean"
+      ],
+      "seconds": 1.281,
+      "exit": 1,
+      "stdout": "InflationE.lean:1:0: error: unknown module prefix 'InflationD'\n\nNo directory 'InflationD' or file 'InflationD.olean' in the search path entries:\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current-import-pruned-v3\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\aesop\\.lake\\build\\lib\\lean\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\batteries\\.lake\\build\\lib\\lean\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\Cli\\.lake\\build\\lib\\lean\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\importGraph\\.lake\\build\\lib\\lean\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\LeanSearchClient\\.lake\\build\\lib\\lean\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\plausible\\.lake\\build\\lib\\lean\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\proofwidgets\\.lake\\build\\lib\\lean\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\Qq\\.lake\\build\\lib\\lean\nc:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\lib\\lean\n",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 4143636480,
+      "stop_reason": null,
+      "started_utc": "2026-10-05T05:14:44.066333+00:00",
+      "finished_utc": "2026-10-05T05:14:45.338904+00:00",
+      "owned_process_stop_output": null,
+      "own_job_resource_receipt": {
+        "command": [
+          "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+          "-j1",
+          "-DmaxHeartbeats=0",
+          "-DmaxRecDepth=100000",
+          "-o",
+          "InflationE.olean",
+          "InflationE.lean"
+        ],
+        "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current-import-pruned-v3",
+        "started_utc": "2026-10-05T05:14:44.066333+00:00",
+        "attempted": true,
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 5368709120,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 1073741824,
+          "own_job_private_bytes": 6442450944,
+          "own_process_private_bytes": 6442450944,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 3600
+        },
+        "minimum_disk_free_bytes": 4143636480,
+        "initial_system_memory_snapshot": {
+          "free_physical_bytes": 8084410368,
+          "total_physical_bytes": 34024419328,
+          "available_commit_bytes": 6627323904,
+          "total_commit_limit_bytes": 60437172224
+        },
+        "minimum_physical_available_bytes": 8010223616,
+        "minimum_available_commit_bytes": 6226108416,
+        "root_pid": 55592,
+        "own_job_assignment_before_resume": "PASS",
+        "exit": 1,
+        "job_peak_process_private_bytes": 455155712,
+        "job_peak_aggregate_private_bytes": 456413184,
+        "state": "COMMAND_FAILED",
+        "finished_utc": "2026-10-05T05:14:45.338904+00:00",
+        "seconds": 1.281,
+        "polled_peak_tree_private_bytes": 405622784,
+        "polled_peak_tree_rss_bytes": 72290304,
+        "counter_samples": 5,
+        "observed_own_processes": {
+          "55592": {
+            "exe": "lean.exe",
+            "peak_private_bytes": 404365312,
+            "peak_rss_bytes": 73555968
+          },
+          "54056": {
+            "exe": "conhost.exe",
+            "peak_private_bytes": 1257472,
+            "peak_rss_bytes": 7860224
+          }
+        },
+        "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\htpeo-dms-current-import-pruned-v3-c59ae96f2ac694bb-attempt-1.stdout.txt",
+        "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\htpeo-dms-current-import-pruned-v3-c59ae96f2ac694bb-attempt-1.stderr.txt",
+        "stdout_sha256": "0b58c0233c00b81493b16e6bd1cbcdd00f9697c57cc939c0851c71dbf870819a",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_excerpt": "InflationE.lean:1:0: error: unknown module prefix 'InflationD'\n\nNo directory 'InflationD' or file 'InflationD.olean' in the search path entries:\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current-import-pruned-v3\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\aesop\\.lake\\build\\lib\\lean\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\batteries\\.lake\\build\\lib\\lean\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\Cli\\.lake\\build\\lib\\lean\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\importGraph\\.lake\\build\\lib\\lean\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\LeanSearchClient\\.lake\\build\\lib\\lean\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\plausible\\.lake\\build\\lib\\lean\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\proofwidgets\\.lake\\build\\lib\\lean\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\Qq\\.lake\\build\\lib\\lean\nc:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\lib\\lean\n",
+        "stderr_excerpt": ""
+      },
+      "source_sha256": "bd58448d83b74022e0521aea7bf794e88d23733f3ae41fa1c6539aefd904de43",
+      "third_worker_memory_observations": {
+        "minimum_free_physical_bytes": 8010223616,
+        "minimum_available_commit_bytes": 6226108416,
+        "peak_owned_private_bytes": 456413184
+      }
+    },
+    {
+      "module": "Inflation",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "Inflation.olean",
+        "Inflation.lean"
+      ],
+      "seconds": 3.515,
+      "exit": 1,
+      "stdout": "Inflation.lean:1:0: error: unknown module prefix 'InflationE'\n\nNo directory 'InflationE' or file 'InflationE.olean' in the search path entries:\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current-import-pruned-v3\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\aesop\\.lake\\build\\lib\\lean\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\batteries\\.lake\\build\\lib\\lean\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\Cli\\.lake\\build\\lib\\lean\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\importGraph\\.lake\\build\\lib\\lean\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\LeanSearchClient\\.lake\\build\\lib\\lean\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\plausible\\.lake\\build\\lib\\lean\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\proofwidgets\\.lake\\build\\lib\\lean\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\Qq\\.lake\\build\\lib\\lean\nc:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\lib\\lean\n",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 4143624192,
+      "stop_reason": null,
+      "started_utc": "2026-10-05T05:14:45.706390+00:00",
+      "finished_utc": "2026-10-05T05:14:49.209967+00:00",
+      "owned_process_stop_output": null,
+      "own_job_resource_receipt": {
+        "command": [
+          "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+          "-j1",
+          "-DmaxHeartbeats=0",
+          "-DmaxRecDepth=100000",
+          "-o",
+          "Inflation.olean",
+          "Inflation.lean"
+        ],
+        "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current-import-pruned-v3",
+        "started_utc": "2026-10-05T05:14:45.706390+00:00",
+        "attempted": true,
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 5368709120,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 1073741824,
+          "own_job_private_bytes": 6442450944,
+          "own_process_private_bytes": 6442450944,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 3600
+        },
+        "minimum_disk_free_bytes": 4143624192,
+        "initial_system_memory_snapshot": {
+          "free_physical_bytes": 8080207872,
+          "total_physical_bytes": 34024419328,
+          "available_commit_bytes": 6640668672,
+          "total_commit_limit_bytes": 60437172224
+        },
+        "minimum_physical_available_bytes": 7951335424,
+        "minimum_available_commit_bytes": 4711051264,
+        "root_pid": 16056,
+        "own_job_assignment_before_resume": "PASS",
+        "exit": 1,
+        "job_peak_process_private_bytes": 2098380800,
+        "job_peak_aggregate_private_bytes": 2099642368,
+        "state": "COMMAND_FAILED",
+        "finished_utc": "2026-10-05T05:14:49.209967+00:00",
+        "seconds": 3.515,
+        "polled_peak_tree_private_bytes": 1927688192,
+        "polled_peak_tree_rss_bytes": 126275584,
+        "counter_samples": 13,
+        "observed_own_processes": {
+          "16056": {
+            "exe": "lean.exe",
+            "peak_private_bytes": 1926426624,
+            "peak_rss_bytes": 141987840
+          },
+          "45000": {
+            "exe": "conhost.exe",
+            "peak_private_bytes": 1261568,
+            "peak_rss_bytes": 7860224
+          }
+        },
+        "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\htpeo-dms-current-import-pruned-v3-8b26b788a74e02a4-attempt-1.stdout.txt",
+        "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\htpeo-dms-current-import-pruned-v3-8b26b788a74e02a4-attempt-1.stderr.txt",
+        "stdout_sha256": "37a5270ca76c7f9028583cbf5afd9cc03c789a235888baeee26e1899af5336f8",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_excerpt": "Inflation.lean:1:0: error: unknown module prefix 'InflationE'\n\nNo directory 'InflationE' or file 'InflationE.olean' in the search path entries:\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current-import-pruned-v3\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\aesop\\.lake\\build\\lib\\lean\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\batteries\\.lake\\build\\lib\\lean\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\Cli\\.lake\\build\\lib\\lean\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\importGraph\\.lake\\build\\lib\\lean\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\LeanSearchClient\\.lake\\build\\lib\\lean\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\plausible\\.lake\\build\\lib\\lean\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\proofwidgets\\.lake\\build\\lib\\lean\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\Qq\\.lake\\build\\lib\\lean\nc:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\lib\\lean\n",
+        "stderr_excerpt": ""
+      },
+      "source_sha256": "381f1c30790fbe4188eaf0cf082380fd748c4741067fc72d98901dc370b341f3",
+      "third_worker_memory_observations": {
+        "minimum_free_physical_bytes": 7951335424,
+        "minimum_available_commit_bytes": 4711051264,
+        "peak_owned_private_bytes": 2099642368
+      }
+    },
+    {
+      "module": "All",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "All.olean",
+        "All.lean"
+      ],
+      "seconds": 3.5,
+      "exit": 1,
+      "stdout": "All.lean:5:0: error: unknown module prefix 'Inflation'\n\nNo directory 'Inflation' or file 'Inflation.olean' in the search path entries:\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current-import-pruned-v3\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\aesop\\.lake\\build\\lib\\lean\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\batteries\\.lake\\build\\lib\\lean\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\Cli\\.lake\\build\\lib\\lean\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\importGraph\\.lake\\build\\lib\\lean\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\LeanSearchClient\\.lake\\build\\lib\\lean\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\plausible\\.lake\\build\\lib\\lean\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\proofwidgets\\.lake\\build\\lib\\lean\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\Qq\\.lake\\build\\lib\\lean\nc:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\lib\\lean\n",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 4143611904,
+      "stop_reason": null,
+      "started_utc": "2026-10-05T05:14:49.725916+00:00",
+      "finished_utc": "2026-10-05T05:14:53.237590+00:00",
+      "owned_process_stop_output": null,
+      "own_job_resource_receipt": {
+        "command": [
+          "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+          "-j1",
+          "-DmaxHeartbeats=0",
+          "-DmaxRecDepth=100000",
+          "-o",
+          "All.olean",
+          "All.lean"
+        ],
+        "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current-import-pruned-v3",
+        "started_utc": "2026-10-05T05:14:49.725916+00:00",
+        "attempted": true,
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 5368709120,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 1073741824,
+          "own_job_private_bytes": 6442450944,
+          "own_process_private_bytes": 6442450944,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 3600
+        },
+        "minimum_disk_free_bytes": 4143611904,
+        "initial_system_memory_snapshot": {
+          "free_physical_bytes": 8095444992,
+          "total_physical_bytes": 34024419328,
+          "available_commit_bytes": 6650990592,
+          "total_commit_limit_bytes": 60437172224
+        },
+        "minimum_physical_available_bytes": 7962279936,
+        "minimum_available_commit_bytes": 4595269632,
+        "root_pid": 53460,
+        "own_job_assignment_before_resume": "PASS",
+        "exit": 1,
+        "job_peak_process_private_bytes": 2177748992,
+        "job_peak_aggregate_private_bytes": 2179006464,
+        "state": "COMMAND_FAILED",
+        "finished_utc": "2026-10-05T05:14:53.237590+00:00",
+        "seconds": 3.5,
+        "polled_peak_tree_private_bytes": 2049703936,
+        "polled_peak_tree_rss_bytes": 131719168,
+        "counter_samples": 13,
+        "observed_own_processes": {
+          "54004": {
+            "exe": "conhost.exe",
+            "peak_private_bytes": 1257472,
+            "peak_rss_bytes": 7856128
+          },
+          "53460": {
+            "exe": "lean.exe",
+            "peak_private_bytes": 2048446464,
+            "peak_rss_bytes": 141967360
+          }
+        },
+        "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\htpeo-dms-current-import-pruned-v3-a52ace420f2175d0-attempt-1.stdout.txt",
+        "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\htpeo-dms-current-import-pruned-v3-a52ace420f2175d0-attempt-1.stderr.txt",
+        "stdout_sha256": "33ec71fbf05d0ec0b63f459d5e109ed244c1ce2a9e45ce2703a244763cf9eedc",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_excerpt": "All.lean:5:0: error: unknown module prefix 'Inflation'\n\nNo directory 'Inflation' or file 'Inflation.olean' in the search path entries:\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current-import-pruned-v3\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\aesop\\.lake\\build\\lib\\lean\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\batteries\\.lake\\build\\lib\\lean\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\Cli\\.lake\\build\\lib\\lean\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\importGraph\\.lake\\build\\lib\\lean\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\LeanSearchClient\\.lake\\build\\lib\\lean\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\plausible\\.lake\\build\\lib\\lean\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\proofwidgets\\.lake\\build\\lib\\lean\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\Qq\\.lake\\build\\lib\\lean\nc:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\lib\\lean\n",
+        "stderr_excerpt": ""
+      },
+      "source_sha256": "614f082b71789d8fc067e4b336b907f688276873cb73192f213bb04439b89fc6",
+      "third_worker_memory_observations": {
+        "minimum_free_physical_bytes": 7962279936,
+        "minimum_available_commit_bytes": 4595269632,
+        "peak_owned_private_bytes": 2179006464
+      }
+    }
+  ],
+  "audit_rows": [
+    {
+      "module": "FreshAudit1.lean",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "FreshAudit1.olean",
+        "FreshAudit1.lean"
+      ],
+      "seconds": 4.047,
+      "exit": 1,
+      "stdout": "FreshAudit1.lean:1:0: error: unknown module prefix 'All'\n\nNo directory 'All' or file 'All.olean' in the search path entries:\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current-import-pruned-v3\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\aesop\\.lake\\build\\lib\\lean\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\batteries\\.lake\\build\\lib\\lean\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\Cli\\.lake\\build\\lib\\lean\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\importGraph\\.lake\\build\\lib\\lean\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\LeanSearchClient\\.lake\\build\\lib\\lean\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\plausible\\.lake\\build\\lib\\lean\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\proofwidgets\\.lake\\build\\lib\\lean\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\Qq\\.lake\\build\\lib\\lean\nc:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\lib\\lean\n",
+      "stderr": "",
+      "is_endpoint_audit": true,
+      "minimum_free_bytes": 4018442240,
+      "stop_reason": null,
+      "started_utc": "2026-10-05T05:16:20.159496+00:00",
+      "finished_utc": "2026-10-05T05:16:24.196380+00:00",
+      "owned_process_stop_output": null,
+      "own_job_resource_receipt": {
+        "command": [
+          "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+          "-j1",
+          "-DmaxHeartbeats=0",
+          "-DmaxRecDepth=100000",
+          "-o",
+          "FreshAudit1.olean",
+          "FreshAudit1.lean"
+        ],
+        "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current-import-pruned-v3",
+        "started_utc": "2026-10-05T05:16:20.159496+00:00",
+        "attempted": true,
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 5368709120,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 1073741824,
+          "own_job_private_bytes": 6442450944,
+          "own_process_private_bytes": 6442450944,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 3600
+        },
+        "minimum_disk_free_bytes": 4018442240,
+        "initial_system_memory_snapshot": {
+          "free_physical_bytes": 9305477120,
+          "total_physical_bytes": 34024419328,
+          "available_commit_bytes": 7576186880,
+          "total_commit_limit_bytes": 60437172224
+        },
+        "minimum_physical_available_bytes": 9032605696,
+        "minimum_available_commit_bytes": 5094207488,
+        "root_pid": 25676,
+        "own_job_assignment_before_resume": "PASS",
+        "exit": 1,
+        "job_peak_process_private_bytes": 3096887296,
+        "job_peak_aggregate_private_bytes": 3098144768,
+        "state": "COMMAND_FAILED",
+        "finished_utc": "2026-10-05T05:16:24.196380+00:00",
+        "seconds": 4.047,
+        "polled_peak_tree_private_bytes": 2342809600,
+        "polled_peak_tree_rss_bytes": 142041088,
+        "counter_samples": 14,
+        "observed_own_processes": {
+          "25676": {
+            "exe": "lean.exe",
+            "peak_private_bytes": 2341552128,
+            "peak_rss_bytes": 155496448
+          },
+          "42796": {
+            "exe": "conhost.exe",
+            "peak_private_bytes": 1257472,
+            "peak_rss_bytes": 7860224
+          }
+        },
+        "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\htpeo-dms-current-import-pruned-v3-6abcc70b865d6bea-attempt-1.stdout.txt",
+        "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\htpeo-dms-current-import-pruned-v3-6abcc70b865d6bea-attempt-1.stderr.txt",
+        "stdout_sha256": "822da289365668c1c7c83351d2053b9165ac92b5392f3fd22b954090fd7857a6",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_excerpt": "FreshAudit1.lean:1:0: error: unknown module prefix 'All'\n\nNo directory 'All' or file 'All.olean' in the search path entries:\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current-import-pruned-v3\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\aesop\\.lake\\build\\lib\\lean\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\batteries\\.lake\\build\\lib\\lean\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\Cli\\.lake\\build\\lib\\lean\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\importGraph\\.lake\\build\\lib\\lean\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\LeanSearchClient\\.lake\\build\\lib\\lean\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\plausible\\.lake\\build\\lib\\lean\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\proofwidgets\\.lake\\build\\lib\\lean\nC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\Qq\\.lake\\build\\lib\\lean\nc:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\lib\\lean\n",
+        "stderr_excerpt": ""
+      },
+      "source_sha256": "c2776a9f5b63944f60b1be65f296da9dd11456cdcbeda49019714323d5dede91",
+      "third_worker_memory_observations": {
+        "minimum_free_physical_bytes": 9032605696,
+        "minimum_available_commit_bytes": 5094207488,
+        "peak_owned_private_bytes": 3098144768
+      }
+    }
+  ],
+  "selected123_actual_print_count": 0,
+  "unknown_or_admitted_axiom_verdict": "NO_SELECTED_PRINTS_AVAILABLE;NOT_QUALIFIED",
+  "scientific_body_changes": 0,
+  "original119_and_V1_V2_preserved": true,
+  "positive_final_qualification_executions": 0
+}

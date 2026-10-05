@@ -1,0 +1,118 @@
+--- qualify_dms_v3_complete_route.py
++++ qualify_dms_v4_vector_complete_route.py
+@@ -1,8 +1,8 @@
+ """Read-only final qualification, only after a separate SHA-bound root review.
+ 
+-The original scientific bodies are preserved.99 original-owned cold outputs linked only from proven V1 COPIES are
+-explicitly reused;129 body-identical diagnostic sources must have actual new
+-compilation rows. No novelty, scoring, publication or release is authorized here.
++All228 scientific bodies/options/audits remain unchanged.99 original-owned passes
++are imported from proven V1 copies read-only,122 unaffected V3-new passes are
++linked into V4, and seven affected sources must have actual new V4 rows. No novelty, scoring, publication or release is authorized here.
+ """
+ from pathlib import Path
+ from datetime import datetime,timezone
+@@ -11,18 +11,19 @@
+ from receipt_io import read_bytes_shared
+ from lean_imports import stripped
+ from audit_axioms import parse as parse_axioms
+-from verify_dms_v3_stage import verify_stage
+-from dms_v3_copy99_hardlink_seed import verify_seed,preserved_check
++from verify_dms_v4_vector_stage import verify_stage
++from dms_v4_vector122_seed import verify_seed
++from dms_v3_copy99_hardlink_seed import preserved_check
+ BASE=Path(__file__).resolve().parent
+-PROJECT='htpeo-dms-current-import-pruned-v3'
++PROJECT='htpeo-dms-current-import-pruned-v4-vector'
+ STAGE=BASE/'builds'/PROJECT
+-PLAN_SHA='eea74ffbc9321a0663d6c77d8e7c79ee7de3da914c9af1bc66e9b3ed3750f7ba'
+-RUNNER_SHA='832e875054d76b597652a37edc197f47182253172581be1ab962b1ae6187ee3d'
+-POLICY_SHA='a4b795b071135118af94868726b9ac45af0579540d5856e9aaf7d48a9e3717e6'
+-SEED_SHA='a1395c3617d8c813048b0ecfb34be453c058636216659583090ad1defb771c83'
++PLAN_SHA='30f7b071fbcd9ddb37e48a059126daf8e37dd65dae9b2733614af926589a7308'
++RUNNER_SHA='96e616f35df492576c8b26909bc76782f476370e08c607883daff706e04456dc'
++POLICY_SHA='0af7feab4fc55f1b7ecade9b60491c2507ac3687d2899f0f74116afd40a93a8f'
++# Actual future seed SHA must be explicitly reviewed in the root final approval.
+ ORIGINAL119_SHA='feb37da0178c7ad7f259096eba604ab43ae253bcaaac5212d66a2748ffc84238'
+-VERIFIER_SHA='be19344e55bb6a50930bbd2b660385447cfe5fd721861f2fa6c4253094b927c5'
+-SEED_HELPER_SHA='772423ad135bddde4487ff381bc39c4d2cf2a1022229943f37e4d7c03fadaa92'
++VERIFIER_SHA='d876f0d7850b4618ff4855aad2306216f6921987936daea24a820fef798b6242'
++SEED_HELPER_SHA='219fa8cd4bbd3d90ca80f3ad4e0ac662b6a7083afc819d88d1cbd5ba93d73df4'
+ 
+ def digest(path):
+     d=hashlib.sha256()
+@@ -59,13 +60,14 @@
+     approval_path=Path(approval_path).resolve()
+     assert approval_path.is_relative_to(BASE.resolve()) and digest(approval_path)==approval_sha
+     approved=load(approval_path)
+-    assert approved['status']=='ROOT_APPROVED_DMS_V3_FINAL_QUALIFICATION_READ_ONLY'
++    assert approved['status']=='ROOT_APPROVED_DMS_V4_FINAL_QUALIFICATION_READ_ONLY'
++    SEED_SHA=approved['reviewed_seed_receipt_sha256'];assert re.fullmatch('[0-9a-f]{64}',SEED_SHA)
+     assert approved['reviewed_qualification_helper_sha256']==digest(__file__)
+     assert approved['reviewed_runner_sha256']==RUNNER_SHA
+     assert approved['reviewed_policy_sha256']==POLICY_SHA and approved['reviewed_seed_receipt_sha256']==SEED_SHA
+-    assert digest(BASE/'run_dms_v3_linked_plan.py')==RUNNER_SHA
+-    assert digest(BASE/'verify_dms_v3_stage.py')==VERIFIER_SHA
+-    assert digest(BASE/'dms_v3_copy99_hardlink_seed.py')==SEED_HELPER_SHA
++    assert digest(BASE/'run_dms_v4_vector_plan.py')==RUNNER_SHA
++    assert digest(BASE/'verify_dms_v4_vector_stage.py')==VERIFIER_SHA
++    assert digest(BASE/'dms_v4_vector122_seed.py')==SEED_HELPER_SHA
+     plan_path=STAGE/'build-plan.json';assert digest(plan_path)==PLAN_SHA
+     plan=load(plan_path);assert plan['version']=='4.33.1' and plan.get('lean_options',{})=={}
+     receipt_path=BASE/(PROJECT+'-fresh-build.json');raw=read_bytes_shared(receipt_path)
+@@ -73,15 +75,16 @@
+     assert receipt_sha==approved['reviewed_actual_source_receipt_sha256']
+     receipt=json.loads(raw)
+     assert receipt.get('current_module') is None and receipt.get('waiting_for_module') is None
+-    assert receipt['runner_source_sha256']==RUNNER_SHA
++    assert receipt['resource_settings']['runner_source_sha256']==RUNNER_SHA
++    assert receipt['modules']==plan['modules'] and receipt.get('finished_utc'), 'Actual final scoped receipt required'
+     assert '4.33.1' in receipt['compiler_version'] and '819816b' in receipt['compiler_version']
+     original_and_v1=preserved_check()
+     assert digest(plan['original119_immutable_receipt'])==ORIGINAL119_SHA
+-    stage_identity=verify_stage(require_cold=False)
++    stage_identity=verify_stage(require_cold=False,linked122_allowed=True)
+     seed_identity=verify_seed(POLICY_SHA,SEED_SHA)
+-    required=set(seed_identity['required129_new_cold_module_names'])
+-    reused={r['module'] for r in seed_identity['modules']}
+-    assert len(required)==129 and len(reused)==99 and required.isdisjoint(reused)
++    required=set(seed_identity['required7_new_cold_module_names'])
++    reused=set(seed_identity['prior221_names'])
++    assert len(required)==7 and len(reused)==221 and required.isdisjoint(reused)
+     entries={r['module']:r for r in plan['modules']}
+     assert set(entries)==required|reused and len(entries)==228
+     source_rows=[r for r in receipt['builds'] if not r['is_endpoint_audit']]
+@@ -150,14 +153,14 @@
+         'current_pinned_compiler_executable_sha256':digest(lean),
+         'current_resource_guard_sha256':digest(BASE/'matt_resource_guard.py'),
+         'original119_and_failed_v1_preservation':original_and_v1,'original119_immutable_receipt_sha256':ORIGINAL119_SHA,
+-        'original_scientific_and_scored_scope':'UNALTERED228_SCIENTIFIC_BODIES_AND123_ORIGINAL_ENDPOINTS;ONLY_THREE_IMPORT_HEADERS_CHANGED',
++        'original_scientific_and_scored_scope':'UNALTERED228_SCIENTIFIC_BODIES_OPTIONS_COMMENTS_AND123_ORIGINAL_ENDPOINTS;ORIGINAL_THREE_IMPORT_HEADER_SPANS_PLUS_DIRECT_INFLATIONA_VECNOTATION_IMPORT',
+         'all228_body_identity_and2735_official_source_artifact_runtime_git_cache_identity':stage_identity,
+-        'post_run99_v1_copy_V3_NTFS_identity_and_all_original_v2_sha':seed_identity,
+-        'copy_source_only_reuse_and_original_v2_linkcount2_preservation':True,
+-        'prior_own_original_cold_source_outputs_reused':99,'new_cold_source_passes':len(actual_pass),
+-        'new_actual_source_module_names':sorted(actual_pass),'required_new129_module_names':sorted(required),
++        'post_run221_readonly99_and_linked122_identity_and_all_original_V1_V2_V3_protection':seed_identity,
++        'existing_V1_copy99_readonly_inputs_and_original_V2_V1_V3_protected99_linkcount2_preservation':True,
++        'prior_own_original_cold_source_outputs_reused_readonly99':99,'prior_V3_new_own_cold_source_passes_reused_linked122':122,'new_V4_cold_source_passes':len(actual_pass),
++        'new_actual_source_module_names':sorted(actual_pass),'required_new7_module_names':sorted(required),
+         'source_failures_or_resources':actual_failure,'missing_actual_new_source_modules':sorted(required-set(actual_pass)),
+-        'current129_artifact_hashes':artifact_records,'actual129_source_CLI_guard_raw_log_identities':actual_source_invocation_identities,'actual_selected_audit_identity':audit_identity,
++        'current7_V4_artifact_hashes':artifact_records,'actual7_V4_source_CLI_guard_raw_log_identities':actual_source_invocation_identities,'actual_selected_audit_identity':audit_identity,
+         'requested_endpoint_count':123,'actual_unique_print_count':len(count),'missing_prints':missing,'unexpected_prints':unexpected,'duplicate_prints':duplicate,
+         'axiom_parser_sha256':digest(BASE/'audit_axioms.py'),'selected123_actual_axiom_classifications':parsed,
+         'selected_classification_counts':dict(Counter(r['classification'] for r in parsed)),
+@@ -166,10 +169,10 @@
+         'actual_raw_print_receipts':raw_print_receipts,'compiler_invocations_in_this_helper':0,
+         'qualification_limits':'This independently rechecks proof replay and body/import/dependency provenance. It does not decide mathematical novelty, statement faithfulness, competition scores or publication.'}
+     assert read_bytes_shared(receipt_path)==raw,'Final source receipt changed during read-only qualification'
+-    out=BASE/'dms-v3-complete-route-final-qualification-20261005.json'
++    out=BASE/'dms-v4-vector-complete-route-final-qualification-20261005.json'
+     assert not out.exists();out.write_text(json.dumps(result,indent=2)+'\n',encoding='utf8')
+     print(json.dumps({'qualification':str(out),'qualification_sha256':digest(out),'status':status,
+-        'prior_owned_reused':99,'actual_new_cold_passes':len(actual_pass),'actual_unique_prints':len(count),
++        'prior_owned_reused':221,'actual_new_cold_passes':len(actual_pass),'actual_unique_prints':len(count),
+         'admitted':len(admissions),'unknown_axioms':len(unknown),'native_endpoints':len(native)},indent=2),flush=True)
+ 
+ if __name__=='__main__':

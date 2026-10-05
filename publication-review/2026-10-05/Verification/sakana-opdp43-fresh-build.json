@@ -1,0 +1,233 @@
+{
+  "id": "sakana-opdp43",
+  "entrant": "E02",
+  "version": "4.34.1",
+  "mathlib_pin": "d13f23b723b8a846827a245b89c10fc7d3f11612",
+  "source_dir": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-opdp43",
+  "modules": [
+    {
+      "module": "OpHack.NoThree.Symmetry",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-opdp43\\OpHack\\NoThree\\Symmetry.lean",
+      "source": "Reproduction_Sources/opdp43/OpHack/NoThree/Symmetry.lean",
+      "sha256": "38a5e72014c95da6a4756f4326d0a41483d078c8c4c381b63109646430312e15"
+    },
+    {
+      "module": "OpHack.NoThree.Grid",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-opdp43\\OpHack\\NoThree\\Grid.lean",
+      "source": "Reproduction_Sources/opdp43/OpHack/NoThree/Grid.lean",
+      "sha256": "17007928d0c8fe2283689fb6da4e8c111b7ce956be8f39d19b30ca686ceaf7f9"
+    },
+    {
+      "module": "OpHack.NoThree.GridBalance",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-opdp43\\OpHack\\NoThree\\GridBalance.lean",
+      "source": "Reproduction_Sources/opdp43/OpHack/NoThree/GridBalance.lean",
+      "sha256": "be89dd659738eb2802ebf2fea1f58bdc56212b97af99f8899cacd6b1b0e04279"
+    },
+    {
+      "module": "OpHack.NoThree.Main",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-opdp43\\OpHack\\NoThree\\Main.lean",
+      "source": "Reproduction_Sources/opdp43/OpHack/NoThree/Main.lean",
+      "sha256": "f8262d41b0933681b1db8dafb3d4302471dc28650b8ca950e3e1fc01f203c3d2"
+    }
+  ],
+  "endpoints": [
+    "NoThreeSymmetry.grid_half_turn_gap",
+    "NoThreeSymmetry.sharp_half_turn_gap"
+  ],
+  "roots": [
+    "OpHack.NoThree.Main"
+  ],
+  "audit_modules": [
+    "FreshAudit1.lean"
+  ],
+  "lean_options": {},
+  "static_review_contexts": [],
+  "status": "PASS",
+  "builds": [
+    {
+      "module": "OpHack.NoThree.Symmetry",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "OpHack\\NoThree\\Symmetry.olean",
+        "OpHack\\NoThree\\Symmetry.lean"
+      ],
+      "seconds": 17.27,
+      "exit": 0,
+      "stdout": "OpHack\\NoThree\\Symmetry.lean:65:15: warning: Try `simp at hm` instead of `simpa using hm`\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nOpHack\\NoThree\\Symmetry.lean:115:2: warning: Unused tactic linter: `change S.card = (k + 1) + (k + 1)` does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`\n'NoThreeSymmetry.half_turn_gap' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 7899553792,
+      "stop_reason": null,
+      "owned_process_stop_output": null,
+      "source_sha256": "38a5e72014c95da6a4756f4326d0a41483d078c8c4c381b63109646430312e15",
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-opdp43\\OpHack\\NoThree\\Symmetry.olean",
+          "sha256": "9a0c15c1189823f1f3615306bafe1593ee25879a142e473b3870c40d6f7f36d1",
+          "bytes": 400312
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "OpHack.NoThree.Grid",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "OpHack\\NoThree\\Grid.olean",
+        "OpHack\\NoThree\\Grid.lean"
+      ],
+      "seconds": 14.41,
+      "exit": 0,
+      "stdout": "OpHack\\NoThree\\Grid.lean:26:95: warning: Unused tactic linter: `ring` does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`\nOpHack\\NoThree\\Grid.lean:26:95: warning: this tactic is never executed\n\nNote: This linter can be disabled with `set_option linter.unreachableTactic false`\nOpHack\\NoThree\\Grid.lean:85:55: warning: `if_false` has been deprecated: Use `ite_false` instead\nOpHack\\NoThree\\Grid.lean:85:65: warning: `if_true` has been deprecated: Use `ite_true` instead\nOpHack\\NoThree\\Grid.lean:85:55: warning: `if_false` has been deprecated: Use `ite_false` instead\nOpHack\\NoThree\\Grid.lean:85:65: warning: `if_true` has been deprecated: Use `ite_true` instead\n",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 7902535680,
+      "stop_reason": null,
+      "owned_process_stop_output": null,
+      "source_sha256": "17007928d0c8fe2283689fb6da4e8c111b7ce956be8f39d19b30ca686ceaf7f9",
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-opdp43\\OpHack\\NoThree\\Grid.olean",
+          "sha256": "0f084292640159b4b130877e5cdd29c54da65f512470ff1e2093ddfe5757003b",
+          "bytes": 366456
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "OpHack.NoThree.GridBalance",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "OpHack\\NoThree\\GridBalance.olean",
+        "OpHack\\NoThree\\GridBalance.lean"
+      ],
+      "seconds": 20.42,
+      "exit": 0,
+      "stdout": "'NoThreeSymmetry.grid_half_turn_gap_large' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 7902535680,
+      "stop_reason": null,
+      "owned_process_stop_output": null,
+      "source_sha256": "be89dd659738eb2802ebf2fea1f58bdc56212b97af99f8899cacd6b1b0e04279",
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-opdp43\\OpHack\\NoThree\\GridBalance.olean",
+          "sha256": "f166464780647ac0dd49d0b10dfcea0e1615efb9d1c49bf88c042f909a825eda",
+          "bytes": 278640
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "OpHack.NoThree.Main",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "OpHack\\NoThree\\Main.olean",
+        "OpHack\\NoThree\\Main.lean"
+      ],
+      "seconds": 41.77,
+      "exit": 0,
+      "stdout": "'NoThreeSymmetry.grid_half_turn_gap' depends on axioms: [propext, Classical.choice, Quot.sound]\n'NoThreeSymmetry.witness5_noThree' depends on axioms: [propext, Classical.choice, Quot.sound]\n'NoThreeSymmetry.sharp_half_turn_gap' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 7946665984,
+      "stop_reason": null,
+      "owned_process_stop_output": null,
+      "source_sha256": "f8262d41b0933681b1db8dafb3d4302471dc28650b8ca950e3e1fc01f203c3d2",
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-opdp43\\OpHack\\NoThree\\Main.olean",
+          "sha256": "1d673e31b82f72004047fe73ef3e810c827f4bda4dc4e89f1d98ca953bede52a",
+          "bytes": 196664
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "FreshAudit1.lean",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "FreshAudit1.olean",
+        "FreshAudit1.lean"
+      ],
+      "seconds": 35.69,
+      "exit": 0,
+      "stdout": "'NoThreeSymmetry.grid_half_turn_gap' depends on axioms: [propext, Classical.choice, Quot.sound]\n'NoThreeSymmetry.sharp_half_turn_gap' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "is_endpoint_audit": true,
+      "minimum_free_bytes": 7460614144,
+      "stop_reason": null,
+      "owned_process_stop_output": null,
+      "source_sha256": "4e2b3f581dd2ad340456cda0e9b2f7a76497e56994e07c9549728deeb2676feb",
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-opdp43\\FreshAudit1.olean",
+          "sha256": "44fd2e16239354c9ed487e96e13f2e7d2d815630b5a7b5416dec164d2454b336",
+          "bytes": 1536
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    }
+  ],
+  "compiler_version": "Lean (version 4.34.1, x86_64-w64-windows-gnu, commit 5045d0056413266e57c625dcd7c365b10e377c52, Release)",
+  "compilation_order": [
+    "OpHack.NoThree.Symmetry",
+    "OpHack.NoThree.Grid",
+    "OpHack.NoThree.GridBalance",
+    "OpHack.NoThree.Main"
+  ],
+  "started_utc": "2026-10-04T21:31:13Z",
+  "failed_invocations": [],
+  "selected_audit_axiom_review": [
+    {
+      "endpoint": "NoThreeSymmetry.grid_half_turn_gap",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    },
+    {
+      "endpoint": "NoThreeSymmetry.sharp_half_turn_gap",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    }
+  ],
+  "resource_settings": {
+    "LEAN_NUM_THREADS": 1,
+    "lean_shell_worker_flag": "-j1",
+    "maxHeartbeats": 0,
+    "maxRecDepth": 100000
+  },
+  "finished_utc": "2026-10-04T21:33:23Z"
+}

@@ -1,0 +1,141 @@
+{
+  "status": "QUALIFIED_ACTUAL_TWO_R100_R101_J2_SOURCES_AND_SUPPLEMENTAL_SELECTED6_STANDARD_ONLY_AUDIT",
+  "checked_utc": "2026-10-05T07:46:14.163670+00:00",
+  "approval_sha256": "8cdbf078daf76dde1d248d23774c9f298d44ed436bfa4df7bb004609f43fec6f",
+  "source_immutable_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\ht-ramsey-actual138-two-R100-R101-j2-source-pilot-immutable-20261005.json",
+  "source_immutable_sha256": "91ac7d8306ea4640f4a126c1bf1aa4ed4b16c16a46cdfabeb768b7f21c66c88c",
+  "source_pilot_actual_exec_exit0_session": 91265,
+  "guard": {
+    "command": [
+      "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+      "-j1",
+      "-DmaxHeartbeats=0",
+      "-DmaxRecDepth=100000",
+      "-o",
+      "FreshAuditJ2R100R101Pilot.olean",
+      "FreshAuditJ2R100R101Pilot.lean"
+    ],
+    "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current",
+    "started_utc": "2026-10-05T07:46:04.538874+00:00",
+    "attempted": true,
+    "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+    "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+    "resource_policy": {
+      "initial_disk_bytes": 4000000000,
+      "initial_physical_bytes": 6442450944,
+      "initial_available_commit_bytes": 5368709120,
+      "continuous_disk_bytes": 1000000000,
+      "continuous_physical_bytes": 3221225472,
+      "continuous_available_commit_bytes": 1073741824,
+      "own_job_private_bytes": 6442450944,
+      "own_process_private_bytes": 6442450944,
+      "poll_seconds": 0.25,
+      "timeout_seconds": 3600
+    },
+    "minimum_disk_free_bytes": 5388898304,
+    "initial_system_memory_snapshot": {
+      "free_physical_bytes": 10197835776,
+      "total_physical_bytes": 34024419328,
+      "available_commit_bytes": 11519823872,
+      "total_commit_limit_bytes": 60213837824
+    },
+    "minimum_physical_available_bytes": 9349844992,
+    "minimum_available_commit_bytes": 9284173824,
+    "root_pid": 55224,
+    "own_job_assignment_before_resume": "PASS",
+    "exit": 0,
+    "job_peak_process_private_bytes": 2236092416,
+    "job_peak_aggregate_private_bytes": 2237345792,
+    "state": "PASS",
+    "finished_utc": "2026-10-05T07:46:14.161669+00:00",
+    "seconds": 9.625,
+    "polled_peak_tree_private_bytes": 2237345792,
+    "polled_peak_tree_rss_bytes": 969621504,
+    "counter_samples": 36,
+    "observed_own_processes": {
+      "55224": {
+        "exe": "lean.exe",
+        "peak_private_bytes": 2236092416,
+        "peak_rss_bytes": 975437824
+      },
+      "55732": {
+        "exe": "conhost.exe",
+        "peak_private_bytes": 1253376,
+        "peak_rss_bytes": 7856128
+      }
+    },
+    "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\root-R100-R101-j2-selected6-audit-20261005.stdout.txt",
+    "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\root-R100-R101-j2-selected6-audit-20261005.stderr.txt",
+    "stdout_sha256": "c2c90a9d1d13bcb87eddfb6d7a62cafe5c50dfc48a92961cf8cfa2c939e96b04",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout_excerpt": "'RamseyCert.nbOKR_100' does not depend on any axioms\n'RamseyCert.mkOKR_100' does not depend on any axioms\n'RamseyCert.tR_100' depends on axioms: [propext]\n'RamseyCert.nbOKR_101' does not depend on any axioms\n'RamseyCert.mkOKR_101' does not depend on any axioms\n'RamseyCert.tR_101' depends on axioms: [propext]\n",
+    "stderr_excerpt": ""
+  },
+  "actual_canonical_receipt_unchanged": true,
+  "prior136_raw_rows_preserved": true,
+  "actual_source_timing_seconds": {
+    "RamseyCert.Chunk.R101": 26.015,
+    "RamseyCert.Chunk.R100": 27.953
+  },
+  "actual_source_peak_private_bytes": {
+    "RamseyCert.Chunk.R101": 3883962368,
+    "RamseyCert.Chunk.R100": 3922317312
+  },
+  "axiom_rows": [
+    {
+      "endpoint": "RamseyCert.tR_100",
+      "axioms": [
+        "propext"
+      ],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    },
+    {
+      "endpoint": "RamseyCert.tR_101",
+      "axioms": [
+        "propext"
+      ],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    },
+    {
+      "endpoint": "RamseyCert.nbOKR_100",
+      "axioms": [],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "AXIOM_FREE"
+    },
+    {
+      "endpoint": "RamseyCert.mkOKR_100",
+      "axioms": [],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "AXIOM_FREE"
+    },
+    {
+      "endpoint": "RamseyCert.nbOKR_101",
+      "axioms": [],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "AXIOM_FREE"
+    },
+    {
+      "endpoint": "RamseyCert.mkOKR_101",
+      "axioms": [],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "AXIOM_FREE"
+    }
+  ],
+  "audit_artifacts": [
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\FreshAuditJ2R100R101Pilot.olean",
+      "sha256": "3da26fab3300d1ce1502e79231092c86036e9949cd693922a7e27d059769edf5",
+      "bytes": 1648
+    }
+  ],
+  "all138_original_sources_and_prior_artifacts_rechecked": true,
+  "no_full_kernel_scope_or_selected_original_audit_completion_or_speedup_inference": true
+}

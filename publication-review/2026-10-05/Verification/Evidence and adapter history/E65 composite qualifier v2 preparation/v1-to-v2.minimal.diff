@@ -1,0 +1,16 @@
+--- C:\Users\Propietario\Documents\Codex\2026-10-01\loo\work\publication\verification\proposals\e65q-v1\helper.py
++++ C:\Users\Propietario\Documents\Codex\2026-10-01\loo\work\publication\verification\qualify_original_e65_composite_199plusStd.py
+@@ -372,6 +372,13 @@
+         own_audits = set(audits) - {STD_AUDIT}
+         require(len(own_audits) == 6 and set(by_name) == granular | whole | own_audits and len(builds) == 205,
+                 'Expected only 199 actual own-source and six actual audit rows')
++        compilation_order = actual['compilation_order']
++        require(len(compilation_order) == 200 and len(set(compilation_order)) == 200 and
++                set(compilation_order) == set(sources), 'Actual source order must cover each frozen body exactly once')
++        position = {name: index for index, name in enumerate(compilation_order)}
++        for name, dependencies in custom_dependencies.items():
++            require(all(position[dependency] < position[name] for dependency in dependencies),
++                    'Actual source order does not respect its frozen custom import DAG')
+         require(set(lease['allowed_audit_names']) == own_audits, 'Actual sole audit lease changed')
+         deferred = actual['deferred_whole_import_policy']['unattempted_whole_invocations']
+         require({r['module'] for r in deferred} == {STD_NAME, STD_AUDIT} and all(r['attempted'] is False for r in deferred), 'Raw Std withholding is no longer explicit')

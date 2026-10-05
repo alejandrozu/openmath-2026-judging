@@ -1,0 +1,107 @@
+{
+  "status": "PASS_SOURCE_LOCKED_DEFINITION_AND_THEOREM_SCOPE_REVIEW",
+  "created_utc": "2026-10-05T03:16:00.707662+00:00",
+  "auxiliary_metadata_basename": "known_companion_m2_fresh_scope_metadata_20261005.json",
+  "auxiliary_metadata_sha256": "85f8cbe20ebaeed961b4606904e2de1783b57c319ca1fb1f8c846e023f78fc40",
+  "source_basename": "Erdos3SpecialCases.lean",
+  "source_sha256": "83f4ca47095bda82b1ddb1020d569607a925d45945522f03b84f8972f7248383",
+  "qualified_actual_audit_basename": "sundai-std-14-audit-qualified-20261005.json",
+  "qualified_actual_audit_sha256": "560d146f065fb0cd14796372141566632e64189641298f65c1ae97e6483e0f63",
+  "definitions": [
+    {
+      "name": "ContainsAP",
+      "source_line": 17,
+      "exact_definition": "∃ a d : Nat, 0 < d ∧ ∀ i : Nat, i < k → A (a + i * d)",
+      "scope": "Natural-number positive-step progressions; k=0 is vacuous and k=1 needs only one element. Strict increase for i<j follows from d>0, so k≥2 is nonconstant."
+    },
+    {
+      "name": "ArbitrarilyLongAPs",
+      "source_line": 20,
+      "exact_definition": "∀ k : Nat, ContainsAP A k",
+      "scope": "Every natural finite length, including zero. Unbounded available lengths are equivalent by the proved prefix lemma."
+    }
+  ],
+  "selected_theorem_statement_headers": [
+    {
+      "theorem": "Erdos3SpecialCases.ap_terms_strictly_increase",
+      "source_line": 23,
+      "exact_statement_header": "theorem ap_terms_strictly_increase (a d i j : Nat)\n    (hd : 0 < d) (hij : i < j) : a + i * d < a + j * d"
+    },
+    {
+      "theorem": "Erdos3SpecialCases.containsAP_mono",
+      "source_line": 27,
+      "exact_statement_header": "theorem containsAP_mono {A B : Nat → Prop} {k : Nat}\n    (hAB : ∀ n, A n → B n) (hA : ContainsAP A k) : ContainsAP B k"
+    },
+    {
+      "theorem": "Erdos3SpecialCases.containsAP_prefix",
+      "source_line": 32,
+      "exact_statement_header": "theorem containsAP_prefix {A : Nat → Prop} {k l : Nat}\n    (hlk : l ≤ k) (hA : ContainsAP A k) : ContainsAP A l"
+    },
+    {
+      "theorem": "Erdos3SpecialCases.unbounded_lengths_iff_all_lengths",
+      "source_line": 38,
+      "exact_statement_header": "theorem unbounded_lengths_iff_all_lengths (A : Nat → Prop) :\n    (∀ n, ∃ k, n ≤ k ∧ ContainsAP A k) ↔ ArbitrarilyLongAPs A"
+    },
+    {
+      "theorem": "Erdos3SpecialCases.cofinite_contains_all_lengths",
+      "source_line": 48,
+      "exact_statement_header": "theorem cofinite_contains_all_lengths {A : Nat → Prop} (N : Nat)\n    (hA : ∀ n, N ≤ n → A n) : ArbitrarilyLongAPs A"
+    },
+    {
+      "theorem": "Erdos3SpecialCases.affine_tail_contains_all_lengths",
+      "source_line": 57,
+      "exact_statement_header": "theorem affine_tail_contains_all_lengths {A : Nat → Prop} (a d N : Nat)\n    (hd : 0 < d) (hA : ∀ n, N ≤ n → A (a + n * d)) :\n    ArbitrarilyLongAPs A"
+    },
+    {
+      "theorem": "Erdos3SpecialCases.multiples_contain_all_lengths",
+      "source_line": 67,
+      "exact_statement_header": "theorem multiples_contain_all_lengths (d : Nat) (hd : 0 < d) :\n    ArbitrarilyLongAPs (fun n => ∃ m, n = m * d)"
+    },
+    {
+      "theorem": "Erdos3SpecialCases.unbounded_contains_two",
+      "source_line": 73,
+      "exact_statement_header": "theorem unbounded_contains_two {A : Nat → Prop}\n    (hA : ∀ N : Nat, ∃ n, N ≤ n ∧ A n) : ContainsAP A 2"
+    },
+    {
+      "theorem": "Erdos3SpecialCases.arbitrarilyLongAPs_mono",
+      "source_line": 86,
+      "exact_statement_header": "theorem arbitrarilyLongAPs_mono {A B : Nat → Prop}\n    (hAB : ∀ n, A n → B n) (hA : ArbitrarilyLongAPs A) :\n    ArbitrarilyLongAPs B"
+    },
+    {
+      "theorem": "Erdos3SpecialCases.powers_two_no_midpoint",
+      "source_line": 94,
+      "exact_statement_header": "theorem powers_two_no_midpoint (i j k : Nat) (hjk : j < k) :\n    2 ^ i + 2 ^ k ≠ 2 * 2 ^ j"
+    },
+    {
+      "theorem": "Erdos3SpecialCases.powers_two_no_three",
+      "source_line": 103,
+      "exact_statement_header": "theorem powers_two_no_three :\n    ¬ ContainsAP (fun n => ∃ i : Nat, n = 2 ^ i) 3"
+    },
+    {
+      "theorem": "Erdos3SpecialCases.nat_lt_two_pow",
+      "source_line": 117,
+      "exact_statement_header": "theorem nat_lt_two_pow (n : Nat) : n < 2 ^ n"
+    },
+    {
+      "theorem": "Erdos3SpecialCases.powers_two_unbounded",
+      "source_line": 125,
+      "exact_statement_header": "theorem powers_two_unbounded :\n    ∀ N : Nat, ∃ n, N ≤ n ∧ (∃ i : Nat, n = 2 ^ i)"
+    },
+    {
+      "theorem": "Erdos3SpecialCases.unbounded_does_not_imply_all_lengths",
+      "source_line": 130,
+      "exact_statement_header": "theorem unbounded_does_not_imply_all_lengths :\n    ¬ (∀ A : Nat → Prop,\n      (∀ N : Nat, ∃ n, N ≤ n ∧ A n) → ArbitrarilyLongAPs A)"
+    }
+  ],
+  "fidelity_findings": [
+    "The metadata matches the exact positive-step predicates and all fourteen source theorem headers.",
+    "Cofinite means a supplied eventual-membership threshold; affine-tail means membership in a supplied nonconstant arithmetic-progression tail. No density assumption is proved or needed.",
+    "Unbounded sets are proved to contain a two-term progression. The powers-of-two construction is unbounded but has no nonconstant three-term progression, so the stronger all-length implication is refuted.",
+    "The source has no reciprocal-sum, Set.IsAPOfLength, cardinality or Filter.atTop definition. The actual Std audit does not certify the open reciprocal-divergence theorem or an unexecuted bridge.",
+    "No FormalConjecturesUtil Answer elaborator occurs; a clean axiom list here is supplemented by direct review of the literal theorem propositions.",
+    "This one Std source does not consume the compatible FC reconstruction. The six deferred companion modules still require a separately scoped dependency replay; original recovered E65 sources remain distinct."
+  ],
+  "metadata_correction_needed": false,
+  "canonical_prose_or_PDF_modified": false,
+  "new_original_family_or_score": false
+}

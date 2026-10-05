@@ -1,0 +1,51 @@
+{
+  "status": "PASS_BODY_IDENTICAL_IMPORT_ONLY_ROUTE_SELECTED_ENDPOINT_STANDARD_AXIOMS",
+  "finished_utc": "2026-10-05T03:02:16Z",
+  "receipt": "Verification/sakana-erdos169-fourap-tactic-specific-v2-fresh-build.json",
+  "receipt_sha256": "b0a0157e0b277a9e20c11f22f342663ae3b11b91ec6aba1fa8f7bbe036c284c6",
+  "qualification_receipt": "Verification/e169-tactic-specific-v2-completed-qualification.json",
+  "qualification_receipt_sha256": "57c466bc581ab50ab62c9fefeadc0a0a6637aee19c5151c652f387dfea56709d",
+  "lean": "4.34.1",
+  "mathlib": "d13f23b723b8a846827a245b89c10fc7d3f11612",
+  "authored_scientific_bodies_passed": 22,
+  "selected_endpoint_prints": 1,
+  "changed_import_headers": 7,
+  "byte_identical_complete_source_files": 15,
+  "scientific_statements_proofs_options_comments": "BYTE_IDENTICAL_OUTSIDE_SEVEN_IMPORT_SPANS",
+  "selected_audit_source": "BYTE_IDENTICAL_TO_ORIGINAL",
+  "endpoint_axioms": [
+    {
+      "endpoint": "Erdos3Candidate.explicit_four_ap_free_reciprocal_gt",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    }
+  ],
+  "closure_units": {
+    "Mathlib_sources": 738,
+    "core_or_package_sources": 1754,
+    "total_sources": 2492,
+    "v1_Mathlib_sources": 2815
+  },
+  "historical_original_source_replay": {
+    "passed_modules": 15,
+    "total_modules": 22,
+    "receipt": "Verification/sakana-erdos169-fourap-fresh-build.json",
+    "receipt_sha256": "1d395cae83c4d623950359dccccdab24d8777c39ffee69c54795226b187d7875",
+    "status": "ENVIRONMENT_BLOCKED_RESOURCE_DEPENDENCIES"
+  },
+  "historical_first_import_only_replay": {
+    "passed_modules": 7,
+    "total_modules": 22,
+    "receipt": "Verification/sakana-erdos169-fourap-import-pruned-diagnostic-fresh-build.json",
+    "receipt_sha256": "689494114098170847557c105ece1a984c30d9bbf287caa71c29135ea768f1fc",
+    "status": "ENVIRONMENT_BLOCKED_THIRD_WORKER_MEMORY"
+  },
+  "qualification": "Exact scientific bodies/options/comments and unchanged selected audit verified using seven import-only header replacements. This qualifies the separate operational route, not original frozen-source PASS; original15/22 and v1 7/22 remain historical resource-limited receipts.",
+  "originality_and_placement": "SEPARATE_UNCHANGED_DECISIONS"
+}

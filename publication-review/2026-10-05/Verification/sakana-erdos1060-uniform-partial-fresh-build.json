@@ -1,0 +1,1312 @@
+{
+  "id": "sakana-erdos1060-uniform-partial",
+  "entrant": "E02",
+  "version": "4.33.1",
+  "mathlib_pin": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "source_dir": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos1060-uniform-partial",
+  "modules": [
+    {
+      "module": "AsymptoticBridge",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos1060-uniform-partial\\AsymptoticBridge.lean",
+      "source": "Reproduction_Sources/erdos1060-uniform-partial/src/AsymptoticBridge.lean",
+      "sha256": "3b30ae8088a5ea464faaaa817678a638daf86ae2b85d69332a5389aff89c54db"
+    },
+    {
+      "module": "SquarefreeSigmaInjection",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos1060-uniform-partial\\SquarefreeSigmaInjection.lean",
+      "source": "Reproduction_Sources/erdos1060-uniform-partial/src/SquarefreeSigmaInjection.lean",
+      "sha256": "18662792f0bd2e9796eefb0d8200b6bf762d73a5e62390227b4c0db4716a9bba"
+    },
+    {
+      "module": "SigmaCoreInjection",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos1060-uniform-partial\\SigmaCoreInjection.lean",
+      "source": "Reproduction_Sources/erdos1060-uniform-partial/src/SigmaCoreInjection.lean",
+      "sha256": "326089d72c82c9ba474507fc0f6eac00a1cc6f9436e839d179a69fc61871a160"
+    },
+    {
+      "module": "SigmaLogBudgets",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos1060-uniform-partial\\SigmaLogBudgets.lean",
+      "source": "Reproduction_Sources/erdos1060-uniform-partial/src/SigmaLogBudgets.lean",
+      "sha256": "256b5826676c847ec50a9442cac0113186f565b5469c2dc3b7c213a273eb19b5"
+    },
+    {
+      "module": "WeightedCoreBound",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos1060-uniform-partial\\WeightedCoreBound.lean",
+      "source": "Reproduction_Sources/erdos1060-uniform-partial/src/WeightedCoreBound.lean",
+      "sha256": "314f1afb09ac3b48db56c919e3ef85f59cc8f936547e32f40aed69644d281d13"
+    },
+    {
+      "module": "WeightedCutoff",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos1060-uniform-partial\\WeightedCutoff.lean",
+      "source": "Reproduction_Sources/erdos1060-uniform-partial/src/WeightedCutoff.lean",
+      "sha256": "146689e872267d99ce514485b3fe68fc126aedac56a0b37a65cbe4f4281c882f"
+    },
+    {
+      "module": "EntropyConversion",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos1060-uniform-partial\\EntropyConversion.lean",
+      "source": "Reproduction_Sources/erdos1060-uniform-partial/src/EntropyConversion.lean",
+      "sha256": "a9c629fe04c5f4252e92ebdef87ba5942f689fb64a0ca7e1fbc46f8f3957dc14"
+    },
+    {
+      "module": "SigmaFiberEntropy",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos1060-uniform-partial\\SigmaFiberEntropy.lean",
+      "source": "Reproduction_Sources/erdos1060-uniform-partial/src/SigmaFiberEntropy.lean",
+      "sha256": "628170baa217657ae46be227016437c27eb0f95c672eeaf7092545b8a0e850f0"
+    },
+    {
+      "module": "SigmaCanonicalCount",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos1060-uniform-partial\\SigmaCanonicalCount.lean",
+      "source": "Reproduction_Sources/erdos1060-uniform-partial/src/SigmaCanonicalCount.lean",
+      "sha256": "5bf6fb775081543eb6538b9cffa5c24f1683e6614a6027bb98aa183d3cc0f925"
+    },
+    {
+      "module": "SigmaFiberAsymptotic",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos1060-uniform-partial\\SigmaFiberAsymptotic.lean",
+      "source": "Reproduction_Sources/erdos1060-uniform-partial/src/SigmaFiberAsymptotic.lean",
+      "sha256": "440f2f6aaa1d5dd04611fe855077352a3b75171d6e1ec823939ede8609e2d45a"
+    }
+  ],
+  "endpoints": [
+    "Erdos1060.canonical_count_eventually_upper",
+    "Erdos1060.canonical_count_upper",
+    "Erdos1060Partial.entropyConstant_lt_old"
+  ],
+  "roots": [
+    "EntropyConversion",
+    "SigmaFiberAsymptotic"
+  ],
+  "audit_modules": [
+    "FreshAudit1.lean"
+  ],
+  "lean_options": {},
+  "static_review_contexts": [],
+  "status": "PASS",
+  "builds": [
+    {
+      "module": "AsymptoticBridge",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "AsymptoticBridge.olean",
+        "AsymptoticBridge.lean"
+      ],
+      "seconds": 18.703,
+      "exit": 0,
+      "stdout": "'Erdos1060Asymptotic.tendsto_normalized_cutoffExponent' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Erdos1060Asymptotic.eventual_bound_of_cutoff_estimate' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Erdos1060Asymptotic.candidate_bound_of_cutoff_estimate' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Erdos1060Asymptotic.candidateConstant_lt_log_three_div_three' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 5811519488,
+      "stop_reason": null,
+      "started_utc": "2026-10-05T01:04:48.526126+00:00",
+      "finished_utc": "2026-10-05T01:05:07.235112+00:00",
+      "owned_process_stop_output": null,
+      "own_job_resource_receipt": {
+        "command": [
+          "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+          "-j1",
+          "-DmaxHeartbeats=0",
+          "-DmaxRecDepth=100000",
+          "-o",
+          "AsymptoticBridge.olean",
+          "AsymptoticBridge.lean"
+        ],
+        "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos1060-uniform-partial",
+        "started_utc": "2026-10-05T01:04:48.526126+00:00",
+        "attempted": true,
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 5368709120,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 1073741824,
+          "own_job_private_bytes": 6442450944,
+          "own_process_private_bytes": 6442450944,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 3600
+        },
+        "minimum_disk_free_bytes": 5811519488,
+        "initial_system_memory_snapshot": {
+          "free_physical_bytes": 7943639040,
+          "total_physical_bytes": 34024419328,
+          "available_commit_bytes": 8907603968,
+          "total_commit_limit_bytes": 61075705856
+        },
+        "minimum_physical_available_bytes": 6559453184,
+        "minimum_available_commit_bytes": 5956435968,
+        "root_pid": 45656,
+        "own_job_assignment_before_resume": "PASS",
+        "exit": 0,
+        "job_peak_process_private_bytes": 3050831872,
+        "job_peak_aggregate_private_bytes": 3052085248,
+        "state": "PASS",
+        "finished_utc": "2026-10-05T01:05:07.235112+00:00",
+        "seconds": 18.703,
+        "polled_peak_tree_private_bytes": 3041886208,
+        "polled_peak_tree_rss_bytes": 1432354816,
+        "counter_samples": 68,
+        "observed_own_processes": {
+          "45656": {
+            "exe": "lean.exe",
+            "peak_private_bytes": 3040632832,
+            "peak_rss_bytes": 1456893952
+          },
+          "47336": {
+            "exe": "conhost.exe",
+            "peak_private_bytes": 1253376,
+            "peak_rss_bytes": 7860224
+          }
+        },
+        "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\sakana-erdos1060-uniform-partial-bfa0d7757a70afc4-attempt-0.stdout.txt",
+        "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\sakana-erdos1060-uniform-partial-bfa0d7757a70afc4-attempt-0.stderr.txt",
+        "stdout_sha256": "c739a7874183eba7a2fe6fb272faf1bb39a926ba2a9ca4c8d322eeefe4c0aec6",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_excerpt": "'Erdos1060Asymptotic.tendsto_normalized_cutoffExponent' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Erdos1060Asymptotic.eventual_bound_of_cutoff_estimate' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Erdos1060Asymptotic.candidate_bound_of_cutoff_estimate' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Erdos1060Asymptotic.candidateConstant_lt_log_three_div_three' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+        "stderr_excerpt": ""
+      },
+      "source_sha256": "3b30ae8088a5ea464faaaa817678a638daf86ae2b85d69332a5389aff89c54db",
+      "third_worker_memory_observations": {
+        "minimum_free_physical_bytes": 6559453184,
+        "minimum_available_commit_bytes": 5956435968,
+        "peak_owned_private_bytes": 3052085248
+      },
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos1060-uniform-partial\\AsymptoticBridge.olean",
+          "sha256": "c2e77623d156727e428794713339c2e16c5beb62c846612b78c211c0e571c689",
+          "bytes": 459776
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "SquarefreeSigmaInjection",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "SquarefreeSigmaInjection.olean",
+        "SquarefreeSigmaInjection.lean"
+      ],
+      "seconds": 14.453,
+      "exit": 0,
+      "stdout": "",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 5811056640,
+      "stop_reason": null,
+      "started_utc": "2026-10-05T01:05:42.068050+00:00",
+      "finished_utc": "2026-10-05T01:05:56.523107+00:00",
+      "owned_process_stop_output": null,
+      "own_job_resource_receipt": {
+        "command": [
+          "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+          "-j1",
+          "-DmaxHeartbeats=0",
+          "-DmaxRecDepth=100000",
+          "-o",
+          "SquarefreeSigmaInjection.olean",
+          "SquarefreeSigmaInjection.lean"
+        ],
+        "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos1060-uniform-partial",
+        "started_utc": "2026-10-05T01:05:42.068050+00:00",
+        "attempted": true,
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 5368709120,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 1073741824,
+          "own_job_private_bytes": 6442450944,
+          "own_process_private_bytes": 6442450944,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 3600
+        },
+        "minimum_disk_free_bytes": 5811056640,
+        "initial_system_memory_snapshot": {
+          "free_physical_bytes": 7853879296,
+          "total_physical_bytes": 34024419328,
+          "available_commit_bytes": 8843214848,
+          "total_commit_limit_bytes": 61075705856
+        },
+        "minimum_physical_available_bytes": 6816559104,
+        "minimum_available_commit_bytes": 6490595328,
+        "root_pid": 26212,
+        "own_job_assignment_before_resume": "PASS",
+        "exit": 0,
+        "job_peak_process_private_bytes": 2443128832,
+        "job_peak_aggregate_private_bytes": 2444382208,
+        "state": "PASS",
+        "finished_utc": "2026-10-05T01:05:56.523107+00:00",
+        "seconds": 14.453,
+        "polled_peak_tree_private_bytes": 2432872448,
+        "polled_peak_tree_rss_bytes": 1091420160,
+        "counter_samples": 52,
+        "observed_own_processes": {
+          "26212": {
+            "exe": "lean.exe",
+            "peak_private_bytes": 2431619072,
+            "peak_rss_bytes": 1110704128
+          },
+          "31012": {
+            "exe": "conhost.exe",
+            "peak_private_bytes": 1253376,
+            "peak_rss_bytes": 7856128
+          }
+        },
+        "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\sakana-erdos1060-uniform-partial-c5add1a6a99763ce-attempt-1.stdout.txt",
+        "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\sakana-erdos1060-uniform-partial-c5add1a6a99763ce-attempt-1.stderr.txt",
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_excerpt": "",
+        "stderr_excerpt": ""
+      },
+      "source_sha256": "18662792f0bd2e9796eefb0d8200b6bf762d73a5e62390227b4c0db4716a9bba",
+      "third_worker_memory_observations": {
+        "minimum_free_physical_bytes": 6816559104,
+        "minimum_available_commit_bytes": 6490595328,
+        "peak_owned_private_bytes": 2444382208
+      },
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos1060-uniform-partial\\SquarefreeSigmaInjection.olean",
+          "sha256": "59eb96fee45013baf7edb8a6614b6ed71b19d425fa88b1360a89899757fed39b",
+          "bytes": 218712
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "SigmaCoreInjection",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "SigmaCoreInjection.olean",
+        "SigmaCoreInjection.lean"
+      ],
+      "seconds": 15.765,
+      "exit": 0,
+      "stdout": "'Erdos1060.core_injective_on_fiber' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Erdos1060.sigmaFiber_card_le_admissibleCores' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Erdos1060.sigmaFiber_card_eq_corePatterns' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Erdos1060.corePatterns_product_square_le' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 5810257920,
+      "stop_reason": null,
+      "started_utc": "2026-10-05T01:05:56.533106+00:00",
+      "finished_utc": "2026-10-05T01:06:12.292420+00:00",
+      "owned_process_stop_output": null,
+      "own_job_resource_receipt": {
+        "command": [
+          "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+          "-j1",
+          "-DmaxHeartbeats=0",
+          "-DmaxRecDepth=100000",
+          "-o",
+          "SigmaCoreInjection.olean",
+          "SigmaCoreInjection.lean"
+        ],
+        "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos1060-uniform-partial",
+        "started_utc": "2026-10-05T01:05:56.533106+00:00",
+        "attempted": true,
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 5368709120,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 1073741824,
+          "own_job_private_bytes": 6442450944,
+          "own_process_private_bytes": 6442450944,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 3600
+        },
+        "minimum_disk_free_bytes": 5810257920,
+        "initial_system_memory_snapshot": {
+          "free_physical_bytes": 7968317440,
+          "total_physical_bytes": 34024419328,
+          "available_commit_bytes": 9022324736,
+          "total_commit_limit_bytes": 61075705856
+        },
+        "minimum_physical_available_bytes": 6906064896,
+        "minimum_available_commit_bytes": 6619951104,
+        "root_pid": 57108,
+        "own_job_assignment_before_resume": "PASS",
+        "exit": 0,
+        "job_peak_process_private_bytes": 2419625984,
+        "job_peak_aggregate_private_bytes": 2420883456,
+        "state": "PASS",
+        "finished_utc": "2026-10-05T01:06:12.292420+00:00",
+        "seconds": 15.765,
+        "polled_peak_tree_private_bytes": 2408390656,
+        "polled_peak_tree_rss_bytes": 1105981440,
+        "counter_samples": 57,
+        "observed_own_processes": {
+          "57108": {
+            "exe": "lean.exe",
+            "peak_private_bytes": 2407133184,
+            "peak_rss_bytes": 1127116800
+          },
+          "20244": {
+            "exe": "conhost.exe",
+            "peak_private_bytes": 1257472,
+            "peak_rss_bytes": 7856128
+          }
+        },
+        "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\sakana-erdos1060-uniform-partial-3ec327bbec64cd63-attempt-1.stdout.txt",
+        "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\sakana-erdos1060-uniform-partial-3ec327bbec64cd63-attempt-1.stderr.txt",
+        "stdout_sha256": "41e24aa511c1ebcd0faaae567621bed634424f6aaa1db2404b5fe8247f6802ee",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_excerpt": "'Erdos1060.core_injective_on_fiber' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Erdos1060.sigmaFiber_card_le_admissibleCores' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Erdos1060.sigmaFiber_card_eq_corePatterns' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Erdos1060.corePatterns_product_square_le' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+        "stderr_excerpt": ""
+      },
+      "source_sha256": "326089d72c82c9ba474507fc0f6eac00a1cc6f9436e839d179a69fc61871a160",
+      "third_worker_memory_observations": {
+        "minimum_free_physical_bytes": 6906064896,
+        "minimum_available_commit_bytes": 6619951104,
+        "peak_owned_private_bytes": 2420883456
+      },
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos1060-uniform-partial\\SigmaCoreInjection.olean",
+          "sha256": "71ebabe72ed197aa273bcd678e41584b9cf951734c39242f8ccc616821cb55e2",
+          "bytes": 428256
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "SigmaLogBudgets",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "SigmaLogBudgets.olean",
+        "SigmaLogBudgets.lean"
+      ],
+      "seconds": 16.844,
+      "exit": 0,
+      "stdout": "SigmaLogBudgets.lean:61:52: warning: Variable name `hn` is not explicitly referenced.\n\nHint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:\n  [apply] _hn\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\n'Erdos1060.corePatterns_large_exponent_sum_le' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Erdos1060.target_large_exponent_sum_le' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Erdos1060.target_exponent_le_log' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Erdos1060.smallPrimes_card_le' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 5809942528,
+      "stop_reason": null,
+      "started_utc": "2026-10-05T01:06:12.309426+00:00",
+      "finished_utc": "2026-10-05T01:06:29.157837+00:00",
+      "owned_process_stop_output": null,
+      "own_job_resource_receipt": {
+        "command": [
+          "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+          "-j1",
+          "-DmaxHeartbeats=0",
+          "-DmaxRecDepth=100000",
+          "-o",
+          "SigmaLogBudgets.olean",
+          "SigmaLogBudgets.lean"
+        ],
+        "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos1060-uniform-partial",
+        "started_utc": "2026-10-05T01:06:12.309426+00:00",
+        "attempted": true,
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 5368709120,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 1073741824,
+          "own_job_private_bytes": 6442450944,
+          "own_process_private_bytes": 6442450944,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 3600
+        },
+        "minimum_disk_free_bytes": 5809942528,
+        "initial_system_memory_snapshot": {
+          "free_physical_bytes": 8010551296,
+          "total_physical_bytes": 34024419328,
+          "available_commit_bytes": 9068797952,
+          "total_commit_limit_bytes": 61075705856
+        },
+        "minimum_physical_available_bytes": 6606901248,
+        "minimum_available_commit_bytes": 6054113280,
+        "root_pid": 12044,
+        "own_job_assignment_before_resume": "PASS",
+        "exit": 0,
+        "job_peak_process_private_bytes": 3057238016,
+        "job_peak_aggregate_private_bytes": 3058511872,
+        "state": "PASS",
+        "finished_utc": "2026-10-05T01:06:29.157837+00:00",
+        "seconds": 16.844,
+        "polled_peak_tree_private_bytes": 3045208064,
+        "polled_peak_tree_rss_bytes": 1412874240,
+        "counter_samples": 61,
+        "observed_own_processes": {
+          "53112": {
+            "exe": "conhost.exe",
+            "peak_private_bytes": 1273856,
+            "peak_rss_bytes": 7864320
+          },
+          "12044": {
+            "exe": "lean.exe",
+            "peak_private_bytes": 3043934208,
+            "peak_rss_bytes": 1456017408
+          }
+        },
+        "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\sakana-erdos1060-uniform-partial-1d5c98412812d28c-attempt-1.stdout.txt",
+        "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\sakana-erdos1060-uniform-partial-1d5c98412812d28c-attempt-1.stderr.txt",
+        "stdout_sha256": "66caa778736e6befbd87cc368f56343d42544d0fb6aace1682fc06454c677d26",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_excerpt": "SigmaLogBudgets.lean:61:52: warning: Variable name `hn` is not explicitly referenced.\n\nHint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:\n  [apply] _hn\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\n'Erdos1060.corePatterns_large_exponent_sum_le' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Erdos1060.target_large_exponent_sum_le' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Erdos1060.target_exponent_le_log' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Erdos1060.smallPrimes_card_le' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+        "stderr_excerpt": ""
+      },
+      "source_sha256": "256b5826676c847ec50a9442cac0113186f565b5469c2dc3b7c213a273eb19b5",
+      "third_worker_memory_observations": {
+        "minimum_free_physical_bytes": 6606901248,
+        "minimum_available_commit_bytes": 6054113280,
+        "peak_owned_private_bytes": 3058511872
+      },
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos1060-uniform-partial\\SigmaLogBudgets.olean",
+          "sha256": "6ca2ecf59005d4197b70ab8b765c4986fa5153ab4c21e86f7a45a711628fd1f6",
+          "bytes": 196640
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "WeightedCoreBound",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "WeightedCoreBound.olean",
+        "WeightedCoreBound.lean"
+      ],
+      "seconds": 14.188,
+      "exit": 0,
+      "stdout": "WeightedCoreBound.lean:196:12: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\n'Erdos1060Partial.weighted_pattern_count' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Erdos1060Partial.local_cubic_bound' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Erdos1060Partial.cubic_pattern_count' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Erdos1060Partial.sixth_pattern_count' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Erdos1060Partial.exact_constant_improvement' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 5808676864,
+      "stop_reason": null,
+      "started_utc": "2026-10-05T01:06:29.165832+00:00",
+      "finished_utc": "2026-10-05T01:06:43.353444+00:00",
+      "owned_process_stop_output": null,
+      "own_job_resource_receipt": {
+        "command": [
+          "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+          "-j1",
+          "-DmaxHeartbeats=0",
+          "-DmaxRecDepth=100000",
+          "-o",
+          "WeightedCoreBound.olean",
+          "WeightedCoreBound.lean"
+        ],
+        "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos1060-uniform-partial",
+        "started_utc": "2026-10-05T01:06:29.165832+00:00",
+        "attempted": true,
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 5368709120,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 1073741824,
+          "own_job_private_bytes": 6442450944,
+          "own_process_private_bytes": 6442450944,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 3600
+        },
+        "minimum_disk_free_bytes": 5808676864,
+        "initial_system_memory_snapshot": {
+          "free_physical_bytes": 8055222272,
+          "total_physical_bytes": 34024419328,
+          "available_commit_bytes": 9106595840,
+          "total_commit_limit_bytes": 61075705856
+        },
+        "minimum_physical_available_bytes": 6952108032,
+        "minimum_available_commit_bytes": 6779785216,
+        "root_pid": 28356,
+        "own_job_assignment_before_resume": "PASS",
+        "exit": 0,
+        "job_peak_process_private_bytes": 2316840960,
+        "job_peak_aggregate_private_bytes": 2318110720,
+        "state": "PASS",
+        "finished_utc": "2026-10-05T01:06:43.353444+00:00",
+        "seconds": 14.188,
+        "polled_peak_tree_private_bytes": 2309148672,
+        "polled_peak_tree_rss_bytes": 1062612992,
+        "counter_samples": 52,
+        "observed_own_processes": {
+          "54452": {
+            "exe": "conhost.exe",
+            "peak_private_bytes": 1269760,
+            "peak_rss_bytes": 7856128
+          },
+          "28356": {
+            "exe": "lean.exe",
+            "peak_private_bytes": 2307878912,
+            "peak_rss_bytes": 1078439936
+          }
+        },
+        "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\sakana-erdos1060-uniform-partial-66599d62157ef69f-attempt-1.stdout.txt",
+        "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\sakana-erdos1060-uniform-partial-66599d62157ef69f-attempt-1.stderr.txt",
+        "stdout_sha256": "175ddbc71b2000805ff76d2754d3b77d293e644f42dd73364397ab2be6e10438",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_excerpt": "WeightedCoreBound.lean:196:12: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\n'Erdos1060Partial.weighted_pattern_count' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Erdos1060Partial.local_cubic_bound' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Erdos1060Partial.cubic_pattern_count' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Erdos1060Partial.sixth_pattern_count' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Erdos1060Partial.exact_constant_improvement' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+        "stderr_excerpt": ""
+      },
+      "source_sha256": "314f1afb09ac3b48db56c919e3ef85f59cc8f936547e32f40aed69644d281d13",
+      "third_worker_memory_observations": {
+        "minimum_free_physical_bytes": 6952108032,
+        "minimum_available_commit_bytes": 6779785216,
+        "peak_owned_private_bytes": 2318110720
+      },
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos1060-uniform-partial\\WeightedCoreBound.olean",
+          "sha256": "8d83b2054d27ea0719f7da71680b4862bf7a24c42174cc862f70eb7f47247f5f",
+          "bytes": 582968
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "WeightedCutoff",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "WeightedCutoff.olean",
+        "WeightedCutoff.lean"
+      ],
+      "seconds": 11.578,
+      "exit": 0,
+      "stdout": "'Erdos1060Partial.cutoff_weighted_pattern_count' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Erdos1060Partial.cutoff_cubic_pattern_count' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 5808668672,
+      "stop_reason": null,
+      "started_utc": "2026-10-05T01:06:43.360444+00:00",
+      "finished_utc": "2026-10-05T01:06:54.942312+00:00",
+      "owned_process_stop_output": null,
+      "own_job_resource_receipt": {
+        "command": [
+          "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+          "-j1",
+          "-DmaxHeartbeats=0",
+          "-DmaxRecDepth=100000",
+          "-o",
+          "WeightedCutoff.olean",
+          "WeightedCutoff.lean"
+        ],
+        "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos1060-uniform-partial",
+        "started_utc": "2026-10-05T01:06:43.360444+00:00",
+        "attempted": true,
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 5368709120,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 1073741824,
+          "own_job_private_bytes": 6442450944,
+          "own_process_private_bytes": 6442450944,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 3600
+        },
+        "minimum_disk_free_bytes": 5808668672,
+        "initial_system_memory_snapshot": {
+          "free_physical_bytes": 8024195072,
+          "total_physical_bytes": 34024419328,
+          "available_commit_bytes": 9078140928,
+          "total_commit_limit_bytes": 61075705856
+        },
+        "minimum_physical_available_bytes": 6986547200,
+        "minimum_available_commit_bytes": 6787555328,
+        "root_pid": 35668,
+        "own_job_assignment_before_resume": "PASS",
+        "exit": 0,
+        "job_peak_process_private_bytes": 2313224192,
+        "job_peak_aggregate_private_bytes": 2314493952,
+        "state": "PASS",
+        "finished_utc": "2026-10-05T01:06:54.942312+00:00",
+        "seconds": 11.578,
+        "polled_peak_tree_private_bytes": 2313969664,
+        "polled_peak_tree_rss_bytes": 1038180352,
+        "counter_samples": 43,
+        "observed_own_processes": {
+          "37984": {
+            "exe": "conhost.exe",
+            "peak_private_bytes": 1269760,
+            "peak_rss_bytes": 7860224
+          },
+          "35668": {
+            "exe": "lean.exe",
+            "peak_private_bytes": 2312699904,
+            "peak_rss_bytes": 1054908416
+          }
+        },
+        "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\sakana-erdos1060-uniform-partial-21a0d01a63e41059-attempt-1.stdout.txt",
+        "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\sakana-erdos1060-uniform-partial-21a0d01a63e41059-attempt-1.stderr.txt",
+        "stdout_sha256": "dc0a027d82c7d5d0c80fc18a3ea1f2a19044400e47a307932ea18f0d25517334",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_excerpt": "'Erdos1060Partial.cutoff_weighted_pattern_count' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Erdos1060Partial.cutoff_cubic_pattern_count' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+        "stderr_excerpt": ""
+      },
+      "source_sha256": "146689e872267d99ce514485b3fe68fc126aedac56a0b37a65cbe4f4281c882f",
+      "third_worker_memory_observations": {
+        "minimum_free_physical_bytes": 6986547200,
+        "minimum_available_commit_bytes": 6787555328,
+        "peak_owned_private_bytes": 2314493952
+      },
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos1060-uniform-partial\\WeightedCutoff.olean",
+          "sha256": "f19e3efbd2decd7e3d7813a312f95580d8d84ac8d58b8c690ea870f6629809b9",
+          "bytes": 150064
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "EntropyConversion",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "EntropyConversion.olean",
+        "EntropyConversion.lean"
+      ],
+      "seconds": 14.859,
+      "exit": 0,
+      "stdout": "'Erdos1060Partial.cubic_bound_to_exp' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Erdos1060Partial.entropyConstant_pos' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Erdos1060Partial.entropyConstant_lt_old' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 5815701504,
+      "stop_reason": null,
+      "started_utc": "2026-10-05T01:06:54.951312+00:00",
+      "finished_utc": "2026-10-05T01:07:09.812669+00:00",
+      "owned_process_stop_output": null,
+      "own_job_resource_receipt": {
+        "command": [
+          "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+          "-j1",
+          "-DmaxHeartbeats=0",
+          "-DmaxRecDepth=100000",
+          "-o",
+          "EntropyConversion.olean",
+          "EntropyConversion.lean"
+        ],
+        "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos1060-uniform-partial",
+        "started_utc": "2026-10-05T01:06:54.951312+00:00",
+        "attempted": true,
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 5368709120,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 1073741824,
+          "own_job_private_bytes": 6442450944,
+          "own_process_private_bytes": 6442450944,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 3600
+        },
+        "minimum_disk_free_bytes": 5815701504,
+        "initial_system_memory_snapshot": {
+          "free_physical_bytes": 8056397824,
+          "total_physical_bytes": 34024419328,
+          "available_commit_bytes": 9110999040,
+          "total_commit_limit_bytes": 61075705856
+        },
+        "minimum_physical_available_bytes": 6598053888,
+        "minimum_available_commit_bytes": 6071828480,
+        "root_pid": 52724,
+        "own_job_assignment_before_resume": "PASS",
+        "exit": 0,
+        "job_peak_process_private_bytes": 3046051840,
+        "job_peak_aggregate_private_bytes": 3047309312,
+        "state": "PASS",
+        "finished_utc": "2026-10-05T01:07:09.812669+00:00",
+        "seconds": 14.859,
+        "polled_peak_tree_private_bytes": 3036979200,
+        "polled_peak_tree_rss_bytes": 1430343680,
+        "counter_samples": 55,
+        "observed_own_processes": {
+          "52724": {
+            "exe": "lean.exe",
+            "peak_private_bytes": 3035721728,
+            "peak_rss_bytes": 1448824832
+          },
+          "47916": {
+            "exe": "conhost.exe",
+            "peak_private_bytes": 1257472,
+            "peak_rss_bytes": 7856128
+          }
+        },
+        "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\sakana-erdos1060-uniform-partial-bd4acfd551991f1c-attempt-1.stdout.txt",
+        "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\sakana-erdos1060-uniform-partial-bd4acfd551991f1c-attempt-1.stderr.txt",
+        "stdout_sha256": "9bf251267369eb996cd89c201479f5ce977101e7b1b9c0813befd991a73c660f",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_excerpt": "'Erdos1060Partial.cubic_bound_to_exp' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Erdos1060Partial.entropyConstant_pos' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Erdos1060Partial.entropyConstant_lt_old' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+        "stderr_excerpt": ""
+      },
+      "source_sha256": "a9c629fe04c5f4252e92ebdef87ba5942f689fb64a0ca7e1fbc46f8f3957dc14",
+      "third_worker_memory_observations": {
+        "minimum_free_physical_bytes": 6598053888,
+        "minimum_available_commit_bytes": 6071828480,
+        "peak_owned_private_bytes": 3047309312
+      },
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos1060-uniform-partial\\EntropyConversion.olean",
+          "sha256": "1d5754a9e21a3c6808c72ca6c7e681c3960341303cae598b66b5124c18c9ec09",
+          "bytes": 257000
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "SigmaFiberEntropy",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "SigmaFiberEntropy.olean",
+        "SigmaFiberEntropy.lean"
+      ],
+      "seconds": 14.406,
+      "exit": 0,
+      "stdout": "'Erdos1060.sigmaFiber_exp_bound' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 5815508992,
+      "stop_reason": null,
+      "started_utc": "2026-10-05T01:07:09.822835+00:00",
+      "finished_utc": "2026-10-05T01:07:24.236459+00:00",
+      "owned_process_stop_output": null,
+      "own_job_resource_receipt": {
+        "command": [
+          "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+          "-j1",
+          "-DmaxHeartbeats=0",
+          "-DmaxRecDepth=100000",
+          "-o",
+          "SigmaFiberEntropy.olean",
+          "SigmaFiberEntropy.lean"
+        ],
+        "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos1060-uniform-partial",
+        "started_utc": "2026-10-05T01:07:09.822835+00:00",
+        "attempted": true,
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 5368709120,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 1073741824,
+          "own_job_private_bytes": 6442450944,
+          "own_process_private_bytes": 6442450944,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 3600
+        },
+        "minimum_disk_free_bytes": 5815508992,
+        "initial_system_memory_snapshot": {
+          "free_physical_bytes": 8043069440,
+          "total_physical_bytes": 34024419328,
+          "available_commit_bytes": 9105702912,
+          "total_commit_limit_bytes": 61075705856
+        },
+        "minimum_physical_available_bytes": 6603501568,
+        "minimum_available_commit_bytes": 6056595456,
+        "root_pid": 53692,
+        "own_job_assignment_before_resume": "PASS",
+        "exit": 0,
+        "job_peak_process_private_bytes": 3056963584,
+        "job_peak_aggregate_private_bytes": 3058237440,
+        "state": "PASS",
+        "finished_utc": "2026-10-05T01:07:24.236459+00:00",
+        "seconds": 14.406,
+        "polled_peak_tree_private_bytes": 3045761024,
+        "polled_peak_tree_rss_bytes": 1410088960,
+        "counter_samples": 53,
+        "observed_own_processes": {
+          "53692": {
+            "exe": "lean.exe",
+            "peak_private_bytes": 3044487168,
+            "peak_rss_bytes": 1454133248
+          },
+          "55876": {
+            "exe": "conhost.exe",
+            "peak_private_bytes": 1273856,
+            "peak_rss_bytes": 7864320
+          }
+        },
+        "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\sakana-erdos1060-uniform-partial-1772c799e488b2b8-attempt-1.stdout.txt",
+        "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\sakana-erdos1060-uniform-partial-1772c799e488b2b8-attempt-1.stderr.txt",
+        "stdout_sha256": "7e4d136f0f275a4e766b9fe97a5fd969a297bb4c76e022fb74f175f5bacfd81a",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_excerpt": "'Erdos1060.sigmaFiber_exp_bound' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+        "stderr_excerpt": ""
+      },
+      "source_sha256": "628170baa217657ae46be227016437c27eb0f95c672eeaf7092545b8a0e850f0",
+      "third_worker_memory_observations": {
+        "minimum_free_physical_bytes": 6603501568,
+        "minimum_available_commit_bytes": 6056595456,
+        "peak_owned_private_bytes": 3058237440
+      },
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos1060-uniform-partial\\SigmaFiberEntropy.olean",
+          "sha256": "d3dceed8de608c7edb1a7fe3878201c48b63c8569600119f907333796c1d808b",
+          "bytes": 192048
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "SigmaCanonicalCount",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "SigmaCanonicalCount.olean",
+        "SigmaCanonicalCount.lean"
+      ],
+      "seconds": 10.813,
+      "exit": 0,
+      "stdout": "theorem Erdos1060.sigmaFiber_eq_canonical : \u2200 {n : \u2115},\n  0 < n \u2192 sigmaFiber n = {k \u2208 Iic n | k * (ArithmeticFunction.sigma 1) k = n} :=\nfun {n} hn =>\n  ext fun k =>\n    Eq.mpr\n      (id\n        (congr (congrArg Iff sigmaFiber_eq_canonical._simp_1_1)\n          (Eq.trans sigmaFiber_eq_canonical._simp_1_2\n            (congrFun' (congrArg And sigmaFiber_eq_canonical._simp_1_3) (k * (ArithmeticFunction.sigma 1) k = n)))))\n      {\n        mp := fun a =>\n          And.casesOn a fun hk heq =>\n            \u27e8Nat.le_of_dvd hn\n                (Eq.mpr (id (congrArg (fun _a => k \u2223 _a) (Eq.symm heq)))\n                  (dvd_mul_right k ((ArithmeticFunction.sigma 1) k))),\n              heq\u27e9,\n        mpr := fun a =>\n          And.casesOn a fun hkn heq =>\n            \u27e8fun hk0 =>\n              Eq.ndrec (motive := fun k => k \u2264 n \u2192 k * (ArithmeticFunction.sigma 1) k = n \u2192 False)\n                (fun hkn heq =>\n                  sigmaFiber_eq_canonical._proof_1_4 hn\n                    (Eq.mp\n                      (congrFun'\n                        (congrArg Eq (Eq.trans (congrArg (HMul.hMul 0) ArithmeticFunction.map_zero) (mul_zero 0))) n)\n                      heq))\n                (Eq.symm hk0) hkn heq,\n              heq\u27e9 }\ntheorem Erdos1060.sigmaFiber_card_eq_canonical : \u2200 {n : \u2115},\n  0 < n \u2192 #(sigmaFiber n) = #({k \u2208 Iic n | k * (ArithmeticFunction.sigma 1) k = n}) :=\nfun {n} hn =>\n  Eq.mpr\n    (id\n      (congrArg (fun _a => #_a = #({k \u2208 Iic n | k * (ArithmeticFunction.sigma 1) k = n})) (sigmaFiber_eq_canonical hn)))\n    (Eq.refl #({k \u2208 Iic n | k * (ArithmeticFunction.sigma 1) k = n}))\n'Erdos1060.sigmaFiber_eq_canonical' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Erdos1060.sigmaFiber_card_eq_canonical' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 5815496704,
+      "stop_reason": null,
+      "started_utc": "2026-10-05T01:07:24.247662+00:00",
+      "finished_utc": "2026-10-05T01:07:35.060293+00:00",
+      "owned_process_stop_output": null,
+      "own_job_resource_receipt": {
+        "command": [
+          "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+          "-j1",
+          "-DmaxHeartbeats=0",
+          "-DmaxRecDepth=100000",
+          "-o",
+          "SigmaCanonicalCount.olean",
+          "SigmaCanonicalCount.lean"
+        ],
+        "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos1060-uniform-partial",
+        "started_utc": "2026-10-05T01:07:24.247662+00:00",
+        "attempted": true,
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 5368709120,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 1073741824,
+          "own_job_private_bytes": 6442450944,
+          "own_process_private_bytes": 6442450944,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 3600
+        },
+        "minimum_disk_free_bytes": 5815496704,
+        "initial_system_memory_snapshot": {
+          "free_physical_bytes": 8031805440,
+          "total_physical_bytes": 34024419328,
+          "available_commit_bytes": 9099788288,
+          "total_commit_limit_bytes": 61075705856
+        },
+        "minimum_physical_available_bytes": 7061319680,
+        "minimum_available_commit_bytes": 6740062208,
+        "root_pid": 52152,
+        "own_job_assignment_before_resume": "PASS",
+        "exit": 0,
+        "job_peak_process_private_bytes": 2403831808,
+        "job_peak_aggregate_private_bytes": 2405093376,
+        "state": "PASS",
+        "finished_utc": "2026-10-05T01:07:35.060293+00:00",
+        "seconds": 10.813,
+        "polled_peak_tree_private_bytes": 2392981504,
+        "polled_peak_tree_rss_bytes": 1075408896,
+        "counter_samples": 40,
+        "observed_own_processes": {
+          "52152": {
+            "exe": "lean.exe",
+            "peak_private_bytes": 2391719936,
+            "peak_rss_bytes": 1098420224
+          },
+          "37032": {
+            "exe": "conhost.exe",
+            "peak_private_bytes": 1261568,
+            "peak_rss_bytes": 7860224
+          }
+        },
+        "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\sakana-erdos1060-uniform-partial-46a3700d1a9d4960-attempt-1.stdout.txt",
+        "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\sakana-erdos1060-uniform-partial-46a3700d1a9d4960-attempt-1.stderr.txt",
+        "stdout_sha256": "739a2d59482a0267e0a0a9fde5f6e35ddea82777ca7c85ddb964bbe8938e57c0",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_excerpt": "theorem Erdos1060.sigmaFiber_eq_canonical : \u2200 {n : \u2115},\n  0 < n \u2192 sigmaFiber n = {k \u2208 Iic n | k * (ArithmeticFunction.sigma 1) k = n} :=\nfun {n} hn =>\n  ext fun k =>\n    Eq.mpr\n      (id\n        (congr (congrArg Iff sigmaFiber_eq_canonical._simp_1_1)\n          (Eq.trans sigmaFiber_eq_canonical._simp_1_2\n            (congrFun' (congrArg And sigmaFiber_eq_canonical._simp_1_3) (k * (ArithmeticFunction.sigma 1) k = n)))))\n      {\n        mp := fun a =>\n          And.casesOn a fun hk heq =>\n            \u27e8Nat.le_of_dvd hn\n                (Eq.mpr (id (congrArg (fun _a => k \u2223 _a) (Eq.symm heq)))\n                  (dvd_mul_right k ((ArithmeticFunction.sigma 1) k))),\n              heq\u27e9,\n        mpr := fun a =>\n          And.casesOn a fun hkn heq =>\n            \u27e8fun hk0 =>\n              Eq.ndrec (motive := fun k => k \u2264 n \u2192 k * (ArithmeticFunction.sigma 1) k = n \u2192 False)\n                (fun hkn heq =>\n                  sigmaFiber_eq_canonical._proof_1_4 hn\n                    (Eq.mp\n                      (congrFun'\n                        (congrArg Eq (Eq.trans (congrArg (HMul.hMul 0) ArithmeticFunction.map_zero) (mul_zero 0))) n)\n                      heq))\n                (Eq.symm hk0) hkn heq,\n              heq\u27e9 }\ntheorem Erdos1060.sigmaFiber_card_eq_canonical : \u2200 {n : \u2115},\n  0 < n \u2192 #(sigmaFiber n) = #({k \u2208 Iic n | k * (ArithmeticFunction.sigma 1) k = n}) :=\nfun {n} hn =>\n  Eq.mpr\n    (id\n      (congrArg (fun _a => #_a = #({k \u2208 Iic n | k * (ArithmeticFunction.sigma 1) k = n})) (sigmaFiber_eq_canonical hn)))\n    (Eq.refl #({k \u2208 Iic n | k * (ArithmeticFunction.sigma 1) k = n}))\n'Erdos1060.sigmaFiber_eq_canonical' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Erdos1060.sigmaFiber_card_eq_canonical' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+        "stderr_excerpt": ""
+      },
+      "source_sha256": "5bf6fb775081543eb6538b9cffa5c24f1683e6614a6027bb98aa183d3cc0f925",
+      "third_worker_memory_observations": {
+        "minimum_free_physical_bytes": 7061319680,
+        "minimum_available_commit_bytes": 6740062208,
+        "peak_owned_private_bytes": 2405093376
+      },
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos1060-uniform-partial\\SigmaCanonicalCount.olean",
+          "sha256": "c2ae816f188ac53f646708ff1645cc27a33a148a4b9f18c5a53cc96593d4bb86",
+          "bytes": 48216
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "SigmaFiberAsymptotic",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "SigmaFiberAsymptotic.olean",
+        "SigmaFiberAsymptotic.lean"
+      ],
+      "seconds": 12.968,
+      "exit": 0,
+      "stdout": "theorem Erdos1060.canonical_count_eventually_upper : \u2200 {\u03b5 : \u211d},\n  0 < \u03b5 \u2192\n    \u2200\u1da0 (n : \u2115) in atTop,\n      \u2191(#({k \u2208 Iic n | k * (ArithmeticFunction.sigma 1) k = n})) \u2264\n        Real.exp ((Real.log (2539 / 1000) / 3 + Real.log (10 / 9) / 2 + \u03b5) * Real.log \u2191n / Real.log (Real.log \u2191n)) :=\nfun {\u03b5} h\u03b5 =>\n  mp_mem (eventually_gt_atTop 0)\n    (mp_mem (eventually_sigmaFiber_card_le h\u03b5)\n      (univ_mem'\n        (id fun n hn hn0 =>\n          Eq.mp\n            (congrArg (fun _a => \u2191_a \u2264 Real.exp ((candidateConstant + \u03b5) * Real.log \u2191n / Real.log (Real.log \u2191n)))\n              (sigmaFiber_card_eq_canonical hn0))\n            hn)))\ntheorem Erdos1060.canonical_count_upper : \u2200 {\u03b5 : \u211d},\n  0 < \u03b5 \u2192\n    \u2203 N,\n      \u2200 (n : \u2115),\n        N \u2264 n \u2192\n          \u2191(#({k \u2208 Iic n | k * (ArithmeticFunction.sigma 1) k = n})) \u2264\n            Real.exp\n              ((Real.log (2539 / 1000) / 3 + Real.log (10 / 9) / 2 + \u03b5) * Real.log \u2191n / Real.log (Real.log \u2191n)) :=\nfun {\u03b5} h\u03b5 => eventually_atTop.mp (canonical_count_eventually_upper h\u03b5)\n'Erdos1060.eventually_sigmaFiber_card_le' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Erdos1060.canonical_count_eventually_upper' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Erdos1060.canonical_count_upper' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 5815304192,
+      "stop_reason": null,
+      "started_utc": "2026-10-05T01:07:35.067766+00:00",
+      "finished_utc": "2026-10-05T01:07:48.043753+00:00",
+      "owned_process_stop_output": null,
+      "own_job_resource_receipt": {
+        "command": [
+          "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+          "-j1",
+          "-DmaxHeartbeats=0",
+          "-DmaxRecDepth=100000",
+          "-o",
+          "SigmaFiberAsymptotic.olean",
+          "SigmaFiberAsymptotic.lean"
+        ],
+        "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos1060-uniform-partial",
+        "started_utc": "2026-10-05T01:07:35.067766+00:00",
+        "attempted": true,
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 5368709120,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 1073741824,
+          "own_job_private_bytes": 6442450944,
+          "own_process_private_bytes": 6442450944,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 3600
+        },
+        "minimum_disk_free_bytes": 5815304192,
+        "initial_system_memory_snapshot": {
+          "free_physical_bytes": 8162111488,
+          "total_physical_bytes": 34024419328,
+          "available_commit_bytes": 9234501632,
+          "total_commit_limit_bytes": 61075705856
+        },
+        "minimum_physical_available_bytes": 6742556672,
+        "minimum_available_commit_bytes": 6202277888,
+        "root_pid": 56696,
+        "own_job_assignment_before_resume": "PASS",
+        "exit": 0,
+        "job_peak_process_private_bytes": 3051556864,
+        "job_peak_aggregate_private_bytes": 3052810240,
+        "state": "PASS",
+        "finished_utc": "2026-10-05T01:07:48.043753+00:00",
+        "seconds": 12.968,
+        "polled_peak_tree_private_bytes": 3041181696,
+        "polled_peak_tree_rss_bytes": 1397694464,
+        "counter_samples": 48,
+        "observed_own_processes": {
+          "56696": {
+            "exe": "lean.exe",
+            "peak_private_bytes": 3039928320,
+            "peak_rss_bytes": 1439989760
+          },
+          "56764": {
+            "exe": "conhost.exe",
+            "peak_private_bytes": 1253376,
+            "peak_rss_bytes": 7856128
+          }
+        },
+        "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\sakana-erdos1060-uniform-partial-133b420810208074-attempt-1.stdout.txt",
+        "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\sakana-erdos1060-uniform-partial-133b420810208074-attempt-1.stderr.txt",
+        "stdout_sha256": "b3f9ffb11e6038b871dca9cc550e76a141bd3eaead4df720e686e511c5984448",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_excerpt": "theorem Erdos1060.canonical_count_eventually_upper : \u2200 {\u03b5 : \u211d},\n  0 < \u03b5 \u2192\n    \u2200\u1da0 (n : \u2115) in atTop,\n      \u2191(#({k \u2208 Iic n | k * (ArithmeticFunction.sigma 1) k = n})) \u2264\n        Real.exp ((Real.log (2539 / 1000) / 3 + Real.log (10 / 9) / 2 + \u03b5) * Real.log \u2191n / Real.log (Real.log \u2191n)) :=\nfun {\u03b5} h\u03b5 =>\n  mp_mem (eventually_gt_atTop 0)\n    (mp_mem (eventually_sigmaFiber_card_le h\u03b5)\n      (univ_mem'\n        (id fun n hn hn0 =>\n          Eq.mp\n            (congrArg (fun _a => \u2191_a \u2264 Real.exp ((candidateConstant + \u03b5) * Real.log \u2191n / Real.log (Real.log \u2191n)))\n              (sigmaFiber_card_eq_canonical hn0))\n            hn)))\ntheorem Erdos1060.canonical_count_upper : \u2200 {\u03b5 : \u211d},\n  0 < \u03b5 \u2192\n    \u2203 N,\n      \u2200 (n : \u2115),\n        N \u2264 n \u2192\n          \u2191(#({k \u2208 Iic n | k * (ArithmeticFunction.sigma 1) k = n})) \u2264\n            Real.exp\n              ((Real.log (2539 / 1000) / 3 + Real.log (10 / 9) / 2 + \u03b5) * Real.log \u2191n / Real.log (Real.log \u2191n)) :=\nfun {\u03b5} h\u03b5 => eventually_atTop.mp (canonical_count_eventually_upper h\u03b5)\n'Erdos1060.eventually_sigmaFiber_card_le' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Erdos1060.canonical_count_eventually_upper' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Erdos1060.canonical_count_upper' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+        "stderr_excerpt": ""
+      },
+      "source_sha256": "440f2f6aaa1d5dd04611fe855077352a3b75171d6e1ec823939ede8609e2d45a",
+      "third_worker_memory_observations": {
+        "minimum_free_physical_bytes": 6742556672,
+        "minimum_available_commit_bytes": 6202277888,
+        "peak_owned_private_bytes": 3052810240
+      },
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos1060-uniform-partial\\SigmaFiberAsymptotic.olean",
+          "sha256": "7c1a71d40003c7f6e6033652904a86101c159e0b23805c893b61521d693b8d07",
+          "bytes": 52632
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "FreshAudit1.lean",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "FreshAudit1.olean",
+        "FreshAudit1.lean"
+      ],
+      "seconds": 13.969,
+      "exit": 0,
+      "stdout": "'Erdos1060.canonical_count_eventually_upper' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Erdos1060.canonical_count_upper' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Erdos1060Partial.entropyConstant_lt_old' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "is_endpoint_audit": true,
+      "minimum_free_bytes": 5815197696,
+      "stop_reason": null,
+      "started_utc": "2026-10-05T01:07:48.058761+00:00",
+      "finished_utc": "2026-10-05T01:08:02.021961+00:00",
+      "owned_process_stop_output": null,
+      "own_job_resource_receipt": {
+        "command": [
+          "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+          "-j1",
+          "-DmaxHeartbeats=0",
+          "-DmaxRecDepth=100000",
+          "-o",
+          "FreshAudit1.olean",
+          "FreshAudit1.lean"
+        ],
+        "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos1060-uniform-partial",
+        "started_utc": "2026-10-05T01:07:48.058761+00:00",
+        "attempted": true,
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 5368709120,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 1073741824,
+          "own_job_private_bytes": 6442450944,
+          "own_process_private_bytes": 6442450944,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 3600
+        },
+        "minimum_disk_free_bytes": 5815197696,
+        "initial_system_memory_snapshot": {
+          "free_physical_bytes": 8142491648,
+          "total_physical_bytes": 34024419328,
+          "available_commit_bytes": 9209401344,
+          "total_commit_limit_bytes": 61075705856
+        },
+        "minimum_physical_available_bytes": 6576959488,
+        "minimum_available_commit_bytes": 6009212928,
+        "root_pid": 42756,
+        "own_job_assignment_before_resume": "PASS",
+        "exit": 0,
+        "job_peak_process_private_bytes": 3046219776,
+        "job_peak_aggregate_private_bytes": 3047481344,
+        "state": "PASS",
+        "finished_utc": "2026-10-05T01:08:02.021961+00:00",
+        "seconds": 13.969,
+        "polled_peak_tree_private_bytes": 3039555584,
+        "polled_peak_tree_rss_bytes": 1384136704,
+        "counter_samples": 51,
+        "observed_own_processes": {
+          "50216": {
+            "exe": "conhost.exe",
+            "peak_private_bytes": 1261568,
+            "peak_rss_bytes": 7860224
+          },
+          "42756": {
+            "exe": "lean.exe",
+            "peak_private_bytes": 3038294016,
+            "peak_rss_bytes": 1386364928
+          }
+        },
+        "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\sakana-erdos1060-uniform-partial-6abcc70b865d6bea-attempt-1.stdout.txt",
+        "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\sakana-erdos1060-uniform-partial-6abcc70b865d6bea-attempt-1.stderr.txt",
+        "stdout_sha256": "32854fa897bfbc38d75a31c4d94f292687a68877fb626c88f0b8f6f01530b70e",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_excerpt": "'Erdos1060.canonical_count_eventually_upper' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Erdos1060.canonical_count_upper' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Erdos1060Partial.entropyConstant_lt_old' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+        "stderr_excerpt": ""
+      },
+      "source_sha256": "7402132521168e2793a62cce2e03e11416a8e78715a4d51aea8033b00523e1a6",
+      "third_worker_memory_observations": {
+        "minimum_free_physical_bytes": 6576959488,
+        "minimum_available_commit_bytes": 6009212928,
+        "peak_owned_private_bytes": 3047481344
+      },
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos1060-uniform-partial\\FreshAudit1.olean",
+          "sha256": "ef657eae708c54e69945471e70b9e20c3b15b35859370866858ce0d21b6c4eda",
+          "bytes": 1528
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION",
+      "selected_endpoint_print_coverage": {
+        "requested_endpoints": [
+          "Erdos1060.canonical_count_eventually_upper",
+          "Erdos1060.canonical_count_upper",
+          "Erdos1060Partial.entropyConstant_lt_old"
+        ],
+        "parsed_endpoints": [
+          "Erdos1060.canonical_count_eventually_upper",
+          "Erdos1060.canonical_count_upper",
+          "Erdos1060Partial.entropyConstant_lt_old"
+        ],
+        "missing_endpoints": [],
+        "status": "PASS"
+      }
+    }
+  ],
+  "compiler_version": "Lean (version 4.33.1, x86_64-w64-windows-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)",
+  "compilation_order": [
+    "AsymptoticBridge",
+    "SquarefreeSigmaInjection",
+    "SigmaCoreInjection",
+    "SigmaLogBudgets",
+    "WeightedCoreBound",
+    "WeightedCutoff",
+    "EntropyConversion",
+    "SigmaFiberEntropy",
+    "SigmaCanonicalCount",
+    "SigmaFiberAsymptotic"
+  ],
+  "started_utc": "2026-10-05T01:05:42Z",
+  "failed_invocations": [],
+  "selected_audit_axiom_review": [
+    {
+      "endpoint": "Erdos1060.canonical_count_eventually_upper",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    },
+    {
+      "endpoint": "Erdos1060.canonical_count_upper",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    },
+    {
+      "endpoint": "Erdos1060Partial.entropyConstant_lt_old",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    }
+  ],
+  "resource_settings": {
+    "LEAN_NUM_THREADS": 1,
+    "lean_shell_worker_flag": "-j1",
+    "maxHeartbeats": 0,
+    "maxRecDepth": 100000,
+    "runner_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\run_source_plan.py",
+    "runner_source_sha256": "7d6e05618cb48494a792efc54c8a80e36c7bedb6f28415e78515b1c4f4caefc0",
+    "axiom_parser_source_sha256": "1ee59639204140430c088023539a648f9007cc26c1856cf8cd2e3c2e59d7143f",
+    "guarded_third_worker_continuation": {
+      "maximum_new_source_invocations": null,
+      "initial_disk_bytes": 4000000000,
+      "initial_free_physical_bytes": 6442450944,
+      "continuous_disk_reserve_bytes": 1000000000,
+      "continuous_free_physical_reserve_bytes": 3221225472,
+      "owned_compiler_private_memory_ceiling_bytes": 6442450944,
+      "initial_memory_snapshot": {
+        "free_physical_bytes": 7856439296,
+        "total_physical_bytes": 34024419328,
+        "available_commit_bytes": 8845295616,
+        "total_commit_limit_bytes": 61075705856
+      },
+      "qualification": "ROOT_AUTHORIZED_GUARDED_THIRD_WORKER_CONTINUATION",
+      "initial_available_commit_bytes": 5368709120,
+      "continuous_available_commit_reserve_bytes": 1073741824,
+      "owned_job_private_memory_ceiling_bytes": 6442450944,
+      "own_job_assignment_before_resume": "REQUIRED",
+      "resource_guard_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\matt_resource_guard.py",
+      "resource_guard_sha256": "ae0b64c7fbf47545365f3238977368042be342ddb973159ec65c98f64aa38a71"
+    }
+  },
+  "prior_attempt_receipts": [
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\sakana-erdos1060-uniform-partial-fresh-build-attempt-1.json",
+      "sha256": "ed5443265ee7365d7faa338e8be77c16a3c088010906fdd833a7d09500415549",
+      "status": "SCHEDULED_RESOURCE_CHECKPOINT"
+    }
+  ],
+  "resume_provenance": "OWN_FRESH_SUCCESSFUL_ARTIFACTS_AFTER_RESOURCE_INTERRUPTION",
+  "retained_successful_custom_modules": 1,
+  "finished_utc": "2026-10-05T01:08:02Z"
+}

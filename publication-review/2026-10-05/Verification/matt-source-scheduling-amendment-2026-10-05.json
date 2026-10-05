@@ -1,0 +1,43 @@
+{
+  "recorded_utc": "2026-10-05T01:15:55.364187+00:00",
+  "authorization": "ROOT_EXPLICIT_SCHEDULING_AMENDMENT_2026_10_05",
+  "project": "matt-unitary-current",
+  "plan_sha256": "aecaca53b7bea637ac2350fa8751faefba09f03f5102458c97f7a3c375caf6aa",
+  "maximum_simultaneous_authored_source_importers": 3,
+  "coordinated_workers": [
+    "Luke Count/RawCount pilot",
+    "one granular novelty companion",
+    "Matt current source replay"
+  ],
+  "maximum_literal_whole_Mathlib_importers": 1,
+  "held_projects": [
+    "DMS",
+    "E169",
+    "A000224"
+  ],
+  "first_source_pilot_required": true,
+  "continuation_authorized_after_first_source_pass_within_existing_guards": true,
+  "dispatch_gates": {
+    "disk_bytes": 4000000000,
+    "free_physical_bytes": 6442450944,
+    "available_commit_bytes": 5368709120
+  },
+  "continuous_reserves": {
+    "disk_bytes": 1000000000,
+    "free_physical_bytes": 3221225472,
+    "available_commit_bytes": 1073741824
+  },
+  "owned_job_private_memory_cap_bytes": 6442450944,
+  "pre_dispatch_measurement": {
+    "free_disk_bytes": 5805170688,
+    "free_physical_bytes": 7009968128,
+    "total_physical_bytes": 34024419328,
+    "available_commit_bytes": 6543978496,
+    "total_commit_limit_bytes": 61075705856
+  },
+  "pre_dispatch_measurement_all_gates_qualify": true,
+  "actual_first_source_dispatch": "Separate guarded source receipt; this record is authorization/provenance only.",
+  "resource_no_attempt_is_not_proof_failure": true,
+  "sources_pins_and_proof_scope_changed": false,
+  "selected_generic_audit_separate_from_unfinished_baselines": true
+}

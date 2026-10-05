@@ -1,0 +1,72 @@
+{
+  "status": "PENDING_ORIGINAL_ROW_FLUSHED_OS_REFUSED_NEXT_CHILD",
+  "started_utc": "2026-10-05T01:45:15.620248+00:00",
+  "owner_identity": {
+    "ProcessId": 52644,
+    "ParentProcessId": 52948,
+    "CreationDate": "/Date(1791154366578)/",
+    "CommandLine": "\"C:\\Users\\Propietario\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe\" -X utf8 work/publication/verification/run_source_plan.py htpeo-dms-current 1"
+  },
+  "hold_receipt": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dms-dispatcher-hold-20261005T005041Z.json",
+  "hold_sha256": "c17795a4e99aff75c80841457055287b439a27df117708194150a564a897cf12",
+  "original_receipt": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dms-pending-row-handoff-20261005T014515Z.before-receipt.json",
+  "original_receipt_sha256": "d15b25f57024b992064417161871016e03de62b7c1b6c52451f4d95d8ad4376d",
+  "source": {
+    "module": "GPn2T",
+    "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current\\GPn2T.lean",
+    "source": "entries/dms-star6/artifact/lean/pack4/src/GPn2T.lean",
+    "sha256": "bead338fcf494f98da2207d3861fe5b01f118e3519cfae4b8dd939f8808ed412"
+  },
+  "job_policy": "ActiveProcessLimit=1; dispatcher only; no kill-on-close; no source child may execute.",
+  "helper_sha256": "7e447a67572a693170680574d7948dad303eb03f42d457970c58ffac8904e259",
+  "metrics_before": {
+    "disk": 6556659712,
+    "free_physical_bytes": 11381215232,
+    "total_physical_bytes": 34024419328,
+    "available_commit_bytes": 8911040512,
+    "total_commit_limit_bytes": 60542980096
+  },
+  "finished_utc": "2026-10-05T01:45:15.761375+00:00",
+  "dispatcher_exit": 1,
+  "completed_source_rows": 118,
+  "flushed_row": {
+    "module": "GPn2T",
+    "command": [
+      "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+      "-j1",
+      "-DmaxHeartbeats=0",
+      "-DmaxRecDepth=100000",
+      "-o",
+      "GPn2T.olean",
+      "GPn2T.lean"
+    ],
+    "seconds": 3290.58,
+    "exit": 0,
+    "stdout": "",
+    "stderr": "",
+    "is_endpoint_audit": false,
+    "minimum_free_bytes": 5699489792,
+    "stop_reason": null,
+    "owned_process_stop_output": null,
+    "source_sha256": "bead338fcf494f98da2207d3861fe5b01f118e3519cfae4b8dd939f8808ed412",
+    "artifacts": [
+      {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current\\GPn2T.olean",
+        "sha256": "4a5ee299801535584af69b8e0d42079e81da095ee7e227f49a95e648881a8d98",
+        "bytes": 278144
+      }
+    ],
+    "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+  },
+  "after_receipt_sha256": "ca2beceb23f2cbc56a929415a12d26399b212df7b962a9ef316c71ac5a199a92",
+  "pending_next_module": "GPn2W1",
+  "held_wall_seconds": 3273.275774240494,
+  "metrics_after": {
+    "disk": 6556655616,
+    "free_physical_bytes": 11434266624,
+    "total_physical_bytes": 34024419328,
+    "available_commit_bytes": 8970358784,
+    "total_commit_limit_bytes": 60542980096
+  },
+  "qualification": "Next child was refused operationally, not a Lean proof failure. Original 117 rows and buffered GPn2T output are preserved."
+}

@@ -1,0 +1,47 @@
+{
+  "id": "sakana-opdp43",
+  "entrant": "E02",
+  "version": "4.34.1",
+  "mathlib_pin": "d13f23b723b8a846827a245b89c10fc7d3f11612",
+  "source_dir": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-opdp43",
+  "modules": [
+    {
+      "module": "OpHack.NoThree.Symmetry",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-opdp43\\OpHack\\NoThree\\Symmetry.lean",
+      "source": "Reproduction_Sources/opdp43/OpHack/NoThree/Symmetry.lean",
+      "sha256": "38a5e72014c95da6a4756f4326d0a41483d078c8c4c381b63109646430312e15"
+    },
+    {
+      "module": "OpHack.NoThree.Grid",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-opdp43\\OpHack\\NoThree\\Grid.lean",
+      "source": "Reproduction_Sources/opdp43/OpHack/NoThree/Grid.lean",
+      "sha256": "17007928d0c8fe2283689fb6da4e8c111b7ce956be8f39d19b30ca686ceaf7f9"
+    },
+    {
+      "module": "OpHack.NoThree.GridBalance",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-opdp43\\OpHack\\NoThree\\GridBalance.lean",
+      "source": "Reproduction_Sources/opdp43/OpHack/NoThree/GridBalance.lean",
+      "sha256": "be89dd659738eb2802ebf2fea1f58bdc56212b97af99f8899cacd6b1b0e04279"
+    },
+    {
+      "module": "OpHack.NoThree.Main",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-opdp43\\OpHack\\NoThree\\Main.lean",
+      "source": "Reproduction_Sources/opdp43/OpHack/NoThree/Main.lean",
+      "sha256": "f8262d41b0933681b1db8dafb3d4302471dc28650b8ca950e3e1fc01f203c3d2"
+    }
+  ],
+  "endpoints": [
+    "NoThreeSymmetry.grid_half_turn_gap",
+    "NoThreeSymmetry.sharp_half_turn_gap"
+  ],
+  "roots": [
+    "OpHack.NoThree.Main"
+  ],
+  "audit_modules": [
+    "FreshAudit1.lean"
+  ],
+  "lean_options": {},
+  "static_review_contexts": [],
+  "status": "PLANNED_NOT_RUN",
+  "builds": []
+}

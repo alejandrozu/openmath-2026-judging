@@ -1,0 +1,27 @@
+--- prepared-helper
++++ corrected-helper
+@@ -88,12 +88,22 @@
+     disallowed=[]
+     for row in rows:
+         cmd=(row.get('CommandLine') or '').replace('\\','/').lower()
++        dispatcher_name=re.search(r'(?<![a-z0-9_])(?:run|dispatch)_dms_[a-z0-9_]+\.py',cmd)
++        same_own_v3_runner=False
++        if dispatcher_name and int(row['ProcessId'])==os.getpid():
++            # Only this exact executing V3 runner may be exempted, never a peer PID.
++            allowed_runner=(BASE/'run_dms_v3_linked_plan.py').resolve()
++            same_own_v3_runner=(Path(sys.argv[0]).resolve()==allowed_runner and
++                len(sys.argv)>1 and sys.argv[1]=='htpeo-dms-current-import-pruned-v3' and
++                dispatcher_name.group(0)=='run_dms_v3_linked_plan.py')
++            if same_own_v3_runner:
++                import __main__
++                assert __main__.RUNNER_SOURCE_SHA256==digest(allowed_runner),'Executing V3 bytes must equal the checked runner file'
+         if ('/builds/htpeo-dms-current/' in cmd or
+             '/builds/htpeo-dms-current-import-pruned-diagnostic/' in cmd or
+             '/builds/htpeo-dms-current-import-pruned-modeq-v2/' in cmd or
+             ('run_source_plan.py' in cmd and ' htpeo-dms-current ' in cmd) or
+-            'run_dms_original99_plan.py' in cmd or 'run_dms_modeq_v2_linked_plan.py' in cmd or
+-            'dispatch_dms_sole_guarded.py' in cmd):disallowed.append(row)
++            (dispatcher_name and not same_own_v3_runner)):disallowed.append(row)
+     assert not disallowed,('Original shared-output route must stay inactive',disallowed)
+     return {'checked_utc':now(),'original_scientific_route_inactive':True,'process_snapshot':rows}
+ 

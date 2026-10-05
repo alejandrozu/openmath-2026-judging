@@ -1,0 +1,173 @@
+--- /dev/null
++++ dms_v4_vector122_seed.py
+@@ -0,0 +1,170 @@
++"""Reviewed V4 seed: link122 V3 NEW passes; import99 proven V1 copies read-only.
++
++Preparation creates metadata only. Seed requires a separately SHA-bound root
++approval. No original/V2 or protected V1/V3 99 inode acquires another link.
++No compiler is invoked; prior passes are never called fresh V4 compilations.
++"""
++from pathlib import Path
++import hashlib,json,os,re,shutil,subprocess,sys,time
++from datetime import datetime,timezone
++from verify_dms_v4_vector_stage import verify_stage,protected99_identity
++from dms_v3_copy99_hardlink_seed import file_identity,inode_key,volume_identity
++BASE=Path(__file__).resolve().parent
++STAGE=BASE/'builds/htpeo-dms-current-import-pruned-v4-vector'
++V3=BASE/'builds/htpeo-dms-current-import-pruned-v3'
++V1=BASE/'builds/htpeo-dms-current-import-pruned-diagnostic'
++POLICY=BASE/'dms-v4-vector122-link99-readonly-policy-20261005.json'
++SEED=BASE/'dms-v4-vector122-link99-readonly-seed-completed-20261005.json'
++PROPOSAL=BASE/'dms-v4-vector-cold-stage-complete221-reuse-proposal-20261005.json'
++REVIEW=BASE/'dms-v4-vector-cold-stage-verifier-result-20261005.json'
++REVIEW_SHA='e90f75dde7da22265de52ba97812447ee0574d7fb66547aede67087c0e3c374e'
++VERIFIER_SHA='d876f0d7850b4618ff4855aad2306216f6921987936daea24a820fef798b6242'
++GUARD_SHA='ae0b64c7fbf47545365f3238977368042be342ddb973159ec65c98f64aa38a71'
++
++def digest(path):
++    h=hashlib.sha256()
++    with Path(path).open('rb') as stream:
++        for block in iter(lambda:stream.read(1024*1024),b''):h.update(block)
++    return h.hexdigest()
++def load(path):return json.loads(Path(path).read_bytes())
++def now():return datetime.now(timezone.utc).isoformat()
++def save_new(path,obj):
++    assert not Path(path).exists(),str(path)
++    with Path(path).open('x',encoding='utf8') as stream:json.dump(obj,stream,indent=2);stream.write('\n')
++    return digest(path)
++def inactive_routes():
++    cmd="Get-CimInstance Win32_Process | Where-Object { $_.Name -match '^(lean|python)(\\.exe)?$' } | Select-Object ProcessId,Name,CreationDate,CommandLine | ConvertTo-Json -Compress"
++    out=subprocess.run(['powershell','-NoProfile','-Command',cmd],capture_output=True,text=True,encoding='utf8',errors='replace',check=True)
++    rows=json.loads(out.stdout or '[]');rows=rows if isinstance(rows,list) else [rows]
++    forbidden=[]
++    protected_stages=['htpeo-dms-current','htpeo-dms-current-import-pruned-diagnostic',
++        'htpeo-dms-current-import-pruned-modeq-v2','htpeo-dms-current-import-pruned-v3',STAGE.name]
++    for row in rows:
++        text=(row.get('CommandLine') or '').replace('\\','/').lower()
++        dispatch=re.search(r'(?<![a-z0-9_])(?:run|dispatch)_dms_[a-z0-9_]+\.py',text)
++        own=False
++        if dispatch and int(row['ProcessId'])==os.getpid():
++            allowed=BASE/'run_dms_v4_vector_plan.py'
++            own=(Path(sys.argv[0]).resolve()==allowed.resolve() and len(sys.argv)>1 and sys.argv[1]==STAGE.name
++                and dispatch.group(0)=='run_dms_v4_vector_plan.py')
++            if own:
++                import __main__
++                assert __main__.RUNNER_SOURCE_SHA256==digest(allowed)
++        if (dispatch and not own) or ('run_source_plan.py' in text and ' htpeo-dms-current ' in text):forbidden.append(row)
++        if row['Name'].lower().startswith('lean') and any('/builds/'+p+'/' in text for p in protected_stages):forbidden.append(row)
++    assert not forbidden,('Other DMS original/diagnostic dispatchers or compilers must be inactive',forbidden)
++    return {'checked_utc':now(),'all_other_DMS_routes_inactive':True,'process_snapshot':rows,'own_exemption_pid':os.getpid()}
++
++def prepare():
++    assert digest(REVIEW)==REVIEW_SHA and digest(BASE/'verify_dms_v4_vector_stage.py')==VERIFIER_SHA
++    check=verify_stage(require_cold=True);proposal=load(PROPOSAL)
++    assert volume_identity(V3)==volume_identity(STAGE)
++    links=[]
++    for c in proposal['actual122_V3_new_unaffected_source_PASS_reuse_candidates']:
++        source_file=V3/Path(c['module'].replace('.','/')+'.lean')
++        siblings={str(source_file.with_suffix(s).resolve()) for s in ['.olean','.olean.private','.olean.server','.ilean'] if source_file.with_suffix(s).exists()}
++        assert siblings=={str(Path(a['file']).resolve()) for a in c['artifacts']}
++        for a in c['artifacts']:
++            source=Path(a['file']).resolve();target=Path(a['proposed_target']).resolve()
++            assert source.is_relative_to(V3.resolve()) and target.is_relative_to(STAGE.resolve())
++            assert not target.exists() and digest(source)==a['sha256']
++            assert file_identity(source)==a['current_source_identity'] and file_identity(source)['link_count']==1
++            links.append({'module':c['module'],'source':str(source),'target':str(target),'sha256':a['sha256'],
++                'bytes':a['bytes'],'source_identity_before':a['current_source_identity']})
++    assert len(links)==122 and len({r['module'] for r in links})==122
++    policy={'status':'PREPARED122_LINK_AND99_READONLY_POLICY_NO_ALIAS_NO_LEAN', 'prepared_utc':now(),
++        'source_plan':str(STAGE/'build-plan.json'),'source_plan_sha256':check['source_plan_sha256'],
++        'proposal':str(PROPOSAL),'proposal_sha256':digest(PROPOSAL),'cold_verifier_result':str(REVIEW),'cold_verifier_result_sha256':REVIEW_SHA,
++        'cold_verifier_source_sha256':VERIFIER_SHA,'resource_guard_source_sha256':GUARD_SHA,
++        'full2735_official_source_artifact_closure_sha256':'936867aecf295ca4892a97b173db0227c403c7177c6bd68859d7b6e8a45b8fcd',
++        'protected99_before':protected99_identity(),'original_V3_actual_failure_receipt_sha256':'ff1dd1a5c1666631992bffb93f51271c6c4e162cb075f2ec80eddf15e741ccd4',
++        'same_NTFS_volume':volume_identity(STAGE),'output_links':links,
++        '122_V3_new_PASS_reused_names':check['122_unaffected_V3_new_PASS_candidates'],
++        '99_previous_original_owned_readonly_V1_copies':proposal['existing99_original_owned_V1_COPY_readonly_inputs'],
++        'required7_new_cold_module_names':check['required7_new_source_names'],
++        'requested123_unchanged_axioms':check['requested123_unchanged_axioms'],
++        'prior221_output_names':sorted(check['122_unaffected_V3_new_PASS_candidates']+check['99_original_owned_readonly_V1_copy_names']),
++        'scientific_coverage_labels':{'original_route_own_cold_passes_reused_via_existing_V1_readonly_copies':99,
++            'V3_new_own_cold_passes_reused_via_new_V4_links':122,'new_V4_source_compilations_required':7,'authored_body_count':228},
++        'readonly_custom_input_directory':str(V1.resolve()),
++        'forbidden_custom_import_directories':[str(BASE/'builds'/p) for p in ['htpeo-dms-current','htpeo-dms-current-import-pruned-modeq-v2','htpeo-dms-current-import-pruned-v3']],
++        'safety_policy':'All prior221 modules skipped;122 V3-new single-link inodes alone gain a V4 alias. Existing99 V1 read-only copies keep linkcount2, original/V2 keep2. No scientific byte edits or payload copying; no future overwrites of protected outputs.',
++        'seed_disk_floor_bytes':1_000_000_000,'actions_performed':{'aliases':0,'compiler':0}}
++    sha=save_new(POLICY,policy)
++    print(json.dumps({'policy':str(POLICY),'sha256':sha,'aliases':0,'compiler':0}),flush=True)
++
++def seed(approval_path,approval_sha):
++    approval_path=Path(approval_path).resolve();assert approval_path.is_relative_to(BASE.resolve()) and digest(approval_path)==approval_sha
++    approval=load(approval_path);assert approval['status']=='ROOT_APPROVED_V4_LINK122_KEEP99_READONLY_SEED_ONLY_NO_LEAN'
++    assert approval['reviewed_policy_sha256']==digest(POLICY) and approval['reviewed_seed_helper_sha256']==digest(__file__)
++    policy=load(POLICY);assert not SEED.exists()
++    check=verify_stage(require_cold=True)
++    assert check['122_unaffected_V3_new_PASS_candidates']==policy['122_V3_new_PASS_reused_names']
++    assert check['required7_new_source_names']==policy['required7_new_cold_module_names']
++    assert digest(BASE/'verify_dms_v4_vector_stage.py')==policy['cold_verifier_source_sha256']
++    assert digest(REVIEW)==policy['cold_verifier_result_sha256'] and volume_identity(V3)==volume_identity(STAGE)==policy['same_NTFS_volume']
++    assert protected99_identity()==policy['protected99_before']
++    inactive=inactive_routes();assert shutil.disk_usage(BASE).free>=policy['seed_disk_floor_bytes']
++    result={'status':'V4_LINK122_AND99_READONLY_SEED_RUNNING_NO_LEAN','started_utc':now(),
++        'approval_receipt':str(approval_path),'approval_receipt_sha256':approval_sha,
++        'policy_sha256':digest(POLICY),'seed_helper_sha256':digest(__file__),
++        'stage_plan_sha256':digest(STAGE/'build-plan.json'),'output_links':[],
++        'prior221_output_names':policy['prior221_output_names'],'required7_new_cold_module_names':policy['required7_new_cold_module_names'],
++        'scientific_coverage_labels':policy['scientific_coverage_labels'],'protected99_before':policy['protected99_before'],
++        'inactive_routes_before':inactive,'new_Lean_invocations':0,'payload_bytes_copied':0,
++        'minimum_disk_free_bytes':shutil.disk_usage(BASE).free}
++    progress=BASE/'dms-v4-vector122-link99-readonly-seed-progress-20261005.json';assert not progress.exists()
++    def checkpoint():
++        tmp=progress.with_suffix('.json.tmp');tmp.write_text(json.dumps(result,indent=2)+'\n',encoding='utf8')
++        for attempt in range(60):
++            try:os.replace(tmp,progress);return
++            except PermissionError:
++                if attempt==59:raise
++                time.sleep(.1)
++    checkpoint()
++    for item in policy['output_links']:
++        source=Path(item['source']).resolve();target=Path(item['target']).resolve()
++        assert source.is_relative_to(V3.resolve()) and target.is_relative_to(STAGE.resolve()) and not target.exists()
++        before=file_identity(source);assert before==item['source_identity_before'] and before['link_count']==1 and digest(source)==item['sha256']
++        free=shutil.disk_usage(BASE).free;result['minimum_disk_free_bytes']=min(free,result['minimum_disk_free_bytes']);assert free>=policy['seed_disk_floor_bytes']
++        os.link(source,target)
++        after=file_identity(source);linked=file_identity(target)
++        assert inode_key(before)==inode_key(after)==inode_key(linked) and after==linked and after['link_count']==2
++        assert all(before[k]==after[k] for k in before if k!='link_count') and digest(source)==digest(target)==item['sha256']
++        result['output_links'].append(dict(item,source_identity_after=after,target_identity_after=linked))
++        checkpoint()
++    assert len(result['output_links'])==122
++    post=verify_stage(require_cold=False,linked122_allowed=True)
++    assert {str(p.resolve()) for p in STAGE.rglob('*.olean')}=={r['target'] for r in policy['output_links']}
++    assert protected99_identity()==policy['protected99_before']
++    result.update(status='EXACT122_V3_OWN_COLD_OUTPUT_LINKS_AND99_EXISTING_READONLY_PRIOR_PASSES_SEEDED_NO_NEW_COMPILATION',
++        finished_utc=now(),protected99_after=protected99_identity(),inactive_routes_after=inactive_routes(),
++        post_seed_stage_verification=post['status'])
++    sha=save_new(SEED,result);checkpoint();print(json.dumps({'seed':str(SEED),'sha256':sha,'aliases':122,'compiler':0}),flush=True)
++
++def verify_seed(policy_sha,seed_sha):
++    assert digest(POLICY)==policy_sha and digest(SEED)==seed_sha
++    policy=load(POLICY);result=load(SEED)
++    assert result['status']=='EXACT122_V3_OWN_COLD_OUTPUT_LINKS_AND99_EXISTING_READONLY_PRIOR_PASSES_SEEDED_NO_NEW_COMPILATION'
++    assert result['policy_sha256']==policy_sha and result['stage_plan_sha256']==digest(STAGE/'build-plan.json')
++    assert result['new_Lean_invocations']==result['payload_bytes_copied']==0
++    assert len(result['output_links'])==len(policy['output_links'])==122
++    assert digest(result['approval_receipt'])==result['approval_receipt_sha256']
++    for expected,actual in zip(policy['output_links'],result['output_links']):
++        assert all(actual[k]==v for k,v in expected.items())
++        source=file_identity(expected['source']);target=file_identity(expected['target'])
++        assert source==target==actual['source_identity_after']==actual['target_identity_after'] and source['link_count']==2
++        assert digest(expected['source'])==digest(expected['target'])==expected['sha256']
++    assert protected99_identity()==policy['protected99_before']==result['protected99_after']
++    inactive_routes();verify_stage(require_cold=False,linked122_allowed=True)
++    return {'status':'221_PREVIOUS_OWN_COLD_PASSES_QUALIFIED_READONLY_OR_LINKED_NOT_NEW_COMPILES',
++        'policy_sha256':policy_sha,'seed_sha256':seed_sha,'prior221_names':policy['prior221_output_names'],
++        'required7_new_cold_module_names':policy['required7_new_cold_module_names'],
++        'scientific_coverage_labels':policy['scientific_coverage_labels'],
++        'readonly99_import_directory':str(V1),'122_linked_output_paths':[r['target'] for r in policy['output_links']],
++        'forbidden_custom_import_directories':policy['forbidden_custom_import_directories']}
++
++if __name__=='__main__':
++    if sys.argv[1:]==['--prepare-policy']:prepare()
++    elif len(sys.argv)==4 and sys.argv[1]=='--seed-root-approved':seed(sys.argv[2],sys.argv[3])
++    else:raise SystemExit('Preparation only by --prepare-policy; seed requires --seed-root-approved approval_file approval_SHA. No Lean in this helper.')

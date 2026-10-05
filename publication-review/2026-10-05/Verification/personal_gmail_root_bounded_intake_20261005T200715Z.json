@@ -1,0 +1,43 @@
+{
+  "schema": "public-safe-root-bounded-personal-gmail-intake-v1",
+  "recorded_utc": "2026-10-05T20:10:20.418835+00:00",
+  "checked_utc": "2026-10-05T20:07:15Z",
+  "evidence_origin": "Selected actual root connector observations; complete raw response and correspondence are not exported.",
+  "bounds": {
+    "after_epoch": 1791222880,
+    "before_epoch": 1791230836,
+    "after_utc": "2026-10-05T17:54:40+00:00",
+    "before_utc": "2026-10-05T20:07:16+00:00",
+    "overlap_seconds": 10
+  },
+  "broad_search": {
+    "query": "in:anywhere after:1791222880 before:1791230836",
+    "max_results": 100,
+    "returned_metadata_count": 9,
+    "complete_pages": 1,
+    "all_pages_complete": true,
+    "errors": 0,
+    "new_competition_packets_identified_from_subjects_snippets": 0
+  },
+  "targeted_search": {
+    "query": "in:anywhere after:1791222880 before:1791230836 {openmath \"open math\" Ramsey Heilbronn kobon Lean DMS tensor}",
+    "returned_metadata_count": 2,
+    "complete_pages": 1,
+    "all_pages_complete": true,
+    "errors": 0,
+    "selected_match_classification": "Both unrelated to competition submissions."
+  },
+  "assessment": {
+    "new_competition_packets_identified": 0,
+    "method": "Metadata/subject/snippet review and bounded targeted text search, not a full body or attachment audit.",
+    "full_message_bodies_read": false,
+    "attachments_read_or_downloaded": false,
+    "targeted_result_count_is_two_not_zero": true,
+    "company_mailbox_available": false,
+    "unavailable_company_mailbox_does_not_establish_zero_results": true
+  },
+  "prior_intake_snapshots_preserved": true,
+  "private_selected_evidence_sha256": "a5676ab2e662f8b075bcfe8c6f2669a5b2f06b0557f1a014fd1319ab4f099f4e",
+  "privacy": "Message identifiers, addresses, names, contact data, bodies, attachments and unrelated private context omitted.",
+  "no_proof_score_author_placement_award_or_release_change": true
+}

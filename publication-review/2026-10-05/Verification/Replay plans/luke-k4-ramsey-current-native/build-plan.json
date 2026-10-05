@@ -1,0 +1,694 @@
+{
+  "id": "luke-k4-ramsey-current",
+  "entrant": "Luke Van Seters / Madhan Jothimani",
+  "commit": "2cf216ba885fbb1b2d1b2d4920efeaa6ba438842",
+  "version": "4.34.1",
+  "mathlib_pin": "d13f23b723b8a846827a245b89c10fc7d3f11612",
+  "source_dir": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-k4-ramsey-current-native",
+  "static_review_contexts": [
+    {
+      "source": "Executables\\CheckCandidate.lean",
+      "line_in_comment_stripped_source": 1,
+      "text": "import K4Ramsey.IO.TemplateInput"
+    },
+    {
+      "source": "Executables\\CheckCandidate.lean",
+      "line_in_comment_stripped_source": 7,
+      "text": "  let some path := args[0]? | throw (IO.userError \"usage: check_candidate rows.txt [expected_numerator]\")"
+    },
+    {
+      "source": "Executables\\CheckCandidate.lean",
+      "line_in_comment_stripped_source": 8,
+      "text": "  let raw \u2190 IO.FS.readFile (System.FilePath.mk path)"
+    },
+    {
+      "source": "Executables\\CheckCandidate.lean",
+      "line_in_comment_stripped_source": 11,
+      "text": "    | .error message => throw (IO.userError message)"
+    },
+    {
+      "source": "Executables\\CheckCandidate.lean",
+      "line_in_comment_stripped_source": 16,
+      "text": "    unless expected.toNat? = some numerator do throw (IO.userError \"numerator mismatch\")"
+    },
+    {
+      "source": "Executables\\CheckCandidate.lean",
+      "line_in_comment_stripped_source": 17,
+      "text": "  IO.println s!\"{n} {numerator} {n^4} {counts.redEdges} {counts.blueTriangles} {counts.redK4} {counts.blueK4}\""
+    },
+    {
+      "source": "Executables\\CheckFinal3840.lean",
+      "line_in_comment_stripped_source": 6,
+      "text": "  let start \u2190 IO.monoMsNow"
+    },
+    {
+      "source": "Executables\\CheckFinal3840.lean",
+      "line_in_comment_stripped_source": 8,
+      "text": "  IO.println s!\"{name}: {value} ({(\u2190 IO.monoMsNow) - start} ms)\""
+    },
+    {
+      "source": "Executables\\CheckFinal3840.lean",
+      "line_in_comment_stripped_source": 11,
+      "text": "  let start \u2190 IO.monoMsNow"
+    },
+    {
+      "source": "Executables\\CheckFinal3840.lean",
+      "line_in_comment_stripped_source": 19,
+      "text": "      IO.println s!\"through {i.val}: {totals} ({(\u2190 IO.monoMsNow) - start} ms)\""
+    },
+    {
+      "source": "Executables\\CheckFinal3840.lean",
+      "line_in_comment_stripped_source": 20,
+      "text": "      (\u2190 IO.getStdout).flush"
+    },
+    {
+      "source": "Executables\\CheckFinal3840.lean",
+      "line_in_comment_stripped_source": 21,
+      "text": "  IO.println s!\"baseRoot: {Count.baseRoot 0}\""
+    },
+    {
+      "source": "Executables\\CheckFinal3840.lean",
+      "line_in_comment_stripped_source": 22,
+      "text": "  IO.println s!\"TOTALS: {totals}\""
+    },
+    {
+      "source": "Executables\\CheckPublished.lean",
+      "line_in_comment_stripped_source": 8,
+      "text": "  let start \u2190 IO.monoMsNow"
+    },
+    {
+      "source": "Executables\\CheckPublished.lean",
+      "line_in_comment_stripped_source": 14,
+      "text": "    | .error message => throw (IO.userError message)"
+    },
+    {
+      "source": "Executables\\CheckPublished.lean",
+      "line_in_comment_stripped_source": 19,
+      "text": "  unless numerator = 10487165184 do throw (IO.userError \"unexpected numerator\")"
+    },
+    {
+      "source": "Executables\\CheckPublished.lean",
+      "line_in_comment_stripped_source": 20,
+      "text": "  let elapsed := (\u2190 IO.monoMsNow) - start"
+    },
+    {
+      "source": "Executables\\CheckPublished.lean",
+      "line_in_comment_stripped_source": 21,
+      "text": "  IO.println s!\"red edges: {counts.redEdges}; blue triangles: {counts.blueTriangles}\""
+    },
+    {
+      "source": "Executables\\CheckPublished.lean",
+      "line_in_comment_stripped_source": 22,
+      "text": "  IO.println s!\"red K4: {counts.redK4}; blue K4: {counts.blueK4}\""
+    },
+    {
+      "source": "Executables\\CheckPublished.lean",
+      "line_in_comment_stripped_source": 23,
+      "text": "  IO.println s!\"numerator: {numerator}; denominator: {denominator768}\""
+    },
+    {
+      "source": "Executables\\CheckPublished.lean",
+      "line_in_comment_stripped_source": 24,
+      "text": "  IO.println s!\"verification: {elapsed} ms\""
+    },
+    {
+      "source": "Executables\\WeightedCandidate.lean",
+      "line_in_comment_stripped_source": 1,
+      "text": "import K4Ramsey.IO.TemplateInput"
+    },
+    {
+      "source": "Executables\\WeightedCandidate.lean",
+      "line_in_comment_stripped_source": 7,
+      "text": "  let some path := args[0]? | throw (IO.userError \"usage: check_weighted_candidate input.txt\")"
+    },
+    {
+      "source": "Executables\\WeightedCandidate.lean",
+      "line_in_comment_stripped_source": 8,
+      "text": "  let raw \u2190 IO.FS.readFile (System.FilePath.mk path)"
+    },
+    {
+      "source": "Executables\\WeightedCandidate.lean",
+      "line_in_comment_stripped_source": 11,
+      "text": "    | .error message => throw (IO.userError message)"
+    },
+    {
+      "source": "Executables\\WeightedCandidate.lean",
+      "line_in_comment_stripped_source": 14,
+      "text": "  IO.println s!\"{cert.graph.raw.order} {cert.weights.foldl (\u00b7 + \u00b7) 0} {value} {denominator}\""
+    },
+    {
+      "source": "K4Ramsey\\Constructions\\Clebsch192\\Certificate.lean",
+      "line_in_comment_stripped_source": 9,
+      "text": "theorem table_symmetric : \u2200 i j, table i j = table j i := by native_decide"
+    },
+    {
+      "source": "K4Ramsey\\Constructions\\Clebsch192\\Certificate.lean",
+      "line_in_comment_stripped_source": 11,
+      "text": "theorem table_nonnegative : \u2200 i j, 0 \u2264 table i j := by native_decide"
+    },
+    {
+      "source": "K4Ramsey\\Constructions\\Clebsch192\\Certificate.lean",
+      "line_in_comment_stripped_source": 13,
+      "text": "theorem table_le_one : \u2200 i j, table i j \u2264 1 := by native_decide"
+    },
+    {
+      "source": "K4Ramsey\\Constructions\\Clebsch192\\Certificate.lean",
+      "line_in_comment_stripped_source": 19,
+      "text": "  native_decide"
+    },
+    {
+      "source": "K4Ramsey\\Constructions\\Final3840\\Certificate.lean",
+      "line_in_comment_stripped_source": 17,
+      "text": "  native_decide"
+    },
+    {
+      "source": "K4Ramsey\\Constructions\\Final3840\\SymmetryProof.lean",
+      "line_in_comment_stripped_source": 6,
+      "text": "theorem shift_bijective : \u2200 i, Function.Bijective (shift i) := by native_decide"
+    },
+    {
+      "source": "K4Ramsey\\Constructions\\Final3840\\SymmetryProof.lean",
+      "line_in_comment_stripped_source": 7,
+      "text": "theorem shift_zero : \u2200 i, shift i 0 = i := by native_decide"
+    },
+    {
+      "source": "K4Ramsey\\Constructions\\Final3840\\SymmetryProof.lean",
+      "line_in_comment_stripped_source": 9,
+      "text": "    baseNumerator (shift i j) (shift i k) = baseNumerator j k := by native_decide"
+    },
+    {
+      "source": "K4Ramsey\\Constructions\\Final3840\\Validity.lean",
+      "line_in_comment_stripped_source": 9,
+      "text": "    (\u2200 b \u2208 Final3840Data.blocks, b.size = 400) := by native_decide"
+    },
+    {
+      "source": "K4Ramsey\\Constructions\\Final3840\\Validity.lean",
+      "line_in_comment_stripped_source": 12,
+      "text": "    numerator u v x y = numerator v u y x := by native_decide"
+    },
+    {
+      "source": "K4Ramsey\\Constructions\\Final3840\\Validity.lean",
+      "line_in_comment_stripped_source": 15,
+      "text": "    numerator u v x y \u2264 denominator := by native_decide"
+    },
+    {
+      "source": "K4Ramsey\\Constructions\\Final3840\\Validity.lean",
+      "line_in_comment_stripped_source": 18,
+      "text": "    baseNumerator u v = baseNumerator v u := by native_decide"
+    },
+    {
+      "source": "K4Ramsey\\Constructions\\Final3840\\Validity.lean",
+      "line_in_comment_stripped_source": 21,
+      "text": "    (\u2211 y : Fiber, centeredNumerator u v x y) = 0 := by native_decide"
+    },
+    {
+      "source": "K4Ramsey\\Constructions\\Final3840\\Validity.lean",
+      "line_in_comment_stripped_source": 25,
+      "text": "    \u2200 x y : Fiber, centeredNumerator u v x y = 0 := by native_decide"
+    },
+    {
+      "source": "K4Ramsey\\Constructions\\Published768\\Certificate.lean",
+      "line_in_comment_stripped_source": 11,
+      "text": "  native_decide"
+    },
+    {
+      "source": "K4Ramsey\\Constructions\\Published768\\Certificate.lean",
+      "line_in_comment_stripped_source": 14,
+      "text": "  native_decide"
+    },
+    {
+      "source": "K4Ramsey\\Constructions\\Published768\\Certificate.lean",
+      "line_in_comment_stripped_source": 17,
+      "text": "  native_decide"
+    },
+    {
+      "source": "K4Ramsey\\Constructions\\Published768\\Certificate.lean",
+      "line_in_comment_stripped_source": 21,
+      "text": "  native_decide"
+    },
+    {
+      "source": "K4Ramsey\\Constructions\\Published768\\Certificate.lean",
+      "line_in_comment_stripped_source": 26,
+      "text": "  native_decide"
+    },
+    {
+      "source": "K4Ramsey\\Counting\\Multiplicity.lean",
+      "line_in_comment_stripped_source": 140,
+      "text": "  native_decide"
+    },
+    {
+      "source": "Tests\\Multiplicity.lean",
+      "line_in_comment_stripped_source": 38,
+      "text": "  native_decide"
+    },
+    {
+      "source": "Tests\\Multiplicity.lean",
+      "line_in_comment_stripped_source": 45,
+      "text": "  native_decide"
+    },
+    {
+      "source": "Tests\\Multiplicity.lean",
+      "line_in_comment_stripped_source": 52,
+      "text": "  native_decide"
+    },
+    {
+      "source": "Tests\\Multiplicity.lean",
+      "line_in_comment_stripped_source": 60,
+      "text": "  native_decide"
+    },
+    {
+      "source": "Tests\\TemplateInput.lean",
+      "line_in_comment_stripped_source": 1,
+      "text": "import K4Ramsey.IO.TemplateInput"
+    },
+    {
+      "source": "Tests\\TemplateInput.lean",
+      "line_in_comment_stripped_source": 9,
+      "text": "      | .error _ => 0) = 2 := by native_decide"
+    },
+    {
+      "source": "Tests\\TemplateInput.lean",
+      "line_in_comment_stripped_source": 19,
+      "text": "      | .error _ => true) = true := by native_decide"
+    },
+    {
+      "source": "Tests\\TemplateInput.lean",
+      "line_in_comment_stripped_source": 25,
+      "text": "      | .error _ => 0) = 625 := by native_decide"
+    },
+    {
+      "source": "Tests\\TemplateInput.lean",
+      "line_in_comment_stripped_source": 32,
+      "text": "      | .error _ => true) = true := by native_decide"
+    },
+    {
+      "source": "Tests\\WeightedMultiplicity.lean",
+      "line_in_comment_stripped_source": 24,
+      "text": "  native_decide"
+    },
+    {
+      "source": "Tests\\WeightedMultiplicity.lean",
+      "line_in_comment_stripped_source": 32,
+      "text": "  native_decide"
+    },
+    {
+      "source": "Tests\\WeightedMultiplicity.lean",
+      "line_in_comment_stripped_source": 39,
+      "text": "  native_decide"
+    },
+    {
+      "source": "Tests\\WeightedMultiplicity.lean",
+      "line_in_comment_stripped_source": 46,
+      "text": "  native_decide"
+    }
+  ],
+  "status": "PLANNED_NOT_RUN",
+  "builds": [],
+  "trust_note": "General realization/counting identities are intended as kernel proofs. Concrete arithmetic endpoints using native_decide additionally trust the Lean native compiler and runtime; exact per-endpoint axiom output will be retained.",
+  "authors": [
+    "Luke Van Seters",
+    "Madhan Jothimani"
+  ],
+  "metadata_correction_note": "Staged plan entrant label corrected from an erroneous preparation label to the exact pinned README author names; no mathematical source bytes, module hashes or audit selection were changed.",
+  "authorship_source": "https://github.com/lukevs/k4-ramsey/blob/2cf216ba885fbb1b2d1b2d4920efeaa6ba438842/README.md",
+  "reproduction_route_id": "luke-k4-ramsey-current-direct",
+  "modules": [
+    {
+      "module": "Audits.Graphon",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-k4-ramsey-current-native\\Audits\\Graphon.lean",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\Audits\\Graphon.lean",
+      "sha256": "9a2b2c6eb23479ddc3474220316673c4d56346dd7dc2046029dc2e0195e98433",
+      "frozen_source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\Audits\\Graphon.lean"
+    },
+    {
+      "module": "Audits.Published",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-k4-ramsey-current-native\\Audits\\Published.lean",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\Audits\\Published.lean",
+      "sha256": "f26bd76f52d2e5f6a484e5ba9e901b570d8a3095c254751d19679b19f8e5c835",
+      "frozen_source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\Audits\\Published.lean"
+    },
+    {
+      "module": "Executables.CheckCandidate",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-k4-ramsey-current-native\\Executables\\CheckCandidate.lean",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\Executables\\CheckCandidate.lean",
+      "sha256": "56ba859ba2df5bbc89881e8a3defa714f1ce0d53aeabd265ba93634ae17b1a53",
+      "frozen_source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\Executables\\CheckCandidate.lean"
+    },
+    {
+      "module": "Executables.CheckFinal3840",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-k4-ramsey-current-native\\Executables\\CheckFinal3840.lean",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\Executables\\CheckFinal3840.lean",
+      "sha256": "dca0181df7d772ed3638aaf00e8d790e848aeb0a023ce06f11af78bf634c9159",
+      "frozen_source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\Executables\\CheckFinal3840.lean"
+    },
+    {
+      "module": "Executables.CheckPublished",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-k4-ramsey-current-native\\Executables\\CheckPublished.lean",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\Executables\\CheckPublished.lean",
+      "sha256": "c888496fad7bf95d5864080adff6450cd5ffb342d4f5323ae4b02c3ab675dbdf",
+      "frozen_source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\Executables\\CheckPublished.lean"
+    },
+    {
+      "module": "Executables.WeightedCandidate",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-k4-ramsey-current-native\\Executables\\WeightedCandidate.lean",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\Executables\\WeightedCandidate.lean",
+      "sha256": "63091aa3ca207d4026a19078dee4e9ab6f4efb3b86835c1df82526e19620298e",
+      "frozen_source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\Executables\\WeightedCandidate.lean"
+    },
+    {
+      "module": "K4Ramsey.Constructions.Clebsch192.Bound",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-k4-ramsey-current-native\\K4Ramsey\\Constructions\\Clebsch192\\Bound.lean",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Constructions\\Clebsch192\\Bound.lean",
+      "sha256": "333d3260e06a1a75002125b5593527ab1073c5c69023033befb0969f530a5dfc",
+      "frozen_source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Constructions\\Clebsch192\\Bound.lean"
+    },
+    {
+      "module": "K4Ramsey.Constructions.Clebsch192.Certificate",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-k4-ramsey-current-native\\K4Ramsey\\Constructions\\Clebsch192\\Certificate.lean",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Constructions\\Clebsch192\\Certificate.lean",
+      "sha256": "4430b35387782f33d6417113a321ed986a9fb28dd59da8f87c6c4be7bbb1eae8",
+      "frozen_source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Constructions\\Clebsch192\\Certificate.lean"
+    },
+    {
+      "module": "K4Ramsey.Constructions.Clebsch192.Model",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-k4-ramsey-current-native\\K4Ramsey\\Constructions\\Clebsch192\\Model.lean",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Constructions\\Clebsch192\\Model.lean",
+      "sha256": "0e5095708179b5683b35f675decbe4e2e78b58325dba8a101ba7ef82c3a3c756",
+      "frozen_source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Constructions\\Clebsch192\\Model.lean"
+    },
+    {
+      "module": "K4Ramsey.Constructions.Final3840.Arithmetic",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-k4-ramsey-current-native\\K4Ramsey\\Constructions\\Final3840\\Arithmetic.lean",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Constructions\\Final3840\\Arithmetic.lean",
+      "sha256": "568e9c981e979254b70e30f3a7ec7d0ab7921f3075d3bc324d34cf4d505107ca",
+      "frozen_source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Constructions\\Final3840\\Arithmetic.lean"
+    },
+    {
+      "module": "K4Ramsey.Constructions.Final3840.Bound",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-k4-ramsey-current-native\\K4Ramsey\\Constructions\\Final3840\\Bound.lean",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Constructions\\Final3840\\Bound.lean",
+      "sha256": "965b7abaaef4ea55fa820b9d0576dbb90cdce17d6fd09b470d21aeffcddbd9bf",
+      "frozen_source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Constructions\\Final3840\\Bound.lean"
+    },
+    {
+      "module": "K4Ramsey.Constructions.Final3840.Certificate",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-k4-ramsey-current-native\\K4Ramsey\\Constructions\\Final3840\\Certificate.lean",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Constructions\\Final3840\\Certificate.lean",
+      "sha256": "de3a81ebcf6b8a2162c7ba35a367f35131c7b45e9d00d7e42a31f81e8f121b04",
+      "frozen_source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Constructions\\Final3840\\Certificate.lean"
+    },
+    {
+      "module": "K4Ramsey.Constructions.Final3840.Count",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-k4-ramsey-current-native\\K4Ramsey\\Constructions\\Final3840\\Count.lean",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Constructions\\Final3840\\Count.lean",
+      "sha256": "974a49d29cee1b9192eadc7dbb528f1e7d130b0c4467280cb0d2e2c7978d7dd2",
+      "frozen_source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Constructions\\Final3840\\Count.lean"
+    },
+    {
+      "module": "K4Ramsey.Constructions.Final3840.CountCorrect",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-k4-ramsey-current-native\\K4Ramsey\\Constructions\\Final3840\\CountCorrect.lean",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Constructions\\Final3840\\CountCorrect.lean",
+      "sha256": "ed124a667f9d57ddce320d8e363630fffe6e9a8e2947d6b0183bf05bb5f35b19",
+      "frozen_source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Constructions\\Final3840\\CountCorrect.lean"
+    },
+    {
+      "module": "K4Ramsey.Constructions.Final3840.Data.Part00",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-k4-ramsey-current-native\\K4Ramsey\\Constructions\\Final3840\\Data\\Part00.lean",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Constructions\\Final3840\\Data\\Part00.lean",
+      "sha256": "237e9976248c5fb43a6d521ad1eb4bd6a4915ea0a739cf218fa7be095af9b907",
+      "frozen_source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Constructions\\Final3840\\Data\\Part00.lean"
+    },
+    {
+      "module": "K4Ramsey.Constructions.Final3840.Data.Part01",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-k4-ramsey-current-native\\K4Ramsey\\Constructions\\Final3840\\Data\\Part01.lean",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Constructions\\Final3840\\Data\\Part01.lean",
+      "sha256": "856f18a7158d2c3b168ff66417b328de38727b03b5f716af11399dffe57314f4",
+      "frozen_source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Constructions\\Final3840\\Data\\Part01.lean"
+    },
+    {
+      "module": "K4Ramsey.Constructions.Final3840.Data.Part02",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-k4-ramsey-current-native\\K4Ramsey\\Constructions\\Final3840\\Data\\Part02.lean",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Constructions\\Final3840\\Data\\Part02.lean",
+      "sha256": "8a0dd1e84d3bc9070e06566e1a6cb016896b7f8b68e6ab74d06215804f98ae43",
+      "frozen_source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Constructions\\Final3840\\Data\\Part02.lean"
+    },
+    {
+      "module": "K4Ramsey.Constructions.Final3840.Data.Part03",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-k4-ramsey-current-native\\K4Ramsey\\Constructions\\Final3840\\Data\\Part03.lean",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Constructions\\Final3840\\Data\\Part03.lean",
+      "sha256": "7e1ee89e22b4bf1d0f6e4dce378d0430ec454aef72a70f40e3012b1d14a08390",
+      "frozen_source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Constructions\\Final3840\\Data\\Part03.lean"
+    },
+    {
+      "module": "K4Ramsey.Constructions.Final3840.Data.Part04",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-k4-ramsey-current-native\\K4Ramsey\\Constructions\\Final3840\\Data\\Part04.lean",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Constructions\\Final3840\\Data\\Part04.lean",
+      "sha256": "298fc2da3d2446d4383c8ef23de2c4ead669771eb21cc310856c93e1e333727d",
+      "frozen_source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Constructions\\Final3840\\Data\\Part04.lean"
+    },
+    {
+      "module": "K4Ramsey.Constructions.Final3840.Data.Part05",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-k4-ramsey-current-native\\K4Ramsey\\Constructions\\Final3840\\Data\\Part05.lean",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Constructions\\Final3840\\Data\\Part05.lean",
+      "sha256": "7ee71b7dfce4ea49ebd7fe6edbe13c654a77ebff9c85ca76ca412a30d6c0575e",
+      "frozen_source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Constructions\\Final3840\\Data\\Part05.lean"
+    },
+    {
+      "module": "K4Ramsey.Constructions.Final3840.Data.Part06",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-k4-ramsey-current-native\\K4Ramsey\\Constructions\\Final3840\\Data\\Part06.lean",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Constructions\\Final3840\\Data\\Part06.lean",
+      "sha256": "e5329adfe2a40c8346a01ed486c291c7af1fe2012bc51499b4a61438c423c400",
+      "frozen_source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Constructions\\Final3840\\Data\\Part06.lean"
+    },
+    {
+      "module": "K4Ramsey.Constructions.Final3840.Data.Part07",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-k4-ramsey-current-native\\K4Ramsey\\Constructions\\Final3840\\Data\\Part07.lean",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Constructions\\Final3840\\Data\\Part07.lean",
+      "sha256": "4939fa5414adb4e8f9503c817e16319fc2ac49ddbe53739a3ed106bde54f646f",
+      "frozen_source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Constructions\\Final3840\\Data\\Part07.lean"
+    },
+    {
+      "module": "K4Ramsey.Constructions.Final3840.Data.Part08",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-k4-ramsey-current-native\\K4Ramsey\\Constructions\\Final3840\\Data\\Part08.lean",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Constructions\\Final3840\\Data\\Part08.lean",
+      "sha256": "bd832cc693db5ea48c5b0ab0c604140b58ec2612bedd7efb3a0623dc92c9c978",
+      "frozen_source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Constructions\\Final3840\\Data\\Part08.lean"
+    },
+    {
+      "module": "K4Ramsey.Constructions.Final3840.Data.Part09",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-k4-ramsey-current-native\\K4Ramsey\\Constructions\\Final3840\\Data\\Part09.lean",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Constructions\\Final3840\\Data\\Part09.lean",
+      "sha256": "f63926222c283346df276cd2f60679637ebba5deffe478d9112ecc8d18b7a481",
+      "frozen_source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Constructions\\Final3840\\Data\\Part09.lean"
+    },
+    {
+      "module": "K4Ramsey.Constructions.Final3840.Data",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-k4-ramsey-current-native\\K4Ramsey\\Constructions\\Final3840\\Data.lean",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Constructions\\Final3840\\Data.lean",
+      "sha256": "d764c6047501f1c2102b81529c86ffa597b6e8ef8c172fb50d72a01dd05069f1",
+      "frozen_source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Constructions\\Final3840\\Data.lean"
+    },
+    {
+      "module": "K4Ramsey.Constructions.Final3840.Model",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-k4-ramsey-current-native\\K4Ramsey\\Constructions\\Final3840\\Model.lean",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Constructions\\Final3840\\Model.lean",
+      "sha256": "78381ebc171808d2edefc807c586d7f16c84ecbaff01e84457ac8454dbc235a0",
+      "frozen_source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Constructions\\Final3840\\Model.lean"
+    },
+    {
+      "module": "K4Ramsey.Constructions.Final3840.NumericalBound",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-k4-ramsey-current-native\\K4Ramsey\\Constructions\\Final3840\\NumericalBound.lean",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Constructions\\Final3840\\NumericalBound.lean",
+      "sha256": "82edecb7f15e44bee4ef0135a530ea1e2830bd077129ef6d3096ad44ba3ddb0e",
+      "frozen_source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Constructions\\Final3840\\NumericalBound.lean"
+    },
+    {
+      "module": "K4Ramsey.Constructions.Final3840.Reduction",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-k4-ramsey-current-native\\K4Ramsey\\Constructions\\Final3840\\Reduction.lean",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Constructions\\Final3840\\Reduction.lean",
+      "sha256": "1d8341938420ca4890bd3434bbc3c27fce98295d52a2e371160a1773a7fdfabc",
+      "frozen_source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Constructions\\Final3840\\Reduction.lean"
+    },
+    {
+      "module": "K4Ramsey.Constructions.Final3840.Symmetry",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-k4-ramsey-current-native\\K4Ramsey\\Constructions\\Final3840\\Symmetry.lean",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Constructions\\Final3840\\Symmetry.lean",
+      "sha256": "5f2d3785aca32700a8186fe52cfdeb98222e0ead8e704c30798bd7f0746ea86f",
+      "frozen_source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Constructions\\Final3840\\Symmetry.lean"
+    },
+    {
+      "module": "K4Ramsey.Constructions.Final3840.SymmetryProof",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-k4-ramsey-current-native\\K4Ramsey\\Constructions\\Final3840\\SymmetryProof.lean",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Constructions\\Final3840\\SymmetryProof.lean",
+      "sha256": "808295a07ecfa29062238a1937c997411faf3d1c16efce7db4774db1330097e5",
+      "frozen_source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Constructions\\Final3840\\SymmetryProof.lean"
+    },
+    {
+      "module": "K4Ramsey.Constructions.Final3840.Validity",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-k4-ramsey-current-native\\K4Ramsey\\Constructions\\Final3840\\Validity.lean",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Constructions\\Final3840\\Validity.lean",
+      "sha256": "cf9983b672a8ac2a7b595b1b77134c39717e589205bc1bfb769f5a8da623874e",
+      "frozen_source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Constructions\\Final3840\\Validity.lean"
+    },
+    {
+      "module": "K4Ramsey.Constructions.Published768.Certificate",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-k4-ramsey-current-native\\K4Ramsey\\Constructions\\Published768\\Certificate.lean",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Constructions\\Published768\\Certificate.lean",
+      "sha256": "4bcbcf031c659694a70e60d47cc190f537d26c5105d776450388081887f89d23",
+      "frozen_source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Constructions\\Published768\\Certificate.lean"
+    },
+    {
+      "module": "K4Ramsey.Constructions.Published768.Data",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-k4-ramsey-current-native\\K4Ramsey\\Constructions\\Published768\\Data.lean",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Constructions\\Published768\\Data.lean",
+      "sha256": "b5de696edd6947b5da2250b466e5eead3e9ff3ee8818cc197a6bbc8c651f3494",
+      "frozen_source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Constructions\\Published768\\Data.lean"
+    },
+    {
+      "module": "K4Ramsey.Core.Asymptotic",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-k4-ramsey-current-native\\K4Ramsey\\Core\\Asymptotic.lean",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Core\\Asymptotic.lean",
+      "sha256": "f1b2cf2160017c7c66f2fc9b82aab3357416330ab1c0cddc37a7fada9e1d5c4b",
+      "frozen_source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Core\\Asymptotic.lean"
+    },
+    {
+      "module": "K4Ramsey.Core.FiniteProbability",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-k4-ramsey-current-native\\K4Ramsey\\Core\\FiniteProbability.lean",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Core\\FiniteProbability.lean",
+      "sha256": "574cb9bb70c6a2dc8abe714dd74326137f829d66ad3467b4358eeb14c73a2e2d",
+      "frozen_source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Core\\FiniteProbability.lean"
+    },
+    {
+      "module": "K4Ramsey.Core.Graphon",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-k4-ramsey-current-native\\K4Ramsey\\Core\\Graphon.lean",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Core\\Graphon.lean",
+      "sha256": "8f86848ab7ead449d0b522a617ba61cbe578f4427e514496ff47bb3da80abd66",
+      "frozen_source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Core\\Graphon.lean"
+    },
+    {
+      "module": "K4Ramsey.Core.Realization",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-k4-ramsey-current-native\\K4Ramsey\\Core\\Realization.lean",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Core\\Realization.lean",
+      "sha256": "b9e2d8b33e6b8636836ab2f1a0bcd71db190103442ca139dcee893f907ad6a99",
+      "frozen_source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Core\\Realization.lean"
+    },
+    {
+      "module": "K4Ramsey.Counting.CenteredExpansion",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-k4-ramsey-current-native\\K4Ramsey\\Counting\\CenteredExpansion.lean",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Counting\\CenteredExpansion.lean",
+      "sha256": "75371241dec15d9c47bb570f0f2aa0206e78d44ac8abde7800459bcd340c7ebd",
+      "frozen_source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Counting\\CenteredExpansion.lean"
+    },
+    {
+      "module": "K4Ramsey.Counting.IntegerCenteredExpansion",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-k4-ramsey-current-native\\K4Ramsey\\Counting\\IntegerCenteredExpansion.lean",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Counting\\IntegerCenteredExpansion.lean",
+      "sha256": "d82fe88bfe592f13b2cbff09668bd4debcfa085dda36162482cc4ace63a2acca",
+      "frozen_source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Counting\\IntegerCenteredExpansion.lean"
+    },
+    {
+      "module": "K4Ramsey.Counting.IntegerRefinement",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-k4-ramsey-current-native\\K4Ramsey\\Counting\\IntegerRefinement.lean",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Counting\\IntegerRefinement.lean",
+      "sha256": "c0b4dd600ac9076334ab9308706d5534aaf764799cd97042c518344ac3d702d8",
+      "frozen_source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Counting\\IntegerRefinement.lean"
+    },
+    {
+      "module": "K4Ramsey.Counting.IntegerTensorK4",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-k4-ramsey-current-native\\K4Ramsey\\Counting\\IntegerTensorK4.lean",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Counting\\IntegerTensorK4.lean",
+      "sha256": "c29e1d83ec248f34105ebaf047c9d42ac53450d2130c367ffc1083966f717992",
+      "frozen_source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Counting\\IntegerTensorK4.lean"
+    },
+    {
+      "module": "K4Ramsey.Counting.Multiplicity",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-k4-ramsey-current-native\\K4Ramsey\\Counting\\Multiplicity.lean",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Counting\\Multiplicity.lean",
+      "sha256": "3e530a3e13b35b2dcb26cd923e27cbc80132c8a860fe611371476733cba002e0",
+      "frozen_source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Counting\\Multiplicity.lean"
+    },
+    {
+      "module": "K4Ramsey.Counting.SignRefinement",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-k4-ramsey-current-native\\K4Ramsey\\Counting\\SignRefinement.lean",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Counting\\SignRefinement.lean",
+      "sha256": "7edd3ab070675cb4039541a44f67069d43951dfa448d41f67641ab7a46993c65",
+      "frozen_source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Counting\\SignRefinement.lean"
+    },
+    {
+      "module": "K4Ramsey.Counting.TensorK4",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-k4-ramsey-current-native\\K4Ramsey\\Counting\\TensorK4.lean",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Counting\\TensorK4.lean",
+      "sha256": "7c5913f78c22bf5251a6baa576bf9a15f16e780a84e0c4643d5f5dca3b737623",
+      "frozen_source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Counting\\TensorK4.lean"
+    },
+    {
+      "module": "K4Ramsey.Counting.ValidatedTemplate",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-k4-ramsey-current-native\\K4Ramsey\\Counting\\ValidatedTemplate.lean",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Counting\\ValidatedTemplate.lean",
+      "sha256": "6a8b4128e4f5ef14db11e8879b0905851c63c65676659a62a23a1812e29d3a83",
+      "frozen_source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Counting\\ValidatedTemplate.lean"
+    },
+    {
+      "module": "K4Ramsey.Counting.WeightedMultiplicity",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-k4-ramsey-current-native\\K4Ramsey\\Counting\\WeightedMultiplicity.lean",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Counting\\WeightedMultiplicity.lean",
+      "sha256": "dfe2ff0482490ce1edec0c305a95697ff6230983ebdcb5a2b8f9c1eb869f303e",
+      "frozen_source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Counting\\WeightedMultiplicity.lean"
+    },
+    {
+      "module": "K4Ramsey.IO.TemplateInput",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-k4-ramsey-current-native\\K4Ramsey\\IO\\TemplateInput.lean",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\IO\\TemplateInput.lean",
+      "sha256": "cf43a0f323baec2f8c0211e223c1129adfc700574bc5f7b15c338ce31ec47447",
+      "frozen_source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\IO\\TemplateInput.lean"
+    },
+    {
+      "module": "K4Ramsey",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-k4-ramsey-current-native\\K4Ramsey.lean",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey.lean",
+      "sha256": "31fb73b4af86bf4d0e9ab9f013ad14689bb24bf099b83d2bb224516da2e3ac52",
+      "frozen_source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey.lean"
+    },
+    {
+      "module": "Tests.Multiplicity",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-k4-ramsey-current-native\\Tests\\Multiplicity.lean",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\Tests\\Multiplicity.lean",
+      "sha256": "a4c28aced326aed2e4142760a9275bb53d3a1acf6296e39c68b3ba2214cba918",
+      "frozen_source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\Tests\\Multiplicity.lean"
+    },
+    {
+      "module": "Tests.TemplateInput",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-k4-ramsey-current-native\\Tests\\TemplateInput.lean",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\Tests\\TemplateInput.lean",
+      "sha256": "899745c548748f69fb3054470e96bbff16b9c84274ee3fb42aee79f83f4212e3",
+      "frozen_source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\Tests\\TemplateInput.lean"
+    },
+    {
+      "module": "Tests.WeightedMultiplicity",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-k4-ramsey-current-native\\Tests\\WeightedMultiplicity.lean",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\Tests\\WeightedMultiplicity.lean",
+      "sha256": "306c0da638b50e9043cc171e7cfd3876defcbc16e4de76a6d1fe652039bc989f",
+      "frozen_source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\Tests\\WeightedMultiplicity.lean"
+    }
+  ],
+  "route": "Direct Lean source replay with isolated source-identical Count native adapter; prior own fresh direct outputs reused by hash",
+  "authored_lake_policy": "K4Ramsey and Tests precompileModules=true; original Lake policy remains preserved in the separate prepared native-Lake route.",
+  "operational_difference": "Direct Lean -o/-i is used to avoid materializing the entire Mathlib native shared-library object closure. Native tactics must execute and pass through Lean; no theorem or assumption is edited.",
+  "dependency_identity_root": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-k4-ramsey-current",
+  "dependency_library_paths": [
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.34.1\\mathlib\\.lake\\build\\lib\\lean",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.34.1\\mathlib\\.lake\\packages\\plausible\\.lake\\build\\lib\\lean",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.34.1\\mathlib\\.lake\\packages\\LeanSearchClient\\.lake\\build\\lib\\lean",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.34.1\\mathlib\\.lake\\packages\\importGraph\\.lake\\build\\lib\\lean",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.34.1\\mathlib\\.lake\\packages\\proofwidgets\\.lake\\build\\lib\\lean",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.34.1\\mathlib\\.lake\\packages\\aesop\\.lake\\build\\lib\\lean",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.34.1\\mathlib\\.lake\\packages\\Qq\\.lake\\build\\lib\\lean",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.34.1\\mathlib\\.lake\\packages\\batteries\\.lake\\build\\lib\\lean",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.34.1\\mathlib\\.lake\\packages\\Cli\\.lake\\build\\lib\\lean"
+  ],
+  "source_file_count": 51,
+  "semantic_options": "No project-wide semantic Lean options are declared in the frozen lakefile; file-local options remain byte-identical. The adapter records its explicit CLI resource worker flag, default -j1; authored WeightedCandidate -j1 remains -j1.",
+  "native_source_stage_notice": "Source staging only, no proof process, DLL load or initializer execution. Every author Lean source byte remains unchanged.",
+  "original_direct_frozen_plan_sha256": "b544a138219c34d7a76fb34bb8645712e4a781b2e0c1d12c959c4f84af9ea43c",
+  "staged_utc": "2026-10-05T00:18:54.308380+00:00"
+}

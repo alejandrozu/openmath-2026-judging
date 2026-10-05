@@ -1,0 +1,38 @@
+{
+  "checked_utc": "2026-10-04T22:54:20.692036+00:00",
+  "role": "Bounded read-only payload/schema and contraction feasibility inspection; no objective count evaluated",
+  "source_hashes": {
+    "Part00.lean": "237e9976248c5fb43a6d521ad1eb4bd6a4915ea0a739cf218fa7be095af9b907",
+    "Part01.lean": "856f18a7158d2c3b168ff66417b328de38727b03b5f716af11399dffe57314f4",
+    "Part02.lean": "8a0dd1e84d3bc9070e06566e1a6cb016896b7f8b68e6ab74d06215804f98ae43",
+    "Part03.lean": "7e1ee89e22b4bf1d0f6e4dce378d0430ec454aef72a70f40e3012b1d14a08390",
+    "Part04.lean": "298fc2da3d2446d4383c8ef23de2c4ead669771eb21cc310856c93e1e333727d",
+    "Part05.lean": "7ee71b7dfce4ea49ebd7fe6edbe13c654a77ebff9c85ca76ca412a30d6c0575e",
+    "Part06.lean": "e5329adfe2a40c8346a01ed486c291c7af1fe2012bc51499b4a61438c423c400",
+    "Part07.lean": "4939fa5414adb4e8f9503c817e16319fc2ac49ddbe53739a3ed106bde54f646f",
+    "Part08.lean": "bd832cc693db5ea48c5b0ab0c604140b58ec2612bedd7efb3a0623dc92c9c978",
+    "Part09.lean": "f63926222c283346df276cd2f60679637ebba5deffe478d9112ecc8d18b7a481"
+  },
+  "block_index_sha256": "d764c6047501f1c2102b81529c86ffa597b6e8ef8c172fb50d72a01dd05069f1",
+  "blocks_shape": [
+    1248,
+    20,
+    20
+  ],
+  "index_shape": [
+    192,
+    192
+  ],
+  "numeric_array_bytes": 8577024,
+  "unique_centered_upper_blocks": 770,
+  "sign_circulant_four_by_four": true,
+  "maximum_absolute_centered_entry": 51064,
+  "unordered_triangles": 1152,
+  "unordered_tetrahedra": 288,
+  "tetrahedron_fiber_terms_after_vertex_permutation_symmetry": 46080000,
+  "path_absolute_bound": 52150641920,
+  "triangle_contraction_absolute_bound": 1065208151601152000,
+  "int64_safe_path_and_triangle": true,
+  "proposed_memory_policy": "Store only fractional 20x20 matrices and lazily cache path contractions (at most 32448 x 400 x 8 bytes); evaluate at most one 20^4 object tensor at a time, never a 3840^2 dense Python-object matrix",
+  "proposed_cpu_policy": "Single process with BLAS thread environment fixed to 1; bounded pilot before full execution; independent recount remains separate from Lean status"
+}

@@ -1,0 +1,119 @@
+{
+  "status": "ROOT_APPROVED_ORIGINAL_SAKANA_RAMSEY_REMAINING_LIMIT_SOURCE_AND4_SELECTED_PRINTS",
+  "approved_utc": "2026-10-05T03:55:56.968908+00:00",
+  "actual_pilot_receipt_sha256": "babe6c231ec29a5ccf1749876ac7be8218878f483df43c982489a706523ad164",
+  "actual_pilot_row": {
+    "module": "Lea.RamseyLifting.Lifting",
+    "command": [
+      "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+      "-j1",
+      "-DmaxHeartbeats=0",
+      "-DmaxRecDepth=100000",
+      "-o",
+      "Lea\\RamseyLifting\\Lifting.olean",
+      "Lea\\RamseyLifting\\Lifting.lean"
+    ],
+    "seconds": 29.516,
+    "exit": 0,
+    "stdout": "",
+    "stderr": "",
+    "is_endpoint_audit": false,
+    "minimum_free_bytes": 5494595584,
+    "stop_reason": null,
+    "started_utc": "2026-10-05T03:54:17.162763+00:00",
+    "finished_utc": "2026-10-05T03:54:46.690727+00:00",
+    "owned_process_stop_output": null,
+    "own_job_resource_receipt": {
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "Lea\\RamseyLifting\\Lifting.olean",
+        "Lea\\RamseyLifting\\Lifting.lean"
+      ],
+      "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-FOCUS-RAMSEY",
+      "started_utc": "2026-10-05T03:54:17.162763+00:00",
+      "attempted": true,
+      "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+      "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+      "resource_policy": {
+        "initial_disk_bytes": 4000000000,
+        "initial_physical_bytes": 6442450944,
+        "initial_available_commit_bytes": 5368709120,
+        "continuous_disk_bytes": 1000000000,
+        "continuous_physical_bytes": 3221225472,
+        "continuous_available_commit_bytes": 1073741824,
+        "own_job_private_bytes": 6442450944,
+        "own_process_private_bytes": 6442450944,
+        "poll_seconds": 0.25,
+        "timeout_seconds": 3600
+      },
+      "minimum_disk_free_bytes": 5494595584,
+      "initial_system_memory_snapshot": {
+        "free_physical_bytes": 9717587968,
+        "total_physical_bytes": 34024419328,
+        "available_commit_bytes": 8431820800,
+        "total_commit_limit_bytes": 60437172224
+      },
+      "minimum_physical_available_bytes": 9606062080,
+      "minimum_available_commit_bytes": 6202978304,
+      "root_pid": 53168,
+      "own_job_assignment_before_resume": "PASS",
+      "exit": 0,
+      "job_peak_process_private_bytes": 2414366720,
+      "job_peak_aggregate_private_bytes": 2415636480,
+      "state": "PASS",
+      "finished_utc": "2026-10-05T03:54:46.690727+00:00",
+      "seconds": 29.516,
+      "polled_peak_tree_private_bytes": 2415476736,
+      "polled_peak_tree_rss_bytes": 1159245824,
+      "counter_samples": 107,
+      "observed_own_processes": {
+        "53168": {
+          "exe": "lean.exe",
+          "peak_private_bytes": 2414206976,
+          "peak_rss_bytes": 1156313088
+        },
+        "52376": {
+          "exe": "conhost.exe",
+          "peak_private_bytes": 1269760,
+          "peak_rss_bytes": 7856128
+        }
+      },
+      "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\sakana-FOCUS-RAMSEY-70bd22861d63f574-attempt-0.stdout.txt",
+      "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\sakana-FOCUS-RAMSEY-70bd22861d63f574-attempt-0.stderr.txt",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_excerpt": "",
+      "stderr_excerpt": ""
+    },
+    "source_sha256": "989684e07901d8a30bf9360d467ce10b30cab0999eebb4ad6ee72ba55e120fd4",
+    "third_worker_memory_observations": {
+      "minimum_free_physical_bytes": 9606062080,
+      "minimum_available_commit_bytes": 6202978304,
+      "peak_owned_private_bytes": 2415636480
+    },
+    "artifacts": [
+      {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-FOCUS-RAMSEY\\Lea\\RamseyLifting\\Lifting.olean",
+        "sha256": "139446a248c0a524a8e317170a866a94e667c705c3140b2639dd6285ab64d3a1",
+        "bytes": 2460696
+      }
+    ],
+    "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+  },
+  "source_plan_sha256": "133e566852d3aa7e212132344e955e2ee6b8700903e5b7e005028039f3e0983c",
+  "runner_sha256": "56952859e73e8773c44c84328e50144580527b82280da9d22229a2862ecedc10",
+  "remaining_source": "Limit",
+  "unchanged4_selected_endpoints": [
+    "Lea.RamseyLifting.density_sub_P_abs_le",
+    "Lea.RamseyLifting.lifting_bound",
+    "Lea.RamseyLifting.density_tendsto",
+    "Lea.RamseyC4.c4_le_Pval"
+  ],
+  "resource_policy": "Atmostmainqueue+thiscompiler; unchanged6/5granularguards/continuousfloors/-j1; no source/header changes.",
+  "root_review": "Actual sourcePASS/artifactSHA/resource row inspected;29.516s peak2,415,636,480B, minavailablecommit6,202,978,304B.",
+  "numerical_instantiation_novelty_and_score": "Separate unchanged holds; generic two-source proof cannot establish any disputed numerical certificate or earlier-priority improvement."
+}

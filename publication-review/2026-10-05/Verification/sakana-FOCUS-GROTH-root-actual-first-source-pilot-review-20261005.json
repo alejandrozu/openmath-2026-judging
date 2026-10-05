@@ -1,0 +1,112 @@
+{
+  "status": "ROOT_ACTUAL_SINGLE_SOURCE_PILOT_PASS_SCOPE_ONLY",
+  "checked_utc": "2026-10-05T05:22:47.553165+00:00",
+  "actual_pilot_receipt_sha256": "d7cb454bdcc02a25d5e9592a4b2c26d98c2b2a841b4ded7b02ac394cb8178e77",
+  "actual_source_invocations": 1,
+  "actual_selected_audit_invocations": 0,
+  "all_source_CLI_guard_raw_log_and_current_artifact_identity_checks": true,
+  "actual_row": {
+    "module": "Row3Granular",
+    "command": [
+      "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+      "-j1",
+      "-DmaxHeartbeats=0",
+      "-DmaxRecDepth=100000",
+      "-o",
+      "Row3Granular.olean",
+      "Row3Granular.lean"
+    ],
+    "seconds": 71.062,
+    "exit": 0,
+    "stdout": "'GrothSymmetry.row3_Q_le_sqrt_three_halves_mul_C' depends on axioms: [propext, Classical.choice, Quot.sound]\n'GrothSymmetry.row3_Q_le_sqrt_two_mul_C' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+    "stderr": "",
+    "is_endpoint_audit": false,
+    "minimum_free_bytes": 4019253248,
+    "stop_reason": null,
+    "started_utc": "2026-10-05T05:19:39.901235+00:00",
+    "finished_utc": "2026-10-05T05:20:50.972879+00:00",
+    "owned_process_stop_output": null,
+    "own_job_resource_receipt": {
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "Row3Granular.olean",
+        "Row3Granular.lean"
+      ],
+      "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-FOCUS-GROTH",
+      "started_utc": "2026-10-05T05:19:39.901235+00:00",
+      "attempted": true,
+      "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+      "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+      "resource_policy": {
+        "initial_disk_bytes": 4000000000,
+        "initial_physical_bytes": 6442450944,
+        "initial_available_commit_bytes": 5368709120,
+        "continuous_disk_bytes": 1000000000,
+        "continuous_physical_bytes": 3221225472,
+        "continuous_available_commit_bytes": 1073741824,
+        "own_job_private_bytes": 6442450944,
+        "own_process_private_bytes": 6442450944,
+        "poll_seconds": 0.25,
+        "timeout_seconds": 3600
+      },
+      "minimum_disk_free_bytes": 4019253248,
+      "initial_system_memory_snapshot": {
+        "free_physical_bytes": 10972766208,
+        "total_physical_bytes": 34024419328,
+        "available_commit_bytes": 11259572224,
+        "total_commit_limit_bytes": 60437172224
+      },
+      "minimum_physical_available_bytes": 7528173568,
+      "minimum_available_commit_bytes": 3988656128,
+      "root_pid": 11756,
+      "own_job_assignment_before_resume": "PASS",
+      "exit": 0,
+      "job_peak_process_private_bytes": 3357745152,
+      "job_peak_aggregate_private_bytes": 3358973952,
+      "state": "PASS",
+      "finished_utc": "2026-10-05T05:20:50.972879+00:00",
+      "seconds": 71.062,
+      "polled_peak_tree_private_bytes": 3358388224,
+      "polled_peak_tree_rss_bytes": 1584861184,
+      "counter_samples": 256,
+      "observed_own_processes": {
+        "12500": {
+          "exe": "conhost.exe",
+          "peak_private_bytes": 1265664,
+          "peak_rss_bytes": 7856128
+        },
+        "11756": {
+          "exe": "lean.exe",
+          "peak_private_bytes": 3357159424,
+          "peak_rss_bytes": 1601019904
+        }
+      },
+      "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\sakana-FOCUS-GROTH-da70e4c11061a6a5-attempt-0.stdout.txt",
+      "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\sakana-FOCUS-GROTH-da70e4c11061a6a5-attempt-0.stderr.txt",
+      "stdout_sha256": "18860017f82633f9836e945376f7d511989a808a79572c404766283a169ac7dc",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_excerpt": "'GrothSymmetry.row3_Q_le_sqrt_three_halves_mul_C' depends on axioms: [propext, Classical.choice, Quot.sound]\n'GrothSymmetry.row3_Q_le_sqrt_two_mul_C' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr_excerpt": ""
+    },
+    "source_sha256": "81f13055043484815587cc049b817d069a50a2621de4588334f081aba167e754",
+    "third_worker_memory_observations": {
+      "minimum_free_physical_bytes": 7528173568,
+      "minimum_available_commit_bytes": 3988656128,
+      "peak_owned_private_bytes": 3358973952
+    },
+    "artifacts": [
+      {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-FOCUS-GROTH\\Row3Granular.olean",
+        "sha256": "64cdccf735ce4fb3af775a00b63d4e55f0bcd22d2d9cb7fb24dd04d92b73bed1",
+        "bytes": 1439144
+      }
+    ],
+    "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+  },
+  "printed_source_endpoints": "Two authored diagnostic prints use propext/Classical.choice/Quot.sound; the one selected row3 declaration is included. Five selected endpoint audit is not complete.",
+  "full_project_or_priority_or_novelty_claim": false
+}

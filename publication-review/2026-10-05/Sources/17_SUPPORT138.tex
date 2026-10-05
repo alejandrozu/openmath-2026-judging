@@ -1,0 +1,84 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,textcomp}
+\usepackage[margin=24mm]{geometry}
+\usepackage{longtable,booktabs,array,enumitem}
+\usepackage[hidelinks]{hyperref}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+\emergencystretch=3em
+\begin{document}
+{\LARGE\bfseries A rational 23-product 3\ensuremath{\times}3 matrix-multiplication scheme of support 138\par}\medskip
+{\small Provisional mathematical authors: Chandragupt Sharma\par}\medskip
+{\small Judging and evaluation record: the submissions discussed in this document have been judged and evaluated by Alejandro Zarzuelo Urdiales for OpenMath 2026. This dated review records the stated verification, classification and unresolved holds; it is a preliminary evaluation rather than a signed award decision.\par}
+
+{\small Event provenance: OpenMath 2026 ran 27 September-2 October 2026 with worldwide online participation. Detailed organizer listings specify Harvard Innovation Labs for the 27 September in-person event; the OpenMath programme advertises a hybrid kickoff at MIT. Sundai identifies its Harvard/MIT community. Organizer sources: \url{https://rsihouse.ai/openmath} ; \url{https://luma.com/yzp9abvr} ; \url{https://www.sundai.club/events/boston/recursive-learning-hack-with-harvard-innovation-labs}\par}
+
+{\small Chandragupt Sharma  -  Cluster Innovation Centre, University of Delhi.\par}
+
+{\small Affiliations follow the recorded author declarations or public institutional/profile sources. Preferred author names, author order and publication affiliations await author review. This editorial compilation does not establish anthology coauthorship.\par}
+
+{\small Original-result working manuscript | OpenMath 2026 | 5 October 2026\par}\medskip
+{\small Central source and adjudication archive: \url{https://github.com/alejandrozu/openmath-2026-judging}\par}
+
+\subsection{Abstract}
+An exact rational decomposition of the 3\ensuremath{\times}3 multiplication tensor uses 23 products and 138 nonzero factor coefficients. A diagonal gauge leaves 126 unit coefficients and 12 dyadic coefficients. Exact tensor and polynomial checks confirm the finite scheme and a parameter family; rank 22, support 137 impossibility and practical speedup are not established.
+
+The 3\ensuremath{\times}3 multiplication tensor admits a rational 23-term decomposition with factor supports 47,47,44, totalling 138.
+
+\subsection{Tensor statement and support measure}
+For 3\ensuremath{\times}3 matrices A and B, a 23-product bilinear scheme forms 23 linear expressions in A,23 in B, multiplies the corresponding pairs, and recombines the products into AB. The three factor lists U,V,W each have 23 vectors with nine coefficients. The total number of nonzero coefficients in those lists is the support measure used here.
+
+The submitted rational scheme has support 47+47+44=138. All 729 tensor coefficient equations hold exactly. It therefore gives a valid 23-product multiplication algorithm and tensor rank at most 23. It does not construct 22 products or prove a matching tensor-rank lower bound. Compared with the located 139-support baseline, the proposed numerical advance is one nonzero coefficient.
+
+\subsection{Exact identities and rational lifting}
+The finite certificate expands each rank-one term and checks every triple of input/output coefficient indices against the multiplication tensor. The archived convention places A and B in row order and the C/trace leg in column order, which must be respected when turning the tensor into output formulas.
+
+Reviewer-owned Fraction arithmetic confirms the 138 scheme, its gauged version and a separate 143 scheme. Every rational coefficient matches the scaled Lean literal. The core finite endpoint uses ordinary decide and reports no added mathematical axioms for validity and support. A fresh independent build under the installed Lean 4.31.0 checks those same archived core statements; this earlier alternate-version check is distinct from the subsequently completed pinned 4.34.1 replay recorded in the current verification register.
+
+The search uses support patterns and exact rational lifting. The paper should state the literal factor lists or a compact structured representation so a reader can reproduce the algorithm directly, then describe how the search reached that support rather than presenting the search log as a proof.
+
+\subsection{Gauges, coefficients and the parameter family}
+A diagonal gauge preserves each simple tensor while redistributing scalar factors among its three lists. The gauged 138 scheme has 126 coefficients equal to\ensuremath{\pm}1 and 12 equal to\ensuremath{\pm}2 or\ensuremath{\pm}1/2. Those are coefficient shifts, not 12 additional bilinear products. Its naive addition count is 83 versus a recorded 84 baseline, while the reported common-subexpression count 77 is worse than a cited optimized 70; no overall practical speedup is demonstrated.
+
+An independent symbolic computation clears denominators in the reported family and checks all 729 polynomial identities in Q[s]. Away from s=0 and s=\ensuremath{-}2, every specialization is valid and the support remains 138; s=\ensuremath{-}1 recovers the stored scheme. Polynomial identity also establishes validity for real parameters outside the poles, although the universal-family statement is not part of the supplied finite Lean certificate.
+
+Reducing the support pattern with every nonzero replaced by one over GF(2) gives four failing tensor equations. This excludes a sign-only rational scheme with precisely that support pattern. It does not give a literal mod-two reduction of dyadic coefficients and does not rule out other patterns or fields.
+
+\subsection{Structural claims that need separate proof}
+The numerical tangent dimension seven and six diagonal gauge directions suggest local family structure. They do not prove a global one-dimensional quotient component, classify every parameter point, establish all projective boundary limits, minimize the number of nonunit coefficients or prove support 137 impossible. Failed searches at 137 are evidence about the tested search, not an impossibility theorem.
+
+Rank triples of factor matrices can distinguish certain constructions, but a complete inequivalence claim needs the precise action and invariant proof. The 143 scheme is a valid auxiliary construction and may have methodological interest; it does not improve the 138/139 frontier and should not be counted as a second numerical award.
+
+\subsection{Prior comparison and paper readiness}
+Credit HKS, Smirnov and other 23-product constructions used as baselines, and compare support under the same factor and gauge conventions. The proposed new claim is the certified 138 scheme and its carefully scoped exact family, not minimum-rank matrix multiplication.
+
+\begin{samepage}
+A focused algebra/computational mathematics paper can lead with the finite algorithm, include exact proof and rational parameter formulas, and separate empirical local structure from theorems. Source-pin reproducibility and prior-equivalence review remain the final gates. The current evidence makes this one of the clearest original construction candidates in the portfolio.
+
+\end{samepage}
+{\small This short manuscript records the construction and selected endpoints. The companion Original results anthology contains the extended ordinary proof exposition and its explicitly stated premises; the preserved Lean source remains the complete formal proof record.\par}
+
+\subsection{Verification and reproducibility}
+Fresh pinned replay PASS: all seven archived custom Lean modules compile under Lean 4.34.1 (commit 5045d005), and all 12 selected endpoint axiom audits pass. Validity and support endpoints are axiom-free; tensor identities use propext and Quot.sound. No submitted compiled artifact was used. Full commands, source hashes, timing and output: Verification/chandragupt-pinned-build.json.
+
+\begin{samepage}
+\subsection{MM3.scheme138\_identities}
+\begin{quote}\small\ttfamily theorem scheme138\_identities :\newline     \ensuremath{\forall} a b c : Nat, a < 9 \ensuremath{\to} b < 9 \ensuremath{\to} c < 9 \ensuremath{\to}\newline       coeff (terms Scheme138.u Scheme138.v Scheme138.w) a b c =\newline         Scheme138.su * Scheme138.sv * Scheme138.sw * target a b c\end{quote}
+{\small Source: lean/MM3/Certificates.lean:22.\par}
+
+{\small Source SHA-256: 78cd77c0514b515d10e28a7bed4505a20ad4c2124cc35346fee04c2b589c9bfa\par}
+
+\end{samepage}
+\begin{samepage}
+\subsection{MM3.scheme138\_support}
+\begin{quote}\small\ttfamily theorem scheme138\_support : support Scheme138.u Scheme138.v Scheme138.w = 138\end{quote}
+{\small Source: lean/MM3/Certificates.lean:28.\par}
+
+{\small Source SHA-256: 78cd77c0514b515d10e28a7bed4505a20ad4c2124cc35346fee04c2b589c9bfa\par}
+
+{\small\textbf{Sources and attribution:} \href{https://github.com/ChandraguptSharma07/matrix-multiplication-tensor-3x3/tree/479c2416b6261ee841052eef4881df0e40054f3f}{1. ChandraguptSharma07/matrix-multiplication-tensor-3x3}; \href{https://doi.org/10.1134/S0965542513120129}{2. DOI: 10.1134/S0965542513120129}; \href{https://arxiv.org/abs/1905.10192}{3. arXiv source: 1905.10192}; \href{https://arxiv.org/abs/2212.01175}{4. arXiv source: 2212.01175}; \href{https://github.com/alejandrozu/openmath-2026-judging/blob/d0ed487f487fa7ec814ff705ab55249983fe8707/OpenMath-Judging/review/entries/E04-SUPPORT138.txt}{5. alejandrozu/openmath-2026-judging / E04-SUPPORT 138.txt}; \href{https://github.com/alejandrozu/openmath-2026-judging}{Central source and adjudication archive}.\par}
+
+\end{samepage}
+\end{document}

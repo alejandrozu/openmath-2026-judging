@@ -1,0 +1,355 @@
+{
+  "status": "READ_ONLY_FULL_ORIGINAL_CUSTOM_SOURCE_HASH_AND_MIXED_IMPORT_REVIEW_NO_COMPILER",
+  "reviewed_utc": "2026-10-05T03:28:36.913043+00:00",
+  "project": "htpeo-ramsey-current",
+  "original_plan": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\build-plan.json",
+  "original_plan_sha256": "94beb20b98cceefe3e5a7aa0a9cec34b4a60c15dd740f675711371a5afd494d3",
+  "original_plan_status": "PLANNED_NOT_RUN",
+  "version": "4.33.1",
+  "mathlib_pin": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "source_count": 2103,
+  "chunk_count": 2048,
+  "all_source_sha256_independently_matched": true,
+  "literal_whole_Mathlib_root_count": 4,
+  "literal_whole_Mathlib_roots": [
+    "RamseyCert.Fast",
+    "RamseyCert.Limit",
+    "RamseyCert.Mono",
+    "RamseyCert.Sym"
+  ],
+  "sources_reaching_a_literal_whole_Mathlib_root_count": 11,
+  "sources_reaching_a_literal_whole_Mathlib_root": [
+    "RamseyCert",
+    "RamseyCert.Fast",
+    "RamseyCert.Final",
+    "RamseyCert.GlueB",
+    "RamseyCert.GlueR",
+    "RamseyCert.Limit",
+    "RamseyCert.Main",
+    "RamseyCert.Mono",
+    "RamseyCert.Native",
+    "RamseyCert.Summary",
+    "RamseyCert.Sym"
+  ],
+  "sources_without_a_whole_Mathlib_custom_closure_count": 2092,
+  "exact_custom_dependency_graph": {
+    "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\htpeo-ramsey-current-mixed-original-source-graph-2026-10-05.json",
+    "sha256": "5fb2d85b78c19b1d0d857487f9b2678e6e2c2925abcc43804dfdf0851fd164ac"
+  },
+  "selected_requested_endpoints": [
+    {
+      "requested_endpoint": "K4_blue",
+      "module": "RamseyCert.Fast",
+      "source_sha256": "14490310b83732e503a6a8e6e1f597684f2b8bbe3c68e010c5f8819877f7a808",
+      "line": 353,
+      "exact_statement_before_proof": "theorem K4_blue (n : ℕ) (w : ℕ → ℕ) (rs rsB : List ℕ) (hlen : rs.length = n)\n    (h : rsB = rs.map (fun r => Nat.xor r (2 ^ n - 1))) :\n    K4 n w (fun a b => !adjOf rs a b) = K4 n w (adjOf rsB)"
+    },
+    {
+      "requested_endpoint": "RamseyCert.blowup_count",
+      "module": "RamseyCert.Limit",
+      "source_sha256": "28276e096be4cf2426f432b92ae425e09c368848e72f21945fc39964edad21e5",
+      "line": 238,
+      "exact_statement_before_proof": "theorem blowup_count (T : Template) (hsym : T.Symmetric) (t : ℕ) :\n    ∃ c : Fin (t * T.total) → Fin (t * T.total) → Bool, (∀ u v, c u v = c v u) ∧\n      24 * monoK4 c ≤ t ^ 4 * T.numer"
+    },
+    {
+      "requested_endpoint": "RamseyCert.minMonoK4_le",
+      "module": "RamseyCert.Limit",
+      "source_sha256": "28276e096be4cf2426f432b92ae425e09c368848e72f21945fc39964edad21e5",
+      "line": 314,
+      "exact_statement_before_proof": "theorem minMonoK4_le (T : Template) (hsym : T.Symmetric) (t : ℕ) :\n    24 * minMonoK4 (t * T.total) ≤ t ^ 4 * T.numer"
+    },
+    {
+      "requested_endpoint": "RamseyCert.ramseyMultK4_le_density",
+      "module": "RamseyCert.Limit",
+      "source_sha256": "28276e096be4cf2426f432b92ae425e09c368848e72f21945fc39964edad21e5",
+      "line": 422,
+      "exact_statement_before_proof": "theorem ramseyMultK4_le_density (T : Template) (hsym : T.Symmetric)\n    (hpos : 0 < T.total) : ramseyMultK4 ≤ (T.density : ℝ)"
+    },
+    {
+      "requested_endpoint": "Template.numer_eq",
+      "module": "RamseyCert.Fast",
+      "source_sha256": "14490310b83732e503a6a8e6e1f597684f2b8bbe3c68e010c5f8819877f7a808",
+      "line": 414,
+      "exact_statement_before_proof": "theorem Template.numer_eq (T : Template) (n : ℕ) (hn : T.n = n) (w : ℕ → ℕ) (adj : ℕ → ℕ → Bool)\n    (hw : ∀ i : Fin T.n, T.w i = w i) (hadj : ∀ i j : Fin T.n, T.red i j = adj i j) :\n    T.numer = K4 n w adj + K4 n w (fun a b => !adj a b)"
+    },
+    {
+      "requested_endpoint": "Template.total_eq",
+      "module": "RamseyCert.Fast",
+      "source_sha256": "14490310b83732e503a6a8e6e1f597684f2b8bbe3c68e010c5f8819877f7a808",
+      "line": 430,
+      "exact_statement_before_proof": "theorem Template.total_eq (T : Template) (n : ℕ) (hn : T.n = n) (w : ℕ → ℕ)\n    (hw : ∀ i : Fin T.n, T.w i = w i) :\n    T.total = ((List.range n).map w).sum"
+    },
+    {
+      "requested_endpoint": "colour_total",
+      "module": "RamseyCert.Fast",
+      "source_sha256": "14490310b83732e503a6a8e6e1f597684f2b8bbe3c68e010c5f8819877f7a808",
+      "line": 292,
+      "exact_statement_before_proof": "theorem colour_total (B n W md : ℕ) (rs : List ℕ) (all : List Ent)\n    (hmd : md = 2 ^ B - 1) (hlen : rs.length = n) (hall : all = mkAll B n W rs)\n    (hsum : ((List.range n).map (wOf W B)).sum < 2 ^ B - 1) :\n    (all.map (fun ea => kTermA md ea (nbhd all ea))).sum\n      = K4 n (wOf W B) (adjOf rs)"
+    },
+    {
+      "requested_endpoint": "fastK_eq",
+      "module": "RamseyCert.Fast",
+      "source_sha256": "14490310b83732e503a6a8e6e1f597684f2b8bbe3c68e010c5f8819877f7a808",
+      "line": 345,
+      "exact_statement_before_proof": "theorem fastK_eq (B n W : ℕ) (rs : List ℕ) (hlen : rs.length = n)\n    (hsum : ((List.range n).map (wOf W B)).sum < 2 ^ B - 1) :\n    fastK B n W rs = K4 n (wOf W B) (adjOf rs)"
+    },
+    {
+      "requested_endpoint": "getD_map_range",
+      "module": "RamseyCert.Fast",
+      "source_sha256": "14490310b83732e503a6a8e6e1f597684f2b8bbe3c68e010c5f8819877f7a808",
+      "line": 443,
+      "exact_statement_before_proof": "theorem getD_map_range (f : ℕ → ℕ) (n i : ℕ) (hi : i < n) :\n    ((List.range n).map f).getD i 0 = f i"
+    },
+    {
+      "requested_endpoint": "kTermA_eq",
+      "module": "RamseyCert.Fast",
+      "source_sha256": "14490310b83732e503a6a8e6e1f597684f2b8bbe3c68e010c5f8819877f7a808",
+      "line": 110,
+      "exact_statement_before_proof": "theorem kTermA_eq (md : ℕ) (ea : Ent) (La : List Ent) : kTermA md ea La = termA md ea La"
+    },
+    {
+      "requested_endpoint": "minMonoK4_density_le",
+      "module": "RamseyCert.Mono",
+      "source_sha256": "63e1e1d118514de7bd7c9c924ee53d487ac7f9234f7276378e9208c210a2ce13",
+      "line": 215,
+      "exact_statement_before_proof": "theorem minMonoK4_density_le (m : ℕ) (hm : 4 ≤ m) :\n    (minMonoK4 m : ℝ) / (m.choose 4 : ℝ) ≤ ramseyMultK4"
+    },
+    {
+      "requested_endpoint": "minMonoK4_density_le_sol",
+      "module": "RamseyCert.Final",
+      "source_sha256": "ac8fbfe56259b7c255520c121f27d54694beb4afe6fa7e325bd18b74c71ac461",
+      "line": 32,
+      "exact_statement_before_proof": "theorem minMonoK4_density_le_sol (m : ℕ) (hm : 4 ≤ m) :\n    (minMonoK4 m : ℝ) / (m.choose 4 : ℝ) ≤ 200137750014677779172692777477 / 6640289795261907019148161833841"
+    },
+    {
+      "requested_endpoint": "minMonoK4_density_mono",
+      "module": "RamseyCert.Mono",
+      "source_sha256": "63e1e1d118514de7bd7c9c924ee53d487ac7f9234f7276378e9208c210a2ce13",
+      "line": 132,
+      "exact_statement_before_proof": "theorem minMonoK4_density_mono (m : ℕ) (hm : 4 ≤ m) :\n    (minMonoK4 m : ℝ) / (m.choose 4 : ℝ) ≤\n      (minMonoK4 (m + 1) : ℝ) / ((m + 1).choose 4 : ℝ)"
+    },
+    {
+      "requested_endpoint": "native_fastK_B",
+      "module": "RamseyCert.Native",
+      "source_sha256": "8d9d66a0f2e2e3d2f6445797e9afbd4b750b678cec644b4131324d9fac48893f",
+      "line": 17,
+      "exact_statement_before_proof": "theorem native_fastK_B : fastK 32 1024 W rowsB = 100297877536367701755653260597"
+    },
+    {
+      "requested_endpoint": "native_fastK_R",
+      "module": "RamseyCert.Native",
+      "source_sha256": "8d9d66a0f2e2e3d2f6445797e9afbd4b750b678cec644b4131324d9fac48893f",
+      "line": 15,
+      "exact_statement_before_proof": "theorem native_fastK_R : fastK 32 1024 W rowsR = 99839872478310077417039516880"
+    },
+    {
+      "requested_endpoint": "ramseyMultK4_le_sol",
+      "module": "RamseyCert.Final",
+      "source_sha256": "ac8fbfe56259b7c255520c121f27d54694beb4afe6fa7e325bd18b74c71ac461",
+      "line": 16,
+      "exact_statement_before_proof": "theorem ramseyMultK4_le_sol :\n    ramseyMultK4 ≤ 200137750014677779172692777477 / 6640289795261907019148161833841"
+    },
+    {
+      "requested_endpoint": "ramseyMultK4_limit_lt_ref",
+      "module": "RamseyCert.Final",
+      "source_sha256": "ac8fbfe56259b7c255520c121f27d54694beb4afe6fa7e325bd18b74c71ac461",
+      "line": 39,
+      "exact_statement_before_proof": "theorem ramseyMultK4_limit_lt_ref :\n    ∃ L : ℝ, Filter.Tendsto (fun m : ℕ => (minMonoK4 m : ℝ) / (m.choose 4 : ℝ)) Filter.atTop (nhds L) ∧\n      L < 10486266368 / 768 ^ 4"
+    },
+    {
+      "requested_endpoint": "ramseyMultK4_lt_ref",
+      "module": "RamseyCert.Final",
+      "source_sha256": "ac8fbfe56259b7c255520c121f27d54694beb4afe6fa7e325bd18b74c71ac461",
+      "line": 25,
+      "exact_statement_before_proof": "theorem ramseyMultK4_lt_ref : ramseyMultK4 < 10486266368 / 768 ^ 4"
+    },
+    {
+      "requested_endpoint": "ramseyMultK4_tendsto",
+      "module": "RamseyCert.Mono",
+      "source_sha256": "63e1e1d118514de7bd7c9c924ee53d487ac7f9234f7276378e9208c210a2ce13",
+      "line": 201,
+      "exact_statement_before_proof": "theorem ramseyMultK4_tendsto :\n    Filter.Tendsto (fun m : ℕ => (minMonoK4 m : ℝ) / (m.choose 4 : ℝ))\n      Filter.atTop (nhds ramseyMultK4)"
+    },
+    {
+      "requested_endpoint": "sol_density",
+      "module": "RamseyCert.Main",
+      "source_sha256": "78f059eb97a79bcc5a84b582120ccd35adf4121966baaa8ae75d3cc08a462753",
+      "line": 59,
+      "exact_statement_before_proof": "theorem sol_density : sol.density = 200137750014677779172692777477 / 6640289795261907019148161833841"
+    },
+    {
+      "requested_endpoint": "sol_lt_ref",
+      "module": "RamseyCert.Main",
+      "source_sha256": "78f059eb97a79bcc5a84b582120ccd35adf4121966baaa8ae75d3cc08a462753",
+      "line": 66,
+      "exact_statement_before_proof": "theorem sol_lt_ref : sol.density < 10486266368 / 768 ^ 4"
+    },
+    {
+      "requested_endpoint": "sol_numer",
+      "module": "RamseyCert.Main",
+      "source_sha256": "78f059eb97a79bcc5a84b582120ccd35adf4121966baaa8ae75d3cc08a462753",
+      "line": 48,
+      "exact_statement_before_proof": "theorem sol_numer : sol.numer = 200137750014677779172692777477"
+    },
+    {
+      "requested_endpoint": "sol_ppt",
+      "module": "RamseyCert.Main",
+      "source_sha256": "78f059eb97a79bcc5a84b582120ccd35adf4121966baaa8ae75d3cc08a462753",
+      "line": 96,
+      "exact_statement_before_proof": "theorem sol_ppt : ⌈(10 ^ 12 : ℚ) * sol.density⌉ = 30139911990"
+    },
+    {
+      "requested_endpoint": "sol_symm",
+      "module": "RamseyCert.Main",
+      "source_sha256": "78f059eb97a79bcc5a84b582120ccd35adf4121966baaa8ae75d3cc08a462753",
+      "line": 91,
+      "exact_statement_before_proof": "theorem sol_symm : sol.Symmetric"
+    }
+  ],
+  "selected_audit": {
+    "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\FreshAudit1.lean",
+    "source_sha256": "dff144f1890c6c255e9463a7e1fa29284166684ae96289b7949f1a363c6e9868",
+    "exact_imports": [
+      "RamseyCert"
+    ],
+    "requests": [
+      "K4_blue",
+      "RamseyCert.blowup_count",
+      "RamseyCert.minMonoK4_le",
+      "RamseyCert.ramseyMultK4_le_density",
+      "Template.numer_eq",
+      "Template.total_eq",
+      "colour_total",
+      "fastK_eq",
+      "getD_map_range",
+      "kTermA_eq",
+      "minMonoK4_density_le",
+      "minMonoK4_density_le_sol",
+      "minMonoK4_density_mono",
+      "native_fastK_B",
+      "native_fastK_R",
+      "ramseyMultK4_le_sol",
+      "ramseyMultK4_limit_lt_ref",
+      "ramseyMultK4_lt_ref",
+      "ramseyMultK4_tendsto",
+      "sol_density",
+      "sol_lt_ref",
+      "sol_numer",
+      "sol_ppt",
+      "sol_symm"
+    ]
+  },
+  "trust": {
+    "authored_sorry_admit_custom_axiom_unsafe_extern_implemented_by_syntax": "NONE_FOUND_OUTSIDE_COMMENTS_AND_STRINGS",
+    "native_decide_occurrences": 2,
+    "native_decide_definitions": [
+      {
+        "module": "RamseyCert.Native",
+        "source_sha256": "8d9d66a0f2e2e3d2f6445797e9afbd4b750b678cec644b4131324d9fac48893f",
+        "native_rows": [
+          {
+            "line": 15,
+            "text": "theorem native_fastK_R : fastK 32 1024 W rowsR = 99839872478310077417039516880 := by native_decide"
+          },
+          {
+            "line": 17,
+            "text": "theorem native_fastK_B : fastK 32 1024 W rowsB = 100297877536367701755653260597 := by native_decide"
+          }
+        ]
+      }
+    ],
+    "native_role": "RamseyCert.Native explicitly labels its two fastK compiled-evaluation cross-checks as separate from the kernel certificate. Main and Final do not import Native; the selected audit requests those two native results separately.",
+    "decide_plus_kernel_occurrences": 6162,
+    "actual_selected_axiom_prints": "PENDING_ORIGINAL_SOURCE_REPLAY_NOT_INFERRED_FROM_SYNTAX"
+  },
+  "scientific_scope": [
+    "The original packet contains 1024 weighted blocks and 2048 red/blue finite computation chunks. Exact kernel certificates are joined by the Fast specification bridge and Main symmetry/count/density statements.",
+    "sol_density = 200137750014677779172692777477/6640289795261907019148161833841; the source compares it strictly with the PPSS reference 10486266368/768^4.",
+    "Limit defines the lower asymptotic constant as liminf; Mono and Final prove convergence and all-order finite upper consequences at the explicit solution value.",
+    "A comparison below that PPSS reference does not establish priority against the earlier Technion/RSA programme or Luke/Madhan construction. The present review does not resolve originality.",
+    "Root RamseyCert imports Main only. All 2103 planned modules must be attempted for a full original-source scope, including Final/Limit/Mono and the separately labeled native cross-checks. The original generated FreshAudit1 does not import those additional modules; its audit-preparation gap is recorded separately."
+  ],
+  "operational_assessment": [
+    "The 11-whole category is a transitive custom-closure classification; the actual frozen literal whole-Mathlib roots are four. These are separated exactly in the graph.",
+    "The 2048 chunk modules are not literal whole importers; they depend on the granular Data/Defs route and use explicit decide +kernel finite checks.",
+    "A future import-only diagnostic would need only the four Mathlib import lines replaced, with unchanged scientific bodies. No replacement set is certified here, no source is staged and no compiler is invoked.",
+    "Do not infer numerical failure or priority from pending operational verification. Original source, pins, status, options and audit remain unchanged."
+  ],
+  "no_staging_source_copy_runner_or_compiler": true,
+  "organizer_audit_static_gap": {
+    "current_unchanged_audit_sha256": "dff144f1890c6c255e9463a7e1fa29284166684ae96289b7949f1a363c6e9868",
+    "current_imports": [
+      "RamseyCert"
+    ],
+    "current_root_closure_missing": [
+      "RamseyCert.Limit",
+      "RamseyCert.Mono",
+      "RamseyCert.Final",
+      "RamseyCert.Native"
+    ],
+    "qualified_requested_names_in_current_audit": [
+      "RamseyCert.blowup_count",
+      "RamseyCert.minMonoK4_le",
+      "RamseyCert.ramseyMultK4_le_density"
+    ],
+    "unqualified_or_missing_RamseyCert_namespace_requests": [
+      "K4_blue",
+      "Template.numer_eq",
+      "Template.total_eq",
+      "colour_total",
+      "fastK_eq",
+      "getD_map_range",
+      "kTermA_eq",
+      "minMonoK4_density_le",
+      "minMonoK4_density_le_sol",
+      "minMonoK4_density_mono",
+      "native_fastK_B",
+      "native_fastK_R",
+      "ramseyMultK4_le_sol",
+      "ramseyMultK4_limit_lt_ref",
+      "ramseyMultK4_lt_ref",
+      "ramseyMultK4_tendsto",
+      "sol_density",
+      "sol_lt_ref",
+      "sol_numer",
+      "sol_ppt",
+      "sol_symm"
+    ],
+    "finding": "FreshAudit1 imports only RamseyCert/Main, omits modules defining several requested results, and has no open RamseyCert for the remaining unqualified names. The current audit cannot establish all 24 requested prints from this source environment.",
+    "classification": "STATIC_ORGANIZER_AUDIT_PREPARATION_GAP_NOT_AUTHORED_PROOF_FAILURE",
+    "minimal_supplemental_audit_imports_proposal": [
+      "RamseyCert.Final",
+      "RamseyCert.Native"
+    ],
+    "minimal_supplemental_fully_qualified_requests_proposal": [
+      "RamseyCert.K4_blue",
+      "RamseyCert.blowup_count",
+      "RamseyCert.minMonoK4_le",
+      "RamseyCert.ramseyMultK4_le_density",
+      "RamseyCert.Template.numer_eq",
+      "RamseyCert.Template.total_eq",
+      "RamseyCert.colour_total",
+      "RamseyCert.fastK_eq",
+      "RamseyCert.getD_map_range",
+      "RamseyCert.kTermA_eq",
+      "RamseyCert.minMonoK4_density_le",
+      "RamseyCert.minMonoK4_density_le_sol",
+      "RamseyCert.minMonoK4_density_mono",
+      "RamseyCert.native_fastK_B",
+      "RamseyCert.native_fastK_R",
+      "RamseyCert.ramseyMultK4_le_sol",
+      "RamseyCert.ramseyMultK4_limit_lt_ref",
+      "RamseyCert.ramseyMultK4_lt_ref",
+      "RamseyCert.ramseyMultK4_tendsto",
+      "RamseyCert.sol_density",
+      "RamseyCert.sol_lt_ref",
+      "RamseyCert.sol_numer",
+      "RamseyCert.sol_ppt",
+      "RamseyCert.sol_symm"
+    ],
+    "supplemental_audit_text_proposal_only_no_Lean_file_created": "import RamseyCert.Final\nimport RamseyCert.Native\n\n#print axioms RamseyCert.K4_blue\n#print axioms RamseyCert.blowup_count\n#print axioms RamseyCert.minMonoK4_le\n#print axioms RamseyCert.ramseyMultK4_le_density\n#print axioms RamseyCert.Template.numer_eq\n#print axioms RamseyCert.Template.total_eq\n#print axioms RamseyCert.colour_total\n#print axioms RamseyCert.fastK_eq\n#print axioms RamseyCert.getD_map_range\n#print axioms RamseyCert.kTermA_eq\n#print axioms RamseyCert.minMonoK4_density_le\n#print axioms RamseyCert.minMonoK4_density_le_sol\n#print axioms RamseyCert.minMonoK4_density_mono\n#print axioms RamseyCert.native_fastK_B\n#print axioms RamseyCert.native_fastK_R\n#print axioms RamseyCert.ramseyMultK4_le_sol\n#print axioms RamseyCert.ramseyMultK4_limit_lt_ref\n#print axioms RamseyCert.ramseyMultK4_lt_ref\n#print axioms RamseyCert.ramseyMultK4_tendsto\n#print axioms RamseyCert.sol_density\n#print axioms RamseyCert.sol_lt_ref\n#print axioms RamseyCert.sol_numer\n#print axioms RamseyCert.sol_ppt\n#print axioms RamseyCert.sol_symm\n",
+    "supplemental_audit_text_utf8_sha256": "4c570ea840ac2283717a34b5f83294def83edd27a056ad747cf60f273f91a80d",
+    "original_audit_unchanged": true,
+    "root_review_required_before_supplemental_audit_is_materialized": true
+  }
+}

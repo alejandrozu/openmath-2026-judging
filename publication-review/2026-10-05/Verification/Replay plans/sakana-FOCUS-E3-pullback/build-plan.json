@@ -1,0 +1,66 @@
+{
+  "id": "sakana-FOCUS-E3-pullback",
+  "entrant": "E02",
+  "version": "4.33.1",
+  "mathlib_pin": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "source_dir": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-FOCUS-E3-pullback",
+  "modules": [
+    {
+      "module": "BooleanTree",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-FOCUS-E3-pullback\\BooleanTree.lean",
+      "source": "Focus_Evidence/evidence/FOCUS-E3/pullback-bridge/source/BooleanTree.lean",
+      "sha256": "57c77b258ba002ab59742e9f4cfdc065df437bdc1098d4e14cf1c2b7defddcc4"
+    },
+    {
+      "module": "CardBridge",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-FOCUS-E3-pullback\\CardBridge.lean",
+      "source": "Focus_Evidence/evidence/FOCUS-E3/pullback-bridge/source/CardBridge.lean",
+      "sha256": "32330d3f2268ba1d23f5e8d0db50bf1a115e85b1b8be65c3418f2b4186e1c130"
+    },
+    {
+      "module": "CyclicUpper",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-FOCUS-E3-pullback\\CyclicUpper.lean",
+      "source": "Focus_Evidence/evidence/FOCUS-E3/pullback-bridge/source/CyclicUpper.lean",
+      "sha256": "11e5d462866219ce6d13e7cde20de92f48eaf19f16cb68480072b2664ebba8d5"
+    },
+    {
+      "module": "R17SplitReplay",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-FOCUS-E3-pullback\\R17SplitReplay.lean",
+      "source": "Focus_Evidence/evidence/FOCUS-E3/pullback-bridge/source/R17SplitReplay.lean",
+      "sha256": "fe2f97e19892fa7a722500188366697949929b453f87914737c525b6fc2b6531"
+    },
+    {
+      "module": "CombinedObstruction",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-FOCUS-E3-pullback\\CombinedObstruction.lean",
+      "source": "Focus_Evidence/evidence/FOCUS-E3/pullback-bridge/source/CombinedObstruction.lean",
+      "sha256": "3bec4ca43c026c51aa6b073fb640197cfeeac2060337dcbb1925d996cc918c13"
+    },
+    {
+      "module": "Fugu3PullbackCore",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-FOCUS-E3-pullback\\Fugu3PullbackCore.lean",
+      "source": "Focus_Evidence/evidence/FOCUS-E3/pullback-bridge/source/Fugu3PullbackCore.lean",
+      "sha256": "1c2fbf34f0cc3adc75c2f45bba589156d668ddf3cfa253a972a599aef793c19d"
+    },
+    {
+      "module": "PullbackObstruction",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-FOCUS-E3-pullback\\PullbackObstruction.lean",
+      "source": "Focus_Evidence/evidence/FOCUS-E3/pullback-bridge/source/PullbackObstruction.lean",
+      "sha256": "042f95ddc1c1630d43710d987dbca399cc4bc1a736004290a2c5425b41f029c8"
+    }
+  ],
+  "endpoints": [
+    "Fugu3Lshape.card_SA",
+    "Erdos3PullbackBridge.card_diagonal_pullback_le_78",
+    "Erdos3PullbackBridge.retained_witness_beats_every_diagonal_pullback"
+  ],
+  "roots": [
+    "PullbackObstruction"
+  ],
+  "audit_modules": [
+    "FreshAudit1.lean"
+  ],
+  "lean_options": {},
+  "static_review_contexts": [],
+  "status": "PLANNED_NOT_RUN",
+  "builds": []
+}

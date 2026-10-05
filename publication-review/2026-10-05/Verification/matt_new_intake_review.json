@@ -1,0 +1,409 @@
+{
+  "entry": "E03",
+  "author": "Matt Bowring",
+  "repository": "https://github.com/bowrango/lean-unitary",
+  "pinned_sha": "7014b63ee2cfd01c641a7f539c73b664a2aa3d66",
+  "pinned_commit_time": "2026-10-04T19:22:00Z",
+  "intake_time": "2026-10-04T19:43:46Z",
+  "lean": "4.30.0-rc2",
+  "mathlib": "c1e30e172c8fda21e6776bf1f10351e882ee31b9",
+  "source_available": true,
+  "fresh_replay": "Assigned to lean_rebuild; pending at this content audit",
+  "modality": "M3A partial on existing OPENMATH-UNITARY family, subject to chair classification",
+  "D": 824,
+  "m": 1,
+  "b": 1,
+  "suggested_p": ".05",
+  "suggested_band": "P2 lower boundary",
+  "conditional_score": "33.9488",
+  "score_formula": "1*1*.05*824^2/1000",
+  "all_unitary_global_score_accepted": false,
+  "resource_class": "Pending declaration; the email phrase under my organization describes authorship of the AI workflow and does not establish company funding",
+  "affiliation": "Purdue University, Department of Mechanical Engineering (documented Jan 2026; current preferred publication affiliation to confirm)",
+  "precutoff_sha": "57d6c96992a58f43d48d61c2a44353d902813cda",
+  "precutoff_commit_time": "2026-10-03T02:00:25Z",
+  "postcutoff_main_formalization_sha": "4be3c9e9f8d554320e8775713ac8019303e5330c",
+  "postcutoff_main_formalization_time": "2026-10-04T19:06:25Z",
+  "scope": {
+    "actual_endpoint": "LeanUnitary.Pivot.pivot_merge",
+    "hypotheses": [
+      "D = 4(q+1), arbitrary finite matrix index type of cardinality D",
+      "X and Y are invertible complex D-by-D matrices",
+      "A complete eigenvalue list u of X inverse times Y",
+      "No two distinct listed eigenvalues have arguments differing by an integer multiple of pi"
+    ],
+    "conclusion": [
+      "Existence of an unrestricted real alpha and beta in [0,pi] with an actual one-qubit unitary pivot gate",
+      "Block identity for multiplication by the lifted pivot",
+      "Eigenphase labeling of the polar-factor matrix zxzC of the pivoted X and Y",
+      "Exact vanishing of the final Walsh-sum angle"
+    ],
+    "not_concluded": [
+      "No circuit list or CNOT gate-count bound",
+      "No proof that every nongeneric unitary node meets the hypotheses",
+      "No formal derivation of the improved recursive node from the phase theorem"
+    ],
+    "angle_range_note": "The formal pivot_merge theorem constrains beta to [0,pi]; alpha is quantified over all real numbers."
+  },
+  "files": [
+    {
+      "path": "LeanUnitary/Blocks.lean",
+      "sha256": "1bc6b0ed5e96acbeac2d73a1a1a0c442d737103f2c775e449a0ab84fffca9a23",
+      "sorry_tokens": 2,
+      "theorem_names": [
+        "blockDiag_eq",
+        "mux_last_eq",
+        "ofBlocks_mul"
+      ]
+    },
+    {
+      "path": "LeanUnitary/Circuit.lean",
+      "sha256": "01d279c4b53bcc1456c2ef825b515b76a9189fa789f96c7d2fef8711259afbe0",
+      "sorry_tokens": 1,
+      "theorem_names": [
+        "denote_nil",
+        "foldl_denote",
+        "denote_append",
+        "cnotCount_append",
+        "denote_lift",
+        "cnotCount_lift"
+      ]
+    },
+    {
+      "path": "LeanUnitary/Claims.lean",
+      "sha256": "05ab3c7e04d1048be3166b799b772d836d5dd9c35ba7b48e65b223b23c3869fa",
+      "sorry_tokens": 0,
+      "theorem_names": [
+        "muxRotations",
+        "demultiplex",
+        "cosineSine",
+        "twoQubitOptimal",
+        "qsd",
+        "qsdOptimized",
+        "blockZXZ",
+        "synth"
+      ]
+    },
+    {
+      "path": "LeanUnitary/Decomposition/BlockZXZ.lean",
+      "sha256": "2133687ae5726d8cf1ae96c8de4d4124c424169797195af9ff02212390997700",
+      "sorry_tokens": 1,
+      "theorem_names": [
+        "blockZXZ"
+      ]
+    },
+    {
+      "path": "LeanUnitary/Decomposition/CosineSine.lean",
+      "sha256": "01467e5ea889d949becd6d03a7f8c1e3408be56254622828b31dfd36c524df03",
+      "sorry_tokens": 1,
+      "theorem_names": [
+        "cosineSine"
+      ]
+    },
+    {
+      "path": "LeanUnitary/Decomposition/Demultiplex.lean",
+      "sha256": "327a046cce7567452aa6e654813bbf71de9e17ea7e35cbbe1bce78c6066dbe74",
+      "sorry_tokens": 1,
+      "theorem_names": [
+        "demultiplex"
+      ]
+    },
+    {
+      "path": "LeanUnitary/Decomposition/Multiplexor.lean",
+      "sha256": "8588fddfbf8eb427a5fa9ca231432fdf4fee6ea4f8079245171da4cf3f2c99f2",
+      "sorry_tokens": 1,
+      "theorem_names": [
+        "muxRotations"
+      ]
+    },
+    {
+      "path": "LeanUnitary/Decomposition/QSD.lean",
+      "sha256": "9f20f1e2e6b57be6679a1abb5b6738d70b8cfe68e2876c2f2343119eac9b5bdd",
+      "sorry_tokens": 2,
+      "theorem_names": [
+        "qsd",
+        "qsdOptimized"
+      ]
+    },
+    {
+      "path": "LeanUnitary/Decomposition/TwoQubit.lean",
+      "sha256": "c0e4c915540767e571aa61f280c076a9ab9a71db99e6197a0f24893651b2f8d1",
+      "sorry_tokens": 1,
+      "theorem_names": [
+        "twoQubitOptimal"
+      ]
+    },
+    {
+      "path": "LeanUnitary/LinearAlgebra.lean",
+      "sha256": "f81b229c2c087d5ffe74ee8bce4bee6be5f6c73969bccc4de98abef958775b43",
+      "sorry_tokens": 3,
+      "theorem_names": [
+        "exists_unitary_diagonalize_of_commute",
+        "exists_unitary_diagonalize_of_mem_unitaryGroup",
+        "exists_cosineSine"
+      ]
+    },
+    {
+      "path": "LeanUnitary/Pivot/Count.lean",
+      "sha256": "8683beed72dc58584946879ce8abb0a12f647e1d6a8ab3b00bcc8b3e1424c453",
+      "sorry_tokens": 0,
+      "theorem_names": [
+        "four_mul_two_pow_le",
+        "zxzCount_closed",
+        "count_closed",
+        "zxzCount_eq",
+        "count_eq",
+        "saving"
+      ]
+    },
+    {
+      "path": "LeanUnitary/Pivot/Existence/EigenContinuity.lean",
+      "sha256": "b000ef2f314e2def1493cc42ba709e7ee421bff38c274e80cbd8fcc253d8161b",
+      "sorry_tokens": 0,
+      "theorem_names": [
+        "norm_le_of_mem_roots_charpoly",
+        "prod_sub_eq_det",
+        "eventually_exists_perm_close"
+      ]
+    },
+    {
+      "path": "LeanUnitary/Pivot/Existence/Imbalance.lean",
+      "sha256": "f212bd6d98c2d94411e36ed32b0eddbb391f82c6a56e469a2892a57bb66d2b01",
+      "sorry_tokens": 0,
+      "theorem_names": [
+        "mem_middleHalf_rev",
+        "card_middleHalf",
+        "imbalance_neg_rev",
+        "exists_imbalance_eq_zero",
+        "exists_walsh_eq_zero_of_lift"
+      ]
+    },
+    {
+      "path": "LeanUnitary/Pivot/Existence/Lift.lean",
+      "sha256": "81e99274d918743f092392a780e1ff43e6834aa13dd0528ada190c6a90e8a591",
+      "sorry_tokens": 0,
+      "theorem_names": [
+        "floorSum_add_sum_eq",
+        "Normalized.le_of_le",
+        "floorSum_eq_on_window",
+        "floorSum_le_of_lt",
+        "le_iff_countLE",
+        "normalized_lift_unique",
+        "Normalized.neg_rev",
+        "neg_rev_eq_of_lift",
+        "sameResidues_of_exp",
+        "SameResidues.refl",
+        "SameResidues.trans",
+        "shift_val",
+        "Normalized.shift",
+        "sameResidues_shift",
+        "sum_shift",
+        "exists_shift_nat",
+        "Normalized.add_const",
+        "exists_normalized_lift",
+        "le_iff_floorSum",
+        "normalized_lift_stable"
+      ]
+    },
+    {
+      "path": "LeanUnitary/Pivot/Existence/PhaseList.lean",
+      "sha256": "5e623dcfea8411754bab67dd619b16c9da3017e31708c0dc80c94a73bbb2e65c",
+      "sorry_tokens": 0,
+      "theorem_names": [
+        "exists_phaseList",
+        "IsPhaseList.of_sameResidues",
+        "det_eq_exp_sum",
+        "exists_int_of_exp_eq",
+        "sameResidues_neg_of_inv",
+        "multiplexor_phases_neg",
+        "exists_phase_close"
+      ]
+    },
+    {
+      "path": "LeanUnitary/Pivot/Existence/Pivot.lean",
+      "sha256": "dd8f689a42fc44b1c1ad17fa7af1e5de337aff7ccc0ec0ef7551ff81e362c2bf",
+      "sorry_tokens": 0,
+      "theorem_names": [
+        "exists_lift_sigma",
+        "continuousOn_lift",
+        "exists_pivot_beta",
+        "exists_rotation_half_upper'",
+        "exists_pivot",
+        "pivot_merge"
+      ]
+    },
+    {
+      "path": "LeanUnitary/Pivot/Existence/Rotation.lean",
+      "sha256": "dbc170f97250b3966749af1a4b572f42b5506693c3c112c2d6f90802b0a1316d",
+      "sorry_tokens": 0,
+      "theorem_names": [
+        "exists_eq_of_step_le_one",
+        "exists_eq_of_step_le_one'",
+        "sin_sub_pos_iff",
+        "sin_sub_ne_zero",
+        "exists_rotation_half_pos",
+        "im_exp_mul",
+        "exists_rotation_half_upper"
+      ]
+    },
+    {
+      "path": "LeanUnitary/Pivot/Multiplexor/Basic.lean",
+      "sha256": "5ecd64d0051bc0f7e16cbee17539ee6fe84d110959a96358ecc2c439733314b8",
+      "sorry_tokens": 0,
+      "theorem_names": [
+        "star_invSqrt",
+        "conjTranspose_invSqrt",
+        "smul_mul_conjTranspose_smul",
+        "multiplexor_pi",
+        "invSqrt_mul_self_mul_invSqrt",
+        "invSqrt_mul_mem_unitaryGroup",
+        "zxzC_mem_unitaryGroup",
+        "multiplexor_mem_unitaryGroup",
+        "isUnit_det_smul_ph",
+        "multiplexor_pi_eq_inv"
+      ]
+    },
+    {
+      "path": "LeanUnitary/Pivot/Multiplexor/Continuity.lean",
+      "sha256": "6243a7f8de32ef63665b4c8e313a64068274dbb980da3fa54bd15b5e0628cabc",
+      "sorry_tokens": 0,
+      "theorem_names": [
+        "spectrum_subset_Ioi_of_posDef",
+        "continuousOn_invSqrt",
+        "posDef_mul_conjTranspose_self",
+        "continuous_Xg",
+        "continuous_Yg",
+        "continuousOn_multiplexor",
+        "add_mul_ne_zero_and_mul_sub_ne_zero",
+        "isUnit_det_Xg",
+        "isUnit_det_Yg",
+        "continuous_multiplexor"
+      ]
+    },
+    {
+      "path": "LeanUnitary/Pivot/Multiplexor/Phase.lean",
+      "sha256": "95a8c81d574d267981e2b80d03ddbe3385ddfdf805e759fbe62a0e3f09eee508",
+      "sorry_tokens": 0,
+      "theorem_names": [
+        "norm_mul_exp_phaseUp",
+        "norm_mul_exp_phaseDn",
+        "norm_mul_exp_halfPhase",
+        "neg_I_mul_mem_slitPlane",
+        "I_mul_mem_slitPlane",
+        "continuousAt_phaseUp",
+        "continuousAt_phaseDn",
+        "phaseUp_eq_arg",
+        "phaseDn_eq_arg",
+        "phaseUp_one",
+        "phaseDn_one",
+        "phaseUp_neg_one",
+        "phaseDn_neg_one",
+        "numF_ne_zero",
+        "denF_ne_zero",
+        "cos_half_nonneg",
+        "sin_half_nonneg",
+        "im_numF",
+        "im_denF",
+        "continuous_numF",
+        "continuous_denF",
+        "continuousOn_halfPhase",
+        "continuousOn_sigma",
+        "sigma_zero",
+        "sigma_pi",
+        "sigma_pi_eq_neg",
+        "det_invSqrt",
+        "ofReal_multiset_sum'",
+        "ofReal_multiset_prod'",
+        "eq_exp_of_norm_eq_one",
+        "star_denF_mul_numF",
+        "exp_sigma"
+      ]
+    },
+    {
+      "path": "LeanUnitary/Pivot/Path/Eigenvalues.lean",
+      "sha256": "e43cfddd8816f591bef3833bf7a1d64690167b3b3568fbaedd8c525e7990659c",
+      "sorry_tokens": 0,
+      "theorem_names": [
+        "det_smul_add_smul_one",
+        "multiset_eq_of_prod_sub_eq",
+        "roots_charpoly_inv",
+        "roots_charpoly_smul",
+        "card_roots_charpoly",
+        "norm_eq_one_of_mem_roots_charpoly",
+        "exists_list_of_card",
+        "exists_perm_of_map_eq",
+        "taus_eq_map",
+        "det_Xg_eq_prod",
+        "det_Yg_eq_prod",
+        "ne_zero_of_mem_taus"
+      ]
+    },
+    {
+      "path": "LeanUnitary/Pivot/Path/Gate.lean",
+      "sha256": "82bff63b801f1ba8d8ca5c06bba7859da4496b8e8b280b7b7bddba4e3ab98e4c",
+      "sorry_tokens": 0,
+      "theorem_names": [
+        "star_ph",
+        "star_ph_mul_ph",
+        "ph_mul_star_ph",
+        "gate_eq",
+        "mem_unitaryGroup_of_phases",
+        "gate_mem_unitaryGroup",
+        "fromBlocks_mul_lift",
+        "Xg_zero",
+        "Yg_zero",
+        "Xg_pi",
+        "Yg_pi",
+        "Xg_eq_mul",
+        "Yg_eq_mul"
+      ]
+    },
+    {
+      "path": "LeanUnitary/Pivot/Split.lean",
+      "sha256": "5e29c62f11ae32dc8c9301b9d001bbb1cf3d8e43cadd521615c400cb47dc9bd1",
+      "sorry_tokens": 0,
+      "theorem_names": [
+        "sum_walshSign_mul",
+        "walsh_eq",
+        "exists_perm_map_eq",
+        "exists_walsh_eq_zero_iff",
+        "card_topPlus"
+      ]
+    },
+    {
+      "path": "LeanUnitary/Pivot/Synthesis.lean",
+      "sha256": "20f943fe3968bf93163948deae9c3b399884145e7041ef63d28ac064bcc2ed61",
+      "sorry_tokens": 0,
+      "theorem_names": [
+        "synthesizable_count",
+        "generalBound_of_pivot_node",
+        "synthesizable_zxzCount",
+        "generalBound_of_zxz_node"
+      ]
+    },
+    {
+      "path": "LeanUnitary/Spec.lean",
+      "sha256": "b7379fedb47170ef29499def8123ee873afe83a02a300ba4544021031de76f62",
+      "sorry_tokens": 0,
+      "theorem_names": []
+    }
+  ],
+  "public_source_urls": [
+    "https://github.com/bowrango/lean-unitary/blob/7014b63ee2cfd01c641a7f539c73b664a2aa3d66/LeanUnitary/Pivot/Existence/Pivot.lean",
+    "https://github.com/bowrango/lean-unitary/blob/7014b63ee2cfd01c641a7f539c73b664a2aa3d66/LeanUnitary/Pivot/Synthesis.lean",
+    "https://github.com/bowrango/lean-unitary/blob/7014b63ee2cfd01c641a7f539c73b664a2aa3d66/LeanUnitary/Claims.lean",
+    "https://github.com/bowrango/lean-unitary/blob/7014b63ee2cfd01c641a7f539c73b664a2aa3d66/LeanUnitary/README.md"
+  ],
+  "accepted_score": "0 pending fresh endpoint replay, novelty review and chair acceptance",
+  "band_rationale": "A nontrivial generic matrix lemma closes normalized eigenphase continuity and a zero-angle pivot existence argument. Its endpoint does not construct a circuit or prove the improved node rule, and nongeneric cases remain. Under handbook P2, a nontrivial lemma short of the central obstacle begins at .05. P3=.15 would require a recorded judgment that this generic matrix advance itself removes a recognized synthesis obstacle and carries sufficient logical scope; it is not automatically justified by the eventual recurrence.",
+  "alternative_scenario": {
+    "p": ".15",
+    "band": "P3 lower boundary, only if separately justified by two mathematical reviewers",
+    "conditional_score": "101.8464"
+  },
+  "intake_status": "Accepted for current review under user-approved late-intake treatment; proof chronology preserved",
+  "affiliation_at_initial_source_audit": "Affiliation not verified in the supplied materials",
+  "affiliation_evidence": "matt_identity_affiliation_history_2026-10-05.json",
+  "current_preferred_publication_affiliation_confirmed": false,
+  "affiliation_update_scope": "Dated public-source attribution update only; mathematical score, resource class, source pin and proof status are unchanged."
+}

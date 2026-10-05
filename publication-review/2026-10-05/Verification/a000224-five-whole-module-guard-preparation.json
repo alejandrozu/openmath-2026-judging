@@ -1,0 +1,15 @@
+{
+  "status": "PREPARED_NOT_DISPATCHED_ROOT_REVIEW_REQUIRED",
+  "runner_sha256": "70ff209c7ac651c1e0ab25e9f629a9fc50c4b85ed1f510666e851e8f69c53534",
+  "source_plan_sha256": "0f6338f72ff570e79847995bac7cf6f6c56c8a1c2cc8dedf55181bc764180fe7",
+  "boundary_evidence_sha256": "170886e5721254e24443bb6ec14f660409f14ceac938bf4d3c5c12d732cda6d0",
+  "command_flags": [
+    "--pilot-third-slot",
+    "--full-mathlib-source-mode",
+    "--a000-whole-scope-only"
+  ],
+  "prerequisite": "166 actual granular source successes, each own artifact hash checked; five exact whole-module/audit source hashes checked against original boundary record",
+  "lease_requirement": "a000_whole_scope_only_authorized:true plus exact holder/source-plan SHA and exclusive whole importer lease",
+  "guard": "10GiB own job/process cap;11GiB commit/6GiB physical/4GB disk launch;1GiB commit/3GiB physical/1GB disk continuous",
+  "scientific_changes": "NONE; frozen171-module plan/selectedaudit/imports/sourcebytes remain unchanged"
+}

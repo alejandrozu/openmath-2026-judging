@@ -1,0 +1,231 @@
+{
+  "title": "Star edge colourings of generalized Petersen graphs and certified reductions towards the six-colour conjecture",
+  "blocks": [
+    {
+      "type": "title",
+      "text": "Star edge colourings of generalized Petersen graphs and certified reductions towards the six-colour conjecture"
+    },
+    {
+      "type": "subtitle",
+      "text": "Provisional mathematical authors: Woohyuk Kang"
+    },
+    {
+      "type": "small",
+      "text": "Judging and evaluation record: the submissions discussed in this document have been judged and evaluated by Alejandro Zarzuelo Urdiales for OpenMath 2026. This dated review records the stated verification, classification and unresolved holds; it is a preliminary evaluation rather than a signed award decision."
+    },
+    {
+      "type": "small",
+      "text": "Event provenance: OpenMath 2026 ran 27 September–2 October 2026 with worldwide online participation. Detailed organizer listings specify Harvard Innovation Labs for the 27 September in-person event; the OpenMath programme advertises a hybrid kickoff at MIT. Sundai identifies its Harvard/MIT community. Organizer sources: https://rsihouse.ai/openmath ; https://luma.com/yzp9abvr ; https://www.sundai.club/events/boston/recursive-learning-hack-with-harvard-innovation-labs"
+    },
+    {
+      "type": "small",
+      "text": "Woohyuk Kang — HTPeo; Kyung Hee University, CS&E."
+    },
+    {
+      "type": "small",
+      "text": "Affiliations follow the recorded author declarations or public institutional/profile sources. Preferred author names, author order and publication affiliations await author review. This editorial compilation does not establish anthology coauthorship."
+    },
+    {
+      "type": "subtitle",
+      "text": "Original-result working manuscript | OpenMath 2026 | 5 October 2026"
+    },
+    {
+      "type": "small",
+      "text": "Central source and adjudication archive: https://github.com/alejandrozu/openmath-2026-judging"
+    },
+    {
+      "type": "h2",
+      "text": "Abstract"
+    },
+    {
+      "type": "p",
+      "text": "The latest construction gives five-star edge colourings of GP(n,k) for1≤k≤15 and n≥2k+1, except GP(3,1), alongside other infinite families, small cubic multigraph classifications and conditional reduction theorems. The general six-colour conjecture remains open."
+    },
+    {
+      "type": "theorem",
+      "text": "χ′_s(GP(n,k))≤5 for1≤k≤15, n≥2k+1, (n,k)≠(3,1); additionally selected infinite-family colourings, finite six-colour cases and explicitly conditional reduction theorems."
+    },
+    {
+      "type": "h2",
+      "text": "Definitions and principal unconditional scope"
+    },
+    {
+      "type": "p",
+      "text": "A star edge colouring is a proper edge colouring with no two-coloured path or cycle of four edges. Parallel edges in a loopless multigraph are distinct and adjacent. The Dvořák–Mohar–Šámal conjecture asks whether every subcubic multigraph has star chromatic index at most six; the located general published bound is seven."
+    },
+    {
+      "type": "p",
+      "text": "The strongest current generalized-Petersen endpoint states that GP(n,k) has a five-star edge colouring for1≤k≤15 and n≥2k+1, except(n,k)=(3,1). Here GP(n,k) has an outer n-cycle, n spokes and inner edges of step k. The condition n>2k makes the construction an ordinary simple cubic graph. This theorem includes parameter regions not covered by the earlier even-order or gcd-based results."
+    },
+    {
+      "type": "p",
+      "text": "The packet also contains colourings of flower and Goldberg snarks, Möbius and inflation families, and a matching-colour-class six-colour construction for GP(n,2). These should be itemized as selected endpoints, with known subfamilies subtracted from the proposed novelty. The whole set remains one competition contribution family, even though a paper may naturally have several theorems."
+    },
+    {
+      "type": "h2",
+      "text": "Periodic blocks, seams and local-window lifting"
+    },
+    {
+      "type": "p",
+      "text": "The GP(n,k) construction colours repeated blocks and inserts a finite seam determined by the residue of n modulo a selected period. Each k has an explicit ordinary graph colouring recipe, small exceptional tables and representative windows. For example, the k=4 development repeats a period-five block, handles9≤n<19 directly and compares later windows with representatives25+(n mod5)."
+    },
+    {
+      "type": "p",
+      "text": "A forbidden four-edge path or four-cycle touches only a bounded range of blocks. The BlockStar.star_of_windows theorem embeds such a candidate into a window of length3D+1, where D bounds the relevant edge jump. A finite representative-window check therefore rules out every forbidden pattern in all large n. This is an infinite proof supported by finite local certificates, rather than an inference that a finite experimental table probably continues."
+    },
+    {
+      "type": "p",
+      "text": "The independent ordinary audit regenerated1,366 GP instances across k=1,...,15, including all small orders through100 and large examples near1000, and checked proper colouring and every relevant four-edge walk. Fifty-one flower-snark examples also passed. All GP JSON tables matched the actual Lean literals. These1,417 tests support semantic fidelity and the finite data, while the formal local-window theorem supplies the intended unbounded conclusion."
+    },
+    {
+      "type": "h2",
+      "text": "Small multigraphs and the reduction programme"
+    },
+    {
+      "type": "p",
+      "text": "The unconditional finite endpoints include six-star edge colourability of all bridgeless cubic loopless multigraphs with at most14 vertices, and of all subcubic multigraphs with at most seven vertices. They are not interchangeable: lifting a cubic census result to arbitrary subcubic graphs can increase the number of vertices, so the14-vertex threshold cannot simply be copied."
+    },
+    {
+      "type": "p",
+      "text": "The reduction library organizes a general loopless-subcubic theorem into cubic and leaf statements. Its basic equivalence says the full conjecture follows from six-colourability of bridgeless cubic graphs together with the six-colourability of their appropriate leaf attachments. Components, bridges and a degree-two core are handled by restriction and gluing lemmas. Two-edge-cut decomposition and digon insertion then concentrate the unresolved cases on more structured cubic hosts."
+    },
+    {
+      "type": "p",
+      "text": "The library also introduces perfect-matchings-as-colour-classes, far-exchange sets and pole-dominance data. An MC colouring has one prescribed perfect matching as its sixth colour class. EX1-goodness asks for compatible choices preserving an edge's membership status; pole dominance encodes the boundary colour compatibility needed to glue cubic pieces. Theorems prove implications from precisely stated remaining hypotheses. They do not prove those hypotheses globally."
+    },
+    {
+      "type": "h2",
+      "text": "Prior work and the actual new regions"
+    },
+    {
+      "type": "p",
+      "text": "The2024 Omoomi–Vahid Dastjerdi paper proves all gcd(n,k)≥3 and selected gcd-two cases, and discusses earlier Zhu–Shao even/gcd-one classes. It does not establish all odd n≥7 for k=2. That odd k=2 region is a particularly clean candidate new infinite scope in the current GPAll theorem. The latest October2 source replaces the disputed partial k=2 and k=3 arguments described in an older novelty memo."
+    },
+    {
+      "type": "keep_start",
+      "text": ""
+    },
+    {
+      "type": "p",
+      "text": "Known covers of Petersen and K4, selected even odd-k classes and previously proved periodic families should be acknowledged as background. Newness of a definition alone does not make every theorem about it a substantive obstacle removal. The contribution needs a theorem-by-theorem comparison demonstrating which parameter regions and gluing/reduction capabilities are new."
+    },
+    {
+      "type": "keep_end",
+      "text": ""
+    },
+    {
+      "type": "p",
+      "text": "An optional strong-five-colour hypothesis may be false in light of the Deng–Liu–Feng2025 infinite cubic family requiring six colours. Its exact graph assumptions require full-text comparison. An implication from that hypothesis can remain logically valid, even if the hypothesis is false; it would then not be a route proving the conjecture. This concern does not invalidate the explicit GP and flower endpoints."
+    },
+    {
+      "type": "h2",
+      "text": "Formal record and manuscript structure"
+    },
+    {
+      "type": "p",
+      "text": "An independently qualified composite import-only route checks the exact scientific scope of all 228 authored modules, using 99 preserved original-owned outputs through read-only V1 copies, 122 unaffected V3-owned passes and seven new V4 source checks. Four import headers differ from the frozen original source; every scientific statement, proof body, option and comment remains identical. The original frozen-source replay remains a separate 119-module checkpoint. The original organizer audit exited 1 after printing 120 of its 123 requested endpoints because it omitted the import needed to expose three Star6Equiv declarations; that actual failure and its raw results are preserved. A separate organizer supplement adds only import Star6Equiv, repeats all 123 original requests and completes their fresh axiom audit. 120 use standard kernel axioms, 3 are axiom-free, and 0 depend on recognized native evaluation trust; none contain selected admissions or unrecognized axioms. No selected endpoint uses native evaluation trust. A separate imported finite certificate uses native_decide and lies outside this selected endpoint set. These checks verify the submitted finite constructions, infinite-family constructions and conditional implications as typed. They do not prove the five remaining infinite structural premises or the general DMS conjecture. Competition p=.15 is retained."
+    },
+    {
+      "type": "p",
+      "text": "The ordinary-proof expansion supplies the unconditional generalized-Petersen construction’s exact period,seam and exception tables for 1≤k≤15, including 519 finite instances and 20,612 windows checked independently. It also explains the elementary I/II reduction, every middle-seam obstruction in two-/three-cut gluing, the prescribed matching-bit induction and the actual universal host/marking census bridge. The delivered base12,simple14,b14d assembly supersedes the older partial census snapshot. The five infinite structural premises remain open and the current full fresh replay is separately tracked. The user retains p=.15 for contest assessment; it is not a fraction of the general conjecture proved."
+    },
+    {
+      "type": "p",
+      "text": "This is a substantial formal combinatorics preprint candidate. A readable main text plus repository tables and formal closure is preferable to a manuscript whose evidence is only a module count. The general DMS conjecture, all k≥16 and the unrestricted cubic/subcubic cases remain open in this submission."
+    },
+    {
+      "type": "small",
+      "text": "This short manuscript records the construction and selected endpoints. The companion Original results anthology contains the extended ordinary proof exposition and its explicitly stated premises; the preserved Lean source remains the complete formal proof record."
+    },
+    {
+      "type": "h2",
+      "text": "Verification and reproducibility"
+    },
+    {
+      "type": "p",
+      "text": "Fresh execution: htpeo-dms-current: SCHEDULED_RESOURCE_CHECKPOINT; 119/228 custom modules compiled successfully; receipt Verification/htpeo-dms-current-fresh-build.json. htpeo-dms-core: PASS; 1/1 custom modules compiled successfully; receipt Verification/htpeo-dms-core-fresh-build.json. Separate qualified body-identical composite route: all 228 scientific bodies are checked through 99 previous original-owned outputs via read-only V1 copies, 122 unaffected V3-owned passes and seven new V4 source checks. The original frozen-source 119-module checkpoint is not replaced. The original organizer audit exited 1 with 120/123 prints; a separate supplement adds only import Star6Equiv and audits all 123 unchanged requests, with 120 standard-kernel and three axiom-free endpoints. A separate imported finite certificate, MGraph.k4subdiv_star6 in StarCert, uses native_decide outside that selected set; the whole portfolio is not asserted standard-only. The five infinite structural premises and general DMS conjecture remain open, and p=.15 is unchanged. Qualification: Verification/dms-v4-vector-composite-supplement-final-qualification-20261005.json. Compiler pins, source hashes and endpoint axiom outputs are in Verification. Historical receipts and finite checks do not replace fresh replay."
+    },
+    {
+      "type": "keep_start",
+      "text": ""
+    },
+    {
+      "type": "h2",
+      "text": "gp_star5"
+    },
+    {
+      "type": "code",
+      "text": "theorem gp_star5 (k n : Nat) (hk : 1 ≤ k) (hK : k ≤ 15) (hn : 2 * k + 1 ≤ n) (hex : ¬ (n = 3 ∧ k = 1)) :\n    ∃ c : Fin (gp n k).m → Fin 5, (gp n k).Star 5 c"
+    },
+    {
+      "type": "small",
+      "text": "Source: entries/dms-star6/artifact/lean/pack4/src/GPAll.lean:25."
+    },
+    {
+      "type": "small",
+      "text": "Source SHA-256: e831e584837dc1e0a2e4ef26bf7875bebd3a18ad54deff326b3c68d1af970893"
+    },
+    {
+      "type": "keep_end",
+      "text": ""
+    },
+    {
+      "type": "keep_start",
+      "text": ""
+    },
+    {
+      "type": "h2",
+      "text": "gp_family"
+    },
+    {
+      "type": "code",
+      "text": "theorem gp_family (k n : Nat) (hk : 1 ≤ k) (hK : k ≤ 15) (hn : 2 * k + 1 ≤ n) (hex : ¬ (n = 3 ∧ k = 1)) :\n    StarFam (gp n k) 5"
+    },
+    {
+      "type": "small",
+      "text": "Source: entries/dms-star6/artifact/lean/pack4/src/GPAll.lean:45."
+    },
+    {
+      "type": "small",
+      "text": "Source SHA-256: e831e584837dc1e0a2e4ef26bf7875bebd3a18ad54deff326b3c68d1af970893"
+    },
+    {
+      "type": "reference_list",
+      "text": "Sources and attribution",
+      "items": [
+        {
+          "text": "1. arXiv source: 2410.15024v1",
+          "url": "https://arxiv.org/html/2410.15024v1"
+        },
+        {
+          "text": "2. arXiv source: 1011.3376",
+          "url": "https://arxiv.org/abs/1011.3376"
+        },
+        {
+          "text": "3. DOI: 10.7151/dmgt.2195",
+          "url": "https://doi.org/10.7151/dmgt.2195"
+        },
+        {
+          "text": "4. link.springer.com / s40840-025-01875-9",
+          "url": "https://link.springer.com/article/10.1007/s40840-025-01875-9"
+        },
+        {
+          "text": "5. alejandrozu/ulam-opdp-difficulty-atlas",
+          "url": "https://github.com/alejandrozu/ulam-opdp-difficulty-atlas"
+        },
+        {
+          "text": "6. alejandrozu/openmath-2026-judging / E08-DMS.txt",
+          "url": "https://github.com/alejandrozu/openmath-2026-judging/blob/d0ed487f487fa7ec814ff705ab55249983fe8707/OpenMath-Judging/review/entries/E08-DMS.txt"
+        },
+        {
+          "text": "Central source and adjudication archive",
+          "url": "https://github.com/alejandrozu/openmath-2026-judging"
+        }
+      ]
+    },
+    {
+      "type": "keep_end",
+      "text": ""
+    }
+  ]
+}

@@ -1,0 +1,522 @@
+{
+  "status": "PREPARED_METADATA_ONLY_FOR_ROOT_REVIEW_NO_LEAN_MATERIALIZATION_OR_COMPILATION",
+  "prepared_utc": "2026-10-05T03:35:36.462025+00:00",
+  "project": "htpeo-ramsey-current",
+  "original_plan": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\build-plan.json",
+  "original_plan_sha256": "94beb20b98cceefe3e5a7aa0a9cec34b4a60c15dd740f675711371a5afd494d3",
+  "version": "4.33.1",
+  "mathlib_pin": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "original_frozen_audit": {
+    "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\FreshAudit1.lean",
+    "sha256": "dff144f1890c6c255e9463a7e1fa29284166684ae96289b7949f1a363c6e9868",
+    "bytes": 791,
+    "exact_utf8_content": "import RamseyCert\r\n\r\n#print axioms K4_blue\r\n#print axioms RamseyCert.blowup_count\r\n#print axioms RamseyCert.minMonoK4_le\r\n#print axioms RamseyCert.ramseyMultK4_le_density\r\n#print axioms Template.numer_eq\r\n#print axioms Template.total_eq\r\n#print axioms colour_total\r\n#print axioms fastK_eq\r\n#print axioms getD_map_range\r\n#print axioms kTermA_eq\r\n#print axioms minMonoK4_density_le\r\n#print axioms minMonoK4_density_le_sol\r\n#print axioms minMonoK4_density_mono\r\n#print axioms native_fastK_B\r\n#print axioms native_fastK_R\r\n#print axioms ramseyMultK4_le_sol\r\n#print axioms ramseyMultK4_limit_lt_ref\r\n#print axioms ramseyMultK4_lt_ref\r\n#print axioms ramseyMultK4_tendsto\r\n#print axioms sol_density\r\n#print axioms sol_lt_ref\r\n#print axioms sol_numer\r\n#print axioms sol_ppt\r\n#print axioms sol_symm\r\n",
+    "untouched_original_import": "RamseyCert",
+    "root_source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert.lean",
+    "root_source_sha256": "e7e3ed232538457acf4f140b002e59ec3dd3337406ff0f11b3d44bbc5202abca"
+  },
+  "supplemental_audit_proposal": {
+    "minimal_direct_imports": [
+      "RamseyCert.Final",
+      "RamseyCert.Native"
+    ],
+    "direct_extra_Limit_or_Mono_imports_needed": false,
+    "reason": "Final imports Main, Limit and Mono. Native separately imports Fast and Data.Base; neither root imports the other, and each defines requested results absent from the other root closure.",
+    "exact_utf8_content_proposal_only": "import RamseyCert.Final\nimport RamseyCert.Native\n\n#print axioms RamseyCert.K4_blue\n#print axioms RamseyCert.blowup_count\n#print axioms RamseyCert.minMonoK4_le\n#print axioms RamseyCert.ramseyMultK4_le_density\n#print axioms RamseyCert.Template.numer_eq\n#print axioms RamseyCert.Template.total_eq\n#print axioms RamseyCert.colour_total\n#print axioms RamseyCert.fastK_eq\n#print axioms RamseyCert.getD_map_range\n#print axioms RamseyCert.kTermA_eq\n#print axioms RamseyCert.minMonoK4_density_le\n#print axioms RamseyCert.minMonoK4_density_le_sol\n#print axioms RamseyCert.minMonoK4_density_mono\n#print axioms RamseyCert.native_fastK_B\n#print axioms RamseyCert.native_fastK_R\n#print axioms RamseyCert.ramseyMultK4_le_sol\n#print axioms RamseyCert.ramseyMultK4_limit_lt_ref\n#print axioms RamseyCert.ramseyMultK4_lt_ref\n#print axioms RamseyCert.ramseyMultK4_tendsto\n#print axioms RamseyCert.sol_density\n#print axioms RamseyCert.sol_lt_ref\n#print axioms RamseyCert.sol_numer\n#print axioms RamseyCert.sol_ppt\n#print axioms RamseyCert.sol_symm\n",
+    "utf8_sha256": "4c570ea840ac2283717a34b5f83294def83edd27a056ad747cf60f273f91a80d",
+    "bytes": 1027,
+    "fully_qualified_requests": [
+      "RamseyCert.K4_blue",
+      "RamseyCert.blowup_count",
+      "RamseyCert.minMonoK4_le",
+      "RamseyCert.ramseyMultK4_le_density",
+      "RamseyCert.Template.numer_eq",
+      "RamseyCert.Template.total_eq",
+      "RamseyCert.colour_total",
+      "RamseyCert.fastK_eq",
+      "RamseyCert.getD_map_range",
+      "RamseyCert.kTermA_eq",
+      "RamseyCert.minMonoK4_density_le",
+      "RamseyCert.minMonoK4_density_le_sol",
+      "RamseyCert.minMonoK4_density_mono",
+      "RamseyCert.native_fastK_B",
+      "RamseyCert.native_fastK_R",
+      "RamseyCert.ramseyMultK4_le_sol",
+      "RamseyCert.ramseyMultK4_limit_lt_ref",
+      "RamseyCert.ramseyMultK4_lt_ref",
+      "RamseyCert.ramseyMultK4_tendsto",
+      "RamseyCert.sol_density",
+      "RamseyCert.sol_lt_ref",
+      "RamseyCert.sol_numer",
+      "RamseyCert.sol_ppt",
+      "RamseyCert.sol_symm"
+    ],
+    "requested_count": 24,
+    "all_requested_declaration_modules_in_static_import_closure": true,
+    "original_frozen_audit_unified_difference": "--- frozen-original/FreshAudit1.lean\n+++ proposal-only/FreshAuditSupplement.lean\n@@ -1,26 +1,27 @@\n-import RamseyCert\r\n-\r\n-#print axioms K4_blue\r\n-#print axioms RamseyCert.blowup_count\r\n-#print axioms RamseyCert.minMonoK4_le\r\n-#print axioms RamseyCert.ramseyMultK4_le_density\r\n-#print axioms Template.numer_eq\r\n-#print axioms Template.total_eq\r\n-#print axioms colour_total\r\n-#print axioms fastK_eq\r\n-#print axioms getD_map_range\r\n-#print axioms kTermA_eq\r\n-#print axioms minMonoK4_density_le\r\n-#print axioms minMonoK4_density_le_sol\r\n-#print axioms minMonoK4_density_mono\r\n-#print axioms native_fastK_B\r\n-#print axioms native_fastK_R\r\n-#print axioms ramseyMultK4_le_sol\r\n-#print axioms ramseyMultK4_limit_lt_ref\r\n-#print axioms ramseyMultK4_lt_ref\r\n-#print axioms ramseyMultK4_tendsto\r\n-#print axioms sol_density\r\n-#print axioms sol_lt_ref\r\n-#print axioms sol_numer\r\n-#print axioms sol_ppt\r\n-#print axioms sol_symm\r\n+import RamseyCert.Final\n+import RamseyCert.Native\n+\n+#print axioms RamseyCert.K4_blue\n+#print axioms RamseyCert.blowup_count\n+#print axioms RamseyCert.minMonoK4_le\n+#print axioms RamseyCert.ramseyMultK4_le_density\n+#print axioms RamseyCert.Template.numer_eq\n+#print axioms RamseyCert.Template.total_eq\n+#print axioms RamseyCert.colour_total\n+#print axioms RamseyCert.fastK_eq\n+#print axioms RamseyCert.getD_map_range\n+#print axioms RamseyCert.kTermA_eq\n+#print axioms RamseyCert.minMonoK4_density_le\n+#print axioms RamseyCert.minMonoK4_density_le_sol\n+#print axioms RamseyCert.minMonoK4_density_mono\n+#print axioms RamseyCert.native_fastK_B\n+#print axioms RamseyCert.native_fastK_R\n+#print axioms RamseyCert.ramseyMultK4_le_sol\n+#print axioms RamseyCert.ramseyMultK4_limit_lt_ref\n+#print axioms RamseyCert.ramseyMultK4_lt_ref\n+#print axioms RamseyCert.ramseyMultK4_tendsto\n+#print axioms RamseyCert.sol_density\n+#print axioms RamseyCert.sol_lt_ref\n+#print axioms RamseyCert.sol_numer\n+#print axioms RamseyCert.sol_ppt\n+#print axioms RamseyCert.sol_symm\n",
+    "difference_utf8_sha256": "18cc382679bdf9521687524a6ec261181bf9f14ac3fcae6bb8f5d5eccd6c3da4",
+    "no_supplemental_Lean_file_created": true
+  },
+  "all_24_typed_declaration_and_import_mappings": [
+    {
+      "original_requested_name": "K4_blue",
+      "fully_qualified_name": "RamseyCert.K4_blue",
+      "declaration_module": "RamseyCert.Fast",
+      "declaration_source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert\\Fast.lean",
+      "declaration_source_sha256": "14490310b83732e503a6a8e6e1f597684f2b8bbe3c68e010c5f8819877f7a808",
+      "line": 353,
+      "exact_statement_before_proof": "theorem K4_blue (n : ℕ) (w : ℕ → ℕ) (rs rsB : List ℕ) (hlen : rs.length = n)\n    (h : rsB = rs.map (fun r => Nat.xor r (2 ^ n - 1))) :\n    K4 n w (fun a b => !adjOf rs a b) = K4 n w (adjOf rsB)",
+      "statement_utf8_sha256": "75205d4970ea1854b078a82e50d5cdffe5b26ead3bcabaabf36fc6ca0d479873",
+      "top_level_proof_delimiter_start_byte": 14722,
+      "statement_parser": "FIRST_DECLARATION_ASSIGNMENT_AT_ZERO_PAREN_BRACE_BRACKET_DEPTH_WITH_COMMENTS_AND_STRINGS_REMOVED",
+      "supplement_import_path": [
+        "RamseyCert.Native",
+        "RamseyCert.Fast"
+      ],
+      "implicit_definition_context": "Inside namespace RamseyCert; Template.numer_eq and Template.total_eq use the nested Template namespace.",
+      "static_expected_trust_role": "KERNEL_CERTIFICATE_OR_GENERAL_PROOF; ACTUAL_AXIOMS_PENDING"
+    },
+    {
+      "original_requested_name": "RamseyCert.blowup_count",
+      "fully_qualified_name": "RamseyCert.blowup_count",
+      "declaration_module": "RamseyCert.Limit",
+      "declaration_source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert\\Limit.lean",
+      "declaration_source_sha256": "28276e096be4cf2426f432b92ae425e09c368848e72f21945fc39964edad21e5",
+      "line": 238,
+      "exact_statement_before_proof": "theorem blowup_count (T : Template) (hsym : T.Symmetric) (t : ℕ) :\n    ∃ c : Fin (t * T.total) → Fin (t * T.total) → Bool, (∀ u v, c u v = c v u) ∧\n      24 * monoK4 c ≤ t ^ 4 * T.numer",
+      "statement_utf8_sha256": "d47427289045a6303f1c516aaa9e8a328a04acaf11469453ec1e4cd5fe0e87ef",
+      "top_level_proof_delimiter_start_byte": 9279,
+      "statement_parser": "FIRST_DECLARATION_ASSIGNMENT_AT_ZERO_PAREN_BRACE_BRACKET_DEPTH_WITH_COMMENTS_AND_STRINGS_REMOVED",
+      "supplement_import_path": [
+        "RamseyCert.Final",
+        "RamseyCert.Limit"
+      ],
+      "implicit_definition_context": "Inside namespace RamseyCert; Template.numer_eq and Template.total_eq use the nested Template namespace.",
+      "static_expected_trust_role": "KERNEL_CERTIFICATE_OR_GENERAL_PROOF; ACTUAL_AXIOMS_PENDING"
+    },
+    {
+      "original_requested_name": "RamseyCert.minMonoK4_le",
+      "fully_qualified_name": "RamseyCert.minMonoK4_le",
+      "declaration_module": "RamseyCert.Limit",
+      "declaration_source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert\\Limit.lean",
+      "declaration_source_sha256": "28276e096be4cf2426f432b92ae425e09c368848e72f21945fc39964edad21e5",
+      "line": 314,
+      "exact_statement_before_proof": "theorem minMonoK4_le (T : Template) (hsym : T.Symmetric) (t : ℕ) :\n    24 * minMonoK4 (t * T.total) ≤ t ^ 4 * T.numer",
+      "statement_utf8_sha256": "5d5b1715a60d4ab719be6fd7fb2d532957f7f6aea5d3cb075bc7c41bef453bd8",
+      "top_level_proof_delimiter_start_byte": 12713,
+      "statement_parser": "FIRST_DECLARATION_ASSIGNMENT_AT_ZERO_PAREN_BRACE_BRACKET_DEPTH_WITH_COMMENTS_AND_STRINGS_REMOVED",
+      "supplement_import_path": [
+        "RamseyCert.Final",
+        "RamseyCert.Limit"
+      ],
+      "implicit_definition_context": "Inside namespace RamseyCert; Template.numer_eq and Template.total_eq use the nested Template namespace.",
+      "static_expected_trust_role": "KERNEL_CERTIFICATE_OR_GENERAL_PROOF; ACTUAL_AXIOMS_PENDING"
+    },
+    {
+      "original_requested_name": "RamseyCert.ramseyMultK4_le_density",
+      "fully_qualified_name": "RamseyCert.ramseyMultK4_le_density",
+      "declaration_module": "RamseyCert.Limit",
+      "declaration_source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert\\Limit.lean",
+      "declaration_source_sha256": "28276e096be4cf2426f432b92ae425e09c368848e72f21945fc39964edad21e5",
+      "line": 422,
+      "exact_statement_before_proof": "theorem ramseyMultK4_le_density (T : Template) (hsym : T.Symmetric)\n    (hpos : 0 < T.total) : ramseyMultK4 ≤ (T.density : ℝ)",
+      "statement_utf8_sha256": "c97d0646f76e06a0d71e75ab0547eadd45e699f1dd86bc927551c2740f033556",
+      "top_level_proof_delimiter_start_byte": 17586,
+      "statement_parser": "FIRST_DECLARATION_ASSIGNMENT_AT_ZERO_PAREN_BRACE_BRACKET_DEPTH_WITH_COMMENTS_AND_STRINGS_REMOVED",
+      "supplement_import_path": [
+        "RamseyCert.Final",
+        "RamseyCert.Limit"
+      ],
+      "implicit_definition_context": "Inside namespace RamseyCert; Template.numer_eq and Template.total_eq use the nested Template namespace.",
+      "static_expected_trust_role": "KERNEL_CERTIFICATE_OR_GENERAL_PROOF; ACTUAL_AXIOMS_PENDING"
+    },
+    {
+      "original_requested_name": "Template.numer_eq",
+      "fully_qualified_name": "RamseyCert.Template.numer_eq",
+      "declaration_module": "RamseyCert.Fast",
+      "declaration_source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert\\Fast.lean",
+      "declaration_source_sha256": "14490310b83732e503a6a8e6e1f597684f2b8bbe3c68e010c5f8819877f7a808",
+      "line": 414,
+      "exact_statement_before_proof": "theorem Template.numer_eq (T : Template) (n : ℕ) (hn : T.n = n) (w : ℕ → ℕ) (adj : ℕ → ℕ → Bool)\n    (hw : ∀ i : Fin T.n, T.w i = w i) (hadj : ∀ i j : Fin T.n, T.red i j = adj i j) :\n    T.numer = K4 n w adj + K4 n w (fun a b => !adj a b)",
+      "statement_utf8_sha256": "b32985e4252848f55d1e835044c8bd0d309976768fd7a8e5cce7bd0c881e246f",
+      "top_level_proof_delimiter_start_byte": 17455,
+      "statement_parser": "FIRST_DECLARATION_ASSIGNMENT_AT_ZERO_PAREN_BRACE_BRACKET_DEPTH_WITH_COMMENTS_AND_STRINGS_REMOVED",
+      "supplement_import_path": [
+        "RamseyCert.Native",
+        "RamseyCert.Fast"
+      ],
+      "implicit_definition_context": "Inside namespace RamseyCert; Template.numer_eq and Template.total_eq use the nested Template namespace.",
+      "static_expected_trust_role": "KERNEL_CERTIFICATE_OR_GENERAL_PROOF; ACTUAL_AXIOMS_PENDING"
+    },
+    {
+      "original_requested_name": "Template.total_eq",
+      "fully_qualified_name": "RamseyCert.Template.total_eq",
+      "declaration_module": "RamseyCert.Fast",
+      "declaration_source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert\\Fast.lean",
+      "declaration_source_sha256": "14490310b83732e503a6a8e6e1f597684f2b8bbe3c68e010c5f8819877f7a808",
+      "line": 430,
+      "exact_statement_before_proof": "theorem Template.total_eq (T : Template) (n : ℕ) (hn : T.n = n) (w : ℕ → ℕ)\n    (hw : ∀ i : Fin T.n, T.w i = w i) :\n    T.total = ((List.range n).map w).sum",
+      "statement_utf8_sha256": "679a63a78c01d1a46ef95d6271b1d2764ed56e311188b71cf196fdf33bfdac00",
+      "top_level_proof_delimiter_start_byte": 18130,
+      "statement_parser": "FIRST_DECLARATION_ASSIGNMENT_AT_ZERO_PAREN_BRACE_BRACKET_DEPTH_WITH_COMMENTS_AND_STRINGS_REMOVED",
+      "supplement_import_path": [
+        "RamseyCert.Native",
+        "RamseyCert.Fast"
+      ],
+      "implicit_definition_context": "Inside namespace RamseyCert; Template.numer_eq and Template.total_eq use the nested Template namespace.",
+      "static_expected_trust_role": "KERNEL_CERTIFICATE_OR_GENERAL_PROOF; ACTUAL_AXIOMS_PENDING"
+    },
+    {
+      "original_requested_name": "colour_total",
+      "fully_qualified_name": "RamseyCert.colour_total",
+      "declaration_module": "RamseyCert.Fast",
+      "declaration_source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert\\Fast.lean",
+      "declaration_source_sha256": "14490310b83732e503a6a8e6e1f597684f2b8bbe3c68e010c5f8819877f7a808",
+      "line": 292,
+      "exact_statement_before_proof": "theorem colour_total (B n W md : ℕ) (rs : List ℕ) (all : List Ent)\n    (hmd : md = 2 ^ B - 1) (hlen : rs.length = n) (hall : all = mkAll B n W rs)\n    (hsum : ((List.range n).map (wOf W B)).sum < 2 ^ B - 1) :\n    (all.map (fun ea => kTermA md ea (nbhd all ea))).sum\n      = K4 n (wOf W B) (adjOf rs)",
+      "statement_utf8_sha256": "b53c87053291453b6b35735e3c013500a9d5f1561948f8b6fa8dda65c75a1d34",
+      "top_level_proof_delimiter_start_byte": 12189,
+      "statement_parser": "FIRST_DECLARATION_ASSIGNMENT_AT_ZERO_PAREN_BRACE_BRACKET_DEPTH_WITH_COMMENTS_AND_STRINGS_REMOVED",
+      "supplement_import_path": [
+        "RamseyCert.Native",
+        "RamseyCert.Fast"
+      ],
+      "implicit_definition_context": "Inside namespace RamseyCert; Template.numer_eq and Template.total_eq use the nested Template namespace.",
+      "static_expected_trust_role": "KERNEL_CERTIFICATE_OR_GENERAL_PROOF; ACTUAL_AXIOMS_PENDING"
+    },
+    {
+      "original_requested_name": "fastK_eq",
+      "fully_qualified_name": "RamseyCert.fastK_eq",
+      "declaration_module": "RamseyCert.Fast",
+      "declaration_source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert\\Fast.lean",
+      "declaration_source_sha256": "14490310b83732e503a6a8e6e1f597684f2b8bbe3c68e010c5f8819877f7a808",
+      "line": 345,
+      "exact_statement_before_proof": "theorem fastK_eq (B n W : ℕ) (rs : List ℕ) (hlen : rs.length = n)\n    (hsum : ((List.range n).map (wOf W B)).sum < 2 ^ B - 1) :\n    fastK B n W rs = K4 n (wOf W B) (adjOf rs)",
+      "statement_utf8_sha256": "a81505d4b0cb5077949ba378d1efc6a04d6981a948f4311567374ab528ee5ffd",
+      "top_level_proof_delimiter_start_byte": 14328,
+      "statement_parser": "FIRST_DECLARATION_ASSIGNMENT_AT_ZERO_PAREN_BRACE_BRACKET_DEPTH_WITH_COMMENTS_AND_STRINGS_REMOVED",
+      "supplement_import_path": [
+        "RamseyCert.Native",
+        "RamseyCert.Fast"
+      ],
+      "implicit_definition_context": "Inside namespace RamseyCert; Template.numer_eq and Template.total_eq use the nested Template namespace.",
+      "static_expected_trust_role": "KERNEL_CERTIFICATE_OR_GENERAL_PROOF; ACTUAL_AXIOMS_PENDING"
+    },
+    {
+      "original_requested_name": "getD_map_range",
+      "fully_qualified_name": "RamseyCert.getD_map_range",
+      "declaration_module": "RamseyCert.Fast",
+      "declaration_source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert\\Fast.lean",
+      "declaration_source_sha256": "14490310b83732e503a6a8e6e1f597684f2b8bbe3c68e010c5f8819877f7a808",
+      "line": 443,
+      "exact_statement_before_proof": "theorem getD_map_range (f : ℕ → ℕ) (n i : ℕ) (hi : i < n) :\n    ((List.range n).map f).getD i 0 = f i",
+      "statement_utf8_sha256": "26dfd14554958aa0ae942257cfedbaa70cbb48988d4bfbfb5d54669af125f481",
+      "top_level_proof_delimiter_start_byte": 18688,
+      "statement_parser": "FIRST_DECLARATION_ASSIGNMENT_AT_ZERO_PAREN_BRACE_BRACKET_DEPTH_WITH_COMMENTS_AND_STRINGS_REMOVED",
+      "supplement_import_path": [
+        "RamseyCert.Native",
+        "RamseyCert.Fast"
+      ],
+      "implicit_definition_context": "Inside namespace RamseyCert; Template.numer_eq and Template.total_eq use the nested Template namespace.",
+      "static_expected_trust_role": "KERNEL_CERTIFICATE_OR_GENERAL_PROOF; ACTUAL_AXIOMS_PENDING"
+    },
+    {
+      "original_requested_name": "kTermA_eq",
+      "fully_qualified_name": "RamseyCert.kTermA_eq",
+      "declaration_module": "RamseyCert.Fast",
+      "declaration_source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert\\Fast.lean",
+      "declaration_source_sha256": "14490310b83732e503a6a8e6e1f597684f2b8bbe3c68e010c5f8819877f7a808",
+      "line": 110,
+      "exact_statement_before_proof": "theorem kTermA_eq (md : ℕ) (ea : Ent) (La : List Ent) : kTermA md ea La = termA md ea La",
+      "statement_utf8_sha256": "40fc4dea14e07a43803420fe39dbb704e033bec7e4cf07dbb39fc35d054ee90d",
+      "top_level_proof_delimiter_start_byte": 4357,
+      "statement_parser": "FIRST_DECLARATION_ASSIGNMENT_AT_ZERO_PAREN_BRACE_BRACKET_DEPTH_WITH_COMMENTS_AND_STRINGS_REMOVED",
+      "supplement_import_path": [
+        "RamseyCert.Native",
+        "RamseyCert.Fast"
+      ],
+      "implicit_definition_context": "Inside namespace RamseyCert; Template.numer_eq and Template.total_eq use the nested Template namespace.",
+      "static_expected_trust_role": "KERNEL_CERTIFICATE_OR_GENERAL_PROOF; ACTUAL_AXIOMS_PENDING"
+    },
+    {
+      "original_requested_name": "minMonoK4_density_le",
+      "fully_qualified_name": "RamseyCert.minMonoK4_density_le",
+      "declaration_module": "RamseyCert.Mono",
+      "declaration_source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert\\Mono.lean",
+      "declaration_source_sha256": "63e1e1d118514de7bd7c9c924ee53d487ac7f9234f7276378e9208c210a2ce13",
+      "line": 215,
+      "exact_statement_before_proof": "theorem minMonoK4_density_le (m : ℕ) (hm : 4 ≤ m) :\n    (minMonoK4 m : ℝ) / (m.choose 4 : ℝ) ≤ ramseyMultK4",
+      "statement_utf8_sha256": "9ef4508fce22b01dbcd082d73310530503bfeeaaddb8da48e89ff7893b8a4d33",
+      "top_level_proof_delimiter_start_byte": 9235,
+      "statement_parser": "FIRST_DECLARATION_ASSIGNMENT_AT_ZERO_PAREN_BRACE_BRACKET_DEPTH_WITH_COMMENTS_AND_STRINGS_REMOVED",
+      "supplement_import_path": [
+        "RamseyCert.Final",
+        "RamseyCert.Mono"
+      ],
+      "implicit_definition_context": "Inside namespace RamseyCert; Template.numer_eq and Template.total_eq use the nested Template namespace.",
+      "static_expected_trust_role": "KERNEL_CERTIFICATE_OR_GENERAL_PROOF; ACTUAL_AXIOMS_PENDING"
+    },
+    {
+      "original_requested_name": "minMonoK4_density_le_sol",
+      "fully_qualified_name": "RamseyCert.minMonoK4_density_le_sol",
+      "declaration_module": "RamseyCert.Final",
+      "declaration_source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert\\Final.lean",
+      "declaration_source_sha256": "ac8fbfe56259b7c255520c121f27d54694beb4afe6fa7e325bd18b74c71ac461",
+      "line": 32,
+      "exact_statement_before_proof": "theorem minMonoK4_density_le_sol (m : ℕ) (hm : 4 ≤ m) :\n    (minMonoK4 m : ℝ) / (m.choose 4 : ℝ) ≤ 200137750014677779172692777477 / 6640289795261907019148161833841",
+      "statement_utf8_sha256": "2a94853d22220b6849743f5b5e1fa8c1716c5fb3ed68fd43ba6e78dbaffcb81c",
+      "top_level_proof_delimiter_start_byte": 1338,
+      "statement_parser": "FIRST_DECLARATION_ASSIGNMENT_AT_ZERO_PAREN_BRACE_BRACKET_DEPTH_WITH_COMMENTS_AND_STRINGS_REMOVED",
+      "supplement_import_path": [
+        "RamseyCert.Final"
+      ],
+      "implicit_definition_context": "Inside namespace RamseyCert; Template.numer_eq and Template.total_eq use the nested Template namespace.",
+      "static_expected_trust_role": "KERNEL_CERTIFICATE_OR_GENERAL_PROOF; ACTUAL_AXIOMS_PENDING"
+    },
+    {
+      "original_requested_name": "minMonoK4_density_mono",
+      "fully_qualified_name": "RamseyCert.minMonoK4_density_mono",
+      "declaration_module": "RamseyCert.Mono",
+      "declaration_source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert\\Mono.lean",
+      "declaration_source_sha256": "63e1e1d118514de7bd7c9c924ee53d487ac7f9234f7276378e9208c210a2ce13",
+      "line": 132,
+      "exact_statement_before_proof": "theorem minMonoK4_density_mono (m : ℕ) (hm : 4 ≤ m) :\n    (minMonoK4 m : ℝ) / (m.choose 4 : ℝ) ≤\n      (minMonoK4 (m + 1) : ℝ) / ((m + 1).choose 4 : ℝ)",
+      "statement_utf8_sha256": "96148f5c11fb2231ea25c92b9198bc69a2e98dc1ba2ad2e8fbeea2d1cfa16f61",
+      "top_level_proof_delimiter_start_byte": 5382,
+      "statement_parser": "FIRST_DECLARATION_ASSIGNMENT_AT_ZERO_PAREN_BRACE_BRACKET_DEPTH_WITH_COMMENTS_AND_STRINGS_REMOVED",
+      "supplement_import_path": [
+        "RamseyCert.Final",
+        "RamseyCert.Mono"
+      ],
+      "implicit_definition_context": "Inside namespace RamseyCert; Template.numer_eq and Template.total_eq use the nested Template namespace.",
+      "static_expected_trust_role": "KERNEL_CERTIFICATE_OR_GENERAL_PROOF; ACTUAL_AXIOMS_PENDING"
+    },
+    {
+      "original_requested_name": "native_fastK_B",
+      "fully_qualified_name": "RamseyCert.native_fastK_B",
+      "declaration_module": "RamseyCert.Native",
+      "declaration_source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert\\Native.lean",
+      "declaration_source_sha256": "8d9d66a0f2e2e3d2f6445797e9afbd4b750b678cec644b4131324d9fac48893f",
+      "line": 17,
+      "exact_statement_before_proof": "theorem native_fastK_B : fastK 32 1024 W rowsB = 100297877536367701755653260597",
+      "statement_utf8_sha256": "df524a51fbb8509b888f0c49548028bc10c8376384024ac943e6b3b98eccae4e",
+      "top_level_proof_delimiter_start_byte": 663,
+      "statement_parser": "FIRST_DECLARATION_ASSIGNMENT_AT_ZERO_PAREN_BRACE_BRACKET_DEPTH_WITH_COMMENTS_AND_STRINGS_REMOVED",
+      "supplement_import_path": [
+        "RamseyCert.Native"
+      ],
+      "implicit_definition_context": "Inside namespace RamseyCert; Template.numer_eq and Template.total_eq use the nested Template namespace.",
+      "static_expected_trust_role": "SEPARATE_NATIVE_EVALUATION_CROSS_CHECK"
+    },
+    {
+      "original_requested_name": "native_fastK_R",
+      "fully_qualified_name": "RamseyCert.native_fastK_R",
+      "declaration_module": "RamseyCert.Native",
+      "declaration_source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert\\Native.lean",
+      "declaration_source_sha256": "8d9d66a0f2e2e3d2f6445797e9afbd4b750b678cec644b4131324d9fac48893f",
+      "line": 15,
+      "exact_statement_before_proof": "theorem native_fastK_R : fastK 32 1024 W rowsR = 99839872478310077417039516880",
+      "statement_utf8_sha256": "1d4cf0703b14bb624d3f74188b2ecac788bc13e2338dfd4a97c0511359289861",
+      "top_level_proof_delimiter_start_byte": 562,
+      "statement_parser": "FIRST_DECLARATION_ASSIGNMENT_AT_ZERO_PAREN_BRACE_BRACKET_DEPTH_WITH_COMMENTS_AND_STRINGS_REMOVED",
+      "supplement_import_path": [
+        "RamseyCert.Native"
+      ],
+      "implicit_definition_context": "Inside namespace RamseyCert; Template.numer_eq and Template.total_eq use the nested Template namespace.",
+      "static_expected_trust_role": "SEPARATE_NATIVE_EVALUATION_CROSS_CHECK"
+    },
+    {
+      "original_requested_name": "ramseyMultK4_le_sol",
+      "fully_qualified_name": "RamseyCert.ramseyMultK4_le_sol",
+      "declaration_module": "RamseyCert.Final",
+      "declaration_source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert\\Final.lean",
+      "declaration_source_sha256": "ac8fbfe56259b7c255520c121f27d54694beb4afe6fa7e325bd18b74c71ac461",
+      "line": 16,
+      "exact_statement_before_proof": "theorem ramseyMultK4_le_sol :\n    ramseyMultK4 ≤ 200137750014677779172692777477 / 6640289795261907019148161833841",
+      "statement_utf8_sha256": "27d62448c1d243d9925cd3bf1f9a566f94b3a4d8aeded05ee72bc4a49d705be5",
+      "top_level_proof_delimiter_start_byte": 536,
+      "statement_parser": "FIRST_DECLARATION_ASSIGNMENT_AT_ZERO_PAREN_BRACE_BRACKET_DEPTH_WITH_COMMENTS_AND_STRINGS_REMOVED",
+      "supplement_import_path": [
+        "RamseyCert.Final"
+      ],
+      "implicit_definition_context": "Inside namespace RamseyCert; Template.numer_eq and Template.total_eq use the nested Template namespace.",
+      "static_expected_trust_role": "KERNEL_CERTIFICATE_OR_GENERAL_PROOF; ACTUAL_AXIOMS_PENDING"
+    },
+    {
+      "original_requested_name": "ramseyMultK4_limit_lt_ref",
+      "fully_qualified_name": "RamseyCert.ramseyMultK4_limit_lt_ref",
+      "declaration_module": "RamseyCert.Final",
+      "declaration_source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert\\Final.lean",
+      "declaration_source_sha256": "ac8fbfe56259b7c255520c121f27d54694beb4afe6fa7e325bd18b74c71ac461",
+      "line": 39,
+      "exact_statement_before_proof": "theorem ramseyMultK4_limit_lt_ref :\n    ∃ L : ℝ, Filter.Tendsto (fun m : ℕ => (minMonoK4 m : ℝ) / (m.choose 4 : ℝ)) Filter.atTop (nhds L) ∧\n      L < 10486266368 / 768 ^ 4",
+      "statement_utf8_sha256": "9fd25367563267018fc644c7e0a40fa91d412c62b7d579fd1d27a1e87e996521",
+      "top_level_proof_delimiter_start_byte": 1725,
+      "statement_parser": "FIRST_DECLARATION_ASSIGNMENT_AT_ZERO_PAREN_BRACE_BRACKET_DEPTH_WITH_COMMENTS_AND_STRINGS_REMOVED",
+      "supplement_import_path": [
+        "RamseyCert.Final"
+      ],
+      "implicit_definition_context": "Inside namespace RamseyCert; Template.numer_eq and Template.total_eq use the nested Template namespace.",
+      "static_expected_trust_role": "KERNEL_CERTIFICATE_OR_GENERAL_PROOF; ACTUAL_AXIOMS_PENDING"
+    },
+    {
+      "original_requested_name": "ramseyMultK4_lt_ref",
+      "fully_qualified_name": "RamseyCert.ramseyMultK4_lt_ref",
+      "declaration_module": "RamseyCert.Final",
+      "declaration_source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert\\Final.lean",
+      "declaration_source_sha256": "ac8fbfe56259b7c255520c121f27d54694beb4afe6fa7e325bd18b74c71ac461",
+      "line": 25,
+      "exact_statement_before_proof": "theorem ramseyMultK4_lt_ref : ramseyMultK4 < 10486266368 / 768 ^ 4",
+      "statement_utf8_sha256": "dc3084d47a707819cecae97d683cb37d246fbc8a566dfde47f4df6a4c1b448df",
+      "top_level_proof_delimiter_start_byte": 864,
+      "statement_parser": "FIRST_DECLARATION_ASSIGNMENT_AT_ZERO_PAREN_BRACE_BRACKET_DEPTH_WITH_COMMENTS_AND_STRINGS_REMOVED",
+      "supplement_import_path": [
+        "RamseyCert.Final"
+      ],
+      "implicit_definition_context": "Inside namespace RamseyCert; Template.numer_eq and Template.total_eq use the nested Template namespace.",
+      "static_expected_trust_role": "KERNEL_CERTIFICATE_OR_GENERAL_PROOF; ACTUAL_AXIOMS_PENDING"
+    },
+    {
+      "original_requested_name": "ramseyMultK4_tendsto",
+      "fully_qualified_name": "RamseyCert.ramseyMultK4_tendsto",
+      "declaration_module": "RamseyCert.Mono",
+      "declaration_source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert\\Mono.lean",
+      "declaration_source_sha256": "63e1e1d118514de7bd7c9c924ee53d487ac7f9234f7276378e9208c210a2ce13",
+      "line": 201,
+      "exact_statement_before_proof": "theorem ramseyMultK4_tendsto :\n    Filter.Tendsto (fun m : ℕ => (minMonoK4 m : ℝ) / (m.choose 4 : ℝ))\n      Filter.atTop (nhds ramseyMultK4)",
+      "statement_utf8_sha256": "82ca661c93980ceca36937d2b580922ad454c0c0d6c728249cf1975648cec275",
+      "top_level_proof_delimiter_start_byte": 8665,
+      "statement_parser": "FIRST_DECLARATION_ASSIGNMENT_AT_ZERO_PAREN_BRACE_BRACKET_DEPTH_WITH_COMMENTS_AND_STRINGS_REMOVED",
+      "supplement_import_path": [
+        "RamseyCert.Final",
+        "RamseyCert.Mono"
+      ],
+      "implicit_definition_context": "Inside namespace RamseyCert; Template.numer_eq and Template.total_eq use the nested Template namespace.",
+      "static_expected_trust_role": "KERNEL_CERTIFICATE_OR_GENERAL_PROOF; ACTUAL_AXIOMS_PENDING"
+    },
+    {
+      "original_requested_name": "sol_density",
+      "fully_qualified_name": "RamseyCert.sol_density",
+      "declaration_module": "RamseyCert.Main",
+      "declaration_source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert\\Main.lean",
+      "declaration_source_sha256": "78f059eb97a79bcc5a84b582120ccd35adf4121966baaa8ae75d3cc08a462753",
+      "line": 59,
+      "exact_statement_before_proof": "theorem sol_density : sol.density = 200137750014677779172692777477 / 6640289795261907019148161833841",
+      "statement_utf8_sha256": "268d196c530f221d32986ae67b2b4d0cca7dcd4f7cfec45411d93641856c3e5a",
+      "top_level_proof_delimiter_start_byte": 2203,
+      "statement_parser": "FIRST_DECLARATION_ASSIGNMENT_AT_ZERO_PAREN_BRACE_BRACKET_DEPTH_WITH_COMMENTS_AND_STRINGS_REMOVED",
+      "supplement_import_path": [
+        "RamseyCert.Final",
+        "RamseyCert.Main"
+      ],
+      "implicit_definition_context": "Inside namespace RamseyCert; Template.numer_eq and Template.total_eq use the nested Template namespace.",
+      "static_expected_trust_role": "KERNEL_CERTIFICATE_OR_GENERAL_PROOF; ACTUAL_AXIOMS_PENDING"
+    },
+    {
+      "original_requested_name": "sol_lt_ref",
+      "fully_qualified_name": "RamseyCert.sol_lt_ref",
+      "declaration_module": "RamseyCert.Main",
+      "declaration_source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert\\Main.lean",
+      "declaration_source_sha256": "78f059eb97a79bcc5a84b582120ccd35adf4121966baaa8ae75d3cc08a462753",
+      "line": 66,
+      "exact_statement_before_proof": "theorem sol_lt_ref : sol.density < 10486266368 / 768 ^ 4",
+      "statement_utf8_sha256": "9730253e71d5a42c61bb3759551741e64e8fd7bc0cf5c477c8a0ed8aedf2736e",
+      "top_level_proof_delimiter_start_byte": 2450,
+      "statement_parser": "FIRST_DECLARATION_ASSIGNMENT_AT_ZERO_PAREN_BRACE_BRACKET_DEPTH_WITH_COMMENTS_AND_STRINGS_REMOVED",
+      "supplement_import_path": [
+        "RamseyCert.Final",
+        "RamseyCert.Main"
+      ],
+      "implicit_definition_context": "Inside namespace RamseyCert; Template.numer_eq and Template.total_eq use the nested Template namespace.",
+      "static_expected_trust_role": "KERNEL_CERTIFICATE_OR_GENERAL_PROOF; ACTUAL_AXIOMS_PENDING"
+    },
+    {
+      "original_requested_name": "sol_numer",
+      "fully_qualified_name": "RamseyCert.sol_numer",
+      "declaration_module": "RamseyCert.Main",
+      "declaration_source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert\\Main.lean",
+      "declaration_source_sha256": "78f059eb97a79bcc5a84b582120ccd35adf4121966baaa8ae75d3cc08a462753",
+      "line": 48,
+      "exact_statement_before_proof": "theorem sol_numer : sol.numer = 200137750014677779172692777477",
+      "statement_utf8_sha256": "a57763c9bbd0b2ddc4026735b113d4a42d9c53d6b5bee66c4304dff42b87951d",
+      "top_level_proof_delimiter_start_byte": 1697,
+      "statement_parser": "FIRST_DECLARATION_ASSIGNMENT_AT_ZERO_PAREN_BRACE_BRACKET_DEPTH_WITH_COMMENTS_AND_STRINGS_REMOVED",
+      "supplement_import_path": [
+        "RamseyCert.Final",
+        "RamseyCert.Main"
+      ],
+      "implicit_definition_context": "Inside namespace RamseyCert; Template.numer_eq and Template.total_eq use the nested Template namespace.",
+      "static_expected_trust_role": "KERNEL_CERTIFICATE_OR_GENERAL_PROOF; ACTUAL_AXIOMS_PENDING"
+    },
+    {
+      "original_requested_name": "sol_ppt",
+      "fully_qualified_name": "RamseyCert.sol_ppt",
+      "declaration_module": "RamseyCert.Main",
+      "declaration_source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert\\Main.lean",
+      "declaration_source_sha256": "78f059eb97a79bcc5a84b582120ccd35adf4121966baaa8ae75d3cc08a462753",
+      "line": 96,
+      "exact_statement_before_proof": "theorem sol_ppt : ⌈(10 ^ 12 : ℚ) * sol.density⌉ = 30139911990",
+      "statement_utf8_sha256": "9e38827f32940100b408fc06468b3c75bc8c94d4b0815edac439f27be608b342",
+      "top_level_proof_delimiter_start_byte": 4047,
+      "statement_parser": "FIRST_DECLARATION_ASSIGNMENT_AT_ZERO_PAREN_BRACE_BRACKET_DEPTH_WITH_COMMENTS_AND_STRINGS_REMOVED",
+      "supplement_import_path": [
+        "RamseyCert.Final",
+        "RamseyCert.Main"
+      ],
+      "implicit_definition_context": "Inside namespace RamseyCert; Template.numer_eq and Template.total_eq use the nested Template namespace.",
+      "static_expected_trust_role": "KERNEL_CERTIFICATE_OR_GENERAL_PROOF; ACTUAL_AXIOMS_PENDING"
+    },
+    {
+      "original_requested_name": "sol_symm",
+      "fully_qualified_name": "RamseyCert.sol_symm",
+      "declaration_module": "RamseyCert.Main",
+      "declaration_source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert\\Main.lean",
+      "declaration_source_sha256": "78f059eb97a79bcc5a84b582120ccd35adf4121966baaa8ae75d3cc08a462753",
+      "line": 91,
+      "exact_statement_before_proof": "theorem sol_symm : sol.Symmetric",
+      "statement_utf8_sha256": "0d4a92c15df8fb2f62ed61cf300873d6438c38caad8e11559e2a89acaadbe659",
+      "top_level_proof_delimiter_start_byte": 3849,
+      "statement_parser": "FIRST_DECLARATION_ASSIGNMENT_AT_ZERO_PAREN_BRACE_BRACKET_DEPTH_WITH_COMMENTS_AND_STRINGS_REMOVED",
+      "supplement_import_path": [
+        "RamseyCert.Final",
+        "RamseyCert.Main"
+      ],
+      "implicit_definition_context": "Inside namespace RamseyCert; Template.numer_eq and Template.total_eq use the nested Template namespace.",
+      "static_expected_trust_role": "KERNEL_CERTIFICATE_OR_GENERAL_PROOF; ACTUAL_AXIOMS_PENDING"
+    }
+  ],
+  "complete_custom_import_closure": {
+    "manifest": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\proposals\\held-original-granular-source-review\\htpeo-ramsey-supplemental-audit-custom-import-closure.json",
+    "sha256": "8d239a150c240918b37c9b742a39c74cd99a4680d51b13bb55e34048a2c866fa",
+    "units": 2101,
+    "original_plan_units_not_in_supplement_closure": [
+      "RamseyCert",
+      "RamseyCert.Summary"
+    ],
+    "all_custom_edges_closed": true,
+    "original_full_source_graph": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\htpeo-ramsey-current-mixed-original-source-graph-2026-10-05.json",
+    "original_full_source_graph_sha256": "5fb2d85b78c19b1d0d857487f9b2678e6e2c2925abcc43804dfdf0851fd164ac",
+    "whole_Mathlib_boundary_is_preserved": true,
+    "official_import_boundary_roots": [
+      "Mathlib",
+      "Mathlib.Algebra.BigOperators.Fin",
+      "Mathlib.Data.Rat.Defs"
+    ],
+    "implicit_Init": "Default Lean Init applies to non-prelude source modules; no source header or compiler option is changed."
+  },
+  "statement_normalizations": [
+    "Template.w has type Fin n -> Nat and permits zero block weights; only positive total weight is required in the asymptotic bound. Symmetry is an explicit hypothesis.",
+    "Template.numer is the literal weighted sum over all ordered block-index quadruples, with repeats and diagonal block colours. Template.density = numer / total^4 over the rationals.",
+    "monoK4 counts unordered four-vertex subsets with every distinct pair the same colour. The general blow-up count bridge includes factor 24, the number of orderings of a four-set.",
+    "minMonoK4 is the infimum over symmetric two-colourings. Its normalized finite density divides by choose(m,4). ramseyMultK4 is initially the real liminf; Mono supplies monotonicity and convergence.",
+    "The exact 1024-block solution density is 200137750014677779172692777477/6640289795261907019148161833841, and the source proves an upper bound at that value and a strict comparison against 10486266368/768^4.",
+    "The selected native_fastK_R/B statements are explicitly separate compiled-evaluation cross-checks; they must retain native trust labels in the actual audit, independent of the kernel computation chunks.",
+    "No exact earlier Technion bound or numerical priority is established by this supplemental audit. Originality and event-placement holds remain unchanged."
+  ],
+  "operational_limits": [
+    "Static declaration/import resolution is complete but is not an actual Lean type-check or axiom print.",
+    "The full original 2103-source compilation scope includes RamseyCert and Summary even though these two wrapper/research-output modules are not needed by the minimal supplement imports.",
+    "The frozen original FreshAudit1 must remain available and unchanged. Any materialized supplement is a separately labeled organizer audit, not a replacement verdict for the original audit.",
+    "No source bodies, import headers, plans, runners, canonical content or PDFs were changed; no Lean process was invoked."
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "created_utc": "2026-10-05T01:58:13.281971+00:00",
+  "status": "PASS",
+  "seconds": 3.703,
+  "checker_sha256": "c86b3b198f6e999fe952c74204389069e962ee1031f1078cdc1ab15d395fd204",
+  "base": 55,
+  "modulus": 166375,
+  "old_digits": [
+    0,
+    1,
+    2,
+    4,
+    5,
+    9,
+    10,
+    11,
+    14,
+    16,
+    17,
+    18,
+    21,
+    24,
+    30,
+    37,
+    39,
+    41,
+    42,
+    45,
+    47
+  ],
+  "new_residues": [
+    26286,
+    26726,
+    26737,
+    120061,
+    120501,
+    120512
+  ],
+  "alphabet_size": 9267,
+  "checks": {
+    "base_digit_nonzero_progressions": 2970,
+    "zero_new_case": "Least-nonzero-base55-digit descent with enumerated base certificate",
+    "one_new_explicit_cases_positions_0_1": 1996488,
+    "one_new_positions_2_3": "Reversal bijection d to -d moduloM",
+    "two_or_more_new_explicit_pair_cases": 180,
+    "gap_inverses": {
+      "1": 1,
+      "2": 83188,
+      "3": 110917
+    }
+  },
+  "conclusion": "The digit-product alphabet enlarged by the six stated residues is modular four-AP-free modulo55^3 for every nonzero step.",
+  "limitations": [
+    "This is an independent finite arithmetic check plus the stated elementary digit descent, not a Lean replay.",
+    "The reciprocal-sum lower bound and final positive-integer set assembly are outside this checker.",
+    "No manuscript inputs, proof sources, cached artifacts or proof plans are modified."
+  ]
+}

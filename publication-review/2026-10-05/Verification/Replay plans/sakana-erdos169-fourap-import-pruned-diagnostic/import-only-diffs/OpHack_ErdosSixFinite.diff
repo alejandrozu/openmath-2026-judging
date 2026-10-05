@@ -1,0 +1,23 @@
+--- frozen/OpHack/ErdosSixFinite.lean
++++ import-pruned/OpHack/ErdosSixFinite.lean
+@@ -1,4 +1,19 @@
+-import Mathlib
++import Mathlib.Tactic
++import Mathlib.Data.Int.ModEq
++import Mathlib.Data.Int.Cast.Lemmas
++import Mathlib.Data.Rat.BigOperators
++import Mathlib.Data.Rat.Lemmas
++import Mathlib.Data.Nat.Cast.Order.Field
++import Mathlib.Order.Interval.Finset.Nat
++import Mathlib.Data.Finset.Card
++import Mathlib.Data.Finset.Prod
++import Mathlib.Data.Finset.Union
++import Mathlib.Algebra.BigOperators.Group.Finset.Basic
++import Mathlib.Algebra.BigOperators.Group.Finset.Sigma
++import Mathlib.Algebra.BigOperators.Group.Finset.Lemmas
++import Mathlib.Algebra.BigOperators.Group.List.Lemmas
++import Mathlib.Algebra.BigOperators.Ring.Finset
++import Mathlib.Algebra.Order.BigOperators.Group.Finset
+ 
+ /-!
+ Compact exact certificates for the six-residue extension modulo 55^3.

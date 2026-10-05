@@ -1,0 +1,664 @@
+{
+  "status": "PENDING_ROOT_NATIVE_IDENTITY_REVIEW_WITH_OBSERVER_LIMITATION",
+  "created_utc": "2026-10-05T01:42:09.926752+00:00",
+  "family_id": "luke-k4-ramsey-current",
+  "source_commit": "2cf216ba885fbb1b2d1b2d4920efeaa6ba438842",
+  "lean_version": "4.34.1",
+  "mathlib_pin": "d13f23b723b8a846827a245b89c10fc7d3f11612",
+  "review_preparer_sha256": "8f9e5c67c8cc21b2b4ef324aac7e2940abb8f695f9005f2b8983ce892c917fed",
+  "pilot_receipt_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\luke-k4-ramsey-current-native-fresh-build.json",
+  "pilot_receipt_sha256": "f96afa977949375778b0666754a20238403718d93919f08508ed9d3f4370229d",
+  "count_row_canonical_sha256": "b4d95910917d10a4decfbb4954d6fbc9b511382be7db56e8d5e4e1fdf8ee5bf0",
+  "source_stage_build_plan_sha256": "d0e2726121389154f9d6c6bd42cde6f7bc66ae98d537100aa40fe123e4e19127",
+  "native_link_receipt_sha256": "6db975a88287d901aabc016a035b9443b5b050df42458010d7f5b769f3ff12f1",
+  "preparation_receipt_sha256": "043f1ad3ecb448c6bd23f06ec1944a17dbb4e0e121ba951f2acb54dd4aa7a274",
+  "object_ABI_audit_sha256": "2d921ce78bbab2577cc873f2640f0eb890af64f0c2fef7269dee3bdff5613c73",
+  "count_execution": {
+    "module": "K4Ramsey.Constructions.Final3840.Certificate",
+    "source_sha256": "de3a81ebcf6b8a2162c7ba35a367f35131c7b45e9d00d7e42a31f81e8f121b04",
+    "command": [
+      "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+      "-j1",
+      "--load-dynlib=C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-k4-ramsey-native-isolated\\bin\\luke_nonmath_native.dll",
+      "--plugin=C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-k4-ramsey-native-isolated\\bin\\luke_mathlib_count_native.dll=initialize_K4Ramsey_Constructions_Final3840_Count",
+      "-o",
+      "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-k4-ramsey-current-native\\.lake\\build\\lib\\lean\\K4Ramsey\\Constructions\\Final3840\\Certificate.olean",
+      "-i",
+      "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-k4-ramsey-current-native\\.lake\\build\\lib\\lean\\K4Ramsey\\Constructions\\Final3840\\Certificate.ilean",
+      "K4Ramsey\\Constructions\\Final3840\\Certificate.lean"
+    ],
+    "started_utc": "2026-10-05T00:56:25.863362+00:00",
+    "finished_utc": "2026-10-05T01:30:57.371350+00:00",
+    "seconds": 2071.453,
+    "state": "PASS",
+    "exit": 0,
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "job_peak_process_private_bytes": 3156987904
+  },
+  "loaded_native_images": [
+    {
+      "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-k4-ramsey-native-isolated\\bin\\luke_nonmath_native.dll",
+      "module": "luke_nonmath_native.dll",
+      "base_address": 140724170260480,
+      "mapped_image_bytes": 15794176,
+      "sha256": "3e98a83c3f1fd2f7c6d340b9deab4dc0a4efd73902c041141ef889b17fa338ca",
+      "observed_utc": "2026-10-05T00:56:26.241502+00:00",
+      "seconds_after_resume": 0.328
+    },
+    {
+      "path": "c:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-k4-ramsey-native-isolated\\bin\\luke_mathlib_count_native.dll",
+      "module": "luke_mathlib_count_native.dll",
+      "base_address": 140723109625856,
+      "mapped_image_bytes": 27426816,
+      "sha256": "20e7e1219b6798e621dfee7776ab0e5f29c06ff04338b9d5544ad98528298498",
+      "observed_utc": "2026-10-05T00:56:26.285010+00:00",
+      "seconds_after_resume": 0.36
+    }
+  ],
+  "initialization_complete_cache_slot_observation": {
+    "observed_utc": "2026-10-05T00:57:17.587372+00:00",
+    "seconds_after_resume": 51.672,
+    "slots": [
+      {
+        "cache": "bCache",
+        "symbol": "l_K4Ramsey_Final3840_Count_bCache",
+        "slot_address": 140723136347704,
+        "pointer_value": 2726279857776,
+        "is_null": false,
+        "read_bytes": 8,
+        "representation": "Exact exported 64-bit lean_object* data slot; pointer is not dereferenced."
+      },
+      {
+        "cache": "dCache",
+        "symbol": "l_K4Ramsey_Final3840_Count_dCache",
+        "slot_address": 140723136347760,
+        "pointer_value": 2726291349872,
+        "is_null": false,
+        "read_bytes": 8,
+        "representation": "Exact exported 64-bit lean_object* data slot; pointer is not dereferenced."
+      },
+      {
+        "cache": "pathsCache",
+        "symbol": "l_K4Ramsey_Final3840_Count_pathsCache",
+        "slot_address": 140723136347800,
+        "pointer_value": 2726440861808,
+        "is_null": false,
+        "read_bytes": 8,
+        "representation": "Exact exported 64-bit lean_object* data slot; pointer is not dereferenced."
+      }
+    ],
+    "all_three_slots_non_null": true,
+    "source_initializer_incomplete_inference": false
+  },
+  "all_native_images_correctly_observed": true,
+  "all_three_exact_exported_cache_slots_observed_non_null": true,
+  "native_dispatch_observations_clean": false,
+  "continuous_observer_completeness": false,
+  "image_observation_errors_preserved": [
+    "[WinError 299] Solo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory."
+  ],
+  "observer_error_timing": "UNKNOWN; original guard did not record a timestamp or at-exit association.",
+  "unknown_error_timing_remains_unresolved": true,
+  "limited_conclusion": "Native identity and initialization are sufficiently observed by the successful time-stamped image/hash and exact non-null exported cache-slot observations, with unchanged inputs and actual Count source exit 0. Continuous observer completeness is false; unknown timing of WinError 299 remains unresolved. Root acceptance is required and is not supplied by this preparer.",
+  "native_selection_evidence_notice": "Selection is a deterministic inference from actual PE exports/imports, loaded image identities, exact pinned default-package mangling/native preference, and successful unchanged source execution. These observations are not a function-call trace and do not dereference Lean heap objects.",
+  "frozen_source_identity_count": 51,
+  "frozen_source_identity_inventory": [
+    {
+      "module": "Audits.Graphon",
+      "sha256": "9a2b2c6eb23479ddc3474220316673c4d56346dd7dc2046029dc2e0195e98433",
+      "staged_and_frozen_match": true
+    },
+    {
+      "module": "Audits.Published",
+      "sha256": "f26bd76f52d2e5f6a484e5ba9e901b570d8a3095c254751d19679b19f8e5c835",
+      "staged_and_frozen_match": true
+    },
+    {
+      "module": "Executables.CheckCandidate",
+      "sha256": "56ba859ba2df5bbc89881e8a3defa714f1ce0d53aeabd265ba93634ae17b1a53",
+      "staged_and_frozen_match": true
+    },
+    {
+      "module": "Executables.CheckFinal3840",
+      "sha256": "dca0181df7d772ed3638aaf00e8d790e848aeb0a023ce06f11af78bf634c9159",
+      "staged_and_frozen_match": true
+    },
+    {
+      "module": "Executables.CheckPublished",
+      "sha256": "c888496fad7bf95d5864080adff6450cd5ffb342d4f5323ae4b02c3ab675dbdf",
+      "staged_and_frozen_match": true
+    },
+    {
+      "module": "Executables.WeightedCandidate",
+      "sha256": "63091aa3ca207d4026a19078dee4e9ab6f4efb3b86835c1df82526e19620298e",
+      "staged_and_frozen_match": true
+    },
+    {
+      "module": "K4Ramsey.Constructions.Clebsch192.Bound",
+      "sha256": "333d3260e06a1a75002125b5593527ab1073c5c69023033befb0969f530a5dfc",
+      "staged_and_frozen_match": true
+    },
+    {
+      "module": "K4Ramsey.Constructions.Clebsch192.Certificate",
+      "sha256": "4430b35387782f33d6417113a321ed986a9fb28dd59da8f87c6c4be7bbb1eae8",
+      "staged_and_frozen_match": true
+    },
+    {
+      "module": "K4Ramsey.Constructions.Clebsch192.Model",
+      "sha256": "0e5095708179b5683b35f675decbe4e2e78b58325dba8a101ba7ef82c3a3c756",
+      "staged_and_frozen_match": true
+    },
+    {
+      "module": "K4Ramsey.Constructions.Final3840.Arithmetic",
+      "sha256": "568e9c981e979254b70e30f3a7ec7d0ab7921f3075d3bc324d34cf4d505107ca",
+      "staged_and_frozen_match": true
+    },
+    {
+      "module": "K4Ramsey.Constructions.Final3840.Bound",
+      "sha256": "965b7abaaef4ea55fa820b9d0576dbb90cdce17d6fd09b470d21aeffcddbd9bf",
+      "staged_and_frozen_match": true
+    },
+    {
+      "module": "K4Ramsey.Constructions.Final3840.Certificate",
+      "sha256": "de3a81ebcf6b8a2162c7ba35a367f35131c7b45e9d00d7e42a31f81e8f121b04",
+      "staged_and_frozen_match": true
+    },
+    {
+      "module": "K4Ramsey.Constructions.Final3840.Count",
+      "sha256": "974a49d29cee1b9192eadc7dbb528f1e7d130b0c4467280cb0d2e2c7978d7dd2",
+      "staged_and_frozen_match": true
+    },
+    {
+      "module": "K4Ramsey.Constructions.Final3840.CountCorrect",
+      "sha256": "ed124a667f9d57ddce320d8e363630fffe6e9a8e2947d6b0183bf05bb5f35b19",
+      "staged_and_frozen_match": true
+    },
+    {
+      "module": "K4Ramsey.Constructions.Final3840.Data.Part00",
+      "sha256": "237e9976248c5fb43a6d521ad1eb4bd6a4915ea0a739cf218fa7be095af9b907",
+      "staged_and_frozen_match": true
+    },
+    {
+      "module": "K4Ramsey.Constructions.Final3840.Data.Part01",
+      "sha256": "856f18a7158d2c3b168ff66417b328de38727b03b5f716af11399dffe57314f4",
+      "staged_and_frozen_match": true
+    },
+    {
+      "module": "K4Ramsey.Constructions.Final3840.Data.Part02",
+      "sha256": "8a0dd1e84d3bc9070e06566e1a6cb016896b7f8b68e6ab74d06215804f98ae43",
+      "staged_and_frozen_match": true
+    },
+    {
+      "module": "K4Ramsey.Constructions.Final3840.Data.Part03",
+      "sha256": "7e1ee89e22b4bf1d0f6e4dce378d0430ec454aef72a70f40e3012b1d14a08390",
+      "staged_and_frozen_match": true
+    },
+    {
+      "module": "K4Ramsey.Constructions.Final3840.Data.Part04",
+      "sha256": "298fc2da3d2446d4383c8ef23de2c4ead669771eb21cc310856c93e1e333727d",
+      "staged_and_frozen_match": true
+    },
+    {
+      "module": "K4Ramsey.Constructions.Final3840.Data.Part05",
+      "sha256": "7ee71b7dfce4ea49ebd7fe6edbe13c654a77ebff9c85ca76ca412a30d6c0575e",
+      "staged_and_frozen_match": true
+    },
+    {
+      "module": "K4Ramsey.Constructions.Final3840.Data.Part06",
+      "sha256": "e5329adfe2a40c8346a01ed486c291c7af1fe2012bc51499b4a61438c423c400",
+      "staged_and_frozen_match": true
+    },
+    {
+      "module": "K4Ramsey.Constructions.Final3840.Data.Part07",
+      "sha256": "4939fa5414adb4e8f9503c817e16319fc2ac49ddbe53739a3ed106bde54f646f",
+      "staged_and_frozen_match": true
+    },
+    {
+      "module": "K4Ramsey.Constructions.Final3840.Data.Part08",
+      "sha256": "bd832cc693db5ea48c5b0ab0c604140b58ec2612bedd7efb3a0623dc92c9c978",
+      "staged_and_frozen_match": true
+    },
+    {
+      "module": "K4Ramsey.Constructions.Final3840.Data.Part09",
+      "sha256": "f63926222c283346df276cd2f60679637ebba5deffe478d9112ecc8d18b7a481",
+      "staged_and_frozen_match": true
+    },
+    {
+      "module": "K4Ramsey.Constructions.Final3840.Data",
+      "sha256": "d764c6047501f1c2102b81529c86ffa597b6e8ef8c172fb50d72a01dd05069f1",
+      "staged_and_frozen_match": true
+    },
+    {
+      "module": "K4Ramsey.Constructions.Final3840.Model",
+      "sha256": "78381ebc171808d2edefc807c586d7f16c84ecbaff01e84457ac8454dbc235a0",
+      "staged_and_frozen_match": true
+    },
+    {
+      "module": "K4Ramsey.Constructions.Final3840.NumericalBound",
+      "sha256": "82edecb7f15e44bee4ef0135a530ea1e2830bd077129ef6d3096ad44ba3ddb0e",
+      "staged_and_frozen_match": true
+    },
+    {
+      "module": "K4Ramsey.Constructions.Final3840.Reduction",
+      "sha256": "1d8341938420ca4890bd3434bbc3c27fce98295d52a2e371160a1773a7fdfabc",
+      "staged_and_frozen_match": true
+    },
+    {
+      "module": "K4Ramsey.Constructions.Final3840.Symmetry",
+      "sha256": "5f2d3785aca32700a8186fe52cfdeb98222e0ead8e704c30798bd7f0746ea86f",
+      "staged_and_frozen_match": true
+    },
+    {
+      "module": "K4Ramsey.Constructions.Final3840.SymmetryProof",
+      "sha256": "808295a07ecfa29062238a1937c997411faf3d1c16efce7db4774db1330097e5",
+      "staged_and_frozen_match": true
+    },
+    {
+      "module": "K4Ramsey.Constructions.Final3840.Validity",
+      "sha256": "cf9983b672a8ac2a7b595b1b77134c39717e589205bc1bfb769f5a8da623874e",
+      "staged_and_frozen_match": true
+    },
+    {
+      "module": "K4Ramsey.Constructions.Published768.Certificate",
+      "sha256": "4bcbcf031c659694a70e60d47cc190f537d26c5105d776450388081887f89d23",
+      "staged_and_frozen_match": true
+    },
+    {
+      "module": "K4Ramsey.Constructions.Published768.Data",
+      "sha256": "b5de696edd6947b5da2250b466e5eead3e9ff3ee8818cc197a6bbc8c651f3494",
+      "staged_and_frozen_match": true
+    },
+    {
+      "module": "K4Ramsey.Core.Asymptotic",
+      "sha256": "f1b2cf2160017c7c66f2fc9b82aab3357416330ab1c0cddc37a7fada9e1d5c4b",
+      "staged_and_frozen_match": true
+    },
+    {
+      "module": "K4Ramsey.Core.FiniteProbability",
+      "sha256": "574cb9bb70c6a2dc8abe714dd74326137f829d66ad3467b4358eeb14c73a2e2d",
+      "staged_and_frozen_match": true
+    },
+    {
+      "module": "K4Ramsey.Core.Graphon",
+      "sha256": "8f86848ab7ead449d0b522a617ba61cbe578f4427e514496ff47bb3da80abd66",
+      "staged_and_frozen_match": true
+    },
+    {
+      "module": "K4Ramsey.Core.Realization",
+      "sha256": "b9e2d8b33e6b8636836ab2f1a0bcd71db190103442ca139dcee893f907ad6a99",
+      "staged_and_frozen_match": true
+    },
+    {
+      "module": "K4Ramsey.Counting.CenteredExpansion",
+      "sha256": "75371241dec15d9c47bb570f0f2aa0206e78d44ac8abde7800459bcd340c7ebd",
+      "staged_and_frozen_match": true
+    },
+    {
+      "module": "K4Ramsey.Counting.IntegerCenteredExpansion",
+      "sha256": "d82fe88bfe592f13b2cbff09668bd4debcfa085dda36162482cc4ace63a2acca",
+      "staged_and_frozen_match": true
+    },
+    {
+      "module": "K4Ramsey.Counting.IntegerRefinement",
+      "sha256": "c0b4dd600ac9076334ab9308706d5534aaf764799cd97042c518344ac3d702d8",
+      "staged_and_frozen_match": true
+    },
+    {
+      "module": "K4Ramsey.Counting.IntegerTensorK4",
+      "sha256": "c29e1d83ec248f34105ebaf047c9d42ac53450d2130c367ffc1083966f717992",
+      "staged_and_frozen_match": true
+    },
+    {
+      "module": "K4Ramsey.Counting.Multiplicity",
+      "sha256": "3e530a3e13b35b2dcb26cd923e27cbc80132c8a860fe611371476733cba002e0",
+      "staged_and_frozen_match": true
+    },
+    {
+      "module": "K4Ramsey.Counting.SignRefinement",
+      "sha256": "7edd3ab070675cb4039541a44f67069d43951dfa448d41f67641ab7a46993c65",
+      "staged_and_frozen_match": true
+    },
+    {
+      "module": "K4Ramsey.Counting.TensorK4",
+      "sha256": "7c5913f78c22bf5251a6baa576bf9a15f16e780a84e0c4643d5f5dca3b737623",
+      "staged_and_frozen_match": true
+    },
+    {
+      "module": "K4Ramsey.Counting.ValidatedTemplate",
+      "sha256": "6a8b4128e4f5ef14db11e8879b0905851c63c65676659a62a23a1812e29d3a83",
+      "staged_and_frozen_match": true
+    },
+    {
+      "module": "K4Ramsey.Counting.WeightedMultiplicity",
+      "sha256": "dfe2ff0482490ce1edec0c305a95697ff6230983ebdcb5a2b8f9c1eb869f303e",
+      "staged_and_frozen_match": true
+    },
+    {
+      "module": "K4Ramsey.IO.TemplateInput",
+      "sha256": "cf43a0f323baec2f8c0211e223c1129adfc700574bc5f7b15c338ce31ec47447",
+      "staged_and_frozen_match": true
+    },
+    {
+      "module": "K4Ramsey",
+      "sha256": "31fb73b4af86bf4d0e9ab9f013ad14689bb24bf099b83d2bb224516da2e3ac52",
+      "staged_and_frozen_match": true
+    },
+    {
+      "module": "Tests.Multiplicity",
+      "sha256": "a4c28aced326aed2e4142760a9275bb53d3a1acf6296e39c68b3ba2214cba918",
+      "staged_and_frozen_match": true
+    },
+    {
+      "module": "Tests.TemplateInput",
+      "sha256": "899745c548748f69fb3054470e96bbff16b9c84274ee3fb42aee79f83f4212e3",
+      "staged_and_frozen_match": true
+    },
+    {
+      "module": "Tests.WeightedMultiplicity",
+      "sha256": "306c0da638b50e9043cc171e7cfd3876defcbc16e4de76a6d1fe652039bc989f",
+      "staged_and_frozen_match": true
+    }
+  ],
+  "fresh_artifact_count": 68,
+  "fresh_artifact_inventory_canonical_sha256": "c956ac7751b20dba426a1af82a59d041ac3aa604559a513fb6e1568b5c21d5cd",
+  "prior_own_direct_artifact_count": 66,
+  "native_object_identity_count": 951,
+  "source_and_input_olean_identity_module_count": 16,
+  "official_dependency_artifact_count": 4675,
+  "official_dependency_artifact_snapshot_sha256": "f19299f52c21d249b156bfccacb25891d18ab6440466496f3baaaeee9e8df60e",
+  "dependencies": [
+    {
+      "name": "mathlib",
+      "head": "d13f23b723b8a846827a245b89c10fc7d3f11612",
+      "origin": "https://github.com/leanprover-community/mathlib4.git",
+      "matches": true
+    },
+    {
+      "name": "plausible",
+      "head": "118aa17ee84656b8bd727fef7c458ee8c833385c",
+      "origin": "https://github.com/leanprover-community/plausible",
+      "matches": true
+    },
+    {
+      "name": "LeanSearchClient",
+      "head": "ddf04cf3949fa556442341e87d47f9f6e6074707",
+      "origin": "https://github.com/leanprover-community/LeanSearchClient",
+      "matches": true
+    },
+    {
+      "name": "importGraph",
+      "head": "e928b72544873815af278d38681b31c0293588e3",
+      "origin": "https://github.com/leanprover-community/import-graph",
+      "matches": true
+    },
+    {
+      "name": "proofwidgets",
+      "head": "106ff4fafc74ef4ac99d81dbf3ab399118f497a5",
+      "origin": "https://github.com/leanprover-community/ProofWidgets4",
+      "matches": true
+    },
+    {
+      "name": "aesop",
+      "head": "355695d523e41d0554926416cba2a2b3544fbbc9",
+      "origin": "https://github.com/leanprover-community/aesop",
+      "matches": true
+    },
+    {
+      "name": "Qq",
+      "head": "6a489d9af5d0c47e5b259e2e8bcdfc1811b5a259",
+      "origin": "https://github.com/leanprover-community/quote4",
+      "matches": true
+    },
+    {
+      "name": "batteries",
+      "head": "f2effa3d803fda822b1f97b806c47cf2adfbcbc2",
+      "origin": "https://github.com/leanprover-community/batteries",
+      "matches": true
+    },
+    {
+      "name": "Cli",
+      "head": "e92c9f15fdfacc8536f31cfb3b7ad26c3c8cd204",
+      "origin": "https://github.com/leanprover/lean4-cli",
+      "matches": true
+    }
+  ],
+  "unchanged_native_DLL_and_import_libraries": [
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-k4-ramsey-native-isolated\\bin\\luke_nonmath_native.dll",
+      "bytes": 22078976,
+      "sha256": "3e98a83c3f1fd2f7c6d340b9deab4dc0a4efd73902c041141ef889b17fa338ca",
+      "matches": true
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-k4-ramsey-native-isolated\\bin\\libluke_nonmath_native.dll.a",
+      "bytes": 17867652,
+      "sha256": "96e02c33685074979fd268b447596de9dc667d9d4a961aa3ce9876e2596fd79c",
+      "matches": true
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-k4-ramsey-native-isolated\\bin\\luke_mathlib_count_native.dll",
+      "bytes": 39286784,
+      "sha256": "20e7e1219b6798e621dfee7776ab0e5f29c06ff04338b9d5544ad98528298498",
+      "matches": true
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-k4-ramsey-native-isolated\\bin\\libluke_mathlib_count_native.dll.a",
+      "bytes": 28227772,
+      "sha256": "c123d5d7e59e87a12c4305f4d6d09ef457c411697eafc8d5e705e455b1aaa5b9",
+      "matches": true
+    }
+  ],
+  "unchanged_pinned_tools": [
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+      "bytes": 83456,
+      "sha256": "fcc4a10077d5fdd575592cea5f2981c91cbd77c490c80bc74407908e57e8b87b",
+      "matches": true
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\leanc.exe",
+      "bytes": 100864,
+      "sha256": "41298e682fb389610a6e17ea06d15289213e890219283dbb55ba167e019a1392",
+      "matches": true
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\clang.exe",
+      "bytes": 217600,
+      "sha256": "1aea18dca98f91a6a7c65532adc2567efc775904d2a4bd28bf06731bc2c3778c",
+      "matches": true
+    }
+  ],
+  "unchanged_pinned_linker_libraries": [
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\lib\\lean\\libInit_shared.dll.a",
+      "bytes": 18695832,
+      "sha256": "f9f3e02ff35f2f3799d8fa8c4f1dfd0bde50da92d2a2813055104a94f3537a55",
+      "matches": true
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\lib\\lean\\libLake_shared.dll.a",
+      "bytes": 6690714,
+      "sha256": "c33baca4add10c223220ff20a9dfbef867b32de249867d37b105e97c86099431",
+      "matches": true
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\lib\\libadvapi32.a",
+      "bytes": 200914,
+      "sha256": "25af7787cd9a365f6485900f0f39ce42b40e90561e41843e3e13cb77a5273270",
+      "matches": true
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\lib\\libbcrypt.a",
+      "bytes": 16244,
+      "sha256": "6f6c23b3f46ee45e56bea34d6574a9e9f709c1330c02be947e3269dcb43ba20b",
+      "matches": true
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\lib\\libc++.a",
+      "bytes": 3625804,
+      "sha256": "16e0958a2e0addceb70dac0aed019463dc710bb83b7ea00ceb3b26dd0d481a56",
+      "matches": true
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\lib\\libc++abi.a",
+      "bytes": 741256,
+      "sha256": "96c35a917aa700b66e81ddeaac8457a99559999f948d09afe93be03863a52b40",
+      "matches": true
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\lib\\libcrypt32.a",
+      "bytes": 73954,
+      "sha256": "91725c34a74762bf9d403b4bd238ec2484ac600d4a1e61b8bc3fce083042a653",
+      "matches": true
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\lib\\libcrypto.a",
+      "bytes": 9083506,
+      "sha256": "ccba334a376bcfec6ede1c340078ccd9ec747bd9d3fe85a8548c47f142b73fe9",
+      "matches": true
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\lib\\libdbghelp.a",
+      "bytes": 49766,
+      "sha256": "f407acff38e12cb5227a6bad5f023f31c3705aca0a5339fc9b25ec433342e3cc",
+      "matches": true
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\lib\\libgdi32.a",
+      "bytes": 208456,
+      "sha256": "4644a7db189fb5dda4e933803b017a4fe1725d04fe7c2b43540e7f12cbe31e7a",
+      "matches": true
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\lib\\libgmp.a",
+      "bytes": 1257966,
+      "sha256": "50c6c0f596274b87a7dce9ab1fb7844c4ace58a1ae0bc9dadce860ec080d77f5",
+      "matches": true
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\lib\\libicu.a",
+      "bytes": 203082,
+      "sha256": "caac4424be135e9a42a05e54ebafc851ecab00c68cd8872df92b2d49e1e98fc9",
+      "matches": true
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\lib\\libiphlpapi.a",
+      "bytes": 84806,
+      "sha256": "6d83b979e5535280f3e6cff327f7a863a9353dfcd60b20ab062f500613ec4c63",
+      "matches": true
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\lib\\lean\\libleanshared.dll.a",
+      "bytes": 52370776,
+      "sha256": "2c66a7e84f3342cfaf77bee12f89e07b26567803be00c8658d47376ec7c30b79",
+      "matches": true
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\lib\\lean\\libleanshared_1.dll.a",
+      "bytes": 37922042,
+      "sha256": "2c74fcf852f1b99e3cfebf5c684941d59ac21626de6d4f6858339c3d0c6081c9",
+      "matches": true
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\lib\\lean\\libleanshared_2.dll.a",
+      "bytes": 40623338,
+      "sha256": "271692956e3ad158b674919a8061f6545d34b0a5f2357481410f120f48cce775",
+      "matches": true
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\lib\\libm.a",
+      "bytes": 920,
+      "sha256": "0bb4732c24467ec9e88e6077a8dbb3a211182a01d96ce39134c6c0e025c93b53",
+      "matches": true
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\lib\\libole32.a",
+      "bytes": 119320,
+      "sha256": "a708363a6239cdc8c9f1612aa5e80445b15b7777da17226965312b475cf4c639",
+      "matches": true
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\lib\\libpsapi.a",
+      "bytes": 7044,
+      "sha256": "076cc8e87fe8ca9011785893c3e11491566da7772f58cc242ba2ded1b87b8170",
+      "matches": true
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\lib\\libshell32.a",
+      "bytes": 92168,
+      "sha256": "66dcaab29fb70660c542d7555512d43c9d1c34aa08d0bbcfa126e03f73bcda4d",
+      "matches": true
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\lib\\libssl.a",
+      "bytes": 1570648,
+      "sha256": "f07316bcdd872e6acb007d5552c66215e9c3e5665c6f3247494348175adf60a4",
+      "matches": true
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\lib\\libucrtbase.a",
+      "bytes": 773202,
+      "sha256": "2807235d4ce793dca6700248c3ae5bf890a0b38f51766ddcc34ed9031a76e1ed",
+      "matches": true
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\lib\\libuser32.a",
+      "bytes": 207984,
+      "sha256": "6b2bea0a02e6a95bcbb684ff4ede16a4a51c8bd0a55e7e15b81255c4467190bb",
+      "matches": true
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\lib\\libuserenv.a",
+      "bytes": 19538,
+      "sha256": "c9d73aedfcbde527e9a41e9c1bb72924bd6fac5e8a4d0cae13483e8b72e2f94b",
+      "matches": true
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\lib\\libuv.a",
+      "bytes": 562670,
+      "sha256": "05ae2391a2a4442bf496479514df7451c73b98d62119296efcc9de5f9a5431f0",
+      "matches": true
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\lib\\libws2_32.a",
+      "bytes": 164632,
+      "sha256": "740d424a56b433c2d72b83f200abc80d436ee9b3d7f541f92bbf628ef03e9e1e",
+      "matches": true
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\lib\\clang\\22\\lib\\windows\\libclang_rt.builtins-x86_64.a",
+      "bytes": 225842,
+      "sha256": "d7a2dd43582efe0b0cccd8c2f6cbabc85220c716573e2daffe212adaf40eefa6",
+      "matches": true
+    }
+  ],
+  "count_stdout_stderr_identity": [
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-k4-ramsey-current-native\\logs\\native_count_pilot.stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "matches": true
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-k4-ramsey-current-native\\logs\\native_count_pilot.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "matches": true
+    }
+  ],
+  "all_checked_source_object_artifact_and_dependency_identities_unchanged": true,
+  "raw_count_audit_executed": false,
+  "complete_project_scope_verified": false,
+  "acceptance_requirements": {
+    "separate_status": "ROOT_NATIVE_IDENTITY_REVIEW_ACCEPTED_WITH_OBSERVER_LIMITATION",
+    "evidence_receipt_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\luke-native-identity-observer-limitation-review.json",
+    "evidence_receipt_sha256": "Root must fill the actual completed evidence SHA.",
+    "pilot_receipt_sha256": "f96afa977949375778b0666754a20238403718d93919f08508ed9d3f4370229d",
+    "count_row_canonical_sha256": "b4d95910917d10a4decfbb4954d6fbc9b511382be7db56e8d5e4e1fdf8ee5bf0",
+    "native_dispatch_observations_clean": false,
+    "continuous_observer_completeness": false,
+    "unknown_error_timing_remains_unresolved": true,
+    "qualification_scope": "Native identity/initialization only; no raw axiom or complete 51-source/35-endpoint qualification."
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "status": "ROOT_ACTUAL_V3_BLOCKSTAR_SINGLE_SOURCE_AND_OWN_OUTPUT_RECHECK_PASS",
+  "checked_utc": "2026-10-05T04:29:51.835875+00:00",
+  "actual_pilot_receipt_sha256": "f270d8093173b90d646a5d2d67f4e7a5eafd3aa7925d04544de2c53e9bd89d83",
+  "source_row": {
+    "module": "BlockStar",
+    "command": [
+      "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+      "-j1",
+      "-DmaxHeartbeats=0",
+      "-DmaxRecDepth=100000",
+      "-o",
+      "BlockStar.olean",
+      "BlockStar.lean"
+    ],
+    "seconds": 16.828,
+    "exit": 0,
+    "stdout": "",
+    "stderr": "",
+    "is_endpoint_audit": false,
+    "minimum_free_bytes": 5242433536,
+    "stop_reason": null,
+    "started_utc": "2026-10-05T04:28:13.638068+00:00",
+    "finished_utc": "2026-10-05T04:28:30.472541+00:00",
+    "owned_process_stop_output": null,
+    "own_job_resource_receipt": {
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "BlockStar.olean",
+        "BlockStar.lean"
+      ],
+      "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current-import-pruned-v3",
+      "started_utc": "2026-10-05T04:28:13.638068+00:00",
+      "attempted": true,
+      "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+      "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+      "resource_policy": {
+        "initial_disk_bytes": 4000000000,
+        "initial_physical_bytes": 6442450944,
+        "initial_available_commit_bytes": 5368709120,
+        "continuous_disk_bytes": 1000000000,
+        "continuous_physical_bytes": 3221225472,
+        "continuous_available_commit_bytes": 1073741824,
+        "own_job_private_bytes": 6442450944,
+        "own_process_private_bytes": 6442450944,
+        "poll_seconds": 0.25,
+        "timeout_seconds": 3600
+      },
+      "minimum_disk_free_bytes": 5242433536,
+      "initial_system_memory_snapshot": {
+        "free_physical_bytes": 9766768640,
+        "total_physical_bytes": 34024419328,
+        "available_commit_bytes": 8550162432,
+        "total_commit_limit_bytes": 60437172224
+      },
+      "minimum_physical_available_bytes": 9661476864,
+      "minimum_available_commit_bytes": 6399553536,
+      "root_pid": 17540,
+      "own_job_assignment_before_resume": "PASS",
+      "exit": 0,
+      "job_peak_process_private_bytes": 2253185024,
+      "job_peak_aggregate_private_bytes": 2254454784,
+      "state": "PASS",
+      "finished_utc": "2026-10-05T04:28:30.472541+00:00",
+      "seconds": 16.828,
+      "polled_peak_tree_private_bytes": 2238443520,
+      "polled_peak_tree_rss_bytes": 1028784128,
+      "counter_samples": 61,
+      "observed_own_processes": {
+        "56268": {
+          "exe": "conhost.exe",
+          "peak_private_bytes": 1269760,
+          "peak_rss_bytes": 7860224
+        },
+        "17540": {
+          "exe": "lean.exe",
+          "peak_private_bytes": 2237173760,
+          "peak_rss_bytes": 1047068672
+        }
+      },
+      "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\htpeo-dms-current-import-pruned-v3-5e26a7b554b93ecf-attempt-0.stdout.txt",
+      "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\htpeo-dms-current-import-pruned-v3-5e26a7b554b93ecf-attempt-0.stderr.txt",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_excerpt": "",
+      "stderr_excerpt": ""
+    },
+    "source_sha256": "a44012db56236240ec639d0861ad2b1a7e9257ca36c888824e539498f48d9457",
+    "third_worker_memory_observations": {
+      "minimum_free_physical_bytes": 9661476864,
+      "minimum_available_commit_bytes": 6399553536,
+      "peak_owned_private_bytes": 2254454784
+    },
+    "artifacts": [
+      {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current-import-pruned-v3\\BlockStar.olean",
+        "sha256": "bc09304883694051885e4b2273de9dbcbf41c0431ca57271e02daca58a26b32c",
+        "bytes": 1332488
+      }
+    ],
+    "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+  },
+  "selected_audits": 0,
+  "total_scientific_source_scope_complete": false,
+  "remaining_new_sources": 128,
+  "remaining_selected_prints": 123,
+  "Lean_invocations": 0
+}

@@ -1,0 +1,1040 @@
+{
+  "status": "PREPARED_NOT_RUN_NO_LEAN_INVOCATION_NO_RUNNER_MUTATION",
+  "prepared_utc": "2026-10-05T02:43:58.419130+00:00",
+  "diagnostic_project": "sakana-erdos169-fourap-tactic-specific-v2",
+  "original_project": "sakana-erdos169-fourap",
+  "original_source_plan_sha256": "48d697f923d0013aa348581e3733f754ffaf35c3491ff6b30e22c783632b8abe",
+  "diagnostic_plan": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos169-fourap-tactic-specific-v2\\build-plan.json",
+  "diagnostic_plan_sha256": "8b183de4ccdcc543b46a8a54fd17a7b41a37ebd13afb8b53c9598e226f2b1e09",
+  "unchanged_original_and_v1_receipts": [
+    {
+      "receipt": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\sakana-erdos169-fourap-fresh-build.json",
+      "sha256": "1d395cae83c4d623950359dccccdab24d8777c39ffee69c54795226b187d7875"
+    },
+    {
+      "receipt": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\sakana-erdos169-fourap-import-pruned-diagnostic-fresh-build.json",
+      "sha256": "689494114098170847557c105ece1a984c30d9bbf287caa71c29135ea768f1fc"
+    }
+  ],
+  "source_changes": [
+    {
+      "module": "OpHack.ResidueFibre",
+      "relative_path": "OpHack/ResidueFibre.lean",
+      "original_source_sha256": "f7ac009d6f76f3a652795f656bb0cec98560f2baa002759bd457e1f80f9eb012",
+      "diagnostic_source_sha256": "9a38a3fe545d28d38cca0031a67f34c135aeb3ef7b598d76b5336713bfd13495",
+      "original_replaced_span": {
+        "start_byte": 0,
+        "end_byte_exclusive": 15
+      },
+      "replacement_span": {
+        "start_byte": 0,
+        "end_byte_exclusive": 1067
+      },
+      "original_body_sha256": "53666145218ac6dd167052edff95e12486dd0876cf7b3146f99c8ebf160d3761",
+      "diagnostic_body_sha256": "53666145218ac6dd167052edff95e12486dd0876cf7b3146f99c8ebf160d3761",
+      "body_options_comments_identity": "BYTE_IDENTICAL_OUTSIDE_THE_SINGLE_LITERAL_IMPORT_LINE",
+      "diagnostic_imports": [
+        "Lean.Elab.Tactic.Omega",
+        "Lean.Elab.Tactic.NormCast",
+        "Lean.Linter.ConstructorAsVariable",
+        "Mathlib.Tactic.Basic",
+        "Mathlib.Tactic.ByContra",
+        "Mathlib.Tactic.Convert",
+        "Mathlib.Tactic.Ring",
+        "Mathlib.Tactic.NormNum",
+        "Mathlib.Tactic.Linarith",
+        "Mathlib.Tactic.FieldSimp",
+        "Mathlib.Tactic.Positivity",
+        "Mathlib.Tactic.Tauto",
+        "Mathlib.Tactic.FinCases",
+        "Mathlib.Tactic.Ext",
+        "Mathlib.Data.Int.ModEq",
+        "Mathlib.Data.Int.Cast.Lemmas",
+        "Mathlib.Data.Rat.BigOperators",
+        "Mathlib.Data.Rat.Lemmas",
+        "Mathlib.Data.Nat.Cast.Order.Field",
+        "Mathlib.Order.Interval.Finset.Nat",
+        "Mathlib.Data.Finset.Card",
+        "Mathlib.Data.Finset.Prod",
+        "Mathlib.Data.Finset.Union",
+        "Mathlib.Algebra.BigOperators.Group.Finset.Basic",
+        "Mathlib.Algebra.BigOperators.Group.Finset.Sigma",
+        "Mathlib.Algebra.BigOperators.Group.Finset.Lemmas",
+        "Mathlib.Algebra.BigOperators.Group.List.Lemmas",
+        "Mathlib.Algebra.BigOperators.Ring.Finset",
+        "Mathlib.Algebra.Order.BigOperators.Group.Finset"
+      ],
+      "diff": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos169-fourap-tactic-specific-v2\\import-only-diffs\\OpHack_ResidueFibre.diff",
+      "diff_sha256": "ac424b8815d3e6dfb55d2b5656050014e5765b094e9de1e9b0ab2278cb836ada"
+    },
+    {
+      "module": "OpHack.ErdosSingletonFinite",
+      "relative_path": "OpHack/ErdosSingletonFinite.lean",
+      "original_source_sha256": "59314444ff2f14c056c4116c7aaeeead74d5c5f8827eb896c867f1c32207bd01",
+      "diagnostic_source_sha256": "01071915809185c25c20d83866fc128c0c5b6705a98fab909d139eaf5acd33da",
+      "original_replaced_span": {
+        "start_byte": 0,
+        "end_byte_exclusive": 15
+      },
+      "replacement_span": {
+        "start_byte": 0,
+        "end_byte_exclusive": 1067
+      },
+      "original_body_sha256": "2ebb5751051e728a5e87092c5db5a7065400eb46711915d0143709cf75c27e41",
+      "diagnostic_body_sha256": "2ebb5751051e728a5e87092c5db5a7065400eb46711915d0143709cf75c27e41",
+      "body_options_comments_identity": "BYTE_IDENTICAL_OUTSIDE_THE_SINGLE_LITERAL_IMPORT_LINE",
+      "diagnostic_imports": [
+        "Lean.Elab.Tactic.Omega",
+        "Lean.Elab.Tactic.NormCast",
+        "Lean.Linter.ConstructorAsVariable",
+        "Mathlib.Tactic.Basic",
+        "Mathlib.Tactic.ByContra",
+        "Mathlib.Tactic.Convert",
+        "Mathlib.Tactic.Ring",
+        "Mathlib.Tactic.NormNum",
+        "Mathlib.Tactic.Linarith",
+        "Mathlib.Tactic.FieldSimp",
+        "Mathlib.Tactic.Positivity",
+        "Mathlib.Tactic.Tauto",
+        "Mathlib.Tactic.FinCases",
+        "Mathlib.Tactic.Ext",
+        "Mathlib.Data.Int.ModEq",
+        "Mathlib.Data.Int.Cast.Lemmas",
+        "Mathlib.Data.Rat.BigOperators",
+        "Mathlib.Data.Rat.Lemmas",
+        "Mathlib.Data.Nat.Cast.Order.Field",
+        "Mathlib.Order.Interval.Finset.Nat",
+        "Mathlib.Data.Finset.Card",
+        "Mathlib.Data.Finset.Prod",
+        "Mathlib.Data.Finset.Union",
+        "Mathlib.Algebra.BigOperators.Group.Finset.Basic",
+        "Mathlib.Algebra.BigOperators.Group.Finset.Sigma",
+        "Mathlib.Algebra.BigOperators.Group.Finset.Lemmas",
+        "Mathlib.Algebra.BigOperators.Group.List.Lemmas",
+        "Mathlib.Algebra.BigOperators.Ring.Finset",
+        "Mathlib.Algebra.Order.BigOperators.Group.Finset"
+      ],
+      "diff": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos169-fourap-tactic-specific-v2\\import-only-diffs\\OpHack_ErdosSingletonFinite.diff",
+      "diff_sha256": "7e862908759ae9cfa485ac82999fe3adc5cabeb886e653460c7b05e01523efea"
+    },
+    {
+      "module": "OpHack.ErdosSixFinite",
+      "relative_path": "OpHack/ErdosSixFinite.lean",
+      "original_source_sha256": "625d3d05b8e2b89310fb23ec768920e60026bea8772347dcc278b4d278d128f6",
+      "diagnostic_source_sha256": "181088e889650b39b84bec0ac62e6d697eb6bc6309c7422cc4cea4f10f1df6c6",
+      "original_replaced_span": {
+        "start_byte": 0,
+        "end_byte_exclusive": 15
+      },
+      "replacement_span": {
+        "start_byte": 0,
+        "end_byte_exclusive": 1067
+      },
+      "original_body_sha256": "d88851ec2b7fc1a10f3bda2d95b48b933888845acdb8a3041d004470eda17dfc",
+      "diagnostic_body_sha256": "d88851ec2b7fc1a10f3bda2d95b48b933888845acdb8a3041d004470eda17dfc",
+      "body_options_comments_identity": "BYTE_IDENTICAL_OUTSIDE_THE_SINGLE_LITERAL_IMPORT_LINE",
+      "diagnostic_imports": [
+        "Lean.Elab.Tactic.Omega",
+        "Lean.Elab.Tactic.NormCast",
+        "Lean.Linter.ConstructorAsVariable",
+        "Mathlib.Tactic.Basic",
+        "Mathlib.Tactic.ByContra",
+        "Mathlib.Tactic.Convert",
+        "Mathlib.Tactic.Ring",
+        "Mathlib.Tactic.NormNum",
+        "Mathlib.Tactic.Linarith",
+        "Mathlib.Tactic.FieldSimp",
+        "Mathlib.Tactic.Positivity",
+        "Mathlib.Tactic.Tauto",
+        "Mathlib.Tactic.FinCases",
+        "Mathlib.Tactic.Ext",
+        "Mathlib.Data.Int.ModEq",
+        "Mathlib.Data.Int.Cast.Lemmas",
+        "Mathlib.Data.Rat.BigOperators",
+        "Mathlib.Data.Rat.Lemmas",
+        "Mathlib.Data.Nat.Cast.Order.Field",
+        "Mathlib.Order.Interval.Finset.Nat",
+        "Mathlib.Data.Finset.Card",
+        "Mathlib.Data.Finset.Prod",
+        "Mathlib.Data.Finset.Union",
+        "Mathlib.Algebra.BigOperators.Group.Finset.Basic",
+        "Mathlib.Algebra.BigOperators.Group.Finset.Sigma",
+        "Mathlib.Algebra.BigOperators.Group.Finset.Lemmas",
+        "Mathlib.Algebra.BigOperators.Group.List.Lemmas",
+        "Mathlib.Algebra.BigOperators.Ring.Finset",
+        "Mathlib.Algebra.Order.BigOperators.Group.Finset"
+      ],
+      "diff": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos169-fourap-tactic-specific-v2\\import-only-diffs\\OpHack_ErdosSixFinite.diff",
+      "diff_sha256": "210ad791133ff02995fd093e8adee22781e6f998c785b9ef332fa3ce6ea9d641"
+    },
+    {
+      "module": "OpHack.FloorBounds",
+      "relative_path": "OpHack/FloorBounds.lean",
+      "original_source_sha256": "2dfb4e1063e4b8dd428c7d745cadf8c80cb6d6a3fd3fdf3b730ea3ab544ffdb3",
+      "diagnostic_source_sha256": "82eeeb2481c0336cd485081ab08fd08f1f309373548245f858927bd97e6c235e",
+      "original_replaced_span": {
+        "start_byte": 0,
+        "end_byte_exclusive": 15
+      },
+      "replacement_span": {
+        "start_byte": 0,
+        "end_byte_exclusive": 1067
+      },
+      "original_body_sha256": "fc1534ed143329a56a5228ea4cbf7f6b8fd91a1d08b5810723d31f0b19edf5cc",
+      "diagnostic_body_sha256": "fc1534ed143329a56a5228ea4cbf7f6b8fd91a1d08b5810723d31f0b19edf5cc",
+      "body_options_comments_identity": "BYTE_IDENTICAL_OUTSIDE_THE_SINGLE_LITERAL_IMPORT_LINE",
+      "diagnostic_imports": [
+        "Lean.Elab.Tactic.Omega",
+        "Lean.Elab.Tactic.NormCast",
+        "Lean.Linter.ConstructorAsVariable",
+        "Mathlib.Tactic.Basic",
+        "Mathlib.Tactic.ByContra",
+        "Mathlib.Tactic.Convert",
+        "Mathlib.Tactic.Ring",
+        "Mathlib.Tactic.NormNum",
+        "Mathlib.Tactic.Linarith",
+        "Mathlib.Tactic.FieldSimp",
+        "Mathlib.Tactic.Positivity",
+        "Mathlib.Tactic.Tauto",
+        "Mathlib.Tactic.FinCases",
+        "Mathlib.Tactic.Ext",
+        "Mathlib.Data.Int.ModEq",
+        "Mathlib.Data.Int.Cast.Lemmas",
+        "Mathlib.Data.Rat.BigOperators",
+        "Mathlib.Data.Rat.Lemmas",
+        "Mathlib.Data.Nat.Cast.Order.Field",
+        "Mathlib.Order.Interval.Finset.Nat",
+        "Mathlib.Data.Finset.Card",
+        "Mathlib.Data.Finset.Prod",
+        "Mathlib.Data.Finset.Union",
+        "Mathlib.Algebra.BigOperators.Group.Finset.Basic",
+        "Mathlib.Algebra.BigOperators.Group.Finset.Sigma",
+        "Mathlib.Algebra.BigOperators.Group.Finset.Lemmas",
+        "Mathlib.Algebra.BigOperators.Group.List.Lemmas",
+        "Mathlib.Algebra.BigOperators.Ring.Finset",
+        "Mathlib.Algebra.Order.BigOperators.Group.Finset"
+      ],
+      "diff": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos169-fourap-tactic-specific-v2\\import-only-diffs\\OpHack_FloorBounds.diff",
+      "diff_sha256": "996bc2a913bf09dec4c8f2f5dcd122614e45e247a3671c9a33739b7990f1d97e"
+    },
+    {
+      "module": "OpHack.HarmonicCertificate",
+      "relative_path": "OpHack/HarmonicCertificate.lean",
+      "original_source_sha256": "28f35ac4677981382582bb41b9d2ff09be876c97d779273f0b18d672238b47ce",
+      "diagnostic_source_sha256": "c72548937310e2c58d5a1478737c1738c9c347f039e0f88fe25cb01f99770c30",
+      "original_replaced_span": {
+        "start_byte": 0,
+        "end_byte_exclusive": 15
+      },
+      "replacement_span": {
+        "start_byte": 0,
+        "end_byte_exclusive": 1067
+      },
+      "original_body_sha256": "3b9fe3497ff968df99c1e55d3831291491d8e7c017dd43f4e0d1d48bfb36b7f1",
+      "diagnostic_body_sha256": "3b9fe3497ff968df99c1e55d3831291491d8e7c017dd43f4e0d1d48bfb36b7f1",
+      "body_options_comments_identity": "BYTE_IDENTICAL_OUTSIDE_THE_SINGLE_LITERAL_IMPORT_LINE",
+      "diagnostic_imports": [
+        "Lean.Elab.Tactic.Omega",
+        "Lean.Elab.Tactic.NormCast",
+        "Lean.Linter.ConstructorAsVariable",
+        "Mathlib.Tactic.Basic",
+        "Mathlib.Tactic.ByContra",
+        "Mathlib.Tactic.Convert",
+        "Mathlib.Tactic.Ring",
+        "Mathlib.Tactic.NormNum",
+        "Mathlib.Tactic.Linarith",
+        "Mathlib.Tactic.FieldSimp",
+        "Mathlib.Tactic.Positivity",
+        "Mathlib.Tactic.Tauto",
+        "Mathlib.Tactic.FinCases",
+        "Mathlib.Tactic.Ext",
+        "Mathlib.Data.Int.ModEq",
+        "Mathlib.Data.Int.Cast.Lemmas",
+        "Mathlib.Data.Rat.BigOperators",
+        "Mathlib.Data.Rat.Lemmas",
+        "Mathlib.Data.Nat.Cast.Order.Field",
+        "Mathlib.Order.Interval.Finset.Nat",
+        "Mathlib.Data.Finset.Card",
+        "Mathlib.Data.Finset.Prod",
+        "Mathlib.Data.Finset.Union",
+        "Mathlib.Algebra.BigOperators.Group.Finset.Basic",
+        "Mathlib.Algebra.BigOperators.Group.Finset.Sigma",
+        "Mathlib.Algebra.BigOperators.Group.Finset.Lemmas",
+        "Mathlib.Algebra.BigOperators.Group.List.Lemmas",
+        "Mathlib.Algebra.BigOperators.Ring.Finset",
+        "Mathlib.Algebra.Order.BigOperators.Group.Finset"
+      ],
+      "diff": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos169-fourap-tactic-specific-v2\\import-only-diffs\\OpHack_HarmonicCertificate.diff",
+      "diff_sha256": "a581af43e01683cd2eadb008963eba0b45f2eda6879e722907f85fd6150c85ee"
+    },
+    {
+      "module": "OpHack.SixHarmonicCertificate",
+      "relative_path": "OpHack/SixHarmonicCertificate.lean",
+      "original_source_sha256": "f2a832a894b3a31460386b52e1c7d865e685512fe945fbd4a53121c673683562",
+      "diagnostic_source_sha256": "12c7eef4909a8e72cd4b788f6a4cc972c3ee9fdac148192861c26f8cb93bde3b",
+      "original_replaced_span": {
+        "start_byte": 0,
+        "end_byte_exclusive": 15
+      },
+      "replacement_span": {
+        "start_byte": 0,
+        "end_byte_exclusive": 1067
+      },
+      "original_body_sha256": "51394f93c22120de829718f27be06f115655fa2e466dcdcde0f6eeb4e9620d96",
+      "diagnostic_body_sha256": "51394f93c22120de829718f27be06f115655fa2e466dcdcde0f6eeb4e9620d96",
+      "body_options_comments_identity": "BYTE_IDENTICAL_OUTSIDE_THE_SINGLE_LITERAL_IMPORT_LINE",
+      "diagnostic_imports": [
+        "Lean.Elab.Tactic.Omega",
+        "Lean.Elab.Tactic.NormCast",
+        "Lean.Linter.ConstructorAsVariable",
+        "Mathlib.Tactic.Basic",
+        "Mathlib.Tactic.ByContra",
+        "Mathlib.Tactic.Convert",
+        "Mathlib.Tactic.Ring",
+        "Mathlib.Tactic.NormNum",
+        "Mathlib.Tactic.Linarith",
+        "Mathlib.Tactic.FieldSimp",
+        "Mathlib.Tactic.Positivity",
+        "Mathlib.Tactic.Tauto",
+        "Mathlib.Tactic.FinCases",
+        "Mathlib.Tactic.Ext",
+        "Mathlib.Data.Int.ModEq",
+        "Mathlib.Data.Int.Cast.Lemmas",
+        "Mathlib.Data.Rat.BigOperators",
+        "Mathlib.Data.Rat.Lemmas",
+        "Mathlib.Data.Nat.Cast.Order.Field",
+        "Mathlib.Order.Interval.Finset.Nat",
+        "Mathlib.Data.Finset.Card",
+        "Mathlib.Data.Finset.Prod",
+        "Mathlib.Data.Finset.Union",
+        "Mathlib.Algebra.BigOperators.Group.Finset.Basic",
+        "Mathlib.Algebra.BigOperators.Group.Finset.Sigma",
+        "Mathlib.Algebra.BigOperators.Group.Finset.Lemmas",
+        "Mathlib.Algebra.BigOperators.Group.List.Lemmas",
+        "Mathlib.Algebra.BigOperators.Ring.Finset",
+        "Mathlib.Algebra.Order.BigOperators.Group.Finset"
+      ],
+      "diff": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos169-fourap-tactic-specific-v2\\import-only-diffs\\OpHack_SixHarmonicCertificate.diff",
+      "diff_sha256": "d71bce08293e47b027a69eac578b26867229be956cb3d50104cb2dfd57dc0fa1"
+    },
+    {
+      "module": "OpHack.FiniteHarmonicMean",
+      "relative_path": "OpHack/FiniteHarmonicMean.lean",
+      "original_source_sha256": "98761e536a0e7105f275d0c7ce8ab1928d6c105918c9d08c91cfa0948f43d0d3",
+      "diagnostic_source_sha256": "bd495da2d3d02bdc14119c8f909fdbf0aed83496c03b3b955232ddff837e7092",
+      "original_replaced_span": {
+        "start_byte": 0,
+        "end_byte_exclusive": 15
+      },
+      "replacement_span": {
+        "start_byte": 0,
+        "end_byte_exclusive": 1067
+      },
+      "original_body_sha256": "30d23cb7eab96e84bb95fbae98e18753cf467d3726e21028d45261bc8c5e42df",
+      "diagnostic_body_sha256": "30d23cb7eab96e84bb95fbae98e18753cf467d3726e21028d45261bc8c5e42df",
+      "body_options_comments_identity": "BYTE_IDENTICAL_OUTSIDE_THE_SINGLE_LITERAL_IMPORT_LINE",
+      "diagnostic_imports": [
+        "Lean.Elab.Tactic.Omega",
+        "Lean.Elab.Tactic.NormCast",
+        "Lean.Linter.ConstructorAsVariable",
+        "Mathlib.Tactic.Basic",
+        "Mathlib.Tactic.ByContra",
+        "Mathlib.Tactic.Convert",
+        "Mathlib.Tactic.Ring",
+        "Mathlib.Tactic.NormNum",
+        "Mathlib.Tactic.Linarith",
+        "Mathlib.Tactic.FieldSimp",
+        "Mathlib.Tactic.Positivity",
+        "Mathlib.Tactic.Tauto",
+        "Mathlib.Tactic.FinCases",
+        "Mathlib.Tactic.Ext",
+        "Mathlib.Data.Int.ModEq",
+        "Mathlib.Data.Int.Cast.Lemmas",
+        "Mathlib.Data.Rat.BigOperators",
+        "Mathlib.Data.Rat.Lemmas",
+        "Mathlib.Data.Nat.Cast.Order.Field",
+        "Mathlib.Order.Interval.Finset.Nat",
+        "Mathlib.Data.Finset.Card",
+        "Mathlib.Data.Finset.Prod",
+        "Mathlib.Data.Finset.Union",
+        "Mathlib.Algebra.BigOperators.Group.Finset.Basic",
+        "Mathlib.Algebra.BigOperators.Group.Finset.Sigma",
+        "Mathlib.Algebra.BigOperators.Group.Finset.Lemmas",
+        "Mathlib.Algebra.BigOperators.Group.List.Lemmas",
+        "Mathlib.Algebra.BigOperators.Ring.Finset",
+        "Mathlib.Algebra.Order.BigOperators.Group.Finset"
+      ],
+      "diff": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos169-fourap-tactic-specific-v2\\import-only-diffs\\OpHack_FiniteHarmonicMean.diff",
+      "diff_sha256": "ccbce37b7453a4dedc91eea91c94cfa0cebcea72ecb3bd8a07156898548816f5"
+    }
+  ],
+  "modified_headers": 7,
+  "unchanged_complete_sources": 15,
+  "unchanged_audit_source_sha256": "d1ffb3143e25505893fd3feaccca7df5517fd45e6e8e60e127324aa6ecbc4849",
+  "source_body_tactic_inventory_without_comments_or_strings": {
+    "linarith": 1,
+    "nlinarith": 8,
+    "omega": 112,
+    "ring": 36,
+    "norm_num": 18,
+    "exact_mod_cast": 10,
+    "norm_cast": 4,
+    "push_cast": 4,
+    "field_simp": 4,
+    "positivity": 11,
+    "tauto": 1,
+    "fin_cases": 1,
+    "native_decide": 0,
+    "decide": 70,
+    "convert": 15,
+    "by_contra": 4,
+    "rintro": 34,
+    "rcases": 25,
+    "ext": 15
+  },
+  "tactic_specific_direct_imports": [
+    "Lean.Elab.Tactic.Omega",
+    "Lean.Elab.Tactic.NormCast",
+    "Lean.Linter.ConstructorAsVariable",
+    "Mathlib.Tactic.Basic",
+    "Mathlib.Tactic.ByContra",
+    "Mathlib.Tactic.Convert",
+    "Mathlib.Tactic.Ring",
+    "Mathlib.Tactic.NormNum",
+    "Mathlib.Tactic.Linarith",
+    "Mathlib.Tactic.FieldSimp",
+    "Mathlib.Tactic.Positivity",
+    "Mathlib.Tactic.Tauto",
+    "Mathlib.Tactic.FinCases",
+    "Mathlib.Tactic.Ext"
+  ],
+  "mathematical_API_direct_imports": [
+    "Mathlib.Data.Int.ModEq",
+    "Mathlib.Data.Int.Cast.Lemmas",
+    "Mathlib.Data.Rat.BigOperators",
+    "Mathlib.Data.Rat.Lemmas",
+    "Mathlib.Data.Nat.Cast.Order.Field",
+    "Mathlib.Order.Interval.Finset.Nat",
+    "Mathlib.Data.Finset.Card",
+    "Mathlib.Data.Finset.Prod",
+    "Mathlib.Data.Finset.Union",
+    "Mathlib.Algebra.BigOperators.Group.Finset.Basic",
+    "Mathlib.Algebra.BigOperators.Group.Finset.Sigma",
+    "Mathlib.Algebra.BigOperators.Group.Finset.Lemmas",
+    "Mathlib.Algebra.BigOperators.Group.List.Lemmas",
+    "Mathlib.Algebra.BigOperators.Ring.Finset",
+    "Mathlib.Algebra.Order.BigOperators.Group.Finset"
+  ],
+  "official_direct_module_identity": [
+    {
+      "module": "Lean.Elab.Tactic.Omega",
+      "identity_root": "official_lean_core",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\src\\lean\\Lean\\Elab\\Tactic\\Omega.lean",
+      "source_sha256": "7a81cef2ff724f9f690993d01aef906b200ca11c36f72fb57f9e6e5eaf4ec45e",
+      "official_olean": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\lib\\lean\\Lean\\Elab\\Tactic\\Omega.olean",
+      "official_olean_present": true,
+      "official_olean_bytes": 1480,
+      "imports": [
+        "Lean.Elab.Tactic.Omega.Frontend"
+      ],
+      "implicit_Init_included": false,
+      "import_all_exposure_preserved_in_source_bytes": false,
+      "official_olean_sha256": "7f58793e49ecdb4e6406a4f1579f508f115cbfb7d339600277716fa4127e64e0"
+    },
+    {
+      "module": "Lean.Elab.Tactic.NormCast",
+      "identity_root": "official_lean_core",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\src\\lean\\Lean\\Elab\\Tactic\\NormCast.lean",
+      "source_sha256": "a5e7d3446b0ff46a38505683ee935d939a4884c3e409a5e2e96be051c5e2e708",
+      "official_olean": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\lib\\lean\\Lean\\Elab\\Tactic\\NormCast.olean",
+      "official_olean_present": true,
+      "official_olean_bytes": 61616,
+      "imports": [
+        "Lean.Meta.Tactic.NormCast",
+        "Lean.Elab.Tactic.Conv.Simp",
+        "Lean.Elab.ConfigEval"
+      ],
+      "implicit_Init_included": false,
+      "import_all_exposure_preserved_in_source_bytes": false,
+      "official_olean_sha256": "88a17ed2e48836230979c448455c18f8a95e2ba68dc1f47771d19c3cb547ec1e"
+    },
+    {
+      "module": "Lean.Linter.ConstructorAsVariable",
+      "identity_root": "official_lean_core",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\src\\lean\\Lean\\Linter\\ConstructorAsVariable.lean",
+      "source_sha256": "81b0330a67cdc04418098f52a38a6af29193f56e4108023c84d3026a9a70b80d",
+      "official_olean": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\lib\\lean\\Lean\\Linter\\ConstructorAsVariable.olean",
+      "official_olean_present": true,
+      "official_olean_bytes": 9888,
+      "imports": [
+        "Lean.Elab.Command",
+        "Lean.Linter.Util"
+      ],
+      "implicit_Init_included": false,
+      "import_all_exposure_preserved_in_source_bytes": false,
+      "official_olean_sha256": "54bf764e9e313e0898ede1c462d68bb2015b961d8e4af171e2b3994294f548ad"
+    },
+    {
+      "module": "Mathlib.Tactic.Basic",
+      "identity_root": "mathlib",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.34.1\\mathlib\\Mathlib\\Tactic\\Basic.lean",
+      "source_sha256": "72e5772b85ca5c7af051af8cb9c160f35e11fb0086f7d6e6bae30969bcd4d9d9",
+      "official_olean": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.34.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Tactic\\Basic.olean",
+      "official_olean_present": true,
+      "official_olean_bytes": 266984,
+      "imports": [
+        "Lean.Elab.BuiltinCommand",
+        "Mathlib.Tactic.PPWithUniv",
+        "Mathlib.Tactic.ExtendDoc",
+        "Mathlib.Tactic.Linter.OldObtain",
+        "Batteries.Util.LibraryNote"
+      ],
+      "implicit_Init_included": true,
+      "import_all_exposure_preserved_in_source_bytes": false,
+      "official_olean_sha256": "566d83702a4ff4bcb42509e5186bfb6d0faf7bb710822be3c6e29994f949d188"
+    },
+    {
+      "module": "Mathlib.Tactic.ByContra",
+      "identity_root": "mathlib",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.34.1\\mathlib\\Mathlib\\Tactic\\ByContra.lean",
+      "source_sha256": "e1d82e56e8fbeabdaa1ec3479c6b7da1d6d5b0d49c0fa883ddb2f4bcd59232ab",
+      "official_olean": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.34.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Tactic\\ByContra.olean",
+      "official_olean_present": true,
+      "official_olean_bytes": 88648,
+      "imports": [
+        "Batteries.Tactic.Init",
+        "Mathlib.Tactic.Push"
+      ],
+      "implicit_Init_included": true,
+      "import_all_exposure_preserved_in_source_bytes": false,
+      "official_olean_sha256": "1ea49e77f4a017e0df5ac702cd4a71557363b621f3e106ba8718dea0741cb75a"
+    },
+    {
+      "module": "Mathlib.Tactic.Convert",
+      "identity_root": "mathlib",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.34.1\\mathlib\\Mathlib\\Tactic\\Convert.lean",
+      "source_sha256": "a73b3955abb4ecab966f6ccbf284a7b4aad144d74509e88a37da9911ef479674",
+      "official_olean": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.34.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Tactic\\Convert.olean",
+      "official_olean_present": true,
+      "official_olean_bytes": 598336,
+      "imports": [
+        "Mathlib.Data.Nat.Notation",
+        "Mathlib.Tactic.CongrExclamation",
+        "Mathlib.Tactic.CongrExclamation"
+      ],
+      "implicit_Init_included": true,
+      "import_all_exposure_preserved_in_source_bytes": false,
+      "official_olean_sha256": "19eae96db070d73505d7fde611dfa20b0fcc5a57cf472071627924f883801633"
+    },
+    {
+      "module": "Mathlib.Tactic.Ring",
+      "identity_root": "mathlib",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.34.1\\mathlib\\Mathlib\\Tactic\\Ring.lean",
+      "source_sha256": "d3ef5c49ebbd1108ce3f935e5ad95485e143abf02f28c027dba4bb6f3be8196e",
+      "official_olean": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.34.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Tactic\\Ring.olean",
+      "official_olean_present": true,
+      "official_olean_bytes": 1904,
+      "imports": [
+        "Mathlib.Tactic.Ring.Basic",
+        "Mathlib.Tactic.Ring.PNat",
+        "Mathlib.Tactic.Ring.RingNF"
+      ],
+      "implicit_Init_included": true,
+      "import_all_exposure_preserved_in_source_bytes": false,
+      "official_olean_sha256": "301e95fbad73634f1e47fe918723c2d5443cec154d15622c3475e766e9405077"
+    },
+    {
+      "module": "Mathlib.Tactic.NormNum",
+      "identity_root": "mathlib",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.34.1\\mathlib\\Mathlib\\Tactic\\NormNum.lean",
+      "source_sha256": "dca9500572c6d887000f3de17c7145b53bf35233afc1ad8026cca908cec7a2fe",
+      "official_olean": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.34.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Tactic\\NormNum.olean",
+      "official_olean_present": true,
+      "official_olean_bytes": 2752,
+      "imports": [
+        "Mathlib.Data.Rat.Cast.Order",
+        "Mathlib.Tactic.NormNum.Abs",
+        "Mathlib.Tactic.NormNum.Basic",
+        "Mathlib.Tactic.NormNum.DivMod",
+        "Mathlib.Tactic.NormNum.Eq",
+        "Mathlib.Tactic.NormNum.Ineq",
+        "Mathlib.Tactic.NormNum.Inv",
+        "Mathlib.Tactic.NormNum.OfScientific",
+        "Mathlib.Tactic.NormNum.Pow"
+      ],
+      "implicit_Init_included": true,
+      "import_all_exposure_preserved_in_source_bytes": false,
+      "official_olean_sha256": "325bbf27940bd90c94aafe405e154131ffec26fccef767b5d1206148c8c239f9"
+    },
+    {
+      "module": "Mathlib.Tactic.Linarith",
+      "identity_root": "mathlib",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.34.1\\mathlib\\Mathlib\\Tactic\\Linarith.lean",
+      "source_sha256": "0581fd9f80f34d728ad628e7c1fb5a93d36cb9cb48d469fbc797869e83ebe0a6",
+      "official_olean": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.34.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Tactic\\Linarith.olean",
+      "official_olean_present": true,
+      "official_olean_bytes": 2792,
+      "imports": [
+        "Mathlib.Tactic.Hint",
+        "Mathlib.Tactic.Linarith.Frontend",
+        "Mathlib.Tactic.NormNum"
+      ],
+      "implicit_Init_included": true,
+      "import_all_exposure_preserved_in_source_bytes": false,
+      "official_olean_sha256": "e57e08793afc08cea4bf3e4b4821151c1edc506c884ab6f37f158bb60e67ab54"
+    },
+    {
+      "module": "Mathlib.Tactic.FieldSimp",
+      "identity_root": "mathlib",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.34.1\\mathlib\\Mathlib\\Tactic\\FieldSimp.lean",
+      "source_sha256": "924a11d74ca2851409f1d78284affbd60c21c9d54ac5bb4fb4676f17cbecb679",
+      "official_olean": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.34.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Tactic\\FieldSimp.olean",
+      "official_olean_present": true,
+      "official_olean_bytes": 1688480,
+      "imports": [
+        "Mathlib.Data.Ineq",
+        "Mathlib.Tactic.FieldSimp.Attr",
+        "Mathlib.Tactic.FieldSimp.Discharger",
+        "Mathlib.Tactic.FieldSimp.Lemmas",
+        "Mathlib.Util.AtomM.Recurse",
+        "Mathlib.Util.SynthesizeUsing",
+        "Mathlib.Data.Ineq"
+      ],
+      "implicit_Init_included": true,
+      "import_all_exposure_preserved_in_source_bytes": false,
+      "official_olean_sha256": "b8dbb458e3a8186460623d9126edab45ac05f1fb0f712203006157199b09ce5c"
+    },
+    {
+      "module": "Mathlib.Tactic.Positivity",
+      "identity_root": "mathlib",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.34.1\\mathlib\\Mathlib\\Tactic\\Positivity.lean",
+      "source_sha256": "74549078792cb4bef7b904577b94f0e206912935507b6f2f39eb73b7a15927d6",
+      "official_olean": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.34.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Tactic\\Positivity.olean",
+      "official_olean_present": true,
+      "official_olean_bytes": 2088,
+      "imports": [
+        "Mathlib.Algebra.Order.Field.Basic",
+        "Mathlib.Tactic.Positivity.Basic",
+        "Mathlib.Tactic.Positivity.Finset"
+      ],
+      "implicit_Init_included": true,
+      "import_all_exposure_preserved_in_source_bytes": false,
+      "official_olean_sha256": "644d0a9de60f611ce7bed05f116fb8dd319402844fa3a154158e873e04b3f3e4"
+    },
+    {
+      "module": "Mathlib.Tactic.Tauto",
+      "identity_root": "mathlib",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.34.1\\mathlib\\Mathlib\\Tactic\\Tauto.lean",
+      "source_sha256": "dd80c05f5ef9a7b73918bbbe9d736f1c4eaaea4b047a2f9ace1cf87d42359a5f",
+      "official_olean": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.34.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Tactic\\Tauto.olean",
+      "official_olean_present": true,
+      "official_olean_bytes": 547208,
+      "imports": [
+        "Lean.Elab.Tactic.Classical",
+        "Mathlib.Lean.Meta",
+        "Mathlib.Basic.Logic.Basic",
+        "Mathlib.Tactic.CasesM",
+        "Mathlib.Tactic.Core",
+        "Lean.Elab.ConfigEval",
+        "Lean.Elab.ConfigEval",
+        "Qq"
+      ],
+      "implicit_Init_included": true,
+      "import_all_exposure_preserved_in_source_bytes": false,
+      "official_olean_sha256": "a89ad753608b227911a88c98d5d338bf784f5a4378fd35d2d3a2afafc8ddd358"
+    },
+    {
+      "module": "Mathlib.Tactic.FinCases",
+      "identity_root": "mathlib",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.34.1\\mathlib\\Mathlib\\Tactic\\FinCases.lean",
+      "source_sha256": "a7ecb037ebbeb09cb9d5460012119e2ce37d3db65361353f50ea200a26bf4d97",
+      "official_olean": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.34.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Tactic\\FinCases.olean",
+      "official_olean_present": true,
+      "official_olean_bytes": 150832,
+      "imports": [
+        "Mathlib.Tactic.Core",
+        "Mathlib.Lean.Expr.Basic",
+        "Mathlib.Data.Finset.Attr",
+        "Mathlib.Data.Fintype.Defs",
+        "Mathlib.Tactic.ToDual"
+      ],
+      "implicit_Init_included": true,
+      "import_all_exposure_preserved_in_source_bytes": false,
+      "official_olean_sha256": "e80fb01a9bef8506a127fac53604c59cb50a43ead804ed43a601c85931d898d3"
+    },
+    {
+      "module": "Mathlib.Tactic.Ext",
+      "identity_root": "mathlib",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.34.1\\mathlib\\Mathlib\\Tactic\\Ext.lean",
+      "source_sha256": "0a95c05b4752da973713a76463870227dde04ca4a2fe8998bcfe1c87f12edac4",
+      "official_olean": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.34.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Tactic\\Ext.olean",
+      "official_olean_present": true,
+      "official_olean_bytes": 4792,
+      "imports": [
+        "Mathlib.Init",
+        "Batteries.Util.LibraryNote"
+      ],
+      "implicit_Init_included": true,
+      "import_all_exposure_preserved_in_source_bytes": false,
+      "official_olean_sha256": "0904bb57a0e85904dd5513ce2f3fb535b412925b5fe5674bfc83c28f3fa0b99b"
+    },
+    {
+      "module": "Mathlib.Data.Int.ModEq",
+      "identity_root": "mathlib",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.34.1\\mathlib\\Mathlib\\Data\\Int\\ModEq.lean",
+      "source_sha256": "85fdd5da9b8faba86f6841344965b472b52e406d5ffcae1e07e3256b288d1a7c",
+      "official_olean": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.34.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Data\\Int\\ModEq.olean",
+      "official_olean_present": true,
+      "official_olean_bytes": 149432,
+      "imports": [
+        "Mathlib.Data.Nat.ModEq",
+        "Mathlib.Data.Int.Cast.Lemmas"
+      ],
+      "implicit_Init_included": true,
+      "import_all_exposure_preserved_in_source_bytes": false,
+      "official_olean_sha256": "f2be944c7f6ee8bbbb6f25774dfa46a813bee0748de2ef4fcd7fb170fa89a0cf"
+    },
+    {
+      "module": "Mathlib.Data.Int.Cast.Lemmas",
+      "identity_root": "mathlib",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.34.1\\mathlib\\Mathlib\\Data\\Int\\Cast\\Lemmas.lean",
+      "source_sha256": "96045cabdced9868db60ce14a08ed828dab1291951937b2d05ab8d7c476853b3",
+      "official_olean": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.34.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Data\\Int\\Cast\\Lemmas.olean",
+      "official_olean_present": true,
+      "official_olean_bytes": 201752,
+      "imports": [
+        "Mathlib.Algebra.Group.TypeTags.Hom",
+        "Mathlib.Algebra.Ring.Int.Defs",
+        "Mathlib.Algebra.Ring.Parity"
+      ],
+      "implicit_Init_included": true,
+      "import_all_exposure_preserved_in_source_bytes": false,
+      "official_olean_sha256": "5128ae98230467abe9e644bf8e931091e290433b15a58c48335d7681599d7dca"
+    },
+    {
+      "module": "Mathlib.Data.Rat.BigOperators",
+      "identity_root": "mathlib",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.34.1\\mathlib\\Mathlib\\Data\\Rat\\BigOperators.lean",
+      "source_sha256": "4024ae991e95d72610ab8ee928d61d16afafcb6433468bbba306b433377bac33",
+      "official_olean": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.34.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Data\\Rat\\BigOperators.olean",
+      "official_olean_present": true,
+      "official_olean_bytes": 26960,
+      "imports": [
+        "Mathlib.Data.Rat.Cast.CharZero",
+        "Mathlib.Algebra.BigOperators.Group.Finset.Defs"
+      ],
+      "implicit_Init_included": true,
+      "import_all_exposure_preserved_in_source_bytes": false,
+      "official_olean_sha256": "5a5d1916dcfbf7b7545b1ae68a61f9f268d6fef30f9fa73a00567f3d42ab617d"
+    },
+    {
+      "module": "Mathlib.Data.Rat.Lemmas",
+      "identity_root": "mathlib",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.34.1\\mathlib\\Mathlib\\Data\\Rat\\Lemmas.lean",
+      "source_sha256": "7708278a1b4f28c587dd3c8710e191ee4c692b0b32f43ae8ee339bd0615cfa92",
+      "official_olean": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.34.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Data\\Rat\\Lemmas.olean",
+      "official_olean_present": true,
+      "official_olean_bytes": 75816,
+      "imports": [
+        "Mathlib.Algebra.GroupWithZero.Divisibility",
+        "Mathlib.Algebra.Ring.Rat",
+        "Mathlib.Algebra.Ring.Int.Parity",
+        "Mathlib.Data.PNat.Defs"
+      ],
+      "implicit_Init_included": true,
+      "import_all_exposure_preserved_in_source_bytes": false,
+      "official_olean_sha256": "0dc3f2ac7c01afb5dcb34a8e7f5a46ef18b73c98920a69eb3bc4fb66504498a7"
+    },
+    {
+      "module": "Mathlib.Data.Nat.Cast.Order.Field",
+      "identity_root": "mathlib",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.34.1\\mathlib\\Mathlib\\Data\\Nat\\Cast\\Order\\Field.lean",
+      "source_sha256": "fc9a5b94982bffd9ecc57ed2362091e1ad67d21a0d6e7eac96656a50d191e6e6",
+      "official_olean": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.34.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Data\\Nat\\Cast\\Order\\Field.olean",
+      "official_olean_present": true,
+      "official_olean_bytes": 35984,
+      "imports": [
+        "Mathlib.Algebra.Order.Field.Basic"
+      ],
+      "implicit_Init_included": true,
+      "import_all_exposure_preserved_in_source_bytes": false,
+      "official_olean_sha256": "96aa546b2a86943359a81447cb07f5d24826a69859f8429b38c4d6d4570392ba"
+    },
+    {
+      "module": "Mathlib.Order.Interval.Finset.Nat",
+      "identity_root": "mathlib",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.34.1\\mathlib\\Mathlib\\Order\\Interval\\Finset\\Nat.lean",
+      "source_sha256": "0cae5c31159996f93b03cee5293aa7d935d013a46eb38c1065be8e3f9f261b17",
+      "official_olean": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.34.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Order\\Interval\\Finset\\Nat.olean",
+      "official_olean_present": true,
+      "official_olean_bytes": 93120,
+      "imports": [
+        "Mathlib.Algebra.Group.Embedding",
+        "Mathlib.Order.Interval.Multiset"
+      ],
+      "implicit_Init_included": true,
+      "import_all_exposure_preserved_in_source_bytes": false,
+      "official_olean_sha256": "3d35194e4babe298d07700dac0e19610f1c9088f7d079aa42ca9f52477af0bbb"
+    },
+    {
+      "module": "Mathlib.Data.Finset.Card",
+      "identity_root": "mathlib",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.34.1\\mathlib\\Mathlib\\Data\\Finset\\Card.lean",
+      "source_sha256": "64bcf8d1632513cb27a30c2cc151b544ace823bb88cf8ede997665f990c559b8",
+      "official_olean": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.34.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Data\\Finset\\Card.olean",
+      "official_olean_present": true,
+      "official_olean_bytes": 287296,
+      "imports": [
+        "Mathlib.Data.Finset.Basic",
+        "Mathlib.Data.Finset.Image",
+        "Mathlib.Data.Finset.Lattice.Lemmas"
+      ],
+      "implicit_Init_included": true,
+      "import_all_exposure_preserved_in_source_bytes": false,
+      "official_olean_sha256": "5819b45d1db5a99ab271f4151686f328eb48cfdd8df47b006c9c41c6f44e1d0d"
+    },
+    {
+      "module": "Mathlib.Data.Finset.Prod",
+      "identity_root": "mathlib",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.34.1\\mathlib\\Mathlib\\Data\\Finset\\Prod.lean",
+      "source_sha256": "13c8756add2710072abee567b38e3447ddb798a2cdac3c9e67a72ac896feec92",
+      "official_olean": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.34.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Data\\Finset\\Prod.olean",
+      "official_olean_present": true,
+      "official_olean_bytes": 173688,
+      "imports": [
+        "Mathlib.Data.Finset.Card",
+        "Mathlib.Data.Finset.Union",
+        "Mathlib.Data.List.OffDiag",
+        "Mathlib.Data.Nat.Choose.Basic"
+      ],
+      "implicit_Init_included": true,
+      "import_all_exposure_preserved_in_source_bytes": false,
+      "official_olean_sha256": "85715375842f59eecce64705e8cca2e4277a1ea0ed00f39b28ad9de1c2ecb9b0"
+    },
+    {
+      "module": "Mathlib.Data.Finset.Union",
+      "identity_root": "mathlib",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.34.1\\mathlib\\Mathlib\\Data\\Finset\\Union.lean",
+      "source_sha256": "e2202bb257f2d4de339beca0096c576027027af52ee5976733a214525464735a",
+      "official_olean": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.34.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Data\\Finset\\Union.olean",
+      "official_olean_present": true,
+      "official_olean_bytes": 211360,
+      "imports": [
+        "Mathlib.Data.Finset.Fold",
+        "Mathlib.Data.Multiset.Bind",
+        "Mathlib.Order.SetNotation"
+      ],
+      "implicit_Init_included": true,
+      "import_all_exposure_preserved_in_source_bytes": false,
+      "official_olean_sha256": "56c5e02c44db3c3645fb706c2a7b00615a2b52fd5c13c3b1fc6d7d8e981e549f"
+    },
+    {
+      "module": "Mathlib.Algebra.BigOperators.Group.Finset.Basic",
+      "identity_root": "mathlib",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.34.1\\mathlib\\Mathlib\\Algebra\\BigOperators\\Group\\Finset\\Basic.lean",
+      "source_sha256": "273036de3d36eda43082685a3ebc998900735e96c3f4b18f1546b39a4f765af0",
+      "official_olean": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.34.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Algebra\\BigOperators\\Group\\Finset\\Basic.olean",
+      "official_olean_present": true,
+      "official_olean_bytes": 522088,
+      "imports": [
+        "Mathlib.Algebra.BigOperators.Group.Finset.Defs",
+        "Mathlib.Data.Finset.Prod",
+        "Mathlib.Data.Finset.Sum"
+      ],
+      "implicit_Init_included": true,
+      "import_all_exposure_preserved_in_source_bytes": false,
+      "official_olean_sha256": "5ea4cfa15d460fb3df56f390b461aa7412a62c7a4941a3a89d7d06df5f38c4d9"
+    },
+    {
+      "module": "Mathlib.Algebra.BigOperators.Group.Finset.Sigma",
+      "identity_root": "mathlib",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.34.1\\mathlib\\Mathlib\\Algebra\\BigOperators\\Group\\Finset\\Sigma.lean",
+      "source_sha256": "28b9560a240b13e9458dcb4f48515071c1649917b4742fcce3359dec9ee536fb",
+      "official_olean": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.34.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Algebra\\BigOperators\\Group\\Finset\\Sigma.olean",
+      "official_olean_present": true,
+      "official_olean_bytes": 56664,
+      "imports": [
+        "Mathlib.Data.Finset.Sigma",
+        "Mathlib.Algebra.BigOperators.Group.Finset.Basic"
+      ],
+      "implicit_Init_included": true,
+      "import_all_exposure_preserved_in_source_bytes": false,
+      "official_olean_sha256": "bf581bb26913f2f3d7ab96fde07772c1c3c79eed8445059e554052a63fb1d9b5"
+    },
+    {
+      "module": "Mathlib.Algebra.BigOperators.Group.Finset.Lemmas",
+      "identity_root": "mathlib",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.34.1\\mathlib\\Mathlib\\Algebra\\BigOperators\\Group\\Finset\\Lemmas.lean",
+      "source_sha256": "75eae4ecb2130179720710a6bdb73436dc05390719d1377bec44cb25cb02418a",
+      "official_olean": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.34.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Algebra\\BigOperators\\Group\\Finset\\Lemmas.olean",
+      "official_olean_present": true,
+      "official_olean_bytes": 37096,
+      "imports": [
+        "Mathlib.Algebra.BigOperators.Group.Finset.Basic",
+        "Mathlib.Algebra.Group.Even",
+        "Mathlib.Algebra.Group.Pi.Lemmas",
+        "Mathlib.Algebra.Notation.Support"
+      ],
+      "implicit_Init_included": true,
+      "import_all_exposure_preserved_in_source_bytes": false,
+      "official_olean_sha256": "7dd48e060a46e6f767b46bd4bddc807a70d512f30f7153088cfcf6315034151e"
+    },
+    {
+      "module": "Mathlib.Algebra.BigOperators.Group.List.Lemmas",
+      "identity_root": "mathlib",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.34.1\\mathlib\\Mathlib\\Algebra\\BigOperators\\Group\\List\\Lemmas.lean",
+      "source_sha256": "5afd35e3f822dfa35ac0528414c1e12c8c603ad3fab1d3de8c68423efae64f4c",
+      "official_olean": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.34.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Algebra\\BigOperators\\Group\\List\\Lemmas.olean",
+      "official_olean_present": true,
+      "official_olean_bytes": 88736,
+      "imports": [
+        "Mathlib.Algebra.BigOperators.Group.List.Basic",
+        "Mathlib.Algebra.Divisibility.Basic",
+        "Mathlib.Algebra.Group.Int.Units",
+        "Mathlib.Data.List.Dedup",
+        "Mathlib.Data.List.Flatten",
+        "Mathlib.Data.List.Pairwise",
+        "Mathlib.Data.List.Perm.Basic",
+        "Mathlib.Data.List.Range",
+        "Mathlib.Data.List.Rotate",
+        "Mathlib.Data.List.ProdSigma",
+        "Mathlib.Algebra.Group.Opposite"
+      ],
+      "implicit_Init_included": true,
+      "import_all_exposure_preserved_in_source_bytes": false,
+      "official_olean_sha256": "d4655ab957a8e50e70f8a743b2398ef640b9e1507aa8cee1dd7043c2771eb60b"
+    },
+    {
+      "module": "Mathlib.Algebra.BigOperators.Ring.Finset",
+      "identity_root": "mathlib",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.34.1\\mathlib\\Mathlib\\Algebra\\BigOperators\\Ring\\Finset.lean",
+      "source_sha256": "3260deb025880a9c56b258bc0d9c53106aab2452599141b1e1c8f5bb0f589aa3",
+      "official_olean": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.34.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Algebra\\BigOperators\\Ring\\Finset.olean",
+      "official_olean_present": true,
+      "official_olean_bytes": 168376,
+      "imports": [
+        "Mathlib.Algebra.BigOperators.Group.Finset.Pi",
+        "Mathlib.Algebra.BigOperators.Group.Finset.Piecewise",
+        "Mathlib.Algebra.BigOperators.GroupWithZero.Finset",
+        "Mathlib.Algebra.BigOperators.Ring.Multiset",
+        "Mathlib.Data.Finset.Max",
+        "Mathlib.Data.Fintype.Powerset",
+        "Mathlib.Data.Int.Cast.Lemmas"
+      ],
+      "implicit_Init_included": true,
+      "import_all_exposure_preserved_in_source_bytes": false,
+      "official_olean_sha256": "461ea90da5b2f88be1d114dac7f7d23de296aa4ba529e3b55380dbcf2277fad8"
+    },
+    {
+      "module": "Mathlib.Algebra.Order.BigOperators.Group.Finset",
+      "identity_root": "mathlib",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.34.1\\mathlib\\Mathlib\\Algebra\\Order\\BigOperators\\Group\\Finset.lean",
+      "source_sha256": "17c2e6e0d7b41171e8d023f58f583230da93ae4e8576be56ac8cbb07dd00f478",
+      "official_olean": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.34.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Algebra\\Order\\BigOperators\\Group\\Finset.olean",
+      "official_olean_present": true,
+      "official_olean_bytes": 339088,
+      "imports": [
+        "Mathlib.Data.Fintype.Card",
+        "Mathlib.Algebra.Order.BigOperators.Group.Multiset",
+        "Mathlib.Algebra.Order.Group.Nat",
+        "Mathlib.Data.Multiset.OrderedMonoid",
+        "Mathlib.Tactic.Bound.Attribute",
+        "Mathlib.Algebra.BigOperators.Group.Finset.Sigma",
+        "Mathlib.Data.Multiset.Powerset",
+        "Mathlib.Algebra.Order.Monoid.Unbundled.Pow",
+        "Mathlib.Algebra.Order.Monoid.OrderDual"
+      ],
+      "implicit_Init_included": true,
+      "import_all_exposure_preserved_in_source_bytes": false,
+      "official_olean_sha256": "2a0b6e659009651c2d1aa5fe860539707d2c1732f403845147cf4073d056673c"
+    }
+  ],
+  "complete_dependency_source_closure": {
+    "total_modules": 2492,
+    "mathlib_modules": 738,
+    "v1_mathlib_modules": 2815,
+    "official_core_or_package_modules": 1754,
+    "literal_umbrella_Mathlib_or_Mathlib_Tactic_reachable": false,
+    "unresolved_modules": [],
+    "all_official_olean_files_present": true,
+    "source_closure_manifest": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos169-fourap-tactic-specific-v2\\official-full-import-source-closure.json",
+    "source_closure_manifest_sha256": "d8f9d535a03052006a4a75503483ff9752ad0efab6602cfc37e865a4940c213d",
+    "implicit_Init_and_import_all_modifiers_accounted_for": true
+  },
+  "dependency_pins": [
+    {
+      "name": "mathlib",
+      "url": "https://github.com/leanprover-community/mathlib4",
+      "rev": "d13f23b723b8a846827a245b89c10fc7d3f11612"
+    },
+    {
+      "name": "plausible",
+      "url": "https://github.com/leanprover-community/plausible",
+      "rev": "118aa17ee84656b8bd727fef7c458ee8c833385c"
+    },
+    {
+      "name": "LeanSearchClient",
+      "url": "https://github.com/leanprover-community/LeanSearchClient",
+      "rev": "ddf04cf3949fa556442341e87d47f9f6e6074707"
+    },
+    {
+      "name": "importGraph",
+      "url": "https://github.com/leanprover-community/import-graph",
+      "rev": "e928b72544873815af278d38681b31c0293588e3"
+    },
+    {
+      "name": "proofwidgets",
+      "url": "https://github.com/leanprover-community/ProofWidgets4",
+      "rev": "106ff4fafc74ef4ac99d81dbf3ab399118f497a5"
+    },
+    {
+      "name": "aesop",
+      "url": "https://github.com/leanprover-community/aesop",
+      "rev": "355695d523e41d0554926416cba2a2b3544fbbc9"
+    },
+    {
+      "name": "Qq",
+      "url": "https://github.com/leanprover-community/quote4",
+      "rev": "6a489d9af5d0c47e5b259e2e8bcdfc1811b5a259"
+    },
+    {
+      "name": "batteries",
+      "url": "https://github.com/leanprover-community/batteries",
+      "rev": "f2effa3d803fda822b1f97b806c47cf2adfbcbc2"
+    },
+    {
+      "name": "Cli",
+      "url": "https://github.com/leanprover/lean4-cli",
+      "rev": "e92c9f15fdfacc8536f31cfb3b7ad26c3c8cd204"
+    }
+  ],
+  "runtime_and_cache_receipt_identities": [
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\lean-4.34.1-installation.json",
+      "sha256": "7b2cb4ed51467e6204fc952e93cf2a25cdf89a895b5fe5edf763a48d6b12a10a"
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\mathlib-4.34.1-cache-retry.json",
+      "sha256": "c318c6ab8b46901bc673a06795e8b2c0eef78d904f9b1b5b6ce8a4f8fe4f3a7b"
+    }
+  ],
+  "proposed_resource_policy": {
+    "dispatch_disk_bytes": 4000000000,
+    "dispatch_physical_bytes": 6442450944,
+    "dispatch_commit_bytes": 5368709120,
+    "continuous_disk_bytes": 1000000000,
+    "continuous_physical_bytes": 3221225472,
+    "continuous_commit_bytes": 1073741824,
+    "own_job_private_cap_bytes": 6442450944,
+    "lean_threads": 1,
+    "baseline_or_heavy_source_scheduling": "Explicit root lease required; do not overlap a heavy Assembly attempt with the main queue"
+  },
+  "scientific_identity_and_limits": [
+    "Only the seven original literal import lines differ; every statement, proof, option and comment outside them is byte-identical",
+    "Fifteen complete authored sources and the original selected audit are byte-identical",
+    "Both original and v1 stopped receipts are unchanged; no custom output is copied into v2",
+    "Static source/official-artifact inspection does not establish import sufficiency or mathematical PASS",
+    "Do not relabel any eventual v2 operational replay as original frozen-source PASS",
+    "No Lean invocation, runner mutation, increased cap or resumed dispatch is authorized by this preparation"
+  ]
+}

@@ -1,0 +1,231 @@
+{
+  "title": "Finite order obstructions for edge-resilient four-critical graphs",
+  "blocks": [
+    {
+      "type": "title",
+      "text": "Finite order obstructions for edge-resilient four-critical graphs"
+    },
+    {
+      "type": "subtitle",
+      "text": "Provisional mathematical authors: Rachel Teo, Wenyi Wang, Hamdi Abderrahmene"
+    },
+    {
+      "type": "small",
+      "text": "Judging and evaluation record: the submissions discussed in this document have been judged and evaluated by Alejandro Zarzuelo Urdiales for OpenMath 2026. This dated review records the stated verification, classification and unresolved holds; it is a preliminary evaluation rather than a signed award decision."
+    },
+    {
+      "type": "small",
+      "text": "Event provenance: OpenMath 2026 ran 27 September–2 October 2026 with worldwide online participation. Detailed organizer listings specify Harvard Innovation Labs for the 27 September in-person event; the OpenMath programme advertises a hybrid kickoff at MIT. Sundai identifies its Harvard/MIT community. Organizer sources: https://rsihouse.ai/openmath ; https://luma.com/yzp9abvr ; https://www.sundai.club/events/boston/recursive-learning-hack-with-harvard-innovation-labs"
+    },
+    {
+      "type": "small",
+      "text": "Rachel Teo — Sakana AI."
+    },
+    {
+      "type": "small",
+      "text": "Wenyi Wang — Sakana AI."
+    },
+    {
+      "type": "small",
+      "text": "Hamdi Abderrahmene — Sakana AI."
+    },
+    {
+      "type": "small",
+      "text": "Affiliations follow the recorded author declarations or public institutional/profile sources. Preferred author names, author order and publication affiliations await author review. This editorial compilation does not establish anthology coauthorship."
+    },
+    {
+      "type": "subtitle",
+      "text": "Original-result working manuscript | OpenMath 2026 | 5 October 2026"
+    },
+    {
+      "type": "small",
+      "text": "Central source and adjudication archive: https://github.com/alejandrozu/openmath-2026-judging"
+    },
+    {
+      "type": "h2",
+      "text": "Abstract"
+    },
+    {
+      "type": "p",
+      "text": "A finite vertex-critical four-chromatic graph that stays four-chromatic after deletion of any r or fewer edges satisfies27r+19≤4n, together with stronger quadratic and integral independent-set filters. These refine explicit finite lower bounds, without improving the prior eventual asymptotic restriction."
+    },
+    {
+      "type": "h2",
+      "text": "Graph hypotheses and inequalities"
+    },
+    {
+      "type": "p",
+      "text": "Let G be a finite simple graph on n vertices, with chromatic number four. Assume that deletion of any vertex lowers that number, and that deletion of any set of at most r edges does not lower it, where r≥1. The submitted theorem gives27r+19≤4n."
+    },
+    {
+      "type": "p",
+      "text": "Two further necessary conditions are27(r+1)(n−1)≤(2n+1)² and9b(r+1)≤(2b+1)(n−b), where b=floor((n+1)/3). The integral filter can exclude an order allowed by the linear inequality: at r=4 it requires n≥33, whereas the linear inequality alone gives n≥32. These are one family of obstructions, not three separate original results."
+    },
+    {
+      "type": "h2",
+      "text": "Criticality supplies a finite code"
+    },
+    {
+      "type": "p",
+      "text": "Deleting a vertex of a four-critical graph produces a three-colouring of the remainder. The proof extracts a large independent colour class and encodes neighbourhood information on that class. Edge resilience forces separation between the relevant codewords: too few differences would produce a critical edge set of size at most r."
+    },
+    {
+      "type": "p",
+      "text": "The finite-code theorem compares a lower bound for total pairwise distance with an upper bound obtained by coordinate counts. This is a Plotkin/Cauchy–Schwarz argument. Optimizing the independent-set parameter and retaining its integer size gives the quadratic and exact filters; a final numerical derivation yields the clean linear inequality."
+    },
+    {
+      "type": "p",
+      "text": "The formal graph module supplies every hypothesis of the numeric code lemma from the actual canonical criticality definitions. The final theorem is not a numeric inequality assuming an unproved graph-to-code model. The target audit checks deletion and finite-cardinality conventions against the registered problem."
+    },
+    {
+      "type": "h2",
+      "text": "An ordinary derivation of the code and order bounds"
+    },
+    {
+      "type": "p",
+      "text": "Put s=r+1≥2. For any vertex v, choose a proper three-colouring of G−v. Each of its three colour classes contains at least s neighbours of v: otherwise delete the fewer than s edges from v into that class and give v its colour, producing a three-colouring after too few deletions. Thus every vertex has degree at least3s."
+    },
+    {
+      "type": "p",
+      "text": "Choose a maximum independent set A of size a and put H=V(G)∖A, |H|=h=n−a. A three-colouring after deleting one vertex shows n−1≤3a. For each v∈A let C_v⊆H be its nonneighbours in H. Independence of A and the degree bound imply |C_v|≤h−3s. If u,v∈A are distinct, take a three-colouring of G−u and look at neighbours x of u having the colour of v. There are at least s of them. Such an x is outside A and cannot be adjacent to v, so it belongs to C_v∖C_u. Therefore |C_v∖C_u|≥s in both directed orders."
+    },
+    {
+      "type": "p",
+      "text": "Here is the complete numerical lemma. Let a subsets C_v of an h-element ground set satisfy those weight and directed separation bounds. Write t_x=#{v:x∈C_v}, T=∑t_x and Q=∑t_x². Double counting directed differences gives a(a−1)s≤∑_(u,v)|C_v∖C_u|=aT−Q. Also T≤a(h−3s) and T²≤hQ by Cauchy–Schwarz."
+    },
+    {
+      "type": "p",
+      "text": "If h≤6s, then T≤a(h−3s)≤ah/2. The function aT−T²/h is increasing for0≤T≤ah/2, so a(a−1)s≤a²(h−3s)−a²(h−3s)²/h=3a²s(h−3s)/h. Rearrangement gives9as≤(2a+1)h. If h>6s, that inequality is immediate from(2a+1)h>6s(2a+1)>9as. This proves the code bound in all cases. The separation of two codewords also gives h≥4s, because one C_v has at least s members while its weight is at most h−3s."
+    },
+    {
+      "type": "p",
+      "text": "The degree bound gives n≥3s+1≥7; hence a≥ceil((n−1)/3)≥2, so two codewords do exist. Combining h≥4s with n−1≤3a and n=a+h yields2n≥12s−1 and therefore n≥6s. Now divide the code bound by a>0. The function(2a+1)(n−a)/a=2n−2a+n/a−1 is decreasing in positive a. Substituting the smaller integer b=floor((n+1)/3) gives9bs≤(2b+1)(n−b). Substituting the real lower value(n−1)/3 instead gives27s(n−1)≤(2n+1)²."
+    },
+    {
+      "type": "p",
+      "text": "Finally n≥6s≥12. If27s≥4n+9, the quadratic inequality would force(4n+9)(n−1)≤(2n+1)², or n≤10, a contradiction. Therefore27s≤4n+8. Replacing s by r+1 yields27r+19≤4n, as claimed. This derives all three displayed inequalities from the graph hypotheses, without an assumed coding model."
+    },
+    {
+      "type": "h2",
+      "text": "What the finite improvement accomplishes"
+    },
+    {
+      "type": "p",
+      "text": "The located prior explicit bound is n≥5r+6. After integer rounding, the new linear condition ties at r=1 and improves the finite lower requirement for larger r. However, Skottova and Steiner also prove an eventual restriction r=O(n/(log n)^c), which is stronger asymptotically. The new theorem does not supersede that result or construct any graph meeting its obstruction."
+    },
+    {
+      "type": "p",
+      "text": "In particular it does not solve existence for r≥2, cover k>4, or address infinite graphs. Known r=1 constructions are prior evidence, not a new contribution of this packet."
+    },
+    {
+      "type": "h2",
+      "text": "Formal evidence and paper form"
+    },
+    {
+      "type": "p",
+      "text": "The recorded independent isolated Lean4.34.1 replay compiled the three proof modules and a separate target audit from unchanged frozen sources, with an initially empty own-output directory. Third-party caches were reused and all final endpoints report standard axioms. Fresh replay outcomes belong in the common register."
+    },
+    {
+      "type": "p",
+      "text": "A short extremal-graph paper should state the three inequalities, explain the criticality-to-code separation, and give small-r comparisons. The precise theorem is more useful than an inflated conjecture-solution headline. Credit the source definitions, prior critical-edge-set paper and classical finite coding inequalities."
+    },
+    {
+      "type": "small",
+      "text": "This short manuscript records the construction and selected endpoints. The companion Original results anthology contains the extended ordinary proof exposition and its explicitly stated premises; the preserved Lean source remains the complete formal proof record."
+    },
+    {
+      "type": "h2",
+      "text": "Verification and reproducibility"
+    },
+    {
+      "type": "p",
+      "text": "Fresh execution: sakana-erdos944-order-bound: PASS; 3/3 custom modules compiled successfully; receipt Verification/sakana-erdos944-order-bound-fresh-build.json. Compiler pins, source hashes and endpoint axiom outputs are in Verification. Historical receipts and finite checks do not replace fresh replay."
+    },
+    {
+      "type": "keep_start",
+      "text": ""
+    },
+    {
+      "type": "h2",
+      "text": "Erdos944Bounds.erdos944_order_linear"
+    },
+    {
+      "type": "code",
+      "text": "theorem erdos944_order_linear {r : ℕ} (hr : 1 ≤ r)\n    (hG : G.IsCritical 4)\n    (hE : ∀ edges : Set (Sym2 V), G.IsCriticalEdges edges → r < edges.ncard) :\n    27*r + 19 ≤ 4 * Fintype.card V"
+    },
+    {
+      "type": "small",
+      "text": "Source: proofs/erdos944-order-bound/OpHack/Erdos944Bounds.lean:42."
+    },
+    {
+      "type": "small",
+      "text": "Source SHA-256: 8f9e544d0e9f465f8d92d0c0b878ab2bd9b542c0c969eaa4e2d7c908acec27f4"
+    },
+    {
+      "type": "keep_end",
+      "text": ""
+    },
+    {
+      "type": "keep_start",
+      "text": ""
+    },
+    {
+      "type": "h2",
+      "text": "Erdos944Bounds.erdos944_order_quadratic"
+    },
+    {
+      "type": "code",
+      "text": "theorem erdos944_order_quadratic {r : ℕ} (hr : 1 ≤ r)\n    (hG : G.IsCritical 4)\n    (hE : ∀ edges : Set (Sym2 V), G.IsCriticalEdges edges → r < edges.ncard) :\n    27 * (r+1) * (Fintype.card V - 1) ≤ (2 * Fintype.card V + 1)^2"
+    },
+    {
+      "type": "small",
+      "text": "Source: proofs/erdos944-order-bound/OpHack/Erdos944Bounds.lean:28."
+    },
+    {
+      "type": "small",
+      "text": "Source SHA-256: 8f9e544d0e9f465f8d92d0c0b878ab2bd9b542c0c969eaa4e2d7c908acec27f4"
+    },
+    {
+      "type": "reference_list",
+      "text": "Sources and attribution",
+      "items": [
+        {
+          "text": "1. www.erdosproblems.com / 944",
+          "url": "https://www.erdosproblems.com/944"
+        },
+        {
+          "text": "2. arXiv source: 2508.08703",
+          "url": "https://arxiv.org/html/2508.08703"
+        },
+        {
+          "text": "3. google-deepmind/formal-conjectures / 944.lean",
+          "url": "https://github.com/google-deepmind/formal-conjectures/blob/main/FormalConjectures/ErdosProblems/944.lean"
+        },
+        {
+          "text": "4. KitaKen1/erdos-944-dirac-k4-lean",
+          "url": "https://github.com/KitaKen1/erdos-944-dirac-k4-lean"
+        },
+        {
+          "text": "5. arXiv source: 2606.18462",
+          "url": "https://arxiv.org/abs/2606.18462"
+        },
+        {
+          "text": "6. alejandrozu/ulam-opdp-difficulty-atlas",
+          "url": "https://github.com/alejandrozu/ulam-opdp-difficulty-atlas"
+        },
+        {
+          "text": "7. alejandrozu/openmath-2026-judging / E02-erdos944-order-bound.txt",
+          "url": "https://github.com/alejandrozu/openmath-2026-judging/blob/d0ed487f487fa7ec814ff705ab55249983fe8707/OpenMath-Judging/review/entries/E02-erdos944-order-bound.txt"
+        },
+        {
+          "text": "Central source and adjudication archive",
+          "url": "https://github.com/alejandrozu/openmath-2026-judging"
+        }
+      ]
+    },
+    {
+      "type": "keep_end",
+      "text": ""
+    }
+  ]
+}

@@ -1,0 +1,1834 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-04",
+  "editorial_boundary": "Proof exposition completeness is not public-release approval, historical originality or fresh formal verification. Every status refers only to its exact displayed theorem.",
+  "totals": {
+    "main_original_candidate_families": 19,
+    "families_with_expansion_json": 17,
+    "complete_ordinary_arguments_at_exact_scope": 19,
+    "complete_ordinary_arguments_with_finite_certificate": 9,
+    "remaining_ordinary_exposition_gaps": 0,
+    "held_priority_or_novelty_families": 4,
+    "matt_generic_pivot_included_in_main_aggregate": 1
+  },
+  "families": {
+    "a060957": {
+      "title": "Arbitrarily long prime-exponent gaps in complete-interval subset products",
+      "category": "original_candidate",
+      "formal_endpoint_count": 4,
+      "ordinary_words_in_base": 670,
+      "ordinary_scope_status": "complete ordinary atom/complete-face/normalization proof; all 45 exact frozen sources and four selected endpoints freshly passed with standard kernel axioms",
+      "ordinary_proof_readiness": "Complete ordinary proof of the construction and exact fibre, subject to the stated standard prime-existence and finite-dimensional separation facts.",
+      "remaining_full_proof_needs": [
+        "Author review of notation and attribution; final fresh verification register and historical priority comparison remain necessary. No major ordinary-proof lemma is omitted in this expansion."
+      ],
+      "source_modules_read": [
+        "Generic/Circulant.lean",
+        "Generic/GraphAtoms.lean",
+        "Generic/LinearAtoms.lean",
+        "Generic/Parameters.lean",
+        "Generic/BaseBounds.lean",
+        "Generic/Embedding.lean",
+        "Generic/ChoiceModel.lean",
+        "Generic/ChoiceNumbers.lean",
+        "Generic/ZeroChoices.lean",
+        "Generic/CountSupport.lean",
+        "Generic/ProductSupport.lean",
+        "Face.lean",
+        "Generic/ExactFiber.lean",
+        "Generic/Normalization.lean",
+        "Generic/Final.lean"
+      ],
+      "ordinary_words_in_expansion": 1302,
+      "fresh_verification": {
+        "status": "PASS",
+        "finished_utc": "2026-10-05T03:10:13Z",
+        "receipt": "Verification/sakana-a060957-fresh-build.json",
+        "receipt_sha256": "efb9d69a8694541f8651fee7e1a56ff5f2e651dbbc7ac14a9d076595e1c07f48",
+        "lean": "4.33.1",
+        "mathlib": "0df444a360eaa60ab8c11dca51a86af692955474",
+        "authored_source_modules": 45,
+        "selected_endpoint_prints": 4,
+        "endpoint_axioms": [
+          {
+            "endpoint": "SubsetProductGap.subset_product_counterexample",
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "native_axioms": [],
+            "unrecognized_axioms": [],
+            "classification": "STANDARD_KERNEL_AXIOMS"
+          },
+          {
+            "endpoint": "SubsetProductGap.interpolation_conjecture_false",
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "native_axioms": [],
+            "unrecognized_axioms": [],
+            "classification": "STANDARD_KERNEL_AXIOMS"
+          },
+          {
+            "endpoint": "SubsetProductGap.Generic.arbitrary_gap_eight_levels_above",
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "native_axioms": [],
+            "unrecognized_axioms": [],
+            "classification": "STANDARD_KERNEL_AXIOMS"
+          },
+          {
+            "endpoint": "SubsetProductGap.Generic.arbitrary_gap_consecutive_above",
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "native_axioms": [],
+            "unrecognized_axioms": [],
+            "classification": "STANDARD_KERNEL_AXIOMS"
+          }
+        ],
+        "originality_and_placement": "SEPARATE_UNCHANGED_DECISIONS"
+      }
+    },
+    "a100475": {
+      "title": "No positive-start periodic orbit for the prime-index reversal map",
+      "category": "original_candidate",
+      "formal_endpoint_count": 2,
+      "ordinary_words_in_base": 592,
+      "ordinary_scope_status": "complete ordinary three-step growth/finite exception proof and distributed exact checker; all 84 exact frozen sources and both selected endpoints freshly passed with standard kernel axioms",
+      "ordinary_proof_readiness": "Complete source-faithful ordinary proof of the positive-start result, including the actual submitted three-step growth argument, elementary Chebyshev estimate, every exceptional transition, and the exact finite checking method. Historical originality and author approval remain separate.",
+      "remaining_full_proof_needs": [
+        "Author review and resolution of the recorded SeqFan/Ball–Coxeter historical priority leads remain necessary before describing the theorem as new. The complete ordinary proof, distributable finite checker and fresh 84-source/two-endpoint replay are now present."
+      ],
+      "source_modules_read": [
+        "Claim_Evidence/proofs/a100475/A100475Dynamics.lean",
+        "Claim_Evidence/proofs/a100475/A100475Bounds.lean",
+        "Claim_Evidence/proofs/a100475/A100475Large.lean",
+        "Claim_Evidence/proofs/a100475/A100475CertificateDefs.lean",
+        "Claim_Evidence/proofs/a100475/A100475Transitions.lean",
+        "Claim_Evidence/proofs/a100475/A100475Conclusion.lean",
+        "Claim_Evidence/proofs/a100475/A100475Finite.lean"
+      ],
+      "ordinary_words_in_expansion": 1044,
+      "fresh_verification": {
+        "status": "PASS",
+        "finished_utc": "2026-10-05T03:53:25Z",
+        "receipt": "Verification/sakana-a100475-fresh-build.json",
+        "receipt_sha256": "4fc9d990f3e2050ff27ae8cbef01c94efbc72922df2d738e55cd99765c26cad6",
+        "lean": "4.33.1",
+        "mathlib": "0df444a360eaa60ab8c11dca51a86af692955474",
+        "authored_source_modules": 84,
+        "selected_endpoint_prints": 2,
+        "endpoint_axioms": [
+          {
+            "endpoint": "OeisA100475.not_periodic",
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "native_axioms": [],
+            "unrecognized_axioms": [],
+            "classification": "STANDARD_KERNEL_AXIOMS"
+          },
+          {
+            "endpoint": "OeisA100475.conjecture",
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "native_axioms": [],
+            "unrecognized_axioms": [],
+            "classification": "STANDARD_KERNEL_AXIOMS"
+          }
+        ],
+        "all85_current_source_and_artifact_rechecks": "PASS",
+        "originality_and_placement": "SEPARATE_UNCHANGED_DECISIONS"
+      }
+    },
+    "a000224": {
+      "title": "A three-prime exclusion for the quadratic-residue divisibility criterion",
+      "category": "original_candidate",
+      "formal_endpoint_count": 3,
+      "ordinary_words_in_base": 483,
+      "ordinary_scope_status": "complete ordinary argument with explicit finite certificate",
+      "ordinary_proof_readiness": "Complete symbolic ordinary proof, with the remaining finite discriminant assertion discharged by the attached explicit generated certificate.",
+      "remaining_full_proof_needs": [
+        "Keep the full generated certificate or a compact independently checkable table with the manuscript supplement; final fresh replay and author review remain necessary."
+      ],
+      "source_modules_read": [
+        "Bounds.lean",
+        "NecessaryBounds.lean",
+        "Reduction.lean",
+        "GeneratedCertificate.lean",
+        "CertificateP3.lean",
+        "SquareCount.lean",
+        "Target224.lean"
+      ],
+      "ordinary_words_in_expansion": 654
+    },
+    "ferrers-hierarchy": {
+      "title": "Factor-preserving deficiency hierarchies in Ferrers graphs",
+      "category": "original_candidate",
+      "formal_endpoint_count": 4,
+      "ordinary_words_in_base": 575,
+      "ordinary_scope_status": "complete ordinary factor-preservation argument; all 44 frozen sources and 4 selected actual graph/rank endpoints freshly passed with standard kernel axioms",
+      "ordinary_proof_readiness": "Complete ordinary proof of the preservation strengthening using standard finite capacitated Hall and bipartite edge-colouring theorems; equality geometry and all new cut estimates are supplied.",
+      "remaining_full_proof_needs": [
+        "Reference and clearly state the standard Ferrers factor/min-cut formula and bipartite edge-colouring theorem in the publication; author review of priority comparisons remains necessary."
+      ],
+      "source_modules_read": [
+        "FactorRank.lean",
+        "TightDefectCorner.lean",
+        "DefectRedStructure.lean",
+        "SpecialRedCuts.lean",
+        "SpecialRedColoring.lean",
+        "DeficientTopArm.lean",
+        "DefectExtension.lean",
+        "RankPrefixFormula.lean",
+        "YoungDiagramDefect.lean",
+        "YoungDiagramRestrictedPrefix.lean"
+      ],
+      "ordinary_words_in_expansion": 1288,
+      "fresh_verification": {
+        "status": "PASS",
+        "finished_utc": "2026-10-05T02:41:25Z",
+        "receipt": "Verification/sakana-ferrers-fresh-build.json",
+        "receipt_sha256": "a22599249b498d96e5e7ceac730fb397f02382f4f0868326a07dcfaaccd96913",
+        "lean": "4.33.1",
+        "mathlib": "0df444a360eaa60ab8c11dca51a86af692955474",
+        "authored_source_modules": 44,
+        "selected_endpoint_prints": 4,
+        "endpoint_axioms": [
+          {
+            "endpoint": "FerrersArm.TightDefectCorner.defect_preserves_factor",
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "native_axioms": [],
+            "unrecognized_axioms": [],
+            "classification": "STANDARD_KERNEL_AXIOMS"
+          },
+          {
+            "endpoint": "FerrersArm.YoungDiagramBridge.defect_indepNumK_later_ranks",
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "native_axioms": [],
+            "unrecognized_axioms": [],
+            "classification": "STANDARD_KERNEL_AXIOMS"
+          },
+          {
+            "endpoint": "FerrersArm.YoungDiagramBridge.one_defect_independent_sets",
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "native_axioms": [],
+            "unrecognized_axioms": [],
+            "classification": "STANDARD_KERNEL_AXIOMS"
+          },
+          {
+            "endpoint": "FerrersArm.YoungDiagramBridge.first_two_r_independent_sets",
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "native_axioms": [],
+            "unrecognized_axioms": [],
+            "classification": "STANDARD_KERNEL_AXIOMS"
+          }
+        ],
+        "originality_and_placement": "SEPARATE_UNCHANGED_DECISIONS"
+      }
+    },
+    "erdos21-sharp-residual": {
+      "title": "A sharp additive-three cover bound for intersecting uniform hypergraphs",
+      "category": "original_candidate",
+      "formal_endpoint_count": 5,
+      "ordinary_words_in_base": 480,
+      "ordinary_scope_status": "complete ordinary argument at displayed scope",
+      "ordinary_proof_readiness": "Complete ordinary proof of the finite +3 improvement, including all small packing cases, with matching/witness baseline credited to Sivashankar.",
+      "remaining_full_proof_needs": [
+        "Author review and a final specialist priority comparison with Sivashankar’s finite and asymptotic bounds. No new structural lemma is omitted in this expansion."
+      ],
+      "source_modules_read": [
+        "AuthorBaseline.lean",
+        "PackingConfig.lean",
+        "ColoredLinks.lean",
+        "ColoredSeven.lean",
+        "PackingBounds.lean",
+        "PackingStructure.lean",
+        "SmallPackings.lean",
+        "PackingFiveNine.lean",
+        "PackingSevenThree.lean",
+        "PackingSevenFour.lean",
+        "PackingBarrier.lean",
+        "LinkCounts.lean",
+        "SharpEndpoint.lean",
+        "Peeling.lean",
+        "Main.lean"
+      ],
+      "ordinary_words_in_expansion": 1720
+    },
+    "erdos169-fourap": {
+      "title": "A four-term-progression-free set with reciprocal sum exceeding 4.44",
+      "category": "original_candidate",
+      "formal_endpoint_count": 1,
+      "ordinary_words_in_base": 462,
+      "ordinary_scope_status": "complete ordinary digit/residue and harmonic argument; all22 scientific bodies and unchanged selected audit passed via a separately qualified import-only route with standard axioms; original frozen-source replay remains15/22 and first import-only route remains7/22 historical resource outcomes",
+      "ordinary_proof_readiness": "Complete ordinary construction and proof with explicit, independently recomputed finite residue and rational certificates. The finite certificate is a genuine computational component and its checking code accompanies the manuscript package.",
+      "remaining_full_proof_needs": [
+        "Confirm the bounded prior-literature comparison and author approval. Preserve the complete ordinary proof and exact finite certificate checking code. Complete the two resource-blocked Lean roots and five dependent sources before claiming an independently replayed final Lean endpoint; the present selected audit was not attempted. This theorem does not resolve the divergent-reciprocal-sum conjecture."
+      ],
+      "source_modules_read": [
+        "OpHack/ErdosSingletonFinite.lean",
+        "OpHack/BaseDigitAP.lean",
+        "OpHack/DigitDescent.lean",
+        "OpHack/OldThreeModular.lean",
+        "OpHack/ErdosSixFinite.lean",
+        "OpHack/SixModularAssembly.lean",
+        "OpHack/SixModularFinal.lean",
+        "OpHack/SixFibreAP.lean",
+        "OpHack/DigitCounting.lean",
+        "OpHack/ReciprocalBlocks.lean",
+        "OpHack/SixTermwise.lean",
+        "OpHack/HarmonicCertificate.lean",
+        "OpHack/SixHarmonicAggregation.lean",
+        "OpHack/SixFloorBridge.lean",
+        "OpHack/SixFinalReciprocal.lean",
+        "OpHack/MainResult.lean",
+        "erdos169_independent_finite_certificate.json",
+        "check_169_certificates.py",
+        "check_e169_modular_six.py",
+        "e169_modular_six_independent_check.json"
+      ],
+      "ordinary_words_in_expansion": 1303,
+      "fresh_verification": {
+        "status": "ENVIRONMENT_BLOCKED_RESOURCE_DEPENDENCIES",
+        "finished_utc": "2026-10-05T02:09:09Z",
+        "receipt": "Verification/sakana-erdos169-fourap-fresh-build.json",
+        "receipt_sha256": "1d395cae83c4d623950359dccccdab24d8777c39ffee69c54795226b187d7875",
+        "lean": "4.34.1",
+        "mathlib": "d13f23b723b8a846827a245b89c10fc7d3f11612",
+        "authored_source_modules": 22,
+        "passed_authored_source_modules": 15,
+        "successful_modules": [
+          "OpHack.ResidueFibre",
+          "OpHack.DigitDescent",
+          "OpHack.ErdosSingletonFinite",
+          "OpHack.BaseDigitAP",
+          "OpHack.OldThreeModular",
+          "OpHack.ErdosSixFinite",
+          "OpHack.SixFibreAP",
+          "OpHack.DigitCounting",
+          "OpHack.FloorBounds",
+          "OpHack.HarmonicCertificate",
+          "OpHack.SixHarmonicCertificate",
+          "OpHack.FiniteHarmonicMean",
+          "OpHack.ReciprocalBlocks",
+          "OpHack.SixTermwise",
+          "OpHack.SixHarmonicAggregation"
+        ],
+        "resource_roots": {
+          "OpHack.SixModularAssembly": {
+            "classification": "OWN_ALLOCATION_FAILURE",
+            "seconds": 46.031,
+            "source_sha256": "3a22027960ebaedc4550201295974585f7d8fba2462d82af59f8a2bdf37d09df",
+            "stderr": "INTERNAL PANIC: out of memory\n",
+            "job_peak_aggregate_private_bytes": 10737463296,
+            "minimum_available_commit_bytes": 1146798080
+          },
+          "OpHack.SixFloorBridge": {
+            "classification": "OWN_ALLOCATION_FAILURE",
+            "seconds": 81.75,
+            "source_sha256": "05e4b37b83b3d2087d80058044a4bc12ed552253f36c2de0640f758c955d024d",
+            "stderr": "INTERNAL PANIC: out of memory\n",
+            "job_peak_aggregate_private_bytes": 10737438720,
+            "minimum_available_commit_bytes": 1301958656
+          }
+        },
+        "unattempted_authored_descendants": [
+          "OpHack.SixModularFinal",
+          "OpHack.SixFinalAP",
+          "OpHack.SixListBridge",
+          "OpHack.SixFinalReciprocal",
+          "OpHack.MainResult"
+        ],
+        "selected_endpoint": "Erdos3Candidate.explicit_four_ap_free_reciprocal_gt",
+        "selected_endpoint_fresh_audit": "NO_ATTEMPT_RESOURCE_DEPENDENCY_BLOCK",
+        "mathematical_failure_invocations": [],
+        "historical_full_build": "Preserved entrant archive, distinct from this 15/22-source independent replay",
+        "independent_modular_certificate": {
+          "script": "Independent checkers/check_e169_modular_six.py",
+          "script_sha256": "c86b3b198f6e999fe952c74204389069e962ee1031f1078cdc1ab15d395fd204",
+          "actual_output": "Independent checkers/e169_modular_six_independent_check.json",
+          "actual_output_sha256": "8702257c1e32f7a3b122ad5d865c053adb337f49905b4a8b0b6054f6cc55f79b",
+          "scope": "Joint 9267-residue modular four-progression-free alphabet; not the final reciprocal-bound Lean endpoint"
+        }
+      },
+      "body_identical_import_only_verification": {
+        "status": "PASS_BODY_IDENTICAL_IMPORT_ONLY_ROUTE_SELECTED_ENDPOINT_STANDARD_AXIOMS",
+        "finished_utc": "2026-10-05T03:02:16Z",
+        "receipt": "Verification/sakana-erdos169-fourap-tactic-specific-v2-fresh-build.json",
+        "receipt_sha256": "b0a0157e0b277a9e20c11f22f342663ae3b11b91ec6aba1fa8f7bbe036c284c6",
+        "qualification_receipt": "Verification/e169-tactic-specific-v2-completed-qualification.json",
+        "qualification_receipt_sha256": "57c466bc581ab50ab62c9fefeadc0a0a6637aee19c5151c652f387dfea56709d",
+        "lean": "4.34.1",
+        "mathlib": "d13f23b723b8a846827a245b89c10fc7d3f11612",
+        "authored_scientific_bodies_passed": 22,
+        "selected_endpoint_prints": 1,
+        "changed_import_headers": 7,
+        "byte_identical_complete_source_files": 15,
+        "scientific_statements_proofs_options_comments": "BYTE_IDENTICAL_OUTSIDE_SEVEN_IMPORT_SPANS",
+        "selected_audit_source": "BYTE_IDENTICAL_TO_ORIGINAL",
+        "endpoint_axioms": [
+          {
+            "endpoint": "Erdos3Candidate.explicit_four_ap_free_reciprocal_gt",
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "native_axioms": [],
+            "unrecognized_axioms": [],
+            "classification": "STANDARD_KERNEL_AXIOMS"
+          }
+        ],
+        "closure_units": {
+          "Mathlib_sources": 738,
+          "core_or_package_sources": 1754,
+          "total_sources": 2492,
+          "v1_Mathlib_sources": 2815
+        },
+        "historical_original_source_replay": {
+          "passed_modules": 15,
+          "total_modules": 22,
+          "receipt": "Verification/sakana-erdos169-fourap-fresh-build.json",
+          "receipt_sha256": "1d395cae83c4d623950359dccccdab24d8777c39ffee69c54795226b187d7875",
+          "status": "ENVIRONMENT_BLOCKED_RESOURCE_DEPENDENCIES"
+        },
+        "historical_first_import_only_replay": {
+          "passed_modules": 7,
+          "total_modules": 22,
+          "receipt": "Verification/sakana-erdos169-fourap-import-pruned-diagnostic-fresh-build.json",
+          "receipt_sha256": "689494114098170847557c105ece1a984c30d9bbf287caa71c29135ea768f1fc",
+          "status": "ENVIRONMENT_BLOCKED_THIRD_WORKER_MEMORY"
+        },
+        "qualification": "Exact scientific bodies/options/comments and unchanged selected audit verified using seven import-only header replacements. This qualifies the separate operational route, not original frozen-source PASS; original15/22 and v1 7/22 remain historical resource-limited receipts.",
+        "originality_and_placement": "SEPARATE_UNCHANGED_DECISIONS"
+      }
+    },
+    "opdp13-quartic": {
+      "title": "Exact admissible powers and a sharp logarithmic boundary scale for a Hermitian quartic",
+      "category": "original_candidate",
+      "formal_endpoint_count": 5,
+      "ordinary_words_in_base": 465,
+      "ordinary_scope_status": "complete ordinary argument at displayed scope",
+      "ordinary_proof_readiness": "Complete source-faithful ordinary semigroup, moment, Fourier obstruction and quantitative saddle/outer-arc upper-bound proof, including explicit polynomial identities, a derived local complex-log remainder, positive Gaussian core, finite coefficient window and uniform exponent assembly. Historical novelty and author approval remain separate.",
+      "remaining_full_proof_needs": [
+        "Author-check the ordinary analytic transcription and historical comparisons; no additional infinite proof lemma is left as an unstated premise in this editorial exposition. Preserve the exact frozen Lean sources as supplements."
+      ],
+      "source_modules_read": [
+        "PowerSemigroup/Certificates.lean",
+        "PowerSemigroup/Main.lean",
+        "PowerSemigroup/Hermitian.lean",
+        "PowerMoment/Bound.lean",
+        "PowerFourier/Main.lean",
+        "PowerFourier/Gaussian.lean",
+        "PowerUpper/DirectRadius.lean",
+        "PowerUpper/ActualCore.lean",
+        "PowerUpper/BoundaryGap.lean",
+        "PowerUpper/OuterEstimates.lean",
+        "PowerUpper/MainUpper.lean",
+        "PowerUpper/LeastIndex.lean",
+        "PowerUpper/Gap.lean",
+        "PowerUpper/LocalExpansion.lean",
+        "PowerUpper/Integrand.lean",
+        "PowerUpper/GaussianCore.lean",
+        "PowerUpper/AngleBridge.lean",
+        "PowerUpper/ArcEstimates.lean",
+        "PowerUpper/EdgeModulus.lean",
+        "PowerUpper/QuarticTail.lean",
+        "PowerUpper/SmallCoefficients.lean"
+      ],
+      "ordinary_words_in_expansion": 1913
+    },
+    "opdp43-halfturn": {
+      "title": "The sharp half-turn defect gap in full no-three-in-line grid configurations",
+      "category": "original_candidate",
+      "formal_endpoint_count": 2,
+      "ordinary_words_in_base": 437,
+      "ordinary_scope_status": "complete ordinary argument at displayed scope",
+      "ordinary_proof_readiness": "Complete ordinary proof already present in the base chapter and source claim card; no duplicate expansion is needed."
+    },
+    "erdos1060-uniform-partial": {
+      "title": "A uniform entropy bound for fibres of kσ(k)",
+      "category": "original_candidate",
+      "formal_endpoint_count": 3,
+      "ordinary_words_in_base": 444,
+      "ordinary_scope_status": "complete ordinary argument at displayed scope",
+      "ordinary_proof_readiness": "Complete ordinary proof of the unconditional uniform positive-constant improvement. The powerful-core method is credited as prior structure; the exact weighted constant and all-n arithmetic/asymptotic bridge are the reported refinement.",
+      "remaining_full_proof_needs": [
+        "Confirm the literature comparison and author approval before a novelty claim is published. The proof below does not establish the zero-constant estimate asked for in Erdős 1060."
+      ],
+      "source_modules_read": [
+        "WeightedCoreBound.lean",
+        "WeightedCutoff.lean",
+        "SquarefreeSigmaInjection.lean",
+        "SigmaCoreInjection.lean",
+        "SigmaLogBudgets.lean",
+        "SigmaFiberEntropy.lean",
+        "EntropyConversion.lean",
+        "AsymptoticBridge.lean",
+        "SigmaCanonicalCount.lean",
+        "SigmaFiberAsymptotic.lean"
+      ],
+      "ordinary_words_in_expansion": 959
+    },
+    "erdos829-log-five-thirds": {
+      "title": "A log(5/3) uniform bound for representations as two nonnegative cubes",
+      "category": "original_candidate",
+      "formal_endpoint_count": 2,
+      "ordinary_words_in_base": 473,
+      "ordinary_scope_status": "complete ordinary argument at displayed scope",
+      "ordinary_proof_readiness": "Complete ordinary proofs of the all-target formal coefficient log(5/3) and the stronger ordinary coefficient 0.4695030882…, using standard finite-group facts, Stirling asymptotics and an explicit rational certificate for the formal endpoint. The optimized coefficient is not asserted as Lean-checked.",
+      "remaining_full_proof_needs": [
+        "Append the exact 500/90 integer certificate or its reproducible verification expression to the submission version. Confirm the prior-literature comparison and author approval. Consult the independent replay manifest before asserting verification of reconstructed Lean modules."
+      ],
+      "source_modules_read": [
+        "CubicRoots.lean",
+        "CubicRatios.lean",
+        "CubicDeterminant.lean",
+        "CubicSeparation.lean",
+        "CubicEncoding.lean",
+        "CubicEliasEncoding.lean",
+        "WeightedTernaryElias.lean",
+        "WeightedTernaryEliasGlobal.lean",
+        "EliasBlockFiveThirds.lean",
+        "CubeGcdTransfer.lean",
+        "FiveThirdsLocalWeights.lean",
+        "FiveThirdsMultiplicative.lean",
+        "FiveThirdsCutoff.lean",
+        "FiveThirdsAsymptotic.lean",
+        "FiveThirdsNonnegative.lean",
+        "FiveThirdsCanonical.lean",
+        "Ordinary_Evidence/Erdos829/829-ordinary-proof-recovered.md",
+        "Ordinary_Evidence/Erdos829/829-literature-comparison.md",
+        "Claim_Evidence/proofs/erdos829-log-five-thirds/VERIFICATION.md"
+      ],
+      "ordinary_words_in_expansion": 1769
+    },
+    "erdos944-order-bound": {
+      "title": "Finite order obstructions for edge-resilient four-critical graphs",
+      "category": "original_candidate",
+      "formal_endpoint_count": 3,
+      "ordinary_words_in_base": 719,
+      "ordinary_scope_status": "complete ordinary argument at displayed scope",
+      "ordinary_proof_readiness": "Complete ordinary proof already present in the base chapter and source claim card; no duplicate expansion is needed."
+    },
+    "opdp89-parity-local-maxima": {
+      "title": "A sharp collapsed-fibre likelihood classification for a four-visible restricted Boltzmann machine",
+      "category": "original_candidate",
+      "formal_endpoint_count": 3,
+      "ordinary_words_in_base": 487,
+      "ordinary_scope_status": "complete ordinary argument at displayed scope",
+      "ordinary_proof_readiness": "Complete ordinary proof of the sharp finite-fibre classification, including full-neighbourhood domination and the equality boundary.",
+      "remaining_full_proof_needs": [
+        "Author review of derivative conventions and attribution; bibliography should credit the older singular-mixture/RBM stationarity literature without identifying that baseline as the new classification."
+      ],
+      "source_modules_read": [
+        "Main.lean",
+        "ParityWalsh.lean",
+        "QuantitativeJensen.lean",
+        "LikelihoodDomination.lean",
+        "MixedDifference.lean",
+        "QuarticGeometry.lean",
+        "LogCoshDerivatives.lean",
+        "LocalMaximum.lean",
+        "StableRegion.lean",
+        "QuarticJets.lean",
+        "QuarticEscape.lean",
+        "SaddleTopology.lean",
+        "Stationarity.lean",
+        "SharpClassification.lean"
+      ],
+      "ordinary_words_in_expansion": 924,
+      "fresh_verification": {
+        "status": "PASS",
+        "finished_utc": "2026-10-05T01:36:52Z",
+        "receipt": "Verification/sakana-opdp89-parity-sharp-fresh-build.json",
+        "receipt_sha256": "bb26bc90b48ce3fb56db7ed03000fcecec748734135dd76131b389fc2fb76581",
+        "lean": "4.33.1",
+        "mathlib": "0df444a360eaa60ab8c11dca51a86af692955474",
+        "authored_source_modules": 15,
+        "selected_endpoint_prints": 3,
+        "endpoint_axioms": [
+          {
+            "endpoint": "ParityFour.sharp_parity_classification",
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "native_axioms": [],
+            "unrecognized_axioms": [],
+            "classification": "STANDARD_KERNEL_AXIOMS"
+          },
+          {
+            "endpoint": "ParityFour.collapsed_local_max_iff",
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "native_axioms": [],
+            "unrecognized_axioms": [],
+            "classification": "STANDARD_KERNEL_AXIOMS"
+          },
+          {
+            "endpoint": "ParityFour.nonstable_parameter_saddle",
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "native_axioms": [],
+            "unrecognized_axioms": [],
+            "classification": "STANDARD_KERNEL_AXIOMS"
+          }
+        ]
+      }
+    },
+    "FOCUS-E3": {
+      "title": "A modulus13 obstruction to diagonal-pullback optimality for a four-point L-pattern",
+      "category": "original_candidate",
+      "formal_endpoint_count": 2,
+      "ordinary_words_in_base": 372,
+      "ordinary_scope_status": "complete ordinary argument with explicit finite certificate",
+      "ordinary_proof_readiness": "Complete ordinary proof of the modulus-13 finite separation, with literal witness rows, both pullback lemmas, a full finite upper-check algorithm, a sharp six-point example, and the source-faithful formal endpoint. It is not an Erdős–Turán solution.",
+      "remaining_full_proof_needs": [
+        "Include the exact ordinary checker or Boolean upper certificate, witness rows and associated checksums in the published supplement.",
+        "Attribute the proposed diagonal ansatz and determine priority for this exact finite obstruction; no infinite theorem is established."
+      ],
+      "source_modules_read": [
+        "Focus_Evidence/evidence/FOCUS-E3/pullback-bridge/source/Fugu3PullbackCore.lean",
+        "Focus_Evidence/evidence/FOCUS-E3/pullback-bridge/source/R17SplitReplay.lean",
+        "Focus_Evidence/evidence/FOCUS-E3/pullback-bridge/source/CyclicUpper.lean",
+        "Focus_Evidence/evidence/FOCUS-E3/pullback-bridge/source/BooleanTree.lean",
+        "Focus_Evidence/evidence/FOCUS-E3/pullback-bridge/source/CombinedObstruction.lean",
+        "Focus_Evidence/evidence/FOCUS-E3/pullback-bridge/source/PullbackObstruction.lean"
+      ],
+      "ordinary_words_in_expansion": 795
+    },
+    "FOCUS-MATRIX": {
+      "title": "One-factor rigidity at three sparse3×3 matrix-multiplication seeds",
+      "category": "original_candidate",
+      "formal_endpoint_count": 9,
+      "ordinary_words_in_base": 393,
+      "ordinary_scope_status": "complete ordinary argument with explicit finite certificate",
+      "ordinary_proof_readiness": "Complete ordinary linear-algebra proof of the exact one-factor uniqueness statements at all three literal HKS139 seeds, supported by nine independently rechecked integer left-inverse certificates. Scope is fixed-factor rigidity only.",
+      "remaining_full_proof_needs": [
+        "Distribute the three literal factor arrays, nine pivot lists, and nine small integer inverse matrices alongside the note; the logical proof is complete.",
+        "Confirm attribution and priority of the specific seed obstruction, which uses classical linear algebra and known multiplication seeds."
+      ],
+      "source_modules_read": [
+        "Focus_Evidence/evidence/FOCUS-MATRIX/kernel/KernelData.lean",
+        "Focus_Evidence/evidence/FOCUS-MATRIX/kernel/KernelFinal.lean",
+        "Focus_Evidence/evidence/FOCUS-MATRIX/additional-seeds/seed_1/proof/Seed1KernelData.lean",
+        "Focus_Evidence/evidence/FOCUS-MATRIX/additional-seeds/seed_1/proof/Seed1KernelFinal.lean",
+        "Focus_Evidence/evidence/FOCUS-MATRIX/additional-seeds/seed_2/proof/Seed2KernelData.lean",
+        "Focus_Evidence/evidence/FOCUS-MATRIX/additional-seeds/seed_2/proof/Seed2KernelFinal.lean"
+      ],
+      "ordinary_words_in_expansion": 850
+    },
+    "DMS": {
+      "title": "Star edge colourings of generalized Petersen graphs and certified reductions towards the six-colour conjecture",
+      "category": "original_candidate",
+      "formal_endpoint_count": 2,
+      "ordinary_words_in_base": 877,
+      "ordinary_scope_status": "complete source-faithful ordinary argument at displayed unconditional/conditional scopes, with explicit finite supplements; five infinite premises remain open",
+      "ordinary_proof_readiness": "Complete source-faithful ordinary GP period/seam certificate argument and elementary I/II reduction; detailed ordinary two-/three-cut seam proofs, prescribed-bit gluing and logical five-premise induction, with delivered universal host/marking census bridges and finite certificate mechanisms. The five infinite structural hypotheses themselves remain open; fresh full replay, author review and originality comparison are separate.",
+      "remaining_full_proof_needs": [
+        "Prove the five open infinite premises FEEXTD10,FEEXISTD10,POLE,TDTRI,IID, or supply a different route, before asserting the full DMS conjecture.",
+        "Complete the fresh replay of the delivered source closure and preserve actual axiom prints; source statements and the historical author draft are not fresh verification.",
+        "Author-check the ordinary translation and full literal census supplement, and compare each unconditional parameter scope and reduction to primary prior work.",
+        "Exclude audit-disputed older generalized-Petersen side branches; the current k≤15 endpoint is a distinct delivered construction."
+      ],
+      "source_modules_read": [
+        "entries/dms-star6/artifact/paper/star6_partial.tex",
+        "entries/dms-star6/artifact/lean/pack2/STATEMENTS.md",
+        "entries/dms-star6/artifact/docs/star6_statement_correspondence.md",
+        "entries/dms-star6/artifact/docs/star6_packet_addendum_corollaries.md",
+        "TEAM.md",
+        "GPAll.lean",
+        "GPPeriodic.lean",
+        "BlockStar.lean",
+        "GPn1.lean",
+        "GPn2.lean",
+        "GPn3.lean",
+        "GPn4.lean",
+        "GPn5.lean",
+        "GPn6.lean",
+        "GPn7.lean",
+        "GPn8.lean",
+        "GPn9.lean",
+        "GPn10.lean",
+        "GPn11.lean",
+        "GPn12.lean",
+        "GPn13.lean",
+        "GPn14.lean",
+        "GPn15.lean",
+        "GPn1T.lean",
+        "GPn2T.lean",
+        "GPn3T.lean",
+        "GPn4T.lean",
+        "GPn5T.lean",
+        "GPn6T.lean",
+        "GPn7T.lean",
+        "GPn8T.lean",
+        "GPn9T.lean",
+        "GPn10T.lean",
+        "GPn11T.lean",
+        "GPn12T.lean",
+        "GPn13T.lean",
+        "GPn14T.lean",
+        "GPn15T.lean",
+        "MhFact_7d291f6ca774e1da.lean",
+        "MhFact_c64b6bd62b78d841.lean",
+        "MhFact_657e581f1145250f.lean",
+        "MhFact_341b6e5e1be16205.lean",
+        "MhFact_3e79907cfcc0085b.lean",
+        "MhFact_9e7dda3374e6b172.lean",
+        "MhFact_413193082c4b8758.lean",
+        "MhFact_54ed0ff9a1ed26b6.lean",
+        "MhFact_4f913d5550e57c85.lean",
+        "MhFact_fbae65436c8cc8bf.lean",
+        "MhFact_e1599bf3f3c26bdb.lean",
+        "MhFact_c3375be11cf311ee.lean",
+        "MhFact_eff6661027b6cbd2.lean",
+        "MhFact_cc801c1ba060f9c7.lean",
+        "MhFact_38b6f78a47fdf12e.lean",
+        "MhFact_66a4a19c81528d5b.lean",
+        "MhFact_30194dab4e05fdcf.lean",
+        "MhFact_33aabc50b1cec1ba.lean",
+        "MhFact_bde9371a01dd2855.lean",
+        "MhFact_2e993e3b07378767.lean",
+        "MhFact_90b4662cdeba097d.lean",
+        "Star6Corollaries.lean"
+      ],
+      "ordinary_words_in_expansion": 8754,
+      "unconditional_gp_subtheorem_status": "Complete source-faithful finite-certificate ordinary proof for GP(n,k), 1≤k≤15, with exact period/seam/exception tables and an independent checker. This does not discharge the five open universal structural hypotheses. The broader matching-preserving gluing and actual universal census bridges are now explained separately from the delivered exact sources."
+    },
+    "KOBON39": {
+      "title": "An exact39-line arrangement with471 triangular faces",
+      "category": "original_candidate",
+      "formal_endpoint_count": 2,
+      "ordinary_words_in_base": 425,
+      "ordinary_scope_status": "complete ordinary finite-certificate argument; all 55 frozen sources and 7 selected geometric endpoints freshly passed with standard-only or zero axioms",
+      "ordinary_proof_readiness": "Complete ordinary geometric proof and finite exact construction certificate for K(39)≥471, including literal line data, determinant criterion, nondegeneracy, cell/disjointness argument and independent recount. It does not prove optimality or a historical global record.",
+      "remaining_full_proof_needs": [
+        "Distribute the 471 increasing face triples and exact independent checker as a supplement; all 39 line triples are printed here.",
+        "Complete specialist historical priority comparison before using a numerical record headline; the immediately relevant pre-event organizer lower bound is 470."
+      ],
+      "source_modules_read": [
+        "entries/hills/kobon-n39-lavaskiller/lean/KobonCert/Defs.lean",
+        "entries/hills/kobon-n39-lavaskiller/lean/KobonCert/Data.lean",
+        "entries/hills/kobon-n39-lavaskiller/lean/KobonCert/Geom.lean",
+        "entries/hills/kobon-n39-lavaskiller/lean/KobonCert/Faces.lean",
+        "entries/hills/kobon-n39-lavaskiller/lean/KobonCert/Main.lean"
+      ],
+      "ordinary_words_in_expansion": 1226,
+      "fresh_verification": {
+        "status": "PASS",
+        "finished_utc": "2026-10-05T02:18:01Z",
+        "receipt": "Verification/htpeo-kobon471-fresh-build.json",
+        "receipt_sha256": "095eb6be3b04160bcd8732c3772d022b46d5f49fd610d503e37907dfa5a86079",
+        "lean": "4.33.1",
+        "mathlib": "0df444a360eaa60ab8c11dca51a86af692955474",
+        "authored_source_modules": 55,
+        "selected_endpoint_prints": 7,
+        "endpoint_axioms": [
+          {
+            "endpoint": "Kobon.certificate",
+            "axioms": [
+              "propext"
+            ],
+            "native_axioms": [],
+            "unrecognized_axioms": [],
+            "classification": "STANDARD_KERNEL_AXIOMS"
+          },
+          {
+            "endpoint": "Kobon.kobon_lower_bound",
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "native_axioms": [],
+            "unrecognized_axioms": [],
+            "classification": "STANDARD_KERNEL_AXIOMS"
+          },
+          {
+            "endpoint": "Kobon.kobon_nonoverlapping",
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "native_axioms": [],
+            "unrecognized_axioms": [],
+            "classification": "STANDARD_KERNEL_AXIOMS"
+          },
+          {
+            "endpoint": "Kobon.sol_triFaces",
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "native_axioms": [],
+            "unrecognized_axioms": [],
+            "classification": "STANDARD_KERNEL_AXIOMS"
+          },
+          {
+            "endpoint": "Kobon.triCheck_iff",
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "native_axioms": [],
+            "unrecognized_axioms": [],
+            "classification": "STANDARD_KERNEL_AXIOMS"
+          },
+          {
+            "endpoint": "Kobon.triFaces_disjoint",
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "native_axioms": [],
+            "unrecognized_axioms": [],
+            "classification": "STANDARD_KERNEL_AXIOMS"
+          },
+          {
+            "endpoint": "Kobon.sol_simple",
+            "axioms": [],
+            "native_axioms": [],
+            "unrecognized_axioms": [],
+            "classification": "AXIOM_FREE"
+          }
+        ],
+        "originality_and_placement": "SEPARATE_UNCHANGED_DECISIONS"
+      }
+    },
+    "SUPPORT138": {
+      "title": "A rational23-product3×3 matrix-multiplication scheme of support138",
+      "category": "original_candidate",
+      "formal_endpoint_count": 4,
+      "ordinary_words_in_base": 622,
+      "ordinary_scope_status": "complete ordinary argument with explicit finite certificate",
+      "ordinary_proof_readiness": "Complete finite-certificate proof of the explicit rational scheme and its constant-support rational family. Standard-action inequivalence follows from the displayed factor-rank invariant. Broader minimality and global moduli claims remain unproved.",
+      "remaining_full_proof_needs": [
+        "Retain the full literal u,v,w factor lists and exact independent 729-equation certificate with the released paper.",
+        "State the equivalence group precisely for any broader classification claim.",
+        "Do not promote numerical tangent, MILP or tropical computations to global theorems without their independently checked proof certificates."
+      ],
+      "source_modules_read": [
+        "paper/paper.md",
+        "kaggle/analysis/REPORT_138_structure.md",
+        "solutions/support_138/PROVENANCE.md",
+        "solutions/support_138/solution.json",
+        "solutions/support_138_gauged/solution.json"
+      ],
+      "ordinary_words_in_expansion": 975
+    },
+    "K61": {
+      "title": "An exact61-line1190-triangle construction: a priority-review manuscript",
+      "category": "held_priority",
+      "formal_endpoint_count": 0,
+      "ordinary_words_in_base": 318,
+      "ordinary_scope_status": "held novelty/priority candidate; not an accepted original-results chapter"
+    },
+    "FOCUS-RAMSEY": {
+      "title": "Exact weighted monochromatic-K4 certificates with a pending prior-bound comparison",
+      "category": "held_priority",
+      "formal_endpoint_count": 0,
+      "ordinary_words_in_base": 329,
+      "ordinary_scope_status": "held novelty/priority candidate; not an accepted original-results chapter"
+    },
+    "RAMSEY": {
+      "title": "Exact weighted monochromatic-K4 certificates with a pending prior-bound comparison",
+      "category": "held_priority",
+      "formal_endpoint_count": 0,
+      "ordinary_words_in_base": 329,
+      "ordinary_scope_status": "held novelty/priority candidate; not an accepted original-results chapter"
+    },
+    "FOCUS-GROTH": {
+      "title": "Restricted sign-matrix certificates for the Grothendieck objective",
+      "category": "held_priority",
+      "formal_endpoint_count": 0,
+      "ordinary_words_in_base": 303,
+      "ordinary_scope_status": "held novelty/priority candidate; not an accepted original-results chapter"
+    },
+    "LUKEMADHAN-RAMSEY": {
+      "title": "Clebsch structure and exact stochastic refinements for monochromaticK4",
+      "category": "original_candidate",
+      "formal_endpoint_count": 2,
+      "ordinary_words_in_base": 1018,
+      "ordinary_scope_status": "complete ordinary finite-certificate argument; all 51 frozen sources and 35 requested Lean outputs qualified with expected native trust and preserved observer limitation",
+      "ordinary_proof_readiness": "Complete source-faithful ordinary construction/density argument with explicit compact finite data and exact counting certificates. The authors’ preserved manuscript supplies the full witness supplement and algebraic-minimum appendix. Independent Lean replay and event provenance are reported separately.",
+      "remaining_full_proof_needs": [
+        "Retain all1248 finite fractional blocks, labeling map, manifest hashes, and exact independent counting certificate in the archival supplement.",
+        "Check the exact earlier unpublished Ramsey bound before making a global numerical-record claim.",
+        "Obtain publication author/affiliation approval and retain the separate event chronology.",
+        "Compare the earlier Feinstein/Even-Zohar construction ideas advertised in RSA 2025, not only the unknown exact density, before an independent structural-priority claim.",
+        "The complete 51-source/35-output replay is qualified with expected native trust and the preserved image-observer limitation; preserve those receipts in release. The earlier-priority comparison, publication authorship approval and event chronology remain separate unresolved checks."
+      ],
+      "source_modules_read": [
+        "luke-k4-ramsey/paper/main.tex",
+        "luke-k4-ramsey/paper/data/final3840-audit.json",
+        "luke-k4-ramsey/paper/data/final3840.json.gz",
+        "luke-k4-ramsey/docs/verification.md"
+      ],
+      "ordinary_words_in_expansion": 1379,
+      "fresh_verification": {
+        "status": "PASS_COMPLETE_EXACT_SCOPE_WITH_NATIVE_EVALUATION_AND_OBSERVER_LIMITATION",
+        "finished_utc_or_explicit_offset": "2026-10-05T02:18:36.301141+00:00",
+        "receipt": "Verification/luke-k4-ramsey-current-native-fresh-build.json",
+        "receipt_sha256": "8b3a912a5f2463d8faa96b1d33118b09602faac15cc0274d811745fe3d73d943",
+        "raw_axiom_analyzer": "Verification/luke-k4-ramsey-native-endpoint-axioms.json",
+        "raw_axiom_analyzer_sha256": "4166713f6be036950526edcb556a82c3b075e26fb324bfe0a4dd2a2770bf4916",
+        "independent_root_qualification": "Verification/luke-native-publication-qualification.json",
+        "independent_root_qualification_sha256": "98d2bef0d648b230aa69600c00d276df70a810c073192d9f61195c8173fd2a44",
+        "historical_31_only_milestone": "Verification/luke-novel-31-endpoint-milestone.json",
+        "historical_31_only_milestone_sha256": "41dd226b88968789822bcc0a6be4dd714fd856cd4734af3d20deef1e814b946c",
+        "historical_compact_31_milestone": "luke_actual_novel_scope_31_milestone_2026-10-05.json",
+        "historical_compact_31_milestone_sha256": "07c872f1675bd3678c36c1cea10e4d1f9d2a5fe2fd9673be3d170e6a443302c4",
+        "source_commit": "2cf216ba885fbb1b2d1b2d4920efeaa6ba438842",
+        "lean": "4.34.1",
+        "mathlib": "d13f23b723b8a846827a245b89c10fc7d3f11612",
+        "passed_authored_sources": 51,
+        "planned_authored_sources": 51,
+        "actual_requested_endpoint_prints": 35,
+        "actual_general_standard_kernel_prints": 11,
+        "actual_concrete_native_trust_prints": 23,
+        "actual_concrete_standard_kernel_prints": 1,
+        "actual_axiom_free_prints": 0,
+        "endpoint_reviews": [
+          {
+            "endpoint": "K4Ramsey.Asymptotic.limit_le_of_finite_bound",
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "ordinary_general_theorem": true,
+            "native_axioms": [],
+            "unexpected_axioms": [],
+            "declared_trust_boundary_matches": true,
+            "classification": "STANDARD_KERNEL_AXIOMS"
+          },
+          {
+            "endpoint": "K4Ramsey.Asymptotic.upperLimit_le_of_finite_bound",
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "ordinary_general_theorem": true,
+            "native_axioms": [],
+            "unexpected_axioms": [],
+            "declared_trust_boundary_matches": true,
+            "classification": "STANDARD_KERNEL_AXIOMS"
+          },
+          {
+            "endpoint": "K4Ramsey.Clebsch192.exact_density",
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound",
+              "K4Ramsey.Clebsch192.exact_rooted_sum._native.native_decide.ax_1_1"
+            ],
+            "ordinary_general_theorem": false,
+            "native_axioms": [
+              "K4Ramsey.Clebsch192.exact_rooted_sum._native.native_decide.ax_1_1"
+            ],
+            "unexpected_axioms": [],
+            "declared_trust_boundary_matches": true,
+            "classification": "NATIVE_EVALUATION_TRUST"
+          },
+          {
+            "endpoint": "K4Ramsey.Clebsch192.exact_rooted_sum",
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound",
+              "K4Ramsey.Clebsch192.exact_rooted_sum._native.native_decide.ax_1_1"
+            ],
+            "ordinary_general_theorem": false,
+            "native_axioms": [
+              "K4Ramsey.Clebsch192.exact_rooted_sum._native.native_decide.ax_1_1"
+            ],
+            "unexpected_axioms": [],
+            "declared_trust_boundary_matches": true,
+            "classification": "NATIVE_EVALUATION_TRUST"
+          },
+          {
+            "endpoint": "K4Ramsey.Clebsch192.exists_coloring",
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound",
+              "K4Ramsey.Clebsch192.exact_rooted_sum._native.native_decide.ax_1_1",
+              "K4Ramsey.Clebsch192.table_le_one._native.native_decide.ax_1_1",
+              "K4Ramsey.Clebsch192.table_nonnegative._native.native_decide.ax_1_1",
+              "K4Ramsey.Clebsch192.table_symmetric._native.native_decide.ax_1_1"
+            ],
+            "ordinary_general_theorem": false,
+            "native_axioms": [
+              "K4Ramsey.Clebsch192.exact_rooted_sum._native.native_decide.ax_1_1",
+              "K4Ramsey.Clebsch192.table_le_one._native.native_decide.ax_1_1",
+              "K4Ramsey.Clebsch192.table_nonnegative._native.native_decide.ax_1_1",
+              "K4Ramsey.Clebsch192.table_symmetric._native.native_decide.ax_1_1"
+            ],
+            "unexpected_axioms": [],
+            "declared_trust_boundary_matches": true,
+            "classification": "NATIVE_EVALUATION_TRUST"
+          },
+          {
+            "endpoint": "K4Ramsey.Clebsch192.ramsey_limit_bound",
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound",
+              "K4Ramsey.Clebsch192.exact_rooted_sum._native.native_decide.ax_1_1",
+              "K4Ramsey.Clebsch192.table_le_one._native.native_decide.ax_1_1",
+              "K4Ramsey.Clebsch192.table_nonnegative._native.native_decide.ax_1_1",
+              "K4Ramsey.Clebsch192.table_symmetric._native.native_decide.ax_1_1"
+            ],
+            "ordinary_general_theorem": false,
+            "native_axioms": [
+              "K4Ramsey.Clebsch192.exact_rooted_sum._native.native_decide.ax_1_1",
+              "K4Ramsey.Clebsch192.table_le_one._native.native_decide.ax_1_1",
+              "K4Ramsey.Clebsch192.table_nonnegative._native.native_decide.ax_1_1",
+              "K4Ramsey.Clebsch192.table_symmetric._native.native_decide.ax_1_1"
+            ],
+            "unexpected_axioms": [],
+            "declared_trust_boundary_matches": true,
+            "classification": "NATIVE_EVALUATION_TRUST"
+          },
+          {
+            "endpoint": "K4Ramsey.Clebsch192.ramsey_upperLimit_bound",
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound",
+              "K4Ramsey.Clebsch192.exact_rooted_sum._native.native_decide.ax_1_1",
+              "K4Ramsey.Clebsch192.table_le_one._native.native_decide.ax_1_1",
+              "K4Ramsey.Clebsch192.table_nonnegative._native.native_decide.ax_1_1",
+              "K4Ramsey.Clebsch192.table_symmetric._native.native_decide.ax_1_1"
+            ],
+            "ordinary_general_theorem": false,
+            "native_axioms": [
+              "K4Ramsey.Clebsch192.exact_rooted_sum._native.native_decide.ax_1_1",
+              "K4Ramsey.Clebsch192.table_le_one._native.native_decide.ax_1_1",
+              "K4Ramsey.Clebsch192.table_nonnegative._native.native_decide.ax_1_1",
+              "K4Ramsey.Clebsch192.table_symmetric._native.native_decide.ax_1_1"
+            ],
+            "unexpected_axioms": [],
+            "declared_trust_boundary_matches": true,
+            "classification": "NATIVE_EVALUATION_TRUST"
+          },
+          {
+            "endpoint": "K4Ramsey.Final3840.Count.density_eq_count",
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound",
+              "K4Ramsey.Final3840.base_symmetry._native.native_decide.ax_1_1",
+              "K4Ramsey.Final3840.centered_rows._native.native_decide.ax_1_1",
+              "K4Ramsey.Final3840.hard_blocks._native.native_decide.ax_1_1",
+              "K4Ramsey.Final3840.numerator_symmetry._native.native_decide.ax_1_1"
+            ],
+            "ordinary_general_theorem": false,
+            "native_axioms": [
+              "K4Ramsey.Final3840.base_symmetry._native.native_decide.ax_1_1",
+              "K4Ramsey.Final3840.centered_rows._native.native_decide.ax_1_1",
+              "K4Ramsey.Final3840.hard_blocks._native.native_decide.ax_1_1",
+              "K4Ramsey.Final3840.numerator_symmetry._native.native_decide.ax_1_1"
+            ],
+            "unexpected_axioms": [],
+            "declared_trust_boundary_matches": true,
+            "classification": "NATIVE_EVALUATION_TRUST"
+          },
+          {
+            "endpoint": "K4Ramsey.Final3840.Count.paths_eq",
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound",
+              "K4Ramsey.Final3840.hard_blocks._native.native_decide.ax_1_1"
+            ],
+            "ordinary_general_theorem": false,
+            "native_axioms": [
+              "K4Ramsey.Final3840.hard_blocks._native.native_decide.ax_1_1"
+            ],
+            "unexpected_axioms": [],
+            "declared_trust_boundary_matches": true,
+            "classification": "NATIVE_EVALUATION_TRUST"
+          },
+          {
+            "endpoint": "K4Ramsey.Final3840.Count.raw_total",
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound",
+              "K4Ramsey.Final3840.base_symmetry._native.native_decide.ax_1_1",
+              "K4Ramsey.Final3840.centered_rows._native.native_decide.ax_1_1",
+              "K4Ramsey.Final3840.hard_blocks._native.native_decide.ax_1_1",
+              "K4Ramsey.Final3840.numerator_symmetry._native.native_decide.ax_1_1"
+            ],
+            "ordinary_general_theorem": false,
+            "native_axioms": [
+              "K4Ramsey.Final3840.base_symmetry._native.native_decide.ax_1_1",
+              "K4Ramsey.Final3840.centered_rows._native.native_decide.ax_1_1",
+              "K4Ramsey.Final3840.hard_blocks._native.native_decide.ax_1_1",
+              "K4Ramsey.Final3840.numerator_symmetry._native.native_decide.ax_1_1"
+            ],
+            "unexpected_axioms": [],
+            "declared_trust_boundary_matches": true,
+            "classification": "NATIVE_EVALUATION_TRUST"
+          },
+          {
+            "endpoint": "K4Ramsey.Final3840.baseRoot_eq",
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound",
+              "K4Ramsey.Final3840.shift_bijective._native.native_decide.ax_1_1",
+              "K4Ramsey.Final3840.shift_preserves_base._native.native_decide.ax_1_1",
+              "K4Ramsey.Final3840.shift_zero._native.native_decide.ax_1_1"
+            ],
+            "ordinary_general_theorem": false,
+            "native_axioms": [
+              "K4Ramsey.Final3840.shift_bijective._native.native_decide.ax_1_1",
+              "K4Ramsey.Final3840.shift_preserves_base._native.native_decide.ax_1_1",
+              "K4Ramsey.Final3840.shift_zero._native.native_decide.ax_1_1"
+            ],
+            "unexpected_axioms": [],
+            "declared_trust_boundary_matches": true,
+            "classification": "NATIVE_EVALUATION_TRUST"
+          },
+          {
+            "endpoint": "K4Ramsey.Final3840.blue_count_reduction",
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound",
+              "K4Ramsey.Final3840.base_symmetry._native.native_decide.ax_1_1",
+              "K4Ramsey.Final3840.centered_rows._native.native_decide.ax_1_1",
+              "K4Ramsey.Final3840.numerator_symmetry._native.native_decide.ax_1_1"
+            ],
+            "ordinary_general_theorem": false,
+            "native_axioms": [
+              "K4Ramsey.Final3840.base_symmetry._native.native_decide.ax_1_1",
+              "K4Ramsey.Final3840.centered_rows._native.native_decide.ax_1_1",
+              "K4Ramsey.Final3840.numerator_symmetry._native.native_decide.ax_1_1"
+            ],
+            "unexpected_axioms": [],
+            "declared_trust_boundary_matches": true,
+            "classification": "NATIVE_EVALUATION_TRUST"
+          },
+          {
+            "endpoint": "K4Ramsey.Final3840.centered_rows",
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound",
+              "K4Ramsey.Final3840.centered_rows._native.native_decide.ax_1_1"
+            ],
+            "ordinary_general_theorem": false,
+            "native_axioms": [
+              "K4Ramsey.Final3840.centered_rows._native.native_decide.ax_1_1"
+            ],
+            "unexpected_axioms": [],
+            "declared_trust_boundary_matches": true,
+            "classification": "NATIVE_EVALUATION_TRUST"
+          },
+          {
+            "endpoint": "K4Ramsey.Final3840.data_shape",
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound",
+              "K4Ramsey.Final3840.data_shape._native.native_decide.ax_1_1"
+            ],
+            "ordinary_general_theorem": false,
+            "native_axioms": [
+              "K4Ramsey.Final3840.data_shape._native.native_decide.ax_1_1"
+            ],
+            "unexpected_axioms": [],
+            "declared_trust_boundary_matches": true,
+            "classification": "NATIVE_EVALUATION_TRUST"
+          },
+          {
+            "endpoint": "K4Ramsey.Final3840.exact_count",
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound",
+              "K4Ramsey.Final3840.exact_count._native.native_decide.ax_1_1"
+            ],
+            "ordinary_general_theorem": false,
+            "native_axioms": [
+              "K4Ramsey.Final3840.exact_count._native.native_decide.ax_1_1"
+            ],
+            "unexpected_axioms": [],
+            "declared_trust_boundary_matches": true,
+            "classification": "NATIVE_EVALUATION_TRUST"
+          },
+          {
+            "endpoint": "K4Ramsey.Final3840.exact_density",
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound",
+              "K4Ramsey.Final3840.base_symmetry._native.native_decide.ax_1_1",
+              "K4Ramsey.Final3840.centered_rows._native.native_decide.ax_1_1",
+              "K4Ramsey.Final3840.exact_count._native.native_decide.ax_1_1",
+              "K4Ramsey.Final3840.hard_blocks._native.native_decide.ax_1_1",
+              "K4Ramsey.Final3840.numerator_symmetry._native.native_decide.ax_1_1",
+              "K4Ramsey.Final3840.shift_bijective._native.native_decide.ax_1_1",
+              "K4Ramsey.Final3840.shift_preserves_base._native.native_decide.ax_1_1",
+              "K4Ramsey.Final3840.shift_zero._native.native_decide.ax_1_1"
+            ],
+            "ordinary_general_theorem": false,
+            "native_axioms": [
+              "K4Ramsey.Final3840.base_symmetry._native.native_decide.ax_1_1",
+              "K4Ramsey.Final3840.centered_rows._native.native_decide.ax_1_1",
+              "K4Ramsey.Final3840.exact_count._native.native_decide.ax_1_1",
+              "K4Ramsey.Final3840.hard_blocks._native.native_decide.ax_1_1",
+              "K4Ramsey.Final3840.numerator_symmetry._native.native_decide.ax_1_1",
+              "K4Ramsey.Final3840.shift_bijective._native.native_decide.ax_1_1",
+              "K4Ramsey.Final3840.shift_preserves_base._native.native_decide.ax_1_1",
+              "K4Ramsey.Final3840.shift_zero._native.native_decide.ax_1_1"
+            ],
+            "unexpected_axioms": [],
+            "declared_trust_boundary_matches": true,
+            "classification": "NATIVE_EVALUATION_TRUST"
+          },
+          {
+            "endpoint": "K4Ramsey.Final3840.exists_coloring_exact",
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound",
+              "K4Ramsey.Final3840.base_symmetry._native.native_decide.ax_1_1",
+              "K4Ramsey.Final3840.centered_rows._native.native_decide.ax_1_1",
+              "K4Ramsey.Final3840.exact_count._native.native_decide.ax_1_1",
+              "K4Ramsey.Final3840.hard_blocks._native.native_decide.ax_1_1",
+              "K4Ramsey.Final3840.numerator_bounds._native.native_decide.ax_1_1",
+              "K4Ramsey.Final3840.numerator_symmetry._native.native_decide.ax_1_1",
+              "K4Ramsey.Final3840.shift_bijective._native.native_decide.ax_1_1",
+              "K4Ramsey.Final3840.shift_preserves_base._native.native_decide.ax_1_1",
+              "K4Ramsey.Final3840.shift_zero._native.native_decide.ax_1_1"
+            ],
+            "ordinary_general_theorem": false,
+            "native_axioms": [
+              "K4Ramsey.Final3840.base_symmetry._native.native_decide.ax_1_1",
+              "K4Ramsey.Final3840.centered_rows._native.native_decide.ax_1_1",
+              "K4Ramsey.Final3840.exact_count._native.native_decide.ax_1_1",
+              "K4Ramsey.Final3840.hard_blocks._native.native_decide.ax_1_1",
+              "K4Ramsey.Final3840.numerator_bounds._native.native_decide.ax_1_1",
+              "K4Ramsey.Final3840.numerator_symmetry._native.native_decide.ax_1_1",
+              "K4Ramsey.Final3840.shift_bijective._native.native_decide.ax_1_1",
+              "K4Ramsey.Final3840.shift_preserves_base._native.native_decide.ax_1_1",
+              "K4Ramsey.Final3840.shift_zero._native.native_decide.ax_1_1"
+            ],
+            "unexpected_axioms": [],
+            "declared_trust_boundary_matches": true,
+            "classification": "NATIVE_EVALUATION_TRUST"
+          },
+          {
+            "endpoint": "K4Ramsey.Final3840.finite_realization",
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound",
+              "K4Ramsey.Final3840.numerator_bounds._native.native_decide.ax_1_1",
+              "K4Ramsey.Final3840.numerator_symmetry._native.native_decide.ax_1_1"
+            ],
+            "ordinary_general_theorem": false,
+            "native_axioms": [
+              "K4Ramsey.Final3840.numerator_bounds._native.native_decide.ax_1_1",
+              "K4Ramsey.Final3840.numerator_symmetry._native.native_decide.ax_1_1"
+            ],
+            "unexpected_axioms": [],
+            "declared_trust_boundary_matches": true,
+            "classification": "NATIVE_EVALUATION_TRUST"
+          },
+          {
+            "endpoint": "K4Ramsey.Final3840.ramsey_limit_exact_bound",
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound",
+              "K4Ramsey.Final3840.base_symmetry._native.native_decide.ax_1_1",
+              "K4Ramsey.Final3840.centered_rows._native.native_decide.ax_1_1",
+              "K4Ramsey.Final3840.exact_count._native.native_decide.ax_1_1",
+              "K4Ramsey.Final3840.hard_blocks._native.native_decide.ax_1_1",
+              "K4Ramsey.Final3840.numerator_bounds._native.native_decide.ax_1_1",
+              "K4Ramsey.Final3840.numerator_symmetry._native.native_decide.ax_1_1",
+              "K4Ramsey.Final3840.shift_bijective._native.native_decide.ax_1_1",
+              "K4Ramsey.Final3840.shift_preserves_base._native.native_decide.ax_1_1",
+              "K4Ramsey.Final3840.shift_zero._native.native_decide.ax_1_1"
+            ],
+            "ordinary_general_theorem": false,
+            "native_axioms": [
+              "K4Ramsey.Final3840.base_symmetry._native.native_decide.ax_1_1",
+              "K4Ramsey.Final3840.centered_rows._native.native_decide.ax_1_1",
+              "K4Ramsey.Final3840.exact_count._native.native_decide.ax_1_1",
+              "K4Ramsey.Final3840.hard_blocks._native.native_decide.ax_1_1",
+              "K4Ramsey.Final3840.numerator_bounds._native.native_decide.ax_1_1",
+              "K4Ramsey.Final3840.numerator_symmetry._native.native_decide.ax_1_1",
+              "K4Ramsey.Final3840.shift_bijective._native.native_decide.ax_1_1",
+              "K4Ramsey.Final3840.shift_preserves_base._native.native_decide.ax_1_1",
+              "K4Ramsey.Final3840.shift_zero._native.native_decide.ax_1_1"
+            ],
+            "unexpected_axioms": [],
+            "declared_trust_boundary_matches": true,
+            "classification": "NATIVE_EVALUATION_TRUST"
+          },
+          {
+            "endpoint": "K4Ramsey.Final3840.ramsey_upperLimit_bound",
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound",
+              "K4Ramsey.Final3840.numerator_bounds._native.native_decide.ax_1_1",
+              "K4Ramsey.Final3840.numerator_symmetry._native.native_decide.ax_1_1"
+            ],
+            "ordinary_general_theorem": false,
+            "native_axioms": [
+              "K4Ramsey.Final3840.numerator_bounds._native.native_decide.ax_1_1",
+              "K4Ramsey.Final3840.numerator_symmetry._native.native_decide.ax_1_1"
+            ],
+            "unexpected_axioms": [],
+            "declared_trust_boundary_matches": true,
+            "classification": "NATIVE_EVALUATION_TRUST"
+          },
+          {
+            "endpoint": "K4Ramsey.Final3840.ramsey_upperLimit_exact_bound",
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound",
+              "K4Ramsey.Final3840.base_symmetry._native.native_decide.ax_1_1",
+              "K4Ramsey.Final3840.centered_rows._native.native_decide.ax_1_1",
+              "K4Ramsey.Final3840.exact_count._native.native_decide.ax_1_1",
+              "K4Ramsey.Final3840.hard_blocks._native.native_decide.ax_1_1",
+              "K4Ramsey.Final3840.numerator_bounds._native.native_decide.ax_1_1",
+              "K4Ramsey.Final3840.numerator_symmetry._native.native_decide.ax_1_1",
+              "K4Ramsey.Final3840.shift_bijective._native.native_decide.ax_1_1",
+              "K4Ramsey.Final3840.shift_preserves_base._native.native_decide.ax_1_1",
+              "K4Ramsey.Final3840.shift_zero._native.native_decide.ax_1_1"
+            ],
+            "ordinary_general_theorem": false,
+            "native_axioms": [
+              "K4Ramsey.Final3840.base_symmetry._native.native_decide.ax_1_1",
+              "K4Ramsey.Final3840.centered_rows._native.native_decide.ax_1_1",
+              "K4Ramsey.Final3840.exact_count._native.native_decide.ax_1_1",
+              "K4Ramsey.Final3840.hard_blocks._native.native_decide.ax_1_1",
+              "K4Ramsey.Final3840.numerator_bounds._native.native_decide.ax_1_1",
+              "K4Ramsey.Final3840.numerator_symmetry._native.native_decide.ax_1_1",
+              "K4Ramsey.Final3840.shift_bijective._native.native_decide.ax_1_1",
+              "K4Ramsey.Final3840.shift_preserves_base._native.native_decide.ax_1_1",
+              "K4Ramsey.Final3840.shift_zero._native.native_decide.ax_1_1"
+            ],
+            "unexpected_axioms": [],
+            "declared_trust_boundary_matches": true,
+            "classification": "NATIVE_EVALUATION_TRUST"
+          },
+          {
+            "endpoint": "K4Ramsey.Final3840.red_count_reduction",
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound",
+              "K4Ramsey.Final3840.base_symmetry._native.native_decide.ax_1_1",
+              "K4Ramsey.Final3840.centered_rows._native.native_decide.ax_1_1",
+              "K4Ramsey.Final3840.numerator_symmetry._native.native_decide.ax_1_1"
+            ],
+            "ordinary_general_theorem": false,
+            "native_axioms": [
+              "K4Ramsey.Final3840.base_symmetry._native.native_decide.ax_1_1",
+              "K4Ramsey.Final3840.centered_rows._native.native_decide.ax_1_1",
+              "K4Ramsey.Final3840.numerator_symmetry._native.native_decide.ax_1_1"
+            ],
+            "unexpected_axioms": [],
+            "declared_trust_boundary_matches": true,
+            "classification": "NATIVE_EVALUATION_TRUST"
+          },
+          {
+            "endpoint": "K4Ramsey.FiniteProbability.expectation_embedding",
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "ordinary_general_theorem": true,
+            "native_axioms": [],
+            "unexpected_axioms": [],
+            "declared_trust_boundary_matches": true,
+            "classification": "STANDARD_KERNEL_AXIOMS"
+          },
+          {
+            "endpoint": "K4Ramsey.Graphon.cayley_colorSum",
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "ordinary_general_theorem": true,
+            "native_axioms": [],
+            "unexpected_axioms": [],
+            "declared_trust_boundary_matches": true,
+            "classification": "STANDARD_KERNEL_AXIOMS"
+          },
+          {
+            "endpoint": "K4Ramsey.Graphon.pairSum_eq_colorSum",
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "ordinary_general_theorem": true,
+            "native_axioms": [],
+            "unexpected_axioms": [],
+            "declared_trust_boundary_matches": true,
+            "classification": "STANDARD_KERNEL_AXIOMS"
+          },
+          {
+            "endpoint": "K4Ramsey.Published768.exact_numerator",
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound",
+              "K4Ramsey.Published768.exact_numerator._native.native_decide.ax_1_1"
+            ],
+            "ordinary_general_theorem": false,
+            "native_axioms": [
+              "K4Ramsey.Published768.exact_numerator._native.native_decide.ax_1_1"
+            ],
+            "unexpected_axioms": [],
+            "declared_trust_boundary_matches": true,
+            "classification": "NATIVE_EVALUATION_TRUST"
+          },
+          {
+            "endpoint": "K4Ramsey.Published768.mckay_is_strict_improvement",
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound",
+              "K4Ramsey.Published768.exact_numerator._native.native_decide.ax_1_1"
+            ],
+            "ordinary_general_theorem": false,
+            "native_axioms": [
+              "K4Ramsey.Published768.exact_numerator._native.native_decide.ax_1_1"
+            ],
+            "unexpected_axioms": [],
+            "declared_trust_boundary_matches": true,
+            "classification": "NATIVE_EVALUATION_TRUST"
+          },
+          {
+            "endpoint": "K4Ramsey.Published768.valid_certificate",
+            "axioms": [
+              "propext",
+              "Quot.sound",
+              "K4Ramsey.Published768.valid_certificate._native.native_decide.ax_1_1"
+            ],
+            "ordinary_general_theorem": false,
+            "native_axioms": [
+              "K4Ramsey.Published768.valid_certificate._native.native_decide.ax_1_1"
+            ],
+            "unexpected_axioms": [],
+            "declared_trust_boundary_matches": true,
+            "classification": "NATIVE_EVALUATION_TRUST"
+          },
+          {
+            "endpoint": "K4Ramsey.Realization.exists_coloring_le",
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "ordinary_general_theorem": true,
+            "native_axioms": [],
+            "unexpected_axioms": [],
+            "declared_trust_boundary_matches": true,
+            "classification": "STANDARD_KERNEL_AXIOMS"
+          },
+          {
+            "endpoint": "K4Ramsey.Realization.monochromatic_indicator",
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "ordinary_general_theorem": true,
+            "native_axioms": [],
+            "unexpected_axioms": [],
+            "declared_trust_boundary_matches": true,
+            "classification": "STANDARD_KERNEL_AXIOMS"
+          },
+          {
+            "endpoint": "K4Ramsey.SignRefinement.monochromatic_fiberAverage",
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "ordinary_general_theorem": true,
+            "native_axioms": [],
+            "unexpected_axioms": [],
+            "declared_trust_boundary_matches": true,
+            "classification": "STANDARD_KERNEL_AXIOMS"
+          },
+          {
+            "endpoint": "K4Ramsey.TensorK4.centered_expansion",
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "ordinary_general_theorem": true,
+            "native_axioms": [],
+            "unexpected_axioms": [],
+            "declared_trust_boundary_matches": true,
+            "classification": "STANDARD_KERNEL_AXIOMS"
+          },
+          {
+            "endpoint": "K4Ramsey.TensorK4.centered_leaf_zero",
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "ordinary_general_theorem": true,
+            "native_axioms": [],
+            "unexpected_axioms": [],
+            "declared_trust_boundary_matches": true,
+            "classification": "STANDARD_KERNEL_AXIOMS"
+          },
+          {
+            "endpoint": "K4Ramsey.TensorK4.diamond_contraction",
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "ordinary_general_theorem": true,
+            "native_axioms": [],
+            "unexpected_axioms": [],
+            "declared_trust_boundary_matches": true,
+            "classification": "STANDARD_KERNEL_AXIOMS"
+          },
+          {
+            "endpoint": "K4Ramsey.ValidTemplate.countSubgraphs_numerator",
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "ordinary_general_theorem": false,
+            "native_axioms": [],
+            "unexpected_axioms": [],
+            "declared_trust_boundary_matches": true,
+            "classification": "STANDARD_KERNEL_AXIOMS"
+          }
+        ],
+        "retained_own_cold_source_outputs_on_native_continuation": 33,
+        "native_identity_qualification": {
+          "observer_errors": [
+            "[WinError 299] Solo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory."
+          ],
+          "continuous_observer_completeness": false,
+          "root_limited_identity_review_qualified": true,
+          "error_timing": "Unknown; no exit-race or complete-observer claim is made.",
+          "root_review": {
+            "accepted_receipt_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\luke-native-root-identity-acceptance-with-limitation.json",
+            "accepted_receipt_sha256": "a932648f1aec80d2d4241a1300e780aaf4b8070db322c011dc948e9676840295",
+            "evidence_receipt_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\luke-native-identity-observer-limitation-review.json",
+            "evidence_receipt_sha256": "37d02bd72946b0310ed3162f837745df5deb12127b94a46fa231954fd04b855c",
+            "status": "ROOT_NATIVE_IDENTITY_REVIEW_ACCEPTED_WITH_OBSERVER_LIMITATION",
+            "native_dispatch_observations_clean": false,
+            "continuous_observer_completeness": false,
+            "unknown_error_timing_remains_unresolved": true,
+            "scope": "Native identity/initialization accepted with the preserved observer limitation; raw axioms and full 51-source/35-endpoint scope require actual separate checks."
+          }
+        },
+        "scientific_scope": "Literal 192/3840 finite density, every-n realization and unconditional upper-limit; ordinary-limit endpoints retain convergence hypotheses",
+        "priority_and_chair_decisions": "UNCHANGED_CONDITIONAL"
+      }
+    },
+    "E03-PIVOT-GENERIC": {
+      "title": "A generic matrix pivot with a vanishing eigenphase Walsh angle",
+      "category": "original_candidate",
+      "formal_endpoint_count": 4,
+      "ordinary_words_in_base": 1532,
+      "ordinary_words_in_expansion": 2098,
+      "ordinary_scope_status": "complete ordinary argument at displayed generic matrix scope; fresh exact Lean replay passed 26 sources and 6 selected standard-axiom endpoints; 8 baseline Claims retain sorryAx",
+      "ordinary_proof_readiness": "A complete ordinary proof of the selected generic matrix/eigenphase theorem, transcribing the actual finite-dimensional source lemmas and standard spectral/functional-calculus facts. Fresh pinned Lean replay passed all 26 sources and six selected axiom audits on 5 October 2026; the eight baseline Claims audit prints still contain sorryAx. No circuit node construction, nongeneric extension or universal CNOT bound is proved.",
+      "remaining_full_proof_needs": [
+        "Author-check this ordinary transcription and compare the generic pivot theorem with earlier methods.",
+        "To claim universal improved synthesis, prove the actual circuit node construction and cancellation, control the basis assignments and nongeneric cases, and discharge the base-case construction."
+      ],
+      "source_modules_read": [
+        "LeanUnitary/Pivot/Existence/Rotation.lean",
+        "LeanUnitary/Pivot/Existence/Lift.lean",
+        "LeanUnitary/Pivot/Existence/EigenContinuity.lean",
+        "LeanUnitary/Pivot/Existence/Imbalance.lean",
+        "LeanUnitary/Pivot/Existence/Pivot.lean",
+        "LeanUnitary/Pivot/Multiplexor/Basic.lean",
+        "LeanUnitary/Pivot/Multiplexor/Continuity.lean",
+        "LeanUnitary/Pivot/Multiplexor/Phase.lean",
+        "LeanUnitary/Pivot/Split.lean",
+        "LeanUnitary/Pivot/Synthesis.lean"
+      ],
+      "source_revision": "7014b63ee2cfd01c641a7f539c73b664a2aa3d66",
+      "scientific_boundary": "The generic polar-pivot/eigenphase theorem only; inherited polar/Walsh primitives receive no originality credit. No universal improved circuit/CNOT synthesis is proved.",
+      "fresh_verification": {
+        "status": "PASS_SELECTED_ENDPOINTS_WITH_UNFINISHED_BASELINES",
+        "finished_utc": "2026-10-05T01:38:41Z",
+        "receipt": "Verification/matt-unitary-current-fresh-build.json",
+        "receipt_sha256": "467dcd3a7cfcd191cdb53b27de2c5d149b6d7505fdaa1b32c4cbe42c4963f17d",
+        "source_revision": "7014b63ee2cfd01c641a7f539c73b664a2aa3d66",
+        "lean": "4.30.0-rc2",
+        "mathlib": "c1e30e172c8fda21e6776bf1f10351e882ee31b9",
+        "authored_source_modules": 26,
+        "authored_source_compilation": "PASS",
+        "selected_endpoint_prints": 6,
+        "selected_endpoint_axioms": [
+          {
+            "endpoint": "LeanUnitary.Pivot.exists_pivot",
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "native_axioms": [],
+            "unrecognized_axioms": [],
+            "classification": "STANDARD_KERNEL_AXIOMS"
+          },
+          {
+            "endpoint": "LeanUnitary.Pivot.pivot_merge",
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "native_axioms": [],
+            "unrecognized_axioms": [],
+            "classification": "STANDARD_KERNEL_AXIOMS"
+          },
+          {
+            "endpoint": "LeanUnitary.Pivot.continuousOn_lift",
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "native_axioms": [],
+            "unrecognized_axioms": [],
+            "classification": "STANDARD_KERNEL_AXIOMS"
+          },
+          {
+            "endpoint": "LeanUnitary.Pivot.count_closed",
+            "axioms": [
+              "propext",
+              "Quot.sound"
+            ],
+            "native_axioms": [],
+            "unrecognized_axioms": [],
+            "classification": "STANDARD_KERNEL_AXIOMS"
+          },
+          {
+            "endpoint": "LeanUnitary.Pivot.saving",
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "native_axioms": [],
+            "unrecognized_axioms": [],
+            "classification": "STANDARD_KERNEL_AXIOMS"
+          },
+          {
+            "endpoint": "LeanUnitary.Pivot.generalBound_of_pivot_node",
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "native_axioms": [],
+            "unrecognized_axioms": [],
+            "classification": "STANDARD_KERNEL_AXIOMS"
+          }
+        ],
+        "selected_endpoint_trust": "STANDARD_KERNEL_AXIOMS_ONLY",
+        "baseline_endpoint_prints": 8,
+        "baseline_endpoint_axioms": [
+          {
+            "endpoint": "LeanUnitary.Claims.muxRotations",
+            "axioms": [
+              "propext",
+              "sorryAx",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "native_axioms": [],
+            "unrecognized_axioms": [],
+            "classification": "SORRY_ADMISSION"
+          },
+          {
+            "endpoint": "LeanUnitary.Claims.demultiplex",
+            "axioms": [
+              "propext",
+              "sorryAx",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "native_axioms": [],
+            "unrecognized_axioms": [],
+            "classification": "SORRY_ADMISSION"
+          },
+          {
+            "endpoint": "LeanUnitary.Claims.cosineSine",
+            "axioms": [
+              "propext",
+              "sorryAx",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "native_axioms": [],
+            "unrecognized_axioms": [],
+            "classification": "SORRY_ADMISSION"
+          },
+          {
+            "endpoint": "LeanUnitary.Claims.twoQubitOptimal",
+            "axioms": [
+              "propext",
+              "sorryAx",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "native_axioms": [],
+            "unrecognized_axioms": [],
+            "classification": "SORRY_ADMISSION"
+          },
+          {
+            "endpoint": "LeanUnitary.Claims.qsd",
+            "axioms": [
+              "propext",
+              "sorryAx",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "native_axioms": [],
+            "unrecognized_axioms": [],
+            "classification": "SORRY_ADMISSION"
+          },
+          {
+            "endpoint": "LeanUnitary.Claims.qsdOptimized",
+            "axioms": [
+              "propext",
+              "sorryAx",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "native_axioms": [],
+            "unrecognized_axioms": [],
+            "classification": "SORRY_ADMISSION"
+          },
+          {
+            "endpoint": "LeanUnitary.Claims.blockZXZ",
+            "axioms": [
+              "propext",
+              "sorryAx",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "native_axioms": [],
+            "unrecognized_axioms": [],
+            "classification": "SORRY_ADMISSION"
+          },
+          {
+            "endpoint": "LeanUnitary.Claims.synth",
+            "axioms": [
+              "propext",
+              "sorryAx",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "native_axioms": [],
+            "unrecognized_axioms": [],
+            "classification": "SORRY_ADMISSION"
+          }
+        ],
+        "baseline_trust": "SORRY_ADMISSION_IN_ALL_EIGHT_PRINTED_CLAIMS",
+        "baseline_source_placeholder_count": 13,
+        "global_21_48_synthesis": "UNPROVED; actual circuit node remains a hypothesis",
+        "source_identity": "Exact frozen source SHAs verified; no entrant custom olean reused. Own first-source pilot output retained at its recorded checkpoint.",
+        "maximum_owned_private_bytes": 739561472,
+        "minimum_disk_free_bytes": 5792649216,
+        "minimum_physical_available_bytes": 3448520704,
+        "minimum_available_commit_bytes": 4861878272
+      }
+    }
+  },
+  "supplements_to_preserve": [
+    "novel_proof_expansions.json",
+    "final_four_independent_certificate_audit.json",
+    "check_final_four_certificates.py",
+    "erdos169_independent_finite_certificate.json",
+    "check_169_certificates.py",
+    "matt_generic_pivot_proof_expansion.json",
+    "matt_generic_pivot_prior_comparison_2026-10-05.json",
+    "check_dms_gp_certificates.py",
+    "dms_gp_periodic_certificate_data.json",
+    "dms_gp_independent_certificate_audit.json",
+    "check_quartic_ordinary_identities.py",
+    "quartic_ordinary_identity_audit.json",
+    "add_dms_gluing_census_exposition.py",
+    "dms_gluing_census_exposition_audit.json",
+    "check_e169_modular_six.py",
+    "e169_modular_six_independent_check.json"
+  ],
+  "release_notes": [
+    "The existing source-faithful half-turn and Erdős944 base chapters already contain their complete ordinary proofs, so no duplicate expansion was needed.",
+    "The nine finite-certificate papers retain explicit constructive data and algorithms; attach the selected exact sources/data or supplements rather than describing their finite facts as unproved empirical observations.",
+    "The optimized Erdős829 coefficient .46950308823856934 is an ordinary-source result; the named Lean endpoint certifies the weaker all-target log(5/3) coefficient.",
+    "The DMS manuscript has complete source-faithful exposition at its exact unconditional/conditional scopes, with finite supplements. The delivered source discharges BASE12/SIMPLE14/B14D; the five infinite structural hypotheses remain explicitly open.",
+    "The quartic manuscript now includes complete quantitative analytic appendices: variance certificates, local complex logarithm, positive Gaussian core, exact modulus deficit and sharp 1/4 boundary coefficient, small-radius error, finite windows and uniform upper-threshold assembly. Its ordinary argument is complete at the displayed one-variable family scope.",
+    "New Matt generic pivot content is supplied separately in matt_generic_pivot_family_content.json, has its own exact scope and late-intake/replay history, and does not prove the global 21/48 CNOT synthesis claim.",
+    "The aggregate now includes nineteen main original-candidate families and nineteen complete ordinary arguments at their exact displayed scopes, including nine with explicit finite certificates. Matt’s generic matrix proof is included; its pinned Lean replay, historical novelty and author approval remain separate. DMS now has detailed matching-preserving seam proofs, conditional inductions and the actual delivered universal host/marking census bridge, alongside its independent GP k=1–15 finite-certificate argument. The five DMS universal structural hypotheses and the universal Matt circuit bridge remain unproved."
+  ]
+}

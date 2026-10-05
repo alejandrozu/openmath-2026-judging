@@ -1,0 +1,65 @@
+--- run_htpeo_ramsey_supplemented_plan.py
++++ run_htpeo_ramsey_first_kernel_chunk_calibration.py
+@@ -13,6 +13,7 @@
+ RUNNER_SOURCE_SHA256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest()
+ AXIOM_PARSER_SOURCE_SHA256=hashlib.sha256((BASE/'audit_axioms.py').read_bytes()).hexdigest()
+ project=sys.argv[1]
++first_kernel_chunk_calibration='--first-kernel-chunk-calibration' in sys.argv[3:]
+ worker_threads=int(sys.argv[2]) if len(sys.argv)>2 else 4
+ assert 1<=worker_threads<=4
+ third_worker_pilot='--pilot-third-slot' in sys.argv[3:]
+@@ -50,6 +51,24 @@
+   else:from matt_resource_guard import guarded_tree
+ dest=BASE/'builds'/project
+ plan=json.loads((dest/'build-plan.json').read_text())
++
++if first_kernel_chunk_calibration:
++ assert project=='htpeo-ramsey-current' and worker_threads==1 and third_worker_continuation and defer_whole_import_mode
++ assert not third_worker_pilot and not full_mathlib_source_mode and not independent_resource_mode
++ scope_flag='--calibration-scope-sha256';assert sys.argv.count(scope_flag)==1
++ scope_sha=sys.argv[sys.argv.index(scope_flag)+1];assert scope_sha=='a9b43338db374a69125a1a854f731f10630792ef2f23990e5f5a648b064099bc'
++ scope_file=BASE/'htpeo-ramsey-first-kernel-chunk-calibration-scope-20261005.json'
++ assert hashlib.sha256(scope_file.read_bytes()).hexdigest()==scope_sha
++ calibration_scope=json.loads(scope_file.read_bytes())
++ assert hashlib.sha256((dest/'build-plan.json').read_bytes()).hexdigest()==calibration_scope['original_source_plan_sha256']
++ assert calibration_scope['first_original_kernel_chunk']=='RamseyCert.Chunk.B0'
++ actual_modules={r['module']:r for r in plan['modules']}
++ for record in calibration_scope['source_records']:
++  assert actual_modules[record['module']]['sha256']==record['sha256']==hashlib.sha256(Path(record['file']).read_bytes()).hexdigest()
++  assert [n for n in read_imports(record['file']) if n!='all']==record['direct_imports']
++ plan['bounded_first_kernel_chunk_calibration']={'scope_file':str(scope_file),'scope_sha256':scope_sha,
++  'first_original_kernel_chunk':'RamseyCert.Chunk.B0','bounded_dispatch_order':calibration_scope['exact_bounded_dispatch_order'],
++  'source_body_or_plan_edits':False,'all_other_sources_and_both_audits_unattempted':True}
+ 
+ # HT-specific organizer audit supplement; the frozen plan/source/original audit remain unchanged.
+ assert project=='htpeo-ramsey-current' and worker_threads==1 and third_worker_guarded
+@@ -271,7 +290,16 @@
+    time.sleep(.05)
+ save()
+ new_source_invocations=0
+-for n in ordered+plan['audit_modules']+plan.get('non_acceptance_audit_modules',[]):
++dispatch_order=ordered+plan['audit_modules']+plan.get('non_acceptance_audit_modules',[])
++if first_kernel_chunk_calibration:
++ scope_names=set(calibration_scope['exact_bounded_dispatch_order'])
++ assert len(scope_names)==len(calibration_scope['exact_bounded_dispatch_order'])
++ dispatch_order=[n for n in ordered if n in scope_names]
++ assert dispatch_order==calibration_scope['exact_bounded_dispatch_order']
++ assert not scope_names&deferred_whole_names and not any(n.endswith('.lean') for n in dispatch_order)
++ assert 'RamseyCert.Defs' in retained and retained['RamseyCert.Defs']['exit']==0
++ assert retained['RamseyCert.Defs']['source_sha256']==calibration_scope['prior_Definitions_PASS_row']['source_sha256']
++for n in dispatch_order:
+  if n in retained:continue
+  if n in deferred_whole_names:
+   plan['deferred_whole_import_policy']['unattempted_whole_invocations'].append({'module':n,'attempted':False,
+@@ -403,6 +431,11 @@
+   else:plan['selected_endpoint_uses_sorry']=True;save()
+ else:
+  if plan['failed_invocations']:plan['status']='BUILD_FAILED_OR_TIMED_OUT'
++ elif first_kernel_chunk_calibration:
++  actual_success={r['module'] for r in plan['builds'] if r['exit']==0 and not r['is_endpoint_audit'] and not r.get('stop_reason')}
++  assert set(calibration_scope['exact_bounded_dispatch_order'])<=actual_success
++  plan['status']='SCHEDULED_RESOURCE_CHECKPOINT'
++  plan['checkpoint_reason']='BOUNDED_PREREQUISITES_AND_FIRST_ORIGINAL_KERNEL_CHUNK_COMPLETED_NO_OTHER_SOURCE_OR_AUDIT_DISPATCH'
+  elif defer_whole_import_mode and plan['deferred_whole_import_policy']['unattempted_whole_invocations']:
+   plan['status']='SCHEDULED_RESOURCE_CHECKPOINT';plan['checkpoint_reason']='GRANULAR_REMAINDER_FINISHED_WHOLE_IMPORT_LEASE_STILL_REQUIRED'
+  elif deferred_resource_roots:plan['status']='ENVIRONMENT_BLOCKED_RESOURCE_DEPENDENCIES'

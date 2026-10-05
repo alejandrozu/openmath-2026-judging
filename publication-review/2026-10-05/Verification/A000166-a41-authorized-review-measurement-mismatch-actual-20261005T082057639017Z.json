@@ -1,0 +1,102 @@
+{
+  "status": "AUTHORIZED_A000166_A41_REVIEW_ATTEMPT_STOPPED_AT_MEASUREMENT_KIND_MISMATCH_NO_FULL_QUALIFICATION",
+  "observed_utc": "2026-10-05T08:20:57.636946+00:00",
+  "executed_producer": {
+    "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\qualify_A000166_granular_completion_readonly_prepared_20261005.py",
+    "sha256": "a41ca1d3e7d79c8b43b6df3cd9c5fcc532a656b2e98a0ad85ca8ff13fa03fa85"
+  },
+  "command": [
+    "python",
+    "-X",
+    "utf8",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\qualify_A000166_granular_completion_readonly_prepared_20261005.py",
+    "--completed166-receipt-sha256",
+    "ba420144481cf50ca830a1e44db44e90de417464fa672491c1f41925036b370f"
+  ],
+  "immutable166_receipt": {
+    "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\operational_history\\a000166\\ba420144481cf50c.json",
+    "sha256": "ba420144481cf50ca830a1e44db44e90de417464fa672491c1f41925036b370f"
+  },
+  "actual_exit": 1,
+  "actual_exception": "AssertionError: Storage measured saved bytes",
+  "actual_failed_line": 225,
+  "checks_completed_before_failure": [
+    "all171 exact source byte hashes",
+    "all166 current own artifact stream hashes",
+    "prior114 and original76 full row equality BY MODULE",
+    "all52 actual new source CLI/guard/logs and custom prerequisite chronology",
+    "one storage sidecar per52 new sources; first differing allocation measurement caused stop"
+  ],
+  "checks_not_completed_in_authorized_attempt": "Complete52 sidecar qualification and final source/receipt rechecks; no overall qualification record was written.",
+  "frozen_interface": {
+    "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\a000_post_exit_lzx_interface_v2_prepared.py",
+    "sha256": "03a6f7118d97e97e646b81cdb5508fab512eb23f65dc1465cd28d141d9cbd99b",
+    "declaring_lines": [
+      208,
+      214
+    ],
+    "measurement": "FileStandardInfo standard_allocation_bytes, not GetCompressedFileSizeW"
+  },
+  "read_only_followup_all52_measurement_check": "All52 actual saved fields equal standard allocation before-minus-after, and both allocation measurements are nonincreasing.",
+  "measurement_mismatch_count": 4,
+  "measurement_mismatches": [
+    {
+      "source_module": "OpHack.QuadraticResidue224.CertificateP167",
+      "sidecar": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\operational_history\\a000-post-exit-storage\\20261005T075923231794Z-actual.json",
+      "sha256": "f38e01de2a956f0d5053f5876d6ca4e580ecbce658b6301f1c270902da98e570",
+      "status": "PASS_BYTE_IDENTICAL_A000_POST_EXIT_WOF_LZX",
+      "actual_allocation_bytes_saved": 10698752,
+      "before_standard_allocation_bytes": 15405056,
+      "after_standard_allocation_bytes": 4706304,
+      "before_GetCompressedFileSizeW_bytes": 15401560,
+      "after_GetCompressedFileSizeW_bytes": 4706304,
+      "standard_allocation_difference": 10698752,
+      "GetCompressedFileSizeW_difference": 10695256
+    },
+    {
+      "source_module": "OpHack.QuadraticResidue224.CertificateP193",
+      "sidecar": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\operational_history\\a000-post-exit-storage\\20261005T080324247715Z-actual.json",
+      "sha256": "647137cb16b116df5dd42f2506dd1f6f2188999d8b911a2a0e814676fc8df55e",
+      "status": "PASS_BYTE_IDENTICAL_A000_POST_EXIT_WOF_LZX",
+      "actual_allocation_bytes_saved": 6836224,
+      "before_standard_allocation_bytes": 9834496,
+      "after_standard_allocation_bytes": 2998272,
+      "before_GetCompressedFileSizeW_bytes": 9830408,
+      "after_GetCompressedFileSizeW_bytes": 2998272,
+      "standard_allocation_difference": 6836224,
+      "GetCompressedFileSizeW_difference": 6832136
+    },
+    {
+      "source_module": "OpHack.QuadraticResidue224.CertificateP227",
+      "sidecar": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\operational_history\\a000-post-exit-storage\\20261005T080618874492Z-actual.json",
+      "sha256": "29240c01b967a3eef3d6c55616a589cdbce98adb411fa5b3ca5cb5eb3330695e",
+      "status": "PASS_BYTE_IDENTICAL_A000_POST_EXIT_WOF_LZX",
+      "actual_allocation_bytes_saved": 4653056,
+      "before_standard_allocation_bytes": 6688768,
+      "after_standard_allocation_bytes": 2035712,
+      "before_GetCompressedFileSizeW_bytes": 6686672,
+      "after_GetCompressedFileSizeW_bytes": 2035712,
+      "standard_allocation_difference": 4653056,
+      "GetCompressedFileSizeW_difference": 4650960
+    },
+    {
+      "source_module": "OpHack.QuadraticResidue224.GeneratedCertificate",
+      "sidecar": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\operational_history\\a000-post-exit-storage\\20261005T081648878663Z-actual.json",
+      "sha256": "be3cf15a2647a2dae48c9c0ba40071d7f2586b24ac381f54925767ef34ac689f",
+      "status": "PASS_BYTE_IDENTICAL_A000_POST_EXIT_WOF_LZX",
+      "actual_allocation_bytes_saved": 430080,
+      "before_standard_allocation_bytes": 593920,
+      "after_standard_allocation_bytes": 163840,
+      "before_GetCompressedFileSizeW_bytes": 593064,
+      "after_GetCompressedFileSizeW_bytes": 163840,
+      "standard_allocation_difference": 430080,
+      "GetCompressedFileSizeW_difference": 429224
+    }
+  ],
+  "new52_recorded_allocation_bytes_saved": 109862912,
+  "limitations": [
+    "This follow-up isolates a verifier measurement mismatch and does not itself establish full166 qualification.",
+    "No source/compiler/storage action or current receipt mutation performed.",
+    "No complete stdout log file was separately retained from the first verifier invocation; its actual tool output reported166 artifact progress and traceback. No log completeness is claimed."
+  ]
+}

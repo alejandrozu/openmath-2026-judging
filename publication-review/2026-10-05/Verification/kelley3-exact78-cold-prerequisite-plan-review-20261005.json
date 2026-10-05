@@ -1,0 +1,568 @@
+{
+  "status": "IMMUTABLE_EXACT78_COLD_PREREQUISITE_PLANS_PREPARED_NO_DISPATCH",
+  "created_utc": "2026-10-05T04:49:02.784043+00:00",
+  "producer_sha256": "0ff50d42e49f0e11c866f6b94286b52b0b6d24fe35ae3e907d0ba81a40410b85",
+  "stage": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\koerbser-kelley3-pinned-prerequisite",
+  "build_plan_sha256": "2da5f206fd16873c2bc22bd3d76ed2c70652ad75d9997593089352ecc09093a4",
+  "provider_source_closure_sha256": "b5cc8976786421ee27a0f1a1c106d88766b19ca8e9fc06d6e67593c9aa99cec4",
+  "selected_audit_sha256": "71b296270c2a836d759c918586ecb298ae74b2165a83916e33fe0a7e8dc978a1",
+  "source_count": 78,
+  "safe_source_count": 45,
+  "whole_source_count": 33,
+  "selected_endpoint_candidates": [
+    {
+      "endpoint": "Erdos140.erdos_140",
+      "source_module": "ErdosProblems.Erdos140",
+      "source_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\koerbser-kelley3-pinned-prerequisite\\ErdosProblems\\Erdos140.lean",
+      "source_sha256": "68c9025156e47c41a14a8e00a276f88abb87b674e18844677500b9cac9aa86a1",
+      "declaration_line": 74,
+      "literal_typed_declaration_before_proof": "theorem erdos_140 (C : ℝ) (hC : 0 < C) :\n    (fun N : ℕ => (r3 N : ℝ)) =O[atTop]\n      (fun N : ℕ => (N : ℝ) / (Real.log (N : ℝ)) ^ C)",
+      "typed_statement_has_not_been_checked_by_Lean_in_this_new_route": true,
+      "axiom_request": "#print axioms Erdos140.erdos_140",
+      "expected_classification": "STANDARD_KERNEL_ONLY_EXPECTATION_NOT_MEASURED",
+      "hypothesis_fidelity": "Retain every bound/supply hypothesis literally; only erdos_140 and exists_rawConcreteSupply are the unconditional closing candidates."
+    },
+    {
+      "endpoint": "Erdos140.isBigO_r3_log_rpow_of_rawConcreteSupply",
+      "source_module": "ErdosProblems.Erdos140",
+      "source_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\koerbser-kelley3-pinned-prerequisite\\ErdosProblems\\Erdos140.lean",
+      "source_sha256": "68c9025156e47c41a14a8e00a276f88abb87b674e18844677500b9cac9aa86a1",
+      "declaration_line": 50,
+      "literal_typed_declaration_before_proof": "theorem isBigO_r3_log_rpow_of_rawConcreteSupply\n    {K : ℝ} (hK : 0 < K) (hraw : FinalAssembly.RawConcreteSupply K)\n    (C : ℝ) :\n    (fun N : ℕ => (r3 N : ℝ)) =O[atTop]\n      (fun N : ℕ => (N : ℝ) / (Real.log (N : ℝ)) ^ C)",
+      "typed_statement_has_not_been_checked_by_Lean_in_this_new_route": true,
+      "axiom_request": "#print axioms Erdos140.isBigO_r3_log_rpow_of_rawConcreteSupply",
+      "expected_classification": "STANDARD_KERNEL_ONLY_EXPECTATION_NOT_MEASURED",
+      "hypothesis_fidelity": "Retain every bound/supply hypothesis literally; only erdos_140 and exists_rawConcreteSupply are the unconditional closing candidates."
+    },
+    {
+      "endpoint": "Erdos140.erdos_140_of_exists_rawConcreteSupply",
+      "source_module": "ErdosProblems.Erdos140",
+      "source_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\koerbser-kelley3-pinned-prerequisite\\ErdosProblems\\Erdos140.lean",
+      "source_sha256": "68c9025156e47c41a14a8e00a276f88abb87b674e18844677500b9cac9aa86a1",
+      "declaration_line": 63,
+      "literal_typed_declaration_before_proof": "theorem erdos_140_of_exists_rawConcreteSupply\n    (hraw : ∃ K : ℝ, 0 < K ∧ FinalAssembly.RawConcreteSupply K)\n    (C : ℝ) (_hC : 0 < C) :\n    (fun N : ℕ => (r3 N : ℝ)) =O[atTop]\n      (fun N : ℕ => (N : ℝ) / (Real.log (N : ℝ)) ^ C)",
+      "typed_statement_has_not_been_checked_by_Lean_in_this_new_route": true,
+      "axiom_request": "#print axioms Erdos140.erdos_140_of_exists_rawConcreteSupply",
+      "expected_classification": "STANDARD_KERNEL_ONLY_EXPECTATION_NOT_MEASURED",
+      "hypothesis_fidelity": "Retain every bound/supply hypothesis literally; only erdos_140 and exists_rawConcreteSupply are the unconditional closing candidates."
+    },
+    {
+      "endpoint": "Erdos140.ConcreteSupply.exists_rawConcreteSupply",
+      "source_module": "ErdosProblems.Erdos140.ConcreteSupply",
+      "source_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\koerbser-kelley3-pinned-prerequisite\\ErdosProblems\\Erdos140\\ConcreteSupply.lean",
+      "source_sha256": "7ece06bb5125c527773e3eaa163aafe5fb07b03d225ba93e1e7732f34474a618",
+      "declaration_line": 3914,
+      "literal_typed_declaration_before_proof": "theorem exists_rawConcreteSupply :\n    ∃ K : ℝ, 0 < K ∧ FinalAssembly.RawConcreteSupply K",
+      "typed_statement_has_not_been_checked_by_Lean_in_this_new_route": true,
+      "axiom_request": "#print axioms Erdos140.ConcreteSupply.exists_rawConcreteSupply",
+      "expected_classification": "STANDARD_KERNEL_ONLY_EXPECTATION_NOT_MEASURED",
+      "hypothesis_fidelity": "Retain every bound/supply hypothesis literally; only erdos_140 and exists_rawConcreteSupply are the unconditional closing candidates."
+    },
+    {
+      "endpoint": "Erdos140.isBigO_r3_log_rpow_of_orderedCount",
+      "source_module": "ErdosProblems.Erdos140.Quantitative",
+      "source_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\koerbser-kelley3-pinned-prerequisite\\ErdosProblems\\Erdos140\\Quantitative.lean",
+      "source_sha256": "127cfe552fd716e74dbc2334fb6b410b924f82ec71190817d93597dd0b5e59c8",
+      "declaration_line": 224,
+      "literal_typed_declaration_before_proof": "theorem isBigO_r3_log_rpow_of_orderedCount\n    {K : ℝ} {N₀ : ℕ} (hKM : KelleyMekaOrderedCountHypothesis K N₀)\n    (C : ℝ) :\n    (fun N : ℕ => (r3 N : ℝ)) =O[atTop]\n      (fun N : ℕ => (N : ℝ) / (Real.log (N : ℝ)) ^ C)",
+      "typed_statement_has_not_been_checked_by_Lean_in_this_new_route": true,
+      "axiom_request": "#print axioms Erdos140.isBigO_r3_log_rpow_of_orderedCount",
+      "expected_classification": "STANDARD_KERNEL_ONLY_EXPECTATION_NOT_MEASURED",
+      "hypothesis_fidelity": "Retain every bound/supply hypothesis literally; only erdos_140 and exists_rawConcreteSupply are the unconditional closing candidates."
+    },
+    {
+      "endpoint": "Erdos140.exists_orderedCount_of_exists_holderCertificates",
+      "source_module": "ErdosProblems.Erdos140.KelleyMekaCount",
+      "source_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\koerbser-kelley3-pinned-prerequisite\\ErdosProblems\\Erdos140\\KelleyMekaCount.lean",
+      "source_sha256": "2a747ae52386283c78fb1250621873bd1a8d450ebf52d495fda4f8c4fd7fa6d7",
+      "declaration_line": 962,
+      "literal_typed_declaration_before_proof": "theorem exists_orderedCount_of_exists_holderCertificates\n    (h : ∃ K : ℝ, KelleyMekaHolderCertificateHypothesis K) :\n    ∃ K : ℝ, ∃ N₀ : ℕ, KelleyMekaOrderedCountHypothesis K N₀",
+      "typed_statement_has_not_been_checked_by_Lean_in_this_new_route": true,
+      "axiom_request": "#print axioms Erdos140.exists_orderedCount_of_exists_holderCertificates",
+      "expected_classification": "STANDARD_KERNEL_ONLY_EXPECTATION_NOT_MEASURED",
+      "hypothesis_fidelity": "Retain every bound/supply hypothesis literally; only erdos_140 and exists_rawConcreteSupply are the unconditional closing candidates."
+    }
+  ],
+  "cold_source_identity_rows": [
+    {
+      "module": "ErdosProblems.Erdos140.Counting",
+      "sha256": "5b9b725ee93170586ddbeeb1ca4c745981ecdc61feaeb8ec10eb008e54a2f830",
+      "source_bytes": 11204,
+      "compiled_outputs_absent": true
+    },
+    {
+      "module": "ErdosProblems.Erdos140.DensityIteration",
+      "sha256": "d70bbd7a0cd6553308965cff3ac1dbfaddbf8f1581e86225348e19455fd995f4",
+      "source_bytes": 9719,
+      "compiled_outputs_absent": true
+    },
+    {
+      "module": "ErdosProblems.Erdos140.ReachableIteration",
+      "sha256": "3ab056710c653d088b584daf9c5aab718679851470f1b6d6f7481303e79648c4",
+      "source_bytes": 9428,
+      "compiled_outputs_absent": true
+    },
+    {
+      "module": "APAP.Prereqs.Convolution.Discrete.Defs",
+      "sha256": "b3c2071dc53ca61c63750ae92b4954a21e8ae72ebf6f374fd3b713fb1826f4e7",
+      "source_bytes": 22326,
+      "compiled_outputs_absent": true
+    },
+    {
+      "module": "APAP.Mathlib.Analysis.RCLike.Basic",
+      "sha256": "4367e222afb8f3ac97896ebfc60e053aef970651b5530ef66dfa781c21714279",
+      "source_bytes": 615,
+      "compiled_outputs_absent": true
+    },
+    {
+      "module": "APAP.Prereqs.LpNorm.Discrete.Defs",
+      "sha256": "3c9e829fe7c214a03cb0eb82dd02a68ca8adbd3dca9bd34fd23be704496a645f",
+      "source_bytes": 14805,
+      "compiled_outputs_absent": true
+    },
+    {
+      "module": "APAP.Prereqs.LpNorm.Weighted",
+      "sha256": "1558cc9c6457483492943d570606c4c94b3f1fabd8e5c8fa985c359d39d07a60",
+      "source_bytes": 8563,
+      "compiled_outputs_absent": true
+    },
+    {
+      "module": "AddCombi.Mathlib.Algebra.Notation.Indicator",
+      "sha256": "828be5c0fa2fed6b0e2eaf60e4b1bbeccc58740738944898413858d59f57c2d6",
+      "source_bytes": 666,
+      "compiled_outputs_absent": true
+    },
+    {
+      "module": "AddCombi.Mathlib.Algebra.GroupWithZero.Indicator",
+      "sha256": "b58b804d9cae00ad694b7ecbd61098d181c56a16f6392c8ac3169fd6e6b29e9c",
+      "source_bytes": 2129,
+      "compiled_outputs_absent": true
+    },
+    {
+      "module": "AddCombi.Mathlib.Algebra.Star.Pi",
+      "sha256": "904f6bc08c77718075269062cedc9fc1af38d3404c00c71419b21bb976495f6a",
+      "source_bytes": 875,
+      "compiled_outputs_absent": true
+    },
+    {
+      "module": "APAP.Mathlib.Algebra.Group.Pointwise.Set.Basic",
+      "sha256": "a004eceb452848051971e093a67b7292548947e240ed6797c293bd3a4d73bd12",
+      "source_bytes": 876,
+      "compiled_outputs_absent": true
+    },
+    {
+      "module": "APAP.Prereqs.Mu",
+      "sha256": "e13bdf1233780e06cbf87d7cb1c20daecbaca77e9125674dd2170e2e55c4d523",
+      "source_bytes": 8794,
+      "compiled_outputs_absent": true
+    },
+    {
+      "module": "APAP.Physics.Unbalancing",
+      "sha256": "1a395c830b56e74ccdda2dc6024a3b6adf39221dc6b04bc36d080d907c248c63",
+      "source_bytes": 13204,
+      "compiled_outputs_absent": true
+    },
+    {
+      "module": "ErdosProblems.Erdos140.Unbalancing",
+      "sha256": "9a42e845c8fc0b8ef8ba7f3b718d2b47a0f6a4c9c90f755a3dbc9f5d688ef7e5",
+      "source_bytes": 19532,
+      "compiled_outputs_absent": true
+    },
+    {
+      "module": "ErdosProblems.Erdos140.FiniteConvolution",
+      "sha256": "4272a67dc3e0854a4ac331d3100b198d9872449fd3814d9f0e3ff34a434fadde",
+      "source_bytes": 20771,
+      "compiled_outputs_absent": true
+    },
+    {
+      "module": "AddCombi.Mathlib.Algebra.BigOperators.Ring.Finset",
+      "sha256": "220cf0b5b2a17c27432cf56614ac3730bd9cc707f4f46a46e1489f850ffd7858",
+      "source_bytes": 912,
+      "compiled_outputs_absent": true
+    },
+    {
+      "module": "AddCombi.Mathlib.Algebra.Order.GroupWithZero.Indicator",
+      "sha256": "ffe92b7afa0ecc379a5143d9fdc3cfc6507696412b76d9c865da6ac3ee3048a6",
+      "source_bytes": 1352,
+      "compiled_outputs_absent": true
+    },
+    {
+      "module": "APAP.Mathlib.Algebra.BigOperators.Pi",
+      "sha256": "815f6228cf59495bb04d8b8beea70525e1d6b18d8077241c55b0f321d3dba5f8",
+      "source_bytes": 1161,
+      "compiled_outputs_absent": true
+    },
+    {
+      "module": "APAP.Mathlib.Algebra.Group.Action.Pointwise.Set.Basic",
+      "sha256": "56293da91c9b5a7bd1dc85fa457b142a66ee359d2c34eb3cd7c5a677855ed638",
+      "source_bytes": 966,
+      "compiled_outputs_absent": true
+    },
+    {
+      "module": "APAP.Mathlib.Algebra.Group.Translate",
+      "sha256": "6b2fcc08484c45faf52e10c7eafa4e2e79d3990d25add9cbe8e455b68c3cbf7e",
+      "source_bytes": 886,
+      "compiled_outputs_absent": true
+    },
+    {
+      "module": "APAP.Mathlib.Algebra.Star.Conjneg",
+      "sha256": "c09f8e83f74a8cbd454736db5ee61e3663fff8ab763cc4d2d82fbd1c464df997",
+      "source_bytes": 806,
+      "compiled_outputs_absent": true
+    },
+    {
+      "module": "APAP.Prereqs.Convolution.Discrete.Basic",
+      "sha256": "f3f97e91d1f7ce4cbc8c8fc52b8e1a7d326bcdd69b0aaf004851590dd7845e27",
+      "source_bytes": 10011,
+      "compiled_outputs_absent": true
+    },
+    {
+      "module": "APAP.Prereqs.LpNorm.Compact",
+      "sha256": "0840d1eb3255dbc43bf2fe9c38d7d2365aae63811ea0cca4efe3f6199f7619c1",
+      "source_bytes": 18565,
+      "compiled_outputs_absent": true
+    },
+    {
+      "module": "APAP.Prereqs.LpNorm.Discrete.Basic",
+      "sha256": "2cc083e10b6f11b86c9cc6250214e1a2d4cd9fa3e29acfe14ea2cc57891e88e9",
+      "source_bytes": 5654,
+      "compiled_outputs_absent": true
+    },
+    {
+      "module": "APAP.Prereqs.Convolution.Norm",
+      "sha256": "8c7e88fb038fed16c804179f3db7c3b5b673ab177b26b8816484775fce45fb22",
+      "source_bytes": 7083,
+      "compiled_outputs_absent": true
+    },
+    {
+      "module": "APAP.Prereqs.Convolution.Order",
+      "sha256": "314b44ade6c81d92e3756912308cfe2fb72d787f4c760c895f43c0549fe7bceb",
+      "source_bytes": 4140,
+      "compiled_outputs_absent": true
+    },
+    {
+      "module": "APAP.Physics.DRC",
+      "sha256": "bec8927bc8df25efc69b04c4c4b77a4e1c72e93dc84f7b8ce7865e1a280ce69a",
+      "source_bytes": 18290,
+      "compiled_outputs_absent": true
+    },
+    {
+      "module": "APAP.Mathlib.Algebra.Module.AddChar",
+      "sha256": "8a71179de014ae91cca484f7970b4f9035df39ad88fa1f0befafbe5905464983",
+      "source_bytes": 1069,
+      "compiled_outputs_absent": true
+    },
+    {
+      "module": "APAP.Mathlib.Data.ZMod.Basic",
+      "sha256": "ff582905b2b2319455b6dc81e412914f26a13e416bcee00e956a39f2cfa46580",
+      "source_bytes": 811,
+      "compiled_outputs_absent": true
+    },
+    {
+      "module": "APAP.Mathlib.Algebra.Module.ZMod",
+      "sha256": "2abb256a2e4a61b8ab08af5a3ba3da281c4fa9a85938ce28efcc50b10a34fad1",
+      "source_bytes": 890,
+      "compiled_outputs_absent": true
+    },
+    {
+      "module": "APAP.Mathlib.LinearAlgebra.Dimension.Finrank",
+      "sha256": "aba810f160e9d9ff91654e0e334d5b3c678a926cf8794b29bb20d3a9792e3922",
+      "source_bytes": 631,
+      "compiled_outputs_absent": true
+    },
+    {
+      "module": "APAP.Mathlib.LinearAlgebra.FiniteDimensional.Lemmas",
+      "sha256": "3fa8aa9681f6a4b0eb16e8794fea279f8309cc405c8247f97ed7ed02401650af",
+      "source_bytes": 1373,
+      "compiled_outputs_absent": true
+    },
+    {
+      "module": "APAP.Mathlib.Analysis.Fourier.FiniteAbelian.PontryaginDuality",
+      "sha256": "e71862ce5216f80896ebce20e510e8fec113665fcf84ddb872d68c3820e39819",
+      "source_bytes": 5158,
+      "compiled_outputs_absent": true
+    },
+    {
+      "module": "APAP.Mathlib.MeasureTheory.Function.LpSeminorm.CompareExp",
+      "sha256": "8fd14ed6f5faa0da8d1ee6f5d6669c3f8d838f4fb788a7b23cfabd15c77baf0c",
+      "source_bytes": 970,
+      "compiled_outputs_absent": true
+    },
+    {
+      "module": "APAP.Prereqs.Inner.Hoelder.Discrete",
+      "sha256": "4677678091423115fabcfd85097531c9ed8b0d0b19bcaa09fc854d7b4c5f731d",
+      "source_bytes": 6855,
+      "compiled_outputs_absent": true
+    },
+    {
+      "module": "APAP.Prereqs.Inner.Hoelder.Compact",
+      "sha256": "603dddb3b873593faa4bc30fd4fe67869b3b33f3066d8200e2f70c6f7979f4ea",
+      "source_bytes": 8281,
+      "compiled_outputs_absent": true
+    },
+    {
+      "module": "APAP.Prereqs.FourierTransform.Discrete",
+      "sha256": "96740cd6495bc7fc2cb14fc94939a7f9aed4596ae1fce3b6a82a17f0751b9cb2",
+      "source_bytes": 9826,
+      "compiled_outputs_absent": true
+    },
+    {
+      "module": "APAP.Prereqs.MarcinkiewiczZygmund",
+      "sha256": "955346275354e5b7572eb6b94101513530bcf94a2b595e30e50fc1570fae71eb",
+      "source_bytes": 14345,
+      "compiled_outputs_absent": true
+    },
+    {
+      "module": "APAP.Physics.AlmostPeriodicity",
+      "sha256": "b63708927758d4cef1560b3fdd01fb651fbd5a07127f6bc2686e02bb4f908aeb",
+      "source_bytes": 25577,
+      "compiled_outputs_absent": true
+    },
+    {
+      "module": "ErdosProblems.Erdos140.MarcinkiewiczZygmund",
+      "sha256": "22b9a8becd7296cc67106d96e652c27e4c8fdbbe1640328c5f9e20efa6cd0b85",
+      "source_bytes": 15096,
+      "compiled_outputs_absent": true
+    },
+    {
+      "module": "ErdosProblems.Erdos140.CrootSisask",
+      "sha256": "1927e78958cd33b99b0ec3cf6614a6159b628f5f3d071f7f1057fd97cdfb72fe",
+      "source_bytes": 22541,
+      "compiled_outputs_absent": true
+    },
+    {
+      "module": "ErdosProblems.Erdos140.FiniteFourier",
+      "sha256": "05dbc20e423b60ae5c825d56e7b72cd92a28c634fc2d701cd2fcfb771db66c75",
+      "source_bytes": 8357,
+      "compiled_outputs_absent": true
+    },
+    {
+      "module": "ErdosProblems.Erdos140.Chang",
+      "sha256": "4d6430432d2b7117e1580e0c14a52f344542afaa4f685f33eeb95fc338bfb5b7",
+      "source_bytes": 11849,
+      "compiled_outputs_absent": true
+    },
+    {
+      "module": "ErdosProblems.Erdos140.HolderLifting",
+      "sha256": "d44942ae596737223670735e2326af6912be8050fc1cfa176911b1e620f28d8c",
+      "source_bytes": 10690,
+      "compiled_outputs_absent": true
+    },
+    {
+      "module": "ErdosProblems.Erdos140.LpOrthogonality",
+      "sha256": "0b849a2893d9f0c0143239370de3152ea8821c4149ed30deb40e865b2a05ea22",
+      "source_bytes": 22997,
+      "compiled_outputs_absent": true
+    },
+    {
+      "module": "ErdosProblems.Erdos140.Endpoint",
+      "sha256": "48853e9ce93cd4f56d35bfbcbc7e014bbeb00128a44a515f2439234d935ce6b2",
+      "source_bytes": 4380,
+      "compiled_outputs_absent": true
+    },
+    {
+      "module": "ErdosProblems.Erdos140.Quantitative",
+      "sha256": "127cfe552fd716e74dbc2334fb6b410b924f82ec71190817d93597dd0b5e59c8",
+      "source_bytes": 10204,
+      "compiled_outputs_absent": true
+    },
+    {
+      "module": "ErdosProblems.Erdos140.BohrBasic",
+      "sha256": "8d4be56a9ae1cdbc58eae449b5916d1b118dd4040b6878b0f71b778d038d5711",
+      "source_bytes": 13028,
+      "compiled_outputs_absent": true
+    },
+    {
+      "module": "ErdosProblems.Erdos140.BohrStopping",
+      "sha256": "fc241829ab5624d631d993adf4844f4caed0e6e20bacb3a340fd47847edfe512",
+      "source_bytes": 17609,
+      "compiled_outputs_absent": true
+    },
+    {
+      "module": "ErdosProblems.Erdos140.BalancedRestriction",
+      "sha256": "6d9223bb4439a3659113642e9af404c26e1f2d585bff5f61afa8f9f4a898d45a",
+      "source_bytes": 19667,
+      "compiled_outputs_absent": true
+    },
+    {
+      "module": "ErdosProblems.Erdos140.RegularBohr",
+      "sha256": "f1859ff51d990755059ec8046b74e90b87e93330cd8cca35970db11426f7693e",
+      "source_bytes": 23651,
+      "compiled_outputs_absent": true
+    },
+    {
+      "module": "ErdosProblems.Erdos140.BohrEstimates",
+      "sha256": "9726e29be026cf67a6df9edde373947ef4691c77270d5a07797288f6bdd14a04",
+      "source_bytes": 28089,
+      "compiled_outputs_absent": true
+    },
+    {
+      "module": "ErdosProblems.Erdos140.BourgainRegular",
+      "sha256": "a6f6d38c1866b9720c85790257bd9fe6f15fb62d5dad06b221c318f9b689ac0c",
+      "source_bytes": 27274,
+      "compiled_outputs_absent": true
+    },
+    {
+      "module": "ErdosProblems.Erdos140.Sifting",
+      "sha256": "8e94402c03c489734e960d5514e46384892a4445afee75aa0465df76a1595d2b",
+      "source_bytes": 12909,
+      "compiled_outputs_absent": true
+    },
+    {
+      "module": "ErdosProblems.Erdos140.RegularSpectrumPhase",
+      "sha256": "2d78b8ec46552c93b40052ea221fe87da8240f498e7316b02239b7e56d0725cd",
+      "source_bytes": 6022,
+      "compiled_outputs_absent": true
+    },
+    {
+      "module": "ErdosProblems.Erdos140.RelativeChangDefinitions",
+      "sha256": "04cd83562cf2832f00ba282a861eb32070b6662f49764adb3ca28691f9a8e4b0",
+      "source_bytes": 2137,
+      "compiled_outputs_absent": true
+    },
+    {
+      "module": "ErdosProblems.Erdos140.RelativeSpectrumBridge",
+      "sha256": "adc2ea63ceef1eb1009604c8aa4dc41e19a55d0f97e3fa5e6f6d6469bf873c1b",
+      "source_bytes": 7534,
+      "compiled_outputs_absent": true
+    },
+    {
+      "module": "ErdosProblems.Erdos140.BohrSmoothingMeasure",
+      "sha256": "fe0f4f1f8498421feef6735a574b040955bc10b2a9547cb04071132140f004b1",
+      "source_bytes": 15346,
+      "compiled_outputs_absent": true
+    },
+    {
+      "module": "ErdosProblems.Erdos140.RelativeDissociation",
+      "sha256": "ea3b0dd028cbd95b6c7dbf249fcd5908a83a40a286844fa301adf99eb8f3bfe2",
+      "source_bytes": 17654,
+      "compiled_outputs_absent": true
+    },
+    {
+      "module": "ErdosProblems.Erdos140.RelativeChangSanders",
+      "sha256": "802483187a6ad998d8f32f9d17aa9cda6f1728b7643e433675b193a73697973c",
+      "source_bytes": 23770,
+      "compiled_outputs_absent": true
+    },
+    {
+      "module": "ErdosProblems.Erdos140.LocalSpectrum",
+      "sha256": "dd2930d8a5a2e561b08b8c3bd874dc4a71a006ef1f6887c859e8a465c35a1a20",
+      "source_bytes": 26880,
+      "compiled_outputs_absent": true
+    },
+    {
+      "module": "ErdosProblems.Erdos140.RelativeBohrVolume",
+      "sha256": "3f05134dec7657238148ade0633e8e81b4ecf7d8a0911d2be9951acd8e00dc8d",
+      "source_bytes": 12740,
+      "compiled_outputs_absent": true
+    },
+    {
+      "module": "ErdosProblems.Erdos140.LocalizedAlmostPeriodicity",
+      "sha256": "4326feda8cd5a52af6146fdb3649f90eb6bae0c300038c1e37d5d3b6bb598492",
+      "source_bytes": 71521,
+      "compiled_outputs_absent": true
+    },
+    {
+      "module": "ErdosProblems.Erdos140.LocalizedUnbalancing",
+      "sha256": "c70daac2da5d7618e93d8427f9188ffbe37de19d7be8d997924cf8e74b6315a8",
+      "source_bytes": 23528,
+      "compiled_outputs_absent": true
+    },
+    {
+      "module": "ErdosProblems.Erdos140.DensityStep",
+      "sha256": "f85176510f79a6062a4392037c995e049d03282c10b602a86609845f91ab613d",
+      "source_bytes": 161714,
+      "compiled_outputs_absent": true
+    },
+    {
+      "module": "ErdosProblems.Erdos140.GroupCount",
+      "sha256": "d01a045a2612d523aef649912c4b5c00de6dc2633829abf05396c183f4a0a813",
+      "source_bytes": 32612,
+      "compiled_outputs_absent": true
+    },
+    {
+      "module": "ErdosProblems.Erdos140.KelleyMekaCount",
+      "sha256": "2a747ae52386283c78fb1250621873bd1a8d450ebf52d495fda4f8c4fd7fa6d7",
+      "source_bytes": 46750,
+      "compiled_outputs_absent": true
+    },
+    {
+      "module": "ErdosProblems.Erdos140.ConvolutionComparison",
+      "sha256": "046aa07fafbbd5f24e939de636c7e85ff5435797d2bf995ba3faa5cd2fed86fc",
+      "source_bytes": 12725,
+      "compiled_outputs_absent": true
+    },
+    {
+      "module": "ErdosProblems.Erdos140.BalancedRestrictionAssembly",
+      "sha256": "e35f3542f32059b71037c337cad7e893180a5a64e1caec63f3ce98c6e281e6ca",
+      "source_bytes": 20461,
+      "compiled_outputs_absent": true
+    },
+    {
+      "module": "ErdosProblems.Erdos140.Bookkeeping",
+      "sha256": "df638a171d801fb3b8107cfe32e1ca7d355424605077a23cf939764ad2dd7dd3",
+      "source_bytes": 10968,
+      "compiled_outputs_absent": true
+    },
+    {
+      "module": "ErdosProblems.Erdos140.FinalAssembly",
+      "sha256": "09dd136cfd6532437ff81a3f4fe252a911c1626bd8826c17f273ae95fdab7b6e",
+      "source_bytes": 49365,
+      "compiled_outputs_absent": true
+    },
+    {
+      "module": "ErdosProblems.Erdos140.BohrScaleVolume",
+      "sha256": "e85902e286ae461d7fbbc8640b92c517e986d0ca40a1699da49d69713abbbd82",
+      "source_bytes": 11921,
+      "compiled_outputs_absent": true
+    },
+    {
+      "module": "ErdosProblems.Erdos140.TwoBohrBalanced",
+      "sha256": "bd1ea236f7e8d708edb563b3aeb718f0d026af28645c7e2b30ac7d57490f3f8a",
+      "source_bytes": 4261,
+      "compiled_outputs_absent": true
+    },
+    {
+      "module": "ErdosProblems.Erdos140.HolderApproximation",
+      "sha256": "87377f93be101c08225498c085ef184cc6bb011cc12b9044bb4a3bd5c8fdd789",
+      "source_bytes": 18985,
+      "compiled_outputs_absent": true
+    },
+    {
+      "module": "ErdosProblems.Erdos140.ConcreteNumerics",
+      "sha256": "c965c9fdbd45326b6c19d56e509daa487f1af5da26230e3f89bb1d155130ef6e",
+      "source_bytes": 7846,
+      "compiled_outputs_absent": true
+    },
+    {
+      "module": "ErdosProblems.Erdos140.RawSupplyNumerics",
+      "sha256": "56c3c4d88612b8279755a300490d7d01777da1a9fc7aa8e6fac83312c10953db",
+      "source_bytes": 70012,
+      "compiled_outputs_absent": true
+    },
+    {
+      "module": "ErdosProblems.Erdos140.ConcreteSupply",
+      "sha256": "7ece06bb5125c527773e3eaa163aafe5fb07b03d225ba93e1e7732f34474a618",
+      "source_bytes": 204827,
+      "compiled_outputs_absent": true
+    },
+    {
+      "module": "ErdosProblems.Erdos140",
+      "sha256": "68c9025156e47c41a14a8e00a276f88abb87b674e18844677500b9cac9aa86a1",
+      "source_bytes": 3284,
+      "compiled_outputs_absent": true
+    }
+  ],
+  "compiler_binary_sha256": "af49bacfabaa1fea71332ca0feae0fa1a60912219d5902291adc79f905bffb8d",
+  "original9pin_preparation_sha256": "96f74d38af628c8763632c3a0869d7fa2404796ecf66de70fd13d6b0652e1e06",
+  "existing_original_three_term_plan_and_climb1_plan_hashes": [
+    "03335f8dae0fe01722dd8c6491c127a1bad3ea1c0b92833c289038dfc5621df8",
+    "4160a948abbfc5ca4cbcd456ba300655362f96be4baaba7ba03a9edf029ded99"
+  ],
+  "old_source_and_plan_unchanged": true,
+  "semantic_body_or_tactic_or_import_changes": false,
+  "Lean_or_compiler_invoked": false,
+  "custom_output_copied_or_aliased": false,
+  "new_LEAN_PATH_admitted": false,
+  "qualification": "Preparation only, source-based Windows route. No source or audit PASS. Upstream4.33.0 compatibility remains explicitly pending."
+}

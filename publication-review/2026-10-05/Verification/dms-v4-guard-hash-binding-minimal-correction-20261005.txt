@@ -1,0 +1,11 @@
+--- prior-prepared-runner
++++ run_dms_v4_vector_plan.py
+@@ -61,7 +61,7 @@
+ dms_seed_sha=sys.argv[sys.argv.index(seed_flag)+1]
+ assert dms_policy_sha=='0af7feab4fc55f1b7ecade9b60491c2507ac3687d2899f0f74116afd40a93a8f' and re.fullmatch('[0-9a-f]{64}',dms_seed_sha)
+ assert hashlib.sha256((BASE/'verify_dms_v4_vector_stage.py').read_bytes()).hexdigest()=='d876f0d7850b4618ff4855aad2306216f6921987936daea24a820fef798b6242'
+-assert hashlib.sha256((BASE/'dms_v4_vector122_seed.py').read_bytes()).hexdigest()=='fc88a26260f0a7a86bcc57c060683550b6a4476c189639686632121f1dcd85c7'
++assert hashlib.sha256((BASE/'dms_v4_vector122_seed.py').read_bytes()).hexdigest()=='219fa8cd4bbd3d90ca80f3ad4e0ac662b6a7083afc819d88d1cbd5ba93d73df4'
+ from verify_dms_v4_vector_stage import verify_stage
+ from dms_v4_vector122_seed import verify_seed
+ dms_stage_preflight=verify_stage(require_cold=False,linked122_allowed=True)

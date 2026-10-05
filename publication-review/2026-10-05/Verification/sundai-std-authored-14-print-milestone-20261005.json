@@ -1,0 +1,144 @@
+{
+  "status": "ACTUAL_AUTHORED_SOURCE_14_PRINTS_STANDARD_OR_AXIOM_FREE_SEPARATE_AUDIT_UNATTEMPTED",
+  "created_utc": "2026-10-05T03:08:28.928401+00:00",
+  "source_replay_receipt_sha256": "7cc183d5662c36dac1d84c2be9f467a99326e18fa1896a78ce2a50787ff7cfc3",
+  "actual_source_sha256": "83f4ca47095bda82b1ddb1020d569607a925d45945522f03b84f8972f7248383",
+  "actual_stdout_sha256": "a5eee0142c9c9d309bb88ecb412ac6c0046799c3f288d93dce2d4909f2de272c",
+  "axiom_parser_sha256": "1ee59639204140430c088023539a648f9007cc26c1856cf8cd2e3c2e59d7143f",
+  "actual_prints": [
+    {
+      "endpoint": "Erdos3SpecialCases.cofinite_contains_all_lengths",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    },
+    {
+      "endpoint": "Erdos3SpecialCases.affine_tail_contains_all_lengths",
+      "axioms": [
+        "propext"
+      ],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    },
+    {
+      "endpoint": "Erdos3SpecialCases.multiples_contain_all_lengths",
+      "axioms": [
+        "propext"
+      ],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    },
+    {
+      "endpoint": "Erdos3SpecialCases.unbounded_contains_two",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    },
+    {
+      "endpoint": "Erdos3SpecialCases.powers_two_no_midpoint",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    },
+    {
+      "endpoint": "Erdos3SpecialCases.powers_two_no_three",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    },
+    {
+      "endpoint": "Erdos3SpecialCases.nat_lt_two_pow",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    },
+    {
+      "endpoint": "Erdos3SpecialCases.powers_two_unbounded",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    },
+    {
+      "endpoint": "Erdos3SpecialCases.unbounded_does_not_imply_all_lengths",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    },
+    {
+      "endpoint": "Erdos3SpecialCases.ap_terms_strictly_increase",
+      "axioms": [],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "AXIOM_FREE"
+    },
+    {
+      "endpoint": "Erdos3SpecialCases.containsAP_mono",
+      "axioms": [],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "AXIOM_FREE"
+    },
+    {
+      "endpoint": "Erdos3SpecialCases.containsAP_prefix",
+      "axioms": [],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "AXIOM_FREE"
+    },
+    {
+      "endpoint": "Erdos3SpecialCases.unbounded_lengths_iff_all_lengths",
+      "axioms": [],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "AXIOM_FREE"
+    },
+    {
+      "endpoint": "Erdos3SpecialCases.arbitrarilyLongAPs_mono",
+      "axioms": [],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "AXIOM_FREE"
+    }
+  ],
+  "actual_requested_print_count": 14,
+  "standard_kernel_print_count": 9,
+  "axiom_free_print_count": 5,
+  "missing_or_extra_selected_names": [],
+  "selected_sorry_or_native_or_unknown": false,
+  "separate_audit_source_sha256": "0cee28fe1bbacdd3ab2d38d4f9da26b287cfe7b2d3ab8da19e6f2ac182d8a4c2",
+  "separate_audit_invoked": false,
+  "whole_FC_dependent_sources_or_audits_invoked": false,
+  "qualification": "The authored source itself includes the fourteen #print axioms commands. The dated preflight expectation of zero separate-audit prints did not anticipate these embedded source prints; actual stdout is preserved unchanged. The one-source pilot remains a checkpoint, not a complete seven-source project PASS."
+}

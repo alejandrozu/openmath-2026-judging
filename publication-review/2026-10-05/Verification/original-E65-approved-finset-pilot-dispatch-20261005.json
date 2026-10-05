@@ -1,0 +1,53 @@
+{
+  "status": "APPROVED_ONE_SOURCE_RUNNER_EXITED",
+  "created_utc": "2026-10-05T04:14:55.607472+00:00",
+  "approval_sha256": "bb523d771fc36ac4467851bd69ecc185c51e70277b4a73662998d09134473f3b",
+  "exact_approved_command": [
+    "C:/Users/Propietario/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+    "-X",
+    "utf8",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\run_original_e65_source_plan.py",
+    "sundai-erdos3-original-image-source",
+    "1",
+    "--pilot-third-slot",
+    "--defer-whole-imports",
+    "--original-e65-source-replay-authorized",
+    "--resource-lease-confirmed",
+    "--reviewed-runner-sha256=84035011cb3dc3b9c8f0e323a18774435ddc7870ceb83c7ee700d97c031974fa"
+  ],
+  "runner_sha256": "84035011cb3dc3b9c8f0e323a18774435ddc7870ceb83c7ee700d97c031974fa",
+  "source_sha256": "996f49245f3e5cc1d0beba2f575ebfe0e92413d826c11603575987026925e9b6",
+  "plan_sha256": "0d140b36c59231a9eaf79a2f6277355d0b4cc08b815e5d817df54c370dcfbf15",
+  "fresh_full189_official_manifest_sha256": "70891fd7cccd675e798a251777feb1c31382db08c83d2575106d5e920cecbdd3",
+  "fresh_first2241_provider_records_exactly_equal_reviewed_manifest": true,
+  "first_provider_file_count": 11205,
+  "pre_dispatch_lean_processes": [
+    {
+      "ProcessId": 37536,
+      "ParentProcessId": 56004,
+      "CreationDate": "/Date(1791173689057)/",
+      "CommandLine": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe -j1 -DmaxHeartbeats=0 -DmaxRecDepth=100000 -o Seed1Row_uw_02.olean Seed1Row_uw_02.lean"
+    }
+  ],
+  "pre_dispatch_resources": {
+    "free_physical_bytes": 9946988544,
+    "total_physical_bytes": 34024419328,
+    "available_commit_bytes": 8614969344,
+    "total_commit_limit_bytes": 60437172224,
+    "free_disk_bytes": 5406777344
+  },
+  "continuation_or_selected_audit_authorized": false,
+  "original_container_executed": false,
+  "finished_utc": "2026-10-05T04:15:09.095022+00:00",
+  "wrapper_exit": 0,
+  "wrapper_stdout": "sundai-erdos3-original-image-source FormalConjecturesForMathlib.Algebra.GCDMonoid.Finset 0 11.843\nPROJECT_STATUS sundai-erdos3-original-image-source SCHEDULED_RESOURCE_CHECKPOINT\n",
+  "wrapper_stderr": "",
+  "post_dispatch_resources": {
+    "free_physical_bytes": 10285572096,
+    "total_physical_bytes": 34024419328,
+    "available_commit_bytes": 8803319808,
+    "total_commit_limit_bytes": 60437172224
+  },
+  "actual_replay_receipt_exists": true,
+  "actual_replay_receipt_sha256": "90a9243fde6f53452ac72da284b778469b5456ce72f9e98f9c633fce18780d8b"
+}

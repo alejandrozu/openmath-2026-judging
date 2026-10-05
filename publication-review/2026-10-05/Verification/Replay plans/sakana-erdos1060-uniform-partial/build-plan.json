@@ -1,0 +1,85 @@
+{
+  "id": "sakana-erdos1060-uniform-partial",
+  "entrant": "E02",
+  "version": "4.33.1",
+  "mathlib_pin": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "source_dir": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos1060-uniform-partial",
+  "modules": [
+    {
+      "module": "AsymptoticBridge",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos1060-uniform-partial\\AsymptoticBridge.lean",
+      "source": "Reproduction_Sources/erdos1060-uniform-partial/src/AsymptoticBridge.lean",
+      "sha256": "3b30ae8088a5ea464faaaa817678a638daf86ae2b85d69332a5389aff89c54db"
+    },
+    {
+      "module": "SquarefreeSigmaInjection",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos1060-uniform-partial\\SquarefreeSigmaInjection.lean",
+      "source": "Reproduction_Sources/erdos1060-uniform-partial/src/SquarefreeSigmaInjection.lean",
+      "sha256": "18662792f0bd2e9796eefb0d8200b6bf762d73a5e62390227b4c0db4716a9bba"
+    },
+    {
+      "module": "SigmaCoreInjection",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos1060-uniform-partial\\SigmaCoreInjection.lean",
+      "source": "Reproduction_Sources/erdos1060-uniform-partial/src/SigmaCoreInjection.lean",
+      "sha256": "326089d72c82c9ba474507fc0f6eac00a1cc6f9436e839d179a69fc61871a160"
+    },
+    {
+      "module": "SigmaLogBudgets",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos1060-uniform-partial\\SigmaLogBudgets.lean",
+      "source": "Reproduction_Sources/erdos1060-uniform-partial/src/SigmaLogBudgets.lean",
+      "sha256": "256b5826676c847ec50a9442cac0113186f565b5469c2dc3b7c213a273eb19b5"
+    },
+    {
+      "module": "WeightedCoreBound",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos1060-uniform-partial\\WeightedCoreBound.lean",
+      "source": "Reproduction_Sources/erdos1060-uniform-partial/src/WeightedCoreBound.lean",
+      "sha256": "314f1afb09ac3b48db56c919e3ef85f59cc8f936547e32f40aed69644d281d13"
+    },
+    {
+      "module": "WeightedCutoff",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos1060-uniform-partial\\WeightedCutoff.lean",
+      "source": "Reproduction_Sources/erdos1060-uniform-partial/src/WeightedCutoff.lean",
+      "sha256": "146689e872267d99ce514485b3fe68fc126aedac56a0b37a65cbe4f4281c882f"
+    },
+    {
+      "module": "EntropyConversion",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos1060-uniform-partial\\EntropyConversion.lean",
+      "source": "Reproduction_Sources/erdos1060-uniform-partial/src/EntropyConversion.lean",
+      "sha256": "a9c629fe04c5f4252e92ebdef87ba5942f689fb64a0ca7e1fbc46f8f3957dc14"
+    },
+    {
+      "module": "SigmaFiberEntropy",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos1060-uniform-partial\\SigmaFiberEntropy.lean",
+      "source": "Reproduction_Sources/erdos1060-uniform-partial/src/SigmaFiberEntropy.lean",
+      "sha256": "628170baa217657ae46be227016437c27eb0f95c672eeaf7092545b8a0e850f0"
+    },
+    {
+      "module": "SigmaCanonicalCount",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos1060-uniform-partial\\SigmaCanonicalCount.lean",
+      "source": "Reproduction_Sources/erdos1060-uniform-partial/src/SigmaCanonicalCount.lean",
+      "sha256": "5bf6fb775081543eb6538b9cffa5c24f1683e6614a6027bb98aa183d3cc0f925"
+    },
+    {
+      "module": "SigmaFiberAsymptotic",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos1060-uniform-partial\\SigmaFiberAsymptotic.lean",
+      "source": "Reproduction_Sources/erdos1060-uniform-partial/src/SigmaFiberAsymptotic.lean",
+      "sha256": "440f2f6aaa1d5dd04611fe855077352a3b75171d6e1ec823939ede8609e2d45a"
+    }
+  ],
+  "endpoints": [
+    "Erdos1060.canonical_count_eventually_upper",
+    "Erdos1060.canonical_count_upper",
+    "Erdos1060Partial.entropyConstant_lt_old"
+  ],
+  "roots": [
+    "EntropyConversion",
+    "SigmaFiberAsymptotic"
+  ],
+  "audit_modules": [
+    "FreshAudit1.lean"
+  ],
+  "lean_options": {},
+  "static_review_contexts": [],
+  "status": "PLANNED_NOT_RUN",
+  "builds": []
+}

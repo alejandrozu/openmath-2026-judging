@@ -1,6 +1,10 @@
 # Structure of the OpenMath archive
 
-## Current judging documents
+## Latest publication and judging review — 5 October 2026
+
+Start with [publication-review/README.md](publication-review/README.md). It links all 26 reviewed PDFs, 52 editable source files, the amended proposals, late scientific packets, actual proof-check records and the chair's decision to waive the remaining runs. The complete review ZIP is also attached to the [review-package release](https://github.com/alejandrozu/openmath-2026-judging/releases/tag/review-package-2026-10-05). These are public working manuscripts with the stated scope and priority qualifications.
+
+## Earlier judging documents — October 3/4 snapshot
 
 | Location | Contents and use |
 |---|---|

@@ -1,0 +1,468 @@
+{
+  "status": "PASS_SOURCE_ONLY_R141_HEADER_LOAD_BINARY_IDENTICAL_REQUIRES_ROOT_QUALIFICATION",
+  "started_utc": "2026-10-05T09:48:47.103075+00:00",
+  "target_module": "RamseyCert.Chunk.R141",
+  "target_source_sha256": "d38f94725cbbe0294637f92e6b747ae1da6274de67f5af29b29317f901e1321e",
+  "variant": "B",
+  "controller_source_sha256": "75480f1912e5ebca3dc3a3b0d11cc79cf193cf75bdb0fe1b1cde8a30c4aacf07",
+  "reviewed_seed_helper_sha256": "c7cb7c743b497c4e80f553631ef625f587bc0e15b071feb891d75557664c344c",
+  "root_approval": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\root-HT-official-R141-one-header-load-B-dispatch-approval-20261005.json",
+  "root_approval_sha256": "c9a76157ddf9c8e719f2da7beb7b8db261b1a63f32ffab189e93125c8025e3c5",
+  "actual_seed_receipt": {
+    "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\isolated-header-pilots\\root-r141-header-seed-20261005-0913\\actual-seed.json",
+    "sha256": "a466829aff3ae9182471fcd8cb7c00041909b91fca6c077ff05af0da66790aab"
+  },
+  "actual_seed_complete_region_runtime_source_qualification": {
+    "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\root-HT-R141-actual-header-seed-full-source-role-runtime-fidelity-one-load-qualification-20261005.json",
+    "sha256": "4f21d40308a683defece94e53bbb3f1dfe33c2f2baaa076b22c9278d9d085354"
+  },
+  "actual_pre_dispatch_process_gate": {
+    "checked_utc": "2026-10-05T09:48:47.092698+00:00",
+    "global_Lean_pids": [],
+    "violations": [],
+    "solo_pilot_no_companion": true,
+    "maximum_total_global_Lean_importers": 2,
+    "no_foreign_process_termination": true
+  },
+  "command": [
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+    "-j2",
+    "-DmaxHeartbeats=0",
+    "-DmaxRecDepth=100000",
+    "--incr-load=C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\isolated-header-pilots\\root-r141-header-seed-20261005-0913\\header\\R141.header",
+    "-o",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\isolated-header-pilots\\root-r141-header-seed-20261005-0913\\B\\RamseyCert\\Chunk\\R141.olean",
+    "RamseyCert\\Chunk\\R141.lean"
+  ],
+  "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current",
+  "literal_LEAN_PATH": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\aesop\\.lake\\build\\lib\\lean;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\batteries\\.lake\\build\\lib\\lean;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\Cli\\.lake\\build\\lib\\lean;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\importGraph\\.lake\\build\\lib\\lean;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\LeanSearchClient\\.lake\\build\\lib\\lean;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\plausible\\.lake\\build\\lib\\lean;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\proofwidgets\\.lake\\build\\lib\\lean;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\Qq\\.lake\\build\\lib\\lean",
+  "literal_LEAN_NUM_THREADS": "2",
+  "inherited_LEAN_IMPORT_WORKERS": null,
+  "original_canonical_receipt_sha256": "5b827c653d1a07d5de5e8486a6451b33782a5a0b8788625d8fe10ac4b852ed6e",
+  "new_source_invocations_this_phase": 1,
+  "new_audit_invocations_this_phase": 0,
+  "no_original_source_output_or_canonical_receipt_writes": true,
+  "no_audit_save_next_source_or_continuation": true,
+  "source_import_header_only_reuse_no_seed_authored_commands_reused": true,
+  "selected_axiom_outputs": "NOT_ATTEMPTED_REQUIRES_SEPARATE_APPROVAL",
+  "loaded_image_errors_never_relabelled_clean": true,
+  "own_job_resource_receipt": {
+    "command": [
+      "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+      "-j2",
+      "-DmaxHeartbeats=0",
+      "-DmaxRecDepth=100000",
+      "--incr-load=C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\isolated-header-pilots\\root-r141-header-seed-20261005-0913\\header\\R141.header",
+      "-o",
+      "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\isolated-header-pilots\\root-r141-header-seed-20261005-0913\\B\\RamseyCert\\Chunk\\R141.olean",
+      "RamseyCert\\Chunk\\R141.lean"
+    ],
+    "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current",
+    "started_utc": "2026-10-05T09:48:47.927387+00:00",
+    "attempted": true,
+    "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+    "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+    "resource_policy": {
+      "initial_disk_bytes": 4000000000,
+      "initial_physical_bytes": 6442450944,
+      "initial_available_commit_bytes": 5368709120,
+      "continuous_disk_bytes": 1000000000,
+      "continuous_physical_bytes": 3221225472,
+      "continuous_available_commit_bytes": 1073741824,
+      "own_job_private_bytes": 6442450944,
+      "own_process_private_bytes": 6442450944,
+      "poll_seconds": 0.25,
+      "timeout_seconds": 3600
+    },
+    "minimum_disk_free_bytes": 4979073024,
+    "initial_system_memory_snapshot": {
+      "free_physical_bytes": 9684459520,
+      "total_physical_bytes": 34024419328,
+      "available_commit_bytes": 11827449856,
+      "total_commit_limit_bytes": 60122619904
+    },
+    "minimum_physical_available_bytes": 7930486784,
+    "minimum_available_commit_bytes": 8058568704,
+    "root_pid": 52364,
+    "own_job_assignment_before_resume": "PASS",
+    "exit": 0,
+    "job_peak_process_private_bytes": 3811876864,
+    "job_peak_aggregate_private_bytes": 3813130240,
+    "state": "PASS",
+    "finished_utc": "2026-10-05T09:49:04.068192+00:00",
+    "seconds": 16.141,
+    "polled_peak_tree_private_bytes": 3813130240,
+    "polled_peak_tree_rss_bytes": 1875955712,
+    "counter_samples": 60,
+    "observed_own_processes": {
+      "52364": {
+        "exe": "lean.exe",
+        "peak_private_bytes": 3811876864,
+        "peak_rss_bytes": 1868099584
+      },
+      "49724": {
+        "exe": "conhost.exe",
+        "peak_private_bytes": 1253376,
+        "peak_rss_bytes": 7856128
+      }
+    },
+    "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\isolated-header-pilots\\root-r141-header-seed-20261005-0913\\logs-load-B.stdout.txt",
+    "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\isolated-header-pilots\\root-r141-header-seed-20261005-0913\\logs-load-B.stderr.txt",
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout_excerpt": "",
+    "stderr_excerpt": ""
+  },
+  "actual_owned_child_exit": 0,
+  "actual_owned_child_finished_utc": "2026-10-05T09:49:04.068192+00:00",
+  "actual_command_state": "PASS",
+  "loaded_image_observation": {
+    "successful_toolhelp_snapshots": 118,
+    "observed_loaded_image_paths": [
+      "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+      "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\libInit_shared.dll",
+      "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\libleanshared.dll",
+      "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\libleanshared_1.dll",
+      "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\libleanshared_2.dll",
+      "C:\\Windows\\System32\\IPHLPAPI.DLL",
+      "C:\\Windows\\System32\\KernelBase.dll",
+      "C:\\Windows\\System32\\advapi32.dll",
+      "C:\\Windows\\System32\\apphelp.dll",
+      "C:\\Windows\\System32\\bcrypt.dll",
+      "C:\\Windows\\System32\\bcryptprimitives.dll",
+      "C:\\Windows\\System32\\combase.dll",
+      "C:\\Windows\\System32\\cryptbase.dll",
+      "C:\\Windows\\System32\\dbgcore.dll",
+      "C:\\Windows\\System32\\dbghelp.dll",
+      "C:\\Windows\\System32\\gdi32.dll",
+      "C:\\Windows\\System32\\gdi32full.dll",
+      "C:\\Windows\\System32\\icu.dll",
+      "C:\\Windows\\System32\\imm32.dll",
+      "C:\\Windows\\System32\\kernel32.dll",
+      "C:\\Windows\\System32\\msvcp_win.dll",
+      "C:\\Windows\\System32\\msvcrt.dll",
+      "C:\\Windows\\System32\\mswsock.dll",
+      "C:\\Windows\\System32\\ntdll.dll",
+      "C:\\Windows\\System32\\ole32.dll",
+      "C:\\Windows\\System32\\oleaut32.dll",
+      "C:\\Windows\\System32\\powrprof.dll",
+      "C:\\Windows\\System32\\rpcrt4.dll",
+      "C:\\Windows\\System32\\sechost.dll",
+      "C:\\Windows\\System32\\shell32.dll",
+      "C:\\Windows\\System32\\ucrtbase.dll",
+      "C:\\Windows\\System32\\umpdc.dll",
+      "C:\\Windows\\System32\\user32.dll",
+      "C:\\Windows\\System32\\userenv.dll",
+      "C:\\Windows\\System32\\uxtheme.dll",
+      "C:\\Windows\\System32\\win32u.dll",
+      "C:\\Windows\\System32\\ws2_32.dll"
+    ],
+    "toolhelp_errors": [
+      {
+        "checked_utc": "2026-10-05T09:48:47.953964+00:00",
+        "pid": 52364,
+        "error": "[WinError 299] Solo se complet\u00f3 una parte de una solicitud ReadProcessMemory o WriteProcessMemory."
+      },
+      {
+        "checked_utc": "2026-10-05T09:48:48.086916+00:00",
+        "pid": 52364,
+        "error": "[WinError 299] Solo se complet\u00f3 una parte de una solicitud ReadProcessMemory o WriteProcessMemory."
+      },
+      {
+        "checked_utc": "2026-10-05T09:49:03.896624+00:00",
+        "pid": 52364,
+        "error": "[WinError 299] Solo se complet\u00f3 una parte de una solicitud ReadProcessMemory o WriteProcessMemory."
+      }
+    ],
+    "observation_scope": "Sampled own Lean images only; not a continuous complete loader trace",
+    "observed_loaded_images": [
+      {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+        "sha256": "af49bacfabaa1fea71332ca0feae0fa1a60912219d5902291adc79f905bffb8d",
+        "bytes": 83456,
+        "mtime_ns": 1791149580660732200,
+        "native_stat_file_id": 2533274792177749
+      },
+      {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\libInit_shared.dll",
+        "sha256": "78a70f06876c01c67d44e7ae5595f1447a0df5acaeca642db115d4089cc7002c",
+        "bytes": 28137472,
+        "mtime_ns": 1791149584461188600,
+        "native_stat_file_id": 1125899908542058
+      },
+      {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\libleanshared.dll",
+        "sha256": "9a3fdb05f1383ff50780d864d33d05e7385f74dec73209cdefd752ce3c8650cd",
+        "bytes": 69859328,
+        "mtime_ns": 1791149586610537900,
+        "native_stat_file_id": 1688849862148431
+      },
+      {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\libleanshared_1.dll",
+        "sha256": "f66e47f5c96556b6592e81ca82ea22a73f835f4f0a3b9863111b459f20048114",
+        "bytes": 52355072,
+        "mtime_ns": 1791149587884484700,
+        "native_stat_file_id": 11540474046917389
+      },
+      {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\libleanshared_2.dll",
+        "sha256": "b300c2b440f7ed036f56dca5e2de92bedabddfd33fa5f7921866c72127b68b28",
+        "bytes": 57940480,
+        "mtime_ns": 1791149589378725800,
+        "native_stat_file_id": 1125899908727154
+      },
+      {
+        "file": "C:\\Windows\\System32\\IPHLPAPI.DLL",
+        "sha256": "8521026d021cc5193a7cd7c0256bd14c7ab39738d22c019e6d544b37deee12c0",
+        "bytes": 220528,
+        "mtime_ns": 1788904949467080700,
+        "native_stat_file_id": 5066549582378988
+      },
+      {
+        "file": "C:\\Windows\\System32\\KernelBase.dll",
+        "sha256": "becad014fb8efa8cb5e314931cca92778ad42c649b12a6909632cacd68af4f40",
+        "bytes": 4212112,
+        "mtime_ns": 1788904930753480200,
+        "native_stat_file_id": 7036874419349248
+      },
+      {
+        "file": "C:\\Windows\\System32\\advapi32.dll",
+        "sha256": "e036c9baecd170d7ef4759a5a7eb76036158cacc4cd9e3f697dbf410a3457224",
+        "bytes": 778344,
+        "mtime_ns": 1788904912048867300,
+        "native_stat_file_id": 12384898976847673
+      },
+      {
+        "file": "C:\\Windows\\System32\\apphelp.dll",
+        "sha256": "6915f018bd5261cccbbda0f50d8585a0d86172e8aac54b2642cdd3efeca75e74",
+        "bytes": 662640,
+        "mtime_ns": 1788904912669098900,
+        "native_stat_file_id": 12384898976847766
+      },
+      {
+        "file": "C:\\Windows\\System32\\bcrypt.dll",
+        "sha256": "b5691584e857caf0c6c590dda13779966b383d66be3c87d5b3cbbc2f5005495b",
+        "bytes": 183376,
+        "mtime_ns": 1788904914633226300,
+        "native_stat_file_id": 12384898976848225
+      },
+      {
+        "file": "C:\\Windows\\System32\\bcryptprimitives.dll",
+        "sha256": "46c06a0f0323d25a32c2b16da1a4a09e9234d282be7714469b7985bb98031ab6",
+        "bytes": 716408,
+        "mtime_ns": 1788904914686748700,
+        "native_stat_file_id": 12384898976848229
+      },
+      {
+        "file": "C:\\Windows\\System32\\combase.dll",
+        "sha256": "39a2e2ba1ca6012953c94c10011fff5a18783120a2a34f5b66deb2d374a362c9",
+        "bytes": 3716184,
+        "mtime_ns": 1788904916607228900,
+        "native_stat_file_id": 12384898976848551
+      },
+      {
+        "file": "C:\\Windows\\System32\\cryptbase.dll",
+        "sha256": "d77b19df871b5a2f02e826ebeb5de86735f5cd0806294fe9143ba138c964ee16",
+        "bytes": 59392,
+        "mtime_ns": 1788904918188570700,
+        "native_stat_file_id": 12384898976848957
+      },
+      {
+        "file": "C:\\Windows\\System32\\dbgcore.dll",
+        "sha256": "af89686bd88030aa0a1d4bdca95e3265b6b8c5bf985f264fd148894844f677e8",
+        "bytes": 241664,
+        "mtime_ns": 1788904918610553200,
+        "native_stat_file_id": 12384898976849096
+      },
+      {
+        "file": "C:\\Windows\\System32\\dbghelp.dll",
+        "sha256": "cbb0c77b812e09f6ae66f482e8eae94fd2e232bbbc3825d12668f3d2ed97e78e",
+        "bytes": 2307568,
+        "mtime_ns": 1788904918805637900,
+        "native_stat_file_id": 12384898976849101
+      },
+      {
+        "file": "C:\\Windows\\System32\\gdi32.dll",
+        "sha256": "772c73e294a4c5f5e0d4146288af95287a85c074d3aee3fa9f320dc010d7dbfe",
+        "bytes": 187456,
+        "mtime_ns": 1778622845133603000,
+        "native_stat_file_id": 281474977147071
+      },
+      {
+        "file": "C:\\Windows\\System32\\gdi32full.dll",
+        "sha256": "bde2077a56c90f68c5fa1ce5ebd4a40755c97a5080b91a87d2beff47349dd01e",
+        "bytes": 1220496,
+        "mtime_ns": 1788904925454734100,
+        "native_stat_file_id": 7036874419348416
+      },
+      {
+        "file": "C:\\Windows\\System32\\icu.dll",
+        "sha256": "7e28c779e6015cc794677ffb00fef38ed76f0f0734130f8c85deaa2ff22fe703",
+        "bytes": 2769976,
+        "mtime_ns": 1788904930314809200,
+        "native_stat_file_id": 7036874419349161
+      },
+      {
+        "file": "C:\\Windows\\System32\\imm32.dll",
+        "sha256": "7e45f12c1c555e2407c5ca082bd925b34655278fde4dbfac53a0468cc1e77411",
+        "bytes": 212288,
+        "mtime_ns": 1788904928355832800,
+        "native_stat_file_id": 7036874419348895
+      },
+      {
+        "file": "C:\\Windows\\System32\\kernel32.dll",
+        "sha256": "8f8629741558b5df71def4e1dd8ef9645d4f806b949762c47757c50fea1a9e6d",
+        "bytes": 844496,
+        "mtime_ns": 1788904930330874100,
+        "native_stat_file_id": 7036874419349237
+      },
+      {
+        "file": "C:\\Windows\\System32\\msvcp_win.dll",
+        "sha256": "c50165e6aaf74395c059564d65fa78b0911844828cbcf791d78f80d964a60f4e",
+        "bytes": 642016,
+        "mtime_ns": 1788904951171102400,
+        "native_stat_file_id": 5066549582379445
+      },
+      {
+        "file": "C:\\Windows\\System32\\msvcrt.dll",
+        "sha256": "a1bd0acd64e1a60368b8878d3987f603d966ed45be2252d2d4d0f92feb10fa8e",
+        "bytes": 699848,
+        "mtime_ns": 1788904935097150100,
+        "native_stat_file_id": 7036874419350149
+      },
+      {
+        "file": "C:\\Windows\\System32\\mswsock.dll",
+        "sha256": "1229de88fce9fd1a3dad4d61ed6c047eaa3e10edeed2bf00a0819b7950425d5e",
+        "bytes": 451920,
+        "mtime_ns": 1788904955582984700,
+        "native_stat_file_id": 4785074605669788
+      },
+      {
+        "file": "C:\\Windows\\System32\\ntdll.dll",
+        "sha256": "a74f7482085eab125ccc09152ab7e0b5994bcb13e1a7b29880bdbb24179ecb8b",
+        "bytes": 2522080,
+        "mtime_ns": 1788904936657582700,
+        "native_stat_file_id": 6755399442639921
+      },
+      {
+        "file": "C:\\Windows\\System32\\ole32.dll",
+        "sha256": "4b81e4a4cb982915ceb3ebef0148227689306c274d5b2f6068ea143ae4db3e40",
+        "bytes": 1695680,
+        "mtime_ns": 1788904916413372100,
+        "native_stat_file_id": 12384898976848568
+      },
+      {
+        "file": "C:\\Windows\\System32\\oleaut32.dll",
+        "sha256": "e276bb09983606469c50f0f03c9604bbeffd7d669d996526c8c1af89042fbae0",
+        "bytes": 898200,
+        "mtime_ns": 1788904936636962300,
+        "native_stat_file_id": 6755399442639955
+      },
+      {
+        "file": "C:\\Windows\\System32\\powrprof.dll",
+        "sha256": "096b3c77ad7fece122be0362c72530b1edc024fe7107d1d40d8bcd8fa5428a0e",
+        "bytes": 398160,
+        "mtime_ns": 1757965554026794100,
+        "native_stat_file_id": 281474976787842
+      },
+      {
+        "file": "C:\\Windows\\System32\\rpcrt4.dll",
+        "sha256": "89af87b6387bde4243306036fce2be89c67a328f93c25c53542e4c665b114747",
+        "bytes": 1162656,
+        "mtime_ns": 1788904941227243200,
+        "native_stat_file_id": 6755399442641096
+      },
+      {
+        "file": "C:\\Windows\\System32\\sechost.dll",
+        "sha256": "c760d6c0dfa2705446aa7a2260206c9076182d92231854c04aa526403217eb9a",
+        "bytes": 704008,
+        "mtime_ns": 1788904942575762600,
+        "native_stat_file_id": 7036874419351993
+      },
+      {
+        "file": "C:\\Windows\\System32\\shell32.dll",
+        "sha256": "57231c16611c536a5905395858af37120bce730092786238b1a9dfab0db7afac",
+        "bytes": 8009440,
+        "mtime_ns": 1788904946176968400,
+        "native_stat_file_id": 6192449489220786
+      },
+      {
+        "file": "C:\\Windows\\System32\\ucrtbase.dll",
+        "sha256": "5c52e3a303baaac0e0af8bd9b96134993da34bc9d834a31ef37e1d2cdc7fe192",
+        "bytes": 1377512,
+        "mtime_ns": 1788904951281041900,
+        "native_stat_file_id": 5066549582379449
+      },
+      {
+        "file": "C:\\Windows\\System32\\umpdc.dll",
+        "sha256": "b3407a812c7f34ac6b5beefb2a78e8f2d7c4376f7c7012f880aab4fe07235e4e",
+        "bytes": 96552,
+        "mtime_ns": 1786481722996465800,
+        "native_stat_file_id": 562949954016182
+      },
+      {
+        "file": "C:\\Windows\\System32\\user32.dll",
+        "sha256": "93a4310e66a47fa359f588c2ebda64fe3651771c6f9ff30d462a77215a2e558e",
+        "bytes": 1914656,
+        "mtime_ns": 1788904953459525400,
+        "native_stat_file_id": 5066549582379729
+      },
+      {
+        "file": "C:\\Windows\\System32\\userenv.dll",
+        "sha256": "e5e77885cbac08ac247fa45916eca36d2fde292a8527ac2c428f36a691827fea",
+        "bytes": 224656,
+        "mtime_ns": 1788904953624315100,
+        "native_stat_file_id": 5066549582379854
+      },
+      {
+        "file": "C:\\Windows\\System32\\uxtheme.dll",
+        "sha256": "6a55672f8ab09bbe36d5376e109dd89f263b37cf478412ff5b9e8bd0e1ab77a0",
+        "bytes": 679936,
+        "mtime_ns": 1788904953752651200,
+        "native_stat_file_id": 5066549582379917
+      },
+      {
+        "file": "C:\\Windows\\System32\\win32u.dll",
+        "sha256": "9cd636e8a1b300e2f4b16f339d650eda71fa02b92b100e4b2f89ce7c04811767",
+        "bytes": 170952,
+        "mtime_ns": 1788904954782806500,
+        "native_stat_file_id": 5066549582380185
+      },
+      {
+        "file": "C:\\Windows\\System32\\ws2_32.dll",
+        "sha256": "535d7a8336ddbae77b1f2c68339e5e7dbeb5f06445d6e42b19c794ef0e26f6a3",
+        "bytes": 534592,
+        "mtime_ns": 1788904955594799900,
+        "native_stat_file_id": 4785074605669792
+      }
+    ],
+    "postexit_image_hash_errors": [],
+    "all_successfully_observed_image_files_hashed": true
+  },
+  "isolated_output_artifacts": [
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\isolated-header-pilots\\root-r141-header-seed-20261005-0913\\B\\RamseyCert\\Chunk\\R141.olean",
+      "sha256": "64ba8661c3b67adf04f30bba027d1253f502135c0d90de7f16dd8edf20d8a2e9",
+      "bytes": 907592,
+      "mtime_ns": 1791193743815218200,
+      "native_stat_file_id": 11258999068642311,
+      "relative_file": "RamseyCert\\Chunk\\R141.olean"
+    }
+  ],
+  "load_positive_image_records_not_in_qualified_library_inventory": [],
+  "load_image_fidelity_error_or_missing_sample": true,
+  "same_R141_binary_comparison": [
+    {
+      "relative_file": "RamseyCert\\Chunk\\R141.olean",
+      "baseline_sha256": "64ba8661c3b67adf04f30bba027d1253f502135c0d90de7f16dd8edf20d8a2e9",
+      "load_sha256": "64ba8661c3b67adf04f30bba027d1253f502135c0d90de7f16dd8edf20d8a2e9",
+      "binary_identical": true
+    }
+  ],
+  "all_same_R141_output_roles_binary_identical": true,
+  "finished_utc": "2026-10-05T09:49:53.638695+00:00",
+  "original_receipt_byte_identical_after": true,
+  "all_prior_owned_source_and_artifact_identities_rehashed_after": true,
+  "actual_selected_axiom_qualification": "NOT_PERFORMED_NO_MAIN24_PROJECT_COMPLETION_CLAIM",
+  "outer_actual_tool_exit_receipt_required_not_inferred_from_saved_label": true
+}

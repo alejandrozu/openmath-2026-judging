@@ -1,0 +1,1569 @@
+{
+  "id": "sakana-opdp13",
+  "entrant": "E02",
+  "version": "4.34.1",
+  "mathlib_pin": "d13f23b723b8a846827a245b89c10fc7d3f11612",
+  "source_dir": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-opdp13",
+  "modules": [
+    {
+      "module": "OpHack.PowerSemigroup.Basic",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-opdp13\\OpHack\\PowerSemigroup\\Basic.lean",
+      "source": "Reproduction_Sources/opdp13/OpHack/PowerSemigroup/Basic.lean",
+      "sha256": "c59dbfa7c904547d2b109d9fa48434e763ded8eb550ec328b766f70d710667ce"
+    },
+    {
+      "module": "OpHack.PowerSemigroup.Certificates",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-opdp13\\OpHack\\PowerSemigroup\\Certificates.lean",
+      "source": "Reproduction_Sources/opdp13/OpHack/PowerSemigroup/Certificates.lean",
+      "sha256": "05b171a1e4b44e90532868fe25a15298d7708ea29a677b4341a83abc8a0985ee"
+    },
+    {
+      "module": "OpHack.PowerSemigroup.Main",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-opdp13\\OpHack\\PowerSemigroup\\Main.lean",
+      "source": "Reproduction_Sources/opdp13/OpHack/PowerSemigroup/Main.lean",
+      "sha256": "42f6db4dcd8e3a672bf788d2954529cb3cc0400f1e61d30faa6aa50ecc1e0294"
+    },
+    {
+      "module": "OpHack.PowerSemigroup.Hermitian",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-opdp13\\OpHack\\PowerSemigroup\\Hermitian.lean",
+      "source": "Reproduction_Sources/opdp13/OpHack/PowerSemigroup/Hermitian.lean",
+      "sha256": "b8652d9dfdc24e8199d6c97362adb09aaa5736483bf0851d63bb0b84c67aa141"
+    },
+    {
+      "module": "OpHack.PowerSemigroup.Evaluation",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-opdp13\\OpHack\\PowerSemigroup\\Evaluation.lean",
+      "source": "Reproduction_Sources/opdp13/OpHack/PowerSemigroup/Evaluation.lean",
+      "sha256": "9924251f0abcd263e38621ad0b96cadbd0a33f6c353d41ecf3e16e30a860ebfc"
+    },
+    {
+      "module": "OpHack.PowerMoment.Algebra",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-opdp13\\OpHack\\PowerMoment\\Algebra.lean",
+      "source": "Reproduction_Sources/opdp13/OpHack/PowerMoment/Algebra.lean",
+      "sha256": "7c572e73a8f5d1de5f57f39a8e2a259cdf8fe428a44a260dfe78d7b620dbcc76"
+    },
+    {
+      "module": "OpHack.PowerMoment.Powers",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-opdp13\\OpHack\\PowerMoment\\Powers.lean",
+      "source": "Reproduction_Sources/opdp13/OpHack/PowerMoment/Powers.lean",
+      "sha256": "d151f6f71cc7f963a25310ef9c522ed1737e683a1ed755063707ea70394cb9a3"
+    },
+    {
+      "module": "OpHack.PowerMoment.Parity",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-opdp13\\OpHack\\PowerMoment\\Parity.lean",
+      "source": "Reproduction_Sources/opdp13/OpHack/PowerMoment/Parity.lean",
+      "sha256": "680027afbe1600eae1919da5a5fe8d36e525a6acb111b33b342bc4c1d1698cb2"
+    },
+    {
+      "module": "OpHack.PowerMoment.Bound",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-opdp13\\OpHack\\PowerMoment\\Bound.lean",
+      "source": "Reproduction_Sources/opdp13/OpHack/PowerMoment/Bound.lean",
+      "sha256": "556b24cda4326f34d2b8e723b629b76a7930ff6a4c115f831942550fdd5fa830"
+    },
+    {
+      "module": "OpHack.PowerFourier.Cosine",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-opdp13\\OpHack\\PowerFourier\\Cosine.lean",
+      "source": "Reproduction_Sources/opdp13/OpHack/PowerFourier/Cosine.lean",
+      "sha256": "6c86e8bb776ac1eec1cbcf09cc3c522418e3e93a7ec0e7f5a44025be62fa0f6a"
+    },
+    {
+      "module": "OpHack.PowerFourier.Polynomial",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-opdp13\\OpHack\\PowerFourier\\Polynomial.lean",
+      "source": "Reproduction_Sources/opdp13/OpHack/PowerFourier/Polynomial.lean",
+      "sha256": "eb081c6398fee25290c16c6008200ffa1a0ae712314337b397f126ea8cc5468b"
+    },
+    {
+      "module": "OpHack.PowerFourier.Positive",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-opdp13\\OpHack\\PowerFourier\\Positive.lean",
+      "source": "Reproduction_Sources/opdp13/OpHack/PowerFourier/Positive.lean",
+      "sha256": "0bb6a8c88681450b561b64b1c98afe9734b1dd0e81b08db61b9b35a00ecd5fd8"
+    },
+    {
+      "module": "OpHack.PowerFourier.Negative",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-opdp13\\OpHack\\PowerFourier\\Negative.lean",
+      "source": "Reproduction_Sources/opdp13/OpHack/PowerFourier/Negative.lean",
+      "sha256": "406588c49336a82dace42d5adea4489d8fa8b18e2de3c6ae9e9587062a62f7ba"
+    },
+    {
+      "module": "OpHack.PowerFourier.Integration",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-opdp13\\OpHack\\PowerFourier\\Integration.lean",
+      "source": "Reproduction_Sources/opdp13/OpHack/PowerFourier/Integration.lean",
+      "sha256": "545a7664dd1a16bd7c628cce34ce118eaa5ec7e7c97300f76e64f757e47b3e63"
+    },
+    {
+      "module": "OpHack.PowerFourier.Gaussian",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-opdp13\\OpHack\\PowerFourier\\Gaussian.lean",
+      "source": "Reproduction_Sources/opdp13/OpHack/PowerFourier/Gaussian.lean",
+      "sha256": "fa33a0c9ec0ece43fd5037d689b2089f4e121ccab8b0f7428c46f2b816bb9f6b"
+    },
+    {
+      "module": "OpHack.PowerFourier.Main",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-opdp13\\OpHack\\PowerFourier\\Main.lean",
+      "source": "Reproduction_Sources/opdp13/OpHack/PowerFourier/Main.lean",
+      "sha256": "8cca7a53fb0cb29c5b7aeca383ac311248e3102539ed895c638f28237f481bed"
+    },
+    {
+      "module": "OpHack.PowerFourier.Logarithms",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-opdp13\\OpHack\\PowerFourier\\Logarithms.lean",
+      "source": "Reproduction_Sources/opdp13/OpHack/PowerFourier/Logarithms.lean",
+      "sha256": "b41d5f8fcd043aeb1424135673cae624b51b971b3442f7301e8833461c8be951"
+    },
+    {
+      "module": "OpHack.PowerFourier.Growth",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-opdp13\\OpHack\\PowerFourier\\Growth.lean",
+      "source": "Reproduction_Sources/opdp13/OpHack/PowerFourier/Growth.lean",
+      "sha256": "dab12267b81d6895e9cfc646fedf3b3180a6ded6987210111863cd98c118e1be"
+    },
+    {
+      "module": "OpHack.PowerUpper.Gap",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-opdp13\\OpHack\\PowerUpper\\Gap.lean",
+      "source": "Reproduction_Sources/opdp13/OpHack/PowerUpper/Gap.lean",
+      "sha256": "dadc11a2be6f0211ad2705ccec24835669e6197a69ee236087d0c2e0fa1a40a0"
+    },
+    {
+      "module": "OpHack.PowerUpper.DirectRadius",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-opdp13\\OpHack\\PowerUpper\\DirectRadius.lean",
+      "source": "Reproduction_Sources/opdp13/OpHack/PowerUpper/DirectRadius.lean",
+      "sha256": "773b57cf5037a3403b50aa404a617fed8982becd6edebb4115266ced07fa3d15"
+    },
+    {
+      "module": "OpHack.PowerUpper.LocalExpansion",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-opdp13\\OpHack\\PowerUpper\\LocalExpansion.lean",
+      "source": "Reproduction_Sources/opdp13/OpHack/PowerUpper/LocalExpansion.lean",
+      "sha256": "7a62e5d7b12a7aa96cb647633504fca0ee98a54030808a2cb55b2cbbfaa5b46a"
+    },
+    {
+      "module": "OpHack.PowerUpper.FourierExtraction",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-opdp13\\OpHack\\PowerUpper\\FourierExtraction.lean",
+      "source": "Reproduction_Sources/opdp13/OpHack/PowerUpper/FourierExtraction.lean",
+      "sha256": "283561fdddd2decb98f5f33daf8be2872cccfc62c68ca1da4b7283e7ccabd9b2"
+    },
+    {
+      "module": "OpHack.PowerUpper.Saddle",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-opdp13\\OpHack\\PowerUpper\\Saddle.lean",
+      "source": "Reproduction_Sources/opdp13/OpHack/PowerUpper/Saddle.lean",
+      "sha256": "eab7b262539f0765811efa71e0ac7de465f50e24999f221e84186cc122331601"
+    },
+    {
+      "module": "OpHack.PowerUpper.Integrand",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-opdp13\\OpHack\\PowerUpper\\Integrand.lean",
+      "source": "Reproduction_Sources/opdp13/OpHack/PowerUpper/Integrand.lean",
+      "sha256": "cc4e2d2f202af6f01d171f46af007ce5f69bd03141ace77397b1accfb1945d6d"
+    },
+    {
+      "module": "OpHack.PowerUpper.GaussianCore",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-opdp13\\OpHack\\PowerUpper\\GaussianCore.lean",
+      "source": "Reproduction_Sources/opdp13/OpHack/PowerUpper/GaussianCore.lean",
+      "sha256": "82da9b89a067c45682b947754e2c9bcb26bbd68b0755a9e2895c3588bbad1bbb"
+    },
+    {
+      "module": "OpHack.PowerUpper.ActualCore",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-opdp13\\OpHack\\PowerUpper\\ActualCore.lean",
+      "source": "Reproduction_Sources/opdp13/OpHack/PowerUpper/ActualCore.lean",
+      "sha256": "256adc2fb8135bd189c2f9a7e59a935b9dfffbced7fbd22a1f938d6e4cb48eef"
+    },
+    {
+      "module": "OpHack.PowerUpper.BoundaryGap",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-opdp13\\OpHack\\PowerUpper\\BoundaryGap.lean",
+      "source": "Reproduction_Sources/opdp13/OpHack/PowerUpper/BoundaryGap.lean",
+      "sha256": "edb9e4900679b15a849de0293bb489803685848f14dc01811980de67dfe04d0b"
+    },
+    {
+      "module": "OpHack.PowerUpper.AngleBridge",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-opdp13\\OpHack\\PowerUpper\\AngleBridge.lean",
+      "source": "Reproduction_Sources/opdp13/OpHack/PowerUpper/AngleBridge.lean",
+      "sha256": "fd0e1071b4b245ab80da3e657eff021359547394b2aa092b9cd79818289d9493"
+    },
+    {
+      "module": "OpHack.PowerUpper.ArcEstimates",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-opdp13\\OpHack\\PowerUpper\\ArcEstimates.lean",
+      "source": "Reproduction_Sources/opdp13/OpHack/PowerUpper/ArcEstimates.lean",
+      "sha256": "d91ba4271478358b1ec5a656a383f205bca8ece0dec7531528358f32bdc59f7a"
+    },
+    {
+      "module": "OpHack.PowerUpper.EdgeModulus",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-opdp13\\OpHack\\PowerUpper\\EdgeModulus.lean",
+      "source": "Reproduction_Sources/opdp13/OpHack/PowerUpper/EdgeModulus.lean",
+      "sha256": "2a3627abb1381e0a5138abe2bbc4dd1a753a9f777097d019e3048970b6234894"
+    },
+    {
+      "module": "OpHack.PowerUpper.QuarticTail",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-opdp13\\OpHack\\PowerUpper\\QuarticTail.lean",
+      "source": "Reproduction_Sources/opdp13/OpHack/PowerUpper/QuarticTail.lean",
+      "sha256": "fcc872f3029b221ee02299a9f812e910a6d7b6d048db3c918b76faa12db2f1d3"
+    },
+    {
+      "module": "OpHack.PowerUpper.OuterEstimates",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-opdp13\\OpHack\\PowerUpper\\OuterEstimates.lean",
+      "source": "Reproduction_Sources/opdp13/OpHack/PowerUpper/OuterEstimates.lean",
+      "sha256": "d697d10dbd869f1c57f09eae91306a155acc4d52fa87701a4d3870f3d8aeb3eb"
+    },
+    {
+      "module": "OpHack.PowerUpper.ScalarTail",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-opdp13\\OpHack\\PowerUpper\\ScalarTail.lean",
+      "source": "Reproduction_Sources/opdp13/OpHack/PowerUpper/ScalarTail.lean",
+      "sha256": "d1057341f11f76663c8ee2df1d4a50b41d0067d9808ce35784fc997b7e8bacb3"
+    },
+    {
+      "module": "OpHack.PowerUpper.Threshold",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-opdp13\\OpHack\\PowerUpper\\Threshold.lean",
+      "source": "Reproduction_Sources/opdp13/OpHack/PowerUpper/Threshold.lean",
+      "sha256": "4f9ace4a3ae56b44735b57f709fed7f3eecc2ff9ef26f69328ceb6ceae187dab"
+    },
+    {
+      "module": "OpHack.PowerUpper.ErrorControl",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-opdp13\\OpHack\\PowerUpper\\ErrorControl.lean",
+      "source": "Reproduction_Sources/opdp13/OpHack/PowerUpper/ErrorControl.lean",
+      "sha256": "938ee0dcaa7644ec377271f82b3e5750873c8492c70cd0bf0d70a822746626b4"
+    },
+    {
+      "module": "OpHack.PowerUpper.SmallCoefficients",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-opdp13\\OpHack\\PowerUpper\\SmallCoefficients.lean",
+      "source": "Reproduction_Sources/opdp13/OpHack/PowerUpper/SmallCoefficients.lean",
+      "sha256": "dbfb292748c9a5ea48b2235efca73a66da9a82da901d530207b295b0a98adbd0"
+    },
+    {
+      "module": "OpHack.PowerUpper.Symmetry",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-opdp13\\OpHack\\PowerUpper\\Symmetry.lean",
+      "source": "Reproduction_Sources/opdp13/OpHack/PowerUpper/Symmetry.lean",
+      "sha256": "700ffb54480621456379ec12dae5afe857782bb26b7bfc83c82e991cc8016a2b"
+    },
+    {
+      "module": "OpHack.PowerUpper.MainUpper",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-opdp13\\OpHack\\PowerUpper\\MainUpper.lean",
+      "source": "Reproduction_Sources/opdp13/OpHack/PowerUpper/MainUpper.lean",
+      "sha256": "55b6e5d739bd4f8f096aae5e6b1ccfa9f3cf915f1f2e56131a9f195606ee90eb"
+    },
+    {
+      "module": "OpHack.PowerUpper.LeastIndex",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-opdp13\\OpHack\\PowerUpper\\LeastIndex.lean",
+      "source": "Reproduction_Sources/opdp13/OpHack/PowerUpper/LeastIndex.lean",
+      "sha256": "41aa021b2f3b58b80de296aa22bf5ca917ffb9853bdaa740af8c9dcb36b442c0"
+    },
+    {
+      "module": "OpHack.PowerUpper.Function",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-opdp13\\OpHack\\PowerUpper\\Function.lean",
+      "source": "Reproduction_Sources/opdp13/OpHack/PowerUpper/Function.lean",
+      "sha256": "c0b278ad2bc4d2d0297a99649e208205dcbc4136c8a3bf89c75604995a7a8e90"
+    }
+  ],
+  "endpoints": [
+    "PowerSemigroup.function_exact_exponent_semigroup",
+    "PowerMoment.function_exponent_lower_bound",
+    "PowerFourier.function_logarithmic_growth",
+    "PowerUpper.function_near_boundary_upper",
+    "PowerUpper.LeastIndex.leastPositiveIndex_squeeze"
+  ],
+  "roots": [
+    "OpHack.PowerFourier.Growth",
+    "OpHack.PowerMoment.Bound",
+    "OpHack.PowerSemigroup.Evaluation",
+    "OpHack.PowerUpper.Function",
+    "OpHack.PowerUpper.LeastIndex"
+  ],
+  "audit_modules": [
+    "FreshAudit1.lean"
+  ],
+  "lean_options": {},
+  "static_review_contexts": [],
+  "status": "PASS",
+  "builds": [
+    {
+      "module": "OpHack.PowerSemigroup.Basic",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "OpHack\\PowerSemigroup\\Basic.olean",
+        "OpHack\\PowerSemigroup\\Basic.lean"
+      ],
+      "seconds": 251.81,
+      "exit": 0,
+      "stdout": "OpHack\\PowerSemigroup\\Basic.lean:66:31: warning: Variable name `hs0` is not explicitly referenced.\n\nHint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:\n  [apply] _hs0\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\n'PowerSemigroup.square_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 6558076928,
+      "stop_reason": null,
+      "owned_process_stop_output": null,
+      "source_sha256": "c59dbfa7c904547d2b109d9fa48434e763ded8eb550ec328b766f70d710667ce",
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-opdp13\\OpHack\\PowerSemigroup\\Basic.olean",
+          "sha256": "1f5b491b5042838c9c7e90bc64c11b38bc635536e1163d97492b8ef434865cb2",
+          "bytes": 365624
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "OpHack.PowerSemigroup.Certificates",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "OpHack\\PowerSemigroup\\Certificates.olean",
+        "OpHack\\PowerSemigroup\\Certificates.lean"
+      ],
+      "seconds": 54.7,
+      "exit": 0,
+      "stdout": "OpHack\\PowerSemigroup\\Certificates.lean:13:33: warning: Variable name `hs0` is not explicitly referenced.\n\nHint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:\n  [apply] _hs0\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\n'PowerSemigroup.cube_nonneg_iff' depends on axioms: [propext, Classical.choice, Quot.sound]\n'PowerSemigroup.fifth_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 6335053824,
+      "stop_reason": null,
+      "owned_process_stop_output": null,
+      "source_sha256": "05b171a1e4b44e90532868fe25a15298d7708ea29a677b4341a83abc8a0985ee",
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-opdp13\\OpHack\\PowerSemigroup\\Certificates.olean",
+          "sha256": "5bc3934254a02905ac5c61e250483664b76e4a418eb7cc2c7e64afadb04dec9a",
+          "bytes": 2695856
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "OpHack.PowerSemigroup.Main",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "OpHack\\PowerSemigroup\\Main.olean",
+        "OpHack\\PowerSemigroup\\Main.lean"
+      ],
+      "seconds": 32.2,
+      "exit": 0,
+      "stdout": "'PowerSemigroup.exact_exponent_semigroup' depends on axioms: [propext, Classical.choice, Quot.sound]\n'PowerSemigroup.quartic_exact_exponent_semigroup' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 6788943872,
+      "stop_reason": null,
+      "owned_process_stop_output": null,
+      "source_sha256": "42f6db4dcd8e3a672bf788d2954529cb3cc0400f1e61d30faa6aa50ecc1e0294",
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-opdp13\\OpHack\\PowerSemigroup\\Main.olean",
+          "sha256": "fca28427b9c1bbec64d4afbc3b82e06b177429b5156ea0c07cd3494bf2a01150",
+          "bytes": 359272
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "OpHack.PowerSemigroup.Hermitian",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "OpHack\\PowerSemigroup\\Hermitian.olean",
+        "OpHack\\PowerSemigroup\\Hermitian.lean"
+      ],
+      "seconds": 47.3,
+      "exit": 0,
+      "stdout": "'PowerSemigroup.diagonal_squaredNorm_iff' depends on axioms: [propext, Classical.choice, Quot.sound]\n'PowerSemigroup.hermitian_exact_exponent_semigroup' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 6743277568,
+      "stop_reason": null,
+      "owned_process_stop_output": null,
+      "source_sha256": "b8652d9dfdc24e8199d6c97362adb09aaa5736483bf0851d63bb0b84c67aa141",
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-opdp13\\OpHack\\PowerSemigroup\\Hermitian.olean",
+          "sha256": "efe9fce57febb11dd9e3c9b10b88f0979e2330c70b73a7e7fffeda143c5bb8c5",
+          "bytes": 167160
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "OpHack.PowerSemigroup.Evaluation",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "OpHack\\PowerSemigroup\\Evaluation.olean",
+        "OpHack\\PowerSemigroup\\Evaluation.lean"
+      ],
+      "seconds": 33.11,
+      "exit": 0,
+      "stdout": "OpHack\\PowerSemigroup\\Evaluation.lean:71:14: warning: This simp argument is unused:\n  Complex.star_def\n\nHint: Omit it from the simp argument list.\n  [apply] simp\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\n'PowerSemigroup.evaluate_injective' depends on axioms: [propext, Classical.choice, Quot.sound]\n'PowerSemigroup.function_exact_exponent_semigroup' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 7075381248,
+      "stop_reason": null,
+      "owned_process_stop_output": null,
+      "source_sha256": "9924251f0abcd263e38621ad0b96cadbd0a33f6c353d41ecf3e16e30a860ebfc",
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-opdp13\\OpHack\\PowerSemigroup\\Evaluation.olean",
+          "sha256": "33ffdc8ca43323f850f2997ada3e68b97ab31c6fed6bedcf478ad92a5aecb9d6",
+          "bytes": 266672
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "OpHack.PowerMoment.Algebra",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "OpHack\\PowerMoment\\Algebra.olean",
+        "OpHack\\PowerMoment\\Algebra.lean"
+      ],
+      "seconds": 51.52,
+      "exit": 0,
+      "stdout": "OpHack\\PowerMoment\\Algebra.lean:46:4: warning: Unused tactic linter: `all_goals ring` does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`\nOpHack\\PowerMoment\\Algebra.lean:51:6: warning: Unused tactic linter: `all_goals ring` does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`\nOpHack\\PowerMoment\\Algebra.lean:46:14: warning: this tactic is never executed\n\nNote: This linter can be disabled with `set_option linter.unreachableTactic false`\nOpHack\\PowerMoment\\Algebra.lean:51:16: warning: this tactic is never executed\n\nNote: This linter can be disabled with `set_option linter.unreachableTactic false`\n",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 6489509888,
+      "stop_reason": null,
+      "owned_process_stop_output": null,
+      "source_sha256": "7c572e73a8f5d1de5f57f39a8e2a259cdf8fe428a44a260dfe78d7b620dbcc76",
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-opdp13\\OpHack\\PowerMoment\\Algebra.olean",
+          "sha256": "8ed3e634a6f6e22a32ec6f5c7fb5023016890d7c6664ac46b364f8b125a57f68",
+          "bytes": 1274792
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "OpHack.PowerMoment.Powers",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "OpHack\\PowerMoment\\Powers.olean",
+        "OpHack\\PowerMoment\\Powers.lean"
+      ],
+      "seconds": 38.69,
+      "exit": 0,
+      "stdout": "'PowerMoment.power_moments' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 6887059456,
+      "stop_reason": null,
+      "owned_process_stop_output": null,
+      "source_sha256": "d151f6f71cc7f963a25310ef9c522ed1737e683a1ed755063707ea70394cb9a3",
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-opdp13\\OpHack\\PowerMoment\\Powers.olean",
+          "sha256": "533a4962bc41066fe14bc7d74209c52f6593a7f64888d035d36a965d02391df4",
+          "bytes": 640672
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "OpHack.PowerMoment.Parity",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "OpHack\\PowerMoment\\Parity.olean",
+        "OpHack\\PowerMoment\\Parity.lean"
+      ],
+      "seconds": 42.01,
+      "exit": 0,
+      "stdout": "'PowerMoment.parity_cauchy' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 6750593024,
+      "stop_reason": null,
+      "owned_process_stop_output": null,
+      "source_sha256": "680027afbe1600eae1919da5a5fe8d36e525a6acb111b33b342bc4c1d1698cb2",
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-opdp13\\OpHack\\PowerMoment\\Parity.olean",
+          "sha256": "50574da4fca8fd4af7d9233ef4013a0dc387f460915595887d75609b93af5a79",
+          "bytes": 373552
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "OpHack.PowerMoment.Bound",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "OpHack\\PowerMoment\\Bound.olean",
+        "OpHack\\PowerMoment\\Bound.lean"
+      ],
+      "seconds": 43.81,
+      "exit": 0,
+      "stdout": "OpHack\\PowerMoment\\Bound.lean:29:71: warning: This simp argument is unused:\n  zero_mul\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [mul_zero, zero_div, zero_pow (by decide : 2 \u2260 0), add_zero]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\nOpHack\\PowerMoment\\Bound.lean:60:23: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nOpHack\\PowerMoment\\Bound.lean:60:39: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\n'PowerMoment.function_exponent_lower_bound' depends on axioms: [propext, Classical.choice, Quot.sound]\n'PowerMoment.quartic_exponent_lower_bound' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 6917541888,
+      "stop_reason": null,
+      "owned_process_stop_output": null,
+      "source_sha256": "556b24cda4326f34d2b8e723b629b76a7930ff6a4c115f831942550fdd5fa830",
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-opdp13\\OpHack\\PowerMoment\\Bound.olean",
+          "sha256": "db359b630c19268dafa6e8e3b303a986c87fb222d0f7ca55e8fd89fcd650b595",
+          "bytes": 1006328
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "OpHack.PowerFourier.Cosine",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "OpHack\\PowerFourier\\Cosine.olean",
+        "OpHack\\PowerFourier\\Cosine.lean"
+      ],
+      "seconds": 40.09,
+      "exit": 0,
+      "stdout": "OpHack\\PowerFourier\\Cosine.lean:16:8: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead\nOpHack\\PowerFourier\\Cosine.lean:49:10: warning: `intervalIntegral.integral_finset_sum` has been deprecated: Use `intervalIntegral.integral_finsetSum` instead\n'PowerFourier.integral_cos_sum_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 7327744000,
+      "stop_reason": null,
+      "owned_process_stop_output": null,
+      "source_sha256": "6c86e8bb776ac1eec1cbcf09cc3c522418e3e93a7ec0e7f5a44025be62fa0f6a",
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-opdp13\\OpHack\\PowerFourier\\Cosine.olean",
+          "sha256": "dfd013294463702b4ff386a267f6af3f95d8e478fa39f05b651b5f8a518d998d",
+          "bytes": 151896
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "OpHack.PowerFourier.Polynomial",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "OpHack\\PowerFourier\\Polynomial.olean",
+        "OpHack\\PowerFourier\\Polynomial.lean"
+      ],
+      "seconds": 39.66,
+      "exit": 0,
+      "stdout": "OpHack\\PowerFourier\\Polynomial.lean:104:27: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nOpHack\\PowerFourier\\Polynomial.lean:104:39: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\n'PowerFourier.profile_integral_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]\n'PowerFourier.centered_integral_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 7407710208,
+      "stop_reason": null,
+      "owned_process_stop_output": null,
+      "source_sha256": "eb081c6398fee25290c16c6008200ffa1a0ae712314337b397f126ea8cc5468b",
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-opdp13\\OpHack\\PowerFourier\\Polynomial.olean",
+          "sha256": "87bd72b73923fd9daaf7e9c1e2f4c6b7eb02285374e6592a86fa7125bf8518ac",
+          "bytes": 377920
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "OpHack.PowerFourier.Positive",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "OpHack\\PowerFourier\\Positive.olean",
+        "OpHack\\PowerFourier\\Positive.lean"
+      ],
+      "seconds": 39.11,
+      "exit": 0,
+      "stdout": "OpHack\\PowerFourier\\Positive.lean:11:21: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nOpHack\\PowerFourier\\Positive.lean:11:33: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nOpHack\\PowerFourier\\Positive.lean:44:53: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nOpHack\\PowerFourier\\Positive.lean:44:69: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\n'PowerFourier.even_profile_upper' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 7764602880,
+      "stop_reason": null,
+      "owned_process_stop_output": null,
+      "source_sha256": "0bb6a8c88681450b561b64b1c98afe9734b1dd0e81b08db61b9b35a00ecd5fd8",
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-opdp13\\OpHack\\PowerFourier\\Positive.olean",
+          "sha256": "b363be31b6cd0cc0e971a8398bda59acd526e56a0e48509d29f9180a3be4209d",
+          "bytes": 583240
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "OpHack.PowerFourier.Negative",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "OpHack\\PowerFourier\\Negative.olean",
+        "OpHack\\PowerFourier\\Negative.lean"
+      ],
+      "seconds": 33.14,
+      "exit": 0,
+      "stdout": "'PowerFourier.even_profile_tail' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 7983763456,
+      "stop_reason": null,
+      "owned_process_stop_output": null,
+      "source_sha256": "406588c49336a82dace42d5adea4489d8fa8b18e2de3c6ae9e9587062a62f7ba",
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-opdp13\\OpHack\\PowerFourier\\Negative.olean",
+          "sha256": "647c88fd47dbb4fd5b86eb3c642dd9ad551d3711a3eafa3b4d488d0963b0d683",
+          "bytes": 723560
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "OpHack.PowerFourier.Integration",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "OpHack\\PowerFourier\\Integration.olean",
+        "OpHack\\PowerFourier\\Integration.lean"
+      ],
+      "seconds": 21.92,
+      "exit": 0,
+      "stdout": "'PowerFourier.negative_tail_estimate' depends on axioms: [propext, Classical.choice, Quot.sound]\n'PowerFourier.gaussian_interval_le' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 8057327616,
+      "stop_reason": null,
+      "owned_process_stop_output": null,
+      "source_sha256": "545a7664dd1a16bd7c628cce34ce118eaa5ec7e7c97300f76e64f757e47b3e63",
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-opdp13\\OpHack\\PowerFourier\\Integration.olean",
+          "sha256": "c3abc87a0cf6ea5950e079cd824aaa479d5323c9bc33b11d6bd7cee2a2dd94af",
+          "bytes": 143960
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "OpHack.PowerFourier.Gaussian",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "OpHack\\PowerFourier\\Gaussian.olean",
+        "OpHack\\PowerFourier\\Gaussian.lean"
+      ],
+      "seconds": 20.48,
+      "exit": 0,
+      "stdout": "OpHack\\PowerFourier\\Gaussian.lean:54:52: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nOpHack\\PowerFourier\\Gaussian.lean:84:54: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nOpHack\\PowerFourier\\Gaussian.lean:84:68: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nOpHack\\PowerFourier\\Gaussian.lean:86:89: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nOpHack\\PowerFourier\\Gaussian.lean:87:16: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\n'PowerFourier.total_majorant_bound' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 8075091968,
+      "stop_reason": null,
+      "owned_process_stop_output": null,
+      "source_sha256": "fa33a0c9ec0ece43fd5037d689b2089f4e121ccab8b0f7428c46f2b816bb9f6b",
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-opdp13\\OpHack\\PowerFourier\\Gaussian.olean",
+          "sha256": "075a1a1d81cf36f50a9893a631ae7d096672eb962edf2151f464b4e458c43355",
+          "bytes": 467904
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "OpHack.PowerFourier.Main",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "OpHack\\PowerFourier\\Main.olean",
+        "OpHack\\PowerFourier\\Main.lean"
+      ],
+      "seconds": 36.91,
+      "exit": 0,
+      "stdout": "OpHack\\PowerFourier\\Main.lean:57:33: warning: Unused tactic linter: `ring` does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`\nOpHack\\PowerFourier\\Main.lean:62:56: warning: Unused tactic linter: `ring` does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`\nOpHack\\PowerFourier\\Main.lean:57:33: warning: this tactic is never executed\n\nNote: This linter can be disabled with `set_option linter.unreachableTactic false`\nOpHack\\PowerFourier\\Main.lean:62:56: warning: this tactic is never executed\n\nNote: This linter can be disabled with `set_option linter.unreachableTactic false`\n'PowerFourier.function_boundary_obstruction' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 7809576960,
+      "stop_reason": null,
+      "owned_process_stop_output": null,
+      "source_sha256": "8cca7a53fb0cb29c5b7aeca383ac311248e3102539ed895c638f28237f481bed",
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-opdp13\\OpHack\\PowerFourier\\Main.olean",
+          "sha256": "76ad48f7aa4c285734103ace0377158a3be4f7a72cceeee756d3e24dfa2c88a8",
+          "bytes": 388048
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "OpHack.PowerFourier.Logarithms",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "OpHack\\PowerFourier\\Logarithms.olean",
+        "OpHack\\PowerFourier\\Logarithms.lean"
+      ],
+      "seconds": 53.7,
+      "exit": 0,
+      "stdout": "Try this:\n  [apply] ring_nf\n  \n  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.\n    \n  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.\nOpHack\\PowerFourier\\Logarithms.lean:48:25: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\n'PowerFourier.function_boundary_explicit_log_lower' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 8071213056,
+      "stop_reason": null,
+      "owned_process_stop_output": null,
+      "source_sha256": "b41d5f8fcd043aeb1424135673cae624b51b971b3442f7301e8833461c8be951",
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-opdp13\\OpHack\\PowerFourier\\Logarithms.olean",
+          "sha256": "bc820750f73415e5c8beda91f39c5ff75105086e9ec4e7bf0525ba46fed4f508",
+          "bytes": 480704
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "OpHack.PowerFourier.Growth",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "OpHack\\PowerFourier\\Growth.olean",
+        "OpHack\\PowerFourier\\Growth.lean"
+      ],
+      "seconds": 52.34,
+      "exit": 0,
+      "stdout": "'PowerFourier.function_logarithmic_growth' depends on axioms: [propext, Classical.choice, Quot.sound]\n'PowerFourier.quartic_logarithmic_growth' depends on axioms: [propext, Classical.choice, Quot.sound]\n'PowerFourier.function_near_boundary_growth' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 8297385984,
+      "stop_reason": null,
+      "owned_process_stop_output": null,
+      "source_sha256": "dab12267b81d6895e9cfc646fedf3b3180a6ded6987210111863cd98c118e1be",
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-opdp13\\OpHack\\PowerFourier\\Growth.olean",
+          "sha256": "fa46d8b284d176c426471bc2af02117d458bfd059b0c03840f351243ca412a05",
+          "bytes": 295400
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "OpHack.PowerUpper.Gap",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "OpHack\\PowerUpper\\Gap.olean",
+        "OpHack\\PowerUpper\\Gap.lean"
+      ],
+      "seconds": 26.42,
+      "exit": 0,
+      "stdout": "OpHack\\PowerUpper\\Gap.lean:1:0: warning: \n'Mathlib.Data.Real.Basic' has been deprecated: please replace this import by\n\nimport Mathlib.Basic.Real.Basic\n'PowerUpper.gap_identity' depends on axioms: [propext, Classical.choice, Quot.sound]\n'PowerUpper.gap_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]\n'PowerUpper.gap_pos' depends on axioms: [propext, Classical.choice, Quot.sound]\n'PowerUpper.variance_numerator_pos' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 8408604672,
+      "stop_reason": null,
+      "owned_process_stop_output": null,
+      "source_sha256": "dadc11a2be6f0211ad2705ccec24835669e6197a69ee236087d0c2e0fa1a40a0",
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-opdp13\\OpHack\\PowerUpper\\Gap.olean",
+          "sha256": "80561a1fd9cce5215c0cb1bff02764998fab9143052cc56dd0fc42e19a34d67c",
+          "bytes": 481104
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "OpHack.PowerUpper.DirectRadius",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "OpHack\\PowerUpper\\DirectRadius.olean",
+        "OpHack\\PowerUpper\\DirectRadius.lean"
+      ],
+      "seconds": 34.09,
+      "exit": 0,
+      "stdout": "",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 8441675776,
+      "stop_reason": null,
+      "owned_process_stop_output": null,
+      "source_sha256": "773b57cf5037a3403b50aa404a617fed8982becd6edebb4115266ced07fa3d15",
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-opdp13\\OpHack\\PowerUpper\\DirectRadius.olean",
+          "sha256": "8bd9b95d891610cc4d8e98c4e7a2a25078e4993f41118f0be6016a47c6987a59",
+          "bytes": 831056
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "OpHack.PowerUpper.LocalExpansion",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "OpHack\\PowerUpper\\LocalExpansion.olean",
+        "OpHack\\PowerUpper\\LocalExpansion.lean"
+      ],
+      "seconds": 45.01,
+      "exit": 0,
+      "stdout": "OpHack\\PowerUpper\\LocalExpansion.lean:37:5: warning: Variable name `hb` is not explicitly referenced.\n\nHint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:\n  [apply] _hb\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\nOpHack\\PowerUpper\\LocalExpansion.lean:74:8: warning: This simp argument is unused:\n  norm_mul\n\nHint: Omit it from the simp argument list.\n  [apply] simp [Complex.norm_real, Real.norm_eq_abs]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\nOpHack\\PowerUpper\\LocalExpansion.lean:115:2: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nOpHack\\PowerUpper\\LocalExpansion.lean:128:6: warning: Unused tactic linter: `simp only [Complex.I_sq]` does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`\nOpHack\\PowerUpper\\LocalExpansion.lean:129:6: warning: Unused tactic linter: `ring` does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`\nOpHack\\PowerUpper\\LocalExpansion.lean:128:6: warning: this tactic is never executed\n\nNote: This linter can be disabled with `set_option linter.unreachableTactic false`\nOpHack\\PowerUpper\\LocalExpansion.lean:129:6: warning: this tactic is never executed\n\nNote: This linter can be disabled with `set_option linter.unreachableTactic false`\nOpHack\\PowerUpper\\LocalExpansion.lean:126:2: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nOpHack\\PowerUpper\\LocalExpansion.lean:127:2: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nOpHack\\PowerUpper\\LocalExpansion.lean:168:51: warning: Unused tactic linter: `push_cast` does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`\nOpHack\\PowerUpper\\LocalExpansion.lean:171:51: warning: Unused tactic linter: `push_cast` does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`\nOpHack\\PowerUpper\\LocalExpansion.lean:174:51: warning: Unused tactic linter: `push_cast` does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`\nOpHack\\PowerUpper\\LocalExpansion.lean:168:47: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nOpHack\\PowerUpper\\LocalExpansion.lean:168:61: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nOpHack\\PowerUpper\\LocalExpansion.lean:171:47: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nOpHack\\PowerUpper\\LocalExpansion.lean:171:61: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nOpHack\\PowerUpper\\LocalExpansion.lean:174:47: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nOpHack\\PowerUpper\\LocalExpansion.lean:174:61: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\n'PowerUpper.LocalExpansion.local_log_remainder' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 8525946880,
+      "stop_reason": null,
+      "owned_process_stop_output": null,
+      "source_sha256": "7a62e5d7b12a7aa96cb647633504fca0ee98a54030808a2cb55b2cbbfaa5b46a",
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-opdp13\\OpHack\\PowerUpper\\LocalExpansion.olean",
+          "sha256": "68d70b0edd25d938959dc02d1fbfc1e6810e08069b69252a1094e49052bbbca1",
+          "bytes": 1765440
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "OpHack.PowerUpper.FourierExtraction",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "OpHack\\PowerUpper\\FourierExtraction.olean",
+        "OpHack\\PowerUpper\\FourierExtraction.lean"
+      ],
+      "seconds": 28.45,
+      "exit": 0,
+      "stdout": "OpHack\\PowerUpper\\FourierExtraction.lean:37:6: warning: `intervalIntegral.integral_finset_sum` has been deprecated: Use `intervalIntegral.integral_finsetSum` instead\n'PowerUpper.radius_coefficient_integral' depends on axioms: [propext, Classical.choice, Quot.sound]\n'PowerUpper.coeff_pos_of_radius_integral_pos' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 8584044544,
+      "stop_reason": null,
+      "owned_process_stop_output": null,
+      "source_sha256": "283561fdddd2decb98f5f33daf8be2872cccfc62c68ca1da4b7283e7ccabd9b2",
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-opdp13\\OpHack\\PowerUpper\\FourierExtraction.olean",
+          "sha256": "39455d809c25883bacac61e26fa3fe8b82043db2a48712fddfff6d73599cdaa3",
+          "bytes": 177784
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "OpHack.PowerUpper.Saddle",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "OpHack\\PowerUpper\\Saddle.olean",
+        "OpHack\\PowerUpper\\Saddle.lean"
+      ],
+      "seconds": 18.66,
+      "exit": 0,
+      "stdout": "'PowerUpper.DirectRadius.saddle_exists' depends on axioms: [propext, Classical.choice, Quot.sound]\n'PowerUpper.DirectRadius.saddle_scale' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 8619417600,
+      "stop_reason": null,
+      "owned_process_stop_output": null,
+      "source_sha256": "eab7b262539f0765811efa71e0ac7de465f50e24999f221e84186cc122331601",
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-opdp13\\OpHack\\PowerUpper\\Saddle.olean",
+          "sha256": "347cc89622e8c0c4d78ad97aecacbc07c69ce05995f1e0bf6047c95ca75d5e2d",
+          "bytes": 194576
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "OpHack.PowerUpper.Integrand",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "OpHack\\PowerUpper\\Integrand.olean",
+        "OpHack\\PowerUpper\\Integrand.lean"
+      ],
+      "seconds": 24.23,
+      "exit": 0,
+      "stdout": "OpHack\\PowerUpper\\Integrand.lean:21:24: warning: This simp argument is unused:\n  norm_mul\n\nHint: Omit it from the simp argument list.\n  [apply] simp [normalizedPower, norm_pow, phase_norm_one]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\nOpHack\\PowerUpper\\Integrand.lean:96:6: warning: Unused tactic linter: `push_cast` does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`\n'PowerUpper.normalizedPower_saddle' depends on axioms: [propext, Classical.choice, Quot.sound]\n'PowerUpper.coeff_pos_of_normalizedPower_integral' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 8631078912,
+      "stop_reason": null,
+      "owned_process_stop_output": null,
+      "source_sha256": "cc4e2d2f202af6f01d171f46af007ce5f69bd03141ace77397b1accfb1945d6d",
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-opdp13\\OpHack\\PowerUpper\\Integrand.olean",
+          "sha256": "0b5ecc8ae9372a9601d9f4eec352a32c7730a6ead5c18611fc23fc6fa30ec2e8",
+          "bytes": 424272
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "OpHack.PowerUpper.GaussianCore",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "OpHack\\PowerUpper\\GaussianCore.olean",
+        "OpHack\\PowerUpper\\GaussianCore.lean"
+      ],
+      "seconds": 28.64,
+      "exit": 0,
+      "stdout": "OpHack\\PowerUpper\\GaussianCore.lean:83:18: warning: Variable name `hx` is not explicitly referenced.\n\nHint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:\n  [apply] _hx\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\nOpHack\\PowerUpper\\GaussianCore.lean:143:8: warning: Unused tactic linter: `ring` does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`\nOpHack\\PowerUpper\\GaussianCore.lean:149:10: warning: Unused tactic linter: `ring` does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`\nOpHack\\PowerUpper\\GaussianCore.lean:143:8: warning: this tactic is never executed\n\nNote: This linter can be disabled with `set_option linter.unreachableTactic false`\nOpHack\\PowerUpper\\GaussianCore.lean:149:10: warning: this tactic is never executed\n\nNote: This linter can be disabled with `set_option linter.unreachableTactic false`\nOpHack\\PowerUpper\\GaussianCore.lean:200:10: warning: Unused tactic linter: `ring` does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`\nOpHack\\PowerUpper\\GaussianCore.lean:219:10: warning: Unused tactic linter: `ring` does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`\nOpHack\\PowerUpper\\GaussianCore.lean:200:10: warning: this tactic is never executed\n\nNote: This linter can be disabled with `set_option linter.unreachableTactic false`\nOpHack\\PowerUpper\\GaussianCore.lean:219:10: warning: this tactic is never executed\n\nNote: This linter can be disabled with `set_option linter.unreachableTactic false`\nOpHack\\PowerUpper\\GaussianCore.lean:326:48: warning: This simp argument is unused:\n  norm_mul\n\nHint: Omit it from the simp argument list.\n  [apply] simp\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\n'PowerUpper.GaussianCore.exists_ns_core' depends on axioms: [propext, Classical.choice, Quot.sound]\n'PowerUpper.GaussianCore.core_integral_lower' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 8635039744,
+      "stop_reason": null,
+      "owned_process_stop_output": null,
+      "source_sha256": "82da9b89a067c45682b947754e2c9bcb26bbd68b0755a9e2895c3588bbad1bbb",
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-opdp13\\OpHack\\PowerUpper\\GaussianCore.olean",
+          "sha256": "613fb8b94b2ed9b003a28739e00eda7e80ed948e7af351cb9181112a62337986",
+          "bytes": 881384
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "OpHack.PowerUpper.ActualCore",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "OpHack\\PowerUpper\\ActualCore.olean",
+        "OpHack\\PowerUpper\\ActualCore.lean"
+      ],
+      "seconds": 21.58,
+      "exit": 0,
+      "stdout": "'PowerUpper.actual_core_lower' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 8634384384,
+      "stop_reason": null,
+      "owned_process_stop_output": null,
+      "source_sha256": "256adc2fb8135bd189c2f9a7e59a935b9dfffbced7fbd22a1f938d6e4cb48eef",
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-opdp13\\OpHack\\PowerUpper\\ActualCore.olean",
+          "sha256": "0f472f48586a5f36751bae2833599db25061d3b8defe1ab2b27194f12ba698ed",
+          "bytes": 125112
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "OpHack.PowerUpper.BoundaryGap",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "OpHack\\PowerUpper\\BoundaryGap.olean",
+        "OpHack\\PowerUpper\\BoundaryGap.lean"
+      ],
+      "seconds": 19.0,
+      "exit": 0,
+      "stdout": "OpHack\\PowerUpper\\BoundaryGap.lean:26:5: warning: Variable name `hd` is not explicitly referenced.\n\nHint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:\n  [apply] _hd\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\nOpHack\\PowerUpper\\BoundaryGap.lean:62:4: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\n",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 8633761792,
+      "stop_reason": null,
+      "owned_process_stop_output": null,
+      "source_sha256": "edb9e4900679b15a849de0293bb489803685848f14dc01811980de67dfe04d0b",
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-opdp13\\OpHack\\PowerUpper\\BoundaryGap.olean",
+          "sha256": "957616136b2330e4195867516a5a301095f8e166dbf8a7b4aab08e5226a7568c",
+          "bytes": 1379704
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "OpHack.PowerUpper.AngleBridge",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "OpHack\\PowerUpper\\AngleBridge.olean",
+        "OpHack\\PowerUpper\\AngleBridge.lean"
+      ],
+      "seconds": 21.38,
+      "exit": 0,
+      "stdout": "OpHack\\PowerUpper\\AngleBridge.lean:28:2: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nOpHack\\PowerUpper\\AngleBridge.lean:34:2: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nOpHack\\PowerUpper\\AngleBridge.lean:97:2: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nOpHack\\PowerUpper\\AngleBridge.lean:100:44: warning: Variable name `hs` is not explicitly referenced.\n\nHint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:\n  [apply] _hs\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\n",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 8628088832,
+      "stop_reason": null,
+      "owned_process_stop_output": null,
+      "source_sha256": "fd0e1071b4b245ab80da3e657eff021359547394b2aa092b9cd79818289d9493",
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-opdp13\\OpHack\\PowerUpper\\AngleBridge.olean",
+          "sha256": "d3c7888b9e793212dd3e51789c86db91da520fb03e199e75971de3d4d8e04ed8",
+          "bytes": 2784920
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "OpHack.PowerUpper.ArcEstimates",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "OpHack\\PowerUpper\\ArcEstimates.olean",
+        "OpHack\\PowerUpper\\ArcEstimates.lean"
+      ],
+      "seconds": 20.33,
+      "exit": 0,
+      "stdout": "OpHack\\PowerUpper\\ArcEstimates.lean:47:21: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nOpHack\\PowerUpper\\ArcEstimates.lean:74:21: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nOpHack\\PowerUpper\\ArcEstimates.lean:74:33: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\n",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 8628084736,
+      "stop_reason": null,
+      "owned_process_stop_output": null,
+      "source_sha256": "d91ba4271478358b1ec5a656a383f205bca8ece0dec7531528358f32bdc59f7a",
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-opdp13\\OpHack\\PowerUpper\\ArcEstimates.olean",
+          "sha256": "555e0c0ab59d3d79aee57f10de6e337c96690aa7f3130c27a6a967d554f88d99",
+          "bytes": 953976
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "OpHack.PowerUpper.EdgeModulus",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "OpHack\\PowerUpper\\EdgeModulus.olean",
+        "OpHack\\PowerUpper\\EdgeModulus.lean"
+      ],
+      "seconds": 34.3,
+      "exit": 0,
+      "stdout": "OpHack\\PowerUpper\\EdgeModulus.lean:21:2: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nOpHack\\PowerUpper\\EdgeModulus.lean:78:8: warning: Unused tactic linter: `ring` does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`\nOpHack\\PowerUpper\\EdgeModulus.lean:78:8: warning: this tactic is never executed\n\nNote: This linter can be disabled with `set_option linter.unreachableTactic false`\nOpHack\\PowerUpper\\EdgeModulus.lean:112:21: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nOpHack\\PowerUpper\\EdgeModulus.lean:112:33: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\n",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 8354795520,
+      "stop_reason": null,
+      "owned_process_stop_output": null,
+      "source_sha256": "2a3627abb1381e0a5138abe2bbc4dd1a753a9f777097d019e3048970b6234894",
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-opdp13\\OpHack\\PowerUpper\\EdgeModulus.olean",
+          "sha256": "855c5752c7f4e5b739610b5e7521d9d5c5793eefe6b93f476a8bcf97955c9404",
+          "bytes": 1431592
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "OpHack.PowerUpper.QuarticTail",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "OpHack\\PowerUpper\\QuarticTail.olean",
+        "OpHack\\PowerUpper\\QuarticTail.lean"
+      ],
+      "seconds": 39.69,
+      "exit": 0,
+      "stdout": "OpHack\\PowerUpper\\QuarticTail.lean:77:10: warning: Unused tactic linter: `ring` does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`\nOpHack\\PowerUpper\\QuarticTail.lean:77:10: warning: this tactic is never executed\n\nNote: This linter can be disabled with `set_option linter.unreachableTactic false`\nOpHack\\PowerUpper\\QuarticTail.lean:117:21: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\n'PowerUpper.QuarticTail.quartic_tail_bound_nat' depends on axioms: [propext, Classical.choice, Quot.sound]\n'PowerUpper.QuarticTail.pi_arc_real_integral_lower' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 8613031936,
+      "stop_reason": null,
+      "owned_process_stop_output": null,
+      "source_sha256": "fcc872f3029b221ee02299a9f812e910a6d7b6d048db3c918b76faa12db2f1d3",
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-opdp13\\OpHack\\PowerUpper\\QuarticTail.olean",
+          "sha256": "9944708d1c7fe192490f0f4e468595982da595c8d7a53c3efea3e727c7e71fd3",
+          "bytes": 421944
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "OpHack.PowerUpper.OuterEstimates",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "OpHack\\PowerUpper\\OuterEstimates.olean",
+        "OpHack\\PowerUpper\\OuterEstimates.lean"
+      ],
+      "seconds": 43.25,
+      "exit": 0,
+      "stdout": "OpHack\\PowerUpper\\OuterEstimates.lean:67:21: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nOpHack\\PowerUpper\\OuterEstimates.lean:67:33: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nOpHack\\PowerUpper\\OuterEstimates.lean:102:21: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nOpHack\\PowerUpper\\OuterEstimates.lean:102:44: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nOpHack\\PowerUpper\\OuterEstimates.lean:102:56: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\n",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 8826613760,
+      "stop_reason": null,
+      "owned_process_stop_output": null,
+      "source_sha256": "d697d10dbd869f1c57f09eae91306a155acc4d52fa87701a4d3870f3d8aeb3eb",
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-opdp13\\OpHack\\PowerUpper\\OuterEstimates.olean",
+          "sha256": "1b36eccdea414a3abb889a9ba93551311211aab5e07c027ed88f96757078c7ef",
+          "bytes": 668016
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "OpHack.PowerUpper.ScalarTail",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "OpHack\\PowerUpper\\ScalarTail.olean",
+        "OpHack\\PowerUpper\\ScalarTail.lean"
+      ],
+      "seconds": 23.42,
+      "exit": 0,
+      "stdout": "'PowerUpper.uniform_fourth_tail' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 8901242880,
+      "stop_reason": null,
+      "owned_process_stop_output": null,
+      "source_sha256": "d1057341f11f76663c8ee2df1d4a50b41d0067d9808ce35784fc997b7e8bacb3",
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-opdp13\\OpHack\\PowerUpper\\ScalarTail.olean",
+          "sha256": "cf4da95b7059fed7c57dad7dc14b87f8b1c84b98f11373c45dc7d066c3b084b7",
+          "bytes": 222104
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "OpHack.PowerUpper.Threshold",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "OpHack\\PowerUpper\\Threshold.olean",
+        "OpHack\\PowerUpper\\Threshold.lean"
+      ],
+      "seconds": 20.8,
+      "exit": 0,
+      "stdout": "OpHack\\PowerUpper\\Threshold.lean:27:72: warning: this tactic is never executed\n\nNote: This linter can be disabled with `set_option linter.unreachableTactic false`\nOpHack\\PowerUpper\\Threshold.lean:27:72: warning: Unused tactic linter: `ring` does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`\nOpHack\\PowerUpper\\Threshold.lean:60:23: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\n'PowerUpper.exists_uniform_exponent_threshold' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 8925376512,
+      "stop_reason": null,
+      "owned_process_stop_output": null,
+      "source_sha256": "4f9ace4a3ae56b44735b57f709fed7f3eecc2ff9ef26f69328ceb6ceae187dab",
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-opdp13\\OpHack\\PowerUpper\\Threshold.olean",
+          "sha256": "8ccb17e84bb9bc65188aa1ebbbd5f2b41d60340319de984365a8f7b9aca6e675",
+          "bytes": 300168
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "OpHack.PowerUpper.ErrorControl",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "OpHack\\PowerUpper\\ErrorControl.olean",
+        "OpHack\\PowerUpper\\ErrorControl.lean"
+      ],
+      "seconds": 25.55,
+      "exit": 0,
+      "stdout": "OpHack\\PowerUpper\\ErrorControl.lean:25:34: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nOpHack\\PowerUpper\\ErrorControl.lean:25:46: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nOpHack\\PowerUpper\\ErrorControl.lean:107:4: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\n",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 8937803776,
+      "stop_reason": null,
+      "owned_process_stop_output": null,
+      "source_sha256": "938ee0dcaa7644ec377271f82b3e5750873c8492c70cd0bf0d70a822746626b4",
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-opdp13\\OpHack\\PowerUpper\\ErrorControl.olean",
+          "sha256": "c3919b790aa577fb8c635ba5309f2f7837c2bc38c2374cbeb1c44586d040b570",
+          "bytes": 609608
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "OpHack.PowerUpper.SmallCoefficients",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "OpHack\\PowerUpper\\SmallCoefficients.olean",
+        "OpHack\\PowerUpper\\SmallCoefficients.lean"
+      ],
+      "seconds": 22.53,
+      "exit": 0,
+      "stdout": "OpHack\\PowerUpper\\SmallCoefficients.lean:120:24: warning: This simp argument is unused:\n  mul_one\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [one_pow, one_mul, coeff_mul_natCast, coeff_natCast_mul, mul_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\nOpHack\\PowerUpper\\SmallCoefficients.lean:120:42: warning: This simp argument is unused:\n  coeff_mul_natCast\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [one_pow, mul_one, one_mul, coeff_natCast_mul, mul_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\n'PowerUpper.SmallCoefficients.coefficient_pos_of_threshold' depends on axioms: [propext, Classical.choice, Quot.sound]\n'PowerUpper.SmallCoefficients.uniform_small_index_positivity' depends on axioms: [propext, Classical.choice, Quot.sound]\n'PowerUpper.SmallCoefficients.uniform_finite_window_positivity' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 8945057792,
+      "stop_reason": null,
+      "owned_process_stop_output": null,
+      "source_sha256": "dbfb292748c9a5ea48b2235efca73a66da9a82da901d530207b295b0a98adbd0",
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-opdp13\\OpHack\\PowerUpper\\SmallCoefficients.olean",
+          "sha256": "7845a2be9571e0fa65b767aafd119afa7d728a6a4988751c84143d7f5cb75909",
+          "bytes": 608192
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "OpHack.PowerUpper.Symmetry",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "OpHack\\PowerUpper\\Symmetry.olean",
+        "OpHack\\PowerUpper\\Symmetry.lean"
+      ],
+      "seconds": 20.44,
+      "exit": 0,
+      "stdout": "'PowerUpper.Symmetry.q_pow_natDegree' depends on axioms: [propext, Classical.choice, Quot.sound]\n'PowerUpper.Symmetry.coeff_q_pow_symm' depends on axioms: [propext, Classical.choice, Quot.sound]\n'PowerUpper.Symmetry.quartic_pow_nonneg_of_lower_half_pos' depends on axioms: [propext, Classical.choice, Quot.sound]\n'PowerUpper.Symmetry.quartic_uniform_finite_window_positivity' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 8949485568,
+      "stop_reason": null,
+      "owned_process_stop_output": null,
+      "source_sha256": "700ffb54480621456379ec12dae5afe857782bb26b7bfc83c82e991cc8016a2b",
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-opdp13\\OpHack\\PowerUpper\\Symmetry.olean",
+          "sha256": "1d81fa013d0de454813b5889c5925bf1fce2b84a2b869365c7142ceebe296083",
+          "bytes": 224184
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "OpHack.PowerUpper.MainUpper",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "OpHack\\PowerUpper\\MainUpper.olean",
+        "OpHack\\PowerUpper\\MainUpper.lean"
+      ],
+      "seconds": 22.23,
+      "exit": 0,
+      "stdout": "'PowerUpper.quartic_near_boundary_upper' depends on axioms: [propext, Classical.choice, Quot.sound]\n'PowerUpper.quartic_near_boundary_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 8951857152,
+      "stop_reason": null,
+      "owned_process_stop_output": null,
+      "source_sha256": "55b6e5d739bd4f8f096aae5e6b1ccfa9f3cf915f1f2e56131a9f195606ee90eb",
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-opdp13\\OpHack\\PowerUpper\\MainUpper.olean",
+          "sha256": "109858ce4630a219868ff5fa4f0bc707fe7e118f2d387541b95812e8f264d785",
+          "bytes": 441080
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "OpHack.PowerUpper.LeastIndex",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "OpHack\\PowerUpper\\LeastIndex.olean",
+        "OpHack\\PowerUpper\\LeastIndex.lean"
+      ],
+      "seconds": 19.62,
+      "exit": 0,
+      "stdout": "OpHack\\PowerUpper\\LeastIndex.lean:31:6: warning: `dif_pos` has been deprecated: Use `dite_eq_left` instead\nOpHack\\PowerUpper\\LeastIndex.lean:86:8: warning: Unused tactic linter: `ring` does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`\nOpHack\\PowerUpper\\LeastIndex.lean:86:8: warning: this tactic is never executed\n\nNote: This linter can be disabled with `set_option linter.unreachableTactic false`\n'PowerUpper.LeastIndex.leastPositiveIndex_spec' depends on axioms: [propext, Classical.choice, Quot.sound]\n'PowerUpper.LeastIndex.leastPositiveIndex_squeeze' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 8956391424,
+      "stop_reason": null,
+      "owned_process_stop_output": null,
+      "source_sha256": "41aa021b2f3b58b80de296aa22bf5ca917ffb9853bdaa740af8c9dcb36b442c0",
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-opdp13\\OpHack\\PowerUpper\\LeastIndex.olean",
+          "sha256": "abeba4bb07a9f9584337648008df29907de06fb7f4d0aced75c635343e053a43",
+          "bytes": 275496
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "OpHack.PowerUpper.Function",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "OpHack\\PowerUpper\\Function.olean",
+        "OpHack\\PowerUpper\\Function.lean"
+      ],
+      "seconds": 19.67,
+      "exit": 0,
+      "stdout": "'PowerUpper.function_near_boundary_upper' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 8953708544,
+      "stop_reason": null,
+      "owned_process_stop_output": null,
+      "source_sha256": "c0b278ad2bc4d2d0297a99649e208205dcbc4136c8a3bf89c75604995a7a8e90",
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-opdp13\\OpHack\\PowerUpper\\Function.olean",
+          "sha256": "0a8573de53716d0a11c919199c84ac212e2869a3f6ff4720021b4246671dec98",
+          "bytes": 75600
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "FreshAudit1.lean",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "FreshAudit1.olean",
+        "FreshAudit1.lean"
+      ],
+      "seconds": 17.8,
+      "exit": 0,
+      "stdout": "'PowerSemigroup.function_exact_exponent_semigroup' depends on axioms: [propext, Classical.choice, Quot.sound]\n'PowerMoment.function_exponent_lower_bound' depends on axioms: [propext, Classical.choice, Quot.sound]\n'PowerFourier.function_logarithmic_growth' depends on axioms: [propext, Classical.choice, Quot.sound]\n'PowerUpper.function_near_boundary_upper' depends on axioms: [propext, Classical.choice, Quot.sound]\n'PowerUpper.LeastIndex.leastPositiveIndex_squeeze' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "is_endpoint_audit": true,
+      "minimum_free_bytes": 8947945472,
+      "stop_reason": null,
+      "owned_process_stop_output": null,
+      "source_sha256": "37adaff51950ab00946887e46579689e0bd7f37500bc5b27e4eeddb11b7c6985",
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-opdp13\\FreshAudit1.olean",
+          "sha256": "3a6af69288a28c3883f63c2961eaff5da87d5a2cd9414b0f71ef6d98c4e2cc8a",
+          "bytes": 2224
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    }
+  ],
+  "compiler_version": "Lean (version 4.34.1, x86_64-w64-windows-gnu, commit 5045d0056413266e57c625dcd7c365b10e377c52, Release)",
+  "compilation_order": [
+    "OpHack.PowerSemigroup.Basic",
+    "OpHack.PowerSemigroup.Certificates",
+    "OpHack.PowerSemigroup.Main",
+    "OpHack.PowerSemigroup.Hermitian",
+    "OpHack.PowerSemigroup.Evaluation",
+    "OpHack.PowerMoment.Algebra",
+    "OpHack.PowerMoment.Powers",
+    "OpHack.PowerMoment.Parity",
+    "OpHack.PowerMoment.Bound",
+    "OpHack.PowerFourier.Cosine",
+    "OpHack.PowerFourier.Polynomial",
+    "OpHack.PowerFourier.Positive",
+    "OpHack.PowerFourier.Negative",
+    "OpHack.PowerFourier.Integration",
+    "OpHack.PowerFourier.Gaussian",
+    "OpHack.PowerFourier.Main",
+    "OpHack.PowerFourier.Logarithms",
+    "OpHack.PowerFourier.Growth",
+    "OpHack.PowerUpper.Gap",
+    "OpHack.PowerUpper.DirectRadius",
+    "OpHack.PowerUpper.LocalExpansion",
+    "OpHack.PowerUpper.FourierExtraction",
+    "OpHack.PowerUpper.Saddle",
+    "OpHack.PowerUpper.Integrand",
+    "OpHack.PowerUpper.GaussianCore",
+    "OpHack.PowerUpper.ActualCore",
+    "OpHack.PowerUpper.BoundaryGap",
+    "OpHack.PowerUpper.AngleBridge",
+    "OpHack.PowerUpper.ArcEstimates",
+    "OpHack.PowerUpper.EdgeModulus",
+    "OpHack.PowerUpper.QuarticTail",
+    "OpHack.PowerUpper.OuterEstimates",
+    "OpHack.PowerUpper.ScalarTail",
+    "OpHack.PowerUpper.Threshold",
+    "OpHack.PowerUpper.ErrorControl",
+    "OpHack.PowerUpper.SmallCoefficients",
+    "OpHack.PowerUpper.Symmetry",
+    "OpHack.PowerUpper.MainUpper",
+    "OpHack.PowerUpper.LeastIndex",
+    "OpHack.PowerUpper.Function"
+  ],
+  "started_utc": "2026-10-04T22:15:46Z",
+  "failed_invocations": [],
+  "selected_audit_axiom_review": [
+    {
+      "endpoint": "PowerSemigroup.function_exact_exponent_semigroup",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    },
+    {
+      "endpoint": "PowerMoment.function_exponent_lower_bound",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    },
+    {
+      "endpoint": "PowerFourier.function_logarithmic_growth",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    },
+    {
+      "endpoint": "PowerUpper.function_near_boundary_upper",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    },
+    {
+      "endpoint": "PowerUpper.LeastIndex.leastPositiveIndex_squeeze",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    }
+  ],
+  "resource_settings": {
+    "LEAN_NUM_THREADS": 1,
+    "lean_shell_worker_flag": "-j1",
+    "maxHeartbeats": 0,
+    "maxRecDepth": 100000
+  },
+  "finished_utc": "2026-10-04T22:41:16Z"
+}

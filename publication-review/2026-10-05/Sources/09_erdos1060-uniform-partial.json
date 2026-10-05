@@ -1,0 +1,195 @@
+{
+  "title": "A uniform entropy bound for fibres of kσ(k)",
+  "blocks": [
+    {
+      "type": "title",
+      "text": "A uniform entropy bound for fibres of kσ(k)"
+    },
+    {
+      "type": "subtitle",
+      "text": "Provisional mathematical authors: Rachel Teo, Wenyi Wang, Hamdi Abderrahmene"
+    },
+    {
+      "type": "small",
+      "text": "Judging and evaluation record: the submissions discussed in this document have been judged and evaluated by Alejandro Zarzuelo Urdiales for OpenMath 2026. This dated review records the stated verification, classification and unresolved holds; it is a preliminary evaluation rather than a signed award decision."
+    },
+    {
+      "type": "small",
+      "text": "Event provenance: OpenMath 2026 ran 27 September–2 October 2026 with worldwide online participation. Detailed organizer listings specify Harvard Innovation Labs for the 27 September in-person event; the OpenMath programme advertises a hybrid kickoff at MIT. Sundai identifies its Harvard/MIT community. Organizer sources: https://rsihouse.ai/openmath ; https://luma.com/yzp9abvr ; https://www.sundai.club/events/boston/recursive-learning-hack-with-harvard-innovation-labs"
+    },
+    {
+      "type": "small",
+      "text": "Rachel Teo — Sakana AI."
+    },
+    {
+      "type": "small",
+      "text": "Wenyi Wang — Sakana AI."
+    },
+    {
+      "type": "small",
+      "text": "Hamdi Abderrahmene — Sakana AI."
+    },
+    {
+      "type": "small",
+      "text": "Affiliations follow the recorded author declarations or public institutional/profile sources. Preferred author names, author order and publication affiliations await author review. This editorial compilation does not establish anthology coauthorship."
+    },
+    {
+      "type": "subtitle",
+      "text": "Original-result working manuscript | OpenMath 2026 | 5 October 2026"
+    },
+    {
+      "type": "small",
+      "text": "Central source and adjudication archive: https://github.com/alejandrozu/openmath-2026-judging"
+    },
+    {
+      "type": "h2",
+      "text": "Abstract"
+    },
+    {
+      "type": "p",
+      "text": "The number f(n) of positive integers k satisfying kσ(k)=n has an all-target upper bound exp((C+ε)log n/log log n), where C=log(2539/1000)/3+log(10/9)/2≈0.36327036. This refines the located log3/3 coefficient while leaving the requested zero-constant asymptotic open."
+    },
+    {
+      "type": "h2",
+      "text": "The exact arithmetic count"
+    },
+    {
+      "type": "p",
+      "text": "Let σ(k) be the sum of positive divisors of k, and let f(n)=#{k≥1:kσ(k)=n}. Since kσ(k)≥k for positive k, the solutions form an explicit finite subset of{0,...,n}; the source proves identity with the canonical formal-conjecture count, including its positivity convention."
+    },
+    {
+      "type": "p",
+      "text": "For every ε>0, the result gives a threshold N such that all n≥N satisfy f(n)≤exp((C+ε)log n/log log n), with C=log(2539/1000)/3+log(10/9)/2. The numerical comparison is all-target: C is smaller than log3/3≈0.366204. A separately located log2/2 bound for odd targets does not subsume a theorem for all n."
+    },
+    {
+      "type": "h2",
+      "text": "Powerful cores and an exact pattern bound"
+    },
+    {
+      "type": "p",
+      "text": "Split k into its powerful core, containing prime exponents at least two, and a coprime squarefree residual part. The squarefree map s↦sσ(s) is injective; the formal argument removes the largest prime and treats the small primes separately. Thus a solution in a fixed target fibre can be encoded by its core exponent pattern without multiplying by an uncontrolled number of squarefree choices."
+    },
+    {
+      "type": "p",
+      "text": "The equation kσ(k)=n constrains both divisibility and size of that core. The development establishes exact weighted exponent-pattern bounds, with local weights and a cubic estimate at a fixed rational parameter. These finite inequalities yield the2539/1000 constant, rather than introducing an unproved entropy heuristic."
+    },
+    {
+      "type": "p",
+      "text": "A logarithmic cutoff divides target primes into small and large ranges. Small-prime choices are bounded crudely but contribute a lower-order term; large-prime exponents obey a log-size budget. The proven weighted finite estimate is then converted to the exponential form, and a real asymptotic bridge absorbs lower-order terms into ε. Every premise of the intermediate conditional bridge is discharged by the final SigmaFiberAsymptotic theorem."
+    },
+    {
+      "type": "h2",
+      "text": "Mathematical and formal boundaries"
+    },
+    {
+      "type": "p",
+      "text": "The requested Erdős1060 conclusion has a little-o exponent, corresponding to an arbitrarily small leading constant. A fixed positive C does not establish that conclusion. The result is a uniform quantitative partial improvement and should be labelled that way."
+    },
+    {
+      "type": "p",
+      "text": "Fresh independent replay completed 2026-10-05T01:08:02+00:00: all ten frozen authored Lean modules compiled under Lean 4.33.1 and Mathlib 0df444a360eaa60ab8c11dca51a86af692955474. The actual printed axiom lists for canonical_count_eventually_upper, canonical_count_upper and entropyConstant_lt_old contain only propext, Classical.choice and Quot.sound; all three requested prints are present, with no admitted, native-evaluation or unrecognized axioms. Source hashes, commands, individual outputs and guarded resource measurements are preserved in Verification/sakana-erdos1060-uniform-partial-fresh-build.json. This verifies the displayed uniform partial theorem, while literature priority, author approval and the full zero-constant target remain separate."
+    },
+    {
+      "type": "h2",
+      "text": "Publication strategy and attribution"
+    },
+    {
+      "type": "p",
+      "text": "Powerful-core decomposition, squarefree injectivity strategy and cutoff counting are prior machinery. The candidate original contribution is the exact weighted pattern improvement and its all-target entropy coefficient. The closest Kominers and related sources should be compared on their domains, constants and quantitative effectiveness before announcing best-known status."
+    },
+    {
+      "type": "p",
+      "text": "A standalone analytic/computational number-theory note should supply the local rational inequality, the core injection and a transparent cutoff argument. The related cube-sum paper reuses some of this formal infrastructure, which should be acknowledged rather than counted as an independent discovery of the same lemmas."
+    },
+    {
+      "type": "small",
+      "text": "This short manuscript records the construction and selected endpoints. The companion Original results anthology contains the extended ordinary proof exposition and its explicitly stated premises; the preserved Lean source remains the complete formal proof record."
+    },
+    {
+      "type": "h2",
+      "text": "Verification and reproducibility"
+    },
+    {
+      "type": "p",
+      "text": "Fresh execution: sakana-erdos1060-uniform-partial: PASS; 10/10 custom modules compiled successfully; receipt Verification/sakana-erdos1060-uniform-partial-fresh-build.json. Compiler pins, source hashes and endpoint axiom outputs are in Verification. Historical receipts and finite checks do not replace fresh replay."
+    },
+    {
+      "type": "keep_start",
+      "text": ""
+    },
+    {
+      "type": "h2",
+      "text": "Erdos1060.canonical_count_eventually_upper"
+    },
+    {
+      "type": "code",
+      "text": "theorem canonical_count_eventually_upper {ε : ℝ} (hε : 0 < ε) :\n    ∀ᶠ n : ℕ in atTop,\n      (#{k ≤ n | k * ArithmeticFunction.sigma 1 k = n} : ℝ) ≤\n        Real.exp (((Real.log (2539 / 1000) / 3 + Real.log (10 / 9) / 2) + ε) *\n          Real.log (n : ℝ) / Real.log (Real.log (n : ℝ)))"
+    },
+    {
+      "type": "small",
+      "text": "Source: proofs/erdos1060-uniform-partial/src/SigmaFiberAsymptotic.lean:38."
+    },
+    {
+      "type": "small",
+      "text": "Source SHA-256: 440f2f6aaa1d5dd04611fe855077352a3b75171d6e1ec823939ede8609e2d45a"
+    },
+    {
+      "type": "keep_end",
+      "text": ""
+    },
+    {
+      "type": "keep_start",
+      "text": ""
+    },
+    {
+      "type": "h2",
+      "text": "Erdos1060.canonical_count_upper"
+    },
+    {
+      "type": "code",
+      "text": "theorem canonical_count_upper {ε : ℝ} (hε : 0 < ε) :\n    ∃ N : ℕ, ∀ n : ℕ, N ≤ n →\n      (#{k ≤ n | k * ArithmeticFunction.sigma 1 k = n} : ℝ) ≤\n        Real.exp (((Real.log (2539 / 1000) / 3 + Real.log (10 / 9) / 2) + ε) *\n          Real.log (n : ℝ) / Real.log (Real.log (n : ℝ)))"
+    },
+    {
+      "type": "small",
+      "text": "Source: proofs/erdos1060-uniform-partial/src/SigmaFiberAsymptotic.lean:49."
+    },
+    {
+      "type": "small",
+      "text": "Source SHA-256: 440f2f6aaa1d5dd04611fe855077352a3b75171d6e1ec823939ede8609e2d45a"
+    },
+    {
+      "type": "reference_list",
+      "text": "Sources and attribution",
+      "items": [
+        {
+          "text": "1. www.erdosproblems.com / 1060",
+          "url": "https://www.erdosproblems.com/1060"
+        },
+        {
+          "text": "2. scottkom.com / Kominers_ksigmak.pdf",
+          "url": "https://scottkom.com/assets/articles/Kominers_ksigmak.pdf"
+        },
+        {
+          "text": "3. google-deepmind/formal-conjectures / 1060.lean",
+          "url": "https://github.com/google-deepmind/formal-conjectures/blob/main/FormalConjectures/ErdosProblems/1060.lean"
+        },
+        {
+          "text": "4. alejandrozu/ulam-opdp-difficulty-atlas",
+          "url": "https://github.com/alejandrozu/ulam-opdp-difficulty-atlas"
+        },
+        {
+          "text": "5. alejandrozu/openmath-2026-judging / E02-erdos1060-uniform-partial.txt",
+          "url": "https://github.com/alejandrozu/openmath-2026-judging/blob/d0ed487f487fa7ec814ff705ab55249983fe8707/OpenMath-Judging/review/entries/E02-erdos1060-uniform-partial.txt"
+        },
+        {
+          "text": "Central source and adjudication archive",
+          "url": "https://github.com/alejandrozu/openmath-2026-judging"
+        }
+      ]
+    },
+    {
+      "type": "keep_end",
+      "text": ""
+    }
+  ]
+}

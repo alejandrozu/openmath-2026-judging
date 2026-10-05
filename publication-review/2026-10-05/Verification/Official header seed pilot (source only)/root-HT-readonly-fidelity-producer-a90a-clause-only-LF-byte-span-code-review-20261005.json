@@ -1,0 +1,11 @@
+{
+  "status": "ROOT_REVIEWED_CLAUSE_METADATA_ONLY_EXACT_LF_BYTE_SPAN_CORRECTION",
+  "checked_utc": "2026-10-05T09:38:33.631258+00:00",
+  "producer_sha256": "a90a115e566f5a902f06e5d6b0860c6a06fab6fa6caf1440ddfebba323bc699f",
+  "previous_full_code_review_sha256": "ea8319ca7da8e0e7c88d0f3669b0c001dd02f5f8cd2e823243da4c61106551ff",
+  "prior_actual_metadata_parser_rejection_sha256": "ca79bc533a9d39202c77b3d535a16ce51293e849cb964742ff78a6bb7ad5817d",
+  "minimal_diff_sha256": "80b65a71a220d5a7e0e4b007cecdde0d48d7627e1dcda0223c822dbfc993c67b",
+  "full_diff_read_and_all_non_clause_AST_unchanged": true,
+  "review": "Exact UTF8 source bytes, literal LF spans and positional mask LF restoration correct the actual quoted escape/LF mask mismatch; end byte-count assertion ensures spans consume exact source bytes. Frozen literal import graph reader and scientific/runtime/source checks unchanged.",
+  "no_compiler_load_source_edit_or_qualification_inferred": true
+}

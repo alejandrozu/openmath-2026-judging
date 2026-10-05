@@ -1,0 +1,383 @@
+{
+  "created_utc": "2026-10-04T23:30:38.075858+00:00",
+  "status": "LOADER_METADATA_SOURCE_AUDIT_PASS_NATIVE_LINK_AND_INIT_UNTESTED",
+  "source_commit": "2cf216ba885fbb1b2d1b2d4920efeaa6ba438842",
+  "lean_version": "4.34.1",
+  "compiler_pin": "5045d0056413266e57c625dcd7c365b10e377c52",
+  "mathlib_pin": "d13f23b723b8a846827a245b89c10fc7d3f11612",
+  "scope": "Pinned loader/registry source assessment only; an independently authorized one-C-object pilot has its own later receipt. No DLL/plugin load or custom C generation recorded here.",
+  "native_eligibility": {
+    "direct_custom_package": null,
+    "direct_command_policy": "No --setup/new package metadata; native C must preserve this policy",
+    "custom_symbol_prefix": "l_",
+    "anticipated_root_initializer": "initialize_K4Ramsey_Constructions_Final3840_Count",
+    "actual_generated_initializer_pending": true,
+    "ordinary_ir_declarations_required": true,
+    "precompileModules_flag_required_for_lookup": false,
+    "native_preference_default": true,
+    "Windows_lookup": "EnumProcessModules then GetProcAddress",
+    "no_loading_after_import": "Required by ImportingFlag and the native success/failure symbol cache",
+    "CLI_plugin_separator": "=",
+    "CLI_load_sequence": [
+      "--load-dynlib=ABSOLUTE_NONMATHLIB_DLL",
+      "--plugin=ABSOLUTE_MATHLIB_CUSTOM_DLL=ACTUAL_COUNT_INITIALIZER"
+    ],
+    "shell_enable_initializers_before_options": true,
+    "IO_initializing_during_options": true,
+    "Lean_initializing_formula": "IO.initializing || importingRef",
+    "emitted_initializer_chain_must_be_complete": true,
+    "stubs_or_omitted_initializers_forbidden": true
+  },
+  "metadata_registry": {
+    "package_extension": "Lean.Compiler.ModPkgExt.modPkgExt",
+    "native_mangling": "Environment.getSymbolStem + NameMangling.mkPackageSymbolPrefix",
+    "module_initialization": "InitAttr.runInitAttrs -> runInitAttrForMod -> runModInitCore",
+    "source_no_module_policy": "Legacy .all initializer resolved, imported module packages remain stored in their exact .oleans"
+  },
+  "measured_dependency_boundary": {
+    "selected_generated_c_modules": 935,
+    "selected_c_source_bytes": 163232279,
+    "selected_modules_by_package": {
+      "aesop": 132,
+      "batteries": 74,
+      "importGraph": 10,
+      "LeanSearchClient": 4,
+      "mathlib": 678,
+      "plausible": 13,
+      "proofwidgets": 10,
+      "Qq": 14
+    },
+    "native_partition_exports": {
+      "non_mathlib": 24829,
+      "mathlib": 39889
+    },
+    "non_mathlib_reverse_dependencies": {},
+    "selected_exports_also_in_core_dlls": [],
+    "selected_export_names_with_multiple_source_providers": {},
+    "unresolved_prefixed_symbol_count": 0,
+    "unresolved_runtime_api_calls": {}
+  },
+  "native_count_concrete_endpoints_only": true,
+  "general_endpoint_no_native_axiom_rule_retained": true,
+  "original_replay_unchanged": true,
+  "source_evidence": [
+    {
+      "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\src\\lean\\Lean\\Shell.lean",
+      "sha256": "4f584ae4d4cc859f39cdbb550df8e09417d1fd8e95046829ef821c2c95e2f940",
+      "bytes": 22984,
+      "source_url": "https://github.com/leanprover/lean4/blob/5045d0056413266e57c625dcd7c365b10e377c52/src/Lean/Shell.lean",
+      "relevant_line_ranges": [
+        [
+          412,
+          428
+        ]
+      ]
+    },
+    {
+      "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\src\\lean\\Lean\\ImportingFlag.lean",
+      "sha256": "9316ad5b5a4c17d37aa6e17c6e3bec60a204c456887d998aa69ba72c3b7f7b4f",
+      "bytes": 2689,
+      "source_url": "https://github.com/leanprover/lean4/blob/5045d0056413266e57c625dcd7c365b10e377c52/src/Lean/ImportingFlag.lean",
+      "relevant_line_ranges": [
+        [
+          20,
+          60
+        ]
+      ]
+    },
+    {
+      "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\src\\lean\\Lean\\LoadDynlib.lean",
+      "sha256": "eb440396160296adc1c2fde044d0fcb87cf09e0b9874fe0afeebd414d4ce488d",
+      "bytes": 5101,
+      "source_url": "https://github.com/leanprover/lean4/blob/5045d0056413266e57c625dcd7c365b10e377c52/src/Lean/LoadDynlib.lean",
+      "relevant_line_ranges": [
+        [
+          76,
+          121
+        ]
+      ]
+    },
+    {
+      "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\src\\lean\\Lean\\Environment.lean",
+      "sha256": "ee364e4788ce0560c87f621eeb3c4c3dfec62e8db4e15e099fd80e6adc533b86",
+      "bytes": 137725,
+      "source_url": "https://github.com/leanprover/lean4/blob/5045d0056413266e57c625dcd7c365b10e377c52/src/Lean/Environment.lean",
+      "relevant_line_ranges": [
+        [
+          2438,
+          2449
+        ],
+        [
+          2517,
+          2539
+        ]
+      ]
+    },
+    {
+      "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\src\\lean\\Lean\\Compiler\\InitAttr.lean",
+      "sha256": "96e4c7ddb97c988b467928434faf3df9365f96a11f64217087cc39ddec729480",
+      "bytes": 10759,
+      "source_url": "https://github.com/leanprover/lean4/blob/5045d0056413266e57c625dcd7c365b10e377c52/src/Lean/Compiler/InitAttr.lean",
+      "relevant_line_ranges": [
+        [
+          153,
+          204
+        ]
+      ]
+    },
+    {
+      "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\src\\lean\\Lean\\Compiler\\ModPkgExt.lean",
+      "sha256": "b063277243ee73367ed915b9ef9a1de91a40642a1c361c508f53997a29867c9c",
+      "bytes": 2548,
+      "source_url": "https://github.com/leanprover/lean4/blob/5045d0056413266e57c625dcd7c365b10e377c52/src/Lean/Compiler/ModPkgExt.lean",
+      "relevant_line_ranges": [
+        [
+          46,
+          83
+        ]
+      ]
+    },
+    {
+      "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\src\\lean\\Lean\\Compiler\\NameMangling.lean",
+      "sha256": "b9914ae74ad8c2e8ba2f9970893e1e4c7d0ff9e2fb228acb3da7f1ef809e4d0d",
+      "bytes": 8371,
+      "source_url": "https://github.com/leanprover/lean4/blob/5045d0056413266e57c625dcd7c365b10e377c52/src/Lean/Compiler/NameMangling.lean",
+      "relevant_line_ranges": [
+        [
+          151,
+          170
+        ]
+      ]
+    },
+    {
+      "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\src\\lean\\Lean\\Compiler\\LCNF\\EmitC.lean",
+      "sha256": "fb2069c82c5f874a41ce791a6a4e1ab9060fbbe4b178a8d7691f11c579f7317b",
+      "bytes": 42038,
+      "source_url": "https://github.com/leanprover/lean4/blob/5045d0056413266e57c625dcd7c365b10e377c52/src/Lean/Compiler/LCNF/EmitC.lean",
+      "relevant_line_ranges": [
+        [
+          1006,
+          1090
+        ]
+      ]
+    },
+    {
+      "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\src\\lean\\Lean\\Elab\\Import.lean",
+      "sha256": "5d46fc36944ed3cbb9b862cb954fdd8ea2d2036f135e4b48adc368b69dc8b8fc",
+      "bytes": 8468,
+      "source_url": "https://github.com/leanprover/lean4/blob/5045d0056413266e57c625dcd7c365b10e377c52/src/Lean/Elab/Import.lean",
+      "relevant_line_ranges": [
+        [
+          140,
+          169
+        ]
+      ]
+    },
+    {
+      "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\src\\lean\\Lean\\Elab\\Frontend.lean",
+      "sha256": "e3e9037222c00308edc4fed589da83a80620bf5b35108779564fc485d8c17774",
+      "bytes": 19531,
+      "source_url": "https://github.com/leanprover/lean4/blob/5045d0056413266e57c625dcd7c365b10e377c52/src/Lean/Elab/Frontend.lean",
+      "relevant_line_ranges": [
+        [
+          287,
+          313
+        ]
+      ]
+    },
+    {
+      "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\src\\lean\\Lean\\Meta\\Native.lean",
+      "sha256": "e1d0c6b5be42f492810a12281fc0d8ff4c981e421397c3ec00e165a255ed09c1",
+      "bytes": 3207,
+      "source_url": "https://github.com/leanprover/lean4/blob/5045d0056413266e57c625dcd7c365b10e377c52/src/Lean/Meta/Native.lean",
+      "relevant_line_ranges": [
+        [
+          35,
+          92
+        ]
+      ]
+    },
+    {
+      "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\src\\lean\\Leanc.lean",
+      "sha256": "4ba1b13a9a58b9a7917ca8aeae6a4929cd292411c771e1cca989a7d8a2fbf7bc",
+      "bytes": 2758,
+      "source_url": "https://github.com/leanprover/lean4/blob/5045d0056413266e57c625dcd7c365b10e377c52/src/Leanc.lean",
+      "relevant_line_ranges": [
+        [
+          230,
+          290
+        ]
+      ]
+    },
+    {
+      "source_url": "https://raw.githubusercontent.com/leanprover/lean4/5045d0056413266e57c625dcd7c365b10e377c52/src/library/ir_interpreter.cpp",
+      "local_path": "work\\publication\\verification\\native_loader_sources\\src_library_ir_interpreter.cpp",
+      "bytes": 66799,
+      "sha256": "54537b547f8bddd01aa90b98a5486555defa118896b3b71d7b750e31d80d3c53"
+    },
+    {
+      "source_url": "https://raw.githubusercontent.com/leanprover/lean4/5045d0056413266e57c625dcd7c365b10e377c52/src/shell/lean.cpp",
+      "local_path": "work\\publication\\verification\\native_loader_sources\\src_shell_lean.cpp",
+      "bytes": 588,
+      "sha256": "b311e6363d689e7b6d2e717c53981c59c63104892dc1d0cb308d977d6c6d943a"
+    },
+    {
+      "source_url": "https://raw.githubusercontent.com/leanprover/lean4/5045d0056413266e57c625dcd7c365b10e377c52/src/library/module.cpp",
+      "local_path": "work\\publication\\verification\\native_loader_sources\\src_library_module.cpp",
+      "bytes": 29699,
+      "sha256": "9b85a9a7610e73f240282fe288ad81c8b160fc975caa80bd5b13ddacdd6012a8"
+    },
+    {
+      "source_url": "https://raw.githubusercontent.com/leanprover/lean4/5045d0056413266e57c625dcd7c365b10e377c52/src/util/shell.cpp",
+      "local_path": "work\\publication\\verification\\native_loader_sources\\src_util_shell.cpp",
+      "bytes": 12425,
+      "sha256": "502eaa752396cdff5bb448833a63be54cbbcbb3d36881eb10e235c04c64c0832"
+    },
+    {
+      "source_url": "https://raw.githubusercontent.com/leanprover/lean4/5045d0056413266e57c625dcd7c365b10e377c52/src/library/dynlib.cpp",
+      "local_path": "work\\publication\\verification\\native_loader_sources\\src_library_dynlib.cpp",
+      "bytes": 4365,
+      "sha256": "3246087cd3c66398b3e2dacf9680c59683e31b0c5723dae029e41eab8d007dab"
+    },
+    {
+      "source_url": "https://raw.githubusercontent.com/leanprover/lean4/5045d0056413266e57c625dcd7c365b10e377c52/src/library/ir_interpreter.h",
+      "local_path": "work\\publication\\verification\\native_loader_sources\\src_library_ir_interpreter.h",
+      "bytes": 655,
+      "sha256": "d2de52d3e55718740a5603e2f7125514db4173304f04781c47d1eb62ee1f0292"
+    },
+    {
+      "source_url": "https://raw.githubusercontent.com/leanprover/lean4/5045d0056413266e57c625dcd7c365b10e377c52/src/library/module.h",
+      "local_path": "work\\publication\\verification\\native_loader_sources\\src_library_module.h",
+      "bytes": 507,
+      "sha256": "6934a733bf52d2350590ca949c329e0761039d062fd8344191d7d36c37941d5c"
+    },
+    {
+      "source_url": "https://raw.githubusercontent.com/leanprover/lean4/5045d0056413266e57c625dcd7c365b10e377c52/src/runtime/io.cpp",
+      "local_path": "work\\publication\\verification\\native_loader_sources\\src_runtime_io.cpp",
+      "bytes": 59777,
+      "sha256": "426bd6862706a516dbdf70fe7d8993efc028b115d386cef06fe0b081c14a5dcf"
+    },
+    {
+      "source_url": "https://raw.githubusercontent.com/leanprover/lean4/5045d0056413266e57c625dcd7c365b10e377c52/src/runtime/init_module.cpp",
+      "local_path": "work\\publication\\verification\\native_loader_sources\\src_runtime_init_module.cpp",
+      "bytes": 1284,
+      "sha256": "b7f1c9abf937c97f668f7207652ed86965731c5ed6f5bd5c8f0a66976919b9a4"
+    }
+  ],
+  "custom_source_inputs": [
+    {
+      "module": "K4Ramsey.Constructions.Final3840.Count",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-k4-ramsey-current-direct\\K4Ramsey\\Constructions\\Final3840\\Count.lean",
+      "sha256": "974a49d29cee1b9192eadc7dbb528f1e7d130b0c4467280cb0d2e2c7978d7dd2",
+      "frozen_source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Constructions\\Final3840\\Count.lean"
+    },
+    {
+      "module": "K4Ramsey.Constructions.Final3840.Data",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-k4-ramsey-current-direct\\K4Ramsey\\Constructions\\Final3840\\Data.lean",
+      "sha256": "d764c6047501f1c2102b81529c86ffa597b6e8ef8c172fb50d72a01dd05069f1",
+      "frozen_source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Constructions\\Final3840\\Data.lean"
+    },
+    {
+      "module": "K4Ramsey.Constructions.Final3840.Data.Part00",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-k4-ramsey-current-direct\\K4Ramsey\\Constructions\\Final3840\\Data\\Part00.lean",
+      "sha256": "237e9976248c5fb43a6d521ad1eb4bd6a4915ea0a739cf218fa7be095af9b907",
+      "frozen_source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Constructions\\Final3840\\Data\\Part00.lean"
+    },
+    {
+      "module": "K4Ramsey.Constructions.Final3840.Data.Part01",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-k4-ramsey-current-direct\\K4Ramsey\\Constructions\\Final3840\\Data\\Part01.lean",
+      "sha256": "856f18a7158d2c3b168ff66417b328de38727b03b5f716af11399dffe57314f4",
+      "frozen_source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Constructions\\Final3840\\Data\\Part01.lean"
+    },
+    {
+      "module": "K4Ramsey.Constructions.Final3840.Data.Part02",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-k4-ramsey-current-direct\\K4Ramsey\\Constructions\\Final3840\\Data\\Part02.lean",
+      "sha256": "8a0dd1e84d3bc9070e06566e1a6cb016896b7f8b68e6ab74d06215804f98ae43",
+      "frozen_source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Constructions\\Final3840\\Data\\Part02.lean"
+    },
+    {
+      "module": "K4Ramsey.Constructions.Final3840.Data.Part03",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-k4-ramsey-current-direct\\K4Ramsey\\Constructions\\Final3840\\Data\\Part03.lean",
+      "sha256": "7e1ee89e22b4bf1d0f6e4dce378d0430ec454aef72a70f40e3012b1d14a08390",
+      "frozen_source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Constructions\\Final3840\\Data\\Part03.lean"
+    },
+    {
+      "module": "K4Ramsey.Constructions.Final3840.Data.Part04",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-k4-ramsey-current-direct\\K4Ramsey\\Constructions\\Final3840\\Data\\Part04.lean",
+      "sha256": "298fc2da3d2446d4383c8ef23de2c4ead669771eb21cc310856c93e1e333727d",
+      "frozen_source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Constructions\\Final3840\\Data\\Part04.lean"
+    },
+    {
+      "module": "K4Ramsey.Constructions.Final3840.Data.Part05",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-k4-ramsey-current-direct\\K4Ramsey\\Constructions\\Final3840\\Data\\Part05.lean",
+      "sha256": "7ee71b7dfce4ea49ebd7fe6edbe13c654a77ebff9c85ca76ca412a30d6c0575e",
+      "frozen_source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Constructions\\Final3840\\Data\\Part05.lean"
+    },
+    {
+      "module": "K4Ramsey.Constructions.Final3840.Data.Part06",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-k4-ramsey-current-direct\\K4Ramsey\\Constructions\\Final3840\\Data\\Part06.lean",
+      "sha256": "e5329adfe2a40c8346a01ed486c291c7af1fe2012bc51499b4a61438c423c400",
+      "frozen_source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Constructions\\Final3840\\Data\\Part06.lean"
+    },
+    {
+      "module": "K4Ramsey.Constructions.Final3840.Data.Part07",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-k4-ramsey-current-direct\\K4Ramsey\\Constructions\\Final3840\\Data\\Part07.lean",
+      "sha256": "4939fa5414adb4e8f9503c817e16319fc2ac49ddbe53739a3ed106bde54f646f",
+      "frozen_source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Constructions\\Final3840\\Data\\Part07.lean"
+    },
+    {
+      "module": "K4Ramsey.Constructions.Final3840.Data.Part08",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-k4-ramsey-current-direct\\K4Ramsey\\Constructions\\Final3840\\Data\\Part08.lean",
+      "sha256": "bd832cc693db5ea48c5b0ab0c604140b58ec2612bedd7efb3a0623dc92c9c978",
+      "frozen_source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Constructions\\Final3840\\Data\\Part08.lean"
+    },
+    {
+      "module": "K4Ramsey.Constructions.Final3840.Data.Part09",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-k4-ramsey-current-direct\\K4Ramsey\\Constructions\\Final3840\\Data\\Part09.lean",
+      "sha256": "f63926222c283346df276cd2f60679637ebba5deffe478d9112ecc8d18b7a481",
+      "frozen_source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Constructions\\Final3840\\Data\\Part09.lean"
+    },
+    {
+      "module": "K4Ramsey.Constructions.Final3840.Model",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-k4-ramsey-current-direct\\K4Ramsey\\Constructions\\Final3840\\Model.lean",
+      "sha256": "78381ebc171808d2edefc807c586d7f16c84ecbaff01e84457ac8454dbc235a0",
+      "frozen_source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Constructions\\Final3840\\Model.lean"
+    },
+    {
+      "module": "K4Ramsey.Core.Graphon",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-k4-ramsey-current-direct\\K4Ramsey\\Core\\Graphon.lean",
+      "sha256": "8f86848ab7ead449d0b522a617ba61cbe578f4427e514496ff47bb3da80abd66",
+      "frozen_source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Core\\Graphon.lean"
+    },
+    {
+      "module": "K4Ramsey.Counting.IntegerTensorK4",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-k4-ramsey-current-direct\\K4Ramsey\\Counting\\IntegerTensorK4.lean",
+      "sha256": "c29e1d83ec248f34105ebaf047c9d42ac53450d2130c367ffc1083966f717992",
+      "frozen_source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Counting\\IntegerTensorK4.lean"
+    },
+    {
+      "module": "K4Ramsey.Counting.TensorK4",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-k4-ramsey-current-direct\\K4Ramsey\\Counting\\TensorK4.lean",
+      "sha256": "7c5913f78c22bf5251a6baa576bf9a15f16e780a84e0c4643d5f5dca3b737623",
+      "frozen_source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Counting\\TensorK4.lean"
+    }
+  ],
+  "symbol_closure_receipt_sha256": "7e892e28b76a3972f126c245bf5f91347dfc718fb1656b9b187db1830b0d5e36",
+  "loader_note_sha256": "91c139753a913d97ec2d54e14d2acd6bf50988e7098e6ee17988417bd849cd7b",
+  "remaining_acceptance_gates": [
+    "Exact custom C generation without source/options/package changes",
+    "Actual custom export and initializer audit",
+    "Genuine isolated import library and both links with no unresolved symbols",
+    "Actual full initializer run in a fresh process before custom module imports",
+    "Actual bounded native Count dispatch diagnostic",
+    "Unchanged Certificate theorem execution and endpoint axiom audit",
+    "Measured codegen/object/link/init resource growth before broadening"
+  ],
+  "separate_one_object_pilot": {
+    "receipt": "work\\publication\\verification\\native_object_pilots\\20261004T232944Z\\receipt.json",
+    "sha256": "0982cd9b9ee761557f9e897835460adea672f0b7fc9bf20dffdb19447ddaaacc",
+    "status": "PASS_OBJECT_COMPILE",
+    "scope": "One unchanged official C object; no DLL link/load, custom C generation or .olean change",
+    "lease_returned": true
+  }
+}

@@ -1,0 +1,212 @@
+{
+  "id": "sakana-FOCUS-E3",
+  "entrant": "E02",
+  "version": "4.33.1",
+  "mathlib_pin": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "source_dir": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-FOCUS-E3",
+  "modules": [
+    {
+      "module": "R17SplitReplay",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-FOCUS-E3\\R17SplitReplay.lean",
+      "source": "Focus_Evidence/evidence/FOCUS-E3/complete-certificate/R17SplitReplay.lean",
+      "sha256": "fe2f97e19892fa7a722500188366697949929b453f87914737c525b6fc2b6531"
+    },
+    {
+      "module": "BooleanTree",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-FOCUS-E3\\BooleanTree.lean",
+      "source": "Focus_Evidence/evidence/FOCUS-E3/complete-certificate/BooleanTree.lean",
+      "sha256": "57c77b258ba002ab59742e9f4cfdc065df437bdc1098d4e14cf1c2b7defddcc4"
+    },
+    {
+      "module": "CardBridge",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-FOCUS-E3\\CardBridge.lean",
+      "source": "Focus_Evidence/evidence/FOCUS-E3/complete-certificate/CardBridge.lean",
+      "sha256": "32330d3f2268ba1d23f5e8d0db50bf1a115e85b1b8be65c3418f2b4186e1c130"
+    },
+    {
+      "module": "CyclicUpper",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-FOCUS-E3\\CyclicUpper.lean",
+      "source": "Focus_Evidence/evidence/FOCUS-E3/complete-certificate/CyclicUpper.lean",
+      "sha256": "11e5d462866219ce6d13e7cde20de92f48eaf19f16cb68480072b2664ebba8d5"
+    },
+    {
+      "module": "CombinedObstruction",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-FOCUS-E3\\CombinedObstruction.lean",
+      "source": "Focus_Evidence/evidence/FOCUS-E3/complete-certificate/CombinedObstruction.lean",
+      "sha256": "3bec4ca43c026c51aa6b073fb640197cfeeac2060337dcbb1925d996cc918c13"
+    },
+    {
+      "module": "CyclicSharpness",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-FOCUS-E3\\CyclicSharpness.lean",
+      "source": "Focus_Evidence/evidence/FOCUS-E3/complete-certificate/CyclicSharpness.lean",
+      "sha256": "9264960904aa1dd2a0d428625e2a777455350d8de1edafecca4bedab9febfe38"
+    }
+  ],
+  "endpoints": [
+    "Erdos3Completion.explicit_L_witness_beats_every_cyclic_AP_free_set",
+    "Cyclic13Kernel.cyclic_four_AP_extremum_is_six",
+    "Cyclic13Kernel.cyclic4Free_card_le_six",
+    "Erdos3R17.B_card",
+    "Erdos3R17.B_Lfree"
+  ],
+  "roots": [
+    "CombinedObstruction",
+    "CyclicSharpness",
+    "CyclicUpper",
+    "R17SplitReplay"
+  ],
+  "audit_modules": [
+    "FreshAudit1.lean"
+  ],
+  "lean_options": {},
+  "static_review_contexts": [],
+  "status": "SCHEDULED_RESOURCE_CHECKPOINT",
+  "builds": [
+    {
+      "module": "R17SplitReplay",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "R17SplitReplay.olean",
+        "R17SplitReplay.lean"
+      ],
+      "seconds": 37.859,
+      "exit": 0,
+      "stdout": "'Erdos3R17.B_card' depends on axioms: [propext, Quot.sound]\n'Erdos3R17.B_Lfree' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 6191136768,
+      "stop_reason": null,
+      "started_utc": "2026-10-05T01:23:48.955050+00:00",
+      "finished_utc": "2026-10-05T01:24:26.810164+00:00",
+      "owned_process_stop_output": null,
+      "own_job_resource_receipt": {
+        "command": [
+          "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+          "-j1",
+          "-DmaxHeartbeats=0",
+          "-DmaxRecDepth=100000",
+          "-o",
+          "R17SplitReplay.olean",
+          "R17SplitReplay.lean"
+        ],
+        "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-FOCUS-E3",
+        "started_utc": "2026-10-05T01:23:48.955050+00:00",
+        "attempted": true,
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 5368709120,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 1073741824,
+          "own_job_private_bytes": 6442450944,
+          "own_process_private_bytes": 6442450944,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 3600
+        },
+        "minimum_disk_free_bytes": 6191136768,
+        "initial_system_memory_snapshot": {
+          "free_physical_bytes": 8314421248,
+          "total_physical_bytes": 34024419328,
+          "available_commit_bytes": 8966340608,
+          "total_commit_limit_bytes": 61075705856
+        },
+        "minimum_physical_available_bytes": 5603909632,
+        "minimum_available_commit_bytes": 4983717888,
+        "root_pid": 55984,
+        "own_job_assignment_before_resume": "PASS",
+        "exit": 0,
+        "job_peak_process_private_bytes": 4023390208,
+        "job_peak_aggregate_private_bytes": 4024623104,
+        "state": "PASS",
+        "finished_utc": "2026-10-05T01:24:26.810164+00:00",
+        "seconds": 37.859,
+        "polled_peak_tree_private_bytes": 4024164352,
+        "polled_peak_tree_rss_bytes": 2726563840,
+        "counter_samples": 138,
+        "observed_own_processes": {
+          "55984": {
+            "exe": "lean.exe",
+            "peak_private_bytes": 4022931456,
+            "peak_rss_bytes": 2719182848
+          },
+          "51068": {
+            "exe": "conhost.exe",
+            "peak_private_bytes": 1273856,
+            "peak_rss_bytes": 7860224
+          }
+        },
+        "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\sakana-FOCUS-E3-c880f36178d4ef9e-attempt-0.stdout.txt",
+        "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\sakana-FOCUS-E3-c880f36178d4ef9e-attempt-0.stderr.txt",
+        "stdout_sha256": "a2fb4a3de15a7820cf322e5b425c3be52cb588cb37d7c3a277cb6a1a306797ab",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_excerpt": "'Erdos3R17.B_card' depends on axioms: [propext, Quot.sound]\n'Erdos3R17.B_Lfree' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+        "stderr_excerpt": ""
+      },
+      "source_sha256": "fe2f97e19892fa7a722500188366697949929b453f87914737c525b6fc2b6531",
+      "third_worker_memory_observations": {
+        "minimum_free_physical_bytes": 5603909632,
+        "minimum_available_commit_bytes": 4983717888,
+        "peak_owned_private_bytes": 4024623104
+      },
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-FOCUS-E3\\R17SplitReplay.olean",
+          "sha256": "f6aa2e88f27b262af6dfa680f005b9bd4835e32bdcf1307d251999f1dc981d3b",
+          "bytes": 435952
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    }
+  ],
+  "compiler_version": "Lean (version 4.33.1, x86_64-w64-windows-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)",
+  "compilation_order": [
+    "R17SplitReplay",
+    "BooleanTree",
+    "CardBridge",
+    "CyclicUpper",
+    "CombinedObstruction",
+    "CyclicSharpness"
+  ],
+  "started_utc": "2026-10-05T01:23:48Z",
+  "failed_invocations": [],
+  "selected_audit_axiom_review": [],
+  "resource_settings": {
+    "LEAN_NUM_THREADS": 1,
+    "lean_shell_worker_flag": "-j1",
+    "maxHeartbeats": 0,
+    "maxRecDepth": 100000,
+    "runner_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\run_source_plan.py",
+    "runner_source_sha256": "7d6e05618cb48494a792efc54c8a80e36c7bedb6f28415e78515b1c4f4caefc0",
+    "axiom_parser_source_sha256": "1ee59639204140430c088023539a648f9007cc26c1856cf8cd2e3c2e59d7143f",
+    "third_worker_pilot": {
+      "maximum_new_source_invocations": 1,
+      "initial_disk_bytes": 4000000000,
+      "initial_free_physical_bytes": 6442450944,
+      "continuous_disk_reserve_bytes": 1000000000,
+      "continuous_free_physical_reserve_bytes": 3221225472,
+      "owned_compiler_private_memory_ceiling_bytes": 6442450944,
+      "initial_memory_snapshot": {
+        "free_physical_bytes": 8318545920,
+        "total_physical_bytes": 34024419328,
+        "available_commit_bytes": 8966606848,
+        "total_commit_limit_bytes": 61075705856
+      },
+      "qualification": "ROOT_AUTHORIZED_MEASURED_THIRD_WORKER_PILOT",
+      "initial_available_commit_bytes": 5368709120,
+      "continuous_available_commit_reserve_bytes": 1073741824,
+      "owned_job_private_memory_ceiling_bytes": 6442450944,
+      "own_job_assignment_before_resume": "REQUIRED",
+      "resource_guard_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\matt_resource_guard.py",
+      "resource_guard_sha256": "ae0b64c7fbf47545365f3238977368042be342ddb973159ec65c98f64aa38a71"
+    }
+  },
+  "checkpoint_reason": "ROOT_AUTHORIZED_SINGLE_THIRD_WORKER_PILOT_COMPLETED",
+  "finished_utc": "2026-10-05T01:24:26Z"
+}

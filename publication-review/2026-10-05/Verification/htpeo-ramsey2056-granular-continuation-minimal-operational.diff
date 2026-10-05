@@ -1,0 +1,56 @@
+--- run_htpeo_ramsey_supplemented_plan.py
++++ run_htpeo_ramsey2056_granular_continuation.py
+@@ -50,6 +50,26 @@
+   else:from matt_resource_guard import guarded_tree
+ dest=BASE/'builds'/project
+ plan=json.loads((dest/'build-plan.json').read_text())
++
++assert '--exact2056-granular-continuation' in sys.argv[3:]
++assert project=='htpeo-ramsey-current' and worker_threads==1 and third_worker_continuation and defer_whole_import_mode
++assert not third_worker_pilot and not full_mathlib_source_mode and not independent_resource_mode
++ht_scope_flag='--granular-continuation-scope-sha256';assert sys.argv.count(ht_scope_flag)==1
++ht_scope_sha=sys.argv[sys.argv.index(ht_scope_flag)+1];assert ht_scope_sha=='8bda2c65aa1200b2df93f99ba341cf0fa171b1bdc3dc1d9955b55ea13fe73579'
++ht_scope_file=BASE/'htpeo-ramsey-exact2056-granular-continuation-scope-20261005.json'
++assert hashlib.sha256(ht_scope_file.read_bytes()).hexdigest()==ht_scope_sha
++ht_scope=json.loads(ht_scope_file.read_bytes())
++assert hashlib.sha256((dest/'build-plan.json').read_bytes()).hexdigest()==ht_scope['original_source_plan_sha256']
++assert hashlib.sha256(Path(ht_scope['actual36_immutable_receipt']).read_bytes()).hexdigest()==ht_scope['actual36_checkpoint_receipt_sha256']
++ht_actual_modules={r['module']:r for r in plan['modules']}
++for record in ht_scope['all2103_source_identities']:
++ assert ht_actual_modules[record['module']]['sha256']==record['sha256']==hashlib.sha256(Path(record['file']).read_bytes()).hexdigest()
++ assert [n for n in read_imports(record['file']) if n!='all']==record['direct_imports']
++plan['exact2056_granular_continuation_policy']={'scope_file':str(ht_scope_file),'scope_sha256':ht_scope_sha,
++ 'prior36_own_cold_pass_checkpoint_sha256':ht_scope['actual36_checkpoint_receipt_sha256'],
++ 'remaining2056_scientific_sources':ht_scope['remaining2056_topological_order'],
++ 'all11whole_sources_and_both_organizer_audits_deferred':True,'source_plan_or_body_changes':False,
++ 'no_automatic_compression_or_storage_mutation':True}
+ 
+ # HT-specific organizer audit supplement; the frozen plan/source/original audit remain unchanged.
+ assert project=='htpeo-ramsey-current' and worker_threads==1 and third_worker_guarded
+@@ -271,7 +291,13 @@
+    time.sleep(.05)
+ save()
+ new_source_invocations=0
+-for n in ordered+plan['audit_modules']+plan.get('non_acceptance_audit_modules',[]):
++assert set(ht_scope['deferred11_whole_source_names'])<=deferred_whole_names
++dispatch_order=[n for n in ordered if n not in deferred_whole_names]
++assert dispatch_order==ht_scope['granular2092_topological_order'] and len(dispatch_order)==2092
++for n in ht_scope['prior36_own_cold_pass_module_names']:
++ assert n in retained and retained[n]['exit']==0 and not retained[n].get('stop_reason')
++ assert retained[n]['source_sha256']==ht_actual_modules[n]['sha256']
++for n in dispatch_order:
+  if n in retained:continue
+  if n in deferred_whole_names:
+   plan['deferred_whole_import_policy']['unattempted_whole_invocations'].append({'module':n,'attempted':False,
+@@ -403,6 +429,11 @@
+   else:plan['selected_endpoint_uses_sorry']=True;save()
+ else:
+  if plan['failed_invocations']:plan['status']='BUILD_FAILED_OR_TIMED_OUT'
++ elif '--exact2056-granular-continuation' in sys.argv[3:]:
++  ht_actual_passes={r['module'] for r in plan['builds'] if r['exit']==0 and not r['is_endpoint_audit'] and not r.get('stop_reason')}
++  assert set(ht_scope['granular2092_topological_order'])<=ht_actual_passes
++  plan['status']='SCHEDULED_RESOURCE_CHECKPOINT'
++  plan['checkpoint_reason']='EXACT2092_GRANULAR_SOURCE_CLOSURE_COMPLETE_ELEVEN_WHOLE_SOURCES_AND_BOTH_AUDITS_NEED_SEPARATE_EXCLUSIVE_LEASE'
+  elif defer_whole_import_mode and plan['deferred_whole_import_policy']['unattempted_whole_invocations']:
+   plan['status']='SCHEDULED_RESOURCE_CHECKPOINT';plan['checkpoint_reason']='GRANULAR_REMAINDER_FINISHED_WHOLE_IMPORT_LEASE_STILL_REQUIRED'
+  elif deferred_resource_roots:plan['status']='ENVIRONMENT_BLOCKED_RESOURCE_DEPENDENCIES'

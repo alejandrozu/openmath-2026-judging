@@ -1,0 +1,13 @@
+--- preserved/run_htpeo_m2_linked_granular_plan.py
++++ run_htpeo_m2_linked_granular_plan.py
+@@ -23,8 +23,8 @@
+ assert '--htpeo-m2-reuse-execution-authorized' in sys.argv[3:], 'Separate root-approved reuse/source lease required'
+ from htpeo_m2_original97_hardlink_seed import verify_seed as m2_verify_seed
+ from htpeo_m2_original97_hardlink_seed import digest as m2_bound_digest
+-M2_LINK_POLICY_SHA256 = 'cc42d467875a71ca36f821945b6162a71528fbe6a564587ab28750189d72b53b'
+-M2_LINK_HELPER_SHA256 = 'ca4c495b5fd70549bff7105e170afa58ccad29580830579fb14a9dfdf9bc0092'
++M2_LINK_POLICY_SHA256 = 'bab7476a702cb7ccf182e5c051f70ecc30a3b21dc14cec8c872487558f9a5092'
++M2_LINK_HELPER_SHA256 = 'be9687da257f90929060878c7219aa09f006eaea1133985debd4a1f3de8d24e7'
+ assert m2_bound_digest(BASE/'htpeo_m2_original97_hardlink_seed.py') == M2_LINK_HELPER_SHA256
+ def m2_flag(name):
+  assert name in sys.argv and sys.argv.index(name)+1<len(sys.argv), name

@@ -1,0 +1,67 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,textcomp}
+\usepackage[margin=24mm]{geometry}
+\usepackage{longtable,booktabs,array,enumitem}
+\usepackage[hidelinks]{hyperref}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+\emergencystretch=3em
+\begin{document}
+{\LARGE\bfseries A four-term-progression-free set with reciprocal sum exceeding 4.44\par}\medskip
+{\small Provisional mathematical authors: Rachel Teo, Wenyi Wang, Hamdi Abderrahmene\par}\medskip
+{\small Judging and evaluation record: the submissions discussed in this document have been judged and evaluated by Alejandro Zarzuelo Urdiales for OpenMath 2026. This dated review records the stated verification, classification and unresolved holds; it is a preliminary evaluation rather than a signed award decision.\par}
+
+{\small Event provenance: OpenMath 2026 ran 27 September-2 October 2026 with worldwide online participation. Detailed organizer listings specify Harvard Innovation Labs for the 27 September in-person event; the OpenMath programme advertises a hybrid kickoff at MIT. Sundai identifies its Harvard/MIT community. Organizer sources: \url{https://rsihouse.ai/openmath} ; \url{https://luma.com/yzp9abvr} ; \url{https://www.sundai.club/events/boston/recursive-learning-hack-with-harvard-innovation-labs}\par}
+
+{\small Rachel Teo  -  Sakana AI.\par}
+
+{\small Wenyi Wang  -  Sakana AI.\par}
+
+{\small Hamdi Abderrahmene  -  Sakana AI.\par}
+
+{\small Affiliations follow the recorded author declarations or public institutional/profile sources. Preferred author names, author order and publication affiliations await author review. This editorial compilation does not establish anthology coauthorship.\par}
+
+{\small Original-result working manuscript | OpenMath 2026 | 5 October 2026\par}\medskip
+{\small Central source and adjudication archive: \url{https://github.com/alejandrozu/openmath-2026-judging}\par}
+
+\subsection{Abstract}
+An explicit six-residue augmentation of the base 55 digit construction gives a finite positive four-AP-free set whose exact reciprocal sum exceeds 111/25. This improves the located lower-bound construction while remaining a finite bound, not a reciprocal-divergence theorem.
+
+\subsection{One explicit set for all three assertions}
+Let D=\{0,1,2,4,5,9,10,11,14,16,17,18,21,24,30,37,39,41,42,45,47\}. Define T\_j as the nonnegative integers with j base 55 digits drawn from D, allowing leading zeroes, and T\_0=\{0\}. Put M=55\ensuremath{^3} and U=\{26286,26726,26737,120061,120501,120512\}. Set E=T\_22\ensuremath{\cup}\ensuremath{\bigcup}\_(u\ensuremath{\in}U)(u+M T\_21), and A=\{e+1:e\ensuremath{\in}E\}.
+
+The theorem proves that every member of A is positive, A contains no nonconstant four-term arithmetic progression over the integers, and the finite rational sum \ensuremath{\sum}\_(a\ensuremath{\in}A)1/a is strictly greater than 111/25=4.44. These clauses concern the same set of distinct elements. Separate large harmonic sums and AP-free witnesses would not establish the result.
+
+\subsection{Digit descent and augmentation}
+The known base 55 alphabet supplies the starting AP-free digital construction. Reducing a hypothetical progression modulo 55 and descending through the digits proves the absence of a nonconstant progression in the digit-restricted part. The six extra residue classes are chosen and checked so that the combined set remains free of forbidden progressions across its pieces.
+
+The formal development includes exact small arithmetic certificates, residue-fibre transport and harmonic estimates. It avoids enumerating an astronomically large set element by element. Grouped levels and rational lower bounds certify the harmonic sum while finset unions preserve distinctness. The finite certificate stages and the original digit alphabet are supporting steps, not additional discoveries.
+
+\subsection{Improvement and limits}
+The located Walker construction gives a reciprocal sum above 4.43975, and a later located bound is approximately 4.4397534742. Exceeding 4.44 is a small but explicit improvement. The paper should show where the six-residue augmentation adds mass and why its interactions do not create a four-term progression.
+
+This result does not give unbounded reciprocal sums and does not refute the Erdős-Turán reciprocal-divergence problem. It is a quantitative lower construction for the associated extremal estimation problem. No optimality of the augmentation or global supremum is claimed.
+
+\subsection{Formal endpoint and manuscript form}
+The selected endpoint Erdos3Candidate.explicit\_four\_ap\_free\_reciprocal\_gt states positivity, APFree 4 and the rational inequality for one set. On 5 October 2026 at 03:02:16 UTC, an independently checked operational replay passed all 22 authored scientific bodies and the unchanged final audit under Lean 4.34.1 and Mathlib d13f23b723b8a846827a245b89c10fc7d3f11612. Seven broad import headers were replaced by 29 exact pinned tactic and mathematical imports; every statement, proof, option and comment outside those import spans remained byte-identical. The actual final print uses only propext, Classical.choice and Quot.sound, with no admitted, native or unknown axioms. This verifies the selected theorem through the separately labeled import-only route. The original frozen-source replay remains a historical 15-of-22 resource-limited outcome, and the first narrowed route remains a historical 7-of-22 resource-limited outcome; their receipts have not been relabeled or overwritten. The entrants' earlier full Linux archive is another distinct record. Completed route and exact body/output/dependency checks: Verification/sakana-erdos169-fourap-tactic-specific-v2-fresh-build.json and Verification/e169-tactic-specific-v2-completed-qualification.json.
+
+A concise paper should give the explicit alphabet, offsets and block scheme, a human digit-descent proof, and a compact rational-sum certificate. The supplementary repository can carry the full formal derivation. Walker and the intervening augmentation must be credited, with the proposed new improvement restricted to the exact set and 4.44 threshold.
+
+{\small This short manuscript records the construction and selected endpoints. The companion Original results anthology contains the extended ordinary proof exposition and its explicitly stated premises; the preserved Lean source remains the complete formal proof record.\par}
+
+\subsection{Verification and reproducibility}
+Fresh execution: sakana-erdos169-fourap: ENVIRONMENT\_BLOCKED\_RESOURCE\_DEPENDENCIES; 15/22 custom modules compiled successfully; 2 unfinished invocations stopped at a recorded resource checkpoint; receipt Verification/sakana-erdos169-fourap-fresh-build.json. Separate qualified import-only route: all 22 unchanged scientific proof bodies and the unchanged final audit pass, with standard kernel axioms only; seven import headers were narrowed under the same source and compiler pins. This does not replace the original frozen-source receipt. Qualification: Verification/e169-tactic-specific-v2-completed-qualification.json. Compiler pins, source hashes and endpoint axiom outputs are in Verification. Historical receipts and finite checks do not replace fresh replay.
+
+\begin{samepage}
+\subsection{Erdos3Candidate.explicit\_four\_ap\_free\_reciprocal\_gt}
+\begin{quote}\small\ttfamily theorem explicit\_four\_ap\_free\_reciprocal\_gt :\newline     (\ensuremath{\forall} a \ensuremath{\in} sixAFinset, 0 < a) \ensuremath{\wedge}\newline       APFree 4 (sixAFinset : Set \ensuremath{\mathbb{Z}}) \ensuremath{\wedge}\newline       (\ensuremath{\sum} a \ensuremath{\in} sixAFinset, (1 : \ensuremath{\mathbb{Q}}) / (a : \ensuremath{\mathbb{Q}})) > 111 / 25\end{quote}
+{\small Source: proofs/erdos169-fourap/OpHack/MainResult.lean:17.\par}
+
+{\small Source SHA-256: cc686e49443c9f23ccbf715be6e9cf71c528736794df230771d33ec84df80ac5\par}
+
+{\small\textbf{Sources and attribution:} \href{https://www.erdosproblems.com/169}{1. www.erdosproblems.com / 169}; \href{https://arxiv.org/abs/2203.06045}{2. arXiv source: 2203.06045}; \href{https://computoergosum.com/en/principia/erdos-169.html}{3. computoergosum.com / erdos-169.html}; \href{https://github.com/alejandrozu/ulam-opdp-difficulty-atlas}{4. alejandrozu/ulam-opdp-difficulty-atlas}; \href{https://github.com/alejandrozu/openmath-2026-judging/blob/d0ed487f487fa7ec814ff705ab55249983fe8707/OpenMath-Judging/review/entries/E02-erdos169-fourap.txt}{5. alejandrozu/openmath-2026-judging / E02-erdos169-fourap.txt}; \href{https://github.com/alejandrozu/openmath-2026-judging}{Central source and adjudication archive}.\par}
+
+\end{samepage}
+\end{document}

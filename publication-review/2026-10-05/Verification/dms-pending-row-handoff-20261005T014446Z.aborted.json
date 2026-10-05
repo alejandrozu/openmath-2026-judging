@@ -1,0 +1,12 @@
+{
+  "status": "OWN_JOB_ASSIGNMENT_FAILED_BEFORE_DISPATCHER_RESUME",
+  "original_prepared_receipt": "dms-pending-row-handoff-20261005T014446Z.json",
+  "observed_error": "AssertionError: Must assign process-only boundary BEFORE dispatcher resume",
+  "last_win32_error": null,
+  "last_win32_error_qualification": "The failed assertion did not preserve GetLastError; no numeric Win32 error is inferred.",
+  "owner_access_mask_used": "0x0200|0x0100|0x1000|0x00100000",
+  "correction": "The next helper revision added PROCESS_TERMINATE access for AssignProcessToJobObject only, then tested that exact OpenProcess access mask with nested owned synthetic jobs. No termination call was introduced.",
+  "dispatcher_resumed": false,
+  "new_source_child_executed": false,
+  "qualification": "Operational wrapper failure before resume, not a Lean source failure. Prepared receipt and before-canonical snapshot remain unchanged. Later completed boundary is separately recorded at 20261005T014515Z."
+}

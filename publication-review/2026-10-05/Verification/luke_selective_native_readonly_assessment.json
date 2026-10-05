@@ -1,0 +1,6007 @@
+{
+  "checked_utc": "2026-10-04T22:47:45.172207+00:00",
+  "scope": "Read-only source and official generated-C import closure, no compiler or new native build invoked.",
+  "custom_runtime_roots": [
+    "K4Ramsey.Constructions.Final3840.Count",
+    "K4Ramsey.Constructions.Final3840.Model",
+    "K4Ramsey.Counting.IntegerTensorK4"
+  ],
+  "own_source_closure": [
+    "K4Ramsey.Constructions.Final3840.Count",
+    "K4Ramsey.Constructions.Final3840.Data",
+    "K4Ramsey.Constructions.Final3840.Data.Part00",
+    "K4Ramsey.Constructions.Final3840.Data.Part01",
+    "K4Ramsey.Constructions.Final3840.Data.Part02",
+    "K4Ramsey.Constructions.Final3840.Data.Part03",
+    "K4Ramsey.Constructions.Final3840.Data.Part04",
+    "K4Ramsey.Constructions.Final3840.Data.Part05",
+    "K4Ramsey.Constructions.Final3840.Data.Part06",
+    "K4Ramsey.Constructions.Final3840.Data.Part07",
+    "K4Ramsey.Constructions.Final3840.Data.Part08",
+    "K4Ramsey.Constructions.Final3840.Data.Part09",
+    "K4Ramsey.Constructions.Final3840.Model",
+    "K4Ramsey.Core.Graphon",
+    "K4Ramsey.Counting.IntegerTensorK4",
+    "K4Ramsey.Counting.TensorK4"
+  ],
+  "direct_mathlib_imports": [
+    "Mathlib.Algebra.BigOperators.Group.Finset.Basic",
+    "Mathlib.Algebra.BigOperators.Ring.Finset",
+    "Mathlib.Data.Fin.Tuple.Basic",
+    "Mathlib.Data.Fintype.BigOperators",
+    "Mathlib.Data.Rat.Cast.Order",
+    "Mathlib.Tactic.Ring"
+  ],
+  "mathlib_c_closure_count": 678,
+  "mathlib_c_closure_source_bytes": 102402282,
+  "unresolved_custom_modules": [],
+  "unresolved_mathlib_c": [],
+  "umbrella_mathlib_runtime_initializer_ref_count": 8509,
+  "mathlib_c_sha256": "ee079f1ae7a8d0bb30023853777c72371d782a5b95964d0fb9c394ec60017920",
+  "modules": {
+    "Mathlib.Algebra.BigOperators.Group.Finset.Basic": {
+      "bytes": 3977,
+      "runtime_initializer_ref_count": 3,
+      "imports": [
+        "Mathlib.Algebra.BigOperators.Group.Finset.Defs",
+        "Mathlib.Data.Finset.Prod",
+        "Mathlib.Data.Finset.Sum"
+      ]
+    },
+    "Mathlib.Algebra.BigOperators.Group.Finset.Defs": {
+      "bytes": 513933,
+      "runtime_initializer_ref_count": 6,
+      "imports": [
+        "Mathlib.Algebra.Group.Equiv.Opposite",
+        "Mathlib.Algebra.Group.TypeTags.Basic",
+        "Mathlib.Algebra.BigOperators.Group.Multiset.Defs",
+        "Mathlib.Data.Fintype.Sets",
+        "Mathlib.Data.Multiset.Bind",
+        "Mathlib.Tactic.ToDual"
+      ]
+    },
+    "Mathlib.Algebra.Group.Equiv.Opposite": {
+      "bytes": 70832,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Algebra.Group.Equiv.Basic",
+        "Mathlib.Algebra.Group.Opposite"
+      ]
+    },
+    "Mathlib.Algebra.Group.Equiv.Basic": {
+      "bytes": 50445,
+      "runtime_initializer_ref_count": 4,
+      "imports": [
+        "Mathlib.Algebra.Group.Equiv.Defs",
+        "Mathlib.Algebra.Group.Hom.Basic",
+        "Mathlib.Logic.Equiv.Basic",
+        "Mathlib.Tactic.Spread"
+      ]
+    },
+    "Mathlib.Algebra.Group.Equiv.Defs": {
+      "bytes": 95616,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Algebra.Group.Hom.Defs",
+        "Mathlib.Logic.Equiv.Defs"
+      ]
+    },
+    "Mathlib.Algebra.Group.Hom.Defs": {
+      "bytes": 183854,
+      "runtime_initializer_ref_count": 4,
+      "imports": [
+        "Mathlib.Algebra.Group.Defs",
+        "Mathlib.Algebra.Notation.Pi.Defs",
+        "Mathlib.Data.FunLike.Basic",
+        "Mathlib.Logic.Function.Iterate"
+      ]
+    },
+    "Mathlib.Algebra.Group.Defs": {
+      "bytes": 16433,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Algebra.Group.DivInvMonoid"
+      ]
+    },
+    "Mathlib.Algebra.Group.DivInvMonoid": {
+      "bytes": 60507,
+      "runtime_initializer_ref_count": 4,
+      "imports": [
+        "Mathlib.Algebra.Group.Monoid",
+        "Mathlib.Data.Int.Notation",
+        "Mathlib.Tactic.CrossRefAttribute",
+        "Mathlib.Tactic.OfNat"
+      ]
+    },
+    "Mathlib.Algebra.Group.Monoid": {
+      "bytes": 94831,
+      "runtime_initializer_ref_count": 4,
+      "imports": [
+        "Mathlib.Algebra.Group.Semigroup",
+        "Mathlib.Data.Nat.BinaryRec",
+        "Mathlib.Data.Nat.Notation",
+        "Mathlib.Tactic.Push.Attr"
+      ]
+    },
+    "Mathlib.Algebra.Group.Semigroup": {
+      "bytes": 6681,
+      "runtime_initializer_ref_count": 3,
+      "imports": [
+        "Mathlib.Algebra.Regular.Defs",
+        "Mathlib.Tactic.MkIffOfInductiveProp",
+        "Mathlib.Tactic.Simps"
+      ]
+    },
+    "Mathlib.Algebra.Regular.Defs": {
+      "bytes": 2834,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Tactic.ToAdditive"
+      ]
+    },
+    "Mathlib.Tactic.ToAdditive": {
+      "bytes": 2863,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Tactic.Translate.ToAdditive"
+      ]
+    },
+    "Mathlib.Tactic.Translate.ToAdditive": {
+      "bytes": 592745,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Tactic.Translate.Core"
+      ]
+    },
+    "Mathlib.Tactic.Translate.Core": {
+      "bytes": 3165870,
+      "runtime_initializer_ref_count": 6,
+      "imports": [
+        "Mathlib.Lean.Meta.Simp",
+        "Mathlib.Tactic.Eqns",
+        "Mathlib.Tactic.Translate.Attributes",
+        "Mathlib.Tactic.Translate.GuessName",
+        "Mathlib.Tactic.Translate.Reorder",
+        "Mathlib.Tactic.Translate.UnfoldBoundary",
+        "Mathlib.Tactic.Translate.Reorder",
+        "Mathlib.Tactic.Translate.Reorder"
+      ]
+    },
+    "Mathlib.Lean.Meta.Simp": {
+      "bytes": 279604,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Init": {
+      "bytes": 30044,
+      "runtime_initializer_ref_count": 30,
+      "imports": [
+        "Mathlib.Lean.Linter",
+        "Mathlib.Tactic.AdaptationNote",
+        "Mathlib.Tactic.Lemma",
+        "Mathlib.Tactic.Linter.AuxLemma",
+        "Mathlib.Tactic.Linter.DeprecatedSyntaxLinter",
+        "Mathlib.Tactic.Linter.DirectoryDependency",
+        "Mathlib.Tactic.Linter.DocPrime",
+        "Mathlib.Tactic.Linter.DocString",
+        "Mathlib.Tactic.Linter.EmptyLine",
+        "Mathlib.Tactic.Linter.GlobalAttributeIn",
+        "Mathlib.Tactic.Linter.HashCommandLinter",
+        "Mathlib.Tactic.Linter.HaveILetI",
+        "Mathlib.Tactic.Linter.Header",
+        "Mathlib.Tactic.Linter.InternalConstructor",
+        "Mathlib.Tactic.Linter.FlexibleLinter",
+        "Mathlib.Tactic.Linter.Multigoal",
+        "Mathlib.Tactic.Linter.OldObtain",
+        "Mathlib.Tactic.Linter.OverlappingInstances",
+        "Mathlib.Tactic.Linter.PrivateModule",
+        "Mathlib.Tactic.Linter.TacticDocumentation",
+        "Mathlib.Tactic.Linter.UnusedTacticExtension",
+        "Mathlib.Tactic.Linter.UnusedTactic",
+        "Mathlib.Tactic.Linter.UnusedInstancesInType",
+        "Mathlib.Tactic.Linter.Style",
+        "Mathlib.Tactic.Linter.Whitespace",
+        "Mathlib.Tactic.TacticAnalysis.Declarations",
+        "Mathlib.Tactic.TypeStar",
+        "Mathlib.Tactic.Linter.Lint",
+        "Mathlib.Tactic.MinImports",
+        "Mathlib.Util.CodeActions"
+      ]
+    },
+    "Mathlib.Lean.Linter": {
+      "bytes": 3565,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Tactic.Linter.Header"
+      ]
+    },
+    "Mathlib.Tactic.Linter.Header": {
+      "bytes": 499212,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Tactic.Linter.DirectoryDependency"
+      ]
+    },
+    "Mathlib.Tactic.Linter.DirectoryDependency": {
+      "bytes": 1083811,
+      "runtime_initializer_ref_count": 0,
+      "imports": []
+    },
+    "Mathlib.Tactic.AdaptationNote": {
+      "bytes": 124970,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Tactic.Linter.Header"
+      ]
+    },
+    "Mathlib.Tactic.Lemma": {
+      "bytes": 26252,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Tactic.Linter.Header"
+      ]
+    },
+    "Mathlib.Tactic.Linter.AuxLemma": {
+      "bytes": 138770,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Tactic.Linter.Header"
+      ]
+    },
+    "Mathlib.Tactic.Linter.DeprecatedSyntaxLinter": {
+      "bytes": 370000,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Tactic.Linter.Header"
+      ]
+    },
+    "Mathlib.Tactic.Linter.DocPrime": {
+      "bytes": 148744,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Tactic.Linter.Header"
+      ]
+    },
+    "Mathlib.Tactic.Linter.DocString": {
+      "bytes": 442929,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Tactic.Linter.Header"
+      ]
+    },
+    "Mathlib.Tactic.Linter.EmptyLine": {
+      "bytes": 315391,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Tactic.Linter.Header"
+      ]
+    },
+    "Mathlib.Tactic.Linter.GlobalAttributeIn": {
+      "bytes": 198242,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Tactic.Linter.Header"
+      ]
+    },
+    "Mathlib.Tactic.Linter.HashCommandLinter": {
+      "bytes": 316594,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Tactic.Linter.Header"
+      ]
+    },
+    "Mathlib.Tactic.Linter.HaveILetI": {
+      "bytes": 156374,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Tactic.Linter.Header"
+      ]
+    },
+    "Mathlib.Tactic.Linter.InternalConstructor": {
+      "bytes": 157191,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Tactic.Linter.Header"
+      ]
+    },
+    "Mathlib.Tactic.Linter.FlexibleLinter": {
+      "bytes": 926790,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Tactic.Linter.Header"
+      ]
+    },
+    "Mathlib.Tactic.Linter.Multigoal": {
+      "bytes": 487196,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Tactic.Linter.Header"
+      ]
+    },
+    "Mathlib.Tactic.Linter.OldObtain": {
+      "bytes": 113304,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Tactic.Linter.Header"
+      ]
+    },
+    "Mathlib.Tactic.Linter.OverlappingInstances": {
+      "bytes": 1131822,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Tactic.Linter.UnusedInstancesInType"
+      ]
+    },
+    "Mathlib.Tactic.Linter.UnusedInstancesInType": {
+      "bytes": 584869,
+      "runtime_initializer_ref_count": 4,
+      "imports": [
+        "Mathlib.Lean.Expr.Basic",
+        "Mathlib.Lean.Environment",
+        "Mathlib.Lean.Elab.InfoTree",
+        "Mathlib.Tactic.Linter.Header"
+      ]
+    },
+    "Mathlib.Lean.Expr.Basic": {
+      "bytes": 600858,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Tactic.Linter.Header"
+      ]
+    },
+    "Mathlib.Lean.Environment": {
+      "bytes": 10579,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Tactic.Linter.Header"
+      ]
+    },
+    "Mathlib.Lean.Elab.InfoTree": {
+      "bytes": 177738,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Lean.Environment",
+        "Mathlib.Tactic.Linter.Header"
+      ]
+    },
+    "Mathlib.Tactic.Linter.PrivateModule": {
+      "bytes": 163010,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Tactic.Linter.Header"
+      ]
+    },
+    "Mathlib.Tactic.Linter.TacticDocumentation": {
+      "bytes": 55721,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Tactic.Linter.Header"
+      ]
+    },
+    "Mathlib.Tactic.Linter.UnusedTacticExtension": {
+      "bytes": 289115,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Tactic.Linter.Header"
+      ]
+    },
+    "Mathlib.Tactic.Linter.UnusedTactic": {
+      "bytes": 540707,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Tactic.Linter.Header",
+        "Mathlib.Tactic.Linter.UnusedTacticExtension"
+      ]
+    },
+    "Mathlib.Tactic.Linter.Style": {
+      "bytes": 840594,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Tactic.Linter.Header",
+        "Mathlib.Tactic.DeclarationNames"
+      ]
+    },
+    "Mathlib.Tactic.DeclarationNames": {
+      "bytes": 32228,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Tactic.Linter.Header"
+      ]
+    },
+    "Mathlib.Tactic.Linter.Whitespace": {
+      "bytes": 454472,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Tactic.Linter.Header"
+      ]
+    },
+    "Mathlib.Tactic.TacticAnalysis.Declarations": {
+      "bytes": 1014316,
+      "runtime_initializer_ref_count": 4,
+      "imports": [
+        "Mathlib.Tactic.TacticAnalysis",
+        "Mathlib.Lean.Elab.InfoTree",
+        "Mathlib.Tactic.ExtractGoal",
+        "Mathlib.Tactic.TacticAnalysis",
+        "Mathlib.Util.ParseCommand"
+      ]
+    },
+    "Mathlib.Tactic.TacticAnalysis": {
+      "bytes": 492449,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Lean.Elab.Tactic.Meta",
+        "Mathlib.Lean.ContextInfo"
+      ]
+    },
+    "Mathlib.Lean.Elab.Tactic.Meta": {
+      "bytes": 145080,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Tactic.Linter.Header"
+      ]
+    },
+    "Mathlib.Lean.ContextInfo": {
+      "bytes": 195665,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Lean.Elab.Tactic.Meta",
+        "Mathlib.Tactic.Linter.Header"
+      ]
+    },
+    "Mathlib.Tactic.ExtractGoal": {
+      "bytes": 444245,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Tactic.MinImports"
+      ]
+    },
+    "Mathlib.Tactic.MinImports": {
+      "bytes": 771395,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Tactic.Linter.Header"
+      ]
+    },
+    "Mathlib.Util.ParseCommand": {
+      "bytes": 159803,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Tactic.Linter.Header"
+      ]
+    },
+    "Mathlib.Tactic.TypeStar": {
+      "bytes": 41118,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Tactic.Linter.Header"
+      ]
+    },
+    "Mathlib.Tactic.Linter.Lint": {
+      "bytes": 330289,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Tactic.DeclarationNames"
+      ]
+    },
+    "Mathlib.Util.CodeActions": {
+      "bytes": 2871,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Util.CodeActions.BinderPlicity"
+      ]
+    },
+    "Mathlib.Util.CodeActions.BinderPlicity": {
+      "bytes": 54830,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Tactic.Linter.Header"
+      ]
+    },
+    "Mathlib.Tactic.Eqns": {
+      "bytes": 34994,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Tactic.Translate.Attributes": {
+      "bytes": 5934,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Tactic.Translate.GuessName": {
+      "bytes": 207075,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Data.String.Defs",
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Data.String.Defs": {
+      "bytes": 14441,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Tactic.Translate.Reorder": {
+      "bytes": 591775,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Tactic.Translate.UnfoldBoundary": {
+      "bytes": 692123,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Tactic.MkIffOfInductiveProp": {
+      "bytes": 786776,
+      "runtime_initializer_ref_count": 3,
+      "imports": [
+        "Mathlib.Lean.Meta",
+        "Mathlib.Lean.Name",
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Lean.Meta": {
+      "bytes": 142945,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Lean.Name": {
+      "bytes": 228518,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Tactic.Simps": {
+      "bytes": 2783,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Tactic.Simps.Basic"
+      ]
+    },
+    "Mathlib.Tactic.Simps.Basic": {
+      "bytes": 2713385,
+      "runtime_initializer_ref_count": 4,
+      "imports": [
+        "Mathlib.Lean.Expr.Basic",
+        "Mathlib.Util.AddRelatedDecl",
+        "Mathlib.Tactic.Simps.NotationClass",
+        "Mathlib.Tactic.Translate.Attributes"
+      ]
+    },
+    "Mathlib.Util.AddRelatedDecl": {
+      "bytes": 903114,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Tactic.Simps.NotationClass": {
+      "bytes": 267449,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Data.Nat.BinaryRec": {
+      "bytes": 16365,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Data.Nat.Notation": {
+      "bytes": 15795,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Tactic.Push.Attr": {
+      "bytes": 502332,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Data.Int.Notation": {
+      "bytes": 15794,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Tactic.CrossRefAttribute": {
+      "bytes": 620111,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Tactic.OfNat": {
+      "bytes": 40116,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Algebra.Notation.Pi.Defs": {
+      "bytes": 17075,
+      "runtime_initializer_ref_count": 3,
+      "imports": [
+        "Mathlib.Algebra.Notation.Defs",
+        "Mathlib.Tactic.Push.Attr",
+        "Mathlib.Logic.Function.Defs"
+      ]
+    },
+    "Mathlib.Algebra.Notation.Defs": {
+      "bytes": 62071,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Tactic.Simps",
+        "Mathlib.Tactic.ToAdditive"
+      ]
+    },
+    "Mathlib.Logic.Function.Defs": {
+      "bytes": 86823,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Init",
+        "Mathlib.Tactic.Attr.Register"
+      ]
+    },
+    "Mathlib.Tactic.Attr.Register": {
+      "bytes": 613799,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Data.FunLike.Basic": {
+      "bytes": 5827,
+      "runtime_initializer_ref_count": 4,
+      "imports": [
+        "Mathlib.Basic.Unique",
+        "Mathlib.Logic.Function.Basic",
+        "Mathlib.Tactic.Simps",
+        "Mathlib.Tactic.SplitIfs"
+      ]
+    },
+    "Mathlib.Basic.Unique": {
+      "bytes": 19493,
+      "runtime_initializer_ref_count": 3,
+      "imports": [
+        "Mathlib.Basic.IsEmpty.Defs",
+        "Mathlib.Logic.Function.Basic",
+        "Mathlib.Tactic.Inhabit"
+      ]
+    },
+    "Mathlib.Basic.IsEmpty.Defs": {
+      "bytes": 4953,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Logic.Function.Basic": {
+      "bytes": 51035,
+      "runtime_initializer_ref_count": 7,
+      "imports": [
+        "Mathlib.Basic.ExistsUnique",
+        "Mathlib.Basic.Logic.Basic",
+        "Mathlib.Basic.Nonempty",
+        "Mathlib.Basic.Nontrivial.Defs",
+        "Mathlib.Data.Set.Defs",
+        "Mathlib.Logic.Function.Defs",
+        "Mathlib.Order.Defs.Unbundled"
+      ]
+    },
+    "Mathlib.Basic.ExistsUnique": {
+      "bytes": 107577,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Basic.Logic.Basic": {
+      "bytes": 170719,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Lean.Meta.Simp",
+        "Mathlib.Tactic.Attr.Register"
+      ]
+    },
+    "Mathlib.Basic.Nonempty": {
+      "bytes": 2727,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Basic.Nontrivial.Defs": {
+      "bytes": 2836,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Tactic.Push.Attr"
+      ]
+    },
+    "Mathlib.Data.Set.Defs": {
+      "bytes": 189666,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Tactic.SetNotationForOrder",
+        "Mathlib.Tactic.ToDual"
+      ]
+    },
+    "Mathlib.Tactic.SetNotationForOrder": {
+      "bytes": 774931,
+      "runtime_initializer_ref_count": 3,
+      "imports": [
+        "Mathlib.Lean.PrettyPrinter.Delaborator",
+        "Mathlib.Tactic.Translate.GuessName",
+        "Mathlib.Util.AddRelatedDecl"
+      ]
+    },
+    "Mathlib.Lean.PrettyPrinter.Delaborator": {
+      "bytes": 246697,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Tactic.ToDual": {
+      "bytes": 3160,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Tactic.Translate.ToDual"
+      ]
+    },
+    "Mathlib.Tactic.Translate.ToDual": {
+      "bytes": 668497,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Tactic.Translate.TagUnfoldBoundary"
+      ]
+    },
+    "Mathlib.Tactic.Translate.TagUnfoldBoundary": {
+      "bytes": 292331,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Tactic.Translate.Core",
+        "Mathlib.Tactic.Translate.Core"
+      ]
+    },
+    "Mathlib.Order.Defs.Unbundled": {
+      "bytes": 53547,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Data.Set.Defs",
+        "Mathlib.Tactic.ExtendDoc"
+      ]
+    },
+    "Mathlib.Tactic.ExtendDoc": {
+      "bytes": 123640,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Tactic.Inhabit": {
+      "bytes": 63746,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Tactic.SplitIfs": {
+      "bytes": 294086,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Tactic.Core"
+      ]
+    },
+    "Mathlib.Tactic.Core": {
+      "bytes": 436492,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Logic.Function.Iterate": {
+      "bytes": 35366,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Logic.Function.Conjugate",
+        "Mathlib.Data.Nat.Notation"
+      ]
+    },
+    "Mathlib.Logic.Function.Conjugate": {
+      "bytes": 2877,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Logic.Function.Basic"
+      ]
+    },
+    "Mathlib.Logic.Equiv.Defs": {
+      "bytes": 235594,
+      "runtime_initializer_ref_count": 5,
+      "imports": [
+        "Mathlib.Basic.Unique",
+        "Mathlib.Data.FunLike.Equiv",
+        "Mathlib.Data.Quot",
+        "Mathlib.Data.Subtype",
+        "Mathlib.Tactic.Simps"
+      ]
+    },
+    "Mathlib.Data.FunLike.Equiv": {
+      "bytes": 2845,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Data.FunLike.Embedding"
+      ]
+    },
+    "Mathlib.Data.FunLike.Embedding": {
+      "bytes": 2853,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Data.FunLike.Basic"
+      ]
+    },
+    "Mathlib.Data.Quot": {
+      "bytes": 166927,
+      "runtime_initializer_ref_count": 3,
+      "imports": [
+        "Mathlib.Basic.Unique",
+        "Mathlib.Logic.Relation",
+        "Mathlib.Util.Notation3"
+      ]
+    },
+    "Mathlib.Logic.Relation": {
+      "bytes": 54977,
+      "runtime_initializer_ref_count": 6,
+      "imports": [
+        "Mathlib.Logic.Relator",
+        "Mathlib.Tactic.Use",
+        "Mathlib.Tactic.MkIffOfInductiveProp",
+        "Mathlib.Tactic.SimpRw",
+        "Mathlib.Order.Defs.Prop",
+        "Mathlib.Order.Defs.Unbundled"
+      ]
+    },
+    "Mathlib.Logic.Relator": {
+      "bytes": 29498,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Logic.Function.Defs"
+      ]
+    },
+    "Mathlib.Tactic.Use": {
+      "bytes": 540176,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Tactic.SimpRw": {
+      "bytes": 140683,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Order.Defs.Prop": {
+      "bytes": 4155,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Tactic.ToDual",
+        "Mathlib.Tactic.ToDual"
+      ]
+    },
+    "Mathlib.Util.Notation3": {
+      "bytes": 2198010,
+      "runtime_initializer_ref_count": 3,
+      "imports": [
+        "Mathlib.Lean.PrettyPrinter.Delaborator",
+        "Mathlib.Lean.Elab.Term",
+        "Mathlib.Tactic.ScopedNS"
+      ]
+    },
+    "Mathlib.Lean.Elab.Term": {
+      "bytes": 16998,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Tactic.ScopedNS": {
+      "bytes": 317542,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Util.WithWeakNamespace"
+      ]
+    },
+    "Mathlib.Util.WithWeakNamespace": {
+      "bytes": 43430,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Data.Subtype": {
+      "bytes": 6537,
+      "runtime_initializer_ref_count": 3,
+      "imports": [
+        "Mathlib.Logic.Function.Basic",
+        "Mathlib.Tactic.AdaptationNote",
+        "Mathlib.Tactic.Simps"
+      ]
+    },
+    "Mathlib.Algebra.Group.Hom.Basic": {
+      "bytes": 45679,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Algebra.Group.Basic",
+        "Mathlib.Algebra.Group.Hom.Defs"
+      ]
+    },
+    "Mathlib.Algebra.Group.Basic": {
+      "bytes": 12586,
+      "runtime_initializer_ref_count": 6,
+      "imports": [
+        "Mathlib.Algebra.Group.Defs",
+        "Mathlib.Algebra.Notation.Defs",
+        "Mathlib.Data.Int.Init",
+        "Mathlib.Logic.Function.Iterate",
+        "Mathlib.Tactic.SimpRw",
+        "Mathlib.Tactic.SplitIfs"
+      ]
+    },
+    "Mathlib.Data.Int.Init": {
+      "bytes": 39207,
+      "runtime_initializer_ref_count": 3,
+      "imports": [
+        "Mathlib.Data.Int.Notation",
+        "Mathlib.Data.Nat.Notation",
+        "Mathlib.Tactic.DepRewrite"
+      ]
+    },
+    "Mathlib.Tactic.DepRewrite": {
+      "bytes": 1558180,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Logic.Equiv.Basic": {
+      "bytes": 128904,
+      "runtime_initializer_ref_count": 5,
+      "imports": [
+        "Mathlib.Logic.Equiv.Option",
+        "Mathlib.Logic.Equiv.Sum",
+        "Mathlib.Logic.Function.Conjugate",
+        "Mathlib.Tactic.Lift",
+        "Mathlib.Data.Int.Notation"
+      ]
+    },
+    "Mathlib.Logic.Equiv.Option": {
+      "bytes": 33213,
+      "runtime_initializer_ref_count": 4,
+      "imports": [
+        "Mathlib.Control.EquivFunctor",
+        "Mathlib.Data.Option.Basic",
+        "Mathlib.Data.Subtype",
+        "Mathlib.Logic.Equiv.Defs"
+      ]
+    },
+    "Mathlib.Control.EquivFunctor": {
+      "bytes": 25932,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Logic.Equiv.Defs",
+        "Mathlib.Tactic.Convert"
+      ]
+    },
+    "Mathlib.Tactic.Convert": {
+      "bytes": 912335,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Data.Nat.Notation",
+        "Mathlib.Tactic.CongrExclamation",
+        "Mathlib.Tactic.CongrExclamation"
+      ]
+    },
+    "Mathlib.Tactic.CongrExclamation": {
+      "bytes": 1327054,
+      "runtime_initializer_ref_count": 3,
+      "imports": [
+        "Mathlib.Lean.Meta.CongrTheorems",
+        "Mathlib.Tactic.Relation.Rfl",
+        "Mathlib.Basic.Logic.Basic"
+      ]
+    },
+    "Mathlib.Lean.Meta.CongrTheorems": {
+      "bytes": 544035,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Basic.IsEmpty.Defs",
+        "Mathlib.Basic.IsEmpty.Defs"
+      ]
+    },
+    "Mathlib.Tactic.Relation.Rfl": {
+      "bytes": 77911,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Data.Option.Basic": {
+      "bytes": 7363,
+      "runtime_initializer_ref_count": 5,
+      "imports": [
+        "Mathlib.Control.Combinators",
+        "Mathlib.Data.Option.Defs",
+        "Mathlib.Logic.Relator",
+        "Mathlib.Logic.Function.Basic",
+        "Mathlib.Basic.IsEmpty.Defs"
+      ]
+    },
+    "Mathlib.Control.Combinators": {
+      "bytes": 6146,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Data.Option.Defs": {
+      "bytes": 7106,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Logic.Equiv.Sum": {
+      "bytes": 95741,
+      "runtime_initializer_ref_count": 4,
+      "imports": [
+        "Mathlib.Data.Option.Defs",
+        "Mathlib.Data.Sigma.Basic",
+        "Mathlib.Logic.Equiv.Prod",
+        "Mathlib.Tactic.Coe"
+      ]
+    },
+    "Mathlib.Data.Sigma.Basic": {
+      "bytes": 19068,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Logic.Function.Defs",
+        "Mathlib.Logic.Function.Basic"
+      ]
+    },
+    "Mathlib.Logic.Equiv.Prod": {
+      "bytes": 139615,
+      "runtime_initializer_ref_count": 3,
+      "imports": [
+        "Mathlib.Logic.Equiv.Defs",
+        "Mathlib.Tactic.Contrapose",
+        "Mathlib.Util.CompileInductive"
+      ]
+    },
+    "Mathlib.Tactic.Contrapose": {
+      "bytes": 216330,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Tactic.Push"
+      ]
+    },
+    "Mathlib.Tactic.Push": {
+      "bytes": 952423,
+      "runtime_initializer_ref_count": 4,
+      "imports": [
+        "Mathlib.Basic.Logic.Basic",
+        "Mathlib.Tactic.Conv",
+        "Mathlib.Tactic.Push.Attr",
+        "Mathlib.Util.AtLocation"
+      ]
+    },
+    "Mathlib.Tactic.Conv": {
+      "bytes": 414286,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Util.AtLocation": {
+      "bytes": 217798,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Util.CompileInductive": {
+      "bytes": 725912,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Tactic.Coe": {
+      "bytes": 138364,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Tactic.Lift": {
+      "bytes": 310876,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Tactic.TypeStar"
+      ]
+    },
+    "Mathlib.Tactic.Spread": {
+      "bytes": 224449,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Algebra.Group.Opposite": {
+      "bytes": 88975,
+      "runtime_initializer_ref_count": 5,
+      "imports": [
+        "Mathlib.Algebra.Group.Commute.Defs",
+        "Mathlib.Algebra.Group.InjSurj",
+        "Mathlib.Algebra.Group.Torsion",
+        "Mathlib.Algebra.Opposites",
+        "Mathlib.Tactic.Conv"
+      ]
+    },
+    "Mathlib.Algebra.Group.Commute.Defs": {
+      "bytes": 2926,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Algebra.Group.Semiconj.Defs"
+      ]
+    },
+    "Mathlib.Algebra.Group.Semiconj.Defs": {
+      "bytes": 3363,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Algebra.Group.Defs",
+        "Mathlib.Order.Defs.Unbundled"
+      ]
+    },
+    "Mathlib.Algebra.Group.InjSurj": {
+      "bytes": 155103,
+      "runtime_initializer_ref_count": 3,
+      "imports": [
+        "Mathlib.Algebra.Group.Defs",
+        "Mathlib.Logic.Function.Basic",
+        "Mathlib.Tactic.Spread"
+      ]
+    },
+    "Mathlib.Algebra.Group.Torsion": {
+      "bytes": 3841,
+      "runtime_initializer_ref_count": 3,
+      "imports": [
+        "Mathlib.Algebra.Group.Basic",
+        "Mathlib.Algebra.Group.SelfInv",
+        "Mathlib.Tactic.MkIffOfInductiveProp"
+      ]
+    },
+    "Mathlib.Algebra.Group.SelfInv": {
+      "bytes": 6836,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Algebra.Group.Basic"
+      ]
+    },
+    "Mathlib.Algebra.Opposites": {
+      "bytes": 75890,
+      "runtime_initializer_ref_count": 3,
+      "imports": [
+        "Mathlib.Algebra.Group.DivInvMonoid",
+        "Mathlib.Algebra.Notation.Defs",
+        "Mathlib.Logic.Equiv.Defs"
+      ]
+    },
+    "Mathlib.Algebra.Group.TypeTags.Basic": {
+      "bytes": 71902,
+      "runtime_initializer_ref_count": 5,
+      "imports": [
+        "Mathlib.Algebra.Group.Torsion",
+        "Mathlib.Algebra.Notation.Pi.Basic",
+        "Mathlib.Data.FunLike.Basic",
+        "Mathlib.Logic.Function.Iterate",
+        "Mathlib.Logic.Equiv.Defs"
+      ]
+    },
+    "Mathlib.Algebra.Notation.Pi.Basic": {
+      "bytes": 8160,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Algebra.Notation.Pi.Defs",
+        "Mathlib.Logic.Function.Basic"
+      ]
+    },
+    "Mathlib.Algebra.BigOperators.Group.Multiset.Defs": {
+      "bytes": 9453,
+      "runtime_initializer_ref_count": 4,
+      "imports": [
+        "Mathlib.Algebra.BigOperators.Group.List.Defs",
+        "Mathlib.Algebra.Group.Basic",
+        "Mathlib.Data.Multiset.Basic",
+        "Mathlib.Data.Multiset.Filter"
+      ]
+    },
+    "Mathlib.Algebra.BigOperators.Group.List.Defs": {
+      "bytes": 9307,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Algebra.Group.Monoid"
+      ]
+    },
+    "Mathlib.Data.Multiset.Basic": {
+      "bytes": 11792,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Data.Multiset.ZeroCons"
+      ]
+    },
+    "Mathlib.Data.Multiset.ZeroCons": {
+      "bytes": 40634,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Data.Multiset.Defs",
+        "Mathlib.Order.BoundedOrder.Basic"
+      ]
+    },
+    "Mathlib.Data.Multiset.Defs": {
+      "bytes": 42619,
+      "runtime_initializer_ref_count": 7,
+      "imports": [
+        "Mathlib.Data.List.Perm.Subperm",
+        "Mathlib.Data.Nat.Basic",
+        "Mathlib.Data.Quot",
+        "Mathlib.Order.Monotone.Defs",
+        "Mathlib.Order.RelClasses",
+        "Mathlib.Tactic.Monotonicity.Attr",
+        "Mathlib.Util.CompileInductive"
+      ]
+    },
+    "Mathlib.Data.List.Perm.Subperm": {
+      "bytes": 4229,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Data.List.Basic",
+        "Mathlib.Data.List.Perm.Basic"
+      ]
+    },
+    "Mathlib.Data.List.Basic": {
+      "bytes": 20187,
+      "runtime_initializer_ref_count": 6,
+      "imports": [
+        "Mathlib.Basic.Unique",
+        "Mathlib.Data.List.Defs",
+        "Mathlib.Data.List.Monad",
+        "Mathlib.Tactic.Common",
+        "Mathlib.Data.Subtype",
+        "Mathlib.Tactic.Attr.Core"
+      ]
+    },
+    "Mathlib.Data.List.Defs": {
+      "bytes": 143529,
+      "runtime_initializer_ref_count": 3,
+      "imports": [
+        "Mathlib.Data.Nat.Notation",
+        "Mathlib.Control.Functor",
+        "Mathlib.Data.SProd"
+      ]
+    },
+    "Mathlib.Control.Functor": {
+      "bytes": 69060,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Data.Set.Defs",
+        "Mathlib.Tactic.Attr.Register"
+      ]
+    },
+    "Mathlib.Data.SProd": {
+      "bytes": 34193,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Tactic.FBinop"
+      ]
+    },
+    "Mathlib.Tactic.FBinop": {
+      "bytes": 722148,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Tactic.ToExpr"
+      ]
+    },
+    "Mathlib.Tactic.ToExpr": {
+      "bytes": 279227,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Data.List.Monad": {
+      "bytes": 19075,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Tactic.Common": {
+      "bytes": 64962,
+      "runtime_initializer_ref_count": 87,
+      "imports": [
+        "Mathlib.Tactic.Linter.Lint",
+        "Mathlib.Tactic.ApplyCongr",
+        "Mathlib.Tactic.ApplyAt",
+        "Mathlib.Tactic.ApplyWith",
+        "Mathlib.Tactic.Basic",
+        "Mathlib.Tactic.ByCases",
+        "Mathlib.Tactic.ByContra",
+        "Mathlib.Tactic.CasesM",
+        "Mathlib.Tactic.Check",
+        "Mathlib.Tactic.Choose",
+        "Mathlib.Tactic.ClearExclamation",
+        "Mathlib.Tactic.ClearExcept",
+        "Mathlib.Tactic.Clear_",
+        "Mathlib.Tactic.ClickSuggestions",
+        "Mathlib.Tactic.Coe",
+        "Mathlib.Tactic.CongrExclamation",
+        "Mathlib.Tactic.CongrM",
+        "Mathlib.Tactic.Constructor",
+        "Mathlib.Tactic.Contrapose",
+        "Mathlib.Tactic.Conv",
+        "Mathlib.Tactic.Convert",
+        "Mathlib.Tactic.DefEqAbuse",
+        "Mathlib.Tactic.DefEqTransformations",
+        "Mathlib.Tactic.DeprecateTo",
+        "Mathlib.Tactic.DepRewrite",
+        "Mathlib.Tactic.DSimpPercent",
+        "Mathlib.Tactic.ErwQuestion",
+        "Mathlib.Tactic.Eqns",
+        "Mathlib.Tactic.ExistsI",
+        "Mathlib.Tactic.ExtractGoal",
+        "Mathlib.Tactic.FailIfNoProgress",
+        "Mathlib.Tactic.Find",
+        "Mathlib.Tactic.FunProp",
+        "Mathlib.Tactic.GCongr",
+        "Mathlib.Tactic.GRewrite",
+        "Mathlib.Tactic.GrindAttrs",
+        "Mathlib.Tactic.GuardGoalNums",
+        "Mathlib.Tactic.GuardHypNums",
+        "Mathlib.Tactic.HigherOrder",
+        "Mathlib.Tactic.Hint",
+        "Mathlib.Tactic.InferParam",
+        "Mathlib.Tactic.Inhabit",
+        "Mathlib.Tactic.IrreducibleDef",
+        "Mathlib.Tactic.Lift",
+        "Mathlib.Tactic.Linter",
+        "Mathlib.Tactic.MkIffOfInductiveProp",
+        "Mathlib.Tactic.NthRewrite",
+        "Mathlib.Tactic.Observe",
+        "Mathlib.Tactic.OfNat",
+        "Mathlib.Tactic.Push",
+        "Mathlib.Tactic.RSuffices",
+        "Mathlib.Tactic.Recover",
+        "Mathlib.Tactic.Relation.Rfl",
+        "Mathlib.Tactic.Rename",
+        "Mathlib.Tactic.RenameBVar",
+        "Mathlib.Tactic.Says",
+        "Mathlib.Tactic.ScopedNS",
+        "Mathlib.Tactic.Set",
+        "Mathlib.Tactic.Setm",
+        "Mathlib.Tactic.SimpIntro",
+        "Mathlib.Tactic.SimpRw",
+        "Mathlib.Tactic.Simproc.ExistsAndEq",
+        "Mathlib.Tactic.Simps",
+        "Mathlib.Tactic.SplitIfs",
+        "Mathlib.Tactic.Spread",
+        "Mathlib.Tactic.Subsingleton",
+        "Mathlib.Tactic.Substs",
+        "Mathlib.Tactic.SuccessIfFailWithMsg",
+        "Mathlib.Tactic.SudoSetOption",
+        "Mathlib.Tactic.SwapVar",
+        "Mathlib.Tactic.Tauto",
+        "Mathlib.Tactic.ToFun",
+        "Mathlib.Tactic.TermCongr",
+        "Mathlib.Tactic.ToExpr",
+        "Mathlib.Tactic.ToLevel",
+        "Mathlib.Tactic.Trace",
+        "Mathlib.Tactic.UnsetOption",
+        "Mathlib.Tactic.Use",
+        "Mathlib.Tactic.Variable",
+        "Mathlib.Tactic.Widget.Calc",
+        "Mathlib.Tactic.Widget.CongrM",
+        "Mathlib.Tactic.Widget.Conv",
+        "Mathlib.Tactic.Widget.LibraryRewrite",
+        "Mathlib.Tactic.WLOG",
+        "Mathlib.Util.CountHeartbeats",
+        "Mathlib.Util.PrintSorries",
+        "Mathlib.Util.TransImports",
+        "Mathlib.Util.WhatsNew"
+      ]
+    },
+    "Mathlib.Tactic.ApplyCongr": {
+      "bytes": 79051,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Tactic.ApplyAt": {
+      "bytes": 95769,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Lean.Meta.Basic",
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Lean.Meta.Basic": {
+      "bytes": 150900,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Tactic.ApplyWith": {
+      "bytes": 247166,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Tactic.Basic": {
+      "bytes": 280103,
+      "runtime_initializer_ref_count": 3,
+      "imports": [
+        "Mathlib.Tactic.PPWithUniv",
+        "Mathlib.Tactic.ExtendDoc",
+        "Mathlib.Tactic.Linter.OldObtain"
+      ]
+    },
+    "Mathlib.Tactic.PPWithUniv": {
+      "bytes": 452981,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Tactic.ByCases": {
+      "bytes": 94968,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Tactic.Push"
+      ]
+    },
+    "Mathlib.Tactic.ByContra": {
+      "bytes": 136743,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Tactic.Push"
+      ]
+    },
+    "Mathlib.Tactic.CasesM": {
+      "bytes": 308737,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Tactic.Check": {
+      "bytes": 363643,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Tactic.Choose": {
+      "bytes": 443985,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Logic.Function.Basic"
+      ]
+    },
+    "Mathlib.Tactic.ClearExclamation": {
+      "bytes": 36939,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Tactic.ClearExcept": {
+      "bytes": 92655,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Tactic.Clear_": {
+      "bytes": 79031,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Tactic.ClickSuggestions": {
+      "bytes": 593088,
+      "runtime_initializer_ref_count": 4,
+      "imports": [
+        "Mathlib.Tactic.ClickSuggestions.TryPremises",
+        "Mathlib.Tactic.ClickSuggestions.Unfold",
+        "Mathlib.Lean.Meta.KAbstractPositions",
+        "Mathlib.Lean.GoalsLocation"
+      ]
+    },
+    "Mathlib.Tactic.ClickSuggestions.TryPremises": {
+      "bytes": 1190542,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Tactic.ClickSuggestions.FindPremises",
+        "Mathlib.Tactic.ClickSuggestions.FindPremises"
+      ]
+    },
+    "Mathlib.Tactic.ClickSuggestions.FindPremises": {
+      "bytes": 524694,
+      "runtime_initializer_ref_count": 6,
+      "imports": [
+        "Mathlib.Tactic.ClickSuggestions.Rewrite",
+        "Mathlib.Tactic.ClickSuggestions.GRewrite",
+        "Mathlib.Tactic.ClickSuggestions.Apply",
+        "Mathlib.Tactic.ClickSuggestions.ApplyAt",
+        "Mathlib.Lean.FoldEnvironment",
+        "Mathlib.Lean.Meta.RefinedDiscrTree",
+        "Mathlib.Lean.FoldEnvironment",
+        "Mathlib.Lean.Meta.RefinedDiscrTree"
+      ]
+    },
+    "Mathlib.Tactic.ClickSuggestions.Rewrite": {
+      "bytes": 276539,
+      "runtime_initializer_ref_count": 3,
+      "imports": [
+        "Mathlib.Tactic.ClickSuggestions.SectionState",
+        "Mathlib.Control.Basic",
+        "Mathlib.Tactic.ClickSuggestions.Util"
+      ]
+    },
+    "Mathlib.Tactic.ClickSuggestions.SectionState": {
+      "bytes": 212169,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Tactic.ClickSuggestions.Util"
+      ]
+    },
+    "Mathlib.Tactic.ClickSuggestions.Util": {
+      "bytes": 1228206,
+      "runtime_initializer_ref_count": 5,
+      "imports": [
+        "Mathlib.Tactic.GRewrite",
+        "Mathlib.Tactic.SimpRw",
+        "Mathlib.Tactic.NthRewrite",
+        "Mathlib.Tactic.DepRewrite",
+        "Mathlib.Data.String.Defs"
+      ]
+    },
+    "Mathlib.Tactic.GRewrite": {
+      "bytes": 3254,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Tactic.GCongr",
+        "Mathlib.Tactic.GRewrite.Elab"
+      ]
+    },
+    "Mathlib.Tactic.GCongr": {
+      "bytes": 17043,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Tactic.GCongr.Core",
+        "Mathlib.Tactic.Hint"
+      ]
+    },
+    "Mathlib.Tactic.GCongr.Core": {
+      "bytes": 1563062,
+      "runtime_initializer_ref_count": 3,
+      "imports": [
+        "Mathlib.Order.Defs.Unbundled",
+        "Mathlib.Tactic.Core",
+        "Mathlib.Tactic.GCongr.ForwardAttr",
+        "Mathlib.Tactic.GCongr.ForwardAttr"
+      ]
+    },
+    "Mathlib.Tactic.GCongr.ForwardAttr": {
+      "bytes": 170184,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Tactic.Hint": {
+      "bytes": 330295,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Tactic.Basic"
+      ]
+    },
+    "Mathlib.Tactic.GRewrite.Elab": {
+      "bytes": 1007087,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Tactic.GRewrite.Core",
+        "Mathlib.Tactic.GRewrite.Core"
+      ]
+    },
+    "Mathlib.Tactic.GRewrite.Core": {
+      "bytes": 924995,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Tactic.GCongr.Core",
+        "Mathlib.Tactic.GCongr.Core"
+      ]
+    },
+    "Mathlib.Tactic.NthRewrite": {
+      "bytes": 112975,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Control.Basic": {
+      "bytes": 45609,
+      "runtime_initializer_ref_count": 4,
+      "imports": [
+        "Mathlib.Control.Combinators",
+        "Mathlib.Tactic.CasesM",
+        "Mathlib.Tactic.Attr.Core",
+        "Mathlib.Tactic.Attr.Register"
+      ]
+    },
+    "Mathlib.Tactic.Attr.Core": {
+      "bytes": 3302,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Tactic.Attr.Register"
+      ]
+    },
+    "Mathlib.Tactic.ClickSuggestions.GRewrite": {
+      "bytes": 494223,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Tactic.ClickSuggestions.SectionState",
+        "Mathlib.Tactic.ClickSuggestions.Util"
+      ]
+    },
+    "Mathlib.Tactic.ClickSuggestions.Apply": {
+      "bytes": 204294,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Tactic.ClickSuggestions.SectionState",
+        "Mathlib.Tactic.ClickSuggestions.Util"
+      ]
+    },
+    "Mathlib.Tactic.ClickSuggestions.ApplyAt": {
+      "bytes": 157873,
+      "runtime_initializer_ref_count": 3,
+      "imports": [
+        "Mathlib.Tactic.ClickSuggestions.SectionState",
+        "Mathlib.Tactic.ApplyAt",
+        "Mathlib.Tactic.ClickSuggestions.Util"
+      ]
+    },
+    "Mathlib.Lean.FoldEnvironment": {
+      "bytes": 150872,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Lean.Meta.RefinedDiscrTree": {
+      "bytes": 43296,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Lean.Meta.RefinedDiscrTree.Lookup",
+        "Mathlib.Lean.Meta.RefinedDiscrTree.Initialize"
+      ]
+    },
+    "Mathlib.Lean.Meta.RefinedDiscrTree.Lookup": {
+      "bytes": 539680,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Lean.Meta.RefinedDiscrTree.Encode"
+      ]
+    },
+    "Mathlib.Lean.Meta.RefinedDiscrTree.Encode": {
+      "bytes": 330826,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Lean.Meta.RefinedDiscrTree.Basic"
+      ]
+    },
+    "Mathlib.Lean.Meta.RefinedDiscrTree.Basic": {
+      "bytes": 309822,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Lean.Meta.RefinedDiscrTree.Initialize": {
+      "bytes": 328028,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Lean.Meta.RefinedDiscrTree.Basic"
+      ]
+    },
+    "Mathlib.Tactic.ClickSuggestions.Unfold": {
+      "bytes": 246707,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Tactic.NthRewrite",
+        "Mathlib.Tactic.ClickSuggestions.Util"
+      ]
+    },
+    "Mathlib.Lean.Meta.KAbstractPositions": {
+      "bytes": 177870,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Lean.GoalsLocation": {
+      "bytes": 15105,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Tactic.CongrM": {
+      "bytes": 139003,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Tactic.Relation.Rfl",
+        "Mathlib.Tactic.TermCongr"
+      ]
+    },
+    "Mathlib.Tactic.TermCongr": {
+      "bytes": 864149,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Lean.Meta.CongrTheorems"
+      ]
+    },
+    "Mathlib.Tactic.Constructor": {
+      "bytes": 28372,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Tactic.DefEqAbuse": {
+      "bytes": 842911,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Init",
+        "Mathlib.Lean.MessageData.Trace"
+      ]
+    },
+    "Mathlib.Lean.MessageData.Trace": {
+      "bytes": 52433,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Tactic.DefEqTransformations": {
+      "bytes": 646663,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Tactic.DeprecateTo": {
+      "bytes": 423037,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Tactic.DSimpPercent": {
+      "bytes": 65445,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Tactic.ErwQuestion": {
+      "bytes": 372871,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Tactic.ExistsI": {
+      "bytes": 36358,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Tactic.FailIfNoProgress": {
+      "bytes": 108166,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Tactic.Find": {
+      "bytes": 216105,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Tactic.FunProp": {
+      "bytes": 9602,
+      "runtime_initializer_ref_count": 9,
+      "imports": [
+        "Mathlib.Tactic.FunProp.Decl",
+        "Mathlib.Tactic.FunProp.FunctionData",
+        "Mathlib.Tactic.FunProp.Mor",
+        "Mathlib.Tactic.FunProp.Theorems",
+        "Mathlib.Tactic.FunProp.ToBatteries",
+        "Mathlib.Tactic.FunProp.Types",
+        "Mathlib.Tactic.FunProp.Attr",
+        "Mathlib.Tactic.FunProp.Core",
+        "Mathlib.Tactic.FunProp.Decl",
+        "Mathlib.Tactic.FunProp.Elab",
+        "Mathlib.Tactic.FunProp.FunctionData",
+        "Mathlib.Tactic.FunProp.Mor",
+        "Mathlib.Tactic.FunProp.Theorems",
+        "Mathlib.Tactic.FunProp.ToBatteries",
+        "Mathlib.Tactic.FunProp.Types"
+      ]
+    },
+    "Mathlib.Tactic.FunProp.Decl": {
+      "bytes": 587754,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Tactic.FunProp.FunctionData": {
+      "bytes": 374180,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Tactic.FunProp.Mor",
+        "Mathlib.Tactic.FunProp.Mor",
+        "Mathlib.Tactic.FunProp.ToBatteries"
+      ]
+    },
+    "Mathlib.Tactic.FunProp.Mor": {
+      "bytes": 123779,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Tactic.FunProp.ToBatteries": {
+      "bytes": 103175,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Tactic.FunProp.Theorems": {
+      "bytes": 520527,
+      "runtime_initializer_ref_count": 5,
+      "imports": [
+        "Mathlib.Tactic.FunProp.Decl",
+        "Mathlib.Tactic.FunProp.Types",
+        "Mathlib.Tactic.FunProp.FunctionData",
+        "Mathlib.Lean.Meta.RefinedDiscrTree.Initialize",
+        "Mathlib.Lean.Meta.RefinedDiscrTree.Lookup",
+        "Mathlib.Lean.Meta.RefinedDiscrTree.Lookup",
+        "Mathlib.Tactic.FunProp.Decl",
+        "Mathlib.Tactic.FunProp.Types"
+      ]
+    },
+    "Mathlib.Tactic.FunProp.Types": {
+      "bytes": 157883,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Lean.Meta.RefinedDiscrTree.Basic",
+        "Mathlib.Tactic.FunProp.FunctionData",
+        "Mathlib.Lean.Meta.RefinedDiscrTree.Basic",
+        "Mathlib.Tactic.FunProp.FunctionData"
+      ]
+    },
+    "Mathlib.Tactic.FunProp.Attr": {
+      "bytes": 200752,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Tactic.FunProp.Decl",
+        "Mathlib.Tactic.FunProp.Theorems"
+      ]
+    },
+    "Mathlib.Tactic.FunProp.Core": {
+      "bytes": 1403726,
+      "runtime_initializer_ref_count": 4,
+      "imports": [
+        "Mathlib.Tactic.FunProp.Theorems",
+        "Mathlib.Tactic.FunProp.ToBatteries",
+        "Mathlib.Tactic.FunProp.Types",
+        "Mathlib.Lean.Expr.Basic",
+        "Mathlib.Tactic.FunProp.Theorems"
+      ]
+    },
+    "Mathlib.Tactic.FunProp.Elab": {
+      "bytes": 725988,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Tactic.FunProp.Core",
+        "Mathlib.Tactic.InferParam"
+      ]
+    },
+    "Mathlib.Tactic.InferParam": {
+      "bytes": 83946,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Tactic.GrindAttrs": {
+      "bytes": 149788,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Tactic.GuardGoalNums": {
+      "bytes": 37123,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Tactic.GuardHypNums": {
+      "bytes": 35783,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Tactic.HigherOrder": {
+      "bytes": 320576,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Tactic.IrreducibleDef": {
+      "bytes": 551260,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Tactic.Eqns",
+        "Mathlib.Util.TermReduce"
+      ]
+    },
+    "Mathlib.Util.TermReduce": {
+      "bytes": 266758,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Tactic.Linter": {
+      "bytes": 5415,
+      "runtime_initializer_ref_count": 6,
+      "imports": [
+        "Mathlib.Tactic.Linter.HaveLetLinter",
+        "Mathlib.Tactic.Linter.MinImports",
+        "Mathlib.Tactic.Linter.PPRoundtrip",
+        "Mathlib.Tactic.Linter.PrivateModule",
+        "Mathlib.Tactic.Linter.UnusedInstancesInType",
+        "Mathlib.Tactic.Linter.UpstreamableDecl"
+      ]
+    },
+    "Mathlib.Tactic.Linter.HaveLetLinter": {
+      "bytes": 251218,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Tactic.Linter.MinImports": {
+      "bytes": 484883,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Tactic.MinImports"
+      ]
+    },
+    "Mathlib.Tactic.Linter.PPRoundtrip": {
+      "bytes": 303306,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Tactic.Linter.UpstreamableDecl": {
+      "bytes": 189592,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Tactic.Observe": {
+      "bytes": 143834,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Tactic.RSuffices": {
+      "bytes": 62814,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Tactic.Recover": {
+      "bytes": 201390,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Tactic.Rename": {
+      "bytes": 120842,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Tactic.RenameBVar": {
+      "bytes": 304175,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Lean.Expr.Basic",
+        "Mathlib.Util.Tactic"
+      ]
+    },
+    "Mathlib.Util.Tactic": {
+      "bytes": 23675,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Tactic.Says": {
+      "bytes": 121576,
+      "runtime_initializer_ref_count": 3,
+      "imports": [
+        "Mathlib.Init",
+        "Mathlib.Lean.Elab.InfoTree",
+        "Mathlib.Tactic.Basic"
+      ]
+    },
+    "Mathlib.Tactic.Set": {
+      "bytes": 185912,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Tactic.Setm": {
+      "bytes": 341653,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Lean.Elab.Tactic.Basic",
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Lean.Elab.Tactic.Basic": {
+      "bytes": 107403,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Lean.Meta"
+      ]
+    },
+    "Mathlib.Tactic.SimpIntro": {
+      "bytes": 177901,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Tactic.Simproc.ExistsAndEq": {
+      "bytes": 532573,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Tactic.Subsingleton": {
+      "bytes": 449572,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Basic.Logic.Basic"
+      ]
+    },
+    "Mathlib.Tactic.Substs": {
+      "bytes": 84813,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Tactic.SuccessIfFailWithMsg": {
+      "bytes": 114757,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Tactic.SudoSetOption": {
+      "bytes": 153233,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Tactic.SwapVar": {
+      "bytes": 98983,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Tactic.Tauto": {
+      "bytes": 836897,
+      "runtime_initializer_ref_count": 4,
+      "imports": [
+        "Mathlib.Lean.Meta",
+        "Mathlib.Basic.Logic.Basic",
+        "Mathlib.Tactic.CasesM",
+        "Mathlib.Tactic.Core"
+      ]
+    },
+    "Mathlib.Tactic.ToFun": {
+      "bytes": 158506,
+      "runtime_initializer_ref_count": 3,
+      "imports": [
+        "Mathlib.Util.AddRelatedDecl",
+        "Mathlib.Tactic.Push",
+        "Mathlib.Tactic.Translate.Attributes"
+      ]
+    },
+    "Mathlib.Tactic.ToLevel": {
+      "bytes": 2792,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Tactic.PPWithUniv"
+      ]
+    },
+    "Mathlib.Tactic.Trace": {
+      "bytes": 77202,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Tactic.UnsetOption": {
+      "bytes": 63410,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Tactic.Variable": {
+      "bytes": 637041,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Tactic.Widget.Calc": {
+      "bytes": 350361,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Data.String.Defs",
+        "Mathlib.Tactic.Widget.SelectPanelUtils",
+        "Mathlib.Tactic.Widget.SelectPanelUtils"
+      ]
+    },
+    "Mathlib.Tactic.Widget.SelectPanelUtils": {
+      "bytes": 270445,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Tactic.Widget.SelectInsertParamsClass",
+        "Mathlib.Tactic.Widget.SelectInsertParamsClass"
+      ]
+    },
+    "Mathlib.Tactic.Widget.SelectInsertParamsClass": {
+      "bytes": 161919,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Tactic.Widget.CongrM": {
+      "bytes": 147269,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Tactic.Widget.SelectPanelUtils"
+      ]
+    },
+    "Mathlib.Tactic.Widget.Conv": {
+      "bytes": 417890,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Lean.Name",
+        "Mathlib.Tactic.Widget.SelectPanelUtils"
+      ]
+    },
+    "Mathlib.Tactic.Widget.LibraryRewrite": {
+      "bytes": 1335771,
+      "runtime_initializer_ref_count": 5,
+      "imports": [
+        "Mathlib.Lean.Meta.RefinedDiscrTree",
+        "Mathlib.Tactic.Widget.SelectPanelUtils",
+        "Mathlib.Lean.GoalsLocation",
+        "Mathlib.Lean.Meta.KAbstractPositions",
+        "Mathlib.Tactic.NthRewrite",
+        "Mathlib.Lean.Meta.RefinedDiscrTree",
+        "Mathlib.Tactic.Widget.SelectPanelUtils"
+      ]
+    },
+    "Mathlib.Tactic.WLOG": {
+      "bytes": 186416,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Tactic.Core",
+        "Mathlib.Tactic.Push"
+      ]
+    },
+    "Mathlib.Util.CountHeartbeats": {
+      "bytes": 508683,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Util.PrintSorries": {
+      "bytes": 373744,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Lean.Expr.Basic"
+      ]
+    },
+    "Mathlib.Util.TransImports": {
+      "bytes": 126205,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Util.WhatsNew": {
+      "bytes": 374104,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Data.List.Perm.Basic": {
+      "bytes": 109461,
+      "runtime_initializer_ref_count": 4,
+      "imports": [
+        "Mathlib.Logic.Relation",
+        "Mathlib.Data.List.Forall2",
+        "Mathlib.Data.List.InsertIdx",
+        "Mathlib.Logic.OpClass"
+      ]
+    },
+    "Mathlib.Data.List.Forall2": {
+      "bytes": 4636,
+      "runtime_initializer_ref_count": 4,
+      "imports": [
+        "Mathlib.Logic.Relator",
+        "Mathlib.Tactic.Attr.Core",
+        "Mathlib.Tactic.Common",
+        "Mathlib.Util.CompileInductive"
+      ]
+    },
+    "Mathlib.Data.List.InsertIdx": {
+      "bytes": 29265,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Tactic.Attr.Core",
+        "Mathlib.Tactic.Common"
+      ]
+    },
+    "Mathlib.Logic.OpClass": {
+      "bytes": 2720,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Data.Nat.Basic": {
+      "bytes": 10361,
+      "runtime_initializer_ref_count": 5,
+      "imports": [
+        "Mathlib.Basic.Logic.Basic",
+        "Mathlib.Basic.Nontrivial.Defs",
+        "Mathlib.Data.Nat.Init",
+        "Mathlib.Order.Defs.LinearOrder",
+        "Mathlib.Tactic.GCongr"
+      ]
+    },
+    "Mathlib.Data.Nat.Init": {
+      "bytes": 47771,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Data.Int.Notation",
+        "Mathlib.Data.Nat.Notation"
+      ]
+    },
+    "Mathlib.Order.Defs.LinearOrder": {
+      "bytes": 144020,
+      "runtime_initializer_ref_count": 5,
+      "imports": [
+        "Mathlib.Data.Ordering.Basic",
+        "Mathlib.Tactic.Push.Attr",
+        "Mathlib.Tactic.Simps",
+        "Mathlib.Tactic.SplitIfs",
+        "Mathlib.Order.Defs.PartialOrder"
+      ]
+    },
+    "Mathlib.Data.Ordering.Basic": {
+      "bytes": 6468,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Order.Defs.PartialOrder": {
+      "bytes": 76662,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Tactic.ToDual"
+      ]
+    },
+    "Mathlib.Order.Monotone.Defs": {
+      "bytes": 20852,
+      "runtime_initializer_ref_count": 4,
+      "imports": [
+        "Mathlib.Data.Set.Operations",
+        "Mathlib.Logic.Function.Iterate",
+        "Mathlib.Order.Basic",
+        "Mathlib.Tactic.Coe"
+      ]
+    },
+    "Mathlib.Data.Set.Operations": {
+      "bytes": 53226,
+      "runtime_initializer_ref_count": 6,
+      "imports": [
+        "Mathlib.Data.Set.CoeSort",
+        "Mathlib.Data.SProd",
+        "Mathlib.Data.Subtype",
+        "Mathlib.Order.Notation",
+        "Mathlib.Tactic.CrossRefAttribute",
+        "Mathlib.Tactic.Push.Attr"
+      ]
+    },
+    "Mathlib.Data.Set.CoeSort": {
+      "bytes": 3021,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Data.Set.Defs"
+      ]
+    },
+    "Mathlib.Order.Notation": {
+      "bytes": 184424,
+      "runtime_initializer_ref_count": 3,
+      "imports": [
+        "Mathlib.Lean.PrettyPrinter.Delaborator",
+        "Mathlib.Tactic.Simps",
+        "Mathlib.Tactic.ToDual"
+      ]
+    },
+    "Mathlib.Order.Basic": {
+      "bytes": 171338,
+      "runtime_initializer_ref_count": 11,
+      "imports": [
+        "Mathlib.Data.Subtype",
+        "Mathlib.Order.Defs.LinearOrder",
+        "Mathlib.Order.Defs.Prop",
+        "Mathlib.Order.Notation",
+        "Mathlib.Tactic.Spread",
+        "Mathlib.Tactic.Convert",
+        "Mathlib.Tactic.Inhabit",
+        "Mathlib.Tactic.SimpRw",
+        "Mathlib.Tactic.GCongr",
+        "Mathlib.Tactic.Attr.Register",
+        "Mathlib.Tactic.FastInstance"
+      ]
+    },
+    "Mathlib.Tactic.FastInstance": {
+      "bytes": 756757,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Order.RelClasses": {
+      "bytes": 16362,
+      "runtime_initializer_ref_count": 4,
+      "imports": [
+        "Mathlib.Basic.IsEmpty.Basic",
+        "Mathlib.Order.OrderDual",
+        "Mathlib.Tactic.CrossRefAttribute",
+        "Mathlib.Tactic.MkIffOfInductiveProp"
+      ]
+    },
+    "Mathlib.Basic.IsEmpty.Basic": {
+      "bytes": 3747,
+      "runtime_initializer_ref_count": 3,
+      "imports": [
+        "Mathlib.Basic.IsEmpty.Defs",
+        "Mathlib.Logic.Function.Basic",
+        "Mathlib.Logic.Relator"
+      ]
+    },
+    "Mathlib.Order.OrderDual": {
+      "bytes": 68407,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Logic.Equiv.Defs",
+        "Mathlib.Order.Basic"
+      ]
+    },
+    "Mathlib.Tactic.Monotonicity.Attr": {
+      "bytes": 33601,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Order.BoundedOrder.Basic": {
+      "bytes": 46194,
+      "runtime_initializer_ref_count": 4,
+      "imports": [
+        "Mathlib.Order.Max",
+        "Mathlib.Order.ULift",
+        "Mathlib.Tactic.ByCases",
+        "Mathlib.Tactic.Finiteness.Attr"
+      ]
+    },
+    "Mathlib.Order.Max": {
+      "bytes": 2747,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Order.OrderDual"
+      ]
+    },
+    "Mathlib.Order.ULift": {
+      "bytes": 12782,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Logic.Function.ULift",
+        "Mathlib.Order.Basic"
+      ]
+    },
+    "Mathlib.Logic.Function.ULift": {
+      "bytes": 2769,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Tactic.Finiteness.Attr": {
+      "bytes": 18001,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Data.Multiset.Filter": {
+      "bytes": 10041,
+      "runtime_initializer_ref_count": 3,
+      "imports": [
+        "Mathlib.Data.Multiset.MapFold",
+        "Mathlib.Data.Set.Function",
+        "Mathlib.Order.Hom.Basic"
+      ]
+    },
+    "Mathlib.Data.Multiset.MapFold": {
+      "bytes": 8468,
+      "runtime_initializer_ref_count": 3,
+      "imports": [
+        "Mathlib.Data.List.Perm.Basic",
+        "Mathlib.Data.Multiset.Replicate",
+        "Mathlib.Data.Set.List"
+      ]
+    },
+    "Mathlib.Data.Multiset.Replicate": {
+      "bytes": 3586,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Data.Multiset.AddSub"
+      ]
+    },
+    "Mathlib.Data.Multiset.AddSub": {
+      "bytes": 8373,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Data.Multiset.Count",
+        "Mathlib.Data.List.Count"
+      ]
+    },
+    "Mathlib.Data.Multiset.Count": {
+      "bytes": 5909,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Data.List.Nodup",
+        "Mathlib.Data.Multiset.ZeroCons"
+      ]
+    },
+    "Mathlib.Data.List.Nodup": {
+      "bytes": 3249,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Data.List.Forall2",
+        "Mathlib.Data.List.Basic"
+      ]
+    },
+    "Mathlib.Data.List.Count": {
+      "bytes": 4170,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Tactic.Common",
+        "Mathlib.Tactic.Attr.Core"
+      ]
+    },
+    "Mathlib.Data.Set.List": {
+      "bytes": 3215,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Data.Set.Image",
+        "Mathlib.Data.List.Defs"
+      ]
+    },
+    "Mathlib.Data.Set.Image": {
+      "bytes": 5100,
+      "runtime_initializer_ref_count": 5,
+      "imports": [
+        "Mathlib.Data.Option.Basic",
+        "Mathlib.Data.Prod.Basic",
+        "Mathlib.Data.Set.Subsingleton",
+        "Mathlib.Data.Set.SymmDiff",
+        "Mathlib.Data.Set.Inclusion"
+      ]
+    },
+    "Mathlib.Data.Prod.Basic": {
+      "bytes": 68937,
+      "runtime_initializer_ref_count": 3,
+      "imports": [
+        "Mathlib.Logic.Function.Defs",
+        "Mathlib.Logic.Function.Iterate",
+        "Mathlib.Tactic.Inhabit"
+      ]
+    },
+    "Mathlib.Data.Set.Subsingleton": {
+      "bytes": 3281,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Data.Set.Insert",
+        "Mathlib.Tactic.ByContra"
+      ]
+    },
+    "Mathlib.Data.Set.Insert": {
+      "bytes": 10757,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Data.Set.Disjoint",
+        "Mathlib.Tactic.Simproc.ExistsAndEq"
+      ]
+    },
+    "Mathlib.Data.Set.Disjoint": {
+      "bytes": 2798,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Data.Set.Basic"
+      ]
+    },
+    "Mathlib.Data.Set.Basic": {
+      "bytes": 31799,
+      "runtime_initializer_ref_count": 3,
+      "imports": [
+        "Mathlib.Order.PropInstances",
+        "Mathlib.Tactic.Lift",
+        "Mathlib.Tactic.Attr.Register"
+      ]
+    },
+    "Mathlib.Order.PropInstances": {
+      "bytes": 7891,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Order.Disjoint"
+      ]
+    },
+    "Mathlib.Order.Disjoint": {
+      "bytes": 14902,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Order.BoundedOrder.Lattice"
+      ]
+    },
+    "Mathlib.Order.BoundedOrder.Lattice": {
+      "bytes": 3351,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Order.BoundedOrder.Basic",
+        "Mathlib.Order.Lattice"
+      ]
+    },
+    "Mathlib.Order.Lattice": {
+      "bytes": 156167,
+      "runtime_initializer_ref_count": 5,
+      "imports": [
+        "Mathlib.Data.Bool.Basic",
+        "Mathlib.Logic.Pairwise",
+        "Mathlib.Order.Monotone.Basic",
+        "Mathlib.Order.ULift",
+        "Mathlib.Tactic.GRewrite"
+      ]
+    },
+    "Mathlib.Data.Bool.Basic": {
+      "bytes": 10935,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Basic.Logic.Basic",
+        "Mathlib.Order.Defs.LinearOrder"
+      ]
+    },
+    "Mathlib.Logic.Pairwise": {
+      "bytes": 3707,
+      "runtime_initializer_ref_count": 3,
+      "imports": [
+        "Mathlib.Logic.Function.Basic",
+        "Mathlib.Data.Set.Defs",
+        "Mathlib.Data.Nat.Notation"
+      ]
+    },
+    "Mathlib.Order.Monotone.Basic": {
+      "bytes": 6909,
+      "runtime_initializer_ref_count": 10,
+      "imports": [
+        "Mathlib.Data.Nat.Basic",
+        "Mathlib.Data.Int.Order.Basic",
+        "Mathlib.Logic.Function.Iterate",
+        "Mathlib.Order.Compare",
+        "Mathlib.Order.Max",
+        "Mathlib.Order.Monotone.Defs",
+        "Mathlib.Order.RelClasses",
+        "Mathlib.Tactic.Choose",
+        "Mathlib.Tactic.Contrapose",
+        "Mathlib.Tactic.ByCases"
+      ]
+    },
+    "Mathlib.Data.Int.Order.Basic": {
+      "bytes": 9967,
+      "runtime_initializer_ref_count": 4,
+      "imports": [
+        "Mathlib.Basic.Logic.Basic",
+        "Mathlib.Data.Int.Notation",
+        "Mathlib.Data.Nat.Notation",
+        "Mathlib.Order.Defs.LinearOrder"
+      ]
+    },
+    "Mathlib.Order.Compare": {
+      "bytes": 13046,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Data.Ordering.Basic",
+        "Mathlib.Order.OrderDual"
+      ]
+    },
+    "Mathlib.Data.Set.SymmDiff": {
+      "bytes": 3293,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Order.BooleanAlgebra.Set",
+        "Mathlib.Order.SymmDiff"
+      ]
+    },
+    "Mathlib.Order.BooleanAlgebra.Set": {
+      "bytes": 6096,
+      "runtime_initializer_ref_count": 4,
+      "imports": [
+        "Mathlib.Data.Set.Insert",
+        "Mathlib.Order.BooleanAlgebra.Basic",
+        "Mathlib.Tactic.Tauto",
+        "Mathlib.Tactic.FastInstance"
+      ]
+    },
+    "Mathlib.Order.BooleanAlgebra.Basic": {
+      "bytes": 116380,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Order.BooleanAlgebra.Defs",
+        "Mathlib.Tactic.GRewrite"
+      ]
+    },
+    "Mathlib.Order.BooleanAlgebra.Defs": {
+      "bytes": 33822,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Order.Heyting.Basic"
+      ]
+    },
+    "Mathlib.Order.Heyting.Basic": {
+      "bytes": 282633,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Order.PropInstances",
+        "Mathlib.Order.GaloisConnection.Defs"
+      ]
+    },
+    "Mathlib.Order.GaloisConnection.Defs": {
+      "bytes": 21620,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Order.BoundedOrder.Basic",
+        "Mathlib.Order.Monotone.Defs"
+      ]
+    },
+    "Mathlib.Order.SymmDiff": {
+      "bytes": 46584,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Order.BooleanAlgebra.Basic",
+        "Mathlib.Logic.Equiv.Basic"
+      ]
+    },
+    "Mathlib.Data.Set.Inclusion": {
+      "bytes": 4105,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Data.Set.Basic"
+      ]
+    },
+    "Mathlib.Data.Set.Function": {
+      "bytes": 3253,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Data.Set.Prod",
+        "Mathlib.Data.Set.Restrict"
+      ]
+    },
+    "Mathlib.Data.Set.Prod": {
+      "bytes": 20751,
+      "runtime_initializer_ref_count": 3,
+      "imports": [
+        "Mathlib.Data.Set.Image",
+        "Mathlib.Data.SProd",
+        "Mathlib.Data.Sum.Basic"
+      ]
+    },
+    "Mathlib.Data.Sum.Basic": {
+      "bytes": 5527,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Logic.Function.Basic",
+        "Mathlib.Tactic.MkIffOfInductiveProp"
+      ]
+    },
+    "Mathlib.Data.Set.Restrict": {
+      "bytes": 6479,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Data.Set.Image"
+      ]
+    },
+    "Mathlib.Order.Hom.Basic": {
+      "bytes": 183226,
+      "runtime_initializer_ref_count": 4,
+      "imports": [
+        "Mathlib.Order.Disjoint",
+        "Mathlib.Order.RelIso.Basic",
+        "Mathlib.Tactic.Monotonicity.Attr",
+        "Mathlib.Tactic.PPWithUniv"
+      ]
+    },
+    "Mathlib.Order.RelIso.Basic": {
+      "bytes": 135482,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Logic.Embedding.Basic",
+        "Mathlib.Order.RelClasses"
+      ]
+    },
+    "Mathlib.Logic.Embedding.Basic": {
+      "bytes": 84195,
+      "runtime_initializer_ref_count": 6,
+      "imports": [
+        "Mathlib.Basic.IsEmpty.Basic",
+        "Mathlib.Data.Option.Basic",
+        "Mathlib.Data.Prod.Basic",
+        "Mathlib.Data.Prod.PProd",
+        "Mathlib.Data.Sum.Basic",
+        "Mathlib.Logic.Equiv.Basic"
+      ]
+    },
+    "Mathlib.Data.Prod.PProd": {
+      "bytes": 4818,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Data.Fintype.Sets": {
+      "bytes": 45728,
+      "runtime_initializer_ref_count": 3,
+      "imports": [
+        "Mathlib.Data.Finset.BooleanAlgebra",
+        "Mathlib.Data.Finset.SymmDiff",
+        "Mathlib.Data.Fintype.OfMap"
+      ]
+    },
+    "Mathlib.Data.Finset.BooleanAlgebra": {
+      "bytes": 13528,
+      "runtime_initializer_ref_count": 3,
+      "imports": [
+        "Mathlib.Data.Finset.Basic",
+        "Mathlib.Data.Finset.Image",
+        "Mathlib.Data.Fintype.Defs"
+      ]
+    },
+    "Mathlib.Data.Finset.Basic": {
+      "bytes": 19507,
+      "runtime_initializer_ref_count": 11,
+      "imports": [
+        "Mathlib.Data.Finset.Attach",
+        "Mathlib.Data.Finset.Disjoint",
+        "Mathlib.Data.Finset.Erase",
+        "Mathlib.Data.Finset.Filter",
+        "Mathlib.Data.Finset.Range",
+        "Mathlib.Data.Finset.SDiff",
+        "Mathlib.Data.Multiset.Basic",
+        "Mathlib.Logic.Equiv.Set",
+        "Mathlib.Order.Directed",
+        "Mathlib.Order.Interval.Set.Defs",
+        "Mathlib.Data.Set.SymmDiff"
+      ]
+    },
+    "Mathlib.Data.Finset.Attach": {
+      "bytes": 3915,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Data.Finset.Defs",
+        "Mathlib.Data.Multiset.MapFold"
+      ]
+    },
+    "Mathlib.Data.Finset.Defs": {
+      "bytes": 44495,
+      "runtime_initializer_ref_count": 4,
+      "imports": [
+        "Mathlib.Data.Multiset.Defs",
+        "Mathlib.Data.Set.Pairwise.Basic",
+        "Mathlib.Data.SetLike.Basic",
+        "Mathlib.Order.Hom.Basic"
+      ]
+    },
+    "Mathlib.Data.Set.Pairwise.Basic": {
+      "bytes": 3745,
+      "runtime_initializer_ref_count": 3,
+      "imports": [
+        "Mathlib.Data.Set.Function",
+        "Mathlib.Logic.Pairwise",
+        "Mathlib.Logic.Relation"
+      ]
+    },
+    "Mathlib.Data.SetLike.Basic": {
+      "bytes": 119581,
+      "runtime_initializer_ref_count": 3,
+      "imports": [
+        "Mathlib.Tactic.Monotonicity.Attr",
+        "Mathlib.Tactic.SetLike",
+        "Mathlib.Data.Set.Basic"
+      ]
+    },
+    "Mathlib.Tactic.SetLike": {
+      "bytes": 32076,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Data.Finset.Disjoint": {
+      "bytes": 6819,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Data.Finset.Insert"
+      ]
+    },
+    "Mathlib.Data.Finset.Insert": {
+      "bytes": 25918,
+      "runtime_initializer_ref_count": 5,
+      "imports": [
+        "Mathlib.Data.Finset.Attr",
+        "Mathlib.Data.Finset.Dedup",
+        "Mathlib.Data.Finset.Empty",
+        "Mathlib.Data.Multiset.FinsetOps",
+        "Mathlib.Util.Delaborators"
+      ]
+    },
+    "Mathlib.Data.Finset.Attr": {
+      "bytes": 17670,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Data.Finset.Dedup": {
+      "bytes": 5136,
+      "runtime_initializer_ref_count": 3,
+      "imports": [
+        "Mathlib.Data.Finset.Defs",
+        "Mathlib.Data.Multiset.Dedup",
+        "Mathlib.Data.Multiset.Basic"
+      ]
+    },
+    "Mathlib.Data.Multiset.Dedup": {
+      "bytes": 4033,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Data.List.Dedup",
+        "Mathlib.Data.Multiset.UnionInter"
+      ]
+    },
+    "Mathlib.Data.List.Dedup": {
+      "bytes": 3732,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Data.List.Nodup",
+        "Mathlib.Data.List.Lattice"
+      ]
+    },
+    "Mathlib.Data.List.Lattice": {
+      "bytes": 5160,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Data.List.Basic"
+      ]
+    },
+    "Mathlib.Data.Multiset.UnionInter": {
+      "bytes": 11267,
+      "runtime_initializer_ref_count": 4,
+      "imports": [
+        "Mathlib.Data.List.Perm.Lattice",
+        "Mathlib.Data.Multiset.Filter",
+        "Mathlib.Order.MinMax",
+        "Mathlib.Logic.Pairwise"
+      ]
+    },
+    "Mathlib.Data.List.Perm.Lattice": {
+      "bytes": 4223,
+      "runtime_initializer_ref_count": 4,
+      "imports": [
+        "Mathlib.Data.List.Forall2",
+        "Mathlib.Data.List.TakeDrop",
+        "Mathlib.Data.List.Lattice",
+        "Mathlib.Data.List.Nodup"
+      ]
+    },
+    "Mathlib.Data.List.TakeDrop": {
+      "bytes": 8759,
+      "runtime_initializer_ref_count": 4,
+      "imports": [
+        "Mathlib.Data.List.Defs",
+        "Mathlib.Tactic.Common",
+        "Mathlib.Logic.Function.Iterate",
+        "Mathlib.Tactic.Attr.Core"
+      ]
+    },
+    "Mathlib.Order.MinMax": {
+      "bytes": 3198,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Logic.OpClass",
+        "Mathlib.Order.Lattice"
+      ]
+    },
+    "Mathlib.Data.Finset.Empty": {
+      "bytes": 27305,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Data.Finset.Defs",
+        "Mathlib.Data.Multiset.ZeroCons"
+      ]
+    },
+    "Mathlib.Data.Multiset.FinsetOps": {
+      "bytes": 7898,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Data.Multiset.Dedup",
+        "Mathlib.Data.List.Infix"
+      ]
+    },
+    "Mathlib.Data.List.Infix": {
+      "bytes": 6999,
+      "runtime_initializer_ref_count": 5,
+      "imports": [
+        "Mathlib.Data.List.TakeDrop",
+        "Mathlib.Data.List.Induction",
+        "Mathlib.Data.Nat.Basic",
+        "Mathlib.Order.Basic",
+        "Mathlib.Data.List.Basic"
+      ]
+    },
+    "Mathlib.Data.List.Induction": {
+      "bytes": 23089,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Util.Delaborators": {
+      "bytes": 358886,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Init",
+        "Mathlib.Util.PPOptions"
+      ]
+    },
+    "Mathlib.Util.PPOptions": {
+      "bytes": 20180,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Data.Finset.Erase": {
+      "bytes": 4108,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Data.Finset.Defs",
+        "Mathlib.Data.Multiset.Filter"
+      ]
+    },
+    "Mathlib.Data.Finset.Filter": {
+      "bytes": 83724,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Data.Finset.Empty",
+        "Mathlib.Data.Multiset.Filter"
+      ]
+    },
+    "Mathlib.Data.Finset.Range": {
+      "bytes": 6140,
+      "runtime_initializer_ref_count": 3,
+      "imports": [
+        "Mathlib.Data.Finset.Insert",
+        "Mathlib.Data.Multiset.Range",
+        "Mathlib.Order.Interval.Set.Defs"
+      ]
+    },
+    "Mathlib.Data.Multiset.Range": {
+      "bytes": 3130,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Data.Multiset.UnionInter"
+      ]
+    },
+    "Mathlib.Order.Interval.Set.Defs": {
+      "bytes": 3780,
+      "runtime_initializer_ref_count": 3,
+      "imports": [
+        "Mathlib.Data.Set.Defs",
+        "Mathlib.Order.Defs.PartialOrder",
+        "Mathlib.Tactic.Push.Attr"
+      ]
+    },
+    "Mathlib.Data.Finset.SDiff": {
+      "bytes": 5723,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Data.Finset.Insert",
+        "Mathlib.Data.Finset.Lattice.Basic"
+      ]
+    },
+    "Mathlib.Data.Finset.Lattice.Basic": {
+      "bytes": 9047,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Data.Finset.Defs",
+        "Mathlib.Data.Multiset.FinsetOps"
+      ]
+    },
+    "Mathlib.Logic.Equiv.Set": {
+      "bytes": 48236,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Data.Set.Function",
+        "Mathlib.Logic.Equiv.Defs"
+      ]
+    },
+    "Mathlib.Order.Directed": {
+      "bytes": 80687,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Data.Set.Image",
+        "Mathlib.Util.Delaborators"
+      ]
+    },
+    "Mathlib.Data.Finset.Image": {
+      "bytes": 22823,
+      "runtime_initializer_ref_count": 9,
+      "imports": [
+        "Mathlib.Algebra.NeZero",
+        "Mathlib.Data.Finset.Attach",
+        "Mathlib.Data.Finset.Disjoint",
+        "Mathlib.Data.Finset.Erase",
+        "Mathlib.Data.Finset.Filter",
+        "Mathlib.Data.Finset.Range",
+        "Mathlib.Data.Finset.Lattice.Lemmas",
+        "Mathlib.Data.Finset.SDiff",
+        "Mathlib.Data.Fintype.Defs"
+      ]
+    },
+    "Mathlib.Algebra.NeZero": {
+      "bytes": 3282,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Basic.Logic.Basic",
+        "Mathlib.Order.Defs.PartialOrder"
+      ]
+    },
+    "Mathlib.Data.Finset.Lattice.Lemmas": {
+      "bytes": 3381,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Data.Finset.Insert",
+        "Mathlib.Data.Finset.Lattice.Basic"
+      ]
+    },
+    "Mathlib.Data.Fintype.Defs": {
+      "bytes": 304449,
+      "runtime_initializer_ref_count": 3,
+      "imports": [
+        "Mathlib.Basic.Finite.Defs",
+        "Mathlib.Data.Finset.Filter",
+        "Mathlib.Order.Lex"
+      ]
+    },
+    "Mathlib.Basic.Finite.Defs": {
+      "bytes": 3723,
+      "runtime_initializer_ref_count": 3,
+      "imports": [
+        "Mathlib.Data.Set.CoeSort",
+        "Mathlib.Logic.Equiv.Defs",
+        "Mathlib.Data.Nat.Notation"
+      ]
+    },
+    "Mathlib.Order.Lex": {
+      "bytes": 26646,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Logic.Equiv.Defs"
+      ]
+    },
+    "Mathlib.Data.Finset.SymmDiff": {
+      "bytes": 3294,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Data.Finset.Image",
+        "Mathlib.Data.Set.SymmDiff"
+      ]
+    },
+    "Mathlib.Data.Fintype.OfMap": {
+      "bytes": 9531,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Data.Fintype.Defs",
+        "Mathlib.Data.Finset.Image"
+      ]
+    },
+    "Mathlib.Data.Multiset.Bind": {
+      "bytes": 10896,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Algebra.BigOperators.Group.Multiset.Basic",
+        "Mathlib.Data.Multiset.Fold"
+      ]
+    },
+    "Mathlib.Algebra.BigOperators.Group.Multiset.Basic": {
+      "bytes": 6086,
+      "runtime_initializer_ref_count": 5,
+      "imports": [
+        "Mathlib.Algebra.BigOperators.Group.List.Lemmas",
+        "Mathlib.Algebra.BigOperators.Group.Multiset.Defs",
+        "Mathlib.Algebra.Group.Prod",
+        "Mathlib.Algebra.Order.Group.Multiset",
+        "Mathlib.Algebra.Order.Sub.Unbundled.Basic"
+      ]
+    },
+    "Mathlib.Algebra.BigOperators.Group.List.Lemmas": {
+      "bytes": 10672,
+      "runtime_initializer_ref_count": 11,
+      "imports": [
+        "Mathlib.Algebra.BigOperators.Group.List.Basic",
+        "Mathlib.Algebra.Divisibility.Basic",
+        "Mathlib.Algebra.Group.Int.Units",
+        "Mathlib.Data.List.Dedup",
+        "Mathlib.Data.List.Flatten",
+        "Mathlib.Data.List.Pairwise",
+        "Mathlib.Data.List.Perm.Basic",
+        "Mathlib.Data.List.Range",
+        "Mathlib.Data.List.Rotate",
+        "Mathlib.Data.List.ProdSigma",
+        "Mathlib.Algebra.Group.Opposite"
+      ]
+    },
+    "Mathlib.Algebra.BigOperators.Group.List.Basic": {
+      "bytes": 8263,
+      "runtime_initializer_ref_count": 12,
+      "imports": [
+        "Mathlib.Algebra.Divisibility.Basic",
+        "Mathlib.Algebra.Group.Hom.Defs",
+        "Mathlib.Algebra.BigOperators.Group.List.Defs",
+        "Mathlib.Data.List.TakeDrop",
+        "Mathlib.Data.List.Forall2",
+        "Mathlib.Data.List.Perm.Basic",
+        "Mathlib.Algebra.Group.Basic",
+        "Mathlib.Algebra.Group.Commute.Defs",
+        "Mathlib.Algebra.Group.Nat.Defs",
+        "Mathlib.Algebra.Group.Int.Defs",
+        "Mathlib.Order.Basic",
+        "Mathlib.Data.List.Basic"
+      ]
+    },
+    "Mathlib.Algebra.Divisibility.Basic": {
+      "bytes": 29466,
+      "runtime_initializer_ref_count": 3,
+      "imports": [
+        "Mathlib.Algebra.Group.Opposite",
+        "Mathlib.Tactic.Common",
+        "Mathlib.Tactic.Attr.Core"
+      ]
+    },
+    "Mathlib.Algebra.Group.Nat.Defs": {
+      "bytes": 10739,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Algebra.Group.Monoid"
+      ]
+    },
+    "Mathlib.Algebra.Group.Int.Defs": {
+      "bytes": 15533,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Algebra.Group.Defs"
+      ]
+    },
+    "Mathlib.Algebra.Group.Int.Units": {
+      "bytes": 4275,
+      "runtime_initializer_ref_count": 4,
+      "imports": [
+        "Mathlib.Tactic.Tauto",
+        "Mathlib.Algebra.Group.Int.Defs",
+        "Mathlib.Algebra.Group.Basic",
+        "Mathlib.Algebra.Group.Nat.Units"
+      ]
+    },
+    "Mathlib.Algebra.Group.Nat.Units": {
+      "bytes": 4935,
+      "runtime_initializer_ref_count": 3,
+      "imports": [
+        "Mathlib.Algebra.Group.Nat.Defs",
+        "Mathlib.Algebra.Group.Units.Defs",
+        "Mathlib.Basic.Unique"
+      ]
+    },
+    "Mathlib.Algebra.Group.Units.Defs": {
+      "bytes": 125436,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Algebra.Group.Commute.Defs"
+      ]
+    },
+    "Mathlib.Data.List.Flatten": {
+      "bytes": 2793,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Tactic.GCongr"
+      ]
+    },
+    "Mathlib.Data.List.Pairwise": {
+      "bytes": 4651,
+      "runtime_initializer_ref_count": 3,
+      "imports": [
+        "Mathlib.Data.List.TFAE",
+        "Mathlib.Logic.Pairwise",
+        "Mathlib.Logic.Relation"
+      ]
+    },
+    "Mathlib.Data.List.TFAE": {
+      "bytes": 80519,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Data.List.Range": {
+      "bytes": 10480,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Data.List.Chain"
+      ]
+    },
+    "Mathlib.Data.List.Chain": {
+      "bytes": 4659,
+      "runtime_initializer_ref_count": 5,
+      "imports": [
+        "Mathlib.Data.List.Forall2",
+        "Mathlib.Data.List.Induction",
+        "Mathlib.Data.List.Lex",
+        "Mathlib.Data.List.Pairwise",
+        "Mathlib.Logic.Function.Iterate"
+      ]
+    },
+    "Mathlib.Data.List.Lex": {
+      "bytes": 15983,
+      "runtime_initializer_ref_count": 3,
+      "imports": [
+        "Mathlib.Data.List.Basic",
+        "Mathlib.Data.Nat.Basic",
+        "Mathlib.Order.RelClasses"
+      ]
+    },
+    "Mathlib.Data.List.Rotate": {
+      "bytes": 38502,
+      "runtime_initializer_ref_count": 3,
+      "imports": [
+        "Mathlib.Data.List.Nodup",
+        "Mathlib.Data.List.Infix",
+        "Mathlib.Data.Quot"
+      ]
+    },
+    "Mathlib.Data.List.ProdSigma": {
+      "bytes": 3707,
+      "runtime_initializer_ref_count": 3,
+      "imports": [
+        "Mathlib.Data.List.Defs",
+        "Mathlib.Tactic.Attr.Core",
+        "Mathlib.Tactic.Common"
+      ]
+    },
+    "Mathlib.Algebra.Group.Prod": {
+      "bytes": 158618,
+      "runtime_initializer_ref_count": 10,
+      "imports": [
+        "Mathlib.Algebra.Group.Equiv.Defs",
+        "Mathlib.Algebra.Group.Hom.Basic",
+        "Mathlib.Algebra.Group.Opposite",
+        "Mathlib.Algebra.Group.SelfInv",
+        "Mathlib.Algebra.Group.Torsion",
+        "Mathlib.Algebra.Group.Units.Hom",
+        "Mathlib.Algebra.Notation.Pi.Defs",
+        "Mathlib.Algebra.Notation.Prod",
+        "Mathlib.Logic.Equiv.Prod",
+        "Mathlib.Tactic.TermCongr"
+      ]
+    },
+    "Mathlib.Algebra.Group.Units.Hom": {
+      "bytes": 23906,
+      "runtime_initializer_ref_count": 3,
+      "imports": [
+        "Mathlib.Algebra.Group.Equiv.Defs",
+        "Mathlib.Algebra.Group.Hom.Basic",
+        "Mathlib.Algebra.Group.Units.Basic"
+      ]
+    },
+    "Mathlib.Algebra.Group.Units.Basic": {
+      "bytes": 8788,
+      "runtime_initializer_ref_count": 7,
+      "imports": [
+        "Mathlib.Algebra.Group.Basic",
+        "Mathlib.Algebra.Group.Commute.Defs",
+        "Mathlib.Algebra.Group.Units.Defs",
+        "Mathlib.Basic.Unique",
+        "Mathlib.Tactic.Lift",
+        "Mathlib.Tactic.Subsingleton",
+        "Mathlib.Tactic.Attr.Core"
+      ]
+    },
+    "Mathlib.Algebra.Notation.Prod": {
+      "bytes": 21935,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Algebra.Notation.Defs",
+        "Mathlib.Data.Prod.Basic"
+      ]
+    },
+    "Mathlib.Algebra.Order.Group.Multiset": {
+      "bytes": 12268,
+      "runtime_initializer_ref_count": 5,
+      "imports": [
+        "Mathlib.Algebra.Group.Hom.Defs",
+        "Mathlib.Algebra.Group.Nat.Defs",
+        "Mathlib.Algebra.Order.Monoid.Unbundled.ExistsOfLE",
+        "Mathlib.Algebra.Order.Sub.Defs",
+        "Mathlib.Data.Multiset.Dedup"
+      ]
+    },
+    "Mathlib.Algebra.Order.Monoid.Unbundled.ExistsOfLE": {
+      "bytes": 3511,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Algebra.Order.Monoid.Unbundled.Basic",
+        "Mathlib.Order.MinMax"
+      ]
+    },
+    "Mathlib.Algebra.Order.Monoid.Unbundled.Basic": {
+      "bytes": 11969,
+      "runtime_initializer_ref_count": 7,
+      "imports": [
+        "Mathlib.Algebra.Order.Monoid.Unbundled.Defs",
+        "Mathlib.Algebra.Order.IsBotOne",
+        "Mathlib.Data.Ordering.Basic",
+        "Mathlib.Order.MinMax",
+        "Mathlib.Tactic.Contrapose",
+        "Mathlib.Tactic.Use",
+        "Mathlib.Tactic.GRewrite"
+      ]
+    },
+    "Mathlib.Algebra.Order.Monoid.Unbundled.Defs": {
+      "bytes": 3849,
+      "runtime_initializer_ref_count": 3,
+      "imports": [
+        "Mathlib.Algebra.Group.Basic",
+        "Mathlib.Order.Basic",
+        "Mathlib.Order.Monotone.Defs"
+      ]
+    },
+    "Mathlib.Algebra.Order.IsBotOne": {
+      "bytes": 6176,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Algebra.Order.ZeroLEOne",
+        "Mathlib.Order.BoundedOrder.Lattice"
+      ]
+    },
+    "Mathlib.Algebra.Order.ZeroLEOne": {
+      "bytes": 3800,
+      "runtime_initializer_ref_count": 3,
+      "imports": [
+        "Mathlib.Algebra.Notation.Pi.Defs",
+        "Mathlib.Algebra.Notation.Prod",
+        "Mathlib.Order.Basic"
+      ]
+    },
+    "Mathlib.Algebra.Order.Sub.Defs": {
+      "bytes": 3853,
+      "runtime_initializer_ref_count": 3,
+      "imports": [
+        "Mathlib.Algebra.Group.Basic",
+        "Mathlib.Algebra.Order.Monoid.Unbundled.Basic",
+        "Mathlib.Order.Lattice"
+      ]
+    },
+    "Mathlib.Algebra.Order.Sub.Unbundled.Basic": {
+      "bytes": 3530,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Algebra.Order.Sub.Defs",
+        "Mathlib.Algebra.Order.Monoid.Unbundled.ExistsOfLE"
+      ]
+    },
+    "Mathlib.Data.Multiset.Fold": {
+      "bytes": 53141,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Data.Multiset.Dedup"
+      ]
+    },
+    "Mathlib.Data.Finset.Prod": {
+      "bytes": 10842,
+      "runtime_initializer_ref_count": 4,
+      "imports": [
+        "Mathlib.Data.Finset.Card",
+        "Mathlib.Data.Finset.Union",
+        "Mathlib.Data.List.OffDiag",
+        "Mathlib.Data.Nat.Choose.Basic"
+      ]
+    },
+    "Mathlib.Data.Finset.Card": {
+      "bytes": 36361,
+      "runtime_initializer_ref_count": 3,
+      "imports": [
+        "Mathlib.Data.Finset.Basic",
+        "Mathlib.Data.Finset.Image",
+        "Mathlib.Data.Finset.Lattice.Lemmas"
+      ]
+    },
+    "Mathlib.Data.Finset.Union": {
+      "bytes": 6454,
+      "runtime_initializer_ref_count": 3,
+      "imports": [
+        "Mathlib.Data.Finset.Fold",
+        "Mathlib.Data.Multiset.Bind",
+        "Mathlib.Order.SetNotation"
+      ]
+    },
+    "Mathlib.Data.Finset.Fold": {
+      "bytes": 55898,
+      "runtime_initializer_ref_count": 4,
+      "imports": [
+        "Mathlib.Data.Finset.Basic",
+        "Mathlib.Data.Finset.Image",
+        "Mathlib.Data.Multiset.Fold",
+        "Mathlib.Data.Finset.Lattice.Lemmas"
+      ]
+    },
+    "Mathlib.Order.SetNotation": {
+      "bytes": 440133,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Data.Set.Operations",
+        "Mathlib.Util.Notation3"
+      ]
+    },
+    "Mathlib.Data.List.OffDiag": {
+      "bytes": 11264,
+      "runtime_initializer_ref_count": 5,
+      "imports": [
+        "Mathlib.Data.List.Count",
+        "Mathlib.Data.List.Enum",
+        "Mathlib.Data.List.Nodup",
+        "Mathlib.Data.List.Perm.Basic",
+        "Mathlib.Data.Nat.Notation"
+      ]
+    },
+    "Mathlib.Data.List.Enum": {
+      "bytes": 2782,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Data.List.Basic"
+      ]
+    },
+    "Mathlib.Data.Nat.Choose.Basic": {
+      "bytes": 11782,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Data.Nat.Factorial.Basic",
+        "Mathlib.Order.Monotone.Defs"
+      ]
+    },
+    "Mathlib.Data.Nat.Factorial.Basic": {
+      "bytes": 44570,
+      "runtime_initializer_ref_count": 5,
+      "imports": [
+        "Mathlib.Data.Nat.Basic",
+        "Mathlib.Tactic.Common",
+        "Mathlib.Tactic.CrossRefAttribute",
+        "Mathlib.Tactic.Monotonicity.Attr",
+        "Mathlib.Tactic.Attr.Core"
+      ]
+    },
+    "Mathlib.Data.Finset.Sum": {
+      "bytes": 11931,
+      "runtime_initializer_ref_count": 3,
+      "imports": [
+        "Mathlib.Data.Finset.Card",
+        "Mathlib.Data.Finset.Fold",
+        "Mathlib.Data.Multiset.Sum"
+      ]
+    },
+    "Mathlib.Data.Multiset.Sum": {
+      "bytes": 5653,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Algebra.Order.Group.Multiset"
+      ]
+    },
+    "Mathlib.Algebra.BigOperators.Ring.Finset": {
+      "bytes": 6133,
+      "runtime_initializer_ref_count": 7,
+      "imports": [
+        "Mathlib.Algebra.BigOperators.Group.Finset.Pi",
+        "Mathlib.Algebra.BigOperators.Group.Finset.Piecewise",
+        "Mathlib.Algebra.BigOperators.GroupWithZero.Finset",
+        "Mathlib.Algebra.BigOperators.Ring.Multiset",
+        "Mathlib.Data.Finset.Max",
+        "Mathlib.Data.Fintype.Powerset",
+        "Mathlib.Data.Int.Cast.Lemmas"
+      ]
+    },
+    "Mathlib.Algebra.BigOperators.Group.Finset.Pi": {
+      "bytes": 3501,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Data.Fintype.Pi",
+        "Mathlib.Algebra.BigOperators.Group.Finset.Defs"
+      ]
+    },
+    "Mathlib.Data.Fintype.Pi": {
+      "bytes": 15285,
+      "runtime_initializer_ref_count": 3,
+      "imports": [
+        "Mathlib.Data.Finset.Pi",
+        "Mathlib.Data.Fintype.Basic",
+        "Mathlib.Data.Set.Finite.Basic"
+      ]
+    },
+    "Mathlib.Data.Finset.Pi": {
+      "bytes": 12788,
+      "runtime_initializer_ref_count": 4,
+      "imports": [
+        "Mathlib.Data.Finset.Card",
+        "Mathlib.Data.Finset.Union",
+        "Mathlib.Data.Multiset.Pi",
+        "Mathlib.Logic.Function.DependsOn"
+      ]
+    },
+    "Mathlib.Data.Multiset.Pi": {
+      "bytes": 10031,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Data.Multiset.Bind"
+      ]
+    },
+    "Mathlib.Logic.Function.DependsOn": {
+      "bytes": 3322,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Data.Set.Restrict",
+        "Mathlib.Util.Delaborators"
+      ]
+    },
+    "Mathlib.Data.Fintype.Basic": {
+      "bytes": 42382,
+      "runtime_initializer_ref_count": 8,
+      "imports": [
+        "Mathlib.Basic.Finite.Defs",
+        "Mathlib.Data.Finset.BooleanAlgebra",
+        "Mathlib.Data.Finset.Image",
+        "Mathlib.Data.Fintype.Defs",
+        "Mathlib.Data.Fintype.OfMap",
+        "Mathlib.Data.Fintype.Sets",
+        "Mathlib.Data.List.FinRange",
+        "Mathlib.Data.List.OfFn"
+      ]
+    },
+    "Mathlib.Data.List.FinRange": {
+      "bytes": 3285,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Data.List.Nodup",
+        "Mathlib.Data.Fin.Tuple.Basic"
+      ]
+    },
+    "Mathlib.Data.Fin.Tuple.Basic": {
+      "bytes": 53258,
+      "runtime_initializer_ref_count": 4,
+      "imports": [
+        "Mathlib.Data.Fin.Rev",
+        "Mathlib.Data.Nat.Find",
+        "Mathlib.Order.Fin.Basic",
+        "Mathlib.Data.Set.Insert"
+      ]
+    },
+    "Mathlib.Data.Fin.Rev": {
+      "bytes": 4626,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Data.Fin.SuccPred",
+        "Mathlib.Logic.Equiv.Basic"
+      ]
+    },
+    "Mathlib.Data.Fin.SuccPred": {
+      "bytes": 9706,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Data.Fin.Basic",
+        "Mathlib.Data.Set.Operations"
+      ]
+    },
+    "Mathlib.Data.Fin.Basic": {
+      "bytes": 77375,
+      "runtime_initializer_ref_count": 5,
+      "imports": [
+        "Mathlib.Data.Int.DivMod",
+        "Mathlib.Data.Nat.Init",
+        "Mathlib.Logic.Equiv.Defs",
+        "Mathlib.Tactic.Common",
+        "Mathlib.Tactic.Attr.Core"
+      ]
+    },
+    "Mathlib.Data.Int.DivMod": {
+      "bytes": 2734,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Data.Nat.Find": {
+      "bytes": 10540,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Data.Nat.Basic",
+        "Mathlib.Tactic.Push"
+      ]
+    },
+    "Mathlib.Order.Fin.Basic": {
+      "bytes": 34158,
+      "runtime_initializer_ref_count": 5,
+      "imports": [
+        "Mathlib.Algebra.Order.IsBotOne",
+        "Mathlib.Data.Fin.Embedding",
+        "Mathlib.Data.Fin.Rev",
+        "Mathlib.Order.Heyting.Basic",
+        "Mathlib.Order.Hom.Basic"
+      ]
+    },
+    "Mathlib.Data.Fin.Embedding": {
+      "bytes": 13363,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Data.Fin.SuccPred",
+        "Mathlib.Logic.Embedding.Basic"
+      ]
+    },
+    "Mathlib.Data.List.OfFn": {
+      "bytes": 6628,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Data.Fin.Tuple.Basic"
+      ]
+    },
+    "Mathlib.Data.Set.Finite.Basic": {
+      "bytes": 31611,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Data.Fintype.EquivFin",
+        "Mathlib.Tactic.Nontriviality"
+      ]
+    },
+    "Mathlib.Data.Fintype.EquivFin": {
+      "bytes": 15921,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Data.Fintype.Card",
+        "Mathlib.Data.List.NodupEquivFin"
+      ]
+    },
+    "Mathlib.Data.Fintype.Card": {
+      "bytes": 8769,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Data.Finset.Card",
+        "Mathlib.Data.Fintype.Basic"
+      ]
+    },
+    "Mathlib.Data.List.NodupEquivFin": {
+      "bytes": 11049,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Data.List.Duplicate",
+        "Mathlib.Data.List.Sort"
+      ]
+    },
+    "Mathlib.Data.List.Duplicate": {
+      "bytes": 50086,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Data.List.Nodup"
+      ]
+    },
+    "Mathlib.Data.List.Sort": {
+      "bytes": 91152,
+      "runtime_initializer_ref_count": 3,
+      "imports": [
+        "Mathlib.Data.List.OfFn",
+        "Mathlib.Data.List.Nodup",
+        "Mathlib.Order.Fin.Basic"
+      ]
+    },
+    "Mathlib.Tactic.Nontriviality": {
+      "bytes": 2874,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Tactic.Nontriviality.Core"
+      ]
+    },
+    "Mathlib.Tactic.Nontriviality.Core": {
+      "bytes": 226760,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Basic.Nontrivial.Basic",
+        "Mathlib.Tactic.Attr.Register"
+      ]
+    },
+    "Mathlib.Basic.Nontrivial.Basic": {
+      "bytes": 4713,
+      "runtime_initializer_ref_count": 5,
+      "imports": [
+        "Mathlib.Basic.Nontrivial.Defs",
+        "Mathlib.Basic.Unique",
+        "Mathlib.Data.Prod.Basic",
+        "Mathlib.Logic.Function.Basic",
+        "Mathlib.Order.Defs.LinearOrder"
+      ]
+    },
+    "Mathlib.Algebra.BigOperators.Group.Finset.Piecewise": {
+      "bytes": 3585,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Algebra.BigOperators.Group.Finset.Basic",
+        "Mathlib.Data.Finset.Piecewise"
+      ]
+    },
+    "Mathlib.Data.Finset.Piecewise": {
+      "bytes": 5610,
+      "runtime_initializer_ref_count": 3,
+      "imports": [
+        "Mathlib.Data.Finset.BooleanAlgebra",
+        "Mathlib.Data.Set.Piecewise",
+        "Mathlib.Order.Interval.Set.Basic"
+      ]
+    },
+    "Mathlib.Data.Set.Piecewise": {
+      "bytes": 2820,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Data.Set.Function"
+      ]
+    },
+    "Mathlib.Order.Interval.Set.Basic": {
+      "bytes": 20919,
+      "runtime_initializer_ref_count": 4,
+      "imports": [
+        "Mathlib.Algebra.Order.IsBotOne",
+        "Mathlib.Data.Set.Subsingleton",
+        "Mathlib.Order.BooleanAlgebra.Set",
+        "Mathlib.Order.Interval.Set.Defs"
+      ]
+    },
+    "Mathlib.Algebra.BigOperators.GroupWithZero.Finset": {
+      "bytes": 4631,
+      "runtime_initializer_ref_count": 4,
+      "imports": [
+        "Mathlib.Algebra.BigOperators.Group.Finset.Basic",
+        "Mathlib.Algebra.GroupWithZero.Units.Basic",
+        "Mathlib.Algebra.Notation.Indicator",
+        "Mathlib.Data.Set.Lattice.Indexed"
+      ]
+    },
+    "Mathlib.Algebra.GroupWithZero.Units.Basic": {
+      "bytes": 35967,
+      "runtime_initializer_ref_count": 8,
+      "imports": [
+        "Mathlib.Algebra.Group.Units.Basic",
+        "Mathlib.Algebra.GroupWithZero.Basic",
+        "Mathlib.Data.Nat.Basic",
+        "Mathlib.Lean.Meta.CongrTheorems",
+        "Mathlib.Tactic.Contrapose",
+        "Mathlib.Tactic.Spread",
+        "Mathlib.Tactic.Convert",
+        "Mathlib.Tactic.Nontriviality"
+      ]
+    },
+    "Mathlib.Algebra.GroupWithZero.Basic": {
+      "bytes": 6797,
+      "runtime_initializer_ref_count": 5,
+      "imports": [
+        "Mathlib.Algebra.Group.Basic",
+        "Mathlib.Algebra.Group.SelfInv",
+        "Mathlib.Algebra.GroupWithZero.NeZero",
+        "Mathlib.Basic.Unique",
+        "Mathlib.Tactic.Conv"
+      ]
+    },
+    "Mathlib.Algebra.GroupWithZero.NeZero": {
+      "bytes": 3380,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Algebra.GroupWithZero.Defs",
+        "Mathlib.Algebra.NeZero"
+      ]
+    },
+    "Mathlib.Algebra.GroupWithZero.Defs": {
+      "bytes": 18040,
+      "runtime_initializer_ref_count": 3,
+      "imports": [
+        "Mathlib.Algebra.Group.DivInvMonoid",
+        "Mathlib.Basic.Nontrivial.Defs",
+        "Mathlib.Basic.Logic.Basic"
+      ]
+    },
+    "Mathlib.Algebra.Notation.Indicator": {
+      "bytes": 3376,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Algebra.Notation.Support",
+        "Mathlib.Data.Set.Piecewise"
+      ]
+    },
+    "Mathlib.Algebra.Notation.Support": {
+      "bytes": 3827,
+      "runtime_initializer_ref_count": 3,
+      "imports": [
+        "Mathlib.Algebra.Notation.Pi.Basic",
+        "Mathlib.Algebra.Notation.Prod",
+        "Mathlib.Data.Set.Image"
+      ]
+    },
+    "Mathlib.Data.Set.Lattice.Indexed": {
+      "bytes": 2892,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Data.Set.BooleanAlgebra"
+      ]
+    },
+    "Mathlib.Data.Set.BooleanAlgebra": {
+      "bytes": 5249,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Order.CompleteBooleanAlgebra"
+      ]
+    },
+    "Mathlib.Order.CompleteBooleanAlgebra": {
+      "bytes": 569876,
+      "runtime_initializer_ref_count": 5,
+      "imports": [
+        "Mathlib.Logic.Equiv.Set",
+        "Mathlib.Logic.Pairwise",
+        "Mathlib.Order.CompleteLattice.Lemmas",
+        "Mathlib.Order.Directed",
+        "Mathlib.Order.GaloisConnection.Basic"
+      ]
+    },
+    "Mathlib.Order.CompleteLattice.Lemmas": {
+      "bytes": 21314,
+      "runtime_initializer_ref_count": 3,
+      "imports": [
+        "Mathlib.Data.Bool.Set",
+        "Mathlib.Data.Nat.Set",
+        "Mathlib.Order.CompleteLattice.Basic"
+      ]
+    },
+    "Mathlib.Data.Bool.Set": {
+      "bytes": 2775,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Data.Set.Insert"
+      ]
+    },
+    "Mathlib.Data.Nat.Set": {
+      "bytes": 2763,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Data.Set.Image"
+      ]
+    },
+    "Mathlib.Order.CompleteLattice.Basic": {
+      "bytes": 50928,
+      "runtime_initializer_ref_count": 5,
+      "imports": [
+        "Mathlib.Data.Set.NAry",
+        "Mathlib.Data.ULift",
+        "Mathlib.Order.Bounds.Image",
+        "Mathlib.Order.CompleteLattice.Defs",
+        "Mathlib.Order.Hom.Set"
+      ]
+    },
+    "Mathlib.Data.Set.NAry": {
+      "bytes": 2765,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Data.Set.Prod"
+      ]
+    },
+    "Mathlib.Data.ULift": {
+      "bytes": 13221,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Control.ULift",
+        "Mathlib.Logic.Equiv.Basic"
+      ]
+    },
+    "Mathlib.Control.ULift": {
+      "bytes": 20412,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Order.Bounds.Image": {
+      "bytes": 3265,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Data.Set.NAry",
+        "Mathlib.Order.Bounds.Basic"
+      ]
+    },
+    "Mathlib.Order.Bounds.Basic": {
+      "bytes": 50195,
+      "runtime_initializer_ref_count": 5,
+      "imports": [
+        "Mathlib.Order.Antisymmetrization",
+        "Mathlib.Order.Bounds.Defs",
+        "Mathlib.Order.Directed",
+        "Mathlib.Order.BoundedOrder.Monotone",
+        "Mathlib.Order.Interval.Set.Basic"
+      ]
+    },
+    "Mathlib.Order.Antisymmetrization": {
+      "bytes": 45029,
+      "runtime_initializer_ref_count": 3,
+      "imports": [
+        "Mathlib.Logic.Relation",
+        "Mathlib.Order.Hom.Basic",
+        "Mathlib.Tactic.Tauto"
+      ]
+    },
+    "Mathlib.Order.Bounds.Defs": {
+      "bytes": 3233,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Data.Set.Defs",
+        "Mathlib.Tactic.ToDual"
+      ]
+    },
+    "Mathlib.Order.BoundedOrder.Monotone": {
+      "bytes": 3393,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Order.BoundedOrder.Basic",
+        "Mathlib.Order.Monotone.Basic"
+      ]
+    },
+    "Mathlib.Order.CompleteLattice.Defs": {
+      "bytes": 59229,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Order.Bounds.Basic",
+        "Mathlib.Order.SetNotation"
+      ]
+    },
+    "Mathlib.Order.Hom.Set": {
+      "bytes": 23144,
+      "runtime_initializer_ref_count": 5,
+      "imports": [
+        "Mathlib.Logic.Equiv.Set",
+        "Mathlib.Order.Hom.Basic",
+        "Mathlib.Order.Interval.Set.Defs",
+        "Mathlib.Order.WellFounded",
+        "Mathlib.Tactic.MinImports"
+      ]
+    },
+    "Mathlib.Order.WellFounded": {
+      "bytes": 3273,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Data.Set.Function",
+        "Mathlib.Order.Bounds.Defs"
+      ]
+    },
+    "Mathlib.Order.GaloisConnection.Basic": {
+      "bytes": 70374,
+      "runtime_initializer_ref_count": 3,
+      "imports": [
+        "Mathlib.Order.Bounds.Image",
+        "Mathlib.Order.CompleteLattice.Basic",
+        "Mathlib.Order.WithBot"
+      ]
+    },
+    "Mathlib.Order.WithBot": {
+      "bytes": 105554,
+      "runtime_initializer_ref_count": 8,
+      "imports": [
+        "Mathlib.Basic.Nontrivial.Basic",
+        "Mathlib.Order.TypeTags",
+        "Mathlib.Data.Option.NAry",
+        "Mathlib.Tactic.Contrapose",
+        "Mathlib.Tactic.Lift",
+        "Mathlib.Data.Option.Basic",
+        "Mathlib.Order.Lattice",
+        "Mathlib.Order.BoundedOrder.Basic"
+      ]
+    },
+    "Mathlib.Order.TypeTags": {
+      "bytes": 20893,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Order.Notation"
+      ]
+    },
+    "Mathlib.Data.Option.NAry": {
+      "bytes": 4771,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Algebra.BigOperators.Ring.Multiset": {
+      "bytes": 4567,
+      "runtime_initializer_ref_count": 4,
+      "imports": [
+        "Mathlib.Algebra.BigOperators.Group.Multiset.Basic",
+        "Mathlib.Algebra.BigOperators.Ring.List",
+        "Mathlib.Data.Multiset.Antidiagonal",
+        "Mathlib.Data.Multiset.Sections"
+      ]
+    },
+    "Mathlib.Algebra.BigOperators.Ring.List": {
+      "bytes": 5539,
+      "runtime_initializer_ref_count": 6,
+      "imports": [
+        "Mathlib.Algebra.GroupWithZero.Commute",
+        "Mathlib.Algebra.GroupWithZero.Divisibility",
+        "Mathlib.Algebra.Ring.Basic",
+        "Mathlib.Algebra.Ring.Divisibility.Basic",
+        "Mathlib.Algebra.Ring.Commute",
+        "Mathlib.Algebra.BigOperators.Group.List.Basic"
+      ]
+    },
+    "Mathlib.Algebra.GroupWithZero.Commute": {
+      "bytes": 3947,
+      "runtime_initializer_ref_count": 3,
+      "imports": [
+        "Mathlib.Algebra.GroupWithZero.Semiconj",
+        "Mathlib.Algebra.Group.Commute.Units",
+        "Mathlib.Tactic.Nontriviality"
+      ]
+    },
+    "Mathlib.Algebra.GroupWithZero.Semiconj": {
+      "bytes": 3499,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Algebra.GroupWithZero.Units.Basic",
+        "Mathlib.Algebra.Group.Semiconj.Units"
+      ]
+    },
+    "Mathlib.Algebra.Group.Semiconj.Units": {
+      "bytes": 3440,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Algebra.Group.Semiconj.Defs",
+        "Mathlib.Algebra.Group.Units.Basic"
+      ]
+    },
+    "Mathlib.Algebra.Group.Commute.Units": {
+      "bytes": 25132,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Algebra.Group.Commute.Defs",
+        "Mathlib.Algebra.Group.Semiconj.Units"
+      ]
+    },
+    "Mathlib.Algebra.GroupWithZero.Divisibility": {
+      "bytes": 3962,
+      "runtime_initializer_ref_count": 3,
+      "imports": [
+        "Mathlib.Algebra.GroupWithZero.Units.Basic",
+        "Mathlib.Algebra.Divisibility.Units",
+        "Mathlib.Data.Nat.Basic"
+      ]
+    },
+    "Mathlib.Algebra.Divisibility.Units": {
+      "bytes": 3421,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Algebra.Divisibility.Basic",
+        "Mathlib.Algebra.Group.Units.Basic"
+      ]
+    },
+    "Mathlib.Algebra.Ring.Basic": {
+      "bytes": 14339,
+      "runtime_initializer_ref_count": 7,
+      "imports": [
+        "Mathlib.Algebra.Group.Commute.Defs",
+        "Mathlib.Algebra.Group.Hom.Instances",
+        "Mathlib.Algebra.Group.SelfInv",
+        "Mathlib.Algebra.GroupWithZero.NeZero",
+        "Mathlib.Algebra.Opposites",
+        "Mathlib.Algebra.Ring.Defs",
+        "Mathlib.Tactic.TFAE"
+      ]
+    },
+    "Mathlib.Algebra.Group.Hom.Instances": {
+      "bytes": 87150,
+      "runtime_initializer_ref_count": 4,
+      "imports": [
+        "Mathlib.Algebra.Group.Hom.Basic",
+        "Mathlib.Algebra.Group.InjSurj",
+        "Mathlib.Algebra.Group.Pi.Basic",
+        "Mathlib.Tactic.FastInstance"
+      ]
+    },
+    "Mathlib.Algebra.Group.Pi.Basic": {
+      "bytes": 65567,
+      "runtime_initializer_ref_count": 5,
+      "imports": [
+        "Mathlib.Algebra.Group.Defs",
+        "Mathlib.Algebra.Notation.Pi.Basic",
+        "Mathlib.Basic.Unique",
+        "Mathlib.Data.Sum.Basic",
+        "Mathlib.Tactic.Spread"
+      ]
+    },
+    "Mathlib.Algebra.Ring.Defs": {
+      "bytes": 90498,
+      "runtime_initializer_ref_count": 6,
+      "imports": [
+        "Mathlib.Algebra.Group.IsCommutative",
+        "Mathlib.Algebra.GroupWithZero.Defs",
+        "Mathlib.Algebra.Notation.Defs",
+        "Mathlib.Data.Int.Cast.Defs",
+        "Mathlib.Tactic.CrossRefAttribute",
+        "Mathlib.Tactic.Spread"
+      ]
+    },
+    "Mathlib.Algebra.Group.IsCommutative": {
+      "bytes": 16896,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Algebra.Group.Defs"
+      ]
+    },
+    "Mathlib.Data.Int.Cast.Defs": {
+      "bytes": 42440,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Algebra.Group.Defs",
+        "Mathlib.Data.Nat.Cast.Defs"
+      ]
+    },
+    "Mathlib.Data.Nat.Cast.Defs": {
+      "bytes": 49666,
+      "runtime_initializer_ref_count": 4,
+      "imports": [
+        "Mathlib.Data.Nat.Init",
+        "Mathlib.Tactic.SplitIfs",
+        "Mathlib.Algebra.Group.Monoid",
+        "Mathlib.Tactic.OfNat"
+      ]
+    },
+    "Mathlib.Tactic.TFAE": {
+      "bytes": 1238390,
+      "runtime_initializer_ref_count": 4,
+      "imports": [
+        "Mathlib.Util.AtomM",
+        "Mathlib.Data.List.Pairwise",
+        "Mathlib.Data.Nat.Notation",
+        "Mathlib.Tactic.ExtendDoc",
+        "Mathlib.Util.AtomM"
+      ]
+    },
+    "Mathlib.Util.AtomM": {
+      "bytes": 47674,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Algebra.Ring.Divisibility.Basic": {
+      "bytes": 3906,
+      "runtime_initializer_ref_count": 3,
+      "imports": [
+        "Mathlib.Algebra.Divisibility.Hom",
+        "Mathlib.Algebra.Group.Equiv.Basic",
+        "Mathlib.Algebra.Ring.Defs"
+      ]
+    },
+    "Mathlib.Algebra.Divisibility.Hom": {
+      "bytes": 3392,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Algebra.Divisibility.Basic",
+        "Mathlib.Algebra.Group.Hom.Defs"
+      ]
+    },
+    "Mathlib.Algebra.Ring.Commute": {
+      "bytes": 6288,
+      "runtime_initializer_ref_count": 4,
+      "imports": [
+        "Mathlib.Algebra.Ring.Semiconj",
+        "Mathlib.Algebra.Ring.Units",
+        "Mathlib.Algebra.Group.Commute.Defs",
+        "Mathlib.Data.Bracket"
+      ]
+    },
+    "Mathlib.Algebra.Ring.Semiconj": {
+      "bytes": 3351,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Algebra.Group.Semiconj.Defs",
+        "Mathlib.Algebra.Ring.Defs"
+      ]
+    },
+    "Mathlib.Algebra.Ring.Units": {
+      "bytes": 7567,
+      "runtime_initializer_ref_count": 3,
+      "imports": [
+        "Mathlib.Algebra.Ring.InjSurj",
+        "Mathlib.Algebra.Group.Units.Hom",
+        "Mathlib.Algebra.Ring.Hom.Defs"
+      ]
+    },
+    "Mathlib.Algebra.Ring.InjSurj": {
+      "bytes": 189509,
+      "runtime_initializer_ref_count": 4,
+      "imports": [
+        "Mathlib.Algebra.Ring.Defs",
+        "Mathlib.Algebra.Opposites",
+        "Mathlib.Algebra.GroupWithZero.InjSurj",
+        "Mathlib.Data.Int.Cast.Basic"
+      ]
+    },
+    "Mathlib.Algebra.GroupWithZero.InjSurj": {
+      "bytes": 47100,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Algebra.Group.InjSurj",
+        "Mathlib.Algebra.GroupWithZero.NeZero"
+      ]
+    },
+    "Mathlib.Data.Int.Cast.Basic": {
+      "bytes": 3747,
+      "runtime_initializer_ref_count": 3,
+      "imports": [
+        "Mathlib.Data.Int.Cast.Defs",
+        "Mathlib.Algebra.Group.Basic",
+        "Mathlib.Data.Nat.Basic"
+      ]
+    },
+    "Mathlib.Algebra.Ring.Hom.Defs": {
+      "bytes": 86062,
+      "runtime_initializer_ref_count": 3,
+      "imports": [
+        "Mathlib.Algebra.GroupWithZero.Hom",
+        "Mathlib.Algebra.Ring.Defs",
+        "Mathlib.Algebra.Ring.Basic"
+      ]
+    },
+    "Mathlib.Algebra.GroupWithZero.Hom": {
+      "bytes": 51331,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Algebra.Group.Hom.Basic",
+        "Mathlib.Algebra.GroupWithZero.Basic"
+      ]
+    },
+    "Mathlib.Data.Bracket": {
+      "bytes": 32265,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Data.Multiset.Antidiagonal": {
+      "bytes": 3710,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Data.Multiset.Powerset"
+      ]
+    },
+    "Mathlib.Data.Multiset.Powerset": {
+      "bytes": 11288,
+      "runtime_initializer_ref_count": 4,
+      "imports": [
+        "Mathlib.Data.List.Sublists",
+        "Mathlib.Data.List.Zip",
+        "Mathlib.Data.Multiset.Bind",
+        "Mathlib.Data.Multiset.Range"
+      ]
+    },
+    "Mathlib.Data.List.Sublists": {
+      "bytes": 21730,
+      "runtime_initializer_ref_count": 7,
+      "imports": [
+        "Mathlib.Data.Nat.Choose.Basic",
+        "Mathlib.Data.List.Perm.Basic",
+        "Mathlib.Data.List.Lex",
+        "Mathlib.Data.List.Induction",
+        "Mathlib.Data.List.Nodup",
+        "Mathlib.Data.Prod.Basic",
+        "Mathlib.Tactic.Finiteness.Attr"
+      ]
+    },
+    "Mathlib.Data.List.Zip": {
+      "bytes": 4120,
+      "runtime_initializer_ref_count": 4,
+      "imports": [
+        "Mathlib.Data.List.Forall2",
+        "Mathlib.Data.Nat.Basic",
+        "Mathlib.Data.List.Basic",
+        "Mathlib.Logic.OpClass"
+      ]
+    },
+    "Mathlib.Data.Multiset.Sections": {
+      "bytes": 6389,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Data.Multiset.Bind"
+      ]
+    },
+    "Mathlib.Data.Finset.Max": {
+      "bytes": 12947,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Data.Finset.Card",
+        "Mathlib.Data.Finset.Lattice.Fold"
+      ]
+    },
+    "Mathlib.Data.Finset.Lattice.Fold": {
+      "bytes": 12648,
+      "runtime_initializer_ref_count": 6,
+      "imports": [
+        "Mathlib.Data.Finset.Fold",
+        "Mathlib.Data.Finset.Sum",
+        "Mathlib.Data.Multiset.Lattice",
+        "Mathlib.Data.Set.BooleanAlgebra",
+        "Mathlib.Order.Hom.BoundedLattice",
+        "Mathlib.Order.Nat"
+      ]
+    },
+    "Mathlib.Data.Multiset.Lattice": {
+      "bytes": 6162,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Data.Multiset.FinsetOps",
+        "Mathlib.Data.Multiset.Fold"
+      ]
+    },
+    "Mathlib.Order.Hom.BoundedLattice": {
+      "bytes": 74155,
+      "runtime_initializer_ref_count": 3,
+      "imports": [
+        "Mathlib.Order.Hom.Bounded",
+        "Mathlib.Order.Hom.Lattice",
+        "Mathlib.Order.SymmDiff"
+      ]
+    },
+    "Mathlib.Order.Hom.Bounded": {
+      "bytes": 99740,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Order.Hom.Basic"
+      ]
+    },
+    "Mathlib.Order.Hom.Lattice": {
+      "bytes": 82556,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Order.Hom.Basic"
+      ]
+    },
+    "Mathlib.Order.Nat": {
+      "bytes": 4017,
+      "runtime_initializer_ref_count": 3,
+      "imports": [
+        "Mathlib.Data.Nat.Find",
+        "Mathlib.Order.BoundedOrder.Basic",
+        "Mathlib.Order.Bounds.Defs"
+      ]
+    },
+    "Mathlib.Data.Fintype.Powerset": {
+      "bytes": 4695,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Data.Finset.Powerset",
+        "Mathlib.Data.Fintype.EquivFin"
+      ]
+    },
+    "Mathlib.Data.Finset.Powerset": {
+      "bytes": 28933,
+      "runtime_initializer_ref_count": 4,
+      "imports": [
+        "Mathlib.Data.Finset.Card",
+        "Mathlib.Data.Finset.Lattice.Union",
+        "Mathlib.Data.Multiset.Powerset",
+        "Mathlib.Data.Set.Pairwise.Lattice"
+      ]
+    },
+    "Mathlib.Data.Finset.Lattice.Union": {
+      "bytes": 3364,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Data.Finset.Lattice.Fold",
+        "Mathlib.Data.Finset.Union"
+      ]
+    },
+    "Mathlib.Data.Set.Pairwise.Lattice": {
+      "bytes": 3894,
+      "runtime_initializer_ref_count": 3,
+      "imports": [
+        "Mathlib.Data.Set.Lattice.Bounded",
+        "Mathlib.Data.Set.Lattice.Disjoint",
+        "Mathlib.Data.Set.Pairwise.Basic"
+      ]
+    },
+    "Mathlib.Data.Set.Lattice.Bounded": {
+      "bytes": 3964,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Data.Set.Lattice.Indexed"
+      ]
+    },
+    "Mathlib.Data.Set.Lattice.Disjoint": {
+      "bytes": 4320,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Data.Set.BooleanAlgebra"
+      ]
+    },
+    "Mathlib.Data.Int.Cast.Lemmas": {
+      "bytes": 14377,
+      "runtime_initializer_ref_count": 3,
+      "imports": [
+        "Mathlib.Algebra.Group.TypeTags.Hom",
+        "Mathlib.Algebra.Ring.Int.Defs",
+        "Mathlib.Algebra.Ring.Parity"
+      ]
+    },
+    "Mathlib.Algebra.Group.TypeTags.Hom": {
+      "bytes": 39682,
+      "runtime_initializer_ref_count": 3,
+      "imports": [
+        "Mathlib.Algebra.Group.Equiv.Defs",
+        "Mathlib.Algebra.Group.Hom.Basic",
+        "Mathlib.Algebra.Group.TypeTags.Basic"
+      ]
+    },
+    "Mathlib.Algebra.Ring.Int.Defs": {
+      "bytes": 13586,
+      "runtime_initializer_ref_count": 5,
+      "imports": [
+        "Mathlib.Algebra.CharZero.Defs",
+        "Mathlib.Algebra.Ring.Defs",
+        "Mathlib.Algebra.Group.Int.Defs",
+        "Mathlib.Data.Int.Basic",
+        "Mathlib.Data.Int.Cast.Basic"
+      ]
+    },
+    "Mathlib.Algebra.CharZero.Defs": {
+      "bytes": 3306,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Basic.Logic.Basic",
+        "Mathlib.Data.Int.Cast.Defs"
+      ]
+    },
+    "Mathlib.Data.Int.Basic": {
+      "bytes": 5002,
+      "runtime_initializer_ref_count": 6,
+      "imports": [
+        "Mathlib.Data.Int.Init",
+        "Mathlib.Data.Nat.Basic",
+        "Mathlib.Logic.Function.Basic",
+        "Mathlib.Tactic.Conv",
+        "Mathlib.Tactic.Convert",
+        "Mathlib.Tactic.OfNat"
+      ]
+    },
+    "Mathlib.Algebra.Ring.Parity": {
+      "bytes": 5665,
+      "runtime_initializer_ref_count": 5,
+      "imports": [
+        "Mathlib.Algebra.Group.Int.Even",
+        "Mathlib.Data.Nat.Cast.Basic",
+        "Mathlib.Data.Nat.Cast.Commute",
+        "Mathlib.Data.Set.Operations",
+        "Mathlib.Logic.Function.Iterate"
+      ]
+    },
+    "Mathlib.Algebra.Group.Int.Even": {
+      "bytes": 7266,
+      "runtime_initializer_ref_count": 4,
+      "imports": [
+        "Mathlib.Algebra.Group.Int.Defs",
+        "Mathlib.Algebra.Group.Nat.Even",
+        "Mathlib.Data.Int.Sqrt",
+        "Mathlib.Tactic.Attr.Core"
+      ]
+    },
+    "Mathlib.Algebra.Group.Nat.Even": {
+      "bytes": 6060,
+      "runtime_initializer_ref_count": 4,
+      "imports": [
+        "Mathlib.Algebra.Group.Even",
+        "Mathlib.Algebra.Group.Nat.Defs",
+        "Mathlib.Data.Nat.Sqrt",
+        "Mathlib.Tactic.Attr.Register"
+      ]
+    },
+    "Mathlib.Algebra.Group.Even": {
+      "bytes": 13489,
+      "runtime_initializer_ref_count": 4,
+      "imports": [
+        "Mathlib.Algebra.Group.Equiv.Basic",
+        "Mathlib.Algebra.Group.Equiv.Opposite",
+        "Mathlib.Algebra.Group.TypeTags.Basic",
+        "Mathlib.Data.Set.Operations"
+      ]
+    },
+    "Mathlib.Data.Nat.Sqrt": {
+      "bytes": 2770,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Data.Nat.Basic"
+      ]
+    },
+    "Mathlib.Data.Int.Sqrt": {
+      "bytes": 4205,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Data.Nat.Sqrt",
+        "Mathlib.Tactic.Common"
+      ]
+    },
+    "Mathlib.Data.Nat.Cast.Basic": {
+      "bytes": 9907,
+      "runtime_initializer_ref_count": 5,
+      "imports": [
+        "Mathlib.Algebra.Divisibility.Hom",
+        "Mathlib.Algebra.Group.Even",
+        "Mathlib.Algebra.Group.Nat.Hom",
+        "Mathlib.Algebra.Ring.Hom.Defs",
+        "Mathlib.Algebra.Ring.Nat"
+      ]
+    },
+    "Mathlib.Algebra.Group.Nat.Hom": {
+      "bytes": 9887,
+      "runtime_initializer_ref_count": 3,
+      "imports": [
+        "Mathlib.Algebra.Group.Nat.Defs",
+        "Mathlib.Algebra.Group.TypeTags.Hom",
+        "Mathlib.Tactic.Spread"
+      ]
+    },
+    "Mathlib.Algebra.Ring.Nat": {
+      "bytes": 12972,
+      "runtime_initializer_ref_count": 4,
+      "imports": [
+        "Mathlib.Algebra.CharZero.Defs",
+        "Mathlib.Algebra.GroupWithZero.Nat",
+        "Mathlib.Algebra.Ring.Defs",
+        "Mathlib.Data.Nat.Basic"
+      ]
+    },
+    "Mathlib.Algebra.GroupWithZero.Nat": {
+      "bytes": 9400,
+      "runtime_initializer_ref_count": 3,
+      "imports": [
+        "Mathlib.Algebra.Group.Nat.Defs",
+        "Mathlib.Algebra.GroupWithZero.Defs",
+        "Mathlib.Tactic.Spread"
+      ]
+    },
+    "Mathlib.Data.Nat.Cast.Commute": {
+      "bytes": 3376,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Algebra.GroupWithZero.Commute",
+        "Mathlib.Algebra.Ring.Commute"
+      ]
+    },
+    "Mathlib.Data.Fintype.BigOperators": {
+      "bytes": 6399,
+      "runtime_initializer_ref_count": 8,
+      "imports": [
+        "Mathlib.Algebra.BigOperators.Group.Finset.Piecewise",
+        "Mathlib.Algebra.BigOperators.Group.Finset.Sigma",
+        "Mathlib.Algebra.BigOperators.Option",
+        "Mathlib.Data.Fintype.Option",
+        "Mathlib.Data.Fintype.Prod",
+        "Mathlib.Data.Fintype.Sigma",
+        "Mathlib.Data.Fintype.Sum",
+        "Mathlib.Data.Fintype.Vector"
+      ]
+    },
+    "Mathlib.Algebra.BigOperators.Group.Finset.Sigma": {
+      "bytes": 3537,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Data.Finset.Sigma",
+        "Mathlib.Algebra.BigOperators.Group.Finset.Basic"
+      ]
+    },
+    "Mathlib.Data.Finset.Sigma": {
+      "bytes": 7156,
+      "runtime_initializer_ref_count": 3,
+      "imports": [
+        "Mathlib.Data.Finset.Lattice.Fold",
+        "Mathlib.Data.Set.Sigma",
+        "Mathlib.Order.CompleteLattice.Finset"
+      ]
+    },
+    "Mathlib.Data.Set.Sigma": {
+      "bytes": 3267,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Data.Set.Image",
+        "Mathlib.Data.Set.BooleanAlgebra"
+      ]
+    },
+    "Mathlib.Order.CompleteLattice.Finset": {
+      "bytes": 3380,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Data.Finset.Option",
+        "Mathlib.Data.Set.Lattice.Image"
+      ]
+    },
+    "Mathlib.Data.Finset.Option": {
+      "bytes": 21463,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Data.Finset.Card",
+        "Mathlib.Data.Finset.Union"
+      ]
+    },
+    "Mathlib.Data.Set.Lattice.Image": {
+      "bytes": 2883,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Data.Set.Lattice.Bounded"
+      ]
+    },
+    "Mathlib.Algebra.BigOperators.Option": {
+      "bytes": 3458,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Data.Finset.Option",
+        "Mathlib.Algebra.BigOperators.Group.Finset.Basic"
+      ]
+    },
+    "Mathlib.Data.Fintype.Option": {
+      "bytes": 15371,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Data.Fintype.EquivFin",
+        "Mathlib.Data.Finset.Option"
+      ]
+    },
+    "Mathlib.Data.Fintype.Prod": {
+      "bytes": 4085,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Data.Finset.Prod",
+        "Mathlib.Data.Fintype.EquivFin"
+      ]
+    },
+    "Mathlib.Data.Fintype.Sigma": {
+      "bytes": 6837,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Data.Finset.Sigma",
+        "Mathlib.Data.Fintype.OfMap"
+      ]
+    },
+    "Mathlib.Data.Fintype.Sum": {
+      "bytes": 7535,
+      "runtime_initializer_ref_count": 3,
+      "imports": [
+        "Mathlib.Data.Finset.Sum",
+        "Mathlib.Data.Fintype.EquivFin",
+        "Mathlib.Logic.Embedding.Set"
+      ]
+    },
+    "Mathlib.Logic.Embedding.Set": {
+      "bytes": 20531,
+      "runtime_initializer_ref_count": 5,
+      "imports": [
+        "Mathlib.Data.Set.Notation",
+        "Mathlib.Order.SetNotation",
+        "Mathlib.Logic.Embedding.Basic",
+        "Mathlib.Logic.Pairwise",
+        "Mathlib.Data.Set.Image"
+      ]
+    },
+    "Mathlib.Data.Set.Notation": {
+      "bytes": 145102,
+      "runtime_initializer_ref_count": 3,
+      "imports": [
+        "Mathlib.Util.Notation3",
+        "Mathlib.Lean.Expr.ExtraRecognizers",
+        "Mathlib.Data.Set.Operations"
+      ]
+    },
+    "Mathlib.Lean.Expr.ExtraRecognizers": {
+      "bytes": 14059,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Data.Set.CoeSort"
+      ]
+    },
+    "Mathlib.Data.Fintype.Vector": {
+      "bytes": 17213,
+      "runtime_initializer_ref_count": 3,
+      "imports": [
+        "Mathlib.Basic.Finite.Prod",
+        "Mathlib.Data.Fintype.Pi",
+        "Mathlib.Data.Sym.Basic"
+      ]
+    },
+    "Mathlib.Basic.Finite.Prod": {
+      "bytes": 9116,
+      "runtime_initializer_ref_count": 6,
+      "imports": [
+        "Mathlib.Data.Set.Finite.Basic",
+        "Mathlib.Data.Fintype.Prod",
+        "Mathlib.Data.Fintype.Pi",
+        "Mathlib.Algebra.Order.Group.Multiset",
+        "Mathlib.Data.ULift",
+        "Mathlib.Data.Set.NAry"
+      ]
+    },
+    "Mathlib.Data.Sym.Basic": {
+      "bytes": 105074,
+      "runtime_initializer_ref_count": 4,
+      "imports": [
+        "Mathlib.Algebra.Order.Group.Multiset",
+        "Mathlib.Data.Setoid.Basic",
+        "Mathlib.Data.Vector.Basic",
+        "Mathlib.Tactic.ApplyFun"
+      ]
+    },
+    "Mathlib.Data.Setoid.Basic": {
+      "bytes": 40908,
+      "runtime_initializer_ref_count": 3,
+      "imports": [
+        "Mathlib.Logic.Relation",
+        "Mathlib.Order.CompleteLattice.Basic",
+        "Mathlib.Order.GaloisConnection.Defs"
+      ]
+    },
+    "Mathlib.Data.Vector.Basic": {
+      "bytes": 110128,
+      "runtime_initializer_ref_count": 6,
+      "imports": [
+        "Mathlib.Data.Vector.Defs",
+        "Mathlib.Data.List.Nodup",
+        "Mathlib.Control.Applicative",
+        "Mathlib.Control.Traversable.Basic",
+        "Mathlib.Algebra.BigOperators.Group.List.Basic",
+        "Mathlib.Data.Fin.SuccPred"
+      ]
+    },
+    "Mathlib.Data.Vector.Defs": {
+      "bytes": 50015,
+      "runtime_initializer_ref_count": 3,
+      "imports": [
+        "Mathlib.Data.List.Defs",
+        "Mathlib.Tactic.Common",
+        "Mathlib.Tactic.Attr.Core"
+      ]
+    },
+    "Mathlib.Control.Applicative": {
+      "bytes": 10191,
+      "runtime_initializer_ref_count": 4,
+      "imports": [
+        "Mathlib.Algebra.Group.Monoid",
+        "Mathlib.Control.Functor",
+        "Mathlib.Control.Basic",
+        "Mathlib.Tactic.Attr.Register"
+      ]
+    },
+    "Mathlib.Control.Traversable.Basic": {
+      "bytes": 27803,
+      "runtime_initializer_ref_count": 4,
+      "imports": [
+        "Mathlib.Data.Option.Defs",
+        "Mathlib.Control.Functor",
+        "Mathlib.Control.Basic",
+        "Mathlib.Tactic.Attr.Register"
+      ]
+    },
+    "Mathlib.Tactic.ApplyFun": {
+      "bytes": 386610,
+      "runtime_initializer_ref_count": 3,
+      "imports": [
+        "Mathlib.Lean.Expr.Basic",
+        "Mathlib.Order.Hom.Basic",
+        "Mathlib.Tactic.ToDual"
+      ]
+    },
+    "Mathlib.Data.Rat.Cast.Order": {
+      "bytes": 325957,
+      "runtime_initializer_ref_count": 3,
+      "imports": [
+        "Mathlib.Algebra.Order.Field.Rat",
+        "Mathlib.Data.Rat.Cast.CharZero",
+        "Mathlib.Tactic.Positivity.Core"
+      ]
+    },
+    "Mathlib.Algebra.Order.Field.Rat": {
+      "bytes": 9760,
+      "runtime_initializer_ref_count": 3,
+      "imports": [
+        "Mathlib.Algebra.Field.Rat",
+        "Mathlib.Algebra.Order.Nonneg.Field",
+        "Mathlib.Algebra.Order.Ring.Rat"
+      ]
+    },
+    "Mathlib.Algebra.Field.Rat": {
+      "bytes": 17520,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Algebra.Field.Defs",
+        "Mathlib.Data.NNRat.Defs"
+      ]
+    },
+    "Mathlib.Algebra.Field.Defs": {
+      "bytes": 56612,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Algebra.Ring.Defs",
+        "Mathlib.Data.Rat.Init"
+      ]
+    },
+    "Mathlib.Data.Rat.Init": {
+      "bytes": 32881,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Data.Nat.Notation"
+      ]
+    },
+    "Mathlib.Data.NNRat.Defs": {
+      "bytes": 44631,
+      "runtime_initializer_ref_count": 7,
+      "imports": [
+        "Mathlib.Algebra.Order.Group.Unbundled.Int",
+        "Mathlib.Algebra.Order.Nonneg.Basic",
+        "Mathlib.Algebra.Order.Ring.Unbundled.Rat",
+        "Mathlib.Algebra.Ring.Rat",
+        "Mathlib.Data.Set.Operations",
+        "Mathlib.Order.Bounds.Defs",
+        "Mathlib.Order.GaloisConnection.Defs"
+      ]
+    },
+    "Mathlib.Algebra.Order.Group.Unbundled.Int": {
+      "bytes": 3935,
+      "runtime_initializer_ref_count": 3,
+      "imports": [
+        "Mathlib.Algebra.Order.Group.Unbundled.Abs",
+        "Mathlib.Algebra.Group.Int.Defs",
+        "Mathlib.Data.Int.Basic"
+      ]
+    },
+    "Mathlib.Algebra.Order.Group.Unbundled.Abs": {
+      "bytes": 97032,
+      "runtime_initializer_ref_count": 4,
+      "imports": [
+        "Mathlib.Algebra.Group.Even",
+        "Mathlib.Algebra.Group.Pi.Basic",
+        "Mathlib.Algebra.Order.Group.Lattice",
+        "Mathlib.Tactic.ToDual"
+      ]
+    },
+    "Mathlib.Algebra.Order.Group.Lattice": {
+      "bytes": 5874,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Algebra.Order.Group.OrderIso"
+      ]
+    },
+    "Mathlib.Algebra.Order.Group.OrderIso": {
+      "bytes": 19261,
+      "runtime_initializer_ref_count": 3,
+      "imports": [
+        "Mathlib.Algebra.Group.Units.Equiv",
+        "Mathlib.Algebra.Order.Group.Unbundled.Basic",
+        "Mathlib.Order.Hom.Basic"
+      ]
+    },
+    "Mathlib.Algebra.Group.Units.Equiv": {
+      "bytes": 61028,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Algebra.Group.Equiv.Basic",
+        "Mathlib.Algebra.Group.Units.Hom"
+      ]
+    },
+    "Mathlib.Algebra.Order.Group.Unbundled.Basic": {
+      "bytes": 3519,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Algebra.Order.Monoid.Unbundled.Basic",
+        "Mathlib.Algebra.Order.Sub.Defs"
+      ]
+    },
+    "Mathlib.Algebra.Order.Nonneg.Basic": {
+      "bytes": 38639,
+      "runtime_initializer_ref_count": 6,
+      "imports": [
+        "Mathlib.Algebra.Order.GroupWithZero.Basic",
+        "Mathlib.Algebra.Order.Monoid.Unbundled.Pow",
+        "Mathlib.Algebra.Order.ZeroLEOne",
+        "Mathlib.Algebra.Ring.Defs",
+        "Mathlib.Algebra.Ring.InjSurj",
+        "Mathlib.Data.Nat.Cast.Order.Basic"
+      ]
+    },
+    "Mathlib.Algebra.Order.GroupWithZero.Basic": {
+      "bytes": 132133,
+      "runtime_initializer_ref_count": 8,
+      "imports": [
+        "Mathlib.Algebra.GroupWithZero.Units.Basic",
+        "Mathlib.Algebra.Notation.Pi.Defs",
+        "Mathlib.Algebra.Order.GroupWithZero.Defs",
+        "Mathlib.Algebra.Order.ZeroLEOne",
+        "Mathlib.Tactic.Bound.Attribute",
+        "Mathlib.Tactic.Monotonicity.Attr",
+        "Mathlib.Data.Set.Function",
+        "Mathlib.Data.Int.Order.Basic"
+      ]
+    },
+    "Mathlib.Algebra.Order.GroupWithZero.Defs": {
+      "bytes": 165105,
+      "runtime_initializer_ref_count": 3,
+      "imports": [
+        "Mathlib.Algebra.Order.Monoid.Unbundled.Defs",
+        "Mathlib.Tactic.MkIffOfInductiveProp",
+        "Mathlib.Util.Notation3"
+      ]
+    },
+    "Mathlib.Tactic.Bound.Attribute": {
+      "bytes": 762106,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Tactic.Bound.Init"
+      ]
+    },
+    "Mathlib.Tactic.Bound.Init": {
+      "bytes": 17367,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Algebra.Order.Monoid.Unbundled.Pow": {
+      "bytes": 4527,
+      "runtime_initializer_ref_count": 4,
+      "imports": [
+        "Mathlib.Algebra.Order.Monoid.Unbundled.Basic",
+        "Mathlib.Algebra.Order.Monoid.Unbundled.OrderDual",
+        "Mathlib.Tactic.Lift",
+        "Mathlib.Tactic.Monotonicity.Attr"
+      ]
+    },
+    "Mathlib.Algebra.Order.Monoid.Unbundled.OrderDual": {
+      "bytes": 3574,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Algebra.Order.Group.Synonym",
+        "Mathlib.Algebra.Order.Monoid.Unbundled.Defs"
+      ]
+    },
+    "Mathlib.Algebra.Order.Group.Synonym": {
+      "bytes": 167755,
+      "runtime_initializer_ref_count": 4,
+      "imports": [
+        "Mathlib.Algebra.Group.Defs",
+        "Mathlib.Algebra.Notation.Defs",
+        "Mathlib.Order.Lex",
+        "Mathlib.Order.OrderDual"
+      ]
+    },
+    "Mathlib.Data.Nat.Cast.Order.Basic": {
+      "bytes": 6478,
+      "runtime_initializer_ref_count": 5,
+      "imports": [
+        "Mathlib.Algebra.Order.Monoid.Unbundled.Basic",
+        "Mathlib.Algebra.Order.ZeroLEOne",
+        "Mathlib.Data.Nat.Cast.Basic",
+        "Mathlib.Data.Nat.Cast.NeZero",
+        "Mathlib.Order.Hom.Basic"
+      ]
+    },
+    "Mathlib.Data.Nat.Cast.NeZero": {
+      "bytes": 2839,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Data.Nat.Cast.Defs"
+      ]
+    },
+    "Mathlib.Algebra.Order.Ring.Unbundled.Rat": {
+      "bytes": 16639,
+      "runtime_initializer_ref_count": 5,
+      "imports": [
+        "Mathlib.Algebra.Order.Group.Unbundled.Abs",
+        "Mathlib.Algebra.Order.Group.Unbundled.Basic",
+        "Mathlib.Algebra.Order.Group.Unbundled.Int",
+        "Mathlib.Data.Rat.Defs",
+        "Mathlib.Algebra.Ring.Int.Defs"
+      ]
+    },
+    "Mathlib.Data.Rat.Defs": {
+      "bytes": 19198,
+      "runtime_initializer_ref_count": 6,
+      "imports": [
+        "Mathlib.Algebra.Group.Defs",
+        "Mathlib.Data.Nat.Basic",
+        "Mathlib.Data.Rat.Init",
+        "Mathlib.Order.Basic",
+        "Mathlib.Tactic.Common",
+        "Mathlib.Tactic.Attr.Core"
+      ]
+    },
+    "Mathlib.Algebra.Ring.Rat": {
+      "bytes": 13905,
+      "runtime_initializer_ref_count": 5,
+      "imports": [
+        "Mathlib.Algebra.GroupWithZero.Units.Basic",
+        "Mathlib.Algebra.Ring.Basic",
+        "Mathlib.Algebra.Ring.Int.Defs",
+        "Mathlib.Data.Rat.Defs",
+        "Mathlib.Algebra.Group.Nat.Defs"
+      ]
+    },
+    "Mathlib.Algebra.Order.Nonneg.Field": {
+      "bytes": 36453,
+      "runtime_initializer_ref_count": 5,
+      "imports": [
+        "Mathlib.Algebra.Field.Basic",
+        "Mathlib.Algebra.Order.Field.Canonical",
+        "Mathlib.Algebra.Order.Nonneg.Ring",
+        "Mathlib.Algebra.Order.Positive.Ring",
+        "Mathlib.Data.Nat.Cast.Order.Ring"
+      ]
+    },
+    "Mathlib.Algebra.Field.Basic": {
+      "bytes": 90577,
+      "runtime_initializer_ref_count": 9,
+      "imports": [
+        "Mathlib.Algebra.Field.Defs",
+        "Mathlib.Algebra.Group.SelfInv",
+        "Mathlib.Algebra.Ring.GrindInstances",
+        "Mathlib.Algebra.Ring.Commute",
+        "Mathlib.Algebra.Ring.Invertible",
+        "Mathlib.Order.OrderDual",
+        "Mathlib.Order.Lex",
+        "Mathlib.Algebra.Order.Ring.Synonym",
+        "Mathlib.Tactic.Tauto"
+      ]
+    },
+    "Mathlib.Algebra.Ring.GrindInstances": {
+      "bytes": 14635,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Algebra.Ring.Defs",
+        "Mathlib.Data.Int.Cast.Basic"
+      ]
+    },
+    "Mathlib.Algebra.Ring.Invertible": {
+      "bytes": 8906,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Algebra.GroupWithZero.Invertible",
+        "Mathlib.Algebra.Ring.Defs"
+      ]
+    },
+    "Mathlib.Algebra.GroupWithZero.Invertible": {
+      "bytes": 7593,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Algebra.Group.Invertible.Basic",
+        "Mathlib.Algebra.GroupWithZero.Units.Basic"
+      ]
+    },
+    "Mathlib.Algebra.Group.Invertible.Basic": {
+      "bytes": 39767,
+      "runtime_initializer_ref_count": 4,
+      "imports": [
+        "Mathlib.Algebra.Group.Commute.Units",
+        "Mathlib.Algebra.Group.Invertible.Defs",
+        "Mathlib.Algebra.Group.Hom.Defs",
+        "Mathlib.Logic.Equiv.Defs"
+      ]
+    },
+    "Mathlib.Algebra.Group.Invertible.Defs": {
+      "bytes": 42863,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Algebra.Group.Defs"
+      ]
+    },
+    "Mathlib.Algebra.Order.Ring.Synonym": {
+      "bytes": 73500,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Algebra.Order.Group.Synonym",
+        "Mathlib.Algebra.Ring.Defs"
+      ]
+    },
+    "Mathlib.Algebra.Order.Field.Canonical": {
+      "bytes": 8753,
+      "runtime_initializer_ref_count": 3,
+      "imports": [
+        "Mathlib.Algebra.Field.Defs",
+        "Mathlib.Algebra.Order.GroupWithZero.Canonical",
+        "Mathlib.Algebra.Order.Ring.Canonical"
+      ]
+    },
+    "Mathlib.Algebra.Order.GroupWithZero.Canonical": {
+      "bytes": 80090,
+      "runtime_initializer_ref_count": 13,
+      "imports": [
+        "Mathlib.Algebra.Group.WithOne.Map",
+        "Mathlib.Algebra.GroupWithZero.InjSurj",
+        "Mathlib.Algebra.GroupWithZero.Regular",
+        "Mathlib.Algebra.GroupWithZero.WithZero",
+        "Mathlib.Algebra.Order.AddGroupWithTop",
+        "Mathlib.Algebra.Order.Group.Defs",
+        "Mathlib.Algebra.Order.Group.Int",
+        "Mathlib.Algebra.Order.Group.Units",
+        "Mathlib.Algebra.Order.GroupWithZero.Basic",
+        "Mathlib.Algebra.Order.Monoid.OrderDual",
+        "Mathlib.Algebra.Order.Monoid.TypeTags",
+        "Mathlib.Data.Int.Basic",
+        "Mathlib.Data.Set.Function"
+      ]
+    },
+    "Mathlib.Algebra.Group.WithOne.Map": {
+      "bytes": 8356,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Algebra.Group.WithOne.Defs",
+        "Mathlib.Data.Option.NAry"
+      ]
+    },
+    "Mathlib.Algebra.Group.WithOne.Defs": {
+      "bytes": 78080,
+      "runtime_initializer_ref_count": 5,
+      "imports": [
+        "Mathlib.Algebra.Group.DivInvMonoid",
+        "Mathlib.Basic.Nontrivial.Basic",
+        "Mathlib.Data.Option.Basic",
+        "Mathlib.Tactic.Common",
+        "Mathlib.Tactic.Attr.Core"
+      ]
+    },
+    "Mathlib.Algebra.GroupWithZero.Regular": {
+      "bytes": 3372,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Algebra.GroupWithZero.Defs",
+        "Mathlib.Tactic.Push"
+      ]
+    },
+    "Mathlib.Algebra.GroupWithZero.WithZero": {
+      "bytes": 114192,
+      "runtime_initializer_ref_count": 7,
+      "imports": [
+        "Mathlib.Algebra.Group.TypeTags.Basic",
+        "Mathlib.Algebra.Group.WithOne.Defs",
+        "Mathlib.Algebra.GroupWithZero.Equiv",
+        "Mathlib.Algebra.GroupWithZero.Units.Basic",
+        "Mathlib.Data.Nat.Cast.Defs",
+        "Mathlib.Data.Option.NAry",
+        "Mathlib.Util.CompileInductive"
+      ]
+    },
+    "Mathlib.Algebra.GroupWithZero.Equiv": {
+      "bytes": 5318,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Algebra.Group.Equiv.Defs",
+        "Mathlib.Algebra.GroupWithZero.Hom"
+      ]
+    },
+    "Mathlib.Algebra.Order.AddGroupWithTop": {
+      "bytes": 21917,
+      "runtime_initializer_ref_count": 5,
+      "imports": [
+        "Mathlib.Algebra.CharZero.Defs",
+        "Mathlib.Algebra.Group.Hom.Defs",
+        "Mathlib.Algebra.Order.Monoid.Canonical.Defs",
+        "Mathlib.Algebra.Order.Monoid.WithTop",
+        "Mathlib.Algebra.Regular.Basic"
+      ]
+    },
+    "Mathlib.Algebra.Order.Monoid.Canonical.Defs": {
+      "bytes": 8208,
+      "runtime_initializer_ref_count": 4,
+      "imports": [
+        "Mathlib.Algebra.Group.Units.Basic",
+        "Mathlib.Algebra.Order.Monoid.Defs",
+        "Mathlib.Algebra.Order.Monoid.Unbundled.ExistsOfLE",
+        "Mathlib.Order.BoundedOrder.Basic"
+      ]
+    },
+    "Mathlib.Algebra.Order.Monoid.Defs": {
+      "bytes": 2964,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Algebra.Order.Monoid.Unbundled.Basic"
+      ]
+    },
+    "Mathlib.Algebra.Order.Monoid.WithTop": {
+      "bytes": 3545,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Algebra.Order.Monoid.Unbundled.WithTop",
+        "Mathlib.Algebra.Order.Monoid.Canonical.Defs"
+      ]
+    },
+    "Mathlib.Algebra.Order.Monoid.Unbundled.WithTop": {
+      "bytes": 57434,
+      "runtime_initializer_ref_count": 6,
+      "imports": [
+        "Mathlib.Algebra.CharZero.Defs",
+        "Mathlib.Algebra.Group.Hom.Defs",
+        "Mathlib.Algebra.Group.Equiv.Defs",
+        "Mathlib.Algebra.Order.Monoid.Unbundled.ExistsOfLE",
+        "Mathlib.Algebra.Order.ZeroLEOne",
+        "Mathlib.Order.WithBot"
+      ]
+    },
+    "Mathlib.Algebra.Regular.Basic": {
+      "bytes": 4326,
+      "runtime_initializer_ref_count": 4,
+      "imports": [
+        "Mathlib.Algebra.Group.Basic",
+        "Mathlib.Algebra.Group.Commute.Defs",
+        "Mathlib.Algebra.Group.Units.Defs",
+        "Mathlib.Algebra.Regular.Defs"
+      ]
+    },
+    "Mathlib.Algebra.Order.Group.Defs": {
+      "bytes": 3937,
+      "runtime_initializer_ref_count": 3,
+      "imports": [
+        "Mathlib.Algebra.Order.Group.Unbundled.Basic",
+        "Mathlib.Algebra.Order.Monoid.Defs",
+        "Mathlib.Algebra.Order.Sub.Defs"
+      ]
+    },
+    "Mathlib.Algebra.Order.Group.Int": {
+      "bytes": 3380,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Algebra.Group.Int.Defs",
+        "Mathlib.Algebra.Order.Monoid.Defs"
+      ]
+    },
+    "Mathlib.Algebra.Order.Group.Units": {
+      "bytes": 3414,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Algebra.Order.Monoid.Defs",
+        "Mathlib.Algebra.Order.Monoid.Units"
+      ]
+    },
+    "Mathlib.Algebra.Order.Monoid.Units": {
+      "bytes": 42954,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Order.Hom.Basic",
+        "Mathlib.Algebra.Group.Units.Defs"
+      ]
+    },
+    "Mathlib.Algebra.Order.Monoid.OrderDual": {
+      "bytes": 4029,
+      "runtime_initializer_ref_count": 3,
+      "imports": [
+        "Mathlib.Algebra.Order.Group.Synonym",
+        "Mathlib.Algebra.Order.Monoid.Unbundled.OrderDual",
+        "Mathlib.Algebra.Order.Monoid.Defs"
+      ]
+    },
+    "Mathlib.Algebra.Order.Monoid.TypeTags": {
+      "bytes": 3557,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Algebra.Order.Monoid.Unbundled.TypeTags",
+        "Mathlib.Algebra.Order.Monoid.Canonical.Defs"
+      ]
+    },
+    "Mathlib.Algebra.Order.Monoid.Unbundled.TypeTags": {
+      "bytes": 48840,
+      "runtime_initializer_ref_count": 3,
+      "imports": [
+        "Mathlib.Algebra.Order.Monoid.Unbundled.ExistsOfLE",
+        "Mathlib.Algebra.Group.TypeTags.Basic",
+        "Mathlib.Order.BoundedOrder.Basic"
+      ]
+    },
+    "Mathlib.Algebra.Order.Ring.Canonical": {
+      "bytes": 4430,
+      "runtime_initializer_ref_count": 4,
+      "imports": [
+        "Mathlib.Algebra.Order.Monoid.Canonical.Defs",
+        "Mathlib.Algebra.Order.Ring.Defs",
+        "Mathlib.Algebra.Order.Sub.Basic",
+        "Mathlib.Algebra.Ring.Parity"
+      ]
+    },
+    "Mathlib.Algebra.Order.Ring.Defs": {
+      "bytes": 7515,
+      "runtime_initializer_ref_count": 10,
+      "imports": [
+        "Mathlib.Algebra.Order.Ring.Unbundled.Basic",
+        "Mathlib.Algebra.CharZero.Defs",
+        "Mathlib.Algebra.Order.Group.Defs",
+        "Mathlib.Algebra.Order.GroupWithZero.Basic",
+        "Mathlib.Algebra.Order.Monoid.NatCast",
+        "Mathlib.Algebra.Order.Monoid.Unbundled.MinMax",
+        "Mathlib.Algebra.Ring.Defs",
+        "Mathlib.Algebra.Ring.GrindInstances",
+        "Mathlib.Tactic.Tauto",
+        "Mathlib.Algebra.Order.Monoid.Unbundled.ExistsOfLE"
+      ]
+    },
+    "Mathlib.Algebra.Order.Ring.Unbundled.Basic": {
+      "bytes": 7127,
+      "runtime_initializer_ref_count": 9,
+      "imports": [
+        "Mathlib.Algebra.Group.Units.Basic",
+        "Mathlib.Algebra.GroupWithZero.NeZero",
+        "Mathlib.Algebra.Order.Group.Unbundled.Basic",
+        "Mathlib.Algebra.Order.GroupWithZero.Basic",
+        "Mathlib.Algebra.Order.Monoid.Unbundled.ExistsOfLE",
+        "Mathlib.Algebra.Order.Monoid.NatCast",
+        "Mathlib.Algebra.Order.Monoid.Unbundled.MinMax",
+        "Mathlib.Algebra.Ring.Defs",
+        "Mathlib.Tactic.Tauto"
+      ]
+    },
+    "Mathlib.Algebra.Order.Monoid.NatCast": {
+      "bytes": 3940,
+      "runtime_initializer_ref_count": 3,
+      "imports": [
+        "Mathlib.Algebra.Order.Monoid.Unbundled.Basic",
+        "Mathlib.Algebra.Order.ZeroLEOne",
+        "Mathlib.Data.Nat.Cast.Defs"
+      ]
+    },
+    "Mathlib.Algebra.Order.Monoid.Unbundled.MinMax": {
+      "bytes": 3048,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Algebra.Order.Monoid.Unbundled.Basic"
+      ]
+    },
+    "Mathlib.Algebra.Order.Sub.Basic": {
+      "bytes": 6948,
+      "runtime_initializer_ref_count": 5,
+      "imports": [
+        "Mathlib.Algebra.Order.Monoid.Unbundled.ExistsOfLE",
+        "Mathlib.Algebra.Order.Monoid.Canonical.Defs",
+        "Mathlib.Algebra.Order.Sub.Unbundled.Basic",
+        "Mathlib.Algebra.Group.Equiv.Basic",
+        "Mathlib.Algebra.Group.Even"
+      ]
+    },
+    "Mathlib.Algebra.Order.Nonneg.Ring": {
+      "bytes": 6517,
+      "runtime_initializer_ref_count": 5,
+      "imports": [
+        "Mathlib.Algebra.Order.GroupWithZero.Canonical",
+        "Mathlib.Algebra.Order.Nonneg.Basic",
+        "Mathlib.Algebra.Order.Nonneg.Lattice",
+        "Mathlib.Algebra.Order.Ring.InjSurj",
+        "Mathlib.Tactic.FastInstance"
+      ]
+    },
+    "Mathlib.Algebra.Order.Nonneg.Lattice": {
+      "bytes": 13002,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Order.CompleteLatticeIntervals",
+        "Mathlib.Order.LatticeIntervals"
+      ]
+    },
+    "Mathlib.Order.CompleteLatticeIntervals": {
+      "bytes": 10124,
+      "runtime_initializer_ref_count": 3,
+      "imports": [
+        "Mathlib.Order.ConditionallyCompleteLattice.Basic",
+        "Mathlib.Order.LatticeIntervals",
+        "Mathlib.Order.Interval.Set.OrdConnected"
+      ]
+    },
+    "Mathlib.Order.ConditionallyCompleteLattice.Basic": {
+      "bytes": 48862,
+      "runtime_initializer_ref_count": 3,
+      "imports": [
+        "Mathlib.Data.Set.Lattice.Indexed",
+        "Mathlib.Order.ConditionallyCompleteLattice.Defs",
+        "Mathlib.Order.ConditionallyCompletePartialOrder.Basic"
+      ]
+    },
+    "Mathlib.Order.ConditionallyCompleteLattice.Defs": {
+      "bytes": 32894,
+      "runtime_initializer_ref_count": 3,
+      "imports": [
+        "Mathlib.Order.Bounds.Basic",
+        "Mathlib.Order.SetNotation",
+        "Mathlib.Order.WellFounded"
+      ]
+    },
+    "Mathlib.Order.ConditionallyCompletePartialOrder.Basic": {
+      "bytes": 10770,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Order.CompleteLattice.Defs",
+        "Mathlib.Order.ConditionallyCompletePartialOrder.Defs"
+      ]
+    },
+    "Mathlib.Order.ConditionallyCompletePartialOrder.Defs": {
+      "bytes": 6172,
+      "runtime_initializer_ref_count": 3,
+      "imports": [
+        "Mathlib.Order.Bounds.Defs",
+        "Mathlib.Order.Directed",
+        "Mathlib.Order.SetNotation"
+      ]
+    },
+    "Mathlib.Order.LatticeIntervals": {
+      "bytes": 46709,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Order.Bounds.Basic"
+      ]
+    },
+    "Mathlib.Order.Interval.Set.OrdConnected": {
+      "bytes": 3901,
+      "runtime_initializer_ref_count": 3,
+      "imports": [
+        "Mathlib.Order.Interval.Set.OrderEmbedding",
+        "Mathlib.Order.Antichain",
+        "Mathlib.Order.SetNotation"
+      ]
+    },
+    "Mathlib.Order.Interval.Set.OrderEmbedding": {
+      "bytes": 3470,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Order.Interval.Set.UnorderedInterval",
+        "Mathlib.Order.Hom.Basic"
+      ]
+    },
+    "Mathlib.Order.Interval.Set.UnorderedInterval": {
+      "bytes": 54839,
+      "runtime_initializer_ref_count": 7,
+      "imports": [
+        "Mathlib.Data.Set.Order",
+        "Mathlib.Order.Bounds.Basic",
+        "Mathlib.Order.Interval.Set.Image",
+        "Mathlib.Order.Interval.Set.LinearOrder",
+        "Mathlib.Tactic.Common",
+        "Mathlib.Order.MinMax",
+        "Mathlib.Tactic.Attr.Core"
+      ]
+    },
+    "Mathlib.Data.Set.Order": {
+      "bytes": 2777,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Data.Set.Basic"
+      ]
+    },
+    "Mathlib.Order.Interval.Set.Image": {
+      "bytes": 3802,
+      "runtime_initializer_ref_count": 3,
+      "imports": [
+        "Mathlib.Order.Interval.Set.Basic",
+        "Mathlib.Data.Set.Function",
+        "Mathlib.Order.Directed"
+      ]
+    },
+    "Mathlib.Order.Interval.Set.LinearOrder": {
+      "bytes": 2939,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Order.Interval.Set.Basic"
+      ]
+    },
+    "Mathlib.Order.Antichain": {
+      "bytes": 41155,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Order.Bounds.Basic",
+        "Mathlib.Order.Preorder.Chain"
+      ]
+    },
+    "Mathlib.Order.Preorder.Chain": {
+      "bytes": 74008,
+      "runtime_initializer_ref_count": 6,
+      "imports": [
+        "Mathlib.Data.List.Pairwise",
+        "Mathlib.Data.Set.Notation",
+        "Mathlib.Data.Set.Pairwise.Basic",
+        "Mathlib.Data.SetLike.Basic",
+        "Mathlib.Order.Directed",
+        "Mathlib.Order.Hom.Set"
+      ]
+    },
+    "Mathlib.Algebra.Order.Ring.InjSurj": {
+      "bytes": 3411,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Algebra.Order.Monoid.Basic",
+        "Mathlib.Algebra.Order.Ring.Defs"
+      ]
+    },
+    "Mathlib.Algebra.Order.Monoid.Basic": {
+      "bytes": 10269,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Algebra.Order.Monoid.Defs",
+        "Mathlib.Order.Hom.Basic"
+      ]
+    },
+    "Mathlib.Algebra.Order.Positive.Ring": {
+      "bytes": 24091,
+      "runtime_initializer_ref_count": 3,
+      "imports": [
+        "Mathlib.Algebra.Order.Ring.Defs",
+        "Mathlib.Algebra.Ring.InjSurj",
+        "Mathlib.Tactic.FastInstance"
+      ]
+    },
+    "Mathlib.Data.Nat.Cast.Order.Ring": {
+      "bytes": 4417,
+      "runtime_initializer_ref_count": 4,
+      "imports": [
+        "Mathlib.Algebra.Order.Group.Unbundled.Abs",
+        "Mathlib.Algebra.Order.Ring.Nat",
+        "Mathlib.Algebra.Order.Sub.Basic",
+        "Mathlib.Data.Nat.Cast.Order.Basic"
+      ]
+    },
+    "Mathlib.Algebra.Order.Ring.Nat": {
+      "bytes": 6345,
+      "runtime_initializer_ref_count": 5,
+      "imports": [
+        "Mathlib.Algebra.Order.Group.Nat",
+        "Mathlib.Algebra.Order.GroupWithZero.Canonical",
+        "Mathlib.Algebra.Order.Ring.Defs",
+        "Mathlib.Algebra.Ring.Parity",
+        "Mathlib.Order.BooleanAlgebra.Set"
+      ]
+    },
+    "Mathlib.Algebra.Order.Group.Nat": {
+      "bytes": 3915,
+      "runtime_initializer_ref_count": 3,
+      "imports": [
+        "Mathlib.Algebra.Group.Nat.Defs",
+        "Mathlib.Algebra.Order.Monoid.Canonical.Defs",
+        "Mathlib.Algebra.Order.Sub.Defs"
+      ]
+    },
+    "Mathlib.Algebra.Order.Ring.Rat": {
+      "bytes": 3868,
+      "runtime_initializer_ref_count": 3,
+      "imports": [
+        "Mathlib.Algebra.Order.Ring.Defs",
+        "Mathlib.Algebra.Order.Ring.Unbundled.Rat",
+        "Mathlib.Algebra.Ring.Rat"
+      ]
+    },
+    "Mathlib.Data.Rat.Cast.CharZero": {
+      "bytes": 5226,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Algebra.GroupWithZero.Units.Lemmas",
+        "Mathlib.Data.Rat.Cast.Defs"
+      ]
+    },
+    "Mathlib.Algebra.GroupWithZero.Units.Lemmas": {
+      "bytes": 4855,
+      "runtime_initializer_ref_count": 3,
+      "imports": [
+        "Mathlib.Algebra.Group.Units.Hom",
+        "Mathlib.Algebra.GroupWithZero.Commute",
+        "Mathlib.Algebra.GroupWithZero.Hom"
+      ]
+    },
+    "Mathlib.Data.Rat.Cast.Defs": {
+      "bytes": 5690,
+      "runtime_initializer_ref_count": 7,
+      "imports": [
+        "Mathlib.Algebra.Field.Basic",
+        "Mathlib.Algebra.Field.Rat",
+        "Mathlib.Algebra.Group.Commute.Basic",
+        "Mathlib.Algebra.GroupWithZero.Units.Lemmas",
+        "Mathlib.Data.Int.Cast.Lemmas",
+        "Mathlib.Data.Rat.Lemmas",
+        "Mathlib.Order.Nat"
+      ]
+    },
+    "Mathlib.Algebra.Group.Commute.Basic": {
+      "bytes": 3443,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Algebra.Group.Commute.Defs",
+        "Mathlib.Algebra.Group.Semiconj.Basic"
+      ]
+    },
+    "Mathlib.Algebra.Group.Semiconj.Basic": {
+      "bytes": 3410,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Algebra.Group.Semiconj.Defs",
+        "Mathlib.Algebra.Group.Basic"
+      ]
+    },
+    "Mathlib.Data.Rat.Lemmas": {
+      "bytes": 4788,
+      "runtime_initializer_ref_count": 4,
+      "imports": [
+        "Mathlib.Algebra.GroupWithZero.Divisibility",
+        "Mathlib.Algebra.Ring.Rat",
+        "Mathlib.Algebra.Ring.Int.Parity",
+        "Mathlib.Data.PNat.Defs"
+      ]
+    },
+    "Mathlib.Algebra.Ring.Int.Parity": {
+      "bytes": 4608,
+      "runtime_initializer_ref_count": 3,
+      "imports": [
+        "Mathlib.Algebra.Ring.Parity",
+        "Mathlib.Algebra.Ring.Int.Defs",
+        "Mathlib.Algebra.Group.Int.Even"
+      ]
+    },
+    "Mathlib.Data.PNat.Defs": {
+      "bytes": 47316,
+      "runtime_initializer_ref_count": 6,
+      "imports": [
+        "Mathlib.Data.Int.Order.Basic",
+        "Mathlib.Data.Nat.Basic",
+        "Mathlib.Data.PNat.Notation",
+        "Mathlib.Order.Basic",
+        "Mathlib.Tactic.Coe",
+        "Mathlib.Tactic.Lift"
+      ]
+    },
+    "Mathlib.Data.PNat.Notation": {
+      "bytes": 18569,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Data.Nat.Notation"
+      ]
+    },
+    "Mathlib.Tactic.Positivity.Core": {
+      "bytes": 1596044,
+      "runtime_initializer_ref_count": 5,
+      "imports": [
+        "Mathlib.Control.Basic",
+        "Mathlib.Algebra.Order.Invertible",
+        "Mathlib.Algebra.Order.Ring.Cast",
+        "Mathlib.Tactic.HaveI",
+        "Mathlib.Tactic.NormNum.Core"
+      ]
+    },
+    "Mathlib.Algebra.Order.Invertible": {
+      "bytes": 3877,
+      "runtime_initializer_ref_count": 3,
+      "imports": [
+        "Mathlib.Algebra.Order.Ring.Defs",
+        "Mathlib.Algebra.Ring.Invertible",
+        "Mathlib.Data.Nat.Cast.Order.Ring"
+      ]
+    },
+    "Mathlib.Algebra.Order.Ring.Cast": {
+      "bytes": 3865,
+      "runtime_initializer_ref_count": 3,
+      "imports": [
+        "Mathlib.Algebra.Order.Group.Abs",
+        "Mathlib.Algebra.Order.Ring.Int",
+        "Mathlib.Data.Nat.Cast.Order.Ring"
+      ]
+    },
+    "Mathlib.Algebra.Order.Group.Abs": {
+      "bytes": 3975,
+      "runtime_initializer_ref_count": 3,
+      "imports": [
+        "Mathlib.Algebra.Order.Group.Defs",
+        "Mathlib.Algebra.Order.Group.Unbundled.Abs",
+        "Mathlib.Algebra.Order.Monoid.Unbundled.Pow"
+      ]
+    },
+    "Mathlib.Algebra.Order.Ring.Int": {
+      "bytes": 5828,
+      "runtime_initializer_ref_count": 7,
+      "imports": [
+        "Mathlib.Algebra.Order.Group.Int",
+        "Mathlib.Algebra.Order.Group.Unbundled.Int",
+        "Mathlib.Algebra.Order.Ring.Defs",
+        "Mathlib.Algebra.Ring.Int.Parity",
+        "Mathlib.Data.Int.GCD",
+        "Mathlib.Data.Nat.Cast.Order.Basic",
+        "Mathlib.Order.BooleanAlgebra.Set"
+      ]
+    },
+    "Mathlib.Data.Int.GCD": {
+      "bytes": 20037,
+      "runtime_initializer_ref_count": 8,
+      "imports": [
+        "Mathlib.Algebra.Divisibility.Basic",
+        "Mathlib.Algebra.Group.Commute.Units",
+        "Mathlib.Algebra.Group.Int.Defs",
+        "Mathlib.Algebra.Group.Nat.Defs",
+        "Mathlib.Algebra.GroupWithZero.Semiconj",
+        "Mathlib.Data.Set.Operations",
+        "Mathlib.Order.Basic",
+        "Mathlib.Order.Bounds.Defs"
+      ]
+    },
+    "Mathlib.Tactic.HaveI": {
+      "bytes": 76389,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Tactic.NormNum.Core": {
+      "bytes": 957073,
+      "runtime_initializer_ref_count": 4,
+      "imports": [
+        "Mathlib.Lean.Expr.Rat",
+        "Mathlib.Tactic.Hint",
+        "Mathlib.Tactic.NormNum.Result",
+        "Mathlib.Util.Qq"
+      ]
+    },
+    "Mathlib.Lean.Expr.Rat": {
+      "bytes": 10537,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Tactic.NormNum.Result": {
+      "bytes": 521922,
+      "runtime_initializer_ref_count": 5,
+      "imports": [
+        "Mathlib.Algebra.Field.Defs",
+        "Mathlib.Algebra.GroupWithZero.Invertible",
+        "Mathlib.Algebra.Ring.Nat",
+        "Mathlib.Data.Int.Cast.Basic",
+        "Mathlib.Data.Sigma.Basic"
+      ]
+    },
+    "Mathlib.Util.Qq": {
+      "bytes": 79617,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Tactic.Ring": {
+      "bytes": 3691,
+      "runtime_initializer_ref_count": 3,
+      "imports": [
+        "Mathlib.Tactic.Ring.Basic",
+        "Mathlib.Tactic.Ring.PNat",
+        "Mathlib.Tactic.Ring.RingNF"
+      ]
+    },
+    "Mathlib.Tactic.Ring.Basic": {
+      "bytes": 721537,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Tactic.Ring.Common",
+        "Mathlib.Algebra.Order.Ring.Unbundled.Rat",
+        "Mathlib.Tactic.Ring.Common"
+      ]
+    },
+    "Mathlib.Tactic.Ring.Common": {
+      "bytes": 1471466,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Tactic.NormNum.Inv",
+        "Mathlib.Tactic.NormNum.Pow"
+      ]
+    },
+    "Mathlib.Tactic.NormNum.Inv": {
+      "bytes": 422346,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Data.Rat.Cast.CharZero",
+        "Mathlib.Tactic.NormNum.Basic"
+      ]
+    },
+    "Mathlib.Tactic.NormNum.Basic": {
+      "bytes": 1050474,
+      "runtime_initializer_ref_count": 7,
+      "imports": [
+        "Mathlib.Algebra.Group.Invertible.Defs",
+        "Mathlib.Algebra.Ring.Defs",
+        "Mathlib.Algebra.Ring.Int.Defs",
+        "Mathlib.Data.Nat.Cast.Basic",
+        "Mathlib.Data.Nat.Cast.Commute",
+        "Mathlib.Tactic.HaveI",
+        "Mathlib.Tactic.NormNum.Core"
+      ]
+    },
+    "Mathlib.Tactic.NormNum.Pow": {
+      "bytes": 317747,
+      "runtime_initializer_ref_count": 3,
+      "imports": [
+        "Mathlib.Data.Int.Cast.Lemmas",
+        "Mathlib.Tactic.NormNum.Basic",
+        "Mathlib.Util.Qq"
+      ]
+    },
+    "Mathlib.Tactic.Ring.PNat": {
+      "bytes": 4888,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Tactic.Ring.Basic",
+        "Mathlib.Data.PNat.Basic",
+        "Mathlib.Data.PNat.Basic",
+        "Mathlib.Tactic.Ring.Basic"
+      ]
+    },
+    "Mathlib.Data.PNat.Basic": {
+      "bytes": 21823,
+      "runtime_initializer_ref_count": 5,
+      "imports": [
+        "Mathlib.Algebra.GroupWithZero.Divisibility",
+        "Mathlib.Algebra.Order.Positive.Ring",
+        "Mathlib.Algebra.Order.Ring.Nat",
+        "Mathlib.Algebra.Order.Sub.Basic",
+        "Mathlib.Data.PNat.Equiv"
+      ]
+    },
+    "Mathlib.Data.PNat.Equiv": {
+      "bytes": 4831,
+      "runtime_initializer_ref_count": 2,
+      "imports": [
+        "Mathlib.Data.PNat.Defs",
+        "Mathlib.Logic.Equiv.Defs"
+      ]
+    },
+    "Mathlib.Tactic.Ring.RingNF": {
+      "bytes": 764140,
+      "runtime_initializer_ref_count": 3,
+      "imports": [
+        "Mathlib.Tactic.Ring.Basic",
+        "Mathlib.Tactic.TryThis",
+        "Mathlib.Util.AtomM.Recurse",
+        "Mathlib.Util.AtomM.Recurse"
+      ]
+    },
+    "Mathlib.Tactic.TryThis": {
+      "bytes": 40245,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Init"
+      ]
+    },
+    "Mathlib.Util.AtomM.Recurse": {
+      "bytes": 103331,
+      "runtime_initializer_ref_count": 1,
+      "imports": [
+        "Mathlib.Util.AtomM"
+      ]
+    }
+  }
+}

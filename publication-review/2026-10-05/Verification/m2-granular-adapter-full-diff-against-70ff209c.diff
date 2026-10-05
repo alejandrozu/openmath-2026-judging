@@ -1,0 +1,160 @@
+--- preserved/run_source_plan.py@70ff209c7ac651c1e0ab25e9f629a9fc50c4b85ed1f510666e851e8f69c53534
++++ prepared/run_m2_granular_source_plan.py@6055abb09b2c9b985b69392af5cb3e8d2747a2027a3108fead72ed57ccc4e67c
+@@ -11,10 +11,41 @@
+ from resource_metrics import snapshot as memory_snapshot
+ BASE=Path(__file__).resolve().parent
+ RUNNER_SOURCE_SHA256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest()
+ AXIOM_PARSER_SOURCE_SHA256=hashlib.sha256((BASE/'audit_axioms.py').read_bytes()).hexdigest()
+ project=sys.argv[1]
++
++# This adapter is prepared only. Execution requires a separately reviewed slot.
++M2_PROJECT_PLAN_HASHES = {'htpeo-erdos-m2': 'd75af96c5e21e79909e7a95646d0bf766609a46dd40bb0fc44e6308a6eb60ef6', 'sakana-m2-research': 'e640756c85349928b6459d41cda81e58f8831cd6240d1e7ddef09425da61fd6c', 'koerbser-climb1-library': '4160a948abbfc5ca4cbcd456ba300655362f96be4baaba7ba03a9edf029ded99', 'koerbser-three-term': '03335f8dae0fe01722dd8c6491c127a1bad3ea1c0b92833c289038dfc5621df8', 'jamie-ap-bridges': '86b3947ca573c0afb6643cfdd436bff031857e9fead0749a7caaa3733b8f5330', 'sundai-organizer-bridge': 'f03bb3fba8072c0825ab34879d405607b89522bc729a97b4d6598740e728a21a', 'sundai-erdos3-current': '8f1074283a569367dfe9141f7df474261f88b1a11506da562badb1c9015d038b', 'official-fc-util433': '104c71d4916cb10b663afd6e5107f928ca18e54b99bcaaae64dd6adc60ff45e7'}
++M2_PREPARATION_SHA256 = 'c2eb16e66fd9f5bacf75ad470cd25846d412ca8780a8a7d24c119d4b366c6ee5'
++assert project in M2_PROJECT_PLAN_HASHES, 'Exact eight-entry M2 whitelist only'
++assert '--m2-granular-execution-authorized' in sys.argv[3:] and '--resource-lease-confirmed' in sys.argv[3:], 'Root-reviewed granular scope and confirmed lease required'
++assert '--defer-whole-imports' in sys.argv[3:] and '--full-mathlib-source-mode' not in sys.argv[3:], 'All literal whole-Mathlib descendants must remain deferred'
++def m2_sha(file):
++ h=hashlib.sha256()
++ with Path(file).open('rb') as stream:
++  for chunk in iter(lambda:stream.read(1024*1024),b''):h.update(chunk)
++ return h.hexdigest()
++prepared_file=BASE/'m2-granular-execution-preparation-20261005.json'
++assert m2_sha(prepared_file)==M2_PREPARATION_SHA256, 'Prepared scope changed'
++m2_prepared=json.loads(prepared_file.read_text(encoding='utf8'))
++m2_project=next(row for row in m2_prepared['projects'] if row['id']==project)
++assert m2_sha(BASE/'m2-novel-formalization-source-scope-inventory-20261005.json')==m2_prepared['inventory_sha256'], 'Inventory changed'
++assert m2_sha(BASE/'builds'/project/'build-plan.json')==M2_PROJECT_PLAN_HASHES[project], 'Exact source plan changed'
++m2_frozen_plan=json.loads((BASE/'builds'/project/'build-plan.json').read_text(encoding='utf8'))
++for row in m2_frozen_plan['modules']:
++ assert m2_sha(row['file'])==row['sha256'], 'Frozen authored source changed: '+row['module']
++assert m2_sha(BASE/'runtimes/lean-4.33.1-windows/bin/lean.exe')==m2_prepared['compiler_binary_sha256'], 'Frozen compiler binary changed'
++for filename,key in [('matt_resource_guard.py','guard_sha256'),('audit_axioms.py','axiom_parser_sha256'),('lean_imports.py','import_parser_sha256')]:
++ assert m2_sha(BASE/filename)==m2_prepared[key], 'Reviewed helper changed: '+filename
++for row in m2_project['exact_additional_library_closure']:
++ assert m2_sha(row['file'])==row['source_sha256'], 'Additional library source changed: '+row['module']
++for packet in m2_project['library_plans']:
++ assert m2_sha(BASE/'builds'/packet['id']/'build-plan.json')==packet['plan_sha256'], 'Additional library plan changed'
++for row in m2_project['audits']:
++ assert m2_sha(BASE/'builds'/project/row['audit'])==row['source_sha256'], 'Frozen audit changed'
++assert all(not row['additional_library_prerequisites'] for row in m2_project['sources'] if not row['deferred_whole_scope']), 'No uncompiled additional custom library may be silently admitted into a granular invocation'
+ worker_threads=int(sys.argv[2]) if len(sys.argv)>2 else 4
+ assert 1<=worker_threads<=4
+ third_worker_pilot='--pilot-third-slot' in sys.argv[3:]
+ third_worker_continuation='--guarded-third-slot' in sys.argv[3:]
+ third_worker_guarded=third_worker_pilot or third_worker_continuation
+@@ -23,11 +54,11 @@
+ if a000_whole_scope_only:
+  assert project=='sakana-a000224' and full_mathlib_source_mode and third_worker_guarded, 'Explicit prepared A000 five-module whole-library exception only'
+ independent_resource_mode='--continue-independent-after-resource-block' in sys.argv[3:]
+ defer_whole_import_mode='--defer-whole-imports' in sys.argv[3:]
+ if defer_whole_import_mode:
+- assert project=='sakana-a000224' and third_worker_continuation and not full_mathlib_source_mode, 'Only the root-authorized A000 granular remainder with separate whole-import lease deferred'
++ assert project in M2_PROJECT_PLAN_HASHES and third_worker_guarded and not full_mathlib_source_mode, 'Only exact root-reviewed M2 granular scopes; whole descendants remain deferred'
+ if independent_resource_mode:
+  assert project=='sakana-erdos169-fourap' and third_worker_continuation and not third_worker_pilot, 'Only the explicitly authorized E169 independent-DAG continuation'
+ novel_third_projects={'sakana-a000224','sakana-erdos169-fourap','htpeo-kobon471','sakana-a060957','sakana-a100475','sakana-ferrers',
+  'sakana-erdos1060-uniform-partial','sakana-erdos829-log-five-thirds','sakana-opdp89-parity-sharp','sakana-FOCUS-E3','sakana-FOCUS-E3-pullback',
+  'sakana-FOCUS-MATRIX-seed0','sakana-FOCUS-MATRIX-seed1','sakana-FOCUS-MATRIX-seed2','matt-unitary-current','htpeo-dms-current'}
+@@ -37,10 +68,11 @@
+ third_worker_tree_guarded=third_worker_guarded and not legacy_a000_single_pilot
+ third_disk_dispatch_bytes=8_000_000_000 if legacy_a000_single_pilot else 4_000_000_000
+ third_commit_dispatch_bytes=(11 if full_mathlib_source_mode else 5)*2**30 if third_worker_tree_guarded else 0
+ third_private_limit_bytes=(10 if full_mathlib_source_mode else 6)*2**30
+ resource_guard_name='full_mathlib_resource_guard.py' if full_mathlib_source_mode else 'matt_resource_guard.py'
++novel_third_projects=set(M2_PROJECT_PLAN_HASHES)
+ if third_worker_guarded:
+  assert project in novel_third_projects and worker_threads==1,'Only the explicitly authorized novelty-family guarded third-slot projects'
+  assert shutil.disk_usage(BASE).free>=third_disk_dispatch_bytes,'Guarded third-worker initial disk gate'
+  assert memory_snapshot()['free_physical_bytes']>=6*2**30,'Third-worker pilot requires initial 6 GiB free physical memory'
+  assert memory_snapshot()['available_commit_bytes']>=third_commit_dispatch_bytes,'Guarded third-worker initial commit gate'
+@@ -49,16 +81,17 @@
+   else:from matt_resource_guard import guarded_tree
+ dest=BASE/'builds'/project
+ plan=json.loads((dest/'build-plan.json').read_text())
+ deferred_whole_names=set()
+ if defer_whole_import_mode:
+- from full_mathlib_scope import classify as classify_full_mathlib
+- deferred_whole_scope=classify_full_mathlib(plan)
+- deferred_whole_names=set(deferred_whole_scope['authored_transitive_whole_Mathlib_closure'])
+- for audit_name in plan['audit_modules']+plan.get('non_acceptance_audit_modules',[]):
+-  audit_imports=read_imports(dest/audit_name)
+-  if 'Mathlib' in audit_imports or deferred_whole_names.intersection(audit_imports):deferred_whole_names.add(audit_name)
++ deferred_whole_names={row['module'] for row in m2_project['sources'] if row['deferred_whole_scope']}
++ deferred_whole_names.update(row['audit'] for row in m2_project['audits'] if row['deferred_whole_scope'])
++ deferred_whole_scope={'preparation_sha256':M2_PREPARATION_SHA256,
++  'authored_transitive_whole_Mathlib_closure':{row['module']:row['whole_Mathlib_roots'] for row in m2_project['sources'] if row['deferred_whole_scope']},
++  'audits_with_whole_Mathlib_roots':{row['audit']:row['whole_Mathlib_roots'] for row in m2_project['audits'] if row['deferred_whole_scope']},
++  'additional_library_whole_scope':{row['module']:row['whole_Mathlib_roots'] for row in m2_project['exact_additional_library_closure'] if row['whole_Mathlib_roots']},
++  'qualification':'No additional library is compiled by this adapter. Every reachable literal whole-library source and all authored/audit descendants are withheld.'}
+ if full_mathlib_source_mode:
+  from full_mathlib_scope import classify as classify_full_mathlib
+  from receipt_io import read_bytes_shared
+  full_scope=classify_full_mathlib(plan)
+  if a000_whole_scope_only:
+@@ -92,11 +125,11 @@
+ if plan.get('mathlib_pin'):
+  actual=subprocess.run(['git','rev-parse','HEAD'],cwd=dependencies,capture_output=True,text=True,check=True).stdout.strip()
+  assert actual==plan['mathlib_pin'],(actual,plan['mathlib_pin'])
+  assert (dependencies/'.lake/build/lib/lean/Mathlib.olean').exists(),'Required official Mathlib cache not ready'
+  assert json.loads((BASE/('mathlib-'+plan['version']+'-cache-retry.json')).read_text())['status']=='PASS','Full official dependency cache import validation has not passed'
+-report=BASE/(project+'-fresh-build.json')
++report=BASE/(project+'-m2-granular-fresh-build.json')
+ prior=None
+ if report.exists():
+  prior=json.loads(report.read_text(encoding='utf8'))
+  if prior.get('finished_utc') and prior.get('status')!='RUNNING':
+   assert prior['version']==plan['version'] and prior.get('mathlib_pin')==plan.get('mathlib_pin')
+@@ -137,10 +170,14 @@
+  visiting.remove(n);seen.add(n);ordered.append(n)
+ for n in modules:visit(n)
+ plan['compiler_version']=subprocess.run([str(lean),'--version'],capture_output=True,text=True).stdout.strip()
+ assert 'version '+plan['version']+',' in plan['compiler_version'],'Compiler version differs from frozen plan'
+ plan['status']='RUNNING';plan['builds']=[];plan['compilation_order']=ordered;plan['started_utc']=time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime())
++plan['execution_route']='SEPARATE_ROOT_REVIEWED_M2_GRANULAR_SOURCE_ADAPTER'
++plan['source_plan_sha256']=M2_PROJECT_PLAN_HASHES[project]
++plan['m2_preparation_sha256']=M2_PREPARATION_SHA256
++plan['baseline_runner_sha256']='70ff209c7ac651c1e0ab25e9f629a9fc50c4b85ed1f510666e851e8f69c53534'
+ plan['failed_invocations']=[]
+ plan['selected_audit_axiom_review']=[]
+ plan['resource_settings']={'LEAN_NUM_THREADS':worker_threads,'lean_shell_worker_flag':'-j'+str(worker_threads),'maxHeartbeats':0,'maxRecDepth':100000,
+  'runner_file':str(Path(__file__).resolve()),'runner_source_sha256':RUNNER_SOURCE_SHA256,'axiom_parser_source_sha256':AXIOM_PARSER_SOURCE_SHA256}
+ if third_worker_guarded:
+@@ -164,11 +201,11 @@
+  if third_worker_continuation and project=='sakana-a000224':
+   plan['resource_settings']['guarded_third_worker_continuation']['disk_gate_amendment']='ROOT_AUTHORIZED_4_GB_DISPATCH_AFTER_MEASURED_4_77_MB_PILOT_ARTIFACT'
+  if project=='matt-unitary-current':
+   plan['resource_settings']['third_worker_pilot' if third_worker_pilot else 'guarded_third_worker_continuation']['source_scope_authorization']='ROOT_AUTHORIZED_EXACT_26_AUTHORED_SOURCES_SELECTED_GENERIC_ENDPOINTS_AND_SEPARATE_NON_ACCEPTANCE_BASELINE_AUDITS_AFTER_ACTUAL_FULL_IMPORT_PASS'
+ if defer_whole_import_mode:
+- plan['deferred_whole_import_policy']={'qualification':'ROOT_AUTHORIZED_GRANULAR_REMAINDER_ONLY_WHOLE_MODULES_AND_AUDITS_NEED_SEPARATE_LITERAL_IMPORTER_LEASE',
++ plan['deferred_whole_import_policy']={'qualification':'ROOT_REVIEWED_M2_GRANULAR_ADAPTER_ONLY_WHOLE_MODULES_AND_AUDITS_NEED_SEPARATE_LITERAL_IMPORTER_LEASE',
+   'exact_frozen_import_classification':deferred_whole_scope,'unattempted_whole_invocations':[]}
+ def digest(file):return hashlib.sha256(file.read_bytes()).hexdigest()
+ def artifacts(file):
+  return [p for p in [file.with_suffix('.olean'),file.with_suffix('.olean.private'),file.with_suffix('.olean.server'),file.with_suffix('.ilean')] if p.exists()]
+ def artifact_inventory(file):
+@@ -176,11 +213,11 @@
+ retained={};past_rows={}
+ resource_stop_reasons={'DISK_RESERVE','SCHEDULED_RESOURCE_CHECKPOINT','PHYSICAL_MEMORY_RESERVE','PRIVATE_MEMORY_CEILING','COMMIT_RESERVE','OWN_ALLOCATION_FAILURE','OPERATIONAL_GUARD_ERROR'}
+ deferred_resource_roots={}
+ if prior:
+  attempt=len(prior.get('prior_attempt_receipts',[]))+1
+- archived=BASE/(project+'-fresh-build-attempt-'+str(attempt)+'.json')
++ archived=BASE/(project+'-m2-granular-fresh-build-attempt-'+str(attempt)+'.json')
+  assert not archived.exists(),'Immutable attempt receipt already exists'
+  # Preserve the exact interrupted receipt, including killed invocations, before updating the main view.
+  archived.write_bytes(report.read_bytes())
+  plan['prior_attempt_receipts']=prior.get('prior_attempt_receipts',[])+[{'file':str(archived),'sha256':digest(archived),'status':prior['status']}]
+  plan['resume_provenance']='OWN_FRESH_SUCCESSFUL_ARTIFACTS_AFTER_RESOURCE_INTERRUPTION'
+@@ -287,11 +324,11 @@
+  for key,value in plan.get('lean_options',{}).items():args.append('-D'+key+'='+str(value).lower())
+  args+=['-o',str(relative.with_suffix('.olean')),str(relative)]
+  plan['current_module']=n;save();start=time.monotonic()
+  if third_worker_tree_guarded:
+   logkey=hashlib.sha256(n.encode('utf8')).hexdigest()[:16]
+-  prefix=BASE/'guarded-source-logs'/(project+'-'+logkey+'-attempt-'+str(len(plan.get('prior_attempt_receipts',[]))))
++  prefix=BASE/'guarded-source-logs'/(project+'-m2-granular-'+logkey+'-attempt-'+str(len(plan.get('prior_attempt_receipts',[]))))
+   while True:
+    guard=guarded_tree(args,dest,env,prefix,timeout=3600)
+    if guard['attempted']:break
+    if guard['state']!='NOT_INVOKED_RESOURCE_DISPATCH_GATE':
+     plan['status']='ENVIRONMENT_BLOCKED_OPERATIONAL_GUARD';plan['unattempted_guard_failure']=guard

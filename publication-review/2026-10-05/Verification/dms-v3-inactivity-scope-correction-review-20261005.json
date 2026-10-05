@@ -1,0 +1,49 @@
+{
+  "status": "PREPARED_INACTIVITY_SCOPE_CORRECTION_NO_ALIAS_NO_LEAN",
+  "preserved_exact_previous_versions": [
+    {
+      "original_path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dms_v3_copy99_hardlink_seed.py",
+      "preserved_path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\operational_history\\dms-v3-inactivity-scope\\dms_v3_copy99_hardlink_seed.py.7e01f07edd14bbde765681bab36bd1a3f38da4e55017f4234b89955fe94eb00f",
+      "sha256": "7e01f07edd14bbde765681bab36bd1a3f38da4e55017f4234b89955fe94eb00f"
+    },
+    {
+      "original_path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\run_dms_v3_linked_plan.py",
+      "preserved_path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\operational_history\\dms-v3-inactivity-scope\\run_dms_v3_linked_plan.py.edbf9d97c62f1f9657a2172d6939008103801a73e9abd15bf29e3dbaceb6b379",
+      "sha256": "edbf9d97c62f1f9657a2172d6939008103801a73e9abd15bf29e3dbaceb6b379"
+    },
+    {
+      "original_path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dms-v3-copy99-hardlink-seed-helper.diff",
+      "preserved_path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\operational_history\\dms-v3-inactivity-scope\\dms-v3-copy99-hardlink-seed-helper.diff.abf0f27534c0060f6fe22e02e981db2d9768107e77e836fef3cf67988685bd79",
+      "sha256": "abf0f27534c0060f6fe22e02e981db2d9768107e77e836fef3cf67988685bd79"
+    },
+    {
+      "original_path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dms-v3-linked-runner-full-operational.diff",
+      "preserved_path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\operational_history\\dms-v3-inactivity-scope\\dms-v3-linked-runner-full-operational.diff.83222e7cc10684891565211ff0d25b328f586161f4fa3aec124b11d8c59929d2",
+      "sha256": "83222e7cc10684891565211ff0d25b328f586161f4fa3aec124b11d8c59929d2"
+    }
+  ],
+  "copy_source_hardlink_policy_sha256_unchanged": "a4b795b071135118af94868726b9ac45af0579540d5856e9aaf7d48a9e3717e6",
+  "current_helper_sha256": "772423ad135bddde4487ff381bc39c4d2cf2a1022229943f37e4d7c03fadaa92",
+  "current_runner_sha256": "832e875054d76b597652a37edc197f47182253172581be1ab962b1ae6187ee3d",
+  "diffs": [
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dms-v3-inactivity-scope-minimal-helper.diff",
+      "sha256": "a7e79ea8e37838c9a07bcb0c02c1f596892ea028015e442bc02681ac44b9b224"
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dms-v3-inactivity-scope-minimal-runner.diff",
+      "sha256": "56b1561b25cbf661acbb16c0d271ecbbd98f2f18d58113501186cb3c315650a1"
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dms-v3-corrected-copy99-hardlink-seed-helper-full.diff",
+      "sha256": "5e6cc3520c1a6647cec9b79bea77a0890747cc4a705065a06932701f3d958dab"
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dms-v3-corrected-linked-runner-full-operational.diff",
+      "sha256": "0e5434d08a973e7499d339fe5d2eac0c812069328a4fa1cbf99b71f8695ab127"
+    }
+  ],
+  "correction": "All actual run_dms_* and dispatch_dms_* dispatcher names are refused, including the actual V1 import-pruned runner. Only the current PID executing the exact frozen V3 runner/project may be exempted; its loaded runner SHA must match disk. No resource/scientific/policy/seed change.",
+  "links_created": 0,
+  "Lean_invocations": 0
+}

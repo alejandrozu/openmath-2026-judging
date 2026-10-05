@@ -1,0 +1,47 @@
+{
+  "status": "DISPATCH_GATES_QUALIFIED_ROOT_APPROVED_SOURCE_ONLY_PILOT",
+  "created_utc": "2026-10-05T03:14:21.446874+00:00",
+  "runner_sha256": "6055abb09b2c9b985b69392af5cb3e8d2747a2027a3108fead72ed57ccc4e67c",
+  "plan_sha256": "d75af96c5e21e79909e7a95646d0bf766609a46dd40bb0fc44e6308a6eb60ef6",
+  "source": {
+    "module": "StarCore",
+    "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-erdos-m2\\StarCore.lean",
+    "sha256": "89fcf09eeeabbba654cec04e5dcbf8e2e5c7548df6c49fdbc82c2d1274dc6968",
+    "source": "entries/dms-star6/artifact/lean/pack3/src/StarCore.lean",
+    "support_module": true
+  },
+  "resource_snapshot": {
+    "disk_free_bytes": 6524657664,
+    "free_physical_bytes": 9281318912,
+    "total_physical_bytes": 34024419328,
+    "available_commit_bytes": 8497483776,
+    "total_commit_limit_bytes": 60437172224
+  },
+  "active_Lean_processes": [
+    {
+      "ProcessId": 16824,
+      "ParentProcessId": 55304,
+      "CreationDate": "/Date(1791170043196)/",
+      "ExecutablePath": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+      "CommandLine": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe -j1 -DmaxHeartbeats=0 -DmaxRecDepth=100000 -DautoImplicit=false -o A100475SievePart00.olean A100475SievePart00.lean"
+    }
+  ],
+  "authorization": "ROOT_REVIEWED_HTPEO_STARCORE_EXACT_ONE_SOURCE_SECOND_SLOT_PILOT_ONLY",
+  "maximum_concurrent_source_importers": 2,
+  "command": [
+    "C:\\Users\\Propietario\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+    "-X",
+    "utf8",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\run_m2_granular_source_plan.py",
+    "htpeo-erdos-m2",
+    "1",
+    "--pilot-third-slot",
+    "--defer-whole-imports",
+    "--m2-granular-execution-authorized",
+    "--resource-lease-confirmed"
+  ],
+  "later_101_source_continuation_authorized": false,
+  "selected_audit_authorized": false,
+  "native_trust_note": "Later StarCert contains native_decide; no trust classification is inferred for future selected endpoints from this core-only pilot.",
+  "dispatch_snapshot_does_not_replace_continuous_runner_guards": true
+}

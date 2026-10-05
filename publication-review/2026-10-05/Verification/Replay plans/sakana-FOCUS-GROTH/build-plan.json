@@ -1,0 +1,39 @@
+{
+  "id": "sakana-FOCUS-GROTH",
+  "entrant": "E02",
+  "version": "4.33.1",
+  "mathlib_pin": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "source_dir": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-FOCUS-GROTH",
+  "modules": [
+    {
+      "module": "Row3Granular",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-FOCUS-GROTH\\Row3Granular.lean",
+      "source": "Focus_Evidence/evidence/FOCUS-GROTH/Row3Granular.lean",
+      "sha256": "81f13055043484815587cc049b817d069a50a2621de4588334f081aba167e754"
+    },
+    {
+      "module": "SemanticTestGranular",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-FOCUS-GROTH\\SemanticTestGranular.lean",
+      "source": "Focus_Evidence/evidence/FOCUS-GROTH/SemanticTestGranular.lean",
+      "sha256": "490c99b751d049b20ee717753e92477bc7dd8420e635d45fef41d2b6b5f1eecd"
+    }
+  ],
+  "endpoints": [
+    "GrothSymmetry.row3_Q_le_sqrt_three_halves_mul_C",
+    "GrothSemantic.semantic_6x6_106",
+    "GrothSemantic.semantic_6x8_690",
+    "GrothSemantic.semantic_7x8_53110",
+    "GrothSemantic.semantic_s8x8_1705"
+  ],
+  "roots": [
+    "Row3Granular",
+    "SemanticTestGranular"
+  ],
+  "audit_modules": [
+    "FreshAudit1.lean"
+  ],
+  "lean_options": {},
+  "static_review_contexts": [],
+  "status": "PLANNED_NOT_RUN",
+  "builds": []
+}

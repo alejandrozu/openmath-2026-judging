@@ -1,0 +1,204 @@
+{
+  "status": "READ_ONLY_STORAGE_FALLBACK_COMPATIBILITY_AND_SCOPED_RECOMMENDATION_NO_ACTION",
+  "created_utc": "2026-10-05T05:23:26.932664+00:00",
+  "assessment_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\completed-own-evidence-storage-fallback-readonly-20261005.json",
+  "assessment_sha256": "bfef57d141bcc77e875d81bbdb2b587ae4915ae3139771a884f2593c01720a27",
+  "scope_totals": {
+    "completed visual QA evidence": {
+      "paths": 1570,
+      "unique_inodes": 1570,
+      "logical_bytes": 165062022,
+      "stored_bytes_GetCompressedFileSizeW": 165062022,
+      "standard_allocation_bytes": 168419328
+    },
+    "stable own generated metadata/log": {
+      "paths": 1838,
+      "unique_inodes": 1838,
+      "logical_bytes": 288168036,
+      "stored_bytes_GetCompressedFileSizeW": 98889069,
+      "standard_allocation_bytes": 100234528
+    },
+    "completed own Lean output": {
+      "paths": 719,
+      "unique_inodes": 719,
+      "logical_bytes": 243561700,
+      "stored_bytes_GetCompressedFileSizeW": 143091756,
+      "standard_allocation_bytes": 143511104
+    },
+    "completed own native linked output": {
+      "paths": 4,
+      "unique_inodes": 4,
+      "logical_bytes": 107461184,
+      "stored_bytes_GetCompressedFileSizeW": 107461184,
+      "standard_allocation_bytes": 107470848
+    },
+    "completed own native preparation evidence": {
+      "paths": 3852,
+      "unique_inodes": 3852,
+      "logical_bytes": 121361785,
+      "stored_bytes_GetCompressedFileSizeW": 121361785,
+      "standard_allocation_bytes": 124915320
+    }
+  },
+  "current_hash_errors": [],
+  "exact_same_SHA_same_size_same_volume_single_link_no_reparse_duplicates": {
+    "groups": 381,
+    "stored_bytes": 63229519,
+    "allocation_bytes": 64434176
+  },
+  "stronger_compression_candidacy": {
+    "ordinary_NTFS_compressed_own_Lean_outputs": {
+      "files": 521,
+      "logical_bytes": 190424568,
+      "allocated_bytes": 90005504
+    },
+    "additional_LZX_savings_measured": false,
+    "lossless_read_compatibility_observed_for_existing_LZX_and_ordinary_NTFS_samples": [
+      {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.34.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Data\\Fin\\SuccPred.olean",
+        "HRESULT": 0,
+        "external_file": true,
+        "provider": 2,
+        "provider_buffer_length": 8,
+        "provider_buffer_hex": "0100000000000000",
+        "stream_sha256": "ff660de9cdfb7a8335eb470a5d8d75a60555656a9c4bc281ba30d05c797a6170",
+        "Windows_read_only_mmap_sha256": "ff660de9cdfb7a8335eb470a5d8d75a60555656a9c4bc281ba30d05c797a6170",
+        "stream_mmap_byte_identity": "PASS",
+        "not_a_mutation_target": true
+      },
+      {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Data\\Fin\\SuccPred.olean",
+        "HRESULT": 0,
+        "external_file": true,
+        "provider": 2,
+        "provider_buffer_length": 8,
+        "provider_buffer_hex": "0100000000000000",
+        "stream_sha256": "805cb08c2238fd6bbe5a08a19934bff33c313c31e0959db1011ee85a871cdcab",
+        "Windows_read_only_mmap_sha256": "805cb08c2238fd6bbe5a08a19934bff33c313c31e0959db1011ee85a871cdcab",
+        "stream_mmap_byte_identity": "PASS",
+        "not_a_mutation_target": true
+      },
+      {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-FOCUS-E3\\BooleanTree.olean",
+        "HRESULT": 0,
+        "external_file": false,
+        "provider": 0,
+        "provider_buffer_length": 64,
+        "provider_buffer_hex": "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "stream_sha256": "b4b3aa772ae0bc707e31a4a546056dd04e7a9f3b27cb4154e931093144261a38",
+        "Windows_read_only_mmap_sha256": "b4b3aa772ae0bc707e31a4a546056dd04e7a9f3b27cb4154e931093144261a38",
+        "stream_mmap_byte_identity": "PASS",
+        "not_a_mutation_target": false
+      },
+      {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-k4-ramsey-native-isolated\\objects\\Mathlib\\Tactic\\Translate\\Core.c.o",
+        "HRESULT": 0,
+        "external_file": false,
+        "provider": 0,
+        "provider_buffer_length": 64,
+        "provider_buffer_hex": "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "stream_sha256": "3c1890904d3f1df08d08e5953ffe59df44cbd3567a1596f60dc8795015e6cddf",
+        "Windows_read_only_mmap_sha256": "3c1890904d3f1df08d08e5953ffe59df44cbd3567a1596f60dc8795015e6cddf",
+        "stream_mmap_byte_identity": "PASS",
+        "not_a_mutation_target": false
+      }
+    ],
+    "limitation": "No completed own output was recompressed, imported into Lean or changed by this assessment. Current Windows WOF_FILE LZX samples return identical ordinary read and read-only mmap bytes. Lean-read compatibility for a future exact output is an inference from Windows transparent reads and byte identity; any operational pilot still needs renewed identity/quiescence and a separately authorized module-loading check if required."
+  },
+  "important_native_metadata_caveat": "On this host, existing WOF LZX SuccPred.olean files are externally backed provider2/algorithm1 while ordinary metadata reports attributes32, compression_format0 and no FILE_ATTRIBUTE_REPARSE_POINT. Future pilots must query WofIsExternalFile rather than relying on that attribute alone. Current duplicate/output inventory records native metadata truthfully; it does not claim an all-file WOF query.",
+  "recommended_smallest_future_action": {
+    "requires_new_root_review_and_exact_target_approval": true,
+    "operation": "One-file ordinary NTFS compression pilot, not WOF/LZX, on a completed own C object. Preserve logical SHA, NTFS inode, linkcount1 and mtime; measure actual allocated savings before broadening.",
+    "exact_pilot_target": {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-k4-ramsey-native-isolated\\objects\\Mathlib\\Tactic\\Translate\\Core.c.o",
+      "scope": "completed own native preparation evidence",
+      "provenance": [
+        {
+          "receipt": "luke-native-isolated-preparation.json",
+          "receipt_sha256": "043f1ad3ecb448c6bd23f06ec1944a17dbb4e0e121ba951f2acb54dd4aa7a274"
+        }
+      ],
+      "expected_sha256": "3c1890904d3f1df08d08e5953ffe59df44cbd3567a1596f60dc8795015e6cddf",
+      "expected_bytes": 1860793,
+      "logical_bytes": 1860793,
+      "stored_bytes_GetCompressedFileSizeW": 1860793,
+      "standard_allocation_bytes": 1863680,
+      "compression_info_stored_bytes": 1860793,
+      "compression_format": 0,
+      "volume_serial": 1980967165,
+      "file_index_high": 65536,
+      "file_index_low": 2208114,
+      "link_count": 1,
+      "attributes": 32,
+      "FILE_ATTRIBUTE_COMPRESSED": false,
+      "FILE_ATTRIBUTE_REPARSE_POINT": false,
+      "FILE_ATTRIBUTE_ENCRYPTED": false,
+      "last_write_FILETIME": 134356333650033657,
+      "current_sha256": "3c1890904d3f1df08d08e5953ffe59df44cbd3567a1596f60dc8795015e6cddf",
+      "current_content_rehashed": true,
+      "write_denying_handle_succeeded": true,
+      "stable_before_after_metadata": true
+    },
+    "conditional_next_tier": {
+      "exact951object_targets_from_assessment": {
+        "files": 951,
+        "logical_bytes": 109999736,
+        "allocated_bytes": 112054272
+      },
+      "exact_two_import_libraries": {
+        "files": 2,
+        "logical_bytes": 46095424,
+        "allocated_bytes": 46100480
+      },
+      "linked_DLLs_defer_until_needed": {
+        "files": 2,
+        "logical_bytes": 61365760,
+        "allocated_bytes": 61370368
+      }
+    },
+    "why": "These are completed own generated outputs with no Lean source-body or dependency changes. C objects/import libraries are not current mathematical module imports or loaded custom DLLs. Ordinary NTFS avoids namespace replacement and WOF-backing changes; existing actual log pilot preserved content/inode/linkcount.",
+    "compression_command_not_executed": [
+      "C:/Windows/System32/compact.exe",
+      "/C",
+      "/F",
+      "/Q",
+      "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-k4-ramsey-native-isolated\\objects\\Mathlib\\Tactic\\Translate\\Core.c.o"
+    ],
+    "reversal_not_executed": "compact.exe /U on the exact file, only with capacity for decompression; no recursive/wildcard/CompactOS invocation.",
+    "quiescence_required": "Renew exact finished receipt/source binding, deny-current-writer check, no native compiler/linker/loader using target, same volume/inode/linkcount/bytes/hash, and unchanged global resource floors before any compression."
+  },
+  "not_recommended_now": [
+    "Hard-link replacement:381 groups yield at most64,434,176 allocated bytes and require changing namespace/inode/linkcounts.",
+    "PNG/JPEG recompression:already internally compressed; no measured meaningful gain.",
+    "LZX of protected DMS/source/seed/witness output identities or any active A000 source scope.",
+    "Global or recursive compression, deletion, moving, reinstalling or lowering resource gates."
+  ],
+  "resource_conclusion": "All freshly checked completed evidence occupies644,551,128 allocated bytes. Even eliminating its entire allocation would recover less than0.65GB. This narrow scope cannot guarantee the reserve for another multi-gigabyte proof/cache expansion; compression gains must be measured and resource checkpoints remain necessary.",
+  "primary_sources": [
+    {
+      "url": "https://learn.microsoft.com/en-us/windows/win32/fileio/file-compression-and-decompression",
+      "supports": "NTFS compression is lossless and transparently supplies uncompressed bytes to applications."
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/compact",
+      "supports": "compact /EXE offers LZX for frequently read unmodified files; /U with /EXE differs from ordinary NTFS decompression."
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/windows/win32/api/wofapi/nf-wofapi-wofisexternalfile",
+      "supports": "Read-only external backing/provider query used in this evidence."
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/windows/win32/api/wofapi/ns-wofapi-wof_file_compression_info_v1",
+      "supports": "FILE_PROVIDER_COMPRESSION_LZX uses32KB chunks; observed provider info algorithm1 is LZX."
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/windows/win32/api/wofapi/nf-wofapi-wofsetfiledatalocation",
+      "supports": "WOF_FILE returns transparently decompressed data and may reject non-beneficial compression."
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/windows/win32/fileio/hard-links-and-junctions",
+      "supports": "Hard-linked files share storage and changes propagate through links; same-volume requirement."
+    }
+  ],
+  "compression_alias_copy_delete_install_compiler_or_existing_evidence_mutation": false
+}

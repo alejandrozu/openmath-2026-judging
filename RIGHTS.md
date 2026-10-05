@@ -5,3 +5,5 @@ The user expressly confirmed permission to publish all affected private and unac
 Each contestant's authors, baseline sources, credits, licenses and original notices are retained within their packet and catalogue. Joint entrants' points are not split into invented individual allocations. AI providers and organizers receive no automatic scholarly authorship. No blanket license is applied to third-party submissions or the combined archive.
 
 The public review record is visibly preliminary. Publication of a candidate does not imply accepted mathematical correctness, verified novelty, official receipt or an award. Unnecessary private contacts and credentials are removed from loose publication copies, with original hashes recorded for provenance.
+
+On October 5, 2026 the user explicitly authorized uploading all newly produced papers and the associated judging material to this repository. They remain public working manuscripts with their stated authorship, affiliation, novelty and verification qualifications; the authorization does not transfer contributor ownership or alter licenses.

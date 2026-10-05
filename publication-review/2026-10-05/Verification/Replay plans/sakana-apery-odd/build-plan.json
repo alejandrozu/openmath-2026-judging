@@ -1,0 +1,67 @@
+{
+  "id": "sakana-apery-odd",
+  "entrant": "E02",
+  "version": "4.33.1",
+  "mathlib_pin": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "source_dir": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-apery-odd",
+  "modules": [
+    {
+      "module": "OpHack.AperyPrimePower.Coefficients",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-apery-odd\\OpHack\\AperyPrimePower\\Coefficients.lean",
+      "source": "Reproduction_Sources/apery-odd/OpHack/AperyPrimePower/Coefficients.lean",
+      "sha256": "1f68b67161cd573335c64c5353063ec4c940a75ae8b168af6c0b163b7f3292a8"
+    },
+    {
+      "module": "OpHack.AperyPrimePower.Eisenstein",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-apery-odd\\OpHack\\AperyPrimePower\\Eisenstein.lean",
+      "source": "Reproduction_Sources/apery-odd/OpHack/AperyPrimePower/Eisenstein.lean",
+      "sha256": "532479d64f998945ce4aecd866bf86072f9f2f57e0671c2d8938411f40b0d081"
+    },
+    {
+      "module": "OpHack.AperyPrimePower.Translation",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-apery-odd\\OpHack\\AperyPrimePower\\Translation.lean",
+      "source": "Reproduction_Sources/apery-odd/OpHack/AperyPrimePower/Translation.lean",
+      "sha256": "f86a91afa1466c8d898661cd387a1b1652bcfc1f0656a6cd7e345339cb3b812e"
+    },
+    {
+      "module": "OpHack.AperyPrimePower.ThreePower",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-apery-odd\\OpHack\\AperyPrimePower\\ThreePower.lean",
+      "source": "Reproduction_Sources/apery-odd/OpHack/AperyPrimePower/ThreePower.lean",
+      "sha256": "2d83f12138a6f00239dfb07a74aef6dc6faf32f88531bdc69d71b91abbb4cab6"
+    },
+    {
+      "module": "OpHack.AperyPrimePower.BinaryPower",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-apery-odd\\OpHack\\AperyPrimePower\\BinaryPower.lean",
+      "source": "Reproduction_Sources/apery-odd/OpHack/AperyPrimePower/BinaryPower.lean",
+      "sha256": "aae036e4284c9e9766068934fb7ae5b85b9ad852a601c9a63b27d0180726cd9f"
+    },
+    {
+      "module": "OpHack.AperyPrimePower.OddPrimePower",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-apery-odd\\OpHack\\AperyPrimePower\\OddPrimePower.lean",
+      "source": "Reproduction_Sources/apery-odd/OpHack/AperyPrimePower/OddPrimePower.lean",
+      "sha256": "3640772fa4a1b9510ea77dd1d7021e11f38fbe8d45c72b99fbd1366bebc0bbd6"
+    },
+    {
+      "module": "OpHack.AperyPrimePower.Target5258",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-apery-odd\\OpHack\\AperyPrimePower\\Target5258.lean",
+      "source": "Reproduction_Sources/apery-odd/OpHack/AperyPrimePower/Target5258.lean",
+      "sha256": "b21b4c8241412e659cda575432d180b1714b306a314111d43c90066e9b88297b"
+    }
+  ],
+  "endpoints": [
+    "OeisA5258.conjecture_odd_nonWieferich_prime_pow"
+  ],
+  "roots": [
+    "OpHack.AperyPrimePower.Target5258"
+  ],
+  "audit_modules": [
+    "FreshAudit1.lean"
+  ],
+  "lean_options": {
+    "autoImplicit": false,
+    "relaxedAutoImplicit": false
+  },
+  "static_review_contexts": [],
+  "status": "PLANNED_NOT_RUN",
+  "builds": []
+}

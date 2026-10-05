@@ -1,0 +1,199 @@
+{
+  "title": "No positive-start periodic orbit for the prime-index reversal map",
+  "blocks": [
+    {
+      "type": "title",
+      "text": "No positive-start periodic orbit for the prime-index reversal map"
+    },
+    {
+      "type": "subtitle",
+      "text": "Provisional mathematical authors: Rachel Teo, Wenyi Wang, Hamdi Abderrahmene"
+    },
+    {
+      "type": "small",
+      "text": "Judging and evaluation record: the submissions discussed in this document have been judged and evaluated by Alejandro Zarzuelo Urdiales for OpenMath 2026. This dated review records the stated verification, classification and unresolved holds; it is a preliminary evaluation rather than a signed award decision."
+    },
+    {
+      "type": "small",
+      "text": "Event provenance: OpenMath 2026 ran 27 September–2 October 2026 with worldwide online participation. Detailed organizer listings specify Harvard Innovation Labs for the 27 September in-person event; the OpenMath programme advertises a hybrid kickoff at MIT. Sundai identifies its Harvard/MIT community. Organizer sources: https://rsihouse.ai/openmath ; https://luma.com/yzp9abvr ; https://www.sundai.club/events/boston/recursive-learning-hack-with-harvard-innovation-labs"
+    },
+    {
+      "type": "small",
+      "text": "Rachel Teo — Sakana AI."
+    },
+    {
+      "type": "small",
+      "text": "Wenyi Wang — Sakana AI."
+    },
+    {
+      "type": "small",
+      "text": "Hamdi Abderrahmene — Sakana AI."
+    },
+    {
+      "type": "small",
+      "text": "Affiliations follow the recorded author declarations or public institutional/profile sources. Preferred author names, author order and publication affiliations await author review. This editorial compilation does not establish anthology coauthorship."
+    },
+    {
+      "type": "subtitle",
+      "text": "Original-result working manuscript | OpenMath 2026 | 5 October 2026"
+    },
+    {
+      "type": "small",
+      "text": "Central source and adjudication archive: https://github.com/alejandrozu/openmath-2026-judging"
+    },
+    {
+      "type": "h2",
+      "text": "Abstract"
+    },
+    {
+      "type": "p",
+      "text": "For the map sending n to the decimal reversal of its nth prime, every orbit beginning at a positive integer is not ultimately periodic. The proof combines a uniform large-index growth bound with an exact finite exclusion of the remaining cycles."
+    },
+    {
+      "type": "h2",
+      "text": "Definition and exact result"
+    },
+    {
+      "type": "p",
+      "text": "Write p_n for the nth prime with p_1=2, and let T(n) be the integer obtained by reversing the usual decimal digits of p_n. Start at x>0 and iterate T. The theorem states that this sequence is not ultimately periodic for every positive x. This includes x=1. Any convention assigning a value to the zeroth prime index is outside the original positive-start problem."
+    },
+    {
+      "type": "p",
+      "text": "An eventually periodic orbit would eventually enter a directed cycle in the functional graph of T. It therefore suffices to exclude every positive cycle. The proof is not just an empirical assertion that tested trajectories grow: it separates all sufficiently large indices, where a uniform inequality forbids a cycle, from a finite domain on which the entire graph can be checked."
+    },
+    {
+      "type": "h2",
+      "text": "The source proof: uniform three-step escape"
+    },
+    {
+      "type": "p",
+      "text": "The selected source proves that every n>0 has n<T(n), n<T²(n), or n<T³(n). Its elementary Chebyshev and decimal-digit estimates handle every prime at least 10,000. An exact small-prime prefix certificate identifies precisely 17 nonincreasing indices below that threshold; 16 escape on their second step and index 1118 escapes on its third."
+    },
+    {
+      "type": "p",
+      "text": "The complete ordinary argument and every exceptional transition are given in the proof sections below. The independent exact recount also verifies the finite prime-counting bounds and source exception list. A periodic tail has a maximum, whereas the three-step lemma produces a later larger value, so no positive orbit can be ultimately periodic."
+    },
+    {
+      "type": "h2",
+      "text": "Formalization and reproducibility"
+    },
+    {
+      "type": "p",
+      "text": "The endpoint OeisA100475.not_periodic takes the explicit assumption 0<x. Its canonical conjecture bridge excludes exactly the positive-start periodicity assertion. This publication pass independently replayed all 84 exact frozen authored source modules and the selected audit under Lean 4.33.1 and Mathlib 0df444a360eaa60ab8c11dca51a86af692955474, finishing on 5 October 2026 at 03:53:25 UTC. Both requested endpoint prints depend only on propext, Classical.choice and Quot.sound, with no admitted, native-evaluation or unknown axioms. The archived 1 October replay remains a separate historical record. The prime and digit modules support a single result and are not additional original theorems to be scored separately. Receipt: Verification/sakana-a100475-fresh-build.json."
+    },
+    {
+      "type": "p",
+      "text": "The distributed supplement includes the exact-integer finite checker check_final_four_certificates.py and its recorded prime-counting, exception-list and transition checks in final_four_independent_certificate_audit.json under Verification/Independent checkers. The ordinary proof below states the threshold bounds and every exceptional transition. A reader can reproduce the finite rejection independently of the Lean sieve. The decimal base and ordinary digit convention remain part of the statement."
+    },
+    {
+      "type": "h2",
+      "text": "Historical comparison and publication scope"
+    },
+    {
+      "type": "p",
+      "text": "The ingredients are classical and the final argument is short once its definitions are fixed. That creates a real historical priority question. The recorded review identified the Ball–Coxeter discussion and the2004 SeqFan archive as specific unresolved leads. The mathematical result can be sound while its originality remains contingent on those sources."
+    },
+    {
+      "type": "p",
+      "text": "If no earlier positive-start proof is found, this is a complete answer to the sequence question and a suitable concise preprint with formal certificates. If an earlier solution is found, move it to the known-mathematics formalization account without presenting zero-index totalization as a replacement novelty claim. Its value then lies in faithful formal treatment and an auditable finite/analytic proof chain."
+    },
+    {
+      "type": "p",
+      "text": "A focused 5 October 2026 recheck found that the current OEIS record still asks the loop question and records computational extensions from December 2004. The September 2026 formal-conjectures correction handles the positive-start statement and the artificial zero-start solution; it does not exclude positive cycles. The linked Wolfram Reversal exposition cites Ball–Coxeter pp14–15 for general digit-reversal identities and products. The exact 13th-edition pages and original November/December 2004 SeqFan message bodies could not be retrieved in this bounded check. Thus neither an earlier positive-start nonperiodicity proof nor its absence has been established. Historical originality remains conditional, without a score change based on non-discovery."
+    },
+    {
+      "type": "small",
+      "text": "This short manuscript records the construction and selected endpoints. The companion Original results anthology contains the extended ordinary proof exposition and its explicitly stated premises; the preserved Lean source remains the complete formal proof record."
+    },
+    {
+      "type": "h2",
+      "text": "Verification and reproducibility"
+    },
+    {
+      "type": "p",
+      "text": "Fresh execution: sakana-a100475: PASS; 84/84 custom modules compiled successfully; receipt Verification/sakana-a100475-fresh-build.json. Compiler pins, source hashes and endpoint axiom outputs are in Verification. Historical receipts and finite checks do not replace fresh replay."
+    },
+    {
+      "type": "keep_start",
+      "text": ""
+    },
+    {
+      "type": "h2",
+      "text": "OeisA100475.not_periodic"
+    },
+    {
+      "type": "code",
+      "text": "theorem not_periodic {x : ℕ} (hx : 0 < x) : ¬ IsUltimatelyPeriodic (aStartAt x)"
+    },
+    {
+      "type": "small",
+      "text": "Source: proofs/a100475/A100475.lean:17."
+    },
+    {
+      "type": "small",
+      "text": "Source SHA-256: e22c200d87ed0a15a25d4760e3f37aaf0005b48aa5b734e79fb0776599c04c95"
+    },
+    {
+      "type": "keep_end",
+      "text": ""
+    },
+    {
+      "type": "keep_start",
+      "text": ""
+    },
+    {
+      "type": "h2",
+      "text": "OeisA100475.conjecture"
+    },
+    {
+      "type": "code",
+      "text": "theorem conjecture :\n    False ↔ ∃ x : ℕ, 0 < x ∧ x ≠ 1 ∧ IsUltimatelyPeriodic (aStartAt x)"
+    },
+    {
+      "type": "small",
+      "text": "Source: proofs/a100475/A100475.lean:20."
+    },
+    {
+      "type": "small",
+      "text": "Source SHA-256: e22c200d87ed0a15a25d4760e3f37aaf0005b48aa5b734e79fb0776599c04c95"
+    },
+    {
+      "type": "reference_list",
+      "text": "Sources and attribution",
+      "items": [
+        {
+          "text": "1. oeis.org / A100475",
+          "url": "https://oeis.org/A100475"
+        },
+        {
+          "text": "2. google-deepmind/formal-conjectures",
+          "url": "https://github.com/google-deepmind/formal-conjectures/pull/5567"
+        },
+        {
+          "text": "3. dlmf.nist.gov / 27.12",
+          "url": "https://dlmf.nist.gov/27.12#E2"
+        },
+        {
+          "text": "4. mathworld.wolfram.com / Reversal.html",
+          "url": "https://mathworld.wolfram.com/Reversal.html"
+        },
+        {
+          "text": "5. books.google.com / Mathematical_Recreations_Essays.html",
+          "url": "https://books.google.com/books/about/Mathematical_Recreations_Essays.html?id=9lJqNJhYc9oC"
+        },
+        {
+          "text": "6. alejandrozu/openmath-2026-judging / E02-a100475.txt",
+          "url": "https://github.com/alejandrozu/openmath-2026-judging/blob/d0ed487f487fa7ec814ff705ab55249983fe8707/OpenMath-Judging/review/entries/E02-a100475.txt"
+        },
+        {
+          "text": "Central source and adjudication archive",
+          "url": "https://github.com/alejandrozu/openmath-2026-judging"
+        }
+      ]
+    },
+    {
+      "type": "keep_end",
+      "text": ""
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "status": "ROOT_REVIEWED_SEPARATE_READONLY_A000166_VERIFIER_MEASUREMENT_CORRECTION",
+  "checked_utc": "2026-10-05T08:24:56.913608+00:00",
+  "reviewer": "/root",
+  "review_basis": "Previously fully reviewed a41 baseline; root read complete minimal diff, full preparation packet, actual failed attempt evidence and exact frozen interface lines208/214. Recomputed full minimal diff and AST; byte bindings checked.",
+  "packet_sha256": "de7fe2ceb45e2ac3da2595a7af84db38f745b28ba0f7a653f703744f0f87919a",
+  "bindings": {
+    "original": {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\qualify_A000166_granular_completion_readonly_prepared_20261005.py",
+      "sha256": "a41ca1d3e7d79c8b43b6df3cd9c5fcc532a656b2e98a0ad85ca8ff13fa03fa85"
+    },
+    "candidate": {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\qualify_A000166_granular_completion_standard_allocation_readonly_prepared_20261005.py",
+      "sha256": "7b4c390e257fe8e2d7e57ec503884e2a4f2870340d611f4b10ec671421349ef3"
+    },
+    "full_minimal_diff": {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\proposals\\A000166-standard-allocation-verifier-correction-20261005\\standard-allocation-measurement-only-full-minimal.diff",
+      "sha256": "40c1dbc475e7710986c4fb1da68b8e9b7af5226629bb01d3a135e39f9ff5918e"
+    },
+    "failed_authorized_attempt_record": {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\A000166-a41-authorized-review-measurement-mismatch-actual-20261005T082057639017Z.json",
+      "sha256": "f2424c9e91970b12dede25e074d95f8e3181aa5891868f270af8b27ab9a880ad"
+    }
+  },
+  "actual166_receipt_sha256": "ba420144481cf50ca830a1e44db44e90de417464fa672491c1f41925036b370f",
+  "correction_only": "Savings equal standard allocation before-minus-after as defined by actual03a6 producer. Both allocation measurements must still be nonincreasing and are reported separately. No source, receipt, sidecar or prior failed attempt changes.",
+  "authorization": "Execute candidate7b4c read-only qualifier with exact actual166 SHA ba420; no compiler/storage/hold/lease/source mutations.",
+  "no_full_qualification_claimed_by_code_review": true
+}

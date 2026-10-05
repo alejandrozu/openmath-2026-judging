@@ -1,0 +1,40 @@
+{
+  "status": "ROOT_AMENDED_GROTH_SINGLE_SOURCE_PILOT_SLOT_RELEASE_AFTER_ACTUAL_UNQUALIFIED_DMS_V3_FINISHED",
+  "created_utc": "2026-10-05T05:19:23.911371+00:00",
+  "prior_queued_pilot_approval": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\sakana-FOCUS-GROTH-root-queued-single-source-pilot-approval-20261005.json",
+  "prior_queued_pilot_approval_sha256": "59461381843a9ea6d98fa0f008afcfe8c18362baa3857b400a3633bb7f42cea6",
+  "amended_condition": "DMS positive qualification is not a prerequisite for the independent Groth pilot. Actual dispatcher/Lean quiescence and preserved failed receipt establish the returned resource slot. DMS remains unqualified and has no score change.",
+  "actual_completed_DMS_receipt_sha256": "ff1dd1a5c1666631992bffb93f51271c6c4e162cb075f2ec80eddf15e741ccd4",
+  "actual_DMS_source_passes": 122,
+  "actual_DMS_source_failures": 7,
+  "actual_DMS_selected_prints": 0,
+  "root_raw_all_invocation_log_identity_review": true,
+  "actual_process_snapshot": [
+    {
+      "ProcessId": 53444,
+      "ParentProcessId": 51944,
+      "Name": "lean.exe",
+      "CommandLine": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe -j1 -DmaxHeartbeats=0 -DmaxRecDepth=100000 -o OpHack\\QuadraticResidue224\\CertificateP127Part0033.olean OpHack\\QuadraticResidue224\\CertificateP127Part0033.lean"
+    }
+  ],
+  "reviewed_runner_sha256": "56952859e73e8773c44c84328e50144580527b82280da9d22229a2862ecedc10",
+  "source_plan_sha256": "1d9db618520db9b9651018b4b4c77192616c5af911963fc3391055b6646ece7a",
+  "root_cold_source_provider_recheck_sha256": "3e2cd3ea1d3797590eb460192f92b388bd61b0aa7087462b8b6a914a62338938",
+  "compiler_invocation_ceiling": 1,
+  "audit_invocations_authorized": 0,
+  "command_args": [
+    "sakana-FOCUS-GROTH",
+    "1",
+    "--pilot-third-slot"
+  ],
+  "max_concurrent_granular_compilers": 2,
+  "own_GiB": 6,
+  "initial_commit_GiB": 5,
+  "initial_physical_GiB": 6,
+  "initial_disk_bytes": 4000000000,
+  "continuous_commit_GiB": 1,
+  "continuous_physical_GiB": 3,
+  "continuous_disk_bytes": 1000000000,
+  "whole_importer_authorized": false,
+  "continuation_authorized": false
+}

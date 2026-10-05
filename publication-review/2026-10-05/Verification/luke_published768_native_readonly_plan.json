@@ -1,0 +1,43 @@
+{
+  "prepared_utc": "2026-10-05T00:32:09.347473+00:00",
+  "status": "SOURCE_ONLY_NATIVE_ADAPTER_V2_ASSESSMENT_NO_COMPILER_LINK_OR_LOAD",
+  "scope": "Separate legacy768 published-baseline numerical verification; no novel3840 priority change or V1 modification",
+  "source_commit": "2cf216ba885fbb1b2d1b2d4920efeaa6ba438842",
+  "version": "4.34.1",
+  "mathlib_pin": "d13f23b723b8a846827a245b89c10fc7d3f11612",
+  "custom_default_package": null,
+  "custom_C_source_closure": [
+    {
+      "module": "K4Ramsey.Counting.Multiplicity",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-k4-ramsey-current-native\\K4Ramsey\\Counting\\Multiplicity.lean",
+      "sha256": "3e530a3e13b35b2dcb26cd923e27cbc80132c8a860fe611371476733cba002e0",
+      "source_bytes": 6082,
+      "imports": [
+        "Std"
+      ]
+    },
+    {
+      "module": "K4Ramsey.Constructions.Published768.Data",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-k4-ramsey-current-native\\K4Ramsey\\Constructions\\Published768\\Data.lean",
+      "sha256": "b5de696edd6947b5da2250b466e5eead3e9ff3ee8818cc197a6bbc8c651f3494",
+      "source_bytes": 290554,
+      "imports": [
+        "K4Ramsey.Counting.Multiplicity"
+      ]
+    }
+  ],
+  "core_dependency": "Std and its genuine pinned runtime closure; no source import of Mathlib in the two selected modules",
+  "next_required_source_audit": "After actual source-only C emission, close every generated-C runtime/helper/initializer reference against exact core DLL exports; do not assume source imports alone suffice",
+  "proposed_initializer": "initialize_K4Ramsey_Constructions_Published768_Data",
+  "initializer_requirement": "Full genuine recursion into Multiplicity and Std plus the actual redRows global; no stubs or omitted initialization",
+  "direct_compilation_strategy": "Compile the frozen Published768.Certificate source with native definitions for Multiplicity and Data loaded first. Its local certificate structure can retain ordinary IR evaluation. No source-edited counting theorem or manufactured numerical witness.",
+  "computations": {
+    "validity": "768-row dimensions, diagonal clearing, symmetric UInt64-packed adjacency",
+    "red_edges": "148608",
+    "exact_combined_numerator": "10487165184",
+    "formula": "n +14*blueEdges +36*blueTriangles +24*(redK4+blueK4)",
+    "kernel_multiplicity_scope_caveat": "The submitted general equivalence of this computational formula to a literal tuple sum remains unproved; numerical agreement is a published-baseline certificate only."
+  },
+  "independence_policy": "Preserve all16-module/935-dependency V1 C/object/DLL bytes and receipts; any V2 source-identical C/objects/DLLs get separate paths, hashes, actual ABI/export/init checks and guard approval",
+  "no_authorization_to_compile_link_load_in_this_plan": true
+}

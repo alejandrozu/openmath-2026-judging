@@ -1,0 +1,829 @@
+{
+  "status": "READ_ONLY_EXACT_ORIGINAL_GRANULAR_ROUTE_REVIEW_NO_STAGING_NO_COMPILER",
+  "reviewed_utc": "2026-10-05T03:26:26.230262+00:00",
+  "project": "sakana-FOCUS-GROTH",
+  "original_plan": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-FOCUS-GROTH\\build-plan.json",
+  "original_plan_sha256": "1d9db618520db9b9651018b4b4c77192616c5af911963fc3391055b6646ece7a",
+  "original_plan_status": "PLANNED_NOT_RUN",
+  "source_count": 2,
+  "selected_endpoint_count": 5,
+  "existing_current_fresh_receipt": {
+    "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\sakana-FOCUS-GROTH-fresh-build.json",
+    "present": false,
+    "sha256": null
+  },
+  "proposed_route": "UNCHANGED_EXISTING_FROZEN_SOURCE_ROUTE_ALREADY_GRANULAR",
+  "modified_import_spans": [],
+  "header_changes": 0,
+  "staged_or_copied_sources": 0,
+  "zero_change_rationale": "Actual frozen imports are already specific; broad-header comments are historical. Zero modified spans is the smallest safe operational proposal. No unverified minimization of already granular direct imports is asserted.",
+  "source_identity_records": [
+    {
+      "module": "Row3Granular",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-FOCUS-GROTH\\Row3Granular.lean",
+      "entrant_source_locator": "Focus_Evidence/evidence/FOCUS-GROTH/Row3Granular.lean",
+      "original_source_sha256": "81f13055043484815587cc049b817d069a50a2621de4588334f081aba167e754",
+      "proposed_source_sha256": "81f13055043484815587cc049b817d069a50a2621de4588334f081aba167e754",
+      "whole_file_byte_identity": true,
+      "source_bytes": 18620,
+      "original_header_span": {
+        "start_byte": 0,
+        "end_byte_exclusive": 182
+      },
+      "original_body_after_header_sha256": "846515f32ebc2cef4476b8fa614ed7a49b14a1b23789c0c0d3cd15bffe26220c",
+      "proposed_body_after_header_sha256": "846515f32ebc2cef4476b8fa614ed7a49b14a1b23789c0c0d3cd15bffe26220c",
+      "proposed_modified_spans": [],
+      "original_imports": [
+        "Mathlib.Analysis.InnerProductSpace.Basic",
+        "Mathlib.Analysis.SpecialFunctions.Sqrt",
+        "Mathlib.Tactic.Linarith",
+        "Mathlib.Tactic.NormNum",
+        "Mathlib.Tactic.Ring"
+      ],
+      "exact_original_import_clauses": [
+        {
+          "line": 1,
+          "start_byte": 0,
+          "end_byte_exclusive": 48,
+          "exact_source_clause": "import Mathlib.Analysis.InnerProductSpace.Basic",
+          "public_modifier": false,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 2,
+          "start_byte": 48,
+          "end_byte_exclusive": 94,
+          "exact_source_clause": "import Mathlib.Analysis.SpecialFunctions.Sqrt",
+          "public_modifier": false,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 3,
+          "start_byte": 94,
+          "end_byte_exclusive": 125,
+          "exact_source_clause": "import Mathlib.Tactic.Linarith",
+          "public_modifier": false,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 4,
+          "start_byte": 125,
+          "end_byte_exclusive": 155,
+          "exact_source_clause": "import Mathlib.Tactic.NormNum",
+          "public_modifier": false,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 5,
+          "start_byte": 155,
+          "end_byte_exclusive": 182,
+          "exact_source_clause": "import Mathlib.Tactic.Ring",
+          "public_modifier": false,
+          "meta_modifier": false,
+          "all_modifier": false
+        }
+      ],
+      "custom_imports": [],
+      "official_direct_imports": [
+        "Mathlib.Analysis.InnerProductSpace.Basic",
+        "Mathlib.Analysis.SpecialFunctions.Sqrt",
+        "Mathlib.Tactic.Linarith",
+        "Mathlib.Tactic.NormNum",
+        "Mathlib.Tactic.Ring"
+      ],
+      "literal_whole_Mathlib_imports": [],
+      "literal_Mathlib_Tactic_umbrella_imports": [],
+      "options": [],
+      "static_tokens_excluding_comments_and_strings": {
+        "sorry": 0,
+        "admit": 0,
+        "native_decide": 0,
+        "implemented_by": 0,
+        "unsafe": 0,
+        "extern": 0,
+        "run_tac": 0,
+        "decide": 0,
+        "linarith": 9,
+        "nlinarith": 7,
+        "norm_num": 13,
+        "ring": 4,
+        "omega": 0,
+        "fin_cases": 0,
+        "gcongr": 0,
+        "positivity": 0,
+        "field_simp": 0,
+        "push": 0,
+        "by_contra": 0
+      },
+      "custom_axiom_declarations": [],
+      "exact_variable_contexts": [
+        "variable {m n : ℕ} {V : Type*} [NormedAddCommGroup V] [InnerProductSpace ℝ V]",
+        "variable (A : SignMat 3 n)"
+      ]
+    },
+    {
+      "module": "SemanticTestGranular",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-FOCUS-GROTH\\SemanticTestGranular.lean",
+      "entrant_source_locator": "Focus_Evidence/evidence/FOCUS-GROTH/SemanticTestGranular.lean",
+      "original_source_sha256": "490c99b751d049b20ee717753e92477bc7dd8420e635d45fef41d2b6b5f1eecd",
+      "proposed_source_sha256": "490c99b751d049b20ee717753e92477bc7dd8420e635d45fef41d2b6b5f1eecd",
+      "whole_file_byte_identity": true,
+      "source_bytes": 22662,
+      "original_header_span": {
+        "start_byte": 0,
+        "end_byte_exclusive": 181
+      },
+      "original_body_after_header_sha256": "8ae12616826b5a08edf4624f0b2165cd06585a958973229f53b012135a35e469",
+      "proposed_body_after_header_sha256": "8ae12616826b5a08edf4624f0b2165cd06585a958973229f53b012135a35e469",
+      "proposed_modified_spans": [],
+      "original_imports": [
+        "Mathlib.Analysis.InnerProductSpace.PiL2",
+        "Mathlib.Analysis.SpecialFunctions.Sqrt",
+        "Mathlib.Tactic.Linarith",
+        "Mathlib.Tactic.NormNum",
+        "Mathlib.Tactic.Ring"
+      ],
+      "exact_original_import_clauses": [
+        {
+          "line": 1,
+          "start_byte": 0,
+          "end_byte_exclusive": 47,
+          "exact_source_clause": "import Mathlib.Analysis.InnerProductSpace.PiL2",
+          "public_modifier": false,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 2,
+          "start_byte": 47,
+          "end_byte_exclusive": 93,
+          "exact_source_clause": "import Mathlib.Analysis.SpecialFunctions.Sqrt",
+          "public_modifier": false,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 3,
+          "start_byte": 93,
+          "end_byte_exclusive": 124,
+          "exact_source_clause": "import Mathlib.Tactic.Linarith",
+          "public_modifier": false,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 4,
+          "start_byte": 124,
+          "end_byte_exclusive": 154,
+          "exact_source_clause": "import Mathlib.Tactic.NormNum",
+          "public_modifier": false,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 5,
+          "start_byte": 154,
+          "end_byte_exclusive": 181,
+          "exact_source_clause": "import Mathlib.Tactic.Ring",
+          "public_modifier": false,
+          "meta_modifier": false,
+          "all_modifier": false
+        }
+      ],
+      "custom_imports": [],
+      "official_direct_imports": [
+        "Mathlib.Analysis.InnerProductSpace.PiL2",
+        "Mathlib.Analysis.SpecialFunctions.Sqrt",
+        "Mathlib.Tactic.Linarith",
+        "Mathlib.Tactic.NormNum",
+        "Mathlib.Tactic.Ring"
+      ],
+      "literal_whole_Mathlib_imports": [],
+      "literal_Mathlib_Tactic_umbrella_imports": [],
+      "options": [],
+      "static_tokens_excluding_comments_and_strings": {
+        "sorry": 0,
+        "admit": 0,
+        "native_decide": 0,
+        "implemented_by": 0,
+        "unsafe": 0,
+        "extern": 0,
+        "run_tac": 0,
+        "decide": 0,
+        "linarith": 1,
+        "nlinarith": 0,
+        "norm_num": 17,
+        "ring": 8,
+        "omega": 0,
+        "fin_cases": 0,
+        "gcongr": 0,
+        "positivity": 4,
+        "field_simp": 0,
+        "push": 0,
+        "by_contra": 0
+      },
+      "custom_axiom_declarations": [],
+      "exact_variable_contexts": [
+        "variable {m n : ℕ}",
+        "variable {V : Type*} [NormedAddCommGroup V] [InnerProductSpace ℝ V]"
+      ]
+    }
+  ],
+  "unchanged_audit_records": [
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-FOCUS-GROTH\\FreshAudit1.lean",
+      "source_sha256": "2a43c7da7651a65f5de70d04a81ea77d53c5e2645ab7b2efc4e8e283644236e2",
+      "exact_requested_prints": [
+        "GrothSymmetry.row3_Q_le_sqrt_three_halves_mul_C",
+        "GrothSemantic.semantic_6x6_106",
+        "GrothSemantic.semantic_6x8_690",
+        "GrothSemantic.semantic_7x8_53110",
+        "GrothSemantic.semantic_s8x8_1705"
+      ],
+      "exact_imports": [
+        "Row3Granular",
+        "SemanticTestGranular"
+      ],
+      "byte_unchanged": true
+    }
+  ],
+  "selected_exact_statement_records": [
+    {
+      "requested_endpoint": "GrothSymmetry.row3_Q_le_sqrt_three_halves_mul_C",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-FOCUS-GROTH\\Row3Granular.lean",
+      "source_sha256": "81f13055043484815587cc049b817d069a50a2621de4588334f081aba167e754",
+      "line": 397,
+      "exact_statement_before_proof": "theorem row3_Q_le_sqrt_three_halves_mul_C :\n    Q (V",
+      "statement_utf8_sha256": "0e723f355e0347abc3010f94b1f44691a8fa4178fa54da06873ed1173a0953be"
+    },
+    {
+      "requested_endpoint": "GrothSemantic.semantic_6x6_106",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-FOCUS-GROTH\\SemanticTestGranular.lean",
+      "source_sha256": "490c99b751d049b20ee717753e92477bc7dd8420e635d45fef41d2b6b5f1eecd",
+      "line": 276,
+      "exact_statement_before_proof": "theorem semantic_6x6_106 : Q (V",
+      "statement_utf8_sha256": "ac23c4e042f8bacf413e8da2db6733242f3f6783794cceb0599c0984594105bb"
+    },
+    {
+      "requested_endpoint": "GrothSemantic.semantic_6x8_690",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-FOCUS-GROTH\\SemanticTestGranular.lean",
+      "source_sha256": "490c99b751d049b20ee717753e92477bc7dd8420e635d45fef41d2b6b5f1eecd",
+      "line": 311,
+      "exact_statement_before_proof": "theorem semantic_6x8_690 : Q (V",
+      "statement_utf8_sha256": "a7188c6e707c110bf5de9ef8f76e460fc5b21bcb4a229fb0d74e5fc73d6f66c2"
+    },
+    {
+      "requested_endpoint": "GrothSemantic.semantic_7x8_53110",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-FOCUS-GROTH\\SemanticTestGranular.lean",
+      "source_sha256": "490c99b751d049b20ee717753e92477bc7dd8420e635d45fef41d2b6b5f1eecd",
+      "line": 346,
+      "exact_statement_before_proof": "theorem semantic_7x8_53110 : Q (V",
+      "statement_utf8_sha256": "8d0b32dd4b3a851b21d25ca6dd356140e3560e578764aaf305eb6209b2502f02"
+    },
+    {
+      "requested_endpoint": "GrothSemantic.semantic_s8x8_1705",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-FOCUS-GROTH\\SemanticTestGranular.lean",
+      "source_sha256": "490c99b751d049b20ee717753e92477bc7dd8420e635d45fef41d2b6b5f1eecd",
+      "line": 381,
+      "exact_statement_before_proof": "theorem semantic_s8x8_1705 : Q (V",
+      "statement_utf8_sha256": "4da9119b3f30519f95ba9c1e5bb4c00dd2d6f54b160dff1c71a134f28342ef5c"
+    }
+  ],
+  "ordinary_statement_and_proof_fidelity": [
+    "Row3Granular states the semantic bound Q(A)<=sqrt(3/2) C(A) for every three-row sign matrix and every real inner-product space, with sSup-defined vector and scalar optima. It explicitly treats an empty vector-feasible set.",
+    "Its proof uses the four projective column-type weights, scalar sign anchors, the parallelogram/Parseval identity and Cauchy-Schwarz; it does not assume or compute an exact C optimum.",
+    "SemanticTestGranular gives four individual fixed-matrix sqrt(2) bounds, dimensions6x6,6x8,7x8,8x8. Each uses an explicit positive sum-of-squares dual certificate and a scalar sign-witness lower anchor; it does not prove an exhaustive all-size family or the unrestricted Grothendieck conjecture.",
+    "The four numerical certificates have (Cnum,U)=(14,19),(20,27),(22,31),(28,77/2); their exact threshold comparisons are361<=392,729<=800,961<=968,5929<=6272.",
+    "The semantic theorems and exact certificates are held pending their original-route fresh replay and bounded prior-work/coverage review. This inspection does not assign originality or change a score."
+  ],
+  "official_direct_imports": [
+    "Mathlib.Analysis.InnerProductSpace.Basic",
+    "Mathlib.Analysis.SpecialFunctions.Sqrt",
+    "Mathlib.Tactic.Linarith",
+    "Mathlib.Tactic.NormNum",
+    "Mathlib.Tactic.Ring",
+    "Mathlib.Analysis.InnerProductSpace.PiL2"
+  ],
+  "official_direct_module_identities": [
+    {
+      "module": "Mathlib.Analysis.InnerProductSpace.Basic",
+      "identity_root": "mathlib",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\Analysis\\InnerProductSpace\\Basic.lean",
+      "source_sha256": "344aa5e0b104223d327bb1f13db092b4d320017c8f82b7ba9846b5f517222468",
+      "source_bytes": 46963,
+      "official_olean": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Analysis\\InnerProductSpace\\Basic.olean",
+      "official_olean_sha256": "b540739abbb57675c68ea5a5b05ea131bc49a21240c476f54cde4756bed20a08",
+      "official_olean_bytes": 496656,
+      "explicit_imports": [
+        "Mathlib.Algebra.BigOperators.Field",
+        "Mathlib.Analysis.Complex.Basic",
+        "Mathlib.Analysis.InnerProductSpace.Defs",
+        "Mathlib.LinearAlgebra.SesquilinearForm.Basic"
+      ],
+      "exact_import_clauses": [
+        {
+          "line": 8,
+          "start_byte": 200,
+          "end_byte_exclusive": 249,
+          "exact_source_clause": "public import Mathlib.Algebra.BigOperators.Field",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 9,
+          "start_byte": 249,
+          "end_byte_exclusive": 294,
+          "exact_source_clause": "public import Mathlib.Analysis.Complex.Basic",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 10,
+          "start_byte": 294,
+          "end_byte_exclusive": 348,
+          "exact_source_clause": "public import Mathlib.Analysis.InnerProductSpace.Defs",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 11,
+          "start_byte": 348,
+          "end_byte_exclusive": 407,
+          "exact_source_clause": "public import Mathlib.LinearAlgebra.SesquilinearForm.Basic",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        }
+      ],
+      "implicit_Init_included": true,
+      "dependency_names": [
+        "Mathlib.Algebra.BigOperators.Field",
+        "Mathlib.Analysis.Complex.Basic",
+        "Mathlib.Analysis.InnerProductSpace.Defs",
+        "Mathlib.LinearAlgebra.SesquilinearForm.Basic",
+        "Init"
+      ],
+      "multiple_resolution_candidates": 1
+    },
+    {
+      "module": "Mathlib.Analysis.SpecialFunctions.Sqrt",
+      "identity_root": "mathlib",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\Analysis\\SpecialFunctions\\Sqrt.lean",
+      "source_sha256": "38c916b763ade8ed7174488bad31aee40735d03877a1bf9e540c1cf0107ec1ab",
+      "source_bytes": 6406,
+      "official_olean": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Analysis\\SpecialFunctions\\Sqrt.olean",
+      "official_olean_sha256": "e92f0fcd284199729e59612543b16abd6f0dbf1c2b7bbfa4d07c2cc32d490ddf",
+      "official_olean_bytes": 78104,
+      "explicit_imports": [
+        "Mathlib.Analysis.Calculus.ContDiff.Operations",
+        "Mathlib.Analysis.Calculus.Deriv.Pow"
+      ],
+      "exact_import_clauses": [
+        {
+          "line": 8,
+          "start_byte": 164,
+          "end_byte_exclusive": 224,
+          "exact_source_clause": "public import Mathlib.Analysis.Calculus.ContDiff.Operations",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 9,
+          "start_byte": 224,
+          "end_byte_exclusive": 274,
+          "exact_source_clause": "public import Mathlib.Analysis.Calculus.Deriv.Pow",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        }
+      ],
+      "implicit_Init_included": true,
+      "dependency_names": [
+        "Mathlib.Analysis.Calculus.ContDiff.Operations",
+        "Mathlib.Analysis.Calculus.Deriv.Pow",
+        "Init"
+      ],
+      "multiple_resolution_candidates": 1
+    },
+    {
+      "module": "Mathlib.Tactic.Linarith",
+      "identity_root": "mathlib",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\Tactic\\Linarith.lean",
+      "source_sha256": "0581fd9f80f34d728ad628e7c1fb5a93d36cb9cb48d469fbc797869e83ebe0a6",
+      "source_bytes": 391,
+      "official_olean": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Tactic\\Linarith.olean",
+      "official_olean_sha256": "f87d414cd6ee07958edb9eb1ccb405173ee00e2df9dbbbffdb526a485c92d322",
+      "official_olean_bytes": 2792,
+      "explicit_imports": [
+        "Mathlib.Tactic.Hint",
+        "Mathlib.Tactic.Linarith.Frontend",
+        "Mathlib.Tactic.NormNum"
+      ],
+      "exact_import_clauses": [
+        {
+          "line": 8,
+          "start_byte": 164,
+          "end_byte_exclusive": 203,
+          "exact_source_clause": "public meta import Mathlib.Tactic.Hint",
+          "public_modifier": true,
+          "meta_modifier": true,
+          "all_modifier": false
+        },
+        {
+          "line": 9,
+          "start_byte": 203,
+          "end_byte_exclusive": 250,
+          "exact_source_clause": "public import Mathlib.Tactic.Linarith.Frontend",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 10,
+          "start_byte": 250,
+          "end_byte_exclusive": 287,
+          "exact_source_clause": "public import Mathlib.Tactic.NormNum",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        }
+      ],
+      "implicit_Init_included": true,
+      "dependency_names": [
+        "Mathlib.Tactic.Hint",
+        "Mathlib.Tactic.Linarith.Frontend",
+        "Mathlib.Tactic.NormNum",
+        "Init"
+      ],
+      "multiple_resolution_candidates": 1
+    },
+    {
+      "module": "Mathlib.Tactic.NormNum",
+      "identity_root": "mathlib",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\Tactic\\NormNum.lean",
+      "source_sha256": "dca9500572c6d887000f3de17c7145b53bf35233afc1ad8026cca908cec7a2fe",
+      "source_bytes": 430,
+      "official_olean": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Tactic\\NormNum.olean",
+      "official_olean_sha256": "f6be00ff19229f44a6a58dff006a3896f6da3dee197d730fb566889c0c532843",
+      "official_olean_bytes": 2752,
+      "explicit_imports": [
+        "Mathlib.Data.Rat.Cast.Order",
+        "Mathlib.Tactic.NormNum.Abs",
+        "Mathlib.Tactic.NormNum.Basic",
+        "Mathlib.Tactic.NormNum.DivMod",
+        "Mathlib.Tactic.NormNum.Eq",
+        "Mathlib.Tactic.NormNum.Ineq",
+        "Mathlib.Tactic.NormNum.Inv",
+        "Mathlib.Tactic.NormNum.OfScientific",
+        "Mathlib.Tactic.NormNum.Pow"
+      ],
+      "exact_import_clauses": [
+        {
+          "line": 3,
+          "start_byte": 8,
+          "end_byte_exclusive": 50,
+          "exact_source_clause": "public import Mathlib.Data.Rat.Cast.Order",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 4,
+          "start_byte": 50,
+          "end_byte_exclusive": 91,
+          "exact_source_clause": "public import Mathlib.Tactic.NormNum.Abs",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 5,
+          "start_byte": 91,
+          "end_byte_exclusive": 134,
+          "exact_source_clause": "public import Mathlib.Tactic.NormNum.Basic",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 6,
+          "start_byte": 134,
+          "end_byte_exclusive": 178,
+          "exact_source_clause": "public import Mathlib.Tactic.NormNum.DivMod",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 7,
+          "start_byte": 178,
+          "end_byte_exclusive": 218,
+          "exact_source_clause": "public import Mathlib.Tactic.NormNum.Eq",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 8,
+          "start_byte": 218,
+          "end_byte_exclusive": 260,
+          "exact_source_clause": "public import Mathlib.Tactic.NormNum.Ineq",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 9,
+          "start_byte": 260,
+          "end_byte_exclusive": 301,
+          "exact_source_clause": "public import Mathlib.Tactic.NormNum.Inv",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 10,
+          "start_byte": 301,
+          "end_byte_exclusive": 351,
+          "exact_source_clause": "public import Mathlib.Tactic.NormNum.OfScientific",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 11,
+          "start_byte": 351,
+          "end_byte_exclusive": 392,
+          "exact_source_clause": "public import Mathlib.Tactic.NormNum.Pow",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        }
+      ],
+      "implicit_Init_included": true,
+      "dependency_names": [
+        "Mathlib.Data.Rat.Cast.Order",
+        "Mathlib.Tactic.NormNum.Abs",
+        "Mathlib.Tactic.NormNum.Basic",
+        "Mathlib.Tactic.NormNum.DivMod",
+        "Mathlib.Tactic.NormNum.Eq",
+        "Mathlib.Tactic.NormNum.Ineq",
+        "Mathlib.Tactic.NormNum.Inv",
+        "Mathlib.Tactic.NormNum.OfScientific",
+        "Mathlib.Tactic.NormNum.Pow",
+        "Init"
+      ],
+      "multiple_resolution_candidates": 1
+    },
+    {
+      "module": "Mathlib.Tactic.Ring",
+      "identity_root": "mathlib",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\Tactic\\Ring.lean",
+      "source_sha256": "d3ef5c49ebbd1108ce3f935e5ad95485e143abf02f28c027dba4bb6f3be8196e",
+      "source_bytes": 166,
+      "official_olean": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Tactic\\Ring.olean",
+      "official_olean_sha256": "0d6d9cfc5fb5f47b125e7a85bb0126257337c279edd7a735f4c5aaf810e38061",
+      "official_olean_bytes": 1904,
+      "explicit_imports": [
+        "Mathlib.Tactic.Ring.Basic",
+        "Mathlib.Tactic.Ring.PNat",
+        "Mathlib.Tactic.Ring.RingNF"
+      ],
+      "exact_import_clauses": [
+        {
+          "line": 3,
+          "start_byte": 8,
+          "end_byte_exclusive": 48,
+          "exact_source_clause": "public import Mathlib.Tactic.Ring.Basic",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 4,
+          "start_byte": 48,
+          "end_byte_exclusive": 87,
+          "exact_source_clause": "public import Mathlib.Tactic.Ring.PNat",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 5,
+          "start_byte": 87,
+          "end_byte_exclusive": 128,
+          "exact_source_clause": "public import Mathlib.Tactic.Ring.RingNF",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        }
+      ],
+      "implicit_Init_included": true,
+      "dependency_names": [
+        "Mathlib.Tactic.Ring.Basic",
+        "Mathlib.Tactic.Ring.PNat",
+        "Mathlib.Tactic.Ring.RingNF",
+        "Init"
+      ],
+      "multiple_resolution_candidates": 1
+    },
+    {
+      "module": "Mathlib.Analysis.InnerProductSpace.PiL2",
+      "identity_root": "mathlib",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\Analysis\\InnerProductSpace\\PiL2.lean",
+      "source_sha256": "1f9827b2db67213c725a2dcc3fec52a87772966d1fbd3fc6857a019dbd7a6053",
+      "source_bytes": 61065,
+      "official_olean": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Analysis\\InnerProductSpace\\PiL2.olean",
+      "official_olean_sha256": "b91d760b8301aecd3c50e3427e182fb2abadac4c009acc9374284e5962df04c8",
+      "official_olean_bytes": 1744520,
+      "explicit_imports": [
+        "Mathlib.Analysis.InnerProductSpace.Projection.FiniteDimensional",
+        "Mathlib.Analysis.Normed.Lp.PiLp",
+        "Mathlib.Analysis.Normed.Lp.Matrix",
+        "Mathlib.LinearAlgebra.FiniteDimensional.Lemmas",
+        "Mathlib.LinearAlgebra.UnitaryGroup",
+        "Mathlib.Tactic.CrossRefAttribute",
+        "Mathlib.Util.Superscript"
+      ],
+      "exact_import_clauses": [
+        {
+          "line": 8,
+          "start_byte": 196,
+          "end_byte_exclusive": 274,
+          "exact_source_clause": "public import Mathlib.Analysis.InnerProductSpace.Projection.FiniteDimensional",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 9,
+          "start_byte": 274,
+          "end_byte_exclusive": 320,
+          "exact_source_clause": "public import Mathlib.Analysis.Normed.Lp.PiLp",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 10,
+          "start_byte": 320,
+          "end_byte_exclusive": 368,
+          "exact_source_clause": "public import Mathlib.Analysis.Normed.Lp.Matrix",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 11,
+          "start_byte": 368,
+          "end_byte_exclusive": 429,
+          "exact_source_clause": "public import Mathlib.LinearAlgebra.FiniteDimensional.Lemmas",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 12,
+          "start_byte": 429,
+          "end_byte_exclusive": 478,
+          "exact_source_clause": "public import Mathlib.LinearAlgebra.UnitaryGroup",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 13,
+          "start_byte": 478,
+          "end_byte_exclusive": 525,
+          "exact_source_clause": "public import Mathlib.Tactic.CrossRefAttribute",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 14,
+          "start_byte": 525,
+          "end_byte_exclusive": 564,
+          "exact_source_clause": "public import Mathlib.Util.Superscript",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        }
+      ],
+      "implicit_Init_included": true,
+      "dependency_names": [
+        "Mathlib.Analysis.InnerProductSpace.Projection.FiniteDimensional",
+        "Mathlib.Analysis.Normed.Lp.PiLp",
+        "Mathlib.Analysis.Normed.Lp.Matrix",
+        "Mathlib.LinearAlgebra.FiniteDimensional.Lemmas",
+        "Mathlib.LinearAlgebra.UnitaryGroup",
+        "Mathlib.Tactic.CrossRefAttribute",
+        "Mathlib.Util.Superscript",
+        "Init"
+      ],
+      "multiple_resolution_candidates": 1
+    }
+  ],
+  "complete_dependency_closure": {
+    "total_official_units": 3954,
+    "mathlib_units": 2167,
+    "official_core_units": 1530,
+    "package_or_lake_units": 257,
+    "identity_root_counts": {
+      "aesop": 132,
+      "batteries": 74,
+      "importGraph": 10,
+      "official_lean_core": 1530,
+      "LeanSearchClient": 4,
+      "mathlib": 2167,
+      "plausible": 13,
+      "proofwidgets": 10,
+      "Qq": 14
+    },
+    "unresolved_units": [],
+    "all_source_and_olean_sha256_measured": true,
+    "all_edges_closed_and_units_reachable": true,
+    "implicit_Init_included": true,
+    "exact_public_meta_all_clauses_bound_to_source_hashes": true,
+    "literal_whole_Mathlib_or_Mathlib_Tactic_reachable": false,
+    "sum_olean_logical_bytes": 857167584,
+    "manifest": {
+      "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\proposals\\held-original-granular-source-review\\sakana-FOCUS-GROTH-complete-official-source-artifact-closure.json",
+      "sha256": "86bd08537eea030f2860f96e6efbd681c48da2d02057d64d9bd38816cd5a49b2"
+    }
+  },
+  "exact_dependency_pins": [
+    {
+      "name": "mathlib",
+      "url": "https://github.com/leanprover-community/mathlib4",
+      "rev": "0df444a360eaa60ab8c11dca51a86af692955474"
+    },
+    {
+      "name": "plausible",
+      "url": "https://github.com/leanprover-community/plausible",
+      "rev": "b7eb3304aeae834b12dda98993a37f6a41f6f0bb"
+    },
+    {
+      "name": "LeanSearchClient",
+      "url": "https://github.com/leanprover-community/LeanSearchClient",
+      "rev": "5f4d51b81cbd3f6b32b156bfad9056621a040404"
+    },
+    {
+      "name": "importGraph",
+      "url": "https://github.com/leanprover-community/import-graph",
+      "rev": "16f02aa7642864af59f1ff0e384a015994db9118"
+    },
+    {
+      "name": "proofwidgets",
+      "url": "https://github.com/leanprover-community/ProofWidgets4",
+      "rev": "4be2e3d5087eeb272cf5a8853b8f9dd025ef5957"
+    },
+    {
+      "name": "aesop",
+      "url": "https://github.com/leanprover-community/aesop",
+      "rev": "3448c0bcc5ce01b2d1546e483ec3620e32df3d0e"
+    },
+    {
+      "name": "Qq",
+      "url": "https://github.com/leanprover-community/quote4",
+      "rev": "92c15be17b7caf78c2ad767ec40f89052d908d81"
+    },
+    {
+      "name": "batteries",
+      "url": "https://github.com/leanprover-community/batteries",
+      "rev": "4488d40d070b9700d4d5a6aa342f0d40c31b2a2d"
+    },
+    {
+      "name": "Cli",
+      "url": "https://github.com/leanprover/lean4-cli",
+      "rev": "6130a47896ce867c6a4a55373441e59e565bad0f"
+    }
+  ],
+  "runtime_version_and_commit": "Lean (version 4.33.1, x86_64-w64-windows-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)",
+  "dependency_runtime_cache_helper_bindings": {
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies-4.33.1-verified-git.json": "31b5850cf64e539ce720e87420b05a74000b8aa3a81fa5dc236182172d8621e2",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\lean-4.33.1-installation.json": "6ec3927af9b76cdb46a8fe74773113e72bee65066a4b7decf4547b646f39f99a",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\mathlib-4.33.1-cache-retry.json": "2970055d4efb8204f90f48e2358b5e8ed8469e0f7ba7019b2723436924f923f4",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\review_held_granular_originals.py": "e6f494d1df5342f7c9a9d32bb693ae67033e8fe3c972fb4c432043b2963df2a3"
+  },
+  "trust_review": {
+    "authored_native_admitted_custom_axiom_syntax": "NONE_FOUND_OUTSIDE_COMMENTS_AND_STRINGS",
+    "ordinary_decide_is_kernel_reduction_not_native_decide": true,
+    "fresh_axiom_outputs": "PENDING_ACTUAL_ORIGINAL_ROUTE_REPLAY",
+    "import_closure_and_static_review_do_not_establish_proof_PASS": true
+  },
+  "scheduling_and_scientific_limits": [
+    "No Lean or runner invocation occurred.",
+    "Root review and an explicit scheduling lease remain required for the original frozen route.",
+    "Priorities, originality, score and manuscript-held classification remain unchanged.",
+    "The original plan, source bytes, exact options, selected audit and pinned dependencies are unchanged."
+  ]
+}

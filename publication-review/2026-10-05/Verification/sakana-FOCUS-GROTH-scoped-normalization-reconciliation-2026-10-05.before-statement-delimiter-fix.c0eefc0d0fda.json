@@ -1,0 +1,99 @@
+{
+  "status": "READ_ONLY_SCOPED_NORMALIZATION_RECONCILIATION_NO_MATHEMATICAL_MISMATCH",
+  "reviewed_utc": "2026-10-05T03:31:00.919447+00:00",
+  "source_review_packet": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\proposals\\held-original-granular-source-review\\sakana-FOCUS-GROTH-read-only-original-granular-review.json",
+  "source_review_packet_sha256": "2c7fed08f223f64d5332fee366ad3e00b8594710f9c30b7530ec64a4bb03e95d",
+  "canonical_family_snapshot": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\novel_results_content.json",
+  "canonical_family_snapshot_sha256": "2a60e781d4571b788c783629e5cc6e16c9dfa54cccca9d2bbcbc8f2815de5de2",
+  "selected_typed_statements": [
+    {
+      "requested_endpoint": "GrothSymmetry.row3_Q_le_sqrt_three_halves_mul_C",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-FOCUS-GROTH\\Row3Granular.lean",
+      "source_sha256": "81f13055043484815587cc049b817d069a50a2621de4588334f081aba167e754",
+      "line": 397,
+      "exact_statement_before_proof": "theorem row3_Q_le_sqrt_three_halves_mul_C :\n    Q (V",
+      "statement_utf8_sha256": "0e723f355e0347abc3010f94b1f44691a8fa4178fa54da06873ed1173a0953be"
+    },
+    {
+      "requested_endpoint": "GrothSemantic.semantic_6x6_106",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-FOCUS-GROTH\\SemanticTestGranular.lean",
+      "source_sha256": "490c99b751d049b20ee717753e92477bc7dd8420e635d45fef41d2b6b5f1eecd",
+      "line": 276,
+      "exact_statement_before_proof": "theorem semantic_6x6_106 : Q (V",
+      "statement_utf8_sha256": "ac23c4e042f8bacf413e8da2db6733242f3f6783794cceb0599c0984594105bb"
+    },
+    {
+      "requested_endpoint": "GrothSemantic.semantic_6x8_690",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-FOCUS-GROTH\\SemanticTestGranular.lean",
+      "source_sha256": "490c99b751d049b20ee717753e92477bc7dd8420e635d45fef41d2b6b5f1eecd",
+      "line": 311,
+      "exact_statement_before_proof": "theorem semantic_6x8_690 : Q (V",
+      "statement_utf8_sha256": "a7188c6e707c110bf5de9ef8f76e460fc5b21bcb4a229fb0d74e5fc73d6f66c2"
+    },
+    {
+      "requested_endpoint": "GrothSemantic.semantic_7x8_53110",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-FOCUS-GROTH\\SemanticTestGranular.lean",
+      "source_sha256": "490c99b751d049b20ee717753e92477bc7dd8420e635d45fef41d2b6b5f1eecd",
+      "line": 346,
+      "exact_statement_before_proof": "theorem semantic_7x8_53110 : Q (V",
+      "statement_utf8_sha256": "8d0b32dd4b3a851b21d25ca6dd356140e3560e578764aaf305eb6209b2502f02"
+    },
+    {
+      "requested_endpoint": "GrothSemantic.semantic_s8x8_1705",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-FOCUS-GROTH\\SemanticTestGranular.lean",
+      "source_sha256": "490c99b751d049b20ee717753e92477bc7dd8420e635d45fef41d2b6b5f1eecd",
+      "line": 381,
+      "exact_statement_before_proof": "theorem semantic_s8x8_1705 : Q (V",
+      "statement_utf8_sha256": "4da9119b3f30519f95ba9c1e5bb4c00dd2d6f54b160dff1c71a134f28342ef5c"
+    }
+  ],
+  "Row3_type_context": {
+    "A": "SignMat 3 n = Fin 3 -> Fin n -> Int.units; entries are integer units, hence +/-1",
+    "V": "Type* with NormedAddCommGroup V and InnerProductSpace Real V",
+    "objective": "sum_i sum_j coeff(A i j) * inner(u i,v j), without dimensional normalization",
+    "Q_V": "sSup of these objectives for all families with norm(u_i)=norm(v_j)=1",
+    "C": "the identical objective optimum in V=Real; scalar unit vectors are signs",
+    "empty_vector_feasible_set": "Q_V = 0, explicitly handled in the theorem proof"
+  },
+  "constants_and_directions": {
+    "Row3": {
+      "exact": "Real.sqrt (3 / 2)",
+      "decimal": 1.224744871391589,
+      "direction": "Q_V(A) <= sqrt(3/2) * C(A)",
+      "not": "sqrt(3)/2; no unrestricted-constant lower bound follows"
+    },
+    "four_fixed_matrices": {
+      "exact": "Real.sqrt 2",
+      "decimal": 1.4142135623730951,
+      "dimensions": [
+        "6x6",
+        "6x8",
+        "7x8",
+        "8x8"
+      ],
+      "direction": "individual Q_V(A) <= sqrt(2) * C(A)"
+    },
+    "ordinary_three_row_comparison": {
+      "exact": "6/5",
+      "decimal": 1.2,
+      "direction": "Q_V(A) <= (6/5) * C(A) for the same three-row sign-matrix restriction",
+      "strictly_stronger_than_selected_Row3_bound": true,
+      "ordinary_polytope_vertex_bounds": [
+        "1",
+        "sqrt(5)/2",
+        "6/5",
+        "2/sqrt(3)"
+      ],
+      "equality_example": "J-2I, three unit vectors at 120 degrees, C=5 and Q=6",
+      "formalization_in_selected_2_source_5_endpoint_scope": false
+    }
+  },
+  "scope_and_originality": [
+    "Three-row sign matrices and four literal larger sign matrices are restricted instances; these selected theorems do not cover arbitrary real coefficient matrices or all row counts.",
+    "The typed statements are upper bounds for restricted vector/scalar objective ratios. They are not a lower-bound improvement of the unrestricted real Grothendieck constant.",
+    "The current canonical held abstract, theorem prose and source-review card use sqrt(3/2) and preserve the stronger ordinary 6/5 comparison correctly.",
+    "Kernel-clean fresh replay, if completed later, establishes the exact typed statements, not an originality or unrestricted-constant advance."
+  ],
+  "manuscript_or_score_change_required": false,
+  "no_source_plan_audit_canonical_or_compiler_mutation": true
+}

@@ -1,0 +1,92 @@
+{
+  "status": "READ_ONLY_SCRIPT_REVIEW_WITH_ONE_PROCESS_GATE_LIMITATION",
+  "checked_utc": "2026-10-05T05:41:00.792459+00:00",
+  "files": {
+    "seed": {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dms_v4_vector122_seed.py",
+      "sha256": "219fa8cd4bbd3d90ca80f3ad4e0ac662b6a7083afc819d88d1cbd5ba93d73df4"
+    },
+    "runner": {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\run_dms_v4_vector_plan.py",
+      "sha256": "96e616f35df492576c8b26909bc76782f476370e08c607883daff706e04456dc"
+    },
+    "qualifier": {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\qualify_dms_v4_vector_complete_route.py",
+      "sha256": "bc34e0c971547d46d164b74007546f11e7c3c6aa83f288a44d62df505b8f03d8"
+    },
+    "verifier": {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\verify_dms_v4_vector_stage.py",
+      "sha256": "d876f0d7850b4618ff4855aad2306216f6921987936daea24a820fef798b6242"
+    },
+    "policy": {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dms-v4-vector122-link99-readonly-policy-20261005.json",
+      "sha256": "0af7feab4fc55f1b7ecade9b60491c2507ac3687d2899f0f74116afd40a93a8f"
+    },
+    "plan": {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current-import-pruned-v4-vector\\build-plan.json",
+      "sha256": "30f7b071fbcd9ddb37e48a059126daf8e37dd65dae9b2733614af926589a7308"
+    }
+  },
+  "actions": {
+    "compiler_invocations": 0,
+    "aliases": 0,
+    "source_or_runner_edits": 0,
+    "full2735_provider_hash_scans": 0
+  },
+  "scope_counts": {
+    "readonly_prior99": 99,
+    "linked_prior122": 122,
+    "new_required7": [
+      "All",
+      "Inflation",
+      "InflationA",
+      "InflationB",
+      "InflationC",
+      "InflationD",
+      "InflationE"
+    ],
+    "audits": [
+      "FreshAudit1.lean"
+    ],
+    "requested123": 123
+  },
+  "confirmed": [
+    "All221 prior names are skip metadata only and cannot enter new compiler rows.",
+    "Readonly99 V1 directory is exact and no original/V2/V3 custom library is in prepared LEAN_PATH.",
+    "Linked122 outputs are excluded from compile/rename targets; exact current file identity and linkcount2 are checked.",
+    "Protected original/V2 and V1/V3 identities/linkcounts remain separately checked.",
+    "Resume preserves own passed source rows and source/artifact hashes; resource failures are retained in immutable prior receipts and partial outputs renamed before retry.",
+    "Final qualifier derives all123 classifications from hash-checked raw stdout, rejects missing/unexpected/duplicate prints and selected sorry or unknown axioms.",
+    "Every prepared script parsed with Python ast without execution."
+  ],
+  "finding": {
+    "severity": "PROCESS_GATE_LIMITATION_REQUIRES_EXPLICIT_COORDINATOR_COVERAGE_OR_HELPER_HARDENING",
+    "file": "dms_v4_vector122_seed.py",
+    "lines": [
+      35,
+      55
+    ],
+    "problem": "The protected-stage Lean check requires an absolute /builds/<stage>/ substring, but actual prepared compiler commands contain relative source/output paths. An orphan relative-command DMS Lean can evade detection once its dispatcher has exited.",
+    "synthetic_relative_command": "\"C:/runtime/bin/lean.exe\" -j1 -DmaxHeartbeats=0 -DmaxRecDepth=100000 -o InflationA.olean InflationA.lean",
+    "absolute_stage_regex_matches": false,
+    "current_process_finding": "Not independently queried in this script review; coordinator reported all Lean children absent. Do not infer current conflict from the synthetic case.",
+    "recommended_action": "At actual seed dispatch, record an immediate all-Lean-absent handoff or identify all active Lean roots through owned dispatcher/job ancestry before exempting permitted non-DMS workers. Do not claim absolute-path CommandLine matching alone proves protected-stage inactivity."
+  },
+  "nonblocking_qualification_hardening": {
+    "file": "qualify_dms_v4_vector_complete_route.py",
+    "lines": [
+      36,
+      57
+    ],
+    "note": "exact_invocation_identity verifies command/cwd/job assignment/state/logs but does not independently compare the stored resource_policy, initial/minimum counters, counter-helper hashes or resource_settings guard identity against the reviewed6/5 policy. Current guard code is separately pinned by verify_seed, so this is evidence-completeness hardening, not a demonstrated altered guard or false proof PASS.",
+    "suggestion": "When root reviews actual completed rows, explicitly compare row resource_policy and counter-helper hashes with reviewed guard constants and report observed reserves/peaks; optionally add those assertions in a separately versioned qualifier."
+  },
+  "axiom_parser_fixture_classifications": [
+    "STANDARD_KERNEL_AXIOMS",
+    "NATIVE_EVALUATION_TRUST",
+    "UNRECOGNIZED_AXIOMS",
+    "SORRY_ADMISSION",
+    "AXIOM_FREE"
+  ],
+  "limits": "Source-only operational review. No seed, source replay, audit, provider rehash, scientific novelty adjudication or publication change was performed."
+}

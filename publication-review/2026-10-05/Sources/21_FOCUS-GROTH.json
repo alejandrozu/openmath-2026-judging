@@ -1,0 +1,135 @@
+{
+  "title": "Restricted sign-matrix certificates for the Grothendieck objective",
+  "blocks": [
+    {
+      "type": "title",
+      "text": "Restricted sign-matrix certificates for the Grothendieck objective"
+    },
+    {
+      "type": "subtitle",
+      "text": "Provisional mathematical authors: Rachel Teo, Wenyi Wang, Hamdi Abderrahmene"
+    },
+    {
+      "type": "small",
+      "text": "Judging and evaluation record: the submissions discussed in this document have been judged and evaluated by Alejandro Zarzuelo Urdiales for OpenMath 2026. This dated review records the stated verification, classification and unresolved holds; it is a preliminary evaluation rather than a signed award decision."
+    },
+    {
+      "type": "small",
+      "text": "Event provenance: OpenMath 2026 ran 27 September–2 October 2026 with worldwide online participation. Detailed organizer listings specify Harvard Innovation Labs for the 27 September in-person event; the OpenMath programme advertises a hybrid kickoff at MIT. Sundai identifies its Harvard/MIT community. Organizer sources: https://rsihouse.ai/openmath ; https://luma.com/yzp9abvr ; https://www.sundai.club/events/boston/recursive-learning-hack-with-harvard-innovation-labs"
+    },
+    {
+      "type": "small",
+      "text": "Rachel Teo — Sakana AI."
+    },
+    {
+      "type": "small",
+      "text": "Wenyi Wang — Sakana AI."
+    },
+    {
+      "type": "small",
+      "text": "Hamdi Abderrahmene — Sakana AI."
+    },
+    {
+      "type": "small",
+      "text": "Affiliations follow the recorded author declarations or public institutional/profile sources. Preferred author names, author order and publication affiliations await author review. This editorial compilation does not establish anthology coauthorship."
+    },
+    {
+      "type": "subtitle",
+      "text": "Candidate manuscript — originality unresolved | OpenMath 2026 | 5 October 2026"
+    },
+    {
+      "type": "small",
+      "text": "Central source and adjudication archive: https://github.com/alejandrozu/openmath-2026-judging"
+    },
+    {
+      "type": "h2",
+      "text": "Abstract"
+    },
+    {
+      "type": "p",
+      "text": "The packet proves Q(A)≤√(3/2)C(A) for three-row sign matrices and √2 bounds for four literal matrices. These correct restricted certificates do not improve the universal Grothendieck constant; a stronger elementary three-row bound6/5 is available in this review, so original-mathematics credit remains held."
+    },
+    {
+      "type": "theorem",
+      "text": "Q(A)≤√(3/2)C(A) for every3×n sign matrix; four literal finite matrices satisfyQ(A)≤√2 C(A)."
+    },
+    {
+      "type": "h2",
+      "text": "Submitted scope"
+    },
+    {
+      "type": "p",
+      "text": "For a3×n matrix with entries±1, C(A) is the scalar sign objective and Q(A) the supremum over unit-vector choices in a real inner-product space. The submitted theorem proves Q(A)≤√(3/2)C(A). Four additional archived matrices receive specific√2 bounds. Empty-feasible-set conventions are fixed in the formal definition."
+    },
+    {
+      "type": "p",
+      "text": "These restrictions do not cover arbitrary real coefficient matrices, arbitrary row counts, or the universal Grothendieck constant. Their finite and restricted theorem validity must not be inflated into a general-constant advance."
+    },
+    {
+      "type": "h2",
+      "text": "A sharper ordinary three-row comparison"
+    },
+    {
+      "type": "p",
+      "text": "Modulo simultaneous column sign, a three-row sign column has one of four projective types. Let their multiplicities be w_i≥0 and W=∑w_i. Then C=W+2max_i w_i. Normalize C≤1. The resulting four-variable polytope has vertices with k positive equal weights1/(k+2), for k=1,2,3,4, as well as zero."
+    },
+    {
+      "type": "p",
+      "text": "The vector objective is convex in the weights, so the vertex bounds suffice. They are1,√5/2,6/5 and2/√3, whose maximum is6/5. For k=3, the squared column norms sum to12−||u₁+u₂+u₃||²≤12, and Cauchy–Schwarz bounds their sum by6. Equality uses three unit vectors120degrees apart in the J−2I example, for which C=5 and Q=6."
+    },
+    {
+      "type": "p",
+      "text": "This review derivation is an ordinary comparison, not a submitted entrant theorem, fresh Lean certificate or claimed new discovery. The known Gisin equality example and any prior general upper bound still require proper attribution. It does show that the submitted√(3/2) inequality is not sharp within its own sign-matrix domain."
+    },
+    {
+      "type": "h2",
+      "text": "Disposition and publication use"
+    },
+    {
+      "type": "p",
+      "text": "Hold original-mathematics credit pending a precise novelty argument. If the reusable formalization is new and useful, it can be discussed in the nonnovel/formalization paper under that separate criterion. A correct but weaker inequality does not become false merely because a stronger one is available."
+    },
+    {
+      "type": "p",
+      "text": "Independent pinned Lean4.33.1 replay now passes both exact source modules and all five requested endpoint prints, with standard kernel axioms or no axioms and no native, admitted or unknown axiom. Row3's mathematical body is unchanged apart from its import adjustment; the four-case file preserves statements and certificate data with the already documented eight arithmetic tactic repairs and explicit imports. This verifies only the universal three-row sign upper bound and the four literal finite upper bounds. Originality remains held against the stronger ordinary6/5 three-row comparison; the existing held planning value3.14721 receives no upgrade."
+    },
+    {
+      "type": "h2",
+      "text": "Verification and reproducibility"
+    },
+    {
+      "type": "p",
+      "text": "Fresh execution: sakana-FOCUS-GROTH: PASS; 2/2 custom modules compiled successfully; receipt Verification/sakana-FOCUS-GROTH-fresh-build.json. Compiler pins, source hashes and endpoint axiom outputs are in Verification. Historical receipts and finite checks do not replace fresh replay."
+    },
+    {
+      "type": "p",
+      "text": "The preserved contribution record and source locator below identify the selected certificate. No new endpoint statement is invented for this editorial manuscript."
+    },
+    {
+      "type": "reference_list",
+      "text": "Sources and attribution",
+      "items": [
+        {
+          "text": "1. pure.strath.ac.uk / strathprints006194.pdf",
+          "url": "https://pure.strath.ac.uk/ws/portalfiles/portal/73870999/strathprints006194.pdf"
+        },
+        {
+          "text": "2. arXiv source: 1712.08506",
+          "url": "https://arxiv.org/html/1712.08506"
+        },
+        {
+          "text": "3. alejandrozu/ulam-opdp-difficulty-atlas",
+          "url": "https://github.com/alejandrozu/ulam-opdp-difficulty-atlas"
+        },
+        {
+          "text": "4. alejandrozu/openmath-2026-judging / E02-FOCUS-GROTH.txt",
+          "url": "https://github.com/alejandrozu/openmath-2026-judging/blob/d0ed487f487fa7ec814ff705ab55249983fe8707/OpenMath-Judging/review/entries/E02-FOCUS-GROTH.txt"
+        },
+        {
+          "text": "Central source and adjudication archive",
+          "url": "https://github.com/alejandrozu/openmath-2026-judging"
+        }
+      ]
+    }
+  ]
+}

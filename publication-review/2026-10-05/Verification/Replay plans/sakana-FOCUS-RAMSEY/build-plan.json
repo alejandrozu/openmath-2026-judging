@@ -1,0 +1,38 @@
+{
+  "id": "sakana-FOCUS-RAMSEY",
+  "entrant": "E02",
+  "version": "4.33.1",
+  "mathlib_pin": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "source_dir": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-FOCUS-RAMSEY",
+  "modules": [
+    {
+      "module": "Lea.RamseyLifting.Lifting",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-FOCUS-RAMSEY\\Lea\\RamseyLifting\\Lifting.lean",
+      "source": "Focus_Evidence/evidence/FOCUS-RAMSEY/formal/Lea/RamseyLifting/Lifting.lean",
+      "sha256": "989684e07901d8a30bf9360d467ce10b30cab0999eebb4ad6ee72ba55e120fd4"
+    },
+    {
+      "module": "Limit",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-FOCUS-RAMSEY\\Limit.lean",
+      "source": "Focus_Evidence/evidence/FOCUS-RAMSEY/formal/Limit.lean",
+      "sha256": "afd36193ffa47a58f052faad63e20905389d8f01d599d2be7c9955b000403291"
+    }
+  ],
+  "endpoints": [
+    "Lea.RamseyLifting.density_sub_P_abs_le",
+    "Lea.RamseyLifting.lifting_bound",
+    "Lea.RamseyLifting.density_tendsto",
+    "Lea.RamseyC4.c4_le_Pval"
+  ],
+  "roots": [
+    "Lea.RamseyLifting.Lifting",
+    "Limit"
+  ],
+  "audit_modules": [
+    "FreshAudit1.lean"
+  ],
+  "lean_options": {},
+  "static_review_contexts": [],
+  "status": "PLANNED_NOT_RUN",
+  "builds": []
+}

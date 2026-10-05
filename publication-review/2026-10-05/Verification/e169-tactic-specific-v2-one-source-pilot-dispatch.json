@@ -1,0 +1,40 @@
+{
+  "status": "ROOT_AUTHORIZED_SINGLE_COLD_SOURCE_PILOT_DISPATCH",
+  "dispatch_utc": "2026-10-05T02:50:08.886737+00:00",
+  "authorization": "Root explicitly authorized exactly one solo cold source after actual A060 dispatcher exit and retained main-queue hold; no continuation/header change/higher cap",
+  "boundary": "main-whole-lease-boundary-20261005T024847Z.completed.json",
+  "project": "sakana-erdos169-fourap-tactic-specific-v2",
+  "runner_sha256": "1a191a331fc672e4ae369c51d819d13274cd28b1ca47300f023f19907fc516b6",
+  "proposal_sha256": "6734d4fd8ac626a8cbfe1199167a401a085a1359693bcd95e74431139810d48f",
+  "source_plan_sha256": "8b183de4ccdcc543b46a8a54fd17a7b41a37ebd13afb8b53c9598e226f2b1e09",
+  "root_identity_review_sha256": "bded1e27d1a92e1d505bb51c984aa5a1f1b2a42537afcf9e37c83b5bb19ad64f",
+  "preflight": {
+    "free_physical_bytes": 11093467136,
+    "total_physical_bytes": 34024419328,
+    "available_commit_bytes": 11621953536,
+    "total_commit_limit_bytes": 60437172224,
+    "free_disk_bytes": 6596509696
+  },
+  "resource_policy": {
+    "dispatch_disk_bytes": 4000000000,
+    "dispatch_physical_bytes": 6442450944,
+    "dispatch_commit_bytes": 5368709120,
+    "continuous_disk_bytes": 1000000000,
+    "continuous_physical_bytes": 3221225472,
+    "continuous_commit_bytes": 1073741824,
+    "own_job_private_cap_bytes": 6442450944,
+    "lean_threads": 1,
+    "baseline_or_heavy_source_scheduling": "Explicit root lease required; do not overlap a heavy Assembly attempt with the main queue"
+  },
+  "maximum_new_source_invocations": 1,
+  "original_and_v1_receipts": [
+    {
+      "receipt": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\sakana-erdos169-fourap-fresh-build.json",
+      "sha256": "1d395cae83c4d623950359dccccdab24d8777c39ffee69c54795226b187d7875"
+    },
+    {
+      "receipt": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\sakana-erdos169-fourap-import-pruned-diagnostic-fresh-build.json",
+      "sha256": "689494114098170847557c105ece1a984c30d9bbf287caa71c29135ea768f1fc"
+    }
+  ]
+}

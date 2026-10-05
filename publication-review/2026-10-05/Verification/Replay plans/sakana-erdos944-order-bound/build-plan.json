@@ -1,0 +1,42 @@
+{
+  "id": "sakana-erdos944-order-bound",
+  "entrant": "E02",
+  "version": "4.34.1",
+  "mathlib_pin": "d13f23b723b8a846827a245b89c10fc7d3f11612",
+  "source_dir": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos944-order-bound",
+  "modules": [
+    {
+      "module": "OpHack.Erdos944Graph",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos944-order-bound\\OpHack\\Erdos944Graph.lean",
+      "source": "Reproduction_Sources/erdos944-order-bound/OpHack/Erdos944Graph.lean",
+      "sha256": "359714b038115b65e9129b006bd731e2b2da74b215dbdde385782f1b1aa0177d"
+    },
+    {
+      "module": "CriticalCodeBound",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos944-order-bound\\CriticalCodeBound.lean",
+      "source": "Reproduction_Sources/erdos944-order-bound/CriticalCodeBound.lean",
+      "sha256": "0d04fbe2740dc9c550dc5a3645d89e4023599d2375b352dcee32faba11de4c5a"
+    },
+    {
+      "module": "OpHack.Erdos944Bounds",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos944-order-bound\\OpHack\\Erdos944Bounds.lean",
+      "source": "Reproduction_Sources/erdos944-order-bound/OpHack/Erdos944Bounds.lean",
+      "sha256": "8f9e544d0e9f465f8d92d0c0b878ab2bd9b542c0c969eaa4e2d7c908acec27f4"
+    }
+  ],
+  "endpoints": [
+    "Erdos944Bounds.erdos944_order_linear",
+    "Erdos944Bounds.erdos944_order_quadratic",
+    "Erdos944Bounds.erdos944_order_exact"
+  ],
+  "roots": [
+    "OpHack.Erdos944Bounds"
+  ],
+  "audit_modules": [
+    "FreshAudit1.lean"
+  ],
+  "lean_options": {},
+  "static_review_contexts": [],
+  "status": "PLANNED_NOT_RUN",
+  "builds": []
+}

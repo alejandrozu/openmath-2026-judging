@@ -1,0 +1,187 @@
+{
+  "title": "An exact39-line arrangement with471 triangular faces",
+  "blocks": [
+    {
+      "type": "title",
+      "text": "An exact39-line arrangement with471 triangular faces"
+    },
+    {
+      "type": "subtitle",
+      "text": "Provisional mathematical authors: Woohyuk Kang"
+    },
+    {
+      "type": "small",
+      "text": "Judging and evaluation record: the submissions discussed in this document have been judged and evaluated by Alejandro Zarzuelo Urdiales for OpenMath 2026. This dated review records the stated verification, classification and unresolved holds; it is a preliminary evaluation rather than a signed award decision."
+    },
+    {
+      "type": "small",
+      "text": "Event provenance: OpenMath 2026 ran 27 September–2 October 2026 with worldwide online participation. Detailed organizer listings specify Harvard Innovation Labs for the 27 September in-person event; the OpenMath programme advertises a hybrid kickoff at MIT. Sundai identifies its Harvard/MIT community. Organizer sources: https://rsihouse.ai/openmath ; https://luma.com/yzp9abvr ; https://www.sundai.club/events/boston/recursive-learning-hack-with-harvard-innovation-labs"
+    },
+    {
+      "type": "small",
+      "text": "Woohyuk Kang — HTPeo; Kyung Hee University, CS&E."
+    },
+    {
+      "type": "small",
+      "text": "Affiliations follow the recorded author declarations or public institutional/profile sources. Preferred author names, author order and publication affiliations await author review. This editorial compilation does not establish anthology coauthorship."
+    },
+    {
+      "type": "subtitle",
+      "text": "Original-result working manuscript | OpenMath 2026 | 5 October 2026"
+    },
+    {
+      "type": "small",
+      "text": "Central source and adjudication archive: https://github.com/alejandrozu/openmath-2026-judging"
+    },
+    {
+      "type": "h2",
+      "text": "Abstract"
+    },
+    {
+      "type": "p",
+      "text": "Thirty-nine explicit rational straight lines form a simple arrangement with471 bounded triangular faces. Exact geometry independently confirms the data and improves the recorded pre-event470 construction by one; no optimality is claimed."
+    },
+    {
+      "type": "theorem",
+      "text": "There exists a simple arrangement of39 ordinary straight lines with471 bounded triangular faces; hence K(39)≥471."
+    },
+    {
+      "type": "h2",
+      "text": "Kobon triangles and the exact theorem"
+    },
+    {
+      "type": "p",
+      "text": "In the ordinary straight-line Kobon problem, count bounded triangular faces formed by the arrangement, with disjoint interiors. A triple of lines can determine a geometric triangle whose interior is crossed by other lines; such a triangle is not an arrangement face and must not be counted. The submitted39-line certificate has471 actual bounded triangular faces."
+    },
+    {
+      "type": "p",
+      "text": "The arrangement is simple: no parallel pairs, no duplicate lines and no triple concurrence. All 741 pair intersections are distinct. The freshly replayed formal endpoints carry the rational construction into actual real triangle faces and pairwise interior-disjointness."
+    },
+    {
+      "type": "h2",
+      "text": "Independent exact geometry"
+    },
+    {
+      "type": "p",
+      "text": "The ordinary audit normalizes line equations, computes every rational intersection and orders the intersection points on each line. A candidate triangle is counted only when each of its three sides joins consecutive arrangement vertices. This adjacency condition excludes a side cut by another intersection and ensures the bounded triangular-face interpretation."
+    },
+    {
+      "type": "p",
+      "text": "The independent recount gives471, using reviewer-owned exact arithmetic and without executing the entrant's search program. Its simple-arrangement checks agree with the source. The full line list and the deterministic face list belong in supplementary JSON, accompanied by a small visualization for intuition. A plot alone cannot certify the count because close intersections may be visually indistinguishable."
+    },
+    {
+      "type": "h2",
+      "text": "Baseline comparison and originality"
+    },
+    {
+      "type": "p",
+      "text": "The pre-event organizer source already contains a simple39-line470-triangle arrangement and a matching SimpleLowerBound39470 theorem. An independent recount gives470 for those same741 distinct-intersection conventions. The proposed improvement is therefore one triangle, not an improvement from468 obtained by overlooking the stronger pre-event certificate."
+    },
+    {
+      "type": "p",
+      "text": "The historical straight-line/pseudoline distinction also matters. Generic doubling formulas in the located literature can concern pseudolines; they do not automatically prove stretchability of the doubled result. The cited straight-line recursive sequences do not already establish39≥471. This clears those particular comparisons, while a specialist historical check remains necessary before a numerical-record headline."
+    },
+    {
+      "type": "h2",
+      "text": "Publication and formal boundary"
+    },
+    {
+      "type": "p",
+      "text": "This is a concise exact-construction note, with a natural theorem K(39)≥471. It does not assert K(39)=471, attainment of the general upper bound, or a new construction at every order. Keep the39-line lower certificate separate from the known18-line93 reconstruction and unrelated upper-bound conjectures."
+    },
+    {
+      "type": "p",
+      "text": "This publication pass independently replayed all 55 exact frozen authored source modules and the selected audit under Lean 4.33.1 and Mathlib 0df444a360eaa60ab8c11dca51a86af692955474, finishing on 5 October 2026 at 02:18:01 UTC. All invocations and all seven selected axiom prints passed. The concrete certificate uses only propext, sol_simple is axiom-free, and the actual real-face lower bound, interior-disjointness and face-checker equivalence use only standard kernel axioms. No selected theorem depends on admitted, native-evaluation or unknown axioms. This closes the requested formal geometric verification of the 39-line/471-face construction; its historical originality and competition placement remain separate. Receipt: Verification/htpeo-kobon471-fresh-build.json."
+    },
+    {
+      "type": "small",
+      "text": "This short manuscript records the construction and selected endpoints. The companion Original results anthology contains the extended ordinary proof exposition and its explicitly stated premises; the preserved Lean source remains the complete formal proof record."
+    },
+    {
+      "type": "h2",
+      "text": "Verification and reproducibility"
+    },
+    {
+      "type": "p",
+      "text": "Fresh execution: htpeo-kobon471: PASS; 55/55 custom modules compiled successfully; receipt Verification/htpeo-kobon471-fresh-build.json. Compiler pins, source hashes and endpoint axiom outputs are in Verification. Historical receipts and finite checks do not replace fresh replay."
+    },
+    {
+      "type": "keep_start",
+      "text": ""
+    },
+    {
+      "type": "h2",
+      "text": "Kobon.kobon_lower_bound"
+    },
+    {
+      "type": "code",
+      "text": "theorem kobon_lower_bound :\n    ∃ L : List Line, L.length = 39 ∧ (∀ l ∈ L, l.a ≠ 0 ∨ l.b ≠ 0) ∧\n      L.Pairwise (fun p q => ¬ ∀ P : ℝ × ℝ, OnLine p P ↔ OnLine q P) ∧\n      {t : ℕ × ℕ × ℕ | t.1 < t.2.1 ∧ t.2.1 < t.2.2 ∧ t.2.2 < 39 ∧\n        IsTriFace L (nth L t.1) (nth L t.2.1) (nth L t.2.2)}.ncard = 471"
+    },
+    {
+      "type": "small",
+      "text": "Source: entries/hills/kobon-n39-lavaskiller/lean/KobonCert/Main.lean:29."
+    },
+    {
+      "type": "small",
+      "text": "Source SHA-256: eaa912ef13c79c074821a1a674f51de8dcf0c2b4a628e8a670d4633a9a579311"
+    },
+    {
+      "type": "keep_end",
+      "text": ""
+    },
+    {
+      "type": "keep_start",
+      "text": ""
+    },
+    {
+      "type": "h2",
+      "text": "Kobon.kobon_nonoverlapping"
+    },
+    {
+      "type": "code",
+      "text": "theorem kobon_nonoverlapping :\n    ∃ (L : List Line) (T : Finset (ℕ × ℕ × ℕ)) (tri : ℕ × ℕ × ℕ → (ℝ × ℝ) × (ℝ × ℝ) × (ℝ × ℝ)),\n      L.length = 39 ∧ (∀ l ∈ L, l.a ≠ 0 ∨ l.b ≠ 0) ∧\n      L.Pairwise (fun p q => ¬ ∀ P : ℝ × ℝ, OnLine p P ↔ OnLine q P) ∧\n      T.card = 471 ∧\n      (∀ t ∈ T, t.1 < t.2.1 ∧ t.2.1 < t.2.2 ∧ t.2.2 < 39 ∧\n        TriWitness L (nth L t.1) (nth L t.2.1) (nth L t.2.2) (tri t).1 (tri t).2.1 (tri t).2.2) ∧\n      (∀ t ∈ T, ∀ t' ∈ T, t ≠ t' →\n        Disjoint (openTri (tri t).1 (tri t).2.1 (tri t).2.2)\n          (openTri (tri t').1 (tri t').2.1 (tri t').2.2))"
+    },
+    {
+      "type": "small",
+      "text": "Source: entries/hills/kobon-n39-lavaskiller/lean/KobonCert/Main.lean:40."
+    },
+    {
+      "type": "small",
+      "text": "Source SHA-256: eaa912ef13c79c074821a1a674f51de8dcf0c2b4a628e8a670d4633a9a579311"
+    },
+    {
+      "type": "reference_list",
+      "text": "Sources and attribution",
+      "items": [
+        {
+          "text": "1. alejandrozu/kobon-proof",
+          "url": "https://github.com/alejandrozu/kobon-proof/commit/99fdc8ec1ef8b1fb22c3da32b011b7361762e958"
+        },
+        {
+          "text": "2. arXiv source: 0706.0723v1",
+          "url": "https://arxiv.org/html/0706.0723v1"
+        },
+        {
+          "text": "3. zegalur.github.io / kobon.html",
+          "url": "https://zegalur.github.io/line-order/gallery/kobon.html"
+        },
+        {
+          "text": "4. alejandrozu/ulam-opdp-difficulty-atlas",
+          "url": "https://github.com/alejandrozu/ulam-opdp-difficulty-atlas"
+        },
+        {
+          "text": "5. alejandrozu/openmath-2026-judging / E08-KOBON39.txt",
+          "url": "https://github.com/alejandrozu/openmath-2026-judging/blob/d0ed487f487fa7ec814ff705ab55249983fe8707/OpenMath-Judging/review/entries/E08-KOBON39.txt"
+        },
+        {
+          "text": "Central source and adjudication archive",
+          "url": "https://github.com/alejandrozu/openmath-2026-judging"
+        }
+      ]
+    },
+    {
+      "type": "keep_end",
+      "text": ""
+    }
+  ]
+}

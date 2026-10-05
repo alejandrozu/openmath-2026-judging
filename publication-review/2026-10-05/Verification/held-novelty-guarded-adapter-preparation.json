@@ -1,0 +1,34 @@
+{
+  "status": "PREPARED_NOT_EXECUTED_ROOT_REVIEW_REQUIRED",
+  "original_runner": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\run_source_plan.py",
+  "original_runner_sha256": "70ff209c7ac651c1e0ab25e9f629a9fc50c4b85ed1f510666e851e8f69c53534",
+  "derived_runner": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\run_held_novelty_plan.py",
+  "derived_runner_sha256": "56952859e73e8773c44c84328e50144580527b82280da9d22229a2862ecedc10",
+  "exact_operational_changes": [
+    {
+      "before": "'matt-unitary-current','htpeo-dms-current'}",
+      "after": "'matt-unitary-current','htpeo-dms-current','sakana-FOCUS-RAMSEY','sakana-FOCUS-GROTH','htpeo-ramsey-current'}"
+    },
+    {
+      "before": " assert project=='sakana-a000224' and third_worker_continuation and not full_mathlib_source_mode, 'Only the root-authorized A000 granular remainder with separate whole-import lease deferred'",
+      "after": " assert project in {'sakana-a000224','htpeo-ramsey-current'} and third_worker_guarded and not full_mathlib_source_mode, 'Only the explicitly root-reviewed mixed-source granular remainder; whole-import lease deferred'\n assert project!='sakana-a000224' or third_worker_continuation,'Existing narrower A000 deferral policy unchanged'"
+    },
+    {
+      "before": "paths=[str(dest)]",
+      "after": "if full_mathlib_source_mode and project=='htpeo-ramsey-current':\n evidence=json.loads((BASE/'ht-ramsey-mixed-source-boundary-evidence.json').read_text())\n assert evidence['source_plan_sha256']==hashlib.sha256((dest/'build-plan.json').read_bytes()).hexdigest()\n expected={m['module']:m['sha256'] for m in evidence['whole_authored_modules']}\n whole=set(full_scope['authored_transitive_whole_Mathlib_closure'])\n assert whole==set(expected) and len(whole)==11\n assert lease.get('ht_ramsey_whole_scope_only_authorized') is True,'Separate reviewed HT eleven-module whole-import lease required'\n assert prior,'All2092 granular sources require actual cold source successes before whole-import scope'\n granular={m['module'] for m in plan['modules']}-whole\n actual_passes={r['module'] for r in prior['builds'] if r['exit']==0 and not r.get('stop_reason')}\n assert len(granular)==2092 and granular<=actual_passes\n for m in plan['modules']:\n  if m['module'] in expected:assert m['sha256']==expected[m['module']]\n for a in evidence['selected_audits']:assert hashlib.sha256((dest/a['name']).read_bytes()).hexdigest()==a['sha256']\npaths=[str(dest)]"
+    }
+  ],
+  "held_sources": "All original entrant2107 source files and every selected audit source are unchanged.",
+  "ht_granular_command_flags": [
+    "--pilot-third-slot",
+    "--defer-whole-imports"
+  ],
+  "ht_whole_command_flags": [
+    "--pilot-third-slot",
+    "--full-mathlib-source-mode"
+  ],
+  "resource_policy": "Granular6GiB own/5GiB commit; separate whole10GiB own/11GiB commit after2092 granular passes; existing physical/disk/commit floors and suspended-before-job-assignment behavior unchanged.",
+  "boundary_evidence": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\ht-ramsey-mixed-source-boundary-evidence.json",
+  "boundary_evidence_sha256": "2ff0aab9bd272037442f459825824e57f62108362ca7a2880cec5663c0b1d77f",
+  "qualification": "Prepared isolated adapter only; no compiler or source change. It additionally whitelists the two short held candidates for later actual fresh attempts under the already authorized6/5 guard."
+}

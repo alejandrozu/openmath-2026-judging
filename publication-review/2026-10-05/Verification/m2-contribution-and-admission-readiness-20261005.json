@@ -1,0 +1,235 @@
+{
+  "status": "READ_ONLY_SOURCE_CONTRIBUTION_AND_EXECUTION_READINESS_NOT_PROOF_PASS_OR_NOVELTY_ACCEPTANCE",
+  "created_utc": "2026-10-05T03:01:50.990151+00:00",
+  "preparation_sha256": "c2eb16e66fd9f5bacf75ad470cd25846d412ca8780a8a7d24c119d4b366c6ee5",
+  "prepared_runner_sha256": "6055abb09b2c9b985b69392af5cb3e8d2747a2027a3108fead72ed57ccc4e67c",
+  "projects": [
+    {
+      "id": "htpeo-erdos-m2",
+      "plan_sha256": "d75af96c5e21e79909e7a95646d0bf766609a46dd40bb0fc44e6308a6eb60ef6",
+      "version": "4.33.1",
+      "mathlib_pin": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "granular_source_count": 101,
+      "deferred_whole_source_count": 21,
+      "selected_print_count": 37,
+      "unique_selected_name_count": 37,
+      "granular_audit_names": [
+        "FreshAuditStar6Simple.lean"
+      ],
+      "granular_selected_print_count": 4,
+      "source_archive_sha256": null,
+      "frozen_source_commit": "76c63b8e425e551a930060a6871b84fe3b4780db",
+      "contribution": "Formalizations of known Erdős variants, plus a reusable finite-incidence graph library and its Mathlib SimpleGraph bridge. The granular Star6Simple closure has 101 source files; it transfers perfect-matching and small-order star-edge-coloring results from the internal incidence model to actual simple graphs.",
+      "meaningful_selected_scope": "For a connected bridgeless cubic simple graph, Schoenberger gives a perfect matching containing any specified edge and another excluding it; Petersen existence follows. Additional endpoints give six-color star edge colorings for bridgeless cubic simple graphs on at most 14 vertices and subcubic simple graphs on at most 7 vertices. These are exact finite/known-theorem scopes; they do not prove the unrestricted six-color conjecture.",
+      "source_locators": [
+        "Star6Simple.lean:140",
+        "Star6Simple.lean:155",
+        "Star6Simple.lean:165",
+        "Star6Simple.lean:174",
+        "StarCert.lean:66"
+      ],
+      "priority": "SECOND_GRANULAR_RESULT_SCOPE_AFTER_STD_PILOT",
+      "expected_admissions": "The exact 101-source selected Star6Simple custom closure has no lexical sorry or explicit authored axioms in the preparation scan, and no FC Answer elaborator. StarCert.lean:66 uses native_decide for the fixed K4-subdivision star-coloring certificate, so finite-coloring endpoints may inherit native/compiler trust; ordinary matching endpoints may stay standard. Only actual compiled raw prints determine the selected dependence. The 21 FC-dependent known-Erdős wrappers and their other 21 audits remain wholly deferred."
+    },
+    {
+      "id": "sakana-m2-research",
+      "plan_sha256": "e640756c85349928b6459d41cda81e58f8831cd6240d1e7ddef09425da61fd6c",
+      "version": "4.33.1",
+      "mathlib_pin": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "granular_source_count": 224,
+      "deferred_whole_source_count": 25,
+      "selected_print_count": 9,
+      "unique_selected_name_count": 9,
+      "granular_audit_names": [],
+      "granular_selected_print_count": 0,
+      "source_archive_sha256": null,
+      "frozen_source_commit": null,
+      "contribution": "Reusable formal proof work for nine selected elementary/known research endpoints: A007406 rational p-adic valuations and a prime-case gcd fact, reverse-add in base3, an even regular-polygon chord multiplicity bound, and the other exact supplied congruence/set endpoints. The224 granular source files primarily prepare the vendored FormalConjectures support library.",
+      "meaningful_selected_scope": "The selected endpoints are individually preserved by name and audit in the source plan. All seven ProofUnit root modules import literal Mathlib and/or the whole FC utility, so no selected mathematical endpoint is eligible for the granular adapter. Successful supporting-library compilation alone must never be presented as verification of these nine results.",
+      "source_locators": [
+        "FreshAudit1.lean",
+        "FreshAudit2.lean",
+        "FreshAudit3.lean",
+        "FreshAudit4.lean",
+        "FreshAudit5.lean",
+        "FreshAudit6.lean",
+        "FreshAudit7.lean"
+      ],
+      "priority": "GRANULAR_LIBRARY_PREPARATION_ONLY_SELECTED_RESULT_AUDITS_DEFERRED",
+      "expected_admissions": "Selected source-closure placeholders and Answer behavior are recorded audit by audit in the exact preparation. No selected theorem dependence can be concluded merely from unrelated sorry tokens in the imported library; actual raw axiom outputs and intended definitions are required."
+    },
+    {
+      "id": "koerbser-climb1-library",
+      "plan_sha256": "4160a948abbfc5ca4cbcd456ba300655362f96be4baaba7ba03a9edf029ded99",
+      "version": "4.33.1",
+      "mathlib_pin": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "granular_source_count": 0,
+      "deferred_whole_source_count": 18,
+      "selected_print_count": 4,
+      "unique_selected_name_count": 4,
+      "granular_audit_names": [],
+      "granular_selected_print_count": 0,
+      "source_archive_sha256": "2f6eb490afef74939696c1b4edb644b018c6315b00115c4c5f707b860187d5b8",
+      "frozen_source_commit": null,
+      "contribution": "A source-explicit reciprocal-divergence/dyadic-density criterion with a lacunary-window converse construction, and the generalized von Neumann four-term progression inequality with normalization checks. The original development archive also carries related Fourier, density-increment, sphere, quadratic and prime-transfer modules; these are reusable formal infrastructure, not a proof of the missing inverse theorem or the full Erdős conjecture.",
+      "meaningful_selected_scope": "Converse.maxCardDyadicSummable_iff equates the lengthK reciprocal-divergence conclusion with dyadic extremal-density summability for K>=3. VonNeumann4 bounds the eighth power of the unnormalized four-AP count by n^12 times the real U3 sum when2 and3 are units modulo n and the first three functions are1-bounded. Its two constant-one endpoint checks confirm n^2 and n^4 count/normalization powers.",
+      "source_locators": [
+        "Converse.lean:595",
+        "VonNeumann4.lean:241",
+        "VonNeumann4.lean:340",
+        "VonNeumann4.lean:351"
+      ],
+      "priority": "ENTIRE18_SOURCE_SCOPE_REQUIRES_SEPARATE_WHOLE_IMPORT_LEASE",
+      "expected_admissions": "Every custom module descends from the actual FCutil whole-Mathlib roots. All18 sources and both audits remain deferred. A zero count of direct authored umbrella imports is insufficient for granular eligibility. Actual compiled axiom scope is still unconfirmed."
+    },
+    {
+      "id": "koerbser-three-term",
+      "plan_sha256": "03335f8dae0fe01722dd8c6491c127a1bad3ea1c0b92833c289038dfc5621df8",
+      "version": "4.33.1",
+      "mathlib_pin": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "granular_source_count": 45,
+      "deferred_whole_source_count": 35,
+      "selected_print_count": 3,
+      "unique_selected_name_count": 3,
+      "granular_audit_names": [],
+      "granular_selected_print_count": 0,
+      "source_archive_sha256": "2f6eb490afef74939696c1b4edb644b018c6315b00115c4c5f707b860187d5b8",
+      "frozen_source_commit": null,
+      "contribution": "Definition bridges between the exact finite-set AP-free predicate and the additive Roth-number library, followed by dyadic summability and the three-term reciprocal-divergence case using the vendored Alexeev/Erdos140 quantitative input. This imports the deep known bound; it is not a new proof of Kelley-Meka or a solution at every AP length.",
+      "meaningful_selected_scope": "The selected Solution theorem is the three-term conclusion. The two other selected endpoints are maxCard_three_le_addRothNumber and summable_maxCard_three_dyadic. All three require whole-import descendants. The45 granular files can prepare upstream machinery, but they do not certify the selected Solution theorem.",
+      "source_locators": [
+        "Solution.lean:85",
+        "Solution.lean:107",
+        "Solution.lean:267"
+      ],
+      "priority": "GRANULAR_HELPERS_ONLY_FINAL3_PRINTS_DEFERRED",
+      "expected_admissions": "The quantitative input must be credited and checked at its actual source scope. The exact audit-closure admission sites and FC Answer elaborator presence are recorded in preparation; eventual clean selected prints still require statement-fidelity review."
+    },
+    {
+      "id": "jamie-ap-bridges",
+      "plan_sha256": "86b3947ca573c0afb6643cfdd436bff031857e9fead0749a7caaa3733b8f5330",
+      "version": "4.33.1",
+      "mathlib_pin": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "granular_source_count": 0,
+      "deferred_whole_source_count": 2,
+      "selected_print_count": 3,
+      "unique_selected_name_count": 2,
+      "granular_audit_names": [],
+      "granular_selected_print_count": 0,
+      "source_archive_sha256": "f2d9a1b32f37819737d2348f11772a326298ca80091e3c4cd86c00f8a8eb9d7f",
+      "frozen_source_commit": null,
+      "contribution": "Small reusable bridges for extracting a shorter arithmetic progression from a longer one and for replacing frequent-at-top existence of lengths by existence at every length. These make the event hill formulation easier to compare with conventional AP statements.",
+      "meaningful_selected_scope": "H7_D3 and H7_D4 both print ap_subprogression_of_le separately; H7_D4 also prints ap_frequently_iff_every_length. Three raw requested outputs represent two unique names in this project, and the duplicate must not be counted as an additional mathematical result.",
+      "source_locators": [
+        "FreshAudit3.lean",
+        "FreshAudit4.lean"
+      ],
+      "priority": "BOTH_SOURCES_AND_AUDITS_REQUIRE_FCUTIl_WHOLE_IMPORT_LEASE",
+      "expected_admissions": "The preserved H7 proof receipt pins Lean 4.33.1 and Mathlib0df444a360eaa60ab8c11dca51a86af692955474. Exact source semantics and selected axiom lists remain for actual replay; no compiler or dependency version is guessed from a different repository root."
+    },
+    {
+      "id": "sundai-organizer-bridge",
+      "plan_sha256": "f03bb3fba8072c0825ab34879d405607b89522bc729a97b4d6598740e728a21a",
+      "version": "4.33.1",
+      "mathlib_pin": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "granular_source_count": 0,
+      "deferred_whole_source_count": 1,
+      "selected_print_count": 5,
+      "unique_selected_name_count": 5,
+      "granular_audit_names": [],
+      "granular_selected_print_count": 0,
+      "source_archive_sha256": null,
+      "frozen_source_commit": null,
+      "contribution": "Organizer-written semantic bridge, not a submitted entrant result or a new publication family. It transfers positive-step ContainsAP on Fin k into a subset with exact cardinality and Set.IsAPOfLength, then transfers all lengths to the event Filter.atTop conclusion.",
+      "meaningful_selected_scope": "Five endpoint prints cover the finite-range/cardinality bridge, all-lengths/frequency transfer, and the cofinite and affine-tail special cases. This is useful statement-fidelity infrastructure and remains score0.",
+      "source_locators": [
+        "Erdos3Bridge.lean:15",
+        "Erdos3Bridge.lean:46",
+        "Erdos3Bridge.lean:55",
+        "Erdos3Bridge.lean:66",
+        "Erdos3Bridge.lean:75"
+      ],
+      "priority": "ONE_SOURCE_AND_AUDIT_REQUIRES_WHOLE_FCUTIl_LEASE",
+      "expected_admissions": "The Std-only elementary source does not eliminate the bridge module’s literal FCutil import or its whole-Mathlib prerequisite. Compatible utility interpretation is explicit; this does not replace an original-image E65 replay."
+    },
+    {
+      "id": "sundai-erdos3-current",
+      "plan_sha256": "8f1074283a569367dfe9141f7df474261f88b1a11506da562badb1c9015d038b",
+      "version": "4.33.1",
+      "mathlib_pin": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "granular_source_count": 1,
+      "deferred_whole_source_count": 6,
+      "selected_print_count": 56,
+      "unique_selected_name_count": 56,
+      "granular_audit_names": [
+        "FreshAuditErdos3SpecialCases.lean"
+      ],
+      "granular_selected_print_count": 14,
+      "source_archive_sha256": null,
+      "frozen_source_commit": "492fd601f9c76e44dcb87f683a5ea6ccb7aaefc9",
+      "contribution": "Cross-scale and dyadic reductions between AP-free reciprocal summability and finite extremal counts, plus Roth-number definition bridges and elementary special cases. The finite density reductions make explicit which quantitative hypotheses remain missing; elementary examples show unboundedness alone is insufficient.",
+      "meaningful_selected_scope": "Erdos3SpecialCases imports only Std. Its14 requested outputs cover monotonicity/prefix extraction, unbounded available lengths, cofinite and affine-tail sets, multiples, unbounded two-term existence, and the unbounded powers-of-two counterexample to arbitrary AP lengths. It is a1-source/14-print source-identical granular pilot. The other six modules and42 printed endpoints require FCutil and remain deferred.",
+      "source_locators": [
+        "Erdos3SpecialCases.lean",
+        "FreshAuditErdos3SpecialCases.lean"
+      ],
+      "priority": "FIRST_SELF_CONTAINED_GRANULAR_PILOT_IF_A_LATER_COMPANION_LEASE_IS_GRANTED",
+      "expected_admissions": "No lexical sorry, explicit authored axiom or native-evaluation syntax is present in the selected Std-only source closure. Standard-kernel output is expected, subject to actual replay. The six compatible-FC-based modules have separately recorded source/definition/admission scopes; original E65 image provenance is not silently substituted."
+    },
+    {
+      "id": "official-fc-util433",
+      "plan_sha256": "104c71d4916cb10b663afd6e5107f928ca18e54b99bcaaae64dd6adc60ff45e7",
+      "version": "4.33.1",
+      "mathlib_pin": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "granular_source_count": 229,
+      "deferred_whole_source_count": 4,
+      "selected_print_count": 1,
+      "unique_selected_name_count": 1,
+      "granular_audit_names": [],
+      "granular_selected_print_count": 0,
+      "source_archive_sha256": null,
+      "frozen_source_commit": null,
+      "contribution": "Pinned additional support library, not an entrant mathematical family. Its definitions and attributes make the known-result packets comparable; its import roots control the genuine whole-library footprint.",
+      "meaningful_selected_scope": "229 of233 source modules are granular. FormalConjecturesForMathlib.Combinatorics.Additive.Coset, FormalConjecturesForMathlib.NumberTheory.Carmichael, FormalConjecturesForMathlib and FormalConjecturesUtil are the four whole-import descendants. The supplied Nat.add_comm dependency audit imports FCutil, so that audit is deferred rather than rewritten to a vacuous minimal import.",
+      "source_locators": [
+        "FormalConjecturesUtil.lean",
+        "FormalConjecturesForMathlib.lean",
+        "FreshDependencyAudit.lean"
+      ],
+      "priority": "PREREQUISITE_LIBRARY_PREPARATION_ONLY_ROOT_AND_AUDIT_NEED_SEPARATE_LEASE",
+      "expected_admissions": "The Answer elaborator’s default Prop answer(sorry) behavior can simplify an intended problem statement to True, while non-Prop placeholders may retain sorryAx. Its safe definition declaration is not itself an added kernel axiom. Actual endpoint axiom cleanliness and mathematical statement fidelity must be assessed independently."
+    }
+  ],
+  "recommended_order": [
+    "sundai-erdos3-current (one Std-only source and14 requested outputs)",
+    "htpeo-erdos-m2 (101-source Star6Simple closure and4 outputs)",
+    "Remaining granular support libraries only if useful; whole source and selected audit scopes await a separate literal importer lease"
+  ],
+  "original_E65_provenance_boundary": {
+    "comparison_receipt_sha256": "cf56ceac82c6a02577655783798548ab3119f310f176eff8de6e9e6c7ac90a76",
+    "original_source_archive_sha256": "014333c7edffa94686ef4be2e30e871c0df03ac8feceab1efab53df9793b31e5",
+    "original_compiler": "4.33.1",
+    "original_dependency_pins": {
+      "mathlib": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "plausible": "b7eb3304aeae834b12dda98993a37f6a41f6f0bb",
+      "LeanSearchClient": "5f4d51b81cbd3f6b32b156bfad9056621a040404",
+      "importGraph": "16f02aa7642864af59f1ff0e384a015994db9118",
+      "proofwidgets": "4be2e3d5087eeb272cf5a8853b8f9dd025ef5957",
+      "aesop": "3448c0bcc5ce01b2d1546e483ec3620e32df3d0e",
+      "Qq": "92c15be17b7caf78c2ad767ec40f89052d908d81",
+      "batteries": "4488d40d070b9700d4d5a6aa342f0d40c31b2a2d",
+      "Cli": "6130a47896ce867c6a4a55373441e59e565bad0f"
+    },
+    "all_package_pins_match_prepared_official_dependencies": true,
+    "original_reachable_FC_module_count": 193,
+    "compatible_compared_module_count": 233,
+    "identical_source_module_count": 173,
+    "original_whole_FC_git_revision": "Not supplied by the image; deleted Git metadata and one matching file cannot establish a whole-tree Git revision",
+    "qualification": "Image-layer source identity and compiler/dependency pins are recovered. The current compatible FC utility source set has material differences. Its replay must not be labeled an original-image replay.",
+    "original_image_executed": false,
+    "original_proof_replayed": false
+  },
+  "global_fidelity_qualification": "Static source admission sites are not selected-endpoint axiom dependence. A compiled clean endpoint alone does not validate problem semantics, especially default Answer elaboration. No fresh M2 proof, extra mathematical family, placement change or outbound communication is claimed.",
+  "canonical_edit_performed": false,
+  "Lean_compiler_invoked": false
+}

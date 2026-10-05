@@ -1,0 +1,56 @@
+--- preserved-current-source-runner-70ff209c7ac651c1e0ab25e9f629a9fc50c4b85ed1f510666e851e8f69c53534
++++ prepared-only-separate-A000-post-exit-storage-runner
+@@ -13,6 +13,26 @@
+ RUNNER_SOURCE_SHA256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest()
+ AXIOM_PARSER_SOURCE_SHA256=hashlib.sha256((BASE/'audit_axioms.py').read_bytes()).hexdigest()
+ project=sys.argv[1]
++a000_post_exit_storage_enabled='--a000-post-exit-lzx-policy' in sys.argv[3:]
++if a000_post_exit_storage_enabled:
++ assert project=='sakana-a000224' and '--guarded-third-slot' in sys.argv[3:], 'Storage callback only inside separately authorized guarded A000 continuation'
++ requested_storage_proof_mode='whole-five-separate-lease' if '--full-mathlib-source-mode' in sys.argv[3:] else 'granular-defer-whole'
++ if requested_storage_proof_mode=='whole-five-separate-lease':assert '--a000-whole-scope-only' in sys.argv[3:]
++ else:assert '--defer-whole-imports' in sys.argv[3:]
++ i=sys.argv.index('--a000-post-exit-lzx-policy');a000_storage_policy_file=Path(sys.argv[i+1]).resolve()
++ i=sys.argv.index('--a000-post-exit-lzx-policy-sha256');a000_storage_policy_sha256=sys.argv[i+1]
++ assert a000_storage_policy_file.is_relative_to(BASE) and hashlib.sha256(a000_storage_policy_file.read_bytes()).hexdigest()==a000_storage_policy_sha256
++ a000_storage_policy=json.loads(a000_storage_policy_file.read_bytes())
++ assert a000_storage_policy['status']=='ROOT_APPROVED_A000_POST_EXIT_OWN_OUTPUT_LZX_INTERFACE'
++ assert a000_storage_policy['runner_sha256']==RUNNER_SOURCE_SHA256
++ assert requested_storage_proof_mode in a000_storage_policy['separately_authorized_source_resource_modes']
++ storage_spec_file=BASE/'proposals/a000-post-exit-owned-artifact-lzx-interface-preparation-20261005.json'
++ assert hashlib.sha256(storage_spec_file.read_bytes()).hexdigest()==a000_storage_policy['specification_sha256']
++ assert hashlib.sha256((BASE/'a000_post_exit_lzx_interface_prepared.py').read_bytes()).hexdigest()==a000_storage_policy['interface_sha256']
++ actual_storage_pilot=Path(a000_storage_policy['actual_A000_single_file_pilot_receipt']).resolve()
++ assert actual_storage_pilot.is_relative_to(BASE) and hashlib.sha256(actual_storage_pilot.read_bytes()).hexdigest()==a000_storage_policy['actual_A000_single_file_pilot_receipt_sha256']
++ assert json.loads(actual_storage_pilot.read_bytes())['status']=='PASS_BYTE_IDENTICAL_READABLE_STRONG_LZX_PILOT'
++ from a000_post_exit_lzx_interface_prepared import compress_after_own_source_exit
+ worker_threads=int(sys.argv[2]) if len(sys.argv)>2 else 4
+ assert 1<=worker_threads<=4
+ third_worker_pilot='--pilot-third-slot' in sys.argv[3:]
+@@ -339,6 +359,26 @@
+  if memory_observations is not None:row['third_worker_memory_observations']=memory_observations
+  if row['exit']==0:row['artifacts']=artifact_inventory(file);row['artifact_hash_provenance']='MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION'
+  plan['builds'].append(row);save();print(project,n,row['exit'],row['seconds'],flush=True)
++ if a000_post_exit_storage_enabled and row['exit']==0 and not row.get('is_endpoint_audit'):
++  # guarded_tree actually waited/closed the owned Lean job before this boundary.
++  # Keep every actual source row/option/command unchanged; only operational sidecars describe storage.
++  plan.pop('current_module',None);save()
++  try:
++   storage_result=compress_after_own_source_exit(
++    approval_file=a000_storage_policy_file,approval_sha256=a000_storage_policy_sha256,
++    source_receipt_file=report,source_receipt_sha256=hashlib.sha256(report.read_bytes()).hexdigest(),
++    completed_module=n,caller_runner_file=Path(__file__).resolve(),caller_runner_sha256=RUNNER_SOURCE_SHA256,replay_lock=lock)
++  except Exception as storage_error:
++   storage_result={'status':'POST_EXIT_STORAGE_PREFLIGHT_OR_OPERATIONAL_REVIEW_REQUIRED',
++    'source_module':n,'actual_source_exit':row['exit'],'actual_source_pass_preserved':True,
++    'operational_error':str(storage_error),'source_failure_inferred':False,'may_dispatch_next_source':False}
++   storage_history=BASE/'operational_history/a000-post-exit-storage';storage_history.mkdir(exist_ok=True)
++   storage_error_file=storage_history/(str(time.time_ns())+'-post-exit-storage-review.json')
++   with storage_error_file.open('x',encoding='utf8',newline='\n') as storage_stream:json.dump(storage_result,storage_stream,indent=2);storage_stream.write('\n')
++   storage_result['record']=str(storage_error_file)
++  print('A000_POST_EXIT_STORAGE_OPERATIONAL_RESULT',json.dumps(storage_result),flush=True)
++  if not storage_result['may_dispatch_next_source']:
++   plan['status']='SCHEDULED_RESOURCE_CHECKPOINT';plan['checkpoint_reason']='OWN_POST_EXIT_STORAGE_REVIEW_REQUIRED_SOURCE_PASS_PRESERVED';save();break
+  if stop_reason in resource_stop_reasons:
+   if independent_resource_mode:
+    deferred_resource_roots[n]={'invocation':row,'reason':stop_reason,'current_attempt':True}

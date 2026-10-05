@@ -1,0 +1,70 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,textcomp}
+\usepackage[margin=24mm]{geometry}
+\usepackage{longtable,booktabs,array,enumitem}
+\usepackage[hidelinks]{hyperref}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+\emergencystretch=3em
+\begin{document}
+{\LARGE\bfseries Exact weighted monochromatic-K4 certificates with a pending prior-bound comparison\par}\medskip
+{\small Provisional mathematical authors: Rachel Teo, Wenyi Wang, Hamdi Abderrahmene\par}\medskip
+{\small Judging and evaluation record: the submissions discussed in this document have been judged and evaluated by Alejandro Zarzuelo Urdiales for OpenMath 2026. This dated review records the stated verification, classification and unresolved holds; it is a preliminary evaluation rather than a signed award decision.\par}
+
+{\small Event provenance: OpenMath 2026 ran 27 September-2 October 2026 with worldwide online participation. Detailed organizer listings specify Harvard Innovation Labs for the 27 September in-person event; the OpenMath programme advertises a hybrid kickoff at MIT. Sundai identifies its Harvard/MIT community. Organizer sources: \url{https://rsihouse.ai/openmath} ; \url{https://luma.com/yzp9abvr} ; \url{https://www.sundai.club/events/boston/recursive-learning-hack-with-harvard-innovation-labs}\par}
+
+{\small Rachel Teo  -  Sakana AI.\par}
+
+{\small Wenyi Wang  -  Sakana AI.\par}
+
+{\small Hamdi Abderrahmene  -  Sakana AI.\par}
+
+{\small Affiliations follow the recorded author declarations or public institutional/profile sources. Preferred author names, author order and publication affiliations await author review. This editorial compilation does not establish anthology coauthorship.\par}
+
+{\small Candidate manuscript  -  originality unresolved | OpenMath 2026 | 5 October 2026\par}\medskip
+{\small Central source and adjudication archive: \url{https://github.com/alejandrozu/openmath-2026-judging}\par}
+
+\subsection{Abstract}
+A 1024-block binary template and positive integer weights give exact weighted monochromatic-K4 density 75525646867723584998137743109 / 2505750190359427899123170347008 \ensuremath{\approx} 0.030140932308. Independent exact arithmetic confirms the number. A stronger pre-event Technion announcement blocks an unqualified new-record claim; method and formalization novelty are to be assessed separately.
+
+c4 \ensuremath{\leq} 75525646867723584998137743109 / 2505750190359427899123170347008 under the specified weighted-template lifting convention; numerical record status held.
+
+\subsection{Finite weighted construction and lifting}
+A binary symmetric template on 1024 blocks is blown up using positive integer weights. The weighted ordered four-vertex probability includes repeated block choices under the specified loop convention. The exact numerator and denominator are 75525646867723584998137743109 and 2505750190359427899123170347008, giving density approximately 0.030140932308. A finite count alone does not establish an asymptotic extremal bound; the generic lifting theorem supplies graph families whose densities approach the weighted objective.
+
+Independent exact arithmetic reproduced the selected weighted number using modular counts and a Chinese-remainder reconstruction. The JSON data were compared with the Lean literals. Those numerical checks and the formal finite-to-limit theorem are different parts of the evidence. The Sakana packet evaluates the concrete count outside Lean under its submitted exact-checker protocol; the HTPeo packet also supplies a kernel count route. The common verification register must report exactly which closure and checker were freshly executed.
+
+\subsection{The pre-event comparison}
+The result is below the frozen McKay benchmark approximately 0.030142273432. However, Technion's official January 2026 announcement states c4 < 0.030139, which is stronger than 0.030140932308. The announcement establishes a specific priority lead, although it does not expose the complete prior certificate in the inspected page.
+
+Until the earlier construction and conventions are compared, this paper must not claim a new numerical record. Correct exact construction and novelty are independent questions. A genuinely different construction method, reusable certificate or first faithful formalization may still be publishable, but that delta needs its own comparison and cannot be inferred from beating an obsolete benchmark.
+
+\subsection{Concrete release gate}
+Request the earlier dated theorem and certificate from the Technion authors, compare the density normalization and target class, and obtain an independent specialist opinion. Then decide whether this is original construction mathematics, useful formalization of a known technique, or a reproduction below the frontier. Independent competition development can matter to contribution attribution without changing the chronological best-known bound.
+
+This held manuscript remains separate from the original-results anthology. Its final version should include the template/weight data, exact counting specification and lifting theorem, credit the prior bound and avoid transforming a small decimal gain into a broad Ramsey-theory claim.
+
+\subsection{Verification and reproducibility}
+On 5 October 2026, both frozen general lifting and limit modules passed the fresh Lean 4.33.1 replay, and all four requested axiom prints used only propext, Classical.choice and Quot.sound. The audited results apply to an arbitrary symmetric Boolean template with nonnegative integer weights: for N at least 4 the monochromatic unordered four-set density differs from the weighted ordered-tuple probability P by at most 6/N, and positive total weight gives the asymptotic bound c4 \ensuremath{\leq} P. Repeated block indices use the template diagonal to colour edges between distinct vertices within one block. These two modules do not evaluate the concrete 1024-block numerator or instantiate its announced rational; that count retains its separate exact-arithmetic evidence. The successful generic formalization therefore closes the pending replay check for these four statements while numerical priority and the manuscript's originality hold remain unchanged. Receipt: Verification/sakana-FOCUS-RAMSEY-fresh-build.json.
+
+\begin{samepage}
+\subsection{Lea.RamseyLifting.density\_tendsto}
+\begin{quote}\small\ttfamily theorem density\_tendsto (hA : \ensuremath{\forall} i j, A i j = A j i) (w : Fin m \ensuremath{\to} \ensuremath{\mathbb{N}}) (hQ : 0 < Qw w)\newline     (\ensuremath{\varepsilon} : \ensuremath{\mathbb{Q}}) (h\ensuremath{\varepsilon} : 0 < \ensuremath{\varepsilon}) :\newline     \ensuremath{\exists} T : \ensuremath{\mathbb{N}}, 0 < T \ensuremath{\wedge} \ensuremath{\forall} t \ensuremath{\geq} T,\newline       |(M4 A (fun i => t * w i) : \ensuremath{\mathbb{Q}}) / (((t * Qw w).choose 4 : \ensuremath{\mathbb{N}}) : \ensuremath{\mathbb{Q}}) - Pval A w| \ensuremath{\leq} \ensuremath{\varepsilon}\end{quote}
+{\small Source: Verification/Replay plans/sakana-FOCUS-RAMSEY/Lea/RamseyLifting/Lifting.lean:1127.\par}
+
+{\small Source SHA-256: 989684e07901d8a30bf9360d467ce10b30cab0999eebb4ad6ee72ba55e120fd4\par}
+
+\end{samepage}
+\begin{samepage}
+\subsection{Lea.RamseyC4.c4\_le\_Pval}
+\begin{quote}\small\ttfamily theorem c4\_le\_Pval \{m : \ensuremath{\mathbb{N}}\} \{A : Fin m \ensuremath{\to} Fin m \ensuremath{\to} Bool\} (hA : \ensuremath{\forall} i j, A i j = A j i)\newline     (w : Fin m \ensuremath{\to} \ensuremath{\mathbb{N}}) (hQ : 0 < Lea.RamseyLifting.Qw w) :\newline     c4 \ensuremath{\leq} ((Lea.RamseyLifting.Pval A w : \ensuremath{\mathbb{Q}}) : \ensuremath{\mathbb{R}})\end{quote}
+{\small Source: Verification/Replay plans/sakana-FOCUS-RAMSEY/Limit.lean:536.\par}
+
+{\small Source SHA-256: afd36193ffa47a58f052faad63e20905389d8f01d599d2be7c9955b000403291\par}
+
+{\small\textbf{Sources and attribution:} \href{https://math.technion.ac.il/events/noam-feinstein/}{1. math.technion.ac.il / noam-feinstein}; \href{https://arxiv.org/pdf/2206.04036}{2. arXiv source: 2206.04036}; \href{https://app.autolab.ai/hills/alejandrozu/clique-cluster-ramsey-multiplicity}{3. app.autolab.ai / clique-cluster-ramsey-multiplicity}; \href{https://github.com/alejandrozu/openmath-2026-judging/blob/d0ed487f487fa7ec814ff705ab55249983fe8707/OpenMath-Judging/review/entries/E02-FOCUS-RAMSEY.txt}{4. alejandrozu/openmath-2026-judging / E02-FOCUS-RAMSEY.txt}; \href{https://github.com/alejandrozu/openmath-2026-judging}{Central source and adjudication archive}.\par}
+
+\end{samepage}
+\end{document}

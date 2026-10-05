@@ -1,0 +1,197 @@
+{
+  "created_utc": "2026-10-05T01:40:48.843738+00:00",
+  "verification": {
+    "status": "PASS_SELECTED_ENDPOINTS_WITH_UNFINISHED_BASELINES",
+    "finished_utc": "2026-10-05T01:38:41Z",
+    "receipt": "Verification/matt-unitary-current-fresh-build.json",
+    "receipt_sha256": "467dcd3a7cfcd191cdb53b27de2c5d149b6d7505fdaa1b32c4cbe42c4963f17d",
+    "source_revision": "7014b63ee2cfd01c641a7f539c73b664a2aa3d66",
+    "lean": "4.30.0-rc2",
+    "mathlib": "c1e30e172c8fda21e6776bf1f10351e882ee31b9",
+    "authored_source_modules": 26,
+    "authored_source_compilation": "PASS",
+    "selected_endpoint_prints": 6,
+    "selected_endpoint_axioms": [
+      {
+        "endpoint": "LeanUnitary.Pivot.exists_pivot",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "native_axioms": [],
+        "unrecognized_axioms": [],
+        "classification": "STANDARD_KERNEL_AXIOMS"
+      },
+      {
+        "endpoint": "LeanUnitary.Pivot.pivot_merge",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "native_axioms": [],
+        "unrecognized_axioms": [],
+        "classification": "STANDARD_KERNEL_AXIOMS"
+      },
+      {
+        "endpoint": "LeanUnitary.Pivot.continuousOn_lift",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "native_axioms": [],
+        "unrecognized_axioms": [],
+        "classification": "STANDARD_KERNEL_AXIOMS"
+      },
+      {
+        "endpoint": "LeanUnitary.Pivot.count_closed",
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "native_axioms": [],
+        "unrecognized_axioms": [],
+        "classification": "STANDARD_KERNEL_AXIOMS"
+      },
+      {
+        "endpoint": "LeanUnitary.Pivot.saving",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "native_axioms": [],
+        "unrecognized_axioms": [],
+        "classification": "STANDARD_KERNEL_AXIOMS"
+      },
+      {
+        "endpoint": "LeanUnitary.Pivot.generalBound_of_pivot_node",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "native_axioms": [],
+        "unrecognized_axioms": [],
+        "classification": "STANDARD_KERNEL_AXIOMS"
+      }
+    ],
+    "selected_endpoint_trust": "STANDARD_KERNEL_AXIOMS_ONLY",
+    "baseline_endpoint_prints": 8,
+    "baseline_endpoint_axioms": [
+      {
+        "endpoint": "LeanUnitary.Claims.muxRotations",
+        "axioms": [
+          "propext",
+          "sorryAx",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "native_axioms": [],
+        "unrecognized_axioms": [],
+        "classification": "SORRY_ADMISSION"
+      },
+      {
+        "endpoint": "LeanUnitary.Claims.demultiplex",
+        "axioms": [
+          "propext",
+          "sorryAx",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "native_axioms": [],
+        "unrecognized_axioms": [],
+        "classification": "SORRY_ADMISSION"
+      },
+      {
+        "endpoint": "LeanUnitary.Claims.cosineSine",
+        "axioms": [
+          "propext",
+          "sorryAx",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "native_axioms": [],
+        "unrecognized_axioms": [],
+        "classification": "SORRY_ADMISSION"
+      },
+      {
+        "endpoint": "LeanUnitary.Claims.twoQubitOptimal",
+        "axioms": [
+          "propext",
+          "sorryAx",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "native_axioms": [],
+        "unrecognized_axioms": [],
+        "classification": "SORRY_ADMISSION"
+      },
+      {
+        "endpoint": "LeanUnitary.Claims.qsd",
+        "axioms": [
+          "propext",
+          "sorryAx",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "native_axioms": [],
+        "unrecognized_axioms": [],
+        "classification": "SORRY_ADMISSION"
+      },
+      {
+        "endpoint": "LeanUnitary.Claims.qsdOptimized",
+        "axioms": [
+          "propext",
+          "sorryAx",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "native_axioms": [],
+        "unrecognized_axioms": [],
+        "classification": "SORRY_ADMISSION"
+      },
+      {
+        "endpoint": "LeanUnitary.Claims.blockZXZ",
+        "axioms": [
+          "propext",
+          "sorryAx",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "native_axioms": [],
+        "unrecognized_axioms": [],
+        "classification": "SORRY_ADMISSION"
+      },
+      {
+        "endpoint": "LeanUnitary.Claims.synth",
+        "axioms": [
+          "propext",
+          "sorryAx",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "native_axioms": [],
+        "unrecognized_axioms": [],
+        "classification": "SORRY_ADMISSION"
+      }
+    ],
+    "baseline_trust": "SORRY_ADMISSION_IN_ALL_EIGHT_PRINTED_CLAIMS",
+    "baseline_source_placeholder_count": 13,
+    "global_21_48_synthesis": "UNPROVED; actual circuit node remains a hypothesis",
+    "source_identity": "Exact frozen source SHAs verified; no entrant custom olean reused. Own first-source pilot output retained at its recorded checkpoint.",
+    "maximum_owned_private_bytes": 739561472,
+    "minimum_disk_free_bytes": 5792649216,
+    "minimum_physical_available_bytes": 3448520704,
+    "minimum_available_commit_bytes": 4861878272
+  },
+  "actual_selected_stdout": "'LeanUnitary.Pivot.exists_pivot' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LeanUnitary.Pivot.pivot_merge' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LeanUnitary.Pivot.continuousOn_lift' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LeanUnitary.Pivot.count_closed' depends on axioms: [propext, Quot.sound]\n'LeanUnitary.Pivot.saving' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LeanUnitary.Pivot.generalBound_of_pivot_node' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+  "actual_baseline_stdout": "'LeanUnitary.Claims.muxRotations' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]\n'LeanUnitary.Claims.demultiplex' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]\n'LeanUnitary.Claims.cosineSine' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]\n'LeanUnitary.Claims.twoQubitOptimal' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]\n'LeanUnitary.Claims.qsd' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]\n'LeanUnitary.Claims.qsdOptimized' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]\n'LeanUnitary.Claims.blockZXZ' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]\n'LeanUnitary.Claims.synth' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]\n",
+  "author_approval": "PENDING",
+  "historical_novelty": "BOUNDED_COMPARISON_REMAINS_CONDITIONAL",
+  "compiler_lease_returned": true,
+  "accepted_score": "0",
+  "conditional_score": "33.9488"
+}

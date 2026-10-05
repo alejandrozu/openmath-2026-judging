@@ -1,0 +1,243 @@
+{
+  "recorded_utc": "2026-10-04T22:21:35.448902+00:00",
+  "record_type": "Assistant source inspection prepared for the preliminary evaluation record; not a second independent human judgment or an award signoff.",
+  "source_identity": "All 40 deduplicated frozen source projects, including the dedicated Chandragupt source set, have matching inventory hashes and no explicit source axiom declarations.",
+  "answer_elaborator_inspections": [
+    {
+      "project": "official-fc-util433",
+      "module": "FormalConjecturesUtil.Answer",
+      "sha256": "c8b3b31e9bb25c511e577b1812159a210e9346720f19ec6c6b30905a0802db7a",
+      "conclusion": "The inspected addDecl site creates a safe auxiliary definition, not an axiom. The default Prop-valued answer(sorry) becomes True; non-Prop placeholders may create sorryAx. Selected elaborated statements must be compared with the mathematical target; an axiom list alone is insufficient."
+    },
+    {
+      "project": "sakana-m2-research",
+      "module": "FormalConjecturesUtil.Answer",
+      "sha256": "c8b3b31e9bb25c511e577b1812159a210e9346720f19ec6c6b30905a0802db7a",
+      "conclusion": "The inspected addDecl site creates a safe auxiliary definition, not an axiom. The default Prop-valued answer(sorry) becomes True; non-Prop placeholders may create sorryAx. Selected elaborated statements must be compared with the mathematical target; an axiom list alone is insufficient."
+    }
+  ],
+  "native_source_inspections": [
+    {
+      "project": "htpeo-dms-current",
+      "execution_route": "htpeo-dms-current",
+      "explicit_axiom_sites": 0,
+      "syntax_extension_sites": 0,
+      "native_evaluation_sites": [
+        {
+          "source": "entries/dms-star6/artifact/lean/pack3/src/StarCert.lean",
+          "line": 66,
+          "text": "native_decide"
+        }
+      ],
+      "conclusion": "No explicit axiom declaration or custom command-extension site was found in this frozen source set. Actual native tactic sites are present. This is compatible with generated native-evaluation axioms, but only matching freshly completed compilation and selected axiom outputs establish the executed endpoint trust boundary."
+    },
+    {
+      "project": "htpeo-erdos-m2",
+      "execution_route": "htpeo-erdos-m2",
+      "explicit_axiom_sites": 0,
+      "syntax_extension_sites": 0,
+      "native_evaluation_sites": [
+        {
+          "source": "entries/dms-star6/artifact/lean/pack3/src/StarCert.lean",
+          "line": 66,
+          "text": "native_decide"
+        }
+      ],
+      "conclusion": "No explicit axiom declaration or custom command-extension site was found in this frozen source set. Actual native tactic sites are present. This is compatible with generated native-evaluation axioms, but only matching freshly completed compilation and selected axiom outputs establish the executed endpoint trust boundary."
+    },
+    {
+      "project": "htpeo-ramsey-current",
+      "execution_route": "htpeo-ramsey-current",
+      "explicit_axiom_sites": 0,
+      "syntax_extension_sites": 0,
+      "native_evaluation_sites": [
+        {
+          "source": "entries/ramsey-k4-multiplicity/artifact/lean_v2/RamseyCert/Native.lean",
+          "line": 15,
+          "text": "native_decide"
+        },
+        {
+          "source": "entries/ramsey-k4-multiplicity/artifact/lean_v2/RamseyCert/Native.lean",
+          "line": 17,
+          "text": "native_decide"
+        }
+      ],
+      "conclusion": "No explicit axiom declaration or custom command-extension site was found in this frozen source set. Actual native tactic sites are present. This is compatible with generated native-evaluation axioms, but only matching freshly completed compilation and selected axiom outputs establish the executed endpoint trust boundary."
+    },
+    {
+      "project": "luke-k4-ramsey-current",
+      "execution_route": "luke-k4-ramsey-current-direct",
+      "explicit_axiom_sites": 0,
+      "syntax_extension_sites": 0,
+      "native_evaluation_sites": [
+        {
+          "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Constructions\\Clebsch192\\Certificate.lean",
+          "line": 9,
+          "text": "native_decide"
+        },
+        {
+          "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Constructions\\Clebsch192\\Certificate.lean",
+          "line": 11,
+          "text": "native_decide"
+        },
+        {
+          "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Constructions\\Clebsch192\\Certificate.lean",
+          "line": 13,
+          "text": "native_decide"
+        },
+        {
+          "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Constructions\\Clebsch192\\Certificate.lean",
+          "line": 19,
+          "text": "native_decide"
+        },
+        {
+          "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Constructions\\Final3840\\Certificate.lean",
+          "line": 22,
+          "text": "native_decide"
+        },
+        {
+          "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Constructions\\Final3840\\SymmetryProof.lean",
+          "line": 6,
+          "text": "native_decide"
+        },
+        {
+          "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Constructions\\Final3840\\SymmetryProof.lean",
+          "line": 7,
+          "text": "native_decide"
+        },
+        {
+          "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Constructions\\Final3840\\SymmetryProof.lean",
+          "line": 9,
+          "text": "native_decide"
+        },
+        {
+          "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Constructions\\Final3840\\Validity.lean",
+          "line": 9,
+          "text": "native_decide"
+        },
+        {
+          "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Constructions\\Final3840\\Validity.lean",
+          "line": 12,
+          "text": "native_decide"
+        },
+        {
+          "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Constructions\\Final3840\\Validity.lean",
+          "line": 15,
+          "text": "native_decide"
+        },
+        {
+          "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Constructions\\Final3840\\Validity.lean",
+          "line": 18,
+          "text": "native_decide"
+        },
+        {
+          "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Constructions\\Final3840\\Validity.lean",
+          "line": 21,
+          "text": "native_decide"
+        },
+        {
+          "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Constructions\\Final3840\\Validity.lean",
+          "line": 25,
+          "text": "native_decide"
+        },
+        {
+          "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Constructions\\Published768\\Certificate.lean",
+          "line": 11,
+          "text": "native_decide"
+        },
+        {
+          "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Constructions\\Published768\\Certificate.lean",
+          "line": 14,
+          "text": "native_decide"
+        },
+        {
+          "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Constructions\\Published768\\Certificate.lean",
+          "line": 17,
+          "text": "native_decide"
+        },
+        {
+          "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Constructions\\Published768\\Certificate.lean",
+          "line": 22,
+          "text": "native_decide"
+        },
+        {
+          "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Constructions\\Published768\\Certificate.lean",
+          "line": 28,
+          "text": "native_decide"
+        },
+        {
+          "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\K4Ramsey\\Counting\\Multiplicity.lean",
+          "line": 146,
+          "text": "native_decide"
+        },
+        {
+          "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\Tests\\Multiplicity.lean",
+          "line": 39,
+          "text": "native_decide"
+        },
+        {
+          "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\Tests\\Multiplicity.lean",
+          "line": 47,
+          "text": "native_decide"
+        },
+        {
+          "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\Tests\\Multiplicity.lean",
+          "line": 54,
+          "text": "native_decide"
+        },
+        {
+          "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\Tests\\Multiplicity.lean",
+          "line": 62,
+          "text": "native_decide"
+        },
+        {
+          "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\Tests\\TemplateInput.lean",
+          "line": 9,
+          "text": "native_decide"
+        },
+        {
+          "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\Tests\\TemplateInput.lean",
+          "line": 19,
+          "text": "native_decide"
+        },
+        {
+          "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\Tests\\TemplateInput.lean",
+          "line": 25,
+          "text": "native_decide"
+        },
+        {
+          "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\Tests\\TemplateInput.lean",
+          "line": 32,
+          "text": "native_decide"
+        },
+        {
+          "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\Tests\\WeightedMultiplicity.lean",
+          "line": 24,
+          "text": "native_decide"
+        },
+        {
+          "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\Tests\\WeightedMultiplicity.lean",
+          "line": 32,
+          "text": "native_decide"
+        },
+        {
+          "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\Tests\\WeightedMultiplicity.lean",
+          "line": 39,
+          "text": "native_decide"
+        },
+        {
+          "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\lean\\Tests\\WeightedMultiplicity.lean",
+          "line": 46,
+          "text": "native_decide"
+        }
+      ],
+      "conclusion": "No explicit axiom declaration or custom command-extension site was found in this frozen source set. Actual native tactic sites are present. This is compatible with generated native-evaluation axioms, but only matching freshly completed compilation and selected axiom outputs establish the executed endpoint trust boundary."
+    }
+  ],
+  "remaining_requirements": [
+    "Fresh unchanged-source replay",
+    "Selected endpoint axiom-output coverage",
+    "Intended-statement fidelity, including explicit hypotheses and placeholder elaboration",
+    "Novelty, resource-class and required independent judging signoffs"
+  ]
+}

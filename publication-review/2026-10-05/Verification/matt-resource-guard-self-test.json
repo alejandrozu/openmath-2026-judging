@@ -1,0 +1,55 @@
+{
+  "command": [
+    "C:\\Users\\Propietario\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+    "-X",
+    "utf8",
+    "-c",
+    "print(\"OWN_JOB_SELF_TEST_PASS\")"
+  ],
+  "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification",
+  "started_utc": "2026-10-04T23:46:34.695431+00:00",
+  "attempted": true,
+  "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+  "resource_policy": {
+    "initial_disk_bytes": 4000000000,
+    "initial_physical_bytes": 6442450944,
+    "continuous_disk_bytes": 1000000000,
+    "continuous_physical_bytes": 3221225472,
+    "own_job_private_bytes": 6442450944,
+    "own_process_private_bytes": 6442450944,
+    "poll_seconds": 0.25,
+    "timeout_seconds": 30
+  },
+  "minimum_disk_free_bytes": 7000141824,
+  "minimum_physical_available_bytes": 7841923072,
+  "root_pid": 30848,
+  "own_job_assignment_before_resume": "PASS",
+  "exit": 0,
+  "job_peak_process_private_bytes": 5840896,
+  "job_peak_aggregate_private_bytes": 7098368,
+  "state": "PASS",
+  "finished_utc": "2026-10-04T23:46:35.410420+00:00",
+  "seconds": 0.703,
+  "polled_peak_tree_private_bytes": 1519616,
+  "polled_peak_tree_rss_bytes": 9678848,
+  "counter_samples": 2,
+  "observed_own_processes": {
+    "30848": {
+      "exe": "python.exe",
+      "peak_private_bytes": 450560,
+      "peak_rss_bytes": 11223040
+    },
+    "24732": {
+      "exe": "conhost.exe",
+      "peak_private_bytes": 1069056,
+      "peak_rss_bytes": 6971392
+    }
+  },
+  "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\matt-resource-guard-self-test.stdout.txt",
+  "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\matt-resource-guard-self-test.stderr.txt",
+  "stdout_sha256": "36a821d73be506a0e41c95cbb8e0c08b007b930e61ca8b0121e1b8a240c662f6",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout_excerpt": "OWN_JOB_SELF_TEST_PASS\n",
+  "stderr_excerpt": "",
+  "scope": "Bounded operational Python child test only; no mathematical compiler."
+}

@@ -1,0 +1,412 @@
+{
+  "status": "QUALIFIED_ACTUAL_TWO_INDEPENDENT_KERNEL_SOURCE_PILOT_ONLY_FULL_HT_PROJECT_INCOMPLETE",
+  "qualified_utc": "2026-10-05T06:55:01.458812+00:00",
+  "helper_sha256": "9cc9b2298d4331709f58cf0270626257f1506dd120efc5ed5feb673a0c7176b4",
+  "actual_pilot_receipt": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\htpeo-ramsey-current-fresh-build.json",
+  "actual_pilot_receipt_historical_sha256": "9d07a52c6e893eed550303fe0a14ccaeccdd6d0919531e32369a6802996b300e",
+  "root_pilot_approval_sha256": "5758b0f2ec94628fc9beb9572818345fcc6ca9b8880b1d99d09f2eda2fc41293",
+  "exact_controller_sha256": "1994efb38b409b5e12bbec589128c348d110308a49069e656b027100a48ee52e",
+  "original2103_plan_sha256": "94beb20b98cceefe3e5a7aa0a9cec34b4a60c15dd740f675711371a5afd494d3",
+  "kernel_source_manifest_sha256": "2c5963c0b5c5094b77206b80d9e02866a504d56991459a2f0ec3bacef147da15",
+  "shared_guard_sha256": "ae0b64c7fbf47545365f3238977368042be342ddb973159ec65c98f64aa38a71",
+  "current_pinned_runtime_sha256": "af49bacfabaa1fea71332ca0feae0fa1a60912219d5902291adc79f905bffb8d",
+  "current_official_cache_PASS_receipt_sha256": "2970055d4efb8204f90f48e2358b5e8ed8469e0f7ba7019b2723436924f923f4",
+  "current_nine_HEAD_and_origin_rechecks": [
+    {
+      "name": "mathlib",
+      "actual_HEAD": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "actual_origin": "https://github.com/leanprover-community/mathlib4"
+    },
+    {
+      "name": "plausible",
+      "actual_HEAD": "b7eb3304aeae834b12dda98993a37f6a41f6f0bb",
+      "actual_origin": "https://github.com/leanprover-community/plausible"
+    },
+    {
+      "name": "LeanSearchClient",
+      "actual_HEAD": "5f4d51b81cbd3f6b32b156bfad9056621a040404",
+      "actual_origin": "https://github.com/leanprover-community/LeanSearchClient"
+    },
+    {
+      "name": "importGraph",
+      "actual_HEAD": "16f02aa7642864af59f1ff0e384a015994db9118",
+      "actual_origin": "https://github.com/leanprover-community/import-graph"
+    },
+    {
+      "name": "proofwidgets",
+      "actual_HEAD": "4be2e3d5087eeb272cf5a8853b8f9dd025ef5957",
+      "actual_origin": "https://github.com/leanprover-community/ProofWidgets4"
+    },
+    {
+      "name": "aesop",
+      "actual_HEAD": "3448c0bcc5ce01b2d1546e483ec3620e32df3d0e",
+      "actual_origin": "https://github.com/leanprover-community/aesop"
+    },
+    {
+      "name": "Qq",
+      "actual_HEAD": "92c15be17b7caf78c2ad767ec40f89052d908d81",
+      "actual_origin": "https://github.com/leanprover-community/quote4"
+    },
+    {
+      "name": "batteries",
+      "actual_HEAD": "4488d40d070b9700d4d5a6aa342f0d40c31b2a2d",
+      "actual_origin": "https://github.com/leanprover-community/batteries"
+    },
+    {
+      "name": "Cli",
+      "actual_HEAD": "6130a47896ce867c6a4a55373441e59e565bad0f",
+      "actual_origin": "https://github.com/leanprover/lean4-cli"
+    }
+  ],
+  "original88_immutable_boundary": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\ht-ramsey-parallel-20261005T064723276477Z-immutable-boundary.json",
+  "original88_immutable_boundary_sha256": "28caa3bd84c930a8e4ddd995f234636464224d4dccf547c236bcd5abeebc86e2",
+  "prior88_rows_content_preserved_exactly": true,
+  "prior88_row_sequence_canonical_content_sha256": "bb86998fc6f47bafc8a7a7c35543c5f022c9b1a7e69c3532fdaea6458cf8f0fc",
+  "original2103_scientific_source_hashes_rechecked": 2103,
+  "all90_current_recorded_source_artifact_hashes_rechecked": true,
+  "actual_new_source_checks": 2,
+  "actual_new_kernel_certificate_declarations_typechecked": 6,
+  "actual_source_scope_rows": [
+    {
+      "module": "RamseyCert.Chunk.R52",
+      "source_sha256": "c618bb6e759eb22555cb6dab795f65b197792c413bb4b91eb7df6545aac3fd11",
+      "unchanged_scientific_source_bytes": true,
+      "frozen_source_internal_set_options": [
+        [
+          "maxRecDepth",
+          "1000000"
+        ]
+      ],
+      "semantic_CLI_options": {},
+      "literal_kernel_certificate_statements": [
+        "theorem nbOKR_52 : nbR_52 = nbhd entsR eR_52 := by decide +kernel",
+        "theorem mkOKR_52 : mkEnt 32 1024 W rR_52 52 = eR_52 := by decide +kernel",
+        "theorem tR_52 : kTermA 4294967295 eR_52 nbR_52 = 120712806202589159558991642 := by decide +kernel"
+      ],
+      "actual_command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "RamseyCert\\Chunk\\R52.olean",
+        "RamseyCert\\Chunk\\R52.lean"
+      ],
+      "complete_shared_custom_prerequisite_count": 35,
+      "current_own_artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert\\Chunk\\R52.olean",
+          "sha256": "10c7ea24e60c448394be75ebe3e9c6c24f7db19b34f8c6a0e5b4833996ad3a7f",
+          "bytes": 914760
+        }
+      ]
+    },
+    {
+      "module": "RamseyCert.Chunk.R53",
+      "source_sha256": "8dc10946b2443759295012f2dfc84f40c79d630dbb92341d0a9e86c7b5e48043",
+      "unchanged_scientific_source_bytes": true,
+      "frozen_source_internal_set_options": [
+        [
+          "maxRecDepth",
+          "1000000"
+        ]
+      ],
+      "semantic_CLI_options": {},
+      "literal_kernel_certificate_statements": [
+        "theorem nbOKR_53 : nbR_53 = nbhd entsR eR_53 := by decide +kernel",
+        "theorem mkOKR_53 : mkEnt 32 1024 W rR_53 53 = eR_53 := by decide +kernel",
+        "theorem tR_53 : kTermA 4294967295 eR_53 nbR_53 = 75878190229407638682475368 := by decide +kernel"
+      ],
+      "actual_command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "RamseyCert\\Chunk\\R53.olean",
+        "RamseyCert\\Chunk\\R53.lean"
+      ],
+      "complete_shared_custom_prerequisite_count": 35,
+      "current_own_artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert\\Chunk\\R53.olean",
+          "sha256": "7ce3eadad0912f0e085b21fe541ce524e2fde37fbf101d06b747553e97bee237",
+          "bytes": 909600
+        }
+      ]
+    }
+  ],
+  "actual_complete_two_raw_invocations": [
+    {
+      "module": "RamseyCert.Chunk.R52",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "RamseyCert\\Chunk\\R52.olean",
+        "RamseyCert\\Chunk\\R52.lean"
+      ],
+      "seconds": 30.281,
+      "exit": 0,
+      "stdout": "",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 5565976576,
+      "stop_reason": null,
+      "started_utc": "2026-10-05T06:47:23.380287+00:00",
+      "finished_utc": "2026-10-05T06:47:53.666075+00:00",
+      "owned_process_stop_output": null,
+      "own_job_resource_receipt": {
+        "command": [
+          "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+          "-j1",
+          "-DmaxHeartbeats=0",
+          "-DmaxRecDepth=100000",
+          "-o",
+          "RamseyCert\\Chunk\\R52.olean",
+          "RamseyCert\\Chunk\\R52.lean"
+        ],
+        "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current",
+        "started_utc": "2026-10-05T06:47:23.380287+00:00",
+        "attempted": true,
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 5368709120,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 1073741824,
+          "own_job_private_bytes": 6442450944,
+          "own_process_private_bytes": 6442450944,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 3600
+        },
+        "minimum_disk_free_bytes": 5565976576,
+        "initial_system_memory_snapshot": {
+          "free_physical_bytes": 10061230080,
+          "total_physical_bytes": 34024419328,
+          "available_commit_bytes": 12024389632,
+          "total_commit_limit_bytes": 60437172224
+        },
+        "minimum_physical_available_bytes": 6451994624,
+        "minimum_available_commit_bytes": 4549169152,
+        "root_pid": 51660,
+        "own_job_assignment_before_resume": "PASS",
+        "exit": 0,
+        "job_peak_process_private_bytes": 3856146432,
+        "job_peak_aggregate_private_bytes": 3857391616,
+        "state": "PASS",
+        "finished_utc": "2026-10-05T06:47:53.666075+00:00",
+        "seconds": 30.281,
+        "polled_peak_tree_private_bytes": 3857391616,
+        "polled_peak_tree_rss_bytes": 2581561344,
+        "counter_samples": 107,
+        "observed_own_processes": {
+          "55616": {
+            "exe": "conhost.exe",
+            "peak_private_bytes": 1245184,
+            "peak_rss_bytes": 7852032
+          },
+          "51660": {
+            "exe": "lean.exe",
+            "peak_private_bytes": 3856146432,
+            "peak_rss_bytes": 2573709312
+          }
+        },
+        "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\ht-parallel-20261005T064723276477Z-58abcd8daf384d1b.stdout.txt",
+        "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\ht-parallel-20261005T064723276477Z-58abcd8daf384d1b.stderr.txt",
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_excerpt": "",
+        "stderr_excerpt": ""
+      },
+      "source_sha256": "c618bb6e759eb22555cb6dab795f65b197792c413bb4b91eb7df6545aac3fd11",
+      "executed_parallel_controller_source_sha256": "1994efb38b409b5e12bbec589128c348d110308a49069e656b027100a48ee52e",
+      "third_worker_memory_observations": {
+        "minimum_free_physical_bytes": 6451994624,
+        "minimum_available_commit_bytes": 4549169152,
+        "peak_owned_private_bytes": 3857391616
+      },
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert\\Chunk\\R52.olean",
+          "sha256": "10c7ea24e60c448394be75ebe3e9c6c24f7db19b34f8c6a0e5b4833996ad3a7f",
+          "bytes": 914760
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_PARALLEL_INDEPENDENT_KERNEL_COMPILATION"
+    },
+    {
+      "module": "RamseyCert.Chunk.R53",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "RamseyCert\\Chunk\\R53.olean",
+        "RamseyCert\\Chunk\\R53.lean"
+      ],
+      "seconds": 30.313,
+      "exit": 0,
+      "stdout": "",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 5568806912,
+      "stop_reason": null,
+      "started_utc": "2026-10-05T06:47:23.381291+00:00",
+      "finished_utc": "2026-10-05T06:47:53.700541+00:00",
+      "owned_process_stop_output": null,
+      "own_job_resource_receipt": {
+        "command": [
+          "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+          "-j1",
+          "-DmaxHeartbeats=0",
+          "-DmaxRecDepth=100000",
+          "-o",
+          "RamseyCert\\Chunk\\R53.olean",
+          "RamseyCert\\Chunk\\R53.lean"
+        ],
+        "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current",
+        "started_utc": "2026-10-05T06:47:23.381291+00:00",
+        "attempted": true,
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 5368709120,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 1073741824,
+          "own_job_private_bytes": 6442450944,
+          "own_process_private_bytes": 6442450944,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 3600
+        },
+        "minimum_disk_free_bytes": 5568806912,
+        "initial_system_memory_snapshot": {
+          "free_physical_bytes": 10062782464,
+          "total_physical_bytes": 34024419328,
+          "available_commit_bytes": 12027277312,
+          "total_commit_limit_bytes": 60437172224
+        },
+        "minimum_physical_available_bytes": 6451994624,
+        "minimum_available_commit_bytes": 4549484544,
+        "root_pid": 56932,
+        "own_job_assignment_before_resume": "PASS",
+        "exit": 0,
+        "job_peak_process_private_bytes": 3815182336,
+        "job_peak_aggregate_private_bytes": 3816443904,
+        "state": "PASS",
+        "finished_utc": "2026-10-05T06:47:53.700541+00:00",
+        "seconds": 30.313,
+        "polled_peak_tree_private_bytes": 3816443904,
+        "polled_peak_tree_rss_bytes": 2563964928,
+        "counter_samples": 107,
+        "observed_own_processes": {
+          "45236": {
+            "exe": "conhost.exe",
+            "peak_private_bytes": 1261568,
+            "peak_rss_bytes": 7864320
+          },
+          "56932": {
+            "exe": "lean.exe",
+            "peak_private_bytes": 3815182336,
+            "peak_rss_bytes": 2556100608
+          }
+        },
+        "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\ht-parallel-20261005T064723276477Z-a5c738eb423695b9.stdout.txt",
+        "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\ht-parallel-20261005T064723276477Z-a5c738eb423695b9.stderr.txt",
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_excerpt": "",
+        "stderr_excerpt": ""
+      },
+      "source_sha256": "8dc10946b2443759295012f2dfc84f40c79d630dbb92341d0a9e86c7b5e48043",
+      "executed_parallel_controller_source_sha256": "1994efb38b409b5e12bbec589128c348d110308a49069e656b027100a48ee52e",
+      "third_worker_memory_observations": {
+        "minimum_free_physical_bytes": 6451994624,
+        "minimum_available_commit_bytes": 4549484544,
+        "peak_owned_private_bytes": 3816443904
+      },
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert\\Chunk\\R53.olean",
+          "sha256": "7ce3eadad0912f0e085b21fe541ce524e2fde37fbf101d06b747553e97bee237",
+          "bytes": 909600
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_PARALLEL_INDEPENDENT_KERNEL_COMPILATION"
+    }
+  ],
+  "actual_raw_log_identities": [
+    {
+      "module": "RamseyCert.Chunk.R52",
+      "channel": "stdout",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\ht-parallel-20261005T064723276477Z-58abcd8daf384d1b.stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "module": "RamseyCert.Chunk.R52",
+      "channel": "stderr",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\ht-parallel-20261005T064723276477Z-58abcd8daf384d1b.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "module": "RamseyCert.Chunk.R53",
+      "channel": "stdout",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\ht-parallel-20261005T064723276477Z-a5c738eb423695b9.stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "module": "RamseyCert.Chunk.R53",
+      "channel": "stderr",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\ht-parallel-20261005T064723276477Z-a5c738eb423695b9.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    }
+  ],
+  "actual_timing_overlap_seconds": 30.284784,
+  "observed_global_resource_minima_across_both_guard_invocations": {
+    "disk_free_bytes": 5565976576,
+    "physical_available_bytes": 6451994624,
+    "available_commit_bytes": 4549169152
+  },
+  "per_own_job_private_peaks_bytes": {
+    "RamseyCert.Chunk.R52": 3857391616,
+    "RamseyCert.Chunk.R53": 3816443904
+  },
+  "sum_of_separate_job_peak_private_bytes_not_a_synchronized_combined_measurement": 7673835520,
+  "actual_controller_exit_all_Lean_absent_snapshot": {
+    "checked_utc": "2026-10-05T06:47:53.829152+00:00",
+    "own_Lean_pids": [],
+    "foreign_Lean_processes": {}
+  },
+  "later_current_global_Lean_snapshot_not_the_pilot_interval": {},
+  "later_resource_and_process_snapshot_qualification": "Root has separately dispatched sole originalE65 after the pilot; the current snapshot is not claimed quiescent and this read-only helper starts no job.",
+  "current_resources": {
+    "disk_free_bytes": 5785276416,
+    "free_physical_bytes": 10286792704,
+    "total_physical_bytes": 34024419328,
+    "available_commit_bytes": 11522805760,
+    "total_commit_limit_bytes": 60213837824
+  },
+  "scope_limits": [
+    "Exactly two new original R52/R53 sources with unchanged options/bodies; no selected endpoint axiom audit invoked.",
+    "Quarter-second sampled global minima are observations over the two guarded intervals; no continuous mathematical lower bound or synchronized aggregate peak is claimed.",
+    "Only this two-source concurrency pilot is qualified. Remaining kernel chunks may have different memory/runtime; no whole-library or future-continuation authorization follows.",
+    "Full2103-source project, nine later granular modules, eleven whole modules and both organizer audits remain incomplete; no novelty/score/publication upgrade follows."
+  ],
+  "current_qualified_source_checkpoint_count": 90,
+  "full_project_source_count": 2103,
+  "full_project_or_selected_endpoint_scope_complete": false,
+  "receipt_source_runner_register_docs_or_job_mutations": 0
+}

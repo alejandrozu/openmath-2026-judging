@@ -1,0 +1,76 @@
+{
+  "recorded_utc": "2026-10-05T02:09:21Z",
+  "status": "ROOT_EXECUTION_SCOPE_AND_RESOURCE_POLICY_APPROVED_NO_SCIENTIFIC_VERDICT",
+  "approval_authority": "Root agent coordinating the user-authorized fresh Lean replay; this is not an additional human publishing/award approval.",
+  "a000_approval": {
+    "prepared_receipt": {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\a000224-five-whole-module-guard-preparation.json",
+      "sha256": "cc8f3585305d7fb9e9defed3558d384ddce61158fb68a2bb4e2e8e3f9a9e658f"
+    },
+    "runner": {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\run_source_plan.py",
+      "sha256": "70ff209c7ac651c1e0ab25e9f629a9fc50c4b85ed1f510666e851e8f69c53534"
+    },
+    "source_plan": {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\build-plan.json",
+      "sha256": "0f6338f72ff570e79847995bac7cf6f6c56c8a1c2cc8dedf55181bc764180fe7"
+    },
+    "source_boundary_evidence": {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\a000224-whole-module-audit-boundary-evidence.json",
+      "sha256": "170886e5721254e24443bb6ec14f660409f14ceac938bf4d3c5c12d732cda6d0"
+    },
+    "scope": "Five exact whole-Mathlib authored modules plus selected audit only after166 granular own cold source successes and hashes.",
+    "lease_requirement": "a000_whole_scope_only_authorized:true; exact holder/source-plan SHA; exclusive whole-import lease.",
+    "pilot_policy": "One newly cold whole module first; actual measured PASS then unchanged guarded continuation."
+  },
+  "held_approval": {
+    "prepared_receipt": {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\held-novelty-guarded-adapter-preparation.json",
+      "sha256": "aa492dd39cf294b46d0ab4401f7fd98f0e4818092c9fe20be68d297ce2f6f7b5"
+    },
+    "adapter": {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\run_held_novelty_plan.py",
+      "sha256": "56952859e73e8773c44c84328e50144580527b82280da9d22229a2862ecedc10"
+    },
+    "source_plans": [
+      {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-FOCUS-RAMSEY\\build-plan.json",
+        "sha256": "133e566852d3aa7e212132344e955e2ee6b8700903e5b7e005028039f3e0983c"
+      },
+      {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\build-plan.json",
+        "sha256": "94beb20b98cceefe3e5a7aa0a9cec34b4a60c15dd740f675711371a5afd494d3"
+      },
+      {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-FOCUS-GROTH\\build-plan.json",
+        "sha256": "1d9db618520db9b9651018b4b4c77192616c5af911963fc3391055b6646ece7a"
+      }
+    ],
+    "source_inventory": {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\held-novelty-candidate-source-inventory.json",
+      "sha256": "b32569706eacfc2f5db51d19261f86931371c40a741f4afc0f11e482f7bd14fe"
+    },
+    "ht_mixed_boundary": {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\ht-ramsey-mixed-source-boundary-evidence.json",
+      "sha256": "2ff0aab9bd272037442f459825824e57f62108362ca7a2880cec5663c0b1d77f"
+    },
+    "scope": "SakRam2 and Grot2 pilot/guarded replay after main granular scope; HT2092 granular source deferral, then exact11 whole modules/audit under separate explicit lease after2092 cold source successes.",
+    "ht_whole_lease_requirement": "ht_ramsey_whole_scope_only_authorized:true plus exact holder/source-plan SHA and exclusive whole-import lease."
+  },
+  "guards": {
+    "granular": {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\matt_resource_guard.py",
+      "sha256": "ae0b64c7fbf47545365f3238977368042be342ddb973159ec65c98f64aa38a71"
+    },
+    "whole": {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\full_mathlib_resource_guard.py",
+      "sha256": "a4c76752e1e0afaf4ddff9368e4a5aa832bc56dcc7553182c5302e2c1c4e5c18"
+    }
+  },
+  "scheduling": {
+    "granular": "At most TWO measured granular source importers,6GiB own/5GiB commit dispatch with existing physical/disk/commit floors.",
+    "whole": "SOLE whole10GiB own/11GiB commit source importer, serialized against both granular workers; existing physical/disk/commit floors unchanged.",
+    "next_release": "E169 lease ends first; main granular resumes with Luke. When Luke completes/checkpoints, main pauses at a completed source boundary for DMS whole resume. A000/HT whole phases require later explicit handoffs."
+  },
+  "scientific_qualification": "These approvals authorize concrete source execution and resource guards only. They do not establish mathematical novelty, eligibility, authorship, awards, successful compilation, or publication readiness. Original PREPARED records remain immutable."
+}

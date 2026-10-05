@@ -1,0 +1,1814 @@
+{
+  "status": "PREPARED_FULL_DIFF_AND_SOURCE_AUDIT_COUNTS_UNEXECUTED",
+  "created_utc": "2026-10-05T03:01:51.621344+00:00",
+  "baseline_sha256": "70ff209c7ac651c1e0ab25e9f629a9fc50c4b85ed1f510666e851e8f69c53534",
+  "runner_sha256": "6055abb09b2c9b985b69392af5cb3e8d2747a2027a3108fead72ed57ccc4e67c",
+  "full_unified_diff_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\m2-granular-adapter-full-diff-against-70ff209c.diff",
+  "full_unified_diff_sha256": "75a45fa129ecec5a134ddb2126a261a01426579665ea9f37728dd994f2882850",
+  "diff_qualification": "Complete unified Python adapter diff. Line endings are normalized for the text diff; original CRLF baseline bytes and exact prepared LF bytes are separately SHA-preserved. No Lean source or imports are edited.",
+  "preparation_sha256": "c2eb16e66fd9f5bacf75ad470cd25846d412ca8780a8a7d24c119d4b366c6ee5",
+  "adapter_contract_sha256": "af4c03a36b28cacb55cb9a089158eb664373ee649c01b7ad77843a9d12f9eefc",
+  "projects": [
+    {
+      "project": "htpeo-erdos-m2",
+      "plan_sha256": "d75af96c5e21e79909e7a95646d0bf766609a46dd40bb0fc44e6308a6eb60ef6",
+      "granular_source_count": 101,
+      "deferred_whole_source_count": 21,
+      "granular_audit_count": 1,
+      "granular_requested_print_count": 4,
+      "granular_unique_requested_name_count": 4,
+      "deferred_audit_count": 21,
+      "deferred_requested_print_count": 33,
+      "selected_granular_expectation": "NO_STATIC_ADMISSION_BUT_NATIVE_CERTIFICATE_SYNTAX_IN_CLOSURE_STANDARD_OR_DECLARED_NATIVE_TRUST_PENDING_RAW_PRINTS",
+      "granular_source_static_admission_sites": [],
+      "granular_source_native_syntax_modules": [
+        "StarCert"
+      ],
+      "selected_deferred_expectation": "UNCONFIRMED_NO_COMPILER_OR_RAW_SELECTED_AXIOM_OUTPUTS_FROM_THIS_PREPARATION",
+      "granular_audit_details": [
+        {
+          "audit": "FreshAuditStar6Simple.lean",
+          "source_sha256": "0a1d2a7c109505db744218228626df946c6415340c45ed53c84ca4eda0c58d6d",
+          "imports": [
+            "Star6Simple"
+          ],
+          "selected_names": [
+            "Star6.simple_schoenberger",
+            "Star6.simple_petersen_connected",
+            "Star6.simple_star6_cubic_bridgeless_le14",
+            "Star6.simple_star6_subcubic_le7"
+          ],
+          "custom_prerequisite_closure": [
+            "MhFact_024845889158353d",
+            "MhFact_046773df0a672922",
+            "MhFact_06139ad5904fa064",
+            "MhFact_066dc781a8de9c11",
+            "MhFact_09796da8a434e150",
+            "MhFact_0e0e37a38e3c97d5",
+            "MhFact_144fd607d85ac5da",
+            "MhFact_1b2e17f98116d9aa",
+            "MhFact_1f8ebb817a59b41d",
+            "MhFact_256b4143cc30000f",
+            "MhFact_2e993e3b07378767",
+            "MhFact_2f482379fe24b1cb",
+            "MhFact_30194dab4e05fdcf",
+            "MhFact_33aabc50b1cec1ba",
+            "MhFact_341b6e5e1be16205",
+            "MhFact_345a55d7429fd4b1",
+            "MhFact_38b6f78a47fdf12e",
+            "MhFact_3c53e18d818a023b",
+            "MhFact_3e79907cfcc0085b",
+            "MhFact_413193082c4b8758",
+            "MhFact_4b6dbe605eac3a1d",
+            "MhFact_4b7436a78212f56a",
+            "MhFact_4e4dfbfc10836500",
+            "MhFact_4e63409f7b05a806",
+            "MhFact_4f913d5550e57c85",
+            "MhFact_51ff9480dc00823f",
+            "MhFact_5343a2db598602a9",
+            "MhFact_54ed0ff9a1ed26b6",
+            "MhFact_55368cd7a0c74072",
+            "MhFact_57ea4db232a2b7f5",
+            "MhFact_59c06cb7808fc140",
+            "MhFact_5c1eb3f583cf643f",
+            "MhFact_5e8f7a0c3cb04161",
+            "MhFact_643ccea3769075c0",
+            "MhFact_6460e64b00785972",
+            "MhFact_657e581f1145250f",
+            "MhFact_66a4a19c81528d5b",
+            "MhFact_6882aa6fa76ff8ed",
+            "MhFact_6b1f8729194e23a3",
+            "MhFact_6c78409a046a3fe7",
+            "MhFact_6e44d3c2232b5736",
+            "MhFact_7217c8f0517c24a9",
+            "MhFact_724d35f964ae6f7d",
+            "MhFact_75fc19c47ee38b89",
+            "MhFact_77a5aa23394eb0f0",
+            "MhFact_77e9ac7f87ab804f",
+            "MhFact_78a34517ee1a6fff",
+            "MhFact_78d98836f6372f68",
+            "MhFact_79ac08d5cf0788b9",
+            "MhFact_7b9500b9ad8bca15",
+            "MhFact_7c9b506b16bbaf73",
+            "MhFact_7d291f6ca774e1da",
+            "MhFact_81c52cea8147de67",
+            "MhFact_83263f8970f3987b",
+            "MhFact_85780d9a54267261",
+            "MhFact_90b4662cdeba097d",
+            "MhFact_916ccd41e9db4312",
+            "MhFact_923511b69a46047e",
+            "MhFact_96b352680829f174",
+            "MhFact_974f7197c1be8069",
+            "MhFact_9e7dda3374e6b172",
+            "MhFact_a030b9ec722eb795",
+            "MhFact_a8bfe25dadf921db",
+            "MhFact_b536c7d8a4f139e4",
+            "MhFact_b71709db7a82637a",
+            "MhFact_ba4d9c5abd0afd83",
+            "MhFact_bde9371a01dd2855",
+            "MhFact_c03bb6e1daa663e4",
+            "MhFact_c156979f912a0408",
+            "MhFact_c1bad3abf5f2e5e8",
+            "MhFact_c3375be11cf311ee",
+            "MhFact_c35583f86422a75a",
+            "MhFact_c64b6bd62b78d841",
+            "MhFact_cc801c1ba060f9c7",
+            "MhFact_d39e578650322db3",
+            "MhFact_def3ba43f6eccb6d",
+            "MhFact_e1599bf3f3c26bdb",
+            "MhFact_e63e13afc71071cb",
+            "MhFact_e68d717a207ff44f",
+            "MhFact_ebeb33c568dfe4e4",
+            "MhFact_eff6661027b6cbd2",
+            "MhFact_f4c06558ba3030b8",
+            "MhFact_f645e06d2ce727a3",
+            "MhFact_f7fb58786d241d68",
+            "MhFact_fbae65436c8cc8bf",
+            "MhFact_fe45f583e0b81581",
+            "Star6Bounded",
+            "Star6Corollaries",
+            "Star6Simple",
+            "StarBottleneck",
+            "StarCert",
+            "StarChecker",
+            "StarCompose",
+            "StarCore",
+            "StarExtension",
+            "StarLeaf",
+            "StarMatching",
+            "StarReduce",
+            "StarRigid",
+            "StarSix",
+            "StarVizing"
+          ],
+          "whole_Mathlib_roots": [],
+          "deferred_whole_scope": false,
+          "additional_library_prerequisites": [],
+          "source_closure_admission_sites": [],
+          "formalconjectures_answer_elaborator_in_closure": false,
+          "expected_axiom_scope": "UNCONFIRMED_STATIC_SOURCE_PLANNING_ONLY_ACTUAL_PRINT_REQUIRED",
+          "qualification": "A sorry token elsewhere in a module/closure does not establish selected-theorem axiom dependence. Conversely a clean print does not validate answer(sorry) problem semantics."
+        }
+      ],
+      "deferred_audit_static_sites": [
+        {
+          "audit": "FreshAuditErdos1136.lean",
+          "selected_names": [
+            "Erdos1136.erdos_1136.variants.multiples_of_three",
+            "Erdos1136.erdos_1136.variants.upper_bound"
+          ],
+          "custom_closure_admission_sites": [
+            {
+              "module": "Erdos1136",
+              "source_sha256": "74ece9ebc11495cc1dc38f68b9cbd5c12e9601f8b0f06cd7f471dc59e4fe032a",
+              "sorry_tokens": 2
+            },
+            {
+              "module": "FormalConjecturesUtil.Answer",
+              "source_sha256": "c8b3b31e9bb25c511e577b1812159a210e9346720f19ec6c6b30905a0802db7a",
+              "sorry_tokens": 2
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.CategoryAnswerLinter",
+              "source_sha256": "e8cd0d443276d31d8412688d25c7680a4a85c4495d7a29948917d55dfb1c9ed6",
+              "sorry_tokens": 1
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.FormalProofLinter",
+              "source_sha256": "59c42b3def4649b81b98ea94286b1449efcf31befbd5721fb3abbfc0c1bb3396",
+              "sorry_tokens": 2
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.StubLinter",
+              "source_sha256": "294be770ca5c2684192717f3e6de7b47e0afb2deb0168bfe65ec8d7042abecb7",
+              "sorry_tokens": 3
+            }
+          ],
+          "FC_Answer_elaborator_in_closure": true,
+          "qualification": "Lexical admissions can be unrelated to selected theorem. Default Prop answer(sorry) can yield True without a sorryAx dependency; raw prints and mathematical definition fidelity are separately required."
+        },
+        {
+          "audit": "FreshAuditErdos1148.lean",
+          "selected_names": [
+            "Erdos1148.erdos_1148.variants.weaker"
+          ],
+          "custom_closure_admission_sites": [
+            {
+              "module": "Erdos1148",
+              "source_sha256": "e44647fb459d160b9c3499ba926a048c35c608587d54f87c5a66fa12c935534e",
+              "sorry_tokens": 1
+            },
+            {
+              "module": "FormalConjecturesUtil.Answer",
+              "source_sha256": "c8b3b31e9bb25c511e577b1812159a210e9346720f19ec6c6b30905a0802db7a",
+              "sorry_tokens": 2
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.CategoryAnswerLinter",
+              "source_sha256": "e8cd0d443276d31d8412688d25c7680a4a85c4495d7a29948917d55dfb1c9ed6",
+              "sorry_tokens": 1
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.FormalProofLinter",
+              "source_sha256": "59c42b3def4649b81b98ea94286b1449efcf31befbd5721fb3abbfc0c1bb3396",
+              "sorry_tokens": 2
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.StubLinter",
+              "source_sha256": "294be770ca5c2684192717f3e6de7b47e0afb2deb0168bfe65ec8d7042abecb7",
+              "sorry_tokens": 3
+            }
+          ],
+          "FC_Answer_elaborator_in_closure": true,
+          "qualification": "Lexical admissions can be unrelated to selected theorem. Default Prop answer(sorry) can yield True without a sorryAx dependency; raw prints and mathematical definition fidelity are separately required."
+        },
+        {
+          "audit": "FreshAuditErdos123.lean",
+          "selected_names": [
+            "Erdos123.erdos_123.variants.powers_2_3"
+          ],
+          "custom_closure_admission_sites": [
+            {
+              "module": "Erdos123",
+              "source_sha256": "9f7d935c3e8622b38ce8423f3952ae657e7e1a7b423d7988e3f5904623a8b256",
+              "sorry_tokens": 4
+            },
+            {
+              "module": "FormalConjecturesUtil.Answer",
+              "source_sha256": "c8b3b31e9bb25c511e577b1812159a210e9346720f19ec6c6b30905a0802db7a",
+              "sorry_tokens": 2
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.CategoryAnswerLinter",
+              "source_sha256": "e8cd0d443276d31d8412688d25c7680a4a85c4495d7a29948917d55dfb1c9ed6",
+              "sorry_tokens": 1
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.FormalProofLinter",
+              "source_sha256": "59c42b3def4649b81b98ea94286b1449efcf31befbd5721fb3abbfc0c1bb3396",
+              "sorry_tokens": 2
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.StubLinter",
+              "source_sha256": "294be770ca5c2684192717f3e6de7b47e0afb2deb0168bfe65ec8d7042abecb7",
+              "sorry_tokens": 3
+            }
+          ],
+          "FC_Answer_elaborator_in_closure": true,
+          "qualification": "Lexical admissions can be unrelated to selected theorem. Default Prop answer(sorry) can yield True without a sorryAx dependency; raw prints and mathematical definition fidelity are separately required."
+        },
+        {
+          "audit": "FreshAuditErdos292.lean",
+          "selected_names": [
+            "Erdos292.erdos_292.variants.mul",
+            "Erdos292.erdos_292.variants.two_mul",
+            "Erdos292.erdos_292.variants.prime_pow"
+          ],
+          "custom_closure_admission_sites": [
+            {
+              "module": "Erdos292",
+              "source_sha256": "b9db02f5d45241bb708b563e8abe648645929406283ef0c0b931db71a7633df4",
+              "sorry_tokens": 2
+            },
+            {
+              "module": "FormalConjecturesUtil.Answer",
+              "source_sha256": "c8b3b31e9bb25c511e577b1812159a210e9346720f19ec6c6b30905a0802db7a",
+              "sorry_tokens": 2
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.CategoryAnswerLinter",
+              "source_sha256": "e8cd0d443276d31d8412688d25c7680a4a85c4495d7a29948917d55dfb1c9ed6",
+              "sorry_tokens": 1
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.FormalProofLinter",
+              "source_sha256": "59c42b3def4649b81b98ea94286b1449efcf31befbd5721fb3abbfc0c1bb3396",
+              "sorry_tokens": 2
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.StubLinter",
+              "source_sha256": "294be770ca5c2684192717f3e6de7b47e0afb2deb0168bfe65ec8d7042abecb7",
+              "sorry_tokens": 3
+            }
+          ],
+          "FC_Answer_elaborator_in_closure": true,
+          "qualification": "Lexical admissions can be unrelated to selected theorem. Default Prop answer(sorry) can yield True without a sorryAx dependency; raw prints and mathematical definition fidelity are separately required."
+        },
+        {
+          "audit": "FreshAuditErdos295.lean",
+          "selected_names": [
+            "Erdos295.exists_k"
+          ],
+          "custom_closure_admission_sites": [
+            {
+              "module": "Erdos295",
+              "source_sha256": "59b39678630187fd4544d3d717cccdde5241e75d2ab50aafde9f7ad36a25751b",
+              "sorry_tokens": 3
+            },
+            {
+              "module": "FormalConjecturesUtil.Answer",
+              "source_sha256": "c8b3b31e9bb25c511e577b1812159a210e9346720f19ec6c6b30905a0802db7a",
+              "sorry_tokens": 2
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.CategoryAnswerLinter",
+              "source_sha256": "e8cd0d443276d31d8412688d25c7680a4a85c4495d7a29948917d55dfb1c9ed6",
+              "sorry_tokens": 1
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.FormalProofLinter",
+              "source_sha256": "59c42b3def4649b81b98ea94286b1449efcf31befbd5721fb3abbfc0c1bb3396",
+              "sorry_tokens": 2
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.StubLinter",
+              "source_sha256": "294be770ca5c2684192717f3e6de7b47e0afb2deb0168bfe65ec8d7042abecb7",
+              "sorry_tokens": 3
+            }
+          ],
+          "FC_Answer_elaborator_in_closure": true,
+          "qualification": "Lexical admissions can be unrelated to selected theorem. Default Prop answer(sorry) can yield True without a sorryAx dependency; raw prints and mathematical definition fidelity are separately required."
+        },
+        {
+          "audit": "FreshAuditErdos358.lean",
+          "selected_names": [
+            "Erdos358.f_id"
+          ],
+          "custom_closure_admission_sites": [
+            {
+              "module": "Erdos358",
+              "source_sha256": "bbaccc0fbda2b195d0bed0327d46d4eaf0a2ce29616cb565eceb37df7b712c68",
+              "sorry_tokens": 4
+            },
+            {
+              "module": "FormalConjecturesUtil.Answer",
+              "source_sha256": "c8b3b31e9bb25c511e577b1812159a210e9346720f19ec6c6b30905a0802db7a",
+              "sorry_tokens": 2
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.CategoryAnswerLinter",
+              "source_sha256": "e8cd0d443276d31d8412688d25c7680a4a85c4495d7a29948917d55dfb1c9ed6",
+              "sorry_tokens": 1
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.FormalProofLinter",
+              "source_sha256": "59c42b3def4649b81b98ea94286b1449efcf31befbd5721fb3abbfc0c1bb3396",
+              "sorry_tokens": 2
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.StubLinter",
+              "source_sha256": "294be770ca5c2684192717f3e6de7b47e0afb2deb0168bfe65ec8d7042abecb7",
+              "sorry_tokens": 3
+            }
+          ],
+          "FC_Answer_elaborator_in_closure": true,
+          "qualification": "Lexical admissions can be unrelated to selected theorem. Default Prop answer(sorry) can yield True without a sorryAx dependency; raw prints and mathematical definition fidelity are separately required."
+        },
+        {
+          "audit": "FreshAuditErdos395.lean",
+          "selected_names": [
+            "Erdos395.erdos_395.variants.one"
+          ],
+          "custom_closure_admission_sites": [
+            {
+              "module": "Erdos395",
+              "source_sha256": "003880cb653e5f4b35e2e56122fe32c317347cb9d567bcd31056b2b6848c914d",
+              "sorry_tokens": 2
+            },
+            {
+              "module": "FormalConjecturesUtil.Answer",
+              "source_sha256": "c8b3b31e9bb25c511e577b1812159a210e9346720f19ec6c6b30905a0802db7a",
+              "sorry_tokens": 2
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.CategoryAnswerLinter",
+              "source_sha256": "e8cd0d443276d31d8412688d25c7680a4a85c4495d7a29948917d55dfb1c9ed6",
+              "sorry_tokens": 1
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.FormalProofLinter",
+              "source_sha256": "59c42b3def4649b81b98ea94286b1449efcf31befbd5721fb3abbfc0c1bb3396",
+              "sorry_tokens": 2
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.StubLinter",
+              "source_sha256": "294be770ca5c2684192717f3e6de7b47e0afb2deb0168bfe65ec8d7042abecb7",
+              "sorry_tokens": 3
+            }
+          ],
+          "FC_Answer_elaborator_in_closure": true,
+          "qualification": "Lexical admissions can be unrelated to selected theorem. Default Prop answer(sorry) can yield True without a sorryAx dependency; raw prints and mathematical definition fidelity are separately required."
+        },
+        {
+          "audit": "FreshAuditErdos44.lean",
+          "selected_names": [
+            "Erdos44.greedy_sidon_construction"
+          ],
+          "custom_closure_admission_sites": [
+            {
+              "module": "Erdos44",
+              "source_sha256": "2a1d49488e57fddd11d99bea84730545868ec84aa32407ce5f54f786696408a5",
+              "sorry_tokens": 4
+            },
+            {
+              "module": "FormalConjecturesUtil.Answer",
+              "source_sha256": "c8b3b31e9bb25c511e577b1812159a210e9346720f19ec6c6b30905a0802db7a",
+              "sorry_tokens": 2
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.CategoryAnswerLinter",
+              "source_sha256": "e8cd0d443276d31d8412688d25c7680a4a85c4495d7a29948917d55dfb1c9ed6",
+              "sorry_tokens": 1
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.FormalProofLinter",
+              "source_sha256": "59c42b3def4649b81b98ea94286b1449efcf31befbd5721fb3abbfc0c1bb3396",
+              "sorry_tokens": 2
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.StubLinter",
+              "source_sha256": "294be770ca5c2684192717f3e6de7b47e0afb2deb0168bfe65ec8d7042abecb7",
+              "sorry_tokens": 3
+            }
+          ],
+          "FC_Answer_elaborator_in_closure": true,
+          "qualification": "Lexical admissions can be unrelated to selected theorem. Default Prop answer(sorry) can yield True without a sorryAx dependency; raw prints and mathematical definition fidelity are separately required."
+        },
+        {
+          "audit": "FreshAuditErdos477.lean",
+          "selected_names": [
+            "Erdos477.erdos_477.variants.S_sq",
+            "Erdos477.erdos_477.variants.degree_two_dvd_condition_b_ne_zero"
+          ],
+          "custom_closure_admission_sites": [
+            {
+              "module": "Erdos477",
+              "source_sha256": "6f36a324a5c890fa4c7e38df2da86e8a12144bfc29877d7de99e14b78bfc3e1d",
+              "sorry_tokens": 3
+            },
+            {
+              "module": "FormalConjecturesUtil.Answer",
+              "source_sha256": "c8b3b31e9bb25c511e577b1812159a210e9346720f19ec6c6b30905a0802db7a",
+              "sorry_tokens": 2
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.CategoryAnswerLinter",
+              "source_sha256": "e8cd0d443276d31d8412688d25c7680a4a85c4495d7a29948917d55dfb1c9ed6",
+              "sorry_tokens": 1
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.FormalProofLinter",
+              "source_sha256": "59c42b3def4649b81b98ea94286b1449efcf31befbd5721fb3abbfc0c1bb3396",
+              "sorry_tokens": 2
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.StubLinter",
+              "source_sha256": "294be770ca5c2684192717f3e6de7b47e0afb2deb0168bfe65ec8d7042abecb7",
+              "sorry_tokens": 3
+            }
+          ],
+          "FC_Answer_elaborator_in_closure": true,
+          "qualification": "Lexical admissions can be unrelated to selected theorem. Default Prop answer(sorry) can yield True without a sorryAx dependency; raw prints and mathematical definition fidelity are separately required."
+        },
+        {
+          "audit": "FreshAuditErdos619.lean",
+          "selected_names": [
+            "Erdos619.erdos_619.variants.add_edges_diam_three"
+          ],
+          "custom_closure_admission_sites": [
+            {
+              "module": "Erdos619",
+              "source_sha256": "f596f21e1353bf6e9292d7f0cd9772c265dfc705ca855868e0a9e166149132ab",
+              "sorry_tokens": 4
+            },
+            {
+              "module": "FormalConjecturesUtil.Answer",
+              "source_sha256": "c8b3b31e9bb25c511e577b1812159a210e9346720f19ec6c6b30905a0802db7a",
+              "sorry_tokens": 2
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.CategoryAnswerLinter",
+              "source_sha256": "e8cd0d443276d31d8412688d25c7680a4a85c4495d7a29948917d55dfb1c9ed6",
+              "sorry_tokens": 1
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.FormalProofLinter",
+              "source_sha256": "59c42b3def4649b81b98ea94286b1449efcf31befbd5721fb3abbfc0c1bb3396",
+              "sorry_tokens": 2
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.StubLinter",
+              "source_sha256": "294be770ca5c2684192717f3e6de7b47e0afb2deb0168bfe65ec8d7042abecb7",
+              "sorry_tokens": 3
+            }
+          ],
+          "FC_Answer_elaborator_in_closure": true,
+          "qualification": "Lexical admissions can be unrelated to selected theorem. Default Prop answer(sorry) can yield True without a sorryAx dependency; raw prints and mathematical definition fidelity are separately required."
+        },
+        {
+          "audit": "FreshAuditErdos698.lean",
+          "selected_names": [
+            "Erdos698.erdos_698.variants.erdos_szekeres",
+            "Erdos698.erdos_698.variants.erdos_szekeres_sharp"
+          ],
+          "custom_closure_admission_sites": [
+            {
+              "module": "Erdos698",
+              "source_sha256": "15577f010988f4751510a1739de0765a855f07df090d135613e96ccecd37c1d9",
+              "sorry_tokens": 2
+            },
+            {
+              "module": "FormalConjecturesUtil.Answer",
+              "source_sha256": "c8b3b31e9bb25c511e577b1812159a210e9346720f19ec6c6b30905a0802db7a",
+              "sorry_tokens": 2
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.CategoryAnswerLinter",
+              "source_sha256": "e8cd0d443276d31d8412688d25c7680a4a85c4495d7a29948917d55dfb1c9ed6",
+              "sorry_tokens": 1
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.FormalProofLinter",
+              "source_sha256": "59c42b3def4649b81b98ea94286b1449efcf31befbd5721fb3abbfc0c1bb3396",
+              "sorry_tokens": 2
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.StubLinter",
+              "source_sha256": "294be770ca5c2684192717f3e6de7b47e0afb2deb0168bfe65ec8d7042abecb7",
+              "sorry_tokens": 3
+            }
+          ],
+          "FC_Answer_elaborator_in_closure": true,
+          "qualification": "Lexical admissions can be unrelated to selected theorem. Default Prop answer(sorry) can yield True without a sorryAx dependency; raw prints and mathematical definition fidelity are separately required."
+        },
+        {
+          "audit": "FreshAuditErdos703.lean",
+          "selected_names": [
+            "Erdos703.erdos_703.variants.zero"
+          ],
+          "custom_closure_admission_sites": [
+            {
+              "module": "Erdos703",
+              "source_sha256": "1bf2ca3afc1bc2fcf482220ec22ee4e8a9489bf54e9a1784f1cbdf76ed201c58",
+              "sorry_tokens": 2
+            },
+            {
+              "module": "FormalConjecturesUtil.Answer",
+              "source_sha256": "c8b3b31e9bb25c511e577b1812159a210e9346720f19ec6c6b30905a0802db7a",
+              "sorry_tokens": 2
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.CategoryAnswerLinter",
+              "source_sha256": "e8cd0d443276d31d8412688d25c7680a4a85c4495d7a29948917d55dfb1c9ed6",
+              "sorry_tokens": 1
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.FormalProofLinter",
+              "source_sha256": "59c42b3def4649b81b98ea94286b1449efcf31befbd5721fb3abbfc0c1bb3396",
+              "sorry_tokens": 2
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.StubLinter",
+              "source_sha256": "294be770ca5c2684192717f3e6de7b47e0afb2deb0168bfe65ec8d7042abecb7",
+              "sorry_tokens": 3
+            }
+          ],
+          "FC_Answer_elaborator_in_closure": true,
+          "qualification": "Lexical admissions can be unrelated to selected theorem. Default Prop answer(sorry) can yield True without a sorryAx dependency; raw prints and mathematical definition fidelity are separately required."
+        },
+        {
+          "audit": "FreshAuditErdos748.lean",
+          "selected_names": [
+            "Erdos748.erdos_748.variants.lower_bound"
+          ],
+          "custom_closure_admission_sites": [
+            {
+              "module": "Erdos748",
+              "source_sha256": "b04797885f82798e79b0bd275cc5ec59dd71ea749769c197ac51226ae70fd849",
+              "sorry_tokens": 3
+            },
+            {
+              "module": "FormalConjecturesUtil.Answer",
+              "source_sha256": "c8b3b31e9bb25c511e577b1812159a210e9346720f19ec6c6b30905a0802db7a",
+              "sorry_tokens": 2
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.CategoryAnswerLinter",
+              "source_sha256": "e8cd0d443276d31d8412688d25c7680a4a85c4495d7a29948917d55dfb1c9ed6",
+              "sorry_tokens": 1
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.FormalProofLinter",
+              "source_sha256": "59c42b3def4649b81b98ea94286b1449efcf31befbd5721fb3abbfc0c1bb3396",
+              "sorry_tokens": 2
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.StubLinter",
+              "source_sha256": "294be770ca5c2684192717f3e6de7b47e0afb2deb0168bfe65ec8d7042abecb7",
+              "sorry_tokens": 3
+            }
+          ],
+          "FC_Answer_elaborator_in_closure": true,
+          "qualification": "Lexical admissions can be unrelated to selected theorem. Default Prop answer(sorry) can yield True without a sorryAx dependency; raw prints and mathematical definition fidelity are separately required."
+        },
+        {
+          "audit": "FreshAuditErdos918.lean",
+          "selected_names": [
+            "Erdos918.erdos_918.variants.eq_aleph_0_all_subgraphs.parts.i",
+            "Erdos918.erdos_918.variants.eq_aleph_0_all_subgraphs.parts.ii",
+            "Erdos918.erdos_918.variants.eq_aleph_0.parts.i"
+          ],
+          "custom_closure_admission_sites": [
+            {
+              "module": "Erdos918",
+              "source_sha256": "e3b9555c94193117c38d4499fad4f7def1121994cded0c589f6d10006cd080b1",
+              "sorry_tokens": 10
+            },
+            {
+              "module": "FormalConjecturesUtil.Answer",
+              "source_sha256": "c8b3b31e9bb25c511e577b1812159a210e9346720f19ec6c6b30905a0802db7a",
+              "sorry_tokens": 2
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.CategoryAnswerLinter",
+              "source_sha256": "e8cd0d443276d31d8412688d25c7680a4a85c4495d7a29948917d55dfb1c9ed6",
+              "sorry_tokens": 1
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.FormalProofLinter",
+              "source_sha256": "59c42b3def4649b81b98ea94286b1449efcf31befbd5721fb3abbfc0c1bb3396",
+              "sorry_tokens": 2
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.StubLinter",
+              "source_sha256": "294be770ca5c2684192717f3e6de7b47e0afb2deb0168bfe65ec8d7042abecb7",
+              "sorry_tokens": 3
+            }
+          ],
+          "FC_Answer_elaborator_in_closure": true,
+          "qualification": "Lexical admissions can be unrelated to selected theorem. Default Prop answer(sorry) can yield True without a sorryAx dependency; raw prints and mathematical definition fidelity are separately required."
+        },
+        {
+          "audit": "FreshAuditErdos939.lean",
+          "selected_names": [
+            "Erdos939.erdos_939.variants.seven",
+            "Erdos939.erdos_939.variants.eight"
+          ],
+          "custom_closure_admission_sites": [
+            {
+              "module": "Erdos939",
+              "source_sha256": "17bd86b729b6d7cd47118c4590253119dbded6741e57888ef6a17400c42868ac",
+              "sorry_tokens": 5
+            },
+            {
+              "module": "FormalConjecturesUtil.Answer",
+              "source_sha256": "c8b3b31e9bb25c511e577b1812159a210e9346720f19ec6c6b30905a0802db7a",
+              "sorry_tokens": 2
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.CategoryAnswerLinter",
+              "source_sha256": "e8cd0d443276d31d8412688d25c7680a4a85c4495d7a29948917d55dfb1c9ed6",
+              "sorry_tokens": 1
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.FormalProofLinter",
+              "source_sha256": "59c42b3def4649b81b98ea94286b1449efcf31befbd5721fb3abbfc0c1bb3396",
+              "sorry_tokens": 2
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.StubLinter",
+              "source_sha256": "294be770ca5c2684192717f3e6de7b47e0afb2deb0168bfe65ec8d7042abecb7",
+              "sorry_tokens": 3
+            }
+          ],
+          "FC_Answer_elaborator_in_closure": true,
+          "qualification": "Lexical admissions can be unrelated to selected theorem. Default Prop answer(sorry) can yield True without a sorryAx dependency; raw prints and mathematical definition fidelity are separately required."
+        },
+        {
+          "audit": "FreshAuditErdos942.lean",
+          "selected_names": [
+            "Erdos942.erdos_942.variants.limsup"
+          ],
+          "custom_closure_admission_sites": [
+            {
+              "module": "Erdos942",
+              "source_sha256": "e902e8e237372f54a19c554b715ef0435b80cedd1ce68cd5d3064f521a3a1d77",
+              "sorry_tokens": 3
+            },
+            {
+              "module": "FormalConjecturesUtil.Answer",
+              "source_sha256": "c8b3b31e9bb25c511e577b1812159a210e9346720f19ec6c6b30905a0802db7a",
+              "sorry_tokens": 2
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.CategoryAnswerLinter",
+              "source_sha256": "e8cd0d443276d31d8412688d25c7680a4a85c4495d7a29948917d55dfb1c9ed6",
+              "sorry_tokens": 1
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.FormalProofLinter",
+              "source_sha256": "59c42b3def4649b81b98ea94286b1449efcf31befbd5721fb3abbfc0c1bb3396",
+              "sorry_tokens": 2
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.StubLinter",
+              "source_sha256": "294be770ca5c2684192717f3e6de7b47e0afb2deb0168bfe65ec8d7042abecb7",
+              "sorry_tokens": 3
+            }
+          ],
+          "FC_Answer_elaborator_in_closure": true,
+          "qualification": "Lexical admissions can be unrelated to selected theorem. Default Prop answer(sorry) can yield True without a sorryAx dependency; raw prints and mathematical definition fidelity are separately required."
+        },
+        {
+          "audit": "FreshAuditErdos261.lean",
+          "selected_names": [
+            "Erdos261.erdos_261.variants.borwein_loring",
+            "Erdos261.erdos_261.variants.borwein_loring_property",
+            "Erdos261.erdos_261.parts.i"
+          ],
+          "custom_closure_admission_sites": [
+            {
+              "module": "Erdos261",
+              "source_sha256": "ebc7899a33f775bf08240f139d23c3ade6ff3b9cff8ffec8918560276ff01548",
+              "sorry_tokens": 6
+            },
+            {
+              "module": "FormalConjecturesUtil.Answer",
+              "source_sha256": "c8b3b31e9bb25c511e577b1812159a210e9346720f19ec6c6b30905a0802db7a",
+              "sorry_tokens": 2
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.CategoryAnswerLinter",
+              "source_sha256": "e8cd0d443276d31d8412688d25c7680a4a85c4495d7a29948917d55dfb1c9ed6",
+              "sorry_tokens": 1
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.FormalProofLinter",
+              "source_sha256": "59c42b3def4649b81b98ea94286b1449efcf31befbd5721fb3abbfc0c1bb3396",
+              "sorry_tokens": 2
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.StubLinter",
+              "source_sha256": "294be770ca5c2684192717f3e6de7b47e0afb2deb0168bfe65ec8d7042abecb7",
+              "sorry_tokens": 3
+            }
+          ],
+          "FC_Answer_elaborator_in_closure": true,
+          "qualification": "Lexical admissions can be unrelated to selected theorem. Default Prop answer(sorry) can yield True without a sorryAx dependency; raw prints and mathematical definition fidelity are separately required."
+        },
+        {
+          "audit": "FreshAuditErdos36.lean",
+          "selected_names": [
+            "Erdos36.minimum_overlap.variants.lower.erdos_1955"
+          ],
+          "custom_closure_admission_sites": [
+            {
+              "module": "Erdos36",
+              "source_sha256": "06d274ab776ca3673e160ebf917562b9e7cba10e8b85ff995535e40b736e745f",
+              "sorry_tokens": 15
+            },
+            {
+              "module": "FormalConjecturesUtil.Answer",
+              "source_sha256": "c8b3b31e9bb25c511e577b1812159a210e9346720f19ec6c6b30905a0802db7a",
+              "sorry_tokens": 2
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.CategoryAnswerLinter",
+              "source_sha256": "e8cd0d443276d31d8412688d25c7680a4a85c4495d7a29948917d55dfb1c9ed6",
+              "sorry_tokens": 1
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.FormalProofLinter",
+              "source_sha256": "59c42b3def4649b81b98ea94286b1449efcf31befbd5721fb3abbfc0c1bb3396",
+              "sorry_tokens": 2
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.StubLinter",
+              "source_sha256": "294be770ca5c2684192717f3e6de7b47e0afb2deb0168bfe65ec8d7042abecb7",
+              "sorry_tokens": 3
+            }
+          ],
+          "FC_Answer_elaborator_in_closure": true,
+          "qualification": "Lexical admissions can be unrelated to selected theorem. Default Prop answer(sorry) can yield True without a sorryAx dependency; raw prints and mathematical definition fidelity are separately required."
+        },
+        {
+          "audit": "FreshAuditErdos508.lean",
+          "selected_names": [
+            "Erdos508.HadwigerNelsonAtLeast4",
+            "Erdos508.HadwigerNelsonAtMostSeven"
+          ],
+          "custom_closure_admission_sites": [
+            {
+              "module": "Erdos508",
+              "source_sha256": "ddb8ccdba30284308afc16e66290b390154ca83999c432e7947a061e840bb171",
+              "sorry_tokens": 3
+            },
+            {
+              "module": "FormalConjecturesUtil.Answer",
+              "source_sha256": "c8b3b31e9bb25c511e577b1812159a210e9346720f19ec6c6b30905a0802db7a",
+              "sorry_tokens": 2
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.CategoryAnswerLinter",
+              "source_sha256": "e8cd0d443276d31d8412688d25c7680a4a85c4495d7a29948917d55dfb1c9ed6",
+              "sorry_tokens": 1
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.FormalProofLinter",
+              "source_sha256": "59c42b3def4649b81b98ea94286b1449efcf31befbd5721fb3abbfc0c1bb3396",
+              "sorry_tokens": 2
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.StubLinter",
+              "source_sha256": "294be770ca5c2684192717f3e6de7b47e0afb2deb0168bfe65ec8d7042abecb7",
+              "sorry_tokens": 3
+            }
+          ],
+          "FC_Answer_elaborator_in_closure": true,
+          "qualification": "Lexical admissions can be unrelated to selected theorem. Default Prop answer(sorry) can yield True without a sorryAx dependency; raw prints and mathematical definition fidelity are separately required."
+        },
+        {
+          "audit": "FreshAuditErdos649.lean",
+          "selected_names": [
+            "Erdos649.erdos_649.variants.tong",
+            "Erdos649.erdos_649.variants.sampaio"
+          ],
+          "custom_closure_admission_sites": [
+            {
+              "module": "Erdos649",
+              "source_sha256": "5ea9a0b3071602d0b7e7f7151c91c14e6320dfc1c4e1280d9ed2db4e83ab5f2c",
+              "sorry_tokens": 4
+            },
+            {
+              "module": "FormalConjecturesUtil.Answer",
+              "source_sha256": "c8b3b31e9bb25c511e577b1812159a210e9346720f19ec6c6b30905a0802db7a",
+              "sorry_tokens": 2
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.CategoryAnswerLinter",
+              "source_sha256": "e8cd0d443276d31d8412688d25c7680a4a85c4495d7a29948917d55dfb1c9ed6",
+              "sorry_tokens": 1
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.FormalProofLinter",
+              "source_sha256": "59c42b3def4649b81b98ea94286b1449efcf31befbd5721fb3abbfc0c1bb3396",
+              "sorry_tokens": 2
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.StubLinter",
+              "source_sha256": "294be770ca5c2684192717f3e6de7b47e0afb2deb0168bfe65ec8d7042abecb7",
+              "sorry_tokens": 3
+            }
+          ],
+          "FC_Answer_elaborator_in_closure": true,
+          "qualification": "Lexical admissions can be unrelated to selected theorem. Default Prop answer(sorry) can yield True without a sorryAx dependency; raw prints and mathematical definition fidelity are separately required."
+        },
+        {
+          "audit": "FreshAuditErdos757.lean",
+          "selected_names": [
+            "Erdos757.erdos_757.variants.upperBound"
+          ],
+          "custom_closure_admission_sites": [
+            {
+              "module": "Erdos757",
+              "source_sha256": "a1260c57f324cbc3e0794bdc32dfb94d4c905e2643eb8e347b8b07fea3d6043f",
+              "sorry_tokens": 3
+            },
+            {
+              "module": "FormalConjecturesUtil.Answer",
+              "source_sha256": "c8b3b31e9bb25c511e577b1812159a210e9346720f19ec6c6b30905a0802db7a",
+              "sorry_tokens": 2
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.CategoryAnswerLinter",
+              "source_sha256": "e8cd0d443276d31d8412688d25c7680a4a85c4495d7a29948917d55dfb1c9ed6",
+              "sorry_tokens": 1
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.FormalProofLinter",
+              "source_sha256": "59c42b3def4649b81b98ea94286b1449efcf31befbd5721fb3abbfc0c1bb3396",
+              "sorry_tokens": 2
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.StubLinter",
+              "source_sha256": "294be770ca5c2684192717f3e6de7b47e0afb2deb0168bfe65ec8d7042abecb7",
+              "sorry_tokens": 3
+            }
+          ],
+          "FC_Answer_elaborator_in_closure": true,
+          "qualification": "Lexical admissions can be unrelated to selected theorem. Default Prop answer(sorry) can yield True without a sorryAx dependency; raw prints and mathematical definition fidelity are separately required."
+        }
+      ]
+    },
+    {
+      "project": "sakana-m2-research",
+      "plan_sha256": "e640756c85349928b6459d41cda81e58f8831cd6240d1e7ddef09425da61fd6c",
+      "granular_source_count": 224,
+      "deferred_whole_source_count": 25,
+      "granular_audit_count": 0,
+      "granular_requested_print_count": 0,
+      "granular_unique_requested_name_count": 0,
+      "deferred_audit_count": 7,
+      "deferred_requested_print_count": 9,
+      "selected_granular_expectation": "NO_SELECTED_GRANULAR_AUDIT_LIBRARY_COMPILATION_IS_NOT_RESULT_VERIFICATION",
+      "granular_source_static_admission_sites": [
+        {
+          "module": "FormalConjecturesUtil.Answer",
+          "sorry_tokens": 2,
+          "explicit_axiom_lines": []
+        },
+        {
+          "module": "FormalConjecturesUtil.Linters.CategoryAnswerLinter",
+          "sorry_tokens": 1,
+          "explicit_axiom_lines": []
+        },
+        {
+          "module": "FormalConjecturesUtil.Linters.FormalProofLinter",
+          "sorry_tokens": 2,
+          "explicit_axiom_lines": []
+        },
+        {
+          "module": "FormalConjecturesUtil.Linters.StubLinter",
+          "sorry_tokens": 3,
+          "explicit_axiom_lines": []
+        }
+      ],
+      "granular_source_native_syntax_modules": [],
+      "selected_deferred_expectation": "UNCONFIRMED_NO_COMPILER_OR_RAW_SELECTED_AXIOM_OUTPUTS_FROM_THIS_PREPARATION",
+      "granular_audit_details": [],
+      "deferred_audit_static_sites": [
+        {
+          "audit": "FreshAudit1.lean",
+          "selected_names": [
+            "a7406_padicValRat_three",
+            "a7406_padicValRat_two"
+          ],
+          "custom_closure_admission_sites": [
+            {
+              "module": "FormalConjectures.OEIS.7406",
+              "source_sha256": "6b8101561979aac0a9f110530c68c296eb5c5a7177ea56d0680d4455f2fc3af1",
+              "sorry_tokens": 1
+            },
+            {
+              "module": "FormalConjecturesUtil.Answer",
+              "source_sha256": "c8b3b31e9bb25c511e577b1812159a210e9346720f19ec6c6b30905a0802db7a",
+              "sorry_tokens": 2
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.CategoryAnswerLinter",
+              "source_sha256": "e8cd0d443276d31d8412688d25c7680a4a85c4495d7a29948917d55dfb1c9ed6",
+              "sorry_tokens": 1
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.FormalProofLinter",
+              "source_sha256": "59c42b3def4649b81b98ea94286b1449efcf31befbd5721fb3abbfc0c1bb3396",
+              "sorry_tokens": 2
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.StubLinter",
+              "source_sha256": "294be770ca5c2684192717f3e6de7b47e0afb2deb0168bfe65ec8d7042abecb7",
+              "sorry_tokens": 3
+            }
+          ],
+          "FC_Answer_elaborator_in_closure": true,
+          "qualification": "Lexical admissions can be unrelated to selected theorem. Default Prop answer(sorry) can yield True without a sorryAx dependency; raw prints and mathematical definition fidelity are separately required."
+        },
+        {
+          "audit": "FreshAudit2.lean",
+          "selected_names": [
+            "ga_addRevBase3_pal_imp_input_pal_or_carryFree"
+          ],
+          "custom_closure_admission_sites": [
+            {
+              "module": "FormalConjectures.OEIS.77408",
+              "source_sha256": "46336287e8be01a7c0cbbb062db6695c3f98a2740888dd897b2a0ba739bab94c",
+              "sorry_tokens": 1
+            },
+            {
+              "module": "FormalConjecturesUtil.Answer",
+              "source_sha256": "c8b3b31e9bb25c511e577b1812159a210e9346720f19ec6c6b30905a0802db7a",
+              "sorry_tokens": 2
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.CategoryAnswerLinter",
+              "source_sha256": "e8cd0d443276d31d8412688d25c7680a4a85c4495d7a29948917d55dfb1c9ed6",
+              "sorry_tokens": 1
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.FormalProofLinter",
+              "source_sha256": "59c42b3def4649b81b98ea94286b1449efcf31befbd5721fb3abbfc0c1bb3396",
+              "sorry_tokens": 2
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.StubLinter",
+              "source_sha256": "294be770ca5c2684192717f3e6de7b47e0afb2deb0168bfe65ec8d7042abecb7",
+              "sorry_tokens": 3
+            }
+          ],
+          "FC_Answer_elaborator_in_closure": true,
+          "qualification": "Lexical admissions can be unrelated to selected theorem. Default Prop answer(sorry) can yield True without a sorryAx dependency; raw prints and mathematical definition fidelity are separately required."
+        },
+        {
+          "audit": "FreshAudit3.lean",
+          "selected_names": [
+            "regularNGon_even_distanceMultiplicity_chord_bound"
+          ],
+          "custom_closure_admission_sites": [
+            {
+              "module": "FormalConjectures.ErdosProblems.94",
+              "source_sha256": "ade0fd86c68e89df3d05dfb39f5d99fa146826b3c50dacc000f4b47d796b6764",
+              "sorry_tokens": 3
+            },
+            {
+              "module": "FormalConjecturesUtil.Answer",
+              "source_sha256": "c8b3b31e9bb25c511e577b1812159a210e9346720f19ec6c6b30905a0802db7a",
+              "sorry_tokens": 2
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.CategoryAnswerLinter",
+              "source_sha256": "e8cd0d443276d31d8412688d25c7680a4a85c4495d7a29948917d55dfb1c9ed6",
+              "sorry_tokens": 1
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.FormalProofLinter",
+              "source_sha256": "59c42b3def4649b81b98ea94286b1449efcf31befbd5721fb3abbfc0c1bb3396",
+              "sorry_tokens": 2
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.StubLinter",
+              "source_sha256": "294be770ca5c2684192717f3e6de7b47e0afb2deb0168bfe65ec8d7042abecb7",
+              "sorry_tokens": 3
+            }
+          ],
+          "FC_Answer_elaborator_in_closure": true,
+          "qualification": "Lexical admissions can be unrelated to selected theorem. Default Prop answer(sorry) can yield True without a sorryAx dependency; raw prints and mathematical definition fidelity are separately required."
+        },
+        {
+          "audit": "FreshAudit4.lean",
+          "selected_names": [
+            "a7406_prime_case_gcd",
+            "a7406_not_dvd_of_padicValRat_nonpos"
+          ],
+          "custom_closure_admission_sites": [
+            {
+              "module": "FormalConjectures.OEIS.7406",
+              "source_sha256": "6b8101561979aac0a9f110530c68c296eb5c5a7177ea56d0680d4455f2fc3af1",
+              "sorry_tokens": 1
+            },
+            {
+              "module": "FormalConjecturesUtil.Answer",
+              "source_sha256": "c8b3b31e9bb25c511e577b1812159a210e9346720f19ec6c6b30905a0802db7a",
+              "sorry_tokens": 2
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.CategoryAnswerLinter",
+              "source_sha256": "e8cd0d443276d31d8412688d25c7680a4a85c4495d7a29948917d55dfb1c9ed6",
+              "sorry_tokens": 1
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.FormalProofLinter",
+              "source_sha256": "59c42b3def4649b81b98ea94286b1449efcf31befbd5721fb3abbfc0c1bb3396",
+              "sorry_tokens": 2
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.StubLinter",
+              "source_sha256": "294be770ca5c2684192717f3e6de7b47e0afb2deb0168bfe65ec8d7042abecb7",
+              "sorry_tokens": 3
+            }
+          ],
+          "FC_Answer_elaborator_in_closure": true,
+          "qualification": "Lexical admissions can be unrelated to selected theorem. Default Prop answer(sorry) can yield True without a sorryAx dependency; raw prints and mathematical definition fidelity are separately required."
+        },
+        {
+          "audit": "FreshAudit5.lean",
+          "selected_names": [
+            "ga_target_5e67b0763c763225"
+          ],
+          "custom_closure_admission_sites": [
+            {
+              "module": "FormalConjectures.OEIS.60841",
+              "source_sha256": "2e575fe28e2b771d1d1502bd51054c937ea2f6dc8d556677dc4b8b220da98256",
+              "sorry_tokens": 2
+            },
+            {
+              "module": "FormalConjecturesUtil.Answer",
+              "source_sha256": "c8b3b31e9bb25c511e577b1812159a210e9346720f19ec6c6b30905a0802db7a",
+              "sorry_tokens": 2
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.CategoryAnswerLinter",
+              "source_sha256": "e8cd0d443276d31d8412688d25c7680a4a85c4495d7a29948917d55dfb1c9ed6",
+              "sorry_tokens": 1
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.FormalProofLinter",
+              "source_sha256": "59c42b3def4649b81b98ea94286b1449efcf31befbd5721fb3abbfc0c1bb3396",
+              "sorry_tokens": 2
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.StubLinter",
+              "source_sha256": "294be770ca5c2684192717f3e6de7b47e0afb2deb0168bfe65ec8d7042abecb7",
+              "sorry_tokens": 3
+            }
+          ],
+          "FC_Answer_elaborator_in_closure": true,
+          "qualification": "Lexical admissions can be unrelated to selected theorem. Default Prop answer(sorry) can yield True without a sorryAx dependency; raw prints and mathematical definition fidelity are separately required."
+        },
+        {
+          "audit": "FreshAudit6.lean",
+          "selected_names": [
+            "ga_half_sum_add_eq_zero_of_modEq_neg_one"
+          ],
+          "custom_closure_admission_sites": [
+            {
+              "module": "FormalConjectures.Arxiv.2501.03234.ArithmeticSumS",
+              "source_sha256": "ff3587186cca274bad749267876939be91a28a4f55b6bcfa30dd6b70f08100c2",
+              "sorry_tokens": 5
+            },
+            {
+              "module": "FormalConjecturesUtil.Answer",
+              "source_sha256": "c8b3b31e9bb25c511e577b1812159a210e9346720f19ec6c6b30905a0802db7a",
+              "sorry_tokens": 2
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.CategoryAnswerLinter",
+              "source_sha256": "e8cd0d443276d31d8412688d25c7680a4a85c4495d7a29948917d55dfb1c9ed6",
+              "sorry_tokens": 1
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.FormalProofLinter",
+              "source_sha256": "59c42b3def4649b81b98ea94286b1449efcf31befbd5721fb3abbfc0c1bb3396",
+              "sorry_tokens": 2
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.StubLinter",
+              "source_sha256": "294be770ca5c2684192717f3e6de7b47e0afb2deb0168bfe65ec8d7042abecb7",
+              "sorry_tokens": 3
+            }
+          ],
+          "FC_Answer_elaborator_in_closure": true,
+          "qualification": "Lexical admissions can be unrelated to selected theorem. Default Prop answer(sorry) can yield True without a sorryAx dependency; raw prints and mathematical definition fidelity are separately required."
+        },
+        {
+          "audit": "FreshAudit7.lean",
+          "selected_names": [
+            "ga_contains_4_infinite"
+          ],
+          "custom_closure_admission_sites": [
+            {
+              "module": "FormalConjectures.ErdosProblems.887",
+              "source_sha256": "132959acb02e47c8847154342f33648f799a0749af2d5831689059be4fa86682",
+              "sorry_tokens": 5
+            },
+            {
+              "module": "FormalConjecturesUtil.Answer",
+              "source_sha256": "c8b3b31e9bb25c511e577b1812159a210e9346720f19ec6c6b30905a0802db7a",
+              "sorry_tokens": 2
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.CategoryAnswerLinter",
+              "source_sha256": "e8cd0d443276d31d8412688d25c7680a4a85c4495d7a29948917d55dfb1c9ed6",
+              "sorry_tokens": 1
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.FormalProofLinter",
+              "source_sha256": "59c42b3def4649b81b98ea94286b1449efcf31befbd5721fb3abbfc0c1bb3396",
+              "sorry_tokens": 2
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.StubLinter",
+              "source_sha256": "294be770ca5c2684192717f3e6de7b47e0afb2deb0168bfe65ec8d7042abecb7",
+              "sorry_tokens": 3
+            }
+          ],
+          "FC_Answer_elaborator_in_closure": true,
+          "qualification": "Lexical admissions can be unrelated to selected theorem. Default Prop answer(sorry) can yield True without a sorryAx dependency; raw prints and mathematical definition fidelity are separately required."
+        }
+      ]
+    },
+    {
+      "project": "koerbser-climb1-library",
+      "plan_sha256": "4160a948abbfc5ca4cbcd456ba300655362f96be4baaba7ba03a9edf029ded99",
+      "granular_source_count": 0,
+      "deferred_whole_source_count": 18,
+      "granular_audit_count": 0,
+      "granular_requested_print_count": 0,
+      "granular_unique_requested_name_count": 0,
+      "deferred_audit_count": 2,
+      "deferred_requested_print_count": 4,
+      "selected_granular_expectation": "NO_SELECTED_GRANULAR_AUDIT_LIBRARY_COMPILATION_IS_NOT_RESULT_VERIFICATION",
+      "granular_source_static_admission_sites": [],
+      "granular_source_native_syntax_modules": [],
+      "selected_deferred_expectation": "UNCONFIRMED_NO_COMPILER_OR_RAW_SELECTED_AXIOM_OUTPUTS_FROM_THIS_PREPARATION",
+      "granular_audit_details": [],
+      "deferred_audit_static_sites": [
+        {
+          "audit": "FreshAuditConverse.lean",
+          "selected_names": [
+            "Erdos3Converse.maxCardDyadicSummable_iff"
+          ],
+          "custom_closure_admission_sites": [
+            {
+              "module": "FormalConjecturesUtil.Answer",
+              "source_sha256": "c8b3b31e9bb25c511e577b1812159a210e9346720f19ec6c6b30905a0802db7a",
+              "sorry_tokens": 2
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.CategoryAnswerLinter",
+              "source_sha256": "e8cd0d443276d31d8412688d25c7680a4a85c4495d7a29948917d55dfb1c9ed6",
+              "sorry_tokens": 1
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.FormalProofLinter",
+              "source_sha256": "59c42b3def4649b81b98ea94286b1449efcf31befbd5721fb3abbfc0c1bb3396",
+              "sorry_tokens": 2
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.StubLinter",
+              "source_sha256": "294be770ca5c2684192717f3e6de7b47e0afb2deb0168bfe65ec8d7042abecb7",
+              "sorry_tokens": 3
+            }
+          ],
+          "FC_Answer_elaborator_in_closure": true,
+          "qualification": "Lexical admissions can be unrelated to selected theorem. Default Prop answer(sorry) can yield True without a sorryAx dependency; raw prints and mathematical definition fidelity are separately required."
+        },
+        {
+          "audit": "FreshAuditVonNeumann.lean",
+          "selected_names": [
+            "Erdos4VonNeumann.norm_apCount4_pow8_le_gowers3",
+            "Erdos4VonNeumann.apCount4_one",
+            "Erdos4VonNeumann.gowers3_one"
+          ],
+          "custom_closure_admission_sites": [
+            {
+              "module": "FormalConjecturesUtil.Answer",
+              "source_sha256": "c8b3b31e9bb25c511e577b1812159a210e9346720f19ec6c6b30905a0802db7a",
+              "sorry_tokens": 2
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.CategoryAnswerLinter",
+              "source_sha256": "e8cd0d443276d31d8412688d25c7680a4a85c4495d7a29948917d55dfb1c9ed6",
+              "sorry_tokens": 1
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.FormalProofLinter",
+              "source_sha256": "59c42b3def4649b81b98ea94286b1449efcf31befbd5721fb3abbfc0c1bb3396",
+              "sorry_tokens": 2
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.StubLinter",
+              "source_sha256": "294be770ca5c2684192717f3e6de7b47e0afb2deb0168bfe65ec8d7042abecb7",
+              "sorry_tokens": 3
+            }
+          ],
+          "FC_Answer_elaborator_in_closure": true,
+          "qualification": "Lexical admissions can be unrelated to selected theorem. Default Prop answer(sorry) can yield True without a sorryAx dependency; raw prints and mathematical definition fidelity are separately required."
+        }
+      ]
+    },
+    {
+      "project": "koerbser-three-term",
+      "plan_sha256": "03335f8dae0fe01722dd8c6491c127a1bad3ea1c0b92833c289038dfc5621df8",
+      "granular_source_count": 45,
+      "deferred_whole_source_count": 35,
+      "granular_audit_count": 0,
+      "granular_requested_print_count": 0,
+      "granular_unique_requested_name_count": 0,
+      "deferred_audit_count": 1,
+      "deferred_requested_print_count": 3,
+      "selected_granular_expectation": "NO_SELECTED_GRANULAR_AUDIT_LIBRARY_COMPILATION_IS_NOT_RESULT_VERIFICATION",
+      "granular_source_static_admission_sites": [],
+      "granular_source_native_syntax_modules": [],
+      "selected_deferred_expectation": "UNCONFIRMED_NO_COMPILER_OR_RAW_SELECTED_AXIOM_OUTPUTS_FROM_THIS_PREPARATION",
+      "granular_audit_details": [],
+      "deferred_audit_static_sites": [
+        {
+          "audit": "FreshAuditThreeTerm.lean",
+          "selected_names": [
+            "solution",
+            "Erdos3ThreeTermProof.maxCard_three_le_addRothNumber",
+            "Erdos3ThreeTermProof.summable_maxCard_three_dyadic"
+          ],
+          "custom_closure_admission_sites": [
+            {
+              "module": "FormalConjecturesUtil.Answer",
+              "source_sha256": "c8b3b31e9bb25c511e577b1812159a210e9346720f19ec6c6b30905a0802db7a",
+              "sorry_tokens": 2
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.CategoryAnswerLinter",
+              "source_sha256": "e8cd0d443276d31d8412688d25c7680a4a85c4495d7a29948917d55dfb1c9ed6",
+              "sorry_tokens": 1
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.FormalProofLinter",
+              "source_sha256": "59c42b3def4649b81b98ea94286b1449efcf31befbd5721fb3abbfc0c1bb3396",
+              "sorry_tokens": 2
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.StubLinter",
+              "source_sha256": "294be770ca5c2684192717f3e6de7b47e0afb2deb0168bfe65ec8d7042abecb7",
+              "sorry_tokens": 3
+            }
+          ],
+          "FC_Answer_elaborator_in_closure": true,
+          "qualification": "Lexical admissions can be unrelated to selected theorem. Default Prop answer(sorry) can yield True without a sorryAx dependency; raw prints and mathematical definition fidelity are separately required."
+        }
+      ]
+    },
+    {
+      "project": "jamie-ap-bridges",
+      "plan_sha256": "86b3947ca573c0afb6643cfdd436bff031857e9fead0749a7caaa3733b8f5330",
+      "granular_source_count": 0,
+      "deferred_whole_source_count": 2,
+      "granular_audit_count": 0,
+      "granular_requested_print_count": 0,
+      "granular_unique_requested_name_count": 0,
+      "deferred_audit_count": 2,
+      "deferred_requested_print_count": 3,
+      "selected_granular_expectation": "NO_SELECTED_GRANULAR_AUDIT_LIBRARY_COMPILATION_IS_NOT_RESULT_VERIFICATION",
+      "granular_source_static_admission_sites": [],
+      "granular_source_native_syntax_modules": [],
+      "selected_deferred_expectation": "UNCONFIRMED_NO_COMPILER_OR_RAW_SELECTED_AXIOM_OUTPUTS_FROM_THIS_PREPARATION",
+      "granular_audit_details": [],
+      "deferred_audit_static_sites": [
+        {
+          "audit": "FreshAudit3.lean",
+          "selected_names": [
+            "Erdos3.ap_subprogression_of_le"
+          ],
+          "custom_closure_admission_sites": [
+            {
+              "module": "FormalConjecturesUtil.Answer",
+              "source_sha256": "c8b3b31e9bb25c511e577b1812159a210e9346720f19ec6c6b30905a0802db7a",
+              "sorry_tokens": 2
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.CategoryAnswerLinter",
+              "source_sha256": "e8cd0d443276d31d8412688d25c7680a4a85c4495d7a29948917d55dfb1c9ed6",
+              "sorry_tokens": 1
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.FormalProofLinter",
+              "source_sha256": "59c42b3def4649b81b98ea94286b1449efcf31befbd5721fb3abbfc0c1bb3396",
+              "sorry_tokens": 2
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.StubLinter",
+              "source_sha256": "294be770ca5c2684192717f3e6de7b47e0afb2deb0168bfe65ec8d7042abecb7",
+              "sorry_tokens": 3
+            }
+          ],
+          "FC_Answer_elaborator_in_closure": true,
+          "qualification": "Lexical admissions can be unrelated to selected theorem. Default Prop answer(sorry) can yield True without a sorryAx dependency; raw prints and mathematical definition fidelity are separately required."
+        },
+        {
+          "audit": "FreshAudit4.lean",
+          "selected_names": [
+            "Erdos3.ap_subprogression_of_le",
+            "Erdos3.ap_frequently_iff_every_length"
+          ],
+          "custom_closure_admission_sites": [
+            {
+              "module": "FormalConjecturesUtil.Answer",
+              "source_sha256": "c8b3b31e9bb25c511e577b1812159a210e9346720f19ec6c6b30905a0802db7a",
+              "sorry_tokens": 2
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.CategoryAnswerLinter",
+              "source_sha256": "e8cd0d443276d31d8412688d25c7680a4a85c4495d7a29948917d55dfb1c9ed6",
+              "sorry_tokens": 1
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.FormalProofLinter",
+              "source_sha256": "59c42b3def4649b81b98ea94286b1449efcf31befbd5721fb3abbfc0c1bb3396",
+              "sorry_tokens": 2
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.StubLinter",
+              "source_sha256": "294be770ca5c2684192717f3e6de7b47e0afb2deb0168bfe65ec8d7042abecb7",
+              "sorry_tokens": 3
+            }
+          ],
+          "FC_Answer_elaborator_in_closure": true,
+          "qualification": "Lexical admissions can be unrelated to selected theorem. Default Prop answer(sorry) can yield True without a sorryAx dependency; raw prints and mathematical definition fidelity are separately required."
+        }
+      ]
+    },
+    {
+      "project": "sundai-organizer-bridge",
+      "plan_sha256": "f03bb3fba8072c0825ab34879d405607b89522bc729a97b4d6598740e728a21a",
+      "granular_source_count": 0,
+      "deferred_whole_source_count": 1,
+      "granular_audit_count": 0,
+      "granular_requested_print_count": 0,
+      "granular_unique_requested_name_count": 0,
+      "deferred_audit_count": 1,
+      "deferred_requested_print_count": 5,
+      "selected_granular_expectation": "NO_SELECTED_GRANULAR_AUDIT_LIBRARY_COMPILATION_IS_NOT_RESULT_VERIFICATION",
+      "granular_source_static_admission_sites": [],
+      "granular_source_native_syntax_modules": [],
+      "selected_deferred_expectation": "UNCONFIRMED_NO_COMPILER_OR_RAW_SELECTED_AXIOM_OUTPUTS_FROM_THIS_PREPARATION",
+      "granular_audit_details": [],
+      "deferred_audit_static_sites": [
+        {
+          "audit": "FreshAuditBridge.lean",
+          "selected_names": [
+            "Erdos3Bridge.containsAP_to_setAP",
+            "Erdos3Bridge.all_lengths_to_frequently",
+            "Erdos3Bridge.elementary_all_lengths_to_frequently",
+            "Erdos3Bridge.cofinite_hill_conclusion",
+            "Erdos3Bridge.affine_tail_hill_conclusion"
+          ],
+          "custom_closure_admission_sites": [
+            {
+              "module": "FormalConjecturesUtil.Answer",
+              "source_sha256": "c8b3b31e9bb25c511e577b1812159a210e9346720f19ec6c6b30905a0802db7a",
+              "sorry_tokens": 2
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.CategoryAnswerLinter",
+              "source_sha256": "e8cd0d443276d31d8412688d25c7680a4a85c4495d7a29948917d55dfb1c9ed6",
+              "sorry_tokens": 1
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.FormalProofLinter",
+              "source_sha256": "59c42b3def4649b81b98ea94286b1449efcf31befbd5721fb3abbfc0c1bb3396",
+              "sorry_tokens": 2
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.StubLinter",
+              "source_sha256": "294be770ca5c2684192717f3e6de7b47e0afb2deb0168bfe65ec8d7042abecb7",
+              "sorry_tokens": 3
+            }
+          ],
+          "FC_Answer_elaborator_in_closure": true,
+          "qualification": "Lexical admissions can be unrelated to selected theorem. Default Prop answer(sorry) can yield True without a sorryAx dependency; raw prints and mathematical definition fidelity are separately required."
+        }
+      ]
+    },
+    {
+      "project": "sundai-erdos3-current",
+      "plan_sha256": "8f1074283a569367dfe9141f7df474261f88b1a11506da562badb1c9015d038b",
+      "granular_source_count": 1,
+      "deferred_whole_source_count": 6,
+      "granular_audit_count": 1,
+      "granular_requested_print_count": 14,
+      "granular_unique_requested_name_count": 14,
+      "deferred_audit_count": 6,
+      "deferred_requested_print_count": 42,
+      "selected_granular_expectation": "EXPECTED_STANDARD_KERNEL_ONLY_NO_STATIC_CUSTOM_ADMISSIONS_OR_NATIVE_SYNTAX_ACTUAL_AUDIT_REQUIRED",
+      "granular_source_static_admission_sites": [],
+      "granular_source_native_syntax_modules": [],
+      "selected_deferred_expectation": "UNCONFIRMED_NO_COMPILER_OR_RAW_SELECTED_AXIOM_OUTPUTS_FROM_THIS_PREPARATION",
+      "granular_audit_details": [
+        {
+          "audit": "FreshAuditErdos3SpecialCases.lean",
+          "source_sha256": "0cee28fe1bbacdd3ab2d38d4f9da26b287cfe7b2d3ab8da19e6f2ac182d8a4c2",
+          "imports": [
+            "Erdos3SpecialCases"
+          ],
+          "selected_names": [
+            "Erdos3SpecialCases.ap_terms_strictly_increase",
+            "Erdos3SpecialCases.containsAP_mono",
+            "Erdos3SpecialCases.containsAP_prefix",
+            "Erdos3SpecialCases.unbounded_lengths_iff_all_lengths",
+            "Erdos3SpecialCases.cofinite_contains_all_lengths",
+            "Erdos3SpecialCases.affine_tail_contains_all_lengths",
+            "Erdos3SpecialCases.multiples_contain_all_lengths",
+            "Erdos3SpecialCases.unbounded_contains_two",
+            "Erdos3SpecialCases.arbitrarilyLongAPs_mono",
+            "Erdos3SpecialCases.powers_two_no_midpoint",
+            "Erdos3SpecialCases.powers_two_no_three",
+            "Erdos3SpecialCases.nat_lt_two_pow",
+            "Erdos3SpecialCases.powers_two_unbounded",
+            "Erdos3SpecialCases.unbounded_does_not_imply_all_lengths"
+          ],
+          "custom_prerequisite_closure": [
+            "Erdos3SpecialCases"
+          ],
+          "whole_Mathlib_roots": [],
+          "deferred_whole_scope": false,
+          "additional_library_prerequisites": [],
+          "source_closure_admission_sites": [],
+          "formalconjectures_answer_elaborator_in_closure": false,
+          "expected_axiom_scope": "UNCONFIRMED_STATIC_SOURCE_PLANNING_ONLY_ACTUAL_PRINT_REQUIRED",
+          "qualification": "A sorry token elsewhere in a module/closure does not establish selected-theorem axiom dependence. Conversely a clean print does not validate answer(sorry) problem semantics."
+        }
+      ],
+      "deferred_audit_static_sites": [
+        {
+          "audit": "FreshAuditErdos3CrossScale.lean",
+          "selected_names": [
+            "Erdos3CrossScale.free_mono",
+            "Erdos3CrossScale.free_image_add",
+            "Erdos3CrossScale.free_preimage_add",
+            "Erdos3CrossScale.free_mono_length",
+            "Erdos3CrossScale.a_sepBlock_disjoint",
+            "Erdos3CrossScale.a_dichot",
+            "Erdos3CrossScale.a_window",
+            "Erdos3CrossScale.sepBlock_union_free",
+            "Erdos3CrossScale.r_attained",
+            "Erdos3CrossScale.card_le_r",
+            "Erdos3CrossScale.r_two_mul_le",
+            "Erdos3CrossScale.logBlock_ncard_le_r",
+            "Erdos3CrossScale.freeSummable_of_dyadic",
+            "Erdos3CrossScale.dyadic_of_quart",
+            "Erdos3CrossScale.e_sepBlock_eq",
+            "Erdos3CrossScale.e_shift_mem",
+            "Erdos3CrossScale.e_block_lower",
+            "Erdos3CrossScale.quart_of_freeSummable",
+            "Erdos3CrossScale.freeSummable_iff_quart",
+            "Erdos3CrossScale.freeSummable_iff_dyadic",
+            "Erdos3CrossScale.hill_iff_extremal",
+            "Erdos3CrossScale.hill_statement_iff_extremal"
+          ],
+          "custom_closure_admission_sites": [
+            {
+              "module": "Erdos3CrossScale",
+              "source_sha256": "f605289b15a763ac7730ef9fd72853e4bf84d61cf3c519a29d9c8ece44eefa85",
+              "sorry_tokens": 1
+            },
+            {
+              "module": "FormalConjecturesUtil.Answer",
+              "source_sha256": "c8b3b31e9bb25c511e577b1812159a210e9346720f19ec6c6b30905a0802db7a",
+              "sorry_tokens": 2
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.CategoryAnswerLinter",
+              "source_sha256": "e8cd0d443276d31d8412688d25c7680a4a85c4495d7a29948917d55dfb1c9ed6",
+              "sorry_tokens": 1
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.FormalProofLinter",
+              "source_sha256": "59c42b3def4649b81b98ea94286b1449efcf31befbd5721fb3abbfc0c1bb3396",
+              "sorry_tokens": 2
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.StubLinter",
+              "source_sha256": "294be770ca5c2684192717f3e6de7b47e0afb2deb0168bfe65ec8d7042abecb7",
+              "sorry_tokens": 3
+            }
+          ],
+          "FC_Answer_elaborator_in_closure": true,
+          "qualification": "Lexical admissions can be unrelated to selected theorem. Default Prop answer(sorry) can yield True without a sorryAx dependency; raw prints and mathematical definition fidelity are separately required."
+        },
+        {
+          "audit": "FreshAuditErdos3Dyadic.lean",
+          "selected_names": [
+            "Erdos3Dyadic.reciprocal_summable_of_dyadic_counts",
+            "Erdos3Dyadic.reciprocal_summable_of_power_envelope",
+            "Erdos3Dyadic.hill_of_apFree_power_envelope"
+          ],
+          "custom_closure_admission_sites": [
+            {
+              "module": "FormalConjecturesUtil.Answer",
+              "source_sha256": "c8b3b31e9bb25c511e577b1812159a210e9346720f19ec6c6b30905a0802db7a",
+              "sorry_tokens": 2
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.CategoryAnswerLinter",
+              "source_sha256": "e8cd0d443276d31d8412688d25c7680a4a85c4495d7a29948917d55dfb1c9ed6",
+              "sorry_tokens": 1
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.FormalProofLinter",
+              "source_sha256": "59c42b3def4649b81b98ea94286b1449efcf31befbd5721fb3abbfc0c1bb3396",
+              "sorry_tokens": 2
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.StubLinter",
+              "source_sha256": "294be770ca5c2684192717f3e6de7b47e0afb2deb0168bfe65ec8d7042abecb7",
+              "sorry_tokens": 3
+            }
+          ],
+          "FC_Answer_elaborator_in_closure": true,
+          "qualification": "Lexical admissions can be unrelated to selected theorem. Default Prop answer(sorry) can yield True without a sorryAx dependency; raw prints and mathematical definition fidelity are separately required."
+        },
+        {
+          "audit": "FreshAuditErdos3Reduction.lean",
+          "selected_names": [
+            "Erdos3Reduction.hill_of_apFreeSummability"
+          ],
+          "custom_closure_admission_sites": [
+            {
+              "module": "FormalConjecturesUtil.Answer",
+              "source_sha256": "c8b3b31e9bb25c511e577b1812159a210e9346720f19ec6c6b30905a0802db7a",
+              "sorry_tokens": 2
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.CategoryAnswerLinter",
+              "source_sha256": "e8cd0d443276d31d8412688d25c7680a4a85c4495d7a29948917d55dfb1c9ed6",
+              "sorry_tokens": 1
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.FormalProofLinter",
+              "source_sha256": "59c42b3def4649b81b98ea94286b1449efcf31befbd5721fb3abbfc0c1bb3396",
+              "sorry_tokens": 2
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.StubLinter",
+              "source_sha256": "294be770ca5c2684192717f3e6de7b47e0afb2deb0168bfe65ec8d7042abecb7",
+              "sorry_tokens": 3
+            }
+          ],
+          "FC_Answer_elaborator_in_closure": true,
+          "qualification": "Lexical admissions can be unrelated to selected theorem. Default Prop answer(sorry) can yield True without a sorryAx dependency; raw prints and mathematical definition fidelity are separately required."
+        },
+        {
+          "audit": "FreshAuditErdos3Blocks.lean",
+          "selected_names": [
+            "Erdos3Blocks.logBlock_lt_upper",
+            "Erdos3Blocks.logBlock_finite",
+            "Erdos3Blocks.logBlock_reciprocal_le",
+            "Erdos3Blocks.logBlock_mass_le"
+          ],
+          "custom_closure_admission_sites": [
+            {
+              "module": "FormalConjecturesUtil.Answer",
+              "source_sha256": "c8b3b31e9bb25c511e577b1812159a210e9346720f19ec6c6b30905a0802db7a",
+              "sorry_tokens": 2
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.CategoryAnswerLinter",
+              "source_sha256": "e8cd0d443276d31d8412688d25c7680a4a85c4495d7a29948917d55dfb1c9ed6",
+              "sorry_tokens": 1
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.FormalProofLinter",
+              "source_sha256": "59c42b3def4649b81b98ea94286b1449efcf31befbd5721fb3abbfc0c1bb3396",
+              "sorry_tokens": 2
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.StubLinter",
+              "source_sha256": "294be770ca5c2684192717f3e6de7b47e0afb2deb0168bfe65ec8d7042abecb7",
+              "sorry_tokens": 3
+            }
+          ],
+          "FC_Answer_elaborator_in_closure": true,
+          "qualification": "Lexical admissions can be unrelated to selected theorem. Default Prop answer(sorry) can yield True without a sorryAx dependency; raw prints and mathematical definition fidelity are separately required."
+        },
+        {
+          "audit": "FreshAuditErdos3ThreeCase.lean",
+          "selected_names": [
+            "Erdos3ThreeCase.dyadic_of_logBarrier",
+            "Erdos3ThreeCase.logBarrier_of_quasipoly",
+            "Erdos3ThreeCase.three_of_dyadic",
+            "Erdos3ThreeCase.three_of_logBarrier",
+            "Erdos3ThreeCase.three_of_kelleyMeka"
+          ],
+          "custom_closure_admission_sites": [
+            {
+              "module": "Erdos3CrossScale",
+              "source_sha256": "f605289b15a763ac7730ef9fd72853e4bf84d61cf3c519a29d9c8ece44eefa85",
+              "sorry_tokens": 1
+            },
+            {
+              "module": "FormalConjecturesUtil.Answer",
+              "source_sha256": "c8b3b31e9bb25c511e577b1812159a210e9346720f19ec6c6b30905a0802db7a",
+              "sorry_tokens": 2
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.CategoryAnswerLinter",
+              "source_sha256": "e8cd0d443276d31d8412688d25c7680a4a85c4495d7a29948917d55dfb1c9ed6",
+              "sorry_tokens": 1
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.FormalProofLinter",
+              "source_sha256": "59c42b3def4649b81b98ea94286b1449efcf31befbd5721fb3abbfc0c1bb3396",
+              "sorry_tokens": 2
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.StubLinter",
+              "source_sha256": "294be770ca5c2684192717f3e6de7b47e0afb2deb0168bfe65ec8d7042abecb7",
+              "sorry_tokens": 3
+            }
+          ],
+          "FC_Answer_elaborator_in_closure": true,
+          "qualification": "Lexical admissions can be unrelated to selected theorem. Default Prop answer(sorry) can yield True without a sorryAx dependency; raw prints and mathematical definition fidelity are separately required."
+        },
+        {
+          "audit": "FreshAuditErdos3RothBridge.lean",
+          "selected_names": [
+            "Erdos3RothBridge.a_three_term_ap",
+            "Erdos3RothBridge.isAPOfLengthFree_three_iff",
+            "Erdos3RothBridge.maxCard_three_eq_addRothNumber",
+            "Erdos3RothBridge.maxCard_three_eq_rothNumberNat",
+            "Erdos3RothBridge.kelleyMeka_iff_rothNumberNat",
+            "Erdos3RothBridge.three_of_rothNumberNat",
+            "Erdos3RothBridge.three_of_uniform_finset_bound"
+          ],
+          "custom_closure_admission_sites": [
+            {
+              "module": "Erdos3CrossScale",
+              "source_sha256": "f605289b15a763ac7730ef9fd72853e4bf84d61cf3c519a29d9c8ece44eefa85",
+              "sorry_tokens": 1
+            },
+            {
+              "module": "FormalConjecturesUtil.Answer",
+              "source_sha256": "c8b3b31e9bb25c511e577b1812159a210e9346720f19ec6c6b30905a0802db7a",
+              "sorry_tokens": 2
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.CategoryAnswerLinter",
+              "source_sha256": "e8cd0d443276d31d8412688d25c7680a4a85c4495d7a29948917d55dfb1c9ed6",
+              "sorry_tokens": 1
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.FormalProofLinter",
+              "source_sha256": "59c42b3def4649b81b98ea94286b1449efcf31befbd5721fb3abbfc0c1bb3396",
+              "sorry_tokens": 2
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.StubLinter",
+              "source_sha256": "294be770ca5c2684192717f3e6de7b47e0afb2deb0168bfe65ec8d7042abecb7",
+              "sorry_tokens": 3
+            }
+          ],
+          "FC_Answer_elaborator_in_closure": true,
+          "qualification": "Lexical admissions can be unrelated to selected theorem. Default Prop answer(sorry) can yield True without a sorryAx dependency; raw prints and mathematical definition fidelity are separately required."
+        }
+      ]
+    },
+    {
+      "project": "official-fc-util433",
+      "plan_sha256": "104c71d4916cb10b663afd6e5107f928ca18e54b99bcaaae64dd6adc60ff45e7",
+      "granular_source_count": 229,
+      "deferred_whole_source_count": 4,
+      "granular_audit_count": 0,
+      "granular_requested_print_count": 0,
+      "granular_unique_requested_name_count": 0,
+      "deferred_audit_count": 1,
+      "deferred_requested_print_count": 1,
+      "selected_granular_expectation": "NO_SELECTED_GRANULAR_AUDIT_LIBRARY_COMPILATION_IS_NOT_RESULT_VERIFICATION",
+      "granular_source_static_admission_sites": [
+        {
+          "module": "FormalConjecturesUtil.Answer",
+          "sorry_tokens": 2,
+          "explicit_axiom_lines": []
+        },
+        {
+          "module": "FormalConjecturesUtil.Linters.AnswerLinterTest",
+          "sorry_tokens": 7,
+          "explicit_axiom_lines": []
+        },
+        {
+          "module": "FormalConjecturesUtil.Linters.CategoryAnswerLinter",
+          "sorry_tokens": 1,
+          "explicit_axiom_lines": []
+        },
+        {
+          "module": "FormalConjecturesUtil.Linters.FormalProofLinter",
+          "sorry_tokens": 2,
+          "explicit_axiom_lines": []
+        },
+        {
+          "module": "FormalConjecturesUtil.Linters.StubLinter",
+          "sorry_tokens": 3,
+          "explicit_axiom_lines": []
+        }
+      ],
+      "granular_source_native_syntax_modules": [],
+      "selected_deferred_expectation": "UNCONFIRMED_NO_COMPILER_OR_RAW_SELECTED_AXIOM_OUTPUTS_FROM_THIS_PREPARATION",
+      "granular_audit_details": [],
+      "deferred_audit_static_sites": [
+        {
+          "audit": "FreshDependencyAudit.lean",
+          "selected_names": [
+            "Nat.add_comm"
+          ],
+          "custom_closure_admission_sites": [
+            {
+              "module": "FormalConjecturesUtil.Answer",
+              "source_sha256": "c8b3b31e9bb25c511e577b1812159a210e9346720f19ec6c6b30905a0802db7a",
+              "sorry_tokens": 2
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.CategoryAnswerLinter",
+              "source_sha256": "e8cd0d443276d31d8412688d25c7680a4a85c4495d7a29948917d55dfb1c9ed6",
+              "sorry_tokens": 1
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.FormalProofLinter",
+              "source_sha256": "59c42b3def4649b81b98ea94286b1449efcf31befbd5721fb3abbfc0c1bb3396",
+              "sorry_tokens": 2
+            },
+            {
+              "module": "FormalConjecturesUtil.Linters.StubLinter",
+              "source_sha256": "294be770ca5c2684192717f3e6de7b47e0afb2deb0168bfe65ec8d7042abecb7",
+              "sorry_tokens": 3
+            }
+          ],
+          "FC_Answer_elaborator_in_closure": true,
+          "qualification": "Lexical admissions can be unrelated to selected theorem. Default Prop answer(sorry) can yield True without a sorryAx dependency; raw prints and mathematical definition fidelity are separately required."
+        }
+      ]
+    }
+  ],
+  "total_granular_sources": 600,
+  "total_deferred_whole_sources": 112,
+  "total_granular_audits": 2,
+  "total_deferred_audits": 41,
+  "compiler_invoked": false,
+  "dispatch_authorized_by_this_preparation": false
+}

@@ -1,0 +1,45 @@
+--- qualify_A000166_granular_completion_readonly_prepared_20261005.py
++++ qualify_A000166_granular_completion_standard_allocation_readonly_prepared_20261005.py
+@@ -22,6 +22,8 @@
+ EXPECTED_RAW = sys.argv[2]
+ assert re.fullmatch('[0-9a-f]{64}', EXPECTED_RAW), 'Malformed future receipt SHA'
+ BOUND = {
++    'qualify_A000166_granular_completion_readonly_prepared_20261005.py': 'a41ca1d3e7d79c8b43b6df3cd9c5fcc532a656b2e98a0ad85ca8ff13fa03fa85',
++    'A000166-a41-authorized-review-measurement-mismatch-actual-20261005T082057639017Z.json': 'f2424c9e91970b12dede25e074d95f8e3181aa5891868f270af8b27ab9a880ad',
+     'qualify_A000114_checkpoint_readonly_20261005.py': '624876f2a4f6fa456fb27852886d060f993d19c8f820c84e6dd8ff5cc726bacb',
+     'operational_history/a000114/99eb7c9441573e8b.json': '99eb7c9441573e8bfb5088f9cdb75bc4eacc12f0e9b3a3512f08709eb9b7540f',
+     'A000-actual114-checkpoint-readonly-qualification-20261005T074611923593Z.json': '4bcd0f7a9cc51d3cf83085cec858774fcd261d4709937b9d09ff1cd160ceba04',
+@@ -222,7 +224,8 @@
+     ensure(s['source_receipt_bytes_unchanged'] is True and s['actual_source_PASS_row_not_reclassified'] is True, 'Storage scientific status preservation')
+     ensure(s['original76_or_any_scientific_source_or_runtime_provider_targets'] == 0, 'Storage protected targets')
+     ensure(after['stored_bytes_GetCompressedFileSizeW'] <= before['stored_bytes_GetCompressedFileSizeW'], 'Storage allocation increased')
+-    ensure(s['actual_allocation_bytes_saved'] == before['stored_bytes_GetCompressedFileSizeW'] - after['stored_bytes_GetCompressedFileSizeW'], 'Storage measured saved bytes')
++    ensure(after['standard_allocation_bytes'] <= before['standard_allocation_bytes'], 'Storage standard allocation increased')
++    ensure(s['actual_allocation_bytes_saved'] == before['standard_allocation_bytes'] - after['standard_allocation_bytes'], 'Storage measured standard allocation saved bytes')
+     for label in ('read_and_mmap_before', 'read_and_mmap_after'):
+         test = s[label]
+         ensure(test['ordinary_read_sha256'] == a['sha256'] and test['Windows_read_only_mmap_sha256'] == a['sha256'] and test['byte_equality'] is True, 'Storage read/mmap measured hash')
+@@ -252,7 +255,10 @@
+     storage_checks.append({'module': name, 'sidecar': str(path), 'sidecar_sha256': digest, 'status': state,
+         'target_source_artifact_sha256': a['sha256'], 'logical_bytes': a['bytes'],
+         'native_identity_preserved': {k: after[k] for k in stable_keys},
+-        'before_allocated_bytes': before['stored_bytes_GetCompressedFileSizeW'], 'after_allocated_bytes': after['stored_bytes_GetCompressedFileSizeW'],
++        'before_allocated_bytes': before['standard_allocation_bytes'], 'after_allocated_bytes': after['standard_allocation_bytes'],
++        'allocation_measurement': 'FileStandardInfo standard_allocation_bytes, matching frozen storage interface03a6 lines208/214',
++        'before_GetCompressedFileSizeW_bytes': before['stored_bytes_GetCompressedFileSizeW'], 'after_GetCompressedFileSizeW_bytes': after['stored_bytes_GetCompressedFileSizeW'],
++        'GetCompressedFileSizeW_measurement_nonincreasing': True,
+         'actual_allocated_bytes_saved': s['actual_allocation_bytes_saved'], 'source_completed_before_storage_and_next_dispatch': True,
+         'raw_storage_logs': raw_logs, 'source_receipt_sha256_before_historical_sidecar_attestation_only': s['source_receipt_sha256_before']})
+ 
+@@ -285,6 +291,11 @@
+         'minimum_measured_available_commit_bytes': min(x['minimum_available_commit_bytes'] for x in new_checks),
+         'total_actual_source_wall_seconds': round(sum(b['seconds'] for b in ordered_new), 3)},
+     'post_exit_storage_actual_class_counts': dict(classes), 'post_exit_storage_sidecar_checks': storage_checks,
++    'storage_measurement_correction': {'original_a41_verifier_sha256': 'a41ca1d3e7d79c8b43b6df3cd9c5fcc532a656b2e98a0ad85ca8ff13fa03fa85',
++        'failed_authorized_a41_attempt_record': 'A000166-a41-authorized-review-measurement-mismatch-actual-20261005T082057639017Z.json',
++        'failed_attempt_record_sha256': 'f2424c9e91970b12dede25e074d95f8e3181aa5891868f270af8b27ab9a880ad',
++        'saved_field_measurement': 'FileStandardInfo standard_allocation_bytes, as explicitly used by frozen interface03a6',
++        'both_allocation_measurements_checked_nonincreasing': True, 'no_actual_source_or_storage_records_modified': True},
+     'total_actual_stored_allocation_bytes_saved_by_new52_sidecars': sum(x['actual_allocated_bytes_saved'] for x in storage_checks),
+     'pending_granular_modules': sorted(granular - set(current)), 'pending_whole_modules': sorted(whole),
+     'limitations': [

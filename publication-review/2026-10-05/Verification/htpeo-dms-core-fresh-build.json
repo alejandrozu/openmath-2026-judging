@@ -1,0 +1,244 @@
+{
+  "id": "htpeo-dms-core",
+  "entrant": "E08",
+  "commit": "76c63b8e425e551a930060a6871b84fe3b4780db",
+  "version": "4.33.1",
+  "mathlib_pin": null,
+  "source_dir": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-core",
+  "modules": [
+    {
+      "module": "StarDMS2",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-core\\StarDMS2.lean",
+      "source": "entries/dms-star6/artifact/lean/pack2/lean433/StarDMS2.lean",
+      "sha256": "07abf56995f9cd1b86b260ffd0f71080bf406179954c9f6bb22b9e505d49f218"
+    }
+  ],
+  "roots": [
+    "StarDMS2"
+  ],
+  "endpoints": [
+    "DmsIIsLean.cs5s_dms",
+    "MGraph.dms_of_hole",
+    "MGraph.k4subdiv_star6",
+    "P05Lean.cubicSharp5_dms",
+    "P06Lean.cover_main",
+    "RH2F.layer1",
+    "RH2F.layer2",
+    "RH2F.layer3",
+    "RH2F.layer4",
+    "RH2F.layer5",
+    "star6_ex1red_conditional",
+    "star6_rh2_conditional"
+  ],
+  "audit_modules": [
+    "FreshAudit1.lean"
+  ],
+  "lean_options": {},
+  "static_review_contexts": [],
+  "status": "PASS",
+  "builds": [
+    {
+      "module": "StarDMS2",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "StarDMS2.olean",
+        "StarDMS2.lean"
+      ],
+      "seconds": 221.0,
+      "exit": 0,
+      "stdout": "StarDMS2.lean:6369:45: warning: This simp argument is unused:\n  Fin.addCases_right\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [dbl, eo, vo, Fin.addCases_left]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\nStarDMS2.lean:6375:30: warning: This simp argument is unused:\n  Fin.addCases_left\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [dbl, eb, vo, vc, Fin.addCases_right]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\nStarDMS2.lean:9647:20: warning: Variable name `h` is not explicitly referenced.\n\nHint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:\n  [apply] _h\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\nStarDMS2.lean:9655:20: warning: Variable name `h` is not explicitly referenced.\n\nHint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:\n  [apply] _h\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\nStarDMS2.lean:9663:20: warning: Variable name `h` is not explicitly referenced.\n\nHint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:\n  [apply] _h\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\nStarDMS2.lean:9671:20: warning: Variable name `h` is not explicitly referenced.\n\nHint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:\n  [apply] _h\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\nStarDMS2.lean:9679:20: warning: Variable name `h` is not explicitly referenced.\n\nHint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:\n  [apply] _h\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\nStarDMS2.lean:9687:20: warning: Variable name `h` is not explicitly referenced.\n\nHint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:\n  [apply] _h\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\nStarDMS2.lean:9695:20: warning: Variable name `h` is not explicitly referenced.\n\nHint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:\n  [apply] _h\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\nStarDMS2.lean:9750:19: warning: Variable name `hL` is not explicitly referenced.\n\nHint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:\n  [apply] _hL\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\nStarDMS2.lean:11917:24: warning: Variable name `huw` is not explicitly referenced.\n\nHint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:\n  [apply] _huw\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\nStarDMS2.lean:13244:60: warning: This simp argument is unused:\n  bne_iff_ne\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [Bool.or_eq_true, beq_iff_eq, Bool.and_eq_true, ne_eq] at h\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\nStarDMS2.lean:13244:72: warning: This simp argument is unused:\n  ne_eq\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [Bool.or_eq_true, beq_iff_eq, Bool.and_eq_true, bne_iff_ne] at h\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\nStarDMS2.lean:19555:90: warning: This simp argument is unused:\n  if_pos rfl\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [\u03b2, if_neg (Ne.symm ab_ea), if_neg (Ne.symm bc_ea), if_neg (Ne.symm ca_ea), \u2193reduceIte]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\nStarDMS2.lean:19558:35: warning: This simp argument is unused:\n  if_pos rfl\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [\u03b2, if_neg (Ne.symm ab_eb), if_neg (Ne.symm bc_eb), if_neg (Ne.symm ca_eb),\n    if_neg (Ne.symm T.ea_ne_eb), \u2193reduceIte]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\nStarDMS2.lean:19561:64: warning: This simp argument is unused:\n  if_pos rfl\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [\u03b2, if_neg (Ne.symm ab_ec), if_neg (Ne.symm bc_ec), if_neg (Ne.symm ca_ec),\n    if_neg (Ne.symm T.ea_ne_ec), if_neg (Ne.symm T.eb_ne_ec), \u2193reduceIte]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\n'MGraph.dms_of_hole' depends on axioms: [propext, Classical.choice, Quot.sound]\n'P05Lean.cubicSharp5_dms' depends on axioms: [propext, Classical.choice, Quot.sound]\n'DmsIIsLean.cs5s_dms' depends on axioms: [propext, Classical.choice, Quot.sound]\n'P06Lean.cover_main' depends on axioms: [propext, Quot.sound]\n'MGraph.k4subdiv_star6' depends on axioms: [propext, Quot.sound]\n'RH2F.layer1' depends on axioms: [propext, Classical.choice, Quot.sound]\n'RH2F.layer2' depends on axioms: [propext, Classical.choice, Quot.sound]\n'RH2F.layer3' depends on axioms: [propext, Classical.choice, Quot.sound]\n'RH2F.layer4' depends on axioms: [propext, Classical.choice, Quot.sound]\n'RH2F.layer5' depends on axioms: [propext, Classical.choice, Quot.sound]\n'star6_rh2_conditional' depends on axioms: [propext, Classical.choice, Quot.sound]\n'star6_ex1red_conditional' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 4173557760,
+      "stop_reason": null,
+      "owned_process_stop_output": null,
+      "source_sha256": "07abf56995f9cd1b86b260ffd0f71080bf406179954c9f6bb22b9e505d49f218",
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-core\\StarDMS2.olean",
+          "sha256": "ddeb0d74f6c02070f60e260d4fbb42112d5361ad66c3705cb2fd07d4eb64eb38",
+          "bytes": 39445824
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "FreshAudit1.lean",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "FreshAudit1.olean",
+        "FreshAudit1.lean"
+      ],
+      "seconds": 0.92,
+      "exit": 0,
+      "stdout": "'DmsIIsLean.cs5s_dms' depends on axioms: [propext, Classical.choice, Quot.sound]\n'MGraph.dms_of_hole' depends on axioms: [propext, Classical.choice, Quot.sound]\n'MGraph.k4subdiv_star6' depends on axioms: [propext, Quot.sound]\n'P05Lean.cubicSharp5_dms' depends on axioms: [propext, Classical.choice, Quot.sound]\n'P06Lean.cover_main' depends on axioms: [propext, Quot.sound]\n'RH2F.layer1' depends on axioms: [propext, Classical.choice, Quot.sound]\n'RH2F.layer2' depends on axioms: [propext, Classical.choice, Quot.sound]\n'RH2F.layer3' depends on axioms: [propext, Classical.choice, Quot.sound]\n'RH2F.layer4' depends on axioms: [propext, Classical.choice, Quot.sound]\n'RH2F.layer5' depends on axioms: [propext, Classical.choice, Quot.sound]\n'star6_ex1red_conditional' depends on axioms: [propext, Classical.choice, Quot.sound]\n'star6_rh2_conditional' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "is_endpoint_audit": true,
+      "minimum_free_bytes": 4394684416,
+      "stop_reason": null,
+      "owned_process_stop_output": null,
+      "source_sha256": "9f1e4ba47cfe2b7be41c3474e285659f6743ab6437b5eb880c39ee6eba0134fe",
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-core\\FreshAudit1.olean",
+          "sha256": "410116985cb788a92c99f2ea15d4c2ff005c114e9e4aefac4160867839e7052c",
+          "bytes": 1400
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    }
+  ],
+  "compiler_version": "Lean (version 4.33.1, x86_64-w64-windows-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)",
+  "compilation_order": [
+    "StarDMS2"
+  ],
+  "started_utc": "2026-10-04T21:36:42Z",
+  "failed_invocations": [],
+  "selected_audit_axiom_review": [
+    {
+      "endpoint": "DmsIIsLean.cs5s_dms",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    },
+    {
+      "endpoint": "MGraph.dms_of_hole",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    },
+    {
+      "endpoint": "MGraph.k4subdiv_star6",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    },
+    {
+      "endpoint": "P05Lean.cubicSharp5_dms",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    },
+    {
+      "endpoint": "P06Lean.cover_main",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    },
+    {
+      "endpoint": "RH2F.layer1",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    },
+    {
+      "endpoint": "RH2F.layer2",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    },
+    {
+      "endpoint": "RH2F.layer3",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    },
+    {
+      "endpoint": "RH2F.layer4",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    },
+    {
+      "endpoint": "RH2F.layer5",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    },
+    {
+      "endpoint": "star6_ex1red_conditional",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    },
+    {
+      "endpoint": "star6_rh2_conditional",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    }
+  ],
+  "resource_settings": {
+    "LEAN_NUM_THREADS": 1,
+    "lean_shell_worker_flag": "-j1",
+    "maxHeartbeats": 0,
+    "maxRecDepth": 100000
+  },
+  "finished_utc": "2026-10-04T21:40:24Z"
+}

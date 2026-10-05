@@ -1,0 +1,83 @@
+--- run_m2_granular_source_plan.prepared.6055abb09b2c9b985b69392af5cb3e8d2747a2027a3108fead72ed57ccc4e67c.py
++++ run_m2_tactic_aware_granular_source_plan.py
+@@ -20,6 +20,9 @@
+ assert project in M2_PROJECT_PLAN_HASHES, 'Exact eight-entry M2 whitelist only'
+ assert '--m2-granular-execution-authorized' in sys.argv[3:] and '--resource-lease-confirmed' in sys.argv[3:], 'Root-reviewed granular scope and confirmed lease required'
+ assert '--defer-whole-imports' in sys.argv[3:] and '--full-mathlib-source-mode' not in sys.argv[3:], 'All literal whole-Mathlib descendants must remain deferred'
++assert '--m2-tactic-aware-execution-authorized' in sys.argv[3:], 'Separate root-reviewed Tactic-aware source scope required'
++assert '--reviewed-runner-sha256='+RUNNER_SOURCE_SHA256 in sys.argv[3:], 'Exact executed adapter must match root-reviewed bytes'
++M2_TACTIC_SCOPE_SHA256='cee7cd9e517897f276d15fa0a96fd2997848bbcb70ff02ca826654731b85da29'
+ def m2_sha(file):
+  h=hashlib.sha256()
+  with Path(file).open('rb') as stream:
+@@ -32,6 +35,21 @@
+ assert m2_sha(BASE/'m2-novel-formalization-source-scope-inventory-20261005.json')==m2_prepared['inventory_sha256'], 'Inventory changed'
+ assert m2_sha(BASE/'builds'/project/'build-plan.json')==M2_PROJECT_PLAN_HASHES[project], 'Exact source plan changed'
+ m2_frozen_plan=json.loads((BASE/'builds'/project/'build-plan.json').read_text(encoding='utf8'))
++tactic_scope_file=BASE/'m2-eight-plans-authoritative-whole-tactic-scope-proposal-20261005.json'
++assert m2_sha(tactic_scope_file)==M2_TACTIC_SCOPE_SHA256, 'Authoritative resource scope changed'
++tactic_scope=json.loads(tactic_scope_file.read_text(encoding='utf8'))
++assert tactic_scope['authoritative_safe_granular_total']==588 and tactic_scope['authoritative_whole_or_Tactic_total']==124
++tactic_project=next(row for row in tactic_scope['projects'] if row['id']==project)
++assert tactic_project['source_plan_sha256']==M2_PROJECT_PLAN_HASHES[project]
++assert m2_sha(tactic_scope['official_source_graph_file'])==tactic_scope['official_source_graph_sha256'], 'Pinned official source graph changed'
++assert m2_sha(tactic_scope['contextual_custom_source_graph_file'])==tactic_scope['contextual_custom_source_graph_sha256'], 'Contextual custom source graph changed'
++context=next(row for row in json.loads(Path(tactic_scope['contextual_custom_source_graph_file']).read_text(encoding='utf8')) if row['project_id']==project)
++for row in context['exact_custom_nodes']:
++ assert m2_sha(row['source_file'])==row['source_sha256'], 'Contextual source changed: '+row['module']
++original_prep=json.loads((BASE/'original-E65-source-replay-preparation-20261005.json').read_text(encoding='utf8'))
++for packet in original_prep['exact_original_nine_packages']:
++ actual=subprocess.run(['git','rev-parse','HEAD'],cwd=packet['prepared_source_path'],capture_output=True,text=True,check=True).stdout.strip()
++ assert actual==tactic_scope['exact_original_nine_package_pins'][packet['name']], 'Exact official dependency pin changed'
+ for row in m2_frozen_plan['modules']:
+  assert m2_sha(row['file'])==row['sha256'], 'Frozen authored source changed: '+row['module']
+ assert m2_sha(BASE/'runtimes/lean-4.33.1-windows/bin/lean.exe')==m2_prepared['compiler_binary_sha256'], 'Frozen compiler binary changed'
+@@ -43,7 +61,7 @@
+  assert m2_sha(BASE/'builds'/packet['id']/'build-plan.json')==packet['plan_sha256'], 'Additional library plan changed'
+ for row in m2_project['audits']:
+  assert m2_sha(BASE/'builds'/project/row['audit'])==row['source_sha256'], 'Frozen audit changed'
+-assert all(not row['additional_library_prerequisites'] for row in m2_project['sources'] if not row['deferred_whole_scope']), 'No uncompiled additional custom library may be silently admitted into a granular invocation'
++assert all(not row['external_custom_prerequisites'] and not row['whole_Mathlib_or_Tactic_official_roots'] and not row['unresolved_external_prerequisite_flags'] for row in tactic_project['source_rows'] if row['resource_classification']=='GRANULAR6_5_NO_LITERAL_WHOLE_EXPOSURE'), 'No uncompiled additional custom library or unresolved/whole resource provider may be silently admitted into a granular invocation'
+ worker_threads=int(sys.argv[2]) if len(sys.argv)>2 else 4
+ assert 1<=worker_threads<=4
+ third_worker_pilot='--pilot-third-slot' in sys.argv[3:]
+@@ -83,13 +101,15 @@
+ plan=json.loads((dest/'build-plan.json').read_text())
+ deferred_whole_names=set()
+ if defer_whole_import_mode:
+- deferred_whole_names={row['module'] for row in m2_project['sources'] if row['deferred_whole_scope']}
+- deferred_whole_names.update(row['audit'] for row in m2_project['audits'] if row['deferred_whole_scope'])
+- deferred_whole_scope={'preparation_sha256':M2_PREPARATION_SHA256,
+-  'authored_transitive_whole_Mathlib_closure':{row['module']:row['whole_Mathlib_roots'] for row in m2_project['sources'] if row['deferred_whole_scope']},
+-  'audits_with_whole_Mathlib_roots':{row['audit']:row['whole_Mathlib_roots'] for row in m2_project['audits'] if row['deferred_whole_scope']},
+-  'additional_library_whole_scope':{row['module']:row['whole_Mathlib_roots'] for row in m2_project['exact_additional_library_closure'] if row['whole_Mathlib_roots']},
+-  'qualification':'No additional library is compiled by this adapter. Every reachable literal whole-library source and all authored/audit descendants are withheld.'}
++ deferred_whole_names={row['module'] for row in tactic_project['source_rows'] if row['resource_classification']!='GRANULAR6_5_NO_LITERAL_WHOLE_EXPOSURE'}
++ deferred_whole_names.update(row['audit'] for row in tactic_project['audit_rows'] if not row['safe_under_granular_resource_classification'])
++ deferred_whole_scope={'original_literal_Mathlib_preparation_sha256':M2_PREPARATION_SHA256,
++  'authoritative_Mathlib_or_Tactic_scope_sha256':M2_TACTIC_SCOPE_SHA256,
++  'authoritative_plan_scope':tactic_project,
++  'authored_transitive_Mathlib_or_Tactic_resource_closure':{row['module']:row['whole_Mathlib_or_Tactic_official_roots'] for row in tactic_project['source_rows'] if row['whole_Mathlib_or_Tactic_official_roots']},
++  'audits_with_whole_Mathlib_or_Tactic_roots':{row['audit']:row['whole_Mathlib_or_Tactic_roots'] for row in tactic_project['audit_rows'] if row['whole_Mathlib_or_Tactic_roots']},
++  'unresolved_external_source_prerequisites':{row['module']:row['unresolved_external_prerequisite_flags'] for row in tactic_project['source_rows'] if row['unresolved_external_prerequisite_flags']},
++  'qualification':'No additional source library is compiled or admitted by this adapter. Every source/audit exposing Mathlib or Mathlib.Tactic, all custom descendants and unresolved source prerequisites are withheld; future whole resource scope needs separate sole10/11 review.'}
+ if full_mathlib_source_mode:
+  from full_mathlib_scope import classify as classify_full_mathlib
+  from receipt_io import read_bytes_shared
+@@ -175,6 +195,7 @@
+ plan['execution_route']='SEPARATE_ROOT_REVIEWED_M2_GRANULAR_SOURCE_ADAPTER'
+ plan['source_plan_sha256']=M2_PROJECT_PLAN_HASHES[project]
+ plan['m2_preparation_sha256']=M2_PREPARATION_SHA256
++plan['authoritative_Mathlib_or_Tactic_source_scope_sha256']=M2_TACTIC_SCOPE_SHA256
+ plan['baseline_runner_sha256']='70ff209c7ac651c1e0ab25e9f629a9fc50c4b85ed1f510666e851e8f69c53534'
+ plan['failed_invocations']=[]
+ plan['selected_audit_axiom_review']=[]
+@@ -275,7 +296,7 @@
+  if n in retained:continue
+  if n in deferred_whole_names:
+   plan['deferred_whole_import_policy']['unattempted_whole_invocations'].append({'module':n,'attempted':False,
+-    'is_endpoint_audit':n.endswith('.lean'),'classification':'SEPARATE_SOLE_LITERAL_IMPORTER_LEASE_REQUIRED'})
++    'is_endpoint_audit':n.endswith('.lean'),'classification':'SEPARATE_SOLE_MATHLIB_OR_TACTIC_LEASE_OR_MISSING_PROVIDER_REVIEW_REQUIRED'})
+   save();print('WHOLE_IMPORT_LEASE_DEFERRED',project,n,flush=True);continue
+  if third_worker_pilot and new_source_invocations>=1:
+   plan['status']='SCHEDULED_RESOURCE_CHECKPOINT';plan['checkpoint_reason']='ROOT_AUTHORIZED_SINGLE_THIRD_WORKER_PILOT_COMPLETED';save();break

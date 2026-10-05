@@ -1,0 +1,679 @@
+{
+  "status": "PASS_COMPLETE_EXACT_SCOPE_WITH_NATIVE_EVALUATION_AND_OBSERVER_LIMITATION",
+  "finished_utc_or_explicit_offset": "2026-10-05T02:18:36.301141+00:00",
+  "receipt": "Verification/luke-k4-ramsey-current-native-fresh-build.json",
+  "receipt_sha256": "8b3a912a5f2463d8faa96b1d33118b09602faac15cc0274d811745fe3d73d943",
+  "raw_axiom_analyzer": "Verification/luke-k4-ramsey-native-endpoint-axioms.json",
+  "raw_axiom_analyzer_sha256": "4166713f6be036950526edcb556a82c3b075e26fb324bfe0a4dd2a2770bf4916",
+  "independent_root_qualification": "Verification/luke-native-publication-qualification.json",
+  "independent_root_qualification_sha256": "98d2bef0d648b230aa69600c00d276df70a810c073192d9f61195c8173fd2a44",
+  "historical_31_only_milestone": "Verification/luke-novel-31-endpoint-milestone.json",
+  "historical_31_only_milestone_sha256": "41dd226b88968789822bcc0a6be4dd714fd856cd4734af3d20deef1e814b946c",
+  "historical_compact_31_milestone": "luke_actual_novel_scope_31_milestone_2026-10-05.json",
+  "historical_compact_31_milestone_sha256": "07c872f1675bd3678c36c1cea10e4d1f9d2a5fe2fd9673be3d170e6a443302c4",
+  "source_commit": "2cf216ba885fbb1b2d1b2d4920efeaa6ba438842",
+  "lean": "4.34.1",
+  "mathlib": "d13f23b723b8a846827a245b89c10fc7d3f11612",
+  "passed_authored_sources": 51,
+  "planned_authored_sources": 51,
+  "actual_requested_endpoint_prints": 35,
+  "actual_general_standard_kernel_prints": 11,
+  "actual_concrete_native_trust_prints": 23,
+  "actual_concrete_standard_kernel_prints": 1,
+  "actual_axiom_free_prints": 0,
+  "endpoint_reviews": [
+    {
+      "endpoint": "K4Ramsey.Asymptotic.limit_le_of_finite_bound",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "ordinary_general_theorem": true,
+      "native_axioms": [],
+      "unexpected_axioms": [],
+      "declared_trust_boundary_matches": true,
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    },
+    {
+      "endpoint": "K4Ramsey.Asymptotic.upperLimit_le_of_finite_bound",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "ordinary_general_theorem": true,
+      "native_axioms": [],
+      "unexpected_axioms": [],
+      "declared_trust_boundary_matches": true,
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    },
+    {
+      "endpoint": "K4Ramsey.Clebsch192.exact_density",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound",
+        "K4Ramsey.Clebsch192.exact_rooted_sum._native.native_decide.ax_1_1"
+      ],
+      "ordinary_general_theorem": false,
+      "native_axioms": [
+        "K4Ramsey.Clebsch192.exact_rooted_sum._native.native_decide.ax_1_1"
+      ],
+      "unexpected_axioms": [],
+      "declared_trust_boundary_matches": true,
+      "classification": "NATIVE_EVALUATION_TRUST"
+    },
+    {
+      "endpoint": "K4Ramsey.Clebsch192.exact_rooted_sum",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound",
+        "K4Ramsey.Clebsch192.exact_rooted_sum._native.native_decide.ax_1_1"
+      ],
+      "ordinary_general_theorem": false,
+      "native_axioms": [
+        "K4Ramsey.Clebsch192.exact_rooted_sum._native.native_decide.ax_1_1"
+      ],
+      "unexpected_axioms": [],
+      "declared_trust_boundary_matches": true,
+      "classification": "NATIVE_EVALUATION_TRUST"
+    },
+    {
+      "endpoint": "K4Ramsey.Clebsch192.exists_coloring",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound",
+        "K4Ramsey.Clebsch192.exact_rooted_sum._native.native_decide.ax_1_1",
+        "K4Ramsey.Clebsch192.table_le_one._native.native_decide.ax_1_1",
+        "K4Ramsey.Clebsch192.table_nonnegative._native.native_decide.ax_1_1",
+        "K4Ramsey.Clebsch192.table_symmetric._native.native_decide.ax_1_1"
+      ],
+      "ordinary_general_theorem": false,
+      "native_axioms": [
+        "K4Ramsey.Clebsch192.exact_rooted_sum._native.native_decide.ax_1_1",
+        "K4Ramsey.Clebsch192.table_le_one._native.native_decide.ax_1_1",
+        "K4Ramsey.Clebsch192.table_nonnegative._native.native_decide.ax_1_1",
+        "K4Ramsey.Clebsch192.table_symmetric._native.native_decide.ax_1_1"
+      ],
+      "unexpected_axioms": [],
+      "declared_trust_boundary_matches": true,
+      "classification": "NATIVE_EVALUATION_TRUST"
+    },
+    {
+      "endpoint": "K4Ramsey.Clebsch192.ramsey_limit_bound",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound",
+        "K4Ramsey.Clebsch192.exact_rooted_sum._native.native_decide.ax_1_1",
+        "K4Ramsey.Clebsch192.table_le_one._native.native_decide.ax_1_1",
+        "K4Ramsey.Clebsch192.table_nonnegative._native.native_decide.ax_1_1",
+        "K4Ramsey.Clebsch192.table_symmetric._native.native_decide.ax_1_1"
+      ],
+      "ordinary_general_theorem": false,
+      "native_axioms": [
+        "K4Ramsey.Clebsch192.exact_rooted_sum._native.native_decide.ax_1_1",
+        "K4Ramsey.Clebsch192.table_le_one._native.native_decide.ax_1_1",
+        "K4Ramsey.Clebsch192.table_nonnegative._native.native_decide.ax_1_1",
+        "K4Ramsey.Clebsch192.table_symmetric._native.native_decide.ax_1_1"
+      ],
+      "unexpected_axioms": [],
+      "declared_trust_boundary_matches": true,
+      "classification": "NATIVE_EVALUATION_TRUST"
+    },
+    {
+      "endpoint": "K4Ramsey.Clebsch192.ramsey_upperLimit_bound",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound",
+        "K4Ramsey.Clebsch192.exact_rooted_sum._native.native_decide.ax_1_1",
+        "K4Ramsey.Clebsch192.table_le_one._native.native_decide.ax_1_1",
+        "K4Ramsey.Clebsch192.table_nonnegative._native.native_decide.ax_1_1",
+        "K4Ramsey.Clebsch192.table_symmetric._native.native_decide.ax_1_1"
+      ],
+      "ordinary_general_theorem": false,
+      "native_axioms": [
+        "K4Ramsey.Clebsch192.exact_rooted_sum._native.native_decide.ax_1_1",
+        "K4Ramsey.Clebsch192.table_le_one._native.native_decide.ax_1_1",
+        "K4Ramsey.Clebsch192.table_nonnegative._native.native_decide.ax_1_1",
+        "K4Ramsey.Clebsch192.table_symmetric._native.native_decide.ax_1_1"
+      ],
+      "unexpected_axioms": [],
+      "declared_trust_boundary_matches": true,
+      "classification": "NATIVE_EVALUATION_TRUST"
+    },
+    {
+      "endpoint": "K4Ramsey.Final3840.Count.density_eq_count",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound",
+        "K4Ramsey.Final3840.base_symmetry._native.native_decide.ax_1_1",
+        "K4Ramsey.Final3840.centered_rows._native.native_decide.ax_1_1",
+        "K4Ramsey.Final3840.hard_blocks._native.native_decide.ax_1_1",
+        "K4Ramsey.Final3840.numerator_symmetry._native.native_decide.ax_1_1"
+      ],
+      "ordinary_general_theorem": false,
+      "native_axioms": [
+        "K4Ramsey.Final3840.base_symmetry._native.native_decide.ax_1_1",
+        "K4Ramsey.Final3840.centered_rows._native.native_decide.ax_1_1",
+        "K4Ramsey.Final3840.hard_blocks._native.native_decide.ax_1_1",
+        "K4Ramsey.Final3840.numerator_symmetry._native.native_decide.ax_1_1"
+      ],
+      "unexpected_axioms": [],
+      "declared_trust_boundary_matches": true,
+      "classification": "NATIVE_EVALUATION_TRUST"
+    },
+    {
+      "endpoint": "K4Ramsey.Final3840.Count.paths_eq",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound",
+        "K4Ramsey.Final3840.hard_blocks._native.native_decide.ax_1_1"
+      ],
+      "ordinary_general_theorem": false,
+      "native_axioms": [
+        "K4Ramsey.Final3840.hard_blocks._native.native_decide.ax_1_1"
+      ],
+      "unexpected_axioms": [],
+      "declared_trust_boundary_matches": true,
+      "classification": "NATIVE_EVALUATION_TRUST"
+    },
+    {
+      "endpoint": "K4Ramsey.Final3840.Count.raw_total",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound",
+        "K4Ramsey.Final3840.base_symmetry._native.native_decide.ax_1_1",
+        "K4Ramsey.Final3840.centered_rows._native.native_decide.ax_1_1",
+        "K4Ramsey.Final3840.hard_blocks._native.native_decide.ax_1_1",
+        "K4Ramsey.Final3840.numerator_symmetry._native.native_decide.ax_1_1"
+      ],
+      "ordinary_general_theorem": false,
+      "native_axioms": [
+        "K4Ramsey.Final3840.base_symmetry._native.native_decide.ax_1_1",
+        "K4Ramsey.Final3840.centered_rows._native.native_decide.ax_1_1",
+        "K4Ramsey.Final3840.hard_blocks._native.native_decide.ax_1_1",
+        "K4Ramsey.Final3840.numerator_symmetry._native.native_decide.ax_1_1"
+      ],
+      "unexpected_axioms": [],
+      "declared_trust_boundary_matches": true,
+      "classification": "NATIVE_EVALUATION_TRUST"
+    },
+    {
+      "endpoint": "K4Ramsey.Final3840.baseRoot_eq",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound",
+        "K4Ramsey.Final3840.shift_bijective._native.native_decide.ax_1_1",
+        "K4Ramsey.Final3840.shift_preserves_base._native.native_decide.ax_1_1",
+        "K4Ramsey.Final3840.shift_zero._native.native_decide.ax_1_1"
+      ],
+      "ordinary_general_theorem": false,
+      "native_axioms": [
+        "K4Ramsey.Final3840.shift_bijective._native.native_decide.ax_1_1",
+        "K4Ramsey.Final3840.shift_preserves_base._native.native_decide.ax_1_1",
+        "K4Ramsey.Final3840.shift_zero._native.native_decide.ax_1_1"
+      ],
+      "unexpected_axioms": [],
+      "declared_trust_boundary_matches": true,
+      "classification": "NATIVE_EVALUATION_TRUST"
+    },
+    {
+      "endpoint": "K4Ramsey.Final3840.blue_count_reduction",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound",
+        "K4Ramsey.Final3840.base_symmetry._native.native_decide.ax_1_1",
+        "K4Ramsey.Final3840.centered_rows._native.native_decide.ax_1_1",
+        "K4Ramsey.Final3840.numerator_symmetry._native.native_decide.ax_1_1"
+      ],
+      "ordinary_general_theorem": false,
+      "native_axioms": [
+        "K4Ramsey.Final3840.base_symmetry._native.native_decide.ax_1_1",
+        "K4Ramsey.Final3840.centered_rows._native.native_decide.ax_1_1",
+        "K4Ramsey.Final3840.numerator_symmetry._native.native_decide.ax_1_1"
+      ],
+      "unexpected_axioms": [],
+      "declared_trust_boundary_matches": true,
+      "classification": "NATIVE_EVALUATION_TRUST"
+    },
+    {
+      "endpoint": "K4Ramsey.Final3840.centered_rows",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound",
+        "K4Ramsey.Final3840.centered_rows._native.native_decide.ax_1_1"
+      ],
+      "ordinary_general_theorem": false,
+      "native_axioms": [
+        "K4Ramsey.Final3840.centered_rows._native.native_decide.ax_1_1"
+      ],
+      "unexpected_axioms": [],
+      "declared_trust_boundary_matches": true,
+      "classification": "NATIVE_EVALUATION_TRUST"
+    },
+    {
+      "endpoint": "K4Ramsey.Final3840.data_shape",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound",
+        "K4Ramsey.Final3840.data_shape._native.native_decide.ax_1_1"
+      ],
+      "ordinary_general_theorem": false,
+      "native_axioms": [
+        "K4Ramsey.Final3840.data_shape._native.native_decide.ax_1_1"
+      ],
+      "unexpected_axioms": [],
+      "declared_trust_boundary_matches": true,
+      "classification": "NATIVE_EVALUATION_TRUST"
+    },
+    {
+      "endpoint": "K4Ramsey.Final3840.exact_count",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound",
+        "K4Ramsey.Final3840.exact_count._native.native_decide.ax_1_1"
+      ],
+      "ordinary_general_theorem": false,
+      "native_axioms": [
+        "K4Ramsey.Final3840.exact_count._native.native_decide.ax_1_1"
+      ],
+      "unexpected_axioms": [],
+      "declared_trust_boundary_matches": true,
+      "classification": "NATIVE_EVALUATION_TRUST"
+    },
+    {
+      "endpoint": "K4Ramsey.Final3840.exact_density",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound",
+        "K4Ramsey.Final3840.base_symmetry._native.native_decide.ax_1_1",
+        "K4Ramsey.Final3840.centered_rows._native.native_decide.ax_1_1",
+        "K4Ramsey.Final3840.exact_count._native.native_decide.ax_1_1",
+        "K4Ramsey.Final3840.hard_blocks._native.native_decide.ax_1_1",
+        "K4Ramsey.Final3840.numerator_symmetry._native.native_decide.ax_1_1",
+        "K4Ramsey.Final3840.shift_bijective._native.native_decide.ax_1_1",
+        "K4Ramsey.Final3840.shift_preserves_base._native.native_decide.ax_1_1",
+        "K4Ramsey.Final3840.shift_zero._native.native_decide.ax_1_1"
+      ],
+      "ordinary_general_theorem": false,
+      "native_axioms": [
+        "K4Ramsey.Final3840.base_symmetry._native.native_decide.ax_1_1",
+        "K4Ramsey.Final3840.centered_rows._native.native_decide.ax_1_1",
+        "K4Ramsey.Final3840.exact_count._native.native_decide.ax_1_1",
+        "K4Ramsey.Final3840.hard_blocks._native.native_decide.ax_1_1",
+        "K4Ramsey.Final3840.numerator_symmetry._native.native_decide.ax_1_1",
+        "K4Ramsey.Final3840.shift_bijective._native.native_decide.ax_1_1",
+        "K4Ramsey.Final3840.shift_preserves_base._native.native_decide.ax_1_1",
+        "K4Ramsey.Final3840.shift_zero._native.native_decide.ax_1_1"
+      ],
+      "unexpected_axioms": [],
+      "declared_trust_boundary_matches": true,
+      "classification": "NATIVE_EVALUATION_TRUST"
+    },
+    {
+      "endpoint": "K4Ramsey.Final3840.exists_coloring_exact",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound",
+        "K4Ramsey.Final3840.base_symmetry._native.native_decide.ax_1_1",
+        "K4Ramsey.Final3840.centered_rows._native.native_decide.ax_1_1",
+        "K4Ramsey.Final3840.exact_count._native.native_decide.ax_1_1",
+        "K4Ramsey.Final3840.hard_blocks._native.native_decide.ax_1_1",
+        "K4Ramsey.Final3840.numerator_bounds._native.native_decide.ax_1_1",
+        "K4Ramsey.Final3840.numerator_symmetry._native.native_decide.ax_1_1",
+        "K4Ramsey.Final3840.shift_bijective._native.native_decide.ax_1_1",
+        "K4Ramsey.Final3840.shift_preserves_base._native.native_decide.ax_1_1",
+        "K4Ramsey.Final3840.shift_zero._native.native_decide.ax_1_1"
+      ],
+      "ordinary_general_theorem": false,
+      "native_axioms": [
+        "K4Ramsey.Final3840.base_symmetry._native.native_decide.ax_1_1",
+        "K4Ramsey.Final3840.centered_rows._native.native_decide.ax_1_1",
+        "K4Ramsey.Final3840.exact_count._native.native_decide.ax_1_1",
+        "K4Ramsey.Final3840.hard_blocks._native.native_decide.ax_1_1",
+        "K4Ramsey.Final3840.numerator_bounds._native.native_decide.ax_1_1",
+        "K4Ramsey.Final3840.numerator_symmetry._native.native_decide.ax_1_1",
+        "K4Ramsey.Final3840.shift_bijective._native.native_decide.ax_1_1",
+        "K4Ramsey.Final3840.shift_preserves_base._native.native_decide.ax_1_1",
+        "K4Ramsey.Final3840.shift_zero._native.native_decide.ax_1_1"
+      ],
+      "unexpected_axioms": [],
+      "declared_trust_boundary_matches": true,
+      "classification": "NATIVE_EVALUATION_TRUST"
+    },
+    {
+      "endpoint": "K4Ramsey.Final3840.finite_realization",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound",
+        "K4Ramsey.Final3840.numerator_bounds._native.native_decide.ax_1_1",
+        "K4Ramsey.Final3840.numerator_symmetry._native.native_decide.ax_1_1"
+      ],
+      "ordinary_general_theorem": false,
+      "native_axioms": [
+        "K4Ramsey.Final3840.numerator_bounds._native.native_decide.ax_1_1",
+        "K4Ramsey.Final3840.numerator_symmetry._native.native_decide.ax_1_1"
+      ],
+      "unexpected_axioms": [],
+      "declared_trust_boundary_matches": true,
+      "classification": "NATIVE_EVALUATION_TRUST"
+    },
+    {
+      "endpoint": "K4Ramsey.Final3840.ramsey_limit_exact_bound",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound",
+        "K4Ramsey.Final3840.base_symmetry._native.native_decide.ax_1_1",
+        "K4Ramsey.Final3840.centered_rows._native.native_decide.ax_1_1",
+        "K4Ramsey.Final3840.exact_count._native.native_decide.ax_1_1",
+        "K4Ramsey.Final3840.hard_blocks._native.native_decide.ax_1_1",
+        "K4Ramsey.Final3840.numerator_bounds._native.native_decide.ax_1_1",
+        "K4Ramsey.Final3840.numerator_symmetry._native.native_decide.ax_1_1",
+        "K4Ramsey.Final3840.shift_bijective._native.native_decide.ax_1_1",
+        "K4Ramsey.Final3840.shift_preserves_base._native.native_decide.ax_1_1",
+        "K4Ramsey.Final3840.shift_zero._native.native_decide.ax_1_1"
+      ],
+      "ordinary_general_theorem": false,
+      "native_axioms": [
+        "K4Ramsey.Final3840.base_symmetry._native.native_decide.ax_1_1",
+        "K4Ramsey.Final3840.centered_rows._native.native_decide.ax_1_1",
+        "K4Ramsey.Final3840.exact_count._native.native_decide.ax_1_1",
+        "K4Ramsey.Final3840.hard_blocks._native.native_decide.ax_1_1",
+        "K4Ramsey.Final3840.numerator_bounds._native.native_decide.ax_1_1",
+        "K4Ramsey.Final3840.numerator_symmetry._native.native_decide.ax_1_1",
+        "K4Ramsey.Final3840.shift_bijective._native.native_decide.ax_1_1",
+        "K4Ramsey.Final3840.shift_preserves_base._native.native_decide.ax_1_1",
+        "K4Ramsey.Final3840.shift_zero._native.native_decide.ax_1_1"
+      ],
+      "unexpected_axioms": [],
+      "declared_trust_boundary_matches": true,
+      "classification": "NATIVE_EVALUATION_TRUST"
+    },
+    {
+      "endpoint": "K4Ramsey.Final3840.ramsey_upperLimit_bound",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound",
+        "K4Ramsey.Final3840.numerator_bounds._native.native_decide.ax_1_1",
+        "K4Ramsey.Final3840.numerator_symmetry._native.native_decide.ax_1_1"
+      ],
+      "ordinary_general_theorem": false,
+      "native_axioms": [
+        "K4Ramsey.Final3840.numerator_bounds._native.native_decide.ax_1_1",
+        "K4Ramsey.Final3840.numerator_symmetry._native.native_decide.ax_1_1"
+      ],
+      "unexpected_axioms": [],
+      "declared_trust_boundary_matches": true,
+      "classification": "NATIVE_EVALUATION_TRUST"
+    },
+    {
+      "endpoint": "K4Ramsey.Final3840.ramsey_upperLimit_exact_bound",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound",
+        "K4Ramsey.Final3840.base_symmetry._native.native_decide.ax_1_1",
+        "K4Ramsey.Final3840.centered_rows._native.native_decide.ax_1_1",
+        "K4Ramsey.Final3840.exact_count._native.native_decide.ax_1_1",
+        "K4Ramsey.Final3840.hard_blocks._native.native_decide.ax_1_1",
+        "K4Ramsey.Final3840.numerator_bounds._native.native_decide.ax_1_1",
+        "K4Ramsey.Final3840.numerator_symmetry._native.native_decide.ax_1_1",
+        "K4Ramsey.Final3840.shift_bijective._native.native_decide.ax_1_1",
+        "K4Ramsey.Final3840.shift_preserves_base._native.native_decide.ax_1_1",
+        "K4Ramsey.Final3840.shift_zero._native.native_decide.ax_1_1"
+      ],
+      "ordinary_general_theorem": false,
+      "native_axioms": [
+        "K4Ramsey.Final3840.base_symmetry._native.native_decide.ax_1_1",
+        "K4Ramsey.Final3840.centered_rows._native.native_decide.ax_1_1",
+        "K4Ramsey.Final3840.exact_count._native.native_decide.ax_1_1",
+        "K4Ramsey.Final3840.hard_blocks._native.native_decide.ax_1_1",
+        "K4Ramsey.Final3840.numerator_bounds._native.native_decide.ax_1_1",
+        "K4Ramsey.Final3840.numerator_symmetry._native.native_decide.ax_1_1",
+        "K4Ramsey.Final3840.shift_bijective._native.native_decide.ax_1_1",
+        "K4Ramsey.Final3840.shift_preserves_base._native.native_decide.ax_1_1",
+        "K4Ramsey.Final3840.shift_zero._native.native_decide.ax_1_1"
+      ],
+      "unexpected_axioms": [],
+      "declared_trust_boundary_matches": true,
+      "classification": "NATIVE_EVALUATION_TRUST"
+    },
+    {
+      "endpoint": "K4Ramsey.Final3840.red_count_reduction",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound",
+        "K4Ramsey.Final3840.base_symmetry._native.native_decide.ax_1_1",
+        "K4Ramsey.Final3840.centered_rows._native.native_decide.ax_1_1",
+        "K4Ramsey.Final3840.numerator_symmetry._native.native_decide.ax_1_1"
+      ],
+      "ordinary_general_theorem": false,
+      "native_axioms": [
+        "K4Ramsey.Final3840.base_symmetry._native.native_decide.ax_1_1",
+        "K4Ramsey.Final3840.centered_rows._native.native_decide.ax_1_1",
+        "K4Ramsey.Final3840.numerator_symmetry._native.native_decide.ax_1_1"
+      ],
+      "unexpected_axioms": [],
+      "declared_trust_boundary_matches": true,
+      "classification": "NATIVE_EVALUATION_TRUST"
+    },
+    {
+      "endpoint": "K4Ramsey.FiniteProbability.expectation_embedding",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "ordinary_general_theorem": true,
+      "native_axioms": [],
+      "unexpected_axioms": [],
+      "declared_trust_boundary_matches": true,
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    },
+    {
+      "endpoint": "K4Ramsey.Graphon.cayley_colorSum",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "ordinary_general_theorem": true,
+      "native_axioms": [],
+      "unexpected_axioms": [],
+      "declared_trust_boundary_matches": true,
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    },
+    {
+      "endpoint": "K4Ramsey.Graphon.pairSum_eq_colorSum",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "ordinary_general_theorem": true,
+      "native_axioms": [],
+      "unexpected_axioms": [],
+      "declared_trust_boundary_matches": true,
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    },
+    {
+      "endpoint": "K4Ramsey.Published768.exact_numerator",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound",
+        "K4Ramsey.Published768.exact_numerator._native.native_decide.ax_1_1"
+      ],
+      "ordinary_general_theorem": false,
+      "native_axioms": [
+        "K4Ramsey.Published768.exact_numerator._native.native_decide.ax_1_1"
+      ],
+      "unexpected_axioms": [],
+      "declared_trust_boundary_matches": true,
+      "classification": "NATIVE_EVALUATION_TRUST"
+    },
+    {
+      "endpoint": "K4Ramsey.Published768.mckay_is_strict_improvement",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound",
+        "K4Ramsey.Published768.exact_numerator._native.native_decide.ax_1_1"
+      ],
+      "ordinary_general_theorem": false,
+      "native_axioms": [
+        "K4Ramsey.Published768.exact_numerator._native.native_decide.ax_1_1"
+      ],
+      "unexpected_axioms": [],
+      "declared_trust_boundary_matches": true,
+      "classification": "NATIVE_EVALUATION_TRUST"
+    },
+    {
+      "endpoint": "K4Ramsey.Published768.valid_certificate",
+      "axioms": [
+        "propext",
+        "Quot.sound",
+        "K4Ramsey.Published768.valid_certificate._native.native_decide.ax_1_1"
+      ],
+      "ordinary_general_theorem": false,
+      "native_axioms": [
+        "K4Ramsey.Published768.valid_certificate._native.native_decide.ax_1_1"
+      ],
+      "unexpected_axioms": [],
+      "declared_trust_boundary_matches": true,
+      "classification": "NATIVE_EVALUATION_TRUST"
+    },
+    {
+      "endpoint": "K4Ramsey.Realization.exists_coloring_le",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "ordinary_general_theorem": true,
+      "native_axioms": [],
+      "unexpected_axioms": [],
+      "declared_trust_boundary_matches": true,
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    },
+    {
+      "endpoint": "K4Ramsey.Realization.monochromatic_indicator",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "ordinary_general_theorem": true,
+      "native_axioms": [],
+      "unexpected_axioms": [],
+      "declared_trust_boundary_matches": true,
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    },
+    {
+      "endpoint": "K4Ramsey.SignRefinement.monochromatic_fiberAverage",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "ordinary_general_theorem": true,
+      "native_axioms": [],
+      "unexpected_axioms": [],
+      "declared_trust_boundary_matches": true,
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    },
+    {
+      "endpoint": "K4Ramsey.TensorK4.centered_expansion",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "ordinary_general_theorem": true,
+      "native_axioms": [],
+      "unexpected_axioms": [],
+      "declared_trust_boundary_matches": true,
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    },
+    {
+      "endpoint": "K4Ramsey.TensorK4.centered_leaf_zero",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "ordinary_general_theorem": true,
+      "native_axioms": [],
+      "unexpected_axioms": [],
+      "declared_trust_boundary_matches": true,
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    },
+    {
+      "endpoint": "K4Ramsey.TensorK4.diamond_contraction",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "ordinary_general_theorem": true,
+      "native_axioms": [],
+      "unexpected_axioms": [],
+      "declared_trust_boundary_matches": true,
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    },
+    {
+      "endpoint": "K4Ramsey.ValidTemplate.countSubgraphs_numerator",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "ordinary_general_theorem": false,
+      "native_axioms": [],
+      "unexpected_axioms": [],
+      "declared_trust_boundary_matches": true,
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    }
+  ],
+  "retained_own_cold_source_outputs_on_native_continuation": 33,
+  "native_identity_qualification": {
+    "observer_errors": [
+      "[WinError 299] Solo se completó una parte de una solicitud ReadProcessMemory o WriteProcessMemory."
+    ],
+    "continuous_observer_completeness": false,
+    "root_limited_identity_review_qualified": true,
+    "error_timing": "Unknown; no exit-race or complete-observer claim is made.",
+    "root_review": {
+      "accepted_receipt_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\luke-native-root-identity-acceptance-with-limitation.json",
+      "accepted_receipt_sha256": "a932648f1aec80d2d4241a1300e780aaf4b8070db322c011dc948e9676840295",
+      "evidence_receipt_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\luke-native-identity-observer-limitation-review.json",
+      "evidence_receipt_sha256": "37d02bd72946b0310ed3162f837745df5deb12127b94a46fa231954fd04b855c",
+      "status": "ROOT_NATIVE_IDENTITY_REVIEW_ACCEPTED_WITH_OBSERVER_LIMITATION",
+      "native_dispatch_observations_clean": false,
+      "continuous_observer_completeness": false,
+      "unknown_error_timing_remains_unresolved": true,
+      "scope": "Native identity/initialization accepted with the preserved observer limitation; raw axioms and full 51-source/35-endpoint scope require actual separate checks."
+    }
+  },
+  "scientific_scope": "Literal 192/3840 finite density, every-n realization and unconditional upper-limit; ordinary-limit endpoints retain convergence hypotheses",
+  "priority_and_chair_decisions": "UNCHANGED_CONDITIONAL"
+}

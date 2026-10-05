@@ -1,0 +1,195 @@
+{
+  "title": "Factor-preserving deficiency hierarchies in Ferrers graphs",
+  "blocks": [
+    {
+      "type": "title",
+      "text": "Factor-preserving deficiency hierarchies in Ferrers graphs"
+    },
+    {
+      "type": "subtitle",
+      "text": "Provisional mathematical authors: Rachel Teo, Wenyi Wang, Hamdi Abderrahmene"
+    },
+    {
+      "type": "small",
+      "text": "Judging and evaluation record: the submissions discussed in this document have been judged and evaluated by Alejandro Zarzuelo Urdiales for OpenMath 2026. This dated review records the stated verification, classification and unresolved holds; it is a preliminary evaluation rather than a signed award decision."
+    },
+    {
+      "type": "small",
+      "text": "Event provenance: OpenMath 2026 ran 27 September–2 October 2026 with worldwide online participation. Detailed organizer listings specify Harvard Innovation Labs for the 27 September in-person event; the OpenMath programme advertises a hybrid kickoff at MIT. Sundai identifies its Harvard/MIT community. Organizer sources: https://rsihouse.ai/openmath ; https://luma.com/yzp9abvr ; https://www.sundai.club/events/boston/recursive-learning-hack-with-harvard-innovation-labs"
+    },
+    {
+      "type": "small",
+      "text": "Rachel Teo — Sakana AI."
+    },
+    {
+      "type": "small",
+      "text": "Wenyi Wang — Sakana AI."
+    },
+    {
+      "type": "small",
+      "text": "Hamdi Abderrahmene — Sakana AI."
+    },
+    {
+      "type": "small",
+      "text": "Affiliations follow the recorded author declarations or public institutional/profile sources. Preferred author names, author order and publication affiliations await author review. This editorial compilation does not establish anthology coauthorship."
+    },
+    {
+      "type": "subtitle",
+      "text": "Original-result working manuscript | OpenMath 2026 | 5 October 2026"
+    },
+    {
+      "type": "small",
+      "text": "Central source and adjudication archive: https://github.com/alejandrozu/openmath-2026-judging"
+    },
+    {
+      "type": "h2",
+      "text": "Abstract"
+    },
+    {
+      "type": "p",
+      "text": "Under two consecutive matching-union rank equalities in a Ferrers graph, every supplied optimal degree-r factor can be preserved while r−e disjoint matchings of the required size are appended. The result determines subsequent ranks and gives balanced and one-defect colour-prefix realizations."
+    },
+    {
+      "type": "h2",
+      "text": "Ranks and the preservation theorem"
+    },
+    {
+      "type": "p",
+      "text": "A Ferrers graph is the bipartite incidence graph of a Young diagram: row lengths are weakly decreasing, and a cell is an allowed row-column edge. Let α_j be the maximum number of edges in a union of j matchings, equivalently the maximum size of an allowed subgraph whose row and column degrees are at most j."
+    },
+    {
+      "type": "p",
+      "text": "For integers1≤r≤k and0≤e<r, assume α_r=rk−e and α_(r+1)=(r+1)k−r−e. Then α_1=k. More strongly, every prescribed optimal degree-r factor F of size rk−e is retained, while r−e edge-disjoint matching classes, each of size k−r and disjoint from F, can be appended. For0≤h≤r−e, the exact later rank is α_(r+h)=rk−e+h(k−r)."
+    },
+    {
+      "type": "p",
+      "text": "The words every prescribed factor express the useful strengthening. An existence theorem for one specially chosen factor would not imply that an arbitrary already-selected optimum can be extended."
+    },
+    {
+      "type": "h2",
+      "text": "Tight corners and matching extensions"
+    },
+    {
+      "type": "p",
+      "text": "Ferrers shape gives an explicit corner/min-cut formula for the degree-constrained factor rank. Equality in the two adjacent rank bounds forces a tight deficient corner. Its geometry divides the available cells into two arms and constrains how the selected red factor occupies the special corner region."
+    },
+    {
+      "type": "p",
+      "text": "The proof extracts a budget on the special red edges, applies a capacitated Hall construction to the top arm, and obtains r−e matching classes there. It transposes the Ferrers graph and applies the same result to the other arm. The two arms have separated row and column supports, so corresponding matchings can be united without creating a repeated row or column. Each combined class has the required size k−r and avoids every edge of the original F."
+    },
+    {
+      "type": "p",
+      "text": "Appending h classes supplies a lower bound for α_(r+h); the tight corner supplies the matching upper bound. Balanced and one-defect cases additionally organize the initial colour classes with the required prefix sizes. The source bridges the incidence model to the actual YoungDiagram graph and its independence-number notation, preventing a theorem about a surrogate rank definition from being mistaken for the target statement."
+    },
+    {
+      "type": "h2",
+      "text": "Balanced and deficient consequences"
+    },
+    {
+      "type": "p",
+      "text": "At e=0, the result realizes simultaneous first2r CDS colours: r initial independent sets of size k and r further sets of size k−r, with all prefixes optimal. At e=1, it supplies the first2r−1 colours with the stated one-defect profile. For e>1, the submitted theorem does not claim that an arbitrary supplied colouring already has every desired individual early colour size."
+    },
+    {
+      "type": "p",
+      "text": "The general Latin Tableau problem remains open. The contribution is a restricted structural hierarchy, with a preservation quantifier that is stronger than selecting a convenient optimum. Parameterized sharpness and missing-corner transport discussed elsewhere are outside the selected44-module formal closure unless separately proved and admitted."
+    },
+    {
+      "type": "h2",
+      "text": "Literature and proof records"
+    },
+    {
+      "type": "p",
+      "text": "Corner formulas, capacitated Hall and bipartite edge colouring are established tools. The greedy boundary e=r−1 and several small existential cases are also known. In particular, the recorded September2026 r=3,e=1 existence comparison should be credited, while distinguishing it from arbitrary supplied-factor preservation."
+    },
+    {
+      "type": "p",
+      "text": "This publication pass independently replayed all 44 exact frozen authored source modules and the selected audit under Lean 4.33.1 and Mathlib 0df444a360eaa60ab8c11dca51a86af692955474, finishing on 5 October 2026 at 02:41:25 UTC. All source invocations and all four requested endpoint prints passed. The factor-preserving extension, actual Young-diagram later ranks, one-defect independent sets and balanced first-two-r independent sets each use only propext, Classical.choice and Quot.sound. No selected endpoint depends on admitted, native-evaluation or unknown axioms. The archive also retains the entrants’ earlier dual-version replays. Some factor-theory full texts remain unchecked, so originality is still a proposed precise extension beyond the credited boundary and existence cases. Formal verification does not settle that comparison or the full Latin Tableau conjecture. Receipt: Verification/sakana-ferrers-fresh-build.json."
+    },
+    {
+      "type": "small",
+      "text": "This short manuscript records the construction and selected endpoints. The companion Original results anthology contains the extended ordinary proof exposition and its explicitly stated premises; the preserved Lean source remains the complete formal proof record."
+    },
+    {
+      "type": "h2",
+      "text": "Verification and reproducibility"
+    },
+    {
+      "type": "p",
+      "text": "Fresh execution: sakana-ferrers: PASS; 44/44 custom modules compiled successfully; receipt Verification/sakana-ferrers-fresh-build.json. Compiler pins, source hashes and endpoint axiom outputs are in Verification. Historical receipts and finite checks do not replace fresh replay."
+    },
+    {
+      "type": "keep_start",
+      "text": ""
+    },
+    {
+      "type": "h2",
+      "text": "FerrersArm.TightDefectCorner.defect_preserves_factor"
+    },
+    {
+      "type": "code",
+      "text": "theorem defect_preserves_factor {n W : ℕ} (ℓ : Fin n → ℕ) (hℓ : Antitone ℓ)\n    (r k e : ℕ) (hr : 1 ≤ r) (hk : r ≤ k) (he : e < r)\n    (hR : factorRank (W := W) ℓ r = r*k-e)\n    (hNext : factorRank (W := W) ℓ (r+1) = (r+1)*k-r-e)\n    (F : Finset (Fin n × Fin W)) (hF : Feasible ℓ r F) (hcard : F.card = r*k-e) :\n    ∃ G : Fin (r-e) → Finset (Fin n × Fin W),\n      (∀ c, IsMatching (G c) ∧ (G c).card = k-r ∧\n        ∀ p ∈ G c, Allowed ℓ p.1 p.2 ∧ p ∉ F) ∧\n      (∀ c d, c ≠ d → Disjoint (G c) (G d)) ∧\n      (∀ h ≤ r-e, factorRank (W := W) ℓ (r+h) = (r+h)*k-h*r-e) ∧\n      factorRank (W := W) ℓ 1 = k"
+    },
+    {
+      "type": "small",
+      "text": "Source: proofs/ferrers/OpHack/Ferrers/DefectExtension.lean:104."
+    },
+    {
+      "type": "small",
+      "text": "Source SHA-256: c17d8534968c3ac199813212046ba0da17c65fa46e2907460afeca99323b1e20"
+    },
+    {
+      "type": "keep_end",
+      "text": ""
+    },
+    {
+      "type": "keep_start",
+      "text": ""
+    },
+    {
+      "type": "h2",
+      "text": "FerrersArm.YoungDiagramBridge.defect_indepNumK_later_ranks"
+    },
+    {
+      "type": "code",
+      "text": "theorem defect_indepNumK_later_ranks (μ : YoungDiagram) (r k e : ℕ)\n    (hr : 1 ≤ r) (hk : r ≤ k) (he : e < r)\n    (hR : FCCompat.indepNumK (FCCompat.YoungDiagram.toSimpleGraph μ) r = r*k-e)\n    (hNext : FCCompat.indepNumK (FCCompat.YoungDiagram.toSimpleGraph μ)\n      (r+1) = (r+1)*k-r-e) :\n    ∀ h ≤ r-e, FCCompat.indepNumK (FCCompat.YoungDiagram.toSimpleGraph μ)\n      (r+h) = (r+h)*k-h*r-e"
+    },
+    {
+      "type": "small",
+      "text": "Source: proofs/ferrers/OpHack/Ferrers/YoungDiagramDefect.lean:8."
+    },
+    {
+      "type": "small",
+      "text": "Source SHA-256: c55685043c4b319f834184a218377c836af11200769eeae94fda76c4fc2c2dbc"
+    },
+    {
+      "type": "reference_list",
+      "text": "Sources and attribution",
+      "items": [
+        {
+          "text": "1. arXiv source: 2408.04086",
+          "url": "https://arxiv.org/abs/2408.04086"
+        },
+        {
+          "text": "2. www.combinatorics.org / pdf",
+          "url": "https://www.combinatorics.org/ojs/index.php/eljc/article/download/v32i2p48/pdf/"
+        },
+        {
+          "text": "3. google-deepmind/formal-conjectures / LatinTableau.lean",
+          "url": "https://github.com/google-deepmind/formal-conjectures/blob/main/FormalConjectures/Paper/LatinTableau.lean"
+        },
+        {
+          "text": "4. alejandrozu/openmath-2026-judging / E02-ferrers-hierarchy.txt",
+          "url": "https://github.com/alejandrozu/openmath-2026-judging/blob/d0ed487f487fa7ec814ff705ab55249983fe8707/OpenMath-Judging/review/entries/E02-ferrers-hierarchy.txt"
+        },
+        {
+          "text": "Central source and adjudication archive",
+          "url": "https://github.com/alejandrozu/openmath-2026-judging"
+        }
+      ]
+    },
+    {
+      "type": "keep_end",
+      "text": ""
+    }
+  ]
+}

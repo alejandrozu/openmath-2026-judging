@@ -1,0 +1,111 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,textcomp}
+\usepackage[margin=20mm]{geometry}
+\usepackage{longtable,booktabs,array,enumitem}
+\usepackage[hidelinks]{hyperref}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{4pt}
+\emergencystretch=3em
+\begin{document}
+{\LARGE\bfseries OpenMath 2026: results and placement rationale\par}\medskip
+{\small Technical review for Stephen Wolfram | 5 October 2026
+Prepared by Alejandro Zarzuelo Urdiales from the preserved contestant packets\par}\medskip
+{\small Judging and evaluation record: the submissions discussed in this document have been judged and evaluated by Alejandro Zarzuelo Urdiales for OpenMath 2026. This dated review records the stated verification, classification and unresolved holds; it is a preliminary evaluation rather than a signed award decision.\par}
+
+{\small Event provenance: OpenMath 2026 ran 27 September-2 October 2026 with worldwide online participation. Detailed organizer listings specify Harvard Innovation Labs for the 27 September in-person event; the OpenMath programme advertises a hybrid kickoff at MIT. Sundai identifies its Harvard/MIT community. Organizer sources: \url{https://rsihouse.ai/openmath} ; \url{https://luma.com/yzp9abvr} ; \url{https://www.sundai.club/events/boston/recursive-learning-hack-with-harvard-innovation-labs}\par}
+
+This five-page review explains the preliminary placements and strongest research candidates. The preserved judging archive is \url{https://github.com/alejandrozu/openmath-2026-judging} at revision d0ed487f487fa7ec814ff705ab55249983fe8707. Newly delivered Luke/Madhan and Matt packets are linked separately. The companion papers retain exact theorem scopes, contributor affiliations and verification records. No manuscript has been uploaded or sent.
+
+\section{1. Placement recommendation}
+\begingroup\footnotesize\begin{longtable}{p{29.87mm}p{44.8mm}p{74.67mm}}\toprule
+Class / placement & Team / contributor & Reason \\ \midrule
+Company: first & Sakana AI team & Largest portfolio of distinct original-result candidates, including complete narrow targets and substantial partial advances. \\ 
+Non-company: first & HTPeo & 52.6704; infinite star-colouring families with retained p=0.15, plus exact Kobon 471. \\ 
+Non-company: 2* & Luke Van Seters / Madhan Jothimani & 35.28; Clebsch Ramsey construction, subject to the acceptance checks below. \\ 
+Non-company: 3* & Matt Bowring & 33.9488; the generic pivot theorem, subject to the acceptance checks below. \\ 
+Non-company: 4* & Chandragupt Sharma & 26.2088; sparse 23-product 3\ensuremath{\times}3 scheme, support 138; fresh Lean and independent exact checks pass. \\ 
+\bottomrule\end{longtable}\endgroup
+The chair approved late-delivery leniency, fixed difficulty values, removal of bonuses and Company/Non-company classes. HTPeo p=0.15 is retained by explicit chair decision. Leanification receives a mention. Scores follow F=m p D\ensuremath{^2}/1000, with m=0.5 for M3B variations; S sums distinct families and A is the largest. Known-mathematics formalizations are recorded separately.
+
+{\small Asterisks mark conditional positions: Luke and Matt require Non-company classification, proof, novelty, declared-resource and required judging review. Rohith's 3.249 remains held. All placements need official signoffs. Superseded independent results can count; prior known mathematics receives no frontier credit.\par}
+
+\clearpage
+\section{2. Sakana: breadth with several clean mathematical stories}
+Contributors: Rachel Teo, Wenyi Wang and Hamdi Abderrahmene, the jointly submitted Sakana AI team. Their educational affiliations are documented separately; a past or current degree programme is not automatically a publication affiliation. The packet contains 27 dossiers, including formalizations and partial results - not 27 solved open problems.
+
+\subsection{The clearest specialist-review candidates}
+A060957: a counterexample to the actual whole-interval distinct-subset-product interpolation assertion, together with arbitrarily long prime-exponent gaps. The prime-coordinate construction is the reusable mechanism; the claim is stronger than an arbitrary restricted-factor-set counterexample.
+
+Erdős-Lovász residual covering: the pre-existing +3 question is resolved, improving the elementary uniform 3r-4 lower bound to 3r-3. Fresh pinned Lean replay passes; all five selected endpoints use only standard kernel axioms. This resolves the exact subquestion rather than the entire parent problem.
+
+A100475: no positive-start prime-reversal periodic cycle, using growth of the prime-index map and an exhaustive finite exceptional region. Ball-Coxeter and the 2004 SeqFan discussion remain specific priority leads to clear.
+
+\subsection{Additional substantial contributions}
+The four-visible/one-hidden restricted Boltzmann machine result classifies a sharp local-landscape threshold, including the degenerate boundary; it does not describe arbitrary training landscapes. The quartic family has an exponent-semigroup classification and a sharp boundary growth scale; all 40 source modules and five standard-axiom endpoint audits pass fresh replay. The Ferrers result preserves a supplied optimal factor while controlling later matching-union ranks. The no-three-collinear half-turn result establishes a sharp defect gap, with a 10-point 5\ensuremath{\times}5 witness.
+
+Other contributions treat squarefree three-prime A000224 cases, a four-AP-free reciprocal sum exceeding 111/25, uniform Erdős 1060/829 bounds, an Erdős 944 obstruction and a finite Erdős 3 ansatz obstruction. Fresh replay and standard-axiom checks pass for A060957, A100475, Ferrers, 1060, 829 and Erdős 3/pullback. The three matrix seeds pass all 213 sources and 18 standard-axiom checks: two fixed factor lists determine the third, without a global-rigidity or minimum-support claim. Erdős 169 passes all 22 unchanged proof bodies and its final standard-axiom audit after import-only adjustments; the original resource-limited replay is preserved. A000224 remains a partial 167/171 source replay; its three selected prints are unrun.
+
+The old proposed S was 1699.56988. Holding Ramsey 35.28 and the restricted Grothendieck 3.14721 leaves a planning total 1661.14267 if all other proposals are accepted. Its largest-family A=308.025 comes from the +3 target. The large aggregate reflects the scoring scale and breadth, not a claim that each contribution has equal scientific importance. The Grothendieck two-source replay and five selected standard-axiom audits now pass; its restricted bound remains weaker than the known 6/5 comparison.
+
+{\small Recommended publication: one substantial anthology chapter per family, with short standalone papers for the strongest exact targets. Preserve joint source authorship and imported-theorem attribution; do not invent individual proof contributions.\par}
+
+\clearpage
+\section{3. HTPeo and Chandragupt: reasons for Non-company placement}
+\subsection{HTPeo: original colouring constructions and exact geometry}
+HTPeo comprises Woohyuk Kang (Kyung Hee University, CS\&E), Hyunjin Lee (University of Cambridge), Sanghyeon Lee (Korea University, Security) and Youchan Oh (Seoul National University, TI). These are the affiliations stated in the pinned team record; the department abbreviations are preserved. Individual result roles are given in the full papers.
+
+Current DMS packet: GP(n,k) admits a five-star edge colouring for 1\ensuremath{\leq}k\ensuremath{\leq}15 and n\ensuremath{\geq}2k+1, except GP(3,1). The construction repeats periodic blocks and adds a residue-dependent seam; finite local windows control all forbidden bicoloured four-edge paths/cycles.
+
+Independent checks passed 1,366 GP cases and 51 flower-snarks; 519 representative graphs and 20,612 local windows support the periodic/seam argument. A body-identical Lean 4.33.1 route now qualifies all 228 sources and 123 selected endpoints (120 standard, three axiom-free), with 221 prior own passes and seven fresh source checks. A separate audit adds one import; the original 120/123 failed audit is preserved. Known GP subfamilies are excluded from the novel delta. Retained p=0.15 gives 49.4214 points. Five broader structural premises and the general DMS conjecture remain open; prior-class comparison remains required.
+
+Kobon: 39 straight lines with 471 bounded triangular faces. Exact rational geometry confirms no parallel lines and 741 distinct intersections. All 55 pinned Lean sources and seven standard-axiom endpoint audits pass fresh replay. This improves the recorded pre-event 470 construction, without proving optimality.
+
+With Ramsey held, HTPeo has planning S=52.6704 and A=49.4214 on these two accepted-if-verified families. This exceeds Chandragupt under both rankings. The full known-mathematics formalization portfolio is discussed separately.
+
+\subsection{Chandragupt Sharma: a clean sparse bilinear certificate}
+Chandragupt Sharma states Cluster Innovation Centre, University of Delhi, on his supplied public profile. The 3\ensuremath{\times}3 multiplication construction uses 23 products and total coefficient support 138=47+47+44, improving the located 139 support reference.
+
+All 729 tensor identities and the rational parameter family pass independent exact checks. All 7 archived Lean modules now freshly compile under pinned Lean 4.34.1; all 12 endpoint axiom audits pass, with standard or no axioms. This is a sparsity improvement, not rank 22, a support 137 impossibility theorem or an established practical speedup. Retained proposal S=A26.2088; new intake can affect its placement.
+
+\clearpage
+\section{4. Important updates and claims kept on hold}
+\subsection{Ramsey: a new complete packet, and an earlier announced bound}
+HTPeo's 0.030139911990 and Sakana's 0.030140932308 templates pass independent exact recounts. Both beat the cited McKay 2024 reference. Technion's January 2026 announcement already gives c4<0.030139, so numerical-frontier credit for those two weaker bounds is held pending comparison with the earlier dated proof. Their certificates remain correct; Sakana's two-source/four-endpoint generic Lean replay now passes with standard axioms. HTPeo's latest qualified source scope is 2083/2103; both 24-request main audits are unrun.
+
+Luke Van Seters and Madhan Jothimani supplied \url{https://github.com/lukevs/k4-ramsey} . Their 12 Clebsch families give a 192-class model and 3840-class refinement, bound 0.0301388875665; independent exact recounts confirm both densities. All 51 unchanged Lean sources and 35 requested endpoint audits pass: eleven general and one concrete theorem use standard axioms, while 23 use native-evaluation trust. Native image identity and initialization were observed; one partial memory-observation error remains disclosed. The earlier exact Technion value is unknown; RSA 2025 announced related constructions. Exact and structural priority need comparison. Notes self-date September 27-28; the preserved full certificate is October 3. Approved late intake; conditional 35.28 awaits novelty, resource-class and required judging review.
+
+\subsection{Rohith: review 61/1190, not the already-known 470}
+Rohith Poola (Autonomy and Intelligence Lab, Northeastern University) independently constructs 61 lines with 1190 faces; the exact recount passes. His 39/470 result ties a pre-event certificate. Most other catalogue candidates tie or trail stronger recorded baselines. A purported 1199 recursion for 61 applies generically to pseudolines; straight-line doubling needs additional geometric hypotheses. The remaining 61 novelty question is held, not rejected from a secondary table.
+
+\subsection{Recognition and research holds}
+Leanification receives a mention for a substantive container-theorem formalization. Luca Seiki Pereira Fujii led it; Mateus/Matheus and Tiago reviewed the statement. The five-person event roster does not make every member a paper author. Leon Koerbs/Cameron Fen, Wilson Wu and Jamie Steeg have separately scoped reusable formalization candidates; these do not solve Erdős 3.
+
+New October 4 intake: Matt Bowring supplies a generic matrix pivot theorem with zero final Walsh angle. All 26 exact-pin sources and six selected standard-axiom audits now pass. Polar/Walsh ingredients are known; originality concerns the combined generic pivot-existence theorem. Separate admitted circuit baselines do not prove the universal 21/48 CNOT claim, which lacks a circuit bridge and nongeneric proof. Conditional P2=.05 at D824 gives 33.9488. If Luke and Matt are Non-company, 35.28/33.9488 precede Chandragupt 26.2088; HTPeo 52.6704 remains first. Other unfinished packets retain their source/proof holds.
+
+\clearpage
+\section{5. Verification, papers and the requested review}
+All 226 original score rows and 70 amended totals reproduce exactly with family deduplication. Independent computations also confirm the two weighted Ramsey fractions, matrix tensor and parameter identities, four Kobon arrangements, 1,417 colouring instances, two BB6 runs, Collatz ceilings and selected finite/formalization tests. The full publication package contains a source-hashed build register separating fresh kernel builds, native-evaluation trust, archived receipts and unresolved environmental or source gaps. A successful build alone does not establish statement fidelity or novelty.
+
+\subsection{The document family}
+\begin{itemize}
+\item Novel results volume: exact statements, constructions, extended ordinary arguments, source endpoints and prior-work comparisons; remaining proof premises and gaps are explicit.
+\item Formalizations and known results volume: what each established theorem or certificate says, its reusable contribution and why it does not earn original-frontier points.
+\item Individual papers: one concise manuscript per original family, plus clearly marked candidate manuscripts where priority/eligibility remains unresolved.
+\item Verification folder: source pins/hashes, commands, compiler versions, reachable theorem endpoints, axiom results and current build status. Editable standalone LaTeX sources accompany the PDFs.
+\end{itemize}
+\subsection{What Stephen Wolfram can usefully assess}
+Prioritize the +3 residual theorem, A060957, the new HTPeo colouring families, the 138 matrix scheme and the latest Clebsch Ramsey construction. For each, the useful questions are: does the ordinary statement match the formal one; is the claimed delta genuinely new; is the construction or proof idea sufficiently general to merit further development; and what is the strongest appropriate publication claim? Kobon 471 supplies an especially compact exact-certificate example.
+
+The chair retains HTPeo 0.15 and recommends the placements on page 1. Final official publication should use signed acceptance records, conflict-free mathematical review, contributor-approved authorship and confirmed publication affiliations. These documents are ready for technical and author review, not evidence of Wolfram's endorsement or journal acceptance.
+
+\subsection{Primary routes}
+{\small Central archive: \url{https://github.com/alejandrozu/openmath-2026-judging}
+Earlier Ramsey sources: \url{https://math.technion.ac.il/events/noam-feinstein/} and \url{https://www.dmg.tuwien.ac.at/rsa2025/}
+Prior GP scope: \url{https://arxiv.org/abs/2410.15024}
+New Ramsey packet: \url{https://github.com/lukevs/k4-ramsey}
+Known matrix/angle ingredients: \url{https://arxiv.org/abs/1512.07240v3} and \url{https://arxiv.org/abs/quant-ph/0404089v3}
+Pre-event Kobon baseline: \url{https://github.com/alejandrozu/kobon-proof}\par}
+
+\end{document}

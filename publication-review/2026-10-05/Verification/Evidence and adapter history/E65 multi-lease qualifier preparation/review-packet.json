@@ -1,0 +1,71 @@
+{
+  "status": "PREPARED_ONLY_SEPARATE_MULTI_LEASE_E65_FINAL_COMPOSITE_QUALIFIER_NOT_EXECUTED",
+  "created_utc": "2026-10-05T07:06:00.754523+00:00",
+  "producer_sha256": "323ee4b51efd8bb5ae15a38e05aee7f9b6d00cbab68626631557340d531eeae2",
+  "new_separate_helper": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\qualify_original_e65_multilease_composite_199plusStd.py",
+  "new_separate_helper_sha256": "504a51d0978924d3b2bdb98ea5d59da71d9e22934a5076d9e5902083660e9c1f",
+  "passive_AST_parse": "PASS_ONLY",
+  "original_qualifier_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\qualify_original_e65_composite_199plusStd.py",
+  "original_qualifier_sha256_unchanged": "2a33dca5490be72972a10e0af9e4091525f08910a82448d86a59d001998bb53b",
+  "preserved_original_helper": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\proposals\\e65qual-multilease\\preserved\\prior_helper.py",
+  "preserved_original_helper_sha256": "2a33dca5490be72972a10e0af9e4091525f08910a82448d86a59d001998bb53b",
+  "preserved_original_packet_sha256": "ed6d9c2508c3ac3fbf754dc8dc9be2571c161a89a2ff81fdc569b0ef6ea3dd77",
+  "preserved_original_full_diff_sha256": "a9887aef3046e0e5673a5f5499b3b0b9346c1609881026c206c56133086602bc",
+  "minimal_diff": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\proposals\\e65qual-multilease\\multi-lease.minimal.diff",
+  "minimal_diff_sha256": "ad72e646cc79211ec0e209dbcacdf9a83272d151e3c5caa0a171a4cfcec61777",
+  "full_new_file_diff": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\proposals\\e65qual-multilease\\multi-lease.NEW_FULL.diff",
+  "full_new_file_diff_sha256": "1bc847b66bf576a9670b41ce8a8f170fb8f569b0fe49964a20612bd05b677775",
+  "frozen_runner_sha256_unchanged": "a2e5931c838e8b348de9fae4945b9f16ceb0883eaed51ca55f93e797deaa9e6d",
+  "frozen200_plan_sha256_unchanged": "0d140b36c59231a9eaf79a2f6277355d0b4cc08b815e5d817df54c370dcfbf15",
+  "fixed_first_actual_history": {
+    "root183_review_sha256": "f778804b0fc1e1c547d5aa69c9e26d04d190235ced844b50eac6a481ff66a4da",
+    "actual183_checkpoint_sha256": "2c8c10816da83a7e50ddf69b3d55fdbaf39bd3a5862d4ba2efc54da77d521b6c",
+    "actual_first_sole_lease_sha256": "473930ee70fe1ca41bc93f244d4d2cc3e44433b899fbbcd20d0a3b6db09d6cb9",
+    "root_first_dispatch_approval_sha256": "dcc4498db4d9ab834de346ccb2b5e23d61aa4e8c34ad805cc78398ac63986322"
+  },
+  "later_root_completion_review_additive_schema_TEMPLATE_ONLY": {
+    "qualification_helper_sha256": "504a51d0978924d3b2bdb98ea5d59da71d9e22934a5076d9e5902083660e9c1f",
+    "sole_lease_sha256": "<exact final lease SHA>",
+    "sole_dispatch_segments": [
+      {
+        "lease_file": "<actual preserved dispatch lease file>",
+        "lease_sha256": "<actual lease SHA>",
+        "dispatch_approval_file": "<actual per-dispatch root approval file>",
+        "dispatch_approval_sha256": "<actual root approval SHA>",
+        "completed_start_checkpoint_file": "<actual completed starting checkpoint file>",
+        "completed_start_checkpoint_sha256": "<actual starting checkpoint SHA>",
+        "completed_end_checkpoint_file": "<actual completed end-of-dispatch checkpoint file>",
+        "completed_end_checkpoint_sha256": "<actual ending checkpoint SHA>"
+      }
+    ]
+  },
+  "later_restart_dispatch_approval_required_schema_TEMPLATE_ONLY": {
+    "status": "ROOT_APPROVED_ACTUAL_E65_SOLE_WHOLE_RESTART_FROM_COMPLETED_PARTIAL_CHECKPOINT",
+    "source_plan_sha256": "0d140b36c59231a9eaf79a2f6277355d0b4cc08b815e5d817df54c370dcfbf15",
+    "reviewed_runner_sha256": "a2e5931c838e8b348de9fae4945b9f16ceb0883eaed51ca55f93e797deaa9e6d",
+    "completed_partial_checkpoint_sha256": "<actual completed checkpoint SHA>",
+    "starting_checkpoint_all_owned_processes_finished": "<future actual true>",
+    "starting_checkpoint_no_owned_Lean_children": "<future actual true>",
+    "actual_sole_dispatch_lease_sha256": "<actual reviewed lease SHA>",
+    "preserved_actual_sole_dispatch_lease_file": "<same exact preserved lease file>",
+    "global_Lean_processes_at_dispatch": "<actual empty process snapshot>",
+    "maximum_global_Lean_jobs": 1,
+    "guard_private_limit_bytes": 10737418240,
+    "initial_commit_gate_bytes": 11811160064,
+    "actual_fresh_resources": "<actual physical >=6GiB and commit >=11GiB>",
+    "free_disk_bytes": "<actual >=4GB>",
+    "checked_utc": "<actual approval time>"
+  },
+  "intermediate_waiting_label_qualification": "A finished natural while-waiting checkpoint may preserve its dated waiting_for_module label only with the next explicit root approval confirming dispatcher exit and no owned child. The final199/42 receipt must contain neither current_module nor waiting_for_module.",
+  "exact_retention_and_dispatch_checks": [
+    "All183 original raw successful rows unchanged in every checkpoint",
+    "Every previously successful whole/audit row remains identical including source, command, options, guards, logs and artifact inventories",
+    "Each later lease starts at exactly the preceding completed checkpoint SHA preserved in actual attempt history",
+    "Every new whole/audit row appears once within its approval/lease-to-completed-boundary time interval under unchanged10/11 guard",
+    "No interruption uses the original exact one-lease branch; restarts require explicit full chain",
+    "Exactly199 own sources/six audits42prints plus separate prior accepted Std1/14, no fake200fresh or aliased output rows"
+  ],
+  "candidate_imported_or_executed": false,
+  "Lean_or_compiler_or_guard_invoked": false,
+  "existing_runner_receipt_source_guard_caps_canonical_PDF_or_artifacts_mutated": false
+}

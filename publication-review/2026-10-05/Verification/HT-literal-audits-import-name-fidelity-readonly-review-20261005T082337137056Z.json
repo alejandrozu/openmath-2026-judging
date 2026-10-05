@@ -1,0 +1,364 @@
+{
+  "status": "READ_ONLY_STATIC_HT_LITERAL_AUDIT_IMPORT_AND_NAME_FIDELITY_REVIEW_NO_COMPILER",
+  "checked_utc": "2026-10-05T08:23:37.135053+00:00",
+  "reviewer": "/root/nonnovel_and_affiliations",
+  "frozen_graph": {
+    "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\proposals\\htpeo-ramsey-current-original-provider-recheck-20261005\\exact-original2103-sources-and-import-graph.json",
+    "sha256": "6d4c3851db4c8753318edeed86c22cc1199b0341b2bb837f082c30add3ff3086"
+  },
+  "typed_mapping": {
+    "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\proposals\\htpeo-ramsey-current-original-provider-recheck-20261005\\all24-exact-typed-statements-and-preserved-audits.json",
+    "sha256": "e95a2f09ad9058f65ed219a0de0a76eb6628d3661bc9af594682b1ed103612c8"
+  },
+  "literal_source_hash_and_import_checks": {
+    "FreshAudit1.lean": {
+      "sha256": "dff144f1890c6c255e9463a7e1fa29284166684ae96289b7949f1a363c6e9868",
+      "bytes": 791,
+      "literal_import_lines": [
+        "import RamseyCert"
+      ]
+    },
+    "FreshAuditSupplement.lean": {
+      "sha256": "4c570ea840ac2283717a34b5f83294def83edd27a056ad747cf60f273f91a80d",
+      "bytes": 1027,
+      "literal_import_lines": [
+        "import RamseyCert.Final",
+        "import RamseyCert.Native"
+      ]
+    },
+    "RamseyCert.lean": {
+      "sha256": "e7e3ed232538457acf4f140b002e59ec3dd3337406ff0f11b3d44bbc5202abca",
+      "bytes": 23,
+      "literal_import_lines": [
+        "import RamseyCert.Main"
+      ]
+    },
+    "RamseyCert/Final.lean": {
+      "sha256": "ac8fbfe56259b7c255520c121f27d54694beb4afe6fa7e325bd18b74c71ac461",
+      "bytes": 1849,
+      "literal_import_lines": [
+        "import RamseyCert.Main",
+        "import RamseyCert.Limit",
+        "import RamseyCert.Mono"
+      ]
+    },
+    "RamseyCert/Native.lean": {
+      "sha256": "8d9d66a0f2e2e3d2f6445797e9afbd4b750b678cec644b4131324d9fac48893f",
+      "bytes": 758,
+      "literal_import_lines": [
+        "import RamseyCert.Fast",
+        "import RamseyCert.Data.Base"
+      ]
+    },
+    "RamseyCert/Main.lean": {
+      "sha256": "78f059eb97a79bcc5a84b582120ccd35adf4121966baaa8ae75d3cc08a462753",
+      "bytes": 4155,
+      "literal_import_lines": [
+        "import RamseyCert.GlueR",
+        "import RamseyCert.GlueB",
+        "import RamseyCert.Sym",
+        "import RamseyCert.SymChk0",
+        "import RamseyCert.SymChk1",
+        "import RamseyCert.SymChk2",
+        "import RamseyCert.SymChk3",
+        "import RamseyCert.SymChk4",
+        "import RamseyCert.SymChk5",
+        "import RamseyCert.SymChk6",
+        "import RamseyCert.SymChk7"
+      ]
+    }
+  },
+  "original_custom_closure_count": 2098,
+  "supplement_custom_closure_count": 2101,
+  "actual_source_requests_each": 24,
+  "unqualified_original_requests_without_local_namespace_or_open": [
+    "K4_blue",
+    "Template.numer_eq",
+    "Template.total_eq",
+    "colour_total",
+    "fastK_eq",
+    "getD_map_range",
+    "kTermA_eq",
+    "minMonoK4_density_le",
+    "minMonoK4_density_le_sol",
+    "minMonoK4_density_mono",
+    "native_fastK_B",
+    "native_fastK_R",
+    "ramseyMultK4_le_sol",
+    "ramseyMultK4_limit_lt_ref",
+    "ramseyMultK4_lt_ref",
+    "ramseyMultK4_tendsto",
+    "sol_density",
+    "sol_lt_ref",
+    "sol_numer",
+    "sol_ppt",
+    "sol_symm"
+  ],
+  "declaration_modules_not_exposed_by_original_imports": [
+    "RamseyCert.blowup_count",
+    "RamseyCert.minMonoK4_le",
+    "RamseyCert.ramseyMultK4_le_density",
+    "minMonoK4_density_le",
+    "minMonoK4_density_le_sol",
+    "minMonoK4_density_mono",
+    "native_fastK_B",
+    "native_fastK_R",
+    "ramseyMultK4_le_sol",
+    "ramseyMultK4_limit_lt_ref",
+    "ramseyMultK4_lt_ref",
+    "ramseyMultK4_tendsto"
+  ],
+  "fresh_rehashed_declaration_locators": [
+    {
+      "original_request": "K4_blue",
+      "qualified_name": "RamseyCert.K4_blue",
+      "declaration_module": "RamseyCert.Fast",
+      "source_sha256": "14490310b83732e503a6a8e6e1f597684f2b8bbe3c68e010c5f8819877f7a808",
+      "source_line": 353,
+      "literal_statement_first_line": "theorem K4_blue (n : \u2115) (w : \u2115 \u2192 \u2115) (rs rsB : List \u2115) (hlen : rs.length = n)",
+      "module_in_original_custom_closure": true,
+      "module_in_supplement_custom_closure": true
+    },
+    {
+      "original_request": "RamseyCert.blowup_count",
+      "qualified_name": "RamseyCert.blowup_count",
+      "declaration_module": "RamseyCert.Limit",
+      "source_sha256": "28276e096be4cf2426f432b92ae425e09c368848e72f21945fc39964edad21e5",
+      "source_line": 238,
+      "literal_statement_first_line": "theorem blowup_count (T : Template) (hsym : T.Symmetric) (t : \u2115) :",
+      "module_in_original_custom_closure": false,
+      "module_in_supplement_custom_closure": true
+    },
+    {
+      "original_request": "RamseyCert.minMonoK4_le",
+      "qualified_name": "RamseyCert.minMonoK4_le",
+      "declaration_module": "RamseyCert.Limit",
+      "source_sha256": "28276e096be4cf2426f432b92ae425e09c368848e72f21945fc39964edad21e5",
+      "source_line": 314,
+      "literal_statement_first_line": "theorem minMonoK4_le (T : Template) (hsym : T.Symmetric) (t : \u2115) :",
+      "module_in_original_custom_closure": false,
+      "module_in_supplement_custom_closure": true
+    },
+    {
+      "original_request": "RamseyCert.ramseyMultK4_le_density",
+      "qualified_name": "RamseyCert.ramseyMultK4_le_density",
+      "declaration_module": "RamseyCert.Limit",
+      "source_sha256": "28276e096be4cf2426f432b92ae425e09c368848e72f21945fc39964edad21e5",
+      "source_line": 422,
+      "literal_statement_first_line": "theorem ramseyMultK4_le_density (T : Template) (hsym : T.Symmetric)",
+      "module_in_original_custom_closure": false,
+      "module_in_supplement_custom_closure": true
+    },
+    {
+      "original_request": "Template.numer_eq",
+      "qualified_name": "RamseyCert.Template.numer_eq",
+      "declaration_module": "RamseyCert.Fast",
+      "source_sha256": "14490310b83732e503a6a8e6e1f597684f2b8bbe3c68e010c5f8819877f7a808",
+      "source_line": 414,
+      "literal_statement_first_line": "theorem Template.numer_eq (T : Template) (n : \u2115) (hn : T.n = n) (w : \u2115 \u2192 \u2115) (adj : \u2115 \u2192 \u2115 \u2192 Bool)",
+      "module_in_original_custom_closure": true,
+      "module_in_supplement_custom_closure": true
+    },
+    {
+      "original_request": "Template.total_eq",
+      "qualified_name": "RamseyCert.Template.total_eq",
+      "declaration_module": "RamseyCert.Fast",
+      "source_sha256": "14490310b83732e503a6a8e6e1f597684f2b8bbe3c68e010c5f8819877f7a808",
+      "source_line": 430,
+      "literal_statement_first_line": "theorem Template.total_eq (T : Template) (n : \u2115) (hn : T.n = n) (w : \u2115 \u2192 \u2115)",
+      "module_in_original_custom_closure": true,
+      "module_in_supplement_custom_closure": true
+    },
+    {
+      "original_request": "colour_total",
+      "qualified_name": "RamseyCert.colour_total",
+      "declaration_module": "RamseyCert.Fast",
+      "source_sha256": "14490310b83732e503a6a8e6e1f597684f2b8bbe3c68e010c5f8819877f7a808",
+      "source_line": 292,
+      "literal_statement_first_line": "theorem colour_total (B n W md : \u2115) (rs : List \u2115) (all : List Ent)",
+      "module_in_original_custom_closure": true,
+      "module_in_supplement_custom_closure": true
+    },
+    {
+      "original_request": "fastK_eq",
+      "qualified_name": "RamseyCert.fastK_eq",
+      "declaration_module": "RamseyCert.Fast",
+      "source_sha256": "14490310b83732e503a6a8e6e1f597684f2b8bbe3c68e010c5f8819877f7a808",
+      "source_line": 345,
+      "literal_statement_first_line": "theorem fastK_eq (B n W : \u2115) (rs : List \u2115) (hlen : rs.length = n)",
+      "module_in_original_custom_closure": true,
+      "module_in_supplement_custom_closure": true
+    },
+    {
+      "original_request": "getD_map_range",
+      "qualified_name": "RamseyCert.getD_map_range",
+      "declaration_module": "RamseyCert.Fast",
+      "source_sha256": "14490310b83732e503a6a8e6e1f597684f2b8bbe3c68e010c5f8819877f7a808",
+      "source_line": 443,
+      "literal_statement_first_line": "theorem getD_map_range (f : \u2115 \u2192 \u2115) (n i : \u2115) (hi : i < n) :",
+      "module_in_original_custom_closure": true,
+      "module_in_supplement_custom_closure": true
+    },
+    {
+      "original_request": "kTermA_eq",
+      "qualified_name": "RamseyCert.kTermA_eq",
+      "declaration_module": "RamseyCert.Fast",
+      "source_sha256": "14490310b83732e503a6a8e6e1f597684f2b8bbe3c68e010c5f8819877f7a808",
+      "source_line": 110,
+      "literal_statement_first_line": "theorem kTermA_eq (md : \u2115) (ea : Ent) (La : List Ent) : kTermA md ea La = termA md ea La := by",
+      "module_in_original_custom_closure": true,
+      "module_in_supplement_custom_closure": true
+    },
+    {
+      "original_request": "minMonoK4_density_le",
+      "qualified_name": "RamseyCert.minMonoK4_density_le",
+      "declaration_module": "RamseyCert.Mono",
+      "source_sha256": "63e1e1d118514de7bd7c9c924ee53d487ac7f9234f7276378e9208c210a2ce13",
+      "source_line": 215,
+      "literal_statement_first_line": "theorem minMonoK4_density_le (m : \u2115) (hm : 4 \u2264 m) :",
+      "module_in_original_custom_closure": false,
+      "module_in_supplement_custom_closure": true
+    },
+    {
+      "original_request": "minMonoK4_density_le_sol",
+      "qualified_name": "RamseyCert.minMonoK4_density_le_sol",
+      "declaration_module": "RamseyCert.Final",
+      "source_sha256": "ac8fbfe56259b7c255520c121f27d54694beb4afe6fa7e325bd18b74c71ac461",
+      "source_line": 32,
+      "literal_statement_first_line": "theorem minMonoK4_density_le_sol (m : \u2115) (hm : 4 \u2264 m) :",
+      "module_in_original_custom_closure": false,
+      "module_in_supplement_custom_closure": true
+    },
+    {
+      "original_request": "minMonoK4_density_mono",
+      "qualified_name": "RamseyCert.minMonoK4_density_mono",
+      "declaration_module": "RamseyCert.Mono",
+      "source_sha256": "63e1e1d118514de7bd7c9c924ee53d487ac7f9234f7276378e9208c210a2ce13",
+      "source_line": 132,
+      "literal_statement_first_line": "theorem minMonoK4_density_mono (m : \u2115) (hm : 4 \u2264 m) :",
+      "module_in_original_custom_closure": false,
+      "module_in_supplement_custom_closure": true
+    },
+    {
+      "original_request": "native_fastK_B",
+      "qualified_name": "RamseyCert.native_fastK_B",
+      "declaration_module": "RamseyCert.Native",
+      "source_sha256": "8d9d66a0f2e2e3d2f6445797e9afbd4b750b678cec644b4131324d9fac48893f",
+      "source_line": 17,
+      "literal_statement_first_line": "theorem native_fastK_B : fastK 32 1024 W rowsB = 100297877536367701755653260597 := by native_decide",
+      "module_in_original_custom_closure": false,
+      "module_in_supplement_custom_closure": true
+    },
+    {
+      "original_request": "native_fastK_R",
+      "qualified_name": "RamseyCert.native_fastK_R",
+      "declaration_module": "RamseyCert.Native",
+      "source_sha256": "8d9d66a0f2e2e3d2f6445797e9afbd4b750b678cec644b4131324d9fac48893f",
+      "source_line": 15,
+      "literal_statement_first_line": "theorem native_fastK_R : fastK 32 1024 W rowsR = 99839872478310077417039516880 := by native_decide",
+      "module_in_original_custom_closure": false,
+      "module_in_supplement_custom_closure": true
+    },
+    {
+      "original_request": "ramseyMultK4_le_sol",
+      "qualified_name": "RamseyCert.ramseyMultK4_le_sol",
+      "declaration_module": "RamseyCert.Final",
+      "source_sha256": "ac8fbfe56259b7c255520c121f27d54694beb4afe6fa7e325bd18b74c71ac461",
+      "source_line": 16,
+      "literal_statement_first_line": "theorem ramseyMultK4_le_sol :",
+      "module_in_original_custom_closure": false,
+      "module_in_supplement_custom_closure": true
+    },
+    {
+      "original_request": "ramseyMultK4_limit_lt_ref",
+      "qualified_name": "RamseyCert.ramseyMultK4_limit_lt_ref",
+      "declaration_module": "RamseyCert.Final",
+      "source_sha256": "ac8fbfe56259b7c255520c121f27d54694beb4afe6fa7e325bd18b74c71ac461",
+      "source_line": 39,
+      "literal_statement_first_line": "theorem ramseyMultK4_limit_lt_ref :",
+      "module_in_original_custom_closure": false,
+      "module_in_supplement_custom_closure": true
+    },
+    {
+      "original_request": "ramseyMultK4_lt_ref",
+      "qualified_name": "RamseyCert.ramseyMultK4_lt_ref",
+      "declaration_module": "RamseyCert.Final",
+      "source_sha256": "ac8fbfe56259b7c255520c121f27d54694beb4afe6fa7e325bd18b74c71ac461",
+      "source_line": 25,
+      "literal_statement_first_line": "theorem ramseyMultK4_lt_ref : ramseyMultK4 < 10486266368 / 768 ^ 4 :=",
+      "module_in_original_custom_closure": false,
+      "module_in_supplement_custom_closure": true
+    },
+    {
+      "original_request": "ramseyMultK4_tendsto",
+      "qualified_name": "RamseyCert.ramseyMultK4_tendsto",
+      "declaration_module": "RamseyCert.Mono",
+      "source_sha256": "63e1e1d118514de7bd7c9c924ee53d487ac7f9234f7276378e9208c210a2ce13",
+      "source_line": 201,
+      "literal_statement_first_line": "theorem ramseyMultK4_tendsto :",
+      "module_in_original_custom_closure": false,
+      "module_in_supplement_custom_closure": true
+    },
+    {
+      "original_request": "sol_density",
+      "qualified_name": "RamseyCert.sol_density",
+      "declaration_module": "RamseyCert.Main",
+      "source_sha256": "78f059eb97a79bcc5a84b582120ccd35adf4121966baaa8ae75d3cc08a462753",
+      "source_line": 59,
+      "literal_statement_first_line": "theorem sol_density : sol.density = 200137750014677779172692777477 / 6640289795261907019148161833841 := by",
+      "module_in_original_custom_closure": true,
+      "module_in_supplement_custom_closure": true
+    },
+    {
+      "original_request": "sol_lt_ref",
+      "qualified_name": "RamseyCert.sol_lt_ref",
+      "declaration_module": "RamseyCert.Main",
+      "source_sha256": "78f059eb97a79bcc5a84b582120ccd35adf4121966baaa8ae75d3cc08a462753",
+      "source_line": 66,
+      "literal_statement_first_line": "theorem sol_lt_ref : sol.density < 10486266368 / 768 ^ 4 := by",
+      "module_in_original_custom_closure": true,
+      "module_in_supplement_custom_closure": true
+    },
+    {
+      "original_request": "sol_numer",
+      "qualified_name": "RamseyCert.sol_numer",
+      "declaration_module": "RamseyCert.Main",
+      "source_sha256": "78f059eb97a79bcc5a84b582120ccd35adf4121966baaa8ae75d3cc08a462753",
+      "source_line": 48,
+      "literal_statement_first_line": "theorem sol_numer : sol.numer = 200137750014677779172692777477 := sol_numer_sum.trans (by norm_num)",
+      "module_in_original_custom_closure": true,
+      "module_in_supplement_custom_closure": true
+    },
+    {
+      "original_request": "sol_ppt",
+      "qualified_name": "RamseyCert.sol_ppt",
+      "declaration_module": "RamseyCert.Main",
+      "source_sha256": "78f059eb97a79bcc5a84b582120ccd35adf4121966baaa8ae75d3cc08a462753",
+      "source_line": 96,
+      "literal_statement_first_line": "theorem sol_ppt : \u2308(10 ^ 12 : \u211a) * sol.density\u2309 = 30139911990 := by",
+      "module_in_original_custom_closure": true,
+      "module_in_supplement_custom_closure": true
+    },
+    {
+      "original_request": "sol_symm",
+      "qualified_name": "RamseyCert.sol_symm",
+      "declaration_module": "RamseyCert.Main",
+      "source_sha256": "78f059eb97a79bcc5a84b582120ccd35adf4121966baaa8ae75d3cc08a462753",
+      "source_line": 91,
+      "literal_statement_first_line": "theorem sol_symm : sol.Symmetric := fun a b => adjR_symm a b a.isLt b.isLt",
+      "module_in_original_custom_closure": true,
+      "module_in_supplement_custom_closure": true
+    }
+  ],
+  "conclusions": [
+    "The unchanged original FreshAudit1 imports RamseyCert, whose only import is Main; Main does not expose Limit,Mono,Final orNative. Exactly12 requested declaration names have a provider outside that original custom closure.",
+    "Exactly21 original requests are not fully qualified and FreshAudit1 has no namespace or open command. Inspected declarations are namespaced under RamseyCert, including nestedTemplate declarations. These are concrete static name-resolution concerns, not an invented compiler failure.",
+    "The unchanged separate supplement imports Final andNative and requests all24 fully qualified names; all24 declaring modules are in its custom closure. No corresponding missing custom import/name concern found.",
+    "Final imports Main/Limit/Mono but notNative. Main imports GlueR/GlueB/Sym/SymChk0..7. Native imports Fast/Data.Base and separately runs two native_decide checks. Keep2native cross-check selectedprints distinct from22 kernel/general outputs."
+  ],
+  "limitations": [
+    "No Lean/controller/guard imported or invoked. No live canonical receipt read. No source/options/output changed.",
+    "Closure follows SHA-bound frozen custom import graph; this bounded review freshly rehashes literal audit/root/Main/Final/Native and all24 declaring sources, not every2103custom/official source again.",
+    "The original audit must be attempted unchanged with real diagnostics retained; a future clean supplement cannot erase an actual original audit failure."
+  ]
+}

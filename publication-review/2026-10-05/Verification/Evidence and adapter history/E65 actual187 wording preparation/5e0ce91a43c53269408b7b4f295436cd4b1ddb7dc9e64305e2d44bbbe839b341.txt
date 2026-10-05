@@ -1,0 +1,338 @@
+Formalizing Established Mathematics at OpenMath 2026: Reusable Libraries, Exact Certificates, and Research Boundaries
+
+Prepared for author review from the preserved competition packets, 4 October 2026
+
+ABSTRACT
+
+The mathematical value of an AI-assisted competition extends beyond new numerical bounds and newly resolved questions. Its preserved artifacts also include formalizations of established theorems, interfaces between different definitions of arithmetic progression, exact computational certificates, and incomplete research programmes whose limitations are informative. This paper records that part of the OpenMath 2026 corpus. It describes ten selected Sakana formalization families; HTPeo's perfect-matching and sixteen Erdős families, distinguishing substantive developments from smaller helpers; the arithmetic-progression developments of Leon Koerbs and Cameron Fen, Wilson Wu, and Jamie Steeg; and Leanification's formalization of the Campos–Samotij container theorem. It also examines Collatz descent certificates, finite Busy Beaver runs, known matrix and Kobon constructions, and Ramsey and Grothendieck certificates whose claimed original-mathematics status is unresolved. Established mathematics is attributed to its prior authors. Potential formal-library novelty is a separate question, requiring exact-source compilation, statement correspondence and prior-formalization comparison. An appendix keeps unfinished unitary-synthesis and geometric research separate from proved known results. The document is an author-review draft, not a declaration of journal acceptance or first-formalization priority.
+
+1. PURPOSE, SCOPE AND THE MEANING OF FORMALIZATION VALUE
+
+A proof assistant can make an established theorem useful in a new way. A reusable formal statement may let future developments invoke a theorem with all its assumptions visible, compose its conclusion with other libraries, or check a computational certificate without trusting its search procedure. These are valuable outcomes even when the informal mathematics was already known. Their value does not depend on presenting them as solutions of open problems. The appropriate scientific questions are which mathematical statement was formalized, how faithfully it matches the source, what reusable infrastructure was added, and what was already available in the dependency libraries.
+
+The competition record contains several layers of evidence. A theorem statement and source file identify a candidate formalization. A supplied successful build log records what an author's environment reported. A fresh build at the exact submitted source and dependency pins is stronger reproduction evidence. An endpoint axiom audit identifies admitted dependencies, while mathematical review establishes whether the machine-checked statement expresses the intended mathematics. These layers should remain visible in publication. A compiler success does not by itself establish novelty, appropriate attribution, or equivalence between a finite encoding and the ordinary mathematical object.
+
+This document uses the preserved judging repository as its central source: https://github.com/alejandrozu/openmath-2026-judging . The audited archive revision is d0ed487f487fa7ec814ff705ab55249983fe8707. The original packets and statement cards, rather than a leaderboard number, govern the descriptions. Fresh replay results are recorded in the companion verification ledger supplied with the publication package. Where this paper refers to earlier replay receipts, they remain receipt evidence unless that ledger records an independent rerun. No result is upgraded merely because its source contains the words 'proved' or 'no sorry'.
+
+One mathematical family is described once, even if it contains many helper lemmas, alternate endpoints or specializations. Independently produced formalizations can deserve separate contributor recognition, but a collective paper should not pretend that equivalent interfaces represent several different mathematical discoveries. The source formalization authors and the prior informal theorem authors are separate attribution categories. AI systems are disclosed as tools; human authors remain responsible for the submitted mathematical statements and their publication.
+
+The chair has approved the October 4 competition amendments and has retained the DMS progress value of 0.15. Those administrative choices are reported in the separate short judging document. They do not turn established mathematics into novel mathematics. Leanification is included here as a mention and a substantive formalization case study, following the chair's latest instruction, without a competitive placement. The long original-results paper is a companion volume, so the material here need not compete rhetorically with novel contributions.
+
+2. SAKANA: TEN SELECTED FORMALIZATION FAMILIES
+
+The Sakana packet is a joint submission of Rachel Teo, Wenyi Wang and Hamdi Abderrahmene. The supplied record does not justify a per-result division of their human contributions. Its known-mathematics material ranges from Bernoulli denominators and quaternion equations to digit carries and geometric counting. These are ten theorem families, not ten completely solved parent open problems. Their potential publication form is a coherent formalization catalogue with reusable definitions and proof interfaces. Individual sections may also support focused library notes if exact prior-formalization comparisons establish an appropriate new delta.
+
+2.1. A046969 and Bernoulli denominators
+
+For n>0, define a(n) as the denominator of B_(2n)/(2n(2n−1)), with a(0)=0. The selected theorem states that if p>3 and both p and 2p−1 are prime, then a(p)=12(2p−1). In particular, a(p)/12 is prime. This is denominator mathematics with a classical source chain, rather than an unrestricted new theorem about Bernoulli-number prime values. The mathematical priority comparison includes Powell–Frame and the classical Bernoulli denominator theory recorded in the packet.
+
+The useful formal task is to connect rational denominators, Bernoulli-number identities, primality hypotheses and an exact natural-number formula. A small-looking final theorem may require careful treatment of signs, rational reduction and the exceptional small primes. Its reuse lies in a verified denominator interface and exact hypotheses. The existing Mathlib Bernoulli infrastructure should receive credit, and the new contribution should be measured against that infrastructure rather than the number of final declarations. Sources: https://oeis.org/A046969 ; https://dlmf.nist.gov/24.10 ; judging card E02-a046969-i.
+
+2.2. A two-witness quaternion scalar equation
+
+The packet formalizes an explicit existential definition of scalar Hamilton quaternions. Over a linearly ordered commutative ring with the required strict-order compatibility, q is scalar precisely when there are unrestricted quaternions u,v satisfying ((uv−vu)^2+4)^2−(qu−uq)^2−(qv−vq)^2=0. The integer Lipschitz order and rational Hamilton quaternions are specializations of the same generic result. The equation is the central object; neither the number of witnesses nor the scalar domain should be silently altered.
+
+This development makes a known Diophantine encoding explicit in a formal algebraic setting. It can be useful to future work on existential definability and noncommutative arithmetic, since it isolates a concrete polynomial equation and its interpretation. It does not solve Hilbert's tenth problem over the rationals. The formal novelty inquiry should compare the selected equation and generic proof with prior quaternion algebra, norm and commutation APIs, which are already available. Source: https://aimath.org/WWN/hilberts10th/hilberts10th.pdf ; judging card E02-opdp67-quaternion.
+
+2.3. A135508, an lcm recurrence and prime-index criteria
+
+Let x(0)=0, x(1)=1, and x(n+1)=2x(n)+lcm(x(n),n+1) for n≥1. Write a(n)=x(n+1)/x(n)−2 for n>0. For a prime p>3, the packet proves that a(p−1)=p exactly when gcd(x(p−3),p−2)>1. It also gives sufficient residue conditions: for p≥7, either p mod3=2 or p mod5=2 implies a(p−1)=p. A more general acquired-divisor condition transfers a divisor already present at an earlier recurrence stage to the desired prime index.
+
+The selected scope is a criterion and sufficient classes, not an unconditional characterization for every prime or a complete parent recurrence conjecture. Its formalization value lies in controlling an integer recurrence whose defining lcm creates persistent divisibility information. Recurrence inequalities, exact divisions and gcd conditions can become reusable lemmas. Classification is conservative because earlier conditional work and elementary specializations overlap. If the precise unconditional criterion is later shown to be new mathematics, it should be reclassified once rather than simultaneously counted as known and original. Sources: https://oeis.org/A135508 ; https://arxiv.org/html/2510.18891v3 ; judging card E02-a135508.
+
+2.4. Apéry prime-power polynomial irreducibility
+
+For B_n(X)=Σ_(k=0)^n binom(n,k)^2 binom(n+k,k)X^k in Q[X], the selected theorem gives irreducibility of B_(p^r) whenever p is an odd prime, r≥1 and p² does not divide 2^(p−1)−1. This is a non-Wieferich sufficient hypothesis. It should not be replaced by a claim covering every odd prime, nor by an unrestricted higher-valuation formula.
+
+An earlier exposed informal sketch overlaps the odd-family mathematics, while a previously completed binary-power chain is not part of the new selected contribution. The meaningful formal delta is the odd-prime-power route under its correct sufficient assumption. This is a good example of why informal priority and formal priority differ: a valid sketch can defeat a first-mathematical-result claim without already supplying a checked endpoint in Lean. Publication should explain the coefficient and valuation interfaces, credit the exposed argument, and identify which new formal modules are reusable. Sources: https://oeis.org/A005258 ; the pinned Epoch LeanOpenProblems-results comparisons recorded in E02-apery-odd-formalization.
+
+2.5. Base-three reverse-and-add carry obstruction
+
+The selected statement says that if x plus its canonical base-three digit reversal has palindromic base-three digits, then either x already has palindromic digits or every mirrored pair of input digits has sum less than3. It is a carry obstruction for one reverse-and-add operation. It does not prove that arbitrary repeated reverse-and-add dynamics reach a palindrome, and it does not transfer automatically to decimal arithmetic.
+
+The interesting formal content is the bridge between natural-number arithmetic and finite digit lists, including canonical digit representation, length changes, reversal and mirrored carries. These are delicate boundaries for automated proofs: leading zeroes and a final carry can change the apparent symmetry. A reusable list-level carry analysis is more valuable than simply listing a few palindromic examples. The packet records the selected endpoint and supporting digit lemmas under the base-three research formalization family; an exhaustive first-formalization claim is not established.
+
+2.6. Theta half-sum cancellation
+
+For an odd prime k and odd naturals a,b with 1≤a,b<k and ab≡−1 mod k, define H(k,a)=Σ_(j=1)^((k−1)/2)(−1)^floor(aj/k). The selected theorem gives H(k,a)+H(k,b)=0. The hypothesis is negative inverse congruence, and the summation domain is exactly the lower half of the nonzero residues. A change to an ordinary inverse or a full residue sum would be a different statement.
+
+This is useful as a formal finite-sum identity with number-theoretic symmetry. The source decomposes parity counts and modular inverses, so the development can support later reciprocity and cancellation arguments. Such an identity may have a very short informal proof but still require substantial indexing and floor-arithmetic infrastructure. Its role in this volume is a faithful formalization of known-method mathematics; the exact formal-library novelty remains to be compared with older modular and finite-sum developments.
+
+2.7. Reciprocal-square numerator arithmetic
+
+For m≥1, the rational sum Σ_(k=1)^m1/k² has nonpositive2-adic and3-adic valuations. The packet also supplies a bridge from nonpositive valuation to exclusion of a prime from the reduced numerator, and a prime-index statement gcd(p,A007406(p−1))=p for every prime p>3. The selected scope is these valuations and prime-index arithmetic. It is not the full composite-index or stronger Wolstenholme target.
+
+Existing formal harmonic-number valuation theory overlaps some infrastructure but does not automatically supply the reciprocal-square theorem. The main selected content includes an equal-minimum3-adic noncancellation argument and the numerator/divisibility bridge. These are reusable interfaces for rational sums, valuations and reduced numerator conventions. Publication should state which preexisting p-adic facts are imported and which finite-sum lemmas were added. The family counts once even when its valuation and numerator endpoints are in separate files. Source: judging card E02-m2-research-wolstenholme and the packet's selected proof modules.
+
+2.8. A060841 reciprocal determinant integrality
+
+For the n×n matrix with entries1/lcm(i+1,j+1), the inverse determinant is an integer exactly when n belongs to {1,…,34,36,38}. The informal classification was already public. Its formalization involves a determinant-to-product correspondence and a valuation-based classification; the packet identifies overlap in preexisting product and valuation helpers.
+
+The reusable contribution is the verified connection from the actual rational matrix determinant to the arithmetic criterion. It should not be presented as a new numerical classification merely because the final finite list is explicit. This is a suitable library case study because it shows how linear algebra, divisibility and finite exceptions interact. The endpoint also needs its nonzero determinant and inverse conventions documented so that totalized inversion cannot conceal a vacuous statement. Source: https://github.com/umaia1234/agentic-conjectures/blob/b89af1ced140d79c4d04ac84e39f00181bb6540a/problems/oeis-a060841/PROOF.md ; judging card E02-m2-research-a060841.
+
+2.9. Four divisors just above a square root
+
+The packet formalizes an Erdős–Rosenfeld construction giving infinitely many natural n with at least four distinct divisors in the open interval (sqrt(n),sqrt(n)+40n^(1/4)). Its preserved integer version uses floor and ceiling endpoints equivalent to that real interval. The theorem is an infinitude statement about a specified short interval, not an unrestricted classification of nearby divisors.
+
+The formal engineering problem is to preserve strict inequalities, distinctness and divisibility while moving between a real scale and exact integers. Such a bridge is useful for many short-interval arithmetic problems. The original construction must be credited to its prior source rather than rediscovered under a new name. The event contribution is the faithful selected formal proof and its reusable arithmetic infrastructure, subject to comparison with existing developments. Source: judging card E02-m2-research-erdos887.
+
+2.10. Regular-polygon distance multiplicity
+
+For even n≥5, every distance occurring between distinct vertices of the regular n-gon is attained by at most n unordered vertex pairs. The statement concerns regular polygons, not arbitrary convex point sets or the full Erdős94 problem. The use of unordered pairs is essential: counting ordered pairs changes the numerical bound by a factor of two.
+
+Generic two-circle-intersection uniqueness is already in Mathlib. The selected family adds the connection to regular-polygon geometry and a complete counting argument. It can serve as a compact verified example of how symmetries, finite sets and geometric intersection bounds compose. The scientific description should therefore identify the actual regular-polygon model and counting conventions instead of treating a one-line final inequality as evidence of either triviality or broad novelty. Source: judging card E02-m2-research-regular-polygon.
+
+3. HTPEO: SELECTED KNOWN THEOREMS AND SMALLER HELPERS
+
+The HTPeo packet names Woohyuk Kang, Hyunjin Lee, Sanghyeon Lee and Youchan Oh. Its selected known-theorem formalization sessions and packet assembly are attributed to Woohyuk in the pinned TEAM.md. The collective record includes one perfect-matching family and sixteen Erdős families. Ten were proposed as substantive, while seven were held for usefulness review; within the ten, the powerful-number examples for r=7,8 may themselves be more suitable as examples than as a standalone family. This paper records all seventeen without deciding their competitive counts from the number of files. Six explicitly unclaimed wrappers remain excluded.
+
+3.1. Petersen and Schönberger perfect matchings
+
+The selected formal theorem concerns connected, bridgeless, cubic simple graphs and perfect matchings with the specified edge-inclusion property. Cubicity, bridge-freeness and the simple-graph convention are part of the statement. The formal predicate Bridgeless checks absence of graph bridges, so the theorem is not merely a declaration that a convenient matching exists.
+
+This is established graph theory, useful both on its own and as infrastructure for the separate DMS work. The correct publication practice is to credit the prior matching theorem and document the added graph and matching interface. Its reuse within DMS does not create a second mathematical result or justify counting an imported dependency again. A future library integration should make the finite vertex, connectivity and regularity assumptions straightforward to invoke. Sources: pinned HTPeo packet, entries E08-G-PM and entries/dms-star6.
+
+3.2. Powerful numbers between consecutive squares: Erdős942
+
+A powerful number has every prime factor occurring with exponent at least two. The selected formal result states that the count h(n) of the relevant powerful numbers between consecutive squares has unbounded limsup. It is an unboundedness theorem, not a claim that every such interval contains many powerful numbers.
+
+The usefulness lies in the precise counting function and the translation of arbitrarily large counts to an extended-natural limsup. Future arithmetic developments can reuse that interface without reconstructing the asymptotic quantifiers. The original theorem is known; formal novelty requires checking earlier powerful-number libraries and exact endpoint overlap. Source: HTPeo E08-E942.
+
+3.3. A greedy Sidon lower bound: Erdős44
+
+For N≥1, the selected theorem constructs a Sidon subset A of {1,…,N} with N≤|A|³. It records the classical scale produced by a greedy exclusion argument. A Sidon set forbids repeated additive representations under the source convention, which must remain aligned with the intended mathematical notion.
+
+This is a natural reusable finite-combinatorics formalization. The proof pattern can support later greedy constructions by relating maximality, forbidden choices and cardinality. Its merit is a verified combinatorial argument and useful API, not a new asymptotic Sidon bound. Source: HTPeo E08-E44.
+
+3.4. Completeness of powers of2 and3: Erdős123
+
+The exact definition is: A is d-complete when every sufficiently large natural n is a sum of a finite set s contained in A, with distinct x,y in s satisfying neither x divides y nor y divides x. The summands form a divisibility antichain. The selected A={2^a3^b:a,b nonnegative integers} satisfies this property; the proof constructs representations for every n, including the empty sum for0. This is established mathematics, here implemented as reusable antichain-sum infrastructure.
+
+Its reusable content is the link between generated sets and the precise representation predicate. This can be valuable in formal additive number theory because finite-subset and set-product conventions are easy to conflate. The statement does not establish completeness for arbitrary multiplicatively generated sets. Source: HTPeo E08-E123.
+
+3.5. Impossible countable chromatic restrictions: Erdős918
+
+The selected set-theoretic graph result rules out the specified graph of cardinality aleph2 and chromatic cardinal aleph2 when all induced subgraphs on aleph1-sized subsets are required to have the exact restricted chromatic cardinal in the source statement. The word 'exact' matters: upper bounds and equalities in infinite chromatic number are different hypotheses.
+
+This development is useful for cardinal graph interfaces, induced subgraphs and chromatic-cardinal arguments. Its source contains a boundary convention at n=0 that must be disclosed wherever the corresponding generalized endpoint is used. It is known mathematics, not a new theorem resolving arbitrary uncountable chromatic phenomena. Source: HTPeo E08-E918.
+
+3.6. Multiplicative closure and excluded prime powers: Erdős292
+
+The selected family proves the source-defined set A is closed under multiplication, contains2m when m∈A and m>1, and has the specified prime-power exclusion. The same set definition must govern all clauses. These are structural statements about one arithmetic object, so their internal lemmas and corollaries should remain one family.
+
+The reusable benefit is a package of closure and obstruction properties, allowing later proofs to move beyond direct evaluation of the defining predicate. Here A consists of possible largest denominators in distinct-unit-fraction expansions of1: a finite S contained in{1,...,n}, containing n, satisfies sum_{m in S}1/m=1. Multiplicative closure replaces denominator n in one expansion by ns from an expansion with maximum m, producing maximum mn. Doubling uses1/2+sum_{s in S}1/(2s)=1. Prime-power maxima p^k are excluded because1/p^k has uniquely lowest p-adic valuation among the distinct smaller positive denominators, preventing cancellation to1. These structural facts are the claimed scope; Martin's density-one theorem and sharp complement asymptotic are not claimed by this packet. Source: HTPeo E08-E292.
+
+3.7. A radius-one Littlewood–Offord counterexample: Erdős395
+
+The selected endpoint refutes the proposed uniform c/n lower bound for the source's radius-one signed-sum probability of unit complex vectors. Its scope is the exact radius and closed-ball convention in the formal count. It should not be described as refuting every reverse Littlewood–Offord inequality.
+
+This is useful as a verified negative example and as infrastructure connecting combinatorial sign assignments to probabilities in the complex plane. A counterexample formalization can prevent later theorem statements from omitting a necessary radius or nondegeneracy hypothesis. Its mathematical outcome is already known. Source: HTPeo E08-E395.
+
+3.8. A binomial gcd inequality: Erdős698
+
+For1≤i<j≤n/2, the selected Erdős–Szekeres inequality gives binom(n,i)/binom(j,i)≤gcd(binom(n,i),binom(n,j)). It mixes exact integer divisibility with a real-valued ratio. The source casts and nonzero denominator assumptions therefore belong in the formal statement.
+
+This is a substantive reusable arithmetic family: binomial identities, gcd divisibility and an inequality endpoint can be composed in later combinatorial-number-theory arguments. It is not a new estimate merely because its formal proof did not already appear under the exact declaration name in Mathlib. Source: HTPeo E08-E698.
+
+3.9. Powerful-number sum examples: Erdős939
+
+The r=7 and r=8 endpoints show that the relevant powerful-number sum sets are nonempty by known explicit examples. These may be useful as verified test cases, particularly for making sure a formal definition matches the intended sum problem. They do not give an unbounded family or settle the unresolved ranges.
+
+The correct level of recognition may be smaller than a substantive standalone formalization family. If the proof consists principally of checking a literal example with existing arithmetic, its chief scientific use is regression testing and statement validation. It belongs in the catalogue, with its exact parameters visible, without making the count of examples a proxy for new mathematics. Source: HTPeo E08-E939.
+
+3.10. Nonunique polynomial-range representations: Erdős477
+
+The square-range endpoint states that for any A⊆Z, some z does not have a unique representation as a plus a square from A and the polynomial's integer range. A selected quadratic extension treats ax²+bx+c with a≠0, b≠0 and a dividing b. Its quantifiers distinguish failure of unique representation from a claim that no representation exists.
+
+The formalization creates interfaces for polynomial evaluation ranges, Cartesian-product representations and uniqueness. This is reusable additive algebra, especially because a uniqueness predicate can be easier to misstate than an existence predicate. The variants remain a single family. Source: HTPeo E08-E477.
+
+3.11. Seven smaller helpers retained in the catalogue
+
+Erdős295 supplies distinct increasing denominators, all at least an arbitrary N, whose reciprocal sum is1. This is an Egyptian-fraction existence helper. Its mathematical utility is a clean finite decomposition that can later be inserted into constructions with a large-denominator requirement. Whether it warrants standalone formalization recognition depends on what genuinely new reusable API it adds.
+
+Erdős703 gives the known t=0 value T(n,0)=2^(n−1) for the source's intersecting-family function, with n≥1. Erdős748 gives the known sum-free-set lower bound2^(n/2)≤f(n). These are boundary and baseline theorems, useful for checking an extremal definition and for later induction or asymptotic comparisons. They should not be presented as resolution of all parameters of their parent problems.
+
+Erdős1136 formalizes the multiples-of-three density baseline: that set avoids the specified powers-of-two pattern and has density1/3. Erdős358 identifies the number of consecutive-sum representations with the number of odd divisors. Both offer useful arithmetic/density interfaces, while the underlying constructions and identities are classical.
+
+Erdős619 extends a connected triangle-free graph to a maximal triangle-free supergraph with the specified diameter bound. Erdős1148 records a known weaker difference-of-squares bound. The first can be useful as an existence/reduction lemma, while the second supplies a baseline against which later improvements can be tested. These seven families are included because the corpus contains them, but inclusion in a scientific catalogue does not by itself award points. Sources: HTPeo E08-E295, E703, E748, E1136, E358, E619 and E1148.
+
+4. ARITHMETIC-PROGRESSION INFRASTRUCTURE ACROSS THREE ENTRIES
+
+Erdős3 asks whether every set of positive integers with divergent reciprocal sum contains nonconstant arithmetic progressions of every finite length. None of the packets described in this section establishes the full statement. Their contribution is to make important equivalences, known cases and analytic tools explicit. They should be published with hypotheses printed beside the conclusions, so a conditional implication cannot be mistaken for a closed solution.
+
+4.1. Leon Koerbs and Cameron Fen: the dyadic equivalence
+
+For each K≥3, their closed endpoint identifies an exact equivalence between summability of Σ_j r_K(2^j)/2^j and the assertion that every reciprocal-divergent set contains a K-term progression. Here r_K(N) is the maximal cardinality of a K-AP-free subset of {1,…,N}. The forward direction relates counting in dyadic blocks to reciprocal sums. The converse constructs separated narrow windows beginning at4K·8^j, of width8^j, and controls cross-window progressions.
+
+The theorem characterizes the missing density input; it does not prove that input for every K. The source also contains earlier parent attempts ending in labelled proof holes. Those holes must not be advertised as solved, but they do not invalidate a separately closed named endpoint outside their dependency chain. This is useful reusable equivalence infrastructure because future density improvements can be connected to the reciprocal formulation without repeating the entire transfer argument. Source: https://github.com/Koerbser/erdos-3-autolab/blob/551e388b0a7a933e68cadbab099342af326c1dc2/lean/climb1-library/Converse.lean .
+
+4.2. Their four-term generalized von Neumann inequality
+
+For the cyclic group ZMod n, with2 and3 invertible, and the first three functions bounded by1, the selected theorem gives ||apCount4(f1,f2,f3,f4)||^8≤n^12 Re(gowers3(f4)). The final function need not be bounded because the inequality is homogeneous in it. The sums in the packet are unnormalized; the factor n^12 is therefore part of the theorem, not a decorative normalization choice.
+
+This is meaningful analytic groundwork based on repeated Cauchy–Schwarz and reindexing. Independent finite tests at n=5 and7, including unbounded fourth functions, support the normalization and model interpretation, but finite tests do not prove the universal result. Its potential use is substantial: a later proof can invoke a correctly normalized inequality instead of developing Gowers machinery from scratch. Source: https://github.com/Koerbser/erdos-3-autolab/blob/551e388b0a7a933e68cadbab099342af326c1dc2/lean/climb1-library/VonNeumann4.lean .
+
+4.3. Their known three-term case and imported deep theorem
+
+The three-term endpoint proves the known implication from divergent reciprocal sum to a nonconstant three-term progression. It invokes an external formalization of the Kelley–Meka density estimate, then supplies a cardinality/predicate bridge, a dyadic summation argument and the reciprocal transfer. The deep analytic estimate is a load-bearing imported result and must be credited to Kelley and Meka for the mathematics and to the relevant prior formalization authors.
+
+Forty-four required plby modules were omitted from the entrant ZIP and identified by an immutable upstream pin. The record also notes redistribution permission has not been obtained for those files. A publishable packet must preserve that licensing boundary while making reproduction possible through an authorized route. Removing a sorry-backed extension from another dependency does not automatically certify the entire final closure. The exact endpoint axioms must be checked after all imports are assembled. Source: https://github.com/Koerbser/erdos-3-autolab/blob/551e388b0a7a933e68cadbab099342af326c1dc2/lean/three-term/Solution.lean and ATTRIBUTION.md.
+
+4.4. Wilson Wu's equivalence and conditional bridges
+
+Wilson's source gives the per-length dyadic equivalence for k≥4, using a different window construction based on [4^j,2·4^j). The threshold matters: cross-window three-term progressions can occur, so this particular gluing route should not be described as covering k=3. The closed equivalence is useful even though neither side is proved unconditionally.
+
+The three-term modules define Kelley–Meka and logarithmic-barrier density assumptions, then prove that those assumptions imply the known three-term reciprocal conclusion. A clean axiom list for this implication does not discharge its analytic parameter. Other modules connect extremal cardinality to the canonical Roth-number vocabulary and supply AP special cases and prefix interfaces. These can form one reusable interface family if their new formal delta is clear; density-envelope variants and elementary corollaries should not be counted separately. On 5 October, an independent exact-source Lean 4.33.1 replay compiled the separate Std-only Erdos3SpecialCases module and its requested 14-print audit: five endpoints are axiom-free and nine use only standard kernel axioms. Its literal ContainsAP predicate requires a natural start and a strictly positive natural step, and its all-length predicate quantifies every finite natural length. The checked statements cover monotonicity, prefixes, cofinite and affine-tail cases, positive multiples, two-term progressions in unbounded sets, and the unbounded powers-of-two obstruction to three-term progressions. They prove known elementary mathematics and reusable statement infrastructure, not the reciprocal-divergence conjecture. The six FC-dependent companion modules, the organizer's Set/cardinality/Filter bridge and the original recovered-image proof replay have not run. This partial audit confers no original-novelty score or full-project PASS. Source: https://github.com/wilsonwu-ai/sundai-erdos-3/tree/492fd601f9c76e44dcb87f683a5ea6ccb7aaefc9 .
+
+One endpoint uses an 'answer(sorry)' token in a proposition macro. In the copied FormalConjecturesUtil.Answer elaborator, the default option google.answer.alwaysTrue maps a Prop-valued answer(sorry) to True; this is not an admitted proof of the endpoint. Its addDecl creates a safe definition, rather than an axiom declaration. A placeholder used at a non-Prop type can instead retain a sorryAx dependency. These cases must be distinguished by inspecting the elaborated term and expected type. Equally, a clean endpoint axiom list does not by itself authenticate the intended problem semantics: replacing an unspecified proposition with True can change what the displayed statement means. In M2 and skeleton developments, the elaborated theorem must therefore be compared explicitly with the ordinary mathematical target and its hypotheses. Neither the spelling of a macro argument nor a token scan suffices to certify or reject the endpoint. Compiler success, dependency axioms and statement correspondence are complementary checks.
+
+The original dependency environment is now better preserved. A source-only recovery verified the full original container layer against its digest and retained 1,527 source, manifest and license files (4,897,328 bytes), without running the image or retaining Linux binaries or compiled proof artifacts. Its compiler is Lean 4.33.1, and its Mathlib revision is 0df444a360eaa60ab8c11dca51a86af692955474; all eight other dependency pins match the prepared official dependencies. This resolves the former compiler and ordinary dependency-pin uncertainty. It does not identify the deleted whole FormalConjectures Git revision. The original reachable FormalConjectures source closure has 193 modules, whereas the separately prepared compatible utility plan has 233: 173 of those compatible modules are byte-identical to files in the entire recovered source tree; 168 of these matches belong to the original 193-module reachable closure, and the other five lie outside that closure. Consequently, an eventual compatible-source replay must remain distinct from an original-source replay. No independent original proof replay has run at this checkpoint. The preserved source ZIP has SHA-256 014333c7edffa94686ef4be2e30e871c0df03ac8feceab1efab53df9793b31e5 and is included in the verification materials.
+
+4.5. Jamie Steeg's AP conclusion-representation interface
+
+The selected H7 D4 endpoint proves arithmetic-progression truncation and an equivalence between frequent-atTop existence and existence at every exact finite length. It uses the imported canonical Set.IsAPOfLength definition. The cardinality argument establishes injectivity, thereby preserving nontriviality rather than allowing a constant progression to make the statement vacuous.
+
+D3 repeats the first endpoint and is not another family. D5 contains related finite-deletion, tail and residue-fibre reciprocal lemmas, but it is not part of the submitted H7 selected manifest; it is documented as supporting source rather than silently expanding the claim. The formalization is a narrow conclusion interface. It does not prove a new analytic estimate or solve Erdős3. The human authority declaration specifies Jamie Steeg as an individual, self-resourced entrant and asserts no organizational affiliation; GCL/GCT references are project provenance only. Source: https://github.com/grandchallenge/MATHSOLVE/blob/2fd9fd643bf3e9e98d121dc2e7af1cf1be411ae2/work_packages/OPENMATH_2026/OM26_H7_ERDOS_3/H7_D4.lean .
+
+4.6. Collective reuse and attribution
+
+The three entries overlap in vocabulary but differ materially in scope. E11's k≥3 dyadic equivalence is more than an AP-prefix interface; Wilson's conditional transfer remains conditional; Jamie's conclusion equivalence supplies neither density estimate. A collective library can retain separate author provenance while presenting shared mathematical interfaces once. The most useful integration would expose canonical definitions, isolate external deep inputs and make the exact hypotheses obvious in documentation.
+
+Their finite four-AP-free harmonic searches are a separate matter. Leon and Cameron's certified reciprocal sum4.314 does not exceed Walker's located4.43975 or the stronger candidate in the novel-results volume. It can be published as a bounded computational benchmark if its finite-N target is clearly specified, but it is not a new unrestricted lower bound and does not supply a divergent reciprocal set.
+
+5. LEANIFICATION: A CONTAINER-THEOREM CASE STUDY AND MENTION
+
+Leanification formalizes Theorem B of Marcelo Campos and Wojciech Samotij's Towards an Optimal Hypergraph Container Lemma, together with Proposition2.2 and Lemmas4.1–4.3 used in its proof. It does not formalize Theorem A or the whole paper. The informal mathematics belongs to Campos and Samotij. The formalization lead is Luca Seiki Pereira Fujii; Mateus and Tiago helped check the statement according to Luca's final correspondence. Augusto and Felipe Leria are event roster members whom that correspondence explicitly says did not contribute to the submitted work. Team recognition should preserve this distinction instead of automatically turning all registrants into manuscript authors.
+
+The formal theorem concerns a finite hypergraph, with0<p≤δ<1, and produces a family of fingerprints and associated containers satisfying independent-set coverage, a small fingerprint condition and a lower bound on the probability that a random sampled set remains independent. Independence is defined by absence of a contained hyperedge. The probability is a genuine finite Bernoulli measure using p^|A|(1−p)^|X\A|, not an arbitrary function whose inequality would be automatic.
+
+The proof includes a nonempty decreasing-family condition in Proposition2.2, needed to avoid zero conditioning probability and log0. The assembly supplies that nonemptiness where the lemma is used: the independent fingerprint gives the empty set as a member of the relevant family. Thus the final meaningful cases are not weakened by an unproved extra premise. If the hypergraph contains the empty edge, it has no independent sets, so the corresponding covering clause is legitimately vacuous. A finite linear order selects a deterministic eligible vertex; every finite vertex type admits such an order, so this is a modelling choice rather than a restriction on the combinatorics.
+
+An independent finite semantic check tested278 hypergraphs on up to3 vertices, four rational parameter pairs and1,560 independent-input algorithm runs. All passed covering, fingerprint-size, probability-bound and replay tests. Another108 decreasing-family checks passed the selected probability inequality. These tests are useful negative-control and interpretation evidence. The proof for arbitrary finite vertex sets still comes from the formal theorem and its exact closure, not from the small cases.
+
+The author's logs were made at commit816f7e3..., while the preserved archive is adcaf45.... A fresh exact-pin replay or a source diff must close that provenance gap before treating the older build log as independent verification of the final artifact. The source also spells one reviewer 'Matheus', while the final email says 'Mateus'; the preferred full name must be confirmed before publication. Under the chair's latest decision this contribution receives a mention, with the technical substance retained in this paper. Sources: https://doi.org/10.1007/s00493-026-00214-1 ; https://arxiv.org/abs/2408.06617 ; https://github.com/lazyluca/hyprgraph_containers/tree/adcaf45c06fa70407f1abb2df80e1bd801d970b3 .
+
+6. EXACT RECONSTRUCTIONS AND CERTIFICATE METHODS
+
+6.1. Collatz descent coverage
+
+Chaewon Yoon's512-rule packet and HTPeo's234-rule packet cover the same1,765 odd residue classes at modulus4096 under the audited rule format. Independent enumeration shows1,765 is the maximum coverable set in that format, while the classical coefficient stopping-time comparison covers1,822 odd classes. Jamie's modulus256, depth-four format has maximum94 of128 odd classes, compared with109 in the classical stopping-time comparison.
+
+These results do not establish a new Collatz theorem. They are exact finite descent certificates reproducing a known mechanism and the pre-event format ceiling. More rules need not mean more mathematical coverage, and better performance within a restrictive checker is not automatically a better theorem than the classical comparison. Their potential value is a transparent certificate language, verified residue arithmetic and a benchmark for search or formal proof generation. A method paper would need to explain compression, checker semantics, negative controls and the relation to existing stopping-time theory, instead of presenting the coverage percentage as a solution of the Collatz conjecture.
+
+6.2. Busy Beaver finite runs
+
+The Sakana six-state machine halts after1,235,211 steps, with1,519 ones and span2,028 in the independently reproduced blank-tape run. HTPeo's machine halts after249,881 steps, with554 ones and span735. These are finite machine certificates, not global Busy Beaver6 records or a determination of BB6. The current HTPeo packet includes a blank-start counter certificate; an older description alleging only a nonblank initial-state proof is stale.
+
+The reusable interest is in the state-transition model, blank-start correspondence, induction or counter certificate, and exact distinction between steps, tape ones and visited span. A certificate that compresses a million-step computation into a kernel-checked argument can be a useful formal-methods example even when the machine is not mathematically extremal. Publication should reproduce the actual transition table and endpoint convention. Numerical halting alone does not prove structural or global maximality.
+
+6.3. Known matrix constructions
+
+Rank23, support139 multiplication tensors appear in several baseline packets. They should be credited to their earlier construction sources. Chandragupt's separate support143 certificate is exact but does not improve either139 or the new138 scheme described in the novel-results volume. Its potential interest is as a differently structured seed and an exact test case for coefficient/gauge transformations, not a new sparsity record.
+
+Exact tensor verification checks729 coefficient identities for3×3 matrix multiplication. The search that finds the coefficients can be untrusted if an independent rational certificate proves those identities. Rank, coefficient support, addition count and practical runtime are distinct metrics. A verified rank23 tensor with more coefficients can still help explore equivalence classes, but unsuccessful searches for support137 do not prove an absolute lower bound. Baseline reconstruction should therefore be presented as reproducible algebraic infrastructure rather than a further award-generating record.
+
+6.4. Kobon baseline arrangements
+
+The18-line,93-triangle reconstruction in HTPeo and other accounts reproduces a known lower bound. Several other leaderboard entries match or fall below frozen construction baselines. Their value may lie in a reusable exact arrangement checker, robust rational perturbations, SAT/search tools or reproducible seed data. They do not each become new Kobon theorems because separate accounts found them.
+
+Rohith's39-line,470-triangle result is also subsumed by a pre-event simple straight-line certificate in the chair's public repository. The independent geometric recount confirms470 under the same ordinary bounded-triangular-face notion. Higher-order catalogue entries need comparison against the full stronger pre-event bound, rather than an older weak formula. Rohith's61-line,1,190-triangle candidate remains a separate novelty question and is reserved for the unresolved-candidate record. Sources: https://github.com/alejandrozu/kobon-proof/commit/99fdc8ec1ef8b1fb22c3da32b011b7361762e958 ; the pinned Rohith packet and companion exact-geometry audit.
+
+7. CORRECT CERTIFICATES WITH UNRESOLVED ORIGINAL-MATHEMATICS STATUS
+
+7.1. Ramsey multiplicity
+
+Luke Van Seters and Madhan Jothimani's newly recovered packet also preserves the older published 768-vertex adjacency construction. This is a known baseline, separate from their 192-class and 3,840-class original-candidate constructions. An independent data-only recount of the frozen UInt64 rows verifies a simple symmetric graph with 148,608 red edges. It finds 9,581,824 red triangles and 216,079,680 red four-cliques; the complementary blue graph has 145,920 edges, 9,149,952 triangles and 207,075,456 four-cliques. The balanced blue-diagonal blow-up numerator is therefore 10,487,165,184, giving 4,551,721/150,994,944, approximately 0.0301448570. McKay's recorded numerator 10,486,266,368 with the same denominator is strictly smaller, so this published certificate is not a new numerical improvement.
+
+The ordinary counting identity is transparent. A four-tuple with all entries in the same vertex class contributes n. Each unordered blue edge contributes eight tuples with equality pattern 3+1 and six with pattern 2+2. Each blue triangle contributes 36 tuples with pattern 2+1+1. Finally, each red or blue four-clique contributes 24 tuples with four distinct classes. These exhaust the equality partitions, so the numerator is n+14E_blue+36T_blue+24(K4_red+K4_blue). The submitted source implements this formula using packed bitsets but explicitly leaves its universal equivalence to a literal tuple sum unproved in Lean. The independent recount uses ordinary arbitrary-precision integer bitsets and separately compares all 64 two-color graphs on four vertices against their literal ordered tuple sums. Those finite checks corroborate the ordinary argument without replacing the missing universal machine proof. The exact frozen Published768.Certificate source has now freshly compiled, including actual execution of its native arithmetic certificate, in 221.671 seconds. The complete repository's 51 formal source files also passed, and its 35 requested axiom outputs include no selected admission or unrecognized axiom; native arithmetic certificates retain the explicitly declared compiler/runtime trust boundary. Four additional standalone research diagnostics separately passed source type-checking; none of their counting main functions was executed, and this is not an extra theorem certificate. The native Count adapter's successful image hashes and three cache slots were observed, but its original WinError 299 observer error and unknown timing remain preserved: continuous observation was incomplete, and root accepted the positive identity/initialization evidence with that limitation. This successful source replay certifies the submitted formula and arithmetic endpoint scope, while the source's omitted universal packed-counter/literal-tuple correspondence remains a separate ordinary-mathematics qualification. This baseline is useful as a regression test for future counters, graph encodings and blow-up interfaces. Sources: https://github.com/lukevs/k4-ramsey/blob/2cf216ba885fbb1b2d1b2d4920efeaa6ba438842/lean/K4Ramsey/Counting/Multiplicity.lean ; https://github.com/lukevs/k4-ramsey/blob/2cf216ba885fbb1b2d1b2d4920efeaa6ba438842/lean/K4Ramsey/Constructions/Published768/Data.lean . The dated independent data-count receipt and script are retained in the companion Verification materials.
+
+HTPeo and Sakana supplied exact weighted constructions with K4 multiplicity upper bounds approximately0.030139911990 and0.030140932308. Both exact counts were independently reproduced. Their finite weighted density and blow-up lifting are mathematical objects worth preserving even when the numerical novelty claim is held.
+
+Technion's January21,2026 official seminar announcement already gives c(4)<0.030139, numerically stronger than both packets in the same standard density normalization. The announcement is a concrete priority objection, although it is not the entire earlier certificate or proof. The proper next scientific step is to retrieve the dated prior construction and compare the methods and hypotheses. A new method, a distinct formalization or improved reproducibility may remain valuable; a new numerical world-record claim is currently unsupported. Source: https://math.technion.ac.il/events/noam-feinstein/ .
+
+The release should preserve the weighted templates, exact rational numerators and denominators, count certificates and lifting theorem. It should also state explicitly that beating a frozen competition baseline is different from beating all earlier mathematical work. Missing certificates from other leaderboard accounts should remain missing-packet records rather than be assigned a guessed construction or formal status.
+
+7.2. Restricted Grothendieck certificates
+
+Sakana's selected theorem bounds the vector objective Q(A) by sqrt(3/2) times the scalar sign objective C(A) for every3×n sign matrix, and gives sqrt2 inequalities for four fixed archived matrices. These statements do not establish a new bound on the unrestricted real Grothendieck constant. The dimensions, sign restriction and four literal finite cases are part of their scope. The independent pinned Lean4.33.1 replay compiled both exact source modules and produced all five selected endpoint prints with standard kernel axioms or no axioms. The verified statement scope remains restricted, and the mathematical priority hold is unchanged.
+
+The independent audit derived a stronger exact6/5 bound for the3×n sign-restricted class, with equality for J−2I. This post-event audit argument is not credited to the entrant and is not a claim of first-discovery priority. It shows why the weaker submitted inequality should not automatically receive original-mathematics credit merely because it is correctly formalized. The selected proof can still have value as a reusable norm/certificate interface after formal-library comparison. Known CHSH sqrt2 witnesses elsewhere in the corpus are likewise established baseline mathematics.
+
+7.3. Formalization of weaker or conditional statements
+
+A correct weak theorem can be a useful engineering milestone, especially when it validates a mathematical encoding. Its publication should show how it composes with stronger known results and why the formal interface is reusable. It should not be made to look stronger by omitting a dimension, hypothesis or exceptional family. Conditional reductions are especially important: they organize future work by exposing a precise missing theorem, but their conclusions remain conditional until that theorem is proved.
+
+Some baseline DMS covering and pullback constructions are known consequences of earlier work. They should remain attributed infrastructure supporting the original-family theorem in the companion volume. The fact that the same reduction is used inside a novel proof does not convert the reduction into another new mathematical result. Conversely, imported known mathematics should not diminish the credit for a new theorem built faithfully on it.
+
+8. UNFINISHED RESEARCH: A SEPARATE BOUNDARY RECORD
+
+This section is deliberately separate from proved established mathematics. 'Not accepted as a novel result' does not mean 'proved nonnovel'. Incomplete source, unclosed assumptions, absent certificates and prior overlap are distinct evidence states. The following research directions may be scientifically interesting, but their missing steps cannot be supplied by polished exposition alone.
+
+8.1. Matt Bowring's unitary synthesis programme
+
+Matt's original manuscript proposed a recursive eigenphase construction intended to improve the unitary-synthesis leading coefficient from22/48 to21/48. A new4October intake supplies a stronger formal development at bowrango/lean-unitary commit7014b63ee2cfd01c641a7f539c73b664a2aa3d66. Its generic matrix endpoint proves existence of a pivot g=Rz(alpha)Ry(beta) whose polar-factor multiplexor admits an eigenphase assignment with zero final Walsh angle, assuming invertible blocks in dimensions divisible by4 and distinct eigenvalue crossing angles. It closes a substantive normalized-eigenphase continuity and intermediate-value argument. The exact endpoint quantifies an unrestricted real angle alpha and an angle beta in [0, pi]. The independent pinned Lean 4.30.0-rc2 replay completed on 5 October: all 26 authored source modules compiled, and all six selected generic-pivot endpoint axiom outputs contain only the standard kernel axioms. A separate inspection of eight Claims endpoints still records sorryAx, consistent with the 13 source placeholders in that baseline chain. The completed generic theorem is consequently distinguished from the unfinished universal circuit-count claim. Fresh proof reproduction does not itself establish mathematical novelty or authorize the provisional award.
+
+The generic theorem belongs in the original partial-results review, not among established nonnovel mathematics. Its endpoint does not contain a circuit or CNOT-count inequality. The Synthesis module assumes the global improved recursion. Non-generic nodes, circuit extraction, Gray-code realization and the sixth-CNOT cancellation bridge remain outside the completed chain; Claims.synth returns the older22/48 statement through an admitted baseline theorem. The universal21/48 bound remains held. Formal additions are dated4October, after the author's pre-cutoff acknowledgment of proof gaps. Intake is accepted for review under the user's late-intake instruction, preserving the proof-completion date. Source: https://github.com/bowrango/lean-unitary/tree/7014b63ee2cfd01c641a7f539c73b664a2aa3d66 .
+
+
+8.2. Geometric and automata packets
+
+Raj Harshit Srirangam's Kobon reductions lack the verified complete closure needed for original-result acceptance. Frederik Smits van Oyen's Heilbronn covering has an incomplete global cover. Qichao Wang's Černý partial-result manifests arrived, but the actual source packet was absent in the material available to this audit. These limitations should be stated accurately. A metadata manifest cannot substitute for a construction; a local geometric cover cannot establish an unverified global cover; a conditional reduction cannot be called a solved parent problem.
+
+The Cerny correspondence expressly identifies and signs the entrant name Qichao Wang, matching the event registration, while its account display name differs. This review credits the submitted name; the identity mapping, preferred publication name and affiliation require author confirmation. An account display name alone does not establish another entrant or author.
+
+Each has a concrete next scientific step: deliver the exact frozen sources and endpoint statements, isolate the missing assumption or region, and reproduce the relevant checker before determining novelty. Their absence from the novel-results paper is an evidence decision, not an assertion that the authors' proposed ideas are mathematically uninteresting.
+
+8.3. SYSTASYS finite inquiry
+
+Hichem Benali's SYSTASYS inquiry described a finite cyclic problem in Z/25Z. The independent audit confirms maximum size16 for a subset avoiding nonconstant five-term arithmetic progressions, and exactly2,000 such size16 sets containing0. However, the preserved inquiry lacks a submitted proof packet, novelty comparison and admitted competition target. It is retained as a potentially useful finite benchmark, not an accepted new result and not a solution of Erdős3. Its coordinatewise-extremality assertion remains separate from the two finite facts independently recounted.
+
+9. REPRODUCIBILITY AND A PRACTICAL LIBRARY RELEASE
+
+A useful public formalization release should identify immutable sources, exact Lean and dependency pins, the selected endpoint theorem types and their complete import closures. The build ledger should list what was freshly run, what used external prebuilt dependencies, and what still relies on supplied logs. Expected axioms such as propositional extensionality, classical choice and quotient soundness are distinct from admitted proof holes or a custom unproved conjecture. Each final endpoint should have its own explicit dependency audit.
+
+Libraries should preserve source licenses and authorship headers. Reusable integration does not require redistributing upstream files without permission; an authorized fetch route and pinned source reference can be preferable where licensing is unresolved. A mathematics paper should attribute the original theorem and the formal development separately, while AI/model and compute disclosures explain how the work was produced. Private email addresses and mailbox evidence should not be published merely because they helped resolve internal attribution.
+
+The best collective release structure is thematic: arithmetic and valuations; finite combinatorics and graphs; progression and analytic interfaces; exact search certificates; and a clearly separated unresolved research appendix. It should deduplicate shared statements and retain per-module contributor provenance. Small example certificates can be supplied as test fixtures beside theorems, while substantial complete formalizations deserve explanatory proof architecture. This arrangement lets future researchers reuse the strongest material without inheriting misleading parent-problem claims.
+
+10. CONTRIBUTOR AND AFFILIATION NOTE
+
+The companion author inventory records source-backed affiliations and their evidence level. HTPeo's pinned TEAM.md supplies author-declared affiliations for Woohyuk Kang (HTPeo and Kyung Hee University, CS&E), Hyunjin Lee (University of Cambridge), Sanghyeon Lee (Korea University, Security) and Youchan Oh (Seoul National University, TI). The department abbreviations are preserved rather than expanded speculatively. The Sakana team affiliation is established by its company-owned packet and author correspondence; optional academic dual affiliations require the authors' preferred publication choices.
+
+Chandragupt's supplied public profile identifies the Cluster Innovation Centre, University of Delhi. Rohith's current personal website and Northeastern University's official profile identify the Autonomy and Intelligence Lab at Northeastern. Leon's public profile declares a fall visiting role at Harvard SEAS and study at TUM; Cameron's current public profile lists State Street, with publication affiliation and identity matching still to confirm. Matt's earlier arXiv manuscript v2, dated 9 January 2026, records Purdue University, Department of Mechanical Engineering; his current preferred publication affiliation remains to be confirmed. His personal website supplies corroborating academic context, while separately declared Purdue study and MathWorks employment are not automatically paper dual-affiliations or competition resource classes. Wilson and Chaewon have no verified current institutional affiliation in the supplied materials. Jamie explicitly asserts no organization. Missing affiliations are printed as unverified, not silently invented as 'independent researcher'.
+
+For the container section, Luca is the formalization lead and Mateus/Tiago are statement reviewers; their preferred full names require confirmation. Augusto and Felipe can retain event participation acknowledgment without an invented submitted-work contribution. Prior theorem authors, library authors and external formalization contributors must retain their own attribution even when they were not event entrants. This draft does not assume that every person in a team roster has approved coauthorship of the collective paper. The final author order, contribution statement and affiliations require author review before archive submission or external circulation.
+
+SOURCE INDEX
+
+Central preserved source and review cards: https://github.com/alejandrozu/openmath-2026-judging/tree/d0ed487f487fa7ec814ff705ab55249983fe8707/OpenMath-Judging/review .
+Sakana original team repository: https://github.com/SakanaAI/autolab-100 ; immutable delivered ZIP SHA256 f22e456eecf1a5c071aafa0666fa517dc9ebbd102f483a963f694ee64748f769.
+HTPeo: https://github.com/lavaskiller/openmath-2026-htpeo/tree/76c63b8e425e551a930060a6871b84fe3b4780db .
+Chandragupt: https://github.com/ChandraguptSharma07/matrix-multiplication-tensor-3x3/tree/479c2416b6261ee841052eef4881df0e40054f3f .
+Leanification: https://github.com/lazyluca/hyprgraph_containers/tree/adcaf45c06fa70407f1abb2df80e1bd801d970b3 .
+Leon/Cameron: https://github.com/Koerbser/erdos-3-autolab/tree/551e388b0a7a933e68cadbab099342af326c1dc2 .
+Wilson: https://github.com/wilsonwu-ai/sundai-erdos-3/tree/492fd601f9c76e44dcb87f683a5ea6ccb7aaefc9 .
+Jamie: https://github.com/grandchallenge/MATHSOLVE/tree/2fd9fd643bf3e9e98d121dc2e7af1cf1be411ae2 .
+Matt: https://github.com/bowrango/lean-unitary/tree/57d6c96992a58f43d48d61c2a44353d902813cda/submission .
+Campos–Samotij mathematical source: https://doi.org/10.1007/s00493-026-00214-1 ; https://arxiv.org/abs/2408.06617 .
+Ramsey prior announcement: https://math.technion.ac.il/events/noam-feinstein/ .
+Kobon pre-event470: https://github.com/alejandrozu/kobon-proof/commit/99fdc8ec1ef8b1fb22c3da32b011b7361762e958 .
+
+
+APPENDIX A. EXACT MACHINE TABLES AND DEFINITIONS
+
+Each deterministic six-state, two-symbol Turing-machine entry wDN writes bitw, moves D=L/R, and enters N; H halts. Execution starts in stateA, head0, on the all-zero bi-infinite tape. Step count includes the transition enteringH. Visited span and final1 count are separate quantities.
+
+State | Sakana read0 | Sakana read1 | HTPeo read0 | HTPeo read1
+A | 1RB | 0LC | 0LE | 1LA
+B | 1RD | 1RB | 1LC | 1RH
+C | 0LH | 1LE | 1RA | 1RF
+D | 1LA | 1LD | 0RF | 0RD
+E | 0LA | 1LF | 1RD | 1LB
+F | 0LE | 0RD | 1LC | 1RD
+
+Reviewer-owned blank-tape simulation reproduces1,235,211 steps,1,519 ones and span2,028 for Sakana, and249,881 steps,554 ones and span735 for HTPeo. These are finite trajectories, not maximality theorems. The Sakana literal machine SHA-256 is8cd4b6a0ea5ac0333c12cbd2b3f4b1f04c7dbb970b360b4e2086efbb5cf1d726. HTPeo source: https://github.com/lavaskiller/openmath-2026-htpeo/blob/76c63b8e425e551a930060a6871b84fe3b4780db/entries/hills/busy-beaver-6-n0rang2/solution.json . Sakana's submitted FOCUS-BB6 packet and independent simulator are preserved in the central archive.
+
+IsDComplete(A) is formally eventual existence, for each natural n, of finite s contained in A, IsAntichain(divides,s), and sum(s)=n. E292.A is{n:exists finite S, S subset[1,n], n in S, sum_{m in S}(1:Q)/m=1}. nonnovel_math_appendix.json preserves the exact Lean predicates, source URLs, hashes and both machine tables. Definition sources: https://github.com/lavaskiller/openmath-2026-htpeo/blob/76c63b8e425e551a930060a6871b84fe3b4780db/entries/erdos-m2-formalizations/artifact/bundle/Erdos123.lean ; https://github.com/lavaskiller/openmath-2026-htpeo/blob/76c63b8e425e551a930060a6871b84fe3b4780db/entries/erdos-m2-formalizations/artifact/bundle/Erdos292.lean .
+
+Dated Matt affiliation sources: https://mattbowring.com/ and https://arxiv.org/html/2512.23720v2 . These sources concern author attribution; they do not certify the new generic balanced polar-pivot theorem or the global improved CNOT bound.

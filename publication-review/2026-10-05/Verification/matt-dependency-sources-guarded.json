@@ -1,0 +1,43 @@
+{
+  "version": "4.30.0-rc2",
+  "status": "EXACT_PIN_SOURCE_AND_METADATA_READY",
+  "started_utc": "2026-10-04T23:17:06Z",
+  "resource_gate": "Root-authorized bounded exact source preparation after runtime verification and cold-runtime LZX handback; 4 GB initial, continuous 1 GB reserve.",
+  "minimum_free_bytes": 8293789696,
+  "reserve_bytes": 1000000000,
+  "stages": [
+    {
+      "helper": "prepare_dependency_sources.py",
+      "helper_sha256": "f5a04405e8834bf7da0b623c3e5faa5f187adbc53226880972bfda0719832928",
+      "command": [
+        "C:\\Users\\Propietario\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+        "-X",
+        "utf8",
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\prepare_dependency_sources.py",
+        "4.30.0-rc2"
+      ],
+      "pid": 32236,
+      "exit": 0,
+      "seconds": 97.11
+    },
+    {
+      "helper": "add_pinned_git_metadata.py",
+      "helper_sha256": "ce0a1edf35699705112ed1cd887471ecea625cbad6bfcbf4d6aea076d196aeb9",
+      "command": [
+        "C:\\Users\\Propietario\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+        "-X",
+        "utf8",
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\add_pinned_git_metadata.py",
+        "4.30.0-rc2"
+      ],
+      "pid": 9140,
+      "exit": 0,
+      "seconds": 119.66
+    }
+  ],
+  "mathlib_pin": "c1e30e172c8fda21e6776bf1f10351e882ee31b9",
+  "scope": "Source archives and genuine exact-pin Git metadata only; no cache expansion or Lean invocation.",
+  "verified_package_count": 8,
+  "finished_utc": "2026-10-04T23:20:43Z",
+  "remaining_free_bytes": 8293715968
+}

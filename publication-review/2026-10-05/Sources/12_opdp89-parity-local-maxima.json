@@ -1,0 +1,195 @@
+{
+  "title": "A sharp collapsed-fibre likelihood classification for a four-visible restricted Boltzmann machine",
+  "blocks": [
+    {
+      "type": "title",
+      "text": "A sharp collapsed-fibre likelihood classification for a four-visible restricted Boltzmann machine"
+    },
+    {
+      "type": "subtitle",
+      "text": "Provisional mathematical authors: Rachel Teo, Wenyi Wang, Hamdi Abderrahmene"
+    },
+    {
+      "type": "small",
+      "text": "Judging and evaluation record: the submissions discussed in this document have been judged and evaluated by Alejandro Zarzuelo Urdiales for OpenMath 2026. This dated review records the stated verification, classification and unresolved holds; it is a preliminary evaluation rather than a signed award decision."
+    },
+    {
+      "type": "small",
+      "text": "Event provenance: OpenMath 2026 ran 27 September–2 October 2026 with worldwide online participation. Detailed organizer listings specify Harvard Innovation Labs for the 27 September in-person event; the OpenMath programme advertises a hybrid kickoff at MIT. Sundai identifies its Harvard/MIT community. Organizer sources: https://rsihouse.ai/openmath ; https://luma.com/yzp9abvr ; https://www.sundai.club/events/boston/recursive-learning-hack-with-harvard-innovation-labs"
+    },
+    {
+      "type": "small",
+      "text": "Rachel Teo — Sakana AI."
+    },
+    {
+      "type": "small",
+      "text": "Wenyi Wang — Sakana AI."
+    },
+    {
+      "type": "small",
+      "text": "Hamdi Abderrahmene — Sakana AI."
+    },
+    {
+      "type": "small",
+      "text": "Affiliations follow the recorded author declarations or public institutional/profile sources. Preferred author names, author order and publication affiliations await author review. This editorial compilation does not establish anthology coauthorship."
+    },
+    {
+      "type": "subtitle",
+      "text": "Original-result working manuscript | OpenMath 2026 | 5 October 2026"
+    },
+    {
+      "type": "small",
+      "text": "Central source and adjudication archive: https://github.com/alejandrozu/openmath-2026-judging"
+    },
+    {
+      "type": "h2",
+      "text": "Abstract"
+    },
+    {
+      "type": "p",
+      "text": "For pure four-parity data and a four-visible, one-hidden spin RBM, collapsed parameters are local likelihood maxima precisely below an explicit tanh² threshold. At equality and beyond they are saddles in the full parameter space; every collapsed point remains globally suboptimal and non-strict."
+    },
+    {
+      "type": "h2",
+      "text": "The model and full-space theorem"
+    },
+    {
+      "type": "p",
+      "text": "For s∈{−1,1}⁴ and0<|ρ|≤1, take data distribution Q_ρ(s)=(1+ρs₁s₂s₃s₄)/16. The one-hidden spin RBM has normalized probabilities proportional to exp(b·s)cosh(c+w·s), with b,w∈ℝ⁴ and c∈ℝ. Its expected log likelihood is ℓ_ρ. The collapsed fibre consists of θ₀=(0,c₀,0), which all represent the uniform visible distribution."
+    },
+    {
+      "type": "p",
+      "text": "Every affine directional derivative at θ₀ is zero. The sharp theorem says θ₀ is a local maximum in the full nine-dimensional parameter space if and only if tanh²(c₀)<(3+2|ρ|)/(3+6|ρ|). At equality or above, every full parameter neighbourhood contains both a strictly higher and a strictly lower likelihood point. Every θ₀ also has some finite RBM with strictly better likelihood and distinct equal-likelihood points arbitrarily nearby."
+    },
+    {
+      "type": "h2",
+      "text": "Why higher-order analysis is needed"
+    },
+    {
+      "type": "p",
+      "text": "The collapsed parametrization is singular. Ordinary stationarity and a quadratic Hessian test miss the parity interaction, whose first nonzero signal appears at higher order. The proof expands log cosh and decomposes the visible functions into Walsh/parity components. It controls nuisance visible biases and normalizing terms by quantitative Jensen and likelihood-domination estimates."
+    },
+    {
+      "type": "p",
+      "text": "The quartic geometry produces the threshold. An independent ordinary fourth-order derivation agrees with the displayed expression, but that calculation alone does not prove a full neighbourhood maximum. The source's StableRegion and LocalMaximum lemmas supply uniform control over arbitrary small parameter perturbations, rather than just along one symmetric ray."
+    },
+    {
+      "type": "p",
+      "text": "Outside the threshold, a quartic escape direction yields a higher point, while another direction gives a lower point. At the equality case, the proof moves along the likelihood-flat collapsed fibre to nearby parameters on the unstable side and transports saddle behaviour back to every neighbourhood. This is the subtle boundary step; it should be explained explicitly rather than inferred from a strictly signed quartic coefficient that vanishes there."
+    },
+    {
+      "type": "h2",
+      "text": "Non-strictness and global suboptimality"
+    },
+    {
+      "type": "p",
+      "text": "Changing the hidden bias while keeping b=w=0 leaves the visible distribution uniform, which creates a flat direction and makes collapsed local maxima non-strict. A suitable finite coupled RBM captures part of the nonzero parity signal and improves the likelihood. Thus a collapsed local maximum can be nonglobal even though it has nearby points of equal value."
+    },
+    {
+      "type": "p",
+      "text": "The theorem concerns parameter-space likelihood only. It does not assert a distribution-space maximum, an attracting training basin, strict trapping, EM convergence or a lower bound on optimization time. It fixes exactly four visible spins, one hidden unit and pure parity data. Ordinary explorations for larger dimensions or general four-wise-uniform data are outside the selected formal endpoint."
+    },
+    {
+      "type": "h2",
+      "text": "Prior setting, formal closure and publication"
+    },
+    {
+      "type": "p",
+      "text": "Collapsed stationarity, singular mixture critical fibres and familiar RBM interaction formulas are prior mathematics. The Fukumizu–Akaho–Amari comparison identifies a degenerate situation where the second-derivative splitting matrix vanishes. The proposed delta is the exact higher-order threshold, including full-neighbourhood and boundary statements."
+    },
+    {
+      "type": "p",
+      "text": "This publication pass independently replayed the exact 15-source frozen closure under Lean 4.33.1 and Mathlib 0df444a360eaa60ab8c11dca51a86af692955474, finishing on 5 October 2026 at 01:36:52 UTC. All sources and all three selected axiom prints passed. sharp_parity_classification, collapsed_local_max_iff and nonstable_parameter_saddle each use only propext, Classical.choice and Quot.sound, with no admitted, native-evaluation or unknown axioms. This verifies the displayed full-neighbourhood classification for four visible spins, one hidden unit and pure four-parity data, including its equality boundary; broader models and training claims remain outside its scope. The dated archive’s separate internal 17-module post-recovery run is preserved as historical evidence rather than being relabeled as this independent run. Receipt: Verification/sakana-opdp89-parity-sharp-fresh-build.json."
+    },
+    {
+      "type": "small",
+      "text": "This short manuscript records the construction and selected endpoints. The companion Original results anthology contains the extended ordinary proof exposition and its explicitly stated premises; the preserved Lean source remains the complete formal proof record."
+    },
+    {
+      "type": "h2",
+      "text": "Verification and reproducibility"
+    },
+    {
+      "type": "p",
+      "text": "Fresh execution: sakana-opdp89-parity-sharp: PASS; 15/15 custom modules compiled successfully; receipt Verification/sakana-opdp89-parity-sharp-fresh-build.json. Compiler pins, source hashes and endpoint axiom outputs are in Verification. Historical receipts and finite checks do not replace fresh replay."
+    },
+    {
+      "type": "keep_start",
+      "text": ""
+    },
+    {
+      "type": "h2",
+      "text": "ParityFour.sharp_parity_classification"
+    },
+    {
+      "type": "code",
+      "text": "theorem sharp_parity_classification (ρ c₀ : ℝ) (hρ : 0 < |ρ|) (hρ1 : |ρ| ≤ 1) :\n    (∀ (b : Fin 4 → ℝ) (d : ℝ) (w : Fin 4 → ℝ),\n      HasDerivAt (fun t => objective ρ (affineParameterRay c₀ b d w t)) 0 0) ∧\n    (IsLocalMax (objective ρ) (nullParameter c₀) ↔\n      Real.tanh c₀ ^ 2 < (3+2*|ρ|)/(3+6*|ρ|)) ∧\n    ((3+2*|ρ|)/(3+6*|ρ|) ≤ Real.tanh c₀ ^ 2 → ParameterSaddle ρ (nullParameter c₀)) ∧\n    (∃ θ : Parameters, objective ρ (nullParameter c₀) < objective ρ θ) ∧\n    (∀ U : Set Parameters, U ∈ nhds (nullParameter c₀) →\n      ∃ θ : Parameters, θ ∈ U ∧ θ ≠ nullParameter c₀ ∧\n        objective ρ θ = objective ρ (nullParameter c₀))"
+    },
+    {
+      "type": "small",
+      "text": "Source: proofs/opdp89-parity-sharp/SharpClassification.lean:40."
+    },
+    {
+      "type": "small",
+      "text": "Source SHA-256: 15ef1ad86c585c87e7ac4fabdc3a58702c915e69dbf6aa80d701258bc9efc602"
+    },
+    {
+      "type": "keep_end",
+      "text": ""
+    },
+    {
+      "type": "keep_start",
+      "text": ""
+    },
+    {
+      "type": "h2",
+      "text": "ParityFour.collapsed_local_max_iff"
+    },
+    {
+      "type": "code",
+      "text": "theorem collapsed_local_max_iff (ρ c₀ : ℝ) (hρ : 0 < |ρ|) (hρ1 : |ρ| ≤ 1) :\n    IsLocalMax (objective ρ) (nullParameter c₀) ↔\n      Real.tanh c₀ ^ 2 < (3+2*|ρ|)/(3+6*|ρ|)"
+    },
+    {
+      "type": "small",
+      "text": "Source: proofs/opdp89-parity-sharp/SharpClassification.lean:22."
+    },
+    {
+      "type": "small",
+      "text": "Source SHA-256: 15ef1ad86c585c87e7ac4fabdc3a58702c915e69dbf6aa80d701258bc9efc602"
+    },
+    {
+      "type": "reference_list",
+      "text": "Sources and attribution",
+      "items": [
+        {
+          "text": "1. aimpl.org / 2",
+          "url": "http://aimpl.org/boltzmann/2/"
+        },
+        {
+          "text": "2. raw.githubusercontent.com / problems.json",
+          "url": "https://raw.githubusercontent.com/alejandrozu/opdp-week-math-100/main/data/problems.json"
+        },
+        {
+          "text": "3. proceedings.neurips.cc / 2d3acd3e240c61820625fff66a19938f-Paper.pdf",
+          "url": "https://proceedings.neurips.cc/paper_files/paper/2002/file/2d3acd3e240c61820625fff66a19938f-Paper.pdf"
+        },
+        {
+          "text": "4. arXiv source: 2605.19178",
+          "url": "https://arxiv.org/html/2605.19178"
+        },
+        {
+          "text": "5. alejandrozu/openmath-2026-judging / E02-opdp89-parity-local-maxima.txt",
+          "url": "https://github.com/alejandrozu/openmath-2026-judging/blob/d0ed487f487fa7ec814ff705ab55249983fe8707/OpenMath-Judging/review/entries/E02-opdp89-parity-local-maxima.txt"
+        },
+        {
+          "text": "Central source and adjudication archive",
+          "url": "https://github.com/alejandrozu/openmath-2026-judging"
+        }
+      ]
+    },
+    {
+      "type": "keep_end",
+      "text": ""
+    }
+  ]
+}

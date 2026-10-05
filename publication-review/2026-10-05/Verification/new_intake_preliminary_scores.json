@@ -1,0 +1,84 @@
+{
+  "dated_at": "2026-10-05T22:44:24+02:00",
+  "evaluation_by": "Alejandro Zarzuelo Urdiales",
+  "status": "preliminary; accepted for intake, not signed awards",
+  "amendments": "Chair-approved October 4 amendments R1-R6; b=1; DMS p=0.15; Leanification mention only",
+  "scoring_rule": "F=p*D^2/1000*m*b; S=sum of accepted families; A=maximum accepted family; no gauge/version double counting",
+  "candidates": [
+    {
+      "authors": [
+        "Luke Van Seters",
+        "Madhan Jothimani"
+      ],
+      "family": "LUKEMADHAN-RAMSEY",
+      "D": 840,
+      "p": "0.05",
+      "m": "1",
+      "b": "1",
+      "conditional_F": "35.28",
+      "recommended_band": "P2 lower endpoint, if the structural reduction is accepted as independently original",
+      "accepted_F": "0",
+      "source_commit": "2cf216ba885fbb1b2d1b2d4920efeaa6ba438842",
+      "formal_scope": "192-class two-parameter construction and 3840-class exact numerical certificate; fresh Lean verification covers the displayed literal-count/formula and general prototype endpoints. The induced-K4 correspondence and every-n coloring realization additionally use the separately stated ordinary argument.",
+      "excluded_claim": "A numerical improvement over the exact earlier Technion result has not been established",
+      "eligibility": "Selfdated September27-28 notes; author October3 statement mathematics largely unchanged; certificate added October3. Approved lenient intake does not authenticate an earlier proof record",
+      "resource_class": "pending author declaration and adjudication"
+    },
+    {
+      "authors": [
+        "Matt Bowring"
+      ],
+      "family": "E03-PIVOT-GENERIC",
+      "D": 824,
+      "p": "0.05",
+      "m": "1",
+      "b": "1",
+      "conditional_F": "33.9488",
+      "recommended_band": "P2 lower endpoint; nontrivial generic matrix lemma with the main universal circuit obstacle unresolved",
+      "alternative_P3_F": "101.8464",
+      "alternative_condition": "Separate written P3 band justification required; not the recommended score",
+      "accepted_F": "0",
+      "source_commit": "7014b63ee2cfd01c641a7f539c73b664a2aa3d66",
+      "formal_scope": "Invertible generic complex blocks; an unrestricted real alpha; beta in [0,pi]; actual polar pivot with zero final eigenphase Walsh angle",
+      "excluded_claim": "No universal21/48 CNOT-count theorem, circuit bridge or nongeneric closure",
+      "eligibility": "New October4 proof delivery accepted for review by the chair; keep timestamp separate from earlier incomplete claim",
+      "resource_class": "pending author declaration and adjudication"
+    }
+  ],
+  "placement_scenario": {
+    "Company": [
+      {
+        "team": "Sakana AI",
+        "conditional_S": "1661.14267",
+        "conditional_A": "308.025",
+        "holds": [
+          "older weighted Ramsey35.28",
+          "restricted Grothendieck3.14721"
+        ]
+      }
+    ],
+    "Non-company_if_new_candidates_accepted_in_that_class": [
+      {
+        "team": "HTPeo",
+        "conditional_S": "52.6704",
+        "conditional_A": "49.4214"
+      },
+      {
+        "team": "Luke/Madhan",
+        "conditional_S": "35.28",
+        "conditional_A": "35.28"
+      },
+      {
+        "team": "Matt Bowring",
+        "conditional_S": "33.9488",
+        "conditional_A": "33.9488"
+      },
+      {
+        "team": "Chandragupt Sharma",
+        "conditional_S": "26.2088",
+        "conditional_A": "26.2088"
+      }
+    ],
+    "note": "This scenario assumes acceptance of all retained proposed families. No final placements or resource classes are inferred."
+  }
+}

@@ -1,0 +1,51 @@
+--- novel_results_content.json.current
++++ novel_results_content.json.PROPOSED_ONLY_AFTER_QUALIFICATION
+@@ -2544,7 +2544,7 @@
+           "heading": "Disposition and publication use",
+           "paragraphs": [
+             "Hold original-mathematics credit pending a precise novelty argument. If the reusable formalization is new and useful, it can be discussed in the nonnovel/formalization paper under that separate criterion. A correct but weaker inequality does not become false merely because a stronger one is available.",
+-            "The recorded Row3Granular and four-case checks use Lean4.33.1 with standard axioms and documented arithmetic compatibility repairs. The paper should present the exact restricted statements, certificate construction and possible library usefulness. It belongs in a held or known-result account unless an independent original delta is established."
++            "Independent pinned Lean4.33.1 replay now passes both exact source modules and all five requested endpoint prints, with standard kernel axioms or no axioms and no native, admitted or unknown axiom. Row3's mathematical body is unchanged apart from its import adjustment; the four-case file preserves statements and certificate data with the already documented eight arithmetic tactic repairs and explicit imports. This verifies only the universal three-row sign upper bound and the four literal finite upper bounds. Originality remains held against the stronger ordinary6/5 three-row comparison; the existing held planning value3.14721 receives no upgrade."
+           ]
+         }
+       ],
+--- nonnovel_paper_content.txt.current
++++ nonnovel_paper_content.txt.PROPOSED_ONLY_AFTER_QUALIFICATION
+@@ -254,7 +254,7 @@
+ 
+ 7.2. Restricted Grothendieck certificates
+ 
+-Sakana's selected theorem bounds the vector objective Q(A) by sqrt(3/2) times the scalar sign objective C(A) for every3×n sign matrix, and gives sqrt2 inequalities for four fixed archived matrices. These statements do not establish a new bound on the unrestricted real Grothendieck constant. The dimensions, sign restriction and four literal finite cases are part of their scope.
++Sakana's selected theorem bounds the vector objective Q(A) by sqrt(3/2) times the scalar sign objective C(A) for every3×n sign matrix, and gives sqrt2 inequalities for four fixed archived matrices. These statements do not establish a new bound on the unrestricted real Grothendieck constant. The dimensions, sign restriction and four literal finite cases are part of their scope. The independent pinned Lean4.33.1 replay compiled both exact source modules and produced all five selected endpoint prints with standard kernel axioms or no axioms. The verified statement scope remains restricted, and the mathematical priority hold is unchanged.
+ 
+ The independent audit derived a stronger exact6/5 bound for the3×n sign-restricted class, with equality for J−2I. This post-event audit argument is not credited to the entrant and is not a claim of first-discovery priority. It shows why the weaker submitted inequality should not automatically receive original-mathematics credit merely because it is correctly formalized. The selected proof can still have value as a reusable norm/certificate interface after formal-library comparison. Known CHSH sqrt2 witnesses elsewhere in the corpus are likewise established baseline mathematics.
+ 
+--- nonnovel_source_status_inventory.json.current
++++ nonnovel_source_status_inventory.json.PROPOSED_ONLY_AFTER_QUALIFICATION
+@@ -2166,7 +2166,7 @@
+       "claim": "For every n and every 3-by-n sign matrix A, Q_V(A)<=sqrt(3/2) C(A) in every real inner-product space V. Additionally Q_V(A)<=sqrt(2) C(A) for the four literal archived matrices A_6x6_106, A_6x8_690, A_7x8_53110 and A_s8x8_1705. Q_V is the unit-vector objective supremum, with Q_V(A)=0 for an empty feasible set, and C is its real scalar specialization. These supporting cases form one review family.",
+       "classification": "Unresolved or missing-artifact record; nonacceptance does not prove nonnovelty",
+       "novelty_record": "No original universal-constant advance established. A new formalization may be M2 only after source and prior-library comparison.",
+-      "formal_status_record": "Fresh Row3Granular and four-case SemanticTestGranular checks passed in Lean 4.33.1 with standard axioms only. Row3 mathematical body is byte-identical after import adjustment; the four-case file retains statements and certificate data with eight arithmetic tactic repairs and explicit imports.",
++      "formal_status_record": "Independent pinned Lean4.33.1 replay completed both exact source modules Row3Granular and SemanticTestGranular and all five selected endpoint prints, with standard kernel axioms or no axioms; no native, admitted or unknown axiom is present in the selected scope. Row3 body remains byte-identical apart from the documented import adjustment; the four-case file retains statements and certificate data with eight documented arithmetic tactic repairs and explicit imports. Restricted upper-bound scope and originality hold remain unchanged.",
+       "recommendation_record": "Open score0; keep supporting formal material, with no automatic extra M2 family.",
+       "source_url": "https://github.com/alejandrozu/openmath-2026-judging/blob/d0ed487f487fa7ec814ff705ab55249983fe8707/OpenMath-Judging/review/entries/E02-FOCUS-GROTH.txt",
+       "source_snapshot": "October3 structured dossier; companion October4 audit supersedes where specified"
+--- brief_content.json.current
++++ brief_content.json.PROPOSED_ONLY_AFTER_QUALIFICATION
+@@ -105,7 +105,7 @@
+     },
+     {
+       "type": "p",
+-      "text": "The old proposed S was1699.56988. Holding Ramsey35.28 and the restricted Grothendieck3.14721 leaves a planning total1661.14267 if all other proposals are accepted. Its largest-family A=308.025 comes from the +3 target. The large aggregate reflects the scoring scale and breadth, not a claim that each contribution has equal scientific importance."
++      "text": "The old proposed S was1699.56988. Holding Ramsey35.28 and the restricted Grothendieck3.14721 leaves a planning total1661.14267 if all other proposals are accepted. Its largest-family A=308.025 comes from the +3 target. The large aggregate reflects the scoring scale and breadth, not a claim that each contribution has equal scientific importance. Grothendieck's two-source/five-endpoint replay passes standard/no-axiom checks; its restricted inequalities do not beat the ordinary6/5 three-row comparison, so3.14721 remains held."
+     },
+     {
+       "type": "small",
+--- build_brief.py.current
++++ build_brief.py.PROPOSED_ONLY_AFTER_QUALIFICATION
+@@ -62,7 +62,7 @@
+ 
+ add('p','Other contributions treat squarefree three-prime A000224 cases, a four-AP-free reciprocal sum exceeding111/25, uniform Erdős1060/829 bounds, an Erdős944 obstruction and a finite Erdős3 ansatz obstruction. Fresh replay and standard-axiom checks pass for A060957, A100475, Ferrers,1060,829 and Erdős3/pullback. The three matrix seeds pass all213 sources and18 standard-axiom checks: two fixed factor lists determine the third, without a global-rigidity or minimum-support claim. Erdős169 passes all22 unchanged proof bodies and its final standard-axiom audit after import-only adjustments; the original resource-limited replay is preserved.') 
+-add('p','The old proposed S was1699.56988. Holding Ramsey35.28 and the restricted Grothendieck3.14721 leaves a planning total1661.14267 if all other proposals are accepted. Its largest-family A=308.025 comes from the +3 target. The large aggregate reflects the scoring scale and breadth, not a claim that each contribution has equal scientific importance.')+add('p','The old proposed S was1699.56988. Holding Ramsey35.28 and the restricted Grothendieck3.14721 leaves a planning total1661.14267 if all other proposals are accepted. Its largest-family A=308.025 comes from the +3 target. The large aggregate reflects the scoring scale and breadth, not a claim that each contribution has equal scientific importance. Grothendieck's two-source/five-endpoint replay passes standard/no-axiom checks; its restricted inequalities do not beat the ordinary6/5 three-row comparison, so3.14721 remains held.') 
+ add('small','Recommended publication: one substantial anthology chapter per family, with short standalone papers for the strongest exact targets. Preserve joint source authorship and imported-theorem attribution; do not invent individual proof contributions.') 

@@ -1,0 +1,47 @@
+{
+  "status": "PASS",
+  "receipt": "Verification/sakana-erdos1060-uniform-partial-fresh-build.json",
+  "receipt_sha256": "2533e971f1d78ab0e08c8f50086ebfae07a7feb64814f16b36ccced80c83268b",
+  "finished_utc": "2026-10-05T01:08:02+00:00",
+  "lean": "4.33.1",
+  "mathlib": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "authored_source_modules": 10,
+  "selected_endpoint_prints": 3,
+  "endpoint_axioms": [
+    {
+      "endpoint": "Erdos1060.canonical_count_eventually_upper",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    },
+    {
+      "endpoint": "Erdos1060.canonical_count_upper",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    },
+    {
+      "endpoint": "Erdos1060Partial.entropyConstant_lt_old",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    }
+  ],
+  "source_identity": "Exact frozen authored-source hashes and fresh compiler outputs preserved in the independent replay receipt.",
+  "scope": "Unconditional all-target fixed-positive-constant upper bound; the full zero-constant Erdős 1060 conclusion remains open."
+}

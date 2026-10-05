@@ -1,0 +1,43 @@
+--- update_replay_register.py
++++ update_replay_register_HTM2_partial101_candidate.py
+@@ -75,6 +75,28 @@
+     'seed':seed['seed'],'completed_raw_receipt_sha256':seed['receipt_sha256'],
+     'scope_relation':'Exact unchanged selected six endpoints for this seed; total three-seed family213/18.',
+     'mathematical_scope':q['scoped_conclusion'],'novelty_or_scoring_or_publication_upgrade_implied':False}
++ q,meta=qualified_record('root-HTM2-granular101-three-new-four-standard-qualified-20261005.json','ede28ac93ddfcae456936231e86b4f3c1db3a0d333e1b363b78e16061f9aa90e')
++ if q:
++  assert q['status']=='ROOT_QUALIFIED_HTM2_EXACT_GRANULAR101_SOURCES_97_PRIOR_DMS_ONE_PRIOR_OWN_THREE_NEW_AND_FOUR_STANDARD_SELECTED'
++  assert (q['body_count_covered'],q['prior_owned_DMS97'],q['prior_owned_M2_StarCore1'],q['new_cold_source_passes'],q['actual_selected_prints'])==(101,97,1,3,4)
++  assert q['full122_project_qualified'] is False and q['whole21_and_selected33_deferred'] is True
++  standard_selected_scope(q['actual_selected_classifications'],4)
++  assert hashlib.sha256(read_bytes_shared(Path(q['receipt_file']))).hexdigest()==q['receipt_sha256']
++  linked=read_json_shared(Path(q['receipt_file']))
++  assert linked['source_plan_sha256']==q['source_plan_sha256']
++  assert q['all_four_raw_CLI_guard_log_source_output_hashes_checked'] is True and q['all122_source_hashes_checked'] is True
++  scopes['htpeo-erdos-m2']={**meta,'family':'HTPeo-M2','status':q['status'],'qualified':True,
++   'scientific_body_scope_complete':False,'selected_endpoint_scope_complete':False,
++   'qualified_granular_subscope_complete':True,'qualified_selected_endpoint_subscope_complete':True,
++   'scientific_body_count':101,'full_project_scientific_body_count':122,
++   'prior_owned_DMS_source_passes':97,'prior_owned_M2_StarCore_source_passes':1,'new_cold_source_passes':3,
++   'selected_endpoint_count':4,'full_project_selected_endpoint_count':37,
++   'selected_classification_counts':{'STANDARD_KERNEL_AXIOMS':4},
++   'whole_source_modules_deferred':21,'other_selected_endpoint_prints_deferred':33,
++   'actual_linked_granular_receipt':q['receipt_file'],'actual_linked_granular_receipt_sha256':q['receipt_sha256'],
++   'source_plan_sha256':q['source_plan_sha256'],'seed_receipt_sha256':q['seed_receipt_sha256'],
++   'scope_relation':'Only exact granular101/122 bodies and four selected outputs are qualified:97 earlier DMS-owned passes,one earlier M2-owned StarCore pass,three new checks. Whole21 and33 other selected outputs remain unattempted. The default full-route status is unchanged.',
++   'full_project_qualified':False,'original_raw_receipt_replaced':False,'novelty_or_scoring_or_publication_upgrade_implied':False}
+  return scopes
+ 
+ qualified_scopes=actual_qualified_scientific_scopes()
+@@ -216,9 +238,9 @@
+ 
+  if pid in qualified_scopes:
+   chosen=dict(chosen);chosen['qualified_scientific_scope']=qualified_scopes[pid]
+-  chosen['effective_scientific_scope_status']='QUALIFIED_SELECTED_SCIENTIFIC_SCOPE'
++  chosen['effective_scientific_scope_status']='QUALIFIED_SELECTED_SCIENTIFIC_SCOPE' if qualified_scopes[pid]['scientific_body_scope_complete'] else 'PARTIALLY_QUALIFIED_GRANULAR_SCIENTIFIC_SCOPE'
+   chosen['raw_execution_status_preserved']=chosen['status']
+-  chosen['qualified_selected_endpoint_coverage']={'status':'PASS_FROM_ACTUAL_COMPLETED_QUALIFICATION',
++  chosen['qualified_selected_endpoint_coverage']={'status':'PASS_FROM_ACTUAL_COMPLETED_QUALIFICATION' if qualified_scopes[pid]['selected_endpoint_scope_complete'] else 'PASS_FROM_COMPLETED_GRANULAR_SUBSCOPE_QUALIFICATION_FULL_SCOPE_PENDING',
+    'requested_and_actual_count':qualified_scopes[pid]['selected_endpoint_count'],
+    'classification_counts':qualified_scopes[pid]['selected_classification_counts'],
+    'qualification_record_sha256':qualified_scopes[pid]['qualification_record_sha256']}

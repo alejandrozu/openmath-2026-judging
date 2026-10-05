@@ -1,0 +1,112 @@
+{
+  "status": "INDEPENDENT_FULL_PREPARED_SEED_ONLY_SOURCE_REVIEW_NO_BLOCKING_FINDING",
+  "checked_utc": "2026-10-05T09:14:00.612733+00:00",
+  "reviewer": "lean_rebuild",
+  "files": {
+    "controller": {
+      "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\run_ht_ramsey_official_header_r141_seed_only_prepared.py",
+      "sha256": "c7cb7c743b497c4e80f553631ef625f587bc0e15b071feb891d75557664c344c",
+      "bytes": 24463
+    },
+    "preparation": {
+      "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\proposals\\ht-official-header-snapshot-cli-readonly-design-20261005\\seed-only-executable-preparation.json",
+      "sha256": "5710ca2e4814f4570eb1d00a8454dcf5351972aba4ffc907047279a0ba489caf",
+      "bytes": 16945
+    },
+    "wording_diff": {
+      "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\proposals\\ht-official-header-snapshot-cli-readonly-design-20261005\\seed-only-exit-and-marker-wording.diff",
+      "sha256": "0234854f859893b3a5c6401acc47e5fb4171feac5d3150a1bea389780e6ca54c",
+      "bytes": 2299
+    },
+    "common_controller": {
+      "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\run_ht_ramsey_kernel_j2_continuation_prepared.py",
+      "sha256": "e551e318748425f8672e73e670aaddda6533af58facefc0ebbef229bf42c6a23",
+      "bytes": 24940
+    },
+    "guard": {
+      "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\matt_resource_guard.py",
+      "sha256": "ae0b64c7fbf47545365f3238977368042be342ddb973159ec65c98f64aa38a71",
+      "bytes": 8897
+    },
+    "job_guard": {
+      "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\native_resource_guard.py",
+      "sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+      "bytes": 5514
+    },
+    "metrics": {
+      "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\resource_metrics.py",
+      "sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+      "bytes": 2119
+    },
+    "imports": {
+      "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\lean_imports.py",
+      "sha256": "4e0387c48c2a857fd1e69c872cbbd9c66b9741cfb661ef8a3e670bc7cd0ab8aa",
+      "bytes": 1172
+    },
+    "receipt_reader": {
+      "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\receipt_io.py",
+      "sha256": "2e189122fe360f1925dda2e0409c321b775fe7eb6edf17c3f13ef067d1776362",
+      "bytes": 1598
+    },
+    "image_observer": {
+      "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\luke_native_image_observer.py",
+      "sha256": "d25a05c7b3e15d349c94416f675af79d5e5ca2db9dd050f1ff9387eb4ea613d6",
+      "bytes": 3640
+    },
+    "plan": {
+      "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\build-plan.json",
+      "sha256": "94beb20b98cceefe3e5a7aa0a9cec34b4a60c15dd740f675711371a5afd494d3",
+      "bytes": 852640
+    },
+    "kernel_manifest": {
+      "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\ht-ramsey-independent2048-kernel-parallel-design-source-manifest-20261005.json",
+      "sha256": "2c5963c0b5c5094b77206b80d9e02866a504d56991459a2f0ec3bacef147da15",
+      "bytes": 3428117
+    },
+    "lean": {
+      "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+      "sha256": "af49bacfabaa1fea71332ca0feae0fa1a60912219d5902291adc79f905bffb8d",
+      "bytes": 83456
+    },
+    "R141": {
+      "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\RamseyCert\\Chunk\\R141.lean",
+      "sha256": "d38f94725cbbe0294637f92e6b747ae1da6274de67f5af29b29317f901e1321e",
+      "bytes": 4495
+    },
+    "actual177_immutable": {
+      "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\ht-ramsey-actual177-mode1-j2-natural-checkpoint-immutable-20261005.json",
+      "sha256": "5b827c653d1a07d5de5e8486a6451b33782a5a0b8788625d8fe10ac4b852ed6e",
+      "bytes": 2059256
+    }
+  },
+  "review_scope": {
+    "full_final_controller_source": true,
+    "full_original_controller_source_and_final_minimal_wording_diff": true,
+    "full_preparation_packet": true,
+    "imported_common_sources_ready_and_guard_wiring_read": true,
+    "imported_image_observer_source_read": true,
+    "pinned_Lean_Shell_and_Frontend_header_save_implementation_read": true,
+    "R141_original_three_kernel_decide_theorem_bodies_read": true,
+    "metadata_hash_and_AST_only_no_module_import_execution": true
+  },
+  "findings": [],
+  "verified_design": [
+    "One exact original cold R141 source, CLI -j2 and LEAN_NUM_THREADS=2, scientific options unchanged; only official --incr-header-save added.",
+    "Original source/output/canonical receipt remain read-only; all newly generated source output, snapshot, dependency sidecar, logs and pilot receipt are in one new isolated directory.",
+    "One actual source invocation, zero axioms audits, no header loading, no R142 invocation, no full continuation, no automatic source retry.",
+    "Exact all-source/prior-artifact/common prerequisite identities and exact runtime/package identities are checked by frozen common preparation functions before dispatch and again afterwards.",
+    "Guard retains own 6 GiB cap, initial 5 GiB commit / 6 GiB physical / 4 GB disk gates and continuous 1 GiB commit / 3 GiB physical / 1 GB disk reserves.",
+    "Unknown dependency JSON role/schema/path/owner is preserved as an operational checkpoint; no unrecognized regions are accepted for loading.",
+    "Neutral actual exited-dispatcher and hold/release-marker fields preserve the prior abnormal controller exit without calling it natural.",
+    "Bounded own image sampling is supplementary; image errors or no successful sample require root review before any future load; no source-only receipt claims selected axiom qualification."
+  ],
+  "limitations": [
+    "No compiler, cache tool, resource guard, process census, snapshot load or main controller was run during this peer review.",
+    "Process exclusion is the explicit scheduler plus checked snapshots, not a universal lock against unrelated externally started compilers.",
+    "Image sampling is not an exhaustive loader trace; conservative native-library inventory is not a claim that every listed image was loaded.",
+    "Snapshot size and speedup are unknown; one-source runtime, reserves, role sidecar and file identities require the actual root-approved pilot.",
+    "Actual three selected declarations still require a separately reviewed axiom audit; seed-only source success alone is not full theorem-trust qualification.",
+    "Future header load, cross-source reuse and continuation require distinct review and approval."
+  ],
+  "no_compiler_source_receipt_hold_lease_alias_or_prepared_code_mutation_by_review": true
+}

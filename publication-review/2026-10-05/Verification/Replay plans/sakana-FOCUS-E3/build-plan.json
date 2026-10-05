@@ -1,0 +1,65 @@
+{
+  "id": "sakana-FOCUS-E3",
+  "entrant": "E02",
+  "version": "4.33.1",
+  "mathlib_pin": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "source_dir": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-FOCUS-E3",
+  "modules": [
+    {
+      "module": "R17SplitReplay",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-FOCUS-E3\\R17SplitReplay.lean",
+      "source": "Focus_Evidence/evidence/FOCUS-E3/complete-certificate/R17SplitReplay.lean",
+      "sha256": "fe2f97e19892fa7a722500188366697949929b453f87914737c525b6fc2b6531"
+    },
+    {
+      "module": "BooleanTree",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-FOCUS-E3\\BooleanTree.lean",
+      "source": "Focus_Evidence/evidence/FOCUS-E3/complete-certificate/BooleanTree.lean",
+      "sha256": "57c77b258ba002ab59742e9f4cfdc065df437bdc1098d4e14cf1c2b7defddcc4"
+    },
+    {
+      "module": "CardBridge",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-FOCUS-E3\\CardBridge.lean",
+      "source": "Focus_Evidence/evidence/FOCUS-E3/complete-certificate/CardBridge.lean",
+      "sha256": "32330d3f2268ba1d23f5e8d0db50bf1a115e85b1b8be65c3418f2b4186e1c130"
+    },
+    {
+      "module": "CyclicUpper",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-FOCUS-E3\\CyclicUpper.lean",
+      "source": "Focus_Evidence/evidence/FOCUS-E3/complete-certificate/CyclicUpper.lean",
+      "sha256": "11e5d462866219ce6d13e7cde20de92f48eaf19f16cb68480072b2664ebba8d5"
+    },
+    {
+      "module": "CombinedObstruction",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-FOCUS-E3\\CombinedObstruction.lean",
+      "source": "Focus_Evidence/evidence/FOCUS-E3/complete-certificate/CombinedObstruction.lean",
+      "sha256": "3bec4ca43c026c51aa6b073fb640197cfeeac2060337dcbb1925d996cc918c13"
+    },
+    {
+      "module": "CyclicSharpness",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-FOCUS-E3\\CyclicSharpness.lean",
+      "source": "Focus_Evidence/evidence/FOCUS-E3/complete-certificate/CyclicSharpness.lean",
+      "sha256": "9264960904aa1dd2a0d428625e2a777455350d8de1edafecca4bedab9febfe38"
+    }
+  ],
+  "endpoints": [
+    "Erdos3Completion.explicit_L_witness_beats_every_cyclic_AP_free_set",
+    "Cyclic13Kernel.cyclic_four_AP_extremum_is_six",
+    "Cyclic13Kernel.cyclic4Free_card_le_six",
+    "Erdos3R17.B_card",
+    "Erdos3R17.B_Lfree"
+  ],
+  "roots": [
+    "CombinedObstruction",
+    "CyclicSharpness",
+    "CyclicUpper",
+    "R17SplitReplay"
+  ],
+  "audit_modules": [
+    "FreshAudit1.lean"
+  ],
+  "lean_options": {},
+  "static_review_contexts": [],
+  "status": "PLANNED_NOT_RUN",
+  "builds": []
+}

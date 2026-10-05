@@ -1,0 +1,401 @@
+{
+  "status": "PREPARED_ONLY_READ_ONLY_GROTH2_SOURCE5_COMPLETE_QUALIFIER_NO_EXECUTION",
+  "created_utc": "2026-10-05T05:26:47.622721+00:00",
+  "helper": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\qualify_groth_exact2_source5_scope.py",
+  "helper_sha256": "6692efc84029d16d7426f9219e5d6c614aeb26c4acb6167c36dca1a49a5fd264",
+  "helper_AST": "PASS_NO_IMPORT_OR_QUALIFICATION_EXECUTION",
+  "source_plan": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-FOCUS-GROTH\\build-plan.json",
+  "source_plan_sha256": "1d9db618520db9b9651018b4b4c77192616c5af911963fc3391055b6646ece7a",
+  "runner": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\run_held_novelty_plan.py",
+  "runner_sha256": "56952859e73e8773c44c84328e50144580527b82280da9d22229a2862ecedc10",
+  "source_fidelity_review": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\proposals\\held-original-granular-source-review\\sakana-FOCUS-GROTH-read-only-original-granular-review.json",
+  "source_fidelity_review_sha256": "977deaa89e29d9fd63f1dcbea35b0670c980bf19f95ba2fbcded26e390d50da1",
+  "official_full_graph": {
+    "total_official_units": 3954,
+    "mathlib_units": 2167,
+    "official_core_units": 1530,
+    "package_or_lake_units": 257,
+    "identity_root_counts": {
+      "aesop": 132,
+      "batteries": 74,
+      "importGraph": 10,
+      "official_lean_core": 1530,
+      "LeanSearchClient": 4,
+      "mathlib": 2167,
+      "plausible": 13,
+      "proofwidgets": 10,
+      "Qq": 14
+    },
+    "unresolved_units": [],
+    "all_source_and_olean_sha256_measured": true,
+    "all_edges_closed_and_units_reachable": true,
+    "implicit_Init_included": true,
+    "exact_public_meta_all_clauses_bound_to_source_hashes": true,
+    "literal_whole_Mathlib_or_Mathlib_Tactic_reachable": false,
+    "sum_olean_logical_bytes": 857167584,
+    "manifest": {
+      "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\proposals\\held-original-granular-source-review\\sakana-FOCUS-GROTH-complete-official-source-artifact-closure.json",
+      "sha256": "86bd08537eea030f2860f96e6efbd681c48da2d02057d64d9bd38816cd5a49b2"
+    }
+  },
+  "exact_nine_dependency_pins": [
+    {
+      "name": "mathlib",
+      "url": "https://github.com/leanprover-community/mathlib4",
+      "rev": "0df444a360eaa60ab8c11dca51a86af692955474"
+    },
+    {
+      "name": "plausible",
+      "url": "https://github.com/leanprover-community/plausible",
+      "rev": "b7eb3304aeae834b12dda98993a37f6a41f6f0bb"
+    },
+    {
+      "name": "LeanSearchClient",
+      "url": "https://github.com/leanprover-community/LeanSearchClient",
+      "rev": "5f4d51b81cbd3f6b32b156bfad9056621a040404"
+    },
+    {
+      "name": "importGraph",
+      "url": "https://github.com/leanprover-community/import-graph",
+      "rev": "16f02aa7642864af59f1ff0e384a015994db9118"
+    },
+    {
+      "name": "proofwidgets",
+      "url": "https://github.com/leanprover-community/ProofWidgets4",
+      "rev": "4be2e3d5087eeb272cf5a8853b8f9dd025ef5957"
+    },
+    {
+      "name": "aesop",
+      "url": "https://github.com/leanprover-community/aesop",
+      "rev": "3448c0bcc5ce01b2d1546e483ec3620e32df3d0e"
+    },
+    {
+      "name": "Qq",
+      "url": "https://github.com/leanprover-community/quote4",
+      "rev": "92c15be17b7caf78c2ad767ec40f89052d908d81"
+    },
+    {
+      "name": "batteries",
+      "url": "https://github.com/leanprover-community/batteries",
+      "rev": "4488d40d070b9700d4d5a6aa342f0d40c31b2a2d"
+    },
+    {
+      "name": "Cli",
+      "url": "https://github.com/leanprover/lean4-cli",
+      "rev": "6130a47896ce867c6a4a55373441e59e565bad0f"
+    }
+  ],
+  "exact_sources": [
+    {
+      "module": "Row3Granular",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-FOCUS-GROTH\\Row3Granular.lean",
+      "entrant_source_locator": "Focus_Evidence/evidence/FOCUS-GROTH/Row3Granular.lean",
+      "original_source_sha256": "81f13055043484815587cc049b817d069a50a2621de4588334f081aba167e754",
+      "proposed_source_sha256": "81f13055043484815587cc049b817d069a50a2621de4588334f081aba167e754",
+      "whole_file_byte_identity": true,
+      "source_bytes": 18620,
+      "original_header_span": {
+        "start_byte": 0,
+        "end_byte_exclusive": 182
+      },
+      "original_body_after_header_sha256": "846515f32ebc2cef4476b8fa614ed7a49b14a1b23789c0c0d3cd15bffe26220c",
+      "proposed_body_after_header_sha256": "846515f32ebc2cef4476b8fa614ed7a49b14a1b23789c0c0d3cd15bffe26220c",
+      "proposed_modified_spans": [],
+      "original_imports": [
+        "Mathlib.Analysis.InnerProductSpace.Basic",
+        "Mathlib.Analysis.SpecialFunctions.Sqrt",
+        "Mathlib.Tactic.Linarith",
+        "Mathlib.Tactic.NormNum",
+        "Mathlib.Tactic.Ring"
+      ],
+      "exact_original_import_clauses": [
+        {
+          "line": 1,
+          "start_byte": 0,
+          "end_byte_exclusive": 48,
+          "exact_source_clause": "import Mathlib.Analysis.InnerProductSpace.Basic",
+          "public_modifier": false,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 2,
+          "start_byte": 48,
+          "end_byte_exclusive": 94,
+          "exact_source_clause": "import Mathlib.Analysis.SpecialFunctions.Sqrt",
+          "public_modifier": false,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 3,
+          "start_byte": 94,
+          "end_byte_exclusive": 125,
+          "exact_source_clause": "import Mathlib.Tactic.Linarith",
+          "public_modifier": false,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 4,
+          "start_byte": 125,
+          "end_byte_exclusive": 155,
+          "exact_source_clause": "import Mathlib.Tactic.NormNum",
+          "public_modifier": false,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 5,
+          "start_byte": 155,
+          "end_byte_exclusive": 182,
+          "exact_source_clause": "import Mathlib.Tactic.Ring",
+          "public_modifier": false,
+          "meta_modifier": false,
+          "all_modifier": false
+        }
+      ],
+      "custom_imports": [],
+      "official_direct_imports": [
+        "Mathlib.Analysis.InnerProductSpace.Basic",
+        "Mathlib.Analysis.SpecialFunctions.Sqrt",
+        "Mathlib.Tactic.Linarith",
+        "Mathlib.Tactic.NormNum",
+        "Mathlib.Tactic.Ring"
+      ],
+      "literal_whole_Mathlib_imports": [],
+      "literal_Mathlib_Tactic_umbrella_imports": [],
+      "options": [],
+      "static_tokens_excluding_comments_and_strings": {
+        "sorry": 0,
+        "admit": 0,
+        "native_decide": 0,
+        "implemented_by": 0,
+        "unsafe": 0,
+        "extern": 0,
+        "run_tac": 0,
+        "decide": 0,
+        "linarith": 9,
+        "nlinarith": 7,
+        "norm_num": 13,
+        "ring": 4,
+        "omega": 0,
+        "fin_cases": 0,
+        "gcongr": 0,
+        "positivity": 0,
+        "field_simp": 0,
+        "push": 0,
+        "by_contra": 0
+      },
+      "custom_axiom_declarations": [],
+      "exact_variable_contexts": [
+        "variable {m n : \u2115} {V : Type*} [NormedAddCommGroup V] [InnerProductSpace \u211d V]",
+        "variable (A : SignMat 3 n)"
+      ]
+    },
+    {
+      "module": "SemanticTestGranular",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-FOCUS-GROTH\\SemanticTestGranular.lean",
+      "entrant_source_locator": "Focus_Evidence/evidence/FOCUS-GROTH/SemanticTestGranular.lean",
+      "original_source_sha256": "490c99b751d049b20ee717753e92477bc7dd8420e635d45fef41d2b6b5f1eecd",
+      "proposed_source_sha256": "490c99b751d049b20ee717753e92477bc7dd8420e635d45fef41d2b6b5f1eecd",
+      "whole_file_byte_identity": true,
+      "source_bytes": 22662,
+      "original_header_span": {
+        "start_byte": 0,
+        "end_byte_exclusive": 181
+      },
+      "original_body_after_header_sha256": "8ae12616826b5a08edf4624f0b2165cd06585a958973229f53b012135a35e469",
+      "proposed_body_after_header_sha256": "8ae12616826b5a08edf4624f0b2165cd06585a958973229f53b012135a35e469",
+      "proposed_modified_spans": [],
+      "original_imports": [
+        "Mathlib.Analysis.InnerProductSpace.PiL2",
+        "Mathlib.Analysis.SpecialFunctions.Sqrt",
+        "Mathlib.Tactic.Linarith",
+        "Mathlib.Tactic.NormNum",
+        "Mathlib.Tactic.Ring"
+      ],
+      "exact_original_import_clauses": [
+        {
+          "line": 1,
+          "start_byte": 0,
+          "end_byte_exclusive": 47,
+          "exact_source_clause": "import Mathlib.Analysis.InnerProductSpace.PiL2",
+          "public_modifier": false,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 2,
+          "start_byte": 47,
+          "end_byte_exclusive": 93,
+          "exact_source_clause": "import Mathlib.Analysis.SpecialFunctions.Sqrt",
+          "public_modifier": false,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 3,
+          "start_byte": 93,
+          "end_byte_exclusive": 124,
+          "exact_source_clause": "import Mathlib.Tactic.Linarith",
+          "public_modifier": false,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 4,
+          "start_byte": 124,
+          "end_byte_exclusive": 154,
+          "exact_source_clause": "import Mathlib.Tactic.NormNum",
+          "public_modifier": false,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 5,
+          "start_byte": 154,
+          "end_byte_exclusive": 181,
+          "exact_source_clause": "import Mathlib.Tactic.Ring",
+          "public_modifier": false,
+          "meta_modifier": false,
+          "all_modifier": false
+        }
+      ],
+      "custom_imports": [],
+      "official_direct_imports": [
+        "Mathlib.Analysis.InnerProductSpace.PiL2",
+        "Mathlib.Analysis.SpecialFunctions.Sqrt",
+        "Mathlib.Tactic.Linarith",
+        "Mathlib.Tactic.NormNum",
+        "Mathlib.Tactic.Ring"
+      ],
+      "literal_whole_Mathlib_imports": [],
+      "literal_Mathlib_Tactic_umbrella_imports": [],
+      "options": [],
+      "static_tokens_excluding_comments_and_strings": {
+        "sorry": 0,
+        "admit": 0,
+        "native_decide": 0,
+        "implemented_by": 0,
+        "unsafe": 0,
+        "extern": 0,
+        "run_tac": 0,
+        "decide": 0,
+        "linarith": 1,
+        "nlinarith": 0,
+        "norm_num": 17,
+        "ring": 8,
+        "omega": 0,
+        "fin_cases": 0,
+        "gcongr": 0,
+        "positivity": 4,
+        "field_simp": 0,
+        "push": 0,
+        "by_contra": 0
+      },
+      "custom_axiom_declarations": [],
+      "exact_variable_contexts": [
+        "variable {m n : \u2115}",
+        "variable {V : Type*} [NormedAddCommGroup V] [InnerProductSpace \u211d V]"
+      ]
+    }
+  ],
+  "unchanged_audit": [
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-FOCUS-GROTH\\FreshAudit1.lean",
+      "source_sha256": "2a43c7da7651a65f5de70d04a81ea77d53c5e2645ab7b2efc4e8e283644236e2",
+      "exact_requested_prints": [
+        "GrothSymmetry.row3_Q_le_sqrt_three_halves_mul_C",
+        "GrothSemantic.semantic_6x6_106",
+        "GrothSemantic.semantic_6x8_690",
+        "GrothSemantic.semantic_7x8_53110",
+        "GrothSemantic.semantic_s8x8_1705"
+      ],
+      "exact_imports": [
+        "Row3Granular",
+        "SemanticTestGranular"
+      ],
+      "byte_unchanged": true
+    }
+  ],
+  "selected_typed_statements": [
+    {
+      "requested_endpoint": "GrothSymmetry.row3_Q_le_sqrt_three_halves_mul_C",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-FOCUS-GROTH\\Row3Granular.lean",
+      "source_sha256": "81f13055043484815587cc049b817d069a50a2621de4588334f081aba167e754",
+      "line": 397,
+      "exact_statement_before_proof": "theorem row3_Q_le_sqrt_three_halves_mul_C :\n    Q (V := V) A \u2264 Real.sqrt (3 / 2) * C A",
+      "statement_utf8_sha256": "e17f7311b81459cfa6f58c0a4ffe825ce0c9cdc14ecb69871febc779e17e6fee",
+      "top_level_proof_delimiter_start_byte": 17510,
+      "statement_parser": "FIRST_DECLARATION_ASSIGNMENT_AT_ZERO_PAREN_BRACE_BRACKET_DEPTH_WITH_COMMENTS_AND_STRINGS_REMOVED"
+    },
+    {
+      "requested_endpoint": "GrothSemantic.semantic_6x6_106",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-FOCUS-GROTH\\SemanticTestGranular.lean",
+      "source_sha256": "490c99b751d049b20ee717753e92477bc7dd8420e635d45fef41d2b6b5f1eecd",
+      "line": 276,
+      "exact_statement_before_proof": "theorem semantic_6x6_106 : Q (V := V) A_6x6_106 \u2264 Real.sqrt 2 * C A_6x6_106",
+      "statement_utf8_sha256": "fe0a7c9f838c32b186068c7cf4b4c8ee02d185dc88679f90d2208a023f18573c",
+      "top_level_proof_delimiter_start_byte": 12254,
+      "statement_parser": "FIRST_DECLARATION_ASSIGNMENT_AT_ZERO_PAREN_BRACE_BRACKET_DEPTH_WITH_COMMENTS_AND_STRINGS_REMOVED"
+    },
+    {
+      "requested_endpoint": "GrothSemantic.semantic_6x8_690",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-FOCUS-GROTH\\SemanticTestGranular.lean",
+      "source_sha256": "490c99b751d049b20ee717753e92477bc7dd8420e635d45fef41d2b6b5f1eecd",
+      "line": 311,
+      "exact_statement_before_proof": "theorem semantic_6x8_690 : Q (V := V) A_6x8_690 \u2264 Real.sqrt 2 * C A_6x8_690",
+      "statement_utf8_sha256": "bafdc5c5476eed8d1f29bfd37090dbee9baa844d3d6f639d6db73a2498ccd672",
+      "top_level_proof_delimiter_start_byte": 15536,
+      "statement_parser": "FIRST_DECLARATION_ASSIGNMENT_AT_ZERO_PAREN_BRACE_BRACKET_DEPTH_WITH_COMMENTS_AND_STRINGS_REMOVED"
+    },
+    {
+      "requested_endpoint": "GrothSemantic.semantic_7x8_53110",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-FOCUS-GROTH\\SemanticTestGranular.lean",
+      "source_sha256": "490c99b751d049b20ee717753e92477bc7dd8420e635d45fef41d2b6b5f1eecd",
+      "line": 346,
+      "exact_statement_before_proof": "theorem semantic_7x8_53110 : Q (V := V) A_7x8_53110 \u2264 Real.sqrt 2 * C A_7x8_53110",
+      "statement_utf8_sha256": "8a1cbb03c3989477c21473ba5b1191721ac5c8122644226b80ec3be5ec72c4ea",
+      "top_level_proof_delimiter_start_byte": 18834,
+      "statement_parser": "FIRST_DECLARATION_ASSIGNMENT_AT_ZERO_PAREN_BRACE_BRACKET_DEPTH_WITH_COMMENTS_AND_STRINGS_REMOVED"
+    },
+    {
+      "requested_endpoint": "GrothSemantic.semantic_s8x8_1705",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-FOCUS-GROTH\\SemanticTestGranular.lean",
+      "source_sha256": "490c99b751d049b20ee717753e92477bc7dd8420e635d45fef41d2b6b5f1eecd",
+      "line": 381,
+      "exact_statement_before_proof": "theorem semantic_s8x8_1705 : Q (V := V) A_s8x8_1705 \u2264 Real.sqrt 2 * C A_s8x8_1705",
+      "statement_utf8_sha256": "32e1f0f89322aa271535d646b3f4a7cb563d8e5fcd670197bf2fcfffa0b1f710",
+      "top_level_proof_delimiter_start_byte": 22154,
+      "statement_parser": "FIRST_DECLARATION_ASSIGNMENT_AT_ZERO_PAREN_BRACE_BRACKET_DEPTH_WITH_COMMENTS_AND_STRINGS_REMOVED"
+    }
+  ],
+  "future_root_approval_fields": {
+    "status": "ROOT_APPROVED_GROTH_EXACT2_SOURCE5_OUTPUT_QUALIFICATION",
+    "reviewed_helper_sha256": "6692efc84029d16d7426f9219e5d6c614aeb26c4acb6167c36dca1a49a5fd264",
+    "completed_receipt_sha256": "ROOT_MUST_BIND_ACTUAL_FINISHED_RECEIPT_AFTER2_SOURCES_AND5_SELECTED_PRINTS",
+    "source_plan_sha256": "1d9db618520db9b9651018b4b4c77192616c5af911963fc3391055b6646ece7a",
+    "official_graph_sha256": "86bd08537eea030f2860f96e6efbd681c48da2d02057d64d9bd38816cd5a49b2",
+    "source_fidelity_review_sha256": "977deaa89e29d9fd63f1dcbea35b0670c980bf19f95ba2fbcded26e390d50da1"
+  },
+  "future_command_only": [
+    "BUNDLED_PYTHON",
+    "-X",
+    "utf8",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\qualify_groth_exact2_source5_scope.py",
+    "--root-approved-exact-groth-qualification",
+    "ACTUAL_COMPLETE_RECEIPT_SHA",
+    "ROOT_APPROVAL_FILE",
+    "ROOT_APPROVAL_SHA"
+  ],
+  "qualification_tests": [
+    "Actual finishedPASS, exact2source rows+1FreshAudit1.lean row, no failures/deferred/currentinvocation.",
+    "Allsource/audit/runner/runtimeSHA rechecks; exactCLI-j1/resourceoptions and actualguard/rawstdout/stderr hashes; owncurrentartifacts byte and size match.",
+    "All3954officialsource+olean providers rehashed, completeedges/directrootreachability+Init checked; actual9GitHEAD/origin match bound preparedpins.",
+    "Exact5unique requested rawprints reparsed, AXIOM_FREE or STANDARD_KERNEL_AXIOMS only; no native/sorry/unknown; storedselectedreview and coverage agree.",
+    "Finishedparentreceipt unchanged throughout read-onlyqualification; writeonlynew qualificationJSON."
+  ],
+  "scientific_scope": "Restrictedthree-row signmatrix sqrt(3/2) upper bound, fourparticular signmatrixsqrt2 upper bounds. sqrt(3/2)>6/5 and no unrestrictedlowerbound. No originality,competition placement,score,class or releaseapproval update.",
+  "no_Lean_compilation_qualification_alias_outputcopy_or_existing_record_mutation": true
+}

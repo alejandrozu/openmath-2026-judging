@@ -1,0 +1,28 @@
+--- run_htpeo_m2_linked_granular_plan.py
++++ run_htpeo_m2_composite_qualified_linked_granular_plan.py
+@@ -21,11 +21,11 @@
+ M2_PREPARATION_SHA256 = 'c2eb16e66fd9f5bacf75ad470cd25846d412ca8780a8a7d24c119d4b366c6ee5'
+ assert project in M2_PROJECT_PLAN_HASHES, 'Exact reviewed HTP M2 project only'
+ assert '--htpeo-m2-reuse-execution-authorized' in sys.argv[3:], 'Separate root-approved reuse/source lease required'
+-from htpeo_m2_original97_hardlink_seed import verify_seed as m2_verify_seed
+-from htpeo_m2_original97_hardlink_seed import digest as m2_bound_digest
+-M2_LINK_POLICY_SHA256 = 'bab7476a702cb7ccf182e5c051f70ecc30a3b21dc14cec8c872487558f9a5092'
+-M2_LINK_HELPER_SHA256 = 'cf35eb78ccf5e36e7775eb0d4d676de2cf6cf57d5ee5b8cbb8878827a0f5ae4e'
+-assert m2_bound_digest(BASE/'htpeo_m2_original97_hardlink_seed.py') == M2_LINK_HELPER_SHA256
++from htpeo_m2_composite_qualified97_hardlink_seed import verify_seed as m2_verify_seed
++from htpeo_m2_composite_qualified97_hardlink_seed import digest as m2_bound_digest
++M2_LINK_POLICY_SHA256 = 'faa229d9236aef36d384f11d12e575cbd7893540a4d80c5386e6db10e3eece7b'
++M2_LINK_HELPER_SHA256 = 'e5abf550dcac01c207663e69279f6f0b34f84dd885a9c52c6b0a32beb3a82c47'
++assert m2_bound_digest(BASE/'htpeo_m2_composite_qualified97_hardlink_seed.py') == M2_LINK_HELPER_SHA256
+ def m2_flag(name):
+  assert name in sys.argv and sys.argv.index(name)+1<len(sys.argv), name
+  return sys.argv[sys.argv.index(name)+1]
+@@ -40,7 +40,7 @@
+ m2_seed_sha=m2_flag('--reuse-seed-receipt-sha256')
+ assert m2_execution_approval['reviewed_completed_seed_receipt_sha256']==m2_seed_sha
+ m2_seed_check=m2_verify_seed(M2_LINK_POLICY_SHA256,m2_seed_sha)
+-m2_link_policy=json.loads((BASE/'htpeo-m2-original97-hardlink-policy-20261005.json').read_bytes())
++m2_link_policy=json.loads((BASE/'htpeo-m2-composite-qualified97-hardlink-policy-20261005.json').read_bytes())
+ m2_reuse_names=set(m2_link_policy['eligible97_module_names'])
+ m2_own_prior_pilot_name='StarCore'
+ m2_required_new_names=set(m2_link_policy['required3_new_cold_module_names'])

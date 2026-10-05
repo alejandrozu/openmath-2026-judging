@@ -1,0 +1,63 @@
+{
+  "status": "ENVIRONMENT_BLOCKED_RESOURCE_DEPENDENCIES",
+  "finished_utc": "2026-10-05T02:09:09Z",
+  "receipt": "Verification/sakana-erdos169-fourap-fresh-build.json",
+  "receipt_sha256": "1d395cae83c4d623950359dccccdab24d8777c39ffee69c54795226b187d7875",
+  "lean": "4.34.1",
+  "mathlib": "d13f23b723b8a846827a245b89c10fc7d3f11612",
+  "authored_source_modules": 22,
+  "passed_authored_source_modules": 15,
+  "successful_modules": [
+    "OpHack.ResidueFibre",
+    "OpHack.DigitDescent",
+    "OpHack.ErdosSingletonFinite",
+    "OpHack.BaseDigitAP",
+    "OpHack.OldThreeModular",
+    "OpHack.ErdosSixFinite",
+    "OpHack.SixFibreAP",
+    "OpHack.DigitCounting",
+    "OpHack.FloorBounds",
+    "OpHack.HarmonicCertificate",
+    "OpHack.SixHarmonicCertificate",
+    "OpHack.FiniteHarmonicMean",
+    "OpHack.ReciprocalBlocks",
+    "OpHack.SixTermwise",
+    "OpHack.SixHarmonicAggregation"
+  ],
+  "resource_roots": {
+    "OpHack.SixModularAssembly": {
+      "classification": "OWN_ALLOCATION_FAILURE",
+      "seconds": 46.031,
+      "source_sha256": "3a22027960ebaedc4550201295974585f7d8fba2462d82af59f8a2bdf37d09df",
+      "stderr": "INTERNAL PANIC: out of memory\n",
+      "job_peak_aggregate_private_bytes": 10737463296,
+      "minimum_available_commit_bytes": 1146798080
+    },
+    "OpHack.SixFloorBridge": {
+      "classification": "OWN_ALLOCATION_FAILURE",
+      "seconds": 81.75,
+      "source_sha256": "05e4b37b83b3d2087d80058044a4bc12ed552253f36c2de0640f758c955d024d",
+      "stderr": "INTERNAL PANIC: out of memory\n",
+      "job_peak_aggregate_private_bytes": 10737438720,
+      "minimum_available_commit_bytes": 1301958656
+    }
+  },
+  "unattempted_authored_descendants": [
+    "OpHack.SixModularFinal",
+    "OpHack.SixFinalAP",
+    "OpHack.SixListBridge",
+    "OpHack.SixFinalReciprocal",
+    "OpHack.MainResult"
+  ],
+  "selected_endpoint": "Erdos3Candidate.explicit_four_ap_free_reciprocal_gt",
+  "selected_endpoint_fresh_audit": "NO_ATTEMPT_RESOURCE_DEPENDENCY_BLOCK",
+  "mathematical_failure_invocations": [],
+  "historical_full_build": "Preserved entrant archive, distinct from this 15/22-source independent replay",
+  "independent_modular_certificate": {
+    "script": "Independent checkers/check_e169_modular_six.py",
+    "script_sha256": "c86b3b198f6e999fe952c74204389069e962ee1031f1078cdc1ab15d395fd204",
+    "actual_output": "Independent checkers/e169_modular_six_independent_check.json",
+    "actual_output_sha256": "8702257c1e32f7a3b122ad5d865c053adb337f49905b4a8b0b6054f6cc55f79b",
+    "scope": "Joint 9267-residue modular four-progression-free alphabet; not the final reciprocal-bound Lean endpoint"
+  }
+}

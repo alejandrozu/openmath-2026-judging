@@ -1,0 +1,39 @@
+{
+  "status": "READ_ONLY_EXACT_CUSTOM_REFLECTION_HITS_REVIEW_ADDENDUM_NO_OUTPUT_ACCEPTANCE",
+  "created_utc": "2026-10-05T04:58:54.469902+00:00",
+  "parent_source_study": "work\\publication\\verification\\pp-unicode-fun-pinned-source-and-future-157-reuse-qualification-proposal-20261005.json",
+  "parent_source_study_sha256": "2847458be109809a2cbfe13d74824342d8fc3a198f67495c98e9c178956491a2",
+  "reviews": [
+    {
+      "module": "FormalConjecturesUtil.Answer",
+      "file": "work\\publication\\verification\\builds\\sundai-erdos3-original-image-source\\FormalConjecturesUtil\\Answer.lean",
+      "sha256": "c8b3b31e9bb25c511e577b1812159a210e9346720f19ec6c6b30905a0802db7a",
+      "lines": [
+        112,
+        151
+      ],
+      "finding": "answerElab calls google.answer.get(getOptions), reading the distinct google.answer option only. It does not test pp.unicode.fun or compare the whole Options map. The option controls statement-answer handling and is semantically meaningful; its unchanged effective/default value must remain part of the future exact semantic-option qualification. This specific pp.unicode.fun difference does not select a different answer mode in this accessor.",
+      "scope_caveat": "The helper has a canonical sorry constructor for certain answer modes. Its source existence does not classify any selected theorem as admitted; actual endpoint axioms and mode/source scope must be preserved."
+    },
+    {
+      "module": "FormalConjecturesUtil.Attributes.AMS",
+      "file": "work\\publication\\verification\\builds\\sundai-erdos3-original-image-source\\FormalConjecturesUtil\\Attributes\\AMS.lean",
+      "sha256": "e5a6b4b0cd42e1ad11e84b75bd89f78a9797a98e5b23d8b956f13190b9078d96",
+      "lines": [
+        198,
+        210
+      ],
+      "finding": "The run_cmd obtains the environment, reads literal constructor docstrings for subject codes0..97, builds a newline-joined String, and elaborates the exposed meta definition amsSubjects. It does not read options or delaborate/pretty-print an expression. The two unicode function-arrow print styles do not enter this data-generation path.",
+      "scope_caveat": "Actual donor compiled metadata remains actual donor metadata; no claim that independently compiled server artifacts would be byte-identical."
+    }
+  ],
+  "candidate_root_count": 157,
+  "direct_custom_pp_unicode_fun_readers_found": 0,
+  "known_two_static_reflection_hits_pp_option_dependency": "NO_DEPENDENCY_IN_THE_REVIEWED_PATHS",
+  "general_arbitrary_metaprogram_equivalence_claim": false,
+  "future_actual_donor_artifact_qualification_still_required": true,
+  "actual_E65_completion_assumed": false,
+  "compiler_invocations": 0,
+  "source_header_options_runner_outputs_LEAN_PATH_modified": false,
+  "root_reuse_approval_or_seed_performed": false
+}

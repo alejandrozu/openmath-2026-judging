@@ -1,0 +1,69 @@
+--- preserved-reviewed-BooleanTree-single-file-helper
++++ prepared-only-A000-P127Part0033-single-file-helper
+@@ -6,14 +6,14 @@
+ from pathlib import Path
+ from datetime import datetime, timezone
+ from ctypes import wintypes as W
+-import ctypes, hashlib, json, mmap, os, shutil, subprocess, sys, time
++import ctypes, hashlib, json, mmap, msvcrt, os, shutil, subprocess, sys, time
+ from native_resource_guard import K, EXTENDEDLIMIT, memory, processes, own_tree
+ from matt_resource_guard import resume_suspended_root
+ from resource_metrics import snapshot
+ 
+ BASE=Path(__file__).resolve().parent
+-PROPOSAL=BASE/'completed-own-BooleanTree-strong-LZX-single-pilot-preparation-20261005.json'
+-TARGET=BASE/'builds/sakana-FOCUS-E3/BooleanTree.olean'
++PROPOSAL=BASE/'completed-own-A000-P127Part0033-strong-LZX-single-pilot-preparation-20261005.json'
++TARGET=BASE/'builds/sakana-a000224/OpHack/QuadraticResidue224/CertificateP127Part0033.olean'
+ GIB=2**30
+ 
+ def sha(p):
+@@ -57,7 +57,7 @@
+     for row in records:
+         if row['ProcessId']==os.getpid():continue
+         cli=(row.get('CommandLine') or '').lower();name=row['Name'].lower()
+-        if name in {'compact.exe','leantar.exe','7z.exe','tar.exe'} or 'sakana-focus-e3' in cli:
++        if name in {'compact.exe','leantar.exe','7z.exe','tar.exe'} or 'sakana-a000224' in cli or 'quadraticresidue224' in cli:
+             blocked.append(row)
+         elif any(x in cli for x in ('compress_','compact_','cache get','force_official_cache')):blocked.append(row)
+     assert not blocked,('Family writer/reader or compressor/extractor must be quiescent',blocked)
+@@ -122,7 +122,7 @@
+     assert sha(PROPOSAL)==approval['reviewed_proposal_sha256'];proposal=json.loads(PROPOSAL.read_bytes())
+     assert proposal['helper_sha256']==sha(__file__)
+     assert TARGET.resolve()==Path(proposal['exact_target']).resolve()
+-    assert TARGET.resolve().is_relative_to(BASE/'builds/sakana-FOCUS-E3') and not TARGET.is_symlink()
++    assert TARGET.resolve().is_relative_to(BASE/'builds/sakana-a000224') and not TARGET.is_symlink()
+     for p,h in proposal['frozen_input_bindings'].items():assert sha(p)==h
+     compact=Path(os.environ['SystemRoot'])/'System32/compact.exe';assert sha(compact)==proposal['compact_executable_sha256']
+     native=metadata(proposal);before=native(TARGET);backing=wof_info(TARGET);read=read_and_mmap(TARGET)
+@@ -143,6 +143,13 @@
+         commands=[[str(compact),'/U','/EXE','/Q',str(TARGET)],[str(compact),'/C','/F','/Q',str(TARGET)]]
+     assert approval['reviewed_exact_commands']==commands
+     quiescence();gates()
++    # Hold the existing own replay byte lock without writing its bytes.
++    replay_lock=BASE/'builds/sakana-a000224/.fresh-replay.lock'
++    assert replay_lock.is_file() and replay_lock.stat().st_size==1
++    replay=replay_lock.open('r+b');replay.seek(0)
++    try:msvcrt.locking(replay.fileno(),msvcrt.LK_NBLCK,1)
++    except OSError:
++        replay.close();raise RuntimeError('A000 dispatcher still owns the source replay lock')
+     # An exclusive named mutex has no disk evidence to remove and is released on process exit.
+     K.CreateMutexW.argtypes=[ctypes.c_void_p,W.BOOL,W.LPCWSTR];K.CreateMutexW.restype=W.HANDLE
+     mutex=K.CreateMutexW(None,True,'Local\\OpenMathSingleCompletedOutputStoragePilot')
+@@ -153,7 +160,7 @@
+         'target':str(TARGET),'native_before':before,'WOF_before':backing,'read_and_mmap_before':read,
+         'resource_policy':'256MiB ownjob/process; dispatch4GBdisk/6GiBphysical/5GiBcommit; continuous1GBdisk/3GiBphysical/1GiBcommit;180spercommand',
+         'commands':commands,'compact_executable_sha256':sha(compact),'frozen_input_bindings':proposal['frozen_input_bindings'],
+-        'sources_compiler_alias_DMS_A000_seed_protected_or_other_output_targets':0}
++        'sources_runtime_providers_DMS_shared_or_other_output_targets':0}
+     write_new(BASE/(serial+'-single-own-output-'+mode+'-started.json'),record)
+     rows=[]
+     try:
+@@ -176,6 +183,7 @@
+     finally:
+         K.ReleaseMutex.argtypes=[W.HANDLE];K.ReleaseMutex.restype=W.BOOL
+         K.ReleaseMutex(mutex);K.CloseHandle(mutex)
++        replay.seek(0);msvcrt.locking(replay.fileno(),msvcrt.LK_UNLCK,1);replay.close()
+ 
+ if __name__=='__main__':
+     assert len(sys.argv)==4 and sys.argv[1] in {'--root-approved-strong-lzx-pilot','--root-approved-ordinary-state-restoration'}

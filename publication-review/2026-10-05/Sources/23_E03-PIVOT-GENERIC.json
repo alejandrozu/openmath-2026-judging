@@ -1,0 +1,263 @@
+{
+  "title": "A generic matrix pivot with a vanishing eigenphase Walsh angle",
+  "blocks": [
+    {
+      "type": "title",
+      "text": "A generic matrix pivot with a vanishing eigenphase Walsh angle"
+    },
+    {
+      "type": "subtitle",
+      "text": "Provisional mathematical authors: Matt Bowring"
+    },
+    {
+      "type": "small",
+      "text": "Judging and evaluation record: the submissions discussed in this document have been judged and evaluated by Alejandro Zarzuelo Urdiales for OpenMath 2026. This dated review records the stated verification, classification and unresolved holds; it is a preliminary evaluation rather than a signed award decision."
+    },
+    {
+      "type": "small",
+      "text": "Event provenance: OpenMath 2026 ran 27 September–2 October 2026 with worldwide online participation. Detailed organizer listings specify Harvard Innovation Labs for the 27 September in-person event; the OpenMath programme advertises a hybrid kickoff at MIT. Sundai identifies its Harvard/MIT community. Organizer sources: https://rsihouse.ai/openmath ; https://luma.com/yzp9abvr ; https://www.sundai.club/events/boston/recursive-learning-hack-with-harvard-innovation-labs"
+    },
+    {
+      "type": "small",
+      "text": "Matt Bowring — Purdue University, Department of Mechanical Engineering (documented January 2026; current preferred publication affiliation to confirm)."
+    },
+    {
+      "type": "small",
+      "text": "Affiliations follow the recorded author declarations or public institutional/profile sources. Preferred author names, author order and publication affiliations await author review. This editorial compilation does not establish anthology coauthorship."
+    },
+    {
+      "type": "subtitle",
+      "text": "Original-result working manuscript | OpenMath 2026 | 5 October 2026"
+    },
+    {
+      "type": "small",
+      "text": "Central source and adjudication archive: https://github.com/alejandrozu/openmath-2026-judging"
+    },
+    {
+      "type": "h2",
+      "text": "Abstract"
+    },
+    {
+      "type": "p",
+      "text": "For arbitrary finite complex matrix dimension D=4(q+1), invertible top blocks X and Y with pairwise distinct eigenvalue crossing angles admit a one-qubit pivot whose polar-factor multiplexor has an eigenphase labeling with an exactly vanishing balanced Walsh angle. The construction combines a discrete half-plane rotation with continuous normalized eigenphase lifting and an intermediate value theorem. It is a genuine restricted matrix-existence theorem and a proposed partial advance toward improved unitary synthesis. The complete circuit bridge, nongeneric nodes and universal improved CNOT count remain unproved in the inspected formal chain; fresh pinned replay verifies the selected generic theorem using only standard kernel axioms; novelty and author review remain pending."
+    },
+    {
+      "type": "theorem",
+      "text": "For D=4(q+1), invertible complex D-by-D blocks X,Y, a full eigenvalue list of X inverse times Y and pairwise crossing-angle separation modulo pi, there exist an unrestricted real angle alpha and an angle beta in [0,pi], an ordinary unitary one-qubit gate, pivoted blocks satisfying the lifted block multiplication identity, and a real phase list of zxzC(Xprime,Yprime) whose finalAngle(q+1) equals zero. No unitarity assumption on the entire block matrix U is needed. The theorem concludes no circuit or CNOT-count bound."
+    },
+    {
+      "type": "h2",
+      "text": "Attribution, source and verification status"
+    },
+    {
+      "type": "p",
+      "text": "Contributor: Matt Bowring, sole human author declared in the supplied correspondence. Provisional publication affiliation: Purdue University, Department of Mechanical Engineering (documented Jan 2026; current preferred publication affiliation to confirm). AI assistance generated the formal code under his direction; human mathematical responsibility and the distinction between a proof and its generated presentation remain explicit."
+    },
+    {
+      "type": "keep_start",
+      "text": ""
+    },
+    {
+      "type": "p",
+      "text": "Source snapshot: bowrango/lean-unitary, commit 7014b63ee2cfd01c641a7f539c73b664a2aa3d66, recorded 4 October 2026 at 19:22 UTC. A fresh exact replay finished 5 October 2026 at 01:38:41 UTC under Lean 4.30.0-rc2 and Mathlib c1e30e172c8fda21e6776bf1f10351e882ee31b9. All 26 authored sources compiled. The six selected generic/count/conditional-bridge theorem prints use only propext, Classical.choice and Quot.sound; count_closed uses only propext and Quot.sound. No selected print contains sorryAx, native-evaluation or unknown axioms. A separate baseline audit prints sorryAx for all eight Claims endpoints, including Claims.synth; the baseline source has 13 admitted placeholders. Compilation success therefore verifies the selected scoped theorem and does not verify the universal synthesis headline. Receipt: Verification/matt-unitary-current-fresh-build.json."
+    },
+    {
+      "type": "keep_end",
+      "text": ""
+    },
+    {
+      "type": "h2",
+      "text": "The actual matrix theorem"
+    },
+    {
+      "type": "p",
+      "text": "The actual formal result is a finite-dimensional matrix theorem. Let D=4(q+1). Write a block matrix U=[X Y;Z W] with complex D-by-D blocks, and suppose X and Y are invertible. Let u_1,...,u_D list the eigenvalues of X inverse times Y, counted with their algebraic multiplicities. Assume that no two different entries in this list have arguments differing by an integer multiple of pi: geometrically, no two lie on the same line through the origin. This is the explicitly restricted generic regime. The theorem is stated for an arbitrary finite index type of cardinality D, so it is an infinite family of matrix dimensions rather than a test of one numerical instance."
+    },
+    {
+      "type": "p",
+      "text": "The pivot is the ordinary one-qubit matrix g=Rz(alpha)Ry(beta). Multiplying U by the lifted g produces top blocks Xg=e^{-i alpha/2}cos(beta/2)X+e^{i alpha/2}sin(beta/2)Y and Yg=-e^{-i alpha/2}sin(beta/2)X+e^{i alpha/2}cos(beta/2)Y. The formal development proves this block multiplication identity and the unitarity of g with ordinary complex matrices. It does not replace the matrix by an abstract object satisfying the desired conclusion."
+    },
+    {
+      "type": "p",
+      "text": "The associated multiplexor is defined by its actual polar-factor formula\nC(beta)=-i Xg* (Xg Xg*)^{-1/2}(Yg Yg*)^{-1/2}Yg,\nwhere * denotes conjugate transpose and inverse square roots use the continuous functional calculus. For invertible Xg and Yg the library proves C(beta) is unitary. It proves the endpoint symmetry C(pi)=C(0)*, hence C(pi)=C(0)^{-1}, and continuity of C along the path under the no-real-crossing condition. Those identities explain why eigenphases can be used to interpolate between opposite endpoint imbalances."
+    },
+    {
+      "type": "h2",
+      "text": "A half-plane rotation avoids singularities"
+    },
+    {
+      "type": "p",
+      "text": "The first angle alpha is chosen by a discrete intermediate-value argument. As a rotation sweeps the nonzero eigenvalues of X inverse times Y, their upper-half-plane count changes one at a time because the crossing angles are distinct. Opposite ends of a half-turn have complementary counts. Since D is even, some intervening interval has exactly D/2 values in each half-plane and no eigenvalue on the real axis. This simultaneously prevents singularities in Xg,Yg and balances the endpoint determinant phase. The exact hypotheses matter: coincident crossings are outside this theorem and are not removed by calling the input generic without explanation."
+    },
+    {
+      "type": "h2",
+      "text": "Continuous normalized eigenphases and a vanishing Walsh angle"
+    },
+    {
+      "type": "p",
+      "text": "The second angle beta is found by continuous eigenphase lifting. The development constructs normalized ordered lists of real phases representing a unitary matrix's eigenvalues. A normalized list is monotone and spans at most 2pi; its total sum is tied to a continuous argument sigma(beta) of det C(beta). Existence follows by choosing eigenvalue arguments and shifting branches by integer multiples of 2pi. Uniqueness at a fixed sum, stability under small changes, continuity of characteristic-polynomial root lists up to permutation, and continuity of the determinant phase establish continuity of the selected normalized list. This addresses the genuine eigenvalue-collision/branch problem that an informal appeal to continuity of individual principal arguments would miss."
+    },
+    {
+      "type": "p",
+      "text": "At beta=pi the normalized list equals the negative of its initial list in reversed order. A middle-half imbalance therefore changes sign. The real intermediate value theorem supplies beta* in [0,pi] with zero imbalance. A combinatorial permutation places the equal-size selected subset in the positive half of a Walsh row, and integer branch shifts preserve the complex eigenvalues. Consequently the final angle phi=(1/D)sum_j h_j theta_j, with h_j=+1 on the first D/2 indices and -1 on the second D/2, is exactly zero. The endpoint LeanUnitary.Pivot.pivot_merge concludes existence of an unrestricted real alpha and a beta in [0,pi], the pivot, the block identity, the phase list of zxzC(Xg,Yg), and that vanishing Walsh angle."
+    },
+    {
+      "type": "h2",
+      "text": "What the theorem accomplishes"
+    },
+    {
+      "type": "p",
+      "text": "This is a meaningful structural partial result in the proposed synthesis programme. Its theorem is stronger than a numerical fit, a local Jacobian calculation or parameter counting: within the stated regime it proves an actual pivot exists in every admitted dimension. Following the successful exact replay, and subject to comparison with previous matrix/pivot methods, it can support a short research note devoted to generic phase balancing. Useful supporting results include continuous normalized eigenphase lifts and the explicit non-singularity criterion for the polar path. The submitted endpoint's name includes the word merge, but the formal conclusion itself does not contain a circuit, a CNOT gate, or a gate-count inequality."
+    },
+    {
+      "type": "h2",
+      "text": "Relation to established Block-ZXZ and Walsh methods"
+    },
+    {
+      "type": "p",
+      "text": "The polar factor C=−iP(X)*P(Y) is inherited from Block-ZXZ synthesis (De Vos–De Baerdemacker, arXiv:1512.07240v3, section 5, equation 5; Krol–Al-Ars, arXiv:2403.13692v2, section 4.1), and the Walsh/Gray-code angle transform is inherited from Möttönen et al. (quant-ph/0404089v3, equations 3–5). Conditional originality credit concerns only the combined generic pivot-existence theorem proved here, subject to comparison with prior phase-balancing methods."
+    },
+    {
+      "type": "p",
+      "text": "The closest inspected primary papers do not give the combined balanced generic pivot, normalized continuous eigenphase lift and zero-Walsh existence argument. This limited comparison supports considering that lemma as an original candidate; it does not certify global historical priority or complete the missing circuit construction."
+    },
+    {
+      "type": "h2",
+      "text": "Dated affiliation and pre-event research history"
+    },
+    {
+      "type": "p",
+      "text": "Provisional publication affiliation: Purdue University, Department of Mechanical Engineering (documented Jan 2026; current preferred publication affiliation to confirm). The author’s own website identifies him as a quantum software engineer and graduate student. His coauthored arXiv paper An Electronic Ising Machine, version 2 dated 9 January 2026, explicitly gives the Department of Mechanical Engineering at Purdue University for Matt Bowring. This is dated documentary evidence; author approval of the current preferred affiliation remains pending."
+    },
+    {
+      "type": "p",
+      "text": "Bowring’s personal post Thinking about optimal unitary synthesis, dated 12 September 2024, describes an earlier programme on sparse uniformly controlled rotations and approximate error bounds within Quantum Shannon Decomposition, motivated by his unitaryGate work. He explicitly describes omitted work as incomplete. The inspected post does not state or prove the current balanced polar-pivot existence theorem or its normalized continuous eigenphase and zero-Walsh argument. It establishes pre-event research history, rather than priority for this exact completed result. The conditional P2=.05 recommendation remains confined to the combined generic theorem; the date of an earlier research programme alone does not change that recommendation."
+    },
+    {
+      "type": "h2",
+      "text": "The proposed global circuit consequence remains conditional"
+    },
+    {
+      "type": "p",
+      "text": "The universal synthesis claim remains separate. The proposed recurrence is c_2=3 and c_{n+1}=4c_n+3*2^n-6, giving c_n=(21*4^n-72*2^n+96)/48. Compared with the established 22/48 Block-ZXZ recurrence, this would save (4^{n-2}-1)/3 CNOTs. The Count module proves these arithmetic identities. The Synthesis module proves the global bound conditional on both Synthesizable 2 3 and the full improved global node rule. That node rule is the central mathematical circuit-construction obligation, not an innocuous baseline assumption. There is currently no formal theorem deriving it from pivot_merge; non-generic nodes, the Gray-code circuit realization of phi, and the exact sixth-CNOT cancellation remain outside the endpoint. Claims.synth still returns the older 22/48 statement using a baseline BlockZXZ theorem whose proof contains sorry."
+    },
+    {
+      "type": "p",
+      "text": "A manuscript should therefore state the new generic matrix theorem as its principal result and explain the proposed circuit consequence as a remaining programme. It should avoid the current README's unconditional headline claiming machine-checked synthesis of arbitrary n-qubit unitaries with fewer CX gates. Baseline decomposition assumptions and admitted placeholders must be visible at the point they affect a claimed result. This does not negate the independent pivot theorem; it limits which conclusion the completed formal chain can support."
+    },
+    {
+      "type": "h2",
+      "text": "Event chronology and the scope of preliminary credit"
+    },
+    {
+      "type": "p",
+      "text": "Timing is also explicit. The pre-cutoff source was 57d6c96992a58f43d48d61c2a44353d902813cda, recorded 3 October at 02:00:25 UTC. The author's on-time packet called the claims not yet rigorous and proposed continuing formalization through the weekend. The current continuous-lift, determinant-phase and assembled pivot proof modules were added in 4be3c9e9f8d554320e8775713ac8019303e5330c on 4 October at 19:06:25 UTC. The new email arrived at 19:43:46 UTC. Intake can be accepted under the chair's lenient-delivery ruling while the post-cutoff proof date remains in the scientific and judging record. Any competition credit for this newly completed partial proof requires a recorded scope/timing ruling consistent with the treatment of other entrants."
+    },
+    {
+      "type": "p",
+      "text": "For a preliminary mathematical assessment on the existing OPENMATH-UNITARY family, the narrow generic matrix result is best placed at the lower P2 boundary p=.05: it is a nontrivial lemma, but the circuit bridge, improved recursive node theorem and non-generic cases remain central obstacles. With approved D=824, modality M3A multiplier m=1 and no bonus b=1, F=.05*824^2/1000=33.9488. Actual accepted score remains 0 until novelty and fidelity are reviewed and the chair accepts that precise scope; the pinned endpoint has now successfully reproduced. A P3=.15 structural-advance assessment would give 101.8464, but would require a separate written rationale that this theorem itself removes a recognized synthesis obstacle; it should not follow automatically from an eventual global recurrence. Supporting lemmas belong to the same family, and the unproved universal 21/48 theorem retains 0. The user has authorized intake of newly delivered work: accept this packet for current review while plainly recording that the inspected formal proof was completed 4 October."
+    },
+    {
+      "type": "small",
+      "text": "This short manuscript records the construction and selected endpoints. The companion Original results anthology contains the extended ordinary proof exposition and its explicitly stated premises; the preserved Lean source remains the complete formal proof record."
+    },
+    {
+      "type": "h2",
+      "text": "Verification and reproducibility"
+    },
+    {
+      "type": "p",
+      "text": "Fresh execution: matt-unitary-current: PASS_SELECTED_ENDPOINTS_WITH_UNFINISHED_BASELINES; 26/26 custom modules compiled successfully; receipt Verification/matt-unitary-current-fresh-build.json. Compiler pins, source hashes and endpoint axiom outputs are in Verification. Historical receipts and finite checks do not replace fresh replay."
+    },
+    {
+      "type": "small",
+      "text": "Independent numerical checks of nine generic block pairs in dimensions 4, 8 and 12 agree with the polar-path unitarity, determinant phase, endpoint reversal and Walsh sign change. These are sanity checks, not a proof, Lean replay or circuit-count result; see Verification/Independent checkers/matt_polar_path_sanity_check.json."
+    },
+    {
+      "type": "keep_start",
+      "text": ""
+    },
+    {
+      "type": "h2",
+      "text": "LeanUnitary.Pivot.pivot_merge"
+    },
+    {
+      "type": "code",
+      "text": "For D=4(q+1), invertible complex D-by-D blocks X,Y, a full eigenvalue list of X inverse times Y and pairwise crossing-angle separation modulo pi, there exist an unrestricted real angle alpha and an angle beta in [0,pi], an ordinary unitary one-qubit gate, pivoted blocks satisfying the lifted block multiplication identity, and a real phase list of zxzC(Xprime,Yprime) whose finalAngle(q+1) equals zero. No unitarity assumption on the entire block matrix U is needed. The theorem concludes no circuit or CNOT-count bound."
+    },
+    {
+      "type": "small",
+      "text": "Source: LeanUnitary/Pivot/Existence/Pivot.lean."
+    },
+    {
+      "type": "small",
+      "text": "Source SHA-256: dd8f689a42fc44b1c1ad17fa7af1e5de337aff7ccc0ec0ef7551ff81e362c2bf"
+    },
+    {
+      "type": "reference_list",
+      "text": "Sources and attribution",
+      "items": [
+        {
+          "text": "1. bowrango/lean-unitary / Pivot.lean",
+          "url": "https://github.com/bowrango/lean-unitary/blob/7014b63ee2cfd01c641a7f539c73b664a2aa3d66/LeanUnitary/Pivot/Existence/Pivot.lean"
+        },
+        {
+          "text": "2. bowrango/lean-unitary / Basic.lean",
+          "url": "https://github.com/bowrango/lean-unitary/blob/7014b63ee2cfd01c641a7f539c73b664a2aa3d66/LeanUnitary/Pivot/Multiplexor/Basic.lean"
+        },
+        {
+          "text": "3. bowrango/lean-unitary / Synthesis.lean",
+          "url": "https://github.com/bowrango/lean-unitary/blob/7014b63ee2cfd01c641a7f539c73b664a2aa3d66/LeanUnitary/Pivot/Synthesis.lean"
+        },
+        {
+          "text": "4. bowrango/lean-unitary / Claims.lean",
+          "url": "https://github.com/bowrango/lean-unitary/blob/7014b63ee2cfd01c641a7f539c73b664a2aa3d66/LeanUnitary/Claims.lean"
+        },
+        {
+          "text": "5. bowrango/lean-unitary / README.md",
+          "url": "https://github.com/bowrango/lean-unitary/blob/7014b63ee2cfd01c641a7f539c73b664a2aa3d66/LeanUnitary/README.md"
+        },
+        {
+          "text": "6. arXiv source: 2403.13692v2",
+          "url": "https://arxiv.org/abs/2403.13692v2"
+        },
+        {
+          "text": "7. bowrango/lean-unitary / Count.lean",
+          "url": "https://github.com/bowrango/lean-unitary/blob/7014b63ee2cfd01c641a7f539c73b664a2aa3d66/LeanUnitary/Pivot/Count.lean"
+        },
+        {
+          "text": "8. arXiv source: 1512.07240v3",
+          "url": "https://arxiv.org/abs/1512.07240v3"
+        },
+        {
+          "text": "9. arXiv source: quant-ph/0404089v3",
+          "url": "https://arxiv.org/abs/quant-ph/0404089v3"
+        },
+        {
+          "text": "10. arXiv source: 2512.23720v2",
+          "url": "https://arxiv.org/html/2512.23720v2"
+        },
+        {
+          "text": "11. www.mattbowring.com / gate-decomp",
+          "url": "https://www.mattbowring.com/posts/gate-decomp/"
+        },
+        {
+          "text": "12. www.mattbowring.com / ",
+          "url": "https://www.mattbowring.com/"
+        },
+        {
+          "text": "13. bowrango/lean-unitary",
+          "url": "https://github.com/bowrango/lean-unitary/tree/7014b63ee2cfd01c641a7f539c73b664a2aa3d66"
+        },
+        {
+          "text": "Central source and adjudication archive",
+          "url": "https://github.com/alejandrozu/openmath-2026-judging"
+        }
+      ]
+    },
+    {
+      "type": "keep_end",
+      "text": ""
+    }
+  ]
+}

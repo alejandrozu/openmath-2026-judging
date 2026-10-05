@@ -1,0 +1,208 @@
+structure MGraph : Type
+number of parameters: 0
+fields:
+  MGraph.n : ℕ
+  MGraph.m : ℕ
+  MGraph.ends : Fin self.m → Fin self.n × Fin self.n
+constructor:
+  MGraph.mk (n m : ℕ) (ends : Fin m → Fin n × Fin n) : MGraph
+def MGraph.Star : {G : MGraph} → (k : ℕ) → (Fin G.m → Fin k) → Prop :=
+fun {G} k c => MGraph.StarOn (fun x => True) k c
+def MGraph.StarOn : {G : MGraph} → (Fin G.m → Prop) → (k : ℕ) → (Fin G.m → Fin k) → Prop :=
+fun {G} P k c =>
+  (∀ (a b : Fin G.m), G.Adj a b → P a → P b → c a ≠ c b) ∧
+    ∀ (w : G.Walk4), P w.e1 → P w.e2 → P w.e3 → P w.e4 → ¬MGraph.Bicol c w
+def MGraph.Bicol : {G : MGraph} → {k : ℕ} → (Fin G.m → Fin k) → G.Walk4 → Prop :=
+fun {G} {k} c w => c w.e1 = c w.e3 ∧ c w.e2 = c w.e4
+structure MGraph.Walk4 (G : MGraph) : Type
+number of parameters: 1
+fields:
+  MGraph.Walk4.v0 : Fin G.n
+  MGraph.Walk4.v1 : Fin G.n
+  MGraph.Walk4.v2 : Fin G.n
+  MGraph.Walk4.v3 : Fin G.n
+  MGraph.Walk4.v4 : Fin G.n
+  MGraph.Walk4.e1 : Fin G.m
+  MGraph.Walk4.e2 : Fin G.m
+  MGraph.Walk4.e3 : Fin G.m
+  MGraph.Walk4.e4 : Fin G.m
+  MGraph.Walk4.h1 : G.Joins self.e1 self.v0 self.v1
+  MGraph.Walk4.h2 : G.Joins self.e2 self.v1 self.v2
+  MGraph.Walk4.h3 : G.Joins self.e3 self.v2 self.v3
+  MGraph.Walk4.h4 : G.Joins self.e4 self.v3 self.v4
+  MGraph.Walk4.d01 : self.v0 ≠ self.v1
+  MGraph.Walk4.d02 : self.v0 ≠ self.v2
+  MGraph.Walk4.d03 : self.v0 ≠ self.v3
+  MGraph.Walk4.d12 : self.v1 ≠ self.v2
+  MGraph.Walk4.d13 : self.v1 ≠ self.v3
+  MGraph.Walk4.d14 : self.v1 ≠ self.v4
+  MGraph.Walk4.d23 : self.v2 ≠ self.v3
+  MGraph.Walk4.d24 : self.v2 ≠ self.v4
+  MGraph.Walk4.d34 : self.v3 ≠ self.v4
+constructor:
+  MGraph.Walk4.mk {G : MGraph} (v0 v1 v2 v3 v4 : Fin G.n) (e1 e2 e3 e4 : Fin G.m) (h1 : G.Joins e1 v0 v1)
+    (h2 : G.Joins e2 v1 v2) (h3 : G.Joins e3 v2 v3) (h4 : G.Joins e4 v3 v4) (d01 : v0 ≠ v1) (d02 : v0 ≠ v2)
+    (d03 : v0 ≠ v3) (d12 : v1 ≠ v2) (d13 : v1 ≠ v3) (d14 : v1 ≠ v4) (d23 : v2 ≠ v3) (d24 : v2 ≠ v4) (d34 : v3 ≠ v4) :
+    G.Walk4
+def MGraph.Subcubic : MGraph → Prop :=
+fun G =>
+  ∀ (x : Fin G.n) (a b c d : Fin G.m),
+    G.Inc a x → G.Inc b x → G.Inc c x → G.Inc d x → a ≠ b → a ≠ c → a ≠ d → b ≠ c → b ≠ d → c ≠ d → False
+def MGraph.Loopless : MGraph → Prop :=
+fun G => ∀ (f : Fin G.m), (G.ends f).1 ≠ (G.ends f).2
+def MGraph.Colourable : {G : MGraph} → (Fin G.m → Prop) → ℕ → Prop :=
+fun {G} P k => ∃ c, MGraph.StarOn P k c
+def RH2F.DMS : Prop :=
+∀ (G : MGraph), G.Subcubic → G.Loopless → ∀ (P : Fin G.m → Prop), MGraph.Colourable P 6
+def BlockStar.DMSfor : MGraph → Prop :=
+fun G => G.Subcubic → G.Loopless → ∀ (P : Fin G.m → Prop), MGraph.Colourable P 6
+def StarFamily : MGraph → ℕ → Prop :=
+fun G k =>
+  G.Subcubic ∧
+    G.Loopless ∧ (∀ (P : Fin G.m → Prop), MGraph.Colourable P k) ∧ ∀ (P : Fin G.m → Prop), MGraph.Colourable P 6
+def GPk.StarFam : MGraph → ℕ → Prop :=
+fun G k =>
+  G.Subcubic ∧
+    G.Loopless ∧ (∀ (P : Fin G.m → Prop), MGraph.Colourable P k) ∧ ∀ (P : Fin G.m → Prop), MGraph.Colourable P 6
+structure BlockStar.Wir (W : Type) (r q : ℕ) : Type
+number of parameters: 3
+fields:
+  BlockStar.Wir.D : ℕ
+  BlockStar.Wir.src : W → ℕ → ℕ
+  BlockStar.Wir.jmp : W → ℕ → ℕ
+  BlockStar.Wir.dst : W → ℕ → ℕ
+  BlockStar.Wir.hsrc : ∀ (w : W) (s : ℕ), self.src w s < r
+  BlockStar.Wir.hdst : ∀ (w : W) (s : ℕ), self.dst w s < r
+  BlockStar.Wir.hjmp : ∀ (w : W) (s : ℕ), self.jmp w s ≤ self.D
+  BlockStar.Wir.jumps : List ℕ
+  BlockStar.Wir.hjmps : ∀ (w : W) (s : ℕ), self.jmp w s ∈ self.jumps
+constructor:
+  BlockStar.Wir.mk {W : Type} {r q : ℕ} (D : ℕ) (src jmp dst : W → ℕ → ℕ) (hsrc : ∀ (w : W) (s : ℕ), src w s < r)
+    (hdst : ∀ (w : W) (s : ℕ), dst w s < r) (hjmp : ∀ (w : W) (s : ℕ), jmp w s ≤ D) (jumps : List ℕ)
+    (hjmps : ∀ (w : W) (s : ℕ), jmp w s ∈ jumps) : BlockStar.Wir W r q
+def BlockStar.BG : {W : Type} → {r q : ℕ} → BlockStar.Wir W r q → ℕ → (ℕ → W) → MGraph :=
+fun {W} {r q} Wr n ω =>
+  { n := n * r, m := n * q,
+    ends := fun e =>
+      (⟨↑e / q * r + Wr.src (ω (↑e / q)) (↑e % q), ⋯⟩,
+        ⟨(↑e / q + Wr.jmp (ω (↑e / q)) (↑e % q)) % n * r + Wr.dst (ω (↑e / q)) (↑e % q), ⋯⟩) }
+def BlockStar.bcol : {C : Type} →
+  ℕ → (ct : C → ℕ → ℕ) → {k : ℕ} → (∀ (c : C) (s : ℕ), ct c s < k) → (ℕ → C) → {m : ℕ} → Fin m → Fin k :=
+fun {C} q ct {k} hct χ {m} e => ⟨ct (χ (↑e / q)) (↑e % q), ⋯⟩
+def FlowerSnark.flowerSnark : ℕ → MGraph :=
+fun n => BlockStar.BG FlowerSnark.flowerWir n fun J => SeamSeq.tw n J
+def GoldbergSnark.goldbergSnark : ℕ → MGraph :=
+fun k => BlockStar.BG GoldbergSnark.goldbergWir k fun x => ()
+def GPetersen2.gp2 : ℕ → MGraph :=
+fun k => BlockStar.BG GPetersen2.gpWir k fun x => ()
+def GP3Five.gp3 : ℕ → MGraph :=
+fun n => BlockStar.BG GP3Five.gp3Wir n fun x => ()
+def GPk.gp : ℕ → ℕ → MGraph :=
+fun n k => BlockStar.BG (GPk.gpkWir k) n fun x => ()
+def Mobius.mobius : ℕ → MGraph :=
+fun n => BlockStar.BG Mobius.mWir n fun J => SeamSeq.tw n J
+def Inflation.inflate : (H : MGraph) → (Fin H.m → Bool → Fin 3) → MGraph :=
+fun H slot =>
+  { n := H.n * 9, m := H.n * 12 + H.m,
+    ends := fun f =>
+      if h : ↑f < H.n * 12 then
+        (Inflation.mkV (↑f / 12) ⋯ (Inflation.pe1 (↑f % 12)), Inflation.mkV (↑f / 12) ⋯ (Inflation.pe2 (↑f % 12)))
+      else
+        (Inflation.mkV ↑(Inflation.endOf H ⟨↑f - H.n * 12, ⋯⟩ false) ⋯
+            (Inflation.portv (slot ⟨↑f - H.n * 12, ⋯⟩ false)),
+          Inflation.mkV ↑(Inflation.endOf H ⟨↑f - H.n * 12, ⋯⟩ true) ⋯
+            (Inflation.portv (slot ⟨↑f - H.n * 12, ⋯⟩ true))) }
+def Inflation.PortsInj : (H : MGraph) → (Fin H.m → Bool → Fin 3) → Prop :=
+fun H slot =>
+  ∀ (e : Fin H.m) (b : Bool) (e' : Fin H.m) (b' : Bool),
+    Inflation.endOf H e b = Inflation.endOf H e' b' → slot e b = slot e' b' → e = e' ∧ b = b'
+FlowerSnark.flower_star : ∀ (n : ℕ), n % 2 = 1 → 5 ≤ n → MGraph.Star 5 (FlowerSnark.flowerCol n)
+FlowerSnark.flower_family : ∀ (n : ℕ), n % 2 = 1 → 5 ≤ n → StarFamily (FlowerSnark.flowerSnark n) 5
+GoldbergSnark.goldberg_star : ∀ (k : ℕ), k % 2 = 1 → 5 ≤ k → MGraph.Star 5 (GoldbergSnark.goldbergCol k)
+GoldbergSnark.goldberg_family : ∀ (k : ℕ), k % 2 = 1 → 5 ≤ k → StarFamily (GoldbergSnark.goldbergSnark k) 5
+GPetersen2.gp2_star : ∀ (k : ℕ), 5 ≤ k → MGraph.Star 6 (GPetersen2.gpCol k)
+GPetersen2.gp2_spokes : ∀ (k : ℕ) (e : Fin (GPetersen2.gp2 k).m), ↑(GPetersen2.gpCol k e) = 5 ↔ ↑e % 3 = 1
+GPetersen2.gp2_spoke_family : ∀ (k : ℕ),
+  5 ≤ k →
+    (GPetersen2.gp2 k).Subcubic ∧
+      (GPetersen2.gp2 k).Loopless ∧
+        MGraph.Star 6 (GPetersen2.gpCol k) ∧ ∀ (e : Fin (GPetersen2.gp2 k).m), ↑(GPetersen2.gpCol k e) = 5 ↔ ↑e % 3 = 1
+GP2Five.star5 : ∀ (n : ℕ), 5 ≤ n → MGraph.Star 5 (GP2Five.col n)
+GP2Five.gp2_family : ∀ (n : ℕ), 5 ≤ n → StarFamily (GPetersen2.gp2 n) 5
+GP3Five.star5 : ∀ (n : ℕ), 7 ≤ n → MGraph.Star 5 (GP3Five.col n)
+GP3Five.gp3_family : ∀ (n : ℕ), 7 ≤ n → StarFamily (GP3Five.gp3 n) 5
+GPk.star4 : ∀ (m : ℕ), MGraph.Star 5 (GPk.pcol GPk.tab4)
+GPk.family4 : ∀ (m : ℕ), 1 ≤ m → GPk.StarFam (GPk.gp (10 * m) 4) 5
+GPk.star6 : ∀ (m : ℕ), MGraph.Star 5 (GPk.pcol GPk.tab6)
+GPk.family6 : ∀ (m : ℕ), 1 ≤ m → GPk.StarFam (GPk.gp (14 * m) 6) 5
+GPk.star8 : ∀ (m : ℕ), MGraph.Star 5 (GPk.pcol GPk.tab8)
+GPk.family8 : ∀ (m : ℕ), 1 ≤ m → GPk.StarFam (GPk.gp (17 * m) 8) 5
+GPk.star10 : ∀ (m : ℕ), MGraph.Star 5 (GPk.pcol GPk.tab10)
+GPk.family10 : ∀ (m : ℕ), 1 ≤ m → GPk.StarFam (GPk.gp (22 * m) 10) 5
+GPk.star12 : ∀ (m : ℕ), MGraph.Star 5 (GPk.pcol GPk.tab12)
+GPk.family12 : ∀ (m : ℕ), 1 ≤ m → GPk.StarFam (GPk.gp (26 * m) 12) 5
+GPk.star14 : ∀ (m : ℕ), MGraph.Star 5 (GPk.pcol GPk.tab14)
+GPk.family14 : ∀ (m : ℕ), 1 ≤ m → GPk.StarFam (GPk.gp (30 * m) 14) 5
+gp_star5 : ∀ (k n : ℕ), 1 ≤ k → k ≤ 15 → 2 * k + 1 ≤ n → ¬(n = 3 ∧ k = 1) → ∃ c, MGraph.Star 5 c
+gp_family : ∀ (k n : ℕ), 1 ≤ k → k ≤ 15 → 2 * k + 1 ≤ n → ¬(n = 3 ∧ k = 1) → GPk.StarFam (GPk.gp n k) 5
+Mobius.star5 : ∀ (n : ℕ), 4 ≤ n → MGraph.Star 5 (Mobius.col n)
+Mobius.mobius_family : ∀ (n : ℕ), 4 ≤ n → StarFamily (Mobius.mobius n) 5
+Inflation.inflate_star5 : ∀ (H : MGraph),
+  H.Loopless → ∀ (slot : Fin H.m → Bool → Fin 3), Inflation.PortsInj H slot → ∃ c, MGraph.Star 5 c
+@BlockStar.star_of_windows : ∀ {W C : Type} {r q : ℕ} (Wr : BlockStar.Wir W r q) (ct : C → ℕ → ℕ) {k : ℕ}
+  (hct : ∀ (c : C) (s : ℕ), ct c s < k) (n : ℕ) (ω : ℕ → W) (χ : ℕ → C),
+  (∀ j < n,
+      ∃ wk ck, (∀ p ≤ 3 * Wr.D, wk p = ω ((j + p) % n) ∧ ck p = χ ((j + p) % n)) ∧ BlockStar.winOK Wr ct wk ck = true) →
+    MGraph.Star k (BlockStar.bcol q ct hct χ)
+@BlockStar.BG_ends : ∀ {W : Type} {r q : ℕ} (Wr : BlockStar.Wir W r q) (n : ℕ) (ω : ℕ → W) (J s : ℕ),
+  J < n →
+    s < q →
+      ∃ (h : J * q + s < n * q),
+        ↑((BlockStar.BG Wr n ω).ends ⟨J * q + s, h⟩).1 = J * r + Wr.src (ω J) s ∧
+          ↑((BlockStar.BG Wr n ω).ends ⟨J * q + s, h⟩).2 = (J + Wr.jmp (ω J) s) % n * r + Wr.dst (ω J) s
+@BlockStar.BG_loopless : ∀ {W : Type} {r q : ℕ} (Wr : BlockStar.Wir W r q) (n : ℕ) (ω : ℕ → W),
+  Wr.D < n → (∀ (w : W), ∀ s < q, Wr.jmp w s = 0 → Wr.src w s ≠ Wr.dst w s) → (BlockStar.BG Wr n ω).Loopless
+@BlockStar.BG_subcubic : ∀ {W : Type} {r q : ℕ} (Wr : BlockStar.Wir W r q) (n : ℕ) (ω : ℕ → W),
+  (∀ j < n, ∃ wk, (∀ p ≤ Wr.D, wk p = ω ((j + p) % n)) ∧ BlockStar.degOK Wr wk = true) → (BlockStar.BG Wr n ω).Subcubic
+@BlockStar.colourable_of_star : ∀ {G : MGraph} {k k' : ℕ} {c : Fin G.m → Fin k},
+  MGraph.Star k c → k ≤ k' → ∀ (P : Fin G.m → Prop), MGraph.Colourable P k'
+BlockStar.dms_iff : RH2F.DMS ↔ ∀ (G : MGraph), BlockStar.DMSfor G
+@starFamily_dms : ∀ {G : MGraph} {k : ℕ}, StarFamily G k → BlockStar.DMSfor G
+GPk.periodic_star : ∀ (k : ℕ) (tab : List (List ℕ)),
+  0 < tab.length → GPk.perOK k tab → ∀ (m : ℕ), MGraph.Star 5 (GPk.pcol tab)
+'FlowerSnark.flower_star' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FlowerSnark.flower_family' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbergSnark.goldberg_star' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GoldbergSnark.goldberg_family' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GPetersen2.gp2_star' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GPetersen2.gp2_spokes' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GPetersen2.gp2_spoke_family' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GP2Five.star5' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GP2Five.gp2_family' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GP3Five.star5' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GP3Five.gp3_family' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GPk.star4' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GPk.family4' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GPk.star6' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GPk.family6' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GPk.star8' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GPk.family8' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GPk.star10' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GPk.family10' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GPk.star12' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GPk.family12' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GPk.star14' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GPk.family14' depends on axioms: [propext, Classical.choice, Quot.sound]
+'gp_star5' depends on axioms: [propext, Classical.choice, Quot.sound]
+'gp_family' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Mobius.star5' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Mobius.mobius_family' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Inflation.inflate_star5' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BlockStar.star_of_windows' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BlockStar.BG_ends' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BlockStar.BG_loopless' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BlockStar.BG_subcubic' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BlockStar.colourable_of_star' does not depend on any axioms
+'BlockStar.dms_iff' does not depend on any axioms
+'starFamily_dms' does not depend on any axioms
+'GPk.periodic_star' depends on axioms: [propext, Classical.choice, Quot.sound]

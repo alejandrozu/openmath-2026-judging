@@ -1,0 +1,154 @@
+{
+  "status": "READ_ONLY_PRIMARY_SOURCE_IR_SIGNATURE_ROLE_AND_PARENT_IDENTITY_ASSESSMENT_NO_DESERIALIZATION",
+  "checked_utc": "2026-10-05T09:45:31.551359+00:00",
+  "reviewer": "nonnovel_and_affiliations",
+  "actual_summary_sha256": "8f7f62d3f8ebe8013d9530efc8042b23a42ad19de2edcfa8299b93ad43e16c3f",
+  "unit_manifest_sha256": "e51cbdb7e9bfc804308508406c01b895c8725208206f62eb3425aea3dd3323e8",
+  "historical_baseline_sha256": "a6359588ec1fb5dbbae82a248d7b70e52fdfdce0055dfaebd91afb271d020289",
+  "metadata_mapping_review": {
+    "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\ht-actual-header-seed-e51cb-source-role-metadata-independent-review-20261005.json",
+    "sha256": "edcf2f64492fe6bdfc0f4433ffa95c89c88494db02a38f3641e3abe9596c8e0b"
+  },
+  "pinned_primary_source_evidence": [
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\src\\lean\\LeanIR.lean",
+      "sha256": "cb0e362fc299ab84ead24874efacc462e25c8c43aaa9d24276518a9ef538dee2",
+      "primary_source_url": "https://github.com/leanprover/lean4/blob/819816b2e0a3bf405af45ae5c7af2491d8f5bee6/src/LeanIR.lean",
+      "locators": [
+        {
+          "needle": "def mkIRSigData",
+          "lines": [
+            26
+          ]
+        },
+        {
+          "needle": "def mkIRData",
+          "lines": [
+            32
+          ]
+        },
+        {
+          "needle": "saveModuleDataParts (env.mainModule",
+          "lines": [
+            160
+          ]
+        }
+      ]
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\src\\lean\\Lean\\Environment.lean",
+      "sha256": "ee364e4788ce0560c87f621eeb3c4c3dfec62e8db4e15e099fd80e6adc533b86",
+      "primary_source_url": "https://github.com/leanprover/lean4/blob/819816b2e0a3bf405af45ae5c7af2491d8f5bee6/src/Lean/Environment.lean",
+      "locators": [
+        {
+          "needle": "def saveModuleDataParts",
+          "lines": [
+            1772
+          ]
+        },
+        {
+          "needle": "def readModuleDataParts",
+          "lines": [
+            1782,
+            2078
+          ]
+        },
+        {
+          "needle": "private def readIRPartsOfMod",
+          "lines": [
+            2093
+          ]
+        },
+        {
+          "needle": "let irSig \u2190 unsafe CompactedRegion.read",
+          "lines": [
+            2100
+          ]
+        },
+        {
+          "needle": "let ir \u2190 unsafe CompactedRegion.read",
+          "lines": [
+            2104
+          ]
+        }
+      ]
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\src\\lean\\Lean\\CompactedRegion.lean",
+      "sha256": "56ef2a63c2394faefe590b58a5e3bd239589ddb6657a8523e5b0385800043f94",
+      "primary_source_url": "https://github.com/leanprover/lean4/blob/819816b2e0a3bf405af45ae5c7af2491d8f5bee6/src/Lean/CompactedRegion.lean",
+      "locators": [
+        {
+          "needle": "key` is hashed",
+          "lines": [
+            78
+          ]
+        },
+        {
+          "needle": "public unsafe opaque CompactedRegion.save",
+          "lines": [
+            94
+          ]
+        },
+        {
+          "needle": "public unsafe opaque CompactedRegion.read",
+          "lines": [
+            108
+          ]
+        },
+        {
+          "needle": "depRegions` are existing",
+          "lines": [
+            101
+          ]
+        }
+      ]
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\src\\lean\\Lean\\Elab\\Frontend.lean",
+      "sha256": "e3e9037222c00308edc4fed589da83a80620bf5b35108779564fc485d8c17774",
+      "primary_source_url": "https://github.com/leanprover/lean4/blob/819816b2e0a3bf405af45ae5c7af2491d8f5bee6/src/Lean/Elab/Frontend.lean",
+      "locators": [
+        {
+          "needle": "accumulate so `.ir` is read",
+          "lines": [
+            192
+          ]
+        },
+        {
+          "needle": "let (_, region) \u2190 CompactedRegion.read",
+          "lines": [
+            187,
+            191
+          ]
+        }
+      ]
+    }
+  ],
+  "additional_signature_role_count": 2307,
+  "logical_bytes": 406032,
+  "signature_size_distribution": {
+    "176": 2307
+  },
+  "all2307_parent_IR_artifacts_match_historical_pinned_baseline_SHA_and_size": true,
+  "role_definition": "The .ir.sig file contains an exported ModuleData/IR-signature part made by mkIRSigData; it is not a cryptographic authentication signature or a checksum of the neighboring .ir file. mkIRData contains fuller private/compiler IR information.",
+  "save_read_dependency_order": "LeanIR saves .ir.sig first and .ir second through saveModuleDataParts, sharing objects across parts. Environment.readIRPartsOfMod first reads .ir.sig with no dependency regions, then reads .ir with the signature compacted region supplied as its dependency. Frontend repeats that ordered role handling when restoring header dependencies.",
+  "what_the_key_hash_means": "The CompactedRegion API documents hashing the module key only to derive a deterministic memory-mapping base address. That does not authenticate sibling content.",
+  "independent_recompute_limit": "The inspected pinned source does not define a content-authentication check that derives .ir.sig bytes from a standalone .ir. The latter is a second compacted part with cross-region pointers into the first, so a baseline SHA for .ir alone is not a cryptographic witness of every .ir.sig byte. Recreating a signature part from source would require a corresponding compilation/environment reconstruction, which was not invoked here.",
+  "scoped_identity_basis": [
+    "All2307 current .ir.sig files have exact SHA/size/fileID/mtime matches to the frozen actual a466 seed role inventory and the completed actual read-only producer manifest.",
+    "All2307 corresponding .ir files match the prior independently recorded pinned official baseline; source modules and provider revisions match exactly.",
+    "All additional signatures predate the actual seed. Official release/cache provenance and exact nine package pins are the provider ancestry basis; this record does not claim source-to-binary byte reconstruction."
+  ],
+  "limitations": [
+    "No Lean, native deserializer, header loader, compiler, or runtime native function was called.",
+    "Native C++ implementation of the compacted-region extern was not separately fetched/reviewed in this narrow assessment; the exact installed primary Lean interface and save/read algorithms establish the stated part-order and role semantics.",
+    "The four sampled loaded-image errors remain preserved, and relevant-library identity review plus actual endpoint audits remain separate requirements."
+  ],
+  "actions": {
+    "source_or_artifact_mutation": false,
+    "additional_artifact_byte_rescan": false,
+    "compiler_loader_or_controller_execution": false,
+    "additive_review_metadata_only": true
+  }
+}

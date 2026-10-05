@@ -1,0 +1,95 @@
+--- run_dms_import_pruned_plan.py@2460c745
++++ run_dms_modeq_v2_linked_plan.py
+@@ -30,7 +30,7 @@
+  assert project=='sakana-erdos169-fourap' and third_worker_continuation and not third_worker_pilot, 'Only the explicitly authorized E169 independent-DAG continuation'
+ novel_third_projects={'sakana-a000224','sakana-erdos169-fourap','htpeo-kobon471','sakana-a060957','sakana-a100475','sakana-ferrers',
+  'sakana-erdos1060-uniform-partial','sakana-erdos829-log-five-thirds','sakana-opdp89-parity-sharp','sakana-FOCUS-E3','sakana-FOCUS-E3-pullback',
+- 'sakana-FOCUS-MATRIX-seed0','sakana-FOCUS-MATRIX-seed1','sakana-FOCUS-MATRIX-seed2','matt-unitary-current','htpeo-dms-current','htpeo-dms-current-import-pruned-diagnostic'}
++ 'sakana-FOCUS-MATRIX-seed0','sakana-FOCUS-MATRIX-seed1','sakana-FOCUS-MATRIX-seed2','matt-unitary-current','htpeo-dms-current','htpeo-dms-current-import-pruned-modeq-v2'}
+ if full_mathlib_source_mode:
+  assert third_worker_guarded and project!='matt-unitary-current' and (project!='sakana-a000224' or a000_whole_scope_only),'Future selected full-library mode only; narrower Matt/A000 policies remain unchanged outside explicit A000 whole-scope mode'
+ legacy_a000_single_pilot=third_worker_pilot and project=='sakana-a000224' and not full_mathlib_source_mode
+@@ -50,27 +50,27 @@
+ dest=BASE/'builds'/project
+ plan=json.loads((dest/'build-plan.json').read_text())
+ 
+-# Qualified exact99 previous-own-output transfer; no invented compilation rows.
+-assert project=='htpeo-dms-current-import-pruned-diagnostic' and worker_threads==1
++# Qualified exact99 previous-own-output NTFS hard-link seed; no invented compilation rows.
++assert project=='htpeo-dms-current-import-pruned-modeq-v2' and worker_threads==1
+ assert third_worker_guarded and not full_mathlib_source_mode and not independent_resource_mode and not defer_whole_import_mode
+ assert third_worker_pilot != third_worker_continuation
+ policy_flag='--reviewed-policy-sha256';seed_flag='--seed-receipt-sha256'
+ assert sys.argv.count(policy_flag)==sys.argv.count(seed_flag)==1
+ dms_policy_sha=sys.argv[sys.argv.index(policy_flag)+1]
+ dms_seed_sha=sys.argv[sys.argv.index(seed_flag)+1]
+-assert dms_policy_sha=='79b4fa2274995fa3a819fc77082847435fd2abe611d4a57968e62dff79e45f1e' and re.fullmatch('[0-9a-f]{64}',dms_seed_sha)
+-assert hashlib.sha256((BASE/'verify_dms_full228_stage.py').read_bytes()).hexdigest()=='5f8e8f917a8551029c1b66eb389cd185f0e3d18aba1a13cb64aac5029d9dcb76'
+-assert hashlib.sha256((BASE/'dms_original99_output_transfer.py').read_bytes()).hexdigest()=='5c7a25a374103999b65454e5e4c4b70ade0a573cfda2e57b03f8a53d33bec08e'
+-from verify_dms_full228_stage import verify_stage
+-from dms_original99_output_transfer import verify_seed
++assert dms_policy_sha=='bfd720d9afbd3774f1cbce465dddf749b5d45e4ba28b755eed2421e078bfa814' and re.fullmatch('[0-9a-f]{64}',dms_seed_sha)
++assert hashlib.sha256((BASE/'verify_dms_modeq_v2_stage.py').read_bytes()).hexdigest()=='65da1bcef62d2a433eb16353d027910f67ca59fe0d3f08d0635700705fadb10b'
++assert hashlib.sha256((BASE/'dms_modeq_v2_original99_hardlink_seed.py').read_bytes()).hexdigest()=='0c6161c5dbd14a55c308aad4790dd88eea230934f4045e22ce9ccd2ad18b7eb3'
++from verify_dms_modeq_v2_stage import verify_stage
++from dms_modeq_v2_original99_hardlink_seed import verify_seed
+ dms_stage_preflight=verify_stage(require_cold=False)
+ dms_stage_preflight['identity_verifier_performed_output_transfer']=dms_stage_preflight.pop('outputs_copied_or_marked_reusable')
+ dms_seed_preflight=verify_seed(dms_policy_sha,dms_seed_sha)
+-seed_receipt=json.loads((BASE/'dms-original99-output-transfer-completed-20261005.json').read_bytes())
++seed_receipt=json.loads((BASE/'dms-modeq-v2-original99-hardlink-seed-completed-20261005.json').read_bytes())
+ assert hashlib.sha256(Path(seed_receipt['approval_receipt']).read_bytes()).hexdigest()==seed_receipt['approval_receipt_sha256']
+-assert seed_receipt['seed_helper_sha256']=='5c7a25a374103999b65454e5e4c4b70ade0a573cfda2e57b03f8a53d33bec08e'
++assert seed_receipt['seed_helper_sha256']=='0c6161c5dbd14a55c308aad4790dd88eea230934f4045e22ce9ccd2ad18b7eb3'
+ plan['import_only_stage_identity_preflight']=dms_stage_preflight
+-plan['qualified_previous_own_original99_transfer']=dms_seed_preflight
++plan['qualified_previous_own_original99_hard_link_seed']=dms_seed_preflight
+ plan['cross_route_own_output_reuse_labels']={'previous_own_original_route_cold_outputs_reused':99,'new_cold_diagnostic_sources_required':129,'outputs_described_as_new_compilation_rows':False}
+ 
+ deferred_whole_names=set()
+@@ -245,10 +245,13 @@
+  plan['retained_successful_custom_modules']=sum(row['exit']==0 for row in retained.values())
+ # Seeded modules are skip metadata, not simulated compiler invocation rows.
+ dms_seed_names={m['module'] for m in dms_seed_preflight['modules']}
++dms_linked_output_paths={Path(item['diagnostic_target']).resolve() for item in seed_receipt['output_links']}
++assert len(dms_linked_output_paths)==99
++plan['hard_link_write_policy']='All99 linked outputs are skipped and forbidden as compiler output targets; original route remains inactive.'
+ assert len(dms_seed_names)==99 and dms_seed_names.isdisjoint(dms_seed_preflight['required129_new_cold_module_names'])
+ for n in dms_seed_names:
+- assert n not in retained and n not in {row['module'] for row in plan['builds']},'Transferred99 outputs must never become fresh compilation rows'
+- retained[n]={'exit':0,'reuse_kind':'PREVIOUS_OWN_ORIGINAL_ROUTE_COLD_OUTPUT_TRANSFER','fresh_diagnostic_compilation':False}
++ assert n not in retained and n not in {row['module'] for row in plan['builds']},'Hard-linked99 outputs must never become fresh compilation rows'
++ retained[n]={'exit':0,'reuse_kind':'PREVIOUS_OWN_ORIGINAL_ROUTE_COLD_OUTPUT_HARD_LINK','fresh_diagnostic_compilation':False}
+ plan['verified_previous_own_cold_source_output_modules']=sorted(dms_seed_names)
+ if independent_resource_mode:
+  plan['resource_settings']['independent_resource_dag_mode']={'authorization':'ROOT_AUTHORIZED_E169_INDEPENDENT_MODULE_ATTEMPTS_WITH_RESOURCE_ROOTS_AND_DESCENDANTS_EXPLICITLY_DEFERRED',
+@@ -270,8 +273,10 @@
+   'unattempted_or_unpassed_required_new_source_modules':sorted(required_new-actual_passes),
+   'scientific_body_sources_verified_in_this_qualified_route':99+len(actual_passes),
+   'scientific_body_source_total':228,'selected_audit_always_requires_new_invocation':True,
+-  'qualification':'99 previous own original-route cold outputs transferred with full unaffected-closure identities; only actual new source invocations appear in builds.'}
+- if plan['status'].startswith('PASS'):assert actual_passes==required_new,'A diagnostic PASS requires all129 new cold sources plus99 separately qualified prior own outputs'
++  'qualification':'99 previous own original-route cold outputs hard-linked with full unaffected-closure and NTFS file identities; only actual new source invocations appear in builds.'}
++ if plan['status'].startswith('PASS'):
++  assert actual_passes==required_new,'A diagnostic PASS requires all129 new cold sources plus99 separately qualified prior own outputs'
++  plan['completed99_NTFS_identity_and_original_output_recheck']=verify_seed(dms_policy_sha,dms_seed_sha)
+  temporary=report.with_suffix('.json.tmp')
+  temporary.write_text(json.dumps(plan,indent=2),encoding='utf8')
+  for attempt in range(101):
+@@ -283,6 +288,7 @@
+ new_source_invocations=0
+ for n in ordered+plan['audit_modules']+plan.get('non_acceptance_audit_modules',[]):
+  if n in retained:continue
++ assert n not in dms_seed_names,'A linked previous output must never reach the compiler dispatch loop'
+  if n in deferred_whole_names:
+   plan['deferred_whole_import_policy']['unattempted_whole_invocations'].append({'module':n,'attempted':False,
+     'is_endpoint_audit':n.endswith('.lean'),'classification':'SEPARATE_SOLE_LITERAL_IMPORTER_LEASE_REQUIRED'})
+@@ -299,6 +305,8 @@
+    save();print('RESOURCE_DAG_DEFERRED',project,n,','.join(blockers),flush=True);continue
+  audit=n.endswith('.lean');m={'file':str(dest/n),'module':n} if audit else modules[n]
+  file=Path(m['file']);relative=file.relative_to(dest)
++ assert file.with_suffix('.olean').resolve() not in dms_linked_output_paths,'Never overwrite a hard-linked output'
++ assert all(p.resolve() not in dms_linked_output_paths for p in artifacts(file)),'Never rename or touch a hard-linked output'
+  if not audit:assert hashlib.sha256(file.read_bytes()).hexdigest()==m['sha256'],n
+  if third_worker_guarded:
+   waiting=False

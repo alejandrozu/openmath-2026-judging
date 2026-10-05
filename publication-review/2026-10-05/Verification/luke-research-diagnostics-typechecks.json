@@ -1,0 +1,459 @@
+{
+  "created_utc": "2026-10-04T22:24:41.995048+00:00",
+  "source_commit": "2cf216ba885fbb1b2d1b2d4920efeaa6ba438842",
+  "lean_version": "4.34.1",
+  "supplementary_scope": "Type-check four standalone Std-only research diagnostics; do not execute main, certify any theorem, or claim fresh numeric outputs. The 51-file formal package replay is recorded separately.",
+  "status": "PASS_TYPECHECK_ONLY",
+  "sources": [
+    {
+      "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\research\\experiments\\verification_precision\\graphon_nat_audit.lean",
+      "relative_path": "research\\experiments\\verification_precision\\graphon_nat_audit.lean",
+      "sha256": "f35567414f6aa46c18cf3cea2bc8aad464266c3dd03757867285502066b47abf",
+      "imports": [
+        "Std"
+      ],
+      "theorem_declarations": 0,
+      "axiom_declarations": 0
+    },
+    {
+      "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\research\\experiments\\verification_precision\\latent_graphon_nat_audit.lean",
+      "relative_path": "research\\experiments\\verification_precision\\latent_graphon_nat_audit.lean",
+      "sha256": "8212fd119881a5a21b90640664600b7915bf64280b71c956586e63a611d6ff1c",
+      "imports": [
+        "Std"
+      ],
+      "theorem_declarations": 0,
+      "axiom_declarations": 0
+    },
+    {
+      "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\research\\experiments\\verification_precision\\typed_kernel_histogram.lean",
+      "relative_path": "research\\experiments\\verification_precision\\typed_kernel_histogram.lean",
+      "sha256": "2fdc0155647986ea5d8831f599d33844455cbebec9861e480e0fabed75532be2",
+      "imports": [
+        "Std"
+      ],
+      "theorem_declarations": 0,
+      "axiom_declarations": 0
+    },
+    {
+      "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\research\\experiments\\weights\\collective_graphon_audit.lean",
+      "relative_path": "research\\experiments\\weights\\collective_graphon_audit.lean",
+      "sha256": "ba6d40e2877442695a39b2bdbf524729c9ab3253c625bb736bb6fab4c301e0b6",
+      "imports": [
+        "Std"
+      ],
+      "theorem_declarations": 0,
+      "axiom_declarations": 0
+    }
+  ],
+  "id": "luke-k4-ramsey-research-diagnostics",
+  "started_utc": "2026-10-05T02:19:08.196569+00:00",
+  "builds": [
+    {
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-o",
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-research-diagnostics\\graphon_nat_audit.olean",
+        "-i",
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-research-diagnostics\\graphon_nat_audit.ilean",
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\research\\experiments\\verification_precision\\graphon_nat_audit.lean"
+      ],
+      "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\research\\experiments\\verification_precision",
+      "started_utc": "2026-10-05T02:19:08.330024+00:00",
+      "attempted": true,
+      "dispatch_counters": {
+        "disk_free_bytes": 6700396544,
+        "physical_available_bytes": 11113398272,
+        "available_commit_bytes": 8720998400,
+        "commit_limit_bytes": 60437172224
+      },
+      "minimum_counters": {
+        "disk_free_bytes": 6700097536,
+        "physical_available_bytes": 10673033216,
+        "available_commit_bytes": 7871737856,
+        "commit_limit_bytes": 60437172224
+      },
+      "guard_sha256": "809802c8d69384918ef8739f10a944bbacb0b76bff36d2aa6b5b18b3bb4bf45e",
+      "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+      "image_observer_sha256": "d25a05c7b3e15d349c94416f675af79d5e5ca2db9dd050f1ff9387eb4ea613d6",
+      "resource_policy": {
+        "initial_disk_bytes": 4000000000,
+        "initial_physical_bytes": 6442450944,
+        "initial_available_commit_bytes": 5368709120,
+        "continuous_disk_bytes": 1000000000,
+        "continuous_physical_bytes": 3221225472,
+        "continuous_available_commit_bytes": 1073741824,
+        "own_job_private_cap_bytes": 6442450944,
+        "own_process_private_cap_bytes": 6442450944,
+        "poll_seconds": 0.25,
+        "timeout_seconds": 600
+      },
+      "uses_native_adapter": false,
+      "loaded_native_images": [],
+      "cache_pointer_observations": [],
+      "image_observation_errors": [],
+      "root_pid": 46020,
+      "created_suspended": true,
+      "assigned_to_own_job_before_resume": true,
+      "NtResumeProcess_status": 0,
+      "resumed_after_own_job_assignment": true,
+      "exit": 0,
+      "job_peak_process_private_bytes": 851922944,
+      "job_peak_aggregate_private_bytes": 853172224,
+      "state": "PASS",
+      "finished_utc": "2026-10-05T02:19:10.013632+00:00",
+      "seconds": 1.687,
+      "polled_peak_tree_private_bytes": 833302528,
+      "observed_own_processes": {
+        "46020": {
+          "exe": "lean.exe",
+          "peak_private_bytes": 832053248,
+          "peak_rss_bytes": 457539584
+        },
+        "29188": {
+          "exe": "conhost.exe",
+          "peak_private_bytes": 1249280,
+          "peak_rss_bytes": 7843840
+        }
+      },
+      "counter_samples": 7,
+      "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-research-diagnostics\\logs\\00-graphon_nat_audit.stdout.txt",
+      "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-research-diagnostics\\logs\\00-graphon_nat_audit.stderr.txt",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout": "",
+      "stderr": "",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\research\\experiments\\verification_precision\\graphon_nat_audit.lean",
+      "source_sha256": "f35567414f6aa46c18cf3cea2bc8aad464266c3dd03757867285502066b47abf",
+      "sha256": "f35567414f6aa46c18cf3cea2bc8aad464266c3dd03757867285502066b47abf",
+      "main_executed": false,
+      "supplementary_typecheck_only": true
+    },
+    {
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-o",
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-research-diagnostics\\latent_graphon_nat_audit.olean",
+        "-i",
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-research-diagnostics\\latent_graphon_nat_audit.ilean",
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\research\\experiments\\verification_precision\\latent_graphon_nat_audit.lean"
+      ],
+      "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\research\\experiments\\verification_precision",
+      "started_utc": "2026-10-05T02:19:10.031962+00:00",
+      "attempted": true,
+      "dispatch_counters": {
+        "disk_free_bytes": 6700093440,
+        "physical_available_bytes": 11116969984,
+        "available_commit_bytes": 8694304768,
+        "commit_limit_bytes": 60437172224
+      },
+      "minimum_counters": {
+        "disk_free_bytes": 6699769856,
+        "physical_available_bytes": 10652942336,
+        "available_commit_bytes": 7790436352,
+        "commit_limit_bytes": 60437172224
+      },
+      "guard_sha256": "809802c8d69384918ef8739f10a944bbacb0b76bff36d2aa6b5b18b3bb4bf45e",
+      "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+      "image_observer_sha256": "d25a05c7b3e15d349c94416f675af79d5e5ca2db9dd050f1ff9387eb4ea613d6",
+      "resource_policy": {
+        "initial_disk_bytes": 4000000000,
+        "initial_physical_bytes": 6442450944,
+        "initial_available_commit_bytes": 5368709120,
+        "continuous_disk_bytes": 1000000000,
+        "continuous_physical_bytes": 3221225472,
+        "continuous_available_commit_bytes": 1073741824,
+        "own_job_private_cap_bytes": 6442450944,
+        "own_process_private_cap_bytes": 6442450944,
+        "poll_seconds": 0.25,
+        "timeout_seconds": 600
+      },
+      "uses_native_adapter": false,
+      "loaded_native_images": [],
+      "cache_pointer_observations": [],
+      "image_observation_errors": [],
+      "root_pid": 43692,
+      "created_suspended": true,
+      "assigned_to_own_job_before_resume": true,
+      "NtResumeProcess_status": 0,
+      "resumed_after_own_job_assignment": true,
+      "exit": 0,
+      "job_peak_process_private_bytes": 852103168,
+      "job_peak_aggregate_private_bytes": 853331968,
+      "state": "PASS",
+      "finished_utc": "2026-10-05T02:19:11.980563+00:00",
+      "seconds": 1.953,
+      "polled_peak_tree_private_bytes": 833458176,
+      "observed_own_processes": {
+        "42204": {
+          "exe": "conhost.exe",
+          "peak_private_bytes": 1228800,
+          "peak_rss_bytes": 7839744
+        },
+        "43692": {
+          "exe": "lean.exe",
+          "peak_private_bytes": 832229376,
+          "peak_rss_bytes": 457891840
+        }
+      },
+      "counter_samples": 8,
+      "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-research-diagnostics\\logs\\01-latent_graphon_nat_audit.stdout.txt",
+      "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-research-diagnostics\\logs\\01-latent_graphon_nat_audit.stderr.txt",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout": "",
+      "stderr": "",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\research\\experiments\\verification_precision\\latent_graphon_nat_audit.lean",
+      "source_sha256": "8212fd119881a5a21b90640664600b7915bf64280b71c956586e63a611d6ff1c",
+      "sha256": "8212fd119881a5a21b90640664600b7915bf64280b71c956586e63a611d6ff1c",
+      "main_executed": false,
+      "supplementary_typecheck_only": true
+    },
+    {
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-o",
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-research-diagnostics\\typed_kernel_histogram.olean",
+        "-i",
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-research-diagnostics\\typed_kernel_histogram.ilean",
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\research\\experiments\\verification_precision\\typed_kernel_histogram.lean"
+      ],
+      "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\research\\experiments\\verification_precision",
+      "started_utc": "2026-10-05T02:19:12.001078+00:00",
+      "attempted": true,
+      "dispatch_counters": {
+        "disk_free_bytes": 6699765760,
+        "physical_available_bytes": 11097534464,
+        "available_commit_bytes": 8611479552,
+        "commit_limit_bytes": 60437172224
+      },
+      "minimum_counters": {
+        "disk_free_bytes": 6699376640,
+        "physical_available_bytes": 10629677056,
+        "available_commit_bytes": 7735676928,
+        "commit_limit_bytes": 60437172224
+      },
+      "guard_sha256": "809802c8d69384918ef8739f10a944bbacb0b76bff36d2aa6b5b18b3bb4bf45e",
+      "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+      "image_observer_sha256": "d25a05c7b3e15d349c94416f675af79d5e5ca2db9dd050f1ff9387eb4ea613d6",
+      "resource_policy": {
+        "initial_disk_bytes": 4000000000,
+        "initial_physical_bytes": 6442450944,
+        "initial_available_commit_bytes": 5368709120,
+        "continuous_disk_bytes": 1000000000,
+        "continuous_physical_bytes": 3221225472,
+        "continuous_available_commit_bytes": 1073741824,
+        "own_job_private_cap_bytes": 6442450944,
+        "own_process_private_cap_bytes": 6442450944,
+        "poll_seconds": 0.25,
+        "timeout_seconds": 600
+      },
+      "uses_native_adapter": false,
+      "loaded_native_images": [],
+      "cache_pointer_observations": [],
+      "image_observation_errors": [],
+      "root_pid": 2888,
+      "created_suspended": true,
+      "assigned_to_own_job_before_resume": true,
+      "NtResumeProcess_status": 0,
+      "resumed_after_own_job_assignment": true,
+      "exit": 0,
+      "job_peak_process_private_bytes": 853766144,
+      "job_peak_aggregate_private_bytes": 855003136,
+      "state": "PASS",
+      "finished_utc": "2026-10-05T02:19:14.268104+00:00",
+      "seconds": 2.266,
+      "polled_peak_tree_private_bytes": 835444736,
+      "observed_own_processes": {
+        "2888": {
+          "exe": "lean.exe",
+          "peak_private_bytes": 834207744,
+          "peak_rss_bytes": 459702272
+        },
+        "27736": {
+          "exe": "conhost.exe",
+          "peak_private_bytes": 1236992,
+          "peak_rss_bytes": 7839744
+        }
+      },
+      "counter_samples": 9,
+      "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-research-diagnostics\\logs\\02-typed_kernel_histogram.stdout.txt",
+      "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-research-diagnostics\\logs\\02-typed_kernel_histogram.stderr.txt",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout": "",
+      "stderr": "",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\research\\experiments\\verification_precision\\typed_kernel_histogram.lean",
+      "source_sha256": "2fdc0155647986ea5d8831f599d33844455cbebec9861e480e0fabed75532be2",
+      "sha256": "2fdc0155647986ea5d8831f599d33844455cbebec9861e480e0fabed75532be2",
+      "main_executed": false,
+      "supplementary_typecheck_only": true
+    },
+    {
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-o",
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-research-diagnostics\\collective_graphon_audit.olean",
+        "-i",
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-research-diagnostics\\collective_graphon_audit.ilean",
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\research\\experiments\\weights\\collective_graphon_audit.lean"
+      ],
+      "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\research\\experiments\\weights",
+      "started_utc": "2026-10-05T02:19:14.287045+00:00",
+      "attempted": true,
+      "dispatch_counters": {
+        "disk_free_bytes": 6699368448,
+        "physical_available_bytes": 11084959744,
+        "available_commit_bytes": 8558190592,
+        "commit_limit_bytes": 60437172224
+      },
+      "minimum_counters": {
+        "disk_free_bytes": 6699048960,
+        "physical_available_bytes": 10682417152,
+        "available_commit_bytes": 7750426624,
+        "commit_limit_bytes": 60437172224
+      },
+      "guard_sha256": "809802c8d69384918ef8739f10a944bbacb0b76bff36d2aa6b5b18b3bb4bf45e",
+      "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+      "image_observer_sha256": "d25a05c7b3e15d349c94416f675af79d5e5ca2db9dd050f1ff9387eb4ea613d6",
+      "resource_policy": {
+        "initial_disk_bytes": 4000000000,
+        "initial_physical_bytes": 6442450944,
+        "initial_available_commit_bytes": 5368709120,
+        "continuous_disk_bytes": 1000000000,
+        "continuous_physical_bytes": 3221225472,
+        "continuous_available_commit_bytes": 1073741824,
+        "own_job_private_cap_bytes": 6442450944,
+        "own_process_private_cap_bytes": 6442450944,
+        "poll_seconds": 0.25,
+        "timeout_seconds": 600
+      },
+      "uses_native_adapter": false,
+      "loaded_native_images": [],
+      "cache_pointer_observations": [],
+      "image_observation_errors": [],
+      "root_pid": 8612,
+      "created_suspended": true,
+      "assigned_to_own_job_before_resume": true,
+      "NtResumeProcess_status": 0,
+      "resumed_after_own_job_assignment": true,
+      "exit": 0,
+      "job_peak_process_private_bytes": 851787776,
+      "job_peak_aggregate_private_bytes": 853032960,
+      "state": "PASS",
+      "finished_utc": "2026-10-05T02:19:15.950862+00:00",
+      "seconds": 1.657,
+      "polled_peak_tree_private_bytes": 833101824,
+      "observed_own_processes": {
+        "57268": {
+          "exe": "conhost.exe",
+          "peak_private_bytes": 1245184,
+          "peak_rss_bytes": 7843840
+        },
+        "8612": {
+          "exe": "lean.exe",
+          "peak_private_bytes": 831856640,
+          "peak_rss_bytes": 457863168
+        }
+      },
+      "counter_samples": 7,
+      "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-research-diagnostics\\logs\\03-collective_graphon_audit.stdout.txt",
+      "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-research-diagnostics\\logs\\03-collective_graphon_audit.stderr.txt",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout": "",
+      "stderr": "",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\luke-k4-ramsey\\research\\experiments\\weights\\collective_graphon_audit.lean",
+      "source_sha256": "ba6d40e2877442695a39b2bdbf524729c9ab3253c625bb736bb6fab4c301e0b6",
+      "sha256": "ba6d40e2877442695a39b2bdbf524729c9ab3253c625bb736bb6fab4c301e0b6",
+      "main_executed": false,
+      "supplementary_typecheck_only": true
+    }
+  ],
+  "main_executed": false,
+  "formal_package_receipt_status": "PASS_WITH_NATIVE_EVALUATION",
+  "formal_package_source_commit": "2cf216ba885fbb1b2d1b2d4920efeaa6ba438842",
+  "resource_environment": {
+    "LEAN_NUM_THREADS": "1",
+    "CLI_workers": "-j1"
+  },
+  "reserve_bytes": 1000000000,
+  "formal_package_receipt_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\luke-k4-ramsey-current-native-fresh-build.json",
+  "formal_package_receipt_sha256": "8b3a912a5f2463d8faa96b1d33118b09602faac15cc0274d811745fe3d73d943",
+  "formal_package_reproduction_route": "native",
+  "runner_sha256": "3454b5c67b112f0577322f5a0f6cfc7d454e3423dddd243b527542e4f2764a9b",
+  "guard_sha256": "809802c8d69384918ef8739f10a944bbacb0b76bff36d2aa6b5b18b3bb4bf45e",
+  "diagnostic_only_notice": "No main function is run; no output of a counting diagnostic is certified by these type-checks.",
+  "compiler_version_output": "Lean (version 4.34.1, x86_64-w64-windows-gnu, commit 5045d0056413266e57c625dcd7c365b10e377c52, Release)",
+  "artifacts": {
+    "collective_graphon_audit.ilean": {
+      "sha256": "ba3d95bc6516423f3ba384fcf5c33db7f73d9982da8203e429a22f02d0084170",
+      "bytes": 4427
+    },
+    "collective_graphon_audit.olean": {
+      "sha256": "a6fea737aec0d9e99357dc841947f384224fedbeb5bb0430555563ebbfb92ded",
+      "bytes": 309296
+    },
+    "graphon_nat_audit.ilean": {
+      "sha256": "503a30634713dc68b57a6250635a271b0a803dcbd2a72fd610f1d7f9229e9d91",
+      "bytes": 3934
+    },
+    "graphon_nat_audit.olean": {
+      "sha256": "39d5487f1ce7d2428a70a0cb1cb3005b796d557f85021e688fb4027ab13e9f8c",
+      "bytes": 290720
+    },
+    "latent_graphon_nat_audit.ilean": {
+      "sha256": "3123a15bf4215ab6be7ee3ee7717ea3d6232608773b6339d0eb28b58dbd606a6",
+      "bytes": 4049
+    },
+    "latent_graphon_nat_audit.olean": {
+      "sha256": "d5584c0aaf8fb9e6f287d15a1d8e14b378b98bd74a0cc9f2dba623ea78385333",
+      "bytes": 306048
+    },
+    "typed_kernel_histogram.ilean": {
+      "sha256": "4c90f991473495861718d9118c2bd73be4d74a7b60a93994f74a3c8bfdc47ad1",
+      "bytes": 4238
+    },
+    "typed_kernel_histogram.olean": {
+      "sha256": "d7794544f73324aba3204ecbebe144b95465f1e1b8171320af58a544b50a6528",
+      "bytes": 362568
+    },
+    "logs\\00-graphon_nat_audit.stderr.txt": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "logs\\00-graphon_nat_audit.stdout.txt": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "logs\\01-latent_graphon_nat_audit.stderr.txt": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "logs\\01-latent_graphon_nat_audit.stdout.txt": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "logs\\02-typed_kernel_histogram.stderr.txt": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "logs\\02-typed_kernel_histogram.stdout.txt": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "logs\\03-collective_graphon_audit.stderr.txt": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "logs\\03-collective_graphon_audit.stdout.txt": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    }
+  },
+  "finished_utc": "2026-10-05T02:19:15.968376+00:00"
+}

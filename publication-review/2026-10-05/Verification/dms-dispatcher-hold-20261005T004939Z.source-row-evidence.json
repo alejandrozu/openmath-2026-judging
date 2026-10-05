@@ -1,0 +1,38 @@
+{
+  "recorded_utc": "2026-10-05T00:56:07Z",
+  "original_receipt_sha256": "64bd397158a67b86fe5e8bdd38837720a93b15fcd99bc1216b9bbc2b8446c280",
+  "outcome_receipt_sha256": "bf1548b69edba230827fe388df4f2f5312dc18c46870d5df3c3ce6266086733f",
+  "qualification": "The prior companion used the absent compiles key, yielding an empty evidence list. This attachment reads the actual builds key. All preceding receipt bytes remain unchanged.",
+  "actual_saved_source_rows": [
+    {
+      "module": "GPn1W1",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "GPn1W1.olean",
+        "GPn1W1.lean"
+      ],
+      "seconds": 31.28,
+      "exit": 0,
+      "stdout": "",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 5703811072,
+      "stop_reason": null,
+      "owned_process_stop_output": null,
+      "source_sha256": "eb86f545165ee4f07852ed01d0ac5409a149730e52f6740b7631c55520fba4fa",
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current\\GPn1W1.olean",
+          "sha256": "ede090def253cdbcdadbf2c1b075dc7b749fce74f762368b626c1bce13675c88",
+          "bytes": 13512
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    }
+  ],
+  "source_report_sha256": "d15b25f57024b992064417161871016e03de62b7c1b6c52451f4d95d8ad4376d"
+}

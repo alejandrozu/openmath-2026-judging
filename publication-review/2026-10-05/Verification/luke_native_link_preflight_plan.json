@@ -1,0 +1,63 @@
+{
+  "created_utc": "2026-10-05T00:03:53.936177+00:00",
+  "status": "PREPARED_NOT_AUTHORIZED_OR_EXECUTED",
+  "scope": "Commands and dispatch policy only; no linker, initializer, plugin or native theorem execution",
+  "family_id": "luke-k4-ramsey-current",
+  "future_replay_receipt": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\luke-k4-ramsey-current-native-fresh-build.json",
+  "source_commit": "2cf216ba885fbb1b2d1b2d4920efeaa6ba438842",
+  "lean_pin": "5045d0056413266e57c625dcd7c365b10e377c52",
+  "required_actual_object_audit": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\luke-native-isolated-object-ABI-audit.json",
+  "objects_must_be_PASS": 951,
+  "native_registry_and_initialization_evidence": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\luke_isolated_native_loader_plan.json",
+  "actual_Count_initializer": "initialize_K4Ramsey_Constructions_Final3840_Count",
+  "package": null,
+  "resource_gates": {
+    "dispatch_disk_bytes": 4000000000,
+    "dispatch_physical_bytes": 6442450944,
+    "dispatch_available_commit_bytes": 5368709120,
+    "continuous_disk_bytes": 1000000000,
+    "continuous_physical_bytes": 3221225472,
+    "continuous_available_commit_bytes": 1073741824,
+    "own_tree_only": true,
+    "workspace_max_bytes": 1000000000,
+    "requested_first_link_own_private_cap_bytes": 2147483648
+  },
+  "planned_link_commands": [
+    [
+      "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\leanc.exe",
+      "-shared",
+      "-o",
+      "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-k4-ramsey-native-isolated\\bin\\luke_nonmath_native.dll",
+      "@C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-k4-ramsey-native-isolated\\link\\nonmath_objects.rsp",
+      "-Wl,--threads=1",
+      "-Wl,--out-implib,C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-k4-ramsey-native-isolated\\bin\\libluke_nonmath_native.dll.a"
+    ],
+    [
+      "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\leanc.exe",
+      "-shared",
+      "-o",
+      "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-k4-ramsey-native-isolated\\bin\\luke_mathlib_count_native.dll",
+      "@C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-k4-ramsey-native-isolated\\link\\mathlib_custom_objects.rsp",
+      "-LC:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-k4-ramsey-native-isolated\\bin",
+      "-lluke_nonmath_native",
+      "-Wl,--threads=1",
+      "-Wl,--out-implib,C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-k4-ramsey-native-isolated\\bin\\libluke_mathlib_count_native.dll.a"
+    ]
+  ],
+  "response_file_policy": "One quoted forward-slash absolute object path per line; only object arguments enter the response files. The visible -shared argument controls the exact leanc shared-runtime flag branch. No explicit export omission or initializer stub.",
+  "resource_only_linker_flag": "Pinned ld.lld --help confirms --threads=1 disables linker multithreading",
+  "Leanc_source_evidence": {
+    "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\src\\lean\\Leanc.lean",
+    "sha256": "4ba1b13a9a58b9a7917ca8aeae6a4929cd292411c771e1cca989a7d8a2fbf7bc",
+    "source_url": "https://github.com/leanprover/lean4/blob/5045d0056413266e57c625dcd7c365b10e377c52/src/Leanc.lean",
+    "interpretation": "All parameters pass as-is to bundled Clang; visible -shared selects the official shared runtime flags. No LEAN_CC or LEAN_SYSROOT override."
+  },
+  "required_post_link_checks": [
+    "Actual PE architecture/export/import tables match all actual COFF directives and the expected two-DLL DAG",
+    "Actual complete Count initializer runs in a fresh pinned process before module imports",
+    "Native symbol-resolution eligibility uses unchanged package=None and preserved ordinary IR declarations",
+    "Unchanged Certificate.lean exits zero and exact_count organizer axiom audit shows only accepted native trust",
+    "Only then request stopping the original slow own duplicate, preserving its attempt as superseded rather than failed"
+  ],
+  "outstanding_approval": "Root has not approved any actual DLL link/plugin load"
+}

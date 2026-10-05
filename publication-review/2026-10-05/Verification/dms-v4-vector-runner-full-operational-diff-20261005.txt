@@ -1,0 +1,144 @@
+--- run_dms_v3_linked_plan.py
++++ run_dms_v4_vector_plan.py
+@@ -1,7 +1,7 @@
+ """Fresh topological compilation of every custom module, then endpoint axiom audits.
+ 
+ Uses only the plan's exact Lean version and verified pinned official dependencies.
+-Original entrant artifacts are never reused. A resource-interrupted replay can retain
++Only qualified previous OWN cold passes are reused (99 original plus122 V3-new). A resource-interrupted replay can retain
+ its own successful, receipt-matched artifacts; partial outputs are preserved by rename.
+ """
+ from pathlib import Path
+@@ -30,7 +30,7 @@
+  assert project=='sakana-erdos169-fourap' and third_worker_continuation and not third_worker_pilot, 'Only the explicitly authorized E169 independent-DAG continuation'
+ novel_third_projects={'sakana-a000224','sakana-erdos169-fourap','htpeo-kobon471','sakana-a060957','sakana-a100475','sakana-ferrers',
+  'sakana-erdos1060-uniform-partial','sakana-erdos829-log-five-thirds','sakana-opdp89-parity-sharp','sakana-FOCUS-E3','sakana-FOCUS-E3-pullback',
+- 'sakana-FOCUS-MATRIX-seed0','sakana-FOCUS-MATRIX-seed1','sakana-FOCUS-MATRIX-seed2','matt-unitary-current','htpeo-dms-current','htpeo-dms-current-import-pruned-v3'}
++ 'sakana-FOCUS-MATRIX-seed0','sakana-FOCUS-MATRIX-seed1','sakana-FOCUS-MATRIX-seed2','matt-unitary-current','htpeo-dms-current','htpeo-dms-current-import-pruned-v4-vector'}
+ if full_mathlib_source_mode:
+  assert third_worker_guarded and project!='matt-unitary-current' and (project!='sakana-a000224' or a000_whole_scope_only),'Future selected full-library mode only; narrower Matt/A000 policies remain unchanged outside explicit A000 whole-scope mode'
+ legacy_a000_single_pilot=third_worker_pilot and project=='sakana-a000224' and not full_mathlib_source_mode
+@@ -50,28 +50,27 @@
+ dest=BASE/'builds'/project
+ plan=json.loads((dest/'build-plan.json').read_text())
+ 
+-# Qualified exact99 previous-own-output NTFS hard-link seed; no invented compilation rows.
+-assert project=='htpeo-dms-current-import-pruned-v3' and worker_threads==1
++# V4 exact221 previous OWN cold passes; no invented compiler rows.
++assert project=='htpeo-dms-current-import-pruned-v4-vector' and worker_threads==1
+ assert third_worker_guarded and not full_mathlib_source_mode and not independent_resource_mode and not defer_whole_import_mode
+ assert third_worker_pilot != third_worker_continuation
++assert not plan.get('additional_dependency_libs'),'Only the exact99 verified V1 read-only directory is admitted explicitly'
+ policy_flag='--reviewed-policy-sha256';seed_flag='--seed-receipt-sha256'
+ assert sys.argv.count(policy_flag)==sys.argv.count(seed_flag)==1
+ dms_policy_sha=sys.argv[sys.argv.index(policy_flag)+1]
+ dms_seed_sha=sys.argv[sys.argv.index(seed_flag)+1]
+-assert dms_policy_sha=='a4b795b071135118af94868726b9ac45af0579540d5856e9aaf7d48a9e3717e6' and re.fullmatch('[0-9a-f]{64}',dms_seed_sha)
+-assert hashlib.sha256((BASE/'verify_dms_v3_stage.py').read_bytes()).hexdigest()=='be19344e55bb6a50930bbd2b660385447cfe5fd721861f2fa6c4253094b927c5'
+-assert hashlib.sha256((BASE/'dms_v3_copy99_hardlink_seed.py').read_bytes()).hexdigest()=='772423ad135bddde4487ff381bc39c4d2cf2a1022229943f37e4d7c03fadaa92'
+-from verify_dms_v3_stage import verify_stage
+-from dms_v3_copy99_hardlink_seed import verify_seed
+-dms_stage_preflight=verify_stage(require_cold=False)
+-dms_stage_preflight['identity_verifier_performed_output_transfer']=dms_stage_preflight.pop('outputs_copied_or_marked_reusable')
++assert dms_policy_sha=='0af7feab4fc55f1b7ecade9b60491c2507ac3687d2899f0f74116afd40a93a8f' and re.fullmatch('[0-9a-f]{64}',dms_seed_sha)
++assert hashlib.sha256((BASE/'verify_dms_v4_vector_stage.py').read_bytes()).hexdigest()=='d876f0d7850b4618ff4855aad2306216f6921987936daea24a820fef798b6242'
++assert hashlib.sha256((BASE/'dms_v4_vector122_seed.py').read_bytes()).hexdigest()=='fc88a26260f0a7a86bcc57c060683550b6a4476c189639686632121f1dcd85c7'
++from verify_dms_v4_vector_stage import verify_stage
++from dms_v4_vector122_seed import verify_seed
++dms_stage_preflight=verify_stage(require_cold=False,linked122_allowed=True)
+ dms_seed_preflight=verify_seed(dms_policy_sha,dms_seed_sha)
+-seed_receipt=json.loads((BASE/'dms-v3-v1copy99-hardlink-seed-completed-20261005.json').read_bytes())
+-assert hashlib.sha256(Path(seed_receipt['approval_receipt']).read_bytes()).hexdigest()==seed_receipt['approval_receipt_sha256']
+-assert seed_receipt['seed_helper_sha256']=='772423ad135bddde4487ff381bc39c4d2cf2a1022229943f37e4d7c03fadaa92'
++seed_receipt=json.loads((BASE/'dms-v4-vector122-link99-readonly-seed-completed-20261005.json').read_bytes())
+ plan['import_only_stage_identity_preflight']=dms_stage_preflight
+-plan['qualified_previous_own_original99_hard_link_seed']=dms_seed_preflight
+-plan['cross_route_own_output_reuse_labels']={'previous_own_original_route_cold_outputs_reused':99,'new_cold_diagnostic_sources_required':129,'outputs_described_as_new_compilation_rows':False}
++plan['qualified_previous221_own_cold_passes']=dms_seed_preflight
++plan['cross_route_own_output_reuse_labels']={'original_route_own_cold_passes_reused_via_existing_V1_readonly_copies':99,
++ 'V3_new_own_cold_passes_reused_via_V4_links':122,'new_V4_source_compilations_required':7,'outputs_described_as_new_compilation_rows':False}
+ 
+ deferred_whole_names=set()
+ if defer_whole_import_mode:
+@@ -137,7 +136,7 @@
+  granular_names={m['module'] for m in plan['modules']}-whole_names
+  actual_passes={r['module'] for r in prior['builds'] if r['exit']==0 and not r.get('stop_reason')}
+  assert granular_names<=actual_passes,'Every one of the166 granular sources must first have its own successful cold output'
+-paths=[str(dest)]
++paths=[str(dest),str(Path(dms_seed_preflight['readonly99_import_directory']).resolve())]
+ for extra in plan.get('additional_dependency_libs',[]):
+  extra_path=Path(extra).resolve()
+  assert extra_path.is_relative_to(BASE.resolve()),'Dependency library outside this verification workspace'
+@@ -147,11 +146,14 @@
+  paths += [str(p/'.lake/build/lib/lean') for p in (dependencies/'.lake/packages').iterdir() if p.is_dir()]
+ env=dict(os.environ);env['LEAN_PATH']=';'.join(paths);env['PATH']=str(lean.parent)+';'+env['PATH']
+ env['LEAN_NUM_THREADS']=str(worker_threads)
+-# Original custom outputs may be read by the verifier, never imported by Lean.
+-original_custom_dir=(BASE/'builds/htpeo-dms-current').resolve()
+-forbidden_custom_dirs=[original_custom_dir, (BASE/'builds/htpeo-dms-current-import-pruned-diagnostic').resolve(), (BASE/'builds/htpeo-dms-current-import-pruned-modeq-v2').resolve()]
++# Original/V2/V3 custom directories forbidden; exact99 proven V1 copies are read-only inputs.
++forbidden_custom_dirs=[Path(p).resolve() for p in dms_seed_preflight['forbidden_custom_import_directories']]
+ assert not any(Path(p).resolve().is_relative_to(forbidden) for p in paths for forbidden in forbidden_custom_dirs)
+-plan['diagnostic_LEAN_PATH_policy']={'actual_import_paths':paths,'forbidden_custom_output_directories':[str(p) for p in forbidden_custom_dirs]}
++readonly99=Path(dms_seed_preflight['readonly99_import_directory']).resolve()
++assert paths[1]==str(readonly99) and readonly99==(BASE/'builds/htpeo-dms-current-import-pruned-diagnostic').resolve()
++plan['diagnostic_LEAN_PATH_policy']={'actual_import_paths':paths,'readonly99_proven_V1_input_directory':str(readonly99),
++ 'forbidden_custom_output_directories':[str(p) for p in forbidden_custom_dirs],
++ 'prior221_outputs_never_compiler_targets':True}
+ 
+ canonical=lambda n:n.replace('«','').replace('»','')
+ modules={canonical(m['module']):m for m in plan['modules']}
+@@ -244,16 +246,17 @@
+    # Do not repeat a genuine source failure merely because another module later hit a resource limit.
+    retained[n]=row;plan['builds'].append(row);plan['failed_invocations'].append(n)
+  plan['retained_successful_custom_modules']=sum(row['exit']==0 for row in retained.values())
+-# Seeded modules are skip metadata, not simulated compiler invocation rows.
+-dms_seed_names={m['module'] for m in dms_seed_preflight['modules']}
+-dms_linked_output_paths={Path(item['diagnostic_target']).resolve() for item in seed_receipt['output_links']}
+-assert len(dms_linked_output_paths)==99
+-plan['hard_link_write_policy']='All99 linked V1 COPY outputs are skipped and forbidden as compiler output targets; original/V2 inodes remain unchanged. Original/V1/V2 source dispatchers stay inactive.'
+-assert len(dms_seed_names)==99 and dms_seed_names.isdisjoint(dms_seed_preflight['required129_new_cold_module_names'])
++# Prior221 modules are skip metadata, never simulated V4 invocation rows.
++dms_seed_names=set(dms_seed_preflight['prior221_names'])
++dms_linked_output_paths={Path(p).resolve() for p in dms_seed_preflight['122_linked_output_paths']}
++assert len(dms_linked_output_paths)==122
++plan['hard_link_write_policy']='Skip221 prior own passes;122 V3-new V4 links and99 V1 read-only outputs are never written. Protected original/V2 and V1/V3 count2 remain unchanged.'
++assert len(dms_seed_names)==221 and dms_seed_names.isdisjoint(dms_seed_preflight['required7_new_cold_module_names'])
+ for n in dms_seed_names:
+- assert n not in retained and n not in {row['module'] for row in plan['builds']},'Hard-linked99 outputs must never become fresh compilation rows'
+- retained[n]={'exit':0,'reuse_kind':'PREVIOUS_OWN_ORIGINAL_ROUTE_COLD_OUTPUT_HARD_LINK','fresh_diagnostic_compilation':False}
++ assert n not in retained and n not in {row['module'] for row in plan['builds']},'Prior221 outputs must never become fresh V4 invocation rows'
++ retained[n]={'exit':0,'reuse_kind':'QUALIFIED_PREVIOUS_OWN_COLD_OUTPUT_READONLY99_OR_LINKED122','fresh_V4_compilation':False}
+ plan['verified_previous_own_cold_source_output_modules']=sorted(dms_seed_names)
++
+ if independent_resource_mode:
+  plan['resource_settings']['independent_resource_dag_mode']={'authorization':'ROOT_AUTHORIZED_E169_INDEPENDENT_MODULE_ATTEMPTS_WITH_RESOURCE_ROOTS_AND_DESCENDANTS_EXPLICITLY_DEFERRED',
+   'source_or_statement_changes':False,'resource_limits_unchanged':True,'deferred_is_never_pass':True}
+@@ -267,17 +270,18 @@
+ def save():
+  actual_passes={row['module'] for row in plan['builds'] if row['exit']==0 and not row['is_endpoint_audit'] and not row.get('stop_reason')}
+  assert actual_passes.isdisjoint(dms_seed_names)
+- required_new=set(dms_seed_preflight['required129_new_cold_module_names'])
++ required_new=set(dms_seed_preflight['required7_new_cold_module_names'])
+  assert actual_passes<=required_new
+- plan['source_coverage_summary']={'reused_previous_own_original_cold_source_outputs':99,
+-  'new_cold_diagnostic_source_passes':len(actual_passes),'new_cold_source_module_names':sorted(actual_passes),
+-  'unattempted_or_unpassed_required_new_source_modules':sorted(required_new-actual_passes),
+-  'scientific_body_sources_verified_in_this_qualified_route':99+len(actual_passes),
+-  'scientific_body_source_total':228,'selected_audit_always_requires_new_invocation':True,
+-  'qualification':'99 previous own original-route cold outputs hard-linked exclusively from proven V1 COPIES, preserving original/V2 identities, with full unaffected-closure and NTFS file identities; only actual new source invocations appear in builds.'}
++ plan['source_coverage_summary']={'original_route_own_cold_passes_reused_via_existing_V1_readonly_copies':99,
++  'V3_new_own_cold_passes_reused_via_new_V4_links':122,'new_cold_V4_source_passes':len(actual_passes),
++  'new_cold_V4_source_names':sorted(actual_passes),'unattempted_or_unpassed_required_new_source_modules':sorted(required_new-actual_passes),
++  'scientific_body_sources_verified_in_this_route':221+len(actual_passes),'scientific_body_source_total':228,
++  'selected123_print_audit_always_requires_new_invocation':True,
++  'qualification':'221 previous OWN cold passes with complete unchanged source/custom/official closure,99 read-only proven V1 copies and122 V3-new hardlinks; only actual seven-new V4 source invocations appear in builds.'}
+  if plan['status'].startswith('PASS'):
+-  assert actual_passes==required_new,'A diagnostic PASS requires all129 new cold sources plus99 separately qualified prior own outputs'
+-  plan['completed99_NTFS_identity_and_original_output_recheck']=verify_seed(dms_policy_sha,dms_seed_sha)
++  assert actual_passes==required_new,'V4 PASS requires all seven NEW sources plus221 separately qualified prior OWN passes'
++  plan['completed221_identity_recheck']=verify_seed(dms_policy_sha,dms_seed_sha)
++
+  temporary=report.with_suffix('.json.tmp')
+  temporary.write_text(json.dumps(plan,indent=2),encoding='utf8')
+  for attempt in range(101):

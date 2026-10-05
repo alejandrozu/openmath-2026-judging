@@ -1,0 +1,182 @@
+--- run_m2_granular_source_plan.py
++++ run_htpeo_m2_linked_granular_plan.py
+@@ -1,8 +1,10 @@
+ """Fresh topological compilation of every custom module, then endpoint axiom audits.
+ 
+ Uses only the plan's exact Lean version and verified pinned official dependencies.
+-Original entrant artifacts are never reused. A resource-interrupted replay can retain
+-its own successful, receipt-matched artifacts; partial outputs are preserved by rename.
++Exactly97 SHA-bound previous-own DMS cold outputs may be reused as reviewed NTFS
++links; they are separate from new M2 compilation and never overwritten. Existing
++M2 StarCore pilot remains independent and immutable. Only3 new granular sources
++and4 scoped prints may run. All21 whole-source modules/audits remain unattempted.
+ """
+ from pathlib import Path
+ import json,re,subprocess,os,sys,time,hashlib,shutil,msvcrt
+@@ -15,9 +17,42 @@
+ project=sys.argv[1]
+ 
+ # This adapter is prepared only. Execution requires a separately reviewed slot.
+-M2_PROJECT_PLAN_HASHES = {'htpeo-erdos-m2': 'd75af96c5e21e79909e7a95646d0bf766609a46dd40bb0fc44e6308a6eb60ef6', 'sakana-m2-research': 'e640756c85349928b6459d41cda81e58f8831cd6240d1e7ddef09425da61fd6c', 'koerbser-climb1-library': '4160a948abbfc5ca4cbcd456ba300655362f96be4baaba7ba03a9edf029ded99', 'koerbser-three-term': '03335f8dae0fe01722dd8c6491c127a1bad3ea1c0b92833c289038dfc5621df8', 'jamie-ap-bridges': '86b3947ca573c0afb6643cfdd436bff031857e9fead0749a7caaa3733b8f5330', 'sundai-organizer-bridge': 'f03bb3fba8072c0825ab34879d405607b89522bc729a97b4d6598740e728a21a', 'sundai-erdos3-current': '8f1074283a569367dfe9141f7df474261f88b1a11506da562badb1c9015d038b', 'official-fc-util433': '104c71d4916cb10b663afd6e5107f928ca18e54b99bcaaae64dd6adc60ff45e7'}
++M2_PROJECT_PLAN_HASHES = {'htpeo-erdos-m2': 'd75af96c5e21e79909e7a95646d0bf766609a46dd40bb0fc44e6308a6eb60ef6'}
+ M2_PREPARATION_SHA256 = 'c2eb16e66fd9f5bacf75ad470cd25846d412ca8780a8a7d24c119d4b366c6ee5'
+-assert project in M2_PROJECT_PLAN_HASHES, 'Exact eight-entry M2 whitelist only'
++assert project in M2_PROJECT_PLAN_HASHES, 'Exact reviewed HTP M2 project only'
++assert '--htpeo-m2-reuse-execution-authorized' in sys.argv[3:], 'Separate root-approved reuse/source lease required'
++from htpeo_m2_original97_hardlink_seed import verify_seed as m2_verify_seed
++from htpeo_m2_original97_hardlink_seed import digest as m2_bound_digest
++M2_LINK_POLICY_SHA256 = 'cc42d467875a71ca36f821945b6162a71528fbe6a564587ab28750189d72b53b'
++M2_LINK_HELPER_SHA256 = 'd3463ef9482e6adf8071c44d433c308f93f3ac1c3e81dbe5fab0df52db104b7b'
++assert m2_bound_digest(BASE/'htpeo_m2_original97_hardlink_seed.py') == M2_LINK_HELPER_SHA256
++def m2_flag(name):
++ assert name in sys.argv and sys.argv.index(name)+1<len(sys.argv), name
++ return sys.argv[sys.argv.index(name)+1]
++m2_execution_approval_path=Path(m2_flag('--reuse-execution-approval')).resolve()
++m2_execution_approval_sha=m2_flag('--reuse-execution-approval-sha256')
++assert m2_execution_approval_path.is_relative_to(BASE.resolve()) and m2_bound_digest(m2_execution_approval_path)==m2_execution_approval_sha
++m2_execution_approval=json.loads(m2_execution_approval_path.read_bytes())
++assert m2_execution_approval['status']=='ROOT_APPROVED_HTPEO_M2_EXACT97_REUSE_PLUS3_COLD_SOURCES_AND4_SCOPED_PRINTS'
++assert m2_execution_approval['reviewed_runner_sha256']==RUNNER_SOURCE_SHA256
++assert m2_execution_approval['reviewed_policy_sha256']==M2_LINK_POLICY_SHA256
++assert m2_execution_approval['reviewed_seed_helper_sha256']==M2_LINK_HELPER_SHA256
++m2_seed_sha=m2_flag('--reuse-seed-receipt-sha256')
++assert m2_execution_approval['reviewed_completed_seed_receipt_sha256']==m2_seed_sha
++m2_seed_check=m2_verify_seed(M2_LINK_POLICY_SHA256,m2_seed_sha)
++m2_link_policy=json.loads((BASE/'htpeo-m2-original97-hardlink-policy-20261005.json').read_bytes())
++m2_reuse_names=set(m2_link_policy['eligible97_module_names'])
++m2_own_prior_pilot_name='StarCore'
++m2_required_new_names=set(m2_link_policy['required3_new_cold_module_names'])
++m2_allowed_scoped_audits={row['audit'] for row in m2_link_policy['audit_records']}
++assert len(m2_reuse_names)==97 and len(m2_required_new_names)==3 and len(m2_allowed_scoped_audits)==1
++m2_protected_output_paths={Path(row['M2_target']).resolve() for row in m2_link_policy['output_links']}
++m2_protected_output_paths.update(Path(row['file']).resolve() for row in m2_link_policy['M2_StarCore_pilot_artifacts'])
++assert len(m2_protected_output_paths)==98
++assert m2_execution_approval['approved97_module_names']==m2_link_policy['eligible97_module_names']
++assert m2_execution_approval['approved3_new_source_names']==m2_link_policy['required3_new_cold_module_names']
++assert m2_execution_approval['approved4_endpoint_names']==m2_link_policy['selected4_endpoint_names']
++assert m2_execution_approval['whole_scope_remains_deferred'] is True
+ assert '--m2-granular-execution-authorized' in sys.argv[3:] and '--resource-lease-confirmed' in sys.argv[3:], 'Root-reviewed granular scope and confirmed lease required'
+ assert '--defer-whole-imports' in sys.argv[3:] and '--full-mathlib-source-mode' not in sys.argv[3:], 'All literal whole-Mathlib descendants must remain deferred'
+ def m2_sha(file):
+@@ -127,7 +162,7 @@
+  assert actual==plan['mathlib_pin'],(actual,plan['mathlib_pin'])
+  assert (dependencies/'.lake/build/lib/lean/Mathlib.olean').exists(),'Required official Mathlib cache not ready'
+  assert json.loads((BASE/('mathlib-'+plan['version']+'-cache-retry.json')).read_text())['status']=='PASS','Full official dependency cache import validation has not passed'
+-report=BASE/(project+'-m2-granular-fresh-build.json')
++report=BASE/(project+'-linked-granular-fresh-build.json')
+ prior=None
+ if report.exists():
+  prior=json.loads(report.read_text(encoding='utf8'))
+@@ -147,13 +182,13 @@
+  actual_passes={r['module'] for r in prior['builds'] if r['exit']==0 and not r.get('stop_reason')}
+  assert granular_names<=actual_passes,'Every one of the166 granular sources must first have its own successful cold output'
+ paths=[str(dest)]
+-for extra in plan.get('additional_dependency_libs',[]):
+- extra_path=Path(extra).resolve()
+- assert extra_path.is_relative_to(BASE.resolve()),'Dependency library outside this verification workspace'
+- paths.append(str(extra_path))
++# This exact granular closure has no additional custom-library prerequisite.
++# DMS outputs are admitted only by reviewed links inside this M2 destination.
++assert all(not row['additional_library_prerequisites'] for row in m2_project['sources'] if not row['deferred_whole_scope'])
+ if plan.get('mathlib_pin'):
+  paths += [str(dependencies/'.lake/build/lib/lean')]
+  paths += [str(p/'.lake/build/lib/lean') for p in (dependencies/'.lake/packages').iterdir() if p.is_dir()]
++assert all(not Path(path).resolve().is_relative_to(Path(forbidden)) for path in paths for forbidden in m2_seed_check['forbidden_custom_LEAN_PATH_roots'])
+ env=dict(os.environ);env['LEAN_PATH']=';'.join(paths);env['PATH']=str(lean.parent)+';'+env['PATH']
+ env['LEAN_NUM_THREADS']=str(worker_threads)
+ canonical=lambda n:n.replace('«','').replace('»','')
+@@ -172,12 +207,24 @@
+ plan['compiler_version']=subprocess.run([str(lean),'--version'],capture_output=True,text=True).stdout.strip()
+ assert 'version '+plan['version']+',' in plan['compiler_version'],'Compiler version differs from frozen plan'
+ plan['status']='RUNNING';plan['builds']=[];plan['compilation_order']=ordered;plan['started_utc']=time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime())
+-plan['execution_route']='SEPARATE_ROOT_REVIEWED_M2_GRANULAR_SOURCE_ADAPTER'
++plan['execution_route']='SEPARATE_ROOT_REVIEWED_HTPEO_M2_EXACT97_PRIOR_OWN_REUSE_PLUS3_NEW_GRANULAR_SOURCES'
+ plan['source_plan_sha256']=M2_PROJECT_PLAN_HASHES[project]
+ plan['m2_preparation_sha256']=M2_PREPARATION_SHA256
+ plan['baseline_runner_sha256']='70ff209c7ac651c1e0ab25e9f629a9fc50c4b85ed1f510666e851e8f69c53534'
+ plan['failed_invocations']=[]
+ plan['selected_audit_axiom_review']=[]
++plan['prior_own_DMS_cold_sources_reused']=m2_link_policy['modules']
++plan['independent_existing_M2_StarCore_pilot']={'file':m2_link_policy['M2_StarCore_pilot'],
++ 'sha256':m2_link_policy['M2_StarCore_pilot_sha256'],'actual_row':m2_link_policy['M2_StarCore_pilot_actual_row'],
++ 'qualification':'Previously completed independent M2 pilot, not a current new source invocation'}
++plan['reuse_identity_check']=m2_seed_check
++plan['reuse_execution_approval']={'file':str(m2_execution_approval_path),'sha256':m2_execution_approval_sha}
++plan['hard_no_write_policy']={'skip97_prior_own_linked_source_names':sorted(m2_reuse_names),
++ 'preserve_independent_own_StarCore_pilot':True,'protected_output_paths':[str(p) for p in sorted(m2_protected_output_paths)],
++ 'required3_new_cold_source_names':sorted(m2_required_new_names),'required_scoped_audits':sorted(m2_allowed_scoped_audits),
++ 'original_DMS119_receipt_immutable':m2_link_policy['original119_receipt_sha256'],
++ 'M2_StarCore_pilot_receipt_immutable':m2_link_policy['M2_StarCore_pilot_sha256'],
++ 'previous_own_cold_output_is_never_a_new_current_M2_compilation':True}
+ plan['resource_settings']={'LEAN_NUM_THREADS':worker_threads,'lean_shell_worker_flag':'-j'+str(worker_threads),'maxHeartbeats':0,'maxRecDepth':100000,
+  'runner_file':str(Path(__file__).resolve()),'runner_source_sha256':RUNNER_SOURCE_SHA256,'axiom_parser_source_sha256':AXIOM_PARSER_SOURCE_SHA256}
+ if third_worker_guarded:
+@@ -210,12 +257,12 @@
+  return [p for p in [file.with_suffix('.olean'),file.with_suffix('.olean.private'),file.with_suffix('.olean.server'),file.with_suffix('.ilean')] if p.exists()]
+ def artifact_inventory(file):
+  return [{'file':str(p),'sha256':digest(p),'bytes':p.stat().st_size} for p in artifacts(file)]
+-retained={};past_rows={}
++retained={m2_own_prior_pilot_name:m2_link_policy['M2_StarCore_pilot_actual_row']};past_rows={}
+ resource_stop_reasons={'DISK_RESERVE','SCHEDULED_RESOURCE_CHECKPOINT','PHYSICAL_MEMORY_RESERVE','PRIVATE_MEMORY_CEILING','COMMIT_RESERVE','OWN_ALLOCATION_FAILURE','OPERATIONAL_GUARD_ERROR'}
+ deferred_resource_roots={}
+ if prior:
+  attempt=len(prior.get('prior_attempt_receipts',[]))+1
+- archived=BASE/(project+'-m2-granular-fresh-build-attempt-'+str(attempt)+'.json')
++ archived=BASE/(project+'-linked-granular-fresh-build-attempt-'+str(attempt)+'.json')
+  assert not archived.exists(),'Immutable attempt receipt already exists'
+  # Preserve the exact interrupted receipt, including killed invocations, before updating the main view.
+  archived.write_bytes(report.read_bytes())
+@@ -273,6 +320,7 @@
+ new_source_invocations=0
+ for n in ordered+plan['audit_modules']+plan.get('non_acceptance_audit_modules',[]):
+  if n in retained:continue
++ if n in m2_reuse_names:continue
+  if n in deferred_whole_names:
+   plan['deferred_whole_import_policy']['unattempted_whole_invocations'].append({'module':n,'attempted':False,
+     'is_endpoint_audit':n.endswith('.lean'),'classification':'SEPARATE_SOLE_LITERAL_IMPORTER_LEASE_REQUIRED'})
+@@ -287,8 +335,12 @@
+    plan['resource_deferred_invocations'].append({'module':n,'attempted':False,'is_endpoint_audit':n.endswith('.lean'),
+     'blocked_by_resource_roots':blockers,'classification':'RESOURCE_ROOT_RETRY_DEFERRED' if n in deferred_resource_roots else 'RESOURCE_DEPENDENCY_BLOCK'})
+    save();print('RESOURCE_DAG_DEFERRED',project,n,','.join(blockers),flush=True);continue
++ assert n not in m2_reuse_names and n!=m2_own_prior_pilot_name,'Protected prior-own source must never dispatch'
++ assert n in m2_required_new_names or n in m2_allowed_scoped_audits,'Only3 cold sources and one four-print audit may dispatch'
+  audit=n.endswith('.lean');m={'file':str(dest/n),'module':n} if audit else modules[n]
+  file=Path(m['file']);relative=file.relative_to(dest)
++ protected_candidates=[file.with_suffix(s).resolve() for s in ['.olean','.olean.private','.olean.server','.ilean']]
++ assert not any(p in m2_protected_output_paths for p in protected_candidates),'Cannot overwrite or rename a protected linked/pilot output'
+  if not audit:assert hashlib.sha256(file.read_bytes()).hexdigest()==m['sha256'],n
+  if third_worker_guarded:
+   waiting=False
+@@ -326,7 +378,7 @@
+  plan['current_module']=n;save();start=time.monotonic()
+  if third_worker_tree_guarded:
+   logkey=hashlib.sha256(n.encode('utf8')).hexdigest()[:16]
+-  prefix=BASE/'guarded-source-logs'/(project+'-m2-granular-'+logkey+'-attempt-'+str(len(plan.get('prior_attempt_receipts',[]))))
++  prefix=BASE/'guarded-source-logs'/(project+'-linked-granular-'+logkey+'-attempt-'+str(len(plan.get('prior_attempt_receipts',[]))))
+   while True:
+    guard=guarded_tree(args,dest,env,prefix,timeout=3600)
+    if guard['attempted']:break
+@@ -411,4 +463,23 @@
+  elif plan.get('selected_unrecognized_axioms'):plan['status']='SELECTED_ENDPOINT_USES_UNRECOGNIZED_AXIOMS'
+  elif plan.get('selected_native_evaluation'):plan['status']='PASS_WITH_NATIVE_EVALUATION'
+  else:plan['status']='PASS_SELECTED_ENDPOINTS_WITH_UNFINISHED_BASELINES' if plan.get('unfinished_baseline_axioms') else 'PASS'
++m2_final_identity_check=m2_verify_seed(M2_LINK_POLICY_SHA256,m2_seed_sha)
++plan['final_reused_link_and_independent_pilot_identity_check']=m2_final_identity_check
++actual_new_rows=[r for r in plan['builds'] if not r.get('is_endpoint_audit')]
++assert all(r['module'] in m2_required_new_names for r in actual_new_rows)
++actual_passes={r['module'] for r in actual_new_rows if r['exit']==0 and not r.get('stop_reason')}
++actual_audits=[r for r in plan['builds'] if r.get('is_endpoint_audit')]
++assert all(r['module'] in m2_allowed_scoped_audits for r in actual_audits)
++scoped_complete=(actual_passes==m2_required_new_names and len(actual_audits)==1 and actual_audits[0]['exit']==0
++ and actual_audits[0].get('selected_endpoint_print_coverage',{}).get('status')=='PASS'
++ and not plan.get('selected_endpoint_uses_sorry') and not plan.get('selected_unrecognized_axioms')
++ and not plan.get('selected_incomplete_print_audits'))
++plan['granular_scope_qualification']={'status':('PASS_SCOPED_GRANULAR_WITH_NATIVE_EVALUATION' if plan.get('selected_native_evaluation') else 'PASS_SCOPED_GRANULAR_STANDARD_AXIOMS') if scoped_complete else 'INCOMPLETE_OR_UNQUALIFIED',
++ 'prior_own_DMS_cold_sources_reused':97,'independent_existing_M2_pilot_sources':1,
++ 'new_actual_current_cold_source_passes':len(actual_passes),'required_new_current_cold_sources':3,
++ 'scoped_selected_prints_required':4,'actual_selected_axiom_rows':plan['selected_audit_axiom_review'],
++ 'full122_project_PASS':False,'whole21_authored_sources_attempted':False,
++ 'qualification':'A granular exact101-body route consisting of97 previous-owned cold checks, one independent earlier M2 pilot and3 actual new source checks. Every whole-scope theorem/audit remains deferred; no novelty, score or placement consequence follows.'}
++assert all(r['module'] not in deferred_whole_names for r in plan['builds'])
++assert plan['status'] not in ['PASS','PASS_WITH_NATIVE_EVALUATION','PASS_SELECTED_ENDPOINTS_WITH_UNFINISHED_BASELINES'],'Cannot mark full frozen122-source project PASS on a granular-only route'
+ plan['finished_utc']=time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime());plan.pop('current_module',None);save();print('PROJECT_STATUS',project,plan['status'],flush=True)

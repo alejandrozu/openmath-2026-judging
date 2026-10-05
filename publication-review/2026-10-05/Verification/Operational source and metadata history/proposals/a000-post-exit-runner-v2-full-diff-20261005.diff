@@ -1,0 +1,19 @@
+--- run_a000_source_plan_with_post_exit_lzx_prepared.py-3d510201d4529a2dbf7f43d600bddbfe4df51d0dd054ed5564b77adb100c35b5
++++ run_a000_source_plan_with_post_exit_storage_v2_prepared.py
+@@ -26,13 +26,13 @@
+  assert a000_storage_policy['status']=='ROOT_APPROVED_A000_POST_EXIT_OWN_OUTPUT_LZX_INTERFACE'
+  assert a000_storage_policy['runner_sha256']==RUNNER_SOURCE_SHA256
+  assert requested_storage_proof_mode in a000_storage_policy['separately_authorized_source_resource_modes']
+- storage_spec_file=BASE/'proposals/a000-post-exit-owned-artifact-lzx-interface-preparation-20261005.json'
++ storage_spec_file=BASE/'proposals/a000-post-exit-owned-artifact-storage-interface-v2-preparation-20261005.json'
+  assert hashlib.sha256(storage_spec_file.read_bytes()).hexdigest()==a000_storage_policy['specification_sha256']
+- assert hashlib.sha256((BASE/'a000_post_exit_lzx_interface_prepared.py').read_bytes()).hexdigest()==a000_storage_policy['interface_sha256']
++ assert hashlib.sha256((BASE/'a000_post_exit_lzx_interface_v2_prepared.py').read_bytes()).hexdigest()==a000_storage_policy['interface_sha256']
+  actual_storage_pilot=Path(a000_storage_policy['actual_A000_single_file_pilot_receipt']).resolve()
+  assert actual_storage_pilot.is_relative_to(BASE) and hashlib.sha256(actual_storage_pilot.read_bytes()).hexdigest()==a000_storage_policy['actual_A000_single_file_pilot_receipt_sha256']
+  assert json.loads(actual_storage_pilot.read_bytes())['status']=='PASS_BYTE_IDENTICAL_READABLE_STRONG_LZX_PILOT'
+- from a000_post_exit_lzx_interface_prepared import compress_after_own_source_exit
++ from a000_post_exit_lzx_interface_v2_prepared import compress_after_own_source_exit
+ worker_threads=int(sys.argv[2]) if len(sys.argv)>2 else 4
+ assert 1<=worker_threads<=4
+ third_worker_pilot='--pilot-third-slot' in sys.argv[3:]

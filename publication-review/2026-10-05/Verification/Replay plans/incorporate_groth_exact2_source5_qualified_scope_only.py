@@ -1,0 +1,209 @@
+"""Prepared narrow Groth status patch; requires actual root-qualified 2/5 scope.
+
+No imports of Lean runners, no compiler, PDF render or proof/source mutation.
+The root-owned brief is proposed separately and remains byte-identical here.
+"""
+from pathlib import Path
+from datetime import datetime, timezone
+from collections import Counter
+import argparse, copy, hashlib, json, os, re, time
+
+BASE = Path(__file__).resolve().parent
+VERIFY = BASE / 'verification'
+PROPOSAL = VERIFY / 'proposals/groth-exact2-source5-editorial/groth-exact2-source5-narrow-editorial-proposal-20261005.json'
+PROPOSAL_SHA = 'e1e7afc5bb76bc73b8b57e99d981b3b3d5302a071a9960caef1096b292224d1b'
+QUALIFIER_SHA = '490a5c910ac0ac9cb1bd694c6ab2f0d5f1d7963465daf4fa6968e59942365ff2'
+SELF_SHA = hashlib.sha256(Path(__file__).read_bytes()).hexdigest()
+
+def sha(path):
+    h = hashlib.sha256()
+    with Path(path).open('rb') as stream:
+        for block in iter(lambda: stream.read(1024 * 1024), b''):
+            h.update(block)
+    return h.hexdigest()
+
+def literal(value):
+    return json.dumps(value, ensure_ascii=False)
+
+def append_member(text, start, key, value):
+    obj, length = json.JSONDecoder().raw_decode(text[start:])
+    end = start + length
+    assert key not in obj and text[end - 1] == '}'
+    content = text[start:end - 1]
+    pos = start + len(content.rstrip())
+    first_field = content.splitlines()[1]
+    indent = first_field[:len(first_field) - len(first_field.lstrip())]
+    addition = ',\n' + indent + literal(key) + ': ' + json.dumps(
+        value, ensure_ascii=False, indent=2).replace('\n', '\n' + indent)
+    return text[:pos] + addition + text[pos:]
+
+def atomic_replace(path, old, updated):
+    temp = path.with_name(path.name + '.groth-incorporation.tmp')
+    assert not temp.exists(), 'Preserve and inspect any earlier temporary file'
+    with temp.open('xb') as stream:
+        stream.write(updated)
+        stream.flush()
+        os.fsync(stream.fileno())
+    assert path.read_bytes() == old, 'Canonical file changed before its atomic replacement'
+    for attempt in range(101):
+        try:
+            os.replace(temp, path)
+            return
+        except PermissionError:
+            if attempt == 100:
+                raise
+            time.sleep(.05)
+
+parser = argparse.ArgumentParser()
+parser.add_argument('--root-approval-file', required=True)
+parser.add_argument('--root-approval-sha256', required=True)
+args = parser.parse_args()
+approval_path = Path(args.root_approval_file).resolve()
+assert approval_path.is_relative_to(VERIFY.resolve())
+assert sha(approval_path) == args.root_approval_sha256
+approval = json.loads(approval_path.read_bytes())
+assert approval['status'] == 'ROOT_APPROVED_NARROW_GROTH_EXACT2_SOURCE5_CANONICAL_INCORPORATION'
+assert approval['incorporation_helper_sha256'] == SELF_SHA
+assert approval['proposal_sha256'] == PROPOSAL_SHA == sha(PROPOSAL)
+proposal = json.loads(PROPOSAL.read_bytes())
+assert sha(VERIFY / 'qualify_groth_exact2_source5_scope.py') == QUALIFIER_SHA
+qualification_path = Path(approval['qualification_file']).resolve()
+assert qualification_path.is_relative_to(VERIFY.resolve())
+assert qualification_path.name == proposal['qualification_required']['file']
+assert sha(qualification_path) == approval['qualification_sha256']
+q = json.loads(qualification_path.read_bytes())
+expected = proposal['qualification_required']
+assert q['status'] == expected['status']
+assert q['helper_sha256'] == QUALIFIER_SHA
+assert q['source_plan_sha256'] == expected['plan_sha256']
+assert q['runner_sha256'] == expected['runner_sha256']
+assert q['authored_source_passes'] == 2 and q['selected_audit_invocations'] == 1
+assert q['selected_unique_prints'] == 5
+assert q['novel_priority_competition_score_class_or_publication_acceptance_upgraded'] is False
+assert q['historical_pilot_and_original_records_preserved'] is True
+assert q['compiler_alias_source_or_output_mutation'] is False
+assert len(q['current_nine_dependency_pins']) == 9
+actual = q['actual_selected_axiom_classifications']
+assert len(actual) == len({r['endpoint'] for r in actual}) == 5
+assert {r['endpoint'] for r in actual} == set(proposal['exact_expected_endpoints'])
+assert all(r['classification'] in expected['selected_allowed_classifications']
+           and not r['native_axioms'] and not r['unrecognized_axioms']
+           and 'sorryAx' not in r['axioms'] for r in actual)
+actual_source_sha = {r['module']: r['sha256'] for r in q['exact_source_identities']}
+assert actual_source_sha == {r['module']: r['source_sha256'] for r in proposal['immutable_source_identities']}
+assert sha(VERIFY / 'sakana-FOCUS-GROTH-fresh-build.json') == q['completed_receipt_sha256']
+for row in q['raw_log_identities']:
+    assert sha(row['file']) == row['sha256']
+for row in q['current_own_artifact_identities']:
+    path = Path(row['file'])
+    assert sha(path) == row['sha256'] and path.stat().st_size == row['bytes']
+
+files = list(proposal['prepared_current_canonical_sha256'])
+paths = {name: BASE / name for name in files}
+raw = {name: path.read_bytes() for name, path in paths.items()}
+before = {name: hashlib.sha256(value).hexdigest() for name, value in raw.items()}
+assert before == approval['current_canonical_sha256'], 'Exact then-current root-reviewed canonical SHA bindings are required'
+base = json.loads(raw['novel_results_content.json'])
+inventory = json.loads(raw['nonnovel_source_status_inventory.json'])
+base_expected = copy.deepcopy(base)
+inventory_expected = copy.deepcopy(inventory)
+fi = next(i for i, f in enumerate(base['families']) if f['id'] == 'FOCUS-GROTH')
+family = base['families'][fi]
+target = proposal['single_family_paragraph_target']
+assert fi == target['family_index'] and family['category'] == 'held_priority'
+si = target['section_index']; pi = target['paragraph_index']
+assert family['sections'][si]['heading'] == target['section_heading']
+assert family['sections'][si]['paragraphs'][pi] == target['before']
+assert 'fresh_verification' not in family
+metadata = {
+    'status': 'PASS_EXACT_RESTRICTED_TWO_SOURCE_FIVE_SELECTED_OUTPUT_SCOPE',
+    'checked_utc': q['qualified_utc'], 'compiler': 'Lean 4.33.1',
+    'authored_sources_planned': 2, 'authored_sources_passed': 2,
+    'selected_endpoint_prints_requested': 5, 'selected_endpoint_prints_passed': 5,
+    'selected_endpoint_names': proposal['exact_expected_endpoints'],
+    'selected_classification_counts': dict(Counter(r['classification'] for r in actual)),
+    'selected_native_admitted_or_unknown_axioms': 0,
+    'qualification_record': 'Verification/' + qualification_path.name,
+    'qualification_record_sha256': sha(qualification_path),
+    'source_plan_sha256': q['source_plan_sha256'],
+    'completed_receipt_sha256': q['completed_receipt_sha256'],
+    'scope': proposal['metadata_limits'],
+    'score_placement_or_novelty_upgrade_implied': False,
+    'historical_source_review_card_preserved': True}
+base_expected['families'][fi]['sections'][si]['paragraphs'][pi] = target['after_only_if_qualified']
+base_expected['families'][fi]['fresh_verification'] = metadata
+it = proposal['single_inventory_status_target']
+ii = next(i for i, r in enumerate(inventory['rows']) if r['id'] == it['row_id'])
+assert ii == it['row_index']
+assert inventory['rows'][ii]['formal_status_record'] == it['before']
+assert 'fresh_verification' not in inventory['rows'][ii]
+inventory_expected['rows'][ii]['formal_status_record'] = it['after_only_if_qualified']
+inventory_expected['rows'][ii]['fresh_verification'] = copy.deepcopy(metadata)
+
+base_text = raw['novel_results_content.json'].decode('utf8')
+assert base_text.count(literal(target['before'])) == 1
+base_text = base_text.replace(literal(target['before']), literal(target['after_only_if_qualified']), 1)
+pos = base_text.index('"id": "FOCUS-GROTH"'); start = base_text.rfind('{', 0, pos)
+assert json.JSONDecoder().raw_decode(base_text[start:])[0]['id'] == 'FOCUS-GROTH'
+base_text = append_member(base_text, start, 'fresh_verification', metadata)
+inventory_text = raw['nonnovel_source_status_inventory.json'].decode('utf8')
+assert inventory_text.count(literal(it['before'])) == 1
+inventory_text = inventory_text.replace(literal(it['before']), literal(it['after_only_if_qualified']), 1)
+pos = inventory_text.index('"id": "E02-FOCUS-GROTH"'); start = inventory_text.rfind('{', 0, pos)
+assert json.JSONDecoder().raw_decode(inventory_text[start:])[0]['id'] == 'E02-FOCUS-GROTH'
+inventory_text = append_member(inventory_text, start, 'fresh_verification', metadata)
+known = raw['nonnovel_paper_content.txt'].decode('utf8')
+kt = proposal['single_known_paragraph_target']
+assert kt['heading'] in known and known.count(kt['before']) == 1
+known = known.replace(kt['before'], kt['after_only_if_qualified'], 1)
+new = {'novel_results_content.json': base_text.encode('utf8'),
+       'nonnovel_source_status_inventory.json': inventory_text.encode('utf8'),
+       'nonnovel_paper_content.txt': known.encode('utf8')}
+assert json.loads(new['novel_results_content.json']) == base_expected
+assert json.loads(new['nonnovel_source_status_inventory.json']) == inventory_expected
+assert base_expected['families'][fi]['source_review_record'] == family['source_review_record']
+assert base_expected['families'][fi]['formal_endpoints'] == family['formal_endpoints']
+assert set(new) == set(proposal['canonical_write_whitelist'])
+assert not set(new).intersection(proposal['preserve_byte_identical'])
+record_path = VERIFY / 'groth-exact2-source5-actual-qualified-narrow-incorporation-20261005.json'
+assert not record_path.exists(), 'Never repeat an already applied incorporation'
+
+snapshot_dir = BASE / 'groth_completion_canonical_snapshots'
+snapshot_dir.mkdir(exist_ok=True)
+snapshots = []
+for name, value in raw.items():
+    suffix = Path(name).suffix
+    snapshot = snapshot_dir / (Path(name).stem + '.before.' + before[name] + suffix)
+    if snapshot.exists():
+        assert snapshot.read_bytes() == value
+    else:
+        with snapshot.open('xb') as stream:
+            stream.write(value)
+    snapshots.append({'canonical': name, 'file': str(snapshot), 'sha256': sha(snapshot)})
+assert {name: path.read_bytes() for name, path in paths.items()} == raw
+for name, updated in new.items():
+    atomic_replace(paths[name], raw[name], updated)
+for name in proposal['preserve_byte_identical']:
+    assert paths[name].read_bytes() == raw[name]
+record = {
+    'status': 'APPLIED_ROOT_APPROVED_ACTUAL_GROTH_EXACT2_SOURCE5_STATUS_ONLY',
+    'updated_utc': datetime.now(timezone.utc).isoformat(),
+    'root_approval': str(approval_path), 'root_approval_sha256': sha(approval_path),
+    'incorporation_helper_sha256': SELF_SHA,
+    'qualification': str(qualification_path), 'qualification_sha256': sha(qualification_path),
+    'proposal': str(PROPOSAL), 'proposal_sha256': PROPOSAL_SHA,
+    'before_canonical_sha256': before,
+    'after_canonical_sha256': {name: sha(path) for name, path in paths.items()},
+    'preserved_before_versions': snapshots,
+    'changed_existing_paragraphs': [target, kt, it],
+    'additive_fresh_metadata': metadata,
+    'category_and_held_planning_points_unchanged': 'held_priority / 3.14721',
+    'all_other_families_math_authors_affiliations_source_cards_unchanged': True,
+    'root_owned_brief_expansion_coverage_and_builders_byte_identical': True,
+    'compiler_source_output_mutation': False,
+    'Lean_or_qualification_invoked': False, 'PDF_regeneration_performed': False}
+with record_path.open('x', encoding='utf8', newline='\n') as stream:
+    json.dump(record, stream, ensure_ascii=False, indent=2)
+    stream.write('\n')
+print(json.dumps({'record': str(record_path), 'sha256': sha(record_path),
+                  'canonical_after': record['after_canonical_sha256']}))

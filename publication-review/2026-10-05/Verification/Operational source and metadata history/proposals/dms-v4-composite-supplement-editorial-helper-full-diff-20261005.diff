@@ -1,0 +1,110 @@
+--- incorporate_dms_v4_qualified_scope_only.py-caadf8310f78ebda7350287209f50c19f2a563f097181fa7a960f7e25943d4f6
++++ incorporate_dms_v4_composite_supplement_qualified_scope_only.py-dc66365088f851c1d7c217a18c38f7e8c694dd52951dfd3dafa4f6a6ed246be4
+@@ -8,8 +8,8 @@
+ BASE=Path(__file__).resolve().parent;VERIFY=BASE/'verification'
+ sys.path.insert(0,str(VERIFY))
+ from audit_axioms import parse as parse_axioms
+-PROPOSAL_SHA='b990fe3377c4a4ba9d4167c42856361ec76bffd69cfa525f113ccca3f3d5f3b1'
+-QUALIFIER_SHA='bc34e0c971547d46d164b74007546f11e7c3c6aa83f288a44d62df505b8f03d8'
++PROPOSAL_SHA='42a29a2b08078581a638cf397c24067a7acde437968bf0fbefab4193ecca6bde'
++QUALIFIER_SHA='3fb5241d60f619b0b9e7be287b38d4c5c6fe5a7792a52e1dca50c717d88e9836'
+ SELF_SHA=hashlib.sha256(Path(__file__).read_bytes()).hexdigest()
+ def sha(p):return hashlib.sha256(Path(p).read_bytes()).hexdigest()
+ def enc(s):return json.dumps(s,ensure_ascii=False)
+@@ -20,11 +20,11 @@
+ ap=Path(args.root_approval_file).resolve();assert ap.is_relative_to(VERIFY.resolve())
+ assert sha(ap)==args.root_approval_sha256
+ a=json.loads(ap.read_text(encoding='utf8'))
+-assert a['status']=='ROOT_APPROVED_NARROW_DMS_V4_CANONICAL_INCORPORATION'
++assert a['status']=='ROOT_APPROVED_NARROW_DMS_V4_COMPOSITE_SUPPLEMENT_CANONICAL_INCORPORATION'
+ assert a['incorporation_helper_sha256']==SELF_SHA and a['proposal_sha256']==PROPOSAL_SHA
+ assert a['qualification_helper_sha256']==QUALIFIER_SHA
+-assert sha(VERIFY/'qualify_dms_v4_vector_complete_route.py')==QUALIFIER_SHA
+-pp=VERIFY/'proposals/dms-v4-exact-scope-manuscript-status-proposal-20261005.json';assert sha(pp)==PROPOSAL_SHA
++assert sha(VERIFY/'qualify_dms_v4_supplement_composite.py')==QUALIFIER_SHA
++pp=VERIFY/'proposals/dms-v4-composite-supplement-narrow-editorial-proposal-20261005.json';assert sha(pp)==PROPOSAL_SHA
+ p=json.loads(pp.read_text(encoding='utf8'))
+ qp=Path(a['qualification_file']).resolve();assert qp.is_relative_to(VERIFY.resolve())
+ assert sha(qp)==a['qualification_sha256']
+@@ -58,6 +58,25 @@
+     for channel in invocation['current_raw_logs']:
+         path=Path(channel['file']).resolve();assert path.is_relative_to((VERIFY/'guarded-source-logs').resolve())
+         assert sha(path)==channel['sha256'] and path.stat().st_size==channel['bytes']
++# The actual original120/123 exit1 remains an independent preserved input defect.
++assert q['final_source_receipt_sha256']=='fb428dd280da30ba25480be5420157dfa7bbeb268c603b05edb0a17dd9eeb7ba'
++assert sha(q['organizer_supplemental_audit_receipt'])==q['organizer_supplemental_audit_receipt_sha256']
++assert q['original120_axiom_classes_and_sets_match_successful_supplement'] is True
++original_audit=q['frozen_original_audit_exit1_120of123_fully_preserved']
++assert original_audit['original_source_receipt_sha256']==q['final_source_receipt_sha256']
++assert len(original_audit['parsed120'])==120 and len(original_audit['actual_raw_audit_receipt'])==1
++assert original_audit['missing_exact3']==['Star6.colourable_of_dms_cubic','Star6.dms_iff_cubic16','Star6.leaf_of_dms']
++original_raw=original_audit['actual_raw_audit_receipt'][0];assert original_raw['actual_exit']==1
++original_row=original_raw['actual_row'];assert original_row['exit']==1 and original_row.get('stop_reason') is None
++for channel in ['stdout','stderr']:
++    guard=original_row['own_job_resource_receipt'];path=Path(guard[channel+'_file']).resolve()
++    assert path.is_relative_to((VERIFY/'guarded-source-logs').resolve())
++    content=path.read_bytes();assert hashlib.sha256(content).hexdigest()==guard[channel+'_sha256']
++    assert content==original_row[channel].encode('utf8')==original_raw['actual_'+channel].encode('utf8')
++assert parse_axioms(original_raw['actual_stdout'])==original_audit['parsed120']
++supplement=stage/'FreshAuditSupplement.lean'
++assert sha(supplement)=='0496d62e6a5cc83f98a73fc0c534eaa0469b1f9cd28f5e13f0fe9cbc1dcd0001'
++assert supplement.read_bytes()==b'import Star6Equiv\n'+(stage/'FreshAudit1.lean').read_bytes()
+ # Reparse every selected actual raw output and compare all123 endpoint classifications.
+ parsed=[]
+ for audit in q['actual_raw_print_receipts']:
+@@ -83,7 +102,7 @@
+ target=p['single_existing_paragraph_target']
+ after=target['qualified_replacement_template_NOT_ACTUAL_COMPLETION'].replace('{actual_trust_classification_sentence}',sentence)
+ assert '{actual_' not in after
+-paths={n:BASE/n for n in ['novel_results_content.json','novel_proof_expansions.json','novel_proof_coverage_2026-10-04.json']}
++paths={n:BASE/n for n in ['novel_results_content.json','novel_proof_expansions.json','novel_proof_coverage_2026-10-04.json','nonnovel_paper_content.txt','nonnovel_source_status_inventory.json']}
+ raw={n:f.read_bytes() for n,f in paths.items()};before={n:hashlib.sha256(v).hexdigest() for n,v in raw.items()}
+ assert before==a['current_canonical_sha256'],'Current canonical versions need separate exact root approval'
+ base=json.loads(raw['novel_results_content.json']);exp=json.loads(raw['novel_proof_expansions.json'])
+@@ -96,11 +115,17 @@
+ meta={
+  'status':q['status'],'qualification_record':'Verification/'+qp.name,'qualification_record_sha256':sha(qp),
+  'qualification_helper_sha256':QUALIFIER_SHA,'actual_source_receipt_sha256':q['final_source_receipt_sha256'],
+- 'route':'htpeo-dms-current-import-pruned-v4-vector','source_plan_sha256':q['source_plan_sha256'],
++ 'route':'htpeo-dms-current-import-pruned-v4-vector-with-organizer-only-supplement','source_plan_sha256':q['source_plan_sha256'],
+  'unchanged_scientific_source_bodies':228,'header_only_modified_sources':4,
+  'only_additional_V3_to_V4_header_source':'InflationA','only_additional_provider':'Mathlib.Data.Fin.VecNotation',
+  'actual_new_V4_cold_source_invocations_passed':7,'previous_own_cold_source_outputs_separately_reused':221,
+  'previous_original_own_readonly_V1_copy_inputs':99,'previous_V3_new_own_unaffected_passes':122,
++ 'frozen_original_organizer_audit_exit':1,'frozen_original_organizer_audit_prints':120,'frozen_original_organizer_audit_requests':123,
++ 'frozen_original_missing3':['Star6.colourable_of_dms_cubic','Star6.dms_iff_cubic16','Star6.leaf_of_dms'],
++ 'supplemental_organizer_audit_record_sha256':q['organizer_supplemental_audit_receipt_sha256'],
++ 'supplemental_organizer_audit_source_sha256':'0496d62e6a5cc83f98a73fc0c534eaa0469b1f9cd28f5e13f0fe9cbc1dcd0001',
++ 'supplemental_change':'Only import Star6Equiv added to separate organizer audit; original123 requests and all228 scientific bodies/options unchanged.',
++ 'original120_classifications_and_axiom_sets_match_supplement':True,
+  'actual_selected_unique_endpoint_prints':123,'selected_standard_kernel_outputs':standard,
+  'selected_axiom_free_outputs':free,'selected_native_evaluation_outputs':native,
+  'actual_selected_endpoint_classifications':parsed,'native_trust_disclosure':q['native_trust_qualification'],
+@@ -110,7 +135,7 @@
+  'five_open_structural_hypotheses':['FEEXTD10','FEEXISTD10','POLE','TDTRI','IID'],
+  'finite_refinements_do_not_prove_infinite_instances':['FEEXISTD18','IID16'],
+  'competition_p':0.15,'score_novelty_priority_or_placement_upgrade_implied':False,
+- 'scope':'Qualified 228-body import-only route with 99 previous original-owned inputs, 122 previous V3-owned passes, seven actual new V4 sources and 123 fresh selected prints. General DMS remains unproved; competition p=.15 retained.'
++ 'scope':'Qualified composite route: 228 identical scientific bodies, 99 original-owned inputs, 122 previous V3-owned passes and seven new V4 sources. Original organizer audit exit1 with120/123 remains preserved; separate organizer-only same123 supplement completes selected auditing. General DMS remains unproved; competition p=.15 retained.'
+ }
+ expected_base['families'][fi]['sections'][si]['paragraphs'][pi]=after
+ expected_base['families'][fi]['fresh_verification']=meta
+@@ -148,8 +173,8 @@
+     temp=paths[n].with_name(paths[n].name+'.dms-incorporation.tmp')
+     with temp.open('xb') as stream:stream.write(new)
+     assert paths[n].read_bytes()==raw[n];os.replace(temp,paths[n])
+-assert paths['novel_proof_coverage_2026-10-04.json'].read_bytes()==raw['novel_proof_coverage_2026-10-04.json']
+-record={'status':'APPLIED_ROOT_APPROVED_ACTUAL_DMS_V4_7_NEW221_PRIOR123_SELECTED_SCOPE_ONLY',
++for protected in ['novel_proof_coverage_2026-10-04.json','nonnovel_paper_content.txt','nonnovel_source_status_inventory.json']:assert paths[protected].read_bytes()==raw[protected]
++record={'status':'APPLIED_ROOT_APPROVED_ACTUAL_DMS_V4_COMPOSITE_7_NEW221_PRIOR_SUPPLEMENT123_SCOPE_ONLY',
+  'updated_utc':datetime.now(timezone.utc).isoformat(),'root_approval':str(ap),'root_approval_sha256':sha(ap),
+  'incorporation_helper_sha256':SELF_SHA,'qualification':str(qp),'qualification_sha256':sha(qp),
+  'proposal_sha256':PROPOSAL_SHA,'before_canonical_sha256':before,
+@@ -159,6 +184,6 @@
+  'only_additive_DMS_family_and_expansion_fresh_verification_metadata':True,
+  'all_other_families_source_cards_formal_endpoints_ordinary_prose_coverage_bytes_unchanged':True,
+  'five_open_hypotheses_and_p_15_preserved':True,'source_compilation_or_PDF_regeneration_performed':False}
+-out=VERIFY/'dms-v4-actual-qualified-narrow-incorporation-20261005.json'
++out=VERIFY/'dms-v4-composite-supplement-actual-qualified-narrow-incorporation-20261005.json'
+ with out.open('x',encoding='utf8',newline='\n') as stream:json.dump(record,stream,ensure_ascii=False,indent=2);stream.write('\n')
+ print(json.dumps({'record':str(out),'sha256':sha(out),'after_canonical_sha256':record['after_canonical_sha256']}))

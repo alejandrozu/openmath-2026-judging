@@ -1,0 +1,209 @@
+{
+  "id": "sakana-erdos944-order-bound",
+  "entrant": "E02",
+  "version": "4.34.1",
+  "mathlib_pin": "d13f23b723b8a846827a245b89c10fc7d3f11612",
+  "source_dir": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos944-order-bound",
+  "modules": [
+    {
+      "module": "OpHack.Erdos944Graph",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos944-order-bound\\OpHack\\Erdos944Graph.lean",
+      "source": "Reproduction_Sources/erdos944-order-bound/OpHack/Erdos944Graph.lean",
+      "sha256": "359714b038115b65e9129b006bd731e2b2da74b215dbdde385782f1b1aa0177d"
+    },
+    {
+      "module": "CriticalCodeBound",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos944-order-bound\\CriticalCodeBound.lean",
+      "source": "Reproduction_Sources/erdos944-order-bound/CriticalCodeBound.lean",
+      "sha256": "0d04fbe2740dc9c550dc5a3645d89e4023599d2375b352dcee32faba11de4c5a"
+    },
+    {
+      "module": "OpHack.Erdos944Bounds",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos944-order-bound\\OpHack\\Erdos944Bounds.lean",
+      "source": "Reproduction_Sources/erdos944-order-bound/OpHack/Erdos944Bounds.lean",
+      "sha256": "8f9e544d0e9f465f8d92d0c0b878ab2bd9b542c0c969eaa4e2d7c908acec27f4"
+    }
+  ],
+  "endpoints": [
+    "Erdos944Bounds.erdos944_order_linear",
+    "Erdos944Bounds.erdos944_order_quadratic",
+    "Erdos944Bounds.erdos944_order_exact"
+  ],
+  "roots": [
+    "OpHack.Erdos944Bounds"
+  ],
+  "audit_modules": [
+    "FreshAudit1.lean"
+  ],
+  "lean_options": {},
+  "static_review_contexts": [],
+  "status": "PASS",
+  "builds": [
+    {
+      "module": "OpHack.Erdos944Graph",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "OpHack\\Erdos944Graph.olean",
+        "OpHack\\Erdos944Graph.lean"
+      ],
+      "seconds": 18.92,
+      "exit": 0,
+      "stdout": "OpHack\\Erdos944Graph.lean:59:15: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead\nOpHack\\Erdos944Graph.lean:59:27: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead\nOpHack\\Erdos944Graph.lean:67:17: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead\nOpHack\\Erdos944Graph.lean:67:28: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead\nOpHack\\Erdos944Graph.lean:74:18: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead\nOpHack\\Erdos944Graph.lean:74:29: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead\nOpHack\\Erdos944Graph.lean:59:15: warning: This simp argument is unused:\n  if_pos rfl\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [if_neg hy]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\nOpHack\\Erdos944Graph.lean:67:28: warning: This simp argument is unused:\n  if_pos rfl\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [if_neg hx]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\nOpHack\\Erdos944Graph.lean:114:60: warning: Variable name `hv` is not explicitly referenced.\n\nHint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:\n  [apply] _hv\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\nOpHack\\Erdos944Graph.lean:130:0: warning: automatically included section variable(s) unused in theorem `Erdos944Bounds.properExcept_of_induce_colorable`:\n  [Fintype V]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [Fintype V] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`\nOpHack\\Erdos944Graph.lean:197:0: warning: automatically included section variable(s) unused in theorem `Erdos944Bounds.properExcept_of_isCritical`:\n  [Fintype V]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [Fintype V] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`\nOpHack\\Erdos944Graph.lean:219:0: warning: automatically included section variable(s) unused in theorem `Erdos944Bounds.edgeRobust_of_criticalEdges`:\n  [Fintype V]\n  [DecidableEq V]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [Fintype V] [DecidableEq V] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`\nOpHack\\Erdos944Graph.lean:235:2: warning: Try this: \n  haveI\u0335\n\nThe goal is a proposition, so `have` is preferred over `haveI`.\nThe difference between `have` and `haveI` is that `haveI` inlines the value.\nBut this is not relevant for proofs because of proof irrelevance.\n\nNote: This linter can be disabled with `set_option linter.style.haveILetI false`\nOpHack\\Erdos944Graph.lean:232:0: warning: automatically included section variable(s) unused in theorem `Erdos944Bounds.nonempty_of_isCritical`:\n  [Fintype V]\n  [DecidableEq V]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [Fintype V] [DecidableEq V] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`\n",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 7746969600,
+      "stop_reason": null,
+      "owned_process_stop_output": null,
+      "source_sha256": "359714b038115b65e9129b006bd731e2b2da74b215dbdde385782f1b1aa0177d",
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos944-order-bound\\OpHack\\Erdos944Graph.olean",
+          "sha256": "9f06ce219de809970ed99d66d3790a4256e28e976418990eff370e04da37bf21",
+          "bytes": 373160
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "CriticalCodeBound",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "CriticalCodeBound.olean",
+        "CriticalCodeBound.lean"
+      ],
+      "seconds": 20.25,
+      "exit": 0,
+      "stdout": "CriticalCodeBound.lean:46:8: warning: automatically included section variable(s) unused in theorem `_private.CriticalCodeBound.0.CriticalCodeBound.total_distance`:\n  [DecidableEq \u03b9]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [DecidableEq \u03b9] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`\nCriticalCodeBound.lean:154:0: warning: automatically included section variable(s) unused in theorem `CriticalCodeBound.ground_size_lower`:\n  [DecidableEq \u03b9]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [DecidableEq \u03b9] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`\n'CriticalCodeBound.finite_code_bound' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CriticalCodeBound.code_bound_at_smaller_index' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CriticalCodeBound.exact_independence_filter' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CriticalCodeBound.order_polynomial_bound' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CriticalCodeBound.integer_order_bound' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CriticalCodeBound.integer_order_bound_r' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CriticalCodeBound.ground_size_lower' depends on axioms: [propext, Classical.choice, Quot.sound]\n'CriticalCodeBound.elementary_order_bound' depends on axioms: [propext, Quot.sound]\n",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 7807442944,
+      "stop_reason": null,
+      "owned_process_stop_output": null,
+      "source_sha256": "0d04fbe2740dc9c550dc5a3645d89e4023599d2375b352dcee32faba11de4c5a",
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos944-order-bound\\CriticalCodeBound.olean",
+          "sha256": "551de5c2d46ba14351d7d22b46f8bc053fe56f8e8180f85044ec477f33b69cef",
+          "bytes": 967808
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "OpHack.Erdos944Bounds",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "OpHack\\Erdos944Bounds.olean",
+        "OpHack\\Erdos944Bounds.lean"
+      ],
+      "seconds": 13.01,
+      "exit": 0,
+      "stdout": "OpHack\\Erdos944Bounds.lean:32:2: warning: Try this: \n  letI\u0335\n\nThe goal is a proposition, so `let` is preferred over `letI`.\nThe difference between `let` and `letI` is that `letI` inlines the value.\nBut this is not relevant for proofs because of proof irrelevance.\n\nNote: This linter can be disabled with `set_option linter.style.haveILetI false`\nOpHack\\Erdos944Bounds.lean:46:2: warning: Try this: \n  letI\u0335\n\nThe goal is a proposition, so `let` is preferred over `letI`.\nThe difference between `let` and `letI` is that `letI` inlines the value.\nBut this is not relevant for proofs because of proof irrelevance.\n\nNote: This linter can be disabled with `set_option linter.style.haveILetI false`\nOpHack\\Erdos944Bounds.lean:60:2: warning: Try this: \n  letI\u0335\n\nThe goal is a proposition, so `let` is preferred over `letI`.\nThe difference between `let` and `letI` is that `letI` inlines the value.\nBut this is not relevant for proofs because of proof irrelevance.\n\nNote: This linter can be disabled with `set_option linter.style.haveILetI false`\nErdos944Bounds.erdos944_order_linear.{u_1} {V : Type u_1} [Fintype V] [DecidableEq V] (G : SimpleGraph V) {r : \u2115}\n  (hr : 1 \u2264 r) (hG : G.IsCritical 4) (hE : \u2200 (edges : Set (Sym2 V)), G.IsCriticalEdges edges \u2192 r < edges.ncard) :\n  27 * r + 19 \u2264 4 * Fintype.card V\n'Erdos944Bounds.erdos944_order_quadratic' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Erdos944Bounds.erdos944_order_linear' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Erdos944Bounds.erdos944_order_exact' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 7858413568,
+      "stop_reason": null,
+      "owned_process_stop_output": null,
+      "source_sha256": "8f9e544d0e9f465f8d92d0c0b878ab2bd9b542c0c969eaa4e2d7c908acec27f4",
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos944-order-bound\\OpHack\\Erdos944Bounds.olean",
+          "sha256": "83c758d7cff289bcd5abb324fe552b26d086bce72043bc192a3088cf88390c31",
+          "bytes": 98736
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "FreshAudit1.lean",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "FreshAudit1.olean",
+        "FreshAudit1.lean"
+      ],
+      "seconds": 10.77,
+      "exit": 0,
+      "stdout": "'Erdos944Bounds.erdos944_order_linear' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Erdos944Bounds.erdos944_order_quadratic' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Erdos944Bounds.erdos944_order_exact' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "is_endpoint_audit": true,
+      "minimum_free_bytes": 7888023552,
+      "stop_reason": null,
+      "owned_process_stop_output": null,
+      "source_sha256": "4dbf754eda08237b93e5936a031eeaacef68c62142cdd8a770a0f1e3720feee9",
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos944-order-bound\\FreshAudit1.olean",
+          "sha256": "071e5faf0b5b58de7300eb1a632bd079b541d9f635a1b9692e4054655ff27ed1",
+          "bytes": 1472
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    }
+  ],
+  "compiler_version": "Lean (version 4.34.1, x86_64-w64-windows-gnu, commit 5045d0056413266e57c625dcd7c365b10e377c52, Release)",
+  "compilation_order": [
+    "OpHack.Erdos944Graph",
+    "CriticalCodeBound",
+    "OpHack.Erdos944Bounds"
+  ],
+  "started_utc": "2026-10-04T21:30:10Z",
+  "failed_invocations": [],
+  "selected_audit_axiom_review": [
+    {
+      "endpoint": "Erdos944Bounds.erdos944_order_linear",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    },
+    {
+      "endpoint": "Erdos944Bounds.erdos944_order_quadratic",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    },
+    {
+      "endpoint": "Erdos944Bounds.erdos944_order_exact",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    }
+  ],
+  "resource_settings": {
+    "LEAN_NUM_THREADS": 1,
+    "lean_shell_worker_flag": "-j1",
+    "maxHeartbeats": 0,
+    "maxRecDepth": 100000
+  },
+  "finished_utc": "2026-10-04T21:31:13Z"
+}

@@ -1,0 +1,26 @@
+{
+  "scope": "Exact 4.34.1 official dependency checkout used by fresh custom-source replays",
+  "mathlib_commit": "d13f23b723b8a846827a245b89c10fc7d3f11612",
+  "caveats": [
+    {
+      "package": "batteries",
+      "commit": "f2effa3d803fda822b1f97b806c47cf2adfbcbc2",
+      "path": "docs/README.md",
+      "working_tree_status": "D",
+      "git_tree_mode": "120000",
+      "git_blob": "32d46ee883b58d6a383eed06eb98f33aa6530ded",
+      "original_symlink_target": "../README.md",
+      "reason": "The inspected codeload extractor omitted symbolic links. This is a documentation symlink, not a Lean source file.",
+      "independent_checks": ["git ls-tree HEAD docs/README.md", "git show HEAD:docs/README.md"]
+    },
+    {
+      "path_pattern": ".source-complete.json",
+      "working_tree_status": "untracked",
+      "reason": "Operational source-fetch receipt written by this audit, not submitted proof source."
+    },
+    {
+      "reason": "Operational cache-plan exporter and source-fetch receipts may appear as additional untracked files. They are not edits to tracked Lean theorem sources."
+    }
+  ],
+  "qualification": "The verified Git HEADs and full official-cache import PASS do not assert a completely clean working tree. Selected entrant source bytes are separately hashed in each custom build plan and invocation receipt."
+}

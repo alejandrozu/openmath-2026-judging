@@ -1,0 +1,3379 @@
+{
+  "id": "matt-unitary-current",
+  "version": "4.30.0-rc2",
+  "mathlib_pin": "c1e30e172c8fda21e6776bf1f10351e882ee31b9",
+  "entrant": "Matt Bowring",
+  "source_dir": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\matt-unitary-current",
+  "modules": [
+    {
+      "module": "LeanUnitary.Blocks",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\matt-unitary-current\\LeanUnitary\\Blocks.lean",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\matt-unitary-new\\LeanUnitary\\Blocks.lean",
+      "sha256": "1bc6b0ed5e96acbeac2d73a1a1a0c442d737103f2c775e449a0ab84fffca9a23"
+    },
+    {
+      "module": "LeanUnitary.Circuit",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\matt-unitary-current\\LeanUnitary\\Circuit.lean",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\matt-unitary-new\\LeanUnitary\\Circuit.lean",
+      "sha256": "01d279c4b53bcc1456c2ef825b515b76a9189fa789f96c7d2fef8711259afbe0"
+    },
+    {
+      "module": "LeanUnitary.Claims",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\matt-unitary-current\\LeanUnitary\\Claims.lean",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\matt-unitary-new\\LeanUnitary\\Claims.lean",
+      "sha256": "05ab3c7e04d1048be3166b799b772d836d5dd9c35ba7b48e65b223b23c3869fa"
+    },
+    {
+      "module": "LeanUnitary.Decomposition.BlockZXZ",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\matt-unitary-current\\LeanUnitary\\Decomposition\\BlockZXZ.lean",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\matt-unitary-new\\LeanUnitary\\Decomposition\\BlockZXZ.lean",
+      "sha256": "2133687ae5726d8cf1ae96c8de4d4124c424169797195af9ff02212390997700"
+    },
+    {
+      "module": "LeanUnitary.Decomposition.CosineSine",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\matt-unitary-current\\LeanUnitary\\Decomposition\\CosineSine.lean",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\matt-unitary-new\\LeanUnitary\\Decomposition\\CosineSine.lean",
+      "sha256": "01467e5ea889d949becd6d03a7f8c1e3408be56254622828b31dfd36c524df03"
+    },
+    {
+      "module": "LeanUnitary.Decomposition.Demultiplex",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\matt-unitary-current\\LeanUnitary\\Decomposition\\Demultiplex.lean",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\matt-unitary-new\\LeanUnitary\\Decomposition\\Demultiplex.lean",
+      "sha256": "327a046cce7567452aa6e654813bbf71de9e17ea7e35cbbe1bce78c6066dbe74"
+    },
+    {
+      "module": "LeanUnitary.Decomposition.Multiplexor",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\matt-unitary-current\\LeanUnitary\\Decomposition\\Multiplexor.lean",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\matt-unitary-new\\LeanUnitary\\Decomposition\\Multiplexor.lean",
+      "sha256": "8588fddfbf8eb427a5fa9ca231432fdf4fee6ea4f8079245171da4cf3f2c99f2"
+    },
+    {
+      "module": "LeanUnitary.Decomposition.QSD",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\matt-unitary-current\\LeanUnitary\\Decomposition\\QSD.lean",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\matt-unitary-new\\LeanUnitary\\Decomposition\\QSD.lean",
+      "sha256": "9f20f1e2e6b57be6679a1abb5b6738d70b8cfe68e2876c2f2343119eac9b5bdd"
+    },
+    {
+      "module": "LeanUnitary.Decomposition.TwoQubit",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\matt-unitary-current\\LeanUnitary\\Decomposition\\TwoQubit.lean",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\matt-unitary-new\\LeanUnitary\\Decomposition\\TwoQubit.lean",
+      "sha256": "c0e4c915540767e571aa61f280c076a9ab9a71db99e6197a0f24893651b2f8d1"
+    },
+    {
+      "module": "LeanUnitary.LinearAlgebra",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\matt-unitary-current\\LeanUnitary\\LinearAlgebra.lean",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\matt-unitary-new\\LeanUnitary\\LinearAlgebra.lean",
+      "sha256": "f81b229c2c087d5ffe74ee8bce4bee6be5f6c73969bccc4de98abef958775b43"
+    },
+    {
+      "module": "LeanUnitary.Pivot.Count",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\matt-unitary-current\\LeanUnitary\\Pivot\\Count.lean",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\matt-unitary-new\\LeanUnitary\\Pivot\\Count.lean",
+      "sha256": "8683beed72dc58584946879ce8abb0a12f647e1d6a8ab3b00bcc8b3e1424c453"
+    },
+    {
+      "module": "LeanUnitary.Pivot.Existence.EigenContinuity",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\matt-unitary-current\\LeanUnitary\\Pivot\\Existence\\EigenContinuity.lean",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\matt-unitary-new\\LeanUnitary\\Pivot\\Existence\\EigenContinuity.lean",
+      "sha256": "b000ef2f314e2def1493cc42ba709e7ee421bff38c274e80cbd8fcc253d8161b"
+    },
+    {
+      "module": "LeanUnitary.Pivot.Existence.Imbalance",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\matt-unitary-current\\LeanUnitary\\Pivot\\Existence\\Imbalance.lean",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\matt-unitary-new\\LeanUnitary\\Pivot\\Existence\\Imbalance.lean",
+      "sha256": "f212bd6d98c2d94411e36ed32b0eddbb391f82c6a56e469a2892a57bb66d2b01"
+    },
+    {
+      "module": "LeanUnitary.Pivot.Existence.Lift",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\matt-unitary-current\\LeanUnitary\\Pivot\\Existence\\Lift.lean",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\matt-unitary-new\\LeanUnitary\\Pivot\\Existence\\Lift.lean",
+      "sha256": "81e99274d918743f092392a780e1ff43e6834aa13dd0528ada190c6a90e8a591"
+    },
+    {
+      "module": "LeanUnitary.Pivot.Existence.PhaseList",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\matt-unitary-current\\LeanUnitary\\Pivot\\Existence\\PhaseList.lean",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\matt-unitary-new\\LeanUnitary\\Pivot\\Existence\\PhaseList.lean",
+      "sha256": "5e623dcfea8411754bab67dd619b16c9da3017e31708c0dc80c94a73bbb2e65c"
+    },
+    {
+      "module": "LeanUnitary.Pivot.Existence.Pivot",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\matt-unitary-current\\LeanUnitary\\Pivot\\Existence\\Pivot.lean",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\matt-unitary-new\\LeanUnitary\\Pivot\\Existence\\Pivot.lean",
+      "sha256": "dd8f689a42fc44b1c1ad17fa7af1e5de337aff7ccc0ec0ef7551ff81e362c2bf"
+    },
+    {
+      "module": "LeanUnitary.Pivot.Existence.Rotation",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\matt-unitary-current\\LeanUnitary\\Pivot\\Existence\\Rotation.lean",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\matt-unitary-new\\LeanUnitary\\Pivot\\Existence\\Rotation.lean",
+      "sha256": "dbc170f97250b3966749af1a4b572f42b5506693c3c112c2d6f90802b0a1316d"
+    },
+    {
+      "module": "LeanUnitary.Pivot.Multiplexor.Basic",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\matt-unitary-current\\LeanUnitary\\Pivot\\Multiplexor\\Basic.lean",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\matt-unitary-new\\LeanUnitary\\Pivot\\Multiplexor\\Basic.lean",
+      "sha256": "5ecd64d0051bc0f7e16cbee17539ee6fe84d110959a96358ecc2c439733314b8"
+    },
+    {
+      "module": "LeanUnitary.Pivot.Multiplexor.Continuity",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\matt-unitary-current\\LeanUnitary\\Pivot\\Multiplexor\\Continuity.lean",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\matt-unitary-new\\LeanUnitary\\Pivot\\Multiplexor\\Continuity.lean",
+      "sha256": "6243a7f8de32ef63665b4c8e313a64068274dbb980da3fa54bd15b5e0628cabc"
+    },
+    {
+      "module": "LeanUnitary.Pivot.Multiplexor.Phase",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\matt-unitary-current\\LeanUnitary\\Pivot\\Multiplexor\\Phase.lean",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\matt-unitary-new\\LeanUnitary\\Pivot\\Multiplexor\\Phase.lean",
+      "sha256": "95a8c81d574d267981e2b80d03ddbe3385ddfdf805e759fbe62a0e3f09eee508"
+    },
+    {
+      "module": "LeanUnitary.Pivot.Path.Eigenvalues",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\matt-unitary-current\\LeanUnitary\\Pivot\\Path\\Eigenvalues.lean",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\matt-unitary-new\\LeanUnitary\\Pivot\\Path\\Eigenvalues.lean",
+      "sha256": "e43cfddd8816f591bef3833bf7a1d64690167b3b3568fbaedd8c525e7990659c"
+    },
+    {
+      "module": "LeanUnitary.Pivot.Path.Gate",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\matt-unitary-current\\LeanUnitary\\Pivot\\Path\\Gate.lean",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\matt-unitary-new\\LeanUnitary\\Pivot\\Path\\Gate.lean",
+      "sha256": "82bff63b801f1ba8d8ca5c06bba7859da4496b8e8b280b7b7bddba4e3ab98e4c"
+    },
+    {
+      "module": "LeanUnitary.Pivot.Split",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\matt-unitary-current\\LeanUnitary\\Pivot\\Split.lean",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\matt-unitary-new\\LeanUnitary\\Pivot\\Split.lean",
+      "sha256": "5e29c62f11ae32dc8c9301b9d001bbb1cf3d8e43cadd521615c400cb47dc9bd1"
+    },
+    {
+      "module": "LeanUnitary.Pivot.Synthesis",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\matt-unitary-current\\LeanUnitary\\Pivot\\Synthesis.lean",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\matt-unitary-new\\LeanUnitary\\Pivot\\Synthesis.lean",
+      "sha256": "20f943fe3968bf93163948deae9c3b399884145e7041ef63d28ac064bcc2ed61"
+    },
+    {
+      "module": "LeanUnitary.Spec",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\matt-unitary-current\\LeanUnitary\\Spec.lean",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\matt-unitary-new\\LeanUnitary\\Spec.lean",
+      "sha256": "b7379fedb47170ef29499def8123ee873afe83a02a300ba4544021031de76f62"
+    },
+    {
+      "module": "LeanUnitary",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\matt-unitary-current\\LeanUnitary.lean",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\matt-unitary-new\\LeanUnitary.lean",
+      "sha256": "72d7304c0bb262ec185deb80781d38868ae2d279f4f4ad5544bdb7738d7713fc"
+    }
+  ],
+  "roots": [
+    "LeanUnitary.Pivot.Existence.Pivot",
+    "LeanUnitary.Pivot.Count",
+    "LeanUnitary.Pivot.Synthesis"
+  ],
+  "audit_modules": [
+    "FreshAuditPivot.lean"
+  ],
+  "endpoints": [
+    "LeanUnitary.Pivot.exists_pivot",
+    "LeanUnitary.Pivot.pivot_merge",
+    "LeanUnitary.Pivot.continuousOn_lift",
+    "LeanUnitary.Pivot.count_closed",
+    "LeanUnitary.Pivot.saving",
+    "LeanUnitary.Pivot.generalBound_of_pivot_node"
+  ],
+  "lean_options": {
+    "pp.unicode.fun": true,
+    "relaxedAutoImplicit": false,
+    "maxSynthPendingDepth": 3
+  },
+  "status": "PASS_SELECTED_ENDPOINTS_WITH_UNFINISHED_BASELINES",
+  "builds": [
+    {
+      "module": "LeanUnitary.Spec",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.30.0-rc2-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-Dpp.unicode.fun=true",
+        "-DrelaxedAutoImplicit=false",
+        "-DmaxSynthPendingDepth=3",
+        "-o",
+        "LeanUnitary\\Spec.olean",
+        "LeanUnitary\\Spec.lean"
+      ],
+      "seconds": 393.359,
+      "exit": 0,
+      "stdout": "",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 5792649216,
+      "stop_reason": null,
+      "started_utc": "2026-10-05T01:16:09.227372+00:00",
+      "finished_utc": "2026-10-05T01:22:42.597581+00:00",
+      "owned_process_stop_output": null,
+      "own_job_resource_receipt": {
+        "command": [
+          "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.30.0-rc2-windows\\bin\\lean.exe",
+          "-j1",
+          "-DmaxHeartbeats=0",
+          "-DmaxRecDepth=100000",
+          "-Dpp.unicode.fun=true",
+          "-DrelaxedAutoImplicit=false",
+          "-DmaxSynthPendingDepth=3",
+          "-o",
+          "LeanUnitary\\Spec.olean",
+          "LeanUnitary\\Spec.lean"
+        ],
+        "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\matt-unitary-current",
+        "started_utc": "2026-10-05T01:16:09.227372+00:00",
+        "attempted": true,
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 5368709120,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 1073741824,
+          "own_job_private_bytes": 6442450944,
+          "own_process_private_bytes": 6442450944,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 3600
+        },
+        "minimum_disk_free_bytes": 5792649216,
+        "initial_system_memory_snapshot": {
+          "free_physical_bytes": 7681044480,
+          "total_physical_bytes": 34024419328,
+          "available_commit_bytes": 6884024320,
+          "total_commit_limit_bytes": 61075705856
+        },
+        "minimum_physical_available_bytes": 4392218624,
+        "minimum_available_commit_bytes": 5032542208,
+        "root_pid": 26992,
+        "own_job_assignment_before_resume": "PASS",
+        "exit": 0,
+        "job_peak_process_private_bytes": 706080768,
+        "job_peak_aggregate_private_bytes": 707379200,
+        "state": "PASS",
+        "finished_utc": "2026-10-05T01:22:42.597581+00:00",
+        "seconds": 393.359,
+        "polled_peak_tree_private_bytes": 705753088,
+        "polled_peak_tree_rss_bytes": 3479269376,
+        "counter_samples": 1414,
+        "observed_own_processes": {
+          "26992": {
+            "exe": "lean.exe",
+            "peak_private_bytes": 704454656,
+            "peak_rss_bytes": 3482103808
+          },
+          "52740": {
+            "exe": "conhost.exe",
+            "peak_private_bytes": 1298432,
+            "peak_rss_bytes": 7962624
+          }
+        },
+        "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\matt-unitary-current-6ea003beb8838453-attempt-0.stdout.txt",
+        "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\matt-unitary-current-6ea003beb8838453-attempt-0.stderr.txt",
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_excerpt": "",
+        "stderr_excerpt": ""
+      },
+      "source_sha256": "b7379fedb47170ef29499def8123ee873afe83a02a300ba4544021031de76f62",
+      "third_worker_memory_observations": {
+        "minimum_free_physical_bytes": 4392218624,
+        "minimum_available_commit_bytes": 5032542208,
+        "peak_owned_private_bytes": 707379200
+      },
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\matt-unitary-current\\LeanUnitary\\Spec.olean",
+          "sha256": "00a98789775208e3b25bfef645116e776cd9cdce6a6755cdfe650ddbdad5b8f7",
+          "bytes": 176104
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "LeanUnitary.Blocks",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.30.0-rc2-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-Dpp.unicode.fun=true",
+        "-DrelaxedAutoImplicit=false",
+        "-DmaxSynthPendingDepth=3",
+        "-o",
+        "LeanUnitary\\Blocks.olean",
+        "LeanUnitary\\Blocks.lean"
+      ],
+      "seconds": 35.078,
+      "exit": 0,
+      "stdout": "LeanUnitary\\Blocks.lean:29:8: warning: declaration uses `sorry`\nLeanUnitary\\Blocks.lean:33:8: warning: declaration uses `sorry`\n",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 6145921024,
+      "stop_reason": null,
+      "started_utc": "2026-10-05T01:24:52.600161+00:00",
+      "finished_utc": "2026-10-05T01:25:27.681317+00:00",
+      "owned_process_stop_output": null,
+      "own_job_resource_receipt": {
+        "command": [
+          "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.30.0-rc2-windows\\bin\\lean.exe",
+          "-j1",
+          "-DmaxHeartbeats=0",
+          "-DmaxRecDepth=100000",
+          "-Dpp.unicode.fun=true",
+          "-DrelaxedAutoImplicit=false",
+          "-DmaxSynthPendingDepth=3",
+          "-o",
+          "LeanUnitary\\Blocks.olean",
+          "LeanUnitary\\Blocks.lean"
+        ],
+        "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\matt-unitary-current",
+        "started_utc": "2026-10-05T01:24:52.600161+00:00",
+        "attempted": true,
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 5368709120,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 1073741824,
+          "own_job_private_bytes": 6442450944,
+          "own_process_private_bytes": 6442450944,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 3600
+        },
+        "minimum_disk_free_bytes": 6145921024,
+        "initial_system_memory_snapshot": {
+          "free_physical_bytes": 7445934080,
+          "total_physical_bytes": 34024419328,
+          "available_commit_bytes": 7881850880,
+          "total_commit_limit_bytes": 61075705856
+        },
+        "minimum_physical_available_bytes": 3448520704,
+        "minimum_available_commit_bytes": 6094577664,
+        "root_pid": 52880,
+        "own_job_assignment_before_resume": "PASS",
+        "exit": 0,
+        "job_peak_process_private_bytes": 703528960,
+        "job_peak_aggregate_private_bytes": 704745472,
+        "state": "PASS",
+        "finished_utc": "2026-10-05T01:25:27.681317+00:00",
+        "seconds": 35.078,
+        "polled_peak_tree_private_bytes": 704745472,
+        "polled_peak_tree_rss_bytes": 3452784640,
+        "counter_samples": 127,
+        "observed_own_processes": {
+          "52880": {
+            "exe": "lean.exe",
+            "peak_private_bytes": 703528960,
+            "peak_rss_bytes": 3470061568
+          },
+          "53576": {
+            "exe": "conhost.exe",
+            "peak_private_bytes": 1253376,
+            "peak_rss_bytes": 7856128
+          }
+        },
+        "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\matt-unitary-current-fea713c0b3d497ea-attempt-1.stdout.txt",
+        "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\matt-unitary-current-fea713c0b3d497ea-attempt-1.stderr.txt",
+        "stdout_sha256": "de89cebc721d17fb2e7f4c5dd0864fcf7f0e2811722ec0fe16b832980dfa66fc",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_excerpt": "LeanUnitary\\Blocks.lean:29:8: warning: declaration uses `sorry`\nLeanUnitary\\Blocks.lean:33:8: warning: declaration uses `sorry`\n",
+        "stderr_excerpt": ""
+      },
+      "source_sha256": "1bc6b0ed5e96acbeac2d73a1a1a0c442d737103f2c775e449a0ab84fffca9a23",
+      "third_worker_memory_observations": {
+        "minimum_free_physical_bytes": 3448520704,
+        "minimum_available_commit_bytes": 6094577664,
+        "peak_owned_private_bytes": 704745472
+      },
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\matt-unitary-current\\LeanUnitary\\Blocks.olean",
+          "sha256": "f85518f54ab382294f84634878b86c5db3476733e51f99e321970dd25b0d726b",
+          "bytes": 55816
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "LeanUnitary.Circuit",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.30.0-rc2-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-Dpp.unicode.fun=true",
+        "-DrelaxedAutoImplicit=false",
+        "-DmaxSynthPendingDepth=3",
+        "-o",
+        "LeanUnitary\\Circuit.olean",
+        "LeanUnitary\\Circuit.lean"
+      ],
+      "seconds": 38.703,
+      "exit": 0,
+      "stdout": "LeanUnitary\\Circuit.lean:44:8: warning: declaration uses `sorry`\n",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 6164197376,
+      "stop_reason": null,
+      "started_utc": "2026-10-05T01:25:27.692195+00:00",
+      "finished_utc": "2026-10-05T01:26:06.381423+00:00",
+      "owned_process_stop_output": null,
+      "own_job_resource_receipt": {
+        "command": [
+          "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.30.0-rc2-windows\\bin\\lean.exe",
+          "-j1",
+          "-DmaxHeartbeats=0",
+          "-DmaxRecDepth=100000",
+          "-Dpp.unicode.fun=true",
+          "-DrelaxedAutoImplicit=false",
+          "-DmaxSynthPendingDepth=3",
+          "-o",
+          "LeanUnitary\\Circuit.olean",
+          "LeanUnitary\\Circuit.lean"
+        ],
+        "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\matt-unitary-current",
+        "started_utc": "2026-10-05T01:25:27.692195+00:00",
+        "attempted": true,
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 5368709120,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 1073741824,
+          "own_job_private_bytes": 6442450944,
+          "own_process_private_bytes": 6442450944,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 3600
+        },
+        "minimum_disk_free_bytes": 6164197376,
+        "initial_system_memory_snapshot": {
+          "free_physical_bytes": 8945508352,
+          "total_physical_bytes": 34024419328,
+          "available_commit_bytes": 6872297472,
+          "total_commit_limit_bytes": 61075705856
+        },
+        "minimum_physical_available_bytes": 5390327808,
+        "minimum_available_commit_bytes": 6006599680,
+        "root_pid": 55576,
+        "own_job_assignment_before_resume": "PASS",
+        "exit": 0,
+        "job_peak_process_private_bytes": 705720320,
+        "job_peak_aggregate_private_bytes": 706932736,
+        "state": "PASS",
+        "finished_utc": "2026-10-05T01:26:06.381423+00:00",
+        "seconds": 38.703,
+        "polled_peak_tree_private_bytes": 705835008,
+        "polled_peak_tree_rss_bytes": 3440037888,
+        "counter_samples": 138,
+        "observed_own_processes": {
+          "55576": {
+            "exe": "lean.exe",
+            "peak_private_bytes": 704622592,
+            "peak_rss_bytes": 3475435520
+          },
+          "56436": {
+            "exe": "conhost.exe",
+            "peak_private_bytes": 1249280,
+            "peak_rss_bytes": 7856128
+          }
+        },
+        "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\matt-unitary-current-e236015a72ee3b29-attempt-1.stdout.txt",
+        "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\matt-unitary-current-e236015a72ee3b29-attempt-1.stderr.txt",
+        "stdout_sha256": "536b38876b9248d5957867dff6fc3b0906f1f06fdf859b7666a76e2d232da330",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_excerpt": "LeanUnitary\\Circuit.lean:44:8: warning: declaration uses `sorry`\n",
+        "stderr_excerpt": ""
+      },
+      "source_sha256": "01d279c4b53bcc1456c2ef825b515b76a9189fa789f96c7d2fef8711259afbe0",
+      "third_worker_memory_observations": {
+        "minimum_free_physical_bytes": 5390327808,
+        "minimum_available_commit_bytes": 6006599680,
+        "peak_owned_private_bytes": 706932736
+      },
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\matt-unitary-current\\LeanUnitary\\Circuit.olean",
+          "sha256": "cd746c8fca4d83f196fe0ddfce9a9fd7e77614121484e5a5d53722f96919ccc2",
+          "bytes": 100424
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "LeanUnitary.Decomposition.Multiplexor",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.30.0-rc2-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-Dpp.unicode.fun=true",
+        "-DrelaxedAutoImplicit=false",
+        "-DmaxSynthPendingDepth=3",
+        "-o",
+        "LeanUnitary\\Decomposition\\Multiplexor.olean",
+        "LeanUnitary\\Decomposition\\Multiplexor.lean"
+      ],
+      "seconds": 35.453,
+      "exit": 0,
+      "stdout": "LeanUnitary\\Decomposition\\Multiplexor.lean:29:8: warning: declaration uses `sorry`\n",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 6164766720,
+      "stop_reason": null,
+      "started_utc": "2026-10-05T01:26:06.391424+00:00",
+      "finished_utc": "2026-10-05T01:26:41.842742+00:00",
+      "owned_process_stop_output": null,
+      "own_job_resource_receipt": {
+        "command": [
+          "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.30.0-rc2-windows\\bin\\lean.exe",
+          "-j1",
+          "-DmaxHeartbeats=0",
+          "-DmaxRecDepth=100000",
+          "-Dpp.unicode.fun=true",
+          "-DrelaxedAutoImplicit=false",
+          "-DmaxSynthPendingDepth=3",
+          "-o",
+          "LeanUnitary\\Decomposition\\Multiplexor.olean",
+          "LeanUnitary\\Decomposition\\Multiplexor.lean"
+        ],
+        "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\matt-unitary-current",
+        "started_utc": "2026-10-05T01:26:06.391424+00:00",
+        "attempted": true,
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 5368709120,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 1073741824,
+          "own_job_private_bytes": 6442450944,
+          "own_process_private_bytes": 6442450944,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 3600
+        },
+        "minimum_disk_free_bytes": 6164766720,
+        "initial_system_memory_snapshot": {
+          "free_physical_bytes": 9860063232,
+          "total_physical_bytes": 34024419328,
+          "available_commit_bytes": 7219179520,
+          "total_commit_limit_bytes": 61075705856
+        },
+        "minimum_physical_available_bytes": 5278752768,
+        "minimum_available_commit_bytes": 6053715968,
+        "root_pid": 55880,
+        "own_job_assignment_before_resume": "PASS",
+        "exit": 0,
+        "job_peak_process_private_bytes": 703397888,
+        "job_peak_aggregate_private_bytes": 704634880,
+        "state": "PASS",
+        "finished_utc": "2026-10-05T01:26:41.842742+00:00",
+        "seconds": 35.453,
+        "polled_peak_tree_private_bytes": 704634880,
+        "polled_peak_tree_rss_bytes": 3441086464,
+        "counter_samples": 128,
+        "observed_own_processes": {
+          "55880": {
+            "exe": "lean.exe",
+            "peak_private_bytes": 703397888,
+            "peak_rss_bytes": 3464183808
+          },
+          "29156": {
+            "exe": "conhost.exe",
+            "peak_private_bytes": 1273856,
+            "peak_rss_bytes": 7864320
+          }
+        },
+        "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\matt-unitary-current-27a06b926d93560c-attempt-1.stdout.txt",
+        "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\matt-unitary-current-27a06b926d93560c-attempt-1.stderr.txt",
+        "stdout_sha256": "4a35c1ba31e972b1f5c97a5bbb86f838f7c5a915782c56e3fe1feebd872aed68",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_excerpt": "LeanUnitary\\Decomposition\\Multiplexor.lean:29:8: warning: declaration uses `sorry`\n",
+        "stderr_excerpt": ""
+      },
+      "source_sha256": "8588fddfbf8eb427a5fa9ca231432fdf4fee6ea4f8079245171da4cf3f2c99f2",
+      "third_worker_memory_observations": {
+        "minimum_free_physical_bytes": 5278752768,
+        "minimum_available_commit_bytes": 6053715968,
+        "peak_owned_private_bytes": 704634880
+      },
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\matt-unitary-current\\LeanUnitary\\Decomposition\\Multiplexor.olean",
+          "sha256": "6e62c22af3a34be1b8e5f172e7072850cfc33447ee9fbc646a0f92b8e9f86ed4",
+          "bytes": 9208
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "LeanUnitary.LinearAlgebra",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.30.0-rc2-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-Dpp.unicode.fun=true",
+        "-DrelaxedAutoImplicit=false",
+        "-DmaxSynthPendingDepth=3",
+        "-o",
+        "LeanUnitary\\LinearAlgebra.olean",
+        "LeanUnitary\\LinearAlgebra.lean"
+      ],
+      "seconds": 29.562,
+      "exit": 0,
+      "stdout": "LeanUnitary\\LinearAlgebra.lean:44:8: warning: declaration uses `sorry`\nLeanUnitary\\LinearAlgebra.lean:55:8: warning: declaration uses `sorry`\nLeanUnitary\\LinearAlgebra.lean:68:8: warning: declaration uses `sorry`\n",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 6169382912,
+      "stop_reason": null,
+      "started_utc": "2026-10-05T01:26:41.851739+00:00",
+      "finished_utc": "2026-10-05T01:27:11.420370+00:00",
+      "owned_process_stop_output": null,
+      "own_job_resource_receipt": {
+        "command": [
+          "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.30.0-rc2-windows\\bin\\lean.exe",
+          "-j1",
+          "-DmaxHeartbeats=0",
+          "-DmaxRecDepth=100000",
+          "-Dpp.unicode.fun=true",
+          "-DrelaxedAutoImplicit=false",
+          "-DmaxSynthPendingDepth=3",
+          "-o",
+          "LeanUnitary\\LinearAlgebra.olean",
+          "LeanUnitary\\LinearAlgebra.lean"
+        ],
+        "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\matt-unitary-current",
+        "started_utc": "2026-10-05T01:26:41.851739+00:00",
+        "attempted": true,
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 5368709120,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 1073741824,
+          "own_job_private_bytes": 6442450944,
+          "own_process_private_bytes": 6442450944,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 3600
+        },
+        "minimum_disk_free_bytes": 6169382912,
+        "initial_system_memory_snapshot": {
+          "free_physical_bytes": 8881963008,
+          "total_physical_bytes": 34024419328,
+          "available_commit_bytes": 6769446912,
+          "total_commit_limit_bytes": 61075705856
+        },
+        "minimum_physical_available_bytes": 6590504960,
+        "minimum_available_commit_bytes": 6613422080,
+        "root_pid": 5880,
+        "own_job_assignment_before_resume": "PASS",
+        "exit": 0,
+        "job_peak_process_private_bytes": 706412544,
+        "job_peak_aggregate_private_bytes": 707657728,
+        "state": "PASS",
+        "finished_utc": "2026-10-05T01:27:11.420370+00:00",
+        "seconds": 29.562,
+        "polled_peak_tree_private_bytes": 706019328,
+        "polled_peak_tree_rss_bytes": 3390480384,
+        "counter_samples": 109,
+        "observed_own_processes": {
+          "5880": {
+            "exe": "lean.exe",
+            "peak_private_bytes": 704774144,
+            "peak_rss_bytes": 3468181504
+          },
+          "48820": {
+            "exe": "conhost.exe",
+            "peak_private_bytes": 1245184,
+            "peak_rss_bytes": 7856128
+          }
+        },
+        "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\matt-unitary-current-db01dbc2b75741a9-attempt-1.stdout.txt",
+        "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\matt-unitary-current-db01dbc2b75741a9-attempt-1.stderr.txt",
+        "stdout_sha256": "ef62ff77fa6f998525652978980e22c3d557cb6fb38b405161726d6c2653aa78",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_excerpt": "LeanUnitary\\LinearAlgebra.lean:44:8: warning: declaration uses `sorry`\nLeanUnitary\\LinearAlgebra.lean:55:8: warning: declaration uses `sorry`\nLeanUnitary\\LinearAlgebra.lean:68:8: warning: declaration uses `sorry`\n",
+        "stderr_excerpt": ""
+      },
+      "source_sha256": "f81b229c2c087d5ffe74ee8bce4bee6be5f6c73969bccc4de98abef958775b43",
+      "third_worker_memory_observations": {
+        "minimum_free_physical_bytes": 6590504960,
+        "minimum_available_commit_bytes": 6613422080,
+        "peak_owned_private_bytes": 707657728
+      },
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\matt-unitary-current\\LeanUnitary\\LinearAlgebra.olean",
+          "sha256": "f99fc10997e10e6bf97898a44f4923e3a57d3445c78c3f5fac1921df2dc90b66",
+          "bytes": 64840
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "LeanUnitary.Decomposition.Demultiplex",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.30.0-rc2-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-Dpp.unicode.fun=true",
+        "-DrelaxedAutoImplicit=false",
+        "-DmaxSynthPendingDepth=3",
+        "-o",
+        "LeanUnitary\\Decomposition\\Demultiplex.olean",
+        "LeanUnitary\\Decomposition\\Demultiplex.lean"
+      ],
+      "seconds": 32.719,
+      "exit": 0,
+      "stdout": "LeanUnitary\\Decomposition\\Demultiplex.lean:24:8: warning: declaration uses `sorry`\n",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 6168756224,
+      "stop_reason": null,
+      "started_utc": "2026-10-05T01:27:11.427881+00:00",
+      "finished_utc": "2026-10-05T01:27:44.145835+00:00",
+      "owned_process_stop_output": null,
+      "own_job_resource_receipt": {
+        "command": [
+          "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.30.0-rc2-windows\\bin\\lean.exe",
+          "-j1",
+          "-DmaxHeartbeats=0",
+          "-DmaxRecDepth=100000",
+          "-Dpp.unicode.fun=true",
+          "-DrelaxedAutoImplicit=false",
+          "-DmaxSynthPendingDepth=3",
+          "-o",
+          "LeanUnitary\\Decomposition\\Demultiplex.olean",
+          "LeanUnitary\\Decomposition\\Demultiplex.lean"
+        ],
+        "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\matt-unitary-current",
+        "started_utc": "2026-10-05T01:27:11.427881+00:00",
+        "attempted": true,
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 5368709120,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 1073741824,
+          "own_job_private_bytes": 6442450944,
+          "own_process_private_bytes": 6442450944,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 3600
+        },
+        "minimum_disk_free_bytes": 6168756224,
+        "initial_system_memory_snapshot": {
+          "free_physical_bytes": 10141708288,
+          "total_physical_bytes": 34024419328,
+          "available_commit_bytes": 9424674816,
+          "total_commit_limit_bytes": 61075705856
+        },
+        "minimum_physical_available_bytes": 5661941760,
+        "minimum_available_commit_bytes": 7596634112,
+        "root_pid": 5908,
+        "own_job_assignment_before_resume": "PASS",
+        "exit": 0,
+        "job_peak_process_private_bytes": 707428352,
+        "job_peak_aggregate_private_bytes": 708685824,
+        "state": "PASS",
+        "finished_utc": "2026-10-05T01:27:44.145835+00:00",
+        "seconds": 32.719,
+        "polled_peak_tree_private_bytes": 708538368,
+        "polled_peak_tree_rss_bytes": 3397263360,
+        "counter_samples": 119,
+        "observed_own_processes": {
+          "55928": {
+            "exe": "conhost.exe",
+            "peak_private_bytes": 1257472,
+            "peak_rss_bytes": 7856128
+          },
+          "5908": {
+            "exe": "lean.exe",
+            "peak_private_bytes": 707280896,
+            "peak_rss_bytes": 3466854400
+          }
+        },
+        "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\matt-unitary-current-fee71191d92dcfec-attempt-1.stdout.txt",
+        "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\matt-unitary-current-fee71191d92dcfec-attempt-1.stderr.txt",
+        "stdout_sha256": "d2fe7ead958264a5e070a493242eb65cbc085aedee3f889914d8e9d7839e75d9",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_excerpt": "LeanUnitary\\Decomposition\\Demultiplex.lean:24:8: warning: declaration uses `sorry`\n",
+        "stderr_excerpt": ""
+      },
+      "source_sha256": "327a046cce7567452aa6e654813bbf71de9e17ea7e35cbbe1bce78c6066dbe74",
+      "third_worker_memory_observations": {
+        "minimum_free_physical_bytes": 5661941760,
+        "minimum_available_commit_bytes": 7596634112,
+        "peak_owned_private_bytes": 708685824
+      },
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\matt-unitary-current\\LeanUnitary\\Decomposition\\Demultiplex.olean",
+          "sha256": "d64b56d86b4440cb706127d0d246952cb089437c81017ea2b75995fbc6fb4326",
+          "bytes": 8872
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "LeanUnitary.Decomposition.CosineSine",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.30.0-rc2-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-Dpp.unicode.fun=true",
+        "-DrelaxedAutoImplicit=false",
+        "-DmaxSynthPendingDepth=3",
+        "-o",
+        "LeanUnitary\\Decomposition\\CosineSine.olean",
+        "LeanUnitary\\Decomposition\\CosineSine.lean"
+      ],
+      "seconds": 38.625,
+      "exit": 0,
+      "stdout": "LeanUnitary\\Decomposition\\CosineSine.lean:25:8: warning: declaration uses `sorry`\n",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 5834203136,
+      "stop_reason": null,
+      "started_utc": "2026-10-05T01:27:44.160638+00:00",
+      "finished_utc": "2026-10-05T01:28:22.792454+00:00",
+      "owned_process_stop_output": null,
+      "own_job_resource_receipt": {
+        "command": [
+          "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.30.0-rc2-windows\\bin\\lean.exe",
+          "-j1",
+          "-DmaxHeartbeats=0",
+          "-DmaxRecDepth=100000",
+          "-Dpp.unicode.fun=true",
+          "-DrelaxedAutoImplicit=false",
+          "-DmaxSynthPendingDepth=3",
+          "-o",
+          "LeanUnitary\\Decomposition\\CosineSine.olean",
+          "LeanUnitary\\Decomposition\\CosineSine.lean"
+        ],
+        "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\matt-unitary-current",
+        "started_utc": "2026-10-05T01:27:44.160638+00:00",
+        "attempted": true,
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 5368709120,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 1073741824,
+          "own_job_private_bytes": 6442450944,
+          "own_process_private_bytes": 6442450944,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 3600
+        },
+        "minimum_disk_free_bytes": 5834203136,
+        "initial_system_memory_snapshot": {
+          "free_physical_bytes": 9127493632,
+          "total_physical_bytes": 34024419328,
+          "available_commit_bytes": 8181297152,
+          "total_commit_limit_bytes": 61075705856
+        },
+        "minimum_physical_available_bytes": 4746575872,
+        "minimum_available_commit_bytes": 5866876928,
+        "root_pid": 49896,
+        "own_job_assignment_before_resume": "PASS",
+        "exit": 0,
+        "job_peak_process_private_bytes": 703762432,
+        "job_peak_aggregate_private_bytes": 704991232,
+        "state": "PASS",
+        "finished_utc": "2026-10-05T01:28:22.792454+00:00",
+        "seconds": 38.625,
+        "polled_peak_tree_private_bytes": 704897024,
+        "polled_peak_tree_rss_bytes": 3460911104,
+        "counter_samples": 127,
+        "observed_own_processes": {
+          "49896": {
+            "exe": "lean.exe",
+            "peak_private_bytes": 703668224,
+            "peak_rss_bytes": 3464232960
+          },
+          "56940": {
+            "exe": "conhost.exe",
+            "peak_private_bytes": 1265664,
+            "peak_rss_bytes": 7868416
+          }
+        },
+        "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\matt-unitary-current-b34a5c1534607dc7-attempt-1.stdout.txt",
+        "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\matt-unitary-current-b34a5c1534607dc7-attempt-1.stderr.txt",
+        "stdout_sha256": "1592e8939e3dfaa25c5646e6bd645d015d1fadae08484f954a6717b35b8155f8",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_excerpt": "LeanUnitary\\Decomposition\\CosineSine.lean:25:8: warning: declaration uses `sorry`\n",
+        "stderr_excerpt": ""
+      },
+      "source_sha256": "01467e5ea889d949becd6d03a7f8c1e3408be56254622828b31dfd36c524df03",
+      "third_worker_memory_observations": {
+        "minimum_free_physical_bytes": 4746575872,
+        "minimum_available_commit_bytes": 5866876928,
+        "peak_owned_private_bytes": 704991232
+      },
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\matt-unitary-current\\LeanUnitary\\Decomposition\\CosineSine.olean",
+          "sha256": "0a46fae1cf7709cb91a498ac33c650dcb956170e01a3281c82604f8b5fa998a5",
+          "bytes": 9000
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "LeanUnitary.Decomposition.TwoQubit",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.30.0-rc2-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-Dpp.unicode.fun=true",
+        "-DrelaxedAutoImplicit=false",
+        "-DmaxSynthPendingDepth=3",
+        "-o",
+        "LeanUnitary\\Decomposition\\TwoQubit.olean",
+        "LeanUnitary\\Decomposition\\TwoQubit.lean"
+      ],
+      "seconds": 28.469,
+      "exit": 0,
+      "stdout": "LeanUnitary\\Decomposition\\TwoQubit.lean:24:8: warning: declaration uses `sorry`\n",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 6120644608,
+      "stop_reason": null,
+      "started_utc": "2026-10-05T01:28:22.801418+00:00",
+      "finished_utc": "2026-10-05T01:28:51.256402+00:00",
+      "owned_process_stop_output": null,
+      "own_job_resource_receipt": {
+        "command": [
+          "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.30.0-rc2-windows\\bin\\lean.exe",
+          "-j1",
+          "-DmaxHeartbeats=0",
+          "-DmaxRecDepth=100000",
+          "-Dpp.unicode.fun=true",
+          "-DrelaxedAutoImplicit=false",
+          "-DmaxSynthPendingDepth=3",
+          "-o",
+          "LeanUnitary\\Decomposition\\TwoQubit.olean",
+          "LeanUnitary\\Decomposition\\TwoQubit.lean"
+        ],
+        "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\matt-unitary-current",
+        "started_utc": "2026-10-05T01:28:22.801418+00:00",
+        "attempted": true,
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 5368709120,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 1073741824,
+          "own_job_private_bytes": 6442450944,
+          "own_process_private_bytes": 6442450944,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 3600
+        },
+        "minimum_disk_free_bytes": 6120644608,
+        "initial_system_memory_snapshot": {
+          "free_physical_bytes": 10015543296,
+          "total_physical_bytes": 34024419328,
+          "available_commit_bytes": 9374318592,
+          "total_commit_limit_bytes": 61075705856
+        },
+        "minimum_physical_available_bytes": 5439967232,
+        "minimum_available_commit_bytes": 6394609664,
+        "root_pid": 50396,
+        "own_job_assignment_before_resume": "PASS",
+        "exit": 0,
+        "job_peak_process_private_bytes": 705650688,
+        "job_peak_aggregate_private_bytes": 706916352,
+        "state": "PASS",
+        "finished_utc": "2026-10-05T01:28:51.256402+00:00",
+        "seconds": 28.469,
+        "polled_peak_tree_private_bytes": 704925696,
+        "polled_peak_tree_rss_bytes": 3446398976,
+        "counter_samples": 105,
+        "observed_own_processes": {
+          "50396": {
+            "exe": "lean.exe",
+            "peak_private_bytes": 703660032,
+            "peak_rss_bytes": 3464314880
+          },
+          "51196": {
+            "exe": "conhost.exe",
+            "peak_private_bytes": 1265664,
+            "peak_rss_bytes": 7860224
+          }
+        },
+        "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\matt-unitary-current-eea1220b3d8ec77f-attempt-1.stdout.txt",
+        "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\matt-unitary-current-eea1220b3d8ec77f-attempt-1.stderr.txt",
+        "stdout_sha256": "7d4039054a5b07c3682e9fe2389a63a29e83df8fbc05a0c8efb72e5ae5636984",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_excerpt": "LeanUnitary\\Decomposition\\TwoQubit.lean:24:8: warning: declaration uses `sorry`\n",
+        "stderr_excerpt": ""
+      },
+      "source_sha256": "c0e4c915540767e571aa61f280c076a9ab9a71db99e6197a0f24893651b2f8d1",
+      "third_worker_memory_observations": {
+        "minimum_free_physical_bytes": 5439967232,
+        "minimum_available_commit_bytes": 6394609664,
+        "peak_owned_private_bytes": 706916352
+      },
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\matt-unitary-current\\LeanUnitary\\Decomposition\\TwoQubit.olean",
+          "sha256": "747bd1b9e03f21cf7d5555f9c831d8acb8673cbc99505bbc614c9892d3fd0a82",
+          "bytes": 8944
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "LeanUnitary.Decomposition.QSD",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.30.0-rc2-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-Dpp.unicode.fun=true",
+        "-DrelaxedAutoImplicit=false",
+        "-DmaxSynthPendingDepth=3",
+        "-o",
+        "LeanUnitary\\Decomposition\\QSD.olean",
+        "LeanUnitary\\Decomposition\\QSD.lean"
+      ],
+      "seconds": 31.422,
+      "exit": 0,
+      "stdout": "LeanUnitary\\Decomposition\\QSD.lean:29:8: warning: declaration uses `sorry`\nLeanUnitary\\Decomposition\\QSD.lean:32:8: warning: declaration uses `sorry`\n",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 6118522880,
+      "stop_reason": null,
+      "started_utc": "2026-10-05T01:28:51.267411+00:00",
+      "finished_utc": "2026-10-05T01:29:22.688756+00:00",
+      "owned_process_stop_output": null,
+      "own_job_resource_receipt": {
+        "command": [
+          "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.30.0-rc2-windows\\bin\\lean.exe",
+          "-j1",
+          "-DmaxHeartbeats=0",
+          "-DmaxRecDepth=100000",
+          "-Dpp.unicode.fun=true",
+          "-DrelaxedAutoImplicit=false",
+          "-DmaxSynthPendingDepth=3",
+          "-o",
+          "LeanUnitary\\Decomposition\\QSD.olean",
+          "LeanUnitary\\Decomposition\\QSD.lean"
+        ],
+        "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\matt-unitary-current",
+        "started_utc": "2026-10-05T01:28:51.267411+00:00",
+        "attempted": true,
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 5368709120,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 1073741824,
+          "own_job_private_bytes": 6442450944,
+          "own_process_private_bytes": 6442450944,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 3600
+        },
+        "minimum_disk_free_bytes": 6118522880,
+        "initial_system_memory_snapshot": {
+          "free_physical_bytes": 8999436288,
+          "total_physical_bytes": 34024419328,
+          "available_commit_bytes": 7056998400,
+          "total_commit_limit_bytes": 61075705856
+        },
+        "minimum_physical_available_bytes": 5410701312,
+        "minimum_available_commit_bytes": 6148554752,
+        "root_pid": 53392,
+        "own_job_assignment_before_resume": "PASS",
+        "exit": 0,
+        "job_peak_process_private_bytes": 703668224,
+        "job_peak_aggregate_private_bytes": 704913408,
+        "state": "PASS",
+        "finished_utc": "2026-10-05T01:29:22.688756+00:00",
+        "seconds": 31.422,
+        "polled_peak_tree_private_bytes": 704913408,
+        "polled_peak_tree_rss_bytes": 3400163328,
+        "counter_samples": 115,
+        "observed_own_processes": {
+          "53392": {
+            "exe": "lean.exe",
+            "peak_private_bytes": 703668224,
+            "peak_rss_bytes": 3464466432
+          },
+          "37748": {
+            "exe": "conhost.exe",
+            "peak_private_bytes": 1245184,
+            "peak_rss_bytes": 7847936
+          }
+        },
+        "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\matt-unitary-current-2b2baeb192f3df81-attempt-1.stdout.txt",
+        "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\matt-unitary-current-2b2baeb192f3df81-attempt-1.stderr.txt",
+        "stdout_sha256": "0fddea01c7e559efa88dc9f761938ff562a3e34e070e5e156363fe2033800609",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_excerpt": "LeanUnitary\\Decomposition\\QSD.lean:29:8: warning: declaration uses `sorry`\nLeanUnitary\\Decomposition\\QSD.lean:32:8: warning: declaration uses `sorry`\n",
+        "stderr_excerpt": ""
+      },
+      "source_sha256": "9f20f1e2e6b57be6679a1abb5b6738d70b8cfe68e2876c2f2343119eac9b5bdd",
+      "third_worker_memory_observations": {
+        "minimum_free_physical_bytes": 5410701312,
+        "minimum_available_commit_bytes": 6148554752,
+        "peak_owned_private_bytes": 704913408
+      },
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\matt-unitary-current\\LeanUnitary\\Decomposition\\QSD.olean",
+          "sha256": "6114ef2bcaa2f829539fe2a0922c00db605798aa23abb392c85b750341afef73",
+          "bytes": 11424
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "LeanUnitary.Decomposition.BlockZXZ",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.30.0-rc2-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-Dpp.unicode.fun=true",
+        "-DrelaxedAutoImplicit=false",
+        "-DmaxSynthPendingDepth=3",
+        "-o",
+        "LeanUnitary\\Decomposition\\BlockZXZ.olean",
+        "LeanUnitary\\Decomposition\\BlockZXZ.lean"
+      ],
+      "seconds": 30.281,
+      "exit": 0,
+      "stdout": "LeanUnitary\\Decomposition\\BlockZXZ.lean:18:8: warning: declaration uses `sorry`\n",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 6118346752,
+      "stop_reason": null,
+      "started_utc": "2026-10-05T01:29:22.700768+00:00",
+      "finished_utc": "2026-10-05T01:29:52.984877+00:00",
+      "owned_process_stop_output": null,
+      "own_job_resource_receipt": {
+        "command": [
+          "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.30.0-rc2-windows\\bin\\lean.exe",
+          "-j1",
+          "-DmaxHeartbeats=0",
+          "-DmaxRecDepth=100000",
+          "-Dpp.unicode.fun=true",
+          "-DrelaxedAutoImplicit=false",
+          "-DmaxSynthPendingDepth=3",
+          "-o",
+          "LeanUnitary\\Decomposition\\BlockZXZ.olean",
+          "LeanUnitary\\Decomposition\\BlockZXZ.lean"
+        ],
+        "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\matt-unitary-current",
+        "started_utc": "2026-10-05T01:29:22.700768+00:00",
+        "attempted": true,
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 5368709120,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 1073741824,
+          "own_job_private_bytes": 6442450944,
+          "own_process_private_bytes": 6442450944,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 3600
+        },
+        "minimum_disk_free_bytes": 6118346752,
+        "initial_system_memory_snapshot": {
+          "free_physical_bytes": 8870531072,
+          "total_physical_bytes": 34024419328,
+          "available_commit_bytes": 6849900544,
+          "total_commit_limit_bytes": 61075705856
+        },
+        "minimum_physical_available_bytes": 3893551104,
+        "minimum_available_commit_bytes": 4861878272,
+        "root_pid": 52308,
+        "own_job_assignment_before_resume": "PASS",
+        "exit": 0,
+        "job_peak_process_private_bytes": 703582208,
+        "job_peak_aggregate_private_bytes": 704839680,
+        "state": "PASS",
+        "finished_utc": "2026-10-05T01:29:52.984877+00:00",
+        "seconds": 30.281,
+        "polled_peak_tree_private_bytes": 704839680,
+        "polled_peak_tree_rss_bytes": 3441115136,
+        "counter_samples": 111,
+        "observed_own_processes": {
+          "52308": {
+            "exe": "lean.exe",
+            "peak_private_bytes": 703582208,
+            "peak_rss_bytes": 3464450048
+          },
+          "37644": {
+            "exe": "conhost.exe",
+            "peak_private_bytes": 1257472,
+            "peak_rss_bytes": 7856128
+          }
+        },
+        "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\matt-unitary-current-6737ac3493758890-attempt-1.stdout.txt",
+        "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\matt-unitary-current-6737ac3493758890-attempt-1.stderr.txt",
+        "stdout_sha256": "637c9f2b59c7a8d330b9c68946e392067291df606bf5e7e3cdfdeb33e23a2e5d",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_excerpt": "LeanUnitary\\Decomposition\\BlockZXZ.lean:18:8: warning: declaration uses `sorry`\n",
+        "stderr_excerpt": ""
+      },
+      "source_sha256": "2133687ae5726d8cf1ae96c8de4d4124c424169797195af9ff02212390997700",
+      "third_worker_memory_observations": {
+        "minimum_free_physical_bytes": 3893551104,
+        "minimum_available_commit_bytes": 4861878272,
+        "peak_owned_private_bytes": 704839680
+      },
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\matt-unitary-current\\LeanUnitary\\Decomposition\\BlockZXZ.olean",
+          "sha256": "39b0fb501f09b1986b0e6322fdc6755811f9288fc677ed48e14b69c8bb24b29a",
+          "bytes": 8352
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "LeanUnitary.Claims",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.30.0-rc2-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-Dpp.unicode.fun=true",
+        "-DrelaxedAutoImplicit=false",
+        "-DmaxSynthPendingDepth=3",
+        "-o",
+        "LeanUnitary\\Claims.olean",
+        "LeanUnitary\\Claims.lean"
+      ],
+      "seconds": 33.11,
+      "exit": 0,
+      "stdout": "",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 6117244928,
+      "stop_reason": null,
+      "started_utc": "2026-10-05T01:29:52.996238+00:00",
+      "finished_utc": "2026-10-05T01:30:26.113382+00:00",
+      "owned_process_stop_output": null,
+      "own_job_resource_receipt": {
+        "command": [
+          "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.30.0-rc2-windows\\bin\\lean.exe",
+          "-j1",
+          "-DmaxHeartbeats=0",
+          "-DmaxRecDepth=100000",
+          "-Dpp.unicode.fun=true",
+          "-DrelaxedAutoImplicit=false",
+          "-DmaxSynthPendingDepth=3",
+          "-o",
+          "LeanUnitary\\Claims.olean",
+          "LeanUnitary\\Claims.lean"
+        ],
+        "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\matt-unitary-current",
+        "started_utc": "2026-10-05T01:29:52.996238+00:00",
+        "attempted": true,
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 5368709120,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 1073741824,
+          "own_job_private_bytes": 6442450944,
+          "own_process_private_bytes": 6442450944,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 3600
+        },
+        "minimum_disk_free_bytes": 6117244928,
+        "initial_system_memory_snapshot": {
+          "free_physical_bytes": 7370153984,
+          "total_physical_bytes": 34024419328,
+          "available_commit_bytes": 5419589632,
+          "total_commit_limit_bytes": 61075705856
+        },
+        "minimum_physical_available_bytes": 5245935616,
+        "minimum_available_commit_bytes": 5036220416,
+        "root_pid": 33856,
+        "own_job_assignment_before_resume": "PASS",
+        "exit": 0,
+        "job_peak_process_private_bytes": 703729664,
+        "job_peak_aggregate_private_bytes": 704974848,
+        "state": "PASS",
+        "finished_utc": "2026-10-05T01:30:26.113382+00:00",
+        "seconds": 33.11,
+        "polled_peak_tree_private_bytes": 704843776,
+        "polled_peak_tree_rss_bytes": 3418132480,
+        "counter_samples": 120,
+        "observed_own_processes": {
+          "33856": {
+            "exe": "lean.exe",
+            "peak_private_bytes": 703598592,
+            "peak_rss_bytes": 3465170944
+          },
+          "8164": {
+            "exe": "conhost.exe",
+            "peak_private_bytes": 1245184,
+            "peak_rss_bytes": 7852032
+          }
+        },
+        "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\matt-unitary-current-8ad35635f6733bc0-attempt-1.stdout.txt",
+        "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\matt-unitary-current-8ad35635f6733bc0-attempt-1.stderr.txt",
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_excerpt": "",
+        "stderr_excerpt": ""
+      },
+      "source_sha256": "05ab3c7e04d1048be3166b799b772d836d5dd9c35ba7b48e65b223b23c3869fa",
+      "third_worker_memory_observations": {
+        "minimum_free_physical_bytes": 5245935616,
+        "minimum_available_commit_bytes": 5036220416,
+        "peak_owned_private_bytes": 704974848
+      },
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\matt-unitary-current\\LeanUnitary\\Claims.olean",
+          "sha256": "c50044021a54c46fec401e8af7501b04bf856a38c6d760715824a1472c0600eb",
+          "bytes": 16304
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "LeanUnitary.Pivot.Count",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.30.0-rc2-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-Dpp.unicode.fun=true",
+        "-DrelaxedAutoImplicit=false",
+        "-DmaxSynthPendingDepth=3",
+        "-o",
+        "LeanUnitary\\Pivot\\Count.olean",
+        "LeanUnitary\\Pivot\\Count.lean"
+      ],
+      "seconds": 33.0,
+      "exit": 0,
+      "stdout": "",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 6115680256,
+      "stop_reason": null,
+      "started_utc": "2026-10-05T01:30:26.128378+00:00",
+      "finished_utc": "2026-10-05T01:30:59.114851+00:00",
+      "owned_process_stop_output": null,
+      "own_job_resource_receipt": {
+        "command": [
+          "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.30.0-rc2-windows\\bin\\lean.exe",
+          "-j1",
+          "-DmaxHeartbeats=0",
+          "-DmaxRecDepth=100000",
+          "-Dpp.unicode.fun=true",
+          "-DrelaxedAutoImplicit=false",
+          "-DmaxSynthPendingDepth=3",
+          "-o",
+          "LeanUnitary\\Pivot\\Count.olean",
+          "LeanUnitary\\Pivot\\Count.lean"
+        ],
+        "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\matt-unitary-current",
+        "started_utc": "2026-10-05T01:30:26.128378+00:00",
+        "attempted": true,
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 5368709120,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 1073741824,
+          "own_job_private_bytes": 6442450944,
+          "own_process_private_bytes": 6442450944,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 3600
+        },
+        "minimum_disk_free_bytes": 6115680256,
+        "initial_system_memory_snapshot": {
+          "free_physical_bytes": 8788271104,
+          "total_physical_bytes": 34024419328,
+          "available_commit_bytes": 6854410240,
+          "total_commit_limit_bytes": 61075705856
+        },
+        "minimum_physical_available_bytes": 5647138816,
+        "minimum_available_commit_bytes": 6307500032,
+        "root_pid": 51772,
+        "own_job_assignment_before_resume": "PASS",
+        "exit": 0,
+        "job_peak_process_private_bytes": 737320960,
+        "job_peak_aggregate_private_bytes": 738541568,
+        "state": "PASS",
+        "finished_utc": "2026-10-05T01:30:59.114851+00:00",
+        "seconds": 33.0,
+        "polled_peak_tree_private_bytes": 738541568,
+        "polled_peak_tree_rss_bytes": 3479875584,
+        "counter_samples": 121,
+        "observed_own_processes": {
+          "49560": {
+            "exe": "conhost.exe",
+            "peak_private_bytes": 1261568,
+            "peak_rss_bytes": 7860224
+          },
+          "51772": {
+            "exe": "lean.exe",
+            "peak_private_bytes": 737320960,
+            "peak_rss_bytes": 3525074944
+          }
+        },
+        "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\matt-unitary-current-5e6f27b502077c67-attempt-1.stdout.txt",
+        "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\matt-unitary-current-5e6f27b502077c67-attempt-1.stderr.txt",
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_excerpt": "",
+        "stderr_excerpt": ""
+      },
+      "source_sha256": "8683beed72dc58584946879ce8abb0a12f647e1d6a8ab3b00bcc8b3e1424c453",
+      "third_worker_memory_observations": {
+        "minimum_free_physical_bytes": 5647138816,
+        "minimum_available_commit_bytes": 6307500032,
+        "peak_owned_private_bytes": 738541568
+      },
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\matt-unitary-current\\LeanUnitary\\Pivot\\Count.olean",
+          "sha256": "6e4927f5024fdd3afe69f83090a90f4e5ffc0940ba8cc9967ccb88402f3b450d",
+          "bytes": 578976
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "LeanUnitary.Pivot.Path.Gate",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.30.0-rc2-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-Dpp.unicode.fun=true",
+        "-DrelaxedAutoImplicit=false",
+        "-DmaxSynthPendingDepth=3",
+        "-o",
+        "LeanUnitary\\Pivot\\Path\\Gate.olean",
+        "LeanUnitary\\Pivot\\Path\\Gate.lean"
+      ],
+      "seconds": 30.5,
+      "exit": 0,
+      "stdout": "",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 6115680256,
+      "stop_reason": null,
+      "started_utc": "2026-10-05T01:30:59.125749+00:00",
+      "finished_utc": "2026-10-05T01:31:29.622554+00:00",
+      "owned_process_stop_output": null,
+      "own_job_resource_receipt": {
+        "command": [
+          "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.30.0-rc2-windows\\bin\\lean.exe",
+          "-j1",
+          "-DmaxHeartbeats=0",
+          "-DmaxRecDepth=100000",
+          "-Dpp.unicode.fun=true",
+          "-DrelaxedAutoImplicit=false",
+          "-DmaxSynthPendingDepth=3",
+          "-o",
+          "LeanUnitary\\Pivot\\Path\\Gate.olean",
+          "LeanUnitary\\Pivot\\Path\\Gate.lean"
+        ],
+        "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\matt-unitary-current",
+        "started_utc": "2026-10-05T01:30:59.125749+00:00",
+        "attempted": true,
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 5368709120,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 1073741824,
+          "own_job_private_bytes": 6442450944,
+          "own_process_private_bytes": 6442450944,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 3600
+        },
+        "minimum_disk_free_bytes": 6115680256,
+        "initial_system_memory_snapshot": {
+          "free_physical_bytes": 11889717248,
+          "total_physical_bytes": 34024419328,
+          "available_commit_bytes": 12348796928,
+          "total_commit_limit_bytes": 60814258176
+        },
+        "minimum_physical_available_bytes": 6571446272,
+        "minimum_available_commit_bytes": 8374059008,
+        "root_pid": 8696,
+        "own_job_assignment_before_resume": "PASS",
+        "exit": 0,
+        "job_peak_process_private_bytes": 703643648,
+        "job_peak_aggregate_private_bytes": 704892928,
+        "state": "PASS",
+        "finished_utc": "2026-10-05T01:31:29.622554+00:00",
+        "seconds": 30.5,
+        "polled_peak_tree_private_bytes": 704892928,
+        "polled_peak_tree_rss_bytes": 3487707136,
+        "counter_samples": 113,
+        "observed_own_processes": {
+          "8696": {
+            "exe": "lean.exe",
+            "peak_private_bytes": 703643648,
+            "peak_rss_bytes": 3501268992
+          },
+          "54004": {
+            "exe": "conhost.exe",
+            "peak_private_bytes": 1249280,
+            "peak_rss_bytes": 7852032
+          }
+        },
+        "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\matt-unitary-current-8b6b1fd700879471-attempt-1.stdout.txt",
+        "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\matt-unitary-current-8b6b1fd700879471-attempt-1.stderr.txt",
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_excerpt": "",
+        "stderr_excerpt": ""
+      },
+      "source_sha256": "82bff63b801f1ba8d8ca5c06bba7859da4496b8e8b280b7b7bddba4e3ab98e4c",
+      "third_worker_memory_observations": {
+        "minimum_free_physical_bytes": 6571446272,
+        "minimum_available_commit_bytes": 8374059008,
+        "peak_owned_private_bytes": 704892928
+      },
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\matt-unitary-current\\LeanUnitary\\Pivot\\Path\\Gate.olean",
+          "sha256": "1550aeab1801c0a536f3a7ecf351d1cfd12c1c596869610609baae5238a40c39",
+          "bytes": 776488
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "LeanUnitary.Pivot.Path.Eigenvalues",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.30.0-rc2-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-Dpp.unicode.fun=true",
+        "-DrelaxedAutoImplicit=false",
+        "-DmaxSynthPendingDepth=3",
+        "-o",
+        "LeanUnitary\\Pivot\\Path\\Eigenvalues.olean",
+        "LeanUnitary\\Pivot\\Path\\Eigenvalues.lean"
+      ],
+      "seconds": 25.047,
+      "exit": 0,
+      "stdout": "",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 6356901888,
+      "stop_reason": null,
+      "started_utc": "2026-10-05T01:31:29.635720+00:00",
+      "finished_utc": "2026-10-05T01:31:54.682048+00:00",
+      "owned_process_stop_output": null,
+      "own_job_resource_receipt": {
+        "command": [
+          "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.30.0-rc2-windows\\bin\\lean.exe",
+          "-j1",
+          "-DmaxHeartbeats=0",
+          "-DmaxRecDepth=100000",
+          "-Dpp.unicode.fun=true",
+          "-DrelaxedAutoImplicit=false",
+          "-DmaxSynthPendingDepth=3",
+          "-o",
+          "LeanUnitary\\Pivot\\Path\\Eigenvalues.olean",
+          "LeanUnitary\\Pivot\\Path\\Eigenvalues.lean"
+        ],
+        "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\matt-unitary-current",
+        "started_utc": "2026-10-05T01:31:29.635720+00:00",
+        "attempted": true,
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 5368709120,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 1073741824,
+          "own_job_private_bytes": 6442450944,
+          "own_process_private_bytes": 6442450944,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 3600
+        },
+        "minimum_disk_free_bytes": 6356901888,
+        "initial_system_memory_snapshot": {
+          "free_physical_bytes": 10225225728,
+          "total_physical_bytes": 34024419328,
+          "available_commit_bytes": 9086218240,
+          "total_commit_limit_bytes": 60814258176
+        },
+        "minimum_physical_available_bytes": 8486830080,
+        "minimum_available_commit_bytes": 9027387392,
+        "root_pid": 3628,
+        "own_job_assignment_before_resume": "PASS",
+        "exit": 0,
+        "job_peak_process_private_bytes": 706052096,
+        "job_peak_aggregate_private_bytes": 707305472,
+        "state": "PASS",
+        "finished_utc": "2026-10-05T01:31:54.682048+00:00",
+        "seconds": 25.047,
+        "polled_peak_tree_private_bytes": 705265664,
+        "polled_peak_tree_rss_bytes": 3367084032,
+        "counter_samples": 94,
+        "observed_own_processes": {
+          "3628": {
+            "exe": "lean.exe",
+            "peak_private_bytes": 704012288,
+            "peak_rss_bytes": 3505672192
+          },
+          "49756": {
+            "exe": "conhost.exe",
+            "peak_private_bytes": 1253376,
+            "peak_rss_bytes": 7856128
+          }
+        },
+        "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\matt-unitary-current-cf20e9acd9b85aa9-attempt-1.stdout.txt",
+        "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\matt-unitary-current-cf20e9acd9b85aa9-attempt-1.stderr.txt",
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_excerpt": "",
+        "stderr_excerpt": ""
+      },
+      "source_sha256": "e43cfddd8816f591bef3833bf7a1d64690167b3b3568fbaedd8c525e7990659c",
+      "third_worker_memory_observations": {
+        "minimum_free_physical_bytes": 8486830080,
+        "minimum_available_commit_bytes": 9027387392,
+        "peak_owned_private_bytes": 707305472
+      },
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\matt-unitary-current\\LeanUnitary\\Pivot\\Path\\Eigenvalues.olean",
+          "sha256": "ef50e2ac0005fb481a7c4367b9a5455aa4de9db9a84fbc742cb12a57ec33a346",
+          "bytes": 597792
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "LeanUnitary.Pivot.Existence.EigenContinuity",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.30.0-rc2-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-Dpp.unicode.fun=true",
+        "-DrelaxedAutoImplicit=false",
+        "-DmaxSynthPendingDepth=3",
+        "-o",
+        "LeanUnitary\\Pivot\\Existence\\EigenContinuity.olean",
+        "LeanUnitary\\Pivot\\Existence\\EigenContinuity.lean"
+      ],
+      "seconds": 33.375,
+      "exit": 0,
+      "stdout": "",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 6360182784,
+      "stop_reason": null,
+      "started_utc": "2026-10-05T01:31:54.692936+00:00",
+      "finished_utc": "2026-10-05T01:32:28.071749+00:00",
+      "owned_process_stop_output": null,
+      "own_job_resource_receipt": {
+        "command": [
+          "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.30.0-rc2-windows\\bin\\lean.exe",
+          "-j1",
+          "-DmaxHeartbeats=0",
+          "-DmaxRecDepth=100000",
+          "-Dpp.unicode.fun=true",
+          "-DrelaxedAutoImplicit=false",
+          "-DmaxSynthPendingDepth=3",
+          "-o",
+          "LeanUnitary\\Pivot\\Existence\\EigenContinuity.olean",
+          "LeanUnitary\\Pivot\\Existence\\EigenContinuity.lean"
+        ],
+        "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\matt-unitary-current",
+        "started_utc": "2026-10-05T01:31:54.692936+00:00",
+        "attempted": true,
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 5368709120,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 1073741824,
+          "own_job_private_bytes": 6442450944,
+          "own_process_private_bytes": 6442450944,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 3600
+        },
+        "minimum_disk_free_bytes": 6360182784,
+        "initial_system_memory_snapshot": {
+          "free_physical_bytes": 12015095808,
+          "total_physical_bytes": 34024419328,
+          "available_commit_bytes": 12298883072,
+          "total_commit_limit_bytes": 60619800576
+        },
+        "minimum_physical_available_bytes": 6572265472,
+        "minimum_available_commit_bytes": 8012906496,
+        "root_pid": 56784,
+        "own_job_assignment_before_resume": "PASS",
+        "exit": 0,
+        "job_peak_process_private_bytes": 706248704,
+        "job_peak_aggregate_private_bytes": 707506176,
+        "state": "PASS",
+        "finished_utc": "2026-10-05T01:32:28.071749+00:00",
+        "seconds": 33.375,
+        "polled_peak_tree_private_bytes": 705871872,
+        "polled_peak_tree_rss_bytes": 3487596544,
+        "counter_samples": 121,
+        "observed_own_processes": {
+          "56784": {
+            "exe": "lean.exe",
+            "peak_private_bytes": 704614400,
+            "peak_rss_bytes": 3493314560
+          },
+          "57040": {
+            "exe": "conhost.exe",
+            "peak_private_bytes": 1257472,
+            "peak_rss_bytes": 7864320
+          }
+        },
+        "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\matt-unitary-current-6b9f49c433c3e05a-attempt-1.stdout.txt",
+        "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\matt-unitary-current-6b9f49c433c3e05a-attempt-1.stderr.txt",
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_excerpt": "",
+        "stderr_excerpt": ""
+      },
+      "source_sha256": "b000ef2f314e2def1493cc42ba709e7ee421bff38c274e80cbd8fcc253d8161b",
+      "third_worker_memory_observations": {
+        "minimum_free_physical_bytes": 6572265472,
+        "minimum_available_commit_bytes": 8012906496,
+        "peak_owned_private_bytes": 707506176
+      },
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\matt-unitary-current\\LeanUnitary\\Pivot\\Existence\\EigenContinuity.olean",
+          "sha256": "6e37228d7e5659791b620588da4b2d023fa678db652bdecb5adc0780ed9212ca",
+          "bytes": 254744
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "LeanUnitary.Pivot.Split",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.30.0-rc2-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-Dpp.unicode.fun=true",
+        "-DrelaxedAutoImplicit=false",
+        "-DmaxSynthPendingDepth=3",
+        "-o",
+        "LeanUnitary\\Pivot\\Split.olean",
+        "LeanUnitary\\Pivot\\Split.lean"
+      ],
+      "seconds": 29.625,
+      "exit": 0,
+      "stdout": "",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 6551633920,
+      "stop_reason": null,
+      "started_utc": "2026-10-05T01:32:28.091276+00:00",
+      "finished_utc": "2026-10-05T01:32:57.712854+00:00",
+      "owned_process_stop_output": null,
+      "own_job_resource_receipt": {
+        "command": [
+          "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.30.0-rc2-windows\\bin\\lean.exe",
+          "-j1",
+          "-DmaxHeartbeats=0",
+          "-DmaxRecDepth=100000",
+          "-Dpp.unicode.fun=true",
+          "-DrelaxedAutoImplicit=false",
+          "-DmaxSynthPendingDepth=3",
+          "-o",
+          "LeanUnitary\\Pivot\\Split.olean",
+          "LeanUnitary\\Pivot\\Split.lean"
+        ],
+        "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\matt-unitary-current",
+        "started_utc": "2026-10-05T01:32:28.091276+00:00",
+        "attempted": true,
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 5368709120,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 1073741824,
+          "own_job_private_bytes": 6442450944,
+          "own_process_private_bytes": 6442450944,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 3600
+        },
+        "minimum_disk_free_bytes": 6551633920,
+        "initial_system_memory_snapshot": {
+          "free_physical_bytes": 10224390144,
+          "total_physical_bytes": 34024419328,
+          "available_commit_bytes": 8714764288,
+          "total_commit_limit_bytes": 60619800576
+        },
+        "minimum_physical_available_bytes": 6886080512,
+        "minimum_available_commit_bytes": 8235212800,
+        "root_pid": 33856,
+        "own_job_assignment_before_resume": "PASS",
+        "exit": 0,
+        "job_peak_process_private_bytes": 703655936,
+        "job_peak_aggregate_private_bytes": 704913408,
+        "state": "PASS",
+        "finished_utc": "2026-10-05T01:32:57.712854+00:00",
+        "seconds": 29.625,
+        "polled_peak_tree_private_bytes": 704913408,
+        "polled_peak_tree_rss_bytes": 3415601152,
+        "counter_samples": 109,
+        "observed_own_processes": {
+          "33856": {
+            "exe": "lean.exe",
+            "peak_private_bytes": 703655936,
+            "peak_rss_bytes": 3490484224
+          },
+          "51860": {
+            "exe": "conhost.exe",
+            "peak_private_bytes": 1257472,
+            "peak_rss_bytes": 7860224
+          }
+        },
+        "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\matt-unitary-current-15fe39e12558bc0a-attempt-1.stdout.txt",
+        "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\matt-unitary-current-15fe39e12558bc0a-attempt-1.stderr.txt",
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_excerpt": "",
+        "stderr_excerpt": ""
+      },
+      "source_sha256": "5e29c62f11ae32dc8c9301b9d001bbb1cf3d8e43cadd521615c400cb47dc9bd1",
+      "third_worker_memory_observations": {
+        "minimum_free_physical_bytes": 6886080512,
+        "minimum_available_commit_bytes": 8235212800,
+        "peak_owned_private_bytes": 704913408
+      },
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\matt-unitary-current\\LeanUnitary\\Pivot\\Split.olean",
+          "sha256": "b88dab8fb46146d8430284028d2c747f9b7ecd289b48082e1fef434b43d4e8f0",
+          "bytes": 276632
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "LeanUnitary.Pivot.Existence.Imbalance",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.30.0-rc2-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-Dpp.unicode.fun=true",
+        "-DrelaxedAutoImplicit=false",
+        "-DmaxSynthPendingDepth=3",
+        "-o",
+        "LeanUnitary\\Pivot\\Existence\\Imbalance.olean",
+        "LeanUnitary\\Pivot\\Existence\\Imbalance.lean"
+      ],
+      "seconds": 30.094,
+      "exit": 0,
+      "stdout": "",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 6549598208,
+      "stop_reason": null,
+      "started_utc": "2026-10-05T01:32:57.724779+00:00",
+      "finished_utc": "2026-10-05T01:33:27.827939+00:00",
+      "owned_process_stop_output": null,
+      "own_job_resource_receipt": {
+        "command": [
+          "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.30.0-rc2-windows\\bin\\lean.exe",
+          "-j1",
+          "-DmaxHeartbeats=0",
+          "-DmaxRecDepth=100000",
+          "-Dpp.unicode.fun=true",
+          "-DrelaxedAutoImplicit=false",
+          "-DmaxSynthPendingDepth=3",
+          "-o",
+          "LeanUnitary\\Pivot\\Existence\\Imbalance.olean",
+          "LeanUnitary\\Pivot\\Existence\\Imbalance.lean"
+        ],
+        "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\matt-unitary-current",
+        "started_utc": "2026-10-05T01:32:57.724779+00:00",
+        "attempted": true,
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 5368709120,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 1073741824,
+          "own_job_private_bytes": 6442450944,
+          "own_process_private_bytes": 6442450944,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 3600
+        },
+        "minimum_disk_free_bytes": 6549598208,
+        "initial_system_memory_snapshot": {
+          "free_physical_bytes": 10443231232,
+          "total_physical_bytes": 34024419328,
+          "available_commit_bytes": 8920735744,
+          "total_commit_limit_bytes": 60619800576
+        },
+        "minimum_physical_available_bytes": 6833156096,
+        "minimum_available_commit_bytes": 8059375616,
+        "root_pid": 50856,
+        "own_job_assignment_before_resume": "PASS",
+        "exit": 0,
+        "job_peak_process_private_bytes": 703664128,
+        "job_peak_aggregate_private_bytes": 704913408,
+        "state": "PASS",
+        "finished_utc": "2026-10-05T01:33:27.827939+00:00",
+        "seconds": 30.094,
+        "polled_peak_tree_private_bytes": 704913408,
+        "polled_peak_tree_rss_bytes": 3410051072,
+        "counter_samples": 111,
+        "observed_own_processes": {
+          "50856": {
+            "exe": "lean.exe",
+            "peak_private_bytes": 703664128,
+            "peak_rss_bytes": 3494825984
+          },
+          "55316": {
+            "exe": "conhost.exe",
+            "peak_private_bytes": 1249280,
+            "peak_rss_bytes": 7856128
+          }
+        },
+        "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\matt-unitary-current-b3ee6a5874963e02-attempt-1.stdout.txt",
+        "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\matt-unitary-current-b3ee6a5874963e02-attempt-1.stderr.txt",
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_excerpt": "",
+        "stderr_excerpt": ""
+      },
+      "source_sha256": "f212bd6d98c2d94411e36ed32b0eddbb391f82c6a56e469a2892a57bb66d2b01",
+      "third_worker_memory_observations": {
+        "minimum_free_physical_bytes": 6833156096,
+        "minimum_available_commit_bytes": 8059375616,
+        "peak_owned_private_bytes": 704913408
+      },
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\matt-unitary-current\\LeanUnitary\\Pivot\\Existence\\Imbalance.olean",
+          "sha256": "4722a79c178a3d3dcae8f6fdc1e836c8e52792d9aa05bdf0aedd650c01c83923",
+          "bytes": 368592
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "LeanUnitary.Pivot.Existence.Lift",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.30.0-rc2-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-Dpp.unicode.fun=true",
+        "-DrelaxedAutoImplicit=false",
+        "-DmaxSynthPendingDepth=3",
+        "-o",
+        "LeanUnitary\\Pivot\\Existence\\Lift.olean",
+        "LeanUnitary\\Pivot\\Existence\\Lift.lean"
+      ],
+      "seconds": 30.36,
+      "exit": 0,
+      "stdout": "",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 6547664896,
+      "stop_reason": null,
+      "started_utc": "2026-10-05T01:33:27.839937+00:00",
+      "finished_utc": "2026-10-05T01:33:58.195069+00:00",
+      "owned_process_stop_output": null,
+      "own_job_resource_receipt": {
+        "command": [
+          "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.30.0-rc2-windows\\bin\\lean.exe",
+          "-j1",
+          "-DmaxHeartbeats=0",
+          "-DmaxRecDepth=100000",
+          "-Dpp.unicode.fun=true",
+          "-DrelaxedAutoImplicit=false",
+          "-DmaxSynthPendingDepth=3",
+          "-o",
+          "LeanUnitary\\Pivot\\Existence\\Lift.olean",
+          "LeanUnitary\\Pivot\\Existence\\Lift.lean"
+        ],
+        "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\matt-unitary-current",
+        "started_utc": "2026-10-05T01:33:27.839937+00:00",
+        "attempted": true,
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 5368709120,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 1073741824,
+          "own_job_private_bytes": 6442450944,
+          "own_process_private_bytes": 6442450944,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 3600
+        },
+        "minimum_disk_free_bytes": 6547664896,
+        "initial_system_memory_snapshot": {
+          "free_physical_bytes": 10396188672,
+          "total_physical_bytes": 34024419328,
+          "available_commit_bytes": 8832581632,
+          "total_commit_limit_bytes": 60619800576
+        },
+        "minimum_physical_available_bytes": 6680227840,
+        "minimum_available_commit_bytes": 8124588032,
+        "root_pid": 22776,
+        "own_job_assignment_before_resume": "PASS",
+        "exit": 0,
+        "job_peak_process_private_bytes": 738308096,
+        "job_peak_aggregate_private_bytes": 739561472,
+        "state": "PASS",
+        "finished_utc": "2026-10-05T01:33:58.195069+00:00",
+        "seconds": 30.36,
+        "polled_peak_tree_private_bytes": 739561472,
+        "polled_peak_tree_rss_bytes": 3472109568,
+        "counter_samples": 113,
+        "observed_own_processes": {
+          "22776": {
+            "exe": "lean.exe",
+            "peak_private_bytes": 738308096,
+            "peak_rss_bytes": 3527254016
+          },
+          "56176": {
+            "exe": "conhost.exe",
+            "peak_private_bytes": 1253376,
+            "peak_rss_bytes": 7856128
+          }
+        },
+        "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\matt-unitary-current-a396352d7b4f0a22-attempt-1.stdout.txt",
+        "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\matt-unitary-current-a396352d7b4f0a22-attempt-1.stderr.txt",
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_excerpt": "",
+        "stderr_excerpt": ""
+      },
+      "source_sha256": "81e99274d918743f092392a780e1ff43e6834aa13dd0528ada190c6a90e8a591",
+      "third_worker_memory_observations": {
+        "minimum_free_physical_bytes": 6680227840,
+        "minimum_available_commit_bytes": 8124588032,
+        "peak_owned_private_bytes": 739561472
+      },
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\matt-unitary-current\\LeanUnitary\\Pivot\\Existence\\Lift.olean",
+          "sha256": "40ed4ce8df277168eb5f81ea7cef48124a69a1d88be2449ab03f0c3ecaa46b27",
+          "bytes": 1016776
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "LeanUnitary.Pivot.Multiplexor.Basic",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.30.0-rc2-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-Dpp.unicode.fun=true",
+        "-DrelaxedAutoImplicit=false",
+        "-DmaxSynthPendingDepth=3",
+        "-o",
+        "LeanUnitary\\Pivot\\Multiplexor\\Basic.olean",
+        "LeanUnitary\\Pivot\\Multiplexor\\Basic.lean"
+      ],
+      "seconds": 28.828,
+      "exit": 0,
+      "stdout": "",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 6542053376,
+      "stop_reason": null,
+      "started_utc": "2026-10-05T01:33:58.209056+00:00",
+      "finished_utc": "2026-10-05T01:34:27.051137+00:00",
+      "owned_process_stop_output": null,
+      "own_job_resource_receipt": {
+        "command": [
+          "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.30.0-rc2-windows\\bin\\lean.exe",
+          "-j1",
+          "-DmaxHeartbeats=0",
+          "-DmaxRecDepth=100000",
+          "-Dpp.unicode.fun=true",
+          "-DrelaxedAutoImplicit=false",
+          "-DmaxSynthPendingDepth=3",
+          "-o",
+          "LeanUnitary\\Pivot\\Multiplexor\\Basic.olean",
+          "LeanUnitary\\Pivot\\Multiplexor\\Basic.lean"
+        ],
+        "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\matt-unitary-current",
+        "started_utc": "2026-10-05T01:33:58.209056+00:00",
+        "attempted": true,
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 5368709120,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 1073741824,
+          "own_job_private_bytes": 6442450944,
+          "own_process_private_bytes": 6442450944,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 3600
+        },
+        "minimum_disk_free_bytes": 6542053376,
+        "initial_system_memory_snapshot": {
+          "free_physical_bytes": 10303201280,
+          "total_physical_bytes": 34024419328,
+          "available_commit_bytes": 8814235648,
+          "total_commit_limit_bytes": 60619800576
+        },
+        "minimum_physical_available_bytes": 6723764224,
+        "minimum_available_commit_bytes": 7994388480,
+        "root_pid": 9140,
+        "own_job_assignment_before_resume": "PASS",
+        "exit": 0,
+        "job_peak_process_private_bytes": 706543616,
+        "job_peak_aggregate_private_bytes": 707788800,
+        "state": "PASS",
+        "finished_utc": "2026-10-05T01:34:27.051137+00:00",
+        "seconds": 28.828,
+        "polled_peak_tree_private_bytes": 705355776,
+        "polled_peak_tree_rss_bytes": 3445919744,
+        "counter_samples": 107,
+        "observed_own_processes": {
+          "54312": {
+            "exe": "conhost.exe",
+            "peak_private_bytes": 1245184,
+            "peak_rss_bytes": 7856128
+          },
+          "9140": {
+            "exe": "lean.exe",
+            "peak_private_bytes": 704110592,
+            "peak_rss_bytes": 3487109120
+          }
+        },
+        "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\matt-unitary-current-3c9d19d6126eaf7c-attempt-1.stdout.txt",
+        "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\matt-unitary-current-3c9d19d6126eaf7c-attempt-1.stderr.txt",
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_excerpt": "",
+        "stderr_excerpt": ""
+      },
+      "source_sha256": "5ecd64d0051bc0f7e16cbee17539ee6fe84d110959a96358ecc2c439733314b8",
+      "third_worker_memory_observations": {
+        "minimum_free_physical_bytes": 6723764224,
+        "minimum_available_commit_bytes": 7994388480,
+        "peak_owned_private_bytes": 707788800
+      },
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\matt-unitary-current\\LeanUnitary\\Pivot\\Multiplexor\\Basic.olean",
+          "sha256": "5689ad3ac1467f1baf25a7f9b642b8c594354618f2eadef53ee1e51e0f732dfa",
+          "bytes": 301792
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "LeanUnitary.Pivot.Existence.PhaseList",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.30.0-rc2-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-Dpp.unicode.fun=true",
+        "-DrelaxedAutoImplicit=false",
+        "-DmaxSynthPendingDepth=3",
+        "-o",
+        "LeanUnitary\\Pivot\\Existence\\PhaseList.olean",
+        "LeanUnitary\\Pivot\\Existence\\PhaseList.lean"
+      ],
+      "seconds": 29.0,
+      "exit": 0,
+      "stdout": "",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 6539059200,
+      "stop_reason": null,
+      "started_utc": "2026-10-05T01:34:27.065145+00:00",
+      "finished_utc": "2026-10-05T01:34:56.055945+00:00",
+      "owned_process_stop_output": null,
+      "own_job_resource_receipt": {
+        "command": [
+          "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.30.0-rc2-windows\\bin\\lean.exe",
+          "-j1",
+          "-DmaxHeartbeats=0",
+          "-DmaxRecDepth=100000",
+          "-Dpp.unicode.fun=true",
+          "-DrelaxedAutoImplicit=false",
+          "-DmaxSynthPendingDepth=3",
+          "-o",
+          "LeanUnitary\\Pivot\\Existence\\PhaseList.olean",
+          "LeanUnitary\\Pivot\\Existence\\PhaseList.lean"
+        ],
+        "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\matt-unitary-current",
+        "started_utc": "2026-10-05T01:34:27.065145+00:00",
+        "attempted": true,
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 5368709120,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 1073741824,
+          "own_job_private_bytes": 6442450944,
+          "own_process_private_bytes": 6442450944,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 3600
+        },
+        "minimum_disk_free_bytes": 6539059200,
+        "initial_system_memory_snapshot": {
+          "free_physical_bytes": 10315526144,
+          "total_physical_bytes": 34024419328,
+          "available_commit_bytes": 8702038016,
+          "total_commit_limit_bytes": 60619800576
+        },
+        "minimum_physical_available_bytes": 6999154688,
+        "minimum_available_commit_bytes": 8049709056,
+        "root_pid": 56796,
+        "own_job_assignment_before_resume": "PASS",
+        "exit": 0,
+        "job_peak_process_private_bytes": 706965504,
+        "job_peak_aggregate_private_bytes": 708214784,
+        "state": "PASS",
+        "finished_utc": "2026-10-05T01:34:56.055945+00:00",
+        "seconds": 29.0,
+        "polled_peak_tree_private_bytes": 706379776,
+        "polled_peak_tree_rss_bytes": 3397988352,
+        "counter_samples": 107,
+        "observed_own_processes": {
+          "52576": {
+            "exe": "conhost.exe",
+            "peak_private_bytes": 1249280,
+            "peak_rss_bytes": 7860224
+          },
+          "56796": {
+            "exe": "lean.exe",
+            "peak_private_bytes": 705130496,
+            "peak_rss_bytes": 3487870976
+          }
+        },
+        "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\matt-unitary-current-92bf91a60e0e64bf-attempt-1.stdout.txt",
+        "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\matt-unitary-current-92bf91a60e0e64bf-attempt-1.stderr.txt",
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_excerpt": "",
+        "stderr_excerpt": ""
+      },
+      "source_sha256": "5e623dcfea8411754bab67dd619b16c9da3017e31708c0dc80c94a73bbb2e65c",
+      "third_worker_memory_observations": {
+        "minimum_free_physical_bytes": 6999154688,
+        "minimum_available_commit_bytes": 8049709056,
+        "peak_owned_private_bytes": 708214784
+      },
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\matt-unitary-current\\LeanUnitary\\Pivot\\Existence\\PhaseList.olean",
+          "sha256": "fc54d08ad343199dd992a8ed733903304619a9433e738bfb99124f6e49afe508",
+          "bytes": 282384
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "LeanUnitary.Pivot.Multiplexor.Continuity",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.30.0-rc2-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-Dpp.unicode.fun=true",
+        "-DrelaxedAutoImplicit=false",
+        "-DmaxSynthPendingDepth=3",
+        "-o",
+        "LeanUnitary\\Pivot\\Multiplexor\\Continuity.olean",
+        "LeanUnitary\\Pivot\\Multiplexor\\Continuity.lean"
+      ],
+      "seconds": 27.14,
+      "exit": 0,
+      "stdout": "",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 6536843264,
+      "stop_reason": null,
+      "started_utc": "2026-10-05T01:34:56.068856+00:00",
+      "finished_utc": "2026-10-05T01:35:23.209671+00:00",
+      "owned_process_stop_output": null,
+      "own_job_resource_receipt": {
+        "command": [
+          "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.30.0-rc2-windows\\bin\\lean.exe",
+          "-j1",
+          "-DmaxHeartbeats=0",
+          "-DmaxRecDepth=100000",
+          "-Dpp.unicode.fun=true",
+          "-DrelaxedAutoImplicit=false",
+          "-DmaxSynthPendingDepth=3",
+          "-o",
+          "LeanUnitary\\Pivot\\Multiplexor\\Continuity.olean",
+          "LeanUnitary\\Pivot\\Multiplexor\\Continuity.lean"
+        ],
+        "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\matt-unitary-current",
+        "started_utc": "2026-10-05T01:34:56.068856+00:00",
+        "attempted": true,
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 5368709120,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 1073741824,
+          "own_job_private_bytes": 6442450944,
+          "own_process_private_bytes": 6442450944,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 3600
+        },
+        "minimum_disk_free_bytes": 6536843264,
+        "initial_system_memory_snapshot": {
+          "free_physical_bytes": 10546774016,
+          "total_physical_bytes": 34024419328,
+          "available_commit_bytes": 8770740224,
+          "total_commit_limit_bytes": 60619800576
+        },
+        "minimum_physical_available_bytes": 6771019776,
+        "minimum_available_commit_bytes": 7971786752,
+        "root_pid": 40264,
+        "own_job_assignment_before_resume": "PASS",
+        "exit": 0,
+        "job_peak_process_private_bytes": 707878912,
+        "job_peak_aggregate_private_bytes": 709136384,
+        "state": "PASS",
+        "finished_utc": "2026-10-05T01:35:23.209671+00:00",
+        "seconds": 27.14,
+        "polled_peak_tree_private_bytes": 707670016,
+        "polled_peak_tree_rss_bytes": 3437105152,
+        "counter_samples": 101,
+        "observed_own_processes": {
+          "40264": {
+            "exe": "lean.exe",
+            "peak_private_bytes": 706412544,
+            "peak_rss_bytes": 3487879168
+          },
+          "39988": {
+            "exe": "conhost.exe",
+            "peak_private_bytes": 1257472,
+            "peak_rss_bytes": 7860224
+          }
+        },
+        "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\matt-unitary-current-85942bdb2a54bffe-attempt-1.stdout.txt",
+        "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\matt-unitary-current-85942bdb2a54bffe-attempt-1.stderr.txt",
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_excerpt": "",
+        "stderr_excerpt": ""
+      },
+      "source_sha256": "6243a7f8de32ef63665b4c8e313a64068274dbb980da3fa54bd15b5e0628cabc",
+      "third_worker_memory_observations": {
+        "minimum_free_physical_bytes": 6771019776,
+        "minimum_available_commit_bytes": 7971786752,
+        "peak_owned_private_bytes": 709136384
+      },
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\matt-unitary-current\\LeanUnitary\\Pivot\\Multiplexor\\Continuity.olean",
+          "sha256": "7f9c4d8282fbb41fa6aae8bb25859fb89b88c3c82b19d8dbf223ea6a5382224b",
+          "bytes": 187496
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "LeanUnitary.Pivot.Multiplexor.Phase",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.30.0-rc2-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-Dpp.unicode.fun=true",
+        "-DrelaxedAutoImplicit=false",
+        "-DmaxSynthPendingDepth=3",
+        "-o",
+        "LeanUnitary\\Pivot\\Multiplexor\\Phase.olean",
+        "LeanUnitary\\Pivot\\Multiplexor\\Phase.lean"
+      ],
+      "seconds": 33.25,
+      "exit": 0,
+      "stdout": "",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 6533234688,
+      "stop_reason": null,
+      "started_utc": "2026-10-05T01:35:23.221673+00:00",
+      "finished_utc": "2026-10-05T01:35:56.464532+00:00",
+      "owned_process_stop_output": null,
+      "own_job_resource_receipt": {
+        "command": [
+          "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.30.0-rc2-windows\\bin\\lean.exe",
+          "-j1",
+          "-DmaxHeartbeats=0",
+          "-DmaxRecDepth=100000",
+          "-Dpp.unicode.fun=true",
+          "-DrelaxedAutoImplicit=false",
+          "-DmaxSynthPendingDepth=3",
+          "-o",
+          "LeanUnitary\\Pivot\\Multiplexor\\Phase.olean",
+          "LeanUnitary\\Pivot\\Multiplexor\\Phase.lean"
+        ],
+        "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\matt-unitary-current",
+        "started_utc": "2026-10-05T01:35:23.221673+00:00",
+        "attempted": true,
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 5368709120,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 1073741824,
+          "own_job_private_bytes": 6442450944,
+          "own_process_private_bytes": 6442450944,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 3600
+        },
+        "minimum_disk_free_bytes": 6533234688,
+        "initial_system_memory_snapshot": {
+          "free_physical_bytes": 11719073792,
+          "total_physical_bytes": 34024419328,
+          "available_commit_bytes": 10385174528,
+          "total_commit_limit_bytes": 60619800576
+        },
+        "minimum_physical_available_bytes": 6867054592,
+        "minimum_available_commit_bytes": 8059576320,
+        "root_pid": 51376,
+        "own_job_assignment_before_resume": "PASS",
+        "exit": 0,
+        "job_peak_process_private_bytes": 737546240,
+        "job_peak_aggregate_private_bytes": 738766848,
+        "state": "PASS",
+        "finished_utc": "2026-10-05T01:35:56.464532+00:00",
+        "seconds": 33.25,
+        "polled_peak_tree_private_bytes": 738766848,
+        "polled_peak_tree_rss_bytes": 3419222016,
+        "counter_samples": 123,
+        "observed_own_processes": {
+          "51376": {
+            "exe": "lean.exe",
+            "peak_private_bytes": 737546240,
+            "peak_rss_bytes": 3519643648
+          },
+          "23480": {
+            "exe": "conhost.exe",
+            "peak_private_bytes": 1257472,
+            "peak_rss_bytes": 7856128
+          }
+        },
+        "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\matt-unitary-current-a239a51065a665e6-attempt-1.stdout.txt",
+        "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\matt-unitary-current-a239a51065a665e6-attempt-1.stderr.txt",
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_excerpt": "",
+        "stderr_excerpt": ""
+      },
+      "source_sha256": "95a8c81d574d267981e2b80d03ddbe3385ddfdf805e759fbe62a0e3f09eee508",
+      "third_worker_memory_observations": {
+        "minimum_free_physical_bytes": 6867054592,
+        "minimum_available_commit_bytes": 8059576320,
+        "peak_owned_private_bytes": 738766848
+      },
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\matt-unitary-current\\LeanUnitary\\Pivot\\Multiplexor\\Phase.olean",
+          "sha256": "897a40ae26fcf97a7a59aea7ed3219a77f2468bddc9a0c8a5931e1448531a2f4",
+          "bytes": 876928
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "LeanUnitary.Pivot.Existence.Rotation",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.30.0-rc2-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-Dpp.unicode.fun=true",
+        "-DrelaxedAutoImplicit=false",
+        "-DmaxSynthPendingDepth=3",
+        "-o",
+        "LeanUnitary\\Pivot\\Existence\\Rotation.olean",
+        "LeanUnitary\\Pivot\\Existence\\Rotation.lean"
+      ],
+      "seconds": 34.719,
+      "exit": 0,
+      "stdout": "",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 6528770048,
+      "stop_reason": null,
+      "started_utc": "2026-10-05T01:35:56.479538+00:00",
+      "finished_utc": "2026-10-05T01:36:31.207042+00:00",
+      "owned_process_stop_output": null,
+      "own_job_resource_receipt": {
+        "command": [
+          "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.30.0-rc2-windows\\bin\\lean.exe",
+          "-j1",
+          "-DmaxHeartbeats=0",
+          "-DmaxRecDepth=100000",
+          "-Dpp.unicode.fun=true",
+          "-DrelaxedAutoImplicit=false",
+          "-DmaxSynthPendingDepth=3",
+          "-o",
+          "LeanUnitary\\Pivot\\Existence\\Rotation.olean",
+          "LeanUnitary\\Pivot\\Existence\\Rotation.lean"
+        ],
+        "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\matt-unitary-current",
+        "started_utc": "2026-10-05T01:35:56.479538+00:00",
+        "attempted": true,
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 5368709120,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 1073741824,
+          "own_job_private_bytes": 6442450944,
+          "own_process_private_bytes": 6442450944,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 3600
+        },
+        "minimum_disk_free_bytes": 6528770048,
+        "initial_system_memory_snapshot": {
+          "free_physical_bytes": 10526154752,
+          "total_physical_bytes": 34024419328,
+          "available_commit_bytes": 8893702144,
+          "total_commit_limit_bytes": 60619800576
+        },
+        "minimum_physical_available_bytes": 6856425472,
+        "minimum_available_commit_bytes": 8005439488,
+        "root_pid": 56148,
+        "own_job_assignment_before_resume": "PASS",
+        "exit": 0,
+        "job_peak_process_private_bytes": 738299904,
+        "job_peak_aggregate_private_bytes": 739516416,
+        "state": "PASS",
+        "finished_utc": "2026-10-05T01:36:31.207042+00:00",
+        "seconds": 34.719,
+        "polled_peak_tree_private_bytes": 732098560,
+        "polled_peak_tree_rss_bytes": 3489468416,
+        "counter_samples": 127,
+        "observed_own_processes": {
+          "52468": {
+            "exe": "conhost.exe",
+            "peak_private_bytes": 1253376,
+            "peak_rss_bytes": 7856128
+          },
+          "56148": {
+            "exe": "lean.exe",
+            "peak_private_bytes": 730882048,
+            "peak_rss_bytes": 3532406784
+          }
+        },
+        "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\matt-unitary-current-d78300529db1561f-attempt-1.stdout.txt",
+        "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\matt-unitary-current-d78300529db1561f-attempt-1.stderr.txt",
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_excerpt": "",
+        "stderr_excerpt": ""
+      },
+      "source_sha256": "dbc170f97250b3966749af1a4b572f42b5506693c3c112c2d6f90802b0a1316d",
+      "third_worker_memory_observations": {
+        "minimum_free_physical_bytes": 6856425472,
+        "minimum_available_commit_bytes": 8005439488,
+        "peak_owned_private_bytes": 739516416
+      },
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\matt-unitary-current\\LeanUnitary\\Pivot\\Existence\\Rotation.olean",
+          "sha256": "c68d322bd13adca420460bbe7d4d00813c0aa552850e4aa96eabaab906643bf9",
+          "bytes": 869512
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "LeanUnitary.Pivot.Existence.Pivot",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.30.0-rc2-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-Dpp.unicode.fun=true",
+        "-DrelaxedAutoImplicit=false",
+        "-DmaxSynthPendingDepth=3",
+        "-o",
+        "LeanUnitary\\Pivot\\Existence\\Pivot.olean",
+        "LeanUnitary\\Pivot\\Existence\\Pivot.lean"
+      ],
+      "seconds": 30.625,
+      "exit": 0,
+      "stdout": "",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 6527709184,
+      "stop_reason": null,
+      "started_utc": "2026-10-05T01:36:31.221313+00:00",
+      "finished_utc": "2026-10-05T01:37:01.836400+00:00",
+      "owned_process_stop_output": null,
+      "own_job_resource_receipt": {
+        "command": [
+          "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.30.0-rc2-windows\\bin\\lean.exe",
+          "-j1",
+          "-DmaxHeartbeats=0",
+          "-DmaxRecDepth=100000",
+          "-Dpp.unicode.fun=true",
+          "-DrelaxedAutoImplicit=false",
+          "-DmaxSynthPendingDepth=3",
+          "-o",
+          "LeanUnitary\\Pivot\\Existence\\Pivot.olean",
+          "LeanUnitary\\Pivot\\Existence\\Pivot.lean"
+        ],
+        "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\matt-unitary-current",
+        "started_utc": "2026-10-05T01:36:31.221313+00:00",
+        "attempted": true,
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 5368709120,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 1073741824,
+          "own_job_private_bytes": 6442450944,
+          "own_process_private_bytes": 6442450944,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 3600
+        },
+        "minimum_disk_free_bytes": 6527709184,
+        "initial_system_memory_snapshot": {
+          "free_physical_bytes": 10397655040,
+          "total_physical_bytes": 34024419328,
+          "available_commit_bytes": 8750567424,
+          "total_commit_limit_bytes": 60619800576
+        },
+        "minimum_physical_available_bytes": 7170818048,
+        "minimum_available_commit_bytes": 8246972416,
+        "root_pid": 41020,
+        "own_job_assignment_before_resume": "PASS",
+        "exit": 0,
+        "job_peak_process_private_bytes": 705765376,
+        "job_peak_aggregate_private_bytes": 707006464,
+        "state": "PASS",
+        "finished_utc": "2026-10-05T01:37:01.836400+00:00",
+        "seconds": 30.625,
+        "polled_peak_tree_private_bytes": 704991232,
+        "polled_peak_tree_rss_bytes": 3414192128,
+        "counter_samples": 113,
+        "observed_own_processes": {
+          "50448": {
+            "exe": "conhost.exe",
+            "peak_private_bytes": 1241088,
+            "peak_rss_bytes": 7852032
+          },
+          "41020": {
+            "exe": "lean.exe",
+            "peak_private_bytes": 703750144,
+            "peak_rss_bytes": 3505631232
+          }
+        },
+        "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\matt-unitary-current-498437e87b736bfa-attempt-1.stdout.txt",
+        "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\matt-unitary-current-498437e87b736bfa-attempt-1.stderr.txt",
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_excerpt": "",
+        "stderr_excerpt": ""
+      },
+      "source_sha256": "dd8f689a42fc44b1c1ad17fa7af1e5de337aff7ccc0ec0ef7551ff81e362c2bf",
+      "third_worker_memory_observations": {
+        "minimum_free_physical_bytes": 7170818048,
+        "minimum_available_commit_bytes": 8246972416,
+        "peak_owned_private_bytes": 707006464
+      },
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\matt-unitary-current\\LeanUnitary\\Pivot\\Existence\\Pivot.olean",
+          "sha256": "b53f490d4c72ee00714db660cd3ac53d67b9a597af4181747615e61c196605c2",
+          "bytes": 571336
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "LeanUnitary.Pivot.Synthesis",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.30.0-rc2-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-Dpp.unicode.fun=true",
+        "-DrelaxedAutoImplicit=false",
+        "-DmaxSynthPendingDepth=3",
+        "-o",
+        "LeanUnitary\\Pivot\\Synthesis.olean",
+        "LeanUnitary\\Pivot\\Synthesis.lean"
+      ],
+      "seconds": 23.828,
+      "exit": 0,
+      "stdout": "",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 6526820352,
+      "stop_reason": null,
+      "started_utc": "2026-10-05T01:37:01.850493+00:00",
+      "finished_utc": "2026-10-05T01:37:25.683488+00:00",
+      "owned_process_stop_output": null,
+      "own_job_resource_receipt": {
+        "command": [
+          "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.30.0-rc2-windows\\bin\\lean.exe",
+          "-j1",
+          "-DmaxHeartbeats=0",
+          "-DmaxRecDepth=100000",
+          "-Dpp.unicode.fun=true",
+          "-DrelaxedAutoImplicit=false",
+          "-DmaxSynthPendingDepth=3",
+          "-o",
+          "LeanUnitary\\Pivot\\Synthesis.olean",
+          "LeanUnitary\\Pivot\\Synthesis.lean"
+        ],
+        "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\matt-unitary-current",
+        "started_utc": "2026-10-05T01:37:01.850493+00:00",
+        "attempted": true,
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 5368709120,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 1073741824,
+          "own_job_private_bytes": 6442450944,
+          "own_process_private_bytes": 6442450944,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 3600
+        },
+        "minimum_disk_free_bytes": 6526820352,
+        "initial_system_memory_snapshot": {
+          "free_physical_bytes": 11837440000,
+          "total_physical_bytes": 34024419328,
+          "available_commit_bytes": 12134957056,
+          "total_commit_limit_bytes": 60619800576
+        },
+        "minimum_physical_available_bytes": 8336871424,
+        "minimum_available_commit_bytes": 11369914368,
+        "root_pid": 51980,
+        "own_job_assignment_before_resume": "PASS",
+        "exit": 0,
+        "job_peak_process_private_bytes": 703586304,
+        "job_peak_aggregate_private_bytes": 704847872,
+        "state": "PASS",
+        "finished_utc": "2026-10-05T01:37:25.683488+00:00",
+        "seconds": 23.828,
+        "polled_peak_tree_private_bytes": 704847872,
+        "polled_peak_tree_rss_bytes": 3348094976,
+        "counter_samples": 89,
+        "observed_own_processes": {
+          "51184": {
+            "exe": "conhost.exe",
+            "peak_private_bytes": 1261568,
+            "peak_rss_bytes": 7860224
+          },
+          "51980": {
+            "exe": "lean.exe",
+            "peak_private_bytes": 703586304,
+            "peak_rss_bytes": 3469430784
+          }
+        },
+        "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\matt-unitary-current-4d43ae2ebf7430d4-attempt-1.stdout.txt",
+        "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\matt-unitary-current-4d43ae2ebf7430d4-attempt-1.stderr.txt",
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_excerpt": "",
+        "stderr_excerpt": ""
+      },
+      "source_sha256": "20f943fe3968bf93163948deae9c3b399884145e7041ef63d28ac064bcc2ed61",
+      "third_worker_memory_observations": {
+        "minimum_free_physical_bytes": 8336871424,
+        "minimum_available_commit_bytes": 11369914368,
+        "peak_owned_private_bytes": 704847872
+      },
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\matt-unitary-current\\LeanUnitary\\Pivot\\Synthesis.olean",
+          "sha256": "410594ca42e758d7e7c77905feccc12c2c28d6486718ab1630886e1987c2d9be",
+          "bytes": 56392
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "LeanUnitary",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.30.0-rc2-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-Dpp.unicode.fun=true",
+        "-DrelaxedAutoImplicit=false",
+        "-DmaxSynthPendingDepth=3",
+        "-o",
+        "LeanUnitary.olean",
+        "LeanUnitary.lean"
+      ],
+      "seconds": 25.343,
+      "exit": 0,
+      "stdout": "",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 6471675904,
+      "stop_reason": null,
+      "started_utc": "2026-10-05T01:37:25.693490+00:00",
+      "finished_utc": "2026-10-05T01:37:51.049966+00:00",
+      "owned_process_stop_output": null,
+      "own_job_resource_receipt": {
+        "command": [
+          "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.30.0-rc2-windows\\bin\\lean.exe",
+          "-j1",
+          "-DmaxHeartbeats=0",
+          "-DmaxRecDepth=100000",
+          "-Dpp.unicode.fun=true",
+          "-DrelaxedAutoImplicit=false",
+          "-DmaxSynthPendingDepth=3",
+          "-o",
+          "LeanUnitary.olean",
+          "LeanUnitary.lean"
+        ],
+        "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\matt-unitary-current",
+        "started_utc": "2026-10-05T01:37:25.693490+00:00",
+        "attempted": true,
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 5368709120,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 1073741824,
+          "own_job_private_bytes": 6442450944,
+          "own_process_private_bytes": 6442450944,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 3600
+        },
+        "minimum_disk_free_bytes": 6471675904,
+        "initial_system_memory_snapshot": {
+          "free_physical_bytes": 11851698176,
+          "total_physical_bytes": 34024419328,
+          "available_commit_bytes": 12122828800,
+          "total_commit_limit_bytes": 60619800576
+        },
+        "minimum_physical_available_bytes": 8246116352,
+        "minimum_available_commit_bytes": 11235672064,
+        "root_pid": 52868,
+        "own_job_assignment_before_resume": "PASS",
+        "exit": 0,
+        "job_peak_process_private_bytes": 703856640,
+        "job_peak_aggregate_private_bytes": 705114112,
+        "state": "PASS",
+        "finished_utc": "2026-10-05T01:37:51.049966+00:00",
+        "seconds": 25.343,
+        "polled_peak_tree_private_bytes": 704983040,
+        "polled_peak_tree_rss_bytes": 3247579136,
+        "counter_samples": 94,
+        "observed_own_processes": {
+          "44440": {
+            "exe": "conhost.exe",
+            "peak_private_bytes": 1257472,
+            "peak_rss_bytes": 7856128
+          },
+          "52868": {
+            "exe": "lean.exe",
+            "peak_private_bytes": 703725568,
+            "peak_rss_bytes": 3251912704
+          }
+        },
+        "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\matt-unitary-current-60777292f1c24465-attempt-1.stdout.txt",
+        "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\matt-unitary-current-60777292f1c24465-attempt-1.stderr.txt",
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_excerpt": "",
+        "stderr_excerpt": ""
+      },
+      "source_sha256": "72d7304c0bb262ec185deb80781d38868ae2d279f4f4ad5544bdb7738d7713fc",
+      "third_worker_memory_observations": {
+        "minimum_free_physical_bytes": 8246116352,
+        "minimum_available_commit_bytes": 11235672064,
+        "peak_owned_private_bytes": 705114112
+      },
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\matt-unitary-current\\LeanUnitary.olean",
+          "sha256": "bac61559a9a3ecb0e41c9fee276a8186b8895ed2878e536ece36f893f4b2ade9",
+          "bytes": 4216
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "FreshAuditPivot.lean",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.30.0-rc2-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-Dpp.unicode.fun=true",
+        "-DrelaxedAutoImplicit=false",
+        "-DmaxSynthPendingDepth=3",
+        "-o",
+        "FreshAuditPivot.olean",
+        "FreshAuditPivot.lean"
+      ],
+      "seconds": 26.625,
+      "exit": 0,
+      "stdout": "'LeanUnitary.Pivot.exists_pivot' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LeanUnitary.Pivot.pivot_merge' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LeanUnitary.Pivot.continuousOn_lift' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LeanUnitary.Pivot.count_closed' depends on axioms: [propext, Quot.sound]\n'LeanUnitary.Pivot.saving' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LeanUnitary.Pivot.generalBound_of_pivot_node' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "is_endpoint_audit": true,
+      "minimum_free_bytes": 6525136896,
+      "stop_reason": null,
+      "started_utc": "2026-10-05T01:37:51.061964+00:00",
+      "finished_utc": "2026-10-05T01:38:17.677827+00:00",
+      "owned_process_stop_output": null,
+      "own_job_resource_receipt": {
+        "command": [
+          "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.30.0-rc2-windows\\bin\\lean.exe",
+          "-j1",
+          "-DmaxHeartbeats=0",
+          "-DmaxRecDepth=100000",
+          "-Dpp.unicode.fun=true",
+          "-DrelaxedAutoImplicit=false",
+          "-DmaxSynthPendingDepth=3",
+          "-o",
+          "FreshAuditPivot.olean",
+          "FreshAuditPivot.lean"
+        ],
+        "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\matt-unitary-current",
+        "started_utc": "2026-10-05T01:37:51.061964+00:00",
+        "attempted": true,
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 5368709120,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 1073741824,
+          "own_job_private_bytes": 6442450944,
+          "own_process_private_bytes": 6442450944,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 3600
+        },
+        "minimum_disk_free_bytes": 6525136896,
+        "initial_system_memory_snapshot": {
+          "free_physical_bytes": 11670097920,
+          "total_physical_bytes": 34024419328,
+          "available_commit_bytes": 11955453952,
+          "total_commit_limit_bytes": 60619800576
+        },
+        "minimum_physical_available_bytes": 8453152768,
+        "minimum_available_commit_bytes": 11454541824,
+        "root_pid": 49380,
+        "own_job_assignment_before_resume": "PASS",
+        "exit": 0,
+        "job_peak_process_private_bytes": 703639552,
+        "job_peak_aggregate_private_bytes": 704905216,
+        "state": "PASS",
+        "finished_utc": "2026-10-05T01:38:17.677827+00:00",
+        "seconds": 26.625,
+        "polled_peak_tree_private_bytes": 683819008,
+        "polled_peak_tree_rss_bytes": 3248742400,
+        "counter_samples": 98,
+        "observed_own_processes": {
+          "56472": {
+            "exe": "conhost.exe",
+            "peak_private_bytes": 1265664,
+            "peak_rss_bytes": 7860224
+          },
+          "49380": {
+            "exe": "lean.exe",
+            "peak_private_bytes": 682553344,
+            "peak_rss_bytes": 3251396608
+          }
+        },
+        "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\matt-unitary-current-af4f386c446dfc79-attempt-1.stdout.txt",
+        "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\matt-unitary-current-af4f386c446dfc79-attempt-1.stderr.txt",
+        "stdout_sha256": "c03cc6cd5a22ae6bfadbac14144a4ed790dd7e8c24af4a34cc42aa1f00a6e9d5",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_excerpt": "'LeanUnitary.Pivot.exists_pivot' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LeanUnitary.Pivot.pivot_merge' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LeanUnitary.Pivot.continuousOn_lift' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LeanUnitary.Pivot.count_closed' depends on axioms: [propext, Quot.sound]\n'LeanUnitary.Pivot.saving' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LeanUnitary.Pivot.generalBound_of_pivot_node' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+        "stderr_excerpt": ""
+      },
+      "source_sha256": "735650912e70e8b0266d8471455f00367f5bd842b3c0cb6a729be90886adeb61",
+      "third_worker_memory_observations": {
+        "minimum_free_physical_bytes": 8453152768,
+        "minimum_available_commit_bytes": 11454541824,
+        "peak_owned_private_bytes": 704905216
+      },
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\matt-unitary-current\\FreshAuditPivot.olean",
+          "sha256": "82eb546556a23bb8ce16272e548c3ce7610d12153ff2dff20a03e93f3901a5ff",
+          "bytes": 1648
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION",
+      "selected_endpoint_print_coverage": {
+        "requested_endpoints": [
+          "LeanUnitary.Pivot.exists_pivot",
+          "LeanUnitary.Pivot.pivot_merge",
+          "LeanUnitary.Pivot.continuousOn_lift",
+          "LeanUnitary.Pivot.count_closed",
+          "LeanUnitary.Pivot.saving",
+          "LeanUnitary.Pivot.generalBound_of_pivot_node"
+        ],
+        "parsed_endpoints": [
+          "LeanUnitary.Pivot.continuousOn_lift",
+          "LeanUnitary.Pivot.count_closed",
+          "LeanUnitary.Pivot.exists_pivot",
+          "LeanUnitary.Pivot.generalBound_of_pivot_node",
+          "LeanUnitary.Pivot.pivot_merge",
+          "LeanUnitary.Pivot.saving"
+        ],
+        "missing_endpoints": [],
+        "status": "PASS"
+      }
+    },
+    {
+      "module": "FreshBaselineAudit.lean",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.30.0-rc2-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-Dpp.unicode.fun=true",
+        "-DrelaxedAutoImplicit=false",
+        "-DmaxSynthPendingDepth=3",
+        "-o",
+        "FreshBaselineAudit.olean",
+        "FreshBaselineAudit.lean"
+      ],
+      "seconds": 24.234,
+      "exit": 0,
+      "stdout": "'LeanUnitary.Claims.muxRotations' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]\n'LeanUnitary.Claims.demultiplex' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]\n'LeanUnitary.Claims.cosineSine' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]\n'LeanUnitary.Claims.twoQubitOptimal' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]\n'LeanUnitary.Claims.qsd' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]\n'LeanUnitary.Claims.qsdOptimized' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]\n'LeanUnitary.Claims.blockZXZ' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]\n'LeanUnitary.Claims.synth' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "is_endpoint_audit": true,
+      "minimum_free_bytes": 6523920384,
+      "stop_reason": null,
+      "started_utc": "2026-10-05T01:38:17.690137+00:00",
+      "finished_utc": "2026-10-05T01:38:41.914736+00:00",
+      "owned_process_stop_output": null,
+      "own_job_resource_receipt": {
+        "command": [
+          "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.30.0-rc2-windows\\bin\\lean.exe",
+          "-j1",
+          "-DmaxHeartbeats=0",
+          "-DmaxRecDepth=100000",
+          "-Dpp.unicode.fun=true",
+          "-DrelaxedAutoImplicit=false",
+          "-DmaxSynthPendingDepth=3",
+          "-o",
+          "FreshBaselineAudit.olean",
+          "FreshBaselineAudit.lean"
+        ],
+        "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\matt-unitary-current",
+        "started_utc": "2026-10-05T01:38:17.690137+00:00",
+        "attempted": true,
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 5368709120,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 1073741824,
+          "own_job_private_bytes": 6442450944,
+          "own_process_private_bytes": 6442450944,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 3600
+        },
+        "minimum_disk_free_bytes": 6523920384,
+        "initial_system_memory_snapshot": {
+          "free_physical_bytes": 11863916544,
+          "total_physical_bytes": 34024419328,
+          "available_commit_bytes": 12171476992,
+          "total_commit_limit_bytes": 60619800576
+        },
+        "minimum_physical_available_bytes": 8421408768,
+        "minimum_available_commit_bytes": 11423236096,
+        "root_pid": 51444,
+        "own_job_assignment_before_resume": "PASS",
+        "exit": 0,
+        "job_peak_process_private_bytes": 706248704,
+        "job_peak_aggregate_private_bytes": 707497984,
+        "state": "PASS",
+        "finished_utc": "2026-10-05T01:38:41.914736+00:00",
+        "seconds": 24.234,
+        "polled_peak_tree_private_bytes": 705904640,
+        "polled_peak_tree_rss_bytes": 3245264896,
+        "counter_samples": 90,
+        "observed_own_processes": {
+          "51444": {
+            "exe": "lean.exe",
+            "peak_private_bytes": 704655360,
+            "peak_rss_bytes": 3251056640
+          },
+          "9268": {
+            "exe": "conhost.exe",
+            "peak_private_bytes": 1249280,
+            "peak_rss_bytes": 7856128
+          }
+        },
+        "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\matt-unitary-current-7cd678e7c0ace6f0-attempt-1.stdout.txt",
+        "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\matt-unitary-current-7cd678e7c0ace6f0-attempt-1.stderr.txt",
+        "stdout_sha256": "c03b0b92837728295b1c2ed49858d79c40ad7fe68ee5bbabb751bea6943ed742",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_excerpt": "'LeanUnitary.Claims.muxRotations' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]\n'LeanUnitary.Claims.demultiplex' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]\n'LeanUnitary.Claims.cosineSine' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]\n'LeanUnitary.Claims.twoQubitOptimal' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]\n'LeanUnitary.Claims.qsd' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]\n'LeanUnitary.Claims.qsdOptimized' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]\n'LeanUnitary.Claims.blockZXZ' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]\n'LeanUnitary.Claims.synth' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]\n",
+        "stderr_excerpt": ""
+      },
+      "source_sha256": "e67188f15831bd43c8521ed523fe9f95850d0b3b729ec694fbdc18e96b262d38",
+      "third_worker_memory_observations": {
+        "minimum_free_physical_bytes": 8421408768,
+        "minimum_available_commit_bytes": 11423236096,
+        "peak_owned_private_bytes": 707497984
+      },
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\matt-unitary-current\\FreshBaselineAudit.olean",
+          "sha256": "fa492387d06957e44928c06c9e9234e14ce520eafbf2d3ca2cb6b686654472f9",
+          "bytes": 1320
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    }
+  ],
+  "commit": "7014b63ee2cfd01c641a7f539c73b664a2aa3d66",
+  "non_acceptance_audit_modules": [
+    "FreshBaselineAudit.lean"
+  ],
+  "verification_scope": "All 26 custom sources; novel generic pivot/count endpoints and conditional synthesis bridge. Global synthesis/older Claims separately audited; actual sorryAx expected there.",
+  "build_option_note": "Retain the semantically relevant original lakefile options. Default-disabled project header linting and weak style lint preferences do not change the kernel theorem; the replay independently audits final axioms. The runner removes performance heartbeat/depth limits without changing source bytes.",
+  "compiler_version": "Lean (version 4.30.0-rc2, x86_64-w64-windows-gnu, commit 3dc1a088b6d2d8eafe25a7cd7ec7b58d731bd7cc, Release)",
+  "compilation_order": [
+    "LeanUnitary.Spec",
+    "LeanUnitary.Blocks",
+    "LeanUnitary.Circuit",
+    "LeanUnitary.Decomposition.Multiplexor",
+    "LeanUnitary.LinearAlgebra",
+    "LeanUnitary.Decomposition.Demultiplex",
+    "LeanUnitary.Decomposition.CosineSine",
+    "LeanUnitary.Decomposition.TwoQubit",
+    "LeanUnitary.Decomposition.QSD",
+    "LeanUnitary.Decomposition.BlockZXZ",
+    "LeanUnitary.Claims",
+    "LeanUnitary.Pivot.Count",
+    "LeanUnitary.Pivot.Path.Gate",
+    "LeanUnitary.Pivot.Path.Eigenvalues",
+    "LeanUnitary.Pivot.Existence.EigenContinuity",
+    "LeanUnitary.Pivot.Split",
+    "LeanUnitary.Pivot.Existence.Imbalance",
+    "LeanUnitary.Pivot.Existence.Lift",
+    "LeanUnitary.Pivot.Multiplexor.Basic",
+    "LeanUnitary.Pivot.Existence.PhaseList",
+    "LeanUnitary.Pivot.Multiplexor.Continuity",
+    "LeanUnitary.Pivot.Multiplexor.Phase",
+    "LeanUnitary.Pivot.Existence.Rotation",
+    "LeanUnitary.Pivot.Existence.Pivot",
+    "LeanUnitary.Pivot.Synthesis",
+    "LeanUnitary"
+  ],
+  "started_utc": "2026-10-05T01:24:52Z",
+  "failed_invocations": [],
+  "selected_audit_axiom_review": [
+    {
+      "endpoint": "LeanUnitary.Pivot.exists_pivot",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    },
+    {
+      "endpoint": "LeanUnitary.Pivot.pivot_merge",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    },
+    {
+      "endpoint": "LeanUnitary.Pivot.continuousOn_lift",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    },
+    {
+      "endpoint": "LeanUnitary.Pivot.count_closed",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    },
+    {
+      "endpoint": "LeanUnitary.Pivot.saving",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    },
+    {
+      "endpoint": "LeanUnitary.Pivot.generalBound_of_pivot_node",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    }
+  ],
+  "resource_settings": {
+    "LEAN_NUM_THREADS": 1,
+    "lean_shell_worker_flag": "-j1",
+    "maxHeartbeats": 0,
+    "maxRecDepth": 100000,
+    "runner_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\run_source_plan.py",
+    "runner_source_sha256": "7d6e05618cb48494a792efc54c8a80e36c7bedb6f28415e78515b1c4f4caefc0",
+    "axiom_parser_source_sha256": "1ee59639204140430c088023539a648f9007cc26c1856cf8cd2e3c2e59d7143f",
+    "guarded_third_worker_continuation": {
+      "maximum_new_source_invocations": null,
+      "initial_disk_bytes": 4000000000,
+      "initial_free_physical_bytes": 6442450944,
+      "continuous_disk_reserve_bytes": 1000000000,
+      "continuous_free_physical_reserve_bytes": 3221225472,
+      "owned_compiler_private_memory_ceiling_bytes": 6442450944,
+      "initial_memory_snapshot": {
+        "free_physical_bytes": 7447334912,
+        "total_physical_bytes": 34024419328,
+        "available_commit_bytes": 7883427840,
+        "total_commit_limit_bytes": 61075705856
+      },
+      "qualification": "ROOT_AUTHORIZED_GUARDED_THIRD_WORKER_CONTINUATION",
+      "initial_available_commit_bytes": 5368709120,
+      "continuous_available_commit_reserve_bytes": 1073741824,
+      "owned_job_private_memory_ceiling_bytes": 6442450944,
+      "own_job_assignment_before_resume": "REQUIRED",
+      "resource_guard_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\matt_resource_guard.py",
+      "resource_guard_sha256": "ae0b64c7fbf47545365f3238977368042be342ddb973159ec65c98f64aa38a71",
+      "source_scope_authorization": "ROOT_AUTHORIZED_EXACT_26_AUTHORED_SOURCES_SELECTED_GENERIC_ENDPOINTS_AND_SEPARATE_NON_ACCEPTANCE_BASELINE_AUDITS_AFTER_ACTUAL_FULL_IMPORT_PASS"
+    }
+  },
+  "prior_attempt_receipts": [
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\matt-unitary-current-fresh-build-attempt-1.json",
+      "sha256": "665c8e7712ee21b3bd6111b3861fd57ff49e4a51ce41bba54ed3b7b44c060da5",
+      "status": "SCHEDULED_RESOURCE_CHECKPOINT"
+    }
+  ],
+  "resume_provenance": "OWN_FRESH_SUCCESSFUL_ARTIFACTS_AFTER_RESOURCE_INTERRUPTION",
+  "retained_successful_custom_modules": 1,
+  "unfinished_baseline_axioms": true,
+  "finished_utc": "2026-10-05T01:38:41Z"
+}

@@ -1,0 +1,41 @@
+{
+  "status": "OPERATIONAL_CHECKPOINT_RECOVERED_NO_LEAN_INVOCATION",
+  "original_running_receipt": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dms-boundary-checkpoint-normalization-20261005T014649Z.original-running-receipt.json",
+  "original_running_receipt_sha256": "ca2beceb23f2cbc56a929415a12d26399b212df7b962a9ef316c71ac5a199a92",
+  "new_checkpoint_receipt": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\htpeo-dms-current-fresh-build.json",
+  "new_checkpoint_sha256": "50cfed42871f26d2a46764898b48523ffeb7dc5e11376bb2d5eecda8401ba2e1",
+  "original_pending_row": {
+    "module": "GPn2T",
+    "command": [
+      "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+      "-j1",
+      "-DmaxHeartbeats=0",
+      "-DmaxRecDepth=100000",
+      "-o",
+      "GPn2T.olean",
+      "GPn2T.lean"
+    ],
+    "seconds": 3290.58,
+    "exit": 0,
+    "stdout": "",
+    "stderr": "",
+    "is_endpoint_audit": false,
+    "minimum_free_bytes": 5699489792,
+    "stop_reason": null,
+    "owned_process_stop_output": null,
+    "source_sha256": "bead338fcf494f98da2207d3861fe5b01f118e3519cfae4b8dd939f8808ed412",
+    "artifacts": [
+      {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current\\GPn2T.olean",
+        "sha256": "4a5ee299801535584af69b8e0d42079e81da095ee7e227f49a95e648881a8d98",
+        "bytes": 278144
+      }
+    ],
+    "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+  },
+  "boundary_receipt": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dms-pending-row-handoff-20261005T014515Z.completed.json",
+  "boundary_receipt_sha256": "402b3c059d18966f767400297ebbf59f6eb015ededec206ac43bfe01f5fc8311",
+  "source_exit_basis": "Externally observed actual child exit0, exact source SHA and every fresh output hash verified.",
+  "retained_actual_source_successes": 118,
+  "helper_sha256": "be72eace73b19da7a6f0687db261d8b36d38700dfd83ff324f2ae57631f280ca"
+}

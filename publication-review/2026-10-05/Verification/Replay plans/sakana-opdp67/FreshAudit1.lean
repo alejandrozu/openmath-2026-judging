@@ -1,0 +1,5 @@
+import OpHack.Quaternion67TwoWitness
+
+#print axioms OPDP67TwoWitness.scalar_ring_existentially_defined
+#print axioms OPDP67TwoWitness.rationals_existentially_defined
+#print axioms OPDP67TwoWitness.integers_defined_by_explicit_equation

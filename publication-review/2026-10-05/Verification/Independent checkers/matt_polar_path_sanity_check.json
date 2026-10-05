@@ -1,0 +1,151 @@
+{
+  "scope": "Independent floating-point sanity checks of generic block invertibility, actual polar path, determinant phase, normalized-lift endpoint reversal and Walsh sign change. Not a proof or Lean replay; no circuit bound is tested.",
+  "entrant_code_executed": false,
+  "cases": [
+    {
+      "dimension": 4,
+      "seed": 17,
+      "alpha": 1.0623902934288731,
+      "sampled_beta_count": 129,
+      "min_sampled_block_singular_value": 0.30058325364563565,
+      "worst_unitarity_error": 2.886579864025407e-15,
+      "worst_determinant_phase_error": 5.4131200380081324e-15,
+      "adjoint_endpoint_error": 1.1443916996305594e-15,
+      "normalized_reversal_error": 0.0,
+      "walsh_endpoint_values": [
+        -0.7359756184994435,
+        0.7359756184994435
+      ],
+      "all_checks_pass": true
+    },
+    {
+      "dimension": 4,
+      "seed": 41,
+      "alpha": 1.075249228315134,
+      "sampled_beta_count": 129,
+      "min_sampled_block_singular_value": 0.20030530659877407,
+      "worst_unitarity_error": 3.774758283725532e-15,
+      "worst_determinant_phase_error": 4.408246038830774e-15,
+      "adjoint_endpoint_error": 7.949198794554405e-16,
+      "normalized_reversal_error": 8.881784197001252e-16,
+      "walsh_endpoint_values": [
+        0.16031381474022943,
+        -0.16031381474022677
+      ],
+      "all_checks_pass": true
+    },
+    {
+      "dimension": 4,
+      "seed": 103,
+      "alpha": 1.6313785759608401,
+      "sampled_beta_count": 129,
+      "min_sampled_block_singular_value": 0.038746980246544896,
+      "worst_unitarity_error": 2.886579864025407e-15,
+      "worst_determinant_phase_error": 8.988782004205988e-15,
+      "adjoint_endpoint_error": 9.155133597044475e-16,
+      "normalized_reversal_error": 8.881784197001252e-16,
+      "walsh_endpoint_values": [
+        2.3358440900360344,
+        -2.3358440900360353
+      ],
+      "all_checks_pass": true
+    },
+    {
+      "dimension": 8,
+      "seed": 17,
+      "alpha": 0.8439976285888797,
+      "sampled_beta_count": 129,
+      "min_sampled_block_singular_value": 0.0762546674167324,
+      "worst_unitarity_error": 2.886579864025407e-15,
+      "worst_determinant_phase_error": 2.5546082373244376e-14,
+      "adjoint_endpoint_error": 9.930136612989092e-16,
+      "normalized_reversal_error": 8.881784197001252e-16,
+      "walsh_endpoint_values": [
+        -0.7736982457917598,
+        0.7736982457917598
+      ],
+      "all_checks_pass": true
+    },
+    {
+      "dimension": 8,
+      "seed": 41,
+      "alpha": 0.9421408966114198,
+      "sampled_beta_count": 129,
+      "min_sampled_block_singular_value": 0.08491289966521656,
+      "worst_unitarity_error": 3.1086244689504383e-15,
+      "worst_determinant_phase_error": 1.500044428510571e-14,
+      "adjoint_endpoint_error": 2.9406505148178844e-15,
+      "normalized_reversal_error": 1.7763568394002505e-15,
+      "walsh_endpoint_values": [
+        0.14954183841890334,
+        -0.14954183841890245
+      ],
+      "all_checks_pass": true
+    },
+    {
+      "dimension": 8,
+      "seed": 103,
+      "alpha": 0.49868813289984276,
+      "sampled_beta_count": 129,
+      "min_sampled_block_singular_value": 0.0941644436491354,
+      "worst_unitarity_error": 3.1086244689504383e-15,
+      "worst_determinant_phase_error": 1.7271730709167024e-14,
+      "adjoint_endpoint_error": 1.2551536537447354e-15,
+      "normalized_reversal_error": 4.440892098500626e-16,
+      "walsh_endpoint_values": [
+        -0.5302876507103207,
+        0.5302876507103207
+      ],
+      "all_checks_pass": true
+    },
+    {
+      "dimension": 12,
+      "seed": 17,
+      "alpha": 1.081457866065707,
+      "sampled_beta_count": 129,
+      "min_sampled_block_singular_value": 0.007226974573585685,
+      "worst_unitarity_error": 3.552713678800501e-15,
+      "worst_determinant_phase_error": 8.203004859972386e-14,
+      "adjoint_endpoint_error": 1.1857187100668868e-15,
+      "normalized_reversal_error": 1.7763568394002505e-15,
+      "walsh_endpoint_values": [
+        0.12766017759620318,
+        -0.1276601775962085
+      ],
+      "all_checks_pass": true
+    },
+    {
+      "dimension": 12,
+      "seed": 41,
+      "alpha": 0.9255001214203993,
+      "sampled_beta_count": 129,
+      "min_sampled_block_singular_value": 0.03667646843669091,
+      "worst_unitarity_error": 3.3306690738754696e-15,
+      "worst_determinant_phase_error": 3.067537377031441e-14,
+      "adjoint_endpoint_error": 1.4130832128153977e-15,
+      "normalized_reversal_error": 1.3322676295501878e-15,
+      "walsh_endpoint_values": [
+        0.8118923963817286,
+        -0.811892396381726
+      ],
+      "all_checks_pass": true
+    },
+    {
+      "dimension": 12,
+      "seed": 103,
+      "alpha": 0.4263151072511696,
+      "sampled_beta_count": 129,
+      "min_sampled_block_singular_value": 0.012186295233054709,
+      "worst_unitarity_error": 3.1086244689504383e-15,
+      "worst_determinant_phase_error": 1.1219087945448282e-13,
+      "adjoint_endpoint_error": 1.208005429980432e-15,
+      "normalized_reversal_error": 1.7763568394002505e-15,
+      "walsh_endpoint_values": [
+        0.9096520615435866,
+        -0.9096520615435884
+      ],
+      "all_checks_pass": true
+    }
+  ],
+  "all_pass": true
+}

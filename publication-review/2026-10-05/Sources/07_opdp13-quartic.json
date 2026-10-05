@@ -1,0 +1,191 @@
+{
+  "title": "Exact admissible powers and a sharp logarithmic boundary scale for a Hermitian quartic",
+  "blocks": [
+    {
+      "type": "title",
+      "text": "Exact admissible powers and a sharp logarithmic boundary scale for a Hermitian quartic"
+    },
+    {
+      "type": "subtitle",
+      "text": "Provisional mathematical authors: Rachel Teo, Wenyi Wang, Hamdi Abderrahmene"
+    },
+    {
+      "type": "small",
+      "text": "Judging and evaluation record: the submissions discussed in this document have been judged and evaluated by Alejandro Zarzuelo Urdiales for OpenMath 2026. This dated review records the stated verification, classification and unresolved holds; it is a preliminary evaluation rather than a signed award decision."
+    },
+    {
+      "type": "small",
+      "text": "Event provenance: OpenMath 2026 ran 27 September–2 October 2026 with worldwide online participation. Detailed organizer listings specify Harvard Innovation Labs for the 27 September in-person event; the OpenMath programme advertises a hybrid kickoff at MIT. Sundai identifies its Harvard/MIT community. Organizer sources: https://rsihouse.ai/openmath ; https://luma.com/yzp9abvr ; https://www.sundai.club/events/boston/recursive-learning-hack-with-harvard-innovation-labs"
+    },
+    {
+      "type": "small",
+      "text": "Rachel Teo — Sakana AI."
+    },
+    {
+      "type": "small",
+      "text": "Wenyi Wang — Sakana AI."
+    },
+    {
+      "type": "small",
+      "text": "Hamdi Abderrahmene — Sakana AI."
+    },
+    {
+      "type": "small",
+      "text": "Affiliations follow the recorded author declarations or public institutional/profile sources. Preferred author names, author order and publication affiliations await author review. This editorial compilation does not establish anthology coauthorship."
+    },
+    {
+      "type": "subtitle",
+      "text": "Original-result working manuscript | OpenMath 2026 | 5 October 2026"
+    },
+    {
+      "type": "small",
+      "text": "Central source and adjudication archive: https://github.com/alejandrozu/openmath-2026-judging"
+    },
+    {
+      "type": "h2",
+      "text": "Abstract"
+    },
+    {
+      "type": "p",
+      "text": "For H_t(z)=(1+|z|²)^4−t|z|⁴, the positive exponents producing a holomorphic squared-norm representation are classified exactly on6<t≤7. Near t=8, the least positive admissible exponent has scale log(1/δ)/δ with leading constant one, where δ=8−t."
+    },
+    {
+      "type": "h2",
+      "text": "Squared norms and the finite exponent classification"
+    },
+    {
+      "type": "p",
+      "text": "A function-level squared norm means a finite sum ∑|f_j(z)|² with holomorphic polynomials f_j, without requiring the summands to be monomials. For a radial polynomial in |z|², the formal development proves equivalence with nonnegativity of every coefficient in the one-variable polynomial. The necessity is a Gram/coefficient statement, so the result concerns actual functions rather than only a chosen monomial ansatz."
+    },
+    {
+      "type": "p",
+      "text": "For6<t≤7 and a positive integer N, H_t^N has such a representation exactly when N=2, or N≥4, or N=3 and924−210t+18t²−t³≥0. The first power fails because its middle coefficient6−t is negative. Exact expansions show that the square and fifth power have nonnegative coefficients throughout this interval. Products of those powers cover every exponent at least four. In the cubic expansion the only possible obstruction is the displayed central coefficient."
+    },
+    {
+      "type": "h2",
+      "text": "Lower bounds near the radical boundary"
+    },
+    {
+      "type": "p",
+      "text": "For6<t<8, an admissible exponent satisfies12N(8−t)≥t(10−t). This inverse-distance bound comes from signed coefficient moments and positivity constraints. It is strengthened near t=8 by a Fourier obstruction: a negative terminal interval in the trigonometric profile must be compensated by the positive majorant allowed by nonnegative coefficients."
+    },
+    {
+      "type": "p",
+      "text": "The source derives3t^N N^(1/4)≤28(16−t)^N, equivalently81N t^(4N)≤614656(16−t)^(4N), for7≤t<8. Taking logarithms and combining with the elementary lower bound gives the quantified leading lower scale. For every ε>0, sufficiently small δ=8−t>0 forces δN≥(1−ε)log(1/δ) for every positive admissible N."
+    },
+    {
+      "type": "h2",
+      "text": "Matching upper bound and least exponent"
+    },
+    {
+      "type": "p",
+      "text": "The upper bound extracts each coefficient by Fourier integration at a positive radius selected to match that coefficient's mean. The source proves existence of the saddle radius, the local Gaussian expansion of the actual normalized quartic, the modulus gap on outer arcs, and bounds for Gaussian, quartic and edge errors. Small coefficients receive a separate direct finite estimate, and symmetry covers the opposite edge. These steps establish positivity in every degree0,...,4N uniformly whenever N≥(1+ε)log(1/δ)/δ and δ is sufficiently small."
+    },
+    {
+      "type": "p",
+      "text": "Define the least positive admissible index using that nonempty admissible set. The formal squeeze proves both its minimality and1−ε≤δ·index/log(1/δ)≤1+ε near zero. It excludes exponent zero, whose constant polynomial would otherwise trivialize the minimum. The claimed endpoint is the quantified squeeze, rather than a separately formalized filter-limit statement or eventual-index theorem."
+    },
+    {
+      "type": "h2",
+      "text": "Novelty comparison and publication boundary"
+    },
+    {
+      "type": "p",
+      "text": "The quartic family, threshold t<8, t=7 square and qualitative eventual positivity are known background. The proposed delta is the exact exceptional exponent/cubic transition and the sharp logarithmic scale with leading constant one. The inspected Tan–To appendix studies multiplication by an auxiliary power R^m and a different Θ(1/α) scale; that does not itself imply this H_t^N result. Their full main theorem and the named Handelman/To–Yeung literature still require comparison."
+    },
+    {
+      "type": "p",
+      "text": "The archive reports a 40-proof-module standalone closure under Lean 4.34.1. Early uncompiled-draft comments remain in the byte-preserved sources; the current verification register distinguishes archived claims from completed fresh execution. The ordinary-proof expansion now derives the analytic estimates and explicit constants, including variance certificates, the local complex logarithm, the positive Gaussian core, the exact modulus deficit and its sharp boundary coefficient, small-radius control, finite windows and uniform upper-threshold assembly. No additional infinite analytic lemma is left as an unstated premise for the displayed one-variable theorem. The result does not solve the general Hermitian-power problem or provide a formally verified binary homogeneous bridge; historical comparison and author review remain necessary."
+    },
+    {
+      "type": "small",
+      "text": "This short manuscript records the construction and selected endpoints. The companion Original results anthology contains the extended ordinary proof exposition and its explicitly stated premises; the preserved Lean source remains the complete formal proof record."
+    },
+    {
+      "type": "h2",
+      "text": "Verification and reproducibility"
+    },
+    {
+      "type": "p",
+      "text": "Fresh execution: sakana-opdp13: PASS; 40/40 custom modules compiled successfully; receipt Verification/sakana-opdp13-fresh-build.json. Compiler pins, source hashes and endpoint axiom outputs are in Verification. Historical receipts and finite checks do not replace fresh replay."
+    },
+    {
+      "type": "keep_start",
+      "text": ""
+    },
+    {
+      "type": "h2",
+      "text": "PowerSemigroup.function_exact_exponent_semigroup"
+    },
+    {
+      "type": "code",
+      "text": "theorem function_exact_exponent_semigroup {t : ℝ} (ht6 : 6 < t) (ht7 : t ≤ 7)\n    (n : ℕ) (hn : 0 < n) :\n    FunctionSquaredNorm (fun z : ℂ =>\n      (((1+Complex.normSq z)^4-t*(Complex.normSq z)^2)^n : ℝ)) ↔\n      n=2 ∨ 4≤n ∨ (n=3 ∧ 0≤924-210*t+18*t^2-t^3)"
+    },
+    {
+      "type": "small",
+      "text": "Source: proofs/opdp13/OpHack/PowerSemigroup/Evaluation.lean:116."
+    },
+    {
+      "type": "small",
+      "text": "Source SHA-256: 9924251f0abcd263e38621ad0b96cadbd0a33f6c353d41ecf3e16e30a860ebfc"
+    },
+    {
+      "type": "keep_end",
+      "text": ""
+    },
+    {
+      "type": "keep_start",
+      "text": ""
+    },
+    {
+      "type": "h2",
+      "text": "PowerMoment.function_exponent_lower_bound"
+    },
+    {
+      "type": "code",
+      "text": "theorem function_exponent_lower_bound (t : ℝ) (ht : 6 < t) (ht8 : t < 8)\n    (n : ℕ) (hn : 0 < n)\n    (h : PowerSemigroup.FunctionSquaredNorm (fun z : ℂ =>\n      (((1+Complex.normSq z)^4-t*(Complex.normSq z)^2)^n : ℝ))) :\n    t*(10-t) ≤ 12*(n : ℝ)*(8-t)"
+    },
+    {
+      "type": "small",
+      "text": "Source: proofs/opdp13/OpHack/PowerMoment/Bound.lean:86."
+    },
+    {
+      "type": "small",
+      "text": "Source SHA-256: 556b24cda4326f34d2b8e723b629b76a7930ff6a4c115f831942550fdd5fa830"
+    },
+    {
+      "type": "reference_list",
+      "text": "Sources and attribution",
+      "items": [
+        {
+          "text": "1. aimath.org / complexitycrmap.pdf",
+          "url": "https://aimath.org/WWN/complexitycrmap/complexitycrmap.pdf"
+        },
+        {
+          "text": "2. arXiv source: 1012.2479",
+          "url": "https://arxiv.org/abs/1012.2479"
+        },
+        {
+          "text": "3. DOI: 10.1007/s12220-019-00334-9",
+          "url": "https://doi.org/10.1007/s12220-019-00334-9"
+        },
+        {
+          "text": "4. DOI: 10.1007/s12220-025-02228-5",
+          "url": "https://doi.org/10.1007/s12220-025-02228-5"
+        },
+        {
+          "text": "5. alejandrozu/openmath-2026-judging / E02-opdp13-quartic.txt",
+          "url": "https://github.com/alejandrozu/openmath-2026-judging/blob/d0ed487f487fa7ec814ff705ab55249983fe8707/OpenMath-Judging/review/entries/E02-opdp13-quartic.txt"
+        },
+        {
+          "text": "Central source and adjudication archive",
+          "url": "https://github.com/alejandrozu/openmath-2026-judging"
+        }
+      ]
+    },
+    {
+      "type": "keep_end",
+      "text": ""
+    }
+  ]
+}

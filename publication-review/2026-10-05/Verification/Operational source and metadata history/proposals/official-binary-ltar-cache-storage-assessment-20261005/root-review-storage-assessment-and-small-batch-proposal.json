@@ -1,0 +1,537 @@
+{
+  "status": "READ_ONLY_STORAGE_ASSESSMENT_NO_DELETION_OR_COMPRESSION",
+  "measured_utc": "2026-10-05T05:28:21.382759+00:00",
+  "task_cache_root": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\download-cache",
+  "strict_candidate_type": "Only workspace-generated official compiled binary .ltar cached downloads in these three exact version subdirectories.",
+  "volume": {
+    "filesystem": "NTFS",
+    "serial": 1980967165,
+    "flags": 65482495,
+    "supports_file_compression": true
+  },
+  "groups": {
+    "4.30.0-rc2": {
+      "archive_paths": 8308,
+      "distinct_NTFS_files": 8308,
+      "logical_bytes": 417518041,
+      "allocated_bytes_unique": 417518041,
+      "max_archive_bytes": 2246596,
+      "min_archive_bytes": 2752
+    },
+    "4.33.1": {
+      "archive_paths": 8690,
+      "distinct_NTFS_files": 8690,
+      "logical_bytes": 443418400,
+      "allocated_bytes_unique": 443418400,
+      "max_archive_bytes": 2246919,
+      "min_archive_bytes": 2705
+    },
+    "4.34.1": {
+      "archive_paths": 8908,
+      "distinct_NTFS_files": 8908,
+      "logical_bytes": 451433503,
+      "allocated_bytes_unique": 451433503,
+      "max_archive_bytes": 2246603,
+      "min_archive_bytes": 2711
+    }
+  },
+  "total_archive_paths": 25906,
+  "distinct_NTFS_archive_files": 25906,
+  "total_logical_archive_bytes": 1312369944,
+  "total_allocated_archive_bytes_unique": 1312369944,
+  "identical_content_duplicate_groups": 0,
+  "potential_duplicate_copy_allocated_bytes": 0,
+  "full_exact_candidate_manifest": {
+    "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\proposals\\official-binary-ltar-cache-storage-assessment-20261005\\all-task-official-binary-ltar-candidates-hash-and-allocation-manifest.json",
+    "sha256": "a833366f8f7f35102ad204be351655605e04e7ca53e37ea5ea520592cac910cd",
+    "bytes": 10760534
+  },
+  "duplicate_manifest": {
+    "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\proposals\\official-binary-ltar-cache-storage-assessment-20261005\\identical-archive-content-duplicate-assessment.json",
+    "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "bytes": 3
+  },
+  "non_ltar_cache_files_not_candidates": [],
+  "preserved_provisioning_and_download_provenance": [
+    {
+      "version": "4.30.0-rc2",
+      "official_cache_plan": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\official-cache-plan-4.30.0-rc2.json",
+      "official_cache_plan_sha256": "6ca078940635fadda1119595b8caad4b9915a8f011e89925f473fa36ed37a757",
+      "extracted_and_full_import_PASS_receipt": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\mathlib-4.30.0-rc2-cache-retry.json",
+      "PASS_receipt_sha256": "c431776ddf9b97d84c30652ce4d51554d0cc2bf0b9689b276edd5225ef6d513f",
+      "installed_runtime_receipt": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\lean-4.30.0-rc2-installation.json",
+      "runtime_installation_receipt_sha256": "c0391b0a09143c14e8d28b6572ca6f3d0072bbfe27b58c47aa9f8343bde389ba",
+      "unchanged_runtime": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.30.0-rc2-windows",
+      "unchanged_dependency_source_and_compiled_root": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.30.0-rc2\\mathlib",
+      "download_receipt": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\mathlib-4.30.0-rc2-cache-direct-download.json",
+      "download_receipt_sha256": "30938f690e86a46d7eedb641bba509a8857afc73b25d3a92bb3ee33fa23d534b",
+      "download_status": "DOWNLOAD_ONLY_PASS",
+      "mathlib_pin": "c1e30e172c8fda21e6776bf1f10351e882ee31b9",
+      "exact_original_download_commands": [
+        {
+          "label": "compiler-version",
+          "command": [
+            "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.30.0-rc2-windows\\bin\\lean.exe",
+            "--version"
+          ],
+          "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.30.0-rc2\\mathlib",
+          "log": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\operational-cache-tools\\4.30.0-rc2\\compiler-version.log",
+          "pid": 55484,
+          "exit": 0,
+          "seconds": 0.5
+        },
+        {
+          "label": "compile-Batteries.Data.Array.Match",
+          "command": [
+            "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.30.0-rc2-windows\\bin\\lean.exe",
+            "-j1",
+            "-o",
+            "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\operational-cache-tools\\4.30.0-rc2\\lib\\lean\\Batteries\\Data\\Array\\Match.olean",
+            "-Dlinter.missingDocs=true",
+            "Batteries\\Data\\Array\\Match.lean"
+          ],
+          "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.30.0-rc2\\mathlib\\.lake\\packages\\batteries",
+          "log": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\operational-cache-tools\\4.30.0-rc2\\compile-Batteries.Data.Array.Match.log",
+          "pid": 47228,
+          "exit": 0,
+          "seconds": 12.02
+        },
+        {
+          "label": "compile-Batteries.Data.String.Basic",
+          "command": [
+            "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.30.0-rc2-windows\\bin\\lean.exe",
+            "-j1",
+            "-o",
+            "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\operational-cache-tools\\4.30.0-rc2\\lib\\lean\\Batteries\\Data\\String\\Basic.olean",
+            "-Dlinter.missingDocs=true",
+            "Batteries\\Data\\String\\Basic.lean"
+          ],
+          "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.30.0-rc2\\mathlib\\.lake\\packages\\batteries",
+          "log": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\operational-cache-tools\\4.30.0-rc2\\compile-Batteries.Data.String.Basic.log",
+          "pid": 52856,
+          "exit": 0,
+          "seconds": 1.5
+        },
+        {
+          "label": "compile-Batteries.Data.String.Matcher",
+          "command": [
+            "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.30.0-rc2-windows\\bin\\lean.exe",
+            "-j1",
+            "-o",
+            "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\operational-cache-tools\\4.30.0-rc2\\lib\\lean\\Batteries\\Data\\String\\Matcher.olean",
+            "-Dlinter.missingDocs=true",
+            "Batteries\\Data\\String\\Matcher.lean"
+          ],
+          "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.30.0-rc2\\mathlib\\.lake\\packages\\batteries",
+          "log": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\operational-cache-tools\\4.30.0-rc2\\compile-Batteries.Data.String.Matcher.log",
+          "pid": 47308,
+          "exit": 0,
+          "seconds": 1.5
+        },
+        {
+          "label": "compile-Cache.Lean",
+          "command": [
+            "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.30.0-rc2-windows\\bin\\lean.exe",
+            "-j1",
+            "-o",
+            "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\operational-cache-tools\\4.30.0-rc2\\lib\\lean\\Cache\\Lean.olean",
+            "Cache\\Lean.lean"
+          ],
+          "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.30.0-rc2\\mathlib",
+          "log": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\operational-cache-tools\\4.30.0-rc2\\compile-Cache.Lean.log",
+          "pid": 36716,
+          "exit": 0,
+          "seconds": 2.5
+        },
+        {
+          "label": "compile-Cache.IO",
+          "command": [
+            "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.30.0-rc2-windows\\bin\\lean.exe",
+            "-j1",
+            "-o",
+            "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\operational-cache-tools\\4.30.0-rc2\\lib\\lean\\Cache\\IO.olean",
+            "Cache\\IO.lean"
+          ],
+          "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.30.0-rc2\\mathlib",
+          "log": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\operational-cache-tools\\4.30.0-rc2\\compile-Cache.IO.log",
+          "pid": 49860,
+          "exit": 0,
+          "seconds": 4.0
+        },
+        {
+          "label": "compile-Cache.Hashing",
+          "command": [
+            "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.30.0-rc2-windows\\bin\\lean.exe",
+            "-j1",
+            "-o",
+            "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\operational-cache-tools\\4.30.0-rc2\\lib\\lean\\Cache\\Hashing.olean",
+            "Cache\\Hashing.lean"
+          ],
+          "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.30.0-rc2\\mathlib",
+          "log": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\operational-cache-tools\\4.30.0-rc2\\compile-Cache.Hashing.log",
+          "pid": 52912,
+          "exit": 0,
+          "seconds": 3.0
+        },
+        {
+          "label": "compile-Cache.Init",
+          "command": [
+            "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.30.0-rc2-windows\\bin\\lean.exe",
+            "-j1",
+            "-o",
+            "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\operational-cache-tools\\4.30.0-rc2\\lib\\lean\\Cache\\Init.olean",
+            "Cache\\Init.lean"
+          ],
+          "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.30.0-rc2\\mathlib",
+          "log": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\operational-cache-tools\\4.30.0-rc2\\compile-Cache.Init.log",
+          "pid": 43784,
+          "exit": 0,
+          "seconds": 1.0
+        },
+        {
+          "label": "compile-Cache.Requests",
+          "command": [
+            "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.30.0-rc2-windows\\bin\\lean.exe",
+            "-j1",
+            "-o",
+            "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\operational-cache-tools\\4.30.0-rc2\\lib\\lean\\Cache\\Requests.olean",
+            "Cache\\Requests.lean"
+          ],
+          "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.30.0-rc2\\mathlib",
+          "log": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\operational-cache-tools\\4.30.0-rc2\\compile-Cache.Requests.log",
+          "pid": 49936,
+          "exit": 0,
+          "seconds": 4.52
+        },
+        {
+          "label": "compile-Cache.Main",
+          "command": [
+            "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.30.0-rc2-windows\\bin\\lean.exe",
+            "-j1",
+            "-o",
+            "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\operational-cache-tools\\4.30.0-rc2\\lib\\lean\\Cache\\Main.olean",
+            "Cache\\Main.lean"
+          ],
+          "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.30.0-rc2\\mathlib",
+          "log": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\operational-cache-tools\\4.30.0-rc2\\compile-Cache.Main.log",
+          "pid": 53328,
+          "exit": 0,
+          "seconds": 2.51
+        },
+        {
+          "label": "official-get-minus-download",
+          "command": [
+            "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.30.0-rc2-windows\\bin\\lean.exe",
+            "-j1",
+            "--run",
+            "Cache/Main.lean",
+            "get-"
+          ],
+          "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.30.0-rc2\\mathlib",
+          "log": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\operational-cache-tools\\4.30.0-rc2\\official-get-minus-download.log",
+          "pid": 56504,
+          "exit": 0,
+          "seconds": 844.77
+        },
+        {
+          "label": "export-official-hash-plan",
+          "command": [
+            "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.30.0-rc2-windows\\bin\\lean.exe",
+            "-j1",
+            "--run",
+            "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\ExportOfficialCachePlan.lean",
+            "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\official-cache-plan-4.30.0-rc2.json"
+          ],
+          "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.30.0-rc2\\mathlib",
+          "log": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\operational-cache-tools\\4.30.0-rc2\\export-official-hash-plan.log",
+          "pid": 40088,
+          "exit": 0,
+          "seconds": 8.56
+        }
+      ],
+      "primary_download_URL_policy_source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.30.0-rc2\\mathlib\\Cache\\Requests.lean",
+      "URL_policy_source_sha256": "83ac9351e4a813334217d2eafc440efda72851d7e78e69dc1d35d3503d09e37b",
+      "refetch_integrity_contract": "Use the original official Cache.Hashing module-key filename and exact version/pin; verify re-fetched raw bytes against this independent SHA-256 manifest. The short filename is the official cache key, not a SHA-256 content digest. Remote persistence is not guaranteed."
+    },
+    {
+      "version": "4.33.1",
+      "official_cache_plan": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\official-cache-plan-4.33.1.json",
+      "official_cache_plan_sha256": "0bf0cf5c36896df08a1d2b3ca01841d9f1de763a491f784adf4f7498019cb9f6",
+      "extracted_and_full_import_PASS_receipt": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\mathlib-4.33.1-cache-retry.json",
+      "PASS_receipt_sha256": "2970055d4efb8204f90f48e2358b5e8ed8469e0f7ba7019b2723436924f923f4",
+      "installed_runtime_receipt": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\lean-4.33.1-installation.json",
+      "runtime_installation_receipt_sha256": "6ec3927af9b76cdb46a8fe74773113e72bee65066a4b7decf4547b646f39f99a",
+      "unchanged_runtime": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows",
+      "unchanged_dependency_source_and_compiled_root": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib",
+      "download_receipt": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\mathlib-4.33.1-cache-direct-download.json",
+      "download_receipt_sha256": "f6b62937f70f21a4b2dad59a6d0ddcdd857ade2ef54280d2342daf09a1fd2092",
+      "download_status": "DOWNLOAD_ONLY_PASS",
+      "mathlib_pin": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "exact_original_download_commands": [
+        {
+          "label": "compiler-version",
+          "command": [
+            "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+            "--version"
+          ],
+          "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib",
+          "log": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\operational-cache-tools\\4.33.1\\compiler-version.log",
+          "pid": 49744,
+          "exit": 0,
+          "seconds": 0.5
+        },
+        {
+          "label": "compile-Cache.Cli",
+          "command": [
+            "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+            "-j1",
+            "-o",
+            "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\operational-cache-tools\\4.33.1\\lib\\lean\\Cache\\Cli.olean",
+            "Cache\\Cli.lean"
+          ],
+          "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib",
+          "log": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\operational-cache-tools\\4.33.1\\compile-Cache.Cli.log",
+          "pid": 36408,
+          "exit": 0,
+          "seconds": 2.0
+        },
+        {
+          "label": "compile-Cache.Lean",
+          "command": [
+            "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+            "-j1",
+            "-o",
+            "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\operational-cache-tools\\4.33.1\\lib\\lean\\Cache\\Lean.olean",
+            "Cache\\Lean.lean"
+          ],
+          "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib",
+          "log": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\operational-cache-tools\\4.33.1\\compile-Cache.Lean.log",
+          "pid": 54544,
+          "exit": 0,
+          "seconds": 1.5
+        },
+        {
+          "label": "compile-Batteries.Tactic.OpenPrivate",
+          "command": [
+            "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+            "-j1",
+            "-o",
+            "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\operational-cache-tools\\4.33.1\\lib\\lean\\Batteries\\Tactic\\OpenPrivate.olean",
+            "-Dlinter.missingDocs=true",
+            "Batteries\\Tactic\\OpenPrivate.lean"
+          ],
+          "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\batteries",
+          "log": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\operational-cache-tools\\4.33.1\\compile-Batteries.Tactic.OpenPrivate.log",
+          "pid": 49872,
+          "exit": 0,
+          "seconds": 2.5
+        },
+        {
+          "label": "compile-Cache.IO",
+          "command": [
+            "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+            "-j1",
+            "-o",
+            "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\operational-cache-tools\\4.33.1\\lib\\lean\\Cache\\IO.olean",
+            "Cache\\IO.lean"
+          ],
+          "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib",
+          "log": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\operational-cache-tools\\4.33.1\\compile-Cache.IO.log",
+          "pid": 56196,
+          "exit": 0,
+          "seconds": 5.02
+        },
+        {
+          "label": "compile-Cache.Hashing",
+          "command": [
+            "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+            "-j1",
+            "-o",
+            "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\operational-cache-tools\\4.33.1\\lib\\lean\\Cache\\Hashing.olean",
+            "Cache\\Hashing.lean"
+          ],
+          "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib",
+          "log": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\operational-cache-tools\\4.33.1\\compile-Cache.Hashing.log",
+          "pid": 46560,
+          "exit": 0,
+          "seconds": 2.0
+        },
+        {
+          "label": "compile-Cache.Infra",
+          "command": [
+            "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+            "-j1",
+            "-o",
+            "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\operational-cache-tools\\4.33.1\\lib\\lean\\Cache\\Infra.olean",
+            "Cache\\Infra.lean"
+          ],
+          "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib",
+          "log": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\operational-cache-tools\\4.33.1\\compile-Cache.Infra.log",
+          "pid": 6620,
+          "exit": 0,
+          "seconds": 1.0
+        },
+        {
+          "label": "compile-Cache.Requests",
+          "command": [
+            "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+            "-j1",
+            "-o",
+            "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\operational-cache-tools\\4.33.1\\lib\\lean\\Cache\\Requests.olean",
+            "Cache\\Requests.lean"
+          ],
+          "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib",
+          "log": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\operational-cache-tools\\4.33.1\\compile-Cache.Requests.log",
+          "pid": 56852,
+          "exit": 0,
+          "seconds": 4.0
+        },
+        {
+          "label": "compile-Cache.Marker",
+          "command": [
+            "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+            "-j1",
+            "-o",
+            "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\operational-cache-tools\\4.33.1\\lib\\lean\\Cache\\Marker.olean",
+            "Cache\\Marker.lean"
+          ],
+          "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib",
+          "log": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\operational-cache-tools\\4.33.1\\compile-Cache.Marker.log",
+          "pid": 9848,
+          "exit": 0,
+          "seconds": 2.0
+        },
+        {
+          "label": "compile-Cache.Query",
+          "command": [
+            "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+            "-j1",
+            "-o",
+            "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\operational-cache-tools\\4.33.1\\lib\\lean\\Cache\\Query.olean",
+            "Cache\\Query.lean"
+          ],
+          "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib",
+          "log": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\operational-cache-tools\\4.33.1\\compile-Cache.Query.log",
+          "pid": 8112,
+          "exit": 0,
+          "seconds": 2.02
+        },
+        {
+          "label": "compile-Cache.Warning",
+          "command": [
+            "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+            "-j1",
+            "-o",
+            "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\operational-cache-tools\\4.33.1\\lib\\lean\\Cache\\Warning.olean",
+            "Cache\\Warning.lean"
+          ],
+          "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib",
+          "log": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\operational-cache-tools\\4.33.1\\compile-Cache.Warning.log",
+          "pid": 51616,
+          "exit": 0,
+          "seconds": 2.02
+        },
+        {
+          "label": "compile-Cache.Main",
+          "command": [
+            "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+            "-j1",
+            "-o",
+            "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\operational-cache-tools\\4.33.1\\lib\\lean\\Cache\\Main.olean",
+            "Cache\\Main.lean"
+          ],
+          "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib",
+          "log": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\operational-cache-tools\\4.33.1\\compile-Cache.Main.log",
+          "pid": 26384,
+          "exit": 0,
+          "seconds": 2.52
+        },
+        {
+          "label": "official-get-minus-download",
+          "command": [
+            "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+            "-j1",
+            "--run",
+            "Cache/Main.lean",
+            "get-"
+          ],
+          "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib",
+          "log": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\operational-cache-tools\\4.33.1\\official-get-minus-download.log",
+          "pid": 50604,
+          "exit": 0,
+          "seconds": 182.8
+        },
+        {
+          "label": "export-official-hash-plan",
+          "command": [
+            "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+            "-j1",
+            "--run",
+            "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\ExportOfficialCachePlan.lean",
+            "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\official-cache-plan-4.33.1.json"
+          ],
+          "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib",
+          "log": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\operational-cache-tools\\4.33.1\\export-official-hash-plan.log",
+          "pid": 55112,
+          "exit": 0,
+          "seconds": 5.5
+        }
+      ],
+      "primary_download_URL_policy_source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Cache\\Requests.lean",
+      "URL_policy_source_sha256": "f9b3f03a938146b08f106bffff8e87405b3535f4a2a2b9b690c359b49cbe8464",
+      "refetch_integrity_contract": "Use the original official Cache.Hashing module-key filename and exact version/pin; verify re-fetched raw bytes against this independent SHA-256 manifest. The short filename is the official cache key, not a SHA-256 content digest. Remote persistence is not guaranteed."
+    },
+    {
+      "version": "4.34.1",
+      "official_cache_plan": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\official-cache-plan-4.34.1.json",
+      "official_cache_plan_sha256": "59f1488681cac3ff00cd0b656647634f1c1e9afe278ccc35434b5e9fcb84a6a7",
+      "extracted_and_full_import_PASS_receipt": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\mathlib-4.34.1-cache-retry.json",
+      "PASS_receipt_sha256": "c318c6ab8b46901bc673a06795e8b2c0eef78d904f9b1b5b6ce8a4f8fe4f3a7b",
+      "installed_runtime_receipt": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\lean-4.34.1-installation.json",
+      "runtime_installation_receipt_sha256": "7b2cb4ed51467e6204fc952e93cf2a25cdf89a895b5fe5edf763a48d6b12a10a",
+      "unchanged_runtime": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows",
+      "unchanged_dependency_source_and_compiled_root": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.34.1\\mathlib",
+      "download_recipe": "Run the pinned official Lake Cache tool in this exact dependency source directory with MATHLIB_CACHE_DIR set to its task cache directory and get- (download only), preserving the recorded unchanged official Cache.Hashing plan.",
+      "primary_download_URL_policy_source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.34.1\\mathlib\\Cache\\Requests.lean",
+      "URL_policy_source_sha256": "bf2fc8f305b34526862798e3bc5a5ee88e412fe7f5e22b742b285359d4844764",
+      "refetch_integrity_contract": "Use the original official Cache.Hashing module-key filename and exact version/pin; verify re-fetched raw bytes against this independent SHA-256 manifest. The short filename is the official cache key, not a SHA-256 content digest. Remote persistence is not guaranteed."
+    }
+  ],
+  "runtime_or_dependency_source_archives_retained_in_provisioning_roots": [],
+  "streaming_installer_evidence": {
+    "runtime_helper": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\install_pinned_lean.py",
+    "runtime_helper_sha256": "1caf982c1c312db1efcf5771af2ee0d77dba3989802950e3ed3e62e90035331f",
+    "dependency_source_helper": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\prepare_dependency_sources.py",
+    "dependency_source_helper_sha256": "f5a04405e8834bf7da0b623c3e5faa5f187adbc53226880972bfda0719832928",
+    "source_and_runtime_tars_are_streamed_not_retained": true
+  },
+  "preserved_verified_provider_closures": {
+    "4.33.1_HT_full10498_source_and52490_artifact_hash_review": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\proposals\\htpeo-ramsey-current-original-provider-recheck-20261005\\root-review-packet.json",
+    "HT_provider_review_sha256": "cba1ffb682cbd99d888726b39e0c4e8af541d490142ea22e6dcf918db63e522b",
+    "each_version_full_import_PASS_receipt_recorded_above": true,
+    "qualification_limit": "This assesses cache redundancy after recorded extraction/import validation. It does not newly rehash every extracted 4.30/4.34 provider, does not verify future cache-dependent tooling, and is not approval to erase provenance or outputs."
+  },
+  "active_task_cache_writers_before": [],
+  "active_task_cache_writers_after": [],
+  "current_disk_free_bytes": 3865780224,
+  "smallest_bounded_proposal": {
+    "version": "4.30.0-rc2",
+    "target_allocated_bytes": 134217728,
+    "selected_file_count": 646,
+    "actual_selected_allocated_bytes": 134270665,
+    "selected_manifest": {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\proposals\\official-binary-ltar-cache-storage-assessment-20261005\\proposed-smallest-file-count-old430-cache-only-128MiB-batch.json",
+      "sha256": "4b36124ca52a30cc2d89943be535c550adbc1201221c1f4042fc47d53ffa485b",
+      "bytes": 325583
+    },
+    "selection_rule": "Sort only oldest-version exact mapped .ltar archives by descending allocated bytes; take the fewest files whose allocated sum reaches 128 MiB. No hard-linked candidates. All runtime/source/provider outputs and all source ZIPs/tars are excluded.",
+    "future_action_NOT_EXECUTED": "If root approves this exact manifest, recheck its path containment, SHA-256, NTFS file identity, link count and absence of any cache writer immediately before removing only those exact literal cache paths. Preserve this manifest, plans, profiles, download receipts and official get- refetch recipe. Any further batch requires a new measured decision.",
+    "refetch_policy": "Restore the original official cache-key filename via the pinned official get- route; compare SHA-256 with the preserved manifest before any use. A source/runtime/package change is not a substitute for restoring an exact archive."
+  },
+  "no_guaranteed_offline_recoverability": "Deletion of even binary cache archives would require a future network re-fetch to recover raw archive bytes; official host availability is not guaranteed. Actual extracted sources/runtimes/compiled outputs remain independently available and are not cleanup candidates.",
+  "files_deleted_moved_compressed_or_copied": 0,
+  "Lean_compiler_or_download_invocations": 0,
+  "canonical_PDF_score_or_priority_changes": 0,
+  "read_only_helper": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\assess_official_binary_download_caches_readonly_20261005.py",
+  "helper_sha256": "1070185122305f280f9d91a173f929999deb4ad3cf2ef20884a82b72f244aec6"
+}

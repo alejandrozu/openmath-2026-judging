@@ -1,0 +1,137 @@
+{
+  "id": "sakana-opdp67",
+  "entrant": "E02",
+  "version": "4.34.1",
+  "mathlib_pin": "d13f23b723b8a846827a245b89c10fc7d3f11612",
+  "source_dir": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-opdp67",
+  "modules": [
+    {
+      "module": "OpHack.Quaternion67TwoWitness",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-opdp67\\OpHack\\Quaternion67TwoWitness.lean",
+      "source": "Reproduction_Sources/opdp67/OpHack/Quaternion67TwoWitness.lean",
+      "sha256": "200cc2be79f4ba4e52f69e738cd4314278f8ef01b9e780072cfec48f8c47d7f3"
+    }
+  ],
+  "endpoints": [
+    "OPDP67TwoWitness.scalar_ring_existentially_defined",
+    "OPDP67TwoWitness.rationals_existentially_defined",
+    "OPDP67TwoWitness.integers_defined_by_explicit_equation"
+  ],
+  "roots": [
+    "OpHack.Quaternion67TwoWitness"
+  ],
+  "audit_modules": [
+    "FreshAudit1.lean"
+  ],
+  "lean_options": {},
+  "static_review_contexts": [],
+  "status": "PASS",
+  "builds": [
+    {
+      "module": "OpHack.Quaternion67TwoWitness",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "OpHack\\Quaternion67TwoWitness.olean",
+        "OpHack\\Quaternion67TwoWitness.lean"
+      ],
+      "seconds": 54.58,
+      "exit": 0,
+      "stdout": "OpHack\\Quaternion67TwoWitness.lean:63:91: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nOpHack\\Quaternion67TwoWitness.lean:104:91: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\n",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 5451616256,
+      "stop_reason": null,
+      "owned_process_stop_output": null,
+      "source_sha256": "200cc2be79f4ba4e52f69e738cd4314278f8ef01b9e780072cfec48f8c47d7f3",
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-opdp67\\OpHack\\Quaternion67TwoWitness.olean",
+          "sha256": "20af64ab384f6043fd84ea47c5d1daefa81573e048ab232f1acf51efba01dd85",
+          "bytes": 1683504
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "FreshAudit1.lean",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "FreshAudit1.olean",
+        "FreshAudit1.lean"
+      ],
+      "seconds": 26.06,
+      "exit": 0,
+      "stdout": "'OPDP67TwoWitness.scalar_ring_existentially_defined' depends on axioms: [propext, Classical.choice, Quot.sound]\n'OPDP67TwoWitness.rationals_existentially_defined' depends on axioms: [propext, Classical.choice, Quot.sound]\n'OPDP67TwoWitness.integers_defined_by_explicit_equation' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "is_endpoint_audit": true,
+      "minimum_free_bytes": 4684677120,
+      "stop_reason": null,
+      "owned_process_stop_output": null,
+      "source_sha256": "9501b3564a3205ea4182d9724925fb45e26e5e59ff649ed0141e7401d1b6adef",
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-opdp67\\FreshAudit1.olean",
+          "sha256": "fe926025a84b71c24b64a7865b0a0df556d0df9d4eda7fdab7a7c66056796cb5",
+          "bytes": 1480
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    }
+  ],
+  "compiler_version": "Lean (version 4.34.1, x86_64-w64-windows-gnu, commit 5045d0056413266e57c625dcd7c365b10e377c52, Release)",
+  "compilation_order": [
+    "OpHack.Quaternion67TwoWitness"
+  ],
+  "started_utc": "2026-10-04T21:33:23Z",
+  "failed_invocations": [],
+  "selected_audit_axiom_review": [
+    {
+      "endpoint": "OPDP67TwoWitness.scalar_ring_existentially_defined",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    },
+    {
+      "endpoint": "OPDP67TwoWitness.rationals_existentially_defined",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    },
+    {
+      "endpoint": "OPDP67TwoWitness.integers_defined_by_explicit_equation",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    }
+  ],
+  "resource_settings": {
+    "LEAN_NUM_THREADS": 1,
+    "lean_shell_worker_flag": "-j1",
+    "maxHeartbeats": 0,
+    "maxRecDepth": 100000
+  },
+  "finished_utc": "2026-10-04T21:34:44Z"
+}

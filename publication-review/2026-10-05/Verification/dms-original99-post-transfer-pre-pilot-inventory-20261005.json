@@ -1,0 +1,46 @@
+{
+  "status": "TRANSFER_COMPLETE_EXACT99_OUTPUTS_REQUIRED129_STILL_COLD_DMS_LEAN_NOT_INVOKED",
+  "checked_utc": "2026-10-05T03:22:00.320688+00:00",
+  "actual_seed_receipt_sha256": "8d2ad36c44b26ef747585e78eb86a60baf1cdfaeebb0dee465b25713dc4570ca",
+  "policy_sha256": "79b4fa2274995fa3a819fc77082847435fd2abe611d4a57968e62dff79e45f1e",
+  "actual_Lean_source_files": 229,
+  "authored_sources": 228,
+  "selected_audits": 1,
+  "reused_previous_own_cold_output_modules": 99,
+  "transferred_artifact_files": 99,
+  "all129_required_new_source_artifacts_absent": true,
+  "all125_affected_artifacts_absent": true,
+  "actual_new_DMS_Lean_invocations": 0,
+  "original119_canonical_receipt_unchanged_sha256": "feb37da0178c7ad7f259096eba604ab43ae253bcaaac5212d66a2748ffc84238",
+  "current_resource_snapshot": {
+    "disk": 5734268928,
+    "free_physical_bytes": 9438650368,
+    "total_physical_bytes": 34024419328,
+    "available_commit_bytes": 8666853376,
+    "total_commit_limit_bytes": 60437172224
+  },
+  "first_new_source": "BlockStar",
+  "proposed_not_invoked_adapter_command": [
+    "C:\\Users\\Propietario\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+    "-X",
+    "utf8",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\run_dms_import_pruned_plan.py",
+    "htpeo-dms-current-import-pruned-diagnostic",
+    "1",
+    "--pilot-third-slot",
+    "--reviewed-policy-sha256",
+    "79b4fa2274995fa3a819fc77082847435fd2abe611d4a57968e62dff79e45f1e",
+    "--seed-receipt-sha256",
+    "8d2ad36c44b26ef747585e78eb86a60baf1cdfaeebb0dee465b25713dc4570ca"
+  ],
+  "proposed_not_invoked_Lean_source_command": [
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+    "-j1",
+    "-DmaxHeartbeats=0",
+    "-DmaxRecDepth=100000",
+    "-o",
+    "BlockStar.olean",
+    "BlockStar.lean"
+  ],
+  "qualification": "No pilot is authorized by this inventory; root must review actual transfer before source invocation. No original custom directory will appear on LEAN_PATH."
+}

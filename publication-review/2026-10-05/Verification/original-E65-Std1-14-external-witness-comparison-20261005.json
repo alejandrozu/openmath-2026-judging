@@ -1,0 +1,444 @@
+{
+  "status": "EXACT_STD_SOURCE_AND_AUDIT_WITNESS_COMPARED_ROOT_ACCEPTANCE_REQUIRED",
+  "created_utc": "2026-10-05T04:25:24.324030+00:00",
+  "original_project_id": "sundai-erdos3-original-image-source",
+  "external_witness_project_id": "sundai-erdos3-current",
+  "external_witness_immutable_receipt_sha256": "63819233046bb28da0618a8313192bf2d9963b46800a2f612eaff0ae72e288eb",
+  "external_witness_qualified_record_sha256": "560d146f065fb0cd14796372141566632e64189641298f65c1ae97e6483e0f63",
+  "original_source_plan_sha256": "0d140b36c59231a9eaf79a2f6277355d0b4cc08b815e5d817df54c370dcfbf15",
+  "original_source_sha256": "83f4ca47095bda82b1ddb1020d569607a925d45945522f03b84f8972f7248383",
+  "witness_source_sha256": "83f4ca47095bda82b1ddb1020d569607a925d45945522f03b84f8972f7248383",
+  "source_bytes_equal": true,
+  "original_audit_sha256": "0cee28fe1bbacdd3ab2d38d4f9da26b287cfe7b2d3ab8da19e6f2ac182d8a4c2",
+  "witness_audit_sha256": "0cee28fe1bbacdd3ab2d38d4f9da26b287cfe7b2d3ab8da19e6f2ac182d8a4c2",
+  "audit_bytes_equal": true,
+  "exact_module_names_equal": true,
+  "custom_prerequisite_closure": [
+    "Erdos3SpecialCases"
+  ],
+  "custom_import_roots": [
+    "Std"
+  ],
+  "official_core_Std_Init_provider_count": 1114,
+  "official_core_provider_manifest_sha256": "67246db9be016335367b4b652b6762962494c7596efc556c55f3e5d47e0d37c1",
+  "no_Mathlib_or_FC_source_in_reachable_Std_closure": true,
+  "compiler_binary_sha256": "af49bacfabaa1fea71332ca0feae0fa1a60912219d5902291adc79f905bffb8d",
+  "compiler_version": "4.33.1",
+  "effective_source_and_audit_options": {},
+  "explicit_cli_options": {
+    "j": 1,
+    "maxHeartbeats": 0,
+    "maxRecDepth": 100000
+  },
+  "FC_strong_semantic_options_applied_to_this_entrant_source_in_either_route": false,
+  "exact_original_nine_package_pins": {
+    "mathlib": "0df444a360eaa60ab8c11dca51a86af692955474",
+    "plausible": "b7eb3304aeae834b12dda98993a37f6a41f6f0bb",
+    "LeanSearchClient": "5f4d51b81cbd3f6b32b156bfad9056621a040404",
+    "importGraph": "16f02aa7642864af59f1ff0e384a015994db9118",
+    "proofwidgets": "4be2e3d5087eeb272cf5a8853b8f9dd025ef5957",
+    "aesop": "3448c0bcc5ce01b2d1546e483ec3620e32df3d0e",
+    "Qq": "92c15be17b7caf78c2ad767ec40f89052d908d81",
+    "batteries": "4488d40d070b9700d4d5a6aa342f0d40c31b2a2d",
+    "Cli": "6130a47896ce867c6a4a55373441e59e565bad0f"
+  },
+  "package_pin_qualification": "Both routes use the same installed pinned compiler and prepared official9package environment; none of those9packages or compatible FC modules is reachable from this Std-only source/audit.",
+  "compatible_FC_library_was_in_witness_LEAN_PATH_but_unreached": true,
+  "actual_14_requested_prints": [
+    {
+      "endpoint": "Erdos3SpecialCases.cofinite_contains_all_lengths",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    },
+    {
+      "endpoint": "Erdos3SpecialCases.affine_tail_contains_all_lengths",
+      "axioms": [
+        "propext"
+      ],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    },
+    {
+      "endpoint": "Erdos3SpecialCases.multiples_contain_all_lengths",
+      "axioms": [
+        "propext"
+      ],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    },
+    {
+      "endpoint": "Erdos3SpecialCases.unbounded_contains_two",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    },
+    {
+      "endpoint": "Erdos3SpecialCases.powers_two_no_midpoint",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    },
+    {
+      "endpoint": "Erdos3SpecialCases.powers_two_no_three",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    },
+    {
+      "endpoint": "Erdos3SpecialCases.nat_lt_two_pow",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    },
+    {
+      "endpoint": "Erdos3SpecialCases.powers_two_unbounded",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    },
+    {
+      "endpoint": "Erdos3SpecialCases.unbounded_does_not_imply_all_lengths",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    },
+    {
+      "endpoint": "Erdos3SpecialCases.ap_terms_strictly_increase",
+      "axioms": [],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "AXIOM_FREE"
+    },
+    {
+      "endpoint": "Erdos3SpecialCases.containsAP_mono",
+      "axioms": [],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "AXIOM_FREE"
+    },
+    {
+      "endpoint": "Erdos3SpecialCases.containsAP_prefix",
+      "axioms": [],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "AXIOM_FREE"
+    },
+    {
+      "endpoint": "Erdos3SpecialCases.unbounded_lengths_iff_all_lengths",
+      "axioms": [],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "AXIOM_FREE"
+    },
+    {
+      "endpoint": "Erdos3SpecialCases.arbitrarilyLongAPs_mono",
+      "axioms": [],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "AXIOM_FREE"
+    }
+  ],
+  "axiom_free_count": 5,
+  "standard_kernel_count": 9,
+  "no_sorry_native_or_unknown_at_selected_scope": true,
+  "actual_source_and_audit_rows": {
+    "source": {
+      "module": "Erdos3SpecialCases",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "Erdos3SpecialCases.olean",
+        "Erdos3SpecialCases.lean"
+      ],
+      "seconds": 3.218,
+      "exit": 0,
+      "stdout": "'Erdos3SpecialCases.ap_terms_strictly_increase' does not depend on any axioms\n'Erdos3SpecialCases.containsAP_mono' does not depend on any axioms\n'Erdos3SpecialCases.containsAP_prefix' does not depend on any axioms\n'Erdos3SpecialCases.unbounded_lengths_iff_all_lengths' does not depend on any axioms\n'Erdos3SpecialCases.cofinite_contains_all_lengths' depends on axioms: [propext, Quot.sound]\n'Erdos3SpecialCases.affine_tail_contains_all_lengths' depends on axioms: [propext]\n'Erdos3SpecialCases.multiples_contain_all_lengths' depends on axioms: [propext]\n'Erdos3SpecialCases.unbounded_contains_two' depends on axioms: [propext, Quot.sound]\n'Erdos3SpecialCases.arbitrarilyLongAPs_mono' does not depend on any axioms\n'Erdos3SpecialCases.powers_two_no_midpoint' depends on axioms: [propext, Quot.sound]\n'Erdos3SpecialCases.powers_two_no_three' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Erdos3SpecialCases.nat_lt_two_pow' depends on axioms: [propext, Quot.sound]\n'Erdos3SpecialCases.powers_two_unbounded' depends on axioms: [propext, Quot.sound]\n'Erdos3SpecialCases.unbounded_does_not_imply_all_lengths' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 6568394752,
+      "stop_reason": null,
+      "started_utc": "2026-10-05T03:07:12.327725+00:00",
+      "finished_utc": "2026-10-05T03:07:15.539404+00:00",
+      "owned_process_stop_output": null,
+      "own_job_resource_receipt": {
+        "command": [
+          "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+          "-j1",
+          "-DmaxHeartbeats=0",
+          "-DmaxRecDepth=100000",
+          "-o",
+          "Erdos3SpecialCases.olean",
+          "Erdos3SpecialCases.lean"
+        ],
+        "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sundai-erdos3-current",
+        "started_utc": "2026-10-05T03:07:12.327725+00:00",
+        "attempted": true,
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 5368709120,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 1073741824,
+          "own_job_private_bytes": 6442450944,
+          "own_process_private_bytes": 6442450944,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 3600
+        },
+        "minimum_disk_free_bytes": 6568394752,
+        "initial_system_memory_snapshot": {
+          "free_physical_bytes": 9244024832,
+          "total_physical_bytes": 34024419328,
+          "available_commit_bytes": 7360442368,
+          "total_commit_limit_bytes": 60437172224
+        },
+        "minimum_physical_available_bytes": 9059287040,
+        "minimum_available_commit_bytes": 6471041024,
+        "root_pid": 42468,
+        "own_job_assignment_before_resume": "PASS",
+        "exit": 0,
+        "job_peak_process_private_bytes": 885129216,
+        "job_peak_aggregate_private_bytes": 886386688,
+        "state": "PASS",
+        "finished_utc": "2026-10-05T03:07:15.539404+00:00",
+        "seconds": 3.218,
+        "polled_peak_tree_private_bytes": 885354496,
+        "polled_peak_tree_rss_bytes": 469585920,
+        "counter_samples": 12,
+        "observed_own_processes": {
+          "55488": {
+            "exe": "conhost.exe",
+            "peak_private_bytes": 1257472,
+            "peak_rss_bytes": 7856128
+          },
+          "42468": {
+            "exe": "lean.exe",
+            "peak_private_bytes": 884097024,
+            "peak_rss_bytes": 463015936
+          }
+        },
+        "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\sundai-erdos3-current-m2-granular-4d820b7bef1c0c66-attempt-0.stdout.txt",
+        "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\sundai-erdos3-current-m2-granular-4d820b7bef1c0c66-attempt-0.stderr.txt",
+        "stdout_sha256": "a5eee0142c9c9d309bb88ecb412ac6c0046799c3f288d93dce2d4909f2de272c",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_excerpt": "'Erdos3SpecialCases.ap_terms_strictly_increase' does not depend on any axioms\n'Erdos3SpecialCases.containsAP_mono' does not depend on any axioms\n'Erdos3SpecialCases.containsAP_prefix' does not depend on any axioms\n'Erdos3SpecialCases.unbounded_lengths_iff_all_lengths' does not depend on any axioms\n'Erdos3SpecialCases.cofinite_contains_all_lengths' depends on axioms: [propext, Quot.sound]\n'Erdos3SpecialCases.affine_tail_contains_all_lengths' depends on axioms: [propext]\n'Erdos3SpecialCases.multiples_contain_all_lengths' depends on axioms: [propext]\n'Erdos3SpecialCases.unbounded_contains_two' depends on axioms: [propext, Quot.sound]\n'Erdos3SpecialCases.arbitrarilyLongAPs_mono' does not depend on any axioms\n'Erdos3SpecialCases.powers_two_no_midpoint' depends on axioms: [propext, Quot.sound]\n'Erdos3SpecialCases.powers_two_no_three' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Erdos3SpecialCases.nat_lt_two_pow' depends on axioms: [propext, Quot.sound]\n'Erdos3SpecialCases.powers_two_unbounded' depends on axioms: [propext, Quot.sound]\n'Erdos3SpecialCases.unbounded_does_not_imply_all_lengths' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+        "stderr_excerpt": ""
+      },
+      "source_sha256": "83f4ca47095bda82b1ddb1020d569607a925d45945522f03b84f8972f7248383",
+      "third_worker_memory_observations": {
+        "minimum_free_physical_bytes": 9059287040,
+        "minimum_available_commit_bytes": 6471041024,
+        "peak_owned_private_bytes": 886386688
+      },
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sundai-erdos3-current\\Erdos3SpecialCases.olean",
+          "sha256": "ac6082c5ee2decfbb7f02793d8142f367eb2891026f144bac641e660bed837a4",
+          "bytes": 210392
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    "audit": {
+      "module": "FreshAuditErdos3SpecialCases.lean",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "FreshAuditErdos3SpecialCases.olean",
+        "FreshAuditErdos3SpecialCases.lean"
+      ],
+      "seconds": 4.313,
+      "exit": 0,
+      "stdout": "'Erdos3SpecialCases.ap_terms_strictly_increase' does not depend on any axioms\n'Erdos3SpecialCases.containsAP_mono' does not depend on any axioms\n'Erdos3SpecialCases.containsAP_prefix' does not depend on any axioms\n'Erdos3SpecialCases.unbounded_lengths_iff_all_lengths' does not depend on any axioms\n'Erdos3SpecialCases.cofinite_contains_all_lengths' depends on axioms: [propext, Quot.sound]\n'Erdos3SpecialCases.affine_tail_contains_all_lengths' depends on axioms: [propext]\n'Erdos3SpecialCases.multiples_contain_all_lengths' depends on axioms: [propext]\n'Erdos3SpecialCases.unbounded_contains_two' depends on axioms: [propext, Quot.sound]\n'Erdos3SpecialCases.arbitrarilyLongAPs_mono' does not depend on any axioms\n'Erdos3SpecialCases.powers_two_no_midpoint' depends on axioms: [propext, Quot.sound]\n'Erdos3SpecialCases.powers_two_no_three' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Erdos3SpecialCases.nat_lt_two_pow' depends on axioms: [propext, Quot.sound]\n'Erdos3SpecialCases.powers_two_unbounded' depends on axioms: [propext, Quot.sound]\n'Erdos3SpecialCases.unbounded_does_not_imply_all_lengths' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "is_endpoint_audit": true,
+      "minimum_free_bytes": 6550659072,
+      "stop_reason": null,
+      "started_utc": "2026-10-05T03:09:36.716609+00:00",
+      "finished_utc": "2026-10-05T03:09:41.023980+00:00",
+      "owned_process_stop_output": null,
+      "own_job_resource_receipt": {
+        "command": [
+          "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+          "-j1",
+          "-DmaxHeartbeats=0",
+          "-DmaxRecDepth=100000",
+          "-o",
+          "FreshAuditErdos3SpecialCases.olean",
+          "FreshAuditErdos3SpecialCases.lean"
+        ],
+        "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sundai-erdos3-current",
+        "started_utc": "2026-10-05T03:09:36.716609+00:00",
+        "attempted": true,
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 5368709120,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 1073741824,
+          "own_job_private_bytes": 6442450944,
+          "own_process_private_bytes": 6442450944,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 3600
+        },
+        "minimum_disk_free_bytes": 6550659072,
+        "initial_system_memory_snapshot": {
+          "free_physical_bytes": 10040401920,
+          "total_physical_bytes": 34024419328,
+          "available_commit_bytes": 9684860928,
+          "total_commit_limit_bytes": 60437172224
+        },
+        "minimum_physical_available_bytes": 10040401920,
+        "minimum_available_commit_bytes": 9408897024,
+        "root_pid": 46548,
+        "own_job_assignment_before_resume": "PASS",
+        "exit": 0,
+        "job_peak_process_private_bytes": 874184704,
+        "job_peak_aggregate_private_bytes": 875438080,
+        "state": "PASS",
+        "finished_utc": "2026-10-05T03:09:41.023980+00:00",
+        "seconds": 4.313,
+        "polled_peak_tree_private_bytes": 865902592,
+        "polled_peak_tree_rss_bytes": 401358848,
+        "counter_samples": 15,
+        "observed_own_processes": {
+          "42936": {
+            "exe": "conhost.exe",
+            "peak_private_bytes": 1253376,
+            "peak_rss_bytes": 7860224
+          },
+          "46548": {
+            "exe": "lean.exe",
+            "peak_private_bytes": 864649216,
+            "peak_rss_bytes": 437194752
+          }
+        },
+        "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\sundai-erdos3-current-m2-granular-ef5f104097479363-attempt-1.stdout.txt",
+        "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\sundai-erdos3-current-m2-granular-ef5f104097479363-attempt-1.stderr.txt",
+        "stdout_sha256": "a5eee0142c9c9d309bb88ecb412ac6c0046799c3f288d93dce2d4909f2de272c",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_excerpt": "'Erdos3SpecialCases.ap_terms_strictly_increase' does not depend on any axioms\n'Erdos3SpecialCases.containsAP_mono' does not depend on any axioms\n'Erdos3SpecialCases.containsAP_prefix' does not depend on any axioms\n'Erdos3SpecialCases.unbounded_lengths_iff_all_lengths' does not depend on any axioms\n'Erdos3SpecialCases.cofinite_contains_all_lengths' depends on axioms: [propext, Quot.sound]\n'Erdos3SpecialCases.affine_tail_contains_all_lengths' depends on axioms: [propext]\n'Erdos3SpecialCases.multiples_contain_all_lengths' depends on axioms: [propext]\n'Erdos3SpecialCases.unbounded_contains_two' depends on axioms: [propext, Quot.sound]\n'Erdos3SpecialCases.arbitrarilyLongAPs_mono' does not depend on any axioms\n'Erdos3SpecialCases.powers_two_no_midpoint' depends on axioms: [propext, Quot.sound]\n'Erdos3SpecialCases.powers_two_no_three' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Erdos3SpecialCases.nat_lt_two_pow' depends on axioms: [propext, Quot.sound]\n'Erdos3SpecialCases.powers_two_unbounded' depends on axioms: [propext, Quot.sound]\n'Erdos3SpecialCases.unbounded_does_not_imply_all_lengths' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+        "stderr_excerpt": ""
+      },
+      "source_sha256": "0cee28fe1bbacdd3ab2d38d4f9da26b287cfe7b2d3ab8da19e6f2ac182d8a4c2",
+      "third_worker_memory_observations": {
+        "minimum_free_physical_bytes": 10040401920,
+        "minimum_available_commit_bytes": 9408897024,
+        "peak_owned_private_bytes": 875438080
+      },
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sundai-erdos3-current\\FreshAuditErdos3SpecialCases.olean",
+          "sha256": "c1f87fb021f8d1d233c23b242d0fabdc85a482bfb3b5d107140b854776819d81",
+          "bytes": 1408
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION",
+      "selected_endpoint_print_coverage": {
+        "requested_endpoints": [
+          "Erdos3SpecialCases.ap_terms_strictly_increase",
+          "Erdos3SpecialCases.containsAP_mono",
+          "Erdos3SpecialCases.containsAP_prefix",
+          "Erdos3SpecialCases.unbounded_lengths_iff_all_lengths",
+          "Erdos3SpecialCases.cofinite_contains_all_lengths",
+          "Erdos3SpecialCases.affine_tail_contains_all_lengths",
+          "Erdos3SpecialCases.multiples_contain_all_lengths",
+          "Erdos3SpecialCases.unbounded_contains_two",
+          "Erdos3SpecialCases.arbitrarilyLongAPs_mono",
+          "Erdos3SpecialCases.powers_two_no_midpoint",
+          "Erdos3SpecialCases.powers_two_no_three",
+          "Erdos3SpecialCases.nat_lt_two_pow",
+          "Erdos3SpecialCases.powers_two_unbounded",
+          "Erdos3SpecialCases.unbounded_does_not_imply_all_lengths"
+        ],
+        "parsed_endpoints": [
+          "Erdos3SpecialCases.affine_tail_contains_all_lengths",
+          "Erdos3SpecialCases.ap_terms_strictly_increase",
+          "Erdos3SpecialCases.arbitrarilyLongAPs_mono",
+          "Erdos3SpecialCases.cofinite_contains_all_lengths",
+          "Erdos3SpecialCases.containsAP_mono",
+          "Erdos3SpecialCases.containsAP_prefix",
+          "Erdos3SpecialCases.multiples_contain_all_lengths",
+          "Erdos3SpecialCases.nat_lt_two_pow",
+          "Erdos3SpecialCases.powers_two_no_midpoint",
+          "Erdos3SpecialCases.powers_two_no_three",
+          "Erdos3SpecialCases.powers_two_unbounded",
+          "Erdos3SpecialCases.unbounded_contains_two",
+          "Erdos3SpecialCases.unbounded_does_not_imply_all_lengths",
+          "Erdos3SpecialCases.unbounded_lengths_iff_all_lengths"
+        ],
+        "missing_endpoints": [],
+        "status": "PASS"
+      }
+    }
+  },
+  "current_witness_artifact_hashes": [
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sundai-erdos3-current\\Erdos3SpecialCases.olean",
+      "sha256": "ac6082c5ee2decfbb7f02793d8142f367eb2891026f144bac641e660bed837a4",
+      "bytes": 210392,
+      "SHA_already_bound_in_historical_receipt": true
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sundai-erdos3-current\\FreshAuditErdos3SpecialCases.olean",
+      "sha256": "c1f87fb021f8d1d233c23b242d0fabdc85a482bfb3b5d107140b854776819d81",
+      "bytes": 1408,
+      "SHA_already_bound_in_historical_receipt": true
+    }
+  ],
+  "artifact_history_qualification": "Recorded primary olean outputs retain their historical SHA. Secondary private/server/IR outputs are hashed now when present; where absent from the historical receipt this comparison does not claim their historical SHA was recorded. No artifact is imported, copied, linked or aliased by this review.",
+  "literal_definition_fidelity": "ContainsAP(A,k) uses a natural start and a strictly positive natural step with membership at all indices i<k; ap_terms_strictly_increase proves the terms distinct. ArbitrarilyLongAPs quantifies every finite length. The fourteen selected elementary implications and powers-of-two obstruction use these literal Std predicates, not default FC answer elaboration.",
+  "known_elementary_scope": "Known elementary cofinite/affine-tail/multiples cases and an unbounded powers-of-two example. Reusable monotonicity, prefix and length-equivalence lemmas. This is formalization/statement infrastructure, not a novel full reciprocal-divergence theorem.",
+  "no_canonical_Set_IsAPOfLength_Filter_bridge_in_selected_scope": true,
+  "root_witness_acceptance_record_created": false,
+  "witness_accepted_into_original_route": false,
+  "recommended_root_decision_for_review": "Eligible for explicit dated external-source-and14-output evidence coverage, because exact source/module/audit bytes, CLI semantic options, compiler and reachable core closure match. This would be an evidence composition, not physical artifact reuse or a second fresh invocation; record one source/14 outputs once, preserve independent-route provenance, and use a separate root gate. The existing adapter must remain partial until that explicit decision or a separately authorized fresh original Std rerun.",
+  "alternatively_original_Std_source_and14audit_can_be_rerun_after_explicit_approval": true,
+  "Lean_or_compiler_invoked": false,
+  "outputs_copied_linked_aliased_or_counted_as_new": false,
+  "original_container_executed": false
+}

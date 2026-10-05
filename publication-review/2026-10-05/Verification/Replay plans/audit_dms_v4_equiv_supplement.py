@@ -1,0 +1,117 @@
+"""One separately approved organizer audit. No scientific source compilation.
+
+Keeps frozen failed120/123 original audit and all7 actual V4 passes unchanged.
+Adds only importStar6Equiv in a new audit file; the123 print requests are identical.
+The source-dispatcher inactivity gate remains frozen; this controller performs
+an organizer-only audit and requires a separately recorded root handoff.
+"""
+from pathlib import Path
+from datetime import datetime,timezone
+import hashlib,json,os,re,subprocess,sys
+from collections import Counter
+from receipt_io import read_bytes_shared
+from lean_imports import stripped
+from audit_axioms import parse
+from verify_dms_v4_vector_stage import verify_stage
+from dms_v4_vector122_seed import verify_seed
+from matt_resource_guard import guarded_tree
+BASE=Path(__file__).resolve().parent
+PROJECT='htpeo-dms-current-import-pruned-v4-vector'
+STAGE=BASE/'builds'/PROJECT
+SCIENCE=BASE/(PROJECT+'-fresh-build.json')
+SCIENCE_SHA='fb428dd280da30ba25480be5420157dfa7bbeb268c603b05edb0a17dd9eeb7ba'
+PLAN_SHA='30f7b071fbcd9ddb37e48a059126daf8e37dd65dae9b2733614af926589a7308'
+POLICY_SHA='0af7feab4fc55f1b7ecade9b60491c2507ac3687d2899f0f74116afd40a93a8f'
+SEED_SHA='2187c885a9145a847db040c2fe8b3ad03db6e6093a6f400117d1a60c84a3dbf3'
+DRAFT=BASE/'proposals/dms-v4-equivalence-organizer-audit/FreshAuditSupplement.lean'
+DRAFT_SHA='0496d62e6a5cc83f98a73fc0c534eaa0469b1f9cd28f5e13f0fe9cbc1dcd0001'
+ORIGINAL_AUDIT_SHA='c2776a9f5b63944f60b1be65f296da9dd11456cdcbeda49019714323d5dede91'
+FROZEN={'verify_dms_v4_vector_stage.py':'d876f0d7850b4618ff4855aad2306216f6921987936daea24a820fef798b6242',
+ 'dms_v4_vector122_seed.py':'219fa8cd4bbd3d90ca80f3ad4e0ac662b6a7083afc819d88d1cbd5ba93d73df4',
+ 'matt_resource_guard.py':'ae0b64c7fbf47545365f3238977368042be342ddb973159ec65c98f64aa38a71'}
+def digest(path):
+    h=hashlib.sha256()
+    with Path(path).open('rb') as stream:
+        for block in iter(lambda:stream.read(1024*1024),b''):h.update(block)
+    return h.hexdigest()
+def now():return datetime.now(timezone.utc).isoformat()
+def source_outputs():
+    receipt=json.loads(read_bytes_shared(SCIENCE));rows=[r for r in receipt['builds'] if not r['is_endpoint_audit']]
+    assert len(rows)==7 and all(r['exit']==0 and not r.get('stop_reason') for r in rows)
+    records=[]
+    for row in rows:
+        for a in row['artifacts']:
+            assert digest(a['file'])==a['sha256'] and Path(a['file']).stat().st_size==a['bytes']
+            records.append(a)
+    return records
+def lean_snapshot():
+    command="Get-CimInstance Win32_Process | Where-Object { $_.Name -eq 'lean.exe' } | Select-Object ProcessId,ParentProcessId,CreationDate,CommandLine | ConvertTo-Json -Compress"
+    result=subprocess.run(['powershell','-NoProfile','-Command',command],capture_output=True,text=True,encoding='utf8',errors='replace',check=True)
+    rows=json.loads(result.stdout or '[]');return rows if isinstance(rows,list) else [rows]
+def run(approval_path,approval_sha):
+    approval_path=Path(approval_path).resolve();assert approval_path.is_relative_to(BASE.resolve()) and digest(approval_path)==approval_sha
+    approval=json.loads(approval_path.read_bytes())
+    assert approval['status']=='ROOT_APPROVED_ONE_DMS_V4_SUPPLEMENTAL_ORGANIZER_AUDIT_ONLY'
+    assert approval['reviewed_audit_runner_sha256']==digest(__file__)
+    assert approval['reviewed_draft_sha256']==DRAFT_SHA and approval['reviewed_source_receipt_sha256']==SCIENCE_SHA
+    assert approval['reviewed_seed_receipt_sha256']==SEED_SHA and approval['other_DMS_source_compilers_confirmed_inactive'] is True
+    output=Path(approval['actual_audit_receipt_file']).resolve();assert output.is_relative_to(BASE.resolve()) and not output.exists()
+    for file,expected in FROZEN.items():assert digest(BASE/file)==expected
+    assert digest(STAGE/'build-plan.json')==PLAN_SHA and digest(SCIENCE)==SCIENCE_SHA
+    assert digest(STAGE/'FreshAudit1.lean')==ORIGINAL_AUDIT_SHA and digest(DRAFT)==DRAFT_SHA
+    raw_original=(STAGE/'FreshAudit1.lean').read_bytes();assert DRAFT.read_bytes()==b'import Star6Equiv\n'+raw_original
+    stage_check=verify_stage(require_cold=False,linked122_allowed=True)
+    seed_check=verify_seed(POLICY_SHA,SEED_SHA)
+    before=source_outputs();others=lean_snapshot();assert len(others)<=1,'At most one companion Lean process is allowed before this single audit'
+    target=STAGE/'FreshAuditSupplement.lean'
+    if target.exists():assert target.read_bytes()==DRAFT.read_bytes()
+    else:
+        with target.open('xb') as stream:stream.write(DRAFT.read_bytes())
+    requests=re.findall(r'^\s*#print\s+axioms\s+(\S+)',stripped(target.read_text(encoding='utf8')),re.M)
+    assert requests==stage_check['requested123_unchanged_axioms'] and len(requests)==123
+    for suffix in ['.olean','.olean.private','.olean.server','.ilean']:assert not target.with_suffix(suffix).exists(),'No supplemental audit output overwrite'
+    plan=json.loads((STAGE/'build-plan.json').read_bytes());assert plan.get('lean_options',{})=={}
+    lean=BASE/'runtimes/lean-4.33.1-windows/bin/lean.exe'
+    assert '819816b' in subprocess.run([str(lean),'--version'],capture_output=True,text=True,check=True).stdout
+    mathlib=BASE/'dependencies/4.33.1/mathlib'
+    paths=[STAGE,Path(seed_check['readonly99_import_directory']),mathlib/'.lake/build/lib/lean']
+    paths.extend(p/'.lake/build/lib/lean' for p in (mathlib/'.lake/packages').iterdir() if p.is_dir())
+    forbidden=[Path(p).resolve() for p in seed_check['forbidden_custom_import_directories']]
+    assert not any(p.resolve().is_relative_to(bad) for p in paths for bad in forbidden)
+    env=dict(os.environ);env['LEAN_PATH']=';'.join(str(p) for p in paths);env['LEAN_NUM_THREADS']='1';env['PATH']=str(lean.parent)+';'+env['PATH']
+    args=[str(lean),'-j1','-DmaxHeartbeats=0','-DmaxRecDepth=100000','-o','FreshAuditSupplement.olean','FreshAuditSupplement.lean']
+    prefix=BASE/'guarded-source-logs'/(PROJECT+'-supplement-'+datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%S'))
+    guard=guarded_tree(args,STAGE,env,prefix,timeout=3600)
+    result={'status':'SUPPLEMENT_NOT_INVOKED_RESOURCE_OR_OPERATIONAL_GUARD','checked_utc':now(),
+        'root_approval':str(approval_path),'root_approval_sha256':approval_sha,'audit_runner_sha256':digest(__file__),
+        'source_receipt_sha256':SCIENCE_SHA,'source_plan_sha256':PLAN_SHA,'seed_receipt_sha256':SEED_SHA,
+        'supplement_source':str(target),'supplement_source_sha256':DRAFT_SHA,'frozen_original_audit_sha256':ORIGINAL_AUDIT_SHA,
+        'frozen_original_audit_exit':1,'frozen_original_print_count':120,'requested123_exact':requests,
+        'all228_scientific_sources_and_plan_modified':False,'scientific_source_compilation_invocations':0,
+        'own_job_resource_receipt':guard,'companion_Lean_snapshot_before':others,
+        'actual_LEAN_PATH':[str(p) for p in paths],'original7_V4_output_hashes_before':before,
+        'prior221_preflight':seed_check['status'],'stage_preflight':stage_check['status']}
+    if guard['attempted']:
+        stdout=Path(guard['stdout_file']).read_text(encoding='utf8');stderr=Path(guard['stderr_file']).read_text(encoding='utf8')
+        row={'module':'FreshAuditSupplement.lean','is_endpoint_audit':True,'source_sha256':DRAFT_SHA,'command':args,
+            'exit':guard['exit'],'seconds':guard['seconds'],'started_utc':guard['started_utc'],'finished_utc':guard['finished_utc'],
+            'stdout':stdout,'stderr':stderr,'stop_reason':None if guard['state']=='PASS' else guard['state'],
+            'own_job_resource_receipt':guard}
+        parsed=parse(stdout);count=Counter(r['endpoint'] for r in parsed)
+        missing=sorted(set(requests)-set(count));extra=sorted(set(count)-set(requests));duplicate=sorted(n for n,c in count.items() if c!=1)
+        result.update(audit_row=row,actual_axiom_classifications=parsed,classification_counts=dict(Counter(r['classification'] for r in parsed)),
+            actual_unique_print_count=len(count),missing_prints=missing,unexpected_prints=extra,duplicate_prints=duplicate)
+        if guard['state']!='PASS':result['status']='SUPPLEMENTAL_AUDIT_FAILED_OR_RESOURCE_INTERRUPTED'
+        elif missing or extra or duplicate or len(parsed)!=123:result['status']='SUPPLEMENTAL_AUDIT_PRINT_COVERAGE_INCOMPLETE'
+        elif any(r['classification'] in ['SORRY_ADMISSION','UNRECOGNIZED_AXIOMS'] for r in parsed):result['status']='SUPPLEMENTAL_AUDIT_SELECTED_ADMISSION_OR_UNKNOWN_AXIOMS'
+        elif any(r['classification']=='NATIVE_EVALUATION_TRUST' for r in parsed):result['status']='SUPPLEMENTAL_AUDIT123_PASS_WITH_NATIVE_EVALUATION_DISCLOSED'
+        else:result['status']='SUPPLEMENTAL_AUDIT123_STANDARD_OR_AXIOM_FREE_PASS'
+    assert source_outputs()==before and digest(SCIENCE)==SCIENCE_SHA and digest(STAGE/'FreshAudit1.lean')==ORIGINAL_AUDIT_SHA
+    verify_seed(POLICY_SHA,SEED_SHA)
+    result['original7_V4_output_hashes_after']=source_outputs();result['protected221_identities_rechecked_after']=True
+    result['frozen_failed_original_audit_and_plan_preserved']=True
+    with output.open('x',encoding='utf8') as stream:json.dump(result,stream,indent=2);stream.write('\n')
+    print(json.dumps({'receipt':str(output),'sha256':digest(output),'status':result['status'],'actual_prints':result.get('actual_unique_print_count',0)},indent=2))
+if __name__=='__main__':
+    assert len(sys.argv)==4 and sys.argv[1]=='--audit-root-approved','Preparation only until separate one-audit approval'
+    run(sys.argv[2],sys.argv[3])

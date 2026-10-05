@@ -1,0 +1,93 @@
+--- compress_a000_existing75_owned_outputs_prepared.py-8570d49698c6d2595559297a47d21e9f6bb9b509ad6d88ea67b7a44c98f24704
++++ compress_a000_remaining59_owned_outputs_v2_prepared.py
+@@ -11,7 +11,7 @@
+ 
+ BASE=Path(__file__).resolve().parent
+ STAGE=(BASE/'builds/sakana-a000224').resolve()
+-PROPOSAL=BASE/'proposals/a000-existing75-completed-owned-output-LZX-preparation-20261005.json'
++PROPOSAL=BASE/'proposals/a000-remaining59-completed-owned-output-storage-v2-preparation-20261005.json'
+ 
+ def metadata(proposal):
+     path=BASE/'assess_completed_own_artifact_storage_readonly.py'
+@@ -42,22 +42,24 @@
+     args=parser.parse_args();ap=Path(args.root_approval_file).resolve()
+     assert ap.is_relative_to(BASE) and sha(ap)==args.root_approval_sha256
+     a=json.loads(ap.read_bytes());self_sha=sha(__file__)
+-    assert a['status']=='ROOT_APPROVED_EXACT_EXISTING_A00075_COMPLETED_OWN_OUTPUTS_LZX'
++    assert a['status']=='ROOT_APPROVED_EXACT_REMAINING_A00059_COMPLETED_OWN_OUTPUTS_STORAGE_V2'
+     assert a['helper_sha256']==self_sha and a['proposal_sha256']==sha(PROPOSAL)
+     p=json.loads(PROPOSAL.read_bytes())
+     assert p['helper_sha256']==self_sha
+     core=BASE/'a000_owned_storage_guard_prepared.py'
+     assert sha(core)==p['guard_core_sha256']==a['guard_core_sha256']
+-    assert a['target_count']==75 and a['Part0033_already_WOF_target_excluded'] is True
++    assert a['target_count']==59 and a['all17_previously_handled_outputs_excluded'] is True
+     assert a['sources_receipts_runtime_providers_never_modified'] is True
+     check_frozen(p);native=metadata(p)
+-    targets=p['exact75_remaining_completed_owned_targets']
+-    assert len(targets)==len({r['file'] for r in targets})==75
+-    skipped=p['already_WOF_pilot_output_NOT_A_TARGET']
+-    assert skipped['file'] not in {r['file'] for r in targets}
+-    skip_path=Path(skipped['file']).resolve();skip_now=native(skip_path);skip_wof=wof_info(skip_path);skip_read=read_and_mmap(skip_path)
+-    assert same_identity(skip_now,skipped['native_current']) and skip_wof==skipped['WOF_current']
+-    assert skip_read['ordinary_read_sha256']==skipped['content_sha256'] and skip_wof['external'] and skip_wof['provider']==2 and skip_wof['algorithm']==1
++    targets=p['exact59_remaining_completed_owned_targets']
++    assert len(targets)==len({r['file'] for r in targets})==59
++    skipped=p['already_handled17_outputs_NOT_TARGETS']
++    assert len(skipped)==17
++    for done in skipped:
++        assert done['file'] not in {r['file'] for r in targets}
++        skip_path=Path(done['file']).resolve();skip_now=native(skip_path);skip_wof=wof_info(skip_path);skip_read=read_and_mmap(skip_path)
++        assert same_identity(skip_now,done['native_current']) and skip_wof==done['WOF_current']
++        assert skip_read['ordinary_read_sha256']==done['content_sha256']
+     compact=Path(os.environ['SystemRoot'])/'System32/compact.exe';assert sha(compact)==p['compact_executable_sha256']
+     commands=[[str(compact),'/C','/F','/Q','/EXE:LZX',r['file']] for r in targets]
+     assert commands==a['exact_reviewed_commands']
+@@ -77,13 +79,13 @@
+         for target in targets:check_target(native,target)
+         check_frozen(p);quiescence(0)
+         serial=datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%S%fZ')
+-        history=BASE/'operational_history/a000-existing75-storage';history.mkdir(exist_ok=True)
++        history=BASE/'operational_history/a000-remaining59-storage-v2';history.mkdir(exist_ok=True)
+         log=history/(serial+'-per-file-actual.jsonl')
+         assert not log.exists()
+-        record={'status':'STARTED_EXACT75_A000_COMPLETED_OWN_OUTPUT_STORAGE_PASS','started_utc':stamp(),
++        record={'status':'STARTED_EXACT59_A000_COMPLETED_OWN_OUTPUT_STORAGE_PASS','started_utc':stamp(),
+             'helper_sha256':self_sha,'guard_core_sha256':sha(core),'proposal_sha256':sha(PROPOSAL),
+             'root_approval_file':str(ap),'root_approval_sha256':args.root_approval_sha256,
+-            'target_count':75,'already_WOF_skipped':skipped,'protected_frozen_input_bindings':p['protected_frozen_input_bindings'],
++            'target_count':59,'already_WOF_skipped':skipped,'protected_frozen_input_bindings':p['protected_frozen_input_bindings'],
+             'actual_per_file_log':str(log),'actual_commands':commands,'resource_policy':p['resource_policy'],
+             'scientific_source_or_historical_proof_receipt_targets':0}
+         write_new(history/(serial+'-started.json'),record)
+@@ -92,12 +94,16 @@
+             for index,(target,command) in enumerate(zip(targets,commands)):
+                 path,before,wb,read_before=check_target(native,target)
+                 gates(path);quiescence(0);check_frozen(p)
+-                result=guarded_compact(command,serial+'-A000-existing75-'+str(index),path,0)
++                result=guarded_compact(command,serial+'-A000-remaining59-v2-'+str(index),path,0)
+                 after=native(path);wa=wof_info(path);read_after=read_and_mmap(path)
+                 same=same_identity(before,after) and read_after['ordinary_read_sha256']==target['content_sha256']
+-                good=result.get('exit')==0 and not result.get('stop_reason') and same and wa['external'] and wa['provider']==2 and wa['algorithm']==1
++                backing_lzx=wa['external'] and wa['provider']==2 and wa['algorithm']==1
++                backing_ordinary=not wa['external'] and not after['FILE_ATTRIBUTE_REPARSE_POINT'] and not after['FILE_ATTRIBUTE_ENCRYPTED']
++                allocation_nonincreasing=after['standard_allocation_bytes']<=before['standard_allocation_bytes']
++                good=result.get('exit')==0 and not result.get('stop_reason') and same and allocation_nonincreasing and (backing_lzx or backing_ordinary)
++                actual_storage_class='PASS_BYTE_IDENTICAL_WOF_LZX_NONINCREASING_ALLOCATION' if good and backing_lzx else ('PASS_BYTE_IDENTICAL_ORDINARY_NON_WOF_NONINCREASING_ALLOCATION' if good else 'STORAGE_REVIEW_REQUIRED_NO_PROOF_FAILURE_INFERENCE')
+                 row={'index':index,'module':target['source_module'],'file':str(path),
+-                    'status':'PASS_BYTE_IDENTICAL_A000_COMPLETED_OWN_OUTPUT_LZX' if good else 'STORAGE_REVIEW_REQUIRED_NO_PROOF_FAILURE_INFERENCE',
++                    'status':actual_storage_class,'WOF_LZX_installed':bool(backing_lzx),'allocation_nonincreasing':allocation_nonincreasing,
+                     'native_before':before,'WOF_before':wb,'read_and_mmap_before':read_before,
+                     'actual_command_row':result,'native_after':after,'WOF_after':wa,'read_and_mmap_after':read_after,
+                     'content_inode_linkcount_size_mtime_preserved':same,
+@@ -105,8 +111,8 @@
+                 stream.write(json.dumps(row)+'\n');stream.flush();rows.append(row)
+                 check_frozen(p)
+                 if not good:stop='CURRENT_FILE_OPERATIONAL_REVIEW_REQUIRED';break
+-        successful=len(rows)==75 and all(r['status'].startswith('PASS_') for r in rows)
+-        record.update(status='PASS_EXACT75_A000_OWN_OUTPUTS_BYTE_IDENTICAL_LZX_NO_PROOF_CHANGE' if successful else 'A000_STORAGE_PASS_CHECKPOINT_REVIEW_REQUIRED',
++        successful=len(rows)==59 and all(r['status'].startswith('PASS_') for r in rows)
++        record.update(status='PASS_EXACT59_A000_OWN_OUTPUTS_BYTE_IDENTICAL_STORAGE_CLASSES_NO_PROOF_CHANGE' if successful else 'A000_STORAGE_PASS_CHECKPOINT_REVIEW_REQUIRED',
+             finished_utc=stamp(),completed_storage_files=len(rows),actual_allocation_bytes_saved=sum(r['actual_allocation_bytes_saved'] for r in rows),
+             stop_reason=stop,actual_per_file_log_sha256=sha(log),all_protected_source_receipt_runtime_provider_bytes_preserved=True)
+         write_new(history/(serial+'-actual.json'),record)

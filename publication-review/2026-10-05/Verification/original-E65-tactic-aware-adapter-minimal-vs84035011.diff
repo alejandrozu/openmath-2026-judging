@@ -1,0 +1,73 @@
+--- run_original_e65_source_plan.py
++++ run_original_e65_tactic_aware_source_plan.py
+@@ -1,8 +1,8 @@
+ """Prepared exact recovered E65 source replay, separate from original-container execution.
+ No process starts unless this concrete adapter and a resource lease are root reviewed.
+-Initially only189 recovered FC granular sources; all whole descendants/audits deferred.
++Initially only183 recovered FC sources without Mathlib or Mathlib.Tactic exposure; all whole resource descendants/audits deferred.
+ The separately verified Std-only source/audit is a candidate witness, never copied or
+-automatically counted as a new PASS here. Future whole mode requires189 own hashed
++automatically counted as a new PASS here. Future whole mode requires183 own hashed
+ passes and an exact-plan sole lease, with10/11 GiB guard. Source bodies stay unchanged.
+ """
+ from pathlib import Path
+@@ -17,6 +17,7 @@
+ PROJECT='sundai-erdos3-original-image-source'
+ PREPARATION_SHA256='96f74d38af628c8763632c3a0869d7fa2404796ecf66de70fd13d6b0652e1e06'
+ PLAN_SHA256='0d140b36c59231a9eaf79a2f6277355d0b4cc08b815e5d817df54c370dcfbf15'
++TACTIC_RESOURCE_SCOPE_SHA256='47ed60dae2f8c65df991072ece7152e80f5594f79f54fd51d5e88d5e31b738ab'
+ project=sys.argv[1]
+ worker_threads=int(sys.argv[2])
+ flags=sys.argv[3:]
+@@ -60,15 +61,22 @@
+ from full_mathlib_scope import classify as classify_full_mathlib
+ full_scope=classify_full_mathlib(plan)
+ assert full_scope==prepared['exact_frozen_import_scope'],'Frozen import scope changed'
+-granular_names=set(prepared['initial_granular_source_names']);assert len(granular_names)==189
+-whole_names=set(prepared['whole_FC_source_names']+prepared['whole_entrant_source_names']);assert len(whole_names)==10
++resource_scope_file=BASE/'original-E65-tactic-aware-resource-scope-20261005.json'
++assert sha_file(resource_scope_file)==TACTIC_RESOURCE_SCOPE_SHA256,'Reviewed Tactic resource scope changed'
++resource_scope=json.loads(resource_scope_file.read_text(encoding='utf8'))
++assert resource_scope['source_plan_sha256']==PLAN_SHA256
++assert sha_file(BASE/'original-E65-granular189-prerequisite-exposure-graph-20261005.json')==resource_scope['complete189_prerequisite_graph_sha256']
++assert sha_file(BASE/'original-E65-granular189-official-source-artifact-manifest-20261005.json')==resource_scope['complete189_provider_manifest_sha256']
++granular_names=set(resource_scope['truly_no_Mathlib_or_Tactic_custom_closed_subset']);assert len(granular_names)==183
++whole_names=set(resource_scope['future_whole_resource_sources']);assert len(whole_names)==16
++assert granular_names|whole_names|{prepared['Std_existing_qualified_reuse_candidate_only']['module']}=={m['module'] for m in plan['modules']}
+ candidate=prepared['Std_existing_qualified_reuse_candidate_only']
+ assert sha_file(candidate['qualified_record_file'])==candidate['qualified_record_sha256']
+ deferred_whole_names={candidate['module'],candidate['audit']}
+ if not full_mathlib_source_mode:
+  deferred_whole_names.update(whole_names)
+  deferred_whole_names.update(row['audit'] for row in prepared['audits'] if row['deferred_whole_scope'])
+-deferred_whole_scope={**full_scope,'Std_witness_candidate_pending':candidate,
++deferred_whole_scope={**full_scope,'Tactic_aware_resource_scope':resource_scope,'Tactic_aware_resource_scope_sha256':TACTIC_RESOURCE_SCOPE_SHA256,'Std_witness_candidate_pending':candidate,
+  'qualification':'Only exact recovered source bodies; withheld whole descendants and separately qualified Std candidate are never silently counted as this route PASS.'}
+ if full_mathlib_source_mode:
+  current_file=BASE/(PROJECT+'-fresh-build.json');current_raw=read_bytes_shared(current_file);current=json.loads(current_raw)
+@@ -76,7 +84,7 @@
+  assert current.get('finished_utc') and current['status']=='SCHEDULED_RESOURCE_CHECKPOINT','Actual completed granular checkpoint required'
+  frozen={m['module']:m for m in plan['modules']}
+  successes={r['module']:r for r in current['builds'] if r.get('exit')==0 and not r.get('stop_reason') and not r.get('is_endpoint_audit')}
+- assert granular_names<=set(successes),'All189 own granular successes required before any whole invocation'
++ assert granular_names<=set(successes),'All183 no-Mathlib/Tactic own granular successes required before any whole resource invocation'
+  for name in granular_names:
+   row=successes[name];assert row['source_sha256']==frozen[name]['sha256'] and '-o' in row['command']
+   assert row.get('effective_lean_options')==frozen[name]['lean_options'],'Recorded FC semantic options required'
+@@ -166,6 +174,7 @@
+ plan['execution_route']='EXACT_RECOVERED_E65_SOURCE_WINDOWS_OPERATIONAL_REPLAY_NOT_ORIGINAL_CONTAINER_EXECUTION'
+ plan['source_plan_sha256']=PLAN_SHA256
+ plan['preparation_sha256']=PREPARATION_SHA256
++plan['Tactic_aware_resource_scope_sha256']=TACTIC_RESOURCE_SCOPE_SHA256
+ plan['baseline_runner_sha256']='70ff209c7ac651c1e0ab25e9f629a9fc50c4b85ed1f510666e851e8f69c53534'
+ plan['original_container_executed']=False
+ plan['Std_external_witness_candidate_accepted']=False
+@@ -268,7 +277,7 @@
+  if n in retained:continue
+  if n in deferred_whole_names:
+   plan['deferred_whole_import_policy']['unattempted_whole_invocations'].append({'module':n,'attempted':False,
+-    'is_endpoint_audit':n.endswith('.lean'),'classification':'EXTERNAL_STD_WITNESS_REVIEW_PENDING' if n in {candidate['module'],candidate['audit']} else 'SEPARATE_SOLE_LITERAL_IMPORTER_LEASE_REQUIRED'})
++    'is_endpoint_audit':n.endswith('.lean'),'classification':'EXTERNAL_STD_WITNESS_REVIEW_PENDING' if n in {candidate['module'],candidate['audit']} else 'SEPARATE_SOLE_MATHLIB_OR_TACTIC_RESOURCE_IMPORTER_LEASE_REQUIRED'})
+   save();print('WHOLE_IMPORT_LEASE_DEFERRED',project,n,flush=True);continue
+  if third_worker_pilot and new_source_invocations>=1:
+   plan['status']='SCHEDULED_RESOURCE_CHECKPOINT';plan['checkpoint_reason']='ROOT_AUTHORIZED_SINGLE_THIRD_WORKER_PILOT_COMPLETED';save();break

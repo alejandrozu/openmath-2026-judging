@@ -1,0 +1,189 @@
+--- run_m2_tactic_aware_granular_source_plan.prepared.3dd5c7b67e4e1d61e169b499cabc4e49fa265aac75019c9313c1c25e2c86b378.py
++++ run_compatible_fc157_linked_granular_plan.py
+@@ -1,8 +1,7 @@
+-"""Fresh topological compilation of every custom module, then endpoint axiom audits.
+-
+-Uses only the plan's exact Lean version and verified pinned official dependencies.
+-Original entrant artifacts are never reused. A resource-interrupted replay can retain
+-its own successful, receipt-matched artifacts; partial outputs are preserved by rename.
++"""Separate compatibleFC223 granular replay:157 reviewed prior-own outputs plus66 actualnew.
++Derived from frozen3dd5. No source/body/option/dependency-path changes.
++Linked outputs are protected and never produce synthetic compiler rows.
++All10 whole-resource modules remain withheld; safe selected audit scope is zero.
+ """
+ from pathlib import Path
+ import json,re,subprocess,os,sys,time,hashlib,shutil,msvcrt
+@@ -13,6 +12,32 @@
+ RUNNER_SOURCE_SHA256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest()
+ AXIOM_PARSER_SOURCE_SHA256=hashlib.sha256((BASE/'audit_axioms.py').read_bytes()).hexdigest()
+ project=sys.argv[1]
++assert project=='official-fc-util433', 'Exact compatible FC project only'
++assert '--compatible-fc157-reuse-execution-authorized' in sys.argv[3:]
++assert '--guarded-third-slot' in sys.argv[3:] and '--pilot-third-slot' not in sys.argv[3:], 'Exactly reviewed66 continuation scope'
++from compatible_fc157_prior_own_seed import verify_seed as fc_verify_seed
++FC_POLICY_SHA='999763dfc9efa95616e4dfb2038dab773ec2715f813b497bc2d34292bf98d96a'
++FC_HELPER_SHA='e5ef1e9dda15819143ea7cad0095aef7d5da6263d8af9564e8f6458b4371efe6'
++assert hashlib.sha256((BASE/'compatible_fc157_prior_own_seed.py').read_bytes()).hexdigest()==FC_HELPER_SHA
++def fc_flag(name):
++ assert name in sys.argv and sys.argv.index(name)+1<len(sys.argv)
++ return sys.argv[sys.argv.index(name)+1]
++fc_approval_file=Path(fc_flag('--reuse-execution-approval')).resolve()
++assert fc_approval_file.is_relative_to(BASE.resolve())
++assert hashlib.sha256(fc_approval_file.read_bytes()).hexdigest()==fc_flag('--reuse-execution-approval-sha256')
++fc_approval=json.loads(fc_approval_file.read_bytes())
++assert fc_approval['status']=='ROOT_APPROVED_COMPATIBLE_FC157_PREVIOUS_OWN_PLUS66_NEW_GRANULAR_EXECUTION'
++assert fc_approval['runner_sha256']==RUNNER_SOURCE_SHA256 and fc_approval['seed_helper_sha256']==FC_HELPER_SHA and fc_approval['policy_sha256']==FC_POLICY_SHA
++assert fc_approval['at_most_one_other_granular_compiler_confirmed'] is True and fc_approval['no_whole_importer_active_confirmed'] is True
++fc_seed_sha=fc_flag('--reuse-seed-receipt-sha256')
++assert fc_approval['seed_receipt_sha256']==fc_seed_sha
++fc_seed_check=fc_verify_seed(FC_POLICY_SHA,fc_seed_sha,allow_own_target_runner=True)
++fc_policy=json.loads((BASE/'compatible-FC-exact157-prior-own-output-policy-20261005.json').read_bytes())
++fc_reuse_names=set(fc_policy['eligible157_module_names']);fc_new_names=set(fc_policy['required66_new_cold_module_names'])
++assert len(fc_reuse_names)==157 and len(fc_new_names)==66
++fc_protected_stems={Path(row['file']).with_suffix('').resolve() for row in fc_policy['all233_target_source_identities'] if row['module'] in fc_reuse_names}
++def fc_no_output_write(file):
++ assert not any(str(Path(file).resolve()).startswith(str(stem)+'.') for stem in fc_protected_stems), 'Writing/renaming any linked artifact is forbidden'
+ 
+ # This adapter is prepared only. Execution requires a separately reviewed slot.
+ M2_PROJECT_PLAN_HASHES = {'htpeo-erdos-m2': 'd75af96c5e21e79909e7a95646d0bf766609a46dd40bb0fc44e6308a6eb60ef6', 'sakana-m2-research': 'e640756c85349928b6459d41cda81e58f8831cd6240d1e7ddef09425da61fd6c', 'koerbser-climb1-library': '4160a948abbfc5ca4cbcd456ba300655362f96be4baaba7ba03a9edf029ded99', 'koerbser-three-term': '03335f8dae0fe01722dd8c6491c127a1bad3ea1c0b92833c289038dfc5621df8', 'jamie-ap-bridges': '86b3947ca573c0afb6643cfdd436bff031857e9fead0749a7caaa3733b8f5330', 'sundai-organizer-bridge': 'f03bb3fba8072c0825ab34879d405607b89522bc729a97b4d6598740e728a21a', 'sundai-erdos3-current': '8f1074283a569367dfe9141f7df474261f88b1a11506da562badb1c9015d038b', 'official-fc-util433': '104c71d4916cb10b663afd6e5107f928ca18e54b99bcaaae64dd6adc60ff45e7'}
+@@ -149,7 +174,7 @@
+  assert actual==plan['mathlib_pin'],(actual,plan['mathlib_pin'])
+  assert (dependencies/'.lake/build/lib/lean/Mathlib.olean').exists(),'Required official Mathlib cache not ready'
+  assert json.loads((BASE/('mathlib-'+plan['version']+'-cache-retry.json')).read_text())['status']=='PASS','Full official dependency cache import validation has not passed'
+-report=BASE/(project+'-m2-granular-fresh-build.json')
++report=BASE/'official-fc-util433-exact157-linked-granular-fresh-build.json'
+ prior=None
+ if report.exists():
+  prior=json.loads(report.read_text(encoding='utf8'))
+@@ -177,6 +202,8 @@
+  paths += [str(dependencies/'.lake/build/lib/lean')]
+  paths += [str(p/'.lake/build/lib/lean') for p in (dependencies/'.lake/packages').iterdir() if p.is_dir()]
+ env=dict(os.environ);env['LEAN_PATH']=';'.join(paths);env['PATH']=str(lean.parent)+';'+env['PATH']
++assert not plan.get('additional_dependency_libs')
++assert all('/builds/sundai-erdos3-original-image-source' not in p.replace('\\','/').lower() for p in paths), 'Donor path may not enter LEAN_PATH'
+ env['LEAN_NUM_THREADS']=str(worker_threads)
+ canonical=lambda n:n.replace('«','').replace('»','')
+ modules={canonical(m['module']):m for m in plan['modules']}
+@@ -194,7 +221,15 @@
+ plan['compiler_version']=subprocess.run([str(lean),'--version'],capture_output=True,text=True).stdout.strip()
+ assert 'version '+plan['version']+',' in plan['compiler_version'],'Compiler version differs from frozen plan'
+ plan['status']='RUNNING';plan['builds']=[];plan['compilation_order']=ordered;plan['started_utc']=time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime())
+-plan['execution_route']='SEPARATE_ROOT_REVIEWED_M2_GRANULAR_SOURCE_ADAPTER'
++plan['execution_route']='SEPARATE_COMPATIBLE_FC157_PRIOR_OWN_REVIEWED_PP_DIFFERENCE_PLUS66_ACTUAL_GRANULAR'
++plan['previous_own_output_reuse_policy_sha256']=FC_POLICY_SHA
++plan['previous_own_output_seed_receipt_sha256']=fc_seed_sha
++plan['previous_own_output_reuse_provenance']=fc_seed_check
++plan['previous_own_output_reused157_module_names']=sorted(fc_reuse_names)
++plan['printing_exception_ancestry_by_target_source']=fc_policy['printing_exception_ancestry_by_target_source']
++plan['required_actual_new_source_module_names']=sorted(fc_new_names)
++plan['selected_safe_audit_count']=0
++plan['reuse_creates_new_compiler_rows']=False
+ plan['source_plan_sha256']=M2_PROJECT_PLAN_HASHES[project]
+ plan['m2_preparation_sha256']=M2_PREPARATION_SHA256
+ plan['authoritative_Mathlib_or_Tactic_source_scope_sha256']=M2_TACTIC_SCOPE_SHA256
+@@ -230,7 +265,8 @@
+   'exact_frozen_import_classification':deferred_whole_scope,'unattempted_whole_invocations':[]}
+ def digest(file):return hashlib.sha256(file.read_bytes()).hexdigest()
+ def artifacts(file):
+- return [p for p in [file.with_suffix('.olean'),file.with_suffix('.olean.private'),file.with_suffix('.olean.server'),file.with_suffix('.ilean')] if p.exists()]
++ fc_no_output_write(file)
++ return [p for p in [file.with_suffix('.olean'),file.with_suffix('.olean.private'),file.with_suffix('.olean.server'),file.with_suffix('.ilean'),file.with_suffix('.ir')] if p.exists()]
+ def artifact_inventory(file):
+  return [{'file':str(p),'sha256':digest(p),'bytes':p.stat().st_size} for p in artifacts(file)]
+ retained={};past_rows={}
+@@ -238,13 +274,15 @@
+ deferred_resource_roots={}
+ if prior:
+  attempt=len(prior.get('prior_attempt_receipts',[]))+1
+- archived=BASE/(project+'-m2-granular-fresh-build-attempt-'+str(attempt)+'.json')
++ archived=BASE/('official-fc-util433-exact157-linked-granular-fresh-build-attempt-'+str(attempt)+'.json')
+  assert not archived.exists(),'Immutable attempt receipt already exists'
+  # Preserve the exact interrupted receipt, including killed invocations, before updating the main view.
+  archived.write_bytes(report.read_bytes())
+  plan['prior_attempt_receipts']=prior.get('prior_attempt_receipts',[])+[{'file':str(archived),'sha256':digest(archived),'status':prior['status']}]
+  plan['resume_provenance']='OWN_FRESH_SUCCESSFUL_ARTIFACTS_AFTER_RESOURCE_INTERRUPTION'
+- for row in prior['builds']:past_rows[row['module']]=row
++ for row in prior['builds']:
++  assert row['module'] in fc_new_names and not row['is_endpoint_audit'], 'Only actual66 own compiler rows may be retained'
++  past_rows[row['module']]=row
+  # Independent-DAG runs preserve deferred roots as actual historical resource
+  # invocations. Restore those rows for a later ordinary retry and for safe
+  # preservation of any partial artifacts; never reuse them as successful builds.
+@@ -295,6 +333,8 @@
+ save()
+ new_source_invocations=0
+ for n in ordered+plan['audit_modules']+plan.get('non_acceptance_audit_modules',[]):
++ if n in fc_reuse_names:
++  plan.setdefault('separately_reused_source_names',[]).append(n);save();continue
+  if n in retained:continue
+  if n in deferred_whole_names:
+   plan['deferred_whole_import_policy']['unattempted_whole_invocations'].append({'module':n,'attempted':False,
+@@ -302,7 +342,7 @@
+   save();print('WHOLE_IMPORT_LEASE_DEFERRED',project,n,flush=True);continue
+  if third_worker_pilot and new_source_invocations>=1:
+   plan['status']='SCHEDULED_RESOURCE_CHECKPOINT';plan['checkpoint_reason']='ROOT_AUTHORIZED_SINGLE_THIRD_WORKER_PILOT_COMPLETED';save();break
+- if third_worker_continuation and (BASE/'hold-third-worker-dispatch').exists():
++ if third_worker_continuation and (BASE/'hold-compatible-fc157-dispatch').exists():
+   plan['status']='SCHEDULED_RESOURCE_CHECKPOINT';plan['checkpoint_reason']='THIRD_WORKER_LEASE_HANDOFF_AT_COMPLETED_MODULE_BOUNDARY';save();break
+  if independent_resource_mode:
+   blockers=sorted(blocked_resource_roots(n))
+@@ -316,7 +356,7 @@
+  if third_worker_guarded:
+   waiting=False
+   while True:
+-   if third_worker_continuation and (BASE/'hold-third-worker-dispatch').exists():
++   if third_worker_continuation and (BASE/'hold-compatible-fc157-dispatch').exists():
+     plan['status']='SCHEDULED_RESOURCE_CHECKPOINT';plan['checkpoint_reason']='THIRD_WORKER_LEASE_HANDOFF_WHILE_WAITING_WITHOUT_COMPILER'
+     plan['finished_utc']=time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime());save();raise SystemExit(0)
+    metrics=memory_snapshot();free=shutil.disk_usage(BASE).free
+@@ -331,6 +371,7 @@
+    plan['status']='RUNNING';plan.pop('waiting_for_module',None)
+    plan['dispatch_wait_recovery_metrics']={'free_disk_bytes':free,**metrics};save()
+  if shutil.disk_usage(BASE).free<1_000_000_000:plan['status']='ENVIRONMENT_BLOCKED';plan['failure']='Disk free below 1 GB reserved threshold';save();break
++ fc_no_output_write(file)
+  existing=artifacts(file)
+  if existing:
+   previous=past_rows.get(n)
+@@ -341,6 +382,7 @@
+    target=old.with_name(old.name+'.interrupted-attempt-'+str(len(plan['prior_attempt_receipts'])))
+    assert old.resolve().is_relative_to(dest.resolve()) and target.resolve().is_relative_to(dest.resolve())
+    assert not target.exists(),str(target)
++   fc_no_output_write(old);fc_no_output_write(target)
+    sha=digest(old);old.rename(target);preserved.append({'file':str(target),'sha256':sha})
+   plan.setdefault('preserved_partial_or_reaudited_outputs',[]).extend(preserved);save()
+  args=[str(lean),'-j'+str(worker_threads),'-DmaxHeartbeats=0','-DmaxRecDepth=100000']
+@@ -349,7 +391,7 @@
+  plan['current_module']=n;save();start=time.monotonic()
+  if third_worker_tree_guarded:
+   logkey=hashlib.sha256(n.encode('utf8')).hexdigest()[:16]
+-  prefix=BASE/'guarded-source-logs'/(project+'-m2-granular-'+logkey+'-attempt-'+str(len(plan.get('prior_attempt_receipts',[]))))
++  prefix=BASE/'guarded-source-logs'/('official-fc-util433-exact157-linked-granular-'+logkey+'-attempt-'+str(len(plan.get('prior_attempt_receipts',[]))))
+   while True:
+    guard=guarded_tree(args,dest,env,prefix,timeout=3600)
+    if guard['attempted']:break
+@@ -357,7 +399,7 @@
+     plan['status']='ENVIRONMENT_BLOCKED_OPERATIONAL_GUARD';plan['unattempted_guard_failure']=guard
+     plan['finished_utc']=time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime());save();raise SystemExit(0)
+    plan['status']='WAITING_THIRD_WORKER_DISPATCH_GATES';plan.pop('current_module',None);plan['waiting_for_module']=n;save()
+-   if (BASE/'hold-third-worker-dispatch').exists():
++   if (BASE/'hold-compatible-fc157-dispatch').exists():
+     plan['status']='SCHEDULED_RESOURCE_CHECKPOINT';plan['checkpoint_reason']='THIRD_WORKER_LEASE_HANDOFF_WITHOUT_COMPILER'
+     plan['finished_utc']=time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime());save();raise SystemExit(0)
+    time.sleep(2)
+@@ -396,6 +438,9 @@
+   row={'module':n,'command':args,'seconds':round(time.monotonic()-start,2),'exit':p.returncode,'stdout':stdout,'stderr':stderr,
+        'is_endpoint_audit':audit,'minimum_free_bytes':minimum_free,'stop_reason':stop_reason,'owned_process_stop_output':stop_output}
+  row['source_sha256']=digest(file)
++ row['effective_lean_options']=dict(plan.get('lean_options',{}))
++ row['printing_exception_dependency_ancestry']=fc_policy['printing_exception_ancestry_by_target_source'].get(n,[])
++ assert n in fc_new_names and not audit, 'No reused, whole or audit compiler row is authorized'
+  if memory_observations is not None:row['third_worker_memory_observations']=memory_observations
+  if row['exit']==0:row['artifacts']=artifact_inventory(file);row['artifact_hash_provenance']='MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION'
+  plan['builds'].append(row);save();print(project,n,row['exit'],row['seconds'],flush=True)
+@@ -434,4 +479,6 @@
+  elif plan.get('selected_unrecognized_axioms'):plan['status']='SELECTED_ENDPOINT_USES_UNRECOGNIZED_AXIOMS'
+  elif plan.get('selected_native_evaluation'):plan['status']='PASS_WITH_NATIVE_EVALUATION'
+  else:plan['status']='PASS_SELECTED_ENDPOINTS_WITH_UNFINISHED_BASELINES' if plan.get('unfinished_baseline_axioms') else 'PASS'
++plan['previous_own_output_seed_final_recheck']=fc_verify_seed(FC_POLICY_SHA,fc_seed_sha,allow_own_target_runner=True)
++assert not set(row['module'] for row in plan['builds']) & fc_reuse_names
+ plan['finished_utc']=time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime());plan.pop('current_module',None);save();print('PROJECT_STATUS',project,plan['status'],flush=True)

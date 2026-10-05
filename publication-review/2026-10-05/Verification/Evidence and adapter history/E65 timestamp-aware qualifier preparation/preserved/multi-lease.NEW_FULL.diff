@@ -1,0 +1,647 @@
+--- /dev/null
++++ C:\Users\Propietario\Documents\Codex\2026-10-01\loo\work\publication\verification\qualify_original_e65_multilease_composite_199plusStd.py
+@@ -0,0 +1,644 @@
++"""Prepared read-only evidence qualifier; DO NOT RUN before root completion review.
++
++This multi-lease revision starts no Lean, Lake, compiler, process guard or artifact-copy operation. It
++may write one NEW final JSON only after exact actual 199-source/42-print evidence
++and the separately root-accepted unchanged Std 1-source/14-print witness pass all
++checks. It never relabels the original adapter's intentionally partial receipt.
++The source-image FC Git revision and original-container execution remain unknown.
++"""
++from pathlib import Path
++from collections import Counter
++from contextlib import ExitStack
++import argparse, configparser, hashlib, json, msvcrt, re
++from datetime import datetime, timezone
++
++BASE = Path(__file__).resolve().parent
++PROJECT = 'sundai-erdos3-original-image-source'
++DEST = BASE / 'builds' / PROJECT
++PLAN_SHA = '0d140b36c59231a9eaf79a2f6277355d0b4cc08b815e5d817df54c370dcfbf15'
++PREP_SHA = '96f74d38af628c8763632c3a0869d7fa2404796ecf66de70fd13d6b0652e1e06'
++INVENTORY_SHA = 'e2e8b65877d552686d2b8fadfe3a26e6f986ec3ce486256735391a9dd4365097'
++RUNNER_SHA = 'a2e5931c838e8b348de9fae4945b9f16ceb0883eaed51ca55f93e797deaa9e6d'
++RESOURCE_SCOPE_SHA = '47ed60dae2f8c65df991072ece7152e80f5594f79f54fd51d5e88d5e31b738ab'
++WHOLE_PREP_SHA = 'c6f5f69176821b2ee4fa4cf50dba3d6f02df66c54beaf9b756a7a8dd2c827a3d'
++STD_ACCEPT_SHA = '5fcee11b0573d3187ef9fb37de9de8663a4ae2f2a94e76b3ac6bd0e5e48dc9eb'
++STD_COMPARISON_SHA = 'a93aff15b4f6e153cb642dc902f2532e85c41bc8d91a7fd5cb6ea3c3689abbe5'
++STD_QUAL_SHA = '560d146f065fb0cd14796372141566632e64189641298f65c1ae97e6483e0f63'
++STD_RAW_SHA = '63819233046bb28da0618a8313192bf2d9963b46800a2f612eaff0ae72e288eb'
++STD_PROVIDER_SHA = '67246db9be016335367b4b652b6762962494c7596efc556c55f3e5d47e0d37c1'
++GRANULAR_PROVIDER_SHA = '70891fd7cccd675e798a251777feb1c31382db08c83d2575106d5e920cecbdd3'
++PARSER_SHA = '1ee59639204140430c088023539a648f9007cc26c1856cf8cd2e3c2e59d7143f'
++IMPORT_HELPER_SHA = '4e0387c48c2a857fd1e69c872cbbd9c66b9741cfb661ef8a3e670bc7cd0ab8aa'
++COMPILER_SHA = 'af49bacfabaa1fea71332ca0feae0fa1a60912219d5902291adc79f905bffb8d'
++COUNTER_SHA = '0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4'
++COMMIT_COUNTER_SHA = '1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed'
++CACHE_SHA = '2970055d4efb8204f90f48e2358b5e8ed8469e0f7ba7019b2723436924f923f4'
++STD_NAME = 'Erdos3SpecialCases'
++STD_AUDIT = 'FreshAuditErdos3SpecialCases.lean'
++ARTIFACT_SUFFIXES = ('.olean', '.olean.private', '.olean.server', '.ilean', '.ir')
++GIB = 2**30
++ROOT_REVIEW_STATUS = 'ROOT_APPROVED_ACTUAL_ORIGINAL_E65_199_42_AND_ACCEPTED_STD_COMPOSITE_QUALIFICATION'
++OUTPUT = BASE / 'original-E65-composite199-42-plus-acceptedStd1-14-final-qualification-20261005.json'
++
++
++def require(condition, message):
++    if not condition:
++        raise RuntimeError(message)
++
++
++def sha_bytes(data):
++    return hashlib.sha256(data).hexdigest()
++
++
++def sha_file(file):
++    result = hashlib.sha256()
++    with Path(file).open('rb') as stream:
++        for chunk in iter(lambda: stream.read(4*1024*1024), b''):
++            result.update(chunk)
++    return result.hexdigest()
++
++
++def exact_json(file, expected_sha):
++    file = Path(file)
++    raw = file.read_bytes()
++    require(sha_bytes(raw) == expected_sha, 'Exact JSON changed: ' + str(file))
++    return json.loads(raw), raw
++
++
++def canon(name):
++    return name.replace('«', '').replace('»', '')
++
++
++def identity(file, single_link=False):
++    file = Path(file)
++    before = file.stat()
++    require(file.is_file() and not file.is_symlink(), 'Regular resolved file required: ' + str(file))
++    if single_link:
++        require(before.st_nlink == 1, 'Own/witness output has an unexpected alias: ' + str(file))
++    digest = sha_file(file)
++    after = file.stat()
++    signature = lambda s: (s.st_dev, s.st_ino, s.st_size, s.st_mtime_ns, s.st_nlink)
++    require(signature(before) == signature(after), 'File changed while hashing: ' + str(file))
++    return {'file': str(file), 'sha256': digest, 'bytes': after.st_size,
++            'volume_id': after.st_dev, 'file_id': after.st_ino,
++            'link_count': after.st_nlink, 'mtime_ns': after.st_mtime_ns}
++
++
++def lock_existing(stack, file):
++    # Only a pre-existing lock byte is leased. No file or byte is created/edited.
++    file = Path(file)
++    require(file.is_file() and file.stat().st_size >= 1, 'Existing replay lock required: ' + str(file))
++    handle = stack.enter_context(file.open('r+b'))
++    handle.seek(0)
++    msvcrt.locking(handle.fileno(), msvcrt.LK_NBLCK, 1)
++
++
++def read_git_identity(directory):
++    # Read-only metadata; no Git subprocess, checkout or index refresh.
++    directory = Path(directory)
++    git = directory / '.git'
++    require(git.is_dir(), 'Expected exact task-created package Git directory: ' + str(directory))
++    head = (git / 'HEAD').read_text(encoding='utf8').strip()
++    if head.startswith('ref: '):
++        ref = head[5:]
++        loose = git / ref
++        if loose.is_file():
++            head = loose.read_text(encoding='utf8').strip()
++        else:
++            matches = []
++            packed = git / 'packed-refs'
++            if packed.exists():
++                for line in packed.read_text(encoding='utf8').splitlines():
++                    if not line.startswith(('#', '^')) and line.endswith(' ' + ref):
++                        matches.append(line.split()[0])
++            require(len(matches) == 1, 'Unresolved exact package HEAD: ' + str(directory))
++            head = matches[0]
++    cfg = configparser.ConfigParser()
++    cfg.read(git / 'config', encoding='utf8')
++    return head, cfg.get('remote "origin"', 'url')
++
++
++def validate_official_manifest(file, digest, expected_count):
++    rows, unused_raw = exact_json(file, digest)
++    require(isinstance(rows, list) and len(rows) == expected_count, 'Official manifest count changed')
++    require(len({r['module'] for r in rows}) == len(rows), 'Official module identities duplicated')
++    modules = {r['module'] for r in rows}
++    seen_files = {}
++    source_count = artifact_count = 0
++    for row in rows:
++        source = Path(row['source_file'])
++        require(source.resolve().is_relative_to(BASE.resolve()), 'Official source outside this verification workspace')
++        require(source.stat().st_size == row['source_bytes'] and sha_file(source) == row['source_sha256'],
++                'Official source identity changed: ' + row['module'])
++        source_count += 1
++        require(set(row['effective_import_dependencies']) <= modules,
++                'Recorded official provider graph not closed: ' + row['module'])
++        for artifact in row['official_artifacts']:
++            file_path = Path(artifact['file'])
++            require(file_path.resolve().is_relative_to(BASE.resolve()), 'Official artifact outside workspace')
++            key = str(file_path.resolve())
++            if key not in seen_files:
++                require(file_path.stat().st_size == artifact['bytes'] and sha_file(file_path) == artifact['sha256'],
++                        'Official artifact identity changed: ' + str(file_path))
++                seen_files[key] = (artifact['sha256'], artifact['bytes'])
++                artifact_count += 1
++            require(seen_files[key] == (artifact['sha256'], artifact['bytes']), 'Conflicting provider artifact identity')
++    return {'manifest_file': str(file), 'manifest_sha256': digest,
++            'official_sources_rehashed': source_count, 'unique_official_artifacts_rehashed': artifact_count,
++            'closure_unit': 'Exact recorded source/artifact provider closure; not a new complete Mathlib umbrella scan'}
++
++
++def expected_command(compiler, directory, source, options):
++    relative = Path(source).relative_to(directory)
++    return ([str(compiler), '-j1', '-DmaxHeartbeats=0', '-DmaxRecDepth=100000']
++            + ['-D' + key + '=' + str(value).lower() for key, value in options.items()]
++            + ['-o', str(relative.with_suffix('.olean')), str(relative)])
++
++
++def validate_guard(row, command, directory, whole=False):
++    require(row['exit'] == 0 and not row.get('stop_reason'), 'Actual successful invocation required: ' + row['module'])
++    require(row.get('started_utc') and row.get('finished_utc'), 'Actual invocation timestamps missing')
++    require(row['command'] == command, 'Command/options/source mismatch: ' + row['module'])
++    guard = row['own_job_resource_receipt']
++    require(guard['attempted'] is True and guard['state'] == 'PASS' and guard['exit'] == 0,
++            'Own job did not actually complete PASS: ' + row['module'])
++    require(guard['command'] == command and Path(guard['cwd']).resolve() == directory.resolve(), 'Guard command/cwd mismatch')
++    require(guard['own_job_assignment_before_resume'] == 'PASS', 'Own Windows job was not assigned before resume')
++    require(guard['counter_helper_sha256'] == COUNTER_SHA and guard['commit_counter_helper_sha256'] == COMMIT_COUNTER_SHA,
++            'Observed resource counter implementation differs')
++    policy = {'initial_disk_bytes': 4_000_000_000, 'initial_physical_bytes': 6*GIB,
++              'initial_available_commit_bytes': (11 if whole else 5)*GIB,
++              'continuous_disk_bytes': 1_000_000_000, 'continuous_physical_bytes': 3*GIB,
++              'continuous_available_commit_bytes': GIB,
++              'own_job_private_bytes': (10 if whole else 6)*GIB,
++              'own_process_private_bytes': (10 if whole else 6)*GIB,
++              'poll_seconds': 0.25, 'timeout_seconds': 3600}
++    require(guard['resource_policy'] == policy, 'Resource policy changed: ' + row['module'])
++    initial = guard['initial_system_memory_snapshot']
++    require(initial['free_physical_bytes'] >= policy['initial_physical_bytes'] and
++            initial['available_commit_bytes'] >= policy['initial_available_commit_bytes'], 'Initial RAM/commit dispatch gate missed')
++    require(guard['minimum_disk_free_bytes'] >= policy['continuous_disk_bytes'] and
++            guard['minimum_physical_available_bytes'] >= policy['continuous_physical_bytes'] and
++            guard['minimum_available_commit_bytes'] >= policy['continuous_available_commit_bytes'], 'A continuous reserve was crossed')
++    require(0 < guard['job_peak_aggregate_private_bytes'] <= policy['own_job_private_bytes'] and
++            0 < guard['job_peak_process_private_bytes'] <= policy['own_process_private_bytes'], 'Owned allocation cap missed')
++    require(guard['counter_samples'] > 0 and guard['seconds'] <= policy['timeout_seconds'] + 5, 'Actual sampled bounded execution required')
++    require(guard['started_utc'] == row['started_utc'] and guard['finished_utc'] == row['finished_utc'], 'Resource/row timestamp mismatch')
++    for label in ('stdout', 'stderr'):
++        log = Path(guard[label + '_file'])
++        require(log.resolve().is_relative_to((BASE / 'guarded-source-logs').resolve()), 'Unexpected raw log location')
++        raw = log.read_bytes()
++        require(sha_bytes(raw) == guard[label + '_sha256'], 'Raw log hash mismatch')
++        require(raw.decode('utf8', errors='replace') == row[label], 'Raw log/receipt text mismatch')
++    require(row.get('minimum_free_bytes') == guard['minimum_disk_free_bytes'], 'Disk row/guard mismatch')
++    observations = row['third_worker_memory_observations']
++    require(observations == {'minimum_free_physical_bytes': guard['minimum_physical_available_bytes'],
++                             'minimum_available_commit_bytes': guard['minimum_available_commit_bytes'],
++                             'peak_owned_private_bytes': guard['job_peak_aggregate_private_bytes']}, 'Memory row/guard mismatch')
++    return {'module': row['module'], 'guard_state': guard['state'], 'whole_10_11_policy': whole,
++            'actual_exit': 0, 'seconds': guard['seconds'],
++            'minimum_disk_free_bytes': guard['minimum_disk_free_bytes'],
++            'minimum_physical_available_bytes': guard['minimum_physical_available_bytes'],
++            'minimum_available_commit_bytes': guard['minimum_available_commit_bytes'],
++            'job_peak_aggregate_private_bytes': guard['job_peak_aggregate_private_bytes'],
++            'raw_stdout_sha256': guard['stdout_sha256'], 'raw_stderr_sha256': guard['stderr_sha256']}
++
++
++def validate_own_artifacts(row, source, directory, historical_subset=False):
++    source = Path(source)
++    require(source.resolve().is_relative_to(directory.resolve()), 'Own source outside exact build directory')
++    expected = [source.with_suffix(suffix) for suffix in ARTIFACT_SUFFIXES]
++    present = [p for p in expected if p.exists()]
++    require(source.with_suffix('.olean') in present, 'Required own primary artifact missing')
++    recorded = row['artifacts']
++    require(recorded and len({r['file'] for r in recorded}) == len(recorded), 'Output artifact inventory duplicated or empty')
++    recorded_by_path = {str(Path(r['file']).resolve()): r for r in recorded}
++    if not historical_subset:
++        require(set(recorded_by_path) == {str(p.resolve()) for p in present}, 'Fresh output inventory no longer covers all present types')
++    else:
++        require(str(source.with_suffix('.olean').resolve()) in recorded_by_path, 'Historical witness primary output not bound')
++        require(set(recorded_by_path) <= {str(p.resolve()) for p in present}, 'Historical witness recorded output missing')
++    current = []
++    for file in present:
++        observed = identity(file, single_link=True)
++        recorded_artifact = recorded_by_path.get(str(file.resolve()))
++        if recorded_artifact:
++            require(observed['sha256'] == recorded_artifact['sha256'] and observed['bytes'] == recorded_artifact['bytes'],
++                    'Actual own output changed: ' + str(file))
++        observed['historical_SHA_recorded'] = recorded_artifact is not None
++        current.append(observed)
++    return current
++
++
++def validate_requested_outputs(row, requested, parse_axioms):
++    actual = parse_axioms(row['stdout'])
++    names = [canon(r['endpoint']) for r in actual]
++    expected = [canon(name) for name in requested]
++    require(len(names) == len(expected) and len(set(names)) == len(names) and set(names) == set(expected),
++            'Exact selected output set/count mismatch: ' + row['module'])
++    require(all(r['classification'] in ('STANDARD_KERNEL_AXIOMS', 'AXIOM_FREE') and
++                not r['native_axioms'] and not r['unrecognized_axioms'] and 'sorryAx' not in r['axioms'] for r in actual),
++            'Selected endpoint has native, admitted or unrecognized trust')
++    coverage = row['selected_endpoint_print_coverage']
++    require(coverage['status'] == 'PASS' and not coverage['missing_endpoints'] and
++            coverage['requested_endpoints'] == requested and set(coverage['parsed_endpoints']) == set(expected), 'Recorded print coverage mismatch')
++    return actual
++
++
++
++def iso_utc(value):
++    stamp = datetime.fromisoformat(value.replace('Z', '+00:00'))
++    require(stamp.tzinfo is not None, 'Actual UTC-aware timestamp required')
++    return stamp.astimezone(timezone.utc)
++
++
++def validate_dispatch_chain(actual, actual_sha, review, report_file, previous_attempts,
++                            sources, granular, whole, own_audits):
++    first_checkpoint_sha = '2c8c10816da83a7e50ddf69b3d55fdbaf39bd3a5862d4ba2efc54da77d521b6c'
++    first_lease_sha = '473930ee70fe1ca41bc93f244d4d2cc3e44433b899fbbcd20d0a3b6db09d6cb9'
++    first_approval_sha = 'dcc4498db4d9ab834de346ccb2b5e23d61aa4e8c34ad805cc78398ac63986322'
++    first_root183_sha = 'f778804b0fc1e1c547d5aa69c9e26d04d190235ced844b50eac6a481ff66a4da'
++    segments = review.get('sole_dispatch_segments')
++    if segments is None:
++        # Preserve the original one-lease input schema without granting an
++        # unreviewed restart. A noninitial final lease always needs the chain.
++        require(review['sole_lease_sha256'] == first_lease_sha, 'Restart requires an explicit reviewed dispatch chain')
++        segments = [{
++            'lease_file': review['preserved_actual_dispatch_sole_lease_file'],
++            'lease_sha256': first_lease_sha,
++            'dispatch_approval_file': str(BASE / 'root-original-E65-solewhole16-sixAudit42-actual-dispatch-approval-20261005.json'),
++            'dispatch_approval_sha256': first_approval_sha,
++            'completed_start_checkpoint_file': str(BASE / 'original-E65-actual183-granular-immutable-checkpoint-20261005.json'),
++            'completed_start_checkpoint_sha256': first_checkpoint_sha,
++            'completed_end_checkpoint_file': str(report_file),
++            'completed_end_checkpoint_sha256': actual_sha,
++        }]
++    require(isinstance(segments, list) and segments, 'An actual nonempty reviewed dispatch chain is required')
++    require(len({r['lease_sha256'] for r in segments}) == len(segments), 'Dispatch leases must be unique')
++    preserved_hashes = {row['sha256'] for row in previous_attempts} | {actual_sha}
++    initial, unused = exact_json(BASE / 'original-E65-actual183-granular-immutable-checkpoint-20261005.json', first_checkpoint_sha)
++    initial_rows = {row['module']: row for row in initial['builds']}
++    require(set(initial_rows) == granular and all(row['exit'] == 0 and not row.get('stop_reason') and not row.get('is_endpoint_audit') for row in initial_rows.values()),
++            'Initial checkpoint must contain exactly the actual183 successful own granular rows')
++    original183_review, unused = exact_json(BASE / 'root-original-E65-actual183-granular-boundary-review-20261005.json', first_root183_sha)
++    require(original183_review['actual_receipt_sha256'] == first_checkpoint_sha and
++            original183_review['all183_raw_CLI_guard_options_logs_source_output_hashes_verified'] is True,
++            'The initial actual183 root review is not preserved')
++    prior_end_sha = first_checkpoint_sha
++    covered_new_rows = {}
++    summaries = []
++    for index, segment in enumerate(segments):
++        paths = {}
++        records = {}
++        for kind in ('lease', 'dispatch_approval', 'completed_start_checkpoint', 'completed_end_checkpoint'):
++            paths[kind] = Path(segment[kind + '_file']).resolve()
++            require(paths[kind].is_relative_to(BASE.resolve()), 'Dispatch history must be task-owned metadata')
++            records[kind], unused = exact_json(paths[kind], segment[kind + '_sha256'])
++        lease = records['lease']
++        approval = records['dispatch_approval']
++        start = records['completed_start_checkpoint']
++        end = records['completed_end_checkpoint']
++        require(segment['completed_start_checkpoint_sha256'] == prior_end_sha,
++                'Every sole restart must bind the immediately preceding completed partial checkpoint')
++        require(segment['completed_start_checkpoint_sha256'] in preserved_hashes and
++                segment['completed_end_checkpoint_sha256'] in preserved_hashes,
++                'A dispatch checkpoint is not preserved among the exact actual attempt receipts')
++        if index == 0:
++            require(segment['lease_sha256'] == first_lease_sha and segment['dispatch_approval_sha256'] == first_approval_sha,
++                    'The original reviewed473930/dcc449 dispatch must begin the chain')
++            require(approval['status'] == 'ROOT_APPROVED_ACTUAL_E65_SOLE_WHOLE16_SIX_AUDITS42_DISPATCH' and
++                    approval['actual183_receipt_sha256'] == first_checkpoint_sha and
++                    approval['root183_qualification_sha256'] == first_root183_sha, 'First dispatch approval differs')
++        else:
++            require(approval['status'] == 'ROOT_APPROVED_ACTUAL_E65_SOLE_WHOLE_RESTART_FROM_COMPLETED_PARTIAL_CHECKPOINT',
++                    'An exact later root restart approval is required')
++            require(approval['completed_partial_checkpoint_sha256'] == segment['completed_start_checkpoint_sha256'] and
++                    approval['starting_checkpoint_all_owned_processes_finished'] is True and
++                    approval['starting_checkpoint_no_owned_Lean_children'] is True,
++                    'Later approval must qualify the actual completed, quiescent starting checkpoint')
++        require(approval['source_plan_sha256'] == PLAN_SHA and approval['reviewed_runner_sha256'] == RUNNER_SHA,
++                'Dispatch approval source/runner identity differs')
++        require(approval['actual_sole_dispatch_lease_sha256'] == segment['lease_sha256'] and
++                Path(approval['preserved_actual_sole_dispatch_lease_file']).resolve() == paths['lease'],
++                'Dispatch approval does not bind the exact preserved lease')
++        require(approval['global_Lean_processes_at_dispatch'] == {} and approval['maximum_global_Lean_jobs'] == 1,
++                'Actual sole-dispatch approval must record no concurrent source compiler')
++        require(approval['guard_private_limit_bytes'] == 10*GIB and approval['initial_commit_gate_bytes'] == 11*GIB,
++                'Sole10/11 policy cannot change across restarts')
++        dispatch_resources = approval['actual_fresh_resources']
++        require(approval['free_disk_bytes'] >= 4_000_000_000 and dispatch_resources['free_physical_bytes'] >= 6*GIB and
++                dispatch_resources['available_commit_bytes'] >= 11*GIB, 'Actual reviewed sole dispatch gate did not qualify')
++        require(lease['holder_project'] == PROJECT and lease['source_plan_sha256'] == PLAN_SHA and
++                lease['reviewed_runner_sha256'] == RUNNER_SHA and
++                lease['whole_library_solo_authorized'] is True and
++                lease['other_source_compilers_confirmed_held_or_finished'] is True and
++                lease['granular_completed_receipt_sha256'] == segment['completed_start_checkpoint_sha256'] and
++                set(lease['allowed_source_names']) == whole and set(lease['allowed_audit_names']) == own_audits,
++                'Exact per-dispatch source/audit/checkpoint sole lease invalid')
++        for name, checkpoint in (('start', start), ('end', end)):
++            require(checkpoint['source_plan_sha256'] == PLAN_SHA and checkpoint['modules'] == actual['modules'] and
++                    checkpoint['audit_modules'] == actual['audit_modules'] and checkpoint['endpoints'] == actual['endpoints'],
++                    'Checkpoint frozen scientific/audit scope changed')
++            require(checkpoint['status'] == 'SCHEDULED_RESOURCE_CHECKPOINT' and checkpoint.get('finished_utc') and
++                    not checkpoint.get('current_module') and not checkpoint.get('failed_invocations'),
++                    'A completed successful partial boundary is required; no live/source-failure checkpoint may be relabeled')
++            # An intermediate natural while-waiting boundary can retain its
++            # dated waiting_for_module label. The next approval separately
++            # confirms actual dispatcher exit and no owned child; final cannot.
++            if name == 'end' and index == len(segments) - 1:
++                require(not checkpoint.get('waiting_for_module'), 'Final completed scope must not retain a waiting label')
++            rows = {row['module']: row for row in checkpoint['builds']}
++            require(len(rows) == len(checkpoint['builds']) and granular <= set(rows) <= granular | whole | own_audits,
++                    'Checkpoint rows duplicated or outside exact199/six scope')
++            require(all(rows[module] == initial_rows[module] for module in granular),
++                    'Any original183 successful source row changed across a restart')
++            require(all(row['exit'] == 0 and not row.get('stop_reason') for row in rows.values()),
++                    'Unsuccessful checkpoint rows cannot be composed as successful evidence')
++        start_rows = {row['module']: row for row in start['builds']}
++        end_rows = {row['module']: row for row in end['builds']}
++        require(set(start_rows) <= set(end_rows) and all(end_rows[name] == row for name, row in start_rows.items()),
++                'Previously successful whole/audit row/options/artifacts changed or disappeared')
++        end_settings = end['resource_settings']['full_mathlib_source_mode']
++        require(end_settings['lease_sha256'] == segment['lease_sha256'] and end_settings['coordinated_lease'] == lease and
++                end['resource_settings']['runner_source_sha256'] == RUNNER_SHA,
++                'Completed dispatch receipt does not preserve the corresponding actual lease/adapter')
++        approval_time = iso_utc(approval['checked_utc'])
++        lease_time = iso_utc(lease['checked_utc'])
++        start_time = iso_utc(start['finished_utc'])
++        end_time = iso_utc(end['finished_utc'])
++        require(start_time <= approval_time and start_time <= lease_time and approval_time <= end_time and lease_time <= end_time,
++                'Approval/lease timestamps do not follow a completed checkpoint')
++        new_names = set(end_rows) - set(start_rows)
++        require(new_names <= whole | own_audits, 'Restart manufactured new granular or external Std rows')
++        for name in new_names:
++            row = end_rows[name]
++            require(name not in covered_new_rows and approval_time <= iso_utc(row['started_utc']) and
++                    lease_time <= iso_utc(row['started_utc']) <= iso_utc(row['finished_utc']) <= end_time,
++                    'A whole/audit invocation is duplicated or falls outside its approved sole lease interval')
++            expected_cap = row['own_job_resource_receipt']['resource_policy']
++            require(expected_cap['own_job_private_bytes'] == 10*GIB and expected_cap['initial_available_commit_bytes'] == 11*GIB,
++                    'Corresponding actual invocation did not use the sole10/11 guard')
++            require(row == next(current for current in actual['builds'] if current['module'] == name),
++                    'An actual whole/audit row changed after its completed lease interval')
++            covered_new_rows[name] = segment['lease_sha256']
++        summaries.append({
++            'dispatch_number': index + 1, 'lease_file': str(paths['lease']), 'lease_sha256': segment['lease_sha256'],
++            'dispatch_approval_file': str(paths['dispatch_approval']), 'dispatch_approval_sha256': segment['dispatch_approval_sha256'],
++            'completed_start_checkpoint_sha256': segment['completed_start_checkpoint_sha256'],
++            'completed_end_checkpoint_sha256': segment['completed_end_checkpoint_sha256'],
++            'retained_source_and_audit_rows': len(start_rows), 'new_whole_source_rows': sorted(new_names & whole),
++            'new_audit_rows': sorted(new_names & own_audits), 'approved_dispatch_utc': approval['checked_utc'],
++            'completed_interval_finished_utc': end['finished_utc'],
++            'original183_and_all_previous_successful_rows_unchanged': True,
++        })
++        prior_end_sha = segment['completed_end_checkpoint_sha256']
++    require(prior_end_sha == actual_sha and set(covered_new_rows) == whole | own_audits,
++            'The chain does not cover all16 actual whole sources and allsix actual audits exactly once')
++    last = segments[-1]
++    require(actual['resource_settings']['full_mathlib_source_mode']['lease_sha256'] == last['lease_sha256'] and
++            review['sole_lease_sha256'] == last['lease_sha256'], 'Final completion review/receipt does not bind the last actual lease')
++    return summaries
++
++
++def main():
++    parser = argparse.ArgumentParser(description=__doc__)
++    parser.add_argument('--root-completion-review', required=True)
++    parser.add_argument('--root-completion-review-sha256', required=True)
++    parser.add_argument('--actual-source-receipt-sha256', required=True)
++    arguments = parser.parse_args()
++    for digest in (arguments.root_completion_review_sha256, arguments.actual_source_receipt_sha256):
++        require(re.fullmatch('[0-9a-f]{64}', digest) is not None, 'An actual exact SHA-256 argument is required')
++    require(not OUTPUT.exists(), 'Final qualification exists; never overwrite it')
++    helper_sha = sha_file(__file__)
++    review_file = Path(arguments.root_completion_review).resolve()
++    require(review_file.is_relative_to(BASE.resolve()), 'Root review must be saved in this task verification workspace')
++    review, review_raw = exact_json(review_file, arguments.root_completion_review_sha256)
++    require(review['status'] == ROOT_REVIEW_STATUS and review['qualification_authorized'] is True, 'Later explicit root completion review missing')
++    required_review = {'project': PROJECT, 'source_plan_sha256': PLAN_SHA, 'runner_sha256': RUNNER_SHA,
++                       'qualification_helper_sha256': helper_sha,
++                       'actual_source_receipt_sha256': arguments.actual_source_receipt_sha256,
++                       'completed_own_source_count': 199, 'completed_granular_source_count': 183,
++                       'completed_sole_whole_source_count': 16, 'completed_sole_audit_count': 6,
++                       'selected_own_print_count': 42, 'accepted_Std_source_count': 1, 'accepted_Std_print_count': 14,
++                       'Std_acceptance_sha256': STD_ACCEPT_SHA,
++                       'all_owned_E65_source_processes_finished': True,
++                       'actual_sole_whole_completion_reviewed': True,
++                       'other_compilers_at_whole_dispatch_confirmed_held': True,
++                       'Std_outputs_copied_linked_or_aliased': False}
++    for key, value in required_review.items():
++        require(review.get(key) == value, 'Root completion review field missing/mismatched: ' + key)
++    with ExitStack() as stack:
++        lock_existing(stack, DEST / '.fresh-replay.lock')
++        lock_existing(stack, BASE / '.exclusive-full-mathlib-source.lock')
++        plan, plan_raw = exact_json(DEST / 'build-plan.json', PLAN_SHA)
++        prep, unused = exact_json(BASE / 'original-E65-source-replay-preparation-20261005.json', PREP_SHA)
++        inventory, unused = exact_json(BASE / 'original-E65-FC193-replay-inventory-20261005.json', INVENTORY_SHA)
++        scope, unused = exact_json(BASE / 'original-E65-tactic-aware-resource-scope-20261005.json', RESOURCE_SCOPE_SHA)
++        whole_prep, unused = exact_json(BASE / 'original-E65-exact16-sixAudit42-sole-continuation-concrete-preparation-20261005.json', WHOLE_PREP_SHA)
++        require(sha_file(BASE / 'run_original_e65_tactic_aware_source_plan.py') == RUNNER_SHA, 'Reviewed exact adapter changed')
++        require(sha_file(BASE / 'audit_axioms.py') == PARSER_SHA and sha_file(BASE / 'lean_imports.py') == IMPORT_HELPER_SHA, 'Reviewed independent parser/import reader changed')
++        for filename, digest in prep['helper_hashes'].items():
++            require(sha_file(BASE / filename) == digest, 'Prepared resource/helper changed: ' + filename)
++        from audit_axioms import parse as parse_axioms
++        from lean_imports import read_imports, stripped
++        compiler = BASE / 'runtimes' / 'lean-4.33.1-windows' / 'bin' / 'lean.exe'
++        require(sha_file(compiler) == COMPILER_SHA, 'Exact compiler binary changed')
++        cache, unused = exact_json(BASE / 'mathlib-4.33.1-cache-retry.json', CACHE_SHA)
++        require(cache['status'] == 'PASS', 'Official complete cache validation is not PASS')
++        require(plan['version'] == '4.33.1' and plan['mathlib_pin'] == '0df444a360eaa60ab8c11dca51a86af692955474', 'Compiler/package plan pin changed')
++        require(not plan['additional_dependency_libs'] and len(plan['modules']) == 200 and len(plan['audit_modules']) == 7, 'Original scope changed or compatible FC library introduced')
++        packages = []
++        for package in prep['exact_original_nine_packages']:
++            head, origin = read_git_identity(package['prepared_source_path'])
++            require(head == package['original_manifest_rev'] and origin == package['original_manifest_url'], 'Exact package HEAD/origin changed')
++            packages.append({'name': package['name'], 'actual_HEAD': head, 'actual_origin': origin})
++        require(len(packages) == 9, 'Exact original nine-package environment required')
++        sources = {row['module']: row for row in plan['modules']}
++        require(len(sources) == 200, 'Scientific source identities duplicated')
++        prepared_sources = {row['module']: row for row in prep['exact_source_rows']}
++        original_sources = {row['module']: row for row in inventory['original_dependency_sources'] + inventory['entrant_sources']}
++        require(set(sources) == set(prepared_sources) == set(original_sources), 'Recovered/entrant scope mismatch')
++        source_observations = []
++        for name, source in sources.items():
++            file = Path(source['file'])
++            require(file.resolve().is_relative_to(DEST.resolve()) and sha_file(file) == source['sha256'], 'Frozen scientific body/source changed: ' + name)
++            require(source['sha256'] == prepared_sources[name]['source_sha256'] == original_sources[name]['source_sha256'], 'Recovered exact-source identity mismatch')
++            require(source['lean_options'] == prepared_sources[name]['lean_options'], 'Exact per-source invocation options changed')
++            original_options = {'pp.unicode.fun': True, 'autoImplicit': False, 'relaxedAutoImplicit': False} if source['source_class'] == 'RECOVERED_ORIGINAL_FC_SOURCE' else {}
++            require(source['lean_options'] == original_options, 'Recovered FC/entrant option separation lost')
++            source_observations.append({'module': name, 'sha256': source['sha256'], 'bytes': file.stat().st_size,
++                                        'source_class': source['source_class'], 'exact_invocation_options': source['lean_options']})
++        granular = set(scope['truly_no_Mathlib_or_Tactic_custom_closed_subset'])
++        whole = set(scope['future_whole_resource_sources'])
++        require(len(granular) == 183 and len(whole) == 16 and not granular & whole and
++                granular | whole | {STD_NAME} == set(sources), '183/16/Std classification changed')
++        require(set(whole_prep['exact16_source_order']) == whole, 'Reviewed whole16 scope changed')
++        # Check the actual unchanged custom DAG; never admit the external Std artifact.
++        custom_dependencies = {name: [canon(dep) for dep in read_imports(row['file']) if canon(dep) in sources] for name, row in sources.items()}
++        closure_cache = {}
++        def closure(name, visiting=None):
++            visiting = set() if visiting is None else visiting
++            require(name not in visiting, 'Custom import cycle')
++            if name not in closure_cache:
++                closure_cache[name] = ({name} | set().union(*(closure(dep, visiting | {name}) for dep in custom_dependencies[name]))
++                                       if custom_dependencies[name] else {name})
++            return closure_cache[name]
++        for name in granular | whole:
++            require(STD_NAME not in closure(name), 'A 199-own-source closure unexpectedly requires external Std output')
++        official_checks = [validate_official_manifest(BASE / 'original-E65-granular189-official-source-artifact-manifest-20261005.json', GRANULAR_PROVIDER_SHA, 6223),
++                           validate_official_manifest(BASE / 'original-E65-Std-witness-core-provider-manifest-20261005.json', STD_PROVIDER_SHA, 1114)]
++        report_file = BASE / (PROJECT + '-fresh-build.json')
++        actual, actual_raw = exact_json(report_file, arguments.actual_source_receipt_sha256)
++        require(actual['source_plan_sha256'] == PLAN_SHA and actual['preparation_sha256'] == PREP_SHA and
++                actual['Tactic_aware_resource_scope_sha256'] == RESOURCE_SCOPE_SHA, 'Actual replay plan/preparation classification changed')
++        require(actual['modules'] == plan['modules'] and actual['audit_modules'] == plan['audit_modules'] and actual['endpoints'] == plan['endpoints'], 'Actual scope differs from frozen plan')
++        require(actual['status'] == 'SCHEDULED_RESOURCE_CHECKPOINT' and actual.get('finished_utc') and
++                actual.get('checkpoint_reason') == 'EXACT_RECOVERED_SCOPE_PARTIAL_WITH_WHOLE_LEASE_OR_EXTERNAL_STD_WITNESS_STILL_PENDING', 'Actual intentionally partial source adapter has not completed its withheld-Std boundary')
++        require(actual['Std_external_witness_candidate_accepted'] is False and actual['original_container_executed'] is False, 'Raw external/container provenance changed')
++        require(not actual.get('failed_invocations') and not actual.get('current_module') and not actual.get('waiting_for_module'), 'Actual source/audit failure or dispatcher still active')
++        settings = actual['resource_settings']
++        require(settings['runner_source_sha256'] == RUNNER_SHA and settings['axiom_parser_source_sha256'] == PARSER_SHA and
++                settings['LEAN_NUM_THREADS'] == 1 and settings['maxHeartbeats'] == 0 and settings['maxRecDepth'] == 100000, 'Actual runner semantics differ')
++        whole_settings = settings['full_mathlib_source_mode']
++        lease = whole_settings['coordinated_lease']
++        previous_attempts = []
++        for attempt in actual.get('prior_attempt_receipts', []):
++            old, unused = exact_json(attempt['file'], attempt['sha256'])
++            require(old['source_plan_sha256'] == PLAN_SHA and old['status'] == attempt['status'], 'Historical resource attempt identity changed')
++            previous_attempts.append({'file': attempt['file'], 'sha256': attempt['sha256'], 'status': attempt['status']})
++        builds = actual['builds']
++        require(len({r['module'] for r in builds}) == len(builds), 'Final actual invocation rows duplicated')
++        by_name = {r['module']: r for r in builds}
++        audits = {a['audit']: a for a in prep['audits']}
++        own_audits = set(audits) - {STD_AUDIT}
++        require(len(own_audits) == 6 and set(by_name) == granular | whole | own_audits and len(builds) == 205,
++                'Expected only 199 actual own-source and six actual audit rows')
++        compilation_order = actual['compilation_order']
++        require(len(compilation_order) == 200 and len(set(compilation_order)) == 200 and
++                set(compilation_order) == set(sources), 'Actual source order must cover each frozen body exactly once')
++        position = {name: index for index, name in enumerate(compilation_order)}
++        for name, dependencies in custom_dependencies.items():
++            require(all(position[dependency] < position[name] for dependency in dependencies),
++                    'Actual source order does not respect its frozen custom import DAG')
++        require(set(lease['allowed_audit_names']) == own_audits, 'Actual sole audit lease changed')
++        dispatch_chain = validate_dispatch_chain(actual, arguments.actual_source_receipt_sha256, review, report_file,
++                                                 previous_attempts, sources, granular, whole, own_audits)
++        deferred = actual['deferred_whole_import_policy']['unattempted_whole_invocations']
++        require({r['module'] for r in deferred} == {STD_NAME, STD_AUDIT} and all(r['attempted'] is False for r in deferred), 'Raw Std withholding is no longer explicit')
++        own_checks = []
++        own_outputs = []
++        own_prints = []
++        for name in actual['compilation_order']:
++            if name == STD_NAME:
++                continue
++            row = by_name[name]
++            source = sources[name]
++            require(row['is_endpoint_audit'] is False and row['source_sha256'] == source['sha256'] and row['effective_lean_options'] == source['lean_options'], 'Own scientific row identity/options mismatch')
++            command = expected_command(compiler, DEST, source['file'], source['lean_options'])
++            own_checks.append(validate_guard(row, command, DEST, whole=name in whole))
++            own_outputs.extend(validate_own_artifacts(row, source['file'], DEST))
++        for name in plan['audit_modules']:
++            audit = audits[name]
++            require(sha_file(audit['file']) == audit['source_sha256'] and audit['lean_options'] == {}, 'Frozen audit source/options changed')
++            requested = [canon(x) for x in re.findall(r'^\s*#print\s+axioms\s+(\S+)', stripped(Path(audit['file']).read_text(encoding='utf8')), re.M)]
++            require(requested == audit['selected_names'] and len(requested) == audit['requested_count'], 'Frozen literal audit request names changed')
++            if name == STD_AUDIT:
++                continue
++            row = by_name[name]
++            require(row['is_endpoint_audit'] is True and row['source_sha256'] == audit['source_sha256'] and row['effective_lean_options'] == {}, 'Own audit identity/options mismatch')
++            own_checks.append(validate_guard(row, expected_command(compiler, DEST, audit['file'], {}), DEST, whole=True))
++            own_outputs.extend(validate_own_artifacts(row, audit['file'], DEST))
++            own_prints.extend(validate_requested_outputs(row, requested, parse_axioms))
++        require(len(own_prints) == 42 and len({r['endpoint'] for r in own_prints}) == 42, 'Actual own selected set is not 42 unique outputs')
++        require({r['endpoint']: r for r in own_prints} == {r['endpoint']: r for r in actual['selected_audit_axiom_review']}, 'Stored selected review differs from independently parsed actual42')
++        accept, unused = exact_json(BASE / 'original-E65-root-exact-Std1-14-external-evidence-acceptance-20261005.json', STD_ACCEPT_SHA)
++        comparison, unused = exact_json(BASE / 'original-E65-Std1-14-external-witness-comparison-20261005.json', STD_COMPARISON_SHA)
++        std_qualification, unused = exact_json(BASE / 'sundai-std-14-audit-qualified-20261005.json', STD_QUAL_SHA)
++        witness, unused = exact_json(accept['immutable_external_witness_receipt'], STD_RAW_SHA)
++        require(accept['status'] == 'ROOT_ACCEPTED_EXACT_STD_SOURCE_AND14_PRINT_EXTERNAL_EVIDENCE_COMPOSITION_ONLY' and
++                accept['exact_source_and_audit_bytes_equal'] is True and accept['effective_source_and_audit_options'] == {}, 'Accepted exact Std witness does not match')
++        require(accept['original_source_plan_sha256'] == PLAN_SHA and accept['external_witness_qualification_sha256'] == STD_QUAL_SHA,
++                'Accepted Std original-plan/qualification identity changed')
++        witness_rows = {r['module']: r for r in witness['builds']}
++        require(len(witness_rows) == 2 and set(witness_rows) == {STD_NAME, STD_AUDIT}, 'Std evidence must remain exactly one prior source plus one prior audit')
++        witness_dir = BASE / 'builds' / 'sundai-erdos3-current'
++        std_checks = []
++        std_outputs = []
++        for name in (STD_NAME, STD_AUDIT):
++            row = witness_rows[name]
++            require(row == comparison['actual_source_and_audit_rows']['source' if name == STD_NAME else 'audit'], 'Accepted Std raw row changed')
++            file = witness_dir / (name + '.lean' if name == STD_NAME else name)
++            original_file = Path(sources[STD_NAME]['file']) if name == STD_NAME else Path(audits[STD_AUDIT]['file'])
++            require(file.read_bytes() == original_file.read_bytes() and row['source_sha256'] == sha_file(file), 'External Std exact scientific/audit bytes changed')
++            require(not row.get('effective_lean_options', {}), 'External Std effective options differ')
++            std_checks.append(validate_guard(row, expected_command(compiler, witness_dir, file, {}), witness_dir))
++            std_outputs.extend(validate_own_artifacts(row, file, witness_dir, historical_subset=True))
++            require(not any(original_file.with_suffix(suffix).exists() for suffix in ARTIFACT_SUFFIXES), 'External Std output was unexpectedly materialized in the original route')
++        for artifact in comparison['current_witness_artifact_hashes']:
++            require(sha_file(artifact['file']) == artifact['sha256'] and Path(artifact['file']).stat().st_size == artifact['bytes'], 'Accepted witness primary output changed')
++        std_prints = validate_requested_outputs(witness_rows[STD_AUDIT], audits[STD_AUDIT]['selected_names'], parse_axioms)
++        require({r['endpoint']: r for r in std_prints} == {r['endpoint']: r for r in accept['actual14_classifications']} ==
++                {r['endpoint']: r for r in std_qualification['actual_prints']}, 'Prior accepted actual Std14 classification mismatch')
++        require(Counter(r['classification'] for r in std_prints) == {'STANDARD_KERNEL_AXIOMS': 9, 'AXIOM_FREE': 5}, 'Std14 actual standard/axiom-free classes changed')
++        require(set(r['endpoint'] for r in own_prints).isdisjoint(r['endpoint'] for r in std_prints), 'Composite endpoint identities overlap')
++        all_prints = own_prints + std_prints
++        require(set(r['endpoint'] for r in all_prints) == set(plan['endpoints']) and len(all_prints) == 56, 'Composite exact56 endpoint coverage mismatch')
++        result = {
++            'status': 'QUALIFIED_EXACT_RECOVERED_199_OWN_SOURCE42_ENDPOINTS_WITH_SEPARATE_ACCEPTED_STD1_14_EVIDENCE',
++            'qualified': True, 'checked_utc': datetime.now(timezone.utc).isoformat(),
++            'qualification_helper_file': str(Path(__file__).resolve()), 'qualification_helper_sha256': helper_sha,
++            'root_actual_completion_review_file': str(review_file), 'root_actual_completion_review_sha256': arguments.root_completion_review_sha256,
++            'project': PROJECT, 'source_plan_sha256': PLAN_SHA, 'source_preparation_sha256': PREP_SHA,
++            'runner_sha256': RUNNER_SHA, 'original_FC193_inventory_sha256': INVENTORY_SHA,
++            'actual_original_source_receipt_file': str(report_file), 'actual_original_source_receipt_sha256': arguments.actual_source_receipt_sha256,
++            'actual_original_source_receipt_status_fully_preserved': actual['status'],
++            'actual_original_source_receipt_withheld_Std_candidate_accepted': False,
++            'actual_this_route_fresh_own_source_count': 199, 'actual_granular_sources': 183, 'actual_sole_whole_sources': 16,
++            'actual_this_route_audit_files': 6, 'actual_this_route_unique_selected_prints': 42,
++            'own42_actual_classifications': own_prints, 'own42_classification_counts': dict(Counter(r['classification'] for r in own_prints)),
++            'accepted_previous_exact_Std_source_count': 1, 'accepted_previous_Std_audit_file_count': 1,
++            'accepted_previous_Std_actual_unique_prints': 14, 'accepted_Std_root_record_sha256': STD_ACCEPT_SHA,
++            'accepted_Std_immutable_actual_receipt_sha256': STD_RAW_SHA, 'accepted_Std_qualification_sha256': STD_QUAL_SHA,
++            'accepted_Std_actual_classifications': std_prints,
++            'composite_distinct_scientific_source_body_coverage': 200, 'composite_unique_selected_print_coverage': 56,
++            'this_is_not_a_200_new_cold_source_or_seven_new_audit_run': True,
++            'Std_outputs_copied_linked_aliased_or_imported_into_original_route': False,
++            'frozen200_scientific_source_file_and_option_identities': source_observations,
++            'actual_own_guard_log_command_option_rechecks': own_checks, 'actual_own_artifact_identity_rechecks': own_outputs,
++            'accepted_Std_guard_log_command_rechecks': std_checks, 'accepted_Std_current_artifact_identity_rechecks': std_outputs,
++            'Std_secondary_current_hashes_without_historical_SHA_are_not_claimed_historically_bound': True,
++            'preserved_prior_attempts': previous_attempts, 'actual_sole_lease_sha256': whole_settings['lease_sha256'],
++            'actual_reviewed_sole_dispatch_chain': dispatch_chain,
++            'each_whole_and_audit_actual_row_covered_by_exact_reviewed_sole10_11_lease': True,
++            'exact_compiler_binary_sha256': COMPILER_SHA, 'exact_nine_package_HEAD_origin_rechecks': packages,
++            'official_cache_PASS_receipt_sha256': CACHE_SHA, 'recorded_official_provider_closure_rechecks': official_checks,
++            'new_complete_official_Mathlib_umbrella_artifact_scan_performed': False,
++            'source_origin': plan['original_image'], 'source_recovery_inventory_only_not_whole_Git_revision': True,
++            'original_FC_whole_Git_revision': plan['original_FC_whole_Git_revision'],
++            'historical_author_invocation_options_verified': False, 'original_container_executed': False,
++            'execution_route': 'Exact recovered source / pinned Windows compiler and package operational replay; separate accepted prior Std evidence',
++            'invocation_option_qualification': 'Recovered FC sources explicitly use pp.unicode.fun=true, autoImplicit=false and relaxedAutoImplicit=false; entrant and organizer audit options are empty. Historical author invocation is not inferred.',
++            'static_source_admission_and_axiom_inventory_preserved': prep['static_admission_and_axiom_related_syntax_sites'],
++            'all193_dependency_or_other_unselected_theorems_axiom_clean_claimed': False,
++            'selected_correctness_scope': 'Exactly42 current FC-dependent selected outputs and14 accepted prior elementary Std outputs, each parsed from actual successful audit logs with no sorry/native/unknown selected axioms.',
++            'source_statement_fidelity_and_open_premises': prep['statement_fidelity_anchors'],
++            'open_AP_claim_qualification': 'The k>=4 equivalences do not prove either side; AP-free summability, extremal/dyadic/quartic estimates, LogBarrier, KelleyMeka and uniform Roth bounds remain hypotheses where present. Default Prop-valued answer(sorry) syntax is retained as its explicit statement wrapper, not an unconditional solution of the open hill.',
++            'novelty_or_priority_or_contest_score_promoted_by_this_qualification': False,
++            'scientific_sources_runners_original_receipts_canonical_prose_PDFs_changed': False,
++            'Lean_Lake_or_compiler_invoked_by_qualifier': False,
++        }
++        # A final input/approval identity check prevents a concurrent receipt update
++        # from producing a falsely bound result; source outputs stayed locked.
++        require(sha_file(report_file) == arguments.actual_source_receipt_sha256 and
++                sha_file(review_file) == arguments.root_completion_review_sha256 and
++                sha_file(DEST / 'build-plan.json') == PLAN_SHA and sha_file(__file__) == helper_sha,
++                'Final receipt/review/plan/helper changed during qualification')
++        with OUTPUT.open('x', encoding='utf8', newline='\n') as stream:
++            json.dump(result, stream, indent=2, ensure_ascii=False)
++            stream.write('\n')
++        print(json.dumps({'status': result['status'], 'file': str(OUTPUT), 'sha256': sha_file(OUTPUT),
++                          'own_sources': 199, 'own_selected': 42, 'previous_Std_sources': 1, 'previous_Std_selected': 14}))
++
++
++if __name__ == '__main__':
++    main()

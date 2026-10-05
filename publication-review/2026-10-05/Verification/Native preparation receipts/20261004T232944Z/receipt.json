@@ -1,0 +1,146 @@
+{
+  "started_utc": "2026-10-04T23:29:44.960354+00:00",
+  "status": "PASS_OBJECT_COMPILE",
+  "scope": "One byte-identical official C object only; no link, DLL load, custom .olean mutation, source edit, or shared-cache output",
+  "compiler_pin": "5045d0056413266e57c625dcd7c365b10e377c52",
+  "mathlib_pin": "d13f23b723b8a846827a245b89c10fc7d3f11612",
+  "source": {
+    "module": "Mathlib.Tactic.Translate.Core",
+    "package": "mathlib",
+    "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.34.1\\mathlib\\.lake\\build\\ir\\Mathlib\\Tactic\\Translate\\Core.c",
+    "bytes": 3165870,
+    "sha256": "5a92e7b20dacba4f2bc85d243c760a9c8d36c95f0f7c6e99016a5ceeb96f42e6",
+    "exported_symbol_count": 902,
+    "imports": [
+      "Init",
+      "Init",
+      "Lean.Compiler.NoncomputableAttr",
+      "Lean.Elab.App",
+      "Lean.Meta.Tactic.Ext",
+      "Lean.Meta.Tactic.Rfl",
+      "Lean.Meta.Tactic.Symm",
+      "Lean.Meta.CoeAttr",
+      "Mathlib.Lean.Meta.Simp",
+      "Batteries.Lean.NameMapAttribute",
+      "Batteries.Tactic.Alias",
+      "Batteries.Tactic.Trans",
+      "Mathlib.Tactic.Eqns",
+      "Mathlib.Tactic.Translate.Attributes",
+      "Mathlib.Tactic.Translate.GuessName",
+      "Mathlib.Tactic.Translate.Reorder",
+      "Mathlib.Tactic.Translate.UnfoldBoundary",
+      "Mathlib.Tactic.Translate.Reorder",
+      "Mathlib.Tactic.Translate.Reorder"
+    ]
+  },
+  "command": [
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\leanc.exe",
+    "-c",
+    "-O3",
+    "-DNDEBUG",
+    "-DLEAN_EXPORTING",
+    "-o",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\native_object_pilots\\20261004T232944Z\\Mathlib.Tactic.Translate.Core.c.o",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.34.1\\mathlib\\.lake\\build\\ir\\Mathlib\\Tactic\\Translate\\Core.c"
+  ],
+  "resource_preflight": {
+    "physical": {
+      "available_bytes": 8061394944,
+      "total_bytes": 34024419328
+    },
+    "disk_free_bytes": 7883145216,
+    "monitor_process": {
+      "pid": 16648,
+      "private_bytes": 12898304,
+      "rss_bytes": 22761472,
+      "peak_rss_bytes": 25649152
+    },
+    "process_snapshot_count": 555,
+    "monitor_in_snapshot": true,
+    "structure_sizes": {
+      "MEMORYSTATUSEX": 64,
+      "PMCEX": 80,
+      "PROCESSENTRY32W": 568,
+      "EXTENDEDLIMIT": 144
+    },
+    "source_allocated_bytes": 368640
+  },
+  "guards": {
+    "launch_disk_bytes": 4000000000,
+    "launch_physical_bytes": 6442450944,
+    "continuous_disk_bytes": 1000000000,
+    "continuous_physical_bytes": 3221225472,
+    "own_job_private_bytes": 2147483648,
+    "own_process_private_bytes": 2147483648,
+    "poll_seconds": 0.25,
+    "timeout_seconds": 600
+  },
+  "LEAN_CC_override_present": false,
+  "runner_sha256": "c882fb62e675387ce6cddab3073e166c691094e8ca0ee04601b4241a0aa2b190",
+  "pinned_tool_executable_hashes": {
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\leanc.exe": "41298e682fb389610a6e17ea06d15289213e890219283dbb55ba167e019a1392",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\clang.exe": "1aea18dca98f91a6a7c65532adc2567efc775904d2a4bd28bf06731bc2c3778c"
+  },
+  "output_allocation_method": "Windows GetCompressedFileSizeW on each preserved isolated output; logical lengths reported separately; minimum whole-volume free bytes also monitored continuously",
+  "environment_policy": {
+    "TEMP": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\native_object_pilots\\20261004T232944Z",
+    "TMP": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\native_object_pilots\\20261004T232944Z",
+    "LEAN_NUM_THREADS": "1",
+    "PATH_prefix": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin",
+    "no_LEAN_CC_override": true
+  },
+  "own_job_assignment": "PASS",
+  "root_pid": 54660,
+  "job_peak_process_memory_bytes": 112611328,
+  "job_peak_aggregate_memory_bytes": 124604416,
+  "compiler_exit": 0,
+  "finished_utc": "2026-10-04T23:30:00.948693+00:00",
+  "seconds": 15.954,
+  "minimum_disk_free_bytes": 7855505408,
+  "minimum_physical_available_bytes": 7818137600,
+  "polled_peak_tree_private_bytes": 116604928,
+  "polled_peak_tree_rss_bytes": 199581696,
+  "counter_samples": 58,
+  "observed_own_processes": {
+    "54824": {
+      "exe": "conhost.exe",
+      "peak_private_bytes": 1249280,
+      "peak_rss_bytes": 7839744
+    },
+    "54660": {
+      "exe": "leanc.exe",
+      "peak_private_bytes": 10743808,
+      "peak_rss_bytes": 46587904
+    },
+    "21416": {
+      "exe": "clang.exe",
+      "peak_private_bytes": 104611840,
+      "peak_rss_bytes": 154316800
+    }
+  },
+  "source_sha256_after": "5a92e7b20dacba4f2bc85d243c760a9c8d36c95f0f7c6e99016a5ceeb96f42e6",
+  "output_inventory": [
+    {
+      "file": "compiler.stderr.txt",
+      "logical_bytes": 0,
+      "allocated_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "compiler.stdout.txt",
+      "logical_bytes": 0,
+      "allocated_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "Mathlib.Tactic.Translate.Core.c.o",
+      "logical_bytes": 1860793,
+      "allocated_bytes": 1860793,
+      "sha256": "3c1890904d3f1df08d08e5953ffe59df44cbd3567a1596f60dc8795015e6cddf"
+    }
+  ],
+  "allocated_output_bytes": 1860793,
+  "stdout_excerpt": "",
+  "stderr_excerpt": "",
+  "receipt_notice": "A one-object compile is neither a successful shared-library link or initializer test nor a theorem proof. Broadening requires another coordinated decision."
+}

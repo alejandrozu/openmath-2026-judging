@@ -1,0 +1,53 @@
+{
+  "status": "PREPARED_UNEXECUTED_FUTURE_A000166_GRANULAR_COMPLETION_READ_ONLY_QUALIFIER",
+  "created_utc": "2026-10-05T07:58:51.549192+00:00",
+  "baseline": {
+    "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\qualify_A000114_checkpoint_readonly_20261005.py",
+    "sha256": "624876f2a4f6fa456fb27852886d060f993d19c8f820c84e6dd8ff5cc726bacb",
+    "immutable_copy": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\proposals\\A000166-qualifier-prepared-20261005\\baseline-624876f2a4f6fa45.py"
+  },
+  "candidate": {
+    "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\qualify_A000166_granular_completion_readonly_prepared_20261005.py",
+    "sha256": "a41ca1d3e7d79c8b43b6df3cd9c5fcc532a656b2e98a0ad85ca8ff13fa03fa85",
+    "bytes": 24352
+  },
+  "full_minimal_diff": {
+    "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\proposals\\A000166-qualifier-prepared-20261005\\A000166-qualifier-full-minimal.diff",
+    "sha256": "29c90d4b87c9c20448f4b158c201792af0cdab26e88c852b878dfc2dd5a0641d",
+    "lines": 189
+  },
+  "required_future_cli": [
+    "python",
+    "-X",
+    "utf8",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\qualify_A000166_granular_completion_readonly_prepared_20261005.py",
+    "--completed166-receipt-sha256",
+    "<ROOT_CONFIRMED_ACTUAL_QUIESCENT166_RECEIPT_SHA256>"
+  ],
+  "frozen_ancestry": {
+    "original76_sha256": "d8226e2920788365d04ccd7c4a1cab829c5c0c192b4fa155aa4e4e4b11e3a552",
+    "actual114_sha256": "99eb7c9441573e8bfb5088f9cdb75bc4eacc12f0e9b3a3512f08709eb9b7540f",
+    "qualified114_sha256": "4bcd0f7a9cc51d3cf83085cec858774fcd261d4709937b9d09ff1cd160ceba04",
+    "new52_dispatch_sha256": "fb494377a8c64e9e16cb691264e4ca1a340ec0f2062ad0d854bcb7850b719281"
+  },
+  "future_required_checks": [
+    "Root-confirmed166 completed/quiescent current receipt exact CLI SHA; final granular-completion reason only",
+    "All171 scientific source bytes; all166 current own output hashes/sizes",
+    "All114 previous rows BY MODULE exact values; original76 independently retained exact",
+    "Exactly52 new source invocations -j1/maxHeartbeats0/maxRecDepth100000 with unchanged6GiB5GiB own guard and raw logs",
+    "Exactly52 source-matched actual postexit sidecars, approved03a6/d73/984, identity/read+mmap/allocation/raw storage logs and nonoverlap chronology",
+    "Exactlyfive whole sources and FreshAudit1 explicitly deferred; zero selected prints"
+  ],
+  "future_permitted_outputs": [
+    "One short-path byte-identical immutable166 JSON copy",
+    "One newly dated additive partial-scope qualification JSON"
+  ],
+  "prior_phase_qualification": "Original76 practices retain dated diversity; prior38 qualification remains separately bound; new52 guard scope is not applied retroactively to all166.",
+  "no_completed166_claim_yet": true,
+  "actions": {
+    "qualifier_imported_or_executed": false,
+    "live_receipt_read": false,
+    "compiler_invoked": false,
+    "source_current_receipt_alias_storage_or_canonical_modified": false
+  }
+}

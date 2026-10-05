@@ -1,0 +1,47 @@
+{
+  "status": "DISPATCHER_MAIN_THREAD_HELD_EXISTING_SOURCE_CHILD_FINISHING",
+  "owner_identity": {
+    "ProcessId": 52644,
+    "ParentProcessId": 52948,
+    "CreationDate": "/Date(1791154366578)/",
+    "CommandLine": "\"C:\\Users\\Propietario\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe\" -X utf8 work/publication/verification/run_source_plan.py htpeo-dms-current 1"
+  },
+  "owner_command_sha256": "42dfc6dacf96a26b377e1586b97ce8544b23539fbeaa1eef2e507db27cc88e8c",
+  "suspended_main_thread": {
+    "tid": 21624,
+    "created_filetime": 134356279665789720
+  },
+  "other_threads_left_running": [
+    {
+      "tid": 49252,
+      "created_filetime": 134356349615161455
+    },
+    {
+      "tid": 49624,
+      "created_filetime": 134356349615163540
+    }
+  ],
+  "pipes": "Original subprocess reader threads left running; no pipe/reader handle closed or suspended.",
+  "source": {
+    "module": "GPn1W1",
+    "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current\\GPn1W1.lean",
+    "source": "entries/dms-star6/artifact/lean/pack4/src/GPn1W1.lean",
+    "sha256": "eb86f545165ee4f07852ed01d0ac5409a149730e52f6740b7631c55520fba4fa"
+  },
+  "source_receipt_before_hold_sha256": "8494d1c8c6d0eb655babf84998df6fbbc8937663e6c16456997079bd0a1adb30",
+  "recorded_cold_source_successes_before_hold": 115,
+  "hold_epoch": 1791161381.0195003,
+  "hold_utc": "2026-10-05T00:49:41Z",
+  "metrics_before": {
+    "disk_free_bytes": 5711171584,
+    "free_physical_bytes": 5573971968,
+    "total_physical_bytes": 34024419328,
+    "available_commit_bytes": 1913761792,
+    "total_commit_limit_bytes": 61256134656
+  },
+  "child_identity": {
+    "ProcessId": 55324,
+    "ParentProcessId": 52644,
+    "CommandLine": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe -j1 -DmaxHeartbeats=0 -DmaxRecDepth=100000 -o GPn1W1.olean GPn1W1.lean"
+  }
+}

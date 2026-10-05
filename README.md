@@ -2,7 +2,13 @@
 
 Competition-only archive for Alejandro Zarzuelo Urdiales. This snapshot preserves collected contestant materials, judging explanations, OPDP analysis, source evidence, research/checking scripts and outreach history.
 
-**Scores and mathematical assessments are preliminary proposals, not final awards or accepted solutions.** Formal closure, literature/independence review, eligibility and official receipts remain separate gates. The handbook is authoritative; old snapshots are retained as history.
+**Scores and mathematical assessments are preliminary proposals, not final awards or accepted solutions.** Formal closure, literature/independence review, eligibility and official receipts remain separate gates. Apply the handbook with the chair-approved October 4 amendments and the October 5 waiver recorded in the current review hub; old snapshots are retained as history.
+
+## Current publication and judging review — 5 October 2026
+
+Start with the **[current publication-review hub](publication-review/README.md)**: 26 PDFs / 315 pages, including 19 proposed original-result manuscripts and four candidates with separate scope or priority holds, plus the brief, anthology and known-results companion.
+
+The chair has authorized this public review upload and waived the remaining proof runs for it. The hub preserves the actual partial HT Ramsey 2083/2103 and A000224 167/171 scopes and their unrun final audits; this waiver does not turn missing checks into passes. DMS p=.15 and Leanification mention only are retained. Earlier snapshot documents and score tables remain historical; use the dated amended proposals and verification records in the new review package.
 
 ## Start judging
 

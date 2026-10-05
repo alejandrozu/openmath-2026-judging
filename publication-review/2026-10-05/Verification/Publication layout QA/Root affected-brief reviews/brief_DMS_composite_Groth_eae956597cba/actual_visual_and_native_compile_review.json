@@ -1,0 +1,51 @@
+{
+  "PDF_sha256": "eae956597cba3f8a2159bf403bc5b136e36bb447cc67b424fe880fcd37c66532",
+  "source_sha256": "e9097f3f003dc899aaff1415e633d01e5e6ae4895ef27390d0b008dc5544b3d8",
+  "pages": 5,
+  "machine_scope_checks": "PASS",
+  "actual_rendered_pixel_comparison": [
+    {
+      "page": "page-1.png",
+      "pixel_identical_to_prior_review": true,
+      "difference_bbox": null
+    },
+    {
+      "page": "page-2.png",
+      "pixel_identical_to_prior_review": true,
+      "difference_bbox": null
+    },
+    {
+      "page": "page-3.png",
+      "pixel_identical_to_prior_review": false,
+      "difference_bbox": [
+        200,
+        347,
+        745,
+        363
+      ]
+    },
+    {
+      "page": "page-4.png",
+      "pixel_identical_to_prior_review": true,
+      "difference_bbox": null
+    },
+    {
+      "page": "page-5.png",
+      "pixel_identical_to_prior_review": true,
+      "difference_bbox": null
+    }
+  ],
+  "original5page_visual_review": "brief_DMS_composite_Groth_95a4b74b2f64/actual_visual_and_native_compile_review.json",
+  "native_compiler_actual": "compile-failed",
+  "native_log": "Unable to find standard directories for platform\n",
+  "actual_native_called_after_two_spacing_changes": true,
+  "visual_final_changed_pages_pending": false,
+  "checked_utc": "2026-10-05T06:20:41.509751+00:00",
+  "actual_visual_final_review": {
+    "viewed_changed_pages2_and3_contactsheet": "PASS",
+    "page2_pixel_identical_prior_full_resolution_review": true,
+    "page3_changed_one_line_spacing_clipping_or_overlap": "NONE_OBSERVED",
+    "other4pages_pixel_identical_prior5page_review": true,
+    "checked_utc": "2026-10-05T06:21:15.118290+00:00"
+  }
+}

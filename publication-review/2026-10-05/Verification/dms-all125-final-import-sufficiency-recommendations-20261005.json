@@ -1,0 +1,1376 @@
+{
+  "status": "FINAL_READ_ONLY_ALL125_SOURCE_PROVIDER_REVIEW_WITH_TWO_MINIMAL_ROOT_RECOMMENDATIONS",
+  "created_utc": "2026-10-05T04:02:35.384840+00:00",
+  "source_plan_sha256": "a690d9c1ae4acc0de5fc20d6510d9bc0055552fe50f10d9fb9f76e1150284eea",
+  "qualified_scan_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dms-all125-qualified-provider-exposure-review-20261005.json",
+  "qualified_scan_sha256": "3ecc9e520af601658502ae7ccfceaaf912a791f5cbe0cedcd9a0b1697412fa88",
+  "all_affected_custom_sources": 125,
+  "qualified_prefixes_scanned": [
+    "Fin",
+    "Nat",
+    "List",
+    "Set",
+    "Function",
+    "Int",
+    "Equiv",
+    "Bool",
+    "Prod",
+    "Sum",
+    "Fintype",
+    "Finset",
+    "SimpleGraph",
+    "Subtype",
+    "Decidable",
+    "Classical"
+  ],
+  "unique_qualified_references": 70,
+  "exact_resolved_qualified_APIs": 64,
+  "concrete_explicit_absent_API_names": [
+    "Fin.castLE_injective",
+    "Finset.card_image_le",
+    "Finset.card_le_card",
+    "Finset.card_le_card_of_injOn",
+    "Finset.mem_image"
+  ],
+  "source_reviewed_absent_provider_candidates": [
+    {
+      "API": "Fin.castLE_injective",
+      "custom_module": "BlockProps",
+      "body_line": 33,
+      "proposed_minimal_provider_exposure_resolves_candidate": true,
+      "selected_exact_provider": {
+        "API": "Fin.castLE_injective",
+        "declared_kind": "lemma",
+        "provider_module": "Mathlib.Data.Fin.SuccPred",
+        "declaring_source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\Data\\Fin\\SuccPred.lean",
+        "source_sha256": "b4abd81eb56af7f8178d592af2eabca0604ade556b85a09981ff301a44783dce",
+        "line": 90,
+        "declaration_line": "lemma castLE_injective (hmn : m ≤ n) : Injective (castLE hmn) :=",
+        "name_resolution_qualification": "Exact written declaration with lexical namespace tracking; generated aliases/constructors and elaborator resolution require separate inspection."
+      }
+    },
+    {
+      "API": "Finset.card_image_le",
+      "custom_module": "InflationD",
+      "body_line": 99,
+      "proposed_minimal_provider_exposure_resolves_candidate": true,
+      "selected_exact_provider": {
+        "API": "Finset.card_image_le",
+        "declared_kind": "theorem",
+        "provider_module": "Mathlib.Data.Finset.Card",
+        "declaring_source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\Data\\Finset\\Card.lean",
+        "source_sha256": "174ec68882bf10567b17c3f4d278d6647cef92574dadfa8f7f0821b949967c8f",
+        "line": 230,
+        "declaration_line": "theorem card_image_le [DecidableEq β] : #(s.image f) ≤ #s := by",
+        "name_resolution_qualification": "Exact written declaration with lexical namespace tracking; generated aliases/constructors and elaborator resolution require separate inspection."
+      }
+    },
+    {
+      "API": "Finset.card_le_card",
+      "custom_module": "InflationD",
+      "body_line": 97,
+      "proposed_minimal_provider_exposure_resolves_candidate": true,
+      "selected_exact_provider": {
+        "API": "Finset.card_le_card",
+        "declared_kind": "theorem",
+        "provider_module": "Mathlib.Data.Finset.Card",
+        "declaring_source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\Data\\Finset\\Card.lean",
+        "source_sha256": "174ec68882bf10567b17c3f4d278d6647cef92574dadfa8f7f0821b949967c8f",
+        "line": 66,
+        "declaration_line": "theorem card_le_card : s ⊆ t → #s ≤ #t :=",
+        "name_resolution_qualification": "Exact written declaration with lexical namespace tracking; generated aliases/constructors and elaborator resolution require separate inspection."
+      }
+    },
+    {
+      "API": "Finset.card_le_card",
+      "custom_module": "InflationD",
+      "body_line": 107,
+      "proposed_minimal_provider_exposure_resolves_candidate": true,
+      "selected_exact_provider": {
+        "API": "Finset.card_le_card",
+        "declared_kind": "theorem",
+        "provider_module": "Mathlib.Data.Finset.Card",
+        "declaring_source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\Data\\Finset\\Card.lean",
+        "source_sha256": "174ec68882bf10567b17c3f4d278d6647cef92574dadfa8f7f0821b949967c8f",
+        "line": 66,
+        "declaration_line": "theorem card_le_card : s ⊆ t → #s ≤ #t :=",
+        "name_resolution_qualification": "Exact written declaration with lexical namespace tracking; generated aliases/constructors and elaborator resolution require separate inspection."
+      }
+    },
+    {
+      "API": "Finset.card_le_card_of_injOn",
+      "custom_module": "InflationD",
+      "body_line": 68,
+      "proposed_minimal_provider_exposure_resolves_candidate": true,
+      "selected_exact_provider": {
+        "API": "Finset.card_le_card_of_injOn",
+        "declared_kind": "lemma",
+        "provider_module": "Mathlib.Data.Finset.Card",
+        "declaring_source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\Data\\Finset\\Card.lean",
+        "source_sha256": "174ec68882bf10567b17c3f4d278d6647cef92574dadfa8f7f0821b949967c8f",
+        "line": 427,
+        "declaration_line": "lemma card_le_card_of_injOn (f : α → β) (hf : Set.MapsTo f s t) (f_inj : (s : Set α).InjOn f) :",
+        "name_resolution_qualification": "Exact written declaration with lexical namespace tracking; generated aliases/constructors and elaborator resolution require separate inspection."
+      }
+    },
+    {
+      "API": "Finset.mem_image",
+      "custom_module": "InflationC",
+      "body_line": 73,
+      "proposed_minimal_provider_exposure_resolves_candidate": true,
+      "selected_exact_provider": {
+        "API": "Finset.mem_image",
+        "declared_kind": "theorem",
+        "provider_module": "Mathlib.Data.Finset.Image",
+        "declaring_source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\Data\\Finset\\Image.lean",
+        "source_sha256": "d7b7e2a714868a3998939bac8f909bbf5b6b0c6895a11fdb8891e39c3ebe326d",
+        "line": 294,
+        "declaration_line": "theorem mem_image : b ∈ s.image f ↔ ∃ a ∈ s, f a = b := by",
+        "name_resolution_qualification": "Exact written declaration with lexical namespace tracking; generated aliases/constructors and elaborator resolution require separate inspection."
+      }
+    },
+    {
+      "API": "Finset.mem_image",
+      "custom_module": "InflationC",
+      "body_line": 75,
+      "proposed_minimal_provider_exposure_resolves_candidate": true,
+      "selected_exact_provider": {
+        "API": "Finset.mem_image",
+        "declared_kind": "theorem",
+        "provider_module": "Mathlib.Data.Finset.Image",
+        "declaring_source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\Data\\Finset\\Image.lean",
+        "source_sha256": "d7b7e2a714868a3998939bac8f909bbf5b6b0c6895a11fdb8891e39c3ebe326d",
+        "line": 294,
+        "declaration_line": "theorem mem_image : b ∈ s.image f ↔ ∃ a ∈ s, f a = b := by",
+        "name_resolution_qualification": "Exact written declaration with lexical namespace tracking; generated aliases/constructors and elaborator resolution require separate inspection."
+      }
+    },
+    {
+      "API": "Finset.mem_image",
+      "custom_module": "InflationC",
+      "body_line": 84,
+      "proposed_minimal_provider_exposure_resolves_candidate": true,
+      "selected_exact_provider": {
+        "API": "Finset.mem_image",
+        "declared_kind": "theorem",
+        "provider_module": "Mathlib.Data.Finset.Image",
+        "declaring_source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\Data\\Finset\\Image.lean",
+        "source_sha256": "d7b7e2a714868a3998939bac8f909bbf5b6b0c6895a11fdb8891e39c3ebe326d",
+        "line": 294,
+        "declaration_line": "theorem mem_image : b ∈ s.image f ↔ ∃ a ∈ s, f a = b := by",
+        "name_resolution_qualification": "Exact written declaration with lexical namespace tracking; generated aliases/constructors and elaborator resolution require separate inspection."
+      }
+    },
+    {
+      "API": "Finset.mem_image",
+      "custom_module": "InflationC",
+      "body_line": 86,
+      "proposed_minimal_provider_exposure_resolves_candidate": true,
+      "selected_exact_provider": {
+        "API": "Finset.mem_image",
+        "declared_kind": "theorem",
+        "provider_module": "Mathlib.Data.Finset.Image",
+        "declaring_source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\Data\\Finset\\Image.lean",
+        "source_sha256": "d7b7e2a714868a3998939bac8f909bbf5b6b0c6895a11fdb8891e39c3ebe326d",
+        "line": 294,
+        "declaration_line": "theorem mem_image : b ∈ s.image f ↔ ∃ a ∈ s, f a = b := by",
+        "name_resolution_qualification": "Exact written declaration with lexical namespace tracking; generated aliases/constructors and elaborator resolution require separate inspection."
+      }
+    },
+    {
+      "API": "Finset.mem_image",
+      "custom_module": "InflationC",
+      "body_line": 121,
+      "proposed_minimal_provider_exposure_resolves_candidate": true,
+      "selected_exact_provider": {
+        "API": "Finset.mem_image",
+        "declared_kind": "theorem",
+        "provider_module": "Mathlib.Data.Finset.Image",
+        "declaring_source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\Data\\Finset\\Image.lean",
+        "source_sha256": "d7b7e2a714868a3998939bac8f909bbf5b6b0c6895a11fdb8891e39c3ebe326d",
+        "line": 294,
+        "declaration_line": "theorem mem_image : b ∈ s.image f ↔ ∃ a ∈ s, f a = b := by",
+        "name_resolution_qualification": "Exact written declaration with lexical namespace tracking; generated aliases/constructors and elaborator resolution require separate inspection."
+      }
+    },
+    {
+      "API": "Finset.mem_image",
+      "custom_module": "InflationC",
+      "body_line": 122,
+      "proposed_minimal_provider_exposure_resolves_candidate": true,
+      "selected_exact_provider": {
+        "API": "Finset.mem_image",
+        "declared_kind": "theorem",
+        "provider_module": "Mathlib.Data.Finset.Image",
+        "declaring_source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\Data\\Finset\\Image.lean",
+        "source_sha256": "d7b7e2a714868a3998939bac8f909bbf5b6b0c6895a11fdb8891e39c3ebe326d",
+        "line": 294,
+        "declaration_line": "theorem mem_image : b ∈ s.image f ↔ ∃ a ∈ s, f a = b := by",
+        "name_resolution_qualification": "Exact written declaration with lexical namespace tracking; generated aliases/constructors and elaborator resolution require separate inspection."
+      }
+    },
+    {
+      "API": "Finset.mem_image",
+      "custom_module": "InflationD",
+      "body_line": 122,
+      "proposed_minimal_provider_exposure_resolves_candidate": true,
+      "selected_exact_provider": {
+        "API": "Finset.mem_image",
+        "declared_kind": "theorem",
+        "provider_module": "Mathlib.Data.Finset.Image",
+        "declaring_source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\Data\\Finset\\Image.lean",
+        "source_sha256": "d7b7e2a714868a3998939bac8f909bbf5b6b0c6895a11fdb8891e39c3ebe326d",
+        "line": 294,
+        "declaration_line": "theorem mem_image : b ∈ s.image f ↔ ∃ a ∈ s, f a = b := by",
+        "name_resolution_qualification": "Exact written declaration with lexical namespace tracking; generated aliases/constructors and elaborator resolution require separate inspection."
+      }
+    },
+    {
+      "API": "Finset.mem_image",
+      "custom_module": "InflationD",
+      "body_line": 136,
+      "proposed_minimal_provider_exposure_resolves_candidate": true,
+      "selected_exact_provider": {
+        "API": "Finset.mem_image",
+        "declared_kind": "theorem",
+        "provider_module": "Mathlib.Data.Finset.Image",
+        "declaring_source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\Data\\Finset\\Image.lean",
+        "source_sha256": "d7b7e2a714868a3998939bac8f909bbf5b6b0c6895a11fdb8891e39c3ebe326d",
+        "line": 294,
+        "declaration_line": "theorem mem_image : b ∈ s.image f ↔ ∃ a ∈ s, f a = b := by",
+        "name_resolution_qualification": "Exact written declaration with lexical namespace tracking; generated aliases/constructors and elaborator resolution require separate inspection."
+      }
+    }
+  ],
+  "implicit_finite_type_instance_candidates": [
+    {
+      "custom_module": "InflationD",
+      "use_lines": [
+        20,
+        35,
+        39,
+        103,
+        106
+      ],
+      "needed_instance": "Fin.fintype",
+      "provider": {
+        "provider_module": "Mathlib.Data.Fintype.Basic",
+        "source_sha256": "c6a92133267056799173b5cada4edf8dce0733e7027db68bf2d9e0107ec2ad7a",
+        "source_line": 36,
+        "source_line_text": "instance Fin.fintype (n : ℕ) : Fintype (Fin n) :=",
+        "source_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\Data\\Fintype\\Basic.lean"
+      },
+      "absent_in_v2_module_exposure": true,
+      "present_via_Fintype_Prod_root": true,
+      "qualification": "Finset.univ over Fin H.m/Fin5 requires a Fintype instance. No local custom instance was identified in this dependency branch; actual instance synthesis remains a future compiler check."
+    },
+    {
+      "custom_module": "InflationD",
+      "use_lines": [
+        35,
+        39
+      ],
+      "needed_instance": "instFintypeProd",
+      "provider": {
+        "provider_module": "Mathlib.Data.Fintype.Prod",
+        "source_sha256": "0356fd85ee13640f7b33ea2e1e443a6c937a0c7c68010973367728bb535b5b01",
+        "source_line": 45,
+        "source_line_text": "instance instFintypeProd (α β : Type*) [Fintype α] [Fintype β] : Fintype (α × β) :=",
+        "source_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\Data\\Fintype\\Prod.lean"
+      },
+      "absent_in_v2_module_exposure": true,
+      "present_via_Fintype_Prod_root": true,
+      "qualification": "Finset.univ over Bool×Fin3 requires the product Fintype instance; the exact provider is absent in v2 and directly supplied by this root."
+    }
+  ],
+  "recommended_minimal_direct_roots": [
+    {
+      "header": "BlockStar",
+      "add": "Mathlib.Data.Fin.SuccPred",
+      "provider_source_sha256": "b4abd81eb56af7f8178d592af2eabca0604ade556b85a09981ff301a44783dce"
+    },
+    {
+      "header": "InflationDefs",
+      "add": "Mathlib.Data.Fintype.Prod",
+      "provider_source_sha256": "0356fd85ee13640f7b33ea2e1e443a6c937a0c7c68010973367728bb535b5b01"
+    }
+  ],
+  "uniform_three_header_option": "If the root-approved v3 policy keeps identical replacement headers, adding both roots to all3 remains an import-only choice. The source evidence itself only requires SuccPred on the BlockStar branch and Fintype.Prod on InflationDefs; no new root is indicated for SeamSeq.",
+  "exact_public_import_provider_chain": [
+    {
+      "provider_module": "Mathlib.Data.Fintype.Prod",
+      "source_sha256": "0356fd85ee13640f7b33ea2e1e443a6c937a0c7c68010973367728bb535b5b01",
+      "source_line": 9,
+      "source_line_text": "public import Mathlib.Data.Fintype.EquivFin",
+      "source_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\Data\\Fintype\\Prod.lean"
+    },
+    {
+      "provider_module": "Mathlib.Data.Fintype.EquivFin",
+      "source_sha256": "2df4d785c723a7cf6ce60790a545497250b63f52ecd7bdd5039fa5ea3537acb8",
+      "source_line": 8,
+      "source_line_text": "public import Mathlib.Data.Fintype.Card",
+      "source_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\Data\\Fintype\\EquivFin.lean"
+    },
+    {
+      "provider_module": "Mathlib.Data.Fintype.Card",
+      "source_sha256": "c0646c3ea4a87f80a91e604a55595c45f51226320e88953333b4d067a5315b24",
+      "source_line": 8,
+      "source_line_text": "public import Mathlib.Data.Finset.Card",
+      "source_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\Data\\Fintype\\Card.lean"
+    },
+    {
+      "provider_module": "Mathlib.Data.Fintype.Card",
+      "source_sha256": "c0646c3ea4a87f80a91e604a55595c45f51226320e88953333b4d067a5315b24",
+      "source_line": 9,
+      "source_line_text": "public import Mathlib.Data.Fintype.Basic",
+      "source_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\Data\\Fintype\\Card.lean"
+    },
+    {
+      "provider_module": "Mathlib.Data.Finset.Card",
+      "source_sha256": "174ec68882bf10567b17c3f4d278d6647cef92574dadfa8f7f0821b949967c8f",
+      "source_line": 9,
+      "source_line_text": "public import Mathlib.Data.Finset.Image",
+      "source_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\Data\\Finset\\Card.lean"
+    }
+  ],
+  "three_original_header_unqualified_review": [
+    {
+      "module": "BlockStar",
+      "original_source_sha256": "2728fd9e9b40ac68b7a0d03276062c486ff856a5e368378fb76a244ba51405c7",
+      "v2_source_sha256": "b688ace0dd4abdfb88643d4de8f165af675b74530dba33138a82ddd7a98c14d4",
+      "reviewed_unqualified_lemmas_and_tactic_syntax": [
+        {
+          "used_token": "beq_iff_eq",
+          "category": "unqualified_lemma",
+          "original_body_use_lines": [
+            284,
+            319
+          ],
+          "current_v2_body_use_lines": [
+            291,
+            326
+          ],
+          "provider_module": "Init.Core",
+          "source_sha256": "8537e234659a281a8f49cc91e2f48c17b6faeacb852d1c4ba3a09b6b5e45ab20",
+          "source_line": 1652,
+          "source_line_text": "@[simp] theorem beq_iff_eq [BEq α] [LawfulBEq α] {a b : α} : a == b ↔ a = b :=",
+          "source_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\src\\lean\\Init\\Core.lean",
+          "present_in_this_header_module_effective_official_exposure": true
+        },
+        {
+          "used_token": "bne_iff_ne",
+          "category": "unqualified_lemma",
+          "original_body_use_lines": [
+            286,
+            323,
+            328
+          ],
+          "current_v2_body_use_lines": [
+            293,
+            330,
+            335
+          ],
+          "provider_module": "Init.SimpLemmas",
+          "source_sha256": "fe0dc61e7380da95224dc4a7bb577a9395c5e64fbab93c62afaa2cf7883a8de5",
+          "source_line": 420,
+          "source_line_text": "@[simp] theorem bne_iff_ne [BEq α] [LawfulBEq α] {a b : α} : a != b ↔ a ≠ b := by",
+          "source_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\src\\lean\\Init\\SimpLemmas.lean",
+          "present_in_this_header_module_effective_official_exposure": true
+        },
+        {
+          "used_token": "beq_self_eq_true",
+          "category": "unqualified_lemma",
+          "original_body_use_lines": [
+            186,
+            203
+          ],
+          "current_v2_body_use_lines": [
+            193,
+            210
+          ],
+          "provider_module": "Init.SimpLemmas",
+          "source_sha256": "fe0dc61e7380da95224dc4a7bb577a9395c5e64fbab93c62afaa2cf7883a8de5",
+          "source_line": 414,
+          "source_line_text": "theorem beq_self_eq_true [BEq α] [ReflBEq α] (a : α) : (a == a) = true := BEq.rfl",
+          "source_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\src\\lean\\Init\\SimpLemmas.lean",
+          "present_in_this_header_module_effective_official_exposure": true
+        },
+        {
+          "used_token": "cond_false",
+          "category": "unqualified_lemma",
+          "original_body_use_lines": [
+            203,
+            204,
+            205,
+            206,
+            207
+          ],
+          "current_v2_body_use_lines": [
+            210,
+            211,
+            212,
+            213,
+            214
+          ],
+          "provider_module": "Init.SimpLemmas",
+          "source_sha256": "fe0dc61e7380da95224dc4a7bb577a9395c5e64fbab93c62afaa2cf7883a8de5",
+          "source_line": 412,
+          "source_line_text": "@[simp] theorem cond_false (a b : α) : cond false a b = b := rfl",
+          "source_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\src\\lean\\Init\\SimpLemmas.lean",
+          "present_in_this_header_module_effective_official_exposure": true
+        },
+        {
+          "used_token": "cond_true",
+          "category": "unqualified_lemma",
+          "original_body_use_lines": [
+            186,
+            187,
+            188,
+            189,
+            190
+          ],
+          "current_v2_body_use_lines": [
+            193,
+            194,
+            195,
+            196,
+            197
+          ],
+          "provider_module": "Init.SimpLemmas",
+          "source_sha256": "fe0dc61e7380da95224dc4a7bb577a9395c5e64fbab93c62afaa2cf7883a8de5",
+          "source_line": 411,
+          "source_line_text": "@[simp] theorem cond_true (a b : α) : cond true a b = a := rfl",
+          "source_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\src\\lean\\Init\\SimpLemmas.lean",
+          "present_in_this_header_module_effective_official_exposure": true
+        },
+        {
+          "used_token": "ne_eq",
+          "category": "unqualified_lemma",
+          "original_body_use_lines": [
+            286,
+            323,
+            328
+          ],
+          "current_v2_body_use_lines": [
+            293,
+            330,
+            335
+          ],
+          "provider_module": "Init.SimpLemmas",
+          "source_sha256": "fe0dc61e7380da95224dc4a7bb577a9395c5e64fbab93c62afaa2cf7883a8de5",
+          "source_line": 235,
+          "source_line_text": "@[simp] theorem ne_eq (a b : α) : (a ≠ b) = ¬(a = b) := rfl",
+          "source_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\src\\lean\\Init\\SimpLemmas.lean",
+          "present_in_this_header_module_effective_official_exposure": true
+        },
+        {
+          "used_token": "decide_eq_true",
+          "category": "unqualified_lemma",
+          "original_body_use_lines": [
+            123
+          ],
+          "current_v2_body_use_lines": [
+            130
+          ],
+          "provider_module": "Init.Prelude",
+          "source_sha256": "56de5780adc4358372fa9cfac270a70f2d03fd4f213a373aea4365483b31a544",
+          "source_line": 1022,
+          "source_line_text": "theorem decide_eq_true : [inst : Decidable p] → p → Eq (decide p) true",
+          "source_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\src\\lean\\Init\\Prelude.lean",
+          "present_in_this_header_module_effective_official_exposure": true
+        },
+        {
+          "used_token": "simp",
+          "category": "tactic_syntax",
+          "original_body_use_lines": [
+            74,
+            116,
+            124,
+            186,
+            187,
+            188,
+            189,
+            190,
+            203,
+            204,
+            205,
+            206,
+            207,
+            241,
+            263,
+            284,
+            286,
+            319,
+            321,
+            323,
+            328
+          ],
+          "current_v2_body_use_lines": [
+            81,
+            123,
+            131,
+            193,
+            194,
+            195,
+            196,
+            197,
+            210,
+            211,
+            212,
+            213,
+            214,
+            248,
+            270,
+            291,
+            293,
+            326,
+            328,
+            330,
+            335
+          ],
+          "provider_module": "Init.Tactics",
+          "source_sha256": "b3fd9963477ff632469620a2b83c8259a3d0545dea12e742b5779a600da8a46a",
+          "source_line": 685,
+          "source_line_text": "syntax (name := simp) \"simp\" optConfig (discharger)? (&\" only\")?",
+          "source_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\src\\lean\\Init\\Tactics.lean",
+          "present_in_this_header_module_effective_official_exposure": true
+        },
+        {
+          "used_token": "rw",
+          "category": "tactic_syntax",
+          "original_body_use_lines": [
+            46,
+            77,
+            119,
+            125,
+            133,
+            134,
+            143,
+            167,
+            170,
+            172,
+            173,
+            174,
+            175,
+            179,
+            181,
+            183,
+            187,
+            193,
+            196,
+            197,
+            198,
+            199,
+            200,
+            201,
+            204,
+            217,
+            218,
+            250,
+            252,
+            258,
+            265,
+            285,
+            288,
+            303,
+            304,
+            320,
+            326,
+            330
+          ],
+          "current_v2_body_use_lines": [
+            53,
+            84,
+            126,
+            132,
+            140,
+            141,
+            150,
+            174,
+            177,
+            179,
+            180,
+            181,
+            182,
+            186,
+            188,
+            190,
+            194,
+            200,
+            203,
+            204,
+            205,
+            206,
+            207,
+            208,
+            211,
+            224,
+            225,
+            257,
+            259,
+            265,
+            272,
+            292,
+            295,
+            310,
+            311,
+            327,
+            333,
+            337
+          ],
+          "provider_module": "Init.Tactics",
+          "source_sha256": "b3fd9963477ff632469620a2b83c8259a3d0545dea12e742b5779a600da8a46a",
+          "source_line": 612,
+          "source_line_text": "macro (name := rwSeq) \"rw \" c:optConfig s:rwRuleSeq l:(location)? : tactic =>",
+          "source_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\src\\lean\\Init\\Tactics.lean",
+          "present_in_this_header_module_effective_official_exposure": true
+        },
+        {
+          "used_token": "rwa",
+          "category": "tactic_syntax",
+          "original_body_use_lines": [
+            139
+          ],
+          "current_v2_body_use_lines": [
+            146
+          ],
+          "provider_module": "Init.Tactics",
+          "source_sha256": "b3fd9963477ff632469620a2b83c8259a3d0545dea12e742b5779a600da8a46a",
+          "source_line": 620,
+          "source_line_text": "macro \"rwa \" rws:rwRuleSeq loc:(location)? : tactic =>",
+          "source_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\src\\lean\\Init\\Tactics.lean",
+          "present_in_this_header_module_effective_official_exposure": true
+        },
+        {
+          "used_token": "omega",
+          "category": "tactic_syntax",
+          "original_body_use_lines": [
+            47,
+            71,
+            122,
+            123,
+            131,
+            176,
+            181,
+            183,
+            185,
+            189,
+            190,
+            206,
+            207,
+            242,
+            243,
+            264,
+            271,
+            272,
+            273,
+            274,
+            275,
+            293,
+            296,
+            298,
+            300,
+            302,
+            305,
+            306,
+            307,
+            308
+          ],
+          "current_v2_body_use_lines": [
+            54,
+            78,
+            129,
+            130,
+            138,
+            183,
+            188,
+            190,
+            192,
+            196,
+            197,
+            213,
+            214,
+            249,
+            250,
+            271,
+            278,
+            279,
+            280,
+            281,
+            282,
+            300,
+            303,
+            305,
+            307,
+            309,
+            312,
+            313,
+            314,
+            315
+          ],
+          "provider_module": "Init.Tactics",
+          "source_sha256": "b3fd9963477ff632469620a2b83c8259a3d0545dea12e742b5779a600da8a46a",
+          "source_line": 1528,
+          "source_line_text": "syntax (name := omega) \"omega\" optConfig : tactic",
+          "source_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\src\\lean\\Init\\Tactics.lean",
+          "present_in_this_header_module_effective_official_exposure": true
+        },
+        {
+          "used_token": "decide",
+          "category": "tactic_syntax",
+          "original_body_use_lines": [
+            97,
+            123
+          ],
+          "current_v2_body_use_lines": [
+            104,
+            130
+          ],
+          "provider_module": "Init.Tactics",
+          "source_sha256": "b3fd9963477ff632469620a2b83c8259a3d0545dea12e742b5779a600da8a46a",
+          "source_line": 1472,
+          "source_line_text": "syntax (name := decide) \"decide\" optConfig : tactic",
+          "source_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\src\\lean\\Init\\Tactics.lean",
+          "present_in_this_header_module_effective_official_exposure": true
+        },
+        {
+          "used_token": "intro",
+          "category": "tactic_syntax",
+          "original_body_use_lines": [
+            71,
+            73,
+            236,
+            247,
+            256,
+            260,
+            268,
+            283,
+            290,
+            318
+          ],
+          "current_v2_body_use_lines": [
+            78,
+            80,
+            243,
+            254,
+            263,
+            267,
+            275,
+            290,
+            297,
+            325
+          ],
+          "provider_module": "Init.Tactics",
+          "source_sha256": "b3fd9963477ff632469620a2b83c8259a3d0545dea12e742b5779a600da8a46a",
+          "source_line": 50,
+          "source_line_text": "syntax (name := intro) \"intro\" notFollowedBy(\"|\") (ppSpace colGt term:max)* : tactic",
+          "source_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\src\\lean\\Init\\Tactics.lean",
+          "present_in_this_header_module_effective_official_exposure": true
+        },
+        {
+          "used_token": "apply",
+          "category": "tactic_syntax",
+          "original_body_use_lines": [
+            142,
+            178,
+            282,
+            287,
+            317,
+            325,
+            329
+          ],
+          "current_v2_body_use_lines": [
+            149,
+            185,
+            289,
+            294,
+            324,
+            332,
+            336
+          ],
+          "provider_module": "Init.Tactics",
+          "source_sha256": "b3fd9963477ff632469620a2b83c8259a3d0545dea12e742b5779a600da8a46a",
+          "source_line": 232,
+          "source_line_text": "syntax (name := apply) \"apply \" term : tactic",
+          "source_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\src\\lean\\Init\\Tactics.lean",
+          "present_in_this_header_module_effective_official_exposure": true
+        },
+        {
+          "used_token": "exact",
+          "category": "tactic_syntax",
+          "original_body_use_lines": [
+            46,
+            76,
+            77,
+            120,
+            126,
+            172,
+            173,
+            174,
+            175,
+            184,
+            187,
+            188,
+            197,
+            198,
+            199,
+            200,
+            205,
+            217,
+            218,
+            221,
+            262,
+            285,
+            320
+          ],
+          "current_v2_body_use_lines": [
+            53,
+            83,
+            84,
+            127,
+            133,
+            179,
+            180,
+            181,
+            182,
+            191,
+            194,
+            195,
+            204,
+            205,
+            206,
+            207,
+            212,
+            224,
+            225,
+            228,
+            269,
+            292,
+            327
+          ],
+          "provider_module": "Init.Tactics",
+          "source_sha256": "b3fd9963477ff632469620a2b83c8259a3d0545dea12e742b5779a600da8a46a",
+          "source_line": 237,
+          "source_line_text": "syntax (name := exact) \"exact \" term : tactic",
+          "source_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\src\\lean\\Init\\Tactics.lean",
+          "present_in_this_header_module_effective_official_exposure": true
+        },
+        {
+          "used_token": "refine",
+          "category": "tactic_syntax",
+          "original_body_use_lines": [
+            185,
+            202,
+            245
+          ],
+          "current_v2_body_use_lines": [
+            192,
+            209,
+            252
+          ],
+          "provider_module": "Init.Tactics",
+          "source_sha256": "b3fd9963477ff632469620a2b83c8259a3d0545dea12e742b5779a600da8a46a",
+          "source_line": 244,
+          "source_line_text": "syntax (name := refine) \"refine \" term : tactic",
+          "source_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\src\\lean\\Init\\Tactics.lean",
+          "present_in_this_header_module_effective_official_exposure": true
+        },
+        {
+          "used_token": "constructor",
+          "category": "tactic_syntax",
+          "original_body_use_lines": [
+            132,
+            266
+          ],
+          "current_v2_body_use_lines": [
+            139,
+            273
+          ],
+          "provider_module": "Init.Tactics",
+          "source_sha256": "b3fd9963477ff632469620a2b83c8259a3d0545dea12e742b5779a600da8a46a",
+          "source_line": 259,
+          "source_line_text": "syntax (name := constructor) \"constructor\" : tactic",
+          "source_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\src\\lean\\Init\\Tactics.lean",
+          "present_in_this_header_module_effective_official_exposure": true
+        },
+        {
+          "used_token": "unfold",
+          "category": "tactic_syntax",
+          "original_body_use_lines": [
+            138
+          ],
+          "current_v2_body_use_lines": [
+            145
+          ],
+          "provider_module": "Init.Tactics",
+          "source_sha256": "b3fd9963477ff632469620a2b83c8259a3d0545dea12e742b5779a600da8a46a",
+          "source_line": 833,
+          "source_line_text": "syntax (name := unfold) \"unfold\" (ppSpace colGt ident)+ (location)? : tactic",
+          "source_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\src\\lean\\Init\\Tactics.lean",
+          "present_in_this_header_module_effective_official_exposure": true
+        },
+        {
+          "used_token": "rcases",
+          "category": "tactic_syntax",
+          "original_body_use_lines": [
+            75,
+            117,
+            164,
+            216,
+            274,
+            275,
+            305,
+            306,
+            307,
+            308,
+            324
+          ],
+          "current_v2_body_use_lines": [
+            82,
+            124,
+            171,
+            223,
+            281,
+            282,
+            312,
+            313,
+            314,
+            315,
+            331
+          ],
+          "provider_module": "Init.RCases",
+          "source_sha256": "a5c5694178d7a376baa6f8ccda1e946a7dc1b048d06be083b7afc6d3f255e675",
+          "source_line": 153,
+          "source_line_text": "syntax (name := rcases) \"rcases \" elimTarget,* (\" with \" rcasesPatLo)? : tactic",
+          "source_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\src\\lean\\Init\\RCases.lean",
+          "present_in_this_header_module_effective_official_exposure": true
+        }
+      ],
+      "qualification": "Common core proof combinators and local identifiers were read in their source context; qualified official APIs are covered separately. This is not a proof of elaboration sufficiency."
+    },
+    {
+      "module": "SeamSeq",
+      "original_source_sha256": "594aaed28b81ee7b9b6a7c90c6d034c9f1dbfe533ce3bdc1e19b51584f079e15",
+      "v2_source_sha256": "9076c5a4f785754945ea789d31c9d34f290a0633e1ef662f2af57953cc66bdee",
+      "reviewed_unqualified_lemmas_and_tactic_syntax": [
+        {
+          "used_token": "simp",
+          "category": "tactic_syntax",
+          "original_body_use_lines": [
+            35,
+            40,
+            45,
+            56,
+            61,
+            66
+          ],
+          "current_v2_body_use_lines": [
+            42,
+            47,
+            52,
+            63,
+            68,
+            73
+          ],
+          "provider_module": "Init.Tactics",
+          "source_sha256": "b3fd9963477ff632469620a2b83c8259a3d0545dea12e742b5779a600da8a46a",
+          "source_line": 685,
+          "source_line_text": "syntax (name := simp) \"simp\" optConfig (discharger)? (&\" only\")?",
+          "source_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\src\\lean\\Init\\Tactics.lean",
+          "present_in_this_header_module_effective_official_exposure": true
+        },
+        {
+          "used_token": "rw",
+          "category": "tactic_syntax",
+          "original_body_use_lines": [
+            24,
+            34,
+            39,
+            44,
+            55,
+            60,
+            65
+          ],
+          "current_v2_body_use_lines": [
+            31,
+            41,
+            46,
+            51,
+            62,
+            67,
+            72
+          ],
+          "provider_module": "Init.Tactics",
+          "source_sha256": "b3fd9963477ff632469620a2b83c8259a3d0545dea12e742b5779a600da8a46a",
+          "source_line": 612,
+          "source_line_text": "macro (name := rwSeq) \"rw \" c:optConfig s:rwRuleSeq l:(location)? : tactic =>",
+          "source_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\src\\lean\\Init\\Tactics.lean",
+          "present_in_this_header_module_effective_official_exposure": true
+        },
+        {
+          "used_token": "omega",
+          "category": "tactic_syntax",
+          "original_body_use_lines": [
+            24,
+            25,
+            31,
+            32,
+            34,
+            36,
+            37,
+            39,
+            41,
+            42,
+            44,
+            46,
+            52,
+            53,
+            55,
+            57,
+            58,
+            60,
+            62,
+            63,
+            65,
+            67
+          ],
+          "current_v2_body_use_lines": [
+            31,
+            32,
+            38,
+            39,
+            41,
+            43,
+            44,
+            46,
+            48,
+            49,
+            51,
+            53,
+            59,
+            60,
+            62,
+            64,
+            65,
+            67,
+            69,
+            70,
+            72,
+            74
+          ],
+          "provider_module": "Init.Tactics",
+          "source_sha256": "b3fd9963477ff632469620a2b83c8259a3d0545dea12e742b5779a600da8a46a",
+          "source_line": 1528,
+          "source_line_text": "syntax (name := omega) \"omega\" optConfig : tactic",
+          "source_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\src\\lean\\Init\\Tactics.lean",
+          "present_in_this_header_module_effective_official_exposure": true
+        },
+        {
+          "used_token": "split",
+          "category": "tactic_syntax",
+          "original_body_use_lines": [
+            22
+          ],
+          "current_v2_body_use_lines": [
+            29
+          ],
+          "provider_module": "Init.Tactics",
+          "source_sha256": "b3fd9963477ff632469620a2b83c8259a3d0545dea12e742b5779a600da8a46a",
+          "source_line": 1205,
+          "source_line_text": "syntax (name := split) \"split\" (ppSpace colGt term)? (location)? : tactic",
+          "source_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\src\\lean\\Init\\Tactics.lean",
+          "present_in_this_header_module_effective_official_exposure": true
+        },
+        {
+          "used_token": "intro",
+          "category": "tactic_syntax",
+          "original_body_use_lines": [
+            33,
+            38,
+            43,
+            54,
+            59,
+            64
+          ],
+          "current_v2_body_use_lines": [
+            40,
+            45,
+            50,
+            61,
+            66,
+            71
+          ],
+          "provider_module": "Init.Tactics",
+          "source_sha256": "b3fd9963477ff632469620a2b83c8259a3d0545dea12e742b5779a600da8a46a",
+          "source_line": 50,
+          "source_line_text": "syntax (name := intro) \"intro\" notFollowedBy(\"|\") (ppSpace colGt term:max)* : tactic",
+          "source_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\src\\lean\\Init\\Tactics.lean",
+          "present_in_this_header_module_effective_official_exposure": true
+        },
+        {
+          "used_token": "exact",
+          "category": "tactic_syntax",
+          "original_body_use_lines": [
+            23,
+            25
+          ],
+          "current_v2_body_use_lines": [
+            30,
+            32
+          ],
+          "provider_module": "Init.Tactics",
+          "source_sha256": "b3fd9963477ff632469620a2b83c8259a3d0545dea12e742b5779a600da8a46a",
+          "source_line": 237,
+          "source_line_text": "syntax (name := exact) \"exact \" term : tactic",
+          "source_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\src\\lean\\Init\\Tactics.lean",
+          "present_in_this_header_module_effective_official_exposure": true
+        },
+        {
+          "used_token": "refine",
+          "category": "tactic_syntax",
+          "original_body_use_lines": [
+            32,
+            37,
+            42,
+            53,
+            58,
+            63
+          ],
+          "current_v2_body_use_lines": [
+            39,
+            44,
+            49,
+            60,
+            65,
+            70
+          ],
+          "provider_module": "Init.Tactics",
+          "source_sha256": "b3fd9963477ff632469620a2b83c8259a3d0545dea12e742b5779a600da8a46a",
+          "source_line": 244,
+          "source_line_text": "syntax (name := refine) \"refine \" term : tactic",
+          "source_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\src\\lean\\Init\\Tactics.lean",
+          "present_in_this_header_module_effective_official_exposure": true
+        },
+        {
+          "used_token": "constructor",
+          "category": "tactic_syntax",
+          "original_body_use_lines": [
+            36,
+            41,
+            46,
+            57,
+            62,
+            67
+          ],
+          "current_v2_body_use_lines": [
+            43,
+            48,
+            53,
+            64,
+            69,
+            74
+          ],
+          "provider_module": "Init.Tactics",
+          "source_sha256": "b3fd9963477ff632469620a2b83c8259a3d0545dea12e742b5779a600da8a46a",
+          "source_line": 259,
+          "source_line_text": "syntax (name := constructor) \"constructor\" : tactic",
+          "source_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\src\\lean\\Init\\Tactics.lean",
+          "present_in_this_header_module_effective_official_exposure": true
+        },
+        {
+          "used_token": "rcases",
+          "category": "tactic_syntax",
+          "original_body_use_lines": [
+            31,
+            52
+          ],
+          "current_v2_body_use_lines": [
+            38,
+            59
+          ],
+          "provider_module": "Init.RCases",
+          "source_sha256": "a5c5694178d7a376baa6f8ccda1e946a7dc1b048d06be083b7afc6d3f255e675",
+          "source_line": 153,
+          "source_line_text": "syntax (name := rcases) \"rcases \" elimTarget,* (\" with \" rcasesPatLo)? : tactic",
+          "source_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\src\\lean\\Init\\RCases.lean",
+          "present_in_this_header_module_effective_official_exposure": true
+        },
+        {
+          "used_token": "split_ifs",
+          "category": "tactic_syntax",
+          "original_body_use_lines": [
+            36,
+            41,
+            46,
+            57,
+            62,
+            67
+          ],
+          "current_v2_body_use_lines": [
+            43,
+            48,
+            53,
+            64,
+            69,
+            74
+          ],
+          "provider_module": "Mathlib.Tactic.SplitIfs",
+          "source_sha256": "dc78688f1b1b5378b20d056706251bb4d14d72404adc4318a75e1817db8d8372",
+          "source_line": 151,
+          "source_line_text": "syntax (name := splitIfs) \"split_ifs\" (location)? (\" with\" (ppSpace colGt binderIdent)+)? : tactic",
+          "source_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\Tactic\\SplitIfs.lean",
+          "present_in_this_header_module_effective_official_exposure": true
+        }
+      ],
+      "qualification": "Common core proof combinators and local identifiers were read in their source context; qualified official APIs are covered separately. This is not a proof of elaboration sufficiency."
+    },
+    {
+      "module": "InflationDefs",
+      "original_source_sha256": "8a02c12ebbd3f7c4b3876693dc0d5634ddb1e42d9d354976e3068db50f6fac7e",
+      "v2_source_sha256": "5eec7510abc0a4ca866e67cebdf12deaf6c2128b16928025b2034ef0396a2299",
+      "reviewed_unqualified_lemmas_and_tactic_syntax": [
+        {
+          "used_token": "omega",
+          "category": "tactic_syntax",
+          "original_body_use_lines": [
+            38,
+            46,
+            48,
+            49,
+            50,
+            51
+          ],
+          "current_v2_body_use_lines": [
+            45,
+            53,
+            55,
+            56,
+            57,
+            58
+          ],
+          "provider_module": "Init.Tactics",
+          "source_sha256": "b3fd9963477ff632469620a2b83c8259a3d0545dea12e742b5779a600da8a46a",
+          "source_line": 1528,
+          "source_line_text": "syntax (name := omega) \"omega\" optConfig : tactic",
+          "source_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\src\\lean\\Init\\Tactics.lean",
+          "present_in_this_header_module_effective_official_exposure": true
+        }
+      ],
+      "qualification": "Common core proof combinators and local identifiers were read in their source context; qualified official APIs are covered separately. This is not a proof of elaboration sufficiency."
+    }
+  ],
+  "generated_and_method_chain_names_not_errors": [
+    {
+      "APIs": [
+        "Fin.val",
+        "Fin.isLt"
+      ],
+      "provider_module": "Init.Prelude",
+      "structure": {
+        "provider_module": "Init.Prelude",
+        "source_sha256": "56de5780adc4358372fa9cfac270a70f2d03fd4f213a373aea4365483b31a544",
+        "source_line": 2324,
+        "source_line_text": "structure Fin (n : Nat) where",
+        "source_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\src\\lean\\Init\\Prelude.lean"
+      },
+      "field_lines": [
+        2332,
+        2336
+      ],
+      "present_in_all125": true,
+      "qualification": "Structure-generated projections, not missing standalone declarations."
+    },
+    {
+      "APIs": [
+        "Prod.fst",
+        "Prod.snd",
+        "Prod.mk.inj"
+      ],
+      "provider_module": "Init.Prelude",
+      "structure": {
+        "provider_module": "Init.Prelude",
+        "source_sha256": "56de5780adc4358372fa9cfac270a70f2d03fd4f213a373aea4365483b31a544",
+        "source_line": 563,
+        "source_line_text": "structure Prod (α : Type u) (β : Type v) where",
+        "source_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\src\\lean\\Init\\Prelude.lean"
+      },
+      "field_lines": [
+        569,
+        571
+      ],
+      "present_in_all125": true,
+      "qualification": "Prod fields and constructor injectivity are generated from the core structure; no extra Mathlib root is indicated."
+    },
+    {
+      "APIs": [
+        "Finset.univ.filter"
+      ],
+      "providers": [
+        {
+          "provider_module": "Mathlib.Data.Fintype.Defs",
+          "source_sha256": "879110eb5e7729b034797ea9a3283751f25b26889324ab73c841055c3fc071dc",
+          "source_line": 92,
+          "source_line_text": "def univ : Finset α :=",
+          "source_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\Data\\Fintype\\Defs.lean"
+        },
+        {
+          "provider_module": "Mathlib.Data.Finset.Filter",
+          "source_sha256": "c777e9b830557d7b4f903a0fa81c27bec2d89f546dd4ae146122f4bb4882a06d",
+          "source_line": 52,
+          "source_line_text": "def filter (s : Finset α) : Finset α :=",
+          "source_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\Data\\Finset\\Filter.lean"
+        }
+      ],
+      "qualification": "Method-chain notation combines the already exposed univ/filter declarations. The missing implicit finite-type instances are considered separately above."
+    }
+  ],
+  "omega_builtin_scope_caveat": {
+    "parser": {
+      "provider_module": "Init.Tactics",
+      "source_sha256": "b3fd9963477ff632469620a2b83c8259a3d0545dea12e742b5779a600da8a46a",
+      "source_line": 1528,
+      "source_line_text": "syntax (name := omega) \"omega\" optConfig : tactic",
+      "source_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\src\\lean\\Init\\Tactics.lean"
+    },
+    "builtin_elaborator": {
+      "provider_module": "Lean.Elab.Tactic.Omega.Frontend",
+      "source_sha256": "835fe8c15d9ec38157c3ead0b1c68b0f0ee498049918fa4120cd2c7727bced53",
+      "source_line": 703,
+      "source_line_text": "@[builtin_tactic Lean.Parser.Tactic.omega]",
+      "source_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\src\\lean\\Lean\\Elab\\Tactic\\Omega\\Frontend.lean"
+    },
+    "builtin_aggregation_import": {
+      "provider_module": "Lean.Elab.Tactic",
+      "source_sha256": "9f552fa3f469e00dd3c076423e4e272064213058359caebf3cbe78e0e1e6e286",
+      "source_line": 35,
+      "source_line_text": "public import Lean.Elab.Tactic.Omega",
+      "source_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\src\\lean\\Lean\\Elab\\Tactic.lean"
+    },
+    "explicit_Omega_elaborator_module_in_v2_source_import_closure": false,
+    "actual_BlockStar_PASS_demonstrates_runtime_builtin_availability": {
+      "receipt_sha256": "664b36b905611c46616af5b67bd98d593f62c03dd3c04e13b6d7325fb7946bea",
+      "source_sha256": "b688ace0dd4abdfb88643d4de8f165af675b74530dba33138a82ddd7a98c14d4",
+      "exit": 0,
+      "seconds": 14.437
+    },
+    "qualification": "Builtin tactic registration is distinct from proof-declaration import exposure. The absent explicit elaborator module is not classified as a missing-import error: this same unchanged BlockStar body actually completed in v2."
+  },
+  "already_present_List_subperm_provider": [
+    {
+      "API": "List.subperm_of_subset",
+      "declared_kind": "theorem",
+      "provider_module": "Batteries.Data.List.Perm",
+      "declaring_source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\batteries\\Batteries\\Data\\List\\Perm.lean",
+      "source_sha256": "f5f5547a4c0e2d45a63f855378c845dc4e4f5ad5ed8bce0c80331ee3dbb9bc03",
+      "line": 139,
+      "declaration_line": "theorem subperm_of_subset (d : Nodup l₁) (H : l₁ ⊆ l₂) : l₁ <+~ l₂ := by",
+      "name_resolution_qualification": "Exact written declaration with lexical namespace tracking; generated aliases/constructors and elaborator resolution require separate inspection."
+    }
+  ],
+  "List_subperm_provider_in_BlockProps_exposure": true,
+  "all_observed_explicit_absence_candidates_resolved_in_branch_specific_hypothetical_closure": true,
+  "actual_v3_source_or_olean_imports_tested": false,
+  "limits": "A source/exposure scan does not establish sufficient typeclass, simplifier, coercion or tactic elaboration for all125. Every actual source still needs its guarded replay; unresolved generated names were reviewed without guessing new imports.",
+  "source_header_runner_or_output_changes": false,
+  "Lean_or_compiler_invoked": false
+}

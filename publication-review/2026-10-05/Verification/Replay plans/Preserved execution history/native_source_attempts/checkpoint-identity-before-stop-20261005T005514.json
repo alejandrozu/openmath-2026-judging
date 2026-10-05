@@ -1,0 +1,334 @@
+{
+  "started_utc": "2026-10-05T00:55:14.600050+00:00",
+  "status": "IDENTITY_VERIFIED_BEFORE_OWN_OPERATIONAL_CHECKPOINT",
+  "runner_sha256": "3f8e71e3897baa3b826761dcefdc77199656f953403d512365395b82014ca698",
+  "source_sha256": "de3a81ebcf6b8a2162c7ba35a367f35131c7b45e9d00d7e42a31f81e8f121b04",
+  "expected_command": [
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+    "-j1",
+    "-o",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-k4-ramsey-current-direct\\.lake\\build\\lib\\lean\\K4Ramsey\\Constructions\\Final3840\\Certificate.olean",
+    "-i",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-k4-ramsey-current-direct\\.lake\\build\\lib\\lean\\K4Ramsey\\Constructions\\Final3840\\Certificate.ilean",
+    "K4Ramsey\\Constructions\\Final3840\\Certificate.lean"
+  ],
+  "CIM_identity_rows": [
+    {
+      "PID": 3184,
+      "ParentPID": 49540,
+      "Executable": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+      "Command": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe -j1 -o C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-k4-ramsey-current-direct\\.lake\\build\\lib\\lean\\K4Ramsey\\Constructions\\Final3840\\Certificate.olean -i C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\luke-k4-ramsey-current-direct\\.lake\\build\\lib\\lean\\K4Ramsey\\Constructions\\Final3840\\Certificate.ilean K4Ramsey\\Constructions\\Final3840\\Certificate.lean",
+      "StartedUTC": "2026-10-04T22:48:02.9737870Z"
+    },
+    {
+      "PID": 49540,
+      "ParentPID": 56828,
+      "Executable": "C:\\Users\\Propietario\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+      "Command": "\"C:\\Users\\Propietario\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe\" -X utf8 work/publication/verification/run_luke_direct_plan.py",
+      "StartedUTC": "2026-10-04T21:49:30.2992750Z"
+    }
+  ],
+  "initial_counters": {
+    "disk_free_bytes": 5647708160,
+    "physical_available_bytes": 8734953472,
+    "available_commit_bytes": 10130391040,
+    "commit_limit_bytes": 61256134656
+  },
+  "old_Count_memory": {
+    "pid": 3184,
+    "private_bytes": 2606424064,
+    "rss_bytes": 1237368832,
+    "peak_rss_bytes": 1237954560
+  },
+  "own_tree_exact_PIDs": [
+    49540,
+    3184
+  ],
+  "bound_process_handle_identity": {
+    "49540": {
+      "executable": "C:\\Users\\Propietario\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+      "started_utc": "2026-10-04T21:49:30.299275+00:00",
+      "creation_FILETIME": 134356241702992755,
+      "cpu_seconds": 19.015625,
+      "exit_code": 259
+    },
+    "3184": {
+      "executable": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+      "started_utc": "2026-10-04T22:48:02.973787+00:00",
+      "creation_FILETIME": 134356276829737877,
+      "cpu_seconds": 6808.265625,
+      "exit_code": 259
+    }
+  },
+  "prior_receipt_snapshot_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\native_source_attempts\\direct33-before-coordinated-checkpoint-20261005T005514.json",
+  "prior_receipt_snapshot_sha256": "f3902b26f9b9e28cafbf0280abdfc974d926bd17591de0452a4968b5d586d575",
+  "prior_completed_module_count": 33,
+  "partial_artifact_inventory": {
+    "K4Ramsey\\Core\\Asymptotic.ilean": {
+      "bytes": 8485,
+      "sha256": "66498e0af6edec90dd8271a4e44d847f6a592af49c091f789c9d86b13ded2fd4"
+    },
+    "K4Ramsey\\Core\\Asymptotic.olean": {
+      "bytes": 64912,
+      "sha256": "83e8bda2f4b3fd71978d4dde79d3c1a63e9017becdc29142dfe58a3e57b00911"
+    },
+    "K4Ramsey\\Core\\FiniteProbability.ilean": {
+      "bytes": 14316,
+      "sha256": "61bb285c7b923f9dd4c88bbe60d667bbcafcb52e9aadc9f851c75a96939c1df8"
+    },
+    "K4Ramsey\\Core\\FiniteProbability.olean": {
+      "bytes": 264456,
+      "sha256": "90d1613fe0ed9515ab77108125bd75d31dd61bfb0ae5793726dc0c369cb44090"
+    },
+    "K4Ramsey\\Core\\Graphon.ilean": {
+      "bytes": 8410,
+      "sha256": "352a7deaaf456d08c302e94f4eb613ce9f293e1e05c78adb23befcaa8c788017"
+    },
+    "K4Ramsey\\Core\\Graphon.olean": {
+      "bytes": 192656,
+      "sha256": "7d1437f4ec9efb2981a8b4ef9c7f442f6e1420acb507871e73f7f3b172a27936"
+    },
+    "K4Ramsey\\Core\\Realization.ilean": {
+      "bytes": 21649,
+      "sha256": "b07c3e3b9cce473dc1208b3f9c54bf60aab1f07988902fea1c7a6b50337f7f5a"
+    },
+    "K4Ramsey\\Core\\Realization.olean": {
+      "bytes": 782280,
+      "sha256": "7375a66e1dab7ca8391de256a8258192b716b1256745d4f4e0fd9a2053c52e02"
+    },
+    "K4Ramsey\\Counting\\CenteredExpansion.ilean": {
+      "bytes": 72604,
+      "sha256": "93636950703ea6273d5cdeafd9016ab3dc5c443d75985c5f3cf8c8a3a7947e6f"
+    },
+    "K4Ramsey\\Counting\\CenteredExpansion.olean": {
+      "bytes": 314808,
+      "sha256": "3f4259f1f2b63a34fd6a6147ad31f5716aa8bb70f3a0fddd79b5e74b57fdbdb2"
+    },
+    "K4Ramsey\\Counting\\IntegerCenteredExpansion.ilean": {
+      "bytes": 83005,
+      "sha256": "ec931c1d42c7ea74d7e1e7e5a78361e6814f3d73fc130c43f049d9ba1eb5ae9b"
+    },
+    "K4Ramsey\\Counting\\IntegerCenteredExpansion.olean": {
+      "bytes": 314336,
+      "sha256": "d97e44cc16d54fe11ea975cd7166cc22f1a75ead19c9f284e4dc3fabf8bf7112"
+    },
+    "K4Ramsey\\Counting\\IntegerRefinement.ilean": {
+      "bytes": 9390,
+      "sha256": "4e3618db1ee6c8866e5e79a14459b7ceaafc8c7982136a3daf5f2562be7ca9d7"
+    },
+    "K4Ramsey\\Counting\\IntegerRefinement.olean": {
+      "bytes": 289024,
+      "sha256": "1cb83c45cdc4e582e7beeaa806e62e3c615d273f54508d1999fa3b952ed462cd"
+    },
+    "K4Ramsey\\Counting\\IntegerTensorK4.ilean": {
+      "bytes": 15133,
+      "sha256": "d2d77a0cca81ae83f4871b56e7bfba16a0bc276dc882ad9b9cb2d05d130a58c2"
+    },
+    "K4Ramsey\\Counting\\IntegerTensorK4.olean": {
+      "bytes": 369416,
+      "sha256": "e615c11fb2552b5f2ad4e0a9cfcfdeec5d06b40cf04769de781b6c67763cab20"
+    },
+    "K4Ramsey\\Counting\\SignRefinement.ilean": {
+      "bytes": 5584,
+      "sha256": "dbbde3544ab52b960a54ac68347f8b6678116e2afafcecad41719dd85746e80c"
+    },
+    "K4Ramsey\\Counting\\SignRefinement.olean": {
+      "bytes": 1585584,
+      "sha256": "235f8d390087ef811aabdffe5953cf3a6bde3b4baa952c6b0dad895a6b12cf3f"
+    },
+    "K4Ramsey\\Counting\\TensorK4.ilean": {
+      "bytes": 13067,
+      "sha256": "a393c59f987e11dc9eeffff654e1924794708eb262912b88a205febca9af829d"
+    },
+    "K4Ramsey\\Counting\\TensorK4.olean": {
+      "bytes": 365648,
+      "sha256": "f59dc11e42b45a8cb240ce4129d3a71af3932b65751664e1335117d1214191fb"
+    },
+    "K4Ramsey\\Constructions\\Clebsch192\\Bound.ilean": {
+      "bytes": 6390,
+      "sha256": "c785acd1427e0a36041f879bc5abf7c09ff183a4667acc31e0b697af6c5de19c"
+    },
+    "K4Ramsey\\Constructions\\Clebsch192\\Bound.olean": {
+      "bytes": 45384,
+      "sha256": "4da305445f1332626da4693c4d4970443a42400c8f34629ef61bd0c2286d2512"
+    },
+    "K4Ramsey\\Constructions\\Clebsch192\\Certificate.ilean": {
+      "bytes": 4920,
+      "sha256": "154e23eafaf667411b6b03821b6433058e0692731c3fc0ce7b9fad2098ea87da"
+    },
+    "K4Ramsey\\Constructions\\Clebsch192\\Certificate.olean": {
+      "bytes": 67872,
+      "sha256": "812c9fa4317722dd855b23b182bcda0982dccd3c7ad98125186666ef0803b682"
+    },
+    "K4Ramsey\\Constructions\\Clebsch192\\Model.ilean": {
+      "bytes": 4127,
+      "sha256": "5789e277881a411d009d54c949977086b82d17b43bb70db2966850bd2248546d"
+    },
+    "K4Ramsey\\Constructions\\Clebsch192\\Model.olean": {
+      "bytes": 175408,
+      "sha256": "54fd5656c903d81e5445ecbed6baa884c73100ec000607aa3a41f5dcc4b3948a"
+    },
+    "K4Ramsey\\Constructions\\Final3840\\Arithmetic.ilean": {
+      "bytes": 38457,
+      "sha256": "2b011ea449b13938ccdaa7ada25e746915d7489af0a41e8dd3d0fc4937d27463"
+    },
+    "K4Ramsey\\Constructions\\Final3840\\Arithmetic.olean": {
+      "bytes": 1048648,
+      "sha256": "49616fa0b219c1a00167a4c83e35da4953db5ab9196e44e117aea43ecdd9ed81"
+    },
+    "K4Ramsey\\Constructions\\Final3840\\Bound.ilean": {
+      "bytes": 3039,
+      "sha256": "b1f5fc87a024663120222c9caa77c923bf4334765311f875d9c6eb525c330586"
+    },
+    "K4Ramsey\\Constructions\\Final3840\\Bound.olean": {
+      "bytes": 14864,
+      "sha256": "fd285f3f9cf410b69ffe9b60b564b23edb5b1a8878301a2945e9dc2dcc417094"
+    },
+    "K4Ramsey\\Constructions\\Final3840\\Count.ilean": {
+      "bytes": 17351,
+      "sha256": "13f8a4e47e1829b3b3ebdd9fa320d64ee0a07ab955d1061d8a832dcc79e61775"
+    },
+    "K4Ramsey\\Constructions\\Final3840\\Count.olean": {
+      "bytes": 229784,
+      "sha256": "3ae93f3ced98e7deba781229e766e6fb3fb4102af19353f848530eb99c1dae93"
+    },
+    "K4Ramsey\\Constructions\\Final3840\\CountCorrect.ilean": {
+      "bytes": 23793,
+      "sha256": "5ff9e9533495976d3b2060c6bcef674fdb7b568c1b31ca042f2755f167cf433e"
+    },
+    "K4Ramsey\\Constructions\\Final3840\\CountCorrect.olean": {
+      "bytes": 280672,
+      "sha256": "d93f9203b4278f7aaf089fbab7b3d2cf8b3b03f2e01b7d9b2aa1dc6d41a9f9d8"
+    },
+    "K4Ramsey\\Constructions\\Final3840\\Data.ilean": {
+      "bytes": 5078,
+      "sha256": "1f36519902a712ef1ae1cb57ec2fe1571cbaa8ab0b75cfc6b014c2d92c4edd92"
+    },
+    "K4Ramsey\\Constructions\\Final3840\\Data.olean": {
+      "bytes": 149920,
+      "sha256": "b72a17c7843c0e93870f7ab1670a3805ec5f593a69709319e7d1858c3a633e61"
+    },
+    "K4Ramsey\\Constructions\\Final3840\\Model.ilean": {
+      "bytes": 7614,
+      "sha256": "d67a1fc7cd5f038f619021de0ea22eba50e66148d4825234ea6e66161d70b559"
+    },
+    "K4Ramsey\\Constructions\\Final3840\\Model.olean": {
+      "bytes": 151216,
+      "sha256": "b71721776facf1ecd4b06b6f9b79038a571367bf6658df725912ca8a20aff2ba"
+    },
+    "K4Ramsey\\Constructions\\Final3840\\Reduction.ilean": {
+      "bytes": 11685,
+      "sha256": "37f313e865f140f21efd308619d2e2a18cba4e89d00deac76f877a7ab1fcfe6b"
+    },
+    "K4Ramsey\\Constructions\\Final3840\\Reduction.olean": {
+      "bytes": 73192,
+      "sha256": "548c346595f0034ab1d89d4845c29c6fbc3a97759ed5aac84c60914f6c039793"
+    },
+    "K4Ramsey\\Constructions\\Final3840\\Symmetry.ilean": {
+      "bytes": 922,
+      "sha256": "49b7ed822a564e23b2ee8f819fb3450a155535750a9286966de35925427cf545"
+    },
+    "K4Ramsey\\Constructions\\Final3840\\Symmetry.olean": {
+      "bytes": 22104,
+      "sha256": "5be570da56fa4aae28b52f0f20dca32fbef4f5673607a0efde8b2cde4cc141f2"
+    },
+    "K4Ramsey\\Constructions\\Final3840\\SymmetryProof.ilean": {
+      "bytes": 3978,
+      "sha256": "37dc96d390ad884e270e2466ba30ef18c0d2ca636e12365e777958abc6462549"
+    },
+    "K4Ramsey\\Constructions\\Final3840\\SymmetryProof.olean": {
+      "bytes": 56168,
+      "sha256": "98817b818e3036e501ddd3908caf852385b45ac03a5966c378cb1fd67839b430"
+    },
+    "K4Ramsey\\Constructions\\Final3840\\Validity.ilean": {
+      "bytes": 11087,
+      "sha256": "a8255a5f5af87ffac640bc2cbcd0446dcf00fde27f5349aefde98a86ac1c480c"
+    },
+    "K4Ramsey\\Constructions\\Final3840\\Validity.olean": {
+      "bytes": 87168,
+      "sha256": "163f0a3bbd866155ef7c0bbf1013b74c66b71f49c4c3fe1ef540f473758a0334"
+    },
+    "K4Ramsey\\Constructions\\Final3840\\Data\\Part00.ilean": {
+      "bytes": 589,
+      "sha256": "2c2f2a25d549dcdf837f59d087a87559623a808d1dad5fce46150ac0698465ff"
+    },
+    "K4Ramsey\\Constructions\\Final3840\\Data\\Part00.olean": {
+      "bytes": 518288,
+      "sha256": "5df87e964685a3d7891ec9e97bb2896abb16b2f00c9c01a17178006c621217cc"
+    },
+    "K4Ramsey\\Constructions\\Final3840\\Data\\Part01.ilean": {
+      "bytes": 589,
+      "sha256": "c01ea2a693ad6a10d672392dde4f22df8c90be16927f7c3f7783ee3b64dabfb6"
+    },
+    "K4Ramsey\\Constructions\\Final3840\\Data\\Part01.olean": {
+      "bytes": 510424,
+      "sha256": "c5d25cfe791ea5e6a3a87ec0661be7b067a5d6a81bf0ed729b532a0844bd2504"
+    },
+    "K4Ramsey\\Constructions\\Final3840\\Data\\Part02.ilean": {
+      "bytes": 589,
+      "sha256": "98389acf5721114868ff4c795fa8372e67be141a24844a9af7f97578cbc2039e"
+    },
+    "K4Ramsey\\Constructions\\Final3840\\Data\\Part02.olean": {
+      "bytes": 518168,
+      "sha256": "94cfa6e95c1267134f16c5439a5d8bc67145a49befa210a7cdeeb9b8c90702b2"
+    },
+    "K4Ramsey\\Constructions\\Final3840\\Data\\Part03.ilean": {
+      "bytes": 589,
+      "sha256": "7a3777a8d61c83cd2901099769e3c4e28d7ddd93d162474eaa9aa6312f30c4a9"
+    },
+    "K4Ramsey\\Constructions\\Final3840\\Data\\Part03.olean": {
+      "bytes": 525400,
+      "sha256": "2b960447787d06831dc8efbeacc7f98cd9f2ed0340bbe2223f06f95139a322c1"
+    },
+    "K4Ramsey\\Constructions\\Final3840\\Data\\Part04.ilean": {
+      "bytes": 589,
+      "sha256": "3982213e7b80e1c73a3deab41593466cca3519c1c766b492d08e48cdb4a08ad8"
+    },
+    "K4Ramsey\\Constructions\\Final3840\\Data\\Part04.olean": {
+      "bytes": 508776,
+      "sha256": "fbf7ad7816dcf8e689e9ba401e0b0a44c891a6627ce8df63c847e7d48e2f3d15"
+    },
+    "K4Ramsey\\Constructions\\Final3840\\Data\\Part05.ilean": {
+      "bytes": 589,
+      "sha256": "1c1f9a70986bd374cd911417f0b7198dde48f11eb6e26b4c2971a09a19fcdab3"
+    },
+    "K4Ramsey\\Constructions\\Final3840\\Data\\Part05.olean": {
+      "bytes": 497328,
+      "sha256": "f4774e4a98d4fd0d6d8cd723c02e1f3fd7ddcc6391be59248eb1dfa1f023ab5f"
+    },
+    "K4Ramsey\\Constructions\\Final3840\\Data\\Part06.ilean": {
+      "bytes": 589,
+      "sha256": "371b2c3df4378293ca4ee08ce3fe7bbb245b9ac068a07eb4ebefae55961e5768"
+    },
+    "K4Ramsey\\Constructions\\Final3840\\Data\\Part06.olean": {
+      "bytes": 534544,
+      "sha256": "c10e951ce3599b069234a452464e7c95a35649e861a57da44549f07413275804"
+    },
+    "K4Ramsey\\Constructions\\Final3840\\Data\\Part07.ilean": {
+      "bytes": 589,
+      "sha256": "f726b7648da0502e60278e5c34cd6efd8d65b1695ad860d1c75d010d2d751d58"
+    },
+    "K4Ramsey\\Constructions\\Final3840\\Data\\Part07.olean": {
+      "bytes": 512800,
+      "sha256": "0a537f166dd4a96a6788020471ac2d07443c2211e4c0898989850ce2991884a9"
+    },
+    "K4Ramsey\\Constructions\\Final3840\\Data\\Part08.ilean": {
+      "bytes": 589,
+      "sha256": "e83657de1ec3a401f1157808888f63af8d8e637e38e01ff44575e5698f0b5931"
+    },
+    "K4Ramsey\\Constructions\\Final3840\\Data\\Part08.olean": {
+      "bytes": 485248,
+      "sha256": "272dfe764697a17cac035e9bf79f558023e441faa247310c68af2860f15742c3"
+    },
+    "K4Ramsey\\Constructions\\Final3840\\Data\\Part09.ilean": {
+      "bytes": 589,
+      "sha256": "fe79b08ece5b508cbc5917218fa92ef575a5c2b7a6f0d13aeeb6c1c4271d86de"
+    },
+    "K4Ramsey\\Constructions\\Final3840\\Data\\Part09.olean": {
+      "bytes": 412792,
+      "sha256": "4abc2f4f42eac11cb9788c24b3ec663494edaeec8c822ec2ac7fb68c86864563"
+    }
+  },
+  "source_statement": "Active Count has not completed. Completed33 own cold module outputs are preserved.",
+  "piped_output_limitation": "The active Count stdout/stderr pipes have not returned to the Python parent; these unfinished streams cannot be recovered by this checkpoint. Actual completed33 diagnostic strings are retained in the immutable prior receipt. No full Count log is invented."
+}

@@ -1,0 +1,286 @@
+{
+  "family_id": "E03-PIVOT-GENERIC",
+  "source_revision": "7014b63ee2cfd01c641a7f539c73b664a2aa3d66",
+  "ordinary_proof_readiness": "A complete ordinary proof of the selected generic matrix/eigenphase theorem, transcribing the actual finite-dimensional source lemmas and standard spectral/functional-calculus facts. Fresh pinned Lean replay passed all 26 sources and six selected axiom audits on 5 October 2026; the eight baseline Claims audit prints still contain sorryAx. No circuit node construction, nongeneric extension or universal CNOT bound is proved.",
+  "remaining_full_proof_needs": [
+    "Author-check this ordinary transcription and compare the generic pivot theorem with earlier methods.",
+    "To claim universal improved synthesis, prove the actual circuit node construction and cancellation, control the basis assignments and nongeneric cases, and discharge the base-case construction."
+  ],
+  "source_modules_read": [
+    "LeanUnitary/Pivot/Existence/Rotation.lean",
+    "LeanUnitary/Pivot/Existence/Lift.lean",
+    "LeanUnitary/Pivot/Existence/EigenContinuity.lean",
+    "LeanUnitary/Pivot/Existence/Imbalance.lean",
+    "LeanUnitary/Pivot/Existence/Pivot.lean",
+    "LeanUnitary/Pivot/Multiplexor/Basic.lean",
+    "LeanUnitary/Pivot/Multiplexor/Continuity.lean",
+    "LeanUnitary/Pivot/Multiplexor/Phase.lean",
+    "LeanUnitary/Pivot/Split.lean",
+    "LeanUnitary/Pivot/Synthesis.lean"
+  ],
+  "sections": [
+    {
+      "heading": "Ordinary proof: a balanced rotation and a nonsingular polar path",
+      "paragraphs": [
+        "Fix p=q+1≥1 and D=4p. Assume X and Y are invertible complex D-by-D matrices and u_0,…,u_{D−1} list, with multiplicity, the eigenvalues of X⁻¹Y. Assume arg(u_j)−arg(u_k) is never an integer multiple of π when j≠k. Invertibility makes every u_j nonzero. This separation hypothesis is stronger than simple spectrum and is part of the theorem; it is not replaced by an unstated genericity assumption.",
+        "Choose an initial rotation angle at which none of e^{iα}u_j is real. In any interval of rotation angles of length π, each eigenvalue crosses the real axis once. Separation modulo π ensures those D crossings occur at distinct angles. On the open intervals between successive crossings, the number N₊ of eigenvalues in the upper half-plane changes by exactly one at each step. After the half-turn it equals D minus its initial value. The two endpoint values bracket D/2, and a sequence of integers changing by at most one cannot pass that integer without taking it. Choose α in one of the intervals with N₊=D/2. Then τ_j=e^{iα}u_j are all nonreal and have equally many positive and negative imaginary parts. This is the source’s discrete intermediate-value argument. It yields an unrestricted real α.",
+        "Set c=cos(β/2), s=sin(β/2), a=e^{−iα/2} and T=e^{iα}X⁻¹Y. The pivoted top blocks are X_β=aX(cI+sT) and Y_β=aX(cT−sI). Neither scalar factor c+sτ_j nor cτ_j−s can vanish for real β. If c+sτ_j=0, taking imaginary parts forces s=0, and then real parts force c=0; the other factor similarly forces c=s=0. Both contradict c²+s²=1. The determinant product formulas therefore prove that both pivoted blocks remain invertible for every real β, not merely on [0,π].",
+        "For an invertible matrix A, let P(A)=(AA*)^{−1/2}A. The positive definite spectral calculus gives (AA*)^{−1/2}(AA*)(AA*)^{−1/2}=I, so P(A)P(A)*=I. In finite square dimension this proves unitarity. Hence C(β)=−iP(X_β)*P(Y_β) is unitary. The path is continuous: matrix multiplication and the trigonometric coefficients are continuous, and inverse square root is continuous on positive definite matrices. An ordinary justification of the last statement fixes a positive spectral lower bound near any given matrix, approximates x↦x^{−1/2} uniformly by polynomials on a compact positive interval, and uses the spectral theorem to bound the matrix approximation error by the scalar uniform error. Polynomial evaluation is continuous, giving the desired continuity in operator norm and therefore in the usual finite-dimensional matrix topology.",
+        "At β=0, X_0=aX and Y_0=e^{iα/2}Y. At β=π they are X_π=e^{iα/2}Y and Y_π=−aX. A unit complex scalar multiplies the polar factor by that scalar. Substituting those endpoint blocks gives C(π)=C(0)*. This calculation uses neither unitarity of the full block matrix [X Y;Z W] nor an assumed circuit decomposition."
+      ]
+    },
+    {
+      "heading": "Ordinary proof: a continuous determinant phase with opposite endpoints",
+      "paragraphs": [
+        "For a nonreal τ define h_τ on its closed half-plane by h_τ(z)=arg(−iz)+π/2 when Im τ>0, and h_τ(z)=arg(iz)−π/2 when Im τ<0. The rotated argument avoids the negative-real branch cut on that closed half-plane away from zero, so h_τ is continuous there. It satisfies e^{ih_τ(z)}=z/|z|. On a nonreal input τ it agrees with arg τ. At z=1 it is zero; at z=−1 it is π in the upper-half-plane branch and −π in the lower-half-plane branch.",
+        "For 0≤β≤π, c and s are nonnegative. The factors n_j(β)=cτ_j−s and d_j(β)=c+sτ_j have imaginary parts c Im τ_j and s Im τ_j. They stay in the closed half-plane selected by τ_j and never vanish, by the preceding factor argument. Define σ(β)=Σ_j[h_{τ_j}(n_j(β))−h_{τ_j}(d_j(β))]. Every summand is continuous, so σ is a continuous real function on [0,π].",
+        "The determinant factors of X_β and Y_β share the same nonzero prefactor a^D det X; their quotient is ∏_j n_j/d_j. The inverse square roots in the polar formula have positive real determinants, and (−i)^D=1 because D is divisible by four. Thus det C(β) has the phase of that product. Since C(β) is unitary, its determinant has modulus one. Consequently det C(β)=e^{iσ(β)} exactly. This is a determinant calculation, not an assumption that principal arguments add without branch corrections.",
+        "At β=0 the numerator is τ_j and denominator is 1, giving σ(0)=Σ_j arg τ_j. At β=π the numerator is −1 and denominator is τ_j, giving σ(π)=π(N₊−N₋)−Σ_j arg τ_j. The balanced rotation makes N₊=N₋, and therefore σ(π)=−σ(0). The prescribed real phase, including its integer branch, is what allows the normalized eigenphase lift to have the required endpoint symmetry."
+      ]
+    },
+    {
+      "heading": "Ordinary proof: existence, uniqueness and stability of normalized phase lifts",
+      "paragraphs": [
+        "Write L=2π. A normalized phase lift is a nondecreasing real list ν_0≤…≤ν_{D−1} with ν_{D−1}≤ν_0+L. Two phase lists have the same residues if, after a permutation, corresponding entries differ by integer multiples of L. Every residue multiset admits a normalized lift with any prescribed sum differing from the sum of one representative list by an integer multiple of L. To see this, reduce the representatives to [0,L) and sort them. Moving the first entry to the end after adding L preserves order and width and increases the sum by L. If the required integer change is k=Dh+r with 0≤r<D, perform r such shifts and then add Lh to all D entries. This realizes the target sum and leaves every complex phase unchanged.",
+        "For uniqueness, define F_ν(x)=Σ_j floor((x−ν_j)/L). Permuting entries leaves F unchanged; adding Lm_j to entries subtracts Σm_j from F and adds LΣm_j to their sum. Hence F_ν(x)+(Σν_j)/L depends only on the residue multiset. Two normalized lists with the same residues and equal sums therefore have identical F functions.",
+        "A normalized list is recovered from F by ν_j≤x if and only if j+1−D≤F_ν(x), with indices starting at zero. Below ν_0 every floor is at most −1, so F≤−D. On [ν_0,ν_0+L), each summand is zero when ν_j≤x and −1 otherwise; thus F is the count of entries at most x minus D. Above or at ν_0+L every summand is nonnegative and every entry is at most x. These three cases prove the equivalence. Equal F functions consequently give the same threshold set for each ordered entry, proving entrywise uniqueness. In particular this remains valid when phases coincide or the width equals L.",
+        "The same invariant gives quantitative stability. Let ν and ν′ be normalized, and let μ be a possibly unsorted lift of ν′’s residues such that |μ_j−ν_{σ(j)}|≤ε for a permutation σ. Assume |Σν′−Σν|+Dε<L. Matched closeness gives |Σμ−Σν|≤Dε, hence |Σμ−Σν′|<L. The invariant shows that (Σμ−Σν′)/L is an integer; it must be zero. Thus F_{ν′}=F_μ.",
+        "For every x, matched closeness and monotonicity of the floor give F_ν(x−ε)≤F_μ(x)≤F_ν(x+ε). Apply the recovery equivalence first at x=ν_j+ε and then at x=ν′_j. It yields ν′_j≤ν_j+ε and ν_j≤ν′_j+ε, respectively. Therefore |ν′_j−ν_j|≤ε for every j. This proves the exact stability lemma used in the source and explains why a small continuous change in the target sum prevents a discontinuous cyclic change of branch."
+      ]
+    },
+    {
+      "heading": "Ordinary proof: continuity through eigenvalue collisions",
+      "paragraphs": [
+        "For a continuous finite matrix path M(β), its eigenvalue multiset is continuous in the matching sense: for β near β_0, any full root list v_j of M(β) can be permuted to lie arbitrarily close to a fixed list u_j of M(β_0). Here multiplicities are retained. An elementary compactness proof starts with the bound |λ|≤Σ_{i,j}|M_{ij}| for every eigenvalue λ. Choose a nonzero eigenvector and a coordinate of maximal modulus; its row equation gives that bound after dividing by the positive maximal modulus.",
+        "If the matching statement failed along β_n→β_0, choose bad root lists v^{(n)}. The bound makes them eventually bounded in the finite-dimensional space ℂ^D. A subsequence therefore converges to a list r. For every complex z, ∏_j(z−v_j^{(n)})=det(zI−M(β_n)). Passing to the limit gives ∏_j(z−r_j)=det(zI−M(β_0)). These monic polynomials are equal, so their root multisets, including multiplicities, agree. A permutation matches r to u, and sufficiently late lists in the subsequence are close under that permutation, contradicting their choice. No assumption of a collision-free spectrum along the path is used.",
+        "Apply this to the continuous unitary C(β). Choose at each β a normalized eigenphase list ν(β) with sum σ(β); existence follows from the determinant phase and the lift existence lemma. Uniqueness makes this list well defined regardless of the auxiliary root ordering. Fix β_0 and a desired entrywise tolerance ε>0, and choose ε′ smaller than both ε and π/(2D). Matching eigenvalues sufficiently closely gives real representatives μ_j near ν_{σ(j)}(β_0) within ε′: on the unit circle, |e^{ix}−e^{iy}|=2|sin((x−y)/2)|, so sufficiently small chord distance admits such a nearby phase representative.",
+        "Continuity of σ also gives |σ(β)−σ(β_0)|<π in a small enough neighborhood. Since Dε′<π/2, the stability condition is strictly below 2π. The preceding stability lemma now bounds every |ν_j(β)−ν_j(β_0)| by ε′. Thus the normalized ordered eigenphase list is continuous on [0,π], even through eigenvalue collisions and crossings of the principal-argument branch cut. This is the crucial conclusion that would not follow from choosing principal arguments independently."
+      ]
+    },
+    {
+      "heading": "Ordinary proof: the middle-half sign change and the exact matrix endpoint",
+      "paragraphs": [
+        "The identity C(π)=C(0)* implies that the endpoint eigenphase multiset is the negative of the initial one modulo 2π. The reversed negative list −ν_{D−1−j}(0) is normalized and has sum −σ(0)=σ(π). Uniqueness therefore proves ν_j(π)=−ν_{D−1−j}(0) exactly as real numbers, not merely modulo 2π.",
+        "Let S={p,p+1,…,3p−1}, the middle half of the D=4p ranks. It has size 2p and is invariant under reversal j↦D−1−j. The real imbalance P(β)=Σ_{j∈S}ν_j(β)−Σ_{j∉S}ν_j(β) is continuous. Endpoint reversal invariance and negation give P(π)=−P(0). If either endpoint vanishes the desired point is already found; otherwise their signs are opposite and the ordinary intermediate value theorem gives β*∈[0,π] with P(β*)=0.",
+        "The positive positions of the chosen Walsh row are the first 2p basis indices. Choose a permutation e carrying them onto S. Reassign the eigenphases by θ_j=ν_{e(j)}(β*); this preserves the eigenvalue multiset. The Walsh sum Σ_j h_jθ_j then equals P(β*) and is zero, where h_j=+1 on the first 2p positions and −1 on the others. Thus finalAngle=(1/D)Σh_jθ_j=0. More generally integer shifts θ_j↦θ_j+2πm_j preserve eigenvalues and alter the Walsh sum by an integer multiple of 2π; the actual zero-imbalance construction can take all additional m_j=0, because the normalized lift already carries its required branches.",
+        "Finally multiply the full block matrix U=[X Y;Z W] by the lifted one-qubit gate g=Rz(α)Ry(β*). Direct block multiplication gives the pivoted blocks already used in the polar path and the corresponding lower blocks. The gate is unitary by its elementary rotation formulas. The phase reassignment above supplies the root list of zxzC(X_β*,Y_β*) with finalAngle zero. This proves exactly the existential matrix conclusion of pivot_merge for every admitted dimension and input. It does not construct a circuit, count the cost of the eigenbasis/permutation, extend the argument to coincident crossing angles, or derive the universal improved recursive node rule.",
+        "The separate arithmetic recursion c_2=3 and c_{n+1}=4c_n+3·2^n−6 has the source’s closed form (21·4^n−72·2^n+96)/48. Its conversion into a bound on every n-qubit circuit explicitly requires a two-qubit construction and a universal synthesis-node hypothesis. Those obligations remain hypotheses of generalBound_of_pivot_node. The ordinary matrix proof above cannot remove them. This expansion is attributed to Matt Bowring’s pinned source; the fresh compiler/axiom audit now passes, while contributor approval and historical novelty review remain independent pending checks."
+      ]
+    },
+    {
+      "heading": "Relation to established Block-ZXZ and Walsh methods",
+      "paragraphs": [
+        "De Vos and De Baerdemacker, The block-ZXZ synthesis of an arbitrary quantum circuit (v3), section 5, equation 5, already give D=−iV₁₁*V₁₂ for the left polar decompositions U_jk=P_jk V_jk. For invertible top blocks their D equals the present C=−iP(X)*P(Y). Krol and Al-Ars section 4.1 use the same polar primitive. Changing notation does not make this formula new.",
+        "The conversion from an eigenphase list to uniformly controlled rotation angles also predates this submission. Möttönen, Vartiainen, Bergholm and Salomaa, Quantum Circuits for General Multiqubit Gates, equations 3–5 and the ensuing discussion, derive a Gray-code column permutation of the Walsh–Hadamard matrix and its inverse. Krol–Al-Ars section 3 uses that transformation; their section 5 establishes the existing Block-ZXZ circuit optimization and the recurrence c_n≤4c_{n−1}+3·2^{n−1}−5. Thus the Walsh transform, the recursive decomposition framework and the established 22/48 leading coefficient are background, rather than new results of this chapter.",
+        "The restricted contribution proposed here is the conjunction of a balanced Rz(α)Ry(β) pivot, a nonsingular polar path under separated crossing angles, a continuous normalized real eigenphase lift with a prescribed determinant sum, and an intermediate-value argument producing an exactly zero selected Walsh angle after relabeling. The closest primary constructions inspected above do not state or prove that combined generic existence theorem. This is a bounded comparison, not proof of historical priority across all spectral phase-balancing literature. Conditional P2=.05 credit concerns that exact combined theorem: its replay now passes, while author review, novelty and judging acceptance remain pending. Its matrix conclusion does not establish a circuit implementing the desired extra cancellation or the proposed universal 21/48 bound."
+      ]
+    },
+    {
+      "heading": "Dated affiliation and pre-event research history",
+      "paragraphs": [
+        "Provisional publication affiliation: Purdue University, Department of Mechanical Engineering (documented Jan 2026; current preferred publication affiliation to confirm). The author’s own website identifies him as a quantum software engineer and graduate student. His coauthored arXiv paper An Electronic Ising Machine, version 2 dated 9 January 2026, explicitly gives the Department of Mechanical Engineering at Purdue University for Matt Bowring. This is dated documentary evidence; author approval of the current preferred affiliation remains pending.",
+        "Bowring’s personal post Thinking about optimal unitary synthesis, dated 12 September 2024, describes an earlier programme on sparse uniformly controlled rotations and approximate error bounds within Quantum Shannon Decomposition, motivated by his unitaryGate work. He explicitly describes omitted work as incomplete. The inspected post does not state or prove the current balanced polar-pivot existence theorem or its normalized continuous eigenphase and zero-Walsh argument. It establishes pre-event research history, rather than priority for this exact completed result. The conditional P2=.05 recommendation remains confined to the combined generic theorem; the date of an earlier research programme alone does not change that recommendation."
+      ]
+    },
+    {
+      "heading": "Fresh exact verification: selected proof and unfinished baseline separated",
+      "paragraphs": [
+        "Source snapshot: bowrango/lean-unitary, commit 7014b63ee2cfd01c641a7f539c73b664a2aa3d66, recorded 4 October 2026 at 19:22 UTC. A fresh exact replay finished 5 October 2026 at 01:38:41 UTC under Lean 4.30.0-rc2 and Mathlib c1e30e172c8fda21e6776bf1f10351e882ee31b9. All 26 authored sources compiled. The six selected generic/count/conditional-bridge theorem prints use only propext, Classical.choice and Quot.sound; count_closed uses only propext and Quot.sound. No selected print contains sorryAx, native-evaluation or unknown axioms. A separate baseline audit prints sorryAx for all eight Claims endpoints, including Claims.synth; the baseline source has 13 admitted placeholders. Compilation success therefore verifies the selected scoped theorem and does not verify the universal synthesis headline. Receipt: Verification/matt-unitary-current-fresh-build.json.",
+        "The endpoint generalBound_of_pivot_node is itself axiom-clean because it proves an implication from explicitly supplied hbase and hnode. Its successful replay does not discharge either premise. The generic pivot_merge theorem supplies the matrix phase conclusion under its displayed separation hypotheses; no proof in this chain turns it into the universal circuit node. All eight separate baseline Claims prints include sorryAx, exactly as their underlying admitted source predicts. These actual axiom lists are preserved in the receipt and companion verification record. Accepted competition points remain zero pending novelty and chair scope acceptance; the recommended narrow conditional score stays 33.9488 at p=.05."
+      ]
+    }
+  ],
+  "primary_prior_references": [
+    "https://arxiv.org/abs/1512.07240v3",
+    "https://arxiv.org/abs/quant-ph/0404089v3",
+    "https://arxiv.org/abs/2403.13692v2"
+  ],
+  "affiliation_evidence": "matt_identity_affiliation_history_2026-10-05.json",
+  "fresh_verification": {
+    "status": "PASS_SELECTED_ENDPOINTS_WITH_UNFINISHED_BASELINES",
+    "finished_utc": "2026-10-05T01:38:41Z",
+    "receipt": "Verification/matt-unitary-current-fresh-build.json",
+    "receipt_sha256": "467dcd3a7cfcd191cdb53b27de2c5d149b6d7505fdaa1b32c4cbe42c4963f17d",
+    "source_revision": "7014b63ee2cfd01c641a7f539c73b664a2aa3d66",
+    "lean": "4.30.0-rc2",
+    "mathlib": "c1e30e172c8fda21e6776bf1f10351e882ee31b9",
+    "authored_source_modules": 26,
+    "authored_source_compilation": "PASS",
+    "selected_endpoint_prints": 6,
+    "selected_endpoint_axioms": [
+      {
+        "endpoint": "LeanUnitary.Pivot.exists_pivot",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "native_axioms": [],
+        "unrecognized_axioms": [],
+        "classification": "STANDARD_KERNEL_AXIOMS"
+      },
+      {
+        "endpoint": "LeanUnitary.Pivot.pivot_merge",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "native_axioms": [],
+        "unrecognized_axioms": [],
+        "classification": "STANDARD_KERNEL_AXIOMS"
+      },
+      {
+        "endpoint": "LeanUnitary.Pivot.continuousOn_lift",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "native_axioms": [],
+        "unrecognized_axioms": [],
+        "classification": "STANDARD_KERNEL_AXIOMS"
+      },
+      {
+        "endpoint": "LeanUnitary.Pivot.count_closed",
+        "axioms": [
+          "propext",
+          "Quot.sound"
+        ],
+        "native_axioms": [],
+        "unrecognized_axioms": [],
+        "classification": "STANDARD_KERNEL_AXIOMS"
+      },
+      {
+        "endpoint": "LeanUnitary.Pivot.saving",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "native_axioms": [],
+        "unrecognized_axioms": [],
+        "classification": "STANDARD_KERNEL_AXIOMS"
+      },
+      {
+        "endpoint": "LeanUnitary.Pivot.generalBound_of_pivot_node",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "native_axioms": [],
+        "unrecognized_axioms": [],
+        "classification": "STANDARD_KERNEL_AXIOMS"
+      }
+    ],
+    "selected_endpoint_trust": "STANDARD_KERNEL_AXIOMS_ONLY",
+    "baseline_endpoint_prints": 8,
+    "baseline_endpoint_axioms": [
+      {
+        "endpoint": "LeanUnitary.Claims.muxRotations",
+        "axioms": [
+          "propext",
+          "sorryAx",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "native_axioms": [],
+        "unrecognized_axioms": [],
+        "classification": "SORRY_ADMISSION"
+      },
+      {
+        "endpoint": "LeanUnitary.Claims.demultiplex",
+        "axioms": [
+          "propext",
+          "sorryAx",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "native_axioms": [],
+        "unrecognized_axioms": [],
+        "classification": "SORRY_ADMISSION"
+      },
+      {
+        "endpoint": "LeanUnitary.Claims.cosineSine",
+        "axioms": [
+          "propext",
+          "sorryAx",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "native_axioms": [],
+        "unrecognized_axioms": [],
+        "classification": "SORRY_ADMISSION"
+      },
+      {
+        "endpoint": "LeanUnitary.Claims.twoQubitOptimal",
+        "axioms": [
+          "propext",
+          "sorryAx",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "native_axioms": [],
+        "unrecognized_axioms": [],
+        "classification": "SORRY_ADMISSION"
+      },
+      {
+        "endpoint": "LeanUnitary.Claims.qsd",
+        "axioms": [
+          "propext",
+          "sorryAx",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "native_axioms": [],
+        "unrecognized_axioms": [],
+        "classification": "SORRY_ADMISSION"
+      },
+      {
+        "endpoint": "LeanUnitary.Claims.qsdOptimized",
+        "axioms": [
+          "propext",
+          "sorryAx",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "native_axioms": [],
+        "unrecognized_axioms": [],
+        "classification": "SORRY_ADMISSION"
+      },
+      {
+        "endpoint": "LeanUnitary.Claims.blockZXZ",
+        "axioms": [
+          "propext",
+          "sorryAx",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "native_axioms": [],
+        "unrecognized_axioms": [],
+        "classification": "SORRY_ADMISSION"
+      },
+      {
+        "endpoint": "LeanUnitary.Claims.synth",
+        "axioms": [
+          "propext",
+          "sorryAx",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "native_axioms": [],
+        "unrecognized_axioms": [],
+        "classification": "SORRY_ADMISSION"
+      }
+    ],
+    "baseline_trust": "SORRY_ADMISSION_IN_ALL_EIGHT_PRINTED_CLAIMS",
+    "baseline_source_placeholder_count": 13,
+    "global_21_48_synthesis": "UNPROVED; actual circuit node remains a hypothesis",
+    "source_identity": "Exact frozen source SHAs verified; no entrant custom olean reused. Own first-source pilot output retained at its recorded checkpoint.",
+    "maximum_owned_private_bytes": 739561472,
+    "minimum_disk_free_bytes": 5792649216,
+    "minimum_physical_available_bytes": 3448520704,
+    "minimum_available_commit_bytes": 4861878272
+  }
+}

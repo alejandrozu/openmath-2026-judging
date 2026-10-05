@@ -1,0 +1,26 @@
+--- run_source_plan.py@70ff209c
++++ run_dms_import_pruned_plan.py
+@@ -30,7 +30,7 @@
+  assert project=='sakana-erdos169-fourap' and third_worker_continuation and not third_worker_pilot, 'Only the explicitly authorized E169 independent-DAG continuation'
+ novel_third_projects={'sakana-a000224','sakana-erdos169-fourap','htpeo-kobon471','sakana-a060957','sakana-a100475','sakana-ferrers',
+  'sakana-erdos1060-uniform-partial','sakana-erdos829-log-five-thirds','sakana-opdp89-parity-sharp','sakana-FOCUS-E3','sakana-FOCUS-E3-pullback',
+- 'sakana-FOCUS-MATRIX-seed0','sakana-FOCUS-MATRIX-seed1','sakana-FOCUS-MATRIX-seed2','matt-unitary-current','htpeo-dms-current'}
++ 'sakana-FOCUS-MATRIX-seed0','sakana-FOCUS-MATRIX-seed1','sakana-FOCUS-MATRIX-seed2','matt-unitary-current','htpeo-dms-current','htpeo-dms-current-import-pruned-diagnostic'}
+ if full_mathlib_source_mode:
+  assert third_worker_guarded and project!='matt-unitary-current' and (project!='sakana-a000224' or a000_whole_scope_only),'Future selected full-library mode only; narrower Matt/A000 policies remain unchanged outside explicit A000 whole-scope mode'
+ legacy_a000_single_pilot=third_worker_pilot and project=='sakana-a000224' and not full_mathlib_source_mode
+@@ -49,6 +49,14 @@
+   else:from matt_resource_guard import guarded_tree
+ dest=BASE/'builds'/project
+ plan=json.loads((dest/'build-plan.json').read_text())
++
++# Exact import-only DMS adapter: no full-source mode or cross-route output reuse.
++assert project=='htpeo-dms-current-import-pruned-diagnostic' and worker_threads==1
++assert third_worker_guarded and not full_mathlib_source_mode and not independent_resource_mode and not defer_whole_import_mode
++from verify_dms_full228_stage import verify_stage
++dms_stage_preflight=verify_stage(require_cold=not (BASE/(project+'-fresh-build.json')).exists())
++plan['import_only_stage_identity_preflight']=dms_stage_preflight
++
+ deferred_whole_names=set()
+ if defer_whole_import_mode:
+  from full_mathlib_scope import classify as classify_full_mathlib

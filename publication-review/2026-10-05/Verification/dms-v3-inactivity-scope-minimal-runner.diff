@@ -1,0 +1,20 @@
+--- prepared-runner
++++ corrected-runner
+@@ -60,7 +60,7 @@
+ dms_seed_sha=sys.argv[sys.argv.index(seed_flag)+1]
+ assert dms_policy_sha=='a4b795b071135118af94868726b9ac45af0579540d5856e9aaf7d48a9e3717e6' and re.fullmatch('[0-9a-f]{64}',dms_seed_sha)
+ assert hashlib.sha256((BASE/'verify_dms_v3_stage.py').read_bytes()).hexdigest()=='be19344e55bb6a50930bbd2b660385447cfe5fd721861f2fa6c4253094b927c5'
+-assert hashlib.sha256((BASE/'dms_v3_copy99_hardlink_seed.py').read_bytes()).hexdigest()=='7e01f07edd14bbde765681bab36bd1a3f38da4e55017f4234b89955fe94eb00f'
++assert hashlib.sha256((BASE/'dms_v3_copy99_hardlink_seed.py').read_bytes()).hexdigest()=='772423ad135bddde4487ff381bc39c4d2cf2a1022229943f37e4d7c03fadaa92'
+ from verify_dms_v3_stage import verify_stage
+ from dms_v3_copy99_hardlink_seed import verify_seed
+ dms_stage_preflight=verify_stage(require_cold=False)
+@@ -68,7 +68,7 @@
+ dms_seed_preflight=verify_seed(dms_policy_sha,dms_seed_sha)
+ seed_receipt=json.loads((BASE/'dms-v3-v1copy99-hardlink-seed-completed-20261005.json').read_bytes())
+ assert hashlib.sha256(Path(seed_receipt['approval_receipt']).read_bytes()).hexdigest()==seed_receipt['approval_receipt_sha256']
+-assert seed_receipt['seed_helper_sha256']=='7e01f07edd14bbde765681bab36bd1a3f38da4e55017f4234b89955fe94eb00f'
++assert seed_receipt['seed_helper_sha256']=='772423ad135bddde4487ff381bc39c4d2cf2a1022229943f37e4d7c03fadaa92'
+ plan['import_only_stage_identity_preflight']=dms_stage_preflight
+ plan['qualified_previous_own_original99_hard_link_seed']=dms_seed_preflight
+ plan['cross_route_own_output_reuse_labels']={'previous_own_original_route_cold_outputs_reused':99,'new_cold_diagnostic_sources_required':129,'outputs_described_as_new_compilation_rows':False}

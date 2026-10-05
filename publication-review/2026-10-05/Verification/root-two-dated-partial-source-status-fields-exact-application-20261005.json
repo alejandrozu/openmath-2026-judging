@@ -1,0 +1,27 @@
+{
+  "status": "ROOT_APPLIED_ONLY_TWO_DATED_PARTIAL_STATUS_FIELDS_ALL_OTHER_CONTENT_VALUES_UNCHANGED",
+  "checked_utc": "2026-10-05T11:07:19.139066+00:00",
+  "reviewed_parent_delta": {
+    "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\A000167-HT185-exact-three-stale-summary-dated-partial-source-delta-unapplied-20261005.json",
+    "sha256": "e99a140dd3b8ba5019762c44f552a5fbfe9e567d7189edcc6a1983fff84815db"
+  },
+  "exact_applied_operations": [
+    {
+      "family_id": "a000224",
+      "field": "completed_verification_scope_note",
+      "after_text": "Dated partial fresh replay: the checkpoint reviewed on 5 October 2026 at 08:56:47 UTC qualifies 167 of 171 frozen custom source modules, comprising 166 granular sources and Bounds. Bounds passed; the controller subsequently exited 120 and its unfinished receipt is preserved. A later attempt exited 1 at an initial resource gate before any new source or audit. At that checkpoint, four remaining source modules and the three selected endpoint prints had not been run; the full 171-source/3-print scope is not qualified. Historical author/internal replay records are separate. Qualification: Verification/A000-actual167-abnormal-controller-exit120-partial-readonly-qualification-20261005T085647463194Z.json. Operational source-free record: Verification/root-A000-remaining4-32529-actual-outer-exit1-before-source-and-hold-restored-20261005.json. These partial checks confer no novelty, score, award or release upgrade."
+    },
+    {
+      "family_id": "RAMSEY",
+      "field": "completed_verification_scope_note",
+      "after_text": "Dated partial fresh replay: the checkpoint qualified on 5 October 2026 at 11:00:56 UTC contains 185 of 2103 original source-module successes: 35 common providers and 150 independent certificate kernels. Eight new original kernels, R141\u2013R148, passed using a separately qualified identical-import header cache; the cache reuses imported dependencies, while each new proof body is freshly checked. At that checkpoint, 1898 kernels, nine support modules, eleven aggregate modules and the main project\u2019s 24 selected endpoint requests had not yet been attempted. Six isolated pilot axiom prints are standard-kernel or axiom-free evidence for the shared import route, not the main-project audit; no isolated pilot output was promoted. Full-project PASS, novelty, score, award and release remain unqualified. Scope record: Verification/root-HT-actual185-eight-cold-header-kernels-complete-source-output-checks-partial-qualification-20261005.json. Immutable checkpoint: Verification/ht-ramsey-actual185-eight-header-kernels-immutable-20261005.json."
+    }
+  ],
+  "prior_canonical_sha256": "b12d0aebd7aeb993a43c13c46ad0d696f30a881d4ca6d7c21edbe4ed0c5bb460",
+  "new_canonical_sha256": "eeb715eda6386a79df0b1cc28c1c1df53070cb5695761244aeed334ce6bfc508",
+  "historical_canonical_preserved": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\editorial_history\\partial-A000167-HT185-20261005",
+  "changes_are_dated_checkpoint_evidence_not_live_run_or_full_completion_claims": true,
+  "PDF_rebuild_still_required": true,
+  "no_proof_or_controller_input_mutation": true,
+  "initial_readonly_delta_check_failure": "Initial family-semantic check used ensure_ascii=True; source proposal uses ensure_ascii=False. Assertion occurred before any source change. An unintended unchanged-source selective render was started afterward; the corrected render is separately recorded below."
+}

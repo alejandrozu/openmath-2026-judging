@@ -1,0 +1,33 @@
+Independent ordinary certificate checks; these do not replace Lean replay or settle novelty.
+
+Run with Python 3:
+  python check_final_four_certificates.py
+  python check_169_certificates.py
+  python check_quartic_ordinary_identities.py
+  python check_rohith_k61.py
+  python check_dms_gp_certificates.py
+  python check_luke_clebsch192.py
+  python check_luke3840_exact.py --inputs luke3840_exact_inputs.npz
+  python check_matt_polar_path.py
+
+The first script has its five byte-identical Lean literal-data inputs in verification/builds/ and uses only the standard library. The second includes its exact finite data and uses only the standard library. The third independently verifies eleven exact Laurent-polynomial identities used by the quartic argument; it does not replace the analytic estimates or the Lean endpoint. The fourth hashes the preserved 61-line input and counts exact rational intersections and bounded triangular faces; no Lean or historical novelty conclusion follows from that count. The DMS script reconstructs the extracted period, seam and small-case data and checks 519 finite graphs and 20,612 local windows; the accompanying ordinary proof explains the passage to arbitrary n. Their output JSON records are included.
+
+The last three scripts require NumPy. The 192-class Luke script independently reconstructs the rational kernel and recounts its exact K4 density. The 3840-class script reconstructs the literal centered blocks from a pickle-free portable input, checks its exact sparse multiplicities and signed-integer overflow bounds, and independently matches the full raw numerator and reduced density. Its manifest hashes the source-derived input and checker. Both exact counts passed; neither constitutes Lean replay or settles historical priority. The Matt script checks nine numerical examples of the polar path and Walsh intermediate-value construction; it is a sanity check, not a proof of the generic theorem or a circuit-count bound.
+
+Luke witness correspondence check also requires NumPy. Extract the Luke source ZIP from ../New intake source archives/ to a folder, then run:
+  python check_luke_witness.py PATH_TO_EXTRACTED_LUKE_SOURCE
+This copy has a path-argument adapter only; the mathematical checks are unchanged. It verifies data, symmetry and all block means, not K4 density or priority.
+
+Compiler projects, version pins, source hashes and actual fresh results are recorded separately in the verification register.
+
+Additional E169 modular-alphabet check (standard library only):
+  python check_e169_modular_six.py --output e169_modular_six-reproduction.json
+This checks the21 base digits, six added residues, 1,996,488 one-new cases and180 two-new pair cases. The zero-new case uses the stated least-nonzero-digit descent. It verifies modular four-AP avoidance, without certifying Lean execution, the reciprocal-sum bound or the final set assembly. The original successful receipt is preserved separately.
+
+Additional DMS gluing checks (standard library only):
+  python check_dms_gluing_finite.py
+This checks the625 two-cut matching cases,256 nonmatching cases,324 three-color compatibility cases and four displayed small colorings. Optional --source-dir validates the22 recorded frozen source hashes. It does not prove the five open infinite structural premises or replace the complete census/Lean replay. Its actual output receipt and source exposition audit accompany it.
+
+Luke known 768 data recount (standard-library Python on Windows; no Lean or entrant executable):
+  python check_luke_published768_data_only.py --source inputs/luke_published768/Data.lean --receipt luke-published768-reproduction.json
+The literal input and all resource-counter helpers are copied byte-identically and SHA-checked in luke_published768_copy_manifest.json. Choose a new receipt filename to preserve the supplied successful receipt. This independently counts ordinary edges, triangles and four-cliques, derives the blue-diagonal blow-up numerator 10,487,165,184, and checks all 64 two-color graphs on four vertices against literal tuple sums. The ordinary equality-pattern proof does not make the submitted universal identity Lean-proved, replace source replay or establish new numerical priority; the smaller McKay numerator is recorded explicitly. It uses one arithmetic worker with a 256 MB own-memory bound and verified Windows resource floors.

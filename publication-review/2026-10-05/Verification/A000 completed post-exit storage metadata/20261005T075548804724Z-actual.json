@@ -1,0 +1,264 @@
+{
+  "status": "PASS_BYTE_IDENTICAL_A000_POST_EXIT_ORDINARY_NON_WOF_NONINCREASING_ALLOCATION",
+  "started_utc": "2026-10-05T07:55:48.804724+00:00",
+  "interface_sha256": "03a6f7118d97e97e646b81cdb5508fab512eb23f65dc1465cd28d141d9cbd99b",
+  "runner_sha256": "d73aa5d2218f358e79d5479de20b5082b345a994d0d4dd35d0a23516876eda28",
+  "root_policy_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\root-A000-post-exit-storage-v2-interface-granular90-approval-20261005.json",
+  "root_policy_sha256": "984cc1aa2baad60e4809cee35c4d6a4046252a34705c25355a48ee3b57363aab",
+  "specification_sha256": "00740b6897357d58e7546252f9299981248457fdef7a7f212db029ad400952fa",
+  "source_receipt_sha256_before": "2d9a5919a066cd253effe6e7e52fee6d8024c8ab23f507a79b634e55bc3bb0d4",
+  "source_module": "OpHack.QuadraticResidue224.CertificateP151",
+  "actual_completed_source_row": {
+    "module": "OpHack.QuadraticResidue224.CertificateP151",
+    "command": [
+      "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+      "-j1",
+      "-DmaxHeartbeats=0",
+      "-DmaxRecDepth=100000",
+      "-o",
+      "OpHack\\QuadraticResidue224\\CertificateP151.olean",
+      "OpHack\\QuadraticResidue224\\CertificateP151.lean"
+    ],
+    "seconds": 8.453,
+    "exit": 0,
+    "stdout": "",
+    "stderr": "",
+    "is_endpoint_audit": false,
+    "minimum_free_bytes": 5372973056,
+    "stop_reason": null,
+    "started_utc": "2026-10-05T07:55:39.604500+00:00",
+    "finished_utc": "2026-10-05T07:55:48.052857+00:00",
+    "owned_process_stop_output": null,
+    "own_job_resource_receipt": {
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "OpHack\\QuadraticResidue224\\CertificateP151.olean",
+        "OpHack\\QuadraticResidue224\\CertificateP151.lean"
+      ],
+      "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224",
+      "started_utc": "2026-10-05T07:55:39.604500+00:00",
+      "attempted": true,
+      "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+      "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+      "resource_policy": {
+        "initial_disk_bytes": 4000000000,
+        "initial_physical_bytes": 6442450944,
+        "initial_available_commit_bytes": 5368709120,
+        "continuous_disk_bytes": 1000000000,
+        "continuous_physical_bytes": 3221225472,
+        "continuous_available_commit_bytes": 1073741824,
+        "own_job_private_bytes": 6442450944,
+        "own_process_private_bytes": 6442450944,
+        "poll_seconds": 0.25,
+        "timeout_seconds": 3600
+      },
+      "minimum_disk_free_bytes": 5372973056,
+      "initial_system_memory_snapshot": {
+        "free_physical_bytes": 10445721600,
+        "total_physical_bytes": 34024419328,
+        "available_commit_bytes": 11695058944,
+        "total_commit_limit_bytes": 60213837824
+      },
+      "minimum_physical_available_bytes": 9448726528,
+      "minimum_available_commit_bytes": 9388937216,
+      "root_pid": 55380,
+      "own_job_assignment_before_resume": "PASS",
+      "exit": 0,
+      "job_peak_process_private_bytes": 2316070912,
+      "job_peak_aggregate_private_bytes": 2317320192,
+      "state": "PASS",
+      "finished_utc": "2026-10-05T07:55:48.052857+00:00",
+      "seconds": 8.453,
+      "polled_peak_tree_private_bytes": 2306535424,
+      "polled_peak_tree_rss_bytes": 1011302400,
+      "counter_samples": 32,
+      "observed_own_processes": {
+        "46524": {
+          "exe": "conhost.exe",
+          "peak_private_bytes": 1249280,
+          "peak_rss_bytes": 7852032
+        },
+        "55380": {
+          "exe": "lean.exe",
+          "peak_private_bytes": 2305286144,
+          "peak_rss_bytes": 1014702080
+        }
+      },
+      "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\sakana-a000224-aa99f0651a5a33d6-attempt-6.stdout.txt",
+      "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\sakana-a000224-aa99f0651a5a33d6-attempt-6.stderr.txt",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_excerpt": "",
+      "stderr_excerpt": ""
+    },
+    "source_sha256": "184e82e331a025d85d56dc4860a21931331f034772c7488f8e9c6bfc07e6e053",
+    "third_worker_memory_observations": {
+      "minimum_free_physical_bytes": 9448726528,
+      "minimum_available_commit_bytes": 9388937216,
+      "peak_owned_private_bytes": 2317320192
+    },
+    "artifacts": [
+      {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP151.olean",
+        "sha256": "35b57082137064cbb68ec192ef63d05a960cc3df69ce05fe33c6e7919f9582e8",
+        "bytes": 1568
+      }
+    ],
+    "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+  },
+  "target": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP151.olean",
+  "native_before": {
+    "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP151.olean",
+    "logical_bytes": 1568,
+    "stored_bytes_GetCompressedFileSizeW": 1568,
+    "standard_allocation_bytes": 4096,
+    "compression_info_stored_bytes": 1568,
+    "compression_format": 2,
+    "volume_serial": 1980967165,
+    "file_index_high": 327680,
+    "file_index_low": 1736624,
+    "link_count": 1,
+    "attributes": 2080,
+    "FILE_ATTRIBUTE_COMPRESSED": true,
+    "FILE_ATTRIBUTE_REPARSE_POINT": false,
+    "FILE_ATTRIBUTE_ENCRYPTED": false,
+    "last_write_FILETIME": 134356605477241419
+  },
+  "WOF_before": {
+    "HRESULT": 0,
+    "external": false,
+    "provider": 0,
+    "info_length": 64,
+    "info_hex": "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "algorithm": null
+  },
+  "read_and_mmap_before": {
+    "ordinary_read_sha256": "35b57082137064cbb68ec192ef63d05a960cc3df69ce05fe33c6e7919f9582e8",
+    "Windows_read_only_mmap_sha256": "35b57082137064cbb68ec192ef63d05a960cc3df69ce05fe33c6e7919f9582e8",
+    "byte_equality": true
+  },
+  "actual_compact_command": [
+    "C:\\windows\\System32\\compact.exe",
+    "/C",
+    "/F",
+    "/Q",
+    "/EXE:LZX",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP151.olean"
+  ],
+  "resource_policy": {
+    "dispatch_disk_bytes": 4000000000,
+    "dispatch_physical_bytes": 6442450944,
+    "dispatch_available_commit_bytes": 5368709120,
+    "continuous_disk_bytes": 1000000000,
+    "continuous_physical_bytes": 3221225472,
+    "continuous_available_commit_bytes": 1073741824,
+    "own_process_and_job_private_cap_bytes": 268435456,
+    "timeout_seconds_per_command": 180,
+    "one_synchronous_compressor_between_actual_Lean_exit_and_next_dispatch": true,
+    "additional_per_file_free_minus_logical_size_at_least": 1000000000
+  },
+  "original76_or_any_scientific_source_or_runtime_provider_targets": 0,
+  "WOF_LZX_installed": false,
+  "allocation_nonincreasing": true,
+  "finished_utc": "2026-10-05T07:55:49.920540+00:00",
+  "actual_command_row": {
+    "command": [
+      "C:\\windows\\System32\\compact.exe",
+      "/C",
+      "/F",
+      "/Q",
+      "/EXE:LZX",
+      "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP151.olean"
+    ],
+    "started_utc": "2026-10-05T07:55:49.510534+00:00",
+    "initial_counters": {
+      "disk_free_bytes": 5373087744,
+      "free_physical_bytes": 10473435136,
+      "total_physical_bytes": 34024419328,
+      "available_commit_bytes": 11720736768,
+      "total_commit_limit_bytes": 60213837824
+    },
+    "preflight_processes": [
+      {
+        "ProcessId": 15636,
+        "ParentProcessId": 46348,
+        "Name": "python.exe",
+        "CreationDate": "/Date(1791031885635)/",
+        "CommandLine": "\"C:\\Users\\Propietario\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe\" \"C:/Users/Propietario/Documents/Codex/2026-10-01/mi/OpenMath-Judging/judging_app.py\""
+      },
+      {
+        "ProcessId": 55864,
+        "ParentProcessId": 50716,
+        "Name": "python.exe",
+        "CreationDate": "/Date(1791186728778)/",
+        "CommandLine": "\"C:\\Users\\Propietario\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe\" -X utf8 work/publication/verification/run_a000_source_plan_with_post_exit_storage_v2_prepared.py sakana-a000224 1 --guarded-third-slot --defer-whole-imports --a000-post-exit-lzx-policy work/publication/verification/root-A000-post-exit-storage-v2-interface-granular90-approval-20261005.json --a000-post-exit-lzx-policy-sha256 984cc1aa2baad60e4809cee35c4d6a4046252a34705c25355a48ee3b57363aab"
+      }
+    ],
+    "own_process_and_job_cap_bytes": 268435456,
+    "minimum_disk_free_bytes": 5373087744,
+    "minimum_physical_available_bytes": 10470440960,
+    "minimum_available_commit_bytes": 11715964928,
+    "owned_pid": 50468,
+    "created_suspended": true,
+    "assigned_to_own_job_before_resume": true,
+    "exit": 0,
+    "job_peak_private_bytes": 2064384,
+    "process_peak_private_bytes": 1241088,
+    "finished_utc": "2026-10-05T07:55:49.777571+00:00",
+    "seconds": 0.266,
+    "stop_reason": null,
+    "polled_peak_private_bytes": 1785856,
+    "polled_peak_rss_bytes": 11386880,
+    "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\20261005T075548804724Z-a000-post-exit-storage.stdout.bin",
+    "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\20261005T075548804724Z-a000-post-exit-storage.stderr.bin",
+    "stdout_sha256": "1599f298ef25918eba4c7020aedbe9c33abaa5228cc8550e64e88e56c71b2c45",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout": "\r\n Comprimiendo archivos en  C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\\r\n\r\n\r\nSe comprimieron 1 archivos en 1 directorios.\r\n1.568 bytes de datos en total est\u00a0n almacenados en 1.568 bytes.\r\nLa relaci\u00a2n de compresi\u00a2n es 1,0 a 1.\r\n",
+    "stderr": ""
+  },
+  "native_after": {
+    "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-a000224\\OpHack\\QuadraticResidue224\\CertificateP151.olean",
+    "logical_bytes": 1568,
+    "stored_bytes_GetCompressedFileSizeW": 1568,
+    "standard_allocation_bytes": 4096,
+    "compression_info_stored_bytes": 1568,
+    "compression_format": 0,
+    "volume_serial": 1980967165,
+    "file_index_high": 327680,
+    "file_index_low": 1736624,
+    "link_count": 1,
+    "attributes": 32,
+    "FILE_ATTRIBUTE_COMPRESSED": false,
+    "FILE_ATTRIBUTE_REPARSE_POINT": false,
+    "FILE_ATTRIBUTE_ENCRYPTED": false,
+    "last_write_FILETIME": 134356605477241419
+  },
+  "WOF_after": {
+    "HRESULT": 0,
+    "external": false,
+    "provider": 0,
+    "info_length": 64,
+    "info_hex": "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "algorithm": null
+  },
+  "read_and_mmap_after": {
+    "ordinary_read_sha256": "35b57082137064cbb68ec192ef63d05a960cc3df69ce05fe33c6e7919f9582e8",
+    "Windows_read_only_mmap_sha256": "35b57082137064cbb68ec192ef63d05a960cc3df69ce05fe33c6e7919f9582e8",
+    "byte_equality": true
+  },
+  "content_inode_linkcount_size_mtime_preserved": true,
+  "actual_allocation_bytes_saved": 0,
+  "source_receipt_bytes_unchanged": true,
+  "actual_source_PASS_row_not_reclassified": true,
+  "final_counters": {
+    "disk_free_bytes": 5373153280,
+    "free_physical_bytes": 10459611136,
+    "total_physical_bytes": 34024419328,
+    "available_commit_bytes": 11718610944,
+    "total_commit_limit_bytes": 60213837824
+  }
+}

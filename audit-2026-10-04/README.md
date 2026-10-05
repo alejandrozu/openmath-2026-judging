@@ -1,3 +1,5 @@
+> Historical October 4 audit. The [October 5 review package](../publication-review/README.md) records the current DMS p=.15, mention-only Leanification, recovered packets and subsequent verification. Earlier numbers below remain preserved as history.
+
 # OpenMath 2026: judging audit (4 October 2026)
 
 - **[AUDIT-REPORT.md](AUDIT-REPORT.md)**: full audit of the preliminary judging, final score proposal under the chair rulings, the new-mathematics review of the hills and zero-score entries, and recommendations for the difficulty (D) values.

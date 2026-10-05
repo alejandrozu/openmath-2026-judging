@@ -1,0 +1,11 @@
+--- preserved/prepare_htpeo_m2_linked_granular_runner.py
++++ prepare_htpeo_m2_linked_granular_runner.py
+@@ -152,7 +152,7 @@
+    'current_original_DMS_or_M2_receipts_changed':False,'hard_links_created':0,'artifacts_copied':0,
+    'Lean_or_compiler_invocations':0,'existing_frozen_plan_or_source_edits':0},
+  'AST_syntax_checks':'PASS_ONLY_NO_SCRIPT_EXECUTION',
+- 'required_next_review':'Root must review exact helper/policy/full runner diff; M2 links must wait for completed DMSv2 qualification and released exact link-count lock. Then separately approve exact97 seed; independently verify concrete seed before approving new3 source/four-print execution with an actual resource lease.',
++ 'required_next_review':'Root must review exact helper/policy/full runner diff; M2 links must wait for a separately root-reviewed COMPLETE body-identical DMS route and an explicit SHA-bound root release of the preserved failed-v2 postseed link-count lock. V2 itself failed at BlockProps and is not qualified. Then separately approve exact97 seed; independently verify concrete seed before approving new3 source/four-print execution with an actual resource lease.',
+  'example_future_invocation_NOT_AUTHORIZATION':'Python run_htpeo_m2_linked_granular_plan.py htpeo-erdos-m2 1 --m2-granular-execution-authorized --resource-lease-confirmed --defer-whole-imports --guarded-third-slot --htpeo-m2-reuse-execution-authorized --reuse-execution-approval <reviewed-approval.json> --reuse-execution-approval-sha256 <sha> --reuse-seed-receipt-sha256 <sha>',
+  'qualification':'Prepared conditional route only. No actual source/audit run or full project PASS, no mathematical priority/novelty/score upgrade.'}
+ sha = new_json(PACKET, packet)

@@ -1,0 +1,2661 @@
+{
+  "id": "sakana-erdos169-fourap-tactic-specific-v2",
+  "entrant": "E02",
+  "version": "4.34.1",
+  "mathlib_pin": "d13f23b723b8a846827a245b89c10fc7d3f11612",
+  "source_dir": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos169-fourap-tactic-specific-v2",
+  "modules": [
+    {
+      "module": "OpHack.ResidueFibre",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos169-fourap-tactic-specific-v2\\OpHack\\ResidueFibre.lean",
+      "source": "Reproduction_Sources/erdos169-fourap/OpHack/ResidueFibre.lean",
+      "sha256": "9a38a3fe545d28d38cca0031a67f34c135aeb3ef7b598d76b5336713bfd13495",
+      "original_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos169-fourap\\OpHack\\ResidueFibre.lean",
+      "original_sha256": "f7ac009d6f76f3a652795f656bb0cec98560f2baa002759bd457e1f80f9eb012"
+    },
+    {
+      "module": "OpHack.DigitDescent",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos169-fourap-tactic-specific-v2\\OpHack\\DigitDescent.lean",
+      "source": "Reproduction_Sources/erdos169-fourap/OpHack/DigitDescent.lean",
+      "sha256": "cbf52b94748f2e13807b22efbafd37b5b896ad21a2abc625245cba83bb471122",
+      "original_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos169-fourap\\OpHack\\DigitDescent.lean",
+      "original_sha256": "cbf52b94748f2e13807b22efbafd37b5b896ad21a2abc625245cba83bb471122"
+    },
+    {
+      "module": "OpHack.ErdosSingletonFinite",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos169-fourap-tactic-specific-v2\\OpHack\\ErdosSingletonFinite.lean",
+      "source": "Reproduction_Sources/erdos169-fourap/OpHack/ErdosSingletonFinite.lean",
+      "sha256": "01071915809185c25c20d83866fc128c0c5b6705a98fab909d139eaf5acd33da",
+      "original_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos169-fourap\\OpHack\\ErdosSingletonFinite.lean",
+      "original_sha256": "59314444ff2f14c056c4116c7aaeeead74d5c5f8827eb896c867f1c32207bd01"
+    },
+    {
+      "module": "OpHack.BaseDigitAP",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos169-fourap-tactic-specific-v2\\OpHack\\BaseDigitAP.lean",
+      "source": "Reproduction_Sources/erdos169-fourap/OpHack/BaseDigitAP.lean",
+      "sha256": "c118ed3c3e18950062a56d7e598fae24c8a26665b028afacb3898745b9088e3c",
+      "original_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos169-fourap\\OpHack\\BaseDigitAP.lean",
+      "original_sha256": "c118ed3c3e18950062a56d7e598fae24c8a26665b028afacb3898745b9088e3c"
+    },
+    {
+      "module": "OpHack.OldThreeModular",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos169-fourap-tactic-specific-v2\\OpHack\\OldThreeModular.lean",
+      "source": "Reproduction_Sources/erdos169-fourap/OpHack/OldThreeModular.lean",
+      "sha256": "c957265169613785134a77641810e7357830f0047e89e6c33e8b9b186af5180c",
+      "original_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos169-fourap\\OpHack\\OldThreeModular.lean",
+      "original_sha256": "c957265169613785134a77641810e7357830f0047e89e6c33e8b9b186af5180c"
+    },
+    {
+      "module": "OpHack.ErdosSixFinite",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos169-fourap-tactic-specific-v2\\OpHack\\ErdosSixFinite.lean",
+      "source": "Reproduction_Sources/erdos169-fourap/OpHack/ErdosSixFinite.lean",
+      "sha256": "181088e889650b39b84bec0ac62e6d697eb6bc6309c7422cc4cea4f10f1df6c6",
+      "original_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos169-fourap\\OpHack\\ErdosSixFinite.lean",
+      "original_sha256": "625d3d05b8e2b89310fb23ec768920e60026bea8772347dcc278b4d278d128f6"
+    },
+    {
+      "module": "OpHack.SixFibreAP",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos169-fourap-tactic-specific-v2\\OpHack\\SixFibreAP.lean",
+      "source": "Reproduction_Sources/erdos169-fourap/OpHack/SixFibreAP.lean",
+      "sha256": "db4f71144c4f3fcfc8ac983cb3c4b5946234435075cc812eb1af643b1be54a08",
+      "original_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos169-fourap\\OpHack\\SixFibreAP.lean",
+      "original_sha256": "db4f71144c4f3fcfc8ac983cb3c4b5946234435075cc812eb1af643b1be54a08"
+    },
+    {
+      "module": "OpHack.SixModularAssembly",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos169-fourap-tactic-specific-v2\\OpHack\\SixModularAssembly.lean",
+      "source": "Reproduction_Sources/erdos169-fourap/OpHack/SixModularAssembly.lean",
+      "sha256": "3a22027960ebaedc4550201295974585f7d8fba2462d82af59f8a2bdf37d09df",
+      "original_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos169-fourap\\OpHack\\SixModularAssembly.lean",
+      "original_sha256": "3a22027960ebaedc4550201295974585f7d8fba2462d82af59f8a2bdf37d09df"
+    },
+    {
+      "module": "OpHack.SixModularFinal",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos169-fourap-tactic-specific-v2\\OpHack\\SixModularFinal.lean",
+      "source": "Reproduction_Sources/erdos169-fourap/OpHack/SixModularFinal.lean",
+      "sha256": "6ff718f57954bfb354e7a5a2dbe6da39855f2ce6db5f792f2df9f7e54fee3e8c",
+      "original_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos169-fourap\\OpHack\\SixModularFinal.lean",
+      "original_sha256": "6ff718f57954bfb354e7a5a2dbe6da39855f2ce6db5f792f2df9f7e54fee3e8c"
+    },
+    {
+      "module": "OpHack.SixFinalAP",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos169-fourap-tactic-specific-v2\\OpHack\\SixFinalAP.lean",
+      "source": "Reproduction_Sources/erdos169-fourap/OpHack/SixFinalAP.lean",
+      "sha256": "003c7c329a36b27cd0072e320fc4a10f7a1d98d8da5f0468013cc487c2113164",
+      "original_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos169-fourap\\OpHack\\SixFinalAP.lean",
+      "original_sha256": "003c7c329a36b27cd0072e320fc4a10f7a1d98d8da5f0468013cc487c2113164"
+    },
+    {
+      "module": "OpHack.DigitCounting",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos169-fourap-tactic-specific-v2\\OpHack\\DigitCounting.lean",
+      "source": "Reproduction_Sources/erdos169-fourap/OpHack/DigitCounting.lean",
+      "sha256": "19c4417028e862a25544270a21226ee74728279d92553e74b87026ec02953f39",
+      "original_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos169-fourap\\OpHack\\DigitCounting.lean",
+      "original_sha256": "19c4417028e862a25544270a21226ee74728279d92553e74b87026ec02953f39"
+    },
+    {
+      "module": "OpHack.FloorBounds",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos169-fourap-tactic-specific-v2\\OpHack\\FloorBounds.lean",
+      "source": "Reproduction_Sources/erdos169-fourap/OpHack/FloorBounds.lean",
+      "sha256": "82eeeb2481c0336cd485081ab08fd08f1f309373548245f858927bd97e6c235e",
+      "original_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos169-fourap\\OpHack\\FloorBounds.lean",
+      "original_sha256": "2dfb4e1063e4b8dd428c7d745cadf8c80cb6d6a3fd3fdf3b730ea3ab544ffdb3"
+    },
+    {
+      "module": "OpHack.HarmonicCertificate",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos169-fourap-tactic-specific-v2\\OpHack\\HarmonicCertificate.lean",
+      "source": "Reproduction_Sources/erdos169-fourap/OpHack/HarmonicCertificate.lean",
+      "sha256": "c72548937310e2c58d5a1478737c1738c9c347f039e0f88fe25cb01f99770c30",
+      "original_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos169-fourap\\OpHack\\HarmonicCertificate.lean",
+      "original_sha256": "28f35ac4677981382582bb41b9d2ff09be876c97d779273f0b18d672238b47ce"
+    },
+    {
+      "module": "OpHack.SixHarmonicCertificate",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos169-fourap-tactic-specific-v2\\OpHack\\SixHarmonicCertificate.lean",
+      "source": "Reproduction_Sources/erdos169-fourap/OpHack/SixHarmonicCertificate.lean",
+      "sha256": "12c7eef4909a8e72cd4b788f6a4cc972c3ee9fdac148192861c26f8cb93bde3b",
+      "original_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos169-fourap\\OpHack\\SixHarmonicCertificate.lean",
+      "original_sha256": "f2a832a894b3a31460386b52e1c7d865e685512fe945fbd4a53121c673683562"
+    },
+    {
+      "module": "OpHack.SixFloorBridge",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos169-fourap-tactic-specific-v2\\OpHack\\SixFloorBridge.lean",
+      "source": "Reproduction_Sources/erdos169-fourap/OpHack/SixFloorBridge.lean",
+      "sha256": "05e4b37b83b3d2087d80058044a4bc12ed552253f36c2de0640f758c955d024d",
+      "original_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos169-fourap\\OpHack\\SixFloorBridge.lean",
+      "original_sha256": "05e4b37b83b3d2087d80058044a4bc12ed552253f36c2de0640f758c955d024d"
+    },
+    {
+      "module": "OpHack.SixListBridge",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos169-fourap-tactic-specific-v2\\OpHack\\SixListBridge.lean",
+      "source": "Reproduction_Sources/erdos169-fourap/OpHack/SixListBridge.lean",
+      "sha256": "fac6271ff8cac0b1e7b64810e352d8e8f193db47439236fadc9b32cf06191075",
+      "original_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos169-fourap\\OpHack\\SixListBridge.lean",
+      "original_sha256": "fac6271ff8cac0b1e7b64810e352d8e8f193db47439236fadc9b32cf06191075"
+    },
+    {
+      "module": "OpHack.FiniteHarmonicMean",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos169-fourap-tactic-specific-v2\\OpHack\\FiniteHarmonicMean.lean",
+      "source": "Reproduction_Sources/erdos169-fourap/OpHack/FiniteHarmonicMean.lean",
+      "sha256": "bd495da2d3d02bdc14119c8f909fdbf0aed83496c03b3b955232ddff837e7092",
+      "original_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos169-fourap\\OpHack\\FiniteHarmonicMean.lean",
+      "original_sha256": "98761e536a0e7105f275d0c7ce8ab1928d6c105918c9d08c91cfa0948f43d0d3"
+    },
+    {
+      "module": "OpHack.ReciprocalBlocks",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos169-fourap-tactic-specific-v2\\OpHack\\ReciprocalBlocks.lean",
+      "source": "Reproduction_Sources/erdos169-fourap/OpHack/ReciprocalBlocks.lean",
+      "sha256": "6dae54248a54056c36b757d41179c8b354e1c7f64e9d6e78c67a4e1cf7abdba7",
+      "original_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos169-fourap\\OpHack\\ReciprocalBlocks.lean",
+      "original_sha256": "6dae54248a54056c36b757d41179c8b354e1c7f64e9d6e78c67a4e1cf7abdba7"
+    },
+    {
+      "module": "OpHack.SixTermwise",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos169-fourap-tactic-specific-v2\\OpHack\\SixTermwise.lean",
+      "source": "Reproduction_Sources/erdos169-fourap/OpHack/SixTermwise.lean",
+      "sha256": "04536ebe261ef012439a532c2c81ab13e879ccb4bbf72881e61b7c6f83e4713c",
+      "original_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos169-fourap\\OpHack\\SixTermwise.lean",
+      "original_sha256": "04536ebe261ef012439a532c2c81ab13e879ccb4bbf72881e61b7c6f83e4713c"
+    },
+    {
+      "module": "OpHack.SixHarmonicAggregation",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos169-fourap-tactic-specific-v2\\OpHack\\SixHarmonicAggregation.lean",
+      "source": "Reproduction_Sources/erdos169-fourap/OpHack/SixHarmonicAggregation.lean",
+      "sha256": "52c7c5421d6274bd7426f19fae514fd73ff787203c2ccd82bd8985f935e69bec",
+      "original_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos169-fourap\\OpHack\\SixHarmonicAggregation.lean",
+      "original_sha256": "52c7c5421d6274bd7426f19fae514fd73ff787203c2ccd82bd8985f935e69bec"
+    },
+    {
+      "module": "OpHack.SixFinalReciprocal",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos169-fourap-tactic-specific-v2\\OpHack\\SixFinalReciprocal.lean",
+      "source": "Reproduction_Sources/erdos169-fourap/OpHack/SixFinalReciprocal.lean",
+      "sha256": "3d7d9d6e76c8400c83a04bbbc40387d939ad92b545203c0800a867ea9d8aee9c",
+      "original_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos169-fourap\\OpHack\\SixFinalReciprocal.lean",
+      "original_sha256": "3d7d9d6e76c8400c83a04bbbc40387d939ad92b545203c0800a867ea9d8aee9c"
+    },
+    {
+      "module": "OpHack.MainResult",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos169-fourap-tactic-specific-v2\\OpHack\\MainResult.lean",
+      "source": "Reproduction_Sources/erdos169-fourap/OpHack/MainResult.lean",
+      "sha256": "cc686e49443c9f23ccbf715be6e9cf71c528736794df230771d33ec84df80ac5",
+      "original_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos169-fourap\\OpHack\\MainResult.lean",
+      "original_sha256": "cc686e49443c9f23ccbf715be6e9cf71c528736794df230771d33ec84df80ac5"
+    }
+  ],
+  "endpoints": [
+    "Erdos3Candidate.explicit_four_ap_free_reciprocal_gt"
+  ],
+  "roots": [
+    "OpHack.MainResult"
+  ],
+  "audit_modules": [
+    "FreshAudit1.lean"
+  ],
+  "lean_options": {},
+  "static_review_contexts": [],
+  "status": "PASS",
+  "builds": [
+    {
+      "module": "OpHack.ResidueFibre",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "OpHack\\ResidueFibre.olean",
+        "OpHack\\ResidueFibre.lean"
+      ],
+      "seconds": 7.828,
+      "exit": 0,
+      "stdout": "OpHack\\ResidueFibre.lean:79:24: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nOpHack\\ResidueFibre.lean:79:36: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\n",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 6596157440,
+      "stop_reason": null,
+      "started_utc": "2026-10-05T02:50:09.444899+00:00",
+      "finished_utc": "2026-10-05T02:50:17.277811+00:00",
+      "owned_process_stop_output": null,
+      "own_job_resource_receipt": {
+        "command": [
+          "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+          "-j1",
+          "-DmaxHeartbeats=0",
+          "-DmaxRecDepth=100000",
+          "-o",
+          "OpHack\\ResidueFibre.olean",
+          "OpHack\\ResidueFibre.lean"
+        ],
+        "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos169-fourap-tactic-specific-v2",
+        "started_utc": "2026-10-05T02:50:09.444899+00:00",
+        "attempted": true,
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 5368709120,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 1073741824,
+          "own_job_private_bytes": 6442450944,
+          "own_process_private_bytes": 6442450944,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 3600
+        },
+        "minimum_disk_free_bytes": 6596157440,
+        "initial_system_memory_snapshot": {
+          "free_physical_bytes": 11047030784,
+          "total_physical_bytes": 34024419328,
+          "available_commit_bytes": 11600498688,
+          "total_commit_limit_bytes": 60437172224
+        },
+        "minimum_physical_available_bytes": 10060029952,
+        "minimum_available_commit_bytes": 9338187776,
+        "root_pid": 46560,
+        "own_job_assignment_before_resume": "PASS",
+        "exit": 0,
+        "job_peak_process_private_bytes": 2310451200,
+        "job_peak_aggregate_private_bytes": 2311700480,
+        "state": "PASS",
+        "finished_utc": "2026-10-05T02:50:17.277811+00:00",
+        "seconds": 7.828,
+        "polled_peak_tree_private_bytes": 2299740160,
+        "polled_peak_tree_rss_bytes": 1027534848,
+        "counter_samples": 30,
+        "observed_own_processes": {
+          "46560": {
+            "exe": "lean.exe",
+            "peak_private_bytes": 2298490880,
+            "peak_rss_bytes": 1043312640
+          },
+          "27316": {
+            "exe": "conhost.exe",
+            "peak_private_bytes": 1249280,
+            "peak_rss_bytes": 7860224
+          }
+        },
+        "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\sakana-erdos169-fourap-tactic-specific-v2-d0d2ad744e25c561-attempt-0.stdout.txt",
+        "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\sakana-erdos169-fourap-tactic-specific-v2-d0d2ad744e25c561-attempt-0.stderr.txt",
+        "stdout_sha256": "2bcef31711c2708f9cfce78ebd35d5081997a8991427178bb91444e662a242c3",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_excerpt": "OpHack\\ResidueFibre.lean:79:24: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nOpHack\\ResidueFibre.lean:79:36: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\n",
+        "stderr_excerpt": ""
+      },
+      "source_sha256": "9a38a3fe545d28d38cca0031a67f34c135aeb3ef7b598d76b5336713bfd13495",
+      "third_worker_memory_observations": {
+        "minimum_free_physical_bytes": 10060029952,
+        "minimum_available_commit_bytes": 9338187776,
+        "peak_owned_private_bytes": 2311700480
+      },
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos169-fourap-tactic-specific-v2\\OpHack\\ResidueFibre.olean",
+          "sha256": "fb247503bb00c9c5732f1351a0e8a3b50de392dd1c4dc2216441de75afbca1e9",
+          "bytes": 57352
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "OpHack.DigitDescent",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "OpHack\\DigitDescent.olean",
+        "OpHack\\DigitDescent.lean"
+      ],
+      "seconds": 8.093,
+      "exit": 0,
+      "stdout": "",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 6594699264,
+      "stop_reason": null,
+      "started_utc": "2026-10-05T02:51:35.693182+00:00",
+      "finished_utc": "2026-10-05T02:51:43.798665+00:00",
+      "owned_process_stop_output": null,
+      "own_job_resource_receipt": {
+        "command": [
+          "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+          "-j1",
+          "-DmaxHeartbeats=0",
+          "-DmaxRecDepth=100000",
+          "-o",
+          "OpHack\\DigitDescent.olean",
+          "OpHack\\DigitDescent.lean"
+        ],
+        "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos169-fourap-tactic-specific-v2",
+        "started_utc": "2026-10-05T02:51:35.693182+00:00",
+        "attempted": true,
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 5368709120,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 1073741824,
+          "own_job_private_bytes": 6442450944,
+          "own_process_private_bytes": 6442450944,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 3600
+        },
+        "minimum_disk_free_bytes": 6594699264,
+        "initial_system_memory_snapshot": {
+          "free_physical_bytes": 11074428928,
+          "total_physical_bytes": 34024419328,
+          "available_commit_bytes": 11631403008,
+          "total_commit_limit_bytes": 60437172224
+        },
+        "minimum_physical_available_bytes": 10066558976,
+        "minimum_available_commit_bytes": 9352343552,
+        "root_pid": 56672,
+        "own_job_assignment_before_resume": "PASS",
+        "exit": 0,
+        "job_peak_process_private_bytes": 2320777216,
+        "job_peak_aggregate_private_bytes": 2322034688,
+        "state": "PASS",
+        "finished_utc": "2026-10-05T02:51:43.798665+00:00",
+        "seconds": 8.093,
+        "polled_peak_tree_private_bytes": 2301636608,
+        "polled_peak_tree_rss_bytes": 1032400896,
+        "counter_samples": 31,
+        "observed_own_processes": {
+          "56672": {
+            "exe": "lean.exe",
+            "peak_private_bytes": 2300379136,
+            "peak_rss_bytes": 1049186304
+          },
+          "46988": {
+            "exe": "conhost.exe",
+            "peak_private_bytes": 1257472,
+            "peak_rss_bytes": 7856128
+          }
+        },
+        "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\sakana-erdos169-fourap-tactic-specific-v2-f86951c53c41a7ac-attempt-1.stdout.txt",
+        "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\sakana-erdos169-fourap-tactic-specific-v2-f86951c53c41a7ac-attempt-1.stderr.txt",
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_excerpt": "",
+        "stderr_excerpt": ""
+      },
+      "source_sha256": "cbf52b94748f2e13807b22efbafd37b5b896ad21a2abc625245cba83bb471122",
+      "third_worker_memory_observations": {
+        "minimum_free_physical_bytes": 10066558976,
+        "minimum_available_commit_bytes": 9352343552,
+        "peak_owned_private_bytes": 2322034688
+      },
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos169-fourap-tactic-specific-v2\\OpHack\\DigitDescent.olean",
+          "sha256": "f0ed135c70cc4a0e44dfaead0060b565c9f1b106cd507533d656b0f426974512",
+          "bytes": 176112
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "OpHack.ErdosSingletonFinite",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "OpHack\\ErdosSingletonFinite.olean",
+        "OpHack\\ErdosSingletonFinite.lean"
+      ],
+      "seconds": 31.969,
+      "exit": 0,
+      "stdout": "",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 6594514944,
+      "stop_reason": null,
+      "started_utc": "2026-10-05T02:51:43.806666+00:00",
+      "finished_utc": "2026-10-05T02:52:15.785927+00:00",
+      "owned_process_stop_output": null,
+      "own_job_resource_receipt": {
+        "command": [
+          "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+          "-j1",
+          "-DmaxHeartbeats=0",
+          "-DmaxRecDepth=100000",
+          "-o",
+          "OpHack\\ErdosSingletonFinite.olean",
+          "OpHack\\ErdosSingletonFinite.lean"
+        ],
+        "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos169-fourap-tactic-specific-v2",
+        "started_utc": "2026-10-05T02:51:43.806666+00:00",
+        "attempted": true,
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 5368709120,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 1073741824,
+          "own_job_private_bytes": 6442450944,
+          "own_process_private_bytes": 6442450944,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 3600
+        },
+        "minimum_disk_free_bytes": 6594514944,
+        "initial_system_memory_snapshot": {
+          "free_physical_bytes": 11124453376,
+          "total_physical_bytes": 34024419328,
+          "available_commit_bytes": 11653885952,
+          "total_commit_limit_bytes": 60437172224
+        },
+        "minimum_physical_available_bytes": 8811184128,
+        "minimum_available_commit_bytes": 8079966208,
+        "root_pid": 52576,
+        "own_job_assignment_before_resume": "PASS",
+        "exit": 0,
+        "job_peak_process_private_bytes": 3583012864,
+        "job_peak_aggregate_private_bytes": 3584266240,
+        "state": "PASS",
+        "finished_utc": "2026-10-05T02:52:15.785927+00:00",
+        "seconds": 31.969,
+        "polled_peak_tree_private_bytes": 3581902848,
+        "polled_peak_tree_rss_bytes": 2306564096,
+        "counter_samples": 120,
+        "observed_own_processes": {
+          "52576": {
+            "exe": "lean.exe",
+            "peak_private_bytes": 3580649472,
+            "peak_rss_bytes": 2301095936
+          },
+          "50060": {
+            "exe": "conhost.exe",
+            "peak_private_bytes": 1253376,
+            "peak_rss_bytes": 7856128
+          }
+        },
+        "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\sakana-erdos169-fourap-tactic-specific-v2-5947bd51e86ba567-attempt-1.stdout.txt",
+        "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\sakana-erdos169-fourap-tactic-specific-v2-5947bd51e86ba567-attempt-1.stderr.txt",
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_excerpt": "",
+        "stderr_excerpt": ""
+      },
+      "source_sha256": "01071915809185c25c20d83866fc128c0c5b6705a98fab909d139eaf5acd33da",
+      "third_worker_memory_observations": {
+        "minimum_free_physical_bytes": 8811184128,
+        "minimum_available_commit_bytes": 8079966208,
+        "peak_owned_private_bytes": 3584266240
+      },
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos169-fourap-tactic-specific-v2\\OpHack\\ErdosSingletonFinite.olean",
+          "sha256": "5a98a86b6e26b2fb013dd8069f4f678678e274fa3e1d8919274237a683c89ec7",
+          "bytes": 188232
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "OpHack.BaseDigitAP",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "OpHack\\BaseDigitAP.olean",
+        "OpHack\\BaseDigitAP.lean"
+      ],
+      "seconds": 10.266,
+      "exit": 0,
+      "stdout": "OpHack\\BaseDigitAP.lean:50:2: warning: Try `simp at hmem` instead of `simpa using hmem`\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 6593773568,
+      "stop_reason": null,
+      "started_utc": "2026-10-05T02:52:15.792917+00:00",
+      "finished_utc": "2026-10-05T02:52:26.058051+00:00",
+      "owned_process_stop_output": null,
+      "own_job_resource_receipt": {
+        "command": [
+          "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+          "-j1",
+          "-DmaxHeartbeats=0",
+          "-DmaxRecDepth=100000",
+          "-o",
+          "OpHack\\BaseDigitAP.olean",
+          "OpHack\\BaseDigitAP.lean"
+        ],
+        "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos169-fourap-tactic-specific-v2",
+        "started_utc": "2026-10-05T02:52:15.792917+00:00",
+        "attempted": true,
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 5368709120,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 1073741824,
+          "own_job_private_bytes": 6442450944,
+          "own_process_private_bytes": 6442450944,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 3600
+        },
+        "minimum_disk_free_bytes": 6593773568,
+        "initial_system_memory_snapshot": {
+          "free_physical_bytes": 11127205888,
+          "total_physical_bytes": 34024419328,
+          "available_commit_bytes": 11659661312,
+          "total_commit_limit_bytes": 60437172224
+        },
+        "minimum_physical_available_bytes": 9977040896,
+        "minimum_available_commit_bytes": 9262964736,
+        "root_pid": 37176,
+        "own_job_assignment_before_resume": "PASS",
+        "exit": 0,
+        "job_peak_process_private_bytes": 2395443200,
+        "job_peak_aggregate_private_bytes": 2396688384,
+        "state": "PASS",
+        "finished_utc": "2026-10-05T02:52:26.058051+00:00",
+        "seconds": 10.266,
+        "polled_peak_tree_private_bytes": 2381324288,
+        "polled_peak_tree_rss_bytes": 1105498112,
+        "counter_samples": 39,
+        "observed_own_processes": {
+          "37176": {
+            "exe": "lean.exe",
+            "peak_private_bytes": 2380079104,
+            "peak_rss_bytes": 1122709504
+          },
+          "15924": {
+            "exe": "conhost.exe",
+            "peak_private_bytes": 1245184,
+            "peak_rss_bytes": 7856128
+          }
+        },
+        "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\sakana-erdos169-fourap-tactic-specific-v2-a1bfeadfb08f4c83-attempt-1.stdout.txt",
+        "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\sakana-erdos169-fourap-tactic-specific-v2-a1bfeadfb08f4c83-attempt-1.stderr.txt",
+        "stdout_sha256": "a9b231c8febd79b95c5ac89ef74bcd6244e8e232d83d05233d08b3bef94c6875",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_excerpt": "OpHack\\BaseDigitAP.lean:50:2: warning: Try `simp at hmem` instead of `simpa using hmem`\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n",
+        "stderr_excerpt": ""
+      },
+      "source_sha256": "c118ed3c3e18950062a56d7e598fae24c8a26665b028afacb3898745b9088e3c",
+      "third_worker_memory_observations": {
+        "minimum_free_physical_bytes": 9977040896,
+        "minimum_available_commit_bytes": 9262964736,
+        "peak_owned_private_bytes": 2396688384
+      },
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos169-fourap-tactic-specific-v2\\OpHack\\BaseDigitAP.olean",
+          "sha256": "4a17755c3ad5fd90bc67bc543327c492b62e67c4bd293d6a336bb01c3037b1e8",
+          "bytes": 736592
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "OpHack.OldThreeModular",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "OpHack\\OldThreeModular.olean",
+        "OpHack\\OldThreeModular.lean"
+      ],
+      "seconds": 10.047,
+      "exit": 0,
+      "stdout": "OpHack\\OldThreeModular.lean:34:25: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nOpHack\\OldThreeModular.lean:51:25: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nOpHack\\OldThreeModular.lean:55:23: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\n",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 6593351680,
+      "stop_reason": null,
+      "started_utc": "2026-10-05T02:52:26.065567+00:00",
+      "finished_utc": "2026-10-05T02:52:36.112638+00:00",
+      "owned_process_stop_output": null,
+      "own_job_resource_receipt": {
+        "command": [
+          "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+          "-j1",
+          "-DmaxHeartbeats=0",
+          "-DmaxRecDepth=100000",
+          "-o",
+          "OpHack\\OldThreeModular.olean",
+          "OpHack\\OldThreeModular.lean"
+        ],
+        "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos169-fourap-tactic-specific-v2",
+        "started_utc": "2026-10-05T02:52:26.065567+00:00",
+        "attempted": true,
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 5368709120,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 1073741824,
+          "own_job_private_bytes": 6442450944,
+          "own_process_private_bytes": 6442450944,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 3600
+        },
+        "minimum_disk_free_bytes": 6593351680,
+        "initial_system_memory_snapshot": {
+          "free_physical_bytes": 11112054784,
+          "total_physical_bytes": 34024419328,
+          "available_commit_bytes": 11639402496,
+          "total_commit_limit_bytes": 60437172224
+        },
+        "minimum_physical_available_bytes": 10045698048,
+        "minimum_available_commit_bytes": 9312010240,
+        "root_pid": 54468,
+        "own_job_assignment_before_resume": "PASS",
+        "exit": 0,
+        "job_peak_process_private_bytes": 2323976192,
+        "job_peak_aggregate_private_bytes": 2325233664,
+        "state": "PASS",
+        "finished_utc": "2026-10-05T02:52:36.112638+00:00",
+        "seconds": 10.047,
+        "polled_peak_tree_private_bytes": 2310057984,
+        "polled_peak_tree_rss_bytes": 1035223040,
+        "counter_samples": 38,
+        "observed_own_processes": {
+          "53100": {
+            "exe": "conhost.exe",
+            "peak_private_bytes": 1257472,
+            "peak_rss_bytes": 7856128
+          },
+          "54468": {
+            "exe": "lean.exe",
+            "peak_private_bytes": 2308800512,
+            "peak_rss_bytes": 1051193344
+          }
+        },
+        "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\sakana-erdos169-fourap-tactic-specific-v2-cda21494779c4168-attempt-1.stdout.txt",
+        "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\sakana-erdos169-fourap-tactic-specific-v2-cda21494779c4168-attempt-1.stderr.txt",
+        "stdout_sha256": "6cc985e08c1200f519d28593b0d2c882e1b4023ce62a103e89d127a0ea206d7b",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_excerpt": "OpHack\\OldThreeModular.lean:34:25: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nOpHack\\OldThreeModular.lean:51:25: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nOpHack\\OldThreeModular.lean:55:23: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\n",
+        "stderr_excerpt": ""
+      },
+      "source_sha256": "c957265169613785134a77641810e7357830f0047e89e6c33e8b9b186af5180c",
+      "third_worker_memory_observations": {
+        "minimum_free_physical_bytes": 10045698048,
+        "minimum_available_commit_bytes": 9312010240,
+        "peak_owned_private_bytes": 2325233664
+      },
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos169-fourap-tactic-specific-v2\\OpHack\\OldThreeModular.olean",
+          "sha256": "21eb787300368cab34c76dbaed7dbf45219c6095f2436b19033bfcb5e532808e",
+          "bytes": 331672
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "OpHack.ErdosSixFinite",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "OpHack\\ErdosSixFinite.olean",
+        "OpHack\\ErdosSixFinite.lean"
+      ],
+      "seconds": 48.86,
+      "exit": 0,
+      "stdout": "",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 6591856640,
+      "stop_reason": null,
+      "started_utc": "2026-10-05T02:52:36.119640+00:00",
+      "finished_utc": "2026-10-05T02:53:24.981610+00:00",
+      "owned_process_stop_output": null,
+      "own_job_resource_receipt": {
+        "command": [
+          "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+          "-j1",
+          "-DmaxHeartbeats=0",
+          "-DmaxRecDepth=100000",
+          "-o",
+          "OpHack\\ErdosSixFinite.olean",
+          "OpHack\\ErdosSixFinite.lean"
+        ],
+        "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos169-fourap-tactic-specific-v2",
+        "started_utc": "2026-10-05T02:52:36.119640+00:00",
+        "attempted": true,
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 5368709120,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 1073741824,
+          "own_job_private_bytes": 6442450944,
+          "own_process_private_bytes": 6442450944,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 3600
+        },
+        "minimum_disk_free_bytes": 6591856640,
+        "initial_system_memory_snapshot": {
+          "free_physical_bytes": 11106889728,
+          "total_physical_bytes": 34024419328,
+          "available_commit_bytes": 11636719616,
+          "total_commit_limit_bytes": 60437172224
+        },
+        "minimum_physical_available_bytes": 8760864768,
+        "minimum_available_commit_bytes": 8030392320,
+        "root_pid": 52548,
+        "own_job_assignment_before_resume": "PASS",
+        "exit": 0,
+        "job_peak_process_private_bytes": 3538415616,
+        "job_peak_aggregate_private_bytes": 3539628032,
+        "state": "PASS",
+        "finished_utc": "2026-10-05T02:53:24.981610+00:00",
+        "seconds": 48.86,
+        "polled_peak_tree_private_bytes": 3535953920,
+        "polled_peak_tree_rss_bytes": 2262388736,
+        "counter_samples": 181,
+        "observed_own_processes": {
+          "23480": {
+            "exe": "conhost.exe",
+            "peak_private_bytes": 1253376,
+            "peak_rss_bytes": 7856128
+          },
+          "52548": {
+            "exe": "lean.exe",
+            "peak_private_bytes": 3534741504,
+            "peak_rss_bytes": 2257895424
+          }
+        },
+        "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\sakana-erdos169-fourap-tactic-specific-v2-8d085f230599d7e1-attempt-1.stdout.txt",
+        "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\sakana-erdos169-fourap-tactic-specific-v2-8d085f230599d7e1-attempt-1.stderr.txt",
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_excerpt": "",
+        "stderr_excerpt": ""
+      },
+      "source_sha256": "181088e889650b39b84bec0ac62e6d697eb6bc6309c7422cc4cea4f10f1df6c6",
+      "third_worker_memory_observations": {
+        "minimum_free_physical_bytes": 8760864768,
+        "minimum_available_commit_bytes": 8030392320,
+        "peak_owned_private_bytes": 3539628032
+      },
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos169-fourap-tactic-specific-v2\\OpHack\\ErdosSixFinite.olean",
+          "sha256": "1d6e6231a7ed11e61377807cef5c26fc69471d6d4b4371d1b1d1bbb613dafe92",
+          "bytes": 230960
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "OpHack.SixFibreAP",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "OpHack\\SixFibreAP.olean",
+        "OpHack\\SixFibreAP.lean"
+      ],
+      "seconds": 14.782,
+      "exit": 0,
+      "stdout": "OpHack\\SixFibreAP.lean:50:26: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nOpHack\\SixFibreAP.lean:52:26: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nOpHack\\SixFibreAP.lean:53:26: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nOpHack\\SixFibreAP.lean:84:23: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\n'Erdos3Candidate.sixA_apFree' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 6589431808,
+      "stop_reason": null,
+      "started_utc": "2026-10-05T02:53:24.993162+00:00",
+      "finished_utc": "2026-10-05T02:53:39.786187+00:00",
+      "owned_process_stop_output": null,
+      "own_job_resource_receipt": {
+        "command": [
+          "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+          "-j1",
+          "-DmaxHeartbeats=0",
+          "-DmaxRecDepth=100000",
+          "-o",
+          "OpHack\\SixFibreAP.olean",
+          "OpHack\\SixFibreAP.lean"
+        ],
+        "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos169-fourap-tactic-specific-v2",
+        "started_utc": "2026-10-05T02:53:24.993162+00:00",
+        "attempted": true,
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 5368709120,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 1073741824,
+          "own_job_private_bytes": 6442450944,
+          "own_process_private_bytes": 6442450944,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 3600
+        },
+        "minimum_disk_free_bytes": 6589431808,
+        "initial_system_memory_snapshot": {
+          "free_physical_bytes": 10989502464,
+          "total_physical_bytes": 34024419328,
+          "available_commit_bytes": 11512492032,
+          "total_commit_limit_bytes": 60437172224
+        },
+        "minimum_physical_available_bytes": 10111242240,
+        "minimum_available_commit_bytes": 9247850496,
+        "root_pid": 49752,
+        "own_job_assignment_before_resume": "PASS",
+        "exit": 0,
+        "job_peak_process_private_bytes": 2340450304,
+        "job_peak_aggregate_private_bytes": 2341715968,
+        "state": "PASS",
+        "finished_utc": "2026-10-05T02:53:39.786187+00:00",
+        "seconds": 14.782,
+        "polled_peak_tree_private_bytes": 2323689472,
+        "polled_peak_tree_rss_bytes": 1058762752,
+        "counter_samples": 55,
+        "observed_own_processes": {
+          "49752": {
+            "exe": "lean.exe",
+            "peak_private_bytes": 2322423808,
+            "peak_rss_bytes": 1076707328
+          },
+          "48464": {
+            "exe": "conhost.exe",
+            "peak_private_bytes": 1265664,
+            "peak_rss_bytes": 7856128
+          }
+        },
+        "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\sakana-erdos169-fourap-tactic-specific-v2-7f9390404c161014-attempt-1.stdout.txt",
+        "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\sakana-erdos169-fourap-tactic-specific-v2-7f9390404c161014-attempt-1.stderr.txt",
+        "stdout_sha256": "fd154c83ad187290351a14ac334084873902de42a2674793ea3815560c98b2b9",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_excerpt": "OpHack\\SixFibreAP.lean:50:26: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nOpHack\\SixFibreAP.lean:52:26: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nOpHack\\SixFibreAP.lean:53:26: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nOpHack\\SixFibreAP.lean:84:23: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\n'Erdos3Candidate.sixA_apFree' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+        "stderr_excerpt": ""
+      },
+      "source_sha256": "db4f71144c4f3fcfc8ac983cb3c4b5946234435075cc812eb1af643b1be54a08",
+      "third_worker_memory_observations": {
+        "minimum_free_physical_bytes": 10111242240,
+        "minimum_available_commit_bytes": 9247850496,
+        "peak_owned_private_bytes": 2341715968
+      },
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos169-fourap-tactic-specific-v2\\OpHack\\SixFibreAP.olean",
+          "sha256": "094b5b06ebc155c5f57bd76b27934f8b2155099765882bb0b13537d914d6bbff",
+          "bytes": 844304
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "OpHack.SixModularAssembly",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "OpHack\\SixModularAssembly.olean",
+        "OpHack\\SixModularAssembly.lean"
+      ],
+      "seconds": 45.907,
+      "exit": 0,
+      "stdout": "OpHack\\SixModularAssembly.lean:36:35: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nOpHack\\SixModularAssembly.lean:60:32: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nOpHack\\SixModularAssembly.lean:60:46: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nOpHack\\SixModularAssembly.lean:69:27: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nOpHack\\SixModularAssembly.lean:174:4: warning: Try `simp at hunit` instead of `simpa using hunit`\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nOpHack\\SixModularAssembly.lean:176:4: warning: Try `simp at hunit` instead of `simpa using hunit`\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nOpHack\\SixModularAssembly.lean:149:48: warning: Variable name `hd` is not explicitly referenced.\n\nHint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:\n  [apply] _hd\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\nOpHack\\SixModularAssembly.lean:166:6: warning: Unused tactic linter: `change\n  (u % 55 + d % 55) % 55 \u2208 D \u2227 (u % 55 + 2 * (d % 55)) % 55 \u2208 D \u2227 (u % 55 + 3 * (d % 55)) % 55 \u2208 D` does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`\nOpHack\\SixModularAssembly.lean:264:4: warning: Try `simp at hthird` instead of `simpa using hthird`\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nOpHack\\SixModularAssembly.lean:266:4: warning: Try `simp at hthird` instead of `simpa using hthird`\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nOpHack\\SixModularAssembly.lean:195:6: warning: Unused tactic linter: `change\n  (u % 55 + 55 - d % 55) % 55 \u2208 D \u2227 (u % 55 + d % 55) % 55 \u2208 D \u2227 (u % 55 + 2 * (d % 55)) % 55 \u2208 D` does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`\nOpHack\\SixModularAssembly.lean:224:6: warning: Unused tactic linter: `change\n  oldTwo ((u % 3025 + 3025 - d % 3025) % 3025) \u2227\n    oldTwo ((u % 3025 + d % 3025) % 3025) \u2227 oldTwo ((u % 3025 + 2 * (d % 3025)) % 3025)` does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`\nOpHack\\SixModularAssembly.lean:256:6: warning: Unused tactic linter: `change\n  (u / 3025 + 55 - d / 3025) % 55 \u2208 D \u2227\n    (u / 3025 + 1 + d / 3025) % 55 \u2208 D \u2227 (u / 3025 + 1 + 2 * (d / 3025)) % 55 \u2208 D` does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`\n",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 6586384384,
+      "stop_reason": null,
+      "started_utc": "2026-10-05T02:53:39.795196+00:00",
+      "finished_utc": "2026-10-05T02:54:25.695518+00:00",
+      "owned_process_stop_output": null,
+      "own_job_resource_receipt": {
+        "command": [
+          "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+          "-j1",
+          "-DmaxHeartbeats=0",
+          "-DmaxRecDepth=100000",
+          "-o",
+          "OpHack\\SixModularAssembly.olean",
+          "OpHack\\SixModularAssembly.lean"
+        ],
+        "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos169-fourap-tactic-specific-v2",
+        "started_utc": "2026-10-05T02:53:39.795196+00:00",
+        "attempted": true,
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 5368709120,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 1073741824,
+          "own_job_private_bytes": 6442450944,
+          "own_process_private_bytes": 6442450944,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 3600
+        },
+        "minimum_disk_free_bytes": 6586384384,
+        "initial_system_memory_snapshot": {
+          "free_physical_bytes": 11254403072,
+          "total_physical_bytes": 34024419328,
+          "available_commit_bytes": 11804385280,
+          "total_commit_limit_bytes": 60437172224
+        },
+        "minimum_physical_available_bytes": 6453366784,
+        "minimum_available_commit_bytes": 5689077760,
+        "root_pid": 48904,
+        "own_job_assignment_before_resume": "PASS",
+        "exit": 0,
+        "job_peak_process_private_bytes": 5993738240,
+        "job_peak_aggregate_private_bytes": 5994954752,
+        "state": "PASS",
+        "finished_utc": "2026-10-05T02:54:25.695518+00:00",
+        "seconds": 45.907,
+        "polled_peak_tree_private_bytes": 5994954752,
+        "polled_peak_tree_rss_bytes": 4715360256,
+        "counter_samples": 171,
+        "observed_own_processes": {
+          "48904": {
+            "exe": "lean.exe",
+            "peak_private_bytes": 5993738240,
+            "peak_rss_bytes": 4707524608
+          },
+          "11296": {
+            "exe": "conhost.exe",
+            "peak_private_bytes": 1253376,
+            "peak_rss_bytes": 7856128
+          }
+        },
+        "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\sakana-erdos169-fourap-tactic-specific-v2-7f9704a095765078-attempt-1.stdout.txt",
+        "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\sakana-erdos169-fourap-tactic-specific-v2-7f9704a095765078-attempt-1.stderr.txt",
+        "stdout_sha256": "e748e719d5f0a082aae9daeddf8805470d65c75d74464960dece4ab71adb8424",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_excerpt": "OpHack\\SixModularAssembly.lean:36:35: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nOpHack\\SixModularAssembly.lean:60:32: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nOpHack\\SixModularAssembly.lean:60:46: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nOpHack\\SixModularAssembly.lean:69:27: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nOpHack\\SixModularAssembly.lean:174:4: warning: Try `simp at hunit` instead of `simpa using hunit`\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nOpHack\\SixModularAssembly.lean:176:4: warning: Try `simp at hunit` instead of `simpa using hunit`\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nOpHack\\SixModularAssembly.lean:149:48: warning: Variable name `hd` is not explicitly referenced.\n\nHint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:\n  [apply] _hd\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\nOpHack\\SixModularAssembly.lean:166:6: warning: Unused tactic linter: `change\n  (u % 55 + d % 55) % 55 \u2208 D \u2227 (u % 55 + 2 * (d % 55)) % 55 \u2208 D \u2227 (u % 55 + 3 * (d % 55)) % 55 \u2208 D` does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`\nOpHack\\SixModularAssembly.lean:264:4: warning: Try `simp at hthird` instead of `simpa using hthird`\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nOpHack\\SixModularAssembly.lean:266:4: warning: Try `simp at hthird` instead of `simpa using hthird`\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\nOpHack\\SixModularAssembly.lean:195:6: warning: Unused tactic linter: `change\n  (u % 55 + 55 - d % 55) % 55 \u2208 D \u2227 (u % 55 + d % 55) % 55 \u2208 D \u2227 (u % 55 + 2 * (d % 55)) % 55 \u2208 D` does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`\nOpHack\\SixModularAssembly.lean:224:6: warning: Unused tactic linter: `change\n  oldTwo ((u % 3025 + 3025 - d % 3025) % 3025) \u2227\n    oldTwo ((u % 3025 + d % 3025) % 3025) \u2227 oldTwo ((u % 3025 + 2 * (d % 3025)) % 3025)` does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`\nOpHack\\SixModularAssembly.lean:256:6: warning: Unused tactic linter: `change\n  (u / 3025 + 55 - d / 3025) % 55 \u2208 D \u2227\n    (u / 3025 + 1 + d / 3025) % 55 \u2208 D \u2227 (u / 3025 + 1 + 2 * (d / 3025)) % 55 \u2208 D` does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`\n",
+        "stderr_excerpt": ""
+      },
+      "source_sha256": "3a22027960ebaedc4550201295974585f7d8fba2462d82af59f8a2bdf37d09df",
+      "third_worker_memory_observations": {
+        "minimum_free_physical_bytes": 6453366784,
+        "minimum_available_commit_bytes": 5689077760,
+        "peak_owned_private_bytes": 5994954752
+      },
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos169-fourap-tactic-specific-v2\\OpHack\\SixModularAssembly.olean",
+          "sha256": "bdc70af7b2302794de416c4cab0a45d3969d15476756efc83d81127b60ca61fa",
+          "bytes": 2992568
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "OpHack.SixModularFinal",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "OpHack\\SixModularFinal.olean",
+        "OpHack\\SixModularFinal.lean"
+      ],
+      "seconds": 15.141,
+      "exit": 0,
+      "stdout": "'Erdos3Candidate.sixResidues_modular_free' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 6595678208,
+      "stop_reason": null,
+      "started_utc": "2026-10-05T02:54:25.709434+00:00",
+      "finished_utc": "2026-10-05T02:54:40.853181+00:00",
+      "owned_process_stop_output": null,
+      "own_job_resource_receipt": {
+        "command": [
+          "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+          "-j1",
+          "-DmaxHeartbeats=0",
+          "-DmaxRecDepth=100000",
+          "-o",
+          "OpHack\\SixModularFinal.olean",
+          "OpHack\\SixModularFinal.lean"
+        ],
+        "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos169-fourap-tactic-specific-v2",
+        "started_utc": "2026-10-05T02:54:25.709434+00:00",
+        "attempted": true,
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 5368709120,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 1073741824,
+          "own_job_private_bytes": 6442450944,
+          "own_process_private_bytes": 6442450944,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 3600
+        },
+        "minimum_disk_free_bytes": 6595678208,
+        "initial_system_memory_snapshot": {
+          "free_physical_bytes": 11151474688,
+          "total_physical_bytes": 34024419328,
+          "available_commit_bytes": 11636809728,
+          "total_commit_limit_bytes": 60437172224
+        },
+        "minimum_physical_available_bytes": 9283403776,
+        "minimum_available_commit_bytes": 8513335296,
+        "root_pid": 50192,
+        "own_job_assignment_before_resume": "PASS",
+        "exit": 0,
+        "job_peak_process_private_bytes": 3101134848,
+        "job_peak_aggregate_private_bytes": 3102384128,
+        "state": "PASS",
+        "finished_utc": "2026-10-05T02:54:40.853181+00:00",
+        "seconds": 15.141,
+        "polled_peak_tree_private_bytes": 3098710016,
+        "polled_peak_tree_rss_bytes": 1819271168,
+        "counter_samples": 57,
+        "observed_own_processes": {
+          "50192": {
+            "exe": "lean.exe",
+            "peak_private_bytes": 3097460736,
+            "peak_rss_bytes": 1814233088
+          },
+          "52132": {
+            "exe": "conhost.exe",
+            "peak_private_bytes": 1249280,
+            "peak_rss_bytes": 7856128
+          }
+        },
+        "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\sakana-erdos169-fourap-tactic-specific-v2-b45d258ea89cefdf-attempt-1.stdout.txt",
+        "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\sakana-erdos169-fourap-tactic-specific-v2-b45d258ea89cefdf-attempt-1.stderr.txt",
+        "stdout_sha256": "75a836b1af005f5d81440bd9ca62d053e2ba49963c104d400126d1f0da239d6c",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_excerpt": "'Erdos3Candidate.sixResidues_modular_free' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+        "stderr_excerpt": ""
+      },
+      "source_sha256": "6ff718f57954bfb354e7a5a2dbe6da39855f2ce6db5f792f2df9f7e54fee3e8c",
+      "third_worker_memory_observations": {
+        "minimum_free_physical_bytes": 9283403776,
+        "minimum_available_commit_bytes": 8513335296,
+        "peak_owned_private_bytes": 3102384128
+      },
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos169-fourap-tactic-specific-v2\\OpHack\\SixModularFinal.olean",
+          "sha256": "86753dc739cff8e2302d2b4628f68d88eb5b5cbb26aec54e5a95cd6b7f565234",
+          "bytes": 249648
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "OpHack.SixFinalAP",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "OpHack\\SixFinalAP.olean",
+        "OpHack\\SixFinalAP.lean"
+      ],
+      "seconds": 8.14,
+      "exit": 0,
+      "stdout": "'Erdos3Candidate.sixA_apFree_unconditional' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 6595473408,
+      "stop_reason": null,
+      "started_utc": "2026-10-05T02:54:40.861198+00:00",
+      "finished_utc": "2026-10-05T02:54:48.997359+00:00",
+      "owned_process_stop_output": null,
+      "own_job_resource_receipt": {
+        "command": [
+          "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+          "-j1",
+          "-DmaxHeartbeats=0",
+          "-DmaxRecDepth=100000",
+          "-o",
+          "OpHack\\SixFinalAP.olean",
+          "OpHack\\SixFinalAP.lean"
+        ],
+        "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos169-fourap-tactic-specific-v2",
+        "started_utc": "2026-10-05T02:54:40.861198+00:00",
+        "attempted": true,
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 5368709120,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 1073741824,
+          "own_job_private_bytes": 6442450944,
+          "own_process_private_bytes": 6442450944,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 3600
+        },
+        "minimum_disk_free_bytes": 6595473408,
+        "initial_system_memory_snapshot": {
+          "free_physical_bytes": 11125538816,
+          "total_physical_bytes": 34024419328,
+          "available_commit_bytes": 11606040576,
+          "total_commit_limit_bytes": 60437172224
+        },
+        "minimum_physical_available_bytes": 10043342848,
+        "minimum_available_commit_bytes": 9283051520,
+        "root_pid": 52724,
+        "own_job_assignment_before_resume": "PASS",
+        "exit": 0,
+        "job_peak_process_private_bytes": 2314809344,
+        "job_peak_aggregate_private_bytes": 2316075008,
+        "state": "PASS",
+        "finished_utc": "2026-10-05T02:54:48.997359+00:00",
+        "seconds": 8.14,
+        "polled_peak_tree_private_bytes": 2305433600,
+        "polled_peak_tree_rss_bytes": 1034305536,
+        "counter_samples": 31,
+        "observed_own_processes": {
+          "45968": {
+            "exe": "conhost.exe",
+            "peak_private_bytes": 1265664,
+            "peak_rss_bytes": 7860224
+          },
+          "52724": {
+            "exe": "lean.exe",
+            "peak_private_bytes": 2304167936,
+            "peak_rss_bytes": 1034952704
+          }
+        },
+        "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\sakana-erdos169-fourap-tactic-specific-v2-57bcbc35ae5123a8-attempt-1.stdout.txt",
+        "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\sakana-erdos169-fourap-tactic-specific-v2-57bcbc35ae5123a8-attempt-1.stderr.txt",
+        "stdout_sha256": "ffed185677c2c5e623f937079b38c454e900849e4b67497f1003613ad02e2a59",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_excerpt": "'Erdos3Candidate.sixA_apFree_unconditional' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+        "stderr_excerpt": ""
+      },
+      "source_sha256": "003c7c329a36b27cd0072e320fc4a10f7a1d98d8da5f0468013cc487c2113164",
+      "third_worker_memory_observations": {
+        "minimum_free_physical_bytes": 10043342848,
+        "minimum_available_commit_bytes": 9283051520,
+        "peak_owned_private_bytes": 2316075008
+      },
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos169-fourap-tactic-specific-v2\\OpHack\\SixFinalAP.olean",
+          "sha256": "f46ab1ee9d158f6180f9f8ea6304529eda023aca2ff78ee514f6da8c482f2873",
+          "bytes": 5752
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "OpHack.DigitCounting",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "OpHack\\DigitCounting.olean",
+        "OpHack\\DigitCounting.lean"
+      ],
+      "seconds": 169.453,
+      "exit": 0,
+      "stdout": "",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 6591062016,
+      "stop_reason": null,
+      "started_utc": "2026-10-05T02:54:49.005366+00:00",
+      "finished_utc": "2026-10-05T02:57:38.458382+00:00",
+      "owned_process_stop_output": null,
+      "own_job_resource_receipt": {
+        "command": [
+          "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+          "-j1",
+          "-DmaxHeartbeats=0",
+          "-DmaxRecDepth=100000",
+          "-o",
+          "OpHack\\DigitCounting.olean",
+          "OpHack\\DigitCounting.lean"
+        ],
+        "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos169-fourap-tactic-specific-v2",
+        "started_utc": "2026-10-05T02:54:49.005366+00:00",
+        "attempted": true,
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 5368709120,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 1073741824,
+          "own_job_private_bytes": 6442450944,
+          "own_process_private_bytes": 6442450944,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 3600
+        },
+        "minimum_disk_free_bytes": 6591062016,
+        "initial_system_memory_snapshot": {
+          "free_physical_bytes": 11105345536,
+          "total_physical_bytes": 34024419328,
+          "available_commit_bytes": 11585830912,
+          "total_commit_limit_bytes": 60437172224
+        },
+        "minimum_physical_available_bytes": 8872869888,
+        "minimum_available_commit_bytes": 8146112512,
+        "root_pid": 51064,
+        "own_job_assignment_before_resume": "PASS",
+        "exit": 0,
+        "job_peak_process_private_bytes": 3523461120,
+        "job_peak_aggregate_private_bytes": 3524694016,
+        "state": "PASS",
+        "finished_utc": "2026-10-05T02:57:38.458382+00:00",
+        "seconds": 169.453,
+        "polled_peak_tree_private_bytes": 3519754240,
+        "polled_peak_tree_rss_bytes": 2245922816,
+        "counter_samples": 631,
+        "observed_own_processes": {
+          "51064": {
+            "exe": "lean.exe",
+            "peak_private_bytes": 3518521344,
+            "peak_rss_bytes": 2242338816
+          },
+          "52088": {
+            "exe": "conhost.exe",
+            "peak_private_bytes": 1273856,
+            "peak_rss_bytes": 7864320
+          }
+        },
+        "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\sakana-erdos169-fourap-tactic-specific-v2-3f8de70dbd3dcc42-attempt-1.stdout.txt",
+        "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\sakana-erdos169-fourap-tactic-specific-v2-3f8de70dbd3dcc42-attempt-1.stderr.txt",
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_excerpt": "",
+        "stderr_excerpt": ""
+      },
+      "source_sha256": "19c4417028e862a25544270a21226ee74728279d92553e74b87026ec02953f39",
+      "third_worker_memory_observations": {
+        "minimum_free_physical_bytes": 8872869888,
+        "minimum_available_commit_bytes": 8146112512,
+        "peak_owned_private_bytes": 3524694016
+      },
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos169-fourap-tactic-specific-v2\\OpHack\\DigitCounting.olean",
+          "sha256": "6fa70df4b4441fbf65a918663abee3732531d4801ff40ce1f7093236f6ced3b1",
+          "bytes": 1006208
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "OpHack.FloorBounds",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "OpHack\\FloorBounds.olean",
+        "OpHack\\FloorBounds.lean"
+      ],
+      "seconds": 8.953,
+      "exit": 0,
+      "stdout": "",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 6591012864,
+      "stop_reason": null,
+      "started_utc": "2026-10-05T02:57:38.468899+00:00",
+      "finished_utc": "2026-10-05T02:57:47.423030+00:00",
+      "owned_process_stop_output": null,
+      "own_job_resource_receipt": {
+        "command": [
+          "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+          "-j1",
+          "-DmaxHeartbeats=0",
+          "-DmaxRecDepth=100000",
+          "-o",
+          "OpHack\\FloorBounds.olean",
+          "OpHack\\FloorBounds.lean"
+        ],
+        "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos169-fourap-tactic-specific-v2",
+        "started_utc": "2026-10-05T02:57:38.468899+00:00",
+        "attempted": true,
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 5368709120,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 1073741824,
+          "own_job_private_bytes": 6442450944,
+          "own_process_private_bytes": 6442450944,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 3600
+        },
+        "minimum_disk_free_bytes": 6591012864,
+        "initial_system_memory_snapshot": {
+          "free_physical_bytes": 11194540032,
+          "total_physical_bytes": 34024419328,
+          "available_commit_bytes": 11725078528,
+          "total_commit_limit_bytes": 60437172224
+        },
+        "minimum_physical_available_bytes": 10172440576,
+        "minimum_available_commit_bytes": 9459728384,
+        "root_pid": 47064,
+        "own_job_assignment_before_resume": "PASS",
+        "exit": 0,
+        "job_peak_process_private_bytes": 2310230016,
+        "job_peak_aggregate_private_bytes": 2311499776,
+        "state": "PASS",
+        "finished_utc": "2026-10-05T02:57:47.423030+00:00",
+        "seconds": 8.953,
+        "polled_peak_tree_private_bytes": 2298728448,
+        "polled_peak_tree_rss_bytes": 1025089536,
+        "counter_samples": 34,
+        "observed_own_processes": {
+          "47064": {
+            "exe": "lean.exe",
+            "peak_private_bytes": 2297458688,
+            "peak_rss_bytes": 1038852096
+          },
+          "46956": {
+            "exe": "conhost.exe",
+            "peak_private_bytes": 1269760,
+            "peak_rss_bytes": 7860224
+          }
+        },
+        "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\sakana-erdos169-fourap-tactic-specific-v2-88105b0966fb2f8d-attempt-1.stdout.txt",
+        "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\sakana-erdos169-fourap-tactic-specific-v2-88105b0966fb2f8d-attempt-1.stderr.txt",
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_excerpt": "",
+        "stderr_excerpt": ""
+      },
+      "source_sha256": "82eeeb2481c0336cd485081ab08fd08f1f309373548245f858927bd97e6c235e",
+      "third_worker_memory_observations": {
+        "minimum_free_physical_bytes": 10172440576,
+        "minimum_available_commit_bytes": 9459728384,
+        "peak_owned_private_bytes": 2311499776
+      },
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos169-fourap-tactic-specific-v2\\OpHack\\FloorBounds.olean",
+          "sha256": "53712c29e6078bcd3218359b899139a3180189955341dd94dc6452a70c455e36",
+          "bytes": 56568
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "OpHack.HarmonicCertificate",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "OpHack\\HarmonicCertificate.olean",
+        "OpHack\\HarmonicCertificate.lean"
+      ],
+      "seconds": 8.672,
+      "exit": 0,
+      "stdout": "",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 6590717952,
+      "stop_reason": null,
+      "started_utc": "2026-10-05T02:57:47.433628+00:00",
+      "finished_utc": "2026-10-05T02:57:56.099874+00:00",
+      "owned_process_stop_output": null,
+      "own_job_resource_receipt": {
+        "command": [
+          "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+          "-j1",
+          "-DmaxHeartbeats=0",
+          "-DmaxRecDepth=100000",
+          "-o",
+          "OpHack\\HarmonicCertificate.olean",
+          "OpHack\\HarmonicCertificate.lean"
+        ],
+        "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos169-fourap-tactic-specific-v2",
+        "started_utc": "2026-10-05T02:57:47.433628+00:00",
+        "attempted": true,
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 5368709120,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 1073741824,
+          "own_job_private_bytes": 6442450944,
+          "own_process_private_bytes": 6442450944,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 3600
+        },
+        "minimum_disk_free_bytes": 6590717952,
+        "initial_system_memory_snapshot": {
+          "free_physical_bytes": 11228889088,
+          "total_physical_bytes": 34024419328,
+          "available_commit_bytes": 11757146112,
+          "total_commit_limit_bytes": 60437172224
+        },
+        "minimum_physical_available_bytes": 10117144576,
+        "minimum_available_commit_bytes": 9393790976,
+        "root_pid": 38244,
+        "own_job_assignment_before_resume": "PASS",
+        "exit": 0,
+        "job_peak_process_private_bytes": 2325147648,
+        "job_peak_aggregate_private_bytes": 2326401024,
+        "state": "PASS",
+        "finished_utc": "2026-10-05T02:57:56.099874+00:00",
+        "seconds": 8.672,
+        "polled_peak_tree_private_bytes": 2303025152,
+        "polled_peak_tree_rss_bytes": 1036288000,
+        "counter_samples": 33,
+        "observed_own_processes": {
+          "35540": {
+            "exe": "conhost.exe",
+            "peak_private_bytes": 1253376,
+            "peak_rss_bytes": 7856128
+          },
+          "38244": {
+            "exe": "lean.exe",
+            "peak_private_bytes": 2301771776,
+            "peak_rss_bytes": 1049153536
+          }
+        },
+        "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\sakana-erdos169-fourap-tactic-specific-v2-3e4122d33e470711-attempt-1.stdout.txt",
+        "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\sakana-erdos169-fourap-tactic-specific-v2-3e4122d33e470711-attempt-1.stderr.txt",
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_excerpt": "",
+        "stderr_excerpt": ""
+      },
+      "source_sha256": "c72548937310e2c58d5a1478737c1738c9c347f039e0f88fe25cb01f99770c30",
+      "third_worker_memory_observations": {
+        "minimum_free_physical_bytes": 10117144576,
+        "minimum_available_commit_bytes": 9393790976,
+        "peak_owned_private_bytes": 2326401024
+      },
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos169-fourap-tactic-specific-v2\\OpHack\\HarmonicCertificate.olean",
+          "sha256": "33cf18f32741d2e690f9c8ed1151999d5637c365cd72ff27634facebffabc8fc",
+          "bytes": 286768
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "OpHack.SixHarmonicCertificate",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "OpHack\\SixHarmonicCertificate.olean",
+        "OpHack\\SixHarmonicCertificate.lean"
+      ],
+      "seconds": 8.969,
+      "exit": 0,
+      "stdout": "OpHack\\SixHarmonicCertificate.lean:47:30: warning: Variable name `u` is not explicitly referenced.\n\nHint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:\n  [apply] _u\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\n",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 6589943808,
+      "stop_reason": null,
+      "started_utc": "2026-10-05T02:57:56.109789+00:00",
+      "finished_utc": "2026-10-05T02:58:05.076194+00:00",
+      "owned_process_stop_output": null,
+      "own_job_resource_receipt": {
+        "command": [
+          "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+          "-j1",
+          "-DmaxHeartbeats=0",
+          "-DmaxRecDepth=100000",
+          "-o",
+          "OpHack\\SixHarmonicCertificate.olean",
+          "OpHack\\SixHarmonicCertificate.lean"
+        ],
+        "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos169-fourap-tactic-specific-v2",
+        "started_utc": "2026-10-05T02:57:56.109789+00:00",
+        "attempted": true,
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 5368709120,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 1073741824,
+          "own_job_private_bytes": 6442450944,
+          "own_process_private_bytes": 6442450944,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 3600
+        },
+        "minimum_disk_free_bytes": 6589943808,
+        "initial_system_memory_snapshot": {
+          "free_physical_bytes": 11188760576,
+          "total_physical_bytes": 34024419328,
+          "available_commit_bytes": 11702431744,
+          "total_commit_limit_bytes": 60437172224
+        },
+        "minimum_physical_available_bytes": 10161860608,
+        "minimum_available_commit_bytes": 9430634496,
+        "root_pid": 49044,
+        "own_job_assignment_before_resume": "PASS",
+        "exit": 0,
+        "job_peak_process_private_bytes": 2320695296,
+        "job_peak_aggregate_private_bytes": 2321965056,
+        "state": "PASS",
+        "finished_utc": "2026-10-05T02:58:05.076194+00:00",
+        "seconds": 8.969,
+        "polled_peak_tree_private_bytes": 2303152128,
+        "polled_peak_tree_rss_bytes": 1027784704,
+        "counter_samples": 34,
+        "observed_own_processes": {
+          "49044": {
+            "exe": "lean.exe",
+            "peak_private_bytes": 2301882368,
+            "peak_rss_bytes": 1048731648
+          },
+          "33828": {
+            "exe": "conhost.exe",
+            "peak_private_bytes": 1269760,
+            "peak_rss_bytes": 7872512
+          }
+        },
+        "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\sakana-erdos169-fourap-tactic-specific-v2-bdb2a5ad9fd10f35-attempt-1.stdout.txt",
+        "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\sakana-erdos169-fourap-tactic-specific-v2-bdb2a5ad9fd10f35-attempt-1.stderr.txt",
+        "stdout_sha256": "dbc502141cd88e36ef827c53f8a9ac8ec1c46610ad5805d86af4cd029a7a15c2",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_excerpt": "OpHack\\SixHarmonicCertificate.lean:47:30: warning: Variable name `u` is not explicitly referenced.\n\nHint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:\n  [apply] _u\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\n",
+        "stderr_excerpt": ""
+      },
+      "source_sha256": "12c7eef4909a8e72cd4b788f6a4cc972c3ee9fdac148192861c26f8cb93bde3b",
+      "third_worker_memory_observations": {
+        "minimum_free_physical_bytes": 10161860608,
+        "minimum_available_commit_bytes": 9430634496,
+        "peak_owned_private_bytes": 2321965056
+      },
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos169-fourap-tactic-specific-v2\\OpHack\\SixHarmonicCertificate.olean",
+          "sha256": "ba59d6282d4ae846676bd7251ac9d8f0312218ee7d91372f13d556760acfcd56",
+          "bytes": 308616
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "OpHack.SixFloorBridge",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "OpHack\\SixFloorBridge.olean",
+        "OpHack\\SixFloorBridge.lean"
+      ],
+      "seconds": 84.125,
+      "exit": 0,
+      "stdout": "",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 6587191296,
+      "stop_reason": null,
+      "started_utc": "2026-10-05T02:58:05.088198+00:00",
+      "finished_utc": "2026-10-05T02:59:29.219874+00:00",
+      "owned_process_stop_output": null,
+      "own_job_resource_receipt": {
+        "command": [
+          "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+          "-j1",
+          "-DmaxHeartbeats=0",
+          "-DmaxRecDepth=100000",
+          "-o",
+          "OpHack\\SixFloorBridge.olean",
+          "OpHack\\SixFloorBridge.lean"
+        ],
+        "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos169-fourap-tactic-specific-v2",
+        "started_utc": "2026-10-05T02:58:05.088198+00:00",
+        "attempted": true,
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 5368709120,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 1073741824,
+          "own_job_private_bytes": 6442450944,
+          "own_process_private_bytes": 6442450944,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 3600
+        },
+        "minimum_disk_free_bytes": 6587191296,
+        "initial_system_memory_snapshot": {
+          "free_physical_bytes": 11180126208,
+          "total_physical_bytes": 34024419328,
+          "available_commit_bytes": 11695628288,
+          "total_commit_limit_bytes": 60437172224
+        },
+        "minimum_physical_available_bytes": 7561625600,
+        "minimum_available_commit_bytes": 6829543424,
+        "root_pid": 42904,
+        "own_job_assignment_before_resume": "PASS",
+        "exit": 0,
+        "job_peak_process_private_bytes": 4855447552,
+        "job_peak_aggregate_private_bytes": 4856676352,
+        "state": "PASS",
+        "finished_utc": "2026-10-05T02:59:29.219874+00:00",
+        "seconds": 84.125,
+        "polled_peak_tree_private_bytes": 4849590272,
+        "polled_peak_tree_rss_bytes": 3572969472,
+        "counter_samples": 311,
+        "observed_own_processes": {
+          "42904": {
+            "exe": "lean.exe",
+            "peak_private_bytes": 4848361472,
+            "peak_rss_bytes": 3571748864
+          },
+          "56772": {
+            "exe": "conhost.exe",
+            "peak_private_bytes": 1269760,
+            "peak_rss_bytes": 7860224
+          }
+        },
+        "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\sakana-erdos169-fourap-tactic-specific-v2-e907073c596fa9b5-attempt-1.stdout.txt",
+        "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\sakana-erdos169-fourap-tactic-specific-v2-e907073c596fa9b5-attempt-1.stderr.txt",
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_excerpt": "",
+        "stderr_excerpt": ""
+      },
+      "source_sha256": "05e4b37b83b3d2087d80058044a4bc12ed552253f36c2de0640f758c955d024d",
+      "third_worker_memory_observations": {
+        "minimum_free_physical_bytes": 7561625600,
+        "minimum_available_commit_bytes": 6829543424,
+        "peak_owned_private_bytes": 4856676352
+      },
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos169-fourap-tactic-specific-v2\\OpHack\\SixFloorBridge.olean",
+          "sha256": "af89f16dc06a84f6a3c75f26292dac9ae0e38366f5fd24b8f0feff8e38396697",
+          "bytes": 373128
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "OpHack.SixListBridge",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "OpHack\\SixListBridge.olean",
+        "OpHack\\SixListBridge.lean"
+      ],
+      "seconds": 10.047,
+      "exit": 0,
+      "stdout": "'Erdos3Candidate.old_prefixes_finset' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Erdos3Candidate.old_leading_prefix_finset' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Erdos3Candidate.six_digits_finset' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Erdos3Candidate.six_extensions_finset' depends on axioms: [propext, Classical.choice, Quot.sound]\nOpHack\\SixListBridge.lean:140:8: warning: Variable name `u` is not explicitly referenced.\n\nHint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:\n  [apply] _u\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\n'Erdos3Candidate.old_prefix_list_sum' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Erdos3Candidate.old_tail_list_sum' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Erdos3Candidate.new_prefix_list_sum' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Erdos3Candidate.new_tail_list_sum' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 6587072512,
+      "stop_reason": null,
+      "started_utc": "2026-10-05T02:59:29.230768+00:00",
+      "finished_utc": "2026-10-05T02:59:39.282027+00:00",
+      "owned_process_stop_output": null,
+      "own_job_resource_receipt": {
+        "command": [
+          "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+          "-j1",
+          "-DmaxHeartbeats=0",
+          "-DmaxRecDepth=100000",
+          "-o",
+          "OpHack\\SixListBridge.olean",
+          "OpHack\\SixListBridge.lean"
+        ],
+        "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos169-fourap-tactic-specific-v2",
+        "started_utc": "2026-10-05T02:59:29.230768+00:00",
+        "attempted": true,
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 5368709120,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 1073741824,
+          "own_job_private_bytes": 6442450944,
+          "own_process_private_bytes": 6442450944,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 3600
+        },
+        "minimum_disk_free_bytes": 6587072512,
+        "initial_system_memory_snapshot": {
+          "free_physical_bytes": 11187511296,
+          "total_physical_bytes": 34024419328,
+          "available_commit_bytes": 11702964224,
+          "total_commit_limit_bytes": 60437172224
+        },
+        "minimum_physical_available_bytes": 10208563200,
+        "minimum_available_commit_bytes": 9428893696,
+        "root_pid": 38520,
+        "own_job_assignment_before_resume": "PASS",
+        "exit": 0,
+        "job_peak_process_private_bytes": 2326999040,
+        "job_peak_aggregate_private_bytes": 2328252416,
+        "state": "PASS",
+        "finished_utc": "2026-10-05T02:59:39.282027+00:00",
+        "seconds": 10.047,
+        "polled_peak_tree_private_bytes": 2324496384,
+        "polled_peak_tree_rss_bytes": 1042673664,
+        "counter_samples": 38,
+        "observed_own_processes": {
+          "38520": {
+            "exe": "lean.exe",
+            "peak_private_bytes": 2323243008,
+            "peak_rss_bytes": 1050746880
+          },
+          "22416": {
+            "exe": "conhost.exe",
+            "peak_private_bytes": 1253376,
+            "peak_rss_bytes": 7856128
+          }
+        },
+        "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\sakana-erdos169-fourap-tactic-specific-v2-313e165927238f3d-attempt-1.stdout.txt",
+        "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\sakana-erdos169-fourap-tactic-specific-v2-313e165927238f3d-attempt-1.stderr.txt",
+        "stdout_sha256": "0c82f97a94ab2e117a301eb36a77ea34dc18a8b82c7d20c871cc10191bb3d121",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_excerpt": "'Erdos3Candidate.old_prefixes_finset' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Erdos3Candidate.old_leading_prefix_finset' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Erdos3Candidate.six_digits_finset' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Erdos3Candidate.six_extensions_finset' depends on axioms: [propext, Classical.choice, Quot.sound]\nOpHack\\SixListBridge.lean:140:8: warning: Variable name `u` is not explicitly referenced.\n\nHint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:\n  [apply] _u\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\n'Erdos3Candidate.old_prefix_list_sum' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Erdos3Candidate.old_tail_list_sum' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Erdos3Candidate.new_prefix_list_sum' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Erdos3Candidate.new_tail_list_sum' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+        "stderr_excerpt": ""
+      },
+      "source_sha256": "fac6271ff8cac0b1e7b64810e352d8e8f193db47439236fadc9b32cf06191075",
+      "third_worker_memory_observations": {
+        "minimum_free_physical_bytes": 10208563200,
+        "minimum_available_commit_bytes": 9428893696,
+        "peak_owned_private_bytes": 2328252416
+      },
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos169-fourap-tactic-specific-v2\\OpHack\\SixListBridge.olean",
+          "sha256": "b90e53ec5bc14100fbf96001c14a94b24ebc5e780b859eefd509ed937a675c18",
+          "bytes": 168400
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "OpHack.FiniteHarmonicMean",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "OpHack\\FiniteHarmonicMean.olean",
+        "OpHack\\FiniteHarmonicMean.lean"
+      ],
+      "seconds": 10.578,
+      "exit": 0,
+      "stdout": "OpHack\\FiniteHarmonicMean.lean:40:8: warning: Unused tactic linter: `ring` does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`\nOpHack\\FiniteHarmonicMean.lean:40:8: warning: this tactic is never executed\n\nNote: This linter can be disabled with `set_option linter.unreachableTactic false`\nOpHack\\FiniteHarmonicMean.lean:54:4: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\n",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 6586478592,
+      "stop_reason": null,
+      "started_utc": "2026-10-05T02:59:39.291353+00:00",
+      "finished_utc": "2026-10-05T02:59:49.875299+00:00",
+      "owned_process_stop_output": null,
+      "own_job_resource_receipt": {
+        "command": [
+          "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+          "-j1",
+          "-DmaxHeartbeats=0",
+          "-DmaxRecDepth=100000",
+          "-o",
+          "OpHack\\FiniteHarmonicMean.olean",
+          "OpHack\\FiniteHarmonicMean.lean"
+        ],
+        "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos169-fourap-tactic-specific-v2",
+        "started_utc": "2026-10-05T02:59:39.291353+00:00",
+        "attempted": true,
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 5368709120,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 1073741824,
+          "own_job_private_bytes": 6442450944,
+          "own_process_private_bytes": 6442450944,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 3600
+        },
+        "minimum_disk_free_bytes": 6586478592,
+        "initial_system_memory_snapshot": {
+          "free_physical_bytes": 11287056384,
+          "total_physical_bytes": 34024419328,
+          "available_commit_bytes": 11806007296,
+          "total_commit_limit_bytes": 60437172224
+        },
+        "minimum_physical_available_bytes": 10139377664,
+        "minimum_available_commit_bytes": 9406926848,
+        "root_pid": 55552,
+        "own_job_assignment_before_resume": "PASS",
+        "exit": 0,
+        "job_peak_process_private_bytes": 2319908864,
+        "job_peak_aggregate_private_bytes": 2321166336,
+        "state": "PASS",
+        "finished_utc": "2026-10-05T02:59:49.875299+00:00",
+        "seconds": 10.578,
+        "polled_peak_tree_private_bytes": 2304929792,
+        "polled_peak_tree_rss_bytes": 1040224256,
+        "counter_samples": 40,
+        "observed_own_processes": {
+          "55552": {
+            "exe": "lean.exe",
+            "peak_private_bytes": 2303672320,
+            "peak_rss_bytes": 1054642176
+          },
+          "51576": {
+            "exe": "conhost.exe",
+            "peak_private_bytes": 1257472,
+            "peak_rss_bytes": 7860224
+          }
+        },
+        "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\sakana-erdos169-fourap-tactic-specific-v2-439a7ffef794d250-attempt-1.stdout.txt",
+        "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\sakana-erdos169-fourap-tactic-specific-v2-439a7ffef794d250-attempt-1.stderr.txt",
+        "stdout_sha256": "a09394e203045e1afef01fef487828e522532cad5d9ff2e50beead08bf23febb",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_excerpt": "OpHack\\FiniteHarmonicMean.lean:40:8: warning: Unused tactic linter: `ring` does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`\nOpHack\\FiniteHarmonicMean.lean:40:8: warning: this tactic is never executed\n\nNote: This linter can be disabled with `set_option linter.unreachableTactic false`\nOpHack\\FiniteHarmonicMean.lean:54:4: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\n",
+        "stderr_excerpt": ""
+      },
+      "source_sha256": "bd495da2d3d02bdc14119c8f909fdbf0aed83496c03b3b955232ddff837e7092",
+      "third_worker_memory_observations": {
+        "minimum_free_physical_bytes": 10139377664,
+        "minimum_available_commit_bytes": 9406926848,
+        "peak_owned_private_bytes": 2321166336
+      },
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos169-fourap-tactic-specific-v2\\OpHack\\FiniteHarmonicMean.olean",
+          "sha256": "1b73803d25164fe25eb35d24ad4271fc921fe3a816e6964d1b4291e72369f6a3",
+          "bytes": 294344
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "OpHack.ReciprocalBlocks",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "OpHack\\ReciprocalBlocks.olean",
+        "OpHack\\ReciprocalBlocks.lean"
+      ],
+      "seconds": 11.344,
+      "exit": 0,
+      "stdout": "",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 6586212352,
+      "stop_reason": null,
+      "started_utc": "2026-10-05T02:59:49.883304+00:00",
+      "finished_utc": "2026-10-05T03:00:01.235795+00:00",
+      "owned_process_stop_output": null,
+      "own_job_resource_receipt": {
+        "command": [
+          "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+          "-j1",
+          "-DmaxHeartbeats=0",
+          "-DmaxRecDepth=100000",
+          "-o",
+          "OpHack\\ReciprocalBlocks.olean",
+          "OpHack\\ReciprocalBlocks.lean"
+        ],
+        "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos169-fourap-tactic-specific-v2",
+        "started_utc": "2026-10-05T02:59:49.883304+00:00",
+        "attempted": true,
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 5368709120,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 1073741824,
+          "own_job_private_bytes": 6442450944,
+          "own_process_private_bytes": 6442450944,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 3600
+        },
+        "minimum_disk_free_bytes": 6586212352,
+        "initial_system_memory_snapshot": {
+          "free_physical_bytes": 11202318336,
+          "total_physical_bytes": 34024419328,
+          "available_commit_bytes": 11708362752,
+          "total_commit_limit_bytes": 60437172224
+        },
+        "minimum_physical_available_bytes": 10165927936,
+        "minimum_available_commit_bytes": 9430032384,
+        "root_pid": 30660,
+        "own_job_assignment_before_resume": "PASS",
+        "exit": 0,
+        "job_peak_process_private_bytes": 2320441344,
+        "job_peak_aggregate_private_bytes": 2321694720,
+        "state": "PASS",
+        "finished_utc": "2026-10-05T03:00:01.235795+00:00",
+        "seconds": 11.344,
+        "polled_peak_tree_private_bytes": 2304720896,
+        "polled_peak_tree_rss_bytes": 1049640960,
+        "counter_samples": 43,
+        "observed_own_processes": {
+          "20608": {
+            "exe": "conhost.exe",
+            "peak_private_bytes": 1253376,
+            "peak_rss_bytes": 7856128
+          },
+          "30660": {
+            "exe": "lean.exe",
+            "peak_private_bytes": 2303467520,
+            "peak_rss_bytes": 1066283008
+          }
+        },
+        "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\sakana-erdos169-fourap-tactic-specific-v2-5a731be06c86e88a-attempt-1.stdout.txt",
+        "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\sakana-erdos169-fourap-tactic-specific-v2-5a731be06c86e88a-attempt-1.stderr.txt",
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_excerpt": "",
+        "stderr_excerpt": ""
+      },
+      "source_sha256": "6dae54248a54056c36b757d41179c8b354e1c7f64e9d6e78c67a4e1cf7abdba7",
+      "third_worker_memory_observations": {
+        "minimum_free_physical_bytes": 10165927936,
+        "minimum_available_commit_bytes": 9430032384,
+        "peak_owned_private_bytes": 2321694720
+      },
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos169-fourap-tactic-specific-v2\\OpHack\\ReciprocalBlocks.olean",
+          "sha256": "01f37c9f69865c21c310945feb419d20e6429d0d952de855674ecc311d0b75af",
+          "bytes": 260656
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "OpHack.SixTermwise",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "OpHack\\SixTermwise.olean",
+        "OpHack\\SixTermwise.lean"
+      ],
+      "seconds": 9.782,
+      "exit": 0,
+      "stdout": "'Erdos3Candidate.six_new_termwise' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Erdos3Candidate.six_new_termwise_of_mem' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 6582538240,
+      "stop_reason": null,
+      "started_utc": "2026-10-05T03:00:01.246707+00:00",
+      "finished_utc": "2026-10-05T03:00:11.035506+00:00",
+      "owned_process_stop_output": null,
+      "own_job_resource_receipt": {
+        "command": [
+          "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+          "-j1",
+          "-DmaxHeartbeats=0",
+          "-DmaxRecDepth=100000",
+          "-o",
+          "OpHack\\SixTermwise.olean",
+          "OpHack\\SixTermwise.lean"
+        ],
+        "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos169-fourap-tactic-specific-v2",
+        "started_utc": "2026-10-05T03:00:01.246707+00:00",
+        "attempted": true,
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 5368709120,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 1073741824,
+          "own_job_private_bytes": 6442450944,
+          "own_process_private_bytes": 6442450944,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 3600
+        },
+        "minimum_disk_free_bytes": 6582538240,
+        "initial_system_memory_snapshot": {
+          "free_physical_bytes": 11290472448,
+          "total_physical_bytes": 34024419328,
+          "available_commit_bytes": 11833798656,
+          "total_commit_limit_bytes": 60437172224
+        },
+        "minimum_physical_available_bytes": 10225848320,
+        "minimum_available_commit_bytes": 9527365632,
+        "root_pid": 28832,
+        "own_job_assignment_before_resume": "PASS",
+        "exit": 0,
+        "job_peak_process_private_bytes": 2316816384,
+        "job_peak_aggregate_private_bytes": 2318065664,
+        "state": "PASS",
+        "finished_utc": "2026-10-05T03:00:11.035506+00:00",
+        "seconds": 9.782,
+        "polled_peak_tree_private_bytes": 2304991232,
+        "polled_peak_tree_rss_bytes": 1034629120,
+        "counter_samples": 37,
+        "observed_own_processes": {
+          "28832": {
+            "exe": "lean.exe",
+            "peak_private_bytes": 2303741952,
+            "peak_rss_bytes": 1048944640
+          },
+          "55532": {
+            "exe": "conhost.exe",
+            "peak_private_bytes": 1249280,
+            "peak_rss_bytes": 7852032
+          }
+        },
+        "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\sakana-erdos169-fourap-tactic-specific-v2-56f6c3285e494a19-attempt-1.stdout.txt",
+        "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\sakana-erdos169-fourap-tactic-specific-v2-56f6c3285e494a19-attempt-1.stderr.txt",
+        "stdout_sha256": "4a0c0896d06c7793f003aaafd81b5cfaeb4c23825bd638314cc0a07f8365a0bb",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_excerpt": "'Erdos3Candidate.six_new_termwise' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Erdos3Candidate.six_new_termwise_of_mem' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+        "stderr_excerpt": ""
+      },
+      "source_sha256": "04536ebe261ef012439a532c2c81ab13e879ccb4bbf72881e61b7c6f83e4713c",
+      "third_worker_memory_observations": {
+        "minimum_free_physical_bytes": 10225848320,
+        "minimum_available_commit_bytes": 9527365632,
+        "peak_owned_private_bytes": 2318065664
+      },
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos169-fourap-tactic-specific-v2\\OpHack\\SixTermwise.olean",
+          "sha256": "4573947b88a4064f84e130a7ab4e74db8e27079adf07ff659b15db65eeabf15b",
+          "bytes": 121352
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "OpHack.SixHarmonicAggregation",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "OpHack\\SixHarmonicAggregation.olean",
+        "OpHack\\SixHarmonicAggregation.lean"
+      ],
+      "seconds": 97.36,
+      "exit": 0,
+      "stdout": "'Erdos3Candidate.six_reciprocal_decomp' depends on axioms: [propext, Classical.choice, Quot.sound]\nOpHack\\SixHarmonicAggregation.lean:206:7: warning: Variable name `u` is not explicitly referenced.\n\nHint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:\n  [apply] _u\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\nOpHack\\SixHarmonicAggregation.lean:242:9: warning: Variable name `u` is not explicitly referenced.\n\nHint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:\n  [apply] _u\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\nOpHack\\SixHarmonicAggregation.lean:287:10: warning: Variable name `u` is not explicitly referenced.\n\nHint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:\n  [apply] _u\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\n'Erdos3Candidate.sixAFinset_positive' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Erdos3Candidate.six_reciprocal_weighted_lower' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 6579650560,
+      "stop_reason": null,
+      "started_utc": "2026-10-05T03:00:11.045620+00:00",
+      "finished_utc": "2026-10-05T03:01:48.406086+00:00",
+      "owned_process_stop_output": null,
+      "own_job_resource_receipt": {
+        "command": [
+          "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+          "-j1",
+          "-DmaxHeartbeats=0",
+          "-DmaxRecDepth=100000",
+          "-o",
+          "OpHack\\SixHarmonicAggregation.olean",
+          "OpHack\\SixHarmonicAggregation.lean"
+        ],
+        "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos169-fourap-tactic-specific-v2",
+        "started_utc": "2026-10-05T03:00:11.045620+00:00",
+        "attempted": true,
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 5368709120,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 1073741824,
+          "own_job_private_bytes": 6442450944,
+          "own_process_private_bytes": 6442450944,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 3600
+        },
+        "minimum_disk_free_bytes": 6579650560,
+        "initial_system_memory_snapshot": {
+          "free_physical_bytes": 11291734016,
+          "total_physical_bytes": 34024419328,
+          "available_commit_bytes": 11833810944,
+          "total_commit_limit_bytes": 60437172224
+        },
+        "minimum_physical_available_bytes": 9920917504,
+        "minimum_available_commit_bytes": 9247907840,
+        "root_pid": 45064,
+        "own_job_assignment_before_resume": "PASS",
+        "exit": 0,
+        "job_peak_process_private_bytes": 2350632960,
+        "job_peak_aggregate_private_bytes": 2351845376,
+        "state": "PASS",
+        "finished_utc": "2026-10-05T03:01:48.406086+00:00",
+        "seconds": 97.36,
+        "polled_peak_tree_private_bytes": 2351316992,
+        "polled_peak_tree_rss_bytes": 1088233472,
+        "counter_samples": 362,
+        "observed_own_processes": {
+          "45064": {
+            "exe": "lean.exe",
+            "peak_private_bytes": 2350104576,
+            "peak_rss_bytes": 1080782848
+          },
+          "53448": {
+            "exe": "conhost.exe",
+            "peak_private_bytes": 1253376,
+            "peak_rss_bytes": 7856128
+          }
+        },
+        "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\sakana-erdos169-fourap-tactic-specific-v2-97b935ca741affb2-attempt-1.stdout.txt",
+        "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\sakana-erdos169-fourap-tactic-specific-v2-97b935ca741affb2-attempt-1.stderr.txt",
+        "stdout_sha256": "6f84ef7dd511771442669a26d67f8759c05a57490afb634ebb67fae4c16f83ec",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_excerpt": "'Erdos3Candidate.six_reciprocal_decomp' depends on axioms: [propext, Classical.choice, Quot.sound]\nOpHack\\SixHarmonicAggregation.lean:206:7: warning: Variable name `u` is not explicitly referenced.\n\nHint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:\n  [apply] _u\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\nOpHack\\SixHarmonicAggregation.lean:242:9: warning: Variable name `u` is not explicitly referenced.\n\nHint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:\n  [apply] _u\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\nOpHack\\SixHarmonicAggregation.lean:287:10: warning: Variable name `u` is not explicitly referenced.\n\nHint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:\n  [apply] _u\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\n'Erdos3Candidate.sixAFinset_positive' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Erdos3Candidate.six_reciprocal_weighted_lower' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+        "stderr_excerpt": ""
+      },
+      "source_sha256": "52c7c5421d6274bd7426f19fae514fd73ff787203c2ccd82bd8985f935e69bec",
+      "third_worker_memory_observations": {
+        "minimum_free_physical_bytes": 9920917504,
+        "minimum_available_commit_bytes": 9247907840,
+        "peak_owned_private_bytes": 2351845376
+      },
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos169-fourap-tactic-specific-v2\\OpHack\\SixHarmonicAggregation.olean",
+          "sha256": "a11d0d947194eed847c0c41306e721e3df6c4992786767f4263f01fd1440caad",
+          "bytes": 644480
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "OpHack.SixFinalReciprocal",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "OpHack\\SixFinalReciprocal.olean",
+        "OpHack\\SixFinalReciprocal.lean"
+      ],
+      "seconds": 10.157,
+      "exit": 0,
+      "stdout": "OpHack\\SixFinalReciprocal.lean:36:8: warning: Variable name `u` is not explicitly referenced.\n\nHint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:\n  [apply] _u\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\nOpHack\\SixFinalReciprocal.lean:55:28: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\n'Erdos3Candidate.six_reciprocal_certificate_lower' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Erdos3Candidate.sixA_reciprocal_gt_unconditional' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 6579548160,
+      "stop_reason": null,
+      "started_utc": "2026-10-05T03:01:48.424095+00:00",
+      "finished_utc": "2026-10-05T03:01:58.582399+00:00",
+      "owned_process_stop_output": null,
+      "own_job_resource_receipt": {
+        "command": [
+          "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+          "-j1",
+          "-DmaxHeartbeats=0",
+          "-DmaxRecDepth=100000",
+          "-o",
+          "OpHack\\SixFinalReciprocal.olean",
+          "OpHack\\SixFinalReciprocal.lean"
+        ],
+        "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos169-fourap-tactic-specific-v2",
+        "started_utc": "2026-10-05T03:01:48.424095+00:00",
+        "attempted": true,
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 5368709120,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 1073741824,
+          "own_job_private_bytes": 6442450944,
+          "own_process_private_bytes": 6442450944,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 3600
+        },
+        "minimum_disk_free_bytes": 6579548160,
+        "initial_system_memory_snapshot": {
+          "free_physical_bytes": 11090374656,
+          "total_physical_bytes": 34024419328,
+          "available_commit_bytes": 11607216128,
+          "total_commit_limit_bytes": 60437172224
+        },
+        "minimum_physical_available_bytes": 10223079424,
+        "minimum_available_commit_bytes": 9444323328,
+        "root_pid": 57104,
+        "own_job_assignment_before_resume": "PASS",
+        "exit": 0,
+        "job_peak_process_private_bytes": 2320240640,
+        "job_peak_aggregate_private_bytes": 2321494016,
+        "state": "PASS",
+        "finished_utc": "2026-10-05T03:01:58.582399+00:00",
+        "seconds": 10.157,
+        "polled_peak_tree_private_bytes": 2307239936,
+        "polled_peak_tree_rss_bytes": 1030107136,
+        "counter_samples": 38,
+        "observed_own_processes": {
+          "57104": {
+            "exe": "lean.exe",
+            "peak_private_bytes": 2305986560,
+            "peak_rss_bytes": 1048109056
+          },
+          "45108": {
+            "exe": "conhost.exe",
+            "peak_private_bytes": 1253376,
+            "peak_rss_bytes": 7852032
+          }
+        },
+        "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\sakana-erdos169-fourap-tactic-specific-v2-d057c4780808c730-attempt-1.stdout.txt",
+        "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\sakana-erdos169-fourap-tactic-specific-v2-d057c4780808c730-attempt-1.stderr.txt",
+        "stdout_sha256": "7acdf32404216e519f1b197aa8010fc5b1a780ea605c688f4e5ca5c7d2e20fc4",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_excerpt": "OpHack\\SixFinalReciprocal.lean:36:8: warning: Variable name `u` is not explicitly referenced.\n\nHint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:\n  [apply] _u\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`\nOpHack\\SixFinalReciprocal.lean:55:28: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\n'Erdos3Candidate.six_reciprocal_certificate_lower' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Erdos3Candidate.sixA_reciprocal_gt_unconditional' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+        "stderr_excerpt": ""
+      },
+      "source_sha256": "3d7d9d6e76c8400c83a04bbbc40387d939ad92b545203c0800a867ea9d8aee9c",
+      "third_worker_memory_observations": {
+        "minimum_free_physical_bytes": 10223079424,
+        "minimum_available_commit_bytes": 9444323328,
+        "peak_owned_private_bytes": 2321494016
+      },
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos169-fourap-tactic-specific-v2\\OpHack\\SixFinalReciprocal.olean",
+          "sha256": "2e3e31e0c2f49c2b904f7282c3354810720baf0147fce88016e785253d932f9d",
+          "bytes": 109888
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "OpHack.MainResult",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "OpHack\\MainResult.olean",
+        "OpHack\\MainResult.lean"
+      ],
+      "seconds": 9.563,
+      "exit": 0,
+      "stdout": "'Erdos3Candidate.explicit_four_ap_free_reciprocal_gt' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 6579482624,
+      "stop_reason": null,
+      "started_utc": "2026-10-05T03:01:58.591409+00:00",
+      "finished_utc": "2026-10-05T03:02:08.146183+00:00",
+      "owned_process_stop_output": null,
+      "own_job_resource_receipt": {
+        "command": [
+          "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+          "-j1",
+          "-DmaxHeartbeats=0",
+          "-DmaxRecDepth=100000",
+          "-o",
+          "OpHack\\MainResult.olean",
+          "OpHack\\MainResult.lean"
+        ],
+        "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos169-fourap-tactic-specific-v2",
+        "started_utc": "2026-10-05T03:01:58.591409+00:00",
+        "attempted": true,
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 5368709120,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 1073741824,
+          "own_job_private_bytes": 6442450944,
+          "own_process_private_bytes": 6442450944,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 3600
+        },
+        "minimum_disk_free_bytes": 6579482624,
+        "initial_system_memory_snapshot": {
+          "free_physical_bytes": 11268427776,
+          "total_physical_bytes": 34024419328,
+          "available_commit_bytes": 11810492416,
+          "total_commit_limit_bytes": 60437172224
+        },
+        "minimum_physical_available_bytes": 10213949440,
+        "minimum_available_commit_bytes": 9484218368,
+        "root_pid": 47916,
+        "own_job_assignment_before_resume": "PASS",
+        "exit": 0,
+        "job_peak_process_private_bytes": 2319544320,
+        "job_peak_aggregate_private_bytes": 2320805888,
+        "state": "PASS",
+        "finished_utc": "2026-10-05T03:02:08.146183+00:00",
+        "seconds": 9.563,
+        "polled_peak_tree_private_bytes": 2307387392,
+        "polled_peak_tree_rss_bytes": 1014800384,
+        "counter_samples": 36,
+        "observed_own_processes": {
+          "53392": {
+            "exe": "conhost.exe",
+            "peak_private_bytes": 1261568,
+            "peak_rss_bytes": 7856128
+          },
+          "47916": {
+            "exe": "lean.exe",
+            "peak_private_bytes": 2306125824,
+            "peak_rss_bytes": 1038700544
+          }
+        },
+        "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\sakana-erdos169-fourap-tactic-specific-v2-bff4b1e91bdbf269-attempt-1.stdout.txt",
+        "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\sakana-erdos169-fourap-tactic-specific-v2-bff4b1e91bdbf269-attempt-1.stderr.txt",
+        "stdout_sha256": "939411f24cc12ba5ae3bd5421c18f5c201eab102176f77eb58c21e8f100ae749",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_excerpt": "'Erdos3Candidate.explicit_four_ap_free_reciprocal_gt' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+        "stderr_excerpt": ""
+      },
+      "source_sha256": "cc686e49443c9f23ccbf715be6e9cf71c528736794df230771d33ec84df80ac5",
+      "third_worker_memory_observations": {
+        "minimum_free_physical_bytes": 10213949440,
+        "minimum_available_commit_bytes": 9484218368,
+        "peak_owned_private_bytes": 2320805888
+      },
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos169-fourap-tactic-specific-v2\\OpHack\\MainResult.olean",
+          "sha256": "ae3164c4dcc46a6360dbe1ae5492dc7e04ce9b92b37d9a728648909ec93c01a8",
+          "bytes": 16864
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "FreshAudit1.lean",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "FreshAudit1.olean",
+        "FreshAudit1.lean"
+      ],
+      "seconds": 7.859,
+      "exit": 0,
+      "stdout": "'Erdos3Candidate.explicit_four_ap_free_reciprocal_gt' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "is_endpoint_audit": true,
+      "minimum_free_bytes": 6579474432,
+      "stop_reason": null,
+      "started_utc": "2026-10-05T03:02:08.158192+00:00",
+      "finished_utc": "2026-10-05T03:02:16.012989+00:00",
+      "owned_process_stop_output": null,
+      "own_job_resource_receipt": {
+        "command": [
+          "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.34.1-windows\\bin\\lean.exe",
+          "-j1",
+          "-DmaxHeartbeats=0",
+          "-DmaxRecDepth=100000",
+          "-o",
+          "FreshAudit1.olean",
+          "FreshAudit1.lean"
+        ],
+        "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos169-fourap-tactic-specific-v2",
+        "started_utc": "2026-10-05T03:02:08.158192+00:00",
+        "attempted": true,
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 5368709120,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 1073741824,
+          "own_job_private_bytes": 6442450944,
+          "own_process_private_bytes": 6442450944,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 3600
+        },
+        "minimum_disk_free_bytes": 6579474432,
+        "initial_system_memory_snapshot": {
+          "free_physical_bytes": 11246563328,
+          "total_physical_bytes": 34024419328,
+          "available_commit_bytes": 11783213056,
+          "total_commit_limit_bytes": 60437172224
+        },
+        "minimum_physical_available_bytes": 10213249024,
+        "minimum_available_commit_bytes": 9482100736,
+        "root_pid": 49792,
+        "own_job_assignment_before_resume": "PASS",
+        "exit": 0,
+        "job_peak_process_private_bytes": 2316476416,
+        "job_peak_aggregate_private_bytes": 2317721600,
+        "state": "PASS",
+        "finished_utc": "2026-10-05T03:02:16.012989+00:00",
+        "seconds": 7.859,
+        "polled_peak_tree_private_bytes": 2307252224,
+        "polled_peak_tree_rss_bytes": 1016913920,
+        "counter_samples": 30,
+        "observed_own_processes": {
+          "49792": {
+            "exe": "lean.exe",
+            "peak_private_bytes": 2306007040,
+            "peak_rss_bytes": 1017896960
+          },
+          "19520": {
+            "exe": "conhost.exe",
+            "peak_private_bytes": 1245184,
+            "peak_rss_bytes": 7852032
+          }
+        },
+        "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\sakana-erdos169-fourap-tactic-specific-v2-6abcc70b865d6bea-attempt-1.stdout.txt",
+        "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\sakana-erdos169-fourap-tactic-specific-v2-6abcc70b865d6bea-attempt-1.stderr.txt",
+        "stdout_sha256": "939411f24cc12ba5ae3bd5421c18f5c201eab102176f77eb58c21e8f100ae749",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_excerpt": "'Erdos3Candidate.explicit_four_ap_free_reciprocal_gt' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+        "stderr_excerpt": ""
+      },
+      "source_sha256": "d1ffb3143e25505893fd3feaccca7df5517fd45e6e8e60e127324aa6ecbc4849",
+      "third_worker_memory_observations": {
+        "minimum_free_physical_bytes": 10213249024,
+        "minimum_available_commit_bytes": 9482100736,
+        "peak_owned_private_bytes": 2317721600
+      },
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos169-fourap-tactic-specific-v2\\FreshAudit1.olean",
+          "sha256": "e63398f860cc8d52a2c7dbbfc74f582dde788e00498ccb31eade4f5a56fcfd27",
+          "bytes": 1472
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION",
+      "selected_endpoint_print_coverage": {
+        "requested_endpoints": [
+          "Erdos3Candidate.explicit_four_ap_free_reciprocal_gt"
+        ],
+        "parsed_endpoints": [
+          "Erdos3Candidate.explicit_four_ap_free_reciprocal_gt"
+        ],
+        "missing_endpoints": [],
+        "status": "PASS"
+      }
+    }
+  ],
+  "operational_route": "SECOND_IMPORT_ONLY_TACTIC_SPECIFIC_DIAGNOSTIC_SAME_SCIENTIFIC_BODIES",
+  "original_source_plan": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-erdos169-fourap\\build-plan.json",
+  "original_source_plan_sha256": "48d697f923d0013aa348581e3733f754ffaf35c3491ff6b30e22c783632b8abe",
+  "import_pruned_diagnostic_provenance": {
+    "proposal_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\e169-tactic-specific-v2-proposal-2026-10-05.json",
+    "proposal_sha256": "6734d4fd8ac626a8cbfe1199167a401a085a1359693bcd95e74431139810d48f",
+    "root_identity_review": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\e169-tactic-specific-v2-root-identity-review.json",
+    "root_identity_review_sha256": "bded1e27d1a92e1d505bb51c984aa5a1f1b2a42537afcf9e37c83b5bb19ad64f",
+    "prior_receipt_identities": [
+      {
+        "receipt": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\sakana-erdos169-fourap-fresh-build.json",
+        "sha256": "1d395cae83c4d623950359dccccdab24d8777c39ffee69c54795226b187d7875"
+      },
+      {
+        "receipt": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\sakana-erdos169-fourap-import-pruned-diagnostic-fresh-build.json",
+        "sha256": "689494114098170847557c105ece1a984c30d9bbf287caa71c29135ea768f1fc"
+      }
+    ],
+    "qualification": "SECOND_SEPARATE_OPERATIONAL_ROUTE_IMPORT_ONLY_SEVEN_HEADERS_SCIENTIFIC_BODIES_BYTE_IDENTICAL_NOT_ORIGINAL_SOURCE_PASS",
+    "closure_units": {
+      "Mathlib_modules": 738,
+      "official_core_or_package_modules": 1754,
+      "total_modules": 2492,
+      "v1_Mathlib_modules": 2815
+    }
+  },
+  "compiler_version": "Lean (version 4.34.1, x86_64-w64-windows-gnu, commit 5045d0056413266e57c625dcd7c365b10e377c52, Release)",
+  "compilation_order": [
+    "OpHack.ResidueFibre",
+    "OpHack.DigitDescent",
+    "OpHack.ErdosSingletonFinite",
+    "OpHack.BaseDigitAP",
+    "OpHack.OldThreeModular",
+    "OpHack.ErdosSixFinite",
+    "OpHack.SixFibreAP",
+    "OpHack.SixModularAssembly",
+    "OpHack.SixModularFinal",
+    "OpHack.SixFinalAP",
+    "OpHack.DigitCounting",
+    "OpHack.FloorBounds",
+    "OpHack.HarmonicCertificate",
+    "OpHack.SixHarmonicCertificate",
+    "OpHack.SixFloorBridge",
+    "OpHack.SixListBridge",
+    "OpHack.FiniteHarmonicMean",
+    "OpHack.ReciprocalBlocks",
+    "OpHack.SixTermwise",
+    "OpHack.SixHarmonicAggregation",
+    "OpHack.SixFinalReciprocal",
+    "OpHack.MainResult"
+  ],
+  "started_utc": "2026-10-05T02:51:35Z",
+  "failed_invocations": [],
+  "selected_audit_axiom_review": [
+    {
+      "endpoint": "Erdos3Candidate.explicit_four_ap_free_reciprocal_gt",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    }
+  ],
+  "resource_settings": {
+    "LEAN_NUM_THREADS": 1,
+    "lean_shell_worker_flag": "-j1",
+    "maxHeartbeats": 0,
+    "maxRecDepth": 100000,
+    "runner_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\run_e169_tactic_specific_v2.py",
+    "runner_source_sha256": "1a191a331fc672e4ae369c51d819d13274cd28b1ca47300f023f19907fc516b6",
+    "axiom_parser_source_sha256": "1ee59639204140430c088023539a648f9007cc26c1856cf8cd2e3c2e59d7143f",
+    "guarded_third_worker_continuation": {
+      "maximum_new_source_invocations": null,
+      "initial_disk_bytes": 4000000000,
+      "initial_free_physical_bytes": 6442450944,
+      "continuous_disk_reserve_bytes": 1000000000,
+      "continuous_free_physical_reserve_bytes": 3221225472,
+      "owned_compiler_private_memory_ceiling_bytes": 6442450944,
+      "initial_memory_snapshot": {
+        "free_physical_bytes": 11076812800,
+        "total_physical_bytes": 34024419328,
+        "available_commit_bytes": 11632455680,
+        "total_commit_limit_bytes": 60437172224
+      },
+      "qualification": "ROOT_AUTHORIZED_GUARDED_THIRD_WORKER_CONTINUATION",
+      "initial_available_commit_bytes": 5368709120,
+      "continuous_available_commit_reserve_bytes": 1073741824,
+      "owned_job_private_memory_ceiling_bytes": 6442450944,
+      "own_job_assignment_before_resume": "REQUIRED",
+      "resource_guard_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\matt_resource_guard.py",
+      "resource_guard_sha256": "ae0b64c7fbf47545365f3238977368042be342ddb973159ec65c98f64aa38a71"
+    }
+  },
+  "prior_attempt_receipts": [
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\sakana-erdos169-fourap-tactic-specific-v2-fresh-build-attempt-1.json",
+      "sha256": "25d9e52979e849b7b1b8b9a1b39e8a4e58f5773e6465545b2765a4646ae42417",
+      "status": "SCHEDULED_RESOURCE_CHECKPOINT"
+    }
+  ],
+  "resume_provenance": "OWN_FRESH_SUCCESSFUL_ARTIFACTS_AFTER_RESOURCE_INTERRUPTION",
+  "retained_successful_custom_modules": 1,
+  "finished_utc": "2026-10-05T03:02:16Z"
+}

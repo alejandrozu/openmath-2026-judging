@@ -1,0 +1,164 @@
+{
+  "schema_version": 1,
+  "status": "BOUNDED_PUBLIC_PRIMARY_SOURCE_RECHECK_EXACT_PRIOR_C4_VALUE_NOT_LOCATED",
+  "created_utc": "2026-10-05T08:02:13.484710+00:00",
+  "prior_record": {
+    "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\ramsey_feinstein_primary_priority_recheck_2026-10-04.json",
+    "sha256": "ddf62527961f68af9188574393079661e17f573467131c508e9cee390c0c46c7"
+  },
+  "purpose": "Find an actual public manuscript, thesis, slides or author-linked certificate giving the exact Feinstein/Even-Zohar c(4) construction value; no contact or guessed identity.",
+  "scope": [
+    "Exact-title/author and value web searches, including author/advisor official academic sites and arXiv.",
+    "Official advisor homepage links to arXiv and GitHub followed. Current 25-result arXiv author listing searched for Ramsey; no matching paper found.",
+    "Author-linked GitHub public repository inventory re-fetched; nine repositories, unchanged response SHA from October4, none exposing a Ramsey construction.",
+    "Official Technion library/graduate thesis-search entry points inspected. Official search.js gives Primo thesis-search URLs for author/topic; both Noam Feinstein and Ramsey query pages failed to yield retrievable search-result content. This is not a completed catalogue search.",
+    "Official RSA2025 online abstract and Technion January 21 2026 announcement rechecked for exact density/slides/certificate links."
+  ],
+  "queries": [
+    "\"Noam Feinstein\" \"Ramsey\" manuscript",
+    "\"Improved Constructions for Ramsey Multiplicities\" exact",
+    "\"Noam Feinstein\" site:arxiv.org",
+    "\"Noam Feinstein\" thesis OR slides OR pdf OR multiplicity site:technion.ac.il",
+    "\"Feinstein\" \"Even-Zohar\" \"Ramsey\" preprint",
+    "\"0.030138\" \"Even-Zohar\"",
+    "\"Noam Feinstein\" site:graduate.technion.ac.il",
+    "\"Feinstein\" \"Ramsey\" site:technion.primo.exlibrisgroup.com",
+    "\"Ramsey Multiplicities\" \"slides\"",
+    "\"Improved Constructions for Ramsey Multiplicities\" pdf",
+    "\"Noam Feinstein\" \"Ramsey\" GitHub"
+  ],
+  "fresh_arxiv_api": [
+    {
+      "url": "https://export.arxiv.org/api/query?search_query=au%3A%22Noam_Feinstein%22&start=0&max_results=100&sortBy=submittedDate&sortOrder=descending",
+      "query": "au:\"Noam_Feinstein\"",
+      "retrieved_at_utc": "2026-10-05T08:02:12.987559+00:00",
+      "status": "FETCHED",
+      "http_status": 200,
+      "sha256": "5c76a5948e760beb74cf7f2f2e71f660a01b443c640f6b0e75caefc1fb11540c",
+      "total_results": 0,
+      "entries": []
+    },
+    {
+      "url": "https://export.arxiv.org/api/query?search_query=au%3AFeinstein%20AND%20all%3ARamsey&start=0&max_results=100&sortBy=submittedDate&sortOrder=descending",
+      "query": "au:Feinstein AND all:Ramsey",
+      "retrieved_at_utc": "2026-10-05T08:02:12.988558+00:00",
+      "status": "FETCHED",
+      "http_status": 200,
+      "sha256": "799d92799089690670255a77e63a2b69f4f19aed8522df8d90b5e913b3826741",
+      "total_results": 0,
+      "entries": []
+    },
+    {
+      "url": "https://export.arxiv.org/api/query?search_query=au%3A%22Even_Zohar%22%20AND%20all%3ARamsey&start=0&max_results=100&sortBy=submittedDate&sortOrder=descending",
+      "query": "au:\"Even_Zohar\" AND all:Ramsey",
+      "retrieved_at_utc": "2026-10-05T08:02:12.988558+00:00",
+      "status": "FETCHED",
+      "http_status": 200,
+      "sha256": "e37a458b967a23ddc86d933e7fda894cbd75bde9468cbd74a76e54443c1090a1",
+      "total_results": 0,
+      "entries": []
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://math.technion.ac.il/events/noam-feinstein/",
+      "type": "Official Technion seminar announcement",
+      "event_date": "2026-01-21",
+      "retrieval_date": "2026-10-05",
+      "limited_paraphrase": "The announced structured randomized improvement gives c(4)<0.030139 and c(5)<0.001652, without a precise prior c(4) value or certificate."
+    },
+    {
+      "url": "https://www.dmg.tuwien.ac.at/rsa2025/",
+      "type": "Official RSA2025 programme/abstract",
+      "event_date": "2025-08-07",
+      "retrieval_date": "2026-10-05",
+      "locator": "Online programme Noam Feinstein talk 17:00–17:25; title Improved Constructions for Ramsey Multiplicities",
+      "limited_paraphrase": "Joint work with Even-Zohar announced symmetric structured random improvements to c4 and c5. No precise density or linked manuscript/slides/certificate was located in the reviewed abstract."
+    },
+    {
+      "url": "https://chaime.net.technion.ac.il/",
+      "type": "Official advisor academic homepage",
+      "retrieval_date": "2026-10-05",
+      "scientific_links_followed": [
+        "https://arxiv.org/search/?query=chaim+even-zohar&searchtype=author",
+        "https://github.com/chaim-e"
+      ],
+      "finding": "No exact Ramsey value or thesis/manuscript link located."
+    },
+    {
+      "url": "https://arxiv.org/search/?query=chaim+even-zohar&searchtype=author",
+      "type": "Advisor-linked arXiv author listing",
+      "retrieval_date": "2026-10-05",
+      "visible_result_count": 25,
+      "finding": "No Ramsey entry found among the listing reviewed."
+    },
+    {
+      "url": "https://api.github.com/users/chaim-e/repos?per_page=100&sort=updated",
+      "type": "Official API inventory of advisor-linked public repositories",
+      "retrieval_date": "2026-10-05",
+      "http_status": 200,
+      "sha256": "8cea288e41c1dc2bfcc0ae21fe0ee55cf194fc89c94a8c7b9702744eed09ed1b",
+      "repository_count": 9,
+      "finding": "Same public inventory as prior day, no Ramsey construction/certificate repository located."
+    },
+    {
+      "url": "https://cris.technion.ac.il/en/persons/chaim-even-zohar/",
+      "type": "Official academic research profile",
+      "retrieval_date": "2026-10-05",
+      "finding": "Profile reports 25 research outputs; visible recent entries do not expose the target. Full publication-list route returned403/internal error; no exhaustive absence claim."
+    },
+    {
+      "url": "https://graduate.technion.ac.il/en/these-search/",
+      "type": "Official PhD/MSc thesis-search entry point",
+      "retrieval_date": "2026-10-05",
+      "http_status": 200,
+      "sha256": "42344dc19066e3953f15652df8d2e22d5020c5b9c8512ff3e4131ce421311756",
+      "finding": "Author/Supervisor/topic form delegates to Primo rather than hosting thesis text."
+    },
+    {
+      "url": "https://graduate.technion.ac.il/wp-content/themes/technion/assets/SearchTheses/search.js?ver=3130300a10c3fe4362ba50512a495ec9",
+      "type": "Official public thesis-search routing code",
+      "retrieval_date": "2026-10-05",
+      "finding": "Uses public Primo search?query=any,contains,<term> with tab=Theses/search_scope=Theses/vid=972TEC_INST:972TEC_V1."
+    },
+    {
+      "url": "https://technion.primo.exlibrisgroup.com/discovery/search?query=any,contains,Noam%20Feinstein&tab=Theses&search_scope=Theses&vid=972TEC_INST:972TEC_V1",
+      "type": "Official thesis catalogue query derived from published routing code",
+      "retrieval_date": "2026-10-05",
+      "status": "NO_RETRIEVABLE_RESULT_CONTENT_INTERNAL_ERROR",
+      "finding": "No exact thesis record or full text was retrieved; absence of a thesis is not established."
+    },
+    {
+      "url": "https://technion.primo.exlibrisgroup.com/discovery/search?query=any,contains,Ramsey&tab=Theses&search_scope=Theses&vid=972TEC_INST:972TEC_V1",
+      "type": "Official thesis catalogue query derived from published routing code",
+      "retrieval_date": "2026-10-05",
+      "status": "NO_RETRIEVABLE_RESULT_CONTENT_INTERNAL_ERROR"
+    },
+    {
+      "url": "https://library.technion.ac.il/ele/collections/",
+      "type": "Official library access explanation",
+      "retrieval_date": "2026-10-05",
+      "limited_paraphrase": "Library explains thesis access may require being on premises and logging in; no credential/access bypass attempted."
+    }
+  ],
+  "exact_prior_fraction_or_more_precise_decimal_found": false,
+  "numerical_comparison": {
+    "Luke_Madhan_exact_density_fraction": "8450462766487926638466333426306607129/280384030360880691940646801777885184000",
+    "Luke_Madhan_decimal": "0.030138887566497220",
+    "public_prior_statement": "c(4)<0.030139",
+    "conclusion": "Both constructions can lie below 0.030139. This threshold does not determine which exact construction value is smaller. No record claim follows from non-discovery."
+  },
+  "existing_priority_hold_preserved": true,
+  "existing_conditional_structural_recommendation_preserved": true,
+  "no_score_or_novelty_change": true,
+  "recommended_unchanged_wording": "The construction lies below the numerical threshold stated in the January 21 2026 Technion announcement. Comparison with the earlier construction’s exact density remains unverified.",
+  "limitations": [
+    "Bounded public search, not a proof that no manuscript/thesis/slides exist.",
+    "Primo full result content and CRIS full list were not retrieved; on-campus thesis access was not attempted.",
+    "No unlinked guessed GitHub account, email or LinkedIn identity was used."
+  ],
+  "privacy": "Only scientific public URLs, limited paraphrases and source digests retained. No contact data, markup, calendar/share/tracking links or raw private content stored.",
+  "outreach_sent": false,
+  "compiler_or_source_status_access": false,
+  "canonical_pdf_source_score_mutations": false
+}

@@ -1,0 +1,26 @@
+--- a000_post_exit_lzx_interface_prepared.py-b010a873a178f122056d3cc9181c95b9703002c3cbaee6ae865e930362e8814a
++++ a000_post_exit_lzx_interface_v2_prepared.py
+@@ -16,7 +16,7 @@
+ BASE=Path(__file__).resolve().parent
+ STAGE=(BASE/'builds/sakana-a000224').resolve()
+ GIB=2**30
+-SPEC=BASE/'proposals/a000-post-exit-owned-artifact-lzx-interface-preparation-20261005.json'
++SPEC=BASE/'proposals/a000-post-exit-owned-artifact-storage-interface-v2-preparation-20261005.json'
+ 
+ def sha(p):
+     h=hashlib.sha256()
+@@ -203,8 +203,12 @@
+         same=same_identity(before,after) and read_after['ordinary_read_sha256']==artifact['sha256']
+         assert rp.read_bytes()==receipt_bytes,'Storage callback must not modify source receipt'
+         for path,h in spec['protected_frozen_input_bindings'].items():assert sha(path)==h,path
+-        successful=result.get('exit')==0 and not result.get('stop_reason') and same and wa['external'] and wa['provider']==2 and wa['algorithm']==1
+-        record.update(status='PASS_BYTE_IDENTICAL_A000_POST_EXIT_OWN_OUTPUT_LZX' if successful else 'STORAGE_OPERATION_REVIEW_REQUIRED_PRESERVE_SOURCE_PASS',
++        backing_lzx=wa['external'] and wa['provider']==2 and wa['algorithm']==1
++        backing_ordinary=not wa['external'] and not after['FILE_ATTRIBUTE_REPARSE_POINT'] and not after['FILE_ATTRIBUTE_ENCRYPTED']
++        allocation_nonincreasing=after['standard_allocation_bytes']<=before['standard_allocation_bytes']
++        successful=result.get('exit')==0 and not result.get('stop_reason') and same and allocation_nonincreasing and (backing_lzx or backing_ordinary)
++        actual_storage_class='PASS_BYTE_IDENTICAL_A000_POST_EXIT_WOF_LZX' if successful and backing_lzx else ('PASS_BYTE_IDENTICAL_A000_POST_EXIT_ORDINARY_NON_WOF_NONINCREASING_ALLOCATION' if successful else 'STORAGE_OPERATION_REVIEW_REQUIRED_PRESERVE_SOURCE_PASS')
++        record.update(status=actual_storage_class,WOF_LZX_installed=bool(backing_lzx),allocation_nonincreasing=allocation_nonincreasing,
+             finished_utc=stamp(),actual_command_row=result,native_after=after,WOF_after=wa,read_and_mmap_after=read_after,
+             content_inode_linkcount_size_mtime_preserved=same,
+             actual_allocation_bytes_saved=before['standard_allocation_bytes']-after['standard_allocation_bytes'],

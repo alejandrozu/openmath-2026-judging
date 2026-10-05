@@ -1,0 +1,108 @@
+{
+  "status": "QUALIFIED_ACTUAL_R99_J2_SOURCE_AND_SUPPLEMENTAL_SELECTED3_STANDARD_ONLY_AUDIT",
+  "checked_utc": "2026-10-05T07:40:24.675188+00:00",
+  "approval_sha256": "25c8c9a5e5e9acfb1c5619ca97bc79dc9218fb11c2dfc0e8ad98266b674d63ad",
+  "source_immutable_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\ht-ramsey-actual136-one-R99-j2-source-pilot-immutable-20261005.json",
+  "source_immutable_sha256": "49006d0cb9905aef38a6058eca63fabe7bb596a208554c14cbff06b61221ea86",
+  "guard": {
+    "command": [
+      "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+      "-j1",
+      "-DmaxHeartbeats=0",
+      "-DmaxRecDepth=100000",
+      "-o",
+      "FreshAuditJ2R99Pilot.olean",
+      "FreshAuditJ2R99Pilot.lean"
+    ],
+    "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current",
+    "started_utc": "2026-10-05T07:40:17.623227+00:00",
+    "attempted": true,
+    "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+    "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+    "resource_policy": {
+      "initial_disk_bytes": 4000000000,
+      "initial_physical_bytes": 6442450944,
+      "initial_available_commit_bytes": 5368709120,
+      "continuous_disk_bytes": 1000000000,
+      "continuous_physical_bytes": 3221225472,
+      "continuous_available_commit_bytes": 1073741824,
+      "own_job_private_bytes": 6442450944,
+      "own_process_private_bytes": 6442450944,
+      "poll_seconds": 0.25,
+      "timeout_seconds": 3600
+    },
+    "minimum_disk_free_bytes": 5400784896,
+    "initial_system_memory_snapshot": {
+      "free_physical_bytes": 10305503232,
+      "total_physical_bytes": 34024419328,
+      "available_commit_bytes": 11607531520,
+      "total_commit_limit_bytes": 60213837824
+    },
+    "minimum_physical_available_bytes": 9346023424,
+    "minimum_available_commit_bytes": 9281888256,
+    "root_pid": 57176,
+    "own_job_assignment_before_resume": "PASS",
+    "exit": 0,
+    "job_peak_process_private_bytes": 2235088896,
+    "job_peak_aggregate_private_bytes": 2236338176,
+    "state": "PASS",
+    "finished_utc": "2026-10-05T07:40:24.675188+00:00",
+    "seconds": 7.047,
+    "polled_peak_tree_private_bytes": 2236338176,
+    "polled_peak_tree_rss_bytes": 971481088,
+    "counter_samples": 27,
+    "observed_own_processes": {
+      "57176": {
+        "exe": "lean.exe",
+        "peak_private_bytes": 2235088896,
+        "peak_rss_bytes": 975593472
+      },
+      "44764": {
+        "exe": "conhost.exe",
+        "peak_private_bytes": 1249280,
+        "peak_rss_bytes": 7856128
+      }
+    },
+    "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\root-R99-j2-source-selected3-audit-20261005.stdout.txt",
+    "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\root-R99-j2-source-selected3-audit-20261005.stderr.txt",
+    "stdout_sha256": "05ac56cd20dfffe7a87c705eaf17fa6ed3f630e1ec6b96c77e16da76bae1e29c",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout_excerpt": "'RamseyCert.nbOKR_99' does not depend on any axioms\n'RamseyCert.mkOKR_99' does not depend on any axioms\n'RamseyCert.tR_99' depends on axioms: [propext]\n",
+    "stderr_excerpt": ""
+  },
+  "actual_canonical_receipt_unchanged": true,
+  "axiom_rows": [
+    {
+      "endpoint": "RamseyCert.tR_99",
+      "axioms": [
+        "propext"
+      ],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    },
+    {
+      "endpoint": "RamseyCert.nbOKR_99",
+      "axioms": [],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "AXIOM_FREE"
+    },
+    {
+      "endpoint": "RamseyCert.mkOKR_99",
+      "axioms": [],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "AXIOM_FREE"
+    }
+  ],
+  "audit_artifacts": [
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-ramsey-current\\FreshAuditJ2R99Pilot.olean",
+      "sha256": "32ced8f8e95f984d0ea0e43a70c2d6e87b1ccf16e2261f4da378eb9f6020671d",
+      "bytes": 1544
+    }
+  ],
+  "all136_original_sources_and_prior_artifacts_rechecked": true,
+  "global_legacy_flag_qualification": "The inherited global lean_shell_worker_flag=-j1 belongs to earlier settings; the newR99 raw command/guard and exact environment explicitly record-j2/2. Raw receipt preserved; future adapters must set their current flag explicitly."
+}

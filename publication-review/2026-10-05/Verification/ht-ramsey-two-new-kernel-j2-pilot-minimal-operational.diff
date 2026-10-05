@@ -1,0 +1,180 @@
+--- run_ht_ramsey_two_kernel_controller_prepared.py
++++ run_ht_ramsey_two_kernel_j2_pilot_prepared.py
+@@ -1,8 +1,8 @@
+-"""Prepared-only independent kernel-chunk controller; SHA-approved boundary lease required.
++"""Prepared-only two-new-kernel -j2 pilot; separate SHA-approved boundary lease required.
+ 
+ One parent owns the HT byte lock and every canonical receipt write. Workers only
+ compile distinct original chunk files with the unchanged pinned own-job guard.
+-No other source, organizer audit, compactor, alias, or native-library target runs.
++Exactly two cold kernels maximum; no audit, retry, continuation, storage, or native build.
+ """
+ from pathlib import Path
+ from datetime import datetime,timezone
+@@ -63,12 +63,11 @@
+         for a in row['artifacts']:assert sha(a['file'])==a['sha256'] and Path(a['file']).stat().st_size==a['bytes']
+     return entries,chunkset
+ def main():
+-    assert len(sys.argv)==4 and sys.argv[1]=='--root-approved-two-kernel-controller'
++    assert len(sys.argv)==4 and sys.argv[1]=='--root-approved-two-kernel-j2-pilot'
+     approval_path=Path(sys.argv[2]).resolve();approval_sha=sys.argv[3]
+     assert approval_path.is_relative_to(BASE) and sha(approval_path)==approval_sha
+     approved=json.loads(approval_path.read_bytes())
+-    allowed={'ROOT_APPROVED_HT_RAMSEY_TWO_INDEPENDENT_NEW_KERNEL_PILOT_ONLY':2,
+-      'ROOT_APPROVED_HT_RAMSEY_REMAINING_INDEPENDENT_KERNELS_TWO_WORKER_CONTINUATION':None}
++    allowed={'ROOT_APPROVED_HT_RAMSEY_TWO_INDEPENDENT_NEW_KERNEL_J2_PILOT_ONLY':2}
+     assert approved['status'] in allowed and approved['reviewed_controller_sha256']==sha(__file__)
+     assert sha(MANIFEST)==approved['reviewed_kernel_source_manifest_sha256']
+     assert sha(PLAN)==approved['reviewed_original2103_plan_sha256']==PLAN_SHA
+@@ -76,10 +75,18 @@
+     assert sha(BASE/'native_resource_guard.py')==COUNTERS_SHA and sha(BASE/'resource_metrics.py')==COMMIT_COUNTERS_SHA
+     assert approved['all_other_source_compiler_leases_returned_and_no_whole_importer'] is True
+     assert approved['maximum_total_global_Lean_importers']==approved['maximum_own_parallel_kernel_jobs']==2
++    assert approved['maximum_new_sources_this_lease']==2 and approved['endpoint_audit_invocations_this_lease']==0
++    assert approved['no_active_A000_or_whole_or_other_source_dispatcher'] is True
++    assert approved['selection_rule']=='FIRST_TWO_STILL_COLD_INDEPENDENT_KERNELS_IN_FRESH_APPROVED_BOUNDARY_ORDER'
++    exit_record=Path(approved['actual_natural_other_dispatcher_exit_record_file']).resolve()
++    assert exit_record.is_relative_to(BASE) and sha(exit_record)==approved['actual_natural_other_dispatcher_exit_record_sha256']
++    registry=processes()
++    assert all(int(pid) not in registry for pid in approved['naturally_exited_other_source_dispatcher_pids'])
+     assert not lean_registry()['foreign_Lean_processes'] and not lean_registry()['own_Lean_pids']
+     lockfile=STAGE/'.fresh-replay.lock';assert lockfile.is_file() and lockfile.stat().st_size==1
+     lock=lockfile.open('r+b');lock.seek(0);msvcrt.locking(lock.fileno(),msvcrt.LK_NBLCK,1)
+     try:
++        assert not REPORT.with_suffix('.json.tmp').exists(),'A pending prior canonical temporary receipt requires separate recovery review'
+         raw=read_bytes_shared(REPORT);assert hashlib.sha256(raw).hexdigest()==approved['actual_quiescent_boundary_receipt_sha256']
+         prior=json.loads(raw);assert prior['status']=='SCHEDULED_RESOURCE_CHECKPOINT' and prior.get('finished_utc')
+         assert prior['modules']==json.loads(PLAN.read_bytes())['modules']
+@@ -90,7 +97,17 @@
+         pending=[n for n in prior['compilation_order'] if n in chunkset and n not in passed]
+         assert set(pending)==chunkset-set(passed)
+         assert pending==approved['exact_current_remaining_kernel_names']
+-        for n in pending:assert not artifacts(Path(entries[n]['file'])),'Unrecorded or partial output requires separate recovery review'
++        for n in pending:
++            p=Path(entries[n]['file'])
++            assert not artifacts(p) and not p.with_suffix('.ir').exists(),'Unrecorded or partial output requires separate recovery review'
++        for n,row in passed.items():
++            if n not in chunkset:continue
++            p=Path(entries[n]['file']).relative_to(STAGE)
++            assert row['command'][1] in {'-j1','-j2'}
++            expected=[str(LEAN),row['command'][1],'-DmaxHeartbeats=0','-DmaxRecDepth=100000','-o',str(p.with_suffix('.olean')),str(p)]
++            assert row['command']==expected,'Previous kernel semantic command differs from the reviewed mixed-j1/j2 baseline'
++        assert len(pending)>=2
++        unselected_pending=pending[2:];pending=pending[:2]
+         assert not plan.get('additional_dependency_libs'),'Any additional custom-library path requires a separately bound design'
+         dependencies=BASE/'dependencies/4.33.1/mathlib'
+         assert plan['version']=='4.33.1' and plan['mathlib_pin']=='0df444a360eaa60ab8c11dca51a86af692955474'
+@@ -107,31 +124,35 @@
+             assert actual==pin['rev'] and origin==pin['url']
+         paths=[str(STAGE),str(dependencies/'.lake/build/lib/lean')]
+         paths += [str(p/'.lake/build/lib/lean') for p in (dependencies/'.lake/packages').iterdir() if p.is_dir()]
+-        env=dict(os.environ);env['LEAN_PATH']=';'.join(paths);env['PATH']=str(LEAN.parent)+';'+env['PATH'];env['LEAN_NUM_THREADS']='1'
++        env=dict(os.environ);env['LEAN_PATH']=';'.join(paths);env['PATH']=str(LEAN.parent)+';'+env['PATH'];env['LEAN_NUM_THREADS']='2'
+         serial=datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%S%fZ')
+-        old=BASE/('ht-ramsey-parallel-'+serial+'-immutable-boundary.json')
++        old=BASE/('ht-ramsey-two-j2-pilot-'+serial+'-immutable-boundary.json')
+         with old.open('xb') as f:f.write(raw)
+         report=copy.deepcopy(prior);report.update(status='RUNNING',started_utc=stamp(),builds=list(prior['builds']))
+         report.pop('finished_utc',None);report.pop('current_module',None);report.pop('waiting_for_module',None)
+         report['preserved_boundary_resource_settings']=copy.deepcopy(prior.get('resource_settings',{}))
+         report.setdefault('resource_settings',{}).update(runner_file=str(Path(__file__).resolve()),
+-          runner_source_sha256=sha(__file__),explicit_lean_threads_per_job=1,maximum_parallel_own_kernel_jobs=2,
++          runner_source_sha256=sha(__file__),explicit_lean_threads_per_job=2,lean_shell_worker_flag='-j2',LEAN_NUM_THREADS='2',maximum_parallel_own_kernel_jobs=2,
+           own_job_guard_sha256=GUARD_SHA,counter_helper_sha256=COUNTERS_SHA,commit_counter_helper_sha256=COMMIT_COUNTERS_SHA)
+         report['parallel_kernel_source_policy']={'controller_sha256':sha(__file__),'source_manifest_sha256':sha(MANIFEST),
+           'root_approval':str(approval_path),'root_approval_sha256':approval_sha,'actual_immutable_boundary':str(old),
+           'actual_immutable_boundary_sha256':sha(old),'maximum_parallel_jobs':2,'maximum_new_sources_this_lease':allowed[approved['status']],
+           'no_nonchunk_or_whole_or_audit_sources':True,'original_source_bytes_pins_semantic_flags_and_guard_unchanged':True,
+           'parent_is_only_canonical_receipt_writer':True,'no_storage_alias_copy_native_library_or_compaction_operations':True,
+-          'strict_per_child_guard_sha256':GUARD_SHA,'own_guard_policy':'6GiBown/5GiBcommit/6GiBphysical/4GBdisk dispatch;1GiBcommit/3GiBphysical/1GBdisk continuous;-j1'}
++          'selection_rule':approved['selection_rule'],'selected_two_new_kernel_names':list(pending),
++          'unselected_remaining_kernel_names_withheld':list(unselected_pending),'actual_LEAN_NUM_THREADS':'2',
++          'no_retry_or_auto_continuation_or_endpoint_audit':True,'prior_mixed_j1_j2_rows_preserved_literally':True,
++          'selected_six_axiom_outputs_unattempted_require_separate_root_review':True,
++          'strict_per_child_guard_sha256':GUARD_SHA,'own_guard_policy':'6GiBown/5GiBcommit/6GiBphysical/4GBdisk dispatch;1GiBcommit/3GiBphysical/1GBdisk continuous;-j2'}
+         report.setdefault('prior_attempt_receipts',[]).append({'file':str(old),'sha256':sha(old),'status':prior['status']})
+         active={};new_invocations=0;stop_dispatch=False;stop_reason=None;failures=[];last_visible_active=None
+         def worker(name):
+             source=Path(entries[name]['file']);relative=source.relative_to(STAGE)
+-            assert sha(source)==entries[name]['sha256'] and not artifacts(source)
+-            command=[str(LEAN),'-j1','-DmaxHeartbeats=0','-DmaxRecDepth=100000']
++            assert sha(source)==entries[name]['sha256'] and not artifacts(source) and not source.with_suffix('.ir').exists()
++            command=[str(LEAN),'-j2','-DmaxHeartbeats=0','-DmaxRecDepth=100000']
+             for key,value in plan.get('lean_options',{}).items():command.append('-D'+key+'='+str(value).lower())
+             command+=['-o',str(relative.with_suffix('.olean')),str(relative)]
+-            prefix=BASE/'guarded-source-logs'/('ht-parallel-'+serial+'-'+hashlib.sha256(name.encode()).hexdigest()[:16])
++            prefix=BASE/'guarded-source-logs'/('ht-two-j2-pilot-'+serial+'-'+hashlib.sha256(name.encode()).hexdigest()[:16])
+             assert not Path(str(prefix)+'.stdout.txt').exists() and not Path(str(prefix)+'.stderr.txt').exists()
+             return name,command,guarded_tree(command,STAGE,env,prefix,timeout=3600)
+         save_atomic(REPORT,report)
+@@ -146,7 +167,8 @@
+                     if limit is not None and new_invocations+len(active)>=limit:break
+                     metrics=initial_resources()
+                     if metrics['disk_free_bytes']<4_000_000_000 or metrics['free_physical_bytes']<6*2**30 or metrics['available_commit_bytes']<5*2**30:
+-                        report['parallel_parent_waiting_dispatch_gates']=metrics
++                        report['parallel_pilot_no_attempt_dispatch_gate']=metrics
++                        stop_dispatch=True;stop_reason='RESOURCE_DISPATCH_GATE_BEFORE_NEW_KERNEL'
+                         break
+                     name=pending.pop(0);future=pool.submit(worker,name);active[future]=name
+                 if list(active.values())!=last_visible_active:
+@@ -154,9 +176,8 @@
+                 if not active:
+                     if stop_dispatch:break
+                     if allowed[approved['status']] is not None and new_invocations>=allowed[approved['status']]:break
+-                    # A guard may have rejected a dispatch. Retain no-attempt evidence;
+-                    # wait with no compiler until unchanged gates or root hold qualify.
+-                    time.sleep(2);continue
++                    stop_dispatch=True;stop_reason=stop_reason or 'PILOT_ENDED_WITHOUT_ANOTHER_SOURCE_DISPATCH'
++                    break
+                 completed,_=wait(active,timeout=.5,return_when=FIRST_COMPLETED)
+                 for future in completed:
+                     name=active.pop(future)
+@@ -166,7 +187,8 @@
+                         report.setdefault('parallel_controller_operational_errors',[]).append({'module':name,'error':str(e),'no_source_failure_inference':True});continue
+                     if not guard['attempted']:
+                         report.setdefault('parallel_no_attempt_dispatch_gates',[]).append({'module':name,'guard':guard})
+-                        pending.insert(0,name);save_atomic(REPORT,report);time.sleep(.5);continue
++                        pending.insert(0,name);stop_dispatch=True;stop_reason='NOT_INVOKED_RESOURCE_DISPATCH_GATE'
++                        save_atomic(REPORT,report);continue
+                     new_invocations+=1
+                     stdout=Path(guard['stdout_file']).read_text(encoding='utf8',errors='replace');stderr=Path(guard['stderr_file']).read_text(encoding='utf8',errors='replace')
+                     stops={'ENVIRONMENT_BLOCKED_DISK_RESERVE':'DISK_RESERVE','ENVIRONMENT_BLOCKED_PHYSICAL_RESERVE':'PHYSICAL_MEMORY_RESERVE',
+@@ -177,7 +199,8 @@
+                       'is_endpoint_audit':False,'minimum_free_bytes':guard['minimum_disk_free_bytes'],'stop_reason':stop,
+                       'started_utc':guard['started_utc'],'finished_utc':guard['finished_utc'],'owned_process_stop_output':guard['state'] if stop else None,
+                       'own_job_resource_receipt':guard,'source_sha256':sha(source),
+-                      'executed_parallel_controller_source_sha256':sha(__file__),
++                      'executed_parallel_controller_source_sha256':sha(__file__),'exact_LEAN_NUM_THREADS':'2',
++                      'explicit_lean_shell_worker_flag':'-j2','maximum_new_sources_this_pilot':2,
+                       'third_worker_memory_observations':{'minimum_free_physical_bytes':guard['minimum_physical_available_bytes'],
+                         'minimum_available_commit_bytes':guard['minimum_available_commit_bytes'],'peak_owned_private_bytes':guard.get('job_peak_aggregate_private_bytes')}}
+                     assert row['source_sha256']==entries[name]['sha256']
+@@ -191,7 +214,16 @@
+                 if stop_dispatch and not active:break
+         report.pop('current_modules',None);report['finished_utc']=stamp()
+         report['parallel_kernel_actual_new_invocations']=new_invocations
+-        report['parallel_kernel_pending_names_not_attempted']=pending
++        report['parallel_kernel_pending_names_not_attempted']=pending+unselected_pending
++        report['two_j2_pilot_unattempted_selected_names']=pending
++        report['two_j2_pilot_unselected_scope_never_dispatched']=unselected_pending
++        assert new_invocations<=2 and report['builds'][:len(prior['builds'])]==prior['builds']
++        sources_ready(plan,passed,manifest)
++        for n in pending+unselected_pending:
++            p=Path(entries[n]['file'])
++            assert not artifacts(p) and not p.with_suffix('.ir').exists()
++        assert sha(old)==hashlib.sha256(raw).hexdigest() and sha(PLAN)==PLAN_SHA
++        report['two_j2_pilot_selected_axiom_qualification']='NOT_ATTEMPTED_REQUIRES_SEPARATE_ROOT_REVIEW'
+         report['final_global_Lean_registry']=lean_registry()
+         report['final_resources']=initial_resources()
+         if stop_reason and stop_reason not in {'ROOT_COMPLETED_MODULE_BOUNDARY_HOLD'}:
+@@ -200,8 +232,8 @@
+         elif failures:report['status']='BUILD_FAILED_OR_TIMED_OUT'
+         else:
+             report['status']='SCHEDULED_RESOURCE_CHECKPOINT'
+-            report['checkpoint_reason']='ROOT_COMPLETED_MODULE_BOUNDARY_HOLD' if stop_reason else 'TWO_NEW_KERNEL_PILOT_COMPLETE_NO_CONTINUATION' if allowed[approved['status']] is not None else 'ALL_KERNEL_CHUNKS_COMPLETE_NONCHUNK_GRANULAR_NINE_AND_WHOLE_ELEVEN_AND_AUDITS_STILL_WITHHELD'
+-        save_atomic(REPORT,report);print('PARALLEL_KERNEL_CONTROLLER_STATUS',report['status'],flush=True)
++            report['checkpoint_reason']='ROOT_COMPLETED_MODULE_BOUNDARY_HOLD' if stop_reason else 'TWO_NEW_KERNEL_J2_SOURCE_PILOT_COMPLETE_NO_AUDIT_OR_CONTINUATION'
++        save_atomic(REPORT,report);print('TWO_NEW_KERNEL_J2_PILOT_STATUS',report['status'],flush=True)
+     finally:
+         lock.seek(0);msvcrt.locking(lock.fileno(),msvcrt.LK_UNLCK,1);lock.close()
+ if __name__=='__main__':main()

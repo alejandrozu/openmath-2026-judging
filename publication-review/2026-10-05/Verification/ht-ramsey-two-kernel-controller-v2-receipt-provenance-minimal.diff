@@ -1,0 +1,67 @@
+--- preserved-unexecuted-initial-controller
++++ run_ht_ramsey_two_kernel_controller_prepared.py
+@@ -22,6 +22,8 @@
+ LEAN=BASE/'runtimes/lean-4.33.1-windows/bin/lean.exe'
+ LEAN_SHA='af49bacfabaa1fea71332ca0feae0fa1a60912219d5902291adc79f905bffb8d'
+ GUARD_SHA='ae0b64c7fbf47545365f3238977368042be342ddb973159ec65c98f64aa38a71'
++COUNTERS_SHA='0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4'
++COMMIT_COUNTERS_SHA='1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed'
+ SUFFIXES=['.olean','.olean.private','.olean.server','.ilean']
+ def sha(p):
+     h=hashlib.sha256()
+@@ -71,6 +73,7 @@
+     assert sha(MANIFEST)==approved['reviewed_kernel_source_manifest_sha256']
+     assert sha(PLAN)==approved['reviewed_original2103_plan_sha256']==PLAN_SHA
+     assert sha(LEAN)==LEAN_SHA and sha(BASE/'matt_resource_guard.py')==GUARD_SHA
++    assert sha(BASE/'native_resource_guard.py')==COUNTERS_SHA and sha(BASE/'resource_metrics.py')==COMMIT_COUNTERS_SHA
+     assert approved['all_other_source_compiler_leases_returned_and_no_whole_importer'] is True
+     assert approved['maximum_total_global_Lean_importers']==approved['maximum_own_parallel_kernel_jobs']==2
+     assert not lean_registry()['foreign_Lean_processes'] and not lean_registry()['own_Lean_pids']
+@@ -91,14 +94,17 @@
+         assert not plan.get('additional_dependency_libs'),'Any additional custom-library path requires a separately bound design'
+         dependencies=BASE/'dependencies/4.33.1/mathlib'
+         assert plan['version']=='4.33.1' and plan['mathlib_pin']=='0df444a360eaa60ab8c11dca51a86af692955474'
+-        assert json.loads((BASE/'mathlib-4.33.1-cache-retry.json').read_bytes())['status']=='PASS'
++        cache_receipt=BASE/'mathlib-4.33.1-cache-retry.json'
++        assert sha(cache_receipt)==approved['reviewed_official_cache_receipt_sha256']
++        assert json.loads(cache_receipt.read_bytes())['status']=='PASS'
+         assert sha(dependencies/'lake-manifest.json')==approved['reviewed_official_lake_manifest_sha256']
+         gitrecord=BASE/'dependencies-4.33.1-verified-git.json'
+         assert sha(gitrecord)==approved['reviewed_exact_nine_dependency_git_record_sha256']
+         for pin in json.loads(gitrecord.read_bytes()):
+             directory=dependencies if pin['name']=='mathlib' else dependencies/'.lake/packages'/pin['name']
+             actual=subprocess.run(['git','rev-parse','HEAD'],cwd=directory,capture_output=True,text=True,check=True).stdout.strip()
+-            assert actual==pin['rev']
++            origin=subprocess.run(['git','remote','get-url','origin'],cwd=directory,capture_output=True,text=True,check=True).stdout.strip()
++            assert actual==pin['rev'] and origin==pin['url']
+         paths=[str(STAGE),str(dependencies/'.lake/build/lib/lean')]
+         paths += [str(p/'.lake/build/lib/lean') for p in (dependencies/'.lake/packages').iterdir() if p.is_dir()]
+         env=dict(os.environ);env['LEAN_PATH']=';'.join(paths);env['PATH']=str(LEAN.parent)+';'+env['PATH'];env['LEAN_NUM_THREADS']='1'
+@@ -107,6 +113,10 @@
+         with old.open('xb') as f:f.write(raw)
+         report=copy.deepcopy(prior);report.update(status='RUNNING',started_utc=stamp(),builds=list(prior['builds']))
+         report.pop('finished_utc',None);report.pop('current_module',None);report.pop('waiting_for_module',None)
++        report['preserved_boundary_resource_settings']=copy.deepcopy(prior.get('resource_settings',{}))
++        report.setdefault('resource_settings',{}).update(runner_file=str(Path(__file__).resolve()),
++          runner_source_sha256=sha(__file__),explicit_lean_threads_per_job=1,maximum_parallel_own_kernel_jobs=2,
++          own_job_guard_sha256=GUARD_SHA,counter_helper_sha256=COUNTERS_SHA,commit_counter_helper_sha256=COMMIT_COUNTERS_SHA)
+         report['parallel_kernel_source_policy']={'controller_sha256':sha(__file__),'source_manifest_sha256':sha(MANIFEST),
+           'root_approval':str(approval_path),'root_approval_sha256':approval_sha,'actual_immutable_boundary':str(old),
+           'actual_immutable_boundary_sha256':sha(old),'maximum_parallel_jobs':2,'maximum_new_sources_this_lease':allowed[approved['status']],
+@@ -156,7 +166,7 @@
+                         report.setdefault('parallel_controller_operational_errors',[]).append({'module':name,'error':str(e),'no_source_failure_inference':True});continue
+                     if not guard['attempted']:
+                         report.setdefault('parallel_no_attempt_dispatch_gates',[]).append({'module':name,'guard':guard})
+-                        pending.insert(0,name);continue
++                        pending.insert(0,name);save_atomic(REPORT,report);time.sleep(.5);continue
+                     new_invocations+=1
+                     stdout=Path(guard['stdout_file']).read_text(encoding='utf8',errors='replace');stderr=Path(guard['stderr_file']).read_text(encoding='utf8',errors='replace')
+                     stops={'ENVIRONMENT_BLOCKED_DISK_RESERVE':'DISK_RESERVE','ENVIRONMENT_BLOCKED_PHYSICAL_RESERVE':'PHYSICAL_MEMORY_RESERVE',
+@@ -167,6 +177,7 @@
+                       'is_endpoint_audit':False,'minimum_free_bytes':guard['minimum_disk_free_bytes'],'stop_reason':stop,
+                       'started_utc':guard['started_utc'],'finished_utc':guard['finished_utc'],'owned_process_stop_output':guard['state'] if stop else None,
+                       'own_job_resource_receipt':guard,'source_sha256':sha(source),
++                      'executed_parallel_controller_source_sha256':sha(__file__),
+                       'third_worker_memory_observations':{'minimum_free_physical_bytes':guard['minimum_physical_available_bytes'],
+                         'minimum_available_commit_bytes':guard['minimum_available_commit_bytes'],'peak_owned_private_bytes':guard.get('job_peak_aggregate_private_bytes')}}
+                     assert row['source_sha256']==entries[name]['sha256']

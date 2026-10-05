@@ -1,0 +1,77 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,textcomp}
+\usepackage[margin=24mm]{geometry}
+\usepackage{longtable,booktabs,array,enumitem}
+\usepackage[hidelinks]{hyperref}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+\emergencystretch=3em
+\begin{document}
+{\LARGE\bfseries A uniform entropy bound for fibres of k\ensuremath{\sigma}(k)\par}\medskip
+{\small Provisional mathematical authors: Rachel Teo, Wenyi Wang, Hamdi Abderrahmene\par}\medskip
+{\small Judging and evaluation record: the submissions discussed in this document have been judged and evaluated by Alejandro Zarzuelo Urdiales for OpenMath 2026. This dated review records the stated verification, classification and unresolved holds; it is a preliminary evaluation rather than a signed award decision.\par}
+
+{\small Event provenance: OpenMath 2026 ran 27 September-2 October 2026 with worldwide online participation. Detailed organizer listings specify Harvard Innovation Labs for the 27 September in-person event; the OpenMath programme advertises a hybrid kickoff at MIT. Sundai identifies its Harvard/MIT community. Organizer sources: \url{https://rsihouse.ai/openmath} ; \url{https://luma.com/yzp9abvr} ; \url{https://www.sundai.club/events/boston/recursive-learning-hack-with-harvard-innovation-labs}\par}
+
+{\small Rachel Teo  -  Sakana AI.\par}
+
+{\small Wenyi Wang  -  Sakana AI.\par}
+
+{\small Hamdi Abderrahmene  -  Sakana AI.\par}
+
+{\small Affiliations follow the recorded author declarations or public institutional/profile sources. Preferred author names, author order and publication affiliations await author review. This editorial compilation does not establish anthology coauthorship.\par}
+
+{\small Original-result working manuscript | OpenMath 2026 | 5 October 2026\par}\medskip
+{\small Central source and adjudication archive: \url{https://github.com/alejandrozu/openmath-2026-judging}\par}
+
+\subsection{Abstract}
+The number f(n) of positive integers k satisfying k\ensuremath{\sigma}(k)=n has an all-target upper bound exp((C+\ensuremath{\varepsilon})log n/log log n), where C=log(2539/1000)/3+log(10/9)/2\ensuremath{\approx}0.36327036. This refines the located log 3/3 coefficient while leaving the requested zero-constant asymptotic open.
+
+\subsection{The exact arithmetic count}
+Let \ensuremath{\sigma}(k) be the sum of positive divisors of k, and let f(n)=\#\{k\ensuremath{\geq}1:k\ensuremath{\sigma}(k)=n\}. Since k\ensuremath{\sigma}(k)\ensuremath{\geq}k for positive k, the solutions form an explicit finite subset of\{0,...,n\}; the source proves identity with the canonical formal-conjecture count, including its positivity convention.
+
+For every \ensuremath{\varepsilon}>0, the result gives a threshold N such that all n\ensuremath{\geq}N satisfy f(n)\ensuremath{\leq}exp((C+\ensuremath{\varepsilon})log n/log log n), with C=log(2539/1000)/3+log(10/9)/2. The numerical comparison is all-target: C is smaller than log 3/3\ensuremath{\approx}0.366204. A separately located log 2/2 bound for odd targets does not subsume a theorem for all n.
+
+\subsection{Powerful cores and an exact pattern bound}
+Split k into its powerful core, containing prime exponents at least two, and a coprime squarefree residual part. The squarefree map s\ensuremath{\mapsto}s\ensuremath{\sigma}(s) is injective; the formal argument removes the largest prime and treats the small primes separately. Thus a solution in a fixed target fibre can be encoded by its core exponent pattern without multiplying by an uncontrolled number of squarefree choices.
+
+The equation k\ensuremath{\sigma}(k)=n constrains both divisibility and size of that core. The development establishes exact weighted exponent-pattern bounds, with local weights and a cubic estimate at a fixed rational parameter. These finite inequalities yield the 2539/1000 constant, rather than introducing an unproved entropy heuristic.
+
+A logarithmic cutoff divides target primes into small and large ranges. Small-prime choices are bounded crudely but contribute a lower-order term; large-prime exponents obey a log-size budget. The proven weighted finite estimate is then converted to the exponential form, and a real asymptotic bridge absorbs lower-order terms into \ensuremath{\varepsilon}. Every premise of the intermediate conditional bridge is discharged by the final SigmaFiberAsymptotic theorem.
+
+\subsection{Mathematical and formal boundaries}
+The requested Erdős 1060 conclusion has a little-o exponent, corresponding to an arbitrarily small leading constant. A fixed positive C does not establish that conclusion. The result is a uniform quantitative partial improvement and should be labelled that way.
+
+Fresh independent replay completed 2026-10-05T01:08:02+00:00: all ten frozen authored Lean modules compiled under Lean 4.33.1 and Mathlib 0df444a360eaa60ab8c11dca51a86af692955474. The actual printed axiom lists for canonical\_count\_eventually\_upper, canonical\_count\_upper and entropyConstant\_lt\_old contain only propext, Classical.choice and Quot.sound; all three requested prints are present, with no admitted, native-evaluation or unrecognized axioms. Source hashes, commands, individual outputs and guarded resource measurements are preserved in Verification/sakana-erdos1060-uniform-partial-fresh-build.json. This verifies the displayed uniform partial theorem, while literature priority, author approval and the full zero-constant target remain separate.
+
+\subsection{Publication strategy and attribution}
+Powerful-core decomposition, squarefree injectivity strategy and cutoff counting are prior machinery. The candidate original contribution is the exact weighted pattern improvement and its all-target entropy coefficient. The closest Kominers and related sources should be compared on their domains, constants and quantitative effectiveness before announcing best-known status.
+
+A standalone analytic/computational number-theory note should supply the local rational inequality, the core injection and a transparent cutoff argument. The related cube-sum paper reuses some of this formal infrastructure, which should be acknowledged rather than counted as an independent discovery of the same lemmas.
+
+{\small This short manuscript records the construction and selected endpoints. The companion Original results anthology contains the extended ordinary proof exposition and its explicitly stated premises; the preserved Lean source remains the complete formal proof record.\par}
+
+\subsection{Verification and reproducibility}
+Fresh execution: sakana-erdos1060-uniform-partial: PASS; 10/10 custom modules compiled successfully; receipt Verification/sakana-erdos1060-uniform-partial-fresh-build.json. Compiler pins, source hashes and endpoint axiom outputs are in Verification. Historical receipts and finite checks do not replace fresh replay.
+
+\begin{samepage}
+\subsection{Erdos1060.canonical\_count\_eventually\_upper}
+\begin{quote}\small\ttfamily theorem canonical\_count\_eventually\_upper \{\ensuremath{\varepsilon} : \ensuremath{\mathbb{R}}\} (h\ensuremath{\varepsilon} : 0 < \ensuremath{\varepsilon}) :\newline     \ensuremath{\forall}\ensuremath{^{f}} n : \ensuremath{\mathbb{N}} in atTop,\newline       (\#\{k \ensuremath{\leq} n | k * ArithmeticFunction.sigma 1 k = n\} : \ensuremath{\mathbb{R}}) \ensuremath{\leq}\newline         Real.exp (((Real.log (2539 / 1000) / 3 + Real.log (10 / 9) / 2) + \ensuremath{\varepsilon}) *\newline           Real.log (n : \ensuremath{\mathbb{R}}) / Real.log (Real.log (n : \ensuremath{\mathbb{R}})))\end{quote}
+{\small Source: proofs/erdos1060-uniform-partial/src/SigmaFiberAsymptotic.lean:38.\par}
+
+{\small Source SHA-256: 440f2f6aaa1d5dd04611fe855077352a3b75171d6e1ec823939ede8609e2d45a\par}
+
+\end{samepage}
+\begin{samepage}
+\subsection{Erdos1060.canonical\_count\_upper}
+\begin{quote}\small\ttfamily theorem canonical\_count\_upper \{\ensuremath{\varepsilon} : \ensuremath{\mathbb{R}}\} (h\ensuremath{\varepsilon} : 0 < \ensuremath{\varepsilon}) :\newline     \ensuremath{\exists} N : \ensuremath{\mathbb{N}}, \ensuremath{\forall} n : \ensuremath{\mathbb{N}}, N \ensuremath{\leq} n \ensuremath{\to}\newline       (\#\{k \ensuremath{\leq} n | k * ArithmeticFunction.sigma 1 k = n\} : \ensuremath{\mathbb{R}}) \ensuremath{\leq}\newline         Real.exp (((Real.log (2539 / 1000) / 3 + Real.log (10 / 9) / 2) + \ensuremath{\varepsilon}) *\newline           Real.log (n : \ensuremath{\mathbb{R}}) / Real.log (Real.log (n : \ensuremath{\mathbb{R}})))\end{quote}
+{\small Source: proofs/erdos1060-uniform-partial/src/SigmaFiberAsymptotic.lean:49.\par}
+
+{\small Source SHA-256: 440f2f6aaa1d5dd04611fe855077352a3b75171d6e1ec823939ede8609e2d45a\par}
+
+{\small\textbf{Sources and attribution:} \href{https://www.erdosproblems.com/1060}{1. www.erdosproblems.com / 1060}; \href{https://scottkom.com/assets/articles/Kominers_ksigmak.pdf}{2. scottkom.com / Kominers\_ksigmak.pdf}; \href{https://github.com/google-deepmind/formal-conjectures/blob/main/FormalConjectures/ErdosProblems/1060.lean}{3. google-deepmind/formal-conjectures / 1060.lean}; \href{https://github.com/alejandrozu/ulam-opdp-difficulty-atlas}{4. alejandrozu/ulam-opdp-difficulty-atlas}; \href{https://github.com/alejandrozu/openmath-2026-judging/blob/d0ed487f487fa7ec814ff705ab55249983fe8707/OpenMath-Judging/review/entries/E02-erdos1060-uniform-partial.txt}{5. alejandrozu/openmath-2026-judging / E02-erdos1060-uniform-partial.txt}; \href{https://github.com/alejandrozu/openmath-2026-judging}{Central source and adjudication archive}.\par}
+
+\end{samepage}
+\end{document}

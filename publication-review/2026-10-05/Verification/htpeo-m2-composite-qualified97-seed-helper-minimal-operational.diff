@@ -1,0 +1,136 @@
+--- htpeo_m2_original97_hardlink_seed.py
++++ htpeo_m2_composite_qualified97_hardlink_seed.py
+@@ -15,8 +15,8 @@
+ BASE = Path(__file__).resolve().parent
+ TARGET = BASE / 'builds/htpeo-erdos-m2'
+ ORIGINAL = BASE / 'builds/htpeo-dms-current'
+-POLICY = BASE / 'htpeo-m2-original97-hardlink-policy-20261005.json'
+-SEED_RECEIPT = BASE / 'htpeo-m2-original97-hardlink-seed-completed-20261005.json'
++POLICY = BASE / 'htpeo-m2-composite-qualified97-hardlink-policy-20261005.json'
++SEED_RECEIPT = BASE / 'htpeo-m2-composite-qualified97-hardlink-seed-completed-20261005.json'
+ CLOSURE = BASE / 'proposals/htpeo-m2-original97/complete-official-source-artifact-closure.json'
+ AUDIT = BASE / 'm2-prior-own-source-conditional-reuse-audit-20261005.json'
+ AUDIT_SHA = 'd92602bf0fc52f0b324c9ce8063b7dbe56b27e489786223adb1cdb140085ded3'
+@@ -91,19 +91,24 @@
+     result = subprocess.run(['powershell', '-NoProfile', '-Command', cmd], capture_output=True, text=True, encoding='utf8', errors='replace', check=True)
+     rows = json.loads(result.stdout or '[]'); rows = rows if isinstance(rows, list) else [rows]
+     disallowed = []
++    original_source_tokens={str(Path(r['file']).resolve().relative_to(ORIGINAL.resolve())).replace('\\','/').lower() for r in load(ORIGINAL/'build-plan.json')['modules']}
+     for row in rows:
+         text = (row.get('CommandLine') or '').replace('\\', '/').lower()
+         # During the reviewed runner's own pre/post identity checks, its own
+         # Python dispatcher is expected. Every other M2 dispatcher remains
+         # disallowed; the original DMS and all diagnostic routes stay inactive.
+-        if allow_own_reviewed_M2_runner and row['ProcessId'] == os.getpid() and 'run_htpeo_m2_linked_granular_plan.py' in text:
++        if allow_own_reviewed_M2_runner and row['ProcessId'] == os.getpid() and 'run_htpeo_m2_composite_qualified_linked_granular_plan.py' in text:
+             continue
+-        if (('/builds/htpeo-dms-current/' in text) or
++        # Also identify relative-command orphan Lean children, and every known
++        # original/diagnostic source directory. No source child may write linked inputs.
++        source_tokens={a or b for a,b in re.findall(r'"([^"]*)"|(\S+)',text)}
++        relative_DMS_child=row['Name'].lower()=='lean.exe' and bool(source_tokens&original_source_tokens)
++        if (('/builds/htpeo-dms-current' in text) or relative_DMS_child or
+             ('run_source_plan.py' in text and ' htpeo-dms-current ' in text) or
+             'dispatch_dms_sole_guarded.py' in text or
+             re.search(r'(?:run|dispatch)_dms_[^ /]+\.py', text) is not None or
+             ('run_m2_granular_source_plan.py' in text and 'htpeo-erdos-m2' in text) or
+-            'run_htpeo_m2_linked_granular_plan.py' in text): disallowed.append(row)
++            'run_htpeo_m2_' in text): disallowed.append(row)
+     assert not disallowed, ('Original and completed DMS source routes plus other M2 dispatchers must be inactive for linking', disallowed)
+     return {'checked_utc': now(), 'DMS_original_completed_diagnostic_and_other_M2_compilers_inactive': True, 'process_snapshot': rows}
+ def preserve():
+@@ -278,6 +283,33 @@
+     print(json.dumps({'policy': str(POLICY), 'policy_sha256': sha, 'proposed97links': 97,
+       'existing_independent_M2_pilot': 1, 'required_new_sources': 3, 'official_closure': len(closure),
+       'official_closure_sha256': closure_sha, 'links_created': 0, 'Lean_invocations': 0}), flush=True)
++
++def composite_protection_check(policy, after_seed=False):
++    composite=policy['actual_DMS_composite_qualification']
++    assert digest(composite['file'])==composite['sha256']=='7d401ae5c7003a1520dac33288b2335645bbd095a3327cc8ddefb2d17aa417ab'
++    q=load(composite['file'])
++    assert q['qualified'] is True and q['status']==composite['status']
++    assert q['prior_own_original_cold_source_outputs_reused_readonly99']==99
++    assert q['prior_V3_new_own_cold_source_passes_reused_linked122']==122 and q['new_V4_cold_source_passes']==7
++    assert q['requested_endpoint_count']==q['actual_unique_print_count']==123
++    assert not q['selected_admitted'] and not q['selected_unknown_axioms']
++    assert q['frozen_original_audit_exit1_120of123_fully_preserved'] and q['original120_axiom_classes_and_sets_match_successful_supplement'] is True
++    for key,hkey in [('final_source_receipt','final_source_receipt_sha256'),('organizer_supplemental_audit_receipt','organizer_supplemental_audit_receipt_sha256')]:assert digest(q[key])==q[hkey]
++    inv=policy['actual_composite_protected_identity_inventory']
++    assert digest(inv['file'])==inv['sha256'];records=load(inv['file'])
++    for binding in records['all456_original_and_V4_scientific_source_identities']:assert digest(binding['file'])==binding['sha256']
++    assert len(records['qualified_body228_records'])==228 and all(r['body_identical_to_V3_and_frozen_original'] for r in records['qualified_body228_records'])
++    for binding in records['bound_seed_receipts']:assert digest(binding['file'])==binding['sha256']
++    for row in records['protected_originalV2_99_plus_qualified_inputs221_pairs']:
++        left,right=file_identity(row['left']),file_identity(row['right']);before=row['identity_before']
++        assert inode_key(left)==inode_key(right)==inode_key(before)
++        assert stable_identity(left)==stable_identity(right)==stable_identity(before)
++        increment=1 if after_seed and row['future_original_V2_increment_only_for_eligible97'] else 0
++        assert left['link_count']==right['link_count']==before['link_count']+increment
++        assert digest(row['left'])==digest(row['right'])==row['sha256']
++    return {'status':'ACTUAL_DMS_COMPOSITE_BODY_AND_PROTECTED221_RECHECKED_ORIGINALV2_ONLY_APPROVED97_INCREMENT' if after_seed else 'ACTUAL_DMS_COMPOSITE_BODY_AND_ALL_PROTECTED_COUNTS_RECHECKED_BEFORE_SEED',
++      'actual_composite_sha256':'7d401ae5c7003a1520dac33288b2335645bbd095a3327cc8ddefb2d17aa417ab','protected221_unchanged':True,'originalV2_approved97_link_increment':1 if after_seed else 0}
++
+ def seed(approval_path, approval_sha):
+     approval_path = Path(approval_path).resolve(); assert approval_path.is_relative_to(BASE.resolve()) and digest(approval_path) == approval_sha
+     approved = load(approval_path); policy = load(POLICY)
+@@ -290,7 +322,8 @@
+     qualified=load(qualification)
+     assert qualified['qualified'] is True and qualified['status']==approved['DMS_complete_route_qualification_status']
+     assert qualified['original119_immutable_receipt_sha256']==ORIGINAL_RECEIPT_SHA
+-    assert qualified['prior_own_original_cold_source_outputs_reused']+qualified['new_cold_source_passes']==228
++    assert qualified['prior_own_original_cold_source_outputs_reused_readonly99']==99
++    assert qualified['prior_V3_new_own_cold_source_passes_reused_linked122']==122 and qualified['new_V4_cold_source_passes']==7
+     assert qualified['requested_endpoint_count']==qualified['actual_unique_print_count']==123
+     assert not qualified['selected_admitted'] and not qualified['selected_unknown_axioms']
+     assert approved['DMS_complete_route_id'].startswith('htpeo-dms-current')
+@@ -302,8 +335,11 @@
+     assert released['preserved_v2_seed_receipt_sha256']==history['preserved_v2_exact99_seed_receipt_sha256']
+     assert released['preserved_v2_failed_checkpoint_sha256']==history['immutable_checkpoint_snapshot_sha256']
+     assert released['approved97_module_names']==policy['eligible97_module_names']
++    assert released['actual_DMS_composite_qualification_sha256']==policy['actual_DMS_composite_qualification']['sha256']
++    assert released['protected221_identity_inventory_sha256']==policy['actual_composite_protected_identity_inventory']['sha256']
++    assert released['only_originalV2_eligible97_linkcounts_may_increment_once'] is True and released['all_qualified221_inputs_must_stay_unchanged'] is True
+     assert not SEED_RECEIPT.exists()
+-    source_and_runtime_check(policy); inactive = route_inactive()
++    source_and_runtime_check(policy); composite_protection_check(policy,after_seed=False); inactive = route_inactive()
+     assert volume_identity(ORIGINAL) == volume_identity(TARGET) == policy['original_and_target_NTFS_volume']
+     result = {'status': 'EXACT97_LINK_SEED_RUNNING_NO_LEAN', 'started_utc': now(),
+       'approval_receipt': str(approval_path), 'approval_receipt_sha256': approval_sha,
+@@ -317,7 +353,7 @@
+       'M2_StarCore_pilot_sha256': PILOT_SHA, 'eligible97_module_names': policy['eligible97_module_names'],
+       'output_links': [], 'new_Lean_compilations': 0, 'payload_bytes_copied': 0,
+       'source_routes_inactive_before': inactive, 'minimum_disk_free_bytes': shutil.disk_usage(BASE).free}
+-    progress = BASE/'htpeo-m2-original97-hardlink-seed-progress-20261005.json'; assert not progress.exists()
++    progress = BASE/'htpeo-m2-composite-qualified97-hardlink-seed-progress-20261005.json'; assert not progress.exists()
+     def checkpoint():
+         temp = progress.with_suffix('.json.tmp'); temp.write_text(json.dumps(result, indent=2)+'\n', encoding='utf8')
+         os.replace(temp, progress)
+@@ -340,7 +376,8 @@
+           original_sha256_after_link=digest(src), M2_target_sha256=digest(dst)))
+         checkpoint()
+     assert len(result['output_links']) == 97
+-    preserve(); result['source_routes_inactive_after'] = route_inactive()
++    preserve(); result['composite_protected221_and_originalV2_postseed_identity']=composite_protection_check(policy,after_seed=True)
++    result['source_routes_inactive_after'] = route_inactive()
+     result.update(status='EXACT97_PREVIOUS_OWN_DMS_COLD_OUTPUT_LINK_SEED_COMPLETE_NO_NEW_COMPILATION', finished_utc=now())
+     sha = save_new(SEED_RECEIPT, result); checkpoint()
+     print(json.dumps({'seed_receipt': str(SEED_RECEIPT), 'seed_receipt_sha256': sha, 'new_Lean_compilations': 0, 'links': 97}), flush=True)
+@@ -361,15 +398,15 @@
+         assert digest(expected['original_owned_output']) == digest(expected['M2_target']) == expected['sha256']
+     for artifact in policy['M2_StarCore_pilot_artifacts']:
+         assert digest(artifact['file']) == artifact['sha256'] and stable_identity(file_identity(artifact['file'])) == stable_identity(artifact['dated_NTFS_identity'])
++    protection=composite_protection_check(policy,after_seed=True)
+     inactive = route_inactive(allow_own_reviewed_M2_runner=True)
+     return {'status': 'EXACT97_PRIOR_OWN_LINK_IDENTITIES_AND_SEPARATE_M2_PILOT_VERIFIED',
+       'policy_sha256': policy_sha, 'seed_receipt_sha256': seed_sha,
+       'reused_previous_own_DMS_cold_source_count': 97, 'independent_existing_M2_pilot_sources': 1,
+       'new_M2_compilations_in_seed': 0, 'modules': policy['modules'],
+-      'source_route_inactivity_check': inactive,
++      'source_route_inactivity_check': inactive,'actual_composite_protection_check':protection,
+       'required3_new_cold_module_names': policy['required3_new_cold_module_names'],
+       'forbidden_custom_LEAN_PATH_roots': [str(ORIGINAL.resolve()), str((BASE/'builds/htpeo-dms-current-import-pruned-modeq-v2').resolve())]}
+ if __name__ == '__main__':
+-    if sys.argv[1:] == ['--prepare-policy']: prepare()
+-    elif len(sys.argv) == 4 and sys.argv[1] == '--seed-root-approved': seed(sys.argv[2], sys.argv[3])
++    if len(sys.argv) == 4 and sys.argv[1] == '--seed-root-approved': seed(sys.argv[2], sys.argv[3])
+     else: raise SystemExit('Use --prepare-policy or separately SHA-approved --seed-root-approved; no Lean is invoked.')

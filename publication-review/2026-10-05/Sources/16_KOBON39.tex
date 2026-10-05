@@ -1,0 +1,73 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,textcomp}
+\usepackage[margin=24mm]{geometry}
+\usepackage{longtable,booktabs,array,enumitem}
+\usepackage[hidelinks]{hyperref}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+\emergencystretch=3em
+\begin{document}
+{\LARGE\bfseries An exact 39-line arrangement with 471 triangular faces\par}\medskip
+{\small Provisional mathematical authors: Woohyuk Kang\par}\medskip
+{\small Judging and evaluation record: the submissions discussed in this document have been judged and evaluated by Alejandro Zarzuelo Urdiales for OpenMath 2026. This dated review records the stated verification, classification and unresolved holds; it is a preliminary evaluation rather than a signed award decision.\par}
+
+{\small Event provenance: OpenMath 2026 ran 27 September-2 October 2026 with worldwide online participation. Detailed organizer listings specify Harvard Innovation Labs for the 27 September in-person event; the OpenMath programme advertises a hybrid kickoff at MIT. Sundai identifies its Harvard/MIT community. Organizer sources: \url{https://rsihouse.ai/openmath} ; \url{https://luma.com/yzp9abvr} ; \url{https://www.sundai.club/events/boston/recursive-learning-hack-with-harvard-innovation-labs}\par}
+
+{\small Woohyuk Kang  -  HTPeo; Kyung Hee University, CS\&E.\par}
+
+{\small Affiliations follow the recorded author declarations or public institutional/profile sources. Preferred author names, author order and publication affiliations await author review. This editorial compilation does not establish anthology coauthorship.\par}
+
+{\small Original-result working manuscript | OpenMath 2026 | 5 October 2026\par}\medskip
+{\small Central source and adjudication archive: \url{https://github.com/alejandrozu/openmath-2026-judging}\par}
+
+\subsection{Abstract}
+Thirty-nine explicit rational straight lines form a simple arrangement with 471 bounded triangular faces. Exact geometry independently confirms the data and improves the recorded pre-event 470 construction by one; no optimality is claimed.
+
+There exists a simple arrangement of 39 ordinary straight lines with 471 bounded triangular faces; hence K(39)\ensuremath{\geq}471.
+
+\subsection{Kobon triangles and the exact theorem}
+In the ordinary straight-line Kobon problem, count bounded triangular faces formed by the arrangement, with disjoint interiors. A triple of lines can determine a geometric triangle whose interior is crossed by other lines; such a triangle is not an arrangement face and must not be counted. The submitted 39-line certificate has 471 actual bounded triangular faces.
+
+The arrangement is simple: no parallel pairs, no duplicate lines and no triple concurrence. All 741 pair intersections are distinct. The freshly replayed formal endpoints carry the rational construction into actual real triangle faces and pairwise interior-disjointness.
+
+\subsection{Independent exact geometry}
+The ordinary audit normalizes line equations, computes every rational intersection and orders the intersection points on each line. A candidate triangle is counted only when each of its three sides joins consecutive arrangement vertices. This adjacency condition excludes a side cut by another intersection and ensures the bounded triangular-face interpretation.
+
+The independent recount gives 471, using reviewer-owned exact arithmetic and without executing the entrant's search program. Its simple-arrangement checks agree with the source. The full line list and the deterministic face list belong in supplementary JSON, accompanied by a small visualization for intuition. A plot alone cannot certify the count because close intersections may be visually indistinguishable.
+
+\subsection{Baseline comparison and originality}
+The pre-event organizer source already contains a simple39-line470-triangle arrangement and a matching SimpleLowerBound39470 theorem. An independent recount gives 470 for those same 741 distinct-intersection conventions. The proposed improvement is therefore one triangle, not an improvement from 468 obtained by overlooking the stronger pre-event certificate.
+
+The historical straight-line/pseudoline distinction also matters. Generic doubling formulas in the located literature can concern pseudolines; they do not automatically prove stretchability of the doubled result. The cited straight-line recursive sequences do not already establish 39\ensuremath{\geq}471. This clears those particular comparisons, while a specialist historical check remains necessary before a numerical-record headline.
+
+\subsection{Publication and formal boundary}
+This is a concise exact-construction note, with a natural theorem K(39)\ensuremath{\geq}471. It does not assert K(39)=471, attainment of the general upper bound, or a new construction at every order. Keep the 39-line lower certificate separate from the known 18-line 93 reconstruction and unrelated upper-bound conjectures.
+
+This publication pass independently replayed all 55 exact frozen authored source modules and the selected audit under Lean 4.33.1 and Mathlib 0df444a360eaa60ab8c11dca51a86af692955474, finishing on 5 October 2026 at 02:18:01 UTC. All invocations and all seven selected axiom prints passed. The concrete certificate uses only propext, sol\_simple is axiom-free, and the actual real-face lower bound, interior-disjointness and face-checker equivalence use only standard kernel axioms. No selected theorem depends on admitted, native-evaluation or unknown axioms. This closes the requested formal geometric verification of the 39-line/471-face construction; its historical originality and competition placement remain separate. Receipt: Verification/htpeo-kobon471-fresh-build.json.
+
+{\small This short manuscript records the construction and selected endpoints. The companion Original results anthology contains the extended ordinary proof exposition and its explicitly stated premises; the preserved Lean source remains the complete formal proof record.\par}
+
+\subsection{Verification and reproducibility}
+Fresh execution: htpeo-kobon 471: PASS; 55/55 custom modules compiled successfully; receipt Verification/htpeo-kobon471-fresh-build.json. Compiler pins, source hashes and endpoint axiom outputs are in Verification. Historical receipts and finite checks do not replace fresh replay.
+
+\begin{samepage}
+\subsection{Kobon.kobon\_lower\_bound}
+\begin{quote}\small\ttfamily theorem kobon\_lower\_bound :\newline     \ensuremath{\exists} L : List Line, L.length = 39 \ensuremath{\wedge} (\ensuremath{\forall} l \ensuremath{\in} L, l.a \ensuremath{\neq} 0 \ensuremath{\vee} l.b \ensuremath{\neq} 0) \ensuremath{\wedge}\newline       L.Pairwise (fun p q => \ensuremath{\neg} \ensuremath{\forall} P : \ensuremath{\mathbb{R}} \ensuremath{\times} \ensuremath{\mathbb{R}}, OnLine p P \ensuremath{\leftrightarrow} OnLine q P) \ensuremath{\wedge}\newline       \{t : \ensuremath{\mathbb{N}} \ensuremath{\times} \ensuremath{\mathbb{N}} \ensuremath{\times} \ensuremath{\mathbb{N}} | t.1 < t.2.1 \ensuremath{\wedge} t.2.1 < t.2.2 \ensuremath{\wedge} t.2.2 < 39 \ensuremath{\wedge}\newline         IsTriFace L (nth L t.1) (nth L t.2.1) (nth L t.2.2)\}.ncard = 471\end{quote}
+{\small Source: entries/hills/kobon-n39-lavaskiller/lean/KobonCert/Main.lean:29.\par}
+
+{\small Source SHA-256: eaa912ef13c79c074821a1a674f51de8dcf0c2b4a628e8a670d4633a9a579311\par}
+
+\end{samepage}
+\begin{samepage}
+\subsection{Kobon.kobon\_nonoverlapping}
+\begin{quote}\small\ttfamily theorem kobon\_nonoverlapping :\newline     \ensuremath{\exists} (L : List Line) (T : Finset (\ensuremath{\mathbb{N}} \ensuremath{\times} \ensuremath{\mathbb{N}} \ensuremath{\times} \ensuremath{\mathbb{N}})) (tri : \ensuremath{\mathbb{N}} \ensuremath{\times} \ensuremath{\mathbb{N}} \ensuremath{\times} \ensuremath{\mathbb{N}} \ensuremath{\to} (\ensuremath{\mathbb{R}} \ensuremath{\times} \ensuremath{\mathbb{R}}) \ensuremath{\times} (\ensuremath{\mathbb{R}} \ensuremath{\times} \ensuremath{\mathbb{R}}) \ensuremath{\times} (\ensuremath{\mathbb{R}} \ensuremath{\times} \ensuremath{\mathbb{R}})),\newline       L.length = 39 \ensuremath{\wedge} (\ensuremath{\forall} l \ensuremath{\in} L, l.a \ensuremath{\neq} 0 \ensuremath{\vee} l.b \ensuremath{\neq} 0) \ensuremath{\wedge}\newline       L.Pairwise (fun p q => \ensuremath{\neg} \ensuremath{\forall} P : \ensuremath{\mathbb{R}} \ensuremath{\times} \ensuremath{\mathbb{R}}, OnLine p P \ensuremath{\leftrightarrow} OnLine q P) \ensuremath{\wedge}\newline       T.card = 471 \ensuremath{\wedge}\newline       (\ensuremath{\forall} t \ensuremath{\in} T, t.1 < t.2.1 \ensuremath{\wedge} t.2.1 < t.2.2 \ensuremath{\wedge} t.2.2 < 39 \ensuremath{\wedge}\newline         TriWitness L (nth L t.1) (nth L t.2.1) (nth L t.2.2) (tri t).1 (tri t).2.1 (tri t).2.2) \ensuremath{\wedge}\newline       (\ensuremath{\forall} t \ensuremath{\in} T, \ensuremath{\forall} t' \ensuremath{\in} T, t \ensuremath{\neq} t' \ensuremath{\to}\newline         Disjoint (openTri (tri t).1 (tri t).2.1 (tri t).2.2)\newline           (openTri (tri t').1 (tri t').2.1 (tri t').2.2))\end{quote}
+{\small Source: entries/hills/kobon-n39-lavaskiller/lean/KobonCert/Main.lean:40.\par}
+
+{\small Source SHA-256: eaa912ef13c79c074821a1a674f51de8dcf0c2b4a628e8a670d4633a9a579311\par}
+
+{\small\textbf{Sources and attribution:} \href{https://github.com/alejandrozu/kobon-proof/commit/99fdc8ec1ef8b1fb22c3da32b011b7361762e958}{1. alejandrozu/kobon-proof}; \href{https://arxiv.org/html/0706.0723v1}{2. arXiv source: 0706.0723v1}; \href{https://zegalur.github.io/line-order/gallery/kobon.html}{3. zegalur.github.io / kobon.html}; \href{https://github.com/alejandrozu/ulam-opdp-difficulty-atlas}{4. alejandrozu/ulam-opdp-difficulty-atlas}; \href{https://github.com/alejandrozu/openmath-2026-judging/blob/d0ed487f487fa7ec814ff705ab55249983fe8707/OpenMath-Judging/review/entries/E08-KOBON39.txt}{5. alejandrozu/openmath-2026-judging / E08-KOBON 39.txt}; \href{https://github.com/alejandrozu/openmath-2026-judging}{Central source and adjudication archive}.\par}
+
+\end{samepage}
+\end{document}

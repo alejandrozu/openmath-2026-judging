@@ -1,0 +1,2252 @@
+{
+  "status": "READ_ONLY_EXACT_ORIGINAL_GRANULAR_ROUTE_REVIEW_NO_STAGING_NO_COMPILER",
+  "reviewed_utc": "2026-10-05T03:25:58.662827+00:00",
+  "project": "sakana-FOCUS-RAMSEY",
+  "original_plan": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-FOCUS-RAMSEY\\build-plan.json",
+  "original_plan_sha256": "133e566852d3aa7e212132344e955e2ee6b8700903e5b7e005028039f3e0983c",
+  "original_plan_status": "PLANNED_NOT_RUN",
+  "source_count": 2,
+  "selected_endpoint_count": 4,
+  "existing_current_fresh_receipt": {
+    "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\sakana-FOCUS-RAMSEY-fresh-build.json",
+    "present": false,
+    "sha256": null
+  },
+  "proposed_route": "UNCHANGED_EXISTING_FROZEN_SOURCE_ROUTE_ALREADY_GRANULAR",
+  "modified_import_spans": [],
+  "header_changes": 0,
+  "staged_or_copied_sources": 0,
+  "zero_change_rationale": "Actual frozen imports are already specific; broad-header comments are historical. Zero modified spans is the smallest safe operational proposal. No unverified minimization of already granular direct imports is asserted.",
+  "source_identity_records": [
+    {
+      "module": "Lea.RamseyLifting.Lifting",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-FOCUS-RAMSEY\\Lea\\RamseyLifting\\Lifting.lean",
+      "entrant_source_locator": "Focus_Evidence/evidence/FOCUS-RAMSEY/formal/Lea/RamseyLifting/Lifting.lean",
+      "original_source_sha256": "989684e07901d8a30bf9360d467ce10b30cab0999eebb4ad6ee72ba55e120fd4",
+      "proposed_source_sha256": "989684e07901d8a30bf9360d467ce10b30cab0999eebb4ad6ee72ba55e120fd4",
+      "whole_file_byte_identity": true,
+      "source_bytes": 50060,
+      "original_header_span": {
+        "start_byte": 0,
+        "end_byte_exclusive": 784
+      },
+      "original_body_after_header_sha256": "1313054f3c9117c6d1aee1608011d2cde2bc6f4fbe7cd8298a4fa992e8f44cf9",
+      "proposed_body_after_header_sha256": "1313054f3c9117c6d1aee1608011d2cde2bc6f4fbe7cd8298a4fa992e8f44cf9",
+      "proposed_modified_spans": [],
+      "original_imports": [
+        "Mathlib.Algebra.BigOperators.Ring.Finset",
+        "Mathlib.Algebra.BigOperators.Group.Finset.Sigma",
+        "Mathlib.Algebra.Order.BigOperators.Group.Finset",
+        "Mathlib.Algebra.Order.Field.Basic",
+        "Mathlib.Algebra.Order.Archimedean.Basic",
+        "Mathlib.Data.Fin.VecNotation",
+        "Mathlib.Data.Finset.Max",
+        "Mathlib.Data.Finset.Powerset",
+        "Mathlib.Data.Fintype.BigOperators",
+        "Mathlib.Data.Fintype.Card",
+        "Mathlib.Data.Fintype.CardEmbedding",
+        "Mathlib.Data.Fintype.Sigma",
+        "Mathlib.Data.Nat.Choose.Basic",
+        "Mathlib.Data.Rat.Cast.Order",
+        "Mathlib.Tactic.FieldSimp",
+        "Mathlib.Tactic.FinCases",
+        "Mathlib.Tactic.GCongr",
+        "Mathlib.Tactic.Linarith",
+        "Mathlib.Tactic.NormNum",
+        "Mathlib.Tactic.Positivity",
+        "Mathlib.Tactic.Ring"
+      ],
+      "exact_original_import_clauses": [
+        {
+          "line": 1,
+          "start_byte": 0,
+          "end_byte_exclusive": 48,
+          "exact_source_clause": "import Mathlib.Algebra.BigOperators.Ring.Finset",
+          "public_modifier": false,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 2,
+          "start_byte": 48,
+          "end_byte_exclusive": 103,
+          "exact_source_clause": "import Mathlib.Algebra.BigOperators.Group.Finset.Sigma",
+          "public_modifier": false,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 3,
+          "start_byte": 103,
+          "end_byte_exclusive": 158,
+          "exact_source_clause": "import Mathlib.Algebra.Order.BigOperators.Group.Finset",
+          "public_modifier": false,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 4,
+          "start_byte": 158,
+          "end_byte_exclusive": 199,
+          "exact_source_clause": "import Mathlib.Algebra.Order.Field.Basic",
+          "public_modifier": false,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 5,
+          "start_byte": 199,
+          "end_byte_exclusive": 246,
+          "exact_source_clause": "import Mathlib.Algebra.Order.Archimedean.Basic",
+          "public_modifier": false,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 6,
+          "start_byte": 246,
+          "end_byte_exclusive": 282,
+          "exact_source_clause": "import Mathlib.Data.Fin.VecNotation",
+          "public_modifier": false,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 7,
+          "start_byte": 282,
+          "end_byte_exclusive": 313,
+          "exact_source_clause": "import Mathlib.Data.Finset.Max",
+          "public_modifier": false,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 8,
+          "start_byte": 313,
+          "end_byte_exclusive": 349,
+          "exact_source_clause": "import Mathlib.Data.Finset.Powerset",
+          "public_modifier": false,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 9,
+          "start_byte": 349,
+          "end_byte_exclusive": 390,
+          "exact_source_clause": "import Mathlib.Data.Fintype.BigOperators",
+          "public_modifier": false,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 10,
+          "start_byte": 390,
+          "end_byte_exclusive": 423,
+          "exact_source_clause": "import Mathlib.Data.Fintype.Card",
+          "public_modifier": false,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 11,
+          "start_byte": 423,
+          "end_byte_exclusive": 465,
+          "exact_source_clause": "import Mathlib.Data.Fintype.CardEmbedding",
+          "public_modifier": false,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 12,
+          "start_byte": 465,
+          "end_byte_exclusive": 499,
+          "exact_source_clause": "import Mathlib.Data.Fintype.Sigma",
+          "public_modifier": false,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 13,
+          "start_byte": 499,
+          "end_byte_exclusive": 536,
+          "exact_source_clause": "import Mathlib.Data.Nat.Choose.Basic",
+          "public_modifier": false,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 14,
+          "start_byte": 536,
+          "end_byte_exclusive": 571,
+          "exact_source_clause": "import Mathlib.Data.Rat.Cast.Order",
+          "public_modifier": false,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 15,
+          "start_byte": 571,
+          "end_byte_exclusive": 603,
+          "exact_source_clause": "import Mathlib.Tactic.FieldSimp",
+          "public_modifier": false,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 16,
+          "start_byte": 603,
+          "end_byte_exclusive": 634,
+          "exact_source_clause": "import Mathlib.Tactic.FinCases",
+          "public_modifier": false,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 17,
+          "start_byte": 634,
+          "end_byte_exclusive": 663,
+          "exact_source_clause": "import Mathlib.Tactic.GCongr",
+          "public_modifier": false,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 18,
+          "start_byte": 663,
+          "end_byte_exclusive": 694,
+          "exact_source_clause": "import Mathlib.Tactic.Linarith",
+          "public_modifier": false,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 19,
+          "start_byte": 694,
+          "end_byte_exclusive": 724,
+          "exact_source_clause": "import Mathlib.Tactic.NormNum",
+          "public_modifier": false,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 20,
+          "start_byte": 724,
+          "end_byte_exclusive": 757,
+          "exact_source_clause": "import Mathlib.Tactic.Positivity",
+          "public_modifier": false,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 21,
+          "start_byte": 757,
+          "end_byte_exclusive": 784,
+          "exact_source_clause": "import Mathlib.Tactic.Ring",
+          "public_modifier": false,
+          "meta_modifier": false,
+          "all_modifier": false
+        }
+      ],
+      "custom_imports": [],
+      "official_direct_imports": [
+        "Mathlib.Algebra.BigOperators.Ring.Finset",
+        "Mathlib.Algebra.BigOperators.Group.Finset.Sigma",
+        "Mathlib.Algebra.Order.BigOperators.Group.Finset",
+        "Mathlib.Algebra.Order.Field.Basic",
+        "Mathlib.Algebra.Order.Archimedean.Basic",
+        "Mathlib.Data.Fin.VecNotation",
+        "Mathlib.Data.Finset.Max",
+        "Mathlib.Data.Finset.Powerset",
+        "Mathlib.Data.Fintype.BigOperators",
+        "Mathlib.Data.Fintype.Card",
+        "Mathlib.Data.Fintype.CardEmbedding",
+        "Mathlib.Data.Fintype.Sigma",
+        "Mathlib.Data.Nat.Choose.Basic",
+        "Mathlib.Data.Rat.Cast.Order",
+        "Mathlib.Tactic.FieldSimp",
+        "Mathlib.Tactic.FinCases",
+        "Mathlib.Tactic.GCongr",
+        "Mathlib.Tactic.Linarith",
+        "Mathlib.Tactic.NormNum",
+        "Mathlib.Tactic.Positivity",
+        "Mathlib.Tactic.Ring"
+      ],
+      "literal_whole_Mathlib_imports": [],
+      "literal_Mathlib_Tactic_umbrella_imports": [],
+      "options": [
+        {
+          "line": 23,
+          "text": "set_option maxHeartbeats 1000000"
+        }
+      ],
+      "static_tokens_excluding_comments_and_strings": {
+        "sorry": 0,
+        "admit": 0,
+        "native_decide": 0,
+        "implemented_by": 0,
+        "unsafe": 0,
+        "extern": 0,
+        "run_tac": 0,
+        "decide": 19,
+        "linarith": 1,
+        "nlinarith": 3,
+        "norm_num": 1,
+        "ring": 29,
+        "omega": 9,
+        "fin_cases": 3,
+        "gcongr": 3,
+        "positivity": 4,
+        "field_simp": 7,
+        "push": 0,
+        "by_contra": 1
+      },
+      "custom_axiom_declarations": [],
+      "exact_variable_contexts": [
+        "variable {m : ℕ}",
+        "variable {ι : Type*} [DecidableEq ι] [LinearOrder ι]",
+        "variable {V : Type*} [Fintype V] [DecidableEq V]",
+        "variable {A : Fin m → Fin m → Bool}"
+      ]
+    },
+    {
+      "module": "Limit",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-FOCUS-RAMSEY\\Limit.lean",
+      "entrant_source_locator": "Focus_Evidence/evidence/FOCUS-RAMSEY/formal/Limit.lean",
+      "original_source_sha256": "afd36193ffa47a58f052faad63e20905389d8f01d599d2be7c9955b000403291",
+      "proposed_source_sha256": "afd36193ffa47a58f052faad63e20905389d8f01d599d2be7c9955b000403291",
+      "whole_file_byte_identity": true,
+      "source_bytes": 23932,
+      "original_header_span": {
+        "start_byte": 0,
+        "end_byte_exclusive": 246
+      },
+      "original_body_after_header_sha256": "e8497e623bb43d9a06a7972747757418c64bf441ea66d526869aa491daec5a1d",
+      "proposed_body_after_header_sha256": "e8497e623bb43d9a06a7972747757418c64bf441ea66d526869aa491daec5a1d",
+      "proposed_modified_spans": [],
+      "original_imports": [
+        "Lea.RamseyLifting.Lifting",
+        "Mathlib.Algebra.BigOperators.Field",
+        "Mathlib.Data.Fin.Embedding",
+        "Mathlib.Data.Fintype.EquivFin",
+        "Mathlib.Topology.MetricSpace.Pseudo.Lemmas",
+        "Mathlib.Topology.Order.MonotoneConvergence"
+      ],
+      "exact_original_import_clauses": [
+        {
+          "line": 1,
+          "start_byte": 0,
+          "end_byte_exclusive": 33,
+          "exact_source_clause": "import Lea.RamseyLifting.Lifting",
+          "public_modifier": false,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 2,
+          "start_byte": 33,
+          "end_byte_exclusive": 75,
+          "exact_source_clause": "import Mathlib.Algebra.BigOperators.Field",
+          "public_modifier": false,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 3,
+          "start_byte": 75,
+          "end_byte_exclusive": 109,
+          "exact_source_clause": "import Mathlib.Data.Fin.Embedding",
+          "public_modifier": false,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 4,
+          "start_byte": 109,
+          "end_byte_exclusive": 146,
+          "exact_source_clause": "import Mathlib.Data.Fintype.EquivFin",
+          "public_modifier": false,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 5,
+          "start_byte": 146,
+          "end_byte_exclusive": 196,
+          "exact_source_clause": "import Mathlib.Topology.MetricSpace.Pseudo.Lemmas",
+          "public_modifier": false,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 6,
+          "start_byte": 196,
+          "end_byte_exclusive": 246,
+          "exact_source_clause": "import Mathlib.Topology.Order.MonotoneConvergence",
+          "public_modifier": false,
+          "meta_modifier": false,
+          "all_modifier": false
+        }
+      ],
+      "custom_imports": [
+        "Lea.RamseyLifting.Lifting"
+      ],
+      "official_direct_imports": [
+        "Mathlib.Algebra.BigOperators.Field",
+        "Mathlib.Data.Fin.Embedding",
+        "Mathlib.Data.Fintype.EquivFin",
+        "Mathlib.Topology.MetricSpace.Pseudo.Lemmas",
+        "Mathlib.Topology.Order.MonotoneConvergence"
+      ],
+      "literal_whole_Mathlib_imports": [],
+      "literal_Mathlib_Tactic_umbrella_imports": [],
+      "options": [
+        {
+          "line": 8,
+          "text": "set_option maxHeartbeats 1000000"
+        }
+      ],
+      "static_tokens_excluding_comments_and_strings": {
+        "sorry": 0,
+        "admit": 0,
+        "native_decide": 0,
+        "implemented_by": 0,
+        "unsafe": 0,
+        "extern": 0,
+        "run_tac": 0,
+        "decide": 5,
+        "linarith": 5,
+        "nlinarith": 1,
+        "norm_num": 1,
+        "ring": 0,
+        "omega": 10,
+        "fin_cases": 0,
+        "gcongr": 0,
+        "positivity": 1,
+        "field_simp": 1,
+        "push": 2,
+        "by_contra": 2
+      },
+      "custom_axiom_declarations": [],
+      "exact_variable_contexts": []
+    }
+  ],
+  "unchanged_audit_records": [
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-FOCUS-RAMSEY\\FreshAudit1.lean",
+      "source_sha256": "db7b81f4a387064db5d954b542f3b5ac2464cc22f48180bde5f87cd6afe289fd",
+      "exact_requested_prints": [
+        "Lea.RamseyLifting.density_sub_P_abs_le",
+        "Lea.RamseyLifting.lifting_bound",
+        "Lea.RamseyLifting.density_tendsto",
+        "Lea.RamseyC4.c4_le_Pval"
+      ],
+      "exact_imports": [
+        "Lea.RamseyLifting.Lifting",
+        "Limit"
+      ],
+      "byte_unchanged": true
+    }
+  ],
+  "selected_exact_statement_records": [
+    {
+      "requested_endpoint": "Lea.RamseyLifting.density_sub_P_abs_le",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-FOCUS-RAMSEY\\Lea\\RamseyLifting\\Lifting.lean",
+      "source_sha256": "989684e07901d8a30bf9360d467ce10b30cab0999eebb4ad6ee72ba55e120fd4",
+      "line": 1018,
+      "exact_statement_before_proof": "theorem density_sub_P_abs_le (hA : ∀ i j, A i j = A j i) (v : Fin m → ℕ)\n    (hQ : 4 ≤ Qw v) :\n    |(M4 A v : ℚ) / ((Qw v).choose 4 : ℚ) - Pval A v| ≤ 6 / (Qw v : ℚ)",
+      "statement_utf8_sha256": "c254b8126388c222bab668cca4f96a083f3c1e08b06f907992db88436151f956"
+    },
+    {
+      "requested_endpoint": "Lea.RamseyLifting.lifting_bound",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-FOCUS-RAMSEY\\Lea\\RamseyLifting\\Lifting.lean",
+      "source_sha256": "989684e07901d8a30bf9360d467ce10b30cab0999eebb4ad6ee72ba55e120fd4",
+      "line": 1117,
+      "exact_statement_before_proof": "theorem lifting_bound (hA : ∀ i j, A i j = A j i) (w : Fin m → ℕ) (t : ℕ)\n    (ht : 0 < t) (hQ : 0 < Qw w) (hN : 4 ≤ t * Qw w) :\n    |(M4 A (fun i => t * w i) : ℚ) / (((t * Qw w).choose 4 : ℕ) : ℚ) - Pval A w|\n      ≤ 6 / ((t * Qw w : ℕ) : ℚ)",
+      "statement_utf8_sha256": "e5a34aebfe375fea9de43670dd1f1be3350e5ce465e77d52ea2f70b3f9f1362f"
+    },
+    {
+      "requested_endpoint": "Lea.RamseyLifting.density_tendsto",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-FOCUS-RAMSEY\\Lea\\RamseyLifting\\Lifting.lean",
+      "source_sha256": "989684e07901d8a30bf9360d467ce10b30cab0999eebb4ad6ee72ba55e120fd4",
+      "line": 1127,
+      "exact_statement_before_proof": "theorem density_tendsto (hA : ∀ i j, A i j = A j i) (w : Fin m → ℕ) (hQ : 0 < Qw w)\n    (ε : ℚ) (hε : 0 < ε) :\n    ∃ T : ℕ, 0 < T ∧ ∀ t ≥ T,\n      |(M4 A (fun i => t * w i) : ℚ) / (((t * Qw w).choose 4 : ℕ) : ℚ) - Pval A w| ≤ ε",
+      "statement_utf8_sha256": "3faa1f87ab057bc116ea503693e7da804d9864c182b75a88e3fb56735026a88e"
+    },
+    {
+      "requested_endpoint": "Lea.RamseyC4.c4_le_Pval",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sakana-FOCUS-RAMSEY\\Limit.lean",
+      "source_sha256": "afd36193ffa47a58f052faad63e20905389d8f01d599d2be7c9955b000403291",
+      "line": 536,
+      "exact_statement_before_proof": "theorem c4_le_Pval {m : ℕ} {A : Fin m → Fin m → Bool} (hA : ∀ i j, A i j = A j i)\n    (w : Fin m → ℕ) (hQ : 0 < Lea.RamseyLifting.Qw w) :\n    c4 ≤ ((Lea.RamseyLifting.Pval A w : ℚ) : ℝ)",
+      "statement_utf8_sha256": "8e94e345fb05d3e3ef88708c0e667dfe1f8494af68fc6c92f37f9a2685dab31c"
+    }
+  ],
+  "ordinary_statement_and_proof_fidelity": [
+    "All four selected statements are generic and require a symmetric Boolean template. The finite density is the number of monochromatic unordered four-element subsets divided by choose(N,4).",
+    "Pval is the rational weighted sum over all ordered template four-tuples, including repeated block indices; the diagonal supplies the colour between distinct vertices of one block, never a self-loop.",
+    "The lifting estimate bounds the absolute finite-density error by 6/N for N>=4. Positive integer total weights and positive blow-up scale are explicit hypotheses of the scaled theorem.",
+    "density_tendsto is an explicit rational epsilon/T statement. Limit.lean separately proves monotonicity and boundedness of the finite minimum and its real convergence to c4 defined as its supremum; c4_le_Pval is unconditional under symmetry and positive total weight.",
+    "These two modules establish the general lifting and limit bridges. Their selected audit does not instantiate the disputed numerical competition template or establish its originality, exact numerical record or priority."
+  ],
+  "official_direct_imports": [
+    "Mathlib.Algebra.BigOperators.Ring.Finset",
+    "Mathlib.Algebra.BigOperators.Group.Finset.Sigma",
+    "Mathlib.Algebra.Order.BigOperators.Group.Finset",
+    "Mathlib.Algebra.Order.Field.Basic",
+    "Mathlib.Algebra.Order.Archimedean.Basic",
+    "Mathlib.Data.Fin.VecNotation",
+    "Mathlib.Data.Finset.Max",
+    "Mathlib.Data.Finset.Powerset",
+    "Mathlib.Data.Fintype.BigOperators",
+    "Mathlib.Data.Fintype.Card",
+    "Mathlib.Data.Fintype.CardEmbedding",
+    "Mathlib.Data.Fintype.Sigma",
+    "Mathlib.Data.Nat.Choose.Basic",
+    "Mathlib.Data.Rat.Cast.Order",
+    "Mathlib.Tactic.FieldSimp",
+    "Mathlib.Tactic.FinCases",
+    "Mathlib.Tactic.GCongr",
+    "Mathlib.Tactic.Linarith",
+    "Mathlib.Tactic.NormNum",
+    "Mathlib.Tactic.Positivity",
+    "Mathlib.Tactic.Ring",
+    "Mathlib.Algebra.BigOperators.Field",
+    "Mathlib.Data.Fin.Embedding",
+    "Mathlib.Data.Fintype.EquivFin",
+    "Mathlib.Topology.MetricSpace.Pseudo.Lemmas",
+    "Mathlib.Topology.Order.MonotoneConvergence"
+  ],
+  "official_direct_module_identities": [
+    {
+      "module": "Mathlib.Algebra.BigOperators.Ring.Finset",
+      "identity_root": "mathlib",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\Algebra\\BigOperators\\Ring\\Finset.lean",
+      "source_sha256": "472cd5000412d8ec35c8b9ee919b2aeedbf0a830033a55009aad436595923809",
+      "source_bytes": 16305,
+      "official_olean": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Algebra\\BigOperators\\Ring\\Finset.olean",
+      "official_olean_sha256": "5613bc8df4c5c18fae2618177b5c3019bc6d278c41fe8789bd7d721ab60be156",
+      "official_olean_bytes": 168376,
+      "explicit_imports": [
+        "Mathlib.Algebra.BigOperators.Group.Finset.Pi",
+        "Mathlib.Algebra.BigOperators.Group.Finset.Piecewise",
+        "Mathlib.Algebra.BigOperators.GroupWithZero.Finset",
+        "Mathlib.Algebra.BigOperators.Ring.Multiset",
+        "Mathlib.Data.Finset.Max",
+        "Mathlib.Data.Fintype.Powerset",
+        "Mathlib.Data.Int.Cast.Lemmas"
+      ],
+      "exact_import_clauses": [
+        {
+          "line": 8,
+          "start_byte": 164,
+          "end_byte_exclusive": 223,
+          "exact_source_clause": "public import Mathlib.Algebra.BigOperators.Group.Finset.Pi",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 9,
+          "start_byte": 223,
+          "end_byte_exclusive": 289,
+          "exact_source_clause": "public import Mathlib.Algebra.BigOperators.Group.Finset.Piecewise",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 10,
+          "start_byte": 289,
+          "end_byte_exclusive": 353,
+          "exact_source_clause": "public import Mathlib.Algebra.BigOperators.GroupWithZero.Finset",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 11,
+          "start_byte": 353,
+          "end_byte_exclusive": 410,
+          "exact_source_clause": "public import Mathlib.Algebra.BigOperators.Ring.Multiset",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 12,
+          "start_byte": 410,
+          "end_byte_exclusive": 448,
+          "exact_source_clause": "public import Mathlib.Data.Finset.Max",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 13,
+          "start_byte": 448,
+          "end_byte_exclusive": 492,
+          "exact_source_clause": "public import Mathlib.Data.Fintype.Powerset",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 14,
+          "start_byte": 492,
+          "end_byte_exclusive": 535,
+          "exact_source_clause": "public import Mathlib.Data.Int.Cast.Lemmas",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        }
+      ],
+      "implicit_Init_included": true,
+      "dependency_names": [
+        "Mathlib.Algebra.BigOperators.Group.Finset.Pi",
+        "Mathlib.Algebra.BigOperators.Group.Finset.Piecewise",
+        "Mathlib.Algebra.BigOperators.GroupWithZero.Finset",
+        "Mathlib.Algebra.BigOperators.Ring.Multiset",
+        "Mathlib.Data.Finset.Max",
+        "Mathlib.Data.Fintype.Powerset",
+        "Mathlib.Data.Int.Cast.Lemmas",
+        "Init"
+      ],
+      "multiple_resolution_candidates": 1
+    },
+    {
+      "module": "Mathlib.Algebra.BigOperators.Group.Finset.Sigma",
+      "identity_root": "mathlib",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\Algebra\\BigOperators\\Group\\Finset\\Sigma.lean",
+      "source_sha256": "795e36343a20dfc70b670f0b03c4c4e92a119e04d2d33904dd4438f78a30c764",
+      "source_bytes": 6475,
+      "official_olean": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Algebra\\BigOperators\\Group\\Finset\\Sigma.olean",
+      "official_olean_sha256": "c080cdbb8aff2de7eb601acfe76a015d10bd5dc160ead019b1ef08ae2a6083cb",
+      "official_olean_bytes": 56664,
+      "explicit_imports": [
+        "Mathlib.Data.Finset.Sigma",
+        "Mathlib.Algebra.BigOperators.Group.Finset.Basic"
+      ],
+      "exact_import_clauses": [
+        {
+          "line": 8,
+          "start_byte": 164,
+          "end_byte_exclusive": 204,
+          "exact_source_clause": "public import Mathlib.Data.Finset.Sigma",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 9,
+          "start_byte": 204,
+          "end_byte_exclusive": 266,
+          "exact_source_clause": "public import Mathlib.Algebra.BigOperators.Group.Finset.Basic",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        }
+      ],
+      "implicit_Init_included": true,
+      "dependency_names": [
+        "Mathlib.Data.Finset.Sigma",
+        "Mathlib.Algebra.BigOperators.Group.Finset.Basic",
+        "Init"
+      ],
+      "multiple_resolution_candidates": 1
+    },
+    {
+      "module": "Mathlib.Algebra.Order.BigOperators.Group.Finset",
+      "identity_root": "mathlib",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\Algebra\\Order\\BigOperators\\Group\\Finset.lean",
+      "source_sha256": "6a8daafb9e3b8b6ac48a696661c99a2d10dce57f48907ae18280914bf0ac639f",
+      "source_bytes": 36509,
+      "official_olean": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Algebra\\Order\\BigOperators\\Group\\Finset.olean",
+      "official_olean_sha256": "deef5869524e749a7fdc811e9a0860b9174a143f204eea0b345adf2dab511987",
+      "official_olean_bytes": 320696,
+      "explicit_imports": [
+        "Mathlib.Data.Fintype.Card",
+        "Mathlib.Algebra.Order.BigOperators.Group.Multiset",
+        "Mathlib.Algebra.Order.Group.Nat",
+        "Mathlib.Data.Multiset.OrderedMonoid",
+        "Mathlib.Tactic.Bound.Attribute",
+        "Mathlib.Algebra.BigOperators.Group.Finset.Sigma",
+        "Mathlib.Data.Multiset.Powerset",
+        "Mathlib.Algebra.Order.Monoid.Unbundled.Pow"
+      ],
+      "exact_import_clauses": [
+        {
+          "line": 8,
+          "start_byte": 164,
+          "end_byte_exclusive": 204,
+          "exact_source_clause": "public import Mathlib.Data.Fintype.Card",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 9,
+          "start_byte": 204,
+          "end_byte_exclusive": 268,
+          "exact_source_clause": "public import Mathlib.Algebra.Order.BigOperators.Group.Multiset",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 10,
+          "start_byte": 268,
+          "end_byte_exclusive": 314,
+          "exact_source_clause": "public import Mathlib.Algebra.Order.Group.Nat",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 11,
+          "start_byte": 314,
+          "end_byte_exclusive": 364,
+          "exact_source_clause": "public import Mathlib.Data.Multiset.OrderedMonoid",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 12,
+          "start_byte": 364,
+          "end_byte_exclusive": 409,
+          "exact_source_clause": "public import Mathlib.Tactic.Bound.Attribute",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 13,
+          "start_byte": 409,
+          "end_byte_exclusive": 471,
+          "exact_source_clause": "public import Mathlib.Algebra.BigOperators.Group.Finset.Sigma",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 14,
+          "start_byte": 471,
+          "end_byte_exclusive": 516,
+          "exact_source_clause": "public import Mathlib.Data.Multiset.Powerset",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 15,
+          "start_byte": 516,
+          "end_byte_exclusive": 573,
+          "exact_source_clause": "public import Mathlib.Algebra.Order.Monoid.Unbundled.Pow",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        }
+      ],
+      "implicit_Init_included": true,
+      "dependency_names": [
+        "Mathlib.Data.Fintype.Card",
+        "Mathlib.Algebra.Order.BigOperators.Group.Multiset",
+        "Mathlib.Algebra.Order.Group.Nat",
+        "Mathlib.Data.Multiset.OrderedMonoid",
+        "Mathlib.Tactic.Bound.Attribute",
+        "Mathlib.Algebra.BigOperators.Group.Finset.Sigma",
+        "Mathlib.Data.Multiset.Powerset",
+        "Mathlib.Algebra.Order.Monoid.Unbundled.Pow",
+        "Init"
+      ],
+      "multiple_resolution_candidates": 1
+    },
+    {
+      "module": "Mathlib.Algebra.Order.Field.Basic",
+      "identity_root": "mathlib",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\Algebra\\Order\\Field\\Basic.lean",
+      "source_sha256": "1d6672beae57890d355067ff20de13b715bece8e87e0d088b7e959e773025f57",
+      "source_bytes": 34578,
+      "official_olean": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Algebra\\Order\\Field\\Basic.olean",
+      "official_olean_sha256": "db375c21485138d34dd8cafa5a02af07f3d5409edc06111ea0ffffb99949740f",
+      "official_olean_bytes": 463376,
+      "explicit_imports": [
+        "Mathlib.Algebra.Field.Basic",
+        "Mathlib.Algebra.GroupWithZero.Units.Lemmas",
+        "Mathlib.Algebra.Order.GroupWithZero.OrderIso",
+        "Mathlib.Algebra.Order.Ring.Abs",
+        "Mathlib.Data.Set.Monotone",
+        "Mathlib.Order.Bounds.OrderIso",
+        "Mathlib.Tactic.Positivity.Core"
+      ],
+      "exact_import_clauses": [
+        {
+          "line": 8,
+          "start_byte": 217,
+          "end_byte_exclusive": 259,
+          "exact_source_clause": "public import Mathlib.Algebra.Field.Basic",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 9,
+          "start_byte": 259,
+          "end_byte_exclusive": 316,
+          "exact_source_clause": "public import Mathlib.Algebra.GroupWithZero.Units.Lemmas",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 10,
+          "start_byte": 316,
+          "end_byte_exclusive": 375,
+          "exact_source_clause": "public import Mathlib.Algebra.Order.GroupWithZero.OrderIso",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 11,
+          "start_byte": 375,
+          "end_byte_exclusive": 420,
+          "exact_source_clause": "public import Mathlib.Algebra.Order.Ring.Abs",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 12,
+          "start_byte": 420,
+          "end_byte_exclusive": 460,
+          "exact_source_clause": "public import Mathlib.Data.Set.Monotone",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 13,
+          "start_byte": 460,
+          "end_byte_exclusive": 504,
+          "exact_source_clause": "public import Mathlib.Order.Bounds.OrderIso",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 14,
+          "start_byte": 504,
+          "end_byte_exclusive": 549,
+          "exact_source_clause": "public import Mathlib.Tactic.Positivity.Core",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        }
+      ],
+      "implicit_Init_included": true,
+      "dependency_names": [
+        "Mathlib.Algebra.Field.Basic",
+        "Mathlib.Algebra.GroupWithZero.Units.Lemmas",
+        "Mathlib.Algebra.Order.GroupWithZero.OrderIso",
+        "Mathlib.Algebra.Order.Ring.Abs",
+        "Mathlib.Data.Set.Monotone",
+        "Mathlib.Order.Bounds.OrderIso",
+        "Mathlib.Tactic.Positivity.Core",
+        "Init"
+      ],
+      "multiple_resolution_candidates": 1
+    },
+    {
+      "module": "Mathlib.Algebra.Order.Archimedean.Basic",
+      "identity_root": "mathlib",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\Algebra\\Order\\Archimedean\\Basic.lean",
+      "source_sha256": "ca25cdb403d7ddf3fd916954cad89c9a47d16c80b5b37c2e711ef8bc7418ca26",
+      "source_bytes": 22498,
+      "official_olean": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Algebra\\Order\\Archimedean\\Basic.olean",
+      "official_olean_sha256": "379f23abd1070af8b38f60c28888f0a2c7abbca2577bfdae8fbf9e7f93f3fd87",
+      "official_olean_bytes": 173032,
+      "explicit_imports": [
+        "Mathlib.Algebra.Field.Defs",
+        "Mathlib.Algebra.Order.Archimedean.Defs",
+        "Mathlib.Algebra.Order.Floor.Semiring",
+        "Mathlib.Order.Directed",
+        "Mathlib.Data.Rat.Floor",
+        "Mathlib.Algebra.Order.Group.Basic",
+        "Mathlib.Algebra.Order.Monoid.Units",
+        "Mathlib.Algebra.Order.Ring.Pow",
+        "Mathlib.Data.Int.LeastGreatest"
+      ],
+      "exact_import_clauses": [
+        {
+          "line": 8,
+          "start_byte": 162,
+          "end_byte_exclusive": 203,
+          "exact_source_clause": "public import Mathlib.Algebra.Field.Defs",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 9,
+          "start_byte": 203,
+          "end_byte_exclusive": 256,
+          "exact_source_clause": "public import Mathlib.Algebra.Order.Archimedean.Defs",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 10,
+          "start_byte": 256,
+          "end_byte_exclusive": 307,
+          "exact_source_clause": "public import Mathlib.Algebra.Order.Floor.Semiring",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 11,
+          "start_byte": 307,
+          "end_byte_exclusive": 344,
+          "exact_source_clause": "public import Mathlib.Order.Directed",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 12,
+          "start_byte": 344,
+          "end_byte_exclusive": 381,
+          "exact_source_clause": "public import Mathlib.Data.Rat.Floor",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 14,
+          "start_byte": 382,
+          "end_byte_exclusive": 423,
+          "exact_source_clause": "import Mathlib.Algebra.Order.Group.Basic",
+          "public_modifier": false,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 15,
+          "start_byte": 423,
+          "end_byte_exclusive": 465,
+          "exact_source_clause": "import Mathlib.Algebra.Order.Monoid.Units",
+          "public_modifier": false,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 16,
+          "start_byte": 465,
+          "end_byte_exclusive": 503,
+          "exact_source_clause": "import Mathlib.Algebra.Order.Ring.Pow",
+          "public_modifier": false,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 17,
+          "start_byte": 503,
+          "end_byte_exclusive": 541,
+          "exact_source_clause": "import Mathlib.Data.Int.LeastGreatest",
+          "public_modifier": false,
+          "meta_modifier": false,
+          "all_modifier": false
+        }
+      ],
+      "implicit_Init_included": true,
+      "dependency_names": [
+        "Mathlib.Algebra.Field.Defs",
+        "Mathlib.Algebra.Order.Archimedean.Defs",
+        "Mathlib.Algebra.Order.Floor.Semiring",
+        "Mathlib.Order.Directed",
+        "Mathlib.Data.Rat.Floor",
+        "Mathlib.Algebra.Order.Group.Basic",
+        "Mathlib.Algebra.Order.Monoid.Units",
+        "Mathlib.Algebra.Order.Ring.Pow",
+        "Mathlib.Data.Int.LeastGreatest",
+        "Init"
+      ],
+      "multiple_resolution_candidates": 1
+    },
+    {
+      "module": "Mathlib.Data.Fin.VecNotation",
+      "identity_root": "mathlib",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\Data\\Fin\\VecNotation.lean",
+      "source_sha256": "08b3449fd3135bb1b4123e74445bad9317b2aa7515a0464aaddc0d656971568e",
+      "source_bytes": 17582,
+      "official_olean": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Data\\Fin\\VecNotation.olean",
+      "official_olean_sha256": "626b61e4bdb77d08bc1d4d3fd2cbc47a483bf15fb4ef9c02e8d77dd7aa332fb1",
+      "official_olean_bytes": 263680,
+      "explicit_imports": [
+        "Mathlib.Data.Fin.Tuple.Basic"
+      ],
+      "exact_import_clauses": [
+        {
+          "line": 8,
+          "start_byte": 169,
+          "end_byte_exclusive": 212,
+          "exact_source_clause": "public import Mathlib.Data.Fin.Tuple.Basic",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        }
+      ],
+      "implicit_Init_included": true,
+      "dependency_names": [
+        "Mathlib.Data.Fin.Tuple.Basic",
+        "Init"
+      ],
+      "multiple_resolution_candidates": 1
+    },
+    {
+      "module": "Mathlib.Data.Finset.Max",
+      "identity_root": "mathlib",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\Data\\Finset\\Max.lean",
+      "source_sha256": "6a67c04a5ad263999707cf927121c15edf11bd66f7b5b48652c0e0e660a0d58c",
+      "source_bytes": 23182,
+      "official_olean": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Data\\Finset\\Max.olean",
+      "official_olean_sha256": "518fbc9b9eb877ab91e94aac36e6e25ca12dd6a4e9a3c90b66a6652fa4bccfaa",
+      "official_olean_bytes": 195896,
+      "explicit_imports": [
+        "Mathlib.Data.Finset.Card",
+        "Mathlib.Data.Finset.Lattice.Fold"
+      ],
+      "exact_import_clauses": [
+        {
+          "line": 8,
+          "start_byte": 162,
+          "end_byte_exclusive": 201,
+          "exact_source_clause": "public import Mathlib.Data.Finset.Card",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 9,
+          "start_byte": 201,
+          "end_byte_exclusive": 248,
+          "exact_source_clause": "public import Mathlib.Data.Finset.Lattice.Fold",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        }
+      ],
+      "implicit_Init_included": true,
+      "dependency_names": [
+        "Mathlib.Data.Finset.Card",
+        "Mathlib.Data.Finset.Lattice.Fold",
+        "Init"
+      ],
+      "multiple_resolution_candidates": 1
+    },
+    {
+      "module": "Mathlib.Data.Finset.Powerset",
+      "identity_root": "mathlib",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\Data\\Finset\\Powerset.lean",
+      "source_sha256": "ffe38ab68a55fd3c24524e502afab8dad28588fb899157deae3976f24ff16b27",
+      "source_bytes": 16574,
+      "official_olean": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Data\\Finset\\Powerset.olean",
+      "official_olean_sha256": "667384a87b942d6084148a18e1e026c9243eb5e8334db6c996161a68b301897e",
+      "official_olean_bytes": 188464,
+      "explicit_imports": [
+        "Mathlib.Data.Finset.Card",
+        "Mathlib.Data.Finset.Lattice.Union",
+        "Mathlib.Data.Multiset.Powerset",
+        "Mathlib.Data.Set.Pairwise.Lattice"
+      ],
+      "exact_import_clauses": [
+        {
+          "line": 8,
+          "start_byte": 162,
+          "end_byte_exclusive": 201,
+          "exact_source_clause": "public import Mathlib.Data.Finset.Card",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 9,
+          "start_byte": 201,
+          "end_byte_exclusive": 249,
+          "exact_source_clause": "public import Mathlib.Data.Finset.Lattice.Union",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 10,
+          "start_byte": 249,
+          "end_byte_exclusive": 294,
+          "exact_source_clause": "public import Mathlib.Data.Multiset.Powerset",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 11,
+          "start_byte": 294,
+          "end_byte_exclusive": 342,
+          "exact_source_clause": "public import Mathlib.Data.Set.Pairwise.Lattice",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        }
+      ],
+      "implicit_Init_included": true,
+      "dependency_names": [
+        "Mathlib.Data.Finset.Card",
+        "Mathlib.Data.Finset.Lattice.Union",
+        "Mathlib.Data.Multiset.Powerset",
+        "Mathlib.Data.Set.Pairwise.Lattice",
+        "Init"
+      ],
+      "multiple_resolution_candidates": 1
+    },
+    {
+      "module": "Mathlib.Data.Fintype.BigOperators",
+      "identity_root": "mathlib",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\Data\\Fintype\\BigOperators.lean",
+      "source_sha256": "bfa35992c02f47d7c78a5425ea3c4eecba0ad54de1b5752db565b37de11148c0",
+      "source_bytes": 12349,
+      "official_olean": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Data\\Fintype\\BigOperators.olean",
+      "official_olean_sha256": "b8e090b03ee21561d4a6b8467c161afac29ad8383d90926af40af15a95aa6105",
+      "official_olean_bytes": 136664,
+      "explicit_imports": [
+        "Mathlib.Algebra.BigOperators.Group.Finset.Piecewise",
+        "Mathlib.Algebra.BigOperators.Group.Finset.Sigma",
+        "Mathlib.Algebra.BigOperators.Option",
+        "Mathlib.Data.Fintype.Option",
+        "Mathlib.Data.Fintype.Prod",
+        "Mathlib.Data.Fintype.Sigma",
+        "Mathlib.Data.Fintype.Sum",
+        "Mathlib.Data.Fintype.Vector"
+      ],
+      "exact_import_clauses": [
+        {
+          "line": 8,
+          "start_byte": 162,
+          "end_byte_exclusive": 228,
+          "exact_source_clause": "public import Mathlib.Algebra.BigOperators.Group.Finset.Piecewise",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 9,
+          "start_byte": 228,
+          "end_byte_exclusive": 290,
+          "exact_source_clause": "public import Mathlib.Algebra.BigOperators.Group.Finset.Sigma",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 10,
+          "start_byte": 290,
+          "end_byte_exclusive": 340,
+          "exact_source_clause": "public import Mathlib.Algebra.BigOperators.Option",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 11,
+          "start_byte": 340,
+          "end_byte_exclusive": 382,
+          "exact_source_clause": "public import Mathlib.Data.Fintype.Option",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 12,
+          "start_byte": 382,
+          "end_byte_exclusive": 422,
+          "exact_source_clause": "public import Mathlib.Data.Fintype.Prod",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 13,
+          "start_byte": 422,
+          "end_byte_exclusive": 463,
+          "exact_source_clause": "public import Mathlib.Data.Fintype.Sigma",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 14,
+          "start_byte": 463,
+          "end_byte_exclusive": 502,
+          "exact_source_clause": "public import Mathlib.Data.Fintype.Sum",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 15,
+          "start_byte": 502,
+          "end_byte_exclusive": 544,
+          "exact_source_clause": "public import Mathlib.Data.Fintype.Vector",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        }
+      ],
+      "implicit_Init_included": true,
+      "dependency_names": [
+        "Mathlib.Algebra.BigOperators.Group.Finset.Piecewise",
+        "Mathlib.Algebra.BigOperators.Group.Finset.Sigma",
+        "Mathlib.Algebra.BigOperators.Option",
+        "Mathlib.Data.Fintype.Option",
+        "Mathlib.Data.Fintype.Prod",
+        "Mathlib.Data.Fintype.Sigma",
+        "Mathlib.Data.Fintype.Sum",
+        "Mathlib.Data.Fintype.Vector",
+        "Init"
+      ],
+      "multiple_resolution_candidates": 1
+    },
+    {
+      "module": "Mathlib.Data.Fintype.Card",
+      "identity_root": "mathlib",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\Data\\Fintype\\Card.lean",
+      "source_sha256": "c0646c3ea4a87f80a91e604a55595c45f51226320e88953333b4d067a5315b24",
+      "source_bytes": 21075,
+      "official_olean": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Data\\Fintype\\Card.olean",
+      "official_olean_sha256": "486710e337f319d22837c09f3e565f22b5574a8d410251560c275c89bd8c5b40",
+      "official_olean_bytes": 151384,
+      "explicit_imports": [
+        "Mathlib.Data.Finset.Card",
+        "Mathlib.Data.Fintype.Basic"
+      ],
+      "exact_import_clauses": [
+        {
+          "line": 8,
+          "start_byte": 162,
+          "end_byte_exclusive": 201,
+          "exact_source_clause": "public import Mathlib.Data.Finset.Card",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 9,
+          "start_byte": 201,
+          "end_byte_exclusive": 242,
+          "exact_source_clause": "public import Mathlib.Data.Fintype.Basic",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        }
+      ],
+      "implicit_Init_included": true,
+      "dependency_names": [
+        "Mathlib.Data.Finset.Card",
+        "Mathlib.Data.Fintype.Basic",
+        "Init"
+      ],
+      "multiple_resolution_candidates": 1
+    },
+    {
+      "module": "Mathlib.Data.Fintype.CardEmbedding",
+      "identity_root": "mathlib",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\Data\\Fintype\\CardEmbedding.lean",
+      "source_sha256": "c80a43cc580276d27c987976ee393659992710aab844c84dcc9a91af4cdf0a3c",
+      "source_bytes": 2267,
+      "official_olean": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Data\\Fintype\\CardEmbedding.olean",
+      "official_olean_sha256": "204dd3ed393b54c2038187196db496883f552f27505b2778452d515b69d4fffd",
+      "official_olean_bytes": 39408,
+      "explicit_imports": [
+        "Mathlib.Data.Nat.Factorial.Basic",
+        "Mathlib.Data.Fintype.BigOperators",
+        "Mathlib.Data.Set.Finite.Range",
+        "Mathlib.Logic.Equiv.Embedding"
+      ],
+      "exact_import_clauses": [
+        {
+          "line": 8,
+          "start_byte": 162,
+          "end_byte_exclusive": 209,
+          "exact_source_clause": "public import Mathlib.Data.Nat.Factorial.Basic",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 9,
+          "start_byte": 209,
+          "end_byte_exclusive": 257,
+          "exact_source_clause": "public import Mathlib.Data.Fintype.BigOperators",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 10,
+          "start_byte": 257,
+          "end_byte_exclusive": 301,
+          "exact_source_clause": "public import Mathlib.Data.Set.Finite.Range",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 11,
+          "start_byte": 301,
+          "end_byte_exclusive": 345,
+          "exact_source_clause": "public import Mathlib.Logic.Equiv.Embedding",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        }
+      ],
+      "implicit_Init_included": true,
+      "dependency_names": [
+        "Mathlib.Data.Nat.Factorial.Basic",
+        "Mathlib.Data.Fintype.BigOperators",
+        "Mathlib.Data.Set.Finite.Range",
+        "Mathlib.Logic.Equiv.Embedding",
+        "Init"
+      ],
+      "multiple_resolution_candidates": 1
+    },
+    {
+      "module": "Mathlib.Data.Fintype.Sigma",
+      "identity_root": "mathlib",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\Data\\Fintype\\Sigma.lean",
+      "source_sha256": "dbf8a3d3c567c2c63c51c166e27c3e89875f40118b51843cf1e9965b53ac82aa",
+      "source_bytes": 1504,
+      "official_olean": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Data\\Fintype\\Sigma.olean",
+      "official_olean_sha256": "48dcd08eba9701b9c4c89a64d5527183105f36af1c1541df02d476c546aa0474",
+      "official_olean_bytes": 34880,
+      "explicit_imports": [
+        "Mathlib.Data.Finset.Sigma",
+        "Mathlib.Data.Fintype.OfMap"
+      ],
+      "exact_import_clauses": [
+        {
+          "line": 8,
+          "start_byte": 162,
+          "end_byte_exclusive": 202,
+          "exact_source_clause": "public import Mathlib.Data.Finset.Sigma",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 9,
+          "start_byte": 202,
+          "end_byte_exclusive": 243,
+          "exact_source_clause": "public import Mathlib.Data.Fintype.OfMap",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        }
+      ],
+      "implicit_Init_included": true,
+      "dependency_names": [
+        "Mathlib.Data.Finset.Sigma",
+        "Mathlib.Data.Fintype.OfMap",
+        "Init"
+      ],
+      "multiple_resolution_candidates": 1
+    },
+    {
+      "module": "Mathlib.Data.Nat.Choose.Basic",
+      "identity_root": "mathlib",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\Data\\Nat\\Choose\\Basic.lean",
+      "source_sha256": "3abe93f2b0d22bf844405a917c97a6677a02d39df76429280df4b5ad0dfc6b0d",
+      "source_bytes": 18826,
+      "official_olean": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Data\\Nat\\Choose\\Basic.olean",
+      "official_olean_sha256": "22c84649f058ec8b797deb2e6284d57446aa135202f3e8b2452ad5f05176c8c7",
+      "official_olean_bytes": 104928,
+      "explicit_imports": [
+        "Mathlib.Data.Nat.Factorial.Basic",
+        "Mathlib.Order.Monotone.Defs"
+      ],
+      "exact_import_clauses": [
+        {
+          "line": 9,
+          "start_byte": 251,
+          "end_byte_exclusive": 298,
+          "exact_source_clause": "public import Mathlib.Data.Nat.Factorial.Basic",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 10,
+          "start_byte": 298,
+          "end_byte_exclusive": 340,
+          "exact_source_clause": "public import Mathlib.Order.Monotone.Defs",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        }
+      ],
+      "implicit_Init_included": true,
+      "dependency_names": [
+        "Mathlib.Data.Nat.Factorial.Basic",
+        "Mathlib.Order.Monotone.Defs",
+        "Init"
+      ],
+      "multiple_resolution_candidates": 1
+    },
+    {
+      "module": "Mathlib.Data.Rat.Cast.Order",
+      "identity_root": "mathlib",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\Data\\Rat\\Cast\\Order.lean",
+      "source_sha256": "2df1dcb5ad5bcac62adc9def0ffe5f8fc4da13f1c8f1dc89c0ff84bc41253cb8",
+      "source_bytes": 10804,
+      "official_olean": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Data\\Rat\\Cast\\Order.olean",
+      "official_olean_sha256": "382a232e2d3ada99b7a25185e1c0920c894960414134a4686d3464bd5ff3d22d",
+      "official_olean_bytes": 385248,
+      "explicit_imports": [
+        "Mathlib.Algebra.Order.Field.Rat",
+        "Mathlib.Data.Rat.Cast.CharZero",
+        "Mathlib.Tactic.Positivity.Core"
+      ],
+      "exact_import_clauses": [
+        {
+          "line": 8,
+          "start_byte": 180,
+          "end_byte_exclusive": 226,
+          "exact_source_clause": "public import Mathlib.Algebra.Order.Field.Rat",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 9,
+          "start_byte": 226,
+          "end_byte_exclusive": 271,
+          "exact_source_clause": "public import Mathlib.Data.Rat.Cast.CharZero",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 10,
+          "start_byte": 271,
+          "end_byte_exclusive": 316,
+          "exact_source_clause": "public import Mathlib.Tactic.Positivity.Core",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        }
+      ],
+      "implicit_Init_included": true,
+      "dependency_names": [
+        "Mathlib.Algebra.Order.Field.Rat",
+        "Mathlib.Data.Rat.Cast.CharZero",
+        "Mathlib.Tactic.Positivity.Core",
+        "Init"
+      ],
+      "multiple_resolution_candidates": 1
+    },
+    {
+      "module": "Mathlib.Tactic.FieldSimp",
+      "identity_root": "mathlib",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\Tactic\\FieldSimp.lean",
+      "source_sha256": "924a11d74ca2851409f1d78284affbd60c21c9d54ac5bb4fb4676f17cbecb679",
+      "source_bytes": 42079,
+      "official_olean": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Tactic\\FieldSimp.olean",
+      "official_olean_sha256": "70c6925cd9edb780a85b5bf695d5ecc45eb1bb650c57e2729c8dbfd8b8c902d4",
+      "official_olean_bytes": 1720080,
+      "explicit_imports": [
+        "Mathlib.Data.Ineq",
+        "Mathlib.Tactic.FieldSimp.Attr",
+        "Mathlib.Tactic.FieldSimp.Discharger",
+        "Mathlib.Tactic.FieldSimp.Lemmas",
+        "Mathlib.Util.AtomM.Recurse",
+        "Mathlib.Util.SynthesizeUsing",
+        "Mathlib.Data.Ineq"
+      ],
+      "exact_import_clauses": [
+        {
+          "line": 8,
+          "start_byte": 240,
+          "end_byte_exclusive": 277,
+          "exact_source_clause": "public meta import Mathlib.Data.Ineq",
+          "public_modifier": true,
+          "meta_modifier": true,
+          "all_modifier": false
+        },
+        {
+          "line": 9,
+          "start_byte": 277,
+          "end_byte_exclusive": 321,
+          "exact_source_clause": "public import Mathlib.Tactic.FieldSimp.Attr",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 10,
+          "start_byte": 321,
+          "end_byte_exclusive": 371,
+          "exact_source_clause": "public import Mathlib.Tactic.FieldSimp.Discharger",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 11,
+          "start_byte": 371,
+          "end_byte_exclusive": 417,
+          "exact_source_clause": "public import Mathlib.Tactic.FieldSimp.Lemmas",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 12,
+          "start_byte": 417,
+          "end_byte_exclusive": 458,
+          "exact_source_clause": "public import Mathlib.Util.AtomM.Recurse",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 13,
+          "start_byte": 458,
+          "end_byte_exclusive": 501,
+          "exact_source_clause": "public import Mathlib.Util.SynthesizeUsing",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 14,
+          "start_byte": 501,
+          "end_byte_exclusive": 533,
+          "exact_source_clause": "public import Mathlib.Data.Ineq",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        }
+      ],
+      "implicit_Init_included": true,
+      "dependency_names": [
+        "Mathlib.Data.Ineq",
+        "Mathlib.Tactic.FieldSimp.Attr",
+        "Mathlib.Tactic.FieldSimp.Discharger",
+        "Mathlib.Tactic.FieldSimp.Lemmas",
+        "Mathlib.Util.AtomM.Recurse",
+        "Mathlib.Util.SynthesizeUsing",
+        "Init"
+      ],
+      "multiple_resolution_candidates": 1
+    },
+    {
+      "module": "Mathlib.Tactic.FinCases",
+      "identity_root": "mathlib",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\Tactic\\FinCases.lean",
+      "source_sha256": "a7ecb037ebbeb09cb9d5460012119e2ce37d3db65361353f50ea200a26bf4d97",
+      "source_bytes": 4930,
+      "official_olean": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Tactic\\FinCases.olean",
+      "official_olean_sha256": "8f3dfc361bde73e4dfcb36faeb341849e935e7b4fd479776cdd79384bfaab469",
+      "official_olean_bytes": 150912,
+      "explicit_imports": [
+        "Mathlib.Tactic.Core",
+        "Mathlib.Lean.Expr.Basic",
+        "Mathlib.Data.Finset.Attr",
+        "Mathlib.Data.Fintype.Defs",
+        "Mathlib.Tactic.ToDual"
+      ],
+      "exact_import_clauses": [
+        {
+          "line": 8,
+          "start_byte": 174,
+          "end_byte_exclusive": 213,
+          "exact_source_clause": "public meta import Mathlib.Tactic.Core",
+          "public_modifier": true,
+          "meta_modifier": true,
+          "all_modifier": false
+        },
+        {
+          "line": 9,
+          "start_byte": 213,
+          "end_byte_exclusive": 256,
+          "exact_source_clause": "public meta import Mathlib.Lean.Expr.Basic",
+          "public_modifier": true,
+          "meta_modifier": true,
+          "all_modifier": false
+        },
+        {
+          "line": 10,
+          "start_byte": 256,
+          "end_byte_exclusive": 295,
+          "exact_source_clause": "public import Mathlib.Data.Finset.Attr",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 11,
+          "start_byte": 295,
+          "end_byte_exclusive": 335,
+          "exact_source_clause": "public import Mathlib.Data.Fintype.Defs",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 12,
+          "start_byte": 335,
+          "end_byte_exclusive": 376,
+          "exact_source_clause": "public meta import Mathlib.Tactic.ToDual",
+          "public_modifier": true,
+          "meta_modifier": true,
+          "all_modifier": false
+        }
+      ],
+      "implicit_Init_included": true,
+      "dependency_names": [
+        "Mathlib.Tactic.Core",
+        "Mathlib.Lean.Expr.Basic",
+        "Mathlib.Data.Finset.Attr",
+        "Mathlib.Data.Fintype.Defs",
+        "Mathlib.Tactic.ToDual",
+        "Init"
+      ],
+      "multiple_resolution_candidates": 1
+    },
+    {
+      "module": "Mathlib.Tactic.GCongr",
+      "identity_root": "mathlib",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\Tactic\\GCongr.lean",
+      "source_sha256": "2bf8a1f3821398421422698977bb0bf22ace83a3e2b572adcb80d02fedd280a5",
+      "source_bytes": 831,
+      "official_olean": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Tactic\\GCongr.olean",
+      "official_olean_sha256": "50e9b88eddc4fe6df36ea981a93cc9164daf90eb12a412047dec8f7b4ed815ab",
+      "official_olean_bytes": 13728,
+      "explicit_imports": [
+        "Mathlib.Tactic.GCongr.CoreAttrs",
+        "Mathlib.Tactic.Hint"
+      ],
+      "exact_import_clauses": [
+        {
+          "line": 8,
+          "start_byte": 196,
+          "end_byte_exclusive": 242,
+          "exact_source_clause": "public import Mathlib.Tactic.GCongr.CoreAttrs",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 9,
+          "start_byte": 242,
+          "end_byte_exclusive": 276,
+          "exact_source_clause": "public import Mathlib.Tactic.Hint",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        }
+      ],
+      "implicit_Init_included": true,
+      "dependency_names": [
+        "Mathlib.Tactic.GCongr.CoreAttrs",
+        "Mathlib.Tactic.Hint",
+        "Init"
+      ],
+      "multiple_resolution_candidates": 1
+    },
+    {
+      "module": "Mathlib.Tactic.Linarith",
+      "identity_root": "mathlib",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\Tactic\\Linarith.lean",
+      "source_sha256": "0581fd9f80f34d728ad628e7c1fb5a93d36cb9cb48d469fbc797869e83ebe0a6",
+      "source_bytes": 391,
+      "official_olean": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Tactic\\Linarith.olean",
+      "official_olean_sha256": "f87d414cd6ee07958edb9eb1ccb405173ee00e2df9dbbbffdb526a485c92d322",
+      "official_olean_bytes": 2792,
+      "explicit_imports": [
+        "Mathlib.Tactic.Hint",
+        "Mathlib.Tactic.Linarith.Frontend",
+        "Mathlib.Tactic.NormNum"
+      ],
+      "exact_import_clauses": [
+        {
+          "line": 8,
+          "start_byte": 164,
+          "end_byte_exclusive": 203,
+          "exact_source_clause": "public meta import Mathlib.Tactic.Hint",
+          "public_modifier": true,
+          "meta_modifier": true,
+          "all_modifier": false
+        },
+        {
+          "line": 9,
+          "start_byte": 203,
+          "end_byte_exclusive": 250,
+          "exact_source_clause": "public import Mathlib.Tactic.Linarith.Frontend",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 10,
+          "start_byte": 250,
+          "end_byte_exclusive": 287,
+          "exact_source_clause": "public import Mathlib.Tactic.NormNum",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        }
+      ],
+      "implicit_Init_included": true,
+      "dependency_names": [
+        "Mathlib.Tactic.Hint",
+        "Mathlib.Tactic.Linarith.Frontend",
+        "Mathlib.Tactic.NormNum",
+        "Init"
+      ],
+      "multiple_resolution_candidates": 1
+    },
+    {
+      "module": "Mathlib.Tactic.NormNum",
+      "identity_root": "mathlib",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\Tactic\\NormNum.lean",
+      "source_sha256": "dca9500572c6d887000f3de17c7145b53bf35233afc1ad8026cca908cec7a2fe",
+      "source_bytes": 430,
+      "official_olean": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Tactic\\NormNum.olean",
+      "official_olean_sha256": "f6be00ff19229f44a6a58dff006a3896f6da3dee197d730fb566889c0c532843",
+      "official_olean_bytes": 2752,
+      "explicit_imports": [
+        "Mathlib.Data.Rat.Cast.Order",
+        "Mathlib.Tactic.NormNum.Abs",
+        "Mathlib.Tactic.NormNum.Basic",
+        "Mathlib.Tactic.NormNum.DivMod",
+        "Mathlib.Tactic.NormNum.Eq",
+        "Mathlib.Tactic.NormNum.Ineq",
+        "Mathlib.Tactic.NormNum.Inv",
+        "Mathlib.Tactic.NormNum.OfScientific",
+        "Mathlib.Tactic.NormNum.Pow"
+      ],
+      "exact_import_clauses": [
+        {
+          "line": 3,
+          "start_byte": 8,
+          "end_byte_exclusive": 50,
+          "exact_source_clause": "public import Mathlib.Data.Rat.Cast.Order",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 4,
+          "start_byte": 50,
+          "end_byte_exclusive": 91,
+          "exact_source_clause": "public import Mathlib.Tactic.NormNum.Abs",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 5,
+          "start_byte": 91,
+          "end_byte_exclusive": 134,
+          "exact_source_clause": "public import Mathlib.Tactic.NormNum.Basic",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 6,
+          "start_byte": 134,
+          "end_byte_exclusive": 178,
+          "exact_source_clause": "public import Mathlib.Tactic.NormNum.DivMod",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 7,
+          "start_byte": 178,
+          "end_byte_exclusive": 218,
+          "exact_source_clause": "public import Mathlib.Tactic.NormNum.Eq",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 8,
+          "start_byte": 218,
+          "end_byte_exclusive": 260,
+          "exact_source_clause": "public import Mathlib.Tactic.NormNum.Ineq",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 9,
+          "start_byte": 260,
+          "end_byte_exclusive": 301,
+          "exact_source_clause": "public import Mathlib.Tactic.NormNum.Inv",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 10,
+          "start_byte": 301,
+          "end_byte_exclusive": 351,
+          "exact_source_clause": "public import Mathlib.Tactic.NormNum.OfScientific",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 11,
+          "start_byte": 351,
+          "end_byte_exclusive": 392,
+          "exact_source_clause": "public import Mathlib.Tactic.NormNum.Pow",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        }
+      ],
+      "implicit_Init_included": true,
+      "dependency_names": [
+        "Mathlib.Data.Rat.Cast.Order",
+        "Mathlib.Tactic.NormNum.Abs",
+        "Mathlib.Tactic.NormNum.Basic",
+        "Mathlib.Tactic.NormNum.DivMod",
+        "Mathlib.Tactic.NormNum.Eq",
+        "Mathlib.Tactic.NormNum.Ineq",
+        "Mathlib.Tactic.NormNum.Inv",
+        "Mathlib.Tactic.NormNum.OfScientific",
+        "Mathlib.Tactic.NormNum.Pow",
+        "Init"
+      ],
+      "multiple_resolution_candidates": 1
+    },
+    {
+      "module": "Mathlib.Tactic.Positivity",
+      "identity_root": "mathlib",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\Tactic\\Positivity.lean",
+      "source_sha256": "74549078792cb4bef7b904577b94f0e206912935507b6f2f39eb73b7a15927d6",
+      "source_bytes": 187,
+      "official_olean": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Tactic\\Positivity.olean",
+      "official_olean_sha256": "11440b335f1cd98c125aeae637daaf01c5c90386929d40a15db7bfeea47ace8a",
+      "official_olean_bytes": 2088,
+      "explicit_imports": [
+        "Mathlib.Algebra.Order.Field.Basic",
+        "Mathlib.Tactic.Positivity.Basic",
+        "Mathlib.Tactic.Positivity.Finset"
+      ],
+      "exact_import_clauses": [
+        {
+          "line": 3,
+          "start_byte": 8,
+          "end_byte_exclusive": 56,
+          "exact_source_clause": "public import Mathlib.Algebra.Order.Field.Basic",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 4,
+          "start_byte": 56,
+          "end_byte_exclusive": 102,
+          "exact_source_clause": "public import Mathlib.Tactic.Positivity.Basic",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 5,
+          "start_byte": 102,
+          "end_byte_exclusive": 149,
+          "exact_source_clause": "public import Mathlib.Tactic.Positivity.Finset",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        }
+      ],
+      "implicit_Init_included": true,
+      "dependency_names": [
+        "Mathlib.Algebra.Order.Field.Basic",
+        "Mathlib.Tactic.Positivity.Basic",
+        "Mathlib.Tactic.Positivity.Finset",
+        "Init"
+      ],
+      "multiple_resolution_candidates": 1
+    },
+    {
+      "module": "Mathlib.Tactic.Ring",
+      "identity_root": "mathlib",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\Tactic\\Ring.lean",
+      "source_sha256": "d3ef5c49ebbd1108ce3f935e5ad95485e143abf02f28c027dba4bb6f3be8196e",
+      "source_bytes": 166,
+      "official_olean": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Tactic\\Ring.olean",
+      "official_olean_sha256": "0d6d9cfc5fb5f47b125e7a85bb0126257337c279edd7a735f4c5aaf810e38061",
+      "official_olean_bytes": 1904,
+      "explicit_imports": [
+        "Mathlib.Tactic.Ring.Basic",
+        "Mathlib.Tactic.Ring.PNat",
+        "Mathlib.Tactic.Ring.RingNF"
+      ],
+      "exact_import_clauses": [
+        {
+          "line": 3,
+          "start_byte": 8,
+          "end_byte_exclusive": 48,
+          "exact_source_clause": "public import Mathlib.Tactic.Ring.Basic",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 4,
+          "start_byte": 48,
+          "end_byte_exclusive": 87,
+          "exact_source_clause": "public import Mathlib.Tactic.Ring.PNat",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 5,
+          "start_byte": 87,
+          "end_byte_exclusive": 128,
+          "exact_source_clause": "public import Mathlib.Tactic.Ring.RingNF",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        }
+      ],
+      "implicit_Init_included": true,
+      "dependency_names": [
+        "Mathlib.Tactic.Ring.Basic",
+        "Mathlib.Tactic.Ring.PNat",
+        "Mathlib.Tactic.Ring.RingNF",
+        "Init"
+      ],
+      "multiple_resolution_candidates": 1
+    },
+    {
+      "module": "Mathlib.Algebra.BigOperators.Field",
+      "identity_root": "mathlib",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\Algebra\\BigOperators\\Field.lean",
+      "source_sha256": "ea6805b6e04e1a10e4f1800fbf6f645af1b3fbe7b7bc9db5c014508a4b9f528f",
+      "source_bytes": 2002,
+      "official_olean": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Algebra\\BigOperators\\Field.olean",
+      "official_olean_sha256": "056418d9970121551ae93a79e6aa3284a03604114baadb7237b94253635cca71",
+      "official_olean_bytes": 26512,
+      "explicit_imports": [
+        "Mathlib.Algebra.BigOperators.Ring.Finset",
+        "Mathlib.Algebra.Field.Defs",
+        "Mathlib.Data.Finset.Density"
+      ],
+      "exact_import_clauses": [
+        {
+          "line": 8,
+          "start_byte": 172,
+          "end_byte_exclusive": 227,
+          "exact_source_clause": "public import Mathlib.Algebra.BigOperators.Ring.Finset",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 9,
+          "start_byte": 227,
+          "end_byte_exclusive": 268,
+          "exact_source_clause": "public import Mathlib.Algebra.Field.Defs",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 10,
+          "start_byte": 268,
+          "end_byte_exclusive": 310,
+          "exact_source_clause": "public import Mathlib.Data.Finset.Density",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        }
+      ],
+      "implicit_Init_included": true,
+      "dependency_names": [
+        "Mathlib.Algebra.BigOperators.Ring.Finset",
+        "Mathlib.Algebra.Field.Defs",
+        "Mathlib.Data.Finset.Density",
+        "Init"
+      ],
+      "multiple_resolution_candidates": 1
+    },
+    {
+      "module": "Mathlib.Data.Fin.Embedding",
+      "identity_root": "mathlib",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\Data\\Fin\\Embedding.lean",
+      "source_sha256": "fe26a4a854247bb447176fcc84d6e1d34bd1cffcfb1305c595d6583a5840acd1",
+      "source_bytes": 5261,
+      "official_olean": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Data\\Fin\\Embedding.olean",
+      "official_olean_sha256": "97ccd1db91466b3f539aa87f107e1a02581e0cbffe15ffa9bdb11609b81964f0",
+      "official_olean_bytes": 75176,
+      "explicit_imports": [
+        "Mathlib.Data.Fin.SuccPred",
+        "Mathlib.Logic.Embedding.Basic"
+      ],
+      "exact_import_clauses": [
+        {
+          "line": 8,
+          "start_byte": 177,
+          "end_byte_exclusive": 217,
+          "exact_source_clause": "public import Mathlib.Data.Fin.SuccPred",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 9,
+          "start_byte": 217,
+          "end_byte_exclusive": 261,
+          "exact_source_clause": "public import Mathlib.Logic.Embedding.Basic",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        }
+      ],
+      "implicit_Init_included": true,
+      "dependency_names": [
+        "Mathlib.Data.Fin.SuccPred",
+        "Mathlib.Logic.Embedding.Basic",
+        "Init"
+      ],
+      "multiple_resolution_candidates": 1
+    },
+    {
+      "module": "Mathlib.Data.Fintype.EquivFin",
+      "identity_root": "mathlib",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\Data\\Fintype\\EquivFin.lean",
+      "source_sha256": "2df4d785c723a7cf6ce60790a545497250b63f52ecd7bdd5039fa5ea3537acb8",
+      "source_bytes": 23701,
+      "official_olean": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Data\\Fintype\\EquivFin.olean",
+      "official_olean_sha256": "0ee87166db1662cd2d24ff99d57bccdf109c20fd0f0e38c35320d71f772a7391",
+      "official_olean_bytes": 250712,
+      "explicit_imports": [
+        "Mathlib.Data.Fintype.Card",
+        "Mathlib.Data.List.NodupEquivFin"
+      ],
+      "exact_import_clauses": [
+        {
+          "line": 8,
+          "start_byte": 162,
+          "end_byte_exclusive": 202,
+          "exact_source_clause": "public import Mathlib.Data.Fintype.Card",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 9,
+          "start_byte": 202,
+          "end_byte_exclusive": 248,
+          "exact_source_clause": "public import Mathlib.Data.List.NodupEquivFin",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        }
+      ],
+      "implicit_Init_included": true,
+      "dependency_names": [
+        "Mathlib.Data.Fintype.Card",
+        "Mathlib.Data.List.NodupEquivFin",
+        "Init"
+      ],
+      "multiple_resolution_candidates": 1
+    },
+    {
+      "module": "Mathlib.Topology.MetricSpace.Pseudo.Lemmas",
+      "identity_root": "mathlib",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\Topology\\MetricSpace\\Pseudo\\Lemmas.lean",
+      "source_sha256": "0194113c847c252d63b1e3d924a818c3ab72343b2112acf7b0d5c13d133a6431",
+      "source_bytes": 5868,
+      "official_olean": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Topology\\MetricSpace\\Pseudo\\Lemmas.olean",
+      "official_olean_sha256": "6fb5a959a0c7322b0f7f0f95044b76652dc2b2c6cfa7951812601615b80a6cb3",
+      "official_olean_bytes": 46728,
+      "explicit_imports": [
+        "Mathlib.Topology.MetricSpace.Pseudo.Constructions",
+        "Mathlib.Topology.Order.DenselyOrdered",
+        "Mathlib.Topology.UniformSpace.Compact"
+      ],
+      "exact_import_clauses": [
+        {
+          "line": 8,
+          "start_byte": 231,
+          "end_byte_exclusive": 295,
+          "exact_source_clause": "public import Mathlib.Topology.MetricSpace.Pseudo.Constructions",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 9,
+          "start_byte": 295,
+          "end_byte_exclusive": 347,
+          "exact_source_clause": "public import Mathlib.Topology.Order.DenselyOrdered",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        },
+        {
+          "line": 10,
+          "start_byte": 347,
+          "end_byte_exclusive": 399,
+          "exact_source_clause": "public import Mathlib.Topology.UniformSpace.Compact",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        }
+      ],
+      "implicit_Init_included": true,
+      "dependency_names": [
+        "Mathlib.Topology.MetricSpace.Pseudo.Constructions",
+        "Mathlib.Topology.Order.DenselyOrdered",
+        "Mathlib.Topology.UniformSpace.Compact",
+        "Init"
+      ],
+      "multiple_resolution_candidates": 1
+    },
+    {
+      "module": "Mathlib.Topology.Order.MonotoneConvergence",
+      "identity_root": "mathlib",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\Topology\\Order\\MonotoneConvergence.lean",
+      "source_sha256": "b182e99e02aa5c4a516fdf0dd40fc584477642be48bfc673196c4bff8f9d074c",
+      "source_bytes": 16520,
+      "official_olean": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Topology\\Order\\MonotoneConvergence.olean",
+      "official_olean_sha256": "fe3ee5173b78e71346596f412322d7465fc0f122caf00a7d5b2a7099f055966a",
+      "official_olean_bytes": 116032,
+      "explicit_imports": [
+        "Mathlib.Topology.Order.Basic"
+      ],
+      "exact_import_clauses": [
+        {
+          "line": 8,
+          "start_byte": 181,
+          "end_byte_exclusive": 224,
+          "exact_source_clause": "public import Mathlib.Topology.Order.Basic",
+          "public_modifier": true,
+          "meta_modifier": false,
+          "all_modifier": false
+        }
+      ],
+      "implicit_Init_included": true,
+      "dependency_names": [
+        "Mathlib.Topology.Order.Basic",
+        "Init"
+      ],
+      "multiple_resolution_candidates": 1
+    }
+  ],
+  "complete_dependency_closure": {
+    "total_official_units": 2662,
+    "mathlib_units": 940,
+    "official_core_units": 1465,
+    "package_or_lake_units": 257,
+    "identity_root_counts": {
+      "aesop": 132,
+      "batteries": 74,
+      "importGraph": 10,
+      "official_lean_core": 1465,
+      "LeanSearchClient": 4,
+      "mathlib": 940,
+      "plausible": 13,
+      "proofwidgets": 10,
+      "Qq": 14
+    },
+    "unresolved_units": [],
+    "all_source_and_olean_sha256_measured": true,
+    "all_edges_closed_and_units_reachable": true,
+    "implicit_Init_included": true,
+    "exact_public_meta_all_clauses_bound_to_source_hashes": true,
+    "literal_whole_Mathlib_or_Mathlib_Tactic_reachable": false,
+    "sum_olean_logical_bytes": 512050192,
+    "manifest": {
+      "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\proposals\\held-original-granular-source-review\\sakana-FOCUS-RAMSEY-complete-official-source-artifact-closure.json",
+      "sha256": "3775d168a2db22b75a2b1d86ed21029dfd50c3836268f0fd1c6b9d57dba1abbe"
+    }
+  },
+  "exact_dependency_pins": [
+    {
+      "name": "mathlib",
+      "url": "https://github.com/leanprover-community/mathlib4",
+      "rev": "0df444a360eaa60ab8c11dca51a86af692955474"
+    },
+    {
+      "name": "plausible",
+      "url": "https://github.com/leanprover-community/plausible",
+      "rev": "b7eb3304aeae834b12dda98993a37f6a41f6f0bb"
+    },
+    {
+      "name": "LeanSearchClient",
+      "url": "https://github.com/leanprover-community/LeanSearchClient",
+      "rev": "5f4d51b81cbd3f6b32b156bfad9056621a040404"
+    },
+    {
+      "name": "importGraph",
+      "url": "https://github.com/leanprover-community/import-graph",
+      "rev": "16f02aa7642864af59f1ff0e384a015994db9118"
+    },
+    {
+      "name": "proofwidgets",
+      "url": "https://github.com/leanprover-community/ProofWidgets4",
+      "rev": "4be2e3d5087eeb272cf5a8853b8f9dd025ef5957"
+    },
+    {
+      "name": "aesop",
+      "url": "https://github.com/leanprover-community/aesop",
+      "rev": "3448c0bcc5ce01b2d1546e483ec3620e32df3d0e"
+    },
+    {
+      "name": "Qq",
+      "url": "https://github.com/leanprover-community/quote4",
+      "rev": "92c15be17b7caf78c2ad767ec40f89052d908d81"
+    },
+    {
+      "name": "batteries",
+      "url": "https://github.com/leanprover-community/batteries",
+      "rev": "4488d40d070b9700d4d5a6aa342f0d40c31b2a2d"
+    },
+    {
+      "name": "Cli",
+      "url": "https://github.com/leanprover/lean4-cli",
+      "rev": "6130a47896ce867c6a4a55373441e59e565bad0f"
+    }
+  ],
+  "runtime_version_and_commit": "Lean (version 4.33.1, x86_64-w64-windows-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)",
+  "dependency_runtime_cache_helper_bindings": {
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies-4.33.1-verified-git.json": "31b5850cf64e539ce720e87420b05a74000b8aa3a81fa5dc236182172d8621e2",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\lean-4.33.1-installation.json": "6ec3927af9b76cdb46a8fe74773113e72bee65066a4b7decf4547b646f39f99a",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\mathlib-4.33.1-cache-retry.json": "2970055d4efb8204f90f48e2358b5e8ed8469e0f7ba7019b2723436924f923f4",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\review_held_granular_originals.py": "e6f494d1df5342f7c9a9d32bb693ae67033e8fe3c972fb4c432043b2963df2a3"
+  },
+  "trust_review": {
+    "authored_native_admitted_custom_axiom_syntax": "NONE_FOUND_OUTSIDE_COMMENTS_AND_STRINGS",
+    "ordinary_decide_is_kernel_reduction_not_native_decide": true,
+    "fresh_axiom_outputs": "PENDING_ACTUAL_ORIGINAL_ROUTE_REPLAY",
+    "import_closure_and_static_review_do_not_establish_proof_PASS": true
+  },
+  "scheduling_and_scientific_limits": [
+    "No Lean or runner invocation occurred.",
+    "Root review and an explicit scheduling lease remain required for the original frozen route.",
+    "Priorities, originality, score and manuscript-held classification remain unchanged.",
+    "The original plan, source bytes, exact options, selected audit and pinned dependencies are unchanged."
+  ]
+}

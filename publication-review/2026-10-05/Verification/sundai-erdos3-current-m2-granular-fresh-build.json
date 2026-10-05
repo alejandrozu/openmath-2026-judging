@@ -1,0 +1,732 @@
+{
+  "id": "sundai-erdos3-current",
+  "entrant": "E65 Wilson Wu / Sundai",
+  "version": "4.33.1",
+  "mathlib_pin": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "source_dir": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sundai-erdos3-current",
+  "modules": [
+    {
+      "module": "Erdos3CrossScale",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sundai-erdos3-current\\Erdos3CrossScale.lean",
+      "sha256": "f605289b15a763ac7730ef9fd72853e4bf84d61cf3c519a29d9c8ece44eefa85",
+      "source": "https://github.com/wilsonwu-ai/sundai-erdos-3/blob/492fd601f9c76e44dcb87f683a5ea6ccb7aaefc9/lean/Erdos3CrossScale.lean",
+      "git_blob_sha": "72d1d00d6ad25980ca7a24b919364c7410a873fd"
+    },
+    {
+      "module": "Erdos3Dyadic",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sundai-erdos3-current\\Erdos3Dyadic.lean",
+      "sha256": "60cd7cdcc9767d5516ad5e6462c1f95c47a79dac21af681d968c5debb48ba340",
+      "source": "https://github.com/wilsonwu-ai/sundai-erdos-3/blob/492fd601f9c76e44dcb87f683a5ea6ccb7aaefc9/lean/Erdos3Dyadic.lean",
+      "git_blob_sha": "65410c8f4e5bd98cb306f8c762d5977c60b4dc98"
+    },
+    {
+      "module": "Erdos3Reduction",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sundai-erdos3-current\\Erdos3Reduction.lean",
+      "sha256": "4054b5824d9182482f1921286f0ae2ba8275ba3fd5d1bab67623122a7db54c78",
+      "source": "https://github.com/wilsonwu-ai/sundai-erdos-3/blob/492fd601f9c76e44dcb87f683a5ea6ccb7aaefc9/lean/Erdos3Reduction.lean",
+      "git_blob_sha": "27e54bf29678fde4bc1df25b0a1f96805e8f6d47"
+    },
+    {
+      "module": "Erdos3Blocks",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sundai-erdos3-current\\Erdos3Blocks.lean",
+      "sha256": "ba845b671c45107062d36a14c04355c8aa7ff6f54760b7d3e5622daa4129f389",
+      "source": "https://github.com/wilsonwu-ai/sundai-erdos-3/blob/492fd601f9c76e44dcb87f683a5ea6ccb7aaefc9/lean/Erdos3Blocks.lean",
+      "git_blob_sha": "3b3ad8aaa083fd8b3308c4e3fe8ff204fa7720d4"
+    },
+    {
+      "module": "Erdos3ThreeCase",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sundai-erdos3-current\\Erdos3ThreeCase.lean",
+      "sha256": "af2c2e41096570deb03ddb8a4655823fbd73ed473d3ee052b9d13973a4a95a22",
+      "source": "https://github.com/wilsonwu-ai/sundai-erdos-3/blob/492fd601f9c76e44dcb87f683a5ea6ccb7aaefc9/lean/Erdos3ThreeCase.lean",
+      "git_blob_sha": "4ae485af900a7c84d5a0636823edd44d1308ebbe"
+    },
+    {
+      "module": "Erdos3RothBridge",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sundai-erdos3-current\\Erdos3RothBridge.lean",
+      "sha256": "ad1bf72bbc9a6612f57cbcaa7f1820ec18387f2b1c3c70a8dd45d9a030549f69",
+      "source": "https://github.com/wilsonwu-ai/sundai-erdos-3/blob/492fd601f9c76e44dcb87f683a5ea6ccb7aaefc9/lean/Erdos3RothBridge.lean",
+      "git_blob_sha": "89cabbd32ef99795413e762e123465cf473a2ff2"
+    },
+    {
+      "module": "Erdos3SpecialCases",
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sundai-erdos3-current\\Erdos3SpecialCases.lean",
+      "sha256": "83f4ca47095bda82b1ddb1020d569607a925d45945522f03b84f8972f7248383",
+      "source": "https://github.com/wilsonwu-ai/sundai-erdos-3/blob/492fd601f9c76e44dcb87f683a5ea6ccb7aaefc9/lean/Erdos3SpecialCases.lean",
+      "git_blob_sha": "bfaf49508a18afd5e357891246927ccfc607eb0a"
+    }
+  ],
+  "roots": [
+    "Erdos3CrossScale",
+    "Erdos3Dyadic",
+    "Erdos3Reduction",
+    "Erdos3Blocks",
+    "Erdos3ThreeCase",
+    "Erdos3RothBridge",
+    "Erdos3SpecialCases"
+  ],
+  "audit_modules": [
+    "FreshAuditErdos3CrossScale.lean",
+    "FreshAuditErdos3Dyadic.lean",
+    "FreshAuditErdos3Reduction.lean",
+    "FreshAuditErdos3Blocks.lean",
+    "FreshAuditErdos3ThreeCase.lean",
+    "FreshAuditErdos3RothBridge.lean",
+    "FreshAuditErdos3SpecialCases.lean"
+  ],
+  "endpoints": [
+    "Erdos3CrossScale.free_mono",
+    "Erdos3CrossScale.free_image_add",
+    "Erdos3CrossScale.free_preimage_add",
+    "Erdos3CrossScale.free_mono_length",
+    "Erdos3CrossScale.a_sepBlock_disjoint",
+    "Erdos3CrossScale.a_dichot",
+    "Erdos3CrossScale.a_window",
+    "Erdos3CrossScale.sepBlock_union_free",
+    "Erdos3CrossScale.r_attained",
+    "Erdos3CrossScale.card_le_r",
+    "Erdos3CrossScale.r_two_mul_le",
+    "Erdos3CrossScale.logBlock_ncard_le_r",
+    "Erdos3CrossScale.freeSummable_of_dyadic",
+    "Erdos3CrossScale.dyadic_of_quart",
+    "Erdos3CrossScale.e_sepBlock_eq",
+    "Erdos3CrossScale.e_shift_mem",
+    "Erdos3CrossScale.e_block_lower",
+    "Erdos3CrossScale.quart_of_freeSummable",
+    "Erdos3CrossScale.freeSummable_iff_quart",
+    "Erdos3CrossScale.freeSummable_iff_dyadic",
+    "Erdos3CrossScale.hill_iff_extremal",
+    "Erdos3CrossScale.hill_statement_iff_extremal",
+    "Erdos3Dyadic.reciprocal_summable_of_dyadic_counts",
+    "Erdos3Dyadic.reciprocal_summable_of_power_envelope",
+    "Erdos3Dyadic.hill_of_apFree_power_envelope",
+    "Erdos3Reduction.hill_of_apFreeSummability",
+    "Erdos3Blocks.logBlock_lt_upper",
+    "Erdos3Blocks.logBlock_finite",
+    "Erdos3Blocks.logBlock_reciprocal_le",
+    "Erdos3Blocks.logBlock_mass_le",
+    "Erdos3ThreeCase.dyadic_of_logBarrier",
+    "Erdos3ThreeCase.logBarrier_of_quasipoly",
+    "Erdos3ThreeCase.three_of_dyadic",
+    "Erdos3ThreeCase.three_of_logBarrier",
+    "Erdos3ThreeCase.three_of_kelleyMeka",
+    "Erdos3RothBridge.a_three_term_ap",
+    "Erdos3RothBridge.isAPOfLengthFree_three_iff",
+    "Erdos3RothBridge.maxCard_three_eq_addRothNumber",
+    "Erdos3RothBridge.maxCard_three_eq_rothNumberNat",
+    "Erdos3RothBridge.kelleyMeka_iff_rothNumberNat",
+    "Erdos3RothBridge.three_of_rothNumberNat",
+    "Erdos3RothBridge.three_of_uniform_finset_bound",
+    "Erdos3SpecialCases.ap_terms_strictly_increase",
+    "Erdos3SpecialCases.containsAP_mono",
+    "Erdos3SpecialCases.containsAP_prefix",
+    "Erdos3SpecialCases.unbounded_lengths_iff_all_lengths",
+    "Erdos3SpecialCases.cofinite_contains_all_lengths",
+    "Erdos3SpecialCases.affine_tail_contains_all_lengths",
+    "Erdos3SpecialCases.multiples_contain_all_lengths",
+    "Erdos3SpecialCases.unbounded_contains_two",
+    "Erdos3SpecialCases.arbitrarilyLongAPs_mono",
+    "Erdos3SpecialCases.powers_two_no_midpoint",
+    "Erdos3SpecialCases.powers_two_no_three",
+    "Erdos3SpecialCases.nat_lt_two_pow",
+    "Erdos3SpecialCases.powers_two_unbounded",
+    "Erdos3SpecialCases.unbounded_does_not_imply_all_lengths"
+  ],
+  "lean_options": {},
+  "status": "SCHEDULED_RESOURCE_CHECKPOINT",
+  "builds": [
+    {
+      "module": "Erdos3SpecialCases",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "Erdos3SpecialCases.olean",
+        "Erdos3SpecialCases.lean"
+      ],
+      "seconds": 3.218,
+      "exit": 0,
+      "stdout": "'Erdos3SpecialCases.ap_terms_strictly_increase' does not depend on any axioms\n'Erdos3SpecialCases.containsAP_mono' does not depend on any axioms\n'Erdos3SpecialCases.containsAP_prefix' does not depend on any axioms\n'Erdos3SpecialCases.unbounded_lengths_iff_all_lengths' does not depend on any axioms\n'Erdos3SpecialCases.cofinite_contains_all_lengths' depends on axioms: [propext, Quot.sound]\n'Erdos3SpecialCases.affine_tail_contains_all_lengths' depends on axioms: [propext]\n'Erdos3SpecialCases.multiples_contain_all_lengths' depends on axioms: [propext]\n'Erdos3SpecialCases.unbounded_contains_two' depends on axioms: [propext, Quot.sound]\n'Erdos3SpecialCases.arbitrarilyLongAPs_mono' does not depend on any axioms\n'Erdos3SpecialCases.powers_two_no_midpoint' depends on axioms: [propext, Quot.sound]\n'Erdos3SpecialCases.powers_two_no_three' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Erdos3SpecialCases.nat_lt_two_pow' depends on axioms: [propext, Quot.sound]\n'Erdos3SpecialCases.powers_two_unbounded' depends on axioms: [propext, Quot.sound]\n'Erdos3SpecialCases.unbounded_does_not_imply_all_lengths' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "is_endpoint_audit": false,
+      "minimum_free_bytes": 6568394752,
+      "stop_reason": null,
+      "started_utc": "2026-10-05T03:07:12.327725+00:00",
+      "finished_utc": "2026-10-05T03:07:15.539404+00:00",
+      "owned_process_stop_output": null,
+      "own_job_resource_receipt": {
+        "command": [
+          "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+          "-j1",
+          "-DmaxHeartbeats=0",
+          "-DmaxRecDepth=100000",
+          "-o",
+          "Erdos3SpecialCases.olean",
+          "Erdos3SpecialCases.lean"
+        ],
+        "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sundai-erdos3-current",
+        "started_utc": "2026-10-05T03:07:12.327725+00:00",
+        "attempted": true,
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 5368709120,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 1073741824,
+          "own_job_private_bytes": 6442450944,
+          "own_process_private_bytes": 6442450944,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 3600
+        },
+        "minimum_disk_free_bytes": 6568394752,
+        "initial_system_memory_snapshot": {
+          "free_physical_bytes": 9244024832,
+          "total_physical_bytes": 34024419328,
+          "available_commit_bytes": 7360442368,
+          "total_commit_limit_bytes": 60437172224
+        },
+        "minimum_physical_available_bytes": 9059287040,
+        "minimum_available_commit_bytes": 6471041024,
+        "root_pid": 42468,
+        "own_job_assignment_before_resume": "PASS",
+        "exit": 0,
+        "job_peak_process_private_bytes": 885129216,
+        "job_peak_aggregate_private_bytes": 886386688,
+        "state": "PASS",
+        "finished_utc": "2026-10-05T03:07:15.539404+00:00",
+        "seconds": 3.218,
+        "polled_peak_tree_private_bytes": 885354496,
+        "polled_peak_tree_rss_bytes": 469585920,
+        "counter_samples": 12,
+        "observed_own_processes": {
+          "55488": {
+            "exe": "conhost.exe",
+            "peak_private_bytes": 1257472,
+            "peak_rss_bytes": 7856128
+          },
+          "42468": {
+            "exe": "lean.exe",
+            "peak_private_bytes": 884097024,
+            "peak_rss_bytes": 463015936
+          }
+        },
+        "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\sundai-erdos3-current-m2-granular-4d820b7bef1c0c66-attempt-0.stdout.txt",
+        "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\sundai-erdos3-current-m2-granular-4d820b7bef1c0c66-attempt-0.stderr.txt",
+        "stdout_sha256": "a5eee0142c9c9d309bb88ecb412ac6c0046799c3f288d93dce2d4909f2de272c",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_excerpt": "'Erdos3SpecialCases.ap_terms_strictly_increase' does not depend on any axioms\n'Erdos3SpecialCases.containsAP_mono' does not depend on any axioms\n'Erdos3SpecialCases.containsAP_prefix' does not depend on any axioms\n'Erdos3SpecialCases.unbounded_lengths_iff_all_lengths' does not depend on any axioms\n'Erdos3SpecialCases.cofinite_contains_all_lengths' depends on axioms: [propext, Quot.sound]\n'Erdos3SpecialCases.affine_tail_contains_all_lengths' depends on axioms: [propext]\n'Erdos3SpecialCases.multiples_contain_all_lengths' depends on axioms: [propext]\n'Erdos3SpecialCases.unbounded_contains_two' depends on axioms: [propext, Quot.sound]\n'Erdos3SpecialCases.arbitrarilyLongAPs_mono' does not depend on any axioms\n'Erdos3SpecialCases.powers_two_no_midpoint' depends on axioms: [propext, Quot.sound]\n'Erdos3SpecialCases.powers_two_no_three' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Erdos3SpecialCases.nat_lt_two_pow' depends on axioms: [propext, Quot.sound]\n'Erdos3SpecialCases.powers_two_unbounded' depends on axioms: [propext, Quot.sound]\n'Erdos3SpecialCases.unbounded_does_not_imply_all_lengths' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+        "stderr_excerpt": ""
+      },
+      "source_sha256": "83f4ca47095bda82b1ddb1020d569607a925d45945522f03b84f8972f7248383",
+      "third_worker_memory_observations": {
+        "minimum_free_physical_bytes": 9059287040,
+        "minimum_available_commit_bytes": 6471041024,
+        "peak_owned_private_bytes": 886386688
+      },
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sundai-erdos3-current\\Erdos3SpecialCases.olean",
+          "sha256": "ac6082c5ee2decfbb7f02793d8142f367eb2891026f144bac641e660bed837a4",
+          "bytes": 210392
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION"
+    },
+    {
+      "module": "FreshAuditErdos3SpecialCases.lean",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DmaxHeartbeats=0",
+        "-DmaxRecDepth=100000",
+        "-o",
+        "FreshAuditErdos3SpecialCases.olean",
+        "FreshAuditErdos3SpecialCases.lean"
+      ],
+      "seconds": 4.313,
+      "exit": 0,
+      "stdout": "'Erdos3SpecialCases.ap_terms_strictly_increase' does not depend on any axioms\n'Erdos3SpecialCases.containsAP_mono' does not depend on any axioms\n'Erdos3SpecialCases.containsAP_prefix' does not depend on any axioms\n'Erdos3SpecialCases.unbounded_lengths_iff_all_lengths' does not depend on any axioms\n'Erdos3SpecialCases.cofinite_contains_all_lengths' depends on axioms: [propext, Quot.sound]\n'Erdos3SpecialCases.affine_tail_contains_all_lengths' depends on axioms: [propext]\n'Erdos3SpecialCases.multiples_contain_all_lengths' depends on axioms: [propext]\n'Erdos3SpecialCases.unbounded_contains_two' depends on axioms: [propext, Quot.sound]\n'Erdos3SpecialCases.arbitrarilyLongAPs_mono' does not depend on any axioms\n'Erdos3SpecialCases.powers_two_no_midpoint' depends on axioms: [propext, Quot.sound]\n'Erdos3SpecialCases.powers_two_no_three' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Erdos3SpecialCases.nat_lt_two_pow' depends on axioms: [propext, Quot.sound]\n'Erdos3SpecialCases.powers_two_unbounded' depends on axioms: [propext, Quot.sound]\n'Erdos3SpecialCases.unbounded_does_not_imply_all_lengths' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+      "stderr": "",
+      "is_endpoint_audit": true,
+      "minimum_free_bytes": 6550659072,
+      "stop_reason": null,
+      "started_utc": "2026-10-05T03:09:36.716609+00:00",
+      "finished_utc": "2026-10-05T03:09:41.023980+00:00",
+      "owned_process_stop_output": null,
+      "own_job_resource_receipt": {
+        "command": [
+          "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+          "-j1",
+          "-DmaxHeartbeats=0",
+          "-DmaxRecDepth=100000",
+          "-o",
+          "FreshAuditErdos3SpecialCases.olean",
+          "FreshAuditErdos3SpecialCases.lean"
+        ],
+        "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sundai-erdos3-current",
+        "started_utc": "2026-10-05T03:09:36.716609+00:00",
+        "attempted": true,
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 5368709120,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 1073741824,
+          "own_job_private_bytes": 6442450944,
+          "own_process_private_bytes": 6442450944,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 3600
+        },
+        "minimum_disk_free_bytes": 6550659072,
+        "initial_system_memory_snapshot": {
+          "free_physical_bytes": 10040401920,
+          "total_physical_bytes": 34024419328,
+          "available_commit_bytes": 9684860928,
+          "total_commit_limit_bytes": 60437172224
+        },
+        "minimum_physical_available_bytes": 10040401920,
+        "minimum_available_commit_bytes": 9408897024,
+        "root_pid": 46548,
+        "own_job_assignment_before_resume": "PASS",
+        "exit": 0,
+        "job_peak_process_private_bytes": 874184704,
+        "job_peak_aggregate_private_bytes": 875438080,
+        "state": "PASS",
+        "finished_utc": "2026-10-05T03:09:41.023980+00:00",
+        "seconds": 4.313,
+        "polled_peak_tree_private_bytes": 865902592,
+        "polled_peak_tree_rss_bytes": 401358848,
+        "counter_samples": 15,
+        "observed_own_processes": {
+          "42936": {
+            "exe": "conhost.exe",
+            "peak_private_bytes": 1253376,
+            "peak_rss_bytes": 7860224
+          },
+          "46548": {
+            "exe": "lean.exe",
+            "peak_private_bytes": 864649216,
+            "peak_rss_bytes": 437194752
+          }
+        },
+        "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\sundai-erdos3-current-m2-granular-ef5f104097479363-attempt-1.stdout.txt",
+        "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\sundai-erdos3-current-m2-granular-ef5f104097479363-attempt-1.stderr.txt",
+        "stdout_sha256": "a5eee0142c9c9d309bb88ecb412ac6c0046799c3f288d93dce2d4909f2de272c",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_excerpt": "'Erdos3SpecialCases.ap_terms_strictly_increase' does not depend on any axioms\n'Erdos3SpecialCases.containsAP_mono' does not depend on any axioms\n'Erdos3SpecialCases.containsAP_prefix' does not depend on any axioms\n'Erdos3SpecialCases.unbounded_lengths_iff_all_lengths' does not depend on any axioms\n'Erdos3SpecialCases.cofinite_contains_all_lengths' depends on axioms: [propext, Quot.sound]\n'Erdos3SpecialCases.affine_tail_contains_all_lengths' depends on axioms: [propext]\n'Erdos3SpecialCases.multiples_contain_all_lengths' depends on axioms: [propext]\n'Erdos3SpecialCases.unbounded_contains_two' depends on axioms: [propext, Quot.sound]\n'Erdos3SpecialCases.arbitrarilyLongAPs_mono' does not depend on any axioms\n'Erdos3SpecialCases.powers_two_no_midpoint' depends on axioms: [propext, Quot.sound]\n'Erdos3SpecialCases.powers_two_no_three' depends on axioms: [propext, Classical.choice, Quot.sound]\n'Erdos3SpecialCases.nat_lt_two_pow' depends on axioms: [propext, Quot.sound]\n'Erdos3SpecialCases.powers_two_unbounded' depends on axioms: [propext, Quot.sound]\n'Erdos3SpecialCases.unbounded_does_not_imply_all_lengths' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+        "stderr_excerpt": ""
+      },
+      "source_sha256": "0cee28fe1bbacdd3ab2d38d4f9da26b287cfe7b2d3ab8da19e6f2ac182d8a4c2",
+      "third_worker_memory_observations": {
+        "minimum_free_physical_bytes": 10040401920,
+        "minimum_available_commit_bytes": 9408897024,
+        "peak_owned_private_bytes": 875438080
+      },
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\sundai-erdos3-current\\FreshAuditErdos3SpecialCases.olean",
+          "sha256": "c1f87fb021f8d1d233c23b242d0fabdc85a482bfb3b5d107140b854776819d81",
+          "bytes": 1408
+        }
+      ],
+      "artifact_hash_provenance": "MEASURED_IMMEDIATELY_AFTER_FRESH_COMPILATION",
+      "selected_endpoint_print_coverage": {
+        "requested_endpoints": [
+          "Erdos3SpecialCases.ap_terms_strictly_increase",
+          "Erdos3SpecialCases.containsAP_mono",
+          "Erdos3SpecialCases.containsAP_prefix",
+          "Erdos3SpecialCases.unbounded_lengths_iff_all_lengths",
+          "Erdos3SpecialCases.cofinite_contains_all_lengths",
+          "Erdos3SpecialCases.affine_tail_contains_all_lengths",
+          "Erdos3SpecialCases.multiples_contain_all_lengths",
+          "Erdos3SpecialCases.unbounded_contains_two",
+          "Erdos3SpecialCases.arbitrarilyLongAPs_mono",
+          "Erdos3SpecialCases.powers_two_no_midpoint",
+          "Erdos3SpecialCases.powers_two_no_three",
+          "Erdos3SpecialCases.nat_lt_two_pow",
+          "Erdos3SpecialCases.powers_two_unbounded",
+          "Erdos3SpecialCases.unbounded_does_not_imply_all_lengths"
+        ],
+        "parsed_endpoints": [
+          "Erdos3SpecialCases.affine_tail_contains_all_lengths",
+          "Erdos3SpecialCases.ap_terms_strictly_increase",
+          "Erdos3SpecialCases.arbitrarilyLongAPs_mono",
+          "Erdos3SpecialCases.cofinite_contains_all_lengths",
+          "Erdos3SpecialCases.containsAP_mono",
+          "Erdos3SpecialCases.containsAP_prefix",
+          "Erdos3SpecialCases.multiples_contain_all_lengths",
+          "Erdos3SpecialCases.nat_lt_two_pow",
+          "Erdos3SpecialCases.powers_two_no_midpoint",
+          "Erdos3SpecialCases.powers_two_no_three",
+          "Erdos3SpecialCases.powers_two_unbounded",
+          "Erdos3SpecialCases.unbounded_contains_two",
+          "Erdos3SpecialCases.unbounded_does_not_imply_all_lengths",
+          "Erdos3SpecialCases.unbounded_lengths_iff_all_lengths"
+        ],
+        "missing_endpoints": [],
+        "status": "PASS"
+      }
+    }
+  ],
+  "additional_dependency_libs": [
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\official-fc-util433"
+  ],
+  "repository": "wilsonwu-ai/sundai-erdos-3",
+  "commit": "492fd601f9c76e44dcb87f683a5ea6ccb7aaefc9",
+  "pin_source": "Exact E65 Lean 4.33.1 compiler and public source commit. Mathlib/FC pins are compatible reconstruction pins; the original image checkout revisions were not preserved.",
+  "dependency_replay_qualification": "COMPATIBLE_VERSION_RECONSTRUCTION_NOT_EXACT_SUBMITTED_DEPENDENCIES",
+  "original_image": "ghcr.io/ottogin/lean-mathlib@sha256:964547ad81e109c78545512867bae70b710c55d833078674878faad7de0ebb85",
+  "compiler_version": "Lean (version 4.33.1, x86_64-w64-windows-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)",
+  "compilation_order": [
+    "Erdos3Blocks",
+    "Erdos3Reduction",
+    "Erdos3Dyadic",
+    "Erdos3CrossScale",
+    "Erdos3ThreeCase",
+    "Erdos3RothBridge",
+    "Erdos3SpecialCases"
+  ],
+  "started_utc": "2026-10-05T03:09:36Z",
+  "execution_route": "SEPARATE_ROOT_REVIEWED_M2_GRANULAR_SOURCE_ADAPTER",
+  "source_plan_sha256": "8f1074283a569367dfe9141f7df474261f88b1a11506da562badb1c9015d038b",
+  "m2_preparation_sha256": "c2eb16e66fd9f5bacf75ad470cd25846d412ca8780a8a7d24c119d4b366c6ee5",
+  "baseline_runner_sha256": "70ff209c7ac651c1e0ab25e9f629a9fc50c4b85ed1f510666e851e8f69c53534",
+  "failed_invocations": [],
+  "selected_audit_axiom_review": [
+    {
+      "endpoint": "Erdos3SpecialCases.cofinite_contains_all_lengths",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    },
+    {
+      "endpoint": "Erdos3SpecialCases.affine_tail_contains_all_lengths",
+      "axioms": [
+        "propext"
+      ],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    },
+    {
+      "endpoint": "Erdos3SpecialCases.multiples_contain_all_lengths",
+      "axioms": [
+        "propext"
+      ],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    },
+    {
+      "endpoint": "Erdos3SpecialCases.unbounded_contains_two",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    },
+    {
+      "endpoint": "Erdos3SpecialCases.powers_two_no_midpoint",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    },
+    {
+      "endpoint": "Erdos3SpecialCases.powers_two_no_three",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    },
+    {
+      "endpoint": "Erdos3SpecialCases.nat_lt_two_pow",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    },
+    {
+      "endpoint": "Erdos3SpecialCases.powers_two_unbounded",
+      "axioms": [
+        "propext",
+        "Quot.sound"
+      ],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    },
+    {
+      "endpoint": "Erdos3SpecialCases.unbounded_does_not_imply_all_lengths",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    },
+    {
+      "endpoint": "Erdos3SpecialCases.ap_terms_strictly_increase",
+      "axioms": [],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "AXIOM_FREE"
+    },
+    {
+      "endpoint": "Erdos3SpecialCases.containsAP_mono",
+      "axioms": [],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "AXIOM_FREE"
+    },
+    {
+      "endpoint": "Erdos3SpecialCases.containsAP_prefix",
+      "axioms": [],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "AXIOM_FREE"
+    },
+    {
+      "endpoint": "Erdos3SpecialCases.unbounded_lengths_iff_all_lengths",
+      "axioms": [],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "AXIOM_FREE"
+    },
+    {
+      "endpoint": "Erdos3SpecialCases.arbitrarilyLongAPs_mono",
+      "axioms": [],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "AXIOM_FREE"
+    }
+  ],
+  "resource_settings": {
+    "LEAN_NUM_THREADS": 1,
+    "lean_shell_worker_flag": "-j1",
+    "maxHeartbeats": 0,
+    "maxRecDepth": 100000,
+    "runner_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\run_m2_granular_source_plan.py",
+    "runner_source_sha256": "6055abb09b2c9b985b69392af5cb3e8d2747a2027a3108fead72ed57ccc4e67c",
+    "axiom_parser_source_sha256": "1ee59639204140430c088023539a648f9007cc26c1856cf8cd2e3c2e59d7143f",
+    "guarded_third_worker_continuation": {
+      "maximum_new_source_invocations": null,
+      "initial_disk_bytes": 4000000000,
+      "initial_free_physical_bytes": 6442450944,
+      "continuous_disk_reserve_bytes": 1000000000,
+      "continuous_free_physical_reserve_bytes": 3221225472,
+      "owned_compiler_private_memory_ceiling_bytes": 6442450944,
+      "initial_memory_snapshot": {
+        "free_physical_bytes": 9817997312,
+        "total_physical_bytes": 34024419328,
+        "available_commit_bytes": 9190105088,
+        "total_commit_limit_bytes": 60437172224
+      },
+      "qualification": "ROOT_AUTHORIZED_GUARDED_THIRD_WORKER_CONTINUATION",
+      "initial_available_commit_bytes": 5368709120,
+      "continuous_available_commit_reserve_bytes": 1073741824,
+      "owned_job_private_memory_ceiling_bytes": 6442450944,
+      "own_job_assignment_before_resume": "REQUIRED",
+      "resource_guard_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\matt_resource_guard.py",
+      "resource_guard_sha256": "ae0b64c7fbf47545365f3238977368042be342ddb973159ec65c98f64aa38a71"
+    }
+  },
+  "deferred_whole_import_policy": {
+    "qualification": "ROOT_REVIEWED_M2_GRANULAR_ADAPTER_ONLY_WHOLE_MODULES_AND_AUDITS_NEED_SEPARATE_LITERAL_IMPORTER_LEASE",
+    "exact_frozen_import_classification": {
+      "preparation_sha256": "c2eb16e66fd9f5bacf75ad470cd25846d412ca8780a8a7d24c119d4b366c6ee5",
+      "authored_transitive_whole_Mathlib_closure": {
+        "Erdos3CrossScale": [
+          "FormalConjecturesForMathlib.Combinatorics.Additive.Coset",
+          "FormalConjecturesForMathlib.NumberTheory.Carmichael",
+          "FormalConjecturesUtil"
+        ],
+        "Erdos3Dyadic": [
+          "FormalConjecturesForMathlib.Combinatorics.Additive.Coset",
+          "FormalConjecturesForMathlib.NumberTheory.Carmichael",
+          "FormalConjecturesUtil"
+        ],
+        "Erdos3Reduction": [
+          "FormalConjecturesForMathlib.Combinatorics.Additive.Coset",
+          "FormalConjecturesForMathlib.NumberTheory.Carmichael",
+          "FormalConjecturesUtil"
+        ],
+        "Erdos3Blocks": [
+          "FormalConjecturesForMathlib.Combinatorics.Additive.Coset",
+          "FormalConjecturesForMathlib.NumberTheory.Carmichael",
+          "FormalConjecturesUtil"
+        ],
+        "Erdos3ThreeCase": [
+          "FormalConjecturesForMathlib.Combinatorics.Additive.Coset",
+          "FormalConjecturesForMathlib.NumberTheory.Carmichael",
+          "FormalConjecturesUtil"
+        ],
+        "Erdos3RothBridge": [
+          "FormalConjecturesForMathlib.Combinatorics.Additive.Coset",
+          "FormalConjecturesForMathlib.NumberTheory.Carmichael",
+          "FormalConjecturesUtil"
+        ]
+      },
+      "audits_with_whole_Mathlib_roots": {
+        "FreshAuditErdos3CrossScale.lean": [
+          "FormalConjecturesForMathlib.Combinatorics.Additive.Coset",
+          "FormalConjecturesForMathlib.NumberTheory.Carmichael",
+          "FormalConjecturesUtil"
+        ],
+        "FreshAuditErdos3Dyadic.lean": [
+          "FormalConjecturesForMathlib.Combinatorics.Additive.Coset",
+          "FormalConjecturesForMathlib.NumberTheory.Carmichael",
+          "FormalConjecturesUtil"
+        ],
+        "FreshAuditErdos3Reduction.lean": [
+          "FormalConjecturesForMathlib.Combinatorics.Additive.Coset",
+          "FormalConjecturesForMathlib.NumberTheory.Carmichael",
+          "FormalConjecturesUtil"
+        ],
+        "FreshAuditErdos3Blocks.lean": [
+          "FormalConjecturesForMathlib.Combinatorics.Additive.Coset",
+          "FormalConjecturesForMathlib.NumberTheory.Carmichael",
+          "FormalConjecturesUtil"
+        ],
+        "FreshAuditErdos3ThreeCase.lean": [
+          "FormalConjecturesForMathlib.Combinatorics.Additive.Coset",
+          "FormalConjecturesForMathlib.NumberTheory.Carmichael",
+          "FormalConjecturesUtil"
+        ],
+        "FreshAuditErdos3RothBridge.lean": [
+          "FormalConjecturesForMathlib.Combinatorics.Additive.Coset",
+          "FormalConjecturesForMathlib.NumberTheory.Carmichael",
+          "FormalConjecturesUtil"
+        ]
+      },
+      "additional_library_whole_scope": {
+        "FormalConjecturesForMathlib": [
+          "FormalConjecturesForMathlib.Combinatorics.Additive.Coset",
+          "FormalConjecturesForMathlib.NumberTheory.Carmichael"
+        ],
+        "FormalConjecturesForMathlib.Combinatorics.Additive.Coset": [
+          "FormalConjecturesForMathlib.Combinatorics.Additive.Coset"
+        ],
+        "FormalConjecturesForMathlib.NumberTheory.Carmichael": [
+          "FormalConjecturesForMathlib.NumberTheory.Carmichael"
+        ],
+        "FormalConjecturesUtil": [
+          "FormalConjecturesForMathlib.Combinatorics.Additive.Coset",
+          "FormalConjecturesForMathlib.NumberTheory.Carmichael",
+          "FormalConjecturesUtil"
+        ]
+      },
+      "qualification": "No additional library is compiled by this adapter. Every reachable literal whole-library source and all authored/audit descendants are withheld."
+    },
+    "unattempted_whole_invocations": [
+      {
+        "module": "Erdos3Blocks",
+        "attempted": false,
+        "is_endpoint_audit": false,
+        "classification": "SEPARATE_SOLE_LITERAL_IMPORTER_LEASE_REQUIRED"
+      },
+      {
+        "module": "Erdos3Reduction",
+        "attempted": false,
+        "is_endpoint_audit": false,
+        "classification": "SEPARATE_SOLE_LITERAL_IMPORTER_LEASE_REQUIRED"
+      },
+      {
+        "module": "Erdos3Dyadic",
+        "attempted": false,
+        "is_endpoint_audit": false,
+        "classification": "SEPARATE_SOLE_LITERAL_IMPORTER_LEASE_REQUIRED"
+      },
+      {
+        "module": "Erdos3CrossScale",
+        "attempted": false,
+        "is_endpoint_audit": false,
+        "classification": "SEPARATE_SOLE_LITERAL_IMPORTER_LEASE_REQUIRED"
+      },
+      {
+        "module": "Erdos3ThreeCase",
+        "attempted": false,
+        "is_endpoint_audit": false,
+        "classification": "SEPARATE_SOLE_LITERAL_IMPORTER_LEASE_REQUIRED"
+      },
+      {
+        "module": "Erdos3RothBridge",
+        "attempted": false,
+        "is_endpoint_audit": false,
+        "classification": "SEPARATE_SOLE_LITERAL_IMPORTER_LEASE_REQUIRED"
+      },
+      {
+        "module": "FreshAuditErdos3CrossScale.lean",
+        "attempted": false,
+        "is_endpoint_audit": true,
+        "classification": "SEPARATE_SOLE_LITERAL_IMPORTER_LEASE_REQUIRED"
+      },
+      {
+        "module": "FreshAuditErdos3Dyadic.lean",
+        "attempted": false,
+        "is_endpoint_audit": true,
+        "classification": "SEPARATE_SOLE_LITERAL_IMPORTER_LEASE_REQUIRED"
+      },
+      {
+        "module": "FreshAuditErdos3Reduction.lean",
+        "attempted": false,
+        "is_endpoint_audit": true,
+        "classification": "SEPARATE_SOLE_LITERAL_IMPORTER_LEASE_REQUIRED"
+      },
+      {
+        "module": "FreshAuditErdos3Blocks.lean",
+        "attempted": false,
+        "is_endpoint_audit": true,
+        "classification": "SEPARATE_SOLE_LITERAL_IMPORTER_LEASE_REQUIRED"
+      },
+      {
+        "module": "FreshAuditErdos3ThreeCase.lean",
+        "attempted": false,
+        "is_endpoint_audit": true,
+        "classification": "SEPARATE_SOLE_LITERAL_IMPORTER_LEASE_REQUIRED"
+      },
+      {
+        "module": "FreshAuditErdos3RothBridge.lean",
+        "attempted": false,
+        "is_endpoint_audit": true,
+        "classification": "SEPARATE_SOLE_LITERAL_IMPORTER_LEASE_REQUIRED"
+      }
+    ]
+  },
+  "prior_attempt_receipts": [
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\sundai-erdos3-current-m2-granular-fresh-build-attempt-1.json",
+      "sha256": "7cc183d5662c36dac1d84c2be9f467a99326e18fa1896a78ce2a50787ff7cfc3",
+      "status": "SCHEDULED_RESOURCE_CHECKPOINT"
+    }
+  ],
+  "resume_provenance": "OWN_FRESH_SUCCESSFUL_ARTIFACTS_AFTER_RESOURCE_INTERRUPTION",
+  "retained_successful_custom_modules": 1,
+  "checkpoint_reason": "GRANULAR_REMAINDER_FINISHED_WHOLE_IMPORT_LEASE_STILL_REQUIRED",
+  "finished_utc": "2026-10-05T03:09:41Z"
+}

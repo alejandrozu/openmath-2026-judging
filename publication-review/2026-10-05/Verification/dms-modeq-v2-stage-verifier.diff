@@ -1,0 +1,43 @@
+--- verify_dms_full228_stage.py
++++ verify_dms_modeq_v2_stage.py
+@@ -8,7 +8,7 @@
+ import hashlib,json,re,subprocess,sys
+ from lean_imports import read_imports,stripped
+ BASE=Path(__file__).resolve().parent
+-PROJECT='htpeo-dms-current-import-pruned-diagnostic'
++PROJECT='htpeo-dms-current-import-pruned-modeq-v2'
+ def digest(path):
+     d=hashlib.sha256()
+     with Path(path).open('rb') as stream:
+@@ -23,10 +23,10 @@
+     return reached
+ 
+ def verify_stage(require_cold=True):
+-    preparation_path=BASE/'dms-full228-cold-stage-and-adapter-preparation-20261005.json'
++    preparation_path=BASE/'dms-modeq-v2-cold-stage-and-link-adapter-preparation-20261005.json'
+     prep=load(preparation_path)
+-    complete_path=BASE/'dms-full228-complete-official-closure-and-reuse-proposal-20261005.json'
+-    assert digest(complete_path)=='620fe0d86aff72859d8b9d97d8f793988710a145f200ae3cb4f05ea322f2bd2a'
++    complete_path=BASE/'dms-modeq-v2-complete-stage-proposal-20261005.json'
++    assert digest(complete_path)=='d65e7f7a81149ab7c6988c4aa9450a228279f984de302dec8bf6852763488fcc'
+     complete=load(complete_path)
+     immutable=Path(prep['immutable_original119_receipt'])
+     assert digest(immutable)==prep['immutable_original119_receipt_sha256']=='feb37da0178c7ad7f259096eba604ab43ae253bcaaac5212d66a2748ffc84238'
+@@ -155,7 +155,7 @@
+     assert len(must_cold)==129 and set(affected)|unpassed==must_cold
+     own_oleans=list(stage.rglob('*.olean'))+list(stage.rglob('*.ilean'))
+     if require_cold:assert not own_oleans,'No custom proof outputs are permitted in the cold preparation'
+-    return {'status':'READ_ONLY_STAGE_BODY_FULL_OFFICIAL_IDENTITY_AND99_CONDITIONAL_REUSE_CHECK_PASS',
++    return {'status':'READ_ONLY_V2_STAGE_BODY_FULL_OFFICIAL_IDENTITY_AND99_CONDITIONAL_HARD_LINK_CHECK_PASS',
+         'checked_utc':datetime.now(timezone.utc).isoformat(),
+         'diagnostic_plan_sha256':digest(plan_path),'preparation_sha256':digest(preparation_path),
+         'verifier_source_sha256':digest(__file__),
+@@ -171,7 +171,7 @@
+ if __name__=='__main__':
+     assert sys.argv[1:]==['--check-cold-stage'],'This preparation supports the explicit read-only cold check only'
+     result=verify_stage(require_cold=True)
+-    out=BASE/'dms-full228-stage-identity-and-conditional99-reuse-review-20261005.json'
++    out=BASE/'dms-modeq-v2-stage-identity-and-conditional99-link-review-20261005.json'
+     assert not out.exists()
+     out.write_text(json.dumps(result,indent=2)+'\n',encoding='utf8')
+     print(json.dumps({'review':str(out),'review_sha256':digest(out),'status':result['status'],

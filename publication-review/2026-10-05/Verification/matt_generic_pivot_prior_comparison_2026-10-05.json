@@ -1,0 +1,61 @@
+{
+  "family_id": "E03-PIVOT-GENERIC",
+  "source_revision": "7014b63ee2cfd01c641a7f539c73b664a2aa3d66",
+  "retrieved_utc": "2026-10-04T22:32:44.450642+00:00",
+  "method": "Focused primary-source comparison of the closest cited decomposition and angle-transform constructions; no exhaustive global novelty search.",
+  "primary_evidence": [
+    {
+      "url": "https://arxiv.org/abs/1512.07240v3",
+      "title": "The block-ZXZ synthesis of an arbitrary quantum circuit",
+      "authors": [
+        "Alexis De Vos",
+        "Stijn De Baerdemacker"
+      ],
+      "locator": "Version 3, section 5, equation 5",
+      "limited_paraphrase": "The existing left-polar factor D=-i V11* V12 equals the candidate C for invertible top blocks."
+    },
+    {
+      "url": "https://arxiv.org/abs/quant-ph/0404089v3",
+      "title": "Quantum Circuits for General Multiqubit Gates",
+      "authors": [
+        "Mikko Möttönen",
+        "Juha J. Vartiainen",
+        "Ville Bergholm",
+        "Martti M. Salomaa"
+      ],
+      "locator": "Equations 3–5 and following Walsh–Hadamard discussion (PDF page 2)",
+      "limited_paraphrase": "Uniformly controlled rotation angles are obtained through a Gray-code permutation of the Walsh–Hadamard transform. This linear angle transform is established background."
+    },
+    {
+      "url": "https://arxiv.org/abs/2403.13692v2",
+      "title": "Beyond Quantum Shannon: Circuit Construction for General n-Qubit Gates Based on Block ZXZ-Decomposition",
+      "authors": [
+        "Anna M. Krol",
+        "Zaid Al-Ars"
+      ],
+      "locator": "Sections 3, 4.1 and 5.3",
+      "limited_paraphrase": "The paper uses the inherited polar factor and Gray-code transform and derives the established Block-ZXZ recurrence with subtraction five and leading coefficient 22/48. It does not present the candidate balanced generic polar-pivot zero-Walsh theorem."
+    }
+  ],
+  "finding": "A real attribution omission was corrected. The polar primitive and Walsh transform are prior work. The exact combined generic existence theorem is not stated in the closest inspected primary papers, so its proposed partial originality remains conditional rather than disproved by those papers.",
+  "additional_author_cited_check": {
+    "url": "https://arxiv.org/abs/2511.16736v1",
+    "title": "Unitary synthesis with optimal brick wall circuits",
+    "authors": [
+      "David Wierichs",
+      "Korbinian Kottmann",
+      "Nathan Killoran"
+    ],
+    "locator": "Introduction and section V, lemmas 1–2 and conjecture 3",
+    "limited_paraphrase": "The author-cited 2025 brick-wall paper gives numerical compilation and Jacobian-rank evidence; its proposed universality still depends on an open critical-values conjecture. This is a different construction, and the inspected arguments do not supply the balanced polar-pivot/eigenphase Walsh-zero theorem.",
+    "assessment": "No further manuscript correction is required by this bounded check. Keyword absence alone was not treated as a novelty proof; the inspected mathematical argument is about circuit-image topology and Jacobian ranks."
+  },
+  "limits": [
+    "This comparison is not an exhaustive priority certification.",
+    "The normalized spectral-lift ingredients and intermediate value theorem are not separately credited as new general mathematical facts.",
+    "Circuit realization, cancellation costs, nongeneric extension and universal synthesis remain unproved obligations.",
+    "Pinned fresh replay, author approval and chair acceptance remain pending."
+  ],
+  "compact_attribution_sentence": "The polar factor C=−iP(X)*P(Y) is inherited from Block-ZXZ synthesis (De Vos–De Baerdemacker, arXiv:1512.07240v3, section 5, equation 5; Krol–Al-Ars, arXiv:2403.13692v2, section 4.1), and the Walsh/Gray-code angle transform is inherited from Möttönen et al. (quant-ph/0404089v3, equations 3–5). Conditional originality credit concerns only the combined generic pivot-existence theorem proved here, subject to fresh replay and comparison with prior phase-balancing methods.",
+  "recommendation": "Consider only the exact combined generic matrix theorem for conditional P2=.05; no originality credit for inherited polar/Walsh primitives and no upgrade to the universal 21/48 claim."
+}

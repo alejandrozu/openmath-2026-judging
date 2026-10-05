@@ -1,0 +1,75 @@
+--- qualify_dms_modeq_v2_complete_route.py
++++ qualify_dms_v3_complete_route.py
+@@ -1,6 +1,6 @@
+ """Read-only final qualification, only after a separate SHA-bound root review.
+ 
+-The original scientific bodies are preserved.99 original-owned cold outputs are
++The original scientific bodies are preserved.99 original-owned cold outputs linked only from proven V1 COPIES are
+ explicitly reused;129 body-identical diagnostic sources must have actual new
+ compilation rows. No novelty, scoring, publication or release is authorized here.
+ """
+@@ -11,18 +11,18 @@
+ from receipt_io import read_bytes_shared
+ from lean_imports import stripped
+ from audit_axioms import parse as parse_axioms
+-from verify_dms_modeq_v2_stage import verify_stage
+-from dms_modeq_v2_original99_hardlink_seed import verify_seed,preserved_check
++from verify_dms_v3_stage import verify_stage
++from dms_v3_copy99_hardlink_seed import verify_seed,preserved_check
+ BASE=Path(__file__).resolve().parent
+-PROJECT='htpeo-dms-current-import-pruned-modeq-v2'
++PROJECT='htpeo-dms-current-import-pruned-v3'
+ STAGE=BASE/'builds'/PROJECT
+-PLAN_SHA='a690d9c1ae4acc0de5fc20d6510d9bc0055552fe50f10d9fb9f76e1150284eea'
+-RUNNER_SHA='a3148afc14e522ee189f9eee496785d1c153dc8afd7aa37b7d4487923a88166a'
+-POLICY_SHA='bfd720d9afbd3774f1cbce465dddf749b5d45e4ba28b755eed2421e078bfa814'
+-SEED_SHA='a5ce596e15b1c35a9c67bbda9ae912e83341c0f1956cbd4c069637587271815b'
++PLAN_SHA='eea74ffbc9321a0663d6c77d8e7c79ee7de3da914c9af1bc66e9b3ed3750f7ba'
++RUNNER_SHA='832e875054d76b597652a37edc197f47182253172581be1ab962b1ae6187ee3d'
++POLICY_SHA='a4b795b071135118af94868726b9ac45af0579540d5856e9aaf7d48a9e3717e6'
++SEED_SHA='a1395c3617d8c813048b0ecfb34be453c058636216659583090ad1defb771c83'
+ ORIGINAL119_SHA='feb37da0178c7ad7f259096eba604ab43ae253bcaaac5212d66a2748ffc84238'
+-VERIFIER_SHA='65da1bcef62d2a433eb16353d027910f67ca59fe0d3f08d0635700705fadb10b'
+-SEED_HELPER_SHA='0c6161c5dbd14a55c308aad4790dd88eea230934f4045e22ce9ccd2ad18b7eb3'
++VERIFIER_SHA='be19344e55bb6a50930bbd2b660385447cfe5fd721861f2fa6c4253094b927c5'
++SEED_HELPER_SHA='772423ad135bddde4487ff381bc39c4d2cf2a1022229943f37e4d7c03fadaa92'
+ 
+ def digest(path):
+     d=hashlib.sha256()
+@@ -36,13 +36,13 @@
+     approval_path=Path(approval_path).resolve()
+     assert approval_path.is_relative_to(BASE.resolve()) and digest(approval_path)==approval_sha
+     approved=load(approval_path)
+-    assert approved['status']=='ROOT_APPROVED_DMS_V2_FINAL_QUALIFICATION_READ_ONLY'
++    assert approved['status']=='ROOT_APPROVED_DMS_V3_FINAL_QUALIFICATION_READ_ONLY'
+     assert approved['reviewed_qualification_helper_sha256']==digest(__file__)
+     assert approved['reviewed_runner_sha256']==RUNNER_SHA
+     assert approved['reviewed_policy_sha256']==POLICY_SHA and approved['reviewed_seed_receipt_sha256']==SEED_SHA
+-    assert digest(BASE/'run_dms_modeq_v2_linked_plan.py')==RUNNER_SHA
+-    assert digest(BASE/'verify_dms_modeq_v2_stage.py')==VERIFIER_SHA
+-    assert digest(BASE/'dms_modeq_v2_original99_hardlink_seed.py')==SEED_HELPER_SHA
++    assert digest(BASE/'run_dms_v3_linked_plan.py')==RUNNER_SHA
++    assert digest(BASE/'verify_dms_v3_stage.py')==VERIFIER_SHA
++    assert digest(BASE/'dms_v3_copy99_hardlink_seed.py')==SEED_HELPER_SHA
+     plan_path=STAGE/'build-plan.json';assert digest(plan_path)==PLAN_SHA
+     plan=load(plan_path);assert plan['version']=='4.33.1' and plan.get('lean_options',{})=={}
+     receipt_path=BASE/(PROJECT+'-fresh-build.json');raw=read_bytes_shared(receipt_path)
+@@ -124,7 +124,8 @@
+         'original119_and_failed_v1_preservation':original_and_v1,'original119_immutable_receipt_sha256':ORIGINAL119_SHA,
+         'original_scientific_and_scored_scope':'UNALTERED228_SCIENTIFIC_BODIES_AND123_ORIGINAL_ENDPOINTS;ONLY_THREE_IMPORT_HEADERS_CHANGED',
+         'all228_body_identity_and2735_official_source_artifact_runtime_git_cache_identity':stage_identity,
+-        'post_run99_NTFS_file_identity_and_original_target_sha':seed_identity,
++        'post_run99_v1_copy_V3_NTFS_identity_and_all_original_v2_sha':seed_identity,
++        'copy_source_only_reuse_and_original_v2_linkcount2_preservation':True,
+         'prior_own_original_cold_source_outputs_reused':99,'new_cold_source_passes':len(actual_pass),
+         'new_actual_source_module_names':sorted(actual_pass),'required_new129_module_names':sorted(required),
+         'source_failures_or_resources':actual_failure,'missing_actual_new_source_modules':sorted(required-set(actual_pass)),
+@@ -137,7 +138,7 @@
+         'actual_raw_print_receipts':raw_print_receipts,'compiler_invocations_in_this_helper':0,
+         'qualification_limits':'This independently rechecks proof replay and body/import/dependency provenance. It does not decide mathematical novelty, statement faithfulness, competition scores or publication.'}
+     assert read_bytes_shared(receipt_path)==raw,'Final source receipt changed during read-only qualification'
+-    out=BASE/'dms-modeq-v2-complete-route-final-qualification-20261005.json'
++    out=BASE/'dms-v3-complete-route-final-qualification-20261005.json'
+     assert not out.exists();out.write_text(json.dumps(result,indent=2)+'\n',encoding='utf8')
+     print(json.dumps({'qualification':str(out),'qualification_sha256':digest(out),'status':status,
+         'prior_owned_reused':99,'actual_new_cold_passes':len(actual_pass),'actual_unique_prints':len(count),

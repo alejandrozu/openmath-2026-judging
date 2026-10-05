@@ -1,0 +1,184 @@
+{
+  "recorded_utc": "2026-10-05T02:02:24Z",
+  "projects": [
+    {
+      "id": "sakana-FOCUS-RAMSEY",
+      "version": "4.33.1",
+      "mathlib_pin": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "source_plan_sha256": "133e566852d3aa7e212132344e955e2ee6b8700903e5b7e005028039f3e0983c",
+      "source_modules": 2,
+      "source_bytes": 73992,
+      "source_hash_mismatches": [],
+      "import_scope": {
+        "direct_whole_Mathlib_import_modules": [],
+        "authored_transitive_whole_Mathlib_closure": {},
+        "source_module_count": 2,
+        "whole_Mathlib_closure_count": 0,
+        "qualification": "Literal whole-Mathlib imports and their transitive authored dependencies; exact imported source bytes are preserved. External library internals retain their independently recorded pin provenance."
+      },
+      "endpoints": [
+        "Lea.RamseyLifting.density_sub_P_abs_le",
+        "Lea.RamseyLifting.lifting_bound",
+        "Lea.RamseyLifting.density_tendsto",
+        "Lea.RamseyC4.c4_le_Pval"
+      ],
+      "selected_audits": [
+        {
+          "name": "FreshAudit1.lean",
+          "sha256": "db7b81f4a387064db5d954b542f3b5ac2464cc22f48180bde5f87cd6afe289fd",
+          "imports": [
+            "Lea.RamseyLifting.Lifting",
+            "Limit"
+          ]
+        }
+      ],
+      "lean_options": {},
+      "additional_dependency_libs": [],
+      "first_frozen_module": "Lea.RamseyLifting.Lifting",
+      "status": "PREPARED_FROZEN_SOURCE_SCOPE_NO_FRESH_COMPILER_INVOCATION",
+      "qualification": "Originality or priority hold remains distinct from compilation. All hashes and source imports inspected read-only; successful future replay would not itself establish novelty."
+    },
+    {
+      "id": "htpeo-ramsey-current",
+      "version": "4.33.1",
+      "mathlib_pin": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "source_plan_sha256": "94beb20b98cceefe3e5a7aa0a9cec34b4a60c15dd740f675711371a5afd494d3",
+      "source_modules": 2103,
+      "source_bytes": 43986058,
+      "source_hash_mismatches": [],
+      "import_scope": {
+        "direct_whole_Mathlib_import_modules": [
+          "RamseyCert.Fast",
+          "RamseyCert.Limit",
+          "RamseyCert.Mono",
+          "RamseyCert.Sym"
+        ],
+        "authored_transitive_whole_Mathlib_closure": {
+          "RamseyCert": [
+            "RamseyCert.Fast",
+            "RamseyCert.Sym"
+          ],
+          "RamseyCert.Fast": [
+            "RamseyCert.Fast"
+          ],
+          "RamseyCert.Final": [
+            "RamseyCert.Fast",
+            "RamseyCert.Limit",
+            "RamseyCert.Mono",
+            "RamseyCert.Sym"
+          ],
+          "RamseyCert.GlueB": [
+            "RamseyCert.Fast"
+          ],
+          "RamseyCert.GlueR": [
+            "RamseyCert.Fast"
+          ],
+          "RamseyCert.Limit": [
+            "RamseyCert.Limit"
+          ],
+          "RamseyCert.Main": [
+            "RamseyCert.Fast",
+            "RamseyCert.Sym"
+          ],
+          "RamseyCert.Mono": [
+            "RamseyCert.Limit",
+            "RamseyCert.Mono"
+          ],
+          "RamseyCert.Native": [
+            "RamseyCert.Fast"
+          ],
+          "RamseyCert.Summary": [
+            "RamseyCert.Fast",
+            "RamseyCert.Limit",
+            "RamseyCert.Mono",
+            "RamseyCert.Sym"
+          ],
+          "RamseyCert.Sym": [
+            "RamseyCert.Sym"
+          ]
+        },
+        "source_module_count": 2103,
+        "whole_Mathlib_closure_count": 11,
+        "qualification": "Literal whole-Mathlib imports and their transitive authored dependencies; exact imported source bytes are preserved. External library internals retain their independently recorded pin provenance."
+      },
+      "endpoints": [
+        "K4_blue",
+        "RamseyCert.blowup_count",
+        "RamseyCert.minMonoK4_le",
+        "RamseyCert.ramseyMultK4_le_density",
+        "Template.numer_eq",
+        "Template.total_eq",
+        "colour_total",
+        "fastK_eq",
+        "getD_map_range",
+        "kTermA_eq",
+        "minMonoK4_density_le",
+        "minMonoK4_density_le_sol",
+        "minMonoK4_density_mono",
+        "native_fastK_B",
+        "native_fastK_R",
+        "ramseyMultK4_le_sol",
+        "ramseyMultK4_limit_lt_ref",
+        "ramseyMultK4_lt_ref",
+        "ramseyMultK4_tendsto",
+        "sol_density",
+        "sol_lt_ref",
+        "sol_numer",
+        "sol_ppt",
+        "sol_symm"
+      ],
+      "selected_audits": [
+        {
+          "name": "FreshAudit1.lean",
+          "sha256": "dff144f1890c6c255e9463a7e1fa29284166684ae96289b7949f1a363c6e9868",
+          "imports": [
+            "RamseyCert"
+          ]
+        }
+      ],
+      "lean_options": {},
+      "additional_dependency_libs": [],
+      "first_frozen_module": "RamseyCert",
+      "status": "PREPARED_FROZEN_SOURCE_SCOPE_NO_FRESH_COMPILER_INVOCATION",
+      "qualification": "Originality or priority hold remains distinct from compilation. All hashes and source imports inspected read-only; successful future replay would not itself establish novelty."
+    },
+    {
+      "id": "sakana-FOCUS-GROTH",
+      "version": "4.33.1",
+      "mathlib_pin": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "source_plan_sha256": "1d9db618520db9b9651018b4b4c77192616c5af911963fc3391055b6646ece7a",
+      "source_modules": 2,
+      "source_bytes": 41282,
+      "source_hash_mismatches": [],
+      "import_scope": {
+        "direct_whole_Mathlib_import_modules": [],
+        "authored_transitive_whole_Mathlib_closure": {},
+        "source_module_count": 2,
+        "whole_Mathlib_closure_count": 0,
+        "qualification": "Literal whole-Mathlib imports and their transitive authored dependencies; exact imported source bytes are preserved. External library internals retain their independently recorded pin provenance."
+      },
+      "endpoints": [
+        "GrothSymmetry.row3_Q_le_sqrt_three_halves_mul_C",
+        "GrothSemantic.semantic_6x6_106",
+        "GrothSemantic.semantic_6x8_690",
+        "GrothSemantic.semantic_7x8_53110",
+        "GrothSemantic.semantic_s8x8_1705"
+      ],
+      "selected_audits": [
+        {
+          "name": "FreshAudit1.lean",
+          "sha256": "2a43c7da7651a65f5de70d04a81ea77d53c5e2645ab7b2efc4e8e283644236e2",
+          "imports": [
+            "Row3Granular",
+            "SemanticTestGranular"
+          ]
+        }
+      ],
+      "lean_options": {},
+      "additional_dependency_libs": [],
+      "first_frozen_module": "Row3Granular",
+      "status": "PREPARED_FROZEN_SOURCE_SCOPE_NO_FRESH_COMPILER_INVOCATION",
+      "qualification": "Originality or priority hold remains distinct from compilation. All hashes and source imports inspected read-only; successful future replay would not itself establish novelty."
+    }
+  ]
+}

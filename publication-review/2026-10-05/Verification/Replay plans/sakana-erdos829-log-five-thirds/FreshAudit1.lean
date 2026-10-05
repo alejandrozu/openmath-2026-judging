@@ -1,0 +1,4 @@
+import FiveThirdsCanonical
+
+#print axioms Erdos829FiveThirds.canonicalCubeCount_eventually_exp
+#print axioms Erdos829FiveThirds.canonicalCubeCount_eventual_threshold

@@ -1,0 +1,120 @@
+{
+  "status": "ACTUAL_NORMAL_DMS_V2_AND_MAIN_SOURCE_CHECKPOINTS_OWNED_TEMPORARY_FLAG_RELEASED",
+  "checked_utc": "2026-10-05T03:52:24.791118+00:00",
+  "original_flag": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\hold-third-worker-dispatch",
+  "original_flag_sha256": "283e7905820436d8e3e2f716d1dd3b277955ab48fbd5a4d79d1cd59b5f6abe90",
+  "checkpoint_receipts": [
+    {
+      "project": "htpeo-dms-current-import-pruned-modeq-v2",
+      "receipt": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\htpeo-dms-current-import-pruned-modeq-v2-fresh-build.json",
+      "receipt_sha256": "664b36b905611c46616af5b67bd98d593f62c03dd3c04e13b6d7325fb7946bea",
+      "actual_source_pass_count": 9,
+      "actual_failures": [
+        {
+          "module": "BlockProps",
+          "command": [
+            "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+            "-j1",
+            "-DmaxHeartbeats=0",
+            "-DmaxRecDepth=100000",
+            "-o",
+            "BlockProps.olean",
+            "BlockProps.lean"
+          ],
+          "seconds": 12.563,
+          "exit": 1,
+          "stdout": "BlockProps.lean:33:58: error(lean.unknownIdentifier): Unknown constant `Fin.castLE_injective`\n",
+          "stderr": "",
+          "is_endpoint_audit": false,
+          "minimum_free_bytes": 5540347904,
+          "stop_reason": null,
+          "started_utc": "2026-10-05T03:47:35.012987+00:00",
+          "finished_utc": "2026-10-05T03:47:47.578142+00:00",
+          "owned_process_stop_output": null,
+          "own_job_resource_receipt": {
+            "command": [
+              "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+              "-j1",
+              "-DmaxHeartbeats=0",
+              "-DmaxRecDepth=100000",
+              "-o",
+              "BlockProps.olean",
+              "BlockProps.lean"
+            ],
+            "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\htpeo-dms-current-import-pruned-modeq-v2",
+            "started_utc": "2026-10-05T03:47:35.012987+00:00",
+            "attempted": true,
+            "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+            "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+            "resource_policy": {
+              "initial_disk_bytes": 4000000000,
+              "initial_physical_bytes": 6442450944,
+              "initial_available_commit_bytes": 5368709120,
+              "continuous_disk_bytes": 1000000000,
+              "continuous_physical_bytes": 3221225472,
+              "continuous_available_commit_bytes": 1073741824,
+              "own_job_private_bytes": 6442450944,
+              "own_process_private_bytes": 6442450944,
+              "poll_seconds": 0.25,
+              "timeout_seconds": 3600
+            },
+            "minimum_disk_free_bytes": 5540347904,
+            "initial_system_memory_snapshot": {
+              "free_physical_bytes": 9134624768,
+              "total_physical_bytes": 34024419328,
+              "available_commit_bytes": 8059064320,
+              "total_commit_limit_bytes": 60437172224
+            },
+            "minimum_physical_available_bytes": 9038053376,
+            "minimum_available_commit_bytes": 6124478464,
+            "root_pid": 35496,
+            "own_job_assignment_before_resume": "PASS",
+            "exit": 1,
+            "job_peak_process_private_bytes": 2192453632,
+            "job_peak_aggregate_private_bytes": 2193702912,
+            "state": "COMMAND_FAILED",
+            "finished_utc": "2026-10-05T03:47:47.578142+00:00",
+            "seconds": 12.563,
+            "polled_peak_tree_private_bytes": 2193702912,
+            "polled_peak_tree_rss_bytes": 979832832,
+            "counter_samples": 46,
+            "observed_own_processes": {
+              "35496": {
+                "exe": "lean.exe",
+                "peak_private_bytes": 2192453632,
+                "peak_rss_bytes": 974094336
+              },
+              "51424": {
+                "exe": "conhost.exe",
+                "peak_private_bytes": 1249280,
+                "peak_rss_bytes": 7852032
+              }
+            },
+            "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\htpeo-dms-current-import-pruned-modeq-v2-cd53b288b0dec984-attempt-1.stdout.txt",
+            "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\guarded-source-logs\\htpeo-dms-current-import-pruned-modeq-v2-cd53b288b0dec984-attempt-1.stderr.txt",
+            "stdout_sha256": "544303176295cb9705e5a5f207ec9764a022a6b03da8e19a92f4d1a064f3b66e",
+            "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "stdout_excerpt": "BlockProps.lean:33:58: error(lean.unknownIdentifier): Unknown constant `Fin.castLE_injective`\n",
+            "stderr_excerpt": ""
+          },
+          "source_sha256": "4f17c166070843e76c159fdbbddbd134b1be57691d0aab2ce54f96aba0ec6d53",
+          "third_worker_memory_observations": {
+            "minimum_free_physical_bytes": 9038053376,
+            "minimum_available_commit_bytes": 6124478464,
+            "peak_owned_private_bytes": 2193702912
+          }
+        }
+      ]
+    },
+    {
+      "project": "sakana-a100475",
+      "receipt": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\sakana-a100475-fresh-build.json",
+      "receipt_sha256": "a1d71ed30a0e6a850636927fe3be210d011e57db826468281fb1e497342fd0a4",
+      "actual_source_pass_count": 81,
+      "actual_failures": []
+    }
+  ],
+  "active_Lean_processes": [],
+  "active_source_child_interrupted": false,
+  "root_authorization": "Root authorized removing only this owned temporary hold after actual DMS normal checkpoint and resuming the previously approved main queue."
+}

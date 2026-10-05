@@ -1,0 +1,32 @@
+{
+  "review_utc": "2026-10-05T00:40:46Z",
+  "status": "PRIMARY_SOURCE_EXPLANATION_OF_WINDOWS_MAPPING_COMMIT_CHARGE",
+  "lean_sources": [
+    {
+      "version": "4.33.1",
+      "compiler_commit": "819816b2e0a3bf405af45ae5c7af2491d8f5bee6",
+      "url": "https://raw.githubusercontent.com/leanprover/lean4/819816b2e0a3bf405af45ae5c7af2491d8f5bee6/src/library/module.cpp",
+      "saved_source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\inspection\\windows-module-mapping\\module-4.33.1.cpp",
+      "sha256": "a78bb4583a9746dea78570c1885500356da9bd1ecebdcb199645cf42709d890d",
+      "windows_mapping_flags": [
+        "PAGE_WRITECOPY",
+        "FILE_MAP_COPY"
+      ]
+    },
+    {
+      "version": "4.34.1",
+      "compiler_commit": "5045d0056413266e57c625dcd7c365b10e377c52",
+      "url": "https://raw.githubusercontent.com/leanprover/lean4/5045d0056413266e57c625dcd7c365b10e377c52/src/library/module.cpp",
+      "saved_source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\inspection\\windows-module-mapping\\module-4.34.1.cpp",
+      "sha256": "9b85a9a7610e73f240282fe288ad81c8b160fc975caa80bd5b13ddacdd6012a8",
+      "windows_mapping_flags": [
+        "PAGE_WRITECOPY",
+        "FILE_MAP_COPY"
+      ]
+    }
+  ],
+  "microsoft_documentation": "https://learn.microsoft.com/en-us/windows/win32/api/memoryapi/nf-memoryapi-mapviewoffile",
+  "documentation_fact": "Copy-on-write mappings incur system and process commit charge for the entire mapped view, before all pages need be resident.",
+  "qualification": "These source references explain one known contributor to measured private/commit allocation; no pinned compiler, mapping behavior, mathematical source or system setting was changed.",
+  "scientific_proof_invoked": false
+}

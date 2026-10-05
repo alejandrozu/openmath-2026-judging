@@ -1,0 +1,73 @@
+{
+  "status": "PREPARED_NOT_EXECUTED_AWAITING_RESOURCE_HANDOFF",
+  "version": "4.30.0-rc2",
+  "compiler_commit": "3dc1a088b6d2d8eafe25a7cd7ec7b58d731bd7cc",
+  "compiler_commit_primary_url": "https://api.github.com/repos/leanprover/lean4/git/ref/tags/v4.30.0-rc2",
+  "mathlib_pin": "c1e30e172c8fda21e6776bf1f10351e882ee31b9",
+  "batteries_pin": "5c57f3857ba81924a88b2cdf4f062e34ec04ff11",
+  "source_sha256": {
+    "Cache.Main": "4aa88c756ebac55e78d0726b79704c2861b3085137016a8c11d85710bd2591aa",
+    "Cache.Requests": "83ac9351e4a813334217d2eafc440efda72851d7e78e69dc1d35d3503d09e37b",
+    "Cache.Hashing": "ff055315fdd39801121892aea6eb1b52e44c47aebbaadbc3a668e9ea4da8006e",
+    "Cache.IO": "a3fa92bfb1c1257c3322306fa8b425a28cf420687ea885e6bf90563f4fac6408",
+    "Cache.Lean": "c89aa848e695a7cad04ae66f517f5c1ccc6f1035062efa376115ce1b8eb46e8d",
+    "Cache.Init": "9514d72513c02aca9667e89bd8fe6310bb9efd19cd11dc685db47a543cd06314",
+    "Batteries.Data.Array.Match": "195e992da319bcaa13a8ef7035e2beea205731ca5f48af3892a1652d2df6cc38",
+    "Batteries.Data.String.Basic": "898295b7b10efa2cae27cb2a7a1215a9df1f4990d5cd3ea1a82954fdd175437e",
+    "Batteries.Data.String.Matcher": "3790a642cc2eb6c77bf6bc306a62dd9dbac9c4ed54543bad4cf596becc4d7d5d"
+  },
+  "core_only_external_imports": [
+    "Lake.Load.Manifest",
+    "Lean.Data.Json",
+    "Lean.Elab.ParseImportsFast",
+    "Lean.Util.Path",
+    "Std.Data.TreeSet"
+  ],
+  "source_options": "Official Cache defaults; official Batteries linter.missingDocs=true.",
+  "download_command": "lean -j1 --run Cache/Main.lean get-",
+  "cache_cli_primary_url": "https://raw.githubusercontent.com/leanprover-community/mathlib4/c1e30e172c8fda21e6776bf1f10351e882ee31b9/Cache/Main.lean",
+  "download_only_branch": "get- passes decompress=false in the unchanged pinned official CLI.",
+  "initial_free_bytes_required": 8000000000,
+  "continuous_reserved_floor_bytes": 1000000000,
+  "helper": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\run_matt_core_cache_download.py",
+  "helper_sha256": "f0486db0fdee102e2046d1fe65e51f0205e15f6ed4f78e92638b057b7da6891c",
+  "dispatch_sequence": [
+    [
+      "install_pinned_lean.py",
+      "4.30.0-rc2"
+    ],
+    [
+      "prepare_dependency_sources.py",
+      "4.30.0-rc2"
+    ],
+    [
+      "add_pinned_git_metadata.py",
+      "4.30.0-rc2"
+    ],
+    [
+      "run_matt_core_cache_download.py"
+    ],
+    [
+      "force_official_cache_in_batches.py",
+      "4.30.0-rc2",
+      "--extract-only"
+    ],
+    [
+      "validate_extracted_official_cache.py",
+      "4.30.0-rc2"
+    ],
+    [
+      "run_source_plan.py",
+      "matt-unitary-current",
+      "1"
+    ]
+  ],
+  "separate_resource_gates": [
+    "Do not provision any runtime/source/archive until the cache-expansion owner hands over capacity.",
+    "Core-only Cache tool compilation/download may overlap proof work only when the authorized bounded reserve is met.",
+    "No competing cache extraction or compression.",
+    "Full Mathlib import and entrant proof replay await the proof-compiler handoff.",
+    "If direct interpretation fails, preserve its failure receipt and use guarded official Lake get- only at a separately coordinated time."
+  ],
+  "scope": "Operational preparation only. No runtime installed, source archive expanded, official cache downloaded, Lean compiler run, or entrant proof accepted by this preparation script."
+}

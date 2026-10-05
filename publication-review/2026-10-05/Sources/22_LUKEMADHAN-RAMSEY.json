@@ -1,0 +1,231 @@
+{
+  "title": "Clebsch structure and exact stochastic refinements for monochromatic K_4",
+  "blocks": [
+    {
+      "type": "title",
+      "text": "Clebsch structure and exact stochastic refinements for monochromatic K_4"
+    },
+    {
+      "type": "subtitle",
+      "text": "Provisional mathematical authors: Luke Van Seters, Madhan Jothimani"
+    },
+    {
+      "type": "small",
+      "text": "Judging and evaluation record: the submissions discussed in this document have been judged and evaluated by Alejandro Zarzuelo Urdiales for OpenMath 2026. This dated review records the stated verification, classification and unresolved holds; it is a preliminary evaluation rather than a signed award decision."
+    },
+    {
+      "type": "small",
+      "text": "Event provenance: OpenMath 2026 ran 27 September–2 October 2026 with worldwide online participation. Detailed organizer listings specify Harvard Innovation Labs for the 27 September in-person event; the OpenMath programme advertises a hybrid kickoff at MIT. Sundai identifies its Harvard/MIT community. Organizer sources: https://rsihouse.ai/openmath ; https://luma.com/yzp9abvr ; https://www.sundai.club/events/boston/recursive-learning-hack-with-harvard-innovation-labs"
+    },
+    {
+      "type": "small",
+      "text": "Luke Van Seters — Klaviyo (provisional; see affiliation register)."
+    },
+    {
+      "type": "small",
+      "text": "Madhan Jothimani — Northeastern University (provisional; see affiliation register)."
+    },
+    {
+      "type": "small",
+      "text": "Affiliations follow the recorded author declarations or public institutional/profile sources. Preferred author names, author order and publication affiliations await author review. This editorial compilation does not establish anthology coauthorship."
+    },
+    {
+      "type": "subtitle",
+      "text": "Original-result working manuscript | OpenMath 2026 | 5 October 2026"
+    },
+    {
+      "type": "small",
+      "text": "Central source and adjudication archive: https://github.com/alejandrozu/openmath-2026-judging"
+    },
+    {
+      "type": "h2",
+      "text": "Abstract"
+    },
+    {
+      "type": "p",
+      "text": "A structural decomposition of the published 768-vertex PPSS construction leads to a 192-class stochastic family and a 3840-class refinement with exact upper bound 0.030138887566497221.... The latest packet supplies finite-realization and counting proofs, with native evaluation explicitly in the arithmetic trust boundary. Event admission and exact comparison with the earlier Technion construction remain separate questions."
+    },
+    {
+      "type": "theorem",
+      "text": "For every n≥4 there exists a red/blue colouring of K_n with monochromatic K_4 proportion at most 8450462766487926638466333426306607129/280384030360880691940646801777885184000; hence the corresponding upper-limit bound holds."
+    },
+    {
+      "type": "h2",
+      "text": "Two exact construction theorems"
+    },
+    {
+      "type": "p",
+      "text": "The compact 192-class construction at p=32/41 and h=22/41 has exact density 1013294255057839/33620705806123008≈0.030138994133588287. The refined 3840-class construction has exact density 8450462766487926638466333426306607129/280384030360880691940646801777885184000≈0.030138887566497220. Both are below the reported McKay numerical value and the rounded 0.030139 threshold in the Technion announcement."
+    },
+    {
+      "type": "p",
+      "text": "The scientific proposal is broader than a single decimal: the public PPSS graph is decomposed into twelve 64-vertex families, each built from sixteen four-vertex fibres over the Clebsch graph, with inter-family rules on ℤ3×ℤ2×ℤ2. The stochastic 192-class family makes two formerly fractional patterns adjustable. A pentagon refinement and two balanced sign splits give the 3840-class table. These are latest-research results at the frozen October 3 revision; the earlier competition leaderboard packet must not silently acquire later results."
+    },
+    {
+      "type": "h2",
+      "text": "A direct finite-realization proof"
+    },
+    {
+      "type": "p",
+      "text": "For any finite symmetric probability table W, choose a class independently and uniformly for every vertex of K_n. Conditioned on the classes, colour each edge independently using the corresponding table entry as its red probability. For four distinct vertices, the class labels are independent, allowing repetitions, and the six colour trials are conditionally independent."
+    },
+    {
+      "type": "p",
+      "text": "The expected normalized ordered injective-four-tuple density is the ordered class average of the six red probabilities’ product plus the blue complements’ product. Every monochromatic unordered four-set has exactly 24 orderings, and the total ordered injective tuple count is 24 times binomial(n,4); therefore this is also the usual unordered-four-set proportion. That equivalence is an ordinary 24-ordering observation, not a separately selected Lean bijection theorem. Some outcome cannot exceed the expectation, proving the actual finite coloring bound at every n≥4. Repeated class labels are legitimate because graph vertices remain distinct. The same uniform finite bound controls the upper limit of extremal minima, and any ordinary limit if supplied separately."
+    },
+    {
+      "type": "h2",
+      "text": "Centered refinement and exact counting"
+    },
+    {
+      "type": "p",
+      "text": "The embedded 3840 witness stores 1248 fractional 20×20 blocks and derives the remaining blocks by the Clebsch rule. Zero row means in the centered blocks allow a substantial algebraic reduction of the six-edge expansion. A graph term with a leaf vanishes after summing that vertex; only the empty/base term and the surviving subgraphs without degree-one vertices remain. For K4 those include its four triangles, three four-cycles, six diamonds and the full perturbation K4."
+    },
+    {
+      "type": "p",
+      "text": "Eleven general realization/counting prototype theorems have standard-kernel axiom scope. The fixed 3840-class sparse-count correctness, raw_total and density instantiations additionally inherit native finite-data facts, including hard_blocks. Native evaluation checks the literal integer expression; kernel rational arithmetic then converts 519196432373018212667371525712277942005760 over 65536^6·3840^4 to the stated fraction. The complete instantiated endpoints therefore trust the native compiler/evaluator as well as the kernel; calling their last rational step kernel-checked does not remove that inherited trust."
+    },
+    {
+      "type": "h2",
+      "text": "Priority, theorem scope and release"
+    },
+    {
+      "type": "p",
+      "text": "A value below an announced rounded threshold does not establish that it improves the announcement's unknown exact construction. Both statements can be below 0.030139, with either one smaller. Obtain the earlier exact value and conventions before a chronological record claim. The PPSS structural decomposition and a transparent new family may have independent mathematical interest even if the numerical result is surpassed."
+    },
+    {
+      "type": "p",
+      "text": "The official Random Structures & Algorithms 2025 program already advertised Noam Feinstein’s Improved Constructions for Ramsey Multiplicities, jointly with Chaim Even-Zohar. Its abstract describes random constructions improving c_4 and c_5 and emphasizes their symmetry and structure, but supplies no exact density, manuscript or construction certificate. Therefore the comparison needed here predates the January 21, 2026 Technion talk, and the unresolved question concerns both the exact numerical bound and possible overlap of construction ideas. Program: https://www.dmg.tuwien.ac.at/rsa2025/."
+    },
+    {
+      "type": "keep_start",
+      "text": ""
+    },
+    {
+      "type": "p",
+      "text": "The proposed p=0.05 recommendation for Luke and Madhan’s structural contribution remains conditional on the chairs’ assessment of independent contribution after comparing the earlier construction. Neither the rounded threshold nor this source search establishes independent priority."
+    },
+    {
+      "type": "keep_end",
+      "text": ""
+    },
+    {
+      "type": "p",
+      "text": "The paper's ordinary algebraic-minimum analysis, structural relabeling checks and exact rational certificates have different verification boundaries. Global minimum and degree-seventeen claims should not be labelled native-certified merely because a rational point is certified. The source does not prove convergence of the finite minimum sequence in its selected asymptotic module; its upper-limit and every-n endpoints do not require convergence."
+    },
+    {
+      "type": "p",
+      "text": "For this collection, preserve the authors' own detailed manuscript and figures as an attributed source supplement and use this chapter as the cross-portfolio explanation. Confirm author approval, affiliations, the event-production chronology and final selected closure before release. Contest points for a frozen earlier result and scientific significance of this later packet are separate decisions."
+    },
+    {
+      "type": "h2",
+      "text": "Independent exact integer recount"
+    },
+    {
+      "type": "p",
+      "text": "An independent reviewer-owned integer calculation now matches the complete 3840-class raw numerator 519196432373018212667371525712277942005760 and the reduced density stated above. It reads the frozen literal blocks without executing the entrant’s program. Zero row/column sums, the base transitivity and sparse multiplicities are checked. Permuting the four coarse vertices reduces 6912 ordered supported tetrahedra to 288 unordered ones. Bounded signed-integer limb contractions and ordinary arbitrary-size integer recombination avoid floating-point arithmetic and overflow."
+    },
+    {
+      "type": "p",
+      "text": "The source-data run completed in 14.437 seconds with peak resident memory 122916864 bytes. The portable checker, pickle-free inputs, per-source hashes and full contribution receipt are supplied in Verification/Independent checkers. This confirms the arithmetic independently; it does not itself close the separate unchanged Lean replay, authenticate the discovery date or settle comparison with the earlier Technion construction."
+    },
+    {
+      "type": "h2",
+      "text": "Actual fresh verification of the novel construction scope"
+    },
+    {
+      "type": "p",
+      "text": "The complete source-identical fresh replay finished on 5 October 2026 at 02:18:36 UTC, and an independent root review qualified its exact scope. All 51 frozen source modules passed, retaining 33 receipt-matched outputs from this reviewer’s earlier cold-source run during the native continuation. All 35 requested unique axiom prints were captured: eleven general statements use standard kernel axioms, twenty-three concrete statements inherit the expected native-evaluation axioms, and the remaining concrete ValidTemplate.countSubgraphs_numerator theorem also uses standard kernel axioms. No selected print contains an admitted or unknown axiom. The exact 192/3840 density, literal-count correspondence, every-n coloring and unconditional upper-limit endpoints are verified at their displayed scopes; ordinary-limit statements retain their convergence hypotheses. The earlier 31-output milestone is preserved as dated evidence. Receipt: Verification/luke-k4-ramsey-current-native-fresh-build.json."
+    },
+    {
+      "type": "p",
+      "text": "Concrete finite computation retains native compiler/evaluator trust. The source-identical native image and initialization review were accepted with a Windows image-observer limitation (WinError 299): continuous observation of every native image is not claimed, and the error timing remains unresolved in the receipt. The independent exact-integer 3840 recount gives separate arithmetic evidence. Full formal completion does not establish a global numerical record, independent priority over Feinstein/Even-Zohar’s earlier construction, discovery chronology or publication author approval."
+    },
+    {
+      "type": "small",
+      "text": "This short manuscript records the construction and selected endpoints. The companion Original results anthology contains the extended ordinary proof exposition and its explicitly stated premises; the preserved Lean source remains the complete formal proof record."
+    },
+    {
+      "type": "h2",
+      "text": "Verification and reproducibility"
+    },
+    {
+      "type": "p",
+      "text": "Fresh execution: luke-k4-ramsey-current: PASS_WITH_NATIVE_EVALUATION; 51/51 custom modules compiled successfully; receipt Verification/luke-k4-ramsey-current-native-fresh-build.json; isolated source-identical native adapter; compiler/native-evaluation trust is explicit; the earlier direct attempt is preserved separately; positive native identity/initialization evidence has a separate root review, with one WinError299 retained, unknown error timing and incomplete continuous memory observation. Compiler pins, source hashes and endpoint axiom outputs are in Verification. Historical receipts and finite checks do not replace fresh replay."
+    },
+    {
+      "type": "small",
+      "text": "Independent exact integer recounts confirm both the 192-class density 1013294255057839/33620705806123008 and the complete 3840-class raw numerator and fraction above. Receipts: Verification/Independent checkers/luke_clebsch192_independent_recount.json and luke3840_independent_exact_recount.json. The counts do not themselves certify Lean execution or historical priority."
+    },
+    {
+      "type": "keep_start",
+      "text": ""
+    },
+    {
+      "type": "h2",
+      "text": "K4Ramsey.Clebsch192.exists_coloring"
+    },
+    {
+      "type": "code",
+      "text": "For every n≥4 an actual colouring has density≤1013294255057839/33620705806123008."
+    },
+    {
+      "type": "small",
+      "text": "Source: lean/K4Ramsey/Constructions/Clebsch192/Bound.lean."
+    },
+    {
+      "type": "keep_end",
+      "text": ""
+    },
+    {
+      "type": "keep_start",
+      "text": ""
+    },
+    {
+      "type": "h2",
+      "text": "K4Ramsey.Final3840.exists_coloring_exact"
+    },
+    {
+      "type": "code",
+      "text": "For every n≥4 an actual colouring has density≤8450462766487926638466333426306607129/280384030360880691940646801777885184000."
+    },
+    {
+      "type": "small",
+      "text": "Source: lean/K4Ramsey/Constructions/Final3840/NumericalBound.lean."
+    },
+    {
+      "type": "reference_list",
+      "text": "Sources and attribution",
+      "items": [
+        {
+          "text": "1. lukevs/k4-ramsey",
+          "url": "https://github.com/lukevs/k4-ramsey/tree/2cf216ba885fbb1b2d1b2d4920efeaa6ba438842"
+        },
+        {
+          "text": "2. lukevs/k4-ramsey / main.tex",
+          "url": "https://github.com/lukevs/k4-ramsey/blob/2cf216ba885fbb1b2d1b2d4920efeaa6ba438842/paper/main.tex"
+        },
+        {
+          "text": "3. lukevs/k4-ramsey / verification.md",
+          "url": "https://github.com/lukevs/k4-ramsey/blob/2cf216ba885fbb1b2d1b2d4920efeaa6ba438842/docs/verification.md"
+        },
+        {
+          "text": "4. math.technion.ac.il / noam-feinstein",
+          "url": "https://math.technion.ac.il/events/noam-feinstein/"
+        },
+        {
+          "text": "5. www.dmg.tuwien.ac.at / rsa2025",
+          "url": "https://www.dmg.tuwien.ac.at/rsa2025/"
+        },
+        {
+          "text": "Central source and adjudication archive",
+          "url": "https://github.com/alejandrozu/openmath-2026-judging"
+        }
+      ]
+    },
+    {
+      "type": "keep_end",
+      "text": ""
+    }
+  ]
+}

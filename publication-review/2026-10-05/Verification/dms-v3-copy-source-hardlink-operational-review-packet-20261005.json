@@ -1,0 +1,44 @@
+{
+  "status": "PREPARED_REVIEW_REQUIRED_NO_ALIAS_NO_LEAN",
+  "scientific_route": "htpeo-dms-current-import-pruned-v3",
+  "source_plan_sha256": "eea74ffbc9321a0663d6c77d8e7c79ee7de3da914c9af1bc66e9b3ed3750f7ba",
+  "root_cold_review_sha256": "43fa4ec468832077a99e2dc184e8f91bad062f095ccb41dc9c38aceed61b0396",
+  "copy_source_hardlink_policy_sha256": "a4b795b071135118af94868726b9ac45af0579540d5856e9aaf7d48a9e3717e6",
+  "seed_helper_sha256": "7e01f07edd14bbde765681bab36bd1a3f38da4e55017f4234b89955fe94eb00f",
+  "seed_helper_full_diff_sha256": "abf0f27534c0060f6fe22e02e981db2d9768107e77e836fef3cf67988685bd79",
+  "runner_sha256": "edbf9d97c62f1f9657a2172d6939008103801a73e9abd15bf29e3dbaceb6b379",
+  "runner_full_operational_diff_sha256": "83222e7cc10684891565211ff0d25b328f586161f4fa3aec124b11d8c59929d2",
+  "stage_verifier_sha256": "be19344e55bb6a50930bbd2b660385447cfe5fd721861f2fa6c4253094b927c5",
+  "resource_guard_sha256": "ae0b64c7fbf47545365f3238977368042be342ddb973159ec65c98f64aa38a71",
+  "guards": {
+    "threads": 1,
+    "own_job_and_process_private_limit": 6442450944,
+    "dispatch_available_commit": 5368709120,
+    "dispatch_physical": 6442450944,
+    "dispatch_disk": 4000000000,
+    "continuous_commit": 1073741824,
+    "continuous_physical": 3221225472,
+    "continuous_disk": 1000000000
+  },
+  "output_reuse_labels": {
+    "previous_own_cold_outputs_linked_from_v1_copy_source": 99,
+    "required_new_sources": 129,
+    "no_v2_new_output_reuse": true,
+    "preserve_original_v2_inode_link_counts2": true
+  },
+  "links_created": 0,
+  "Lean_invocations": 0,
+  "future_first_new_pilot_command": [
+    "python",
+    "-X",
+    "utf8",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\run_dms_v3_linked_plan.py",
+    "htpeo-dms-current-import-pruned-v3",
+    "1",
+    "--pilot-third-slot",
+    "--reviewed-policy-sha256",
+    "a4b795b071135118af94868726b9ac45af0579540d5856e9aaf7d48a9e3717e6",
+    "--seed-receipt-sha256",
+    "<actual-completed-seed-sha256-after-root-review>"
+  ]
+}

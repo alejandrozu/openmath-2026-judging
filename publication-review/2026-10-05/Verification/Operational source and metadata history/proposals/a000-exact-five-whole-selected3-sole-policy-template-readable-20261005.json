@@ -1,0 +1,577 @@
+{
+  "status": "PREPARED_ONLY_A000_EXACT_FIVE_WHOLE_PLUS_SELECTED3_SOLE_POLICY_TEMPLATE_NOT_AUTHORIZED",
+  "created_utc": "2026-10-05T07:36:33.542922+00:00",
+  "project": "sakana-a000224",
+  "source_plan_sha256": "0f6338f72ff570e79847995bac7cf6f6c56c8a1c2cc8dedf55181bc764180fe7",
+  "source_version": "4.34.1",
+  "mathlib_pin": "d13f23b723b8a846827a245b89c10fc7d3f11612",
+  "plan_lean_options": {},
+  "all171_source_hashes_rechecked_metadata_only": true,
+  "custom_import_graph_sha256": "234c9e4ceb063b3dd74c1b6ebf2cc9313dcd38a6add96847a54b78b57d71e79b",
+  "exact_granular_names_count": 166,
+  "exact_granular_names_sha256": "d01764500d50c637d31fcb7d555842ee05760ed152dfbf39427d092806f1002a",
+  "direct_literal_whole_roots": [
+    "OpHack.QuadraticResidue224.Bounds",
+    "OpHack.QuadraticResidue224.SquareTypes"
+  ],
+  "five_authored_whole_modules": [
+    {
+      "module": "OpHack.QuadraticResidue224.Bounds",
+      "source_sha256": "61fa6ceae311eae5591a91698ed4421b89b15ecfc1d531d5f95c0b073d3c01d5",
+      "source_bytes": 16851,
+      "imports": [
+        "Mathlib",
+        "OpHack.QuadraticResidue224.Reduction"
+      ],
+      "whole_roots": [
+        "OpHack.QuadraticResidue224.Bounds"
+      ],
+      "prior_granular_custom_dependencies": [
+        "OpHack.QuadraticResidue224.Reduction"
+      ],
+      "new_whole_custom_dependencies": [],
+      "explicit_sorry_admit_axiom_native_decide_tokens": [],
+      "actual_compilation_in_this_proposal": "NOT_ATTEMPTED"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.NecessaryBounds",
+      "source_sha256": "7eea9ef0f641d8b096b75dfc01c9c18feb8747811bbf10a3af53661cef885e71",
+      "source_bytes": 10826,
+      "imports": [
+        "OpHack.QuadraticResidue224.Bounds"
+      ],
+      "whole_roots": [
+        "OpHack.QuadraticResidue224.Bounds"
+      ],
+      "prior_granular_custom_dependencies": [
+        "OpHack.QuadraticResidue224.Reduction"
+      ],
+      "new_whole_custom_dependencies": [
+        "OpHack.QuadraticResidue224.Bounds"
+      ],
+      "explicit_sorry_admit_axiom_native_decide_tokens": [],
+      "actual_compilation_in_this_proposal": "NOT_ATTEMPTED"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.SquareTypes",
+      "source_sha256": "68a970abf6b658c3bda5851041af4f3e14d6a982df1796624c1d7faacf7cd0fb",
+      "source_bytes": 5338,
+      "imports": [
+        "Mathlib"
+      ],
+      "whole_roots": [
+        "OpHack.QuadraticResidue224.SquareTypes"
+      ],
+      "prior_granular_custom_dependencies": [],
+      "new_whole_custom_dependencies": [],
+      "explicit_sorry_admit_axiom_native_decide_tokens": [],
+      "actual_compilation_in_this_proposal": "NOT_ATTEMPTED"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.SquareCount",
+      "source_sha256": "0e38d843b0c67cdb97b6c0c79f8282baa7d8fbe3697cef8e6f8d8859688bd093",
+      "source_bytes": 6648,
+      "imports": [
+        "OpHack.QuadraticResidue224.SquareTypes",
+        "OpHack.QuadraticResidue224.Reduction"
+      ],
+      "whole_roots": [
+        "OpHack.QuadraticResidue224.SquareTypes"
+      ],
+      "prior_granular_custom_dependencies": [
+        "OpHack.QuadraticResidue224.Reduction"
+      ],
+      "new_whole_custom_dependencies": [
+        "OpHack.QuadraticResidue224.SquareTypes"
+      ],
+      "explicit_sorry_admit_axiom_native_decide_tokens": [],
+      "actual_compilation_in_this_proposal": "NOT_ATTEMPTED"
+    },
+    {
+      "module": "OpHack.QuadraticResidue224.Target224",
+      "source_sha256": "3b67f7494439886af3359a9e684433f49a6dccb7d10258d1d05dcc01de7886d0",
+      "source_bytes": 2549,
+      "imports": [
+        "OpHack.QuadraticResidue224.GeneratedCertificate",
+        "OpHack.QuadraticResidue224.NecessaryBounds",
+        "OpHack.QuadraticResidue224.SquareCount",
+        "Mathlib.Data.Nat.ModEq"
+      ],
+      "whole_roots": [
+        "OpHack.QuadraticResidue224.Bounds",
+        "OpHack.QuadraticResidue224.SquareTypes"
+      ],
+      "prior_granular_custom_dependencies": [
+        "OpHack.QuadraticResidue224.CertificateP101",
+        "OpHack.QuadraticResidue224.CertificateP103",
+        "OpHack.QuadraticResidue224.CertificateP107",
+        "OpHack.QuadraticResidue224.CertificateP109",
+        "OpHack.QuadraticResidue224.CertificateP11",
+        "OpHack.QuadraticResidue224.CertificateP113",
+        "OpHack.QuadraticResidue224.CertificateP127",
+        "OpHack.QuadraticResidue224.CertificateP127Part0001",
+        "OpHack.QuadraticResidue224.CertificateP127Part0002",
+        "OpHack.QuadraticResidue224.CertificateP127Part0003",
+        "OpHack.QuadraticResidue224.CertificateP127Part0004",
+        "OpHack.QuadraticResidue224.CertificateP127Part0005",
+        "OpHack.QuadraticResidue224.CertificateP127Part0006",
+        "OpHack.QuadraticResidue224.CertificateP127Part0007",
+        "OpHack.QuadraticResidue224.CertificateP127Part0008",
+        "OpHack.QuadraticResidue224.CertificateP127Part0009",
+        "OpHack.QuadraticResidue224.CertificateP127Part0010",
+        "OpHack.QuadraticResidue224.CertificateP127Part0011",
+        "OpHack.QuadraticResidue224.CertificateP127Part0012",
+        "OpHack.QuadraticResidue224.CertificateP127Part0013",
+        "OpHack.QuadraticResidue224.CertificateP127Part0014",
+        "OpHack.QuadraticResidue224.CertificateP127Part0015",
+        "OpHack.QuadraticResidue224.CertificateP127Part0016",
+        "OpHack.QuadraticResidue224.CertificateP127Part0017",
+        "OpHack.QuadraticResidue224.CertificateP127Part0018",
+        "OpHack.QuadraticResidue224.CertificateP127Part0019",
+        "OpHack.QuadraticResidue224.CertificateP127Part0020",
+        "OpHack.QuadraticResidue224.CertificateP127Part0021",
+        "OpHack.QuadraticResidue224.CertificateP127Part0022",
+        "OpHack.QuadraticResidue224.CertificateP127Part0023",
+        "OpHack.QuadraticResidue224.CertificateP127Part0024",
+        "OpHack.QuadraticResidue224.CertificateP127Part0025",
+        "OpHack.QuadraticResidue224.CertificateP127Part0026",
+        "OpHack.QuadraticResidue224.CertificateP127Part0027",
+        "OpHack.QuadraticResidue224.CertificateP127Part0028",
+        "OpHack.QuadraticResidue224.CertificateP127Part0029",
+        "OpHack.QuadraticResidue224.CertificateP127Part0030",
+        "OpHack.QuadraticResidue224.CertificateP127Part0031",
+        "OpHack.QuadraticResidue224.CertificateP127Part0032",
+        "OpHack.QuadraticResidue224.CertificateP127Part0033",
+        "OpHack.QuadraticResidue224.CertificateP127Part0034",
+        "OpHack.QuadraticResidue224.CertificateP127Part0035",
+        "OpHack.QuadraticResidue224.CertificateP127Part0036",
+        "OpHack.QuadraticResidue224.CertificateP127Part0037",
+        "OpHack.QuadraticResidue224.CertificateP127Part0038",
+        "OpHack.QuadraticResidue224.CertificateP127Part0039",
+        "OpHack.QuadraticResidue224.CertificateP127Part0040",
+        "OpHack.QuadraticResidue224.CertificateP127Part0041",
+        "OpHack.QuadraticResidue224.CertificateP127Part0042",
+        "OpHack.QuadraticResidue224.CertificateP127Part0043",
+        "OpHack.QuadraticResidue224.CertificateP127Part0044",
+        "OpHack.QuadraticResidue224.CertificateP127Part0045",
+        "OpHack.QuadraticResidue224.CertificateP127Part0046",
+        "OpHack.QuadraticResidue224.CertificateP127Part0047",
+        "OpHack.QuadraticResidue224.CertificateP127Part0048",
+        "OpHack.QuadraticResidue224.CertificateP127Part0049",
+        "OpHack.QuadraticResidue224.CertificateP127Part0050",
+        "OpHack.QuadraticResidue224.CertificateP127Part0051",
+        "OpHack.QuadraticResidue224.CertificateP127Part0052",
+        "OpHack.QuadraticResidue224.CertificateP127Part0053",
+        "OpHack.QuadraticResidue224.CertificateP127Part0054",
+        "OpHack.QuadraticResidue224.CertificateP127Part0055",
+        "OpHack.QuadraticResidue224.CertificateP127Part0056",
+        "OpHack.QuadraticResidue224.CertificateP13",
+        "OpHack.QuadraticResidue224.CertificateP131",
+        "OpHack.QuadraticResidue224.CertificateP131Part0001",
+        "OpHack.QuadraticResidue224.CertificateP131Part0002",
+        "OpHack.QuadraticResidue224.CertificateP131Part0003",
+        "OpHack.QuadraticResidue224.CertificateP131Part0004",
+        "OpHack.QuadraticResidue224.CertificateP131Part0005",
+        "OpHack.QuadraticResidue224.CertificateP131Part0006",
+        "OpHack.QuadraticResidue224.CertificateP131Part0007",
+        "OpHack.QuadraticResidue224.CertificateP137",
+        "OpHack.QuadraticResidue224.CertificateP137Part0001",
+        "OpHack.QuadraticResidue224.CertificateP137Part0002",
+        "OpHack.QuadraticResidue224.CertificateP137Part0003",
+        "OpHack.QuadraticResidue224.CertificateP137Part0004",
+        "OpHack.QuadraticResidue224.CertificateP139",
+        "OpHack.QuadraticResidue224.CertificateP139Part0001",
+        "OpHack.QuadraticResidue224.CertificateP139Part0002",
+        "OpHack.QuadraticResidue224.CertificateP139Part0003",
+        "OpHack.QuadraticResidue224.CertificateP149",
+        "OpHack.QuadraticResidue224.CertificateP149Part0001",
+        "OpHack.QuadraticResidue224.CertificateP149Part0002",
+        "OpHack.QuadraticResidue224.CertificateP151",
+        "OpHack.QuadraticResidue224.CertificateP151Part0001",
+        "OpHack.QuadraticResidue224.CertificateP151Part0002",
+        "OpHack.QuadraticResidue224.CertificateP157",
+        "OpHack.QuadraticResidue224.CertificateP157Part0001",
+        "OpHack.QuadraticResidue224.CertificateP157Part0002",
+        "OpHack.QuadraticResidue224.CertificateP163",
+        "OpHack.QuadraticResidue224.CertificateP163Part0001",
+        "OpHack.QuadraticResidue224.CertificateP163Part0002",
+        "OpHack.QuadraticResidue224.CertificateP167",
+        "OpHack.QuadraticResidue224.CertificateP17",
+        "OpHack.QuadraticResidue224.CertificateP173",
+        "OpHack.QuadraticResidue224.CertificateP179",
+        "OpHack.QuadraticResidue224.CertificateP181",
+        "OpHack.QuadraticResidue224.CertificateP19",
+        "OpHack.QuadraticResidue224.CertificateP191",
+        "OpHack.QuadraticResidue224.CertificateP193",
+        "OpHack.QuadraticResidue224.CertificateP197",
+        "OpHack.QuadraticResidue224.CertificateP199",
+        "OpHack.QuadraticResidue224.CertificateP211",
+        "OpHack.QuadraticResidue224.CertificateP223",
+        "OpHack.QuadraticResidue224.CertificateP227",
+        "OpHack.QuadraticResidue224.CertificateP229",
+        "OpHack.QuadraticResidue224.CertificateP23",
+        "OpHack.QuadraticResidue224.CertificateP233",
+        "OpHack.QuadraticResidue224.CertificateP239",
+        "OpHack.QuadraticResidue224.CertificateP241",
+        "OpHack.QuadraticResidue224.CertificateP251",
+        "OpHack.QuadraticResidue224.CertificateP257",
+        "OpHack.QuadraticResidue224.CertificateP263",
+        "OpHack.QuadraticResidue224.CertificateP269",
+        "OpHack.QuadraticResidue224.CertificateP271",
+        "OpHack.QuadraticResidue224.CertificateP277",
+        "OpHack.QuadraticResidue224.CertificateP281",
+        "OpHack.QuadraticResidue224.CertificateP283",
+        "OpHack.QuadraticResidue224.CertificateP29",
+        "OpHack.QuadraticResidue224.CertificateP293",
+        "OpHack.QuadraticResidue224.CertificateP3",
+        "OpHack.QuadraticResidue224.CertificateP307",
+        "OpHack.QuadraticResidue224.CertificateP31",
+        "OpHack.QuadraticResidue224.CertificateP311",
+        "OpHack.QuadraticResidue224.CertificateP313",
+        "OpHack.QuadraticResidue224.CertificateP317",
+        "OpHack.QuadraticResidue224.CertificateP31Part0001",
+        "OpHack.QuadraticResidue224.CertificateP31Part0002",
+        "OpHack.QuadraticResidue224.CertificateP31Part0003",
+        "OpHack.QuadraticResidue224.CertificateP31Part0004",
+        "OpHack.QuadraticResidue224.CertificateP331",
+        "OpHack.QuadraticResidue224.CertificateP337",
+        "OpHack.QuadraticResidue224.CertificateP347",
+        "OpHack.QuadraticResidue224.CertificateP349",
+        "OpHack.QuadraticResidue224.CertificateP353",
+        "OpHack.QuadraticResidue224.CertificateP359",
+        "OpHack.QuadraticResidue224.CertificateP367",
+        "OpHack.QuadraticResidue224.CertificateP37",
+        "OpHack.QuadraticResidue224.CertificateP373",
+        "OpHack.QuadraticResidue224.CertificateP379",
+        "OpHack.QuadraticResidue224.CertificateP41",
+        "OpHack.QuadraticResidue224.CertificateP43",
+        "OpHack.QuadraticResidue224.CertificateP43Part0001",
+        "OpHack.QuadraticResidue224.CertificateP43Part0002",
+        "OpHack.QuadraticResidue224.CertificateP43Part0003",
+        "OpHack.QuadraticResidue224.CertificateP47",
+        "OpHack.QuadraticResidue224.CertificateP5",
+        "OpHack.QuadraticResidue224.CertificateP53",
+        "OpHack.QuadraticResidue224.CertificateP59",
+        "OpHack.QuadraticResidue224.CertificateP61",
+        "OpHack.QuadraticResidue224.CertificateP67",
+        "OpHack.QuadraticResidue224.CertificateP67Part0001",
+        "OpHack.QuadraticResidue224.CertificateP67Part0002",
+        "OpHack.QuadraticResidue224.CertificateP7",
+        "OpHack.QuadraticResidue224.CertificateP71",
+        "OpHack.QuadraticResidue224.CertificateP71Part0001",
+        "OpHack.QuadraticResidue224.CertificateP71Part0002",
+        "OpHack.QuadraticResidue224.CertificateP73",
+        "OpHack.QuadraticResidue224.CertificateP79",
+        "OpHack.QuadraticResidue224.CertificateP83",
+        "OpHack.QuadraticResidue224.CertificateP89",
+        "OpHack.QuadraticResidue224.CertificateP97",
+        "OpHack.QuadraticResidue224.GeneratedCertificate",
+        "OpHack.QuadraticResidue224.Reduction",
+        "OpHack.QuadraticResidue224.SplitCertificatePilot"
+      ],
+      "new_whole_custom_dependencies": [
+        "OpHack.QuadraticResidue224.Bounds",
+        "OpHack.QuadraticResidue224.NecessaryBounds",
+        "OpHack.QuadraticResidue224.SquareCount",
+        "OpHack.QuadraticResidue224.SquareTypes"
+      ],
+      "explicit_sorry_admit_axiom_native_decide_tokens": [],
+      "actual_compilation_in_this_proposal": "NOT_ATTEMPTED"
+    }
+  ],
+  "whole_source_total_bytes": 42212,
+  "selected_audits": [
+    {
+      "audit": "FreshAudit1.lean",
+      "sha256": "c5e4477039688d0579f10457dae3ba29595d0f7cc05057f9fb63600e8b7d5547",
+      "bytes": 193,
+      "imports": [
+        "OpHack.QuadraticResidue224.Target224"
+      ],
+      "requested_unique_endpoints": [
+        "OeisA224.not_divisible_three_primes",
+        "OeisA224.not_modEq_three_primes",
+        "OeisA224.conjecture_three_primes"
+      ],
+      "authored_custom_closure_count": 171,
+      "authored_custom_closure_names_sha256": "1687f187c03dfd5a9da8dae40f62997dc4b8807fd36f0522005793bf937fb827",
+      "actual_audit_in_this_proposal": "NOT_ATTEMPTED"
+    }
+  ],
+  "endpoint_literal_statement_candidates": [
+    {
+      "endpoint": "OeisA224.not_divisible_three_primes",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/Target224.lean",
+      "source_sha256": "3b67f7494439886af3359a9e684433f49a6dccb7d10258d1d05dcc01de7886d0",
+      "literal_theorem_statement": "theorem not_divisible_three_primes {p q r : ℕ}\n    (hp : p.Prime) (hq : q.Prime) (hr : r.Prime)\n    (hp2 : 2 < p) (hpq : p < q) (hqr : q < r) :\n    ¬ a (p * q * r) * (a (p * q * r) - 1) ∣ (p * q * r) ^ 2 - 1",
+      "expected_trust": "AXIOM_FREE_OR_STANDARD_KERNEL_AXIOMS_ONLY_EXPECTED_NOT_OBSERVED; actual raw prints must exclude sorryAx, native or unknown axioms before qualification"
+    },
+    {
+      "endpoint": "OeisA224.not_modEq_three_primes",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/Target224.lean",
+      "source_sha256": "3b67f7494439886af3359a9e684433f49a6dccb7d10258d1d05dcc01de7886d0",
+      "literal_theorem_statement": "theorem not_modEq_three_primes {p q r : ℕ}\n    (hp : p.Prime) (hq : q.Prime) (hr : r.Prime)\n    (hp2 : 2 < p) (hpq : p < q) (hqr : q < r) :\n    ¬ (p * q * r) ^ 2 ≡ 1 [MOD a (p * q * r) * (a (p * q * r) - 1)]",
+      "expected_trust": "AXIOM_FREE_OR_STANDARD_KERNEL_AXIOMS_ONLY_EXPECTED_NOT_OBSERVED; actual raw prints must exclude sorryAx, native or unknown axioms before qualification"
+    },
+    {
+      "endpoint": "OeisA224.conjecture_three_primes",
+      "source": "Reproduction_Sources/a000224/OpHack/QuadraticResidue224/Target224.lean",
+      "source_sha256": "3b67f7494439886af3359a9e684433f49a6dccb7d10258d1d05dcc01de7886d0",
+      "literal_theorem_statement": "theorem conjecture_three_primes {p q r : ℕ}\n    (hp : p.Prime) (hq : q.Prime) (hr : r.Prime)\n    (hp2 : 2 < p) (hpq : p < q) (hqr : q < r) :\n    ((p * q * r).Prime ∧ p * q * r ≠ 2) ↔\n      (p * q * r) ^ 2 ≡ 1 [MOD a (p * q * r) * (a (p * q * r) - 1)]",
+      "expected_trust": "AXIOM_FREE_OR_STANDARD_KERNEL_AXIOMS_ONLY_EXPECTED_NOT_OBSERVED; actual raw prints must exclude sorryAx, native or unknown axioms before qualification"
+    }
+  ],
+  "a_definition_fidelity": "For n=0, a(n)=1; otherwise a(n) is the cardinality of the actual residues k^2 mod n for k in Finset.range n. The selected theorems quantify three distinct ordered odd primes 2<p<q<r, not all natural n. The displayed equivalence has false left and right sides on these composites and does not prove the unrestricted conjecture.",
+  "frozen_boundary_evidence": {
+    "filename": "a000224-whole-module-audit-boundary-evidence.json",
+    "sha256": "170886e5721254e24443bb6ec14f660409f14ceac938bf4d3c5c12d732cda6d0",
+    "dated_historical_success_count": 59,
+    "historical_receipt_sha256": "8ce8cfb7ac084081eb8b1792beebacb5e52a48f696918dcbe9d0b6fdba5b9beb",
+    "interpretation": "Static five-source/audit boundaries remain valid; the dated59-pass count is not current completion evidence and cannotreplace futureactual166."
+  },
+  "immutable_historical_resource_and_scheduler_attempts": [
+    {
+      "filename": "sakana-a000224-fresh-build-attempt-1.json",
+      "sha256": "92acb3d054ee55103915d6168ef0b8bf38cac975a002c0c9ccac4b7fd06ea7ec",
+      "status": "ENVIRONMENT_BLOCKED",
+      "finished_utc": "2026-10-04T21:19:07Z",
+      "actual_successful_sources": 24,
+      "checkpoint_reason": null,
+      "failure": "Disk free below 1 GB reserved threshold",
+      "failed_or_resource_invocations": []
+    },
+    {
+      "filename": "sakana-a000224-fresh-build-attempt-2.json",
+      "sha256": "3d350d61eb1b78cf62f657bdae2154f7ed3585c8561ae6ee263e4771b9631157",
+      "status": "SCHEDULED_RESOURCE_CHECKPOINT",
+      "finished_utc": "2026-10-04T23:21:43Z",
+      "actual_successful_sources": 25,
+      "checkpoint_reason": "ROOT_AUTHORIZED_SINGLE_THIRD_WORKER_PILOT_COMPLETED",
+      "failure": null,
+      "failed_or_resource_invocations": []
+    },
+    {
+      "filename": "sakana-a000224-fresh-build-attempt-3.json",
+      "sha256": "3e50315e11b0b65f9f2105fa2c9cfdf6884156bd3915c24960c2591fb71403be",
+      "status": "SCHEDULED_RESOURCE_CHECKPOINT",
+      "finished_utc": "2026-10-04T23:37:21Z",
+      "actual_successful_sources": 33,
+      "checkpoint_reason": "THIRD_WORKER_LEASE_HANDOFF_AT_COMPLETED_MODULE_BOUNDARY",
+      "failure": null,
+      "failed_or_resource_invocations": []
+    },
+    {
+      "filename": "sakana-a000224-fresh-build-attempt-4.json",
+      "sha256": "8ce8cfb7ac084081eb8b1792beebacb5e52a48f696918dcbe9d0b6fdba5b9beb",
+      "status": "SCHEDULED_RESOURCE_CHECKPOINT",
+      "finished_utc": "2026-10-05T00:18:00Z",
+      "actual_successful_sources": 59,
+      "checkpoint_reason": "THIRD_WORKER_LEASE_HANDOFF_AT_COMPLETED_MODULE_BOUNDARY",
+      "failure": null,
+      "failed_or_resource_invocations": []
+    },
+    {
+      "filename": "sakana-a000224-fresh-build-attempt-5.json",
+      "sha256": "d8226e2920788365d04ccd7c4a1cab829c5c0c192b4fa155aa4e4e4b11e3a552",
+      "status": "SCHEDULED_RESOURCE_CHECKPOINT",
+      "finished_utc": "2026-10-05T05:39:14Z",
+      "actual_successful_sources": 76,
+      "checkpoint_reason": "THIRD_WORKER_LEASE_HANDOFF_WHILE_WAITING_WITHOUT_COMPILER",
+      "failure": null,
+      "failed_or_resource_invocations": []
+    }
+  ],
+  "existing_code_and_policy_sha256": {
+    "run_source_plan.py": "70ff209c7ac651c1e0ab25e9f629a9fc50c4b85ed1f510666e851e8f69c53534",
+    "run_a000_source_plan_with_post_exit_storage_v2_prepared.py": "d73aa5d2218f358e79d5479de20b5082b345a994d0d4dd35d0a23516876eda28",
+    "a000_post_exit_lzx_interface_v2_prepared.py": "03a6f7118d97e97e646b81cdb5508fab512eb23f65dc1465cd28d141d9cbd99b",
+    "full_mathlib_resource_guard.py": "a4c76752e1e0afaf4ddff9368e4a5aa832bc56dcc7553182c5302e2c1c4e5c18",
+    "matt_resource_guard.py": "ae0b64c7fbf47545365f3238977368042be342ddb973159ec65c98f64aa38a71",
+    "native_resource_guard.py": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+    "resource_metrics.py": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+    "receipt_io.py": "2e189122fe360f1925dda2e0409c321b775fe7eb6edf17c3f13ef067d1776362",
+    "audit_axioms.py": "1ee59639204140430c088023539a648f9007cc26c1856cf8cd2e3c2e59d7143f",
+    "lean_imports.py": "4e0387c48c2a857fd1e69c872cbbd9c66b9741cfb661ef8a3e670bc7cd0ab8aa",
+    "full_mathlib_scope.py": "1698d525e0bac93cd241c499dc0a132e5c9477cabd7ca7899e4574645714a3ab",
+    "root-A000-post-exit-storage-v2-interface-granular90-approval-20261005.json": "984cc1aa2baad60e4809cee35c4d6a4046252a34705c25355a48ee3b57363aab",
+    "proposals/a000-post-exit-owned-artifact-storage-interface-v2-preparation-20261005.json": "00740b6897357d58e7546252f9299981248457fdef7a7f212db029ad400952fa"
+  },
+  "active_lease_at_preparation": {
+    "file": "full-mathlib-source-lease.json",
+    "sha256": "b88a49773d0613d41bc8082be4e84ccbf68a7e07d216e0e58e020e26a731d763",
+    "status": "SOLE_WHOLE_LEASE_RELEASED_AFTER_ACTUAL_DMS119_WAITING_CHECKPOINT",
+    "holder_project": null,
+    "is_current_A000_authorization": false
+  },
+  "future_root_preconditions": [
+    {
+      "name": "actual166_finished_quiescent",
+      "status": "NOT_YET_QUALIFIED_OR_AUTHORIZED",
+      "requirement": "A future immutable completed granular receipt must contain every one of the exact 166 custom sources with exit 0, matching hashes, options and own outputs. A finish timestamp and a non-RUNNING state are required."
+    },
+    {
+      "name": "all171_scientific_bytes_and_audit_match",
+      "status": "NOT_YET_QUALIFIED_OR_AUTHORIZED",
+      "requirement": "Revalidate the frozen plan, all 171 source files and audit c5e4 without altering mathematical bodies, tactics, imports or options."
+    },
+    {
+      "name": "all166_own_artifacts_valid",
+      "status": "NOT_YET_QUALIFIED_OR_AUTHORIZED",
+      "requirement": "Hash every retained own successful output. Strong WOF compression is acceptable only with identical logical bytes and preserved source/receipt ancestry. No entrant artifact, foreign output or unowned alias may be used."
+    },
+    {
+      "name": "HT_natural_held_boundary",
+      "status": "NOT_YET_QUALIFIED_OR_AUTHORIZED",
+      "requirement": "HT must actually finish its current source and reach a held or quiescent dispatcher boundary. Record its actual exit and time; a prospective hold flag is insufficient."
+    },
+    {
+      "name": "zero_other_Lean_or_math_compilers",
+      "status": "NOT_YET_QUALIFIED_OR_AUTHORIZED",
+      "requirement": "A fresh command-line census and coordinated leases must establish that no other Lean, source, native or library worker is active. Do not terminate user applications or infer global exclusion from the byte lock alone."
+    },
+    {
+      "name": "separate_root_whole5_plus_audit_authorization",
+      "status": "NOT_YET_QUALIFIED_OR_AUTHORIZED",
+      "requirement": "Current policy 984cc authorizes only the granular 90. A new dated root authorization must bind the exact runner, plan, five bodies, audit and completed immutable 166-source receipt."
+    },
+    {
+      "name": "new_sole10_11_lease",
+      "status": "NOT_YET_QUALIFIED_OR_AUTHORIZED",
+      "requirement": "The active full-mathlib-source-lease must be newly bound to holder sakana-a000224, the frozen plan SHA, a000_whole_scope_only_authorized=true and actual exclusion of all other workers. The currently released DMS lease with a null holder cannot be used."
+    },
+    {
+      "name": "exact_runtime_and_official_dependencies",
+      "status": "NOT_YET_QUALIFIED_OR_AUTHORIZED",
+      "requirement": "Require Lean 4.34.1, frozen Mathlib d13f23b723b8a846827a245b89c10fc7d3f11612, the original nine dependency identities and the existing official-cache validation. No runtime, download, provider or mathematical source change is proposed."
+    },
+    {
+      "name": "fresh11commit6physical4GBdisk",
+      "status": "NOT_YET_QUALIFIED_OR_AUTHORIZED",
+      "requirement": "Immediately before each source or audit invocation, require available commit of at least 11 GiB, physical memory of at least 6 GiB and disk of at least 4 GB. The 10 GiB own job/process caps and continuous 1 GiB commit, 3 GiB physical and 1 GB disk floors remain unchanged."
+    },
+    {
+      "name": "own_job_suspended_assign_resume",
+      "status": "NOT_YET_QUALIFIED_OR_AUTHORIZED",
+      "requirement": "Use the reviewed full-Mathlib guard: create the child suspended, assign its own job before resume, record actual counters, and stop only that job at a reserve or cap. Record the 3,600-second timeout as operational."
+    },
+    {
+      "name": "locks_and_hold_state_reviewed",
+      "status": "NOT_YET_QUALIFIED_OR_AUTHORIZED",
+      "requirement": "Acquire the exclusive whole-mode byte lock and per-project replay lock. The global dispatch-hold state requires separate review for this sole lease. This proposal does not change a lock, hold or lease."
+    },
+    {
+      "name": "whole_outputs_cold_or_attributed",
+      "status": "NOT_YET_QUALIFIED_OR_AUTHORIZED",
+      "requirement": "Verify absence of outputs for the five whole sources and organizer audit, or explicit attribution of any prior partial/re-audited artifacts. Unrelated outputs cannot be silently retained."
+    },
+    {
+      "name": "actual_five_successes_and_selected3",
+      "status": "NOT_YET_QUALIFIED_OR_AUTHORIZED",
+      "requirement": "Require all five actual source exits and FreshAudit1 exit 0, plus all three unique requested raw axiom outputs and their classifications. Do not promote planned or partial execution to completion."
+    },
+    {
+      "name": "publication_novelty_score_and_release_review",
+      "status": "NOT_YET_QUALIFIED_OR_AUTHORIZED",
+      "requirement": "Even eventual 171-source/three-print coverage establishes only the stated result for three ordered odd primes. The general A000224 conjecture, novelty, priority, competition points, awards and release remain independently held."
+    }
+  ],
+  "whole_resource_policy_template": {
+    "status": "TEMPLATE_ONLY_NOT_AN_ACTIVE_LEASE",
+    "holder_project": "sakana-a000224",
+    "source_plan_sha256": "0f6338f72ff570e79847995bac7cf6f6c56c8a1c2cc8dedf55181bc764180fe7",
+    "a000_whole_scope_only_authorized": "NOT_YET_TRUE_REQUIRES_ROOT_ACTUAL_REVIEW",
+    "other_umbrella_compilers_confirmed_held_or_finished": "NOT_YET_TRUE_REQUIRES_ACTUAL_ALL_WORKER_EXCLUSION",
+    "zero_other_Lean_compilers_confirmed": "NOT_YET",
+    "actual166_finished_receipt_sha256": "NOT_YET",
+    "actual_HT_held_boundary_receipt_sha256": "NOT_YET",
+    "root_exact_scope_approval_sha256": "NOT_YET",
+    "maximum_mathematical_compilers": 1,
+    "own_process_and_job_private_cap_bytes": 10737418240,
+    "dispatch_available_commit_bytes": 11811160064,
+    "dispatch_physical_bytes": 6442450944,
+    "dispatch_disk_bytes": 4000000000,
+    "continuous_commit_bytes": 1073741824,
+    "continuous_physical_bytes": 3221225472,
+    "continuous_disk_bytes": 1000000000,
+    "shell_threads": "-j1",
+    "LEAN_NUM_THREADS": "1",
+    "maxHeartbeats": 0,
+    "maxRecDepth": 100000,
+    "source_or_performance_changes": false
+  },
+  "future_command_templates_NOT_EXECUTION": {
+    "recommended_reviewed_base_without_storage_callback": [
+      "C:/Users/Propietario/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+      "-X",
+      "utf8",
+      "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\run_source_plan.py",
+      "sakana-a000224",
+      "1",
+      "--guarded-third-slot",
+      "--full-mathlib-source-mode",
+      "--a000-whole-scope-only"
+    ],
+    "equivalent_current_d73_without_callback_flags": [
+      "C:/Users/Propietario/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+      "-X",
+      "utf8",
+      "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\run_a000_source_plan_with_post_exit_storage_v2_prepared.py",
+      "sakana-a000224",
+      "1",
+      "--guarded-third-slot",
+      "--full-mathlib-source-mode",
+      "--a000-whole-scope-only"
+    ],
+    "optional_same_d73_with_new_whole_storage_policy": [
+      "C:/Users/Propietario/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+      "-X",
+      "utf8",
+      "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\run_a000_source_plan_with_post_exit_storage_v2_prepared.py",
+      "sakana-a000224",
+      "1",
+      "--guarded-third-slot",
+      "--full-mathlib-source-mode",
+      "--a000-whole-scope-only",
+      "--a000-post-exit-lzx-policy",
+      "NOT_YET_NEW_ROOT_WHOLE_FIVE_STORAGE_POLICY_FILE",
+      "--a000-post-exit-lzx-policy-sha256",
+      "NOT_YET_NEW_ROOT_WHOLE_FIVE_STORAGE_POLICY_SHA256"
+    ]
+  },
+  "storage_recommendation": {
+    "preferred": "Use reviewed base runner 70ff, or the source-equivalent current d73 runner with the callback disabled, for the five whole sources and selected audit. These command templates invoke no storage interface or storage policy.",
+    "rationale": "The five authored bodies total 42,212 bytes and contain no long generated finite-certificate bodies; their eventual .olean sizes are unknown. Disabling the callback avoids additional per-file WOF/quiescence checks, storage gates and a storage-only checkpoint while preserving the sole 10/11 proof guard. Previously compressed own outputs remain byte-preserved. This is not an output-size or resource guarantee.",
+    "optional_callback_viability": "Existing interface 03a6 supports all five names within the remaining 95 and excludes the original 76. Current policy 984cc contains only granular-defer-whole. A separately reviewed new policy must authorize whole-five-separate-lease and bind d73, 03a6, specification 00740 and pilot 325b to the exact scope. The interface grants no scientific source lease.",
+    "new_optional_storage_policy_template": {
+      "status": "TEMPLATE_NOT_APPROVED",
+      "future_recognized_status_only_after_root_approval": "ROOT_APPROVED_A000_POST_EXIT_OWN_OUTPUT_LZX_INTERFACE",
+      "runner_sha256": "d73aa5d2218f358e79d5479de20b5082b345a994d0d4dd35d0a23516876eda28",
+      "interface_sha256": "03a6f7118d97e97e646b81cdb5508fab512eb23f65dc1465cd28d141d9cbd99b",
+      "specification_sha256": "00740b6897357d58e7546252f9299981248457fdef7a7f212db029ad400952fa",
+      "actual_A000_single_file_pilot_receipt": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\20261005T054942002749Z-single-own-output-compress-actual.json",
+      "actual_A000_single_file_pilot_receipt_sha256": "325bec959997fb2b2f4ec8defe8f7d6776e5d35aee508b553591b53fc72613cc",
+      "allow_only_remaining_original95_modules": true,
+      "previous_original76_outputs_not_targets": true,
+      "separately_authorized_source_resource_modes": [
+        "whole-five-separate-lease"
+      ],
+      "maximum_Lean_importers": 1,
+      "exact_scientific_source_authorization": "NOT_YET_SEPARATELY_REVIEWED_FIVE_WHOLE_PLUS_SELECTED3",
+      "storage_compact_own_cap_bytes": 268435456,
+      "storage_dispatch_available_commit_bytes": 5368709120,
+      "proof_own_cap_and_dispatch_remain10_11": true
+    }
+  },
+  "eventual_complete_scope_NOT_YET": {
+    "retained_prior_own_sources": 166,
+    "future_new_whole_sources": 5,
+    "future_selected_unique_prints": 3,
+    "future_source_total": 171,
+    "original_kernel_trust_expected": "Standard kernel trust is expected, but actual raw outputs are required. A static scan finding no admission tokens is not theorem verification.",
+    "status": "NOT_YET_ACTUAL_OR_QUALIFIED"
+  },
+  "preserved_984_current_policy_unchanged": true,
+  "mutation_scope": "Only additive proposal JSON files. No source, runner, policy, active lease, hold, lock, process, resource, artifact, alias, compaction, PDF or canonical change; no compiler execution and no bulk reading of official sources or binaries.",
+  "previous_prepared_template_sha256": "a5cf64681a6bc64f1c37f96bf1248b6162f732678a95874ed079fde34f5567b6",
+  "readability_polished_utc": "2026-10-05T07:37:10.858345+00:00"
+}
