@@ -30,8 +30,8 @@ roots = ["AffinePaletteBarrier", "CherryBoundary", "ComponentClosure", "Componen
 
 [[lean_lib]]
 name = "SLT"
-roots = ["SLT.RMT.MatBern"]
+roots = ["SLT.MatrixInfra.Basic", "SLT.MatrixInfra.CourantFischer", "SLT.MatrixInfra.MatCalc", "SLT.RMT.Lieb", "SLT.RMT.MatBern"]
 
 [[lean_lib]]
 name = "IndependentTransversals"
-roots = ["IndependentTransversals.GeneralHaxell"]
+roots = ["IndependentTransversals.AugmentingSequences", "IndependentTransversals.Basic", "IndependentTransversals.GeneralHaxell", "IndependentTransversals.MainDefs"]

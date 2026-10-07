@@ -1,0 +1,147 @@
+{
+  "schema": "dated-Robert-eight-family-novelty-and-current-proof-scope-v1",
+  "date": "2026-10-07",
+  "source_commit": "527cc8347dc749b3f1136b0938f0ff31c6048969",
+  "families": [
+    {
+      "family": "QB",
+      "title": "Quartic extraction",
+      "exact_current_scope": "Exact threshold3n−5 for finite simple bipartite degree-cap6 hosts.",
+      "novelty_assessment": "AFK Remark3.6 gives3n−2 with degree-cap7. The exact lower threshold is not implied by that comparator; global priority remains unresolved.",
+      "verification_boundary": "Main theorem checked; degree-four extraction is not connected cycle-pair forcing.",
+      "novelty_globally_certified": false,
+      "extra_independent_discovery_credit": false,
+      "selected_main_endpoints": [
+        {
+          "name": "Erdos585.qb5",
+          "source_sha256": "203089ca8e60776dfcebff55ba5d3deefd0732fcdf472d3d653e5b52e683c91e",
+          "source_url": "https://github.com/alejandrozu/openmath-2026-judging/blob/527cc8347dc749b3f1136b0938f0ff31c6048969/robert-review-2026-10-07/lean/Openmath/Proofs/QB5/Statement.lean#L42"
+        }
+      ]
+    },
+    {
+      "family": "TWIN",
+      "title": "Twin-based cycle-pair forcing",
+      "exact_current_scope": "Actual nonempty capped hosts in the whole e+2≥3v range, with no singleton left-neighbourhood class.",
+      "novelty_assessment": "Olson/AFK zero-sum selection and Eppstein2025 subdivided-double lift are known. Possible contribution is the exact actual-host density corollary; priority unresolved and potentially routine.",
+      "verification_boundary": "New dense-range extension checked. No new zero-sum/Eulerian principle.",
+      "novelty_globally_certified": false,
+      "extra_independent_discovery_credit": false,
+      "selected_main_endpoints": [
+        {
+          "name": "OpenMathReview.TwinDensityExtension.hasPair_of_no_singleton_twins_dense",
+          "source_sha256": "a6c92256b4ccfea80281db47c5cfb892bb39be8d92b49d8437a90b5404d046b7",
+          "source_url": "https://github.com/alejandrozu/openmath-2026-judging/blob/527cc8347dc749b3f1136b0938f0ff31c6048969/robert-review-2026-10-07/lean/TwinDensityExtension.lean#L132"
+        }
+      ]
+    },
+    {
+      "family": "FINITE",
+      "title": "Finite extremal profiles",
+      "exact_current_scope": "Exact small values, finite higher lower witnesses and restricted constructions.",
+      "novelty_assessment": "Tiny values and linear lower growth are elementary or known. Specific higher values and constructions need exact predecessor comparison.",
+      "verification_boundary": "Formal exactness through7; fresh computations through10; source-reported upper11/12 excluded from formal exactness.",
+      "novelty_globally_certified": false,
+      "extra_independent_discovery_credit": false,
+      "selected_main_endpoints": [
+        {
+          "name": "Erdos585.thirty_one_le_maxEdges_eleven",
+          "source_sha256": "73095dca497005eacdc0bfd0fd7c85f54753de68e253276b4eaeec2b8edc370a",
+          "source_url": "https://github.com/alejandrozu/openmath-2026-judging/blob/527cc8347dc749b3f1136b0938f0ff31c6048969/robert-review-2026-10-07/lean/Openmath/Proofs/Final.lean#L112"
+        },
+        {
+          "name": "Erdos585.thirty_six_le_maxEdges_twelve",
+          "source_sha256": "73095dca497005eacdc0bfd0fd7c85f54753de68e253276b4eaeec2b8edc370a",
+          "source_url": "https://github.com/alejandrozu/openmath-2026-judging/blob/527cc8347dc749b3f1136b0938f0ff31c6048969/robert-review-2026-10-07/lean/Openmath/Proofs/Final.lean#L116"
+        }
+      ]
+    },
+    {
+      "family": "REG5",
+      "title": "Five-regular witnesses",
+      "exact_current_scope": "Exact18/32/104 pair-free graph certificates, with104 bipartite.",
+      "novelty_assessment": "Generic nonbipartite5-regular pair-free existence is already recorded in Read–Wilson1998. Exact witness/minimum/bipartite comparisons remain unresolved.",
+      "verification_boundary": "Actual examples checked. Least order18 needs full16-order census;104 is not claimed least bipartite order.",
+      "novelty_globally_certified": false,
+      "extra_independent_discovery_credit": false,
+      "selected_main_endpoints": []
+    },
+    {
+      "family": "SUB",
+      "title": "Substitution and prescribed-vertex deletion",
+      "exact_current_scope": "Faithful d≤7 pair-preserving substitution and nonempty finite B6↔every-prescribed-deletion equivalence.",
+      "novelty_assessment": "Generic Meredith-style gadget substitution is known. Exact pair preservation, labelled parallel-edge treatment and this deletion equivalence were not located in bounded comparison; priority unresolved.",
+      "verification_boundary": "Both main claims newly fully checked, including explicit16-vertex48-edge skeleton and actualsixunitports. No proof of B6.",
+      "novelty_globally_certified": false,
+      "extra_independent_discovery_credit": false,
+      "selected_main_endpoints": [
+        {
+          "name": "RobertPublishable.SUB.theorem_R1",
+          "source_sha256": "e1850bd3740761ca76e7233132022021a4f95ffabb7394aa4491321de19baee1",
+          "source_url": "https://github.com/alejandrozu/openmath-2026-judging/blob/527cc8347dc749b3f1136b0938f0ff31c6048969/robert-review-2026-10-07/lean/R1.lean#L13"
+        },
+        {
+          "name": "RobertPublishable.SUB.prescribed_vertex_equivalence",
+          "source_sha256": "437e5353148c2a7bd7242296c9c335816c22a4301eb7d8f78f6dfdf6f192b321",
+          "source_url": "https://github.com/alejandrozu/openmath-2026-judging/blob/527cc8347dc749b3f1136b0938f0ff31c6048969/robert-review-2026-10-07/lean/PrescribedVertex.lean#L89"
+        }
+      ]
+    },
+    {
+      "family": "HAAR",
+      "title": "Prime-field Haar graphs",
+      "exact_current_scope": "Exactlyfour colours: every actual component has a Hamilton decomposition; arbitrary ambient prime-field module.",
+      "novelty_assessment": "Prime-line dihedral, characteristic2 and centrallysymmetric odd palettes have known decomposition coverage. Residual nonsymmetric odd rank2/3 and specified composite template remain candidate deltas.",
+      "verification_boundary": "Component strengthening checked. For>4palette only a pair in a selected4-colour subgraph, not entirehost decomposition.",
+      "novelty_globally_certified": false,
+      "extra_independent_discovery_credit": false,
+      "selected_main_endpoints": [
+        {
+          "name": "OpenMathReview.HaarInfinite.hasPair_iff",
+          "source_sha256": "70ff39e67bef8a1d6b369296f89f2a798cd3b3890dede5acdfd4f2cd3cbbeb3d",
+          "source_url": "https://github.com/alejandrozu/openmath-2026-judging/blob/527cc8347dc749b3f1136b0938f0ff31c6048969/robert-review-2026-10-07/lean/HaarInfinite.lean#L110"
+        },
+        {
+          "name": "RobertPublishable.HaarComponent.every_connected_component",
+          "source_sha256": "33c0d6e6cb45509bbdbad3ef3db26c8413301d268f2926146bc5972ab7fa6345",
+          "source_url": "https://github.com/alejandrozu/openmath-2026-judging/blob/527cc8347dc749b3f1136b0938f0ff31c6048969/robert-review-2026-10-07/lean/HaarComponents.lean#L73"
+        }
+      ]
+    },
+    {
+      "family": "ONE",
+      "title": "One-round recolouring barrier",
+      "exact_current_scope": "General finite Sidon palettes in any characteristic3 module; sharp2component-union-round threshold for everyparabola host q=3^k,k≥2.",
+      "novelty_assessment": "Classical Sidon/2-cap equivalence and parabola geometry are credited to earlier sources. The detector application, generalization and actual2-round witness are the candidate contributions.",
+      "verification_boundary": "Uniform full-host moves and54common-support cycles checked; no minimumindividualflip assertion.",
+      "novelty_globally_certified": false,
+      "extra_independent_discovery_credit": false,
+      "selected_main_endpoints": [
+        {
+          "name": "OpenMathReview.InfiniteAffinePaletteBarrier.sidon_exposed_cycle_no_partner",
+          "source_sha256": "76dfad233d2e4508eca924ef824c9ec5a4abe098d04534bd5bd6d2dba9fae063",
+          "source_url": "https://github.com/alejandrozu/openmath-2026-judging/blob/527cc8347dc749b3f1136b0938f0ff31c6048969/robert-review-2026-10-07/lean/InfiniteAffinePaletteBarrier.lean#L54"
+        },
+        {
+          "name": "RobertPublishable.TWO.family_exactly_two_component_union_rounds",
+          "source_sha256": "fe8a215c5a8103963c4bc5ddf3fb7d6b642e36e4d24ba39cd5dc74e479ffc135",
+          "source_url": "https://github.com/alejandrozu/openmath-2026-judging/blob/527cc8347dc749b3f1136b0938f0ff31c6048969/robert-review-2026-10-07/lean/CycleComposition.lean#L171"
+        }
+      ]
+    },
+    {
+      "family": "BM",
+      "title": "Quantitative bipartite Hamiltonicity",
+      "exact_current_scope": "Written candidate δ^-5(logn)^3 one-sided spectral adaptation, with its intendedpositive-degree/asymptotic premises.",
+      "novelty_assessment": "Generic bipartite Hamiltonicity is already prior; exact power5 implementation is the possible delta. A powers calculation alone does not certify it.",
+      "verification_boundary": "Main theorem not yet fully formal. Sampling/router/factor closure still required; E110 avoidance bridge remains mathematicallyopen; privateexponent11/B2unavailable.",
+      "novelty_globally_certified": false,
+      "extra_independent_discovery_credit": false,
+      "selected_main_endpoints": []
+    }
+  ],
+  "judging_policy": "Do not equate helper counts or known ports with discoveries. Prove the accepted narrow claim atp=1, or use a declared broad-target progress coefficient with a separately calibrated difficulty. Historical prior overlap must be subtracted from credited scope. This record does not silently replace the earlier scores or signed awards.",
+  "unchanged_existing19_scores": true,
+  "global_priority_certified": false,
+  "all_claims_fully_Lean_verified": false
+}

@@ -1,4 +1,4 @@
-/-! Frozen Robert Huynh proof collection; target placeholders are not accepted endpoints. -/
+/- Frozen Robert Huynh proof collection; target placeholders are not accepted endpoints. -/
 import Openmath.Proofs.AdjacentHubs
 import Openmath.Proofs.BipartiteBalance
 import Openmath.Proofs.BipartiteEulerian
