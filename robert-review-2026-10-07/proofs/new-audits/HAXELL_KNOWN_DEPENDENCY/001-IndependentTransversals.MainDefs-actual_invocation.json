@@ -1,0 +1,326 @@
+{
+  "schema": "HAXELL-known-foundation-own-4.33.1-guarded-port-invocation-v1",
+  "checked_utc": "2026-10-07T14:30:27.552998+00:00",
+  "module": "IndependentTransversals.MainDefs",
+  "source": {
+    "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\HAXELL\\IndependentTransversals\\MainDefs.lean",
+    "sha256": "d1af84d18c2b81ede39e0f44473ec482ce0d905398e5a17d1ae09eee666e3884",
+    "bytes": 6057
+  },
+  "original_upstream_source": {
+    "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\research\\external\\IndependentTransversals\\IndependentTransversals\\MainDefs.lean",
+    "sha256": "d1af84d18c2b81ede39e0f44473ec482ce0d905398e5a17d1ae09eee666e3884",
+    "bytes": 6057
+  },
+  "api_changes": [],
+  "upstream_head": "205372fe2b4b17ec77ef3f4629c43686223c1028",
+  "plan": {
+    "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\HAXELL\\port-plan.json",
+    "sha256": "356177f3cc35ac7c7d8722cd8897633fe5dc5bedf1dcdd7e423cfd2e99ada808",
+    "bytes": 16830
+  },
+  "runner": {
+    "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\HAXELL\\compile_guarded.py",
+    "sha256": "052bbcc2422d14963526b7d819503024bd6f88fb567d99e283528b8b29b49204",
+    "bytes": 7647
+  },
+  "guard_binding": {
+    "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\shared_guard.py",
+    "sha256": "29578665ab4f1336e8164a547872119939c6a0b86ceafbadcd36f9859bc367f2",
+    "bytes": 9243
+  },
+  "runtime": {
+    "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+    "sha256": "af49bacfabaa1fea71332ca0feae0fa1a60912219d5902291adc79f905bffb8d",
+    "bytes": 83456
+  },
+  "baseline": {
+    "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\adjacent_robert_20261007\\verification\\completed106-source81-axioms-immutable.json",
+    "sha256": "82b6c76de58309b35ed3b1b28b211011449b319affde181446870a33e9a9f142",
+    "bytes": 1107666
+  },
+  "dependency_pins": {
+    "Lean": "4.33.1",
+    "Mathlib": "0df444a360eaa60ab8c11dca51a86af692955474"
+  },
+  "direct_official_provider_bindings": [
+    {
+      "module": "Mathlib.Combinatorics.SimpleGraph.Basic",
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\Combinatorics\\SimpleGraph\\Basic.lean",
+        "sha256": "e45d2248020078b2b2f853e6c6000af23cc0808e28ef54fda0471924bc4c9f8a",
+        "bytes": 41858
+      },
+      "artifact": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Combinatorics\\SimpleGraph\\Basic.olean",
+        "sha256": "c823e8bd1fa08f9559281ef90994363ce9b1ab0fe310595a318d8232c64a4495",
+        "bytes": 630096
+      }
+    },
+    {
+      "module": "Mathlib.Combinatorics.SimpleGraph.Clique",
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\Combinatorics\\SimpleGraph\\Clique.lean",
+        "sha256": "85240ba4c91c972d648f58a1dcbcc51ec105720ad791a94f179777685aa26e45",
+        "bytes": 41701
+      },
+      "artifact": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Combinatorics\\SimpleGraph\\Clique.olean",
+        "sha256": "341d421fa987d8d19115348feb7743ae6df3cb55a0540785307111052f5a6828",
+        "bytes": 359344
+      }
+    },
+    {
+      "module": "Mathlib.Combinatorics.SimpleGraph.Connectivity.Connected",
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\Combinatorics\\SimpleGraph\\Connectivity\\Connected.lean",
+        "sha256": "91cd08147cff7559f9d85be230e04662c3aaa401078ef5c561bafff0a4ea87de",
+        "bytes": 42172
+      },
+      "artifact": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Combinatorics\\SimpleGraph\\Connectivity\\Connected.olean",
+        "sha256": "69258ad8e492fb403ef14445c9f513dfede091a774d516687b09c5a0a4dc50b3",
+        "bytes": 323376
+      }
+    },
+    {
+      "module": "Mathlib.Combinatorics.SimpleGraph.Finite",
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\Combinatorics\\SimpleGraph\\Finite.lean",
+        "sha256": "1aa6eeffe77fd243fb2659ceb377843206bfa62fdeeae9e64741bedadd411934",
+        "bytes": 30231
+      },
+      "artifact": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Combinatorics\\SimpleGraph\\Finite.olean",
+        "sha256": "7cbdf0a8154410cba75e02a34565bdbbb8f027f39ee993155fe6146d5e2aaabd",
+        "bytes": 290600
+      }
+    },
+    {
+      "module": "Mathlib.Combinatorics.SimpleGraph.Maps",
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\Combinatorics\\SimpleGraph\\Maps.lean",
+        "sha256": "3532c4ca6e28b6f6d57b63aa7143b8509e3dcfd72e7d4fcabc2ecf5aedb44ee7",
+        "bytes": 30496
+      },
+      "artifact": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Combinatorics\\SimpleGraph\\Maps.olean",
+        "sha256": "2e790dbdec4a0344025085198e0e097ab30b143f784139c8800b4bd16a8a8393",
+        "bytes": 547168
+      }
+    },
+    {
+      "module": "Mathlib.Data.Set.Card",
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\Data\\Set\\Card.lean",
+        "sha256": "66ccca9b43ba4c1f2905dcc5f775675711451d5e4055be95b0ff8ba950dbc39c",
+        "bytes": 67792
+      },
+      "artifact": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Data\\Set\\Card.olean",
+        "sha256": "fa69ba37577ba9197cd899395df18b220341c6706ef3b67b5959ebcc695250e0",
+        "bytes": 370024
+      }
+    },
+    {
+      "module": "Mathlib.Data.Fintype.Basic",
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\Data\\Fintype\\Basic.lean",
+        "sha256": "c6a92133267056799173b5cada4edf8dce0733e7027db68bf2d9e0107ec2ad7a",
+        "bytes": 12262
+      },
+      "artifact": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Data\\Fintype\\Basic.olean",
+        "sha256": "deb60b12448ed0da3c47558f095bb38029c96b8df1be242df3a5c1f53e509e91",
+        "bytes": 226480
+      }
+    },
+    {
+      "module": "Mathlib.Data.Setoid.Partition",
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\Data\\Setoid\\Partition.lean",
+        "sha256": "d76d0b1d0afe35fe88650b5a89cc60ab7f68d42aed2cd40f45dc054e32df869a",
+        "bytes": 23126
+      },
+      "artifact": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Data\\Setoid\\Partition.olean",
+        "sha256": "84e038b8d56cc32f52fdd16b7e60d9886f67309eb13a517f72e2b8db8ac7a210",
+        "bytes": 270480
+      }
+    },
+    {
+      "module": "Mathlib.Combinatorics.SimpleGraph.Subgraph",
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\Combinatorics\\SimpleGraph\\Subgraph.lean",
+        "sha256": "f9f1e5c5cc4d719cc8ace2f88805639173a04fdd3d6d09ad4093469ddf5e4401",
+        "bytes": 50347
+      },
+      "artifact": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Combinatorics\\SimpleGraph\\Subgraph.olean",
+        "sha256": "2b3371c25c5b698118a5fbfbc026fa755a84bf359b213a6294041dd36befa756",
+        "bytes": 787096
+      }
+    },
+    {
+      "module": "Mathlib.Data.Set.Card.Arithmetic",
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\Data\\Set\\Card\\Arithmetic.lean",
+        "sha256": "1bd4705302d624d893e3753ad703dbd36341cabf81ea3fa08531a2e87d574246",
+        "bytes": 6798
+      },
+      "artifact": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Data\\Set\\Card\\Arithmetic.olean",
+        "sha256": "454d0ea6f8db8742ddaab76f7ec663c79063cffec8092ebe53046360fac9ad28",
+        "bytes": 45624
+      }
+    },
+    {
+      "module": "Mathlib.Data.Finset.Basic",
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\Data\\Finset\\Basic.lean",
+        "sha256": "ff97d5e92ad851a04f36140e3d537a5a48b7f5e067fd07e3603b2440aca1006e",
+        "bytes": 25379
+      },
+      "artifact": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Data\\Finset\\Basic.olean",
+        "sha256": "535a2d269159f1fed5f18a9fff73e5677d32c3328e36e8a8d964cc7fbb2d8a95",
+        "bytes": 277712
+      }
+    },
+    {
+      "module": "Mathlib.Order.SymmDiff",
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\Order\\SymmDiff.lean",
+        "sha256": "107e46d5ec569673e1eed1777c76e3fba77336bf9970e690563b66aa86c19289",
+        "bytes": 20393
+      },
+      "artifact": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Order\\SymmDiff.olean",
+        "sha256": "6b66f40f844816eec82aa67c0a93a3947c19751c60ffaddcbdce9a53e85523a3",
+        "bytes": 277080
+      }
+    },
+    {
+      "module": "Mathlib.Algebra.Order.BigOperators.Group.Finset",
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\Algebra\\Order\\BigOperators\\Group\\Finset.lean",
+        "sha256": "6a8daafb9e3b8b6ac48a696661c99a2d10dce57f48907ae18280914bf0ac639f",
+        "bytes": 36509
+      },
+      "artifact": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Algebra\\Order\\BigOperators\\Group\\Finset.olean",
+        "sha256": "deef5869524e749a7fdc811e9a0860b9174a143f204eea0b345adf2dab511987",
+        "bytes": 320696
+      }
+    },
+    {
+      "module": "Mathlib.Order.WellFounded",
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\Order\\WellFounded.lean",
+        "sha256": "51e96625f2ea719cc9575cf623a1d4169cda879fd06a12e8f003b0b2cae0f039",
+        "bytes": 16724
+      },
+      "artifact": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Order\\WellFounded.olean",
+        "sha256": "3ac641ff5a689c490449ec124bdea40f5cec0bb26cfe66160fdd4bfb70fabdf5",
+        "bytes": 129480
+      }
+    }
+  ],
+  "own_dependency_PASS_receipts": [],
+  "command": [
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+    "-j1",
+    "-Dpp.unicode.fun=true",
+    "-DautoImplicit=false",
+    "-o",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\HAXELL\\IndependentTransversals\\MainDefs.olean",
+    "IndependentTransversals/MainDefs.lean"
+  ],
+  "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\HAXELL",
+  "environment": {
+    "LEAN_PATH": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\HAXELL;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\aesop\\.lake\\build\\lib\\lean;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\batteries\\.lake\\build\\lib\\lean;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\Cli\\.lake\\build\\lib\\lean;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\importGraph\\.lake\\build\\lib\\lean;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\LeanSearchClient\\.lake\\build\\lib\\lean;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\plausible\\.lake\\build\\lib\\lean;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\proofwidgets\\.lake\\build\\lib\\lean;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\Qq\\.lake\\build\\lib\\lean",
+    "LEAN_NUM_THREADS": "1"
+  },
+  "actual_pre_dispatch_source_compilers": [],
+  "guard": {
+    "command": [
+      "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+      "-j1",
+      "-Dpp.unicode.fun=true",
+      "-DautoImplicit=false",
+      "-o",
+      "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\HAXELL\\IndependentTransversals\\MainDefs.olean",
+      "IndependentTransversals/MainDefs.lean"
+    ],
+    "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\HAXELL",
+    "started_utc": "2026-10-07T14:30:20.426078+00:00",
+    "attempted": true,
+    "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+    "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+    "resource_policy": {
+      "initial_disk_bytes": 4000000000,
+      "initial_physical_bytes": 6442450944,
+      "initial_available_commit_bytes": 17179869184,
+      "continuous_disk_bytes": 1000000000,
+      "continuous_physical_bytes": 3221225472,
+      "continuous_available_commit_bytes": 2147483648,
+      "own_job_private_bytes": 13958643712,
+      "own_process_private_bytes": 13958643712,
+      "poll_seconds": 0.25,
+      "timeout_seconds": 1800
+    },
+    "minimum_disk_free_bytes": 11073019904,
+    "initial_system_memory_snapshot": {
+      "free_physical_bytes": 14838648832,
+      "total_physical_bytes": 34024419328,
+      "available_commit_bytes": 19399303168,
+      "total_commit_limit_bytes": 45444141056
+    },
+    "minimum_physical_available_bytes": 13955899392,
+    "minimum_available_commit_bytes": 17174855680,
+    "root_pid": 30932,
+    "own_job_assignment_before_resume": "PASS",
+    "exit": 0,
+    "job_peak_process_private_bytes": 2293694464,
+    "job_peak_aggregate_private_bytes": 2294956032,
+    "state": "PASS",
+    "finished_utc": "2026-10-07T14:30:27.536751+00:00",
+    "seconds": 7.109,
+    "polled_peak_tree_private_bytes": 2292518912,
+    "polled_peak_tree_rss_bytes": 1027534848,
+    "counter_samples": 28,
+    "observed_own_processes": {
+      "8644": {
+        "exe": "conhost.exe",
+        "peak_private_bytes": 1261568,
+        "peak_rss_bytes": 7352320
+      },
+      "30932": {
+        "exe": "lean.exe",
+        "peak_private_bytes": 2291257344,
+        "peak_rss_bytes": 1045422080
+      }
+    },
+    "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\HAXELL\\attempts\\001-IndependentTransversals.MainDefs\\compiler.stdout.txt",
+    "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\HAXELL\\attempts\\001-IndependentTransversals.MainDefs\\compiler.stderr.txt",
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout_excerpt": "",
+    "stderr_excerpt": ""
+  },
+  "artifacts": [
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\HAXELL\\IndependentTransversals\\MainDefs.olean",
+      "sha256": "1f5f1299569f2889b86ce7a51fe40337e73b0146b0fabc08103cdc3d4c03e4bf",
+      "bytes": 80824
+    }
+  ],
+  "actual_selected_axiom_outputs": [],
+  "selected_print_coverage_exact": true,
+  "selected_standard_or_free_only": true,
+  "qualified_module_PASS": true,
+  "BM_main_theorem_complete": false,
+  "known_third_party_foundation_not_novel_result": true,
+  "upstream_sources_or_official_dependencies_modified": false
+}

@@ -1,0 +1,12 @@
+Main.lean:9:12: warning: please avoid 'open (scoped) Classical' statements: this can hide theorem statements which would be better stated with explicit decidability statements.
+Instead, use `open Classical in` for definitions or instances, the `classical` tactic for proofs.
+For theorem statements, either add missing decidability assumptions or use `open Classical in`.
+
+Note: This linter can be disabled with `set_option linter.style.openClassical false`
+Main.lean:15:0: warning: automatically included section variable(s) unused in theorem `RobertPublishable.SUB.pair_in_fiber`:
+  [DecidableEq U]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq U] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+'RobertPublishable.SUB.pairfree_of_link_projection' depends on axioms: [propext, Classical.choice, Quot.sound]

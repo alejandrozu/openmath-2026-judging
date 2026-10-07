@@ -1,0 +1,448 @@
+{
+  "schema": "actual-four-module-Haxell-known-foundation-v1",
+  "status": "ACTUAL_PASS_4_SOURCES_1_STANDARD_SELECTED_ENDPOINT",
+  "actual_sources": 4,
+  "actual_selected": 1,
+  "module_rows": [
+    {
+      "module": "IndependentTransversals.MainDefs",
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\HAXELL\\IndependentTransversals\\MainDefs.lean",
+        "sha256": "d1af84d18c2b81ede39e0f44473ec482ce0d905398e5a17d1ae09eee666e3884",
+        "bytes": 6057
+      },
+      "receipt": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\HAXELL\\attempts\\001-IndependentTransversals.MainDefs\\actual_invocation.json",
+        "sha256": "c9e7d38bcd0704b29c9159ffa8cc64c6b97d17956f22d52c6a5800b01c544c75",
+        "bytes": 19078
+      },
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\HAXELL\\IndependentTransversals\\MainDefs.olean",
+          "sha256": "1f5f1299569f2889b86ce7a51fe40337e73b0146b0fabc08103cdc3d4c03e4bf",
+          "bytes": 80824
+        }
+      ],
+      "guard": {
+        "command": [
+          "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+          "-j1",
+          "-Dpp.unicode.fun=true",
+          "-DautoImplicit=false",
+          "-o",
+          "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\HAXELL\\IndependentTransversals\\MainDefs.olean",
+          "IndependentTransversals/MainDefs.lean"
+        ],
+        "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\HAXELL",
+        "started_utc": "2026-10-07T14:30:20.426078+00:00",
+        "attempted": true,
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 17179869184,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 2147483648,
+          "own_job_private_bytes": 13958643712,
+          "own_process_private_bytes": 13958643712,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 1800
+        },
+        "minimum_disk_free_bytes": 11073019904,
+        "initial_system_memory_snapshot": {
+          "free_physical_bytes": 14838648832,
+          "total_physical_bytes": 34024419328,
+          "available_commit_bytes": 19399303168,
+          "total_commit_limit_bytes": 45444141056
+        },
+        "minimum_physical_available_bytes": 13955899392,
+        "minimum_available_commit_bytes": 17174855680,
+        "root_pid": 30932,
+        "own_job_assignment_before_resume": "PASS",
+        "exit": 0,
+        "job_peak_process_private_bytes": 2293694464,
+        "job_peak_aggregate_private_bytes": 2294956032,
+        "state": "PASS",
+        "finished_utc": "2026-10-07T14:30:27.536751+00:00",
+        "seconds": 7.109,
+        "polled_peak_tree_private_bytes": 2292518912,
+        "polled_peak_tree_rss_bytes": 1027534848,
+        "counter_samples": 28,
+        "observed_own_processes": {
+          "8644": {
+            "exe": "conhost.exe",
+            "peak_private_bytes": 1261568,
+            "peak_rss_bytes": 7352320
+          },
+          "30932": {
+            "exe": "lean.exe",
+            "peak_private_bytes": 2291257344,
+            "peak_rss_bytes": 1045422080
+          }
+        },
+        "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\HAXELL\\attempts\\001-IndependentTransversals.MainDefs\\compiler.stdout.txt",
+        "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\HAXELL\\attempts\\001-IndependentTransversals.MainDefs\\compiler.stderr.txt",
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_excerpt": "",
+        "stderr_excerpt": ""
+      },
+      "actual_axiom_outputs": [],
+      "original": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\research\\external\\IndependentTransversals\\IndependentTransversals\\MainDefs.lean",
+        "sha256": "d1af84d18c2b81ede39e0f44473ec482ce0d905398e5a17d1ae09eee666e3884",
+        "bytes": 6057
+      },
+      "original_statement_preserved": true
+    },
+    {
+      "module": "IndependentTransversals.Basic",
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\HAXELL\\IndependentTransversals\\Basic.lean",
+        "sha256": "f91e1cc6c3360c49cde7c7372e6f618485b24b22078a460c15718dd2a671f202",
+        "bytes": 12499
+      },
+      "receipt": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\HAXELL\\attempts\\002-IndependentTransversals.Basic\\actual_invocation.json",
+        "sha256": "ade5758464ceda060b06b9bd4ba338b0affafa02cd93395a5c0f0f64c379f906",
+        "bytes": 19675
+      },
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\HAXELL\\IndependentTransversals\\Basic.olean",
+          "sha256": "e5f2ae1bbcd6d9d57c4b441a1b18a0f9598a2de049f42e18e38bbc823d91cb51",
+          "bytes": 188776
+        }
+      ],
+      "guard": {
+        "command": [
+          "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+          "-j1",
+          "-Dpp.unicode.fun=true",
+          "-DautoImplicit=false",
+          "-o",
+          "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\HAXELL\\IndependentTransversals\\Basic.olean",
+          "IndependentTransversals/Basic.lean"
+        ],
+        "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\HAXELL",
+        "started_utc": "2026-10-07T14:30:33.078040+00:00",
+        "attempted": true,
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 17179869184,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 2147483648,
+          "own_job_private_bytes": 13958643712,
+          "own_process_private_bytes": 13958643712,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 1800
+        },
+        "minimum_disk_free_bytes": 11073343488,
+        "initial_system_memory_snapshot": {
+          "free_physical_bytes": 14982885376,
+          "total_physical_bytes": 34024419328,
+          "available_commit_bytes": 19575717888,
+          "total_commit_limit_bytes": 45444141056
+        },
+        "minimum_physical_available_bytes": 13899005952,
+        "minimum_available_commit_bytes": 17183027200,
+        "root_pid": 32512,
+        "own_job_assignment_before_resume": "PASS",
+        "exit": 0,
+        "job_peak_process_private_bytes": 2402971648,
+        "job_peak_aggregate_private_bytes": 2404229120,
+        "state": "PASS",
+        "finished_utc": "2026-10-07T14:30:40.705536+00:00",
+        "seconds": 7.625,
+        "polled_peak_tree_private_bytes": 2404229120,
+        "polled_peak_tree_rss_bytes": 1077764096,
+        "counter_samples": 30,
+        "observed_own_processes": {
+          "32512": {
+            "exe": "lean.exe",
+            "peak_private_bytes": 2402971648,
+            "peak_rss_bytes": 1100050432
+          },
+          "20208": {
+            "exe": "conhost.exe",
+            "peak_private_bytes": 1257472,
+            "peak_rss_bytes": 7360512
+          }
+        },
+        "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\HAXELL\\attempts\\002-IndependentTransversals.Basic\\compiler.stdout.txt",
+        "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\HAXELL\\attempts\\002-IndependentTransversals.Basic\\compiler.stderr.txt",
+        "stdout_sha256": "51a18e0c96d78a6ef4f6d44d4a6238bd44a7899267b5da240d4fb077e314020e",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_excerpt": "IndependentTransversals/Basic.lean:286:9: warning: `Set.ncard_image_of_injOn` has been deprecated: Use `Set.InjOn.ncard_image` instead\n\nNote: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.ncard_image_of_injOn` to `Set.InjOn.ncard_image x`).\n",
+        "stderr_excerpt": ""
+      },
+      "actual_axiom_outputs": [],
+      "original": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\research\\external\\IndependentTransversals\\IndependentTransversals\\Basic.lean",
+        "sha256": "f91e1cc6c3360c49cde7c7372e6f618485b24b22078a460c15718dd2a671f202",
+        "bytes": 12499
+      },
+      "original_statement_preserved": true
+    },
+    {
+      "module": "IndependentTransversals.AugmentingSequences",
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\HAXELL\\IndependentTransversals\\AugmentingSequences.lean",
+        "sha256": "caa3129f56ac8d9dee4b32b0618761ad3279ba14845d984fbb45af51dc208503",
+        "bytes": 76293
+      },
+      "receipt": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\HAXELL\\attempts\\004-IndependentTransversals.AugmentingSequences\\actual_invocation.json",
+        "sha256": "ba14b227226975e5b5f9b80bdebcbf435b40623d78969d0e61c9362d1a7c858c",
+        "bytes": 21298
+      },
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\HAXELL\\IndependentTransversals\\AugmentingSequences.olean",
+          "sha256": "b15111f5319692c6f76e22f902d4a94c4af5a6b4531a04098433dd707fc90aa9",
+          "bytes": 1833520
+        }
+      ],
+      "guard": {
+        "command": [
+          "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+          "-j1",
+          "-Dpp.unicode.fun=true",
+          "-DautoImplicit=false",
+          "-o",
+          "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\HAXELL\\IndependentTransversals\\AugmentingSequences.olean",
+          "IndependentTransversals/AugmentingSequences.lean"
+        ],
+        "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\HAXELL",
+        "started_utc": "2026-10-07T14:32:16.216718+00:00",
+        "attempted": true,
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 17179869184,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 2147483648,
+          "own_job_private_bytes": 13958643712,
+          "own_process_private_bytes": 13958643712,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 1800
+        },
+        "minimum_disk_free_bytes": 11070980096,
+        "initial_system_memory_snapshot": {
+          "free_physical_bytes": 14841438208,
+          "total_physical_bytes": 34024419328,
+          "available_commit_bytes": 19414966272,
+          "total_commit_limit_bytes": 45444141056
+        },
+        "minimum_physical_available_bytes": 13813481472,
+        "minimum_available_commit_bytes": 17112580096,
+        "root_pid": 28936,
+        "own_job_assignment_before_resume": "PASS",
+        "exit": 0,
+        "job_peak_process_private_bytes": 2478616576,
+        "job_peak_aggregate_private_bytes": 2479906816,
+        "state": "PASS",
+        "finished_utc": "2026-10-07T14:32:26.674029+00:00",
+        "seconds": 10.453,
+        "polled_peak_tree_private_bytes": 2479906816,
+        "polled_peak_tree_rss_bytes": 1184989184,
+        "counter_samples": 41,
+        "observed_own_processes": {
+          "28936": {
+            "exe": "lean.exe",
+            "peak_private_bytes": 2478616576,
+            "peak_rss_bytes": 1203826688
+          },
+          "28808": {
+            "exe": "conhost.exe",
+            "peak_private_bytes": 1290240,
+            "peak_rss_bytes": 7372800
+          }
+        },
+        "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\HAXELL\\attempts\\004-IndependentTransversals.AugmentingSequences\\compiler.stdout.txt",
+        "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\HAXELL\\attempts\\004-IndependentTransversals.AugmentingSequences\\compiler.stderr.txt",
+        "stdout_sha256": "db6ab99c9a65936e1fa61f0d24ded4f7be81f9bcae28fbc3ccc088355aff5e39",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_excerpt": "IndependentTransversals/AugmentingSequences.lean:81:34: warning: `Set.mem_diff` has been deprecated: Use `Set.mem_sdiff` instead\nIndependentTransversals/AugmentingSequences.lean:84:35: warning: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead\nIndependentTransversals/AugmentingSequences.lean:483:33: warning: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead\nIndependentTransversals/AugmentingSequences.lean:491:32: warning: `Set.mem_diff` has been deprecated: Use `Set.mem_sdiff` instead\nIndependentTransversals/AugmentingSequences.lean:491:66: warning: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead\nIndependentTransversals/AugmentingSequences.lean:498:35: warning: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead\nIndependentTransversals/AugmentingSequences.lean:1152:17: warning: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead\nIndependentTransversals/AugmentingSequences.lean:1165:35: warning: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead\nIndependentTransversals/AugmentingSequences.lean:1171:35: warning: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead\nIndependentTransversals/AugmentingSequences.lean:1209:39: warning: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead\nIndependentTransversals/AugmentingSequences.lean:1258:33: warning: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead\nIndependentTransversals/AugmentingSequences.lean:1267:8: warning: `Set.mem_of_mem_diff` has been deprecated: Use `Set.mem_of_mem_sdiff` instead\n",
+        "stderr_excerpt": ""
+      },
+      "actual_axiom_outputs": [],
+      "original": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\research\\external\\IndependentTransversals\\IndependentTransversals\\AugmentingSequences.lean",
+        "sha256": "d48f5cbb4e36d520bd5dca5aa158935e9978bb7a3805e4c0ebd7a5ca08242b53",
+        "bytes": 78344
+      },
+      "original_statement_preserved": true
+    },
+    {
+      "module": "IndependentTransversals.GeneralHaxell",
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\HAXELL\\IndependentTransversals\\GeneralHaxell.lean",
+        "sha256": "7fbdabfed12b1dff07b5879e9fb41777a5169864f5e3ad2e01295b70bb829f43",
+        "bytes": 48616
+      },
+      "receipt": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\HAXELL\\attempts\\006-IndependentTransversals.GeneralHaxell\\actual_invocation.json",
+        "sha256": "87a5909e2ab789840e818a8f199d2196b0fdae43cb7b669c4c62c8f1340fc78f",
+        "bytes": 22748
+      },
+      "artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\HAXELL\\IndependentTransversals\\GeneralHaxell.olean",
+          "sha256": "d7477aaf4dcf8bc2cb887bb12397e0e42d5a327aa2bf4f5f9b6ddea66b110cf9",
+          "bytes": 1242264
+        }
+      ],
+      "guard": {
+        "command": [
+          "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+          "-j1",
+          "-Dpp.unicode.fun=true",
+          "-DautoImplicit=false",
+          "-o",
+          "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\HAXELL\\IndependentTransversals\\GeneralHaxell.olean",
+          "IndependentTransversals/GeneralHaxell.lean"
+        ],
+        "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\HAXELL",
+        "started_utc": "2026-10-07T14:33:38.935407+00:00",
+        "attempted": true,
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 17179869184,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 2147483648,
+          "own_job_private_bytes": 13958643712,
+          "own_process_private_bytes": 13958643712,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 1800
+        },
+        "minimum_disk_free_bytes": 11069267968,
+        "initial_system_memory_snapshot": {
+          "free_physical_bytes": 14970331136,
+          "total_physical_bytes": 34024419328,
+          "available_commit_bytes": 19580903424,
+          "total_commit_limit_bytes": 45444141056
+        },
+        "minimum_physical_available_bytes": 13767081984,
+        "minimum_available_commit_bytes": 17076142080,
+        "root_pid": 31028,
+        "own_job_assignment_before_resume": "PASS",
+        "exit": 0,
+        "job_peak_process_private_bytes": 2507161600,
+        "job_peak_aggregate_private_bytes": 2508427264,
+        "state": "PASS",
+        "finished_utc": "2026-10-07T14:33:49.917338+00:00",
+        "seconds": 10.984,
+        "polled_peak_tree_private_bytes": 2508288000,
+        "polled_peak_tree_rss_bytes": 1184423936,
+        "counter_samples": 43,
+        "observed_own_processes": {
+          "28976": {
+            "exe": "conhost.exe",
+            "peak_private_bytes": 1265664,
+            "peak_rss_bytes": 7360512
+          },
+          "31028": {
+            "exe": "lean.exe",
+            "peak_private_bytes": 2507022336,
+            "peak_rss_bytes": 1188995072
+          }
+        },
+        "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\HAXELL\\attempts\\006-IndependentTransversals.GeneralHaxell\\compiler.stdout.txt",
+        "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\HAXELL\\attempts\\006-IndependentTransversals.GeneralHaxell\\compiler.stderr.txt",
+        "stdout_sha256": "ebdddce74d166ea617caee76c5082222ee4091d0086429dd904c0e759e150c4d",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_excerpt": "IndependentTransversals/GeneralHaxell.lean:23:0: warning: automatically included section variable(s) unused in theorem `IndependentTransversals.PartitionedGraph.can_extend_without_domination`:\n  [DecidableRel G.graph.Adj]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [DecidableRel G.graph.Adj] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`\nIndependentTransversals/GeneralHaxell.lean:198:17: warning: `Set.mem_diff` has been deprecated: Use `Set.mem_sdiff` instead\nIndependentTransversals/GeneralHaxell.lean:198:31: warning: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead\nIndependentTransversals/GeneralHaxell.lean:268:35: warning: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead\nIndependentTransversals/GeneralHaxell.lean:281:43: warning: `Set.mem_diff` has been deprecated: Use `Set.mem_sdiff` instead\nIndependentTransversals/GeneralHaxell.lean:300:68: warning: `Set.mem_diff` has been deprecated: Use `Set.mem_sdiff` instead\nIndependentTransversals/GeneralHaxell.lean:312:68: warning: `Set.mem_diff` has been deprecated: Use `Set.mem_sdiff` instead\nIndependentTransversals/GeneralHaxell.lean:365:54: warning: `Set.mem_diff` has been deprecated: Use `Set.mem_sdiff` instead\nIndependentTransversals/GeneralHaxell.lean:365:68: warning: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead\nIndependentTransversals/GeneralHaxell.lean:394:47: warning: `Set.mem_diff` has been deprecated: Use `Set.mem_sdiff` instead\nIndependentTransversals/GeneralHaxell.lean:405:45: warning: `Set.mem_diff` has been deprecated: Use `Set.mem_sdiff` instead\nIndependentTransversals/GeneralHaxell.lean:450:62: warning: `Set.mem_diff` has been deprecated: Use `Set.mem_sdiff` instead\nIndependentTransversals/GeneralHaxell.lean:611:43: warning: `Set.mem_diff` has been deprecated: Use `Set.mem_sdiff` instead\nIndependentTransversals/GeneralHaxell.lean:655:24: warning: `Set.ncard_inter_add_ncard_diff_eq_ncard` has been deprecated: Use `Set.ncard_inter_add_ncard_sdiff_eq_ncard` instead\nIndependentTransversals/GeneralHaxell.lean:691:66: warning: `Set.mem_diff` has been deprecated: Use `Set.mem_sdiff` instead\nIndependentTransversals/GeneralHaxell.lean:721:22: warning: `Set.ncard_diff_singleton_of_mem` has been deprecated: Use `Set.ncard_sdiff_singleton_of_mem` instead\n'IndependentTransversals.PartitionedGraph.haxell_no_small_total_domination' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n@PartitionedGraph.haxell_no_small_total_domination : \u2200 {V : Type u_2} [inst : DecidableEq V] [Fintype V]\n  (G : PartitionedGraph V) [DecidableRel G.graph.Adj], G.NoSmallTotalDomination \u2192 \u2203 S, G.IsIndependentTransversal S\n",
+        "stderr_excerpt": ""
+      },
+      "actual_axiom_outputs": [
+        {
+          "endpoint": "IndependentTransversals.PartitionedGraph.haxell_no_small_total_domination",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        }
+      ],
+      "original": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\research\\external\\IndependentTransversals\\IndependentTransversals\\Haxell.lean",
+        "sha256": "87ad77e62bb822152875d8321d9f41bb1721644f932b7a88e7ece26dcaa2d55c",
+        "bytes": 128547
+      },
+      "original_statement_preserved": false
+    }
+  ],
+  "upstream": "https://github.com/Pjotr5/IndependentTransversals",
+  "upstream_head": "205372fe2b4b17ec77ef3f4629c43686223c1028",
+  "known_foundational_mathematics_not_Robert_novelty": true,
+  "BM_complete": false,
+  "hypergraph_2r_minus_3_formal": false,
+  "scope": "Sufficient independent-transversal criterion: no nonempty union of B blocks admits any total dominating set of at most2(|B|-1) vertices. No maximum-degree or desired independent-transversal conclusion is assumed.",
+  "adaptation": "Only the degree/thickness-based extension step is replaced by the explicit non-domination criterion. Cardinality is derived from actual feasible tuples and well-founded descent. Original pure zero-degree improvements retain their mathematical statements.",
+  "api_repairs": {
+    "AugmentingSequences": [
+      "Fin.getElem_fin normalization in prefix and append proofs",
+      "Two explicitly typed mapped-list indices avoid semireducible proof-index rewriting"
+    ],
+    "GeneralHaxell": [
+      "SimpleGraph.adj_symm API at three uses",
+      "WellFounded.not_lt_min current explicit argument signature"
+    ]
+  },
+  "actual_invocations": 6,
+  "failed_actual_attempts": [
+    {
+      "receipt": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\HAXELL\\attempts\\003-IndependentTransversals.AugmentingSequences\\actual_invocation.json",
+        "sha256": "4ff93a595e793dd9438de46456d437602e515cdbf0a8f343c8a96e859f293bcf",
+        "bytes": 31833
+      },
+      "state": "COMMAND_FAILED",
+      "accepted": false
+    },
+    {
+      "receipt": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\HAXELL\\attempts\\005-IndependentTransversals.GeneralHaxell\\actual_invocation.json",
+        "sha256": "3684be1adbb0d94e1f227dae353962358b83484b006358fdb925a7d57da604fe",
+        "bytes": 23731
+      },
+      "state": "COMMAND_FAILED",
+      "accepted": false
+    }
+  ],
+  "pre_dispatch_rejections": [
+    {
+      "reason": "Mistyped runner hash; no compiler dispatched"
+    },
+    {
+      "reason": "Runtime binding missing bytes field; no compiler dispatched"
+    }
+  ],
+  "current_plan": {
+    "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\HAXELL\\port-plan.json",
+    "sha256": "969ae18f8e713c03bd7d04cca0e627b0c768d452e110ec230c4766f2210d82e4",
+    "bytes": 16960
+  },
+  "license": {
+    "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\HAXELL\\LICENSE",
+    "sha256": "9bf4e882bdd75e8d10fc788c53d0a787ef0f59cead1fe1f0878c240896fc8610",
+    "bytes": 10353
+  }
+}

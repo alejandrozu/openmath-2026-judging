@@ -1,5 +1,5 @@
 name = "openmath"
-defaultTargets = ["ReviewExisting", "HaarInfinite", "HamiltonianDeletion", "CutResilience", "CherryBoundary"]
+defaultTargets = ["ReviewExisting", "ReviewAdditions"]
 
 [leanOptions]
 pp.unicode.fun = true
@@ -22,13 +22,16 @@ name = "Openmath"
 name = "ReviewExisting"
 
 [[lean_lib]]
-name = "HaarInfinite"
+name = "ReviewAdditions"
 
 [[lean_lib]]
-name = "HamiltonianDeletion"
+name = "VerifiedAdditions"
+roots = ["AffinePaletteBarrier", "CherryBoundary", "ComponentClosure", "ComponentUnions", "CutResilience", "CycleComposition", "DeletedGadget", "GlobalSelectors", "HaarComponents", "HaarInfinite", "HamiltonianDeletion", "InfiniteAffinePaletteBarrier", "Main", "MatchingIdentification", "MatrixSampling", "MultigraphCut", "NormVariance", "Passage", "Piece", "PrescribedVertex", "PrimeChart", "Projection", "R1", "Regularity", "SkeletonB", "SkeletonK", "Substitution", "TwinDensityExtension", "UnitPorts"]
 
 [[lean_lib]]
-name = "CutResilience"
+name = "SLT"
+roots = ["SLT.RMT.MatBern"]
 
 [[lean_lib]]
-name = "CherryBoundary"
+name = "IndependentTransversals"
+roots = ["IndependentTransversals.GeneralHaxell"]

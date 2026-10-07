@@ -1,0 +1,63 @@
+AffinePaletteBarrier.lean:32:8: warning: automatically included section variable(s) unused in theorem `_private.AffinePaletteBarrier.0.OpenMathReview.AffinePaletteBarrier.triple_self`:
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+AffinePaletteBarrier.lean:93:8: warning: automatically included section variable(s) unused in theorem `_private.AffinePaletteBarrier.0.OpenMathReview.AffinePaletteBarrier.exists_eq_triple`:
+  [AddCommGroup V]
+  [Module (ZMod 3) V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [AddCommGroup V] [Module (ZMod 3) V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+AffinePaletteBarrier.lean:157:0: warning: automatically included section variable(s) unused in theorem `OpenMathReview.AffinePaletteBarrier.palette_subset`:
+  [AddCommGroup V]
+  [Module (ZMod 3) V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [AddCommGroup V] [Module (ZMod 3) V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+AffinePaletteBarrier.lean:162:0: warning: automatically included section variable(s) unused in theorem `OpenMathReview.AffinePaletteBarrier.palette_card`:
+  [AddCommGroup V]
+  [Module (ZMod 3) V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [AddCommGroup V] [Module (ZMod 3) V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+AffinePaletteBarrier.lean:165:8: warning: automatically included section variable(s) unused in theorem `_private.AffinePaletteBarrier.0.OpenMathReview.AffinePaletteBarrier.shift_mem`:
+  [Module (ZMod 3) V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Module (ZMod 3) V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+'OpenMathReview.AffinePaletteBarrier.component_induced' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OpenMathReview.AffinePaletteBarrier.tripleClosed_of_sidon' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OpenMathReview.AffinePaletteBarrier.canonical_full' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OpenMathReview.AffinePaletteBarrier.exposed_cycle_no_partner' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'OpenMathReview.AffinePaletteBarrier.sidon_exposed_cycle_no_partner' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@exposed_cycle_no_partner : ∀ {V : Type u_2} [inst : AddCommGroup V] [inst_1 : Module (ZMod 3) V]
+  [inst_2 : DecidableEq V] [Fintype V] (S : Finset V),
+  TripleClosed S →
+    ∀ (a b : Color S) (J : Set (twoFactor (canonical S) a b).ConnectedComponent) (i j : Color S) {u : V × Bool}
+      (p : (twoFactor (swap (canonical S) a b J) i j).Walk u u),
+      p.IsCycle →
+        ¬∃ w q,
+            q.IsCycle ∧
+              (Walk.mapLe ⋯ p).support.toFinset = q.support.toFinset ∧
+                Disjoint (Walk.mapLe ⋯ p).edges.toFinset q.edges.toFinset
+@sidon_exposed_cycle_no_partner : ∀ {V : Type u_2} [inst : AddCommGroup V] [inst_1 : Module (ZMod 3) V]
+  [inst_2 : DecidableEq V] [Fintype V] (S : Finset V),
+  Sidon S →
+    ∀ (a b : Color S) (J : Set (twoFactor (canonical S) a b).ConnectedComponent) (i j : Color S) {u : V × Bool}
+      (p : (twoFactor (swap (canonical S) a b J) i j).Walk u u),
+      p.IsCycle →
+        ¬∃ w q,
+            q.IsCycle ∧
+              (Walk.mapLe ⋯ p).support.toFinset = q.support.toFinset ∧
+                Disjoint (Walk.mapLe ⋯ p).edges.toFinset q.edges.toFinset

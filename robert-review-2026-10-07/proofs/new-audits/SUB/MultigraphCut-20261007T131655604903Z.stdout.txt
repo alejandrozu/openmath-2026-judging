@@ -1,0 +1,39 @@
+MultigraphCut.lean:10:12: warning: please avoid 'open (scoped) Classical' statements: this can hide theorem statements which would be better stated with explicit decidability statements.
+Instead, use `open Classical in` for definitions or instances, the `classical` tactic for proofs.
+For theorem statements, either add missing decidability assumptions or use `open Classical in`.
+
+Note: This linter can be disabled with `set_option linter.style.openClassical false`
+MultigraphCut.lean:16:0: warning: automatically included section variable(s) unused in theorem `RobertPublishable.SUB.LooplessMultigraph.IsCycleOn.mem_support_of_incident`:
+  [DecidableEq E]
+  [Fintype U]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq E] [Fintype U] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+MultigraphCut.lean:25:0: warning: automatically included section variable(s) unused in theorem `RobertPublishable.SUB.LooplessMultigraph.degree_weight_sum`:
+  [DecidableEq E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+MultigraphCut.lean:74:26: warning: This simp argument is unused:
+  Finset.sum_filter
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Finset.sum_ite, Finset.sum_const, mul_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+MultigraphCut.lean:80:27: warning: This simp argument is unused:
+  Finset.sum_ite
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [boundary, inner]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+MultigraphCut.lean:85:0: warning: automatically included section variable(s) unused in theorem `RobertPublishable.SUB.LooplessMultigraph.exists_boundary_of_distinct_colors`:
+  [DecidableEq E]
+  [Fintype U]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq E] [Fintype U] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`

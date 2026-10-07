@@ -1,0 +1,511 @@
+{
+  "schema": "actual-preparatory-matrix-algebra-and-real-operator-norm-qualification-v1",
+  "checked_utc": "2026-10-07T14:33:17.533488+00:00",
+  "status": "ACTUAL_TWO_SOURCE_TWELVE_STANDARD_PREPARATORY_MATRIX_ENDPOINTS",
+  "producer": {
+    "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\qualify_preparatory_matrices_readonly.py",
+    "sha256": "275543a6f5bc3dab1ddd9c2e347151f2e7415063791422af56cca0bcfa5dfa3f",
+    "bytes": 5479
+  },
+  "actual_sources_passed": 2,
+  "actual_unique_standard_prints": 12,
+  "modules": [
+    {
+      "module": "MatrixSampling",
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\MatrixSampling.lean",
+        "sha256": "d2efc982231c792db9ac99e51cfe3406f7c66efd13d980f0268df5a5155209db",
+        "bytes": 5036
+      },
+      "actual_PASS_receipt": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\attempts\\003-MatrixSampling\\actual_invocation.json",
+        "sha256": "c448b981096d8da1ad1baebb666b111e73f1164bd2f8234c7bfa37ab6936a359",
+        "bytes": 29129
+      },
+      "stdout": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\attempts\\003-MatrixSampling\\compiler.stdout.txt",
+        "sha256": "f767a6e062ee0dc7dfb3f753fdcac87641be25470afdb9c6008469876638a140",
+        "bytes": 854
+      },
+      "stderr": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\attempts\\003-MatrixSampling\\compiler.stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      },
+      "actual_artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\MatrixSampling.olean",
+          "sha256": "0160d92286541bdbb9225faf9f073a0e196a4ab18bc35abd1de3a23082d911ee",
+          "bytes": 311424
+        }
+      ],
+      "actual_printed_endpoints": [
+        {
+          "endpoint": "OpenMathReview.Sampling.sampled_centered_decomposition",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "endpoint": "OpenMathReview.Sampling.centered_row_energy",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "endpoint": "OpenMathReview.Sampling.centered_column_energy",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "endpoint": "OpenMathReview.Sampling.centered_row_energy_le",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "endpoint": "OpenMathReview.Sampling.columnGram_isHermitian",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "endpoint": "OpenMathReview.Sampling.gram_eq_sum_columnGram",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "endpoint": "OpenMathReview.Sampling.weighted_gram_eq",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "endpoint": "OpenMathReview.Sampling.columnGram_sq",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "actual_seconds": 12.047,
+      "runtime": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+        "sha256": "af49bacfabaa1fea71332ca0feae0fa1a60912219d5902291adc79f905bffb8d",
+        "bytes": 83456
+      },
+      "qualified_readonly_SLT_port": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SLT_PORT\\SLT_PORT_actual_final_qualification.json",
+        "sha256": "1e57e284ffd2cdc8cb093e9586f66cd1bb803e0659b7c8ceaff2ae4eb62e38c5",
+        "bytes": 37486
+      }
+    },
+    {
+      "module": "NormVariance",
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\NormVariance.lean",
+        "sha256": "40f738c4c5298b726c8087a7417d96aed4e70f9878aea25b4642fba2f42818ea",
+        "bytes": 2774
+      },
+      "actual_PASS_receipt": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\attempts\\001-NormVariance\\actual_invocation.json",
+        "sha256": "e4280c9440f15b13f6949f80a5df01a8623e1287131ade552d72b035af46abd5",
+        "bytes": 28441
+      },
+      "stdout": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\attempts\\001-NormVariance\\compiler.stdout.txt",
+        "sha256": "d0daec0d068cd708c232889af994497bc54fa70367f4132def99c4fb2b464fdd",
+        "bytes": 434
+      },
+      "stderr": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\attempts\\001-NormVariance\\compiler.stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      },
+      "actual_artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\NormVariance.olean",
+          "sha256": "86b06b75e2ecd6d0b42649af658765f2cc02172a509470ec0a28978c00ea393a",
+          "bytes": 183088
+        }
+      ],
+      "actual_printed_endpoints": [
+        {
+          "endpoint": "OpenMathReview.Sampling.real_opNorm_mono_of_quadratic_forms",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "endpoint": "OpenMathReview.Sampling.columnGram_norm",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "endpoint": "OpenMathReview.Sampling.columnGram_norm_le",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "endpoint": "OpenMathReview.Sampling.columnGram_square_norm",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "actual_seconds": 11.234,
+      "runtime": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+        "sha256": "af49bacfabaa1fea71332ca0feae0fa1a60912219d5902291adc79f905bffb8d",
+        "bytes": 83456
+      },
+      "qualified_readonly_SLT_port": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SLT_PORT\\SLT_PORT_actual_final_qualification.json",
+        "sha256": "1e57e284ffd2cdc8cb093e9586f66cd1bb803e0659b7c8ceaff2ae4eb62e38c5",
+        "bytes": 37486
+      }
+    }
+  ],
+  "endpoint_source_scope_index": [
+    {
+      "endpoint": "OpenMathReview.Sampling.sampled_centered_decomposition",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "scope": "Actual chosen subsets U,V: sampledW equals constant d/N matrix plus sampled centredW. No stochastic claim or rank bound is assumed/proved here."
+    },
+    {
+      "endpoint": "OpenMathReview.Sampling.centered_row_energy",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "scope": "For N>0 and binary W with everyrow sumd, actual centredrow squared Euclidean energy equals d−d²/N."
+    },
+    {
+      "endpoint": "OpenMathReview.Sampling.centered_column_energy",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "scope": "Corresponding actual binarycolumn sumd energy identity."
+    },
+    {
+      "endpoint": "OpenMathReview.Sampling.centered_row_energy_le",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "scope": "The exact centredrow energy is at mostd, with no probabilistic input."
+    },
+    {
+      "endpoint": "OpenMathReview.Sampling.columnGram_isHermitian",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "scope": "Actual real columnouterproduct is symmetric."
+    },
+    {
+      "endpoint": "OpenMathReview.Sampling.gram_eq_sum_columnGram",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "scope": "Actual F Fᵀ equals the sum of actual columnouterproducts."
+    },
+    {
+      "endpoint": "OpenMathReview.Sampling.weighted_gram_eq",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "scope": "Actual columnweighting by b has Gram Σb_j² columnGram_j."
+    },
+    {
+      "endpoint": "OpenMathReview.Sampling.columnGram_sq",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "scope": "Actual columnGram square equals columnEnergy times columnGram."
+    },
+    {
+      "endpoint": "OpenMathReview.Sampling.real_opNorm_mono_of_quadratic_forms",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "scope": "Real symmetric operator with nonnegative quadraticforms and pointwisequadraticform≤B has operatornorm≤normB; no complexCStarAlgebra assumption."
+    },
+    {
+      "endpoint": "OpenMathReview.Sampling.columnGram_norm",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "scope": "Actual L2operatornorm of columnouterproduct equals columnEnergy, i.e.sum of realentry squares."
+    },
+    {
+      "endpoint": "OpenMathReview.Sampling.columnGram_norm_le",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "scope": "Given actualcolumnEnergy≤c², its columnGram norm is at mostc²."
+    },
+    {
+      "endpoint": "OpenMathReview.Sampling.columnGram_square_norm",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "scope": "Actual squared-column-Gram norm equals columnEnergy²."
+    }
+  ],
+  "two_failed_elaboration_drafts_fully_preserved": [
+    {
+      "actual_failed_receipt": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\attempts\\001-MatrixSampling\\actual_invocation.json",
+        "sha256": "9e9a67b933b6200c39e524b9244cfa757fafbf87ce0a7031db382fec779865d4",
+        "bytes": 32897
+      },
+      "actual_state": "COMMAND_FAILED",
+      "actual_exit": 1,
+      "stdout": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\attempts\\001-MatrixSampling\\compiler.stdout.txt",
+        "sha256": "49083011b7a9e336aa78965b9d170355230aa2cbc89ad3c185d2aa8bd98ca324",
+        "bytes": 5059
+      },
+      "raw_recovery_axiom_outputs_not_accepted": [
+        {
+          "endpoint": "OpenMathReview.Sampling.centered_row_energy",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        },
+        {
+          "endpoint": "OpenMathReview.Sampling.centered_column_energy",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        },
+        {
+          "endpoint": "OpenMathReview.Sampling.centered_row_energy_le",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        },
+        {
+          "endpoint": "OpenMathReview.Sampling.columnGram_isHermitian",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        },
+        {
+          "endpoint": "OpenMathReview.Sampling.gram_eq_sum_columnGram",
+          "axioms": [
+            "propext",
+            "sorryAx",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "SORRY_ADMISSION"
+        },
+        {
+          "endpoint": "OpenMathReview.Sampling.weighted_gram_eq",
+          "axioms": [
+            "propext",
+            "sorryAx",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "SORRY_ADMISSION"
+        },
+        {
+          "endpoint": "OpenMathReview.Sampling.columnGram_sq",
+          "axioms": [
+            "propext",
+            "sorryAx",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "SORRY_ADMISSION"
+        }
+      ]
+    },
+    {
+      "actual_failed_receipt": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\attempts\\002-MatrixSampling\\actual_invocation.json",
+        "sha256": "1b4aa5dfcc84c03533d9743856ad3c18fa504c91d8d4254b980587bb5cbbdc27",
+        "bytes": 29036
+      },
+      "actual_state": "COMMAND_FAILED",
+      "actual_exit": 1,
+      "stdout": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\attempts\\002-MatrixSampling\\compiler.stdout.txt",
+        "sha256": "c21005f15a1bd3a4ab0e79dbf359097e407050299b4f4e1d63cce9873139800c",
+        "bytes": 1114
+      },
+      "raw_recovery_axiom_outputs_not_accepted": [
+        {
+          "endpoint": "OpenMathReview.Sampling.centered_row_energy",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        },
+        {
+          "endpoint": "OpenMathReview.Sampling.centered_column_energy",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        },
+        {
+          "endpoint": "OpenMathReview.Sampling.centered_row_energy_le",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        },
+        {
+          "endpoint": "OpenMathReview.Sampling.columnGram_isHermitian",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        },
+        {
+          "endpoint": "OpenMathReview.Sampling.gram_eq_sum_columnGram",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        },
+        {
+          "endpoint": "OpenMathReview.Sampling.weighted_gram_eq",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        },
+        {
+          "endpoint": "OpenMathReview.Sampling.columnGram_sq",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        },
+        {
+          "endpoint": "OpenMathReview.Sampling.sampled_centered_decomposition",
+          "axioms": [],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "AXIOM_FREE"
+        }
+      ]
+    }
+  ],
+  "new_sampling_concentration_theorem_proved": false,
+  "B22_uniform_fixed_cardinality_spectral_sampling_proved": false,
+  "BM_full_Hamiltonicity_proved": false,
+  "publication_classification": "Preparatory actual-matrix algebra and real operator-norm interfaces only. No new family score or probabilistic/spectral conclusion follows from these twelve prints.",
+  "known_ingredient_attribution": "The imported matrix-Bernstein tool is the qualified five-module third-party SLTport; algebra/norm identities are standard ingredients, not original concentration methods.",
+  "upstream_sources_runtime_or_preexisting_artifacts_modified": false,
+  "qualification_compiler_invocations": 0
+}

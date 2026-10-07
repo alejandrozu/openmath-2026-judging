@@ -1,0 +1,51 @@
+GlobalSelectors.lean:28:0: warning: automatically included section variable(s) unused in theorem `RobertPublishable.TWO.vertex_injective`:
+  [DecidableEq F]
+  [Fintype F]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq F] [Fintype F] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+GlobalSelectors.lean:84:0: warning: automatically included section variable(s) unused in theorem `RobertPublishable.TWO.round1_full`:
+  [CharP F 3]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharP F 3] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+GlobalSelectors.lean:87:0: warning: automatically included section variable(s) unused in theorem `RobertPublishable.TWO.chart_matchA`:
+  [DecidableEq F]
+  [Fintype F]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq F] [Fintype F] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+GlobalSelectors.lean:92:0: warning: automatically included section variable(s) unused in theorem `RobertPublishable.TWO.chart_matchC`:
+  [DecidableEq F]
+  [Fintype F]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq F] [Fintype F] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+GlobalSelectors.lean:100:74: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+GlobalSelectors.lean:105:68: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+GlobalSelectors.lean:163:0: warning: automatically included section variable(s) unused in theorem `RobertPublishable.TWO.round1_AC_unchanged`:
+  [CharP F 3]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharP F 3] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+'RobertPublishable.TWO.vertex_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RobertPublishable.TWO.firstSet_edge_closed' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RobertPublishable.TWO.firstSelected_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RobertPublishable.TWO.round1_full' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RobertPublishable.TWO.secondSet_canonical_edge_closed' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RobertPublishable.TWO.round1_AC_unchanged' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RobertPublishable.TWO.secondSet_edge_closed' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RobertPublishable.TWO.secondSelected_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RobertPublishable.TWO.round2_full' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RobertPublishable.TWO.firstSelected_vertex' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RobertPublishable.TWO.secondSelected_left' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RobertPublishable.TWO.secondSelected_right' depends on axioms: [propext, Classical.choice, Quot.sound]

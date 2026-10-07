@@ -1,0 +1,104 @@
+{
+  "schema": "SUB-actual-constructed-ports-skeleton-prescribed-vertex-independent-semantic-peer-review-v1",
+  "checked_utc": "2026-10-07T14:19:30.556599+00:00",
+  "reviewer": "/root/novel_paper_content",
+  "status": "PASS_READ_ONLY_SEMANTIC_SCOPE_NO_CONCRETE_BLOCKER",
+  "review_scope": "Full PrescribedVertex,UnitPorts,SkeletonB,DeletedGadget source read; conditional Gadget/substitution interfaces inspected. This is not a second13-source compiler execution or a complete independent operational qualification.",
+  "source_bindings": [
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SUB\\PrescribedVertex.lean",
+      "sha256": "437e5353148c2a7bd7242296c9c335816c22a4301eb7d8f78f6dfdf6f192b321",
+      "bytes": 4849
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SUB\\UnitPorts.lean",
+      "sha256": "79a0f4e79695008b73bd823402e2c9aa3b60d781423aa83793e941392ef1e6ae",
+      "bytes": 7463
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SUB\\SkeletonB.lean",
+      "sha256": "1248215583f7399c483300207d3b20028df75bdcd3bd568ddfc2bf75b12fceb9",
+      "bytes": 9925
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SUB\\DeletedGadget.lean",
+      "sha256": "cc155df61fde8f35f388e58890d1023b5bea2bf47346124723cc9bb286f13b52",
+      "bytes": 5631
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SUB\\Substitution.lean",
+      "sha256": "e6c33b8923f6ab8c7426b1b05ba3c7ebd06e02f0f679e82fd1bb54d796c8cdfb",
+      "bytes": 4924
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SUB\\Regularity.lean",
+      "sha256": "9e84eb174db4e441f8170ab892d79c2a028937cde7adb31285d5175281787ae5",
+      "bytes": 6394
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SUB\\Piece.lean",
+      "sha256": "2a0e656ff1475973c3f852bd65f39df9a866bf076cc4b33306d07360ea7f7da2",
+      "bytes": 6601
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SUB\\SkeletonK.lean",
+      "sha256": "9f330a4b92e8d973c306c0ebb42a94d25435ffdcf4d3c6fdab231f6d2029b001",
+      "bytes": 2971
+    }
+  ],
+  "actual_final_PV_receipt": {
+    "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SUB\\logs\\PrescribedVertex-20261007T141142685244Z.json",
+    "sha256": "9502fe993f3ee21c7e383843de599be4599d5c164bc992cd18960830c3dbd29c",
+    "bytes": 9262
+  },
+  "stdout": {
+    "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SUB\\logs\\PrescribedVertex-20261007T141142685244Z.stdout.txt",
+    "sha256": "a8bc025102c96e935449b27292aa690be1748613af656fb9084e577917b1dd20",
+    "bytes": 1712
+  },
+  "stderr": {
+    "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SUB\\logs\\PrescribedVertex-20261007T141142685244Z.stderr.txt",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0
+  },
+  "actual_two_standard_PV_prints": [
+    {
+      "endpoint": "RobertPublishable.SUB.avoiding_graph_from_deleted_vertex",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "endpoint": "RobertPublishable.SUB.prescribed_vertex_equivalence",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    }
+  ],
+  "construction_fidelity": [
+    "The six deficient ports are the actual deleted vertex’s six distinct neighbors on the opposite color shore.",
+    "Port cardinality is derived from degree6 and an injective image into the original neighbor set.",
+    "The full grouped graph is concretely defined as disjoint gadgetcopies plus one link for each labelled skeletonedge.",
+    "Fintype.equivOfCardEq supplies an actual bijection from each incidentstar to the six actual ports.",
+    "PortAt injectivity on each star proves distinct edge labels give distinct simple links, even for parallel skeleton edges.",
+    "No selfloop is introduced: skeletonlooplessness is used after projecting a putative diagonal link.",
+    "DefaultPort outside the incidentstar is never used at an actual endpoint of a link, because RegularStars.mem_star matches endpointincidence.",
+    "Each designated port receives exactlyone link, every otheroutervertex receiveszero; portdegree defect is proved, not assumed as graphregularity.",
+    "Gadget is structural: bipartite,innerdegree6,outerdegree≤6,one-vertexsurplus. It contains no pair-existence/freeness conclusion.",
+    "DeletedGadget constructs an actual graphisomorphic to Binduce(v≠o), with exact deletedneighbor degree and proved surplus.",
+    "The actual original L6b has16vertices/48labellededges. Small cuts confine a hypothetical pair to one localpiece; local_cycles carry actual connectivity,degree2 anddisjoint labels into Piece.",
+    "skeletonB_pairfree is proved from the localpiece theorem, not supplied as a CorollaryB input.",
+    "Universal B6 and VA6 both explicitly quantify finite nonempty vertex types. The actual substituted host is shown nonempty via the six-port set.",
+    "Forward implication uses a hypothetical pair-free B−o as a counterexample premise to construct a genuine pair-free six-regular bipartite host, contradicting universalB6.",
+    "Reverse implication chooses one existingvertex and injectively maps an actual avoiding-vertex pair back into B.",
+    "The conclusion is an equivalence of conjectural existence statements, not a proof that B6/VA6 holds, and not a Hamiltoncycle claim."
+  ],
+  "ordinary_priority_note": "Known substitution machinery must remain distinguished from the exact pair-preserving formal reduction; this semantic review is not a novelty certification.",
+  "material_unresolved_findings": [],
+  "compiler_invocations_by_reviewer": 0,
+  "source_or_existing_evidence_mutations": 0
+}

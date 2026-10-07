@@ -1,0 +1,453 @@
+{
+  "schema": "SLT-known-foundation-own-4.33.1-guarded-port-invocation-v1",
+  "checked_utc": "2026-10-07T13:27:44.199489+00:00",
+  "module": "SLT.MatrixInfra.Basic",
+  "source": {
+    "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SLT_PORT\\SLT\\MatrixInfra\\Basic.lean",
+    "sha256": "996a35b418cd71e8395421cf9de742dd47f5a2794c7cb5463688e6dc7ee0b03c",
+    "bytes": 35984
+  },
+  "original_upstream_source": {
+    "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\research\\external\\lean-stat-learning-theory\\SLT\\MatrixInfra\\Basic.lean",
+    "sha256": "f6b5423e8af465ae13b4135ded3b6ecb5a44005a05211c182a0beaef5497c041",
+    "bytes": 35963
+  },
+  "api_changes": [
+    {
+      "scope": "One proof-tactic insertion before simplification; theorem statement and all other original bytes unchanged.",
+      "declaration": "Matrix.orthonormal_leftSingularVector_of_singularValues_ne_zero",
+      "inserted_tactic": "rw [if_pos rfl], before simp",
+      "reason": "Avoid simplifying the singular-value subtype before discharging its reflexive conditional. First retry placed rewrite after simp and exposed implicit-transparency type mismatch.",
+      "before_source_sha256": "f6b5423e8af465ae13b4135ded3b6ecb5a44005a05211c182a0beaef5497c041",
+      "after_source_sha256": "996a35b418cd71e8395421cf9de742dd47f5a2794c7cb5463688e6dc7ee0b03c",
+      "actual_failed_attempts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SLT_PORT\\attempts\\001-SLT.MatrixInfra.Basic\\actual_invocation.json",
+          "sha256": "80285d1eda172d54c34f52b0bf8af37855782a08bd38b30cc80607cc6f003a47"
+        },
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SLT_PORT\\attempts\\002-SLT.MatrixInfra.Basic\\actual_invocation.json",
+          "sha256": "07809beeafae23832553d9aa68fcc97417ef688c7295d8b13d4cb048ac004566"
+        }
+      ]
+    }
+  ],
+  "upstream_head": "d0f506f0a695018265dccb33bcb05e2f5ca1c876",
+  "plan": {
+    "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SLT_PORT\\port-plan.json",
+    "sha256": "460a16fff91bb2fb6c88c9fe943563665bb5a7a4c37683fa888ecc45a9678219",
+    "bytes": 31064
+  },
+  "runner": {
+    "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SLT_PORT\\compile_guarded.py",
+    "sha256": "3f2b739f96d94a2d874fccd7ab78b744f30147d5420736046e69a814f85f0e8c",
+    "bytes": 7576
+  },
+  "guard_binding": {
+    "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\shared_guard.py",
+    "sha256": "29578665ab4f1336e8164a547872119939c6a0b86ceafbadcd36f9859bc367f2",
+    "bytes": 9243
+  },
+  "runtime": {
+    "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+    "sha256": "af49bacfabaa1fea71332ca0feae0fa1a60912219d5902291adc79f905bffb8d",
+    "bytes": 83456
+  },
+  "baseline": {
+    "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\adjacent_robert_20261007\\verification\\completed106-source81-axioms-immutable.json",
+    "sha256": "82b6c76de58309b35ed3b1b28b211011449b319affde181446870a33e9a9f142",
+    "bytes": 1107666
+  },
+  "dependency_pins": [
+    {
+      "name": "mathlib",
+      "head": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib"
+    },
+    {
+      "name": "plausible",
+      "head": "b7eb3304aeae834b12dda98993a37f6a41f6f0bb",
+      "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\plausible"
+    },
+    {
+      "name": "LeanSearchClient",
+      "head": "5f4d51b81cbd3f6b32b156bfad9056621a040404",
+      "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\LeanSearchClient"
+    },
+    {
+      "name": "importGraph",
+      "head": "16f02aa7642864af59f1ff0e384a015994db9118",
+      "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\importGraph"
+    },
+    {
+      "name": "proofwidgets",
+      "head": "4be2e3d5087eeb272cf5a8853b8f9dd025ef5957",
+      "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\proofwidgets"
+    },
+    {
+      "name": "aesop",
+      "head": "3448c0bcc5ce01b2d1546e483ec3620e32df3d0e",
+      "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\aesop"
+    },
+    {
+      "name": "Qq",
+      "head": "92c15be17b7caf78c2ad767ec40f89052d908d81",
+      "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\Qq"
+    },
+    {
+      "name": "batteries",
+      "head": "4488d40d070b9700d4d5a6aa342f0d40c31b2a2d",
+      "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\batteries"
+    },
+    {
+      "name": "Cli",
+      "head": "6130a47896ce867c6a4a55373441e59e565bad0f",
+      "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\Cli"
+    }
+  ],
+  "direct_official_provider_bindings": [
+    {
+      "module": "Mathlib.Analysis.InnerProductSpace.SingularValues",
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\Analysis\\InnerProductSpace\\SingularValues.lean",
+        "sha256": "ce8193fcd5d226845a71f66b8ca7ad385358916a6e0e688745410ac412ed5c81",
+        "bytes": 10354
+      },
+      "artifact": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Analysis\\InnerProductSpace\\SingularValues.olean",
+        "sha256": "46788a5cdd8e6e4513bf286c2b7fa23d4a66bc16ada96f3e340f8b8c46ebae4a",
+        "bytes": 110392
+      }
+    },
+    {
+      "module": "Mathlib.Analysis.CStarAlgebra.CStarMatrix",
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\Analysis\\CStarAlgebra\\CStarMatrix.lean",
+        "sha256": "95067757d043ef5e6c52acf952486f5d75e79e89bb740eb0b4033d3a5db4a0de",
+        "bytes": 35842
+      },
+      "artifact": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Analysis\\CStarAlgebra\\CStarMatrix.olean",
+        "sha256": "61e4b0a29adc1a3c7480cf63e9081022587c9fcee3100d785f61fb014a693acd",
+        "bytes": 1531544
+      }
+    },
+    {
+      "module": "Mathlib.Analysis.CStarAlgebra.ContinuousFunctionalCalculus.Instances",
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\Analysis\\CStarAlgebra\\ContinuousFunctionalCalculus\\Instances.lean",
+        "sha256": "0bc04d350ea16313953d98ec4a73ba1767777414c08081572933e8b7dfddf163",
+        "bytes": 20830
+      },
+      "artifact": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Analysis\\CStarAlgebra\\ContinuousFunctionalCalculus\\Instances.olean",
+        "sha256": "a1d5958946ac5a36b4bd1adfa70c558da5417b20e667ad8edd62c62dd829e3b1",
+        "bytes": 473632
+      }
+    },
+    {
+      "module": "Mathlib.Analysis.CStarAlgebra.Matrix",
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\Analysis\\CStarAlgebra\\Matrix.lean",
+        "sha256": "79518c9e51c4d0cf4083ab69a9ac7a2817305b48db1fe6f25ae1d678e12ce223",
+        "bytes": 14220
+      },
+      "artifact": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Analysis\\CStarAlgebra\\Matrix.olean",
+        "sha256": "08f334722a7bcf712b67326c10710e9fe6c2b13052570b8ab79a57bd9995ac57",
+        "bytes": 471168
+      }
+    },
+    {
+      "module": "Mathlib.Analysis.Matrix.Order",
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\Analysis\\Matrix\\Order.lean",
+        "sha256": "eb786ba4435f1955c504da52de2beae76647d814922266c8aac8f082bbc3e2da",
+        "bytes": 16271
+      },
+      "artifact": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Analysis\\Matrix\\Order.olean",
+        "sha256": "266fb157167926b001330379c8f37d69fb7609e7e244bd54ee535864bcc828b9",
+        "bytes": 250312
+      }
+    },
+    {
+      "module": "Mathlib.Analysis.Normed.Algebra.MatrixExponential",
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\Analysis\\Normed\\Algebra\\MatrixExponential.lean",
+        "sha256": "b455181a304df946738ad2856d3d6ec7222300fd1da2cb285f5a519dfd43a224",
+        "bytes": 7815
+      },
+      "artifact": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Analysis\\Normed\\Algebra\\MatrixExponential.olean",
+        "sha256": "891011a3c2ebab22c3ab77ddcd503c45fbc95988c0ac33fc17f8fd074905dd98",
+        "bytes": 99408
+      }
+    },
+    {
+      "module": "Mathlib.Analysis.SpecialFunctions.ContinuousFunctionalCalculus.ExpLog.Basic",
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\Analysis\\SpecialFunctions\\ContinuousFunctionalCalculus\\ExpLog\\Basic.lean",
+        "sha256": "6bf0c9b685cc6b88334c76ad8921b8bcb240ee371ba0a516e9a159bdfb54142a",
+        "bytes": 7445
+      },
+      "artifact": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Analysis\\SpecialFunctions\\ContinuousFunctionalCalculus\\ExpLog\\Basic.olean",
+        "sha256": "b10c7d26989e11ee4a9baa4dab156162995afb003368d4f1980e006e13d0371e",
+        "bytes": 118584
+      }
+    },
+    {
+      "module": "Mathlib.Analysis.SpecialFunctions.ContinuousFunctionalCalculus.ExpLog.Order",
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\Analysis\\SpecialFunctions\\ContinuousFunctionalCalculus\\ExpLog\\Order.lean",
+        "sha256": "21a4281b12931eedae6899d2bf20b74c5dfb635cfb020853212d187f62bc9208",
+        "bytes": 5882
+      },
+      "artifact": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Analysis\\SpecialFunctions\\ContinuousFunctionalCalculus\\ExpLog\\Order.olean",
+        "sha256": "c8b351ffeaa70acab2cd0876948011e5d05a325e858dfdd0099e53f050d97535",
+        "bytes": 60576
+      }
+    },
+    {
+      "module": "Mathlib.Analysis.SpecialFunctions.ImproperIntegrals",
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\Analysis\\SpecialFunctions\\ImproperIntegrals.lean",
+        "sha256": "e088f3d80344a073e29812e7b626b20bee595635bd520a4f61407b043301b4aa",
+        "bytes": 15967
+      },
+      "artifact": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Analysis\\SpecialFunctions\\ImproperIntegrals.olean",
+        "sha256": "d82f9a48fc98b4f3fe63b17f53f42f79e4a95a40d0f331918f17b9ca685fbe35",
+        "bytes": 59544
+      }
+    },
+    {
+      "module": "Mathlib.Analysis.SpecialFunctions.Integrals.Basic",
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\Analysis\\SpecialFunctions\\Integrals\\Basic.lean",
+        "sha256": "58a81e8137bddf5cc43ae28f08ffa75ea3aa086e607cf70e70f70c3c8e935e81",
+        "bytes": 28786
+      },
+      "artifact": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Analysis\\SpecialFunctions\\Integrals\\Basic.olean",
+        "sha256": "00d51c7b2f5392cacd9197f4ca8cec897f12085b4570dc1126ee77aeb5480cee",
+        "bytes": 108144
+      }
+    },
+    {
+      "module": "Mathlib.LinearAlgebra.Lagrange",
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\LinearAlgebra\\Lagrange.lean",
+        "sha256": "d499c3a0f94632d32003acec6dd5f40c4bffaf6985374dfa20c3c5addced3259",
+        "bytes": 31424
+      },
+      "artifact": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\LinearAlgebra\\Lagrange.olean",
+        "sha256": "20a711a061f5314c9228a4033e28f22ecc0a74e5b974768c1158428c119d4edb",
+        "bytes": 292672
+      }
+    },
+    {
+      "module": "Mathlib.LinearAlgebra.Matrix.SchurComplement",
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\LinearAlgebra\\Matrix\\SchurComplement.lean",
+        "sha256": "a064102c025395540240d0ca8df41b42fba25f4a874e0817ff9e3c58c1b9e43d",
+        "bytes": 22483
+      },
+      "artifact": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\LinearAlgebra\\Matrix\\SchurComplement.olean",
+        "sha256": "c26863f03036f5b5bbf8f14322835a15c3b01af5634d3385fe79bf237c41028e",
+        "bytes": 480680
+      }
+    },
+    {
+      "module": "Mathlib.LinearAlgebra.Matrix.Vec",
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\LinearAlgebra\\Matrix\\Vec.lean",
+        "sha256": "629d8691b6dd8fd3775f09c8cefa5dc4583902b7b538302bfac79d1bf9887f67",
+        "bytes": 7472
+      },
+      "artifact": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\LinearAlgebra\\Matrix\\Vec.olean",
+        "sha256": "630388bbd81ff3a8bde72d49348bb7baf8c217f9cccb4f46e626c41b4f37ad45",
+        "bytes": 122944
+      }
+    },
+    {
+      "module": "Mathlib.MeasureTheory.Integral.Bochner.Basic",
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\MeasureTheory\\Integral\\Bochner\\Basic.lean",
+        "sha256": "f81a06eab17faccbc4b671a93e7af73332f5fd3946f7690e7c2a3cfee77d28c8",
+        "bytes": 70432
+      },
+      "artifact": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\MeasureTheory\\Integral\\Bochner\\Basic.olean",
+        "sha256": "6eadcf04831de80b54538b86c4acd2a6c45c889eab1f663661d42afe76889061",
+        "bytes": 710240
+      }
+    },
+    {
+      "module": "Mathlib.MeasureTheory.Integral.Prod",
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\MeasureTheory\\Integral\\Prod.lean",
+        "sha256": "c7d4d23349591c5c65aa5b1b6024331fb0b7f22e9b2b08d6a1fe19b1c258ec5b",
+        "bytes": 32393
+      },
+      "artifact": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\MeasureTheory\\Integral\\Prod.olean",
+        "sha256": "526f7f56532d2c1e85a1ab32ff210268923fc1043830d1f488445f5d4d4f6d52",
+        "bytes": 298240
+      }
+    },
+    {
+      "module": "Mathlib.Topology.Algebra.Module.ContinuousLinearMap.PiProd",
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\Topology\\Algebra\\Module\\ContinuousLinearMap\\PiProd.lean",
+        "sha256": "ed277abbd2ab1086f0b5bc67a7b95bce06b266db240fefa0eb956372a0b36284",
+        "bytes": 16637
+      },
+      "artifact": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Topology\\Algebra\\Module\\ContinuousLinearMap\\PiProd.olean",
+        "sha256": "89e2f0a4f3c136764f82c890beb9d4bdb9823b7f190a0462897bb921697899db",
+        "bytes": 744048
+      }
+    },
+    {
+      "module": "Mathlib.Analysis.Convex.Integral",
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\Analysis\\Convex\\Integral.lean",
+        "sha256": "1b3115887fabf0dccc2fed689d1f1ddc7a114b5de4594e752c02908a445aafb4",
+        "bytes": 21375
+      },
+      "artifact": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Analysis\\Convex\\Integral.olean",
+        "sha256": "483721d7f699c983b3669a58a28dff9e9b6a9e98a817c42822f0d81454fdeceb",
+        "bytes": 92200
+      }
+    },
+    {
+      "module": "Mathlib.MeasureTheory.Measure.ProbabilityMeasure",
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\MeasureTheory\\Measure\\ProbabilityMeasure.lean",
+        "sha256": "ececad97c60703de0e0ee2f47bca44a017aa8537f7186412f69b169f026e92fd",
+        "bytes": 33420
+      },
+      "artifact": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\MeasureTheory\\Measure\\ProbabilityMeasure.olean",
+        "sha256": "f53efa559e4f605156d811158db96fb09a2f9ae4998e8d81448336c2ae78d51f",
+        "bytes": 227168
+      }
+    },
+    {
+      "module": "Mathlib.Probability.Independence.Basic",
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\Probability\\Independence\\Basic.lean",
+        "sha256": "85c6c98a306c1b10952181fcb9cc777c0ed06e91246428690a88d7821d24f9d2",
+        "bytes": 55669
+      },
+      "artifact": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Probability\\Independence\\Basic.olean",
+        "sha256": "30cab0bd5dae5d180b72b8aafb55b7028c3f2dd54c70dfc08d21e417669e2ba6",
+        "bytes": 447496
+      }
+    }
+  ],
+  "own_dependency_PASS_receipts": [],
+  "command": [
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+    "-j1",
+    "-Dpp.unicode.fun=true",
+    "-DautoImplicit=false",
+    "-o",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SLT_PORT\\SLT\\MatrixInfra\\Basic.olean",
+    "SLT/MatrixInfra/Basic.lean"
+  ],
+  "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SLT_PORT",
+  "environment": {
+    "LEAN_PATH": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SLT_PORT;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\aesop\\.lake\\build\\lib\\lean;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\batteries\\.lake\\build\\lib\\lean;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\Cli\\.lake\\build\\lib\\lean;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\importGraph\\.lake\\build\\lib\\lean;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\LeanSearchClient\\.lake\\build\\lib\\lean;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\plausible\\.lake\\build\\lib\\lean;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\proofwidgets\\.lake\\build\\lib\\lean;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\Qq\\.lake\\build\\lib\\lean",
+    "LEAN_NUM_THREADS": "1"
+  },
+  "actual_pre_dispatch_source_compilers": [],
+  "guard": {
+    "command": [
+      "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+      "-j1",
+      "-Dpp.unicode.fun=true",
+      "-DautoImplicit=false",
+      "-o",
+      "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SLT_PORT\\SLT\\MatrixInfra\\Basic.olean",
+      "SLT/MatrixInfra/Basic.lean"
+    ],
+    "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SLT_PORT",
+    "started_utc": "2026-10-07T13:27:11.257196+00:00",
+    "attempted": true,
+    "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+    "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+    "resource_policy": {
+      "initial_disk_bytes": 4000000000,
+      "initial_physical_bytes": 6442450944,
+      "initial_available_commit_bytes": 17179869184,
+      "continuous_disk_bytes": 1000000000,
+      "continuous_physical_bytes": 3221225472,
+      "continuous_available_commit_bytes": 2147483648,
+      "own_job_private_bytes": 13958643712,
+      "own_process_private_bytes": 13958643712,
+      "poll_seconds": 0.25,
+      "timeout_seconds": 1800
+    },
+    "minimum_disk_free_bytes": 11102322688,
+    "initial_system_memory_snapshot": {
+      "free_physical_bytes": 14292930560,
+      "total_physical_bytes": 34024419328,
+      "available_commit_bytes": 19695919104,
+      "total_commit_limit_bytes": 45444141056
+    },
+    "minimum_physical_available_bytes": 12328304640,
+    "minimum_available_commit_bytes": 15597318144,
+    "root_pid": 30836,
+    "own_job_assignment_before_resume": "PASS",
+    "exit": 0,
+    "job_peak_process_private_bytes": 3956404224,
+    "job_peak_aggregate_private_bytes": 3957624832,
+    "state": "PASS",
+    "finished_utc": "2026-10-07T13:27:44.179582+00:00",
+    "seconds": 32.922,
+    "polled_peak_tree_private_bytes": 3939364864,
+    "polled_peak_tree_rss_bytes": 1854337024,
+    "counter_samples": 127,
+    "observed_own_processes": {
+      "30424": {
+        "exe": "conhost.exe",
+        "peak_private_bytes": 1261568,
+        "peak_rss_bytes": 7356416
+      },
+      "30836": {
+        "exe": "lean.exe",
+        "peak_private_bytes": 3938144256,
+        "peak_rss_bytes": 1861791744
+      }
+    },
+    "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SLT_PORT\\attempts\\003-SLT.MatrixInfra.Basic\\compiler.stdout.txt",
+    "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SLT_PORT\\attempts\\003-SLT.MatrixInfra.Basic\\compiler.stderr.txt",
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout_excerpt": "",
+    "stderr_excerpt": ""
+  },
+  "artifacts": [
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SLT_PORT\\SLT\\MatrixInfra\\Basic.olean",
+      "sha256": "2fe8e977beabb994b0a0d5808475ece39ea0bdb872e2d834945c18cc77d5acc3",
+      "bytes": 1295480
+    }
+  ],
+  "actual_selected_axiom_outputs": [],
+  "selected_print_coverage_exact": true,
+  "selected_standard_or_free_only": true,
+  "qualified_module_PASS": true,
+  "BM_main_theorem_complete": false,
+  "known_third_party_concentration_not_novel_result": true,
+  "upstream_sources_or_official_dependencies_modified": false
+}

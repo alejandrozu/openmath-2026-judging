@@ -1,0 +1,11 @@
+R1.lean:10:12: warning: please avoid 'open (scoped) Classical' statements: this can hide theorem statements which would be better stated with explicit decidability statements.
+Instead, use `open Classical in` for definitions or instances, the `classical` tactic for proofs.
+For theorem statements, either add missing decidability assumptions or use `open Classical in`.
+
+Note: This linter can be disabled with `set_option linter.style.openClassical false`
+RobertPublishable.SUB.theorem_R1.{u_1, u_2, u_3, u_4} {U : Type u_1} {E : Type u_2} {I : Type u_3} {O : Type u_4}
+  [DecidableEq U] [DecidableEq E] [DecidableEq I] [DecidableEq O] [Fintype I] [Fintype O] {Γ : SimpleGraph (I ⊕ O)}
+  {L : LooplessMultigraph U E} {d : ℕ} {G : SimpleGraph (U × (I ⊕ O))} (T : ValidSimpleSubstitution Γ L d G)
+  (hΓgadget : Gadget Γ d) (hd : d ≤ 7) (hΓ : ¬Erdos585.HasPairF Γ) (hL : ¬L.HasPair) :
+  ¬Erdos585.HasPairF G ∧ G.IsRegularOfDegree d ∧ ((∃ c, ValidSimpleSubstitution.SkeletonBicoloring L c) → G.IsBipartite)
+'RobertPublishable.SUB.theorem_R1' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,59 @@
+{
+  "schema": "OpenMath-Robert-root-three-family-novelty-review-v1",
+  "client_date": "2026-10-07",
+  "source_head": "1efc324e155ef0b6a7081c5f695c6c825e7debef",
+  "families": [
+    {
+      "family_id": "ONE",
+      "exact_result": "An unbounded characteristic-three parabola Haar family defeats the supplied-colouring detector after at most one component-union two-colour round; every exposed cycle has no actual host partner on the same support.",
+      "known_ingredients": [
+        "Huang, Tait and Won2019 Theorem3.2: Sidon sets in F3 vector spaces are exactly2-caps.",
+        "HTW2019 Theorem3.4 cites the parabola {(x,x^2)} as a classical Sidon construction, credited to Cilleruelo2012 Example1.",
+        "Kempe changes, matching-colour switches and unrestricted edge-colouring reconfiguration predate this submission."
+      ],
+      "comparators": [
+        {"url": "https://msp.org/involve/2019/12-6/involve-v12-n6-p06-p.pdf", "authors": "Yixuan Huang, Michael Tait, Robert Won", "year": 2019, "locators": ["Definition2.1", "Theorem3.2", "Theorem3.4"], "actual_access": "PublishedPDF definitions and full theorem arguments read using web; no claim that the Sidon construction is new."},
+        {"url": "https://arxiv.org/pdf/2105.01363", "authors": "Jan Goedgebeur, PatricR.J.Ostergard", "year": 2021, "locators": ["Introduction", "Section2 cycle/edge-Kempe-switch definitions"], "actual_access": "Full relevantPDF definitions/intro read; global cubic reconfiguration differs from fixed-one-round high-degree detector failure."}
+      ],
+      "candidate_delta": "Actual fixed-radius detector obstruction on these canonically coloured hosts, with finite graph/cycle/move semantics and unrestricted number of simultaneous component swaps. No claim of host pair-freeness or obstruction to arbitrary initial colourings/multiple rounds.",
+      "new_improvement": "Actual compiled AffinePaletteBarrier.sidon_exposed_cycle_no_partner generalizes the obstruction to every finite Sidon palette in any finite ZMod3-module. Sidon-to-geometric closure is known background; the new graph/move application is isolated.",
+      "historical_priority": "NO_EXACT_MATCH_LOCATED_IN_BOUNDED_PRIMARY_SEARCH; ORIGINALITY_REMAINS_SUBJECT_TO_FURTHER_REVIEW",
+      "search_terms": ["Sidon Kempe graph", "edge-disjoint cycles same vertex set recolouring", "one Kempe edge-disjoint cycles", "fixed-radius Kempe cycle detector", "affine parabola characteristic three2-cap"],
+      "formal_limits": "One-round theorem and generic Sidon addition are actual standard-kernel proofs. Uniform two-round sharpness is separate pending work, not inferred from Haar pair existence."
+    },
+    {
+      "family_id": "SUB",
+      "exact_result": "Valid-simple substitution of a pair-free finite d-gadget with one extra outer vertex into a pair-free loopless d-regular labelled multigraph preserves pair-freeness for d<=7, regularity and bipartiteness when the skeleton is bipartite.",
+      "comparators": [
+        {"url": "https://doi.org/10.1016/S0095-8956(73)80006-1", "authors": "G.H.J.Meredith", "year": 1973, "title": "Regular n-valent n-connected nonHamiltonian non-n-edge-colorable graphs", "actual_access": "Primary publisher abstract and bibliographic record located/read; full publisher page fetch failed. No claim that the full proof or exact cycle-pair criterion was compared."}
+      ],
+      "known_ingredients": ["Classical vertex/gadget replacement for regular non-Hamiltonian constructions", "Four incident edges per common cycle-pair support vertex", "Even cut crossing by a connected cycle", "Projection of connected2-regular labelled multigraph edge-subgraphs"],
+      "candidate_delta": "Exact general pair-preservation criterion with the seven-link threshold, allowing multigraph parallel2-cycles and arbitrary pair-free gadgets under faithful port/link conditions. Meredith non-Hamiltonicity alone does not establish pair-freeness on all supports.",
+      "new_improvement": "Main pair-preservation plus actual graph regularity/bicoloring has now passed Lean on a possibly infinite locally finite skeleton, using finite actual cycle supports. The prescribed-vertex equivalence still requires its exact finite skeleton/port construction, independently tracked.",
+      "historical_priority": "PRECISE_PAIR_PRESERVING_CRITERION_UNRESOLVED; GENERIC_GADGET_IDEA_KNOWN",
+      "search_terms": ["same vertex set cycles gadget", "edge-disjoint cycles same vertex set substitution", "pair-free regular substitution", "regular same vertex-set cycles substitution", "prescribed vertex edge-disjoint cycles", "Meredith regular n-valent1973"],
+      "formal_limits": "Proof of R1 is distinct from proving B6 or the additional prescribed-vertex equivalence. No assumption that the final substituted graph is pair-free or regular is used as its own conclusion."
+    },
+    {
+      "family_id": "BM",
+      "exact_result": "Written one-sided spectral bipartite Hamiltonicity adaptation with a candidate delta^-5(logn)^3 degree bound, a delta^-6 fallback and conditional factor/deletion consequences.",
+      "comparators": [
+        {"url": "https://arxiv.org/html/2609.35766v1", "authors": "Alp Muyesser", "year": 2026, "locators": ["Theorem1.3", "bipartite remark afterCorollary1.4", "Lemmas3.1,4.7,5.1"], "actual_access": "Primary full relevant theorem/lemma statements and bipartite announcement read."},
+        {"url": "https://arxiv.org/html/2605.15043v1", "authors": "Domagoj Bradac, Oliver Janzer", "year": 2026, "locators": ["Introduction", "Lemmas3.11-3.12", "Theorem6.4"], "actual_access": "Primary bipartite/deletion/resilience statements read; exact reported quantitative threshold compared in collaborator review."}
+      ],
+      "known_ingredients": ["Generic bipartite Hamiltonicity already announced/proved in the located priors", "Matrix concentration, Haxell-type path selection and Hamilton-router methods", "Regular-factor and balanced-deletion consequences are dependent applications, not extra independent discoveries"],
+      "candidate_delta": "Specific power-five degree dependence and side/parity/router implementation; exponent accounting alone is not a proof of the probabilistic construction.",
+      "concrete_correction": "Written isolated cherry lemma admits d=0/empty-shores/r=1 counterexample. Add positive degree or an equivalent nonvacuity premise; positive degree already holds in intended BM application. Actual Lean counterexample plus nonvacuous elementary cherry facts are verified.",
+      "new_improvement": "Verified actual Hamilton-cycle remainder transfer and balanced-deletion cut-loss t|S| pieces. External exact matrix-Bernstein infrastructure and Haxell variants are being examined as potential dependencies, not silently imported as a proved BM theorem.",
+      "historical_priority": "QUANTITATIVE_PRIORITY_UNRESOLVED; GENERIC_EXISTENCE_IS_KNOWN",
+      "formal_limits": "Main BM, full factorF, V110 and the avoidance-conditioned E110 extraction have no complete new formal theorem. E110 remains an unresolved mathematical bridge, not merely a compiler task."
+    }
+  ],
+  "judging_implications": {
+    "no_scoring_mutation_in_this_record": true,
+    "p_is_not_proof_confidence": true,
+    "rule": "Price precise accepted novel targets rather than broadening the target while retaining an old narrow D estimate. New standalone complete theorems may have logicalp1 after exact eligibility/originality review; supporting bridges and classical ingredients are not separately awarded.",
+    "prior_27_family_draft": "Retained as a dated provisional proposal. New novelty findings and additive proofs must be incorporated before considering its Robert placement settled."
+  },
+  "scope": "Primary-source bounded research with explicit access/priority limits; this is neither a proof that no prior result exists nor an official signed award."
+}

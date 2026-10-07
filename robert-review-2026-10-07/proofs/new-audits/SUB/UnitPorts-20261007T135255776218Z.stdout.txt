@@ -1,0 +1,49 @@
+UnitPorts.lean:10:12: warning: please avoid 'open (scoped) Classical' statements: this can hide theorem statements which would be better stated with explicit decidability statements.
+Instead, use `open Classical in` for definitions or instances, the `classical` tactic for proofs.
+For theorem statements, either add missing decidability assumptions or use `open Classical in`.
+
+Note: This linter can be disabled with `set_option linter.style.openClassical false`
+UnitPorts.lean:29:0: warning: automatically included section variable(s) unused in theorem `RobertPublishable.SUB.UnitPorts.portAt_mem`:
+  [DecidableEq U]
+  [DecidableEq O]
+  [Fintype O]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq U] [DecidableEq O] [Fintype O] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+UnitPorts.lean:35:0: warning: automatically included section variable(s) unused in theorem `RobertPublishable.SUB.UnitPorts.portAt_injective`:
+  [DecidableEq U]
+  [DecidableEq O]
+  [Fintype O]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq U] [DecidableEq O] [Fintype O] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+UnitPorts.lean:43:0: warning: automatically included section variable(s) unused in theorem `RobertPublishable.SUB.UnitPorts.link_ends`:
+  [DecidableEq U]
+  [DecidableEq I]
+  [DecidableEq O]
+  [Fintype I]
+  [Fintype O]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq U] [DecidableEq I] [DecidableEq O] [Fintype I] [Fintype O] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+UnitPorts.lean:44:26: warning: This simp argument is unused:
+  Function.comp_def
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [link, Sym2.map_map]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+UnitPorts.lean:46:0: warning: automatically included section variable(s) unused in theorem `RobertPublishable.SUB.UnitPorts.link_member`:
+  [DecidableEq U]
+  [DecidableEq I]
+  [DecidableEq O]
+  [Fintype I]
+  [Fintype O]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq U] [DecidableEq I] [DecidableEq O] [Fintype I] [Fintype O] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+'RobertPublishable.SUB.UnitPorts.valid' depends on axioms: [propext, Classical.choice, Quot.sound]

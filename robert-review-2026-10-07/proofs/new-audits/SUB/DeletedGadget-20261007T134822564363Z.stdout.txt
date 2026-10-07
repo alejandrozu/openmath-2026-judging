@@ -1,0 +1,41 @@
+DeletedGadget.lean:9:12: warning: please avoid 'open (scoped) Classical' statements: this can hide theorem statements which would be better stated with explicit decidability statements.
+Instead, use `open Classical in` for definitions or instances, the `classical` tactic for proofs.
+For theorem statements, either add missing decidability assumptions or use `open Classical in`.
+
+Note: This linter can be disabled with `set_option linter.style.openClassical false`
+DeletedGadget.lean:23:0: warning: automatically included section variable(s) unused in theorem `RobertPublishable.SUB.DeletedGadget.kept_ne`:
+  [DecidableEq V]
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+DeletedGadget.lean:28:0: warning: automatically included section variable(s) unused in theorem `RobertPublishable.SUB.DeletedGadget.kept_injective`:
+  [DecidableEq V]
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+DeletedGadget.lean:77:0: warning: automatically included section variable(s) unused in theorem `RobertPublishable.SUB.DeletedGadget.color_outer`:
+  [DecidableEq V]
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+DeletedGadget.lean:92:0: warning: automatically included section variable(s) unused in theorem `RobertPublishable.SUB.DeletedGadget.side_card_eq`:
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+DeletedGadget.lean:112:8: warning: This simp argument is unused:
+  hreg
+
+Hint: Omit it from the simp argument list.
+  [apply] simp at he
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'RobertPublishable.SUB.DeletedGadget.gadget' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RobertPublishable.SUB.DeletedGadget.pairfree' depends on axioms: [propext, Classical.choice, Quot.sound]

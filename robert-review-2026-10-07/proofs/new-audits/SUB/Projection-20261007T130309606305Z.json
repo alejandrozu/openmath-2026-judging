@@ -1,0 +1,98 @@
+{
+  "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SUB\\Projection.lean",
+  "source_sha256": "6baa299a9f60efd4b2a82305191ec01d2e929c860ec8858ef5195c38130357d2",
+  "source_head_provenance": "1efc324e155ef0b6a7081c5f695c6c825e7debef",
+  "completed106_baseline": {
+    "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\adjacent_robert_20261007\\verification\\completed106-source81-axioms-immutable.json",
+    "sha256": "82b6c76de58309b35ed3b1b28b211011449b319affde181446870a33e9a9f142"
+  },
+  "runtime": {
+    "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+    "sha256": "af49bacfabaa1fea71332ca0feae0fa1a60912219d5902291adc79f905bffb8d",
+    "version": "Lean (version 4.33.1, x86_64-w64-windows-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)"
+  },
+  "environment": {
+    "LEAN_PATH": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SUB;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\adjacent_robert_20261007\\verification\\replay;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\adjacent_robert_20261007\\verification\\provider-replay;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\aesop\\.lake\\build\\lib\\lean;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\batteries\\.lake\\build\\lib\\lean;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\Cli\\.lake\\build\\lib\\lean;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\importGraph\\.lake\\build\\lib\\lean;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\LeanSearchClient\\.lake\\build\\lib\\lean;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\plausible\\.lake\\build\\lib\\lean;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\proofwidgets\\.lake\\build\\lib\\lean;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\Qq\\.lake\\build\\lib\\lean",
+    "LEAN_NUM_THREADS": "1"
+  },
+  "resource_guard_sha256": "29578665ab4f1336e8164a547872119939c6a0b86ceafbadcd36f9859bc367f2",
+  "guard": {
+    "command": [
+      "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+      "-j1",
+      "-Dpp.unicode.fun=true",
+      "-DautoImplicit=false",
+      "-DrelaxedAutoImplicit=false",
+      "-Dweak.linter.style.copyright.formalConjectures=false",
+      "-Dweak.linter.style.namespace=true",
+      "-Dweak.linter.style.stubs=true",
+      "-Dweak.linter.style.openClassical=true",
+      "-o",
+      "Projection.olean",
+      "Projection.lean"
+    ],
+    "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SUB",
+    "started_utc": "2026-10-07T13:03:09.606305+00:00",
+    "attempted": true,
+    "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+    "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+    "resource_policy": {
+      "initial_disk_bytes": 4000000000,
+      "initial_physical_bytes": 6442450944,
+      "initial_available_commit_bytes": 17179869184,
+      "continuous_disk_bytes": 1000000000,
+      "continuous_physical_bytes": 3221225472,
+      "continuous_available_commit_bytes": 2147483648,
+      "own_job_private_bytes": 13958643712,
+      "own_process_private_bytes": 13958643712,
+      "poll_seconds": 0.25,
+      "timeout_seconds": 600
+    },
+    "minimum_disk_free_bytes": 11119169536,
+    "initial_system_memory_snapshot": {
+      "free_physical_bytes": 14790262784,
+      "total_physical_bytes": 34024419328,
+      "available_commit_bytes": 20554661888,
+      "total_commit_limit_bytes": 45444141056
+    },
+    "minimum_physical_available_bytes": 11060015104,
+    "minimum_available_commit_bytes": 11800449024,
+    "root_pid": 11148,
+    "own_job_assignment_before_resume": "PASS",
+    "exit": 0,
+    "job_peak_process_private_bytes": 8946356224,
+    "job_peak_aggregate_private_bytes": 8947630080,
+    "state": "PASS",
+    "finished_utc": "2026-10-07T13:03:30.463186+00:00",
+    "seconds": 20.859,
+    "polled_peak_tree_private_bytes": 8945717248,
+    "polled_peak_tree_rss_bytes": 3696381952,
+    "counter_samples": 81,
+    "observed_own_processes": {
+      "4716": {
+        "exe": "conhost.exe",
+        "peak_private_bytes": 1273856,
+        "peak_rss_bytes": 7360512
+      },
+      "11148": {
+        "exe": "lean.exe",
+        "peak_private_bytes": 8944443392,
+        "peak_rss_bytes": 3789033472
+      }
+    },
+    "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SUB\\logs\\Projection-20261007T130309606305Z.stdout.txt",
+    "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SUB\\logs\\Projection-20261007T130309606305Z.stderr.txt",
+    "stdout_sha256": "bad782b9f24b3f4a89f079711426319d5a77da6ed83380a0e9e4accd1a6dfc6f",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout_excerpt": "Projection.lean:10:0: warning: This file has no module docstring (`/-! ... -/`). Add one after the imports to document the file.\n\nNote: This linter can be disabled with `set_option linter.style.moduleDocstring false`\nProjection.lean:11:12: warning: please avoid 'open (scoped) Classical' statements: this can hide theorem statements which would be better stated with explicit decidability statements.\nInstead, use `open Classical in` for definitions or instances, the `classical` tactic for proofs.\nFor theorem statements, either add missing decidability assumptions or use `open Classical in`.\n\nNote: This linter can be disabled with `set_option linter.style.openClassical false`\nProjection.lean:81:8: warning: automatically included section variable(s) unused in theorem `RobertPublishable.SUB.LinkProjection.mem_projectedEdges`:\n  [DecidableEq U]\n  [DecidableEq E]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [DecidableEq U] [DecidableEq E] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`\nProjection.lean:85:0: warning: automatically included section variable(s) unused in theorem `RobertPublishable.SUB.LinkProjection.incident_iff_crosses`:\n  [DecidableEq E]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [DecidableEq E] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`\nProjection.lean:130:0: warning: automatically included section variable(s) unused in theorem `RobertPublishable.SUB.LinkProjection.quotient_reachable_of_walk`:\n  [DecidableEq V]\n  [DecidableEq E]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [DecidableEq V] [DecidableEq E] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`\n",
+    "stderr_excerpt": ""
+  },
+  "actual_axiom_outputs": [],
+  "artifacts": [
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SUB\\Projection.olean",
+      "sha256": "88b6873e69d341bad124bc5dc4014b93cfd805549710e3c57064d4524176d071",
+      "bytes": 375496
+    }
+  ]
+}

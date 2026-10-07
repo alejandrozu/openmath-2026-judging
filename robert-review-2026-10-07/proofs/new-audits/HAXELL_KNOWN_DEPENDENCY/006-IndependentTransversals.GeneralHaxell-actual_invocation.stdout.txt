@@ -1,0 +1,26 @@
+IndependentTransversals/GeneralHaxell.lean:23:0: warning: automatically included section variable(s) unused in theorem `IndependentTransversals.PartitionedGraph.can_extend_without_domination`:
+  [DecidableRel G.graph.Adj]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableRel G.graph.Adj] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+IndependentTransversals/GeneralHaxell.lean:198:17: warning: `Set.mem_diff` has been deprecated: Use `Set.mem_sdiff` instead
+IndependentTransversals/GeneralHaxell.lean:198:31: warning: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+IndependentTransversals/GeneralHaxell.lean:268:35: warning: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+IndependentTransversals/GeneralHaxell.lean:281:43: warning: `Set.mem_diff` has been deprecated: Use `Set.mem_sdiff` instead
+IndependentTransversals/GeneralHaxell.lean:300:68: warning: `Set.mem_diff` has been deprecated: Use `Set.mem_sdiff` instead
+IndependentTransversals/GeneralHaxell.lean:312:68: warning: `Set.mem_diff` has been deprecated: Use `Set.mem_sdiff` instead
+IndependentTransversals/GeneralHaxell.lean:365:54: warning: `Set.mem_diff` has been deprecated: Use `Set.mem_sdiff` instead
+IndependentTransversals/GeneralHaxell.lean:365:68: warning: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+IndependentTransversals/GeneralHaxell.lean:394:47: warning: `Set.mem_diff` has been deprecated: Use `Set.mem_sdiff` instead
+IndependentTransversals/GeneralHaxell.lean:405:45: warning: `Set.mem_diff` has been deprecated: Use `Set.mem_sdiff` instead
+IndependentTransversals/GeneralHaxell.lean:450:62: warning: `Set.mem_diff` has been deprecated: Use `Set.mem_sdiff` instead
+IndependentTransversals/GeneralHaxell.lean:611:43: warning: `Set.mem_diff` has been deprecated: Use `Set.mem_sdiff` instead
+IndependentTransversals/GeneralHaxell.lean:655:24: warning: `Set.ncard_inter_add_ncard_diff_eq_ncard` has been deprecated: Use `Set.ncard_inter_add_ncard_sdiff_eq_ncard` instead
+IndependentTransversals/GeneralHaxell.lean:691:66: warning: `Set.mem_diff` has been deprecated: Use `Set.mem_sdiff` instead
+IndependentTransversals/GeneralHaxell.lean:721:22: warning: `Set.ncard_diff_singleton_of_mem` has been deprecated: Use `Set.ncard_sdiff_singleton_of_mem` instead
+'IndependentTransversals.PartitionedGraph.haxell_no_small_total_domination' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@PartitionedGraph.haxell_no_small_total_domination : ∀ {V : Type u_2} [inst : DecidableEq V] [Fintype V]
+  (G : PartitionedGraph V) [DecidableRel G.graph.Adj], G.NoSmallTotalDomination → ∃ S, G.IsIndependentTransversal S

@@ -1,0 +1,1162 @@
+{
+  "schema": "robert-TWO-uniform-full-host-actual-five-source38-endpoint-qualification-v1",
+  "checked_utc": "2026-10-07T14:09:25.107166+00:00",
+  "status": "PASS_EXACT5_SOURCES38_STANDARD_OR_FREE_ENDPOINTS_UNIFORM_TWO_ROUND_PARABOLA",
+  "qualified": true,
+  "all_current_source_artifact_log_hashes_match": true,
+  "actual_source_count": 5,
+  "actual_new_four_source_endpoint_count": 33,
+  "actual_selected_count": 38,
+  "classification_counts": {
+    "STANDARD_KERNEL_AXIOMS": 38,
+    "AXIOM_FREE": 0
+  },
+  "module_rows": [
+    {
+      "module": "ComponentUnions",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\TWO\\ComponentUnions.lean",
+      "source_sha256": "fa65b300a345761ff5c35828edae8aa908d3729243651169bb90343144e3264b",
+      "receipt": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\TWO\\attempts\\002-ComponentUnions\\actual_invocation.json",
+      "receipt_sha256": "c2173a3d6a247afe904bc9cf07f54cca98c3f96929b4759ce600c5fea767bbfc",
+      "runner_sha256": "92e1b35713cea065408114970ac9e89f30debf46de04ffa162c7f45be91680b3",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DautoImplicit=false",
+        "-DrelaxedAutoImplicit=false",
+        "-o",
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\TWO\\attempts\\002-ComponentUnions\\ComponentUnions.olean",
+        "ComponentUnions.lean"
+      ],
+      "environment": {
+        "LEAN_PATH": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\TWO;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\adjacent_robert_20261007\\verification\\replay;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\adjacent_robert_20261007\\verification\\provider-replay;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\aesop\\.lake\\build\\lib\\lean;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\batteries\\.lake\\build\\lib\\lean;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\Cli\\.lake\\build\\lib\\lean;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\importGraph\\.lake\\build\\lib\\lean;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\LeanSearchClient\\.lake\\build\\lib\\lean;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\plausible\\.lake\\build\\lib\\lean;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\proofwidgets\\.lake\\build\\lib\\lean;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\Qq\\.lake\\build\\lib\\lean",
+        "LEAN_NUM_THREADS": "1"
+      },
+      "guard": {
+        "command": [
+          "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+          "-j1",
+          "-DautoImplicit=false",
+          "-DrelaxedAutoImplicit=false",
+          "-o",
+          "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\TWO\\attempts\\002-ComponentUnions\\ComponentUnions.olean",
+          "ComponentUnions.lean"
+        ],
+        "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\TWO",
+        "started_utc": "2026-10-07T13:13:07.438405+00:00",
+        "attempted": true,
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 17179869184,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 2147483648,
+          "own_job_private_bytes": 13958643712,
+          "own_process_private_bytes": 13958643712,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 1800
+        },
+        "minimum_disk_free_bytes": 11095719936,
+        "initial_system_memory_snapshot": {
+          "free_physical_bytes": 15272534016,
+          "total_physical_bytes": 34024419328,
+          "available_commit_bytes": 20462018560,
+          "total_commit_limit_bytes": 45444141056
+        },
+        "minimum_physical_available_bytes": 14172524544,
+        "minimum_available_commit_bytes": 18025472000,
+        "root_pid": 23200,
+        "own_job_assignment_before_resume": "PASS",
+        "exit": 0,
+        "job_peak_process_private_bytes": 2468151296,
+        "job_peak_aggregate_private_bytes": 2469412864,
+        "state": "PASS",
+        "finished_utc": "2026-10-07T13:13:15.041486+00:00",
+        "seconds": 7.609,
+        "polled_peak_tree_private_bytes": 2455257088,
+        "polled_peak_tree_rss_bytes": 1109798912,
+        "counter_samples": 30,
+        "observed_own_processes": {
+          "23200": {
+            "exe": "lean.exe",
+            "peak_private_bytes": 2453995520,
+            "peak_rss_bytes": 1140219904
+          },
+          "13500": {
+            "exe": "conhost.exe",
+            "peak_private_bytes": 1261568,
+            "peak_rss_bytes": 7356416
+          }
+        },
+        "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\TWO\\attempts\\002-ComponentUnions\\compiler.stdout.txt",
+        "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\TWO\\attempts\\002-ComponentUnions\\compiler.stderr.txt",
+        "stdout_sha256": "0eaab8dc54ded69b8ba52b9f4b541c9123c4410ec2447b2f30fe0b8567fc54eb",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_excerpt": "'RobertPublishable.TWO.mem_of_reachable_of_edge_closed' depends on axioms: [propext]\n'RobertPublishable.TWO.selected_iff_of_edge_closed' depends on axioms: [propext, Classical.choice, Quot.sound]\n'RobertPublishable.TWO.swap_labelGraph_of_other' depends on axioms: [propext, Classical.choice, Quot.sound]\n'RobertPublishable.TWO.swap_twoFactor_of_other' depends on axioms: [propext, Classical.choice, Quot.sound]\n'RobertPublishable.TWO.two_actual_swaps_full' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+        "stderr_excerpt": ""
+      },
+      "artifacts": [
+        {
+          "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\TWO\\attempts\\002-ComponentUnions\\ComponentUnions.olean",
+          "sha256": "3413d7901d79955d5bee00de5d4a4fbce1a2be2fa31ab6d15509a993601474da",
+          "bytes": 53072
+        }
+      ],
+      "selected_axiom_outputs": [
+        {
+          "endpoint": "RobertPublishable.TWO.mem_of_reachable_of_edge_closed",
+          "axioms": [
+            "propext"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        },
+        {
+          "endpoint": "RobertPublishable.TWO.selected_iff_of_edge_closed",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        },
+        {
+          "endpoint": "RobertPublishable.TWO.swap_labelGraph_of_other",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        },
+        {
+          "endpoint": "RobertPublishable.TWO.swap_twoFactor_of_other",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        },
+        {
+          "endpoint": "RobertPublishable.TWO.two_actual_swaps_full",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        }
+      ],
+      "selected_count": 5,
+      "own_pid_absent_at_qualification": true,
+      "own_prior_qualified_imports": []
+    },
+    {
+      "module": "PrimeChart",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\TWO\\PrimeChart.lean",
+      "source_sha256": "54deea3bde655caf1217418d66901a541a44741b1bbe18bb5100d62dcd2e79ab",
+      "receipt": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\TWO\\attempts\\005-PrimeChart\\actual_invocation.json",
+      "receipt_sha256": "4d49a9a7457ea2bfb2f85c92787e766501b3430f7906883c5247fe9904cf782d",
+      "runner_sha256": "0f09d64cab008a106d4e0bc56de85b1c7c034059c2d73e7483bb3545316ab677",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DautoImplicit=false",
+        "-DrelaxedAutoImplicit=false",
+        "-o",
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\TWO\\attempts\\005-PrimeChart\\PrimeChart.olean",
+        "PrimeChart.lean"
+      ],
+      "environment": {
+        "LEAN_PATH": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\TWO;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\TWO\\attempts\\002-ComponentUnions;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\adjacent_robert_20261007\\verification\\replay;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\adjacent_robert_20261007\\verification\\provider-replay;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\aesop\\.lake\\build\\lib\\lean;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\batteries\\.lake\\build\\lib\\lean;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\Cli\\.lake\\build\\lib\\lean;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\importGraph\\.lake\\build\\lib\\lean;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\LeanSearchClient\\.lake\\build\\lib\\lean;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\plausible\\.lake\\build\\lib\\lean;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\proofwidgets\\.lake\\build\\lib\\lean;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\Qq\\.lake\\build\\lib\\lean",
+        "LEAN_NUM_THREADS": "1"
+      },
+      "guard": {
+        "command": [
+          "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+          "-j1",
+          "-DautoImplicit=false",
+          "-DrelaxedAutoImplicit=false",
+          "-o",
+          "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\TWO\\attempts\\005-PrimeChart\\PrimeChart.olean",
+          "PrimeChart.lean"
+        ],
+        "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\TWO",
+        "started_utc": "2026-10-07T14:03:05.967289+00:00",
+        "attempted": true,
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 17179869184,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 2147483648,
+          "own_job_private_bytes": 13958643712,
+          "own_process_private_bytes": 13958643712,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 1800
+        },
+        "minimum_disk_free_bytes": 11052716032,
+        "initial_system_memory_snapshot": {
+          "free_physical_bytes": 15099817984,
+          "total_physical_bytes": 34024419328,
+          "available_commit_bytes": 19346423808,
+          "total_commit_limit_bytes": 45444141056
+        },
+        "minimum_physical_available_bytes": 13153529856,
+        "minimum_available_commit_bytes": 14626988032,
+        "root_pid": 22580,
+        "own_job_assignment_before_resume": "PASS",
+        "exit": 0,
+        "job_peak_process_private_bytes": 4872720384,
+        "job_peak_aggregate_private_bytes": 4873981952,
+        "state": "PASS",
+        "finished_utc": "2026-10-07T14:03:20.322907+00:00",
+        "seconds": 14.359,
+        "polled_peak_tree_private_bytes": 4872908800,
+        "polled_peak_tree_rss_bytes": 2062008320,
+        "counter_samples": 56,
+        "observed_own_processes": {
+          "9792": {
+            "exe": "conhost.exe",
+            "peak_private_bytes": 1261568,
+            "peak_rss_bytes": 7356416
+          },
+          "22580": {
+            "exe": "lean.exe",
+            "peak_private_bytes": 4871647232,
+            "peak_rss_bytes": 2139348992
+          }
+        },
+        "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\TWO\\attempts\\005-PrimeChart\\compiler.stdout.txt",
+        "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\TWO\\attempts\\005-PrimeChart\\compiler.stderr.txt",
+        "stdout_sha256": "46186dd1fd2c76a3875946f7e757f186f88191107a7d06249a567e37c07ef4af",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_excerpt": "PrimeChart.lean:22:0: warning: automatically included section variable(s) unused in theorem `RobertPublishable.TWO.prime_scalar_cases`:\n  [CharP F 3]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [CharP F 3] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`\nPrimeChart.lean:57:8: warning: automatically included section variable(s) unused in theorem `RobertPublishable.TWO.chart_A`:\n  [CharP F 3]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [CharP F 3] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`\nPrimeChart.lean:60:8: warning: automatically included section variable(s) unused in theorem `RobertPublishable.TWO.chart_B`:\n  [CharP F 3]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [CharP F 3] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`\nPrimeChart.lean:63:8: warning: automatically included section variable(s) unused in theorem `RobertPublishable.TWO.chart_C`:\n  [CharP F 3]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [CharP F 3] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`\nPrimeChart.lean:96:0: warning: automatically included section variable(s) unused in theorem `RobertPublishable.TWO.exists_nonprime_parameter`:\n  [CharP F 3]\n  [Algebra (ZMod 3) F]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [CharP F 3] [Algebra (ZMod 3) F] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`\n'RobertPublishable.TWO.prime_scalar_cases' depends on axioms: [propext, Classical.choice, Quot.sound]\n'RobertPublishable.TWO.prime_scalar_t_independent' depends on axioms: [propext, Classical.choice, Quot.sound]\n'RobertPublishable.TWO.chart_kernel' depends on axioms: [propext, Classical.choice, Quot.sound]\n'RobertPublishable.TWO.chart_injective' depends on axioms: [propext, Classical.choice, Quot.sound]\n'RobertPublishable.TWO.exists_nonprime_parameter' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+        "stderr_excerpt": ""
+      },
+      "artifacts": [
+        {
+          "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\TWO\\attempts\\005-PrimeChart\\PrimeChart.olean",
+          "sha256": "6ded57a6e868e00b179f46dc54ba28aaed48171dd308a7ac24077a85cf7258ad",
+          "bytes": 418120
+        }
+      ],
+      "selected_axiom_outputs": [
+        {
+          "endpoint": "RobertPublishable.TWO.prime_scalar_cases",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        },
+        {
+          "endpoint": "RobertPublishable.TWO.prime_scalar_t_independent",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        },
+        {
+          "endpoint": "RobertPublishable.TWO.chart_kernel",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        },
+        {
+          "endpoint": "RobertPublishable.TWO.chart_injective",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        },
+        {
+          "endpoint": "RobertPublishable.TWO.exists_nonprime_parameter",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        }
+      ],
+      "selected_count": 5,
+      "own_pid_absent_at_qualification": true,
+      "own_prior_qualified_imports": [
+        {
+          "module": "ComponentUnions",
+          "receipt": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\TWO\\attempts\\002-ComponentUnions\\actual_invocation.json",
+          "sha256": "c2173a3d6a247afe904bc9cf07f54cca98c3f96929b4759ce600c5fea767bbfc",
+          "library_root": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\TWO\\attempts\\002-ComponentUnions"
+        }
+      ]
+    },
+    {
+      "module": "GlobalSelectors",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\TWO\\GlobalSelectors.lean",
+      "source_sha256": "255101360485b6b7bca0166955103b781253aba359b88b58f7c97e23b45349de",
+      "receipt": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\TWO\\attempts\\007-GlobalSelectors\\actual_invocation.json",
+      "receipt_sha256": "9addb8ba06f0703518090588ddc3964607b7bdbab9307fc2c0e5117a978fe5f1",
+      "runner_sha256": "0f09d64cab008a106d4e0bc56de85b1c7c034059c2d73e7483bb3545316ab677",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DautoImplicit=false",
+        "-DrelaxedAutoImplicit=false",
+        "-o",
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\TWO\\attempts\\007-GlobalSelectors\\GlobalSelectors.olean",
+        "GlobalSelectors.lean"
+      ],
+      "environment": {
+        "LEAN_PATH": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\TWO;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\TWO\\attempts\\002-ComponentUnions;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\TWO\\attempts\\005-PrimeChart;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\adjacent_robert_20261007\\verification\\replay;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\adjacent_robert_20261007\\verification\\provider-replay;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\aesop\\.lake\\build\\lib\\lean;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\batteries\\.lake\\build\\lib\\lean;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\Cli\\.lake\\build\\lib\\lean;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\importGraph\\.lake\\build\\lib\\lean;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\LeanSearchClient\\.lake\\build\\lib\\lean;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\plausible\\.lake\\build\\lib\\lean;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\proofwidgets\\.lake\\build\\lib\\lean;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\Qq\\.lake\\build\\lib\\lean",
+        "LEAN_NUM_THREADS": "1"
+      },
+      "guard": {
+        "command": [
+          "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+          "-j1",
+          "-DautoImplicit=false",
+          "-DrelaxedAutoImplicit=false",
+          "-o",
+          "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\TWO\\attempts\\007-GlobalSelectors\\GlobalSelectors.olean",
+          "GlobalSelectors.lean"
+        ],
+        "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\TWO",
+        "started_utc": "2026-10-07T14:04:28.588743+00:00",
+        "attempted": true,
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 17179869184,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 2147483648,
+          "own_job_private_bytes": 13958643712,
+          "own_process_private_bytes": 13958643712,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 1800
+        },
+        "minimum_disk_free_bytes": 11077697536,
+        "initial_system_memory_snapshot": {
+          "free_physical_bytes": 15340494848,
+          "total_physical_bytes": 34024419328,
+          "available_commit_bytes": 19602833408,
+          "total_commit_limit_bytes": 45444141056
+        },
+        "minimum_physical_available_bytes": 11246489600,
+        "minimum_available_commit_bytes": 10385530880,
+        "root_pid": 8392,
+        "own_job_assignment_before_resume": "PASS",
+        "exit": 0,
+        "job_peak_process_private_bytes": 8975638528,
+        "job_peak_aggregate_private_bytes": 8976912384,
+        "state": "PASS",
+        "finished_utc": "2026-10-07T14:04:52.307097+00:00",
+        "seconds": 23.719,
+        "polled_peak_tree_private_bytes": 8964816896,
+        "polled_peak_tree_rss_bytes": 3694985216,
+        "counter_samples": 92,
+        "observed_own_processes": {
+          "8392": {
+            "exe": "lean.exe",
+            "peak_private_bytes": 8963543040,
+            "peak_rss_bytes": 3798491136
+          },
+          "32120": {
+            "exe": "conhost.exe",
+            "peak_private_bytes": 1273856,
+            "peak_rss_bytes": 7360512
+          }
+        },
+        "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\TWO\\attempts\\007-GlobalSelectors\\compiler.stdout.txt",
+        "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\TWO\\attempts\\007-GlobalSelectors\\compiler.stderr.txt",
+        "stdout_sha256": "d0f49711b966613da8dd0a94e2533f32299d3ae5f92d6ae348cca5ecd02d4207",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_excerpt": "GlobalSelectors.lean:28:0: warning: automatically included section variable(s) unused in theorem `RobertPublishable.TWO.vertex_injective`:\n  [DecidableEq F]\n  [Fintype F]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [DecidableEq F] [Fintype F] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`\nGlobalSelectors.lean:84:0: warning: automatically included section variable(s) unused in theorem `RobertPublishable.TWO.round1_full`:\n  [CharP F 3]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [CharP F 3] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`\nGlobalSelectors.lean:87:0: warning: automatically included section variable(s) unused in theorem `RobertPublishable.TWO.chart_matchA`:\n  [DecidableEq F]\n  [Fintype F]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [DecidableEq F] [Fintype F] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`\nGlobalSelectors.lean:92:0: warning: automatically included section variable(s) unused in theorem `RobertPublishable.TWO.chart_matchC`:\n  [DecidableEq F]\n  [Fintype F]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [DecidableEq F] [Fintype F] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`\nGlobalSelectors.lean:100:74: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nGlobalSelectors.lean:105:68: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\nGlobalSelectors.lean:163:0: warning: automatically included section variable(s) unused in theorem `RobertPublishable.TWO.round1_AC_unchanged`:\n  [CharP F 3]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [CharP F 3] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`\n'RobertPublishable.TWO.vertex_injective' depends on axioms: [propext, Classical.choice, Quot.sound]\n'RobertPublishable.TWO.firstSet_edge_closed' depends on axioms: [propext, Classical.choice, Quot.sound]\n'RobertPublishable.TWO.firstSelected_iff' depends on axioms: [propext, Classical.choice, Quot.sound]\n'RobertPublishable.TWO.round1_full' depends on axioms: [propext, Classical.choice, Quot.sound]\n'RobertPublishable.TWO.secondSet_canonical_edge_closed' depends on axioms: [propext, Classical.choice, Quot.sound]\n'RobertPublishable.TWO.round1_AC_unchanged' depends on axioms: [propext, Classical.choice, Quot.sound]\n'RobertPublishable.TWO.secondSet_edge_closed' depends on axioms: [propext, Classical.choice, Quot.sound]\n'RobertPublishable.TWO.secondSelected_iff' depends on axioms: [propext, Classical.choice, Quot.sound]\n'RobertPublishable.TWO.round2_full' depends on axioms: [propext, Classical.choice, Quot.sound]\n'RobertPublishable.TWO.firstSelected_vertex' depends on axioms: [propext, Classical.choice, Quot.sound]\n'RobertPublishable.TWO.secondSelected_left' depends on axioms: [propext, Classical.choice, Quot.sound]\n'RobertPublishable.TWO.secondSelected_right' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+        "stderr_excerpt": ""
+      },
+      "artifacts": [
+        {
+          "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\TWO\\attempts\\007-GlobalSelectors\\GlobalSelectors.olean",
+          "sha256": "a68f243263ca9b0528fbd6ba29d0c0ae956de0ed2f6db7e56bd8db77be89c5bf",
+          "bytes": 374664
+        }
+      ],
+      "selected_axiom_outputs": [
+        {
+          "endpoint": "RobertPublishable.TWO.vertex_injective",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        },
+        {
+          "endpoint": "RobertPublishable.TWO.firstSet_edge_closed",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        },
+        {
+          "endpoint": "RobertPublishable.TWO.firstSelected_iff",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        },
+        {
+          "endpoint": "RobertPublishable.TWO.round1_full",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        },
+        {
+          "endpoint": "RobertPublishable.TWO.secondSet_canonical_edge_closed",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        },
+        {
+          "endpoint": "RobertPublishable.TWO.round1_AC_unchanged",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        },
+        {
+          "endpoint": "RobertPublishable.TWO.secondSet_edge_closed",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        },
+        {
+          "endpoint": "RobertPublishable.TWO.secondSelected_iff",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        },
+        {
+          "endpoint": "RobertPublishable.TWO.round2_full",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        },
+        {
+          "endpoint": "RobertPublishable.TWO.firstSelected_vertex",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        },
+        {
+          "endpoint": "RobertPublishable.TWO.secondSelected_left",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        },
+        {
+          "endpoint": "RobertPublishable.TWO.secondSelected_right",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        }
+      ],
+      "selected_count": 12,
+      "own_pid_absent_at_qualification": true,
+      "own_prior_qualified_imports": [
+        {
+          "module": "ComponentUnions",
+          "receipt": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\TWO\\attempts\\002-ComponentUnions\\actual_invocation.json",
+          "sha256": "c2173a3d6a247afe904bc9cf07f54cca98c3f96929b4759ce600c5fea767bbfc",
+          "library_root": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\TWO\\attempts\\002-ComponentUnions"
+        },
+        {
+          "module": "PrimeChart",
+          "receipt": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\TWO\\attempts\\005-PrimeChart\\actual_invocation.json",
+          "sha256": "4d49a9a7457ea2bfb2f85c92787e766501b3430f7906883c5247fe9904cf782d",
+          "library_root": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\TWO\\attempts\\005-PrimeChart"
+        }
+      ]
+    },
+    {
+      "module": "MatchingIdentification",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\TWO\\MatchingIdentification.lean",
+      "source_sha256": "a322ac68dffeade7088e93c1064f5b62424d3aeca329af689919d42f513c1839",
+      "receipt": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\TWO\\attempts\\009-MatchingIdentification\\actual_invocation.json",
+      "receipt_sha256": "deaeb051f1e644c5a18897428c8c732208e3a915d5f3244c0f8ab4f03dd1ab34",
+      "runner_sha256": "0f09d64cab008a106d4e0bc56de85b1c7c034059c2d73e7483bb3545316ab677",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DautoImplicit=false",
+        "-DrelaxedAutoImplicit=false",
+        "-o",
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\TWO\\attempts\\009-MatchingIdentification\\MatchingIdentification.olean",
+        "MatchingIdentification.lean"
+      ],
+      "environment": {
+        "LEAN_PATH": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\TWO;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\TWO\\attempts\\002-ComponentUnions;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\TWO\\attempts\\005-PrimeChart;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\TWO\\attempts\\007-GlobalSelectors;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\adjacent_robert_20261007\\verification\\replay;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\adjacent_robert_20261007\\verification\\provider-replay;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\aesop\\.lake\\build\\lib\\lean;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\batteries\\.lake\\build\\lib\\lean;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\Cli\\.lake\\build\\lib\\lean;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\importGraph\\.lake\\build\\lib\\lean;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\LeanSearchClient\\.lake\\build\\lib\\lean;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\plausible\\.lake\\build\\lib\\lean;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\proofwidgets\\.lake\\build\\lib\\lean;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\Qq\\.lake\\build\\lib\\lean",
+        "LEAN_NUM_THREADS": "1"
+      },
+      "guard": {
+        "command": [
+          "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+          "-j1",
+          "-DautoImplicit=false",
+          "-DrelaxedAutoImplicit=false",
+          "-o",
+          "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\TWO\\attempts\\009-MatchingIdentification\\MatchingIdentification.olean",
+          "MatchingIdentification.lean"
+        ],
+        "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\TWO",
+        "started_utc": "2026-10-07T14:06:08.052089+00:00",
+        "attempted": true,
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 17179869184,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 2147483648,
+          "own_job_private_bytes": 13958643712,
+          "own_process_private_bytes": 13958643712,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 1800
+        },
+        "minimum_disk_free_bytes": 11080347648,
+        "initial_system_memory_snapshot": {
+          "free_physical_bytes": 14994767872,
+          "total_physical_bytes": 34024419328,
+          "available_commit_bytes": 19277348864,
+          "total_commit_limit_bytes": 45444141056
+        },
+        "minimum_physical_available_bytes": 11143139328,
+        "minimum_available_commit_bytes": 10348576768,
+        "root_pid": 28444,
+        "own_job_assignment_before_resume": "PASS",
+        "exit": 0,
+        "job_peak_process_private_bytes": 8939454464,
+        "job_peak_aggregate_private_bytes": 8940728320,
+        "state": "PASS",
+        "finished_utc": "2026-10-07T14:06:30.503395+00:00",
+        "seconds": 22.453,
+        "polled_peak_tree_private_bytes": 8928055296,
+        "polled_peak_tree_rss_bytes": 3687084032,
+        "counter_samples": 87,
+        "observed_own_processes": {
+          "30572": {
+            "exe": "conhost.exe",
+            "peak_private_bytes": 1273856,
+            "peak_rss_bytes": 7360512
+          },
+          "28444": {
+            "exe": "lean.exe",
+            "peak_private_bytes": 8926781440,
+            "peak_rss_bytes": 3788394496
+          }
+        },
+        "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\TWO\\attempts\\009-MatchingIdentification\\compiler.stdout.txt",
+        "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\TWO\\attempts\\009-MatchingIdentification\\compiler.stderr.txt",
+        "stdout_sha256": "d661966c824a231ac3d7d5f1a46eeef22f7da3291c6b9f0e4404ccce9d9774f3",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_excerpt": "MatchingIdentification.lean:22:0: warning: automatically included section variable(s) unused in theorem `RobertPublishable.TWO.canonical_zero_edge`:\n  [CharP F 3]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [CharP F 3] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`\nMatchingIdentification.lean:25:8: warning: This simp argument is unused:\n  vertex\n\nHint: Omit it from the simp argument list.\n  [apply] simp\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\nMatchingIdentification.lean:31:8: warning: This simp argument is unused:\n  vertex\n\nHint: Omit it from the simp argument list.\n  [apply] simp [map_add]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\nMatchingIdentification.lean:37:8: warning: This simp argument is unused:\n  vertex\n\nHint: Omit it from the simp argument list.\n  [apply] simp [chart_matchA]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\nMatchingIdentification.lean:43:8: warning: This simp argument is unused:\n  vertex\n\nHint: Omit it from the simp argument list.\n  [apply] simp [chart_matchC]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\n'RobertPublishable.TWO.round1_zero_edge' depends on axioms: [propext, Classical.choice, Quot.sound]\n'RobertPublishable.TWO.round1_B_edge' depends on axioms: [propext, Classical.choice, Quot.sound]\n'RobertPublishable.TWO.round2_AFinal_edge' depends on axioms: [propext, Classical.choice, Quot.sound]\n'RobertPublishable.TWO.round2_CFinal_edge' depends on axioms: [propext, Classical.choice, Quot.sound]\n'RobertPublishable.TWO.round2_zero_edge' depends on axioms: [propext, Classical.choice, Quot.sound]\n'RobertPublishable.TWO.round2_B_edge' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+        "stderr_excerpt": ""
+      },
+      "artifacts": [
+        {
+          "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\TWO\\attempts\\009-MatchingIdentification\\MatchingIdentification.olean",
+          "sha256": "1e9067ecf231d5037e53865d624de1bc94863405e042b6f7d29b2f8e27d0c224",
+          "bytes": 220208
+        }
+      ],
+      "selected_axiom_outputs": [
+        {
+          "endpoint": "RobertPublishable.TWO.round1_zero_edge",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        },
+        {
+          "endpoint": "RobertPublishable.TWO.round1_B_edge",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        },
+        {
+          "endpoint": "RobertPublishable.TWO.round2_AFinal_edge",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        },
+        {
+          "endpoint": "RobertPublishable.TWO.round2_CFinal_edge",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        },
+        {
+          "endpoint": "RobertPublishable.TWO.round2_zero_edge",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        },
+        {
+          "endpoint": "RobertPublishable.TWO.round2_B_edge",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        }
+      ],
+      "selected_count": 6,
+      "own_pid_absent_at_qualification": true,
+      "own_prior_qualified_imports": [
+        {
+          "module": "ComponentUnions",
+          "receipt": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\TWO\\attempts\\002-ComponentUnions\\actual_invocation.json",
+          "sha256": "c2173a3d6a247afe904bc9cf07f54cca98c3f96929b4759ce600c5fea767bbfc",
+          "library_root": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\TWO\\attempts\\002-ComponentUnions"
+        },
+        {
+          "module": "PrimeChart",
+          "receipt": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\TWO\\attempts\\005-PrimeChart\\actual_invocation.json",
+          "sha256": "4d49a9a7457ea2bfb2f85c92787e766501b3430f7906883c5247fe9904cf782d",
+          "library_root": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\TWO\\attempts\\005-PrimeChart"
+        },
+        {
+          "module": "GlobalSelectors",
+          "receipt": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\TWO\\attempts\\007-GlobalSelectors\\actual_invocation.json",
+          "sha256": "9addb8ba06f0703518090588ddc3964607b7bdbab9307fc2c0e5117a978fe5f1",
+          "library_root": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\TWO\\attempts\\007-GlobalSelectors"
+        }
+      ]
+    },
+    {
+      "module": "CycleComposition",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\TWO\\CycleComposition.lean",
+      "source_sha256": "fe8a215c5a8103963c4bc5ddf3fb7d6b642e36e4d24ba39cd5dc74e479ffc135",
+      "receipt": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\TWO\\attempts\\011-CycleComposition\\actual_invocation.json",
+      "receipt_sha256": "8f1a47cf6fab2d1caa7a0f5b4078ffdce8caffa8704d8793edb0acad0147c2ba",
+      "runner_sha256": "0f09d64cab008a106d4e0bc56de85b1c7c034059c2d73e7483bb3545316ab677",
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-DautoImplicit=false",
+        "-DrelaxedAutoImplicit=false",
+        "-o",
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\TWO\\attempts\\011-CycleComposition\\CycleComposition.olean",
+        "CycleComposition.lean"
+      ],
+      "environment": {
+        "LEAN_PATH": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\TWO;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\TWO\\attempts\\002-ComponentUnions;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\TWO\\attempts\\005-PrimeChart;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\TWO\\attempts\\007-GlobalSelectors;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\TWO\\attempts\\009-MatchingIdentification;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\adjacent_robert_20261007\\verification\\replay;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\adjacent_robert_20261007\\verification\\provider-replay;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\aesop\\.lake\\build\\lib\\lean;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\batteries\\.lake\\build\\lib\\lean;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\Cli\\.lake\\build\\lib\\lean;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\importGraph\\.lake\\build\\lib\\lean;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\LeanSearchClient\\.lake\\build\\lib\\lean;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\plausible\\.lake\\build\\lib\\lean;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\proofwidgets\\.lake\\build\\lib\\lean;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\Qq\\.lake\\build\\lib\\lean",
+        "LEAN_NUM_THREADS": "1"
+      },
+      "guard": {
+        "command": [
+          "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+          "-j1",
+          "-DautoImplicit=false",
+          "-DrelaxedAutoImplicit=false",
+          "-o",
+          "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\TWO\\attempts\\011-CycleComposition\\CycleComposition.olean",
+          "CycleComposition.lean"
+        ],
+        "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\TWO",
+        "started_utc": "2026-10-07T14:07:45.248044+00:00",
+        "attempted": true,
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 17179869184,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 2147483648,
+          "own_job_private_bytes": 13958643712,
+          "own_process_private_bytes": 13958643712,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 1800
+        },
+        "minimum_disk_free_bytes": 11078832128,
+        "initial_system_memory_snapshot": {
+          "free_physical_bytes": 15003910144,
+          "total_physical_bytes": 34024419328,
+          "available_commit_bytes": 19264348160,
+          "total_commit_limit_bytes": 45444141056
+        },
+        "minimum_physical_available_bytes": 11160190976,
+        "minimum_available_commit_bytes": 10358652928,
+        "root_pid": 31656,
+        "own_job_assignment_before_resume": "PASS",
+        "exit": 0,
+        "job_peak_process_private_bytes": 8939753472,
+        "job_peak_aggregate_private_bytes": 8941006848,
+        "state": "PASS",
+        "finished_utc": "2026-10-07T14:08:08.747875+00:00",
+        "seconds": 23.5,
+        "polled_peak_tree_private_bytes": 8928391168,
+        "polled_peak_tree_rss_bytes": 3702857728,
+        "counter_samples": 91,
+        "observed_own_processes": {
+          "31656": {
+            "exe": "lean.exe",
+            "peak_private_bytes": 8927137792,
+            "peak_rss_bytes": 3793502208
+          },
+          "31852": {
+            "exe": "conhost.exe",
+            "peak_private_bytes": 1253376,
+            "peak_rss_bytes": 7356416
+          }
+        },
+        "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\TWO\\attempts\\011-CycleComposition\\compiler.stdout.txt",
+        "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\TWO\\attempts\\011-CycleComposition\\compiler.stderr.txt",
+        "stdout_sha256": "687134dc90502f768070e562cf1a53019235354ba7fb8cf9175c56618c042fe1",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_excerpt": "CycleComposition.lean:39:0: warning: automatically included section variable(s) unused in theorem `RobertPublishable.TWO.label_same_impossible`:\n  [CharP F 3]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [CharP F 3] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`\nCycleComposition.lean:104:0: warning: automatically included section variable(s) unused in theorem `RobertPublishable.TWO.mapped_support_eq_image`:\n  [Fintype F]\n  [CharP F 3]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [Fintype F] [CharP F 3] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`\nCycleComposition.lean:123:0: warning: automatically included section variable(s) unused in theorem `RobertPublishable.TWO.final_factors_disjoint`:\n  [CharP F 3]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [CharP F 3] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`\nCycleComposition.lean:180:47: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`\n'RobertPublishable.TWO.label_cross_iff_matching' depends on axioms: [propext, Classical.choice, Quot.sound]\n'RobertPublishable.TWO.red_cross' depends on axioms: [propext, Classical.choice, Quot.sound]\n'RobertPublishable.TWO.blue_cross' depends on axioms: [propext, Classical.choice, Quot.sound]\n'RobertPublishable.TWO.red_cycle_local' depends on axioms: [propext, Classical.choice, Quot.sound]\n'RobertPublishable.TWO.blue_cycle_local' depends on axioms: [propext, Classical.choice, Quot.sound]\n'RobertPublishable.TWO.chart_support_card' depends on axioms: [propext, Classical.choice, Quot.sound]\n'RobertPublishable.TWO.final_factors_disjoint' depends on axioms: [propext, Classical.choice, Quot.sound]\n'RobertPublishable.TWO.actual_two_round_exposed_cycles' depends on axioms: [propext, Classical.choice, Quot.sound]\n'RobertPublishable.TWO.exactly_two_component_union_rounds' depends on axioms: [propext, Classical.choice, Quot.sound]\n'RobertPublishable.TWO.family_exactly_two_component_union_rounds' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n@actual_two_round_exposed_cycles : ∀ {F : Type u_2} [inst : Field F] [inst_1 : DecidableEq F] [inst_2 : Fintype F]\n  [CharP F 3] [inst_4 : Algebra (ZMod 3) F] (t : F),\n  t ≠ 0 →\n    t ≠ 1 →\n      t ≠ -1 →\n        ∃ p q,\n          p.IsCycle ∧\n            q.IsCycle ∧\n              p.support.toFinset = q.support.toFinset ∧\n                Disjoint p.edges.toFinset q.edges.toFinset ∧ p.support.toFinset.card = 54\nfamily_exactly_two_component_union_rounds : ∀ (k : ℕ),\n  2 ≤ k →\n    ParabolaBarrier104.OneRoundBarrier ∧\n      ∃ t,\n        t ≠ 0 ∧\n          t ≠ 1 ∧\n            t ≠ -1 ∧\n              ∃ p q,\n                p.IsCycle ∧\n                  q.IsCycle ∧\n                    p.support.toFinset = q.support.toFinset ∧\n                      Disjoint p.edges.toFinset q.edges.toFinset ∧ p.support.toFinset.card = 54\n",
+        "stderr_excerpt": ""
+      },
+      "artifacts": [
+        {
+          "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\TWO\\attempts\\011-CycleComposition\\CycleComposition.olean",
+          "sha256": "c6861c9e5e840f8639af6fa31e0d8a3b496cdf8a87b76e6f26a375d349287fd4",
+          "bytes": 353808
+        }
+      ],
+      "selected_axiom_outputs": [
+        {
+          "endpoint": "RobertPublishable.TWO.label_cross_iff_matching",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        },
+        {
+          "endpoint": "RobertPublishable.TWO.red_cross",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        },
+        {
+          "endpoint": "RobertPublishable.TWO.blue_cross",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        },
+        {
+          "endpoint": "RobertPublishable.TWO.red_cycle_local",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        },
+        {
+          "endpoint": "RobertPublishable.TWO.blue_cycle_local",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        },
+        {
+          "endpoint": "RobertPublishable.TWO.chart_support_card",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        },
+        {
+          "endpoint": "RobertPublishable.TWO.final_factors_disjoint",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        },
+        {
+          "endpoint": "RobertPublishable.TWO.actual_two_round_exposed_cycles",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        },
+        {
+          "endpoint": "RobertPublishable.TWO.exactly_two_component_union_rounds",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        },
+        {
+          "endpoint": "RobertPublishable.TWO.family_exactly_two_component_union_rounds",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        }
+      ],
+      "selected_count": 10,
+      "own_pid_absent_at_qualification": true,
+      "own_prior_qualified_imports": [
+        {
+          "module": "ComponentUnions",
+          "receipt": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\TWO\\attempts\\002-ComponentUnions\\actual_invocation.json",
+          "sha256": "c2173a3d6a247afe904bc9cf07f54cca98c3f96929b4759ce600c5fea767bbfc",
+          "library_root": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\TWO\\attempts\\002-ComponentUnions"
+        },
+        {
+          "module": "PrimeChart",
+          "receipt": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\TWO\\attempts\\005-PrimeChart\\actual_invocation.json",
+          "sha256": "4d49a9a7457ea2bfb2f85c92787e766501b3430f7906883c5247fe9904cf782d",
+          "library_root": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\TWO\\attempts\\005-PrimeChart"
+        },
+        {
+          "module": "GlobalSelectors",
+          "receipt": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\TWO\\attempts\\007-GlobalSelectors\\actual_invocation.json",
+          "sha256": "9addb8ba06f0703518090588ddc3964607b7bdbab9307fc2c0e5117a978fe5f1",
+          "library_root": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\TWO\\attempts\\007-GlobalSelectors"
+        },
+        {
+          "module": "MatchingIdentification",
+          "receipt": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\TWO\\attempts\\009-MatchingIdentification\\actual_invocation.json",
+          "sha256": "deaeb051f1e644c5a18897428c8c732208e3a915d5f3244c0f8ab4f03dd1ab34",
+          "library_root": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\TWO\\attempts\\009-MatchingIdentification"
+        }
+      ]
+    }
+  ],
+  "preserved_failed_attempts": [
+    {
+      "receipt": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\TWO\\attempts\\001-ComponentUnions\\actual_invocation.json",
+      "sha256": "f5c0efb6d83a6085fa35e33c5a5c0c1046f52a004a062258c788ce77d77affa1",
+      "module": "ComponentUnions",
+      "source_sha256": "942cca5873e599d210842a3b437cea5c40233fb676acc6ffa9a3b68683df86ac",
+      "actual_exit": 1,
+      "state": "COMMAND_FAILED",
+      "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\TWO\\attempts\\001-ComponentUnions\\compiler.stdout.txt",
+      "stdout_sha256": "d253c05e9ae0489f5f8b3d84d718758329a3c17a223b6d3d09297a864555a732",
+      "qualified": false,
+      "note": "Preserved failed ordinary elaboration attempts; Lean error-recovery sorryAx prints are not accepted proof evidence."
+    },
+    {
+      "receipt": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\TWO\\attempts\\003-PrimeChart\\actual_invocation.json",
+      "sha256": "ba8b10c7fd1f0e536969fd734fcda9749adf06ad6525780877ca926831b4c98d",
+      "module": "PrimeChart",
+      "source_sha256": "c77c558149c77cae6d022b43733a631e095c99ada4d09e19a141132800f10626",
+      "actual_exit": 1,
+      "state": "COMMAND_FAILED",
+      "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\TWO\\attempts\\003-PrimeChart\\compiler.stdout.txt",
+      "stdout_sha256": "bfdb1b63ee2a4ddaaa74ea658bbe7fe10205fa058aafef71869af8275ee7aa0f",
+      "qualified": false,
+      "note": "Preserved failed ordinary elaboration attempts; Lean error-recovery sorryAx prints are not accepted proof evidence."
+    },
+    {
+      "receipt": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\TWO\\attempts\\004-PrimeChart\\actual_invocation.json",
+      "sha256": "61b66b5985956bb761a1215bf3c93fa0b13fad395fa43c2e3094fabce43b15d5",
+      "module": "PrimeChart",
+      "source_sha256": "58e05cba06669164cdbbd20f2f17052edf8f080eccd470121a0e859d04b7019a",
+      "actual_exit": 1,
+      "state": "COMMAND_FAILED",
+      "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\TWO\\attempts\\004-PrimeChart\\compiler.stdout.txt",
+      "stdout_sha256": "0ce557857e720d90a006fb5ad35cc276c94c9b313fb9ce876d85228c6d28c8e7",
+      "qualified": false,
+      "note": "Preserved failed ordinary elaboration attempts; Lean error-recovery sorryAx prints are not accepted proof evidence."
+    },
+    {
+      "receipt": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\TWO\\attempts\\006-GlobalSelectors\\actual_invocation.json",
+      "sha256": "b42067249108fb358b48591279ded41587f6413a5b1fcfa10eab4b6347bec20b",
+      "module": "GlobalSelectors",
+      "source_sha256": "e21d410d74e8977eeea8ff1ba9853321058561038ea8891a91885cb1d024a2ce",
+      "actual_exit": 1,
+      "state": "COMMAND_FAILED",
+      "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\TWO\\attempts\\006-GlobalSelectors\\compiler.stdout.txt",
+      "stdout_sha256": "3c8dd68b8d399e4f9c09ae28ea4b03a785292426f64ed2b281798aa2f69baa34",
+      "qualified": false,
+      "note": "Preserved failed ordinary elaboration attempts; Lean error-recovery sorryAx prints are not accepted proof evidence."
+    },
+    {
+      "receipt": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\TWO\\attempts\\008-MatchingIdentification\\actual_invocation.json",
+      "sha256": "c1fed04f6d6b1f7027cee00a365196f042481d24e8dd320f9a6a94abeae2ce33",
+      "module": "MatchingIdentification",
+      "source_sha256": "84d1b61e4d00078f636673499315bcb20d18860f7706ba6b1b06c07d0ffe8b07",
+      "actual_exit": 1,
+      "state": "COMMAND_FAILED",
+      "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\TWO\\attempts\\008-MatchingIdentification\\compiler.stdout.txt",
+      "stdout_sha256": "aceb5fa5aeae3ab12a3f27fc3d655aa838f2ea7accd97b37ef688316bf5585f1",
+      "qualified": false,
+      "note": "Preserved failed ordinary elaboration attempts; Lean error-recovery sorryAx prints are not accepted proof evidence."
+    },
+    {
+      "receipt": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\TWO\\attempts\\010-CycleComposition\\actual_invocation.json",
+      "sha256": "9debb2ddf009aafe60394416d5b673465ce2e0a0504bcf3baea393d68b354397",
+      "module": "CycleComposition",
+      "source_sha256": "ae55fb5418a0a5412ae367281b835631e4b9def31d5a13697bce54a5eafb563c",
+      "actual_exit": 1,
+      "state": "COMMAND_FAILED",
+      "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\TWO\\attempts\\010-CycleComposition\\compiler.stdout.txt",
+      "stdout_sha256": "c1b5d1188414fcb66f66c14a38fe5b6c9f4dffe75cdcee58f9864a3a9df389b1",
+      "qualified": false,
+      "note": "Preserved failed ordinary elaboration attempts; Lean error-recovery sorryAx prints are not accepted proof evidence."
+    }
+  ],
+  "runtime": {
+    "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+    "sha256": "af49bacfabaa1fea71332ca0feae0fa1a60912219d5902291adc79f905bffb8d",
+    "version": "Lean (version 4.33.1, x86_64-w64-windows-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)"
+  },
+  "dependency_pins": [
+    {
+      "name": "mathlib",
+      "head": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib"
+    },
+    {
+      "name": "plausible",
+      "head": "b7eb3304aeae834b12dda98993a37f6a41f6f0bb",
+      "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\plausible"
+    },
+    {
+      "name": "LeanSearchClient",
+      "head": "5f4d51b81cbd3f6b32b156bfad9056621a040404",
+      "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\LeanSearchClient"
+    },
+    {
+      "name": "importGraph",
+      "head": "16f02aa7642864af59f1ff0e384a015994db9118",
+      "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\importGraph"
+    },
+    {
+      "name": "proofwidgets",
+      "head": "4be2e3d5087eeb272cf5a8853b8f9dd025ef5957",
+      "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\proofwidgets"
+    },
+    {
+      "name": "aesop",
+      "head": "3448c0bcc5ce01b2d1546e483ec3620e32df3d0e",
+      "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\aesop"
+    },
+    {
+      "name": "Qq",
+      "head": "92c15be17b7caf78c2ad767ec40f89052d908d81",
+      "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\Qq"
+    },
+    {
+      "name": "batteries",
+      "head": "4488d40d070b9700d4d5a6aa342f0d40c31b2a2d",
+      "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\batteries"
+    },
+    {
+      "name": "Cli",
+      "head": "6130a47896ce867c6a4a55373441e59e565bad0f",
+      "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\Cli"
+    }
+  ],
+  "old_source_head": "1efc324e155ef0b6a7081c5f695c6c825e7debef",
+  "original_source_replay": {
+    "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\adjacent_robert_20261007\\verification\\completed106-source81-axioms-immutable.json",
+    "sha256": "82b6c76de58309b35ed3b1b28b211011449b319affde181446870a33e9a9f142"
+  },
+  "main_endpoint_locators": [
+    {
+      "name": "RobertPublishable.TWO.actual_two_round_exposed_cycles",
+      "line": 137,
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\TWO\\CycleComposition.lean",
+      "sha256": "fe8a215c5a8103963c4bc5ddf3fb7d6b642e36e4d24ba39cd5dc74e479ffc135"
+    },
+    {
+      "name": "RobertPublishable.TWO.exactly_two_component_union_rounds",
+      "line": 160,
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\TWO\\CycleComposition.lean",
+      "sha256": "fe8a215c5a8103963c4bc5ddf3fb7d6b642e36e4d24ba39cd5dc74e479ffc135"
+    },
+    {
+      "name": "RobertPublishable.TWO.family_exactly_two_component_union_rounds",
+      "line": 171,
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\TWO\\CycleComposition.lean",
+      "sha256": "fe8a215c5a8103963c4bc5ddf3fb7d6b642e36e4d24ba39cd5dc74e479ffc135"
+    }
+  ],
+  "scientific_scope": {
+    "uniform_two_round_parabola_proved": true,
+    "generic_field": "all finite characteristic3 fields F with an Algebra(ZMod3)F and cardF>3",
+    "literal_family": "GaloisField3k, each integer k>=2",
+    "original_full_host": "Parabola104.fullGraph with all field colors, starting from Parabola104.canonical",
+    "rounds": "two literal KempeSwap104.swap component-union rounds; first0/t union at a=c, second1/(1+t) mark component",
+    "no_assumed_component_closure_or_pair": true,
+    "pair": "actual final red1/0 and blue(1+t)/t factor walks, IsCycle, equal support, edge-disjoint",
+    "support_cardinality": 54,
+    "smallest_full_host_cardinality": 162,
+    "sharpness": "old exact OneRoundBarrier plus new actual two-round witness; minimum component-union round count2, not minimum individual component-flip count",
+    "main_BM_quantitative_Hamiltonicity_proved": false,
+    "global_cycle_pair_avoidance_or_Erdos585_resolution": false,
+    "native_decide_or_custom_axiom_or_sorry": false,
+    "score_change_or_extra_family_credit": false
+  },
+  "raw_helper_limitation": "Per-piece raw rows retain uniform_two_round_parabola_proved=false as an inherited nonpromoting runner flag. This separate qualification derives true only from actual final composition endpoint PASS plus all source/import/log/artifact checks; raw rows unchanged.",
+  "old_source_or_output_mutations": 0,
+  "outbound_actions": 0,
+  "compiler_invocations_by_this_qualification": 0
+}

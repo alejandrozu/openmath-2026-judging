@@ -1,0 +1,91 @@
+{
+  "schema": "robert-twin-density-additive-actual-pass-semantic-review-v1",
+  "checked_utc": "2026-10-07T13:24:07.259932+00:00",
+  "status": "ACTUAL_ROOT_COMPILED_FOUR_STANDARD_PRINTS_READONLY_SEMANTIC_REVIEW_PASS",
+  "source": {
+    "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\GEN\\TwinDensityExtension.lean",
+    "sha256": "a6c92256b4ccfea80281db47c5cfb892bb39be8d92b49d8437a90b5404d046b7",
+    "bytes": 7747
+  },
+  "actual_receipt": {
+    "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\GEN\\logs\\TwinDensityExtension-20261007T131941833131Z.json",
+    "sha256": "3d67db09ad8995669953b26bb736175a328a7e85abaebd845b18bc5bd93a0488",
+    "bytes": 9371
+  },
+  "stdout": {
+    "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\GEN\\logs\\TwinDensityExtension-20261007T131941833131Z.stdout.txt",
+    "sha256": "41b366a31fcf6a58ba841754a542c5993d3c6824013c86f769250cf7e150ac01",
+    "bytes": 1504
+  },
+  "stderr": {
+    "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\GEN\\logs\\TwinDensityExtension-20261007T131941833131Z.stderr.txt",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0
+  },
+  "artifacts": [
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\GEN\\TwinDensityExtension.olean",
+      "sha256": "fde7a91e69904309a464aa963dc81f695a9a5e8b968b8b9dbe3943489a7f3f2e",
+      "bytes": 340416
+    }
+  ],
+  "actual_prints": [
+    {
+      "endpoint": "OpenMathReview.TwinDensityExtension.grouped_balance_dense",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "endpoint": "OpenMathReview.TwinDensityExtension.grouped_full_degree_of_strict_dense",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "endpoint": "OpenMathReview.TwinDensityExtension.groupedGraph_hasPair_of_no_singletons_dense",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    {
+      "endpoint": "OpenMathReview.TwinDensityExtension.hasPair_of_no_singleton_twins_dense",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    }
+  ],
+  "guard_state": "PASS",
+  "guard_exit": 0,
+  "semantics": [
+    "Nonempty host guard explicit; empty graphs are not falsely covered.",
+    "Inequality shore balance is derived from degree sums.",
+    "Exact critical-density branch imports the original actual-host theorem.",
+    "Strict branch derives weighted deficit at most one; clone size at leasttwo forces every left group degree six.",
+    "Large groups give actual K4,4; small groups give the incidence budget from shore balance.",
+    "Existing actual two-clone selection/lift maps through groupedIso into the given host.",
+    "No selected factor, cycle existence or pair-freeness premise occurs."
+  ],
+  "prepared_source_and_prior_matrix_remain_historical": true,
+  "preparation": {
+    "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\research\\research_five_TwinDensityExtension_preparation.json",
+    "sha256": "f3dd0b2d7346910ae8dcb47146caba168b4bd178cbafc9f93f21fc5021438d22",
+    "bytes": 3605
+  },
+  "historical_five_family_matrix": {
+    "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\research\\research_five_comparison_matrix.json",
+    "sha256": "53b56e948f1f8f2eb4235d85156594154ee586b2e46b8aca846f09e06aa171b7",
+    "bytes": 102654
+  },
+  "novelty": "Corollary extension using known AFK/Olson/Eppstein ingredients; no new-method or priority certification.",
+  "compiler_invocations_by_semantic_reviewer": 0,
+  "material_unresolved_findings": []
+}

@@ -1,0 +1,27 @@
+TwinDensityExtension.lean:118:6: warning: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+'OpenMathReview.TwinDensityExtension.grouped_balance_dense' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OpenMathReview.TwinDensityExtension.grouped_full_degree_of_strict_dense' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'OpenMathReview.TwinDensityExtension.groupedGraph_hasPair_of_no_singletons_dense' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'OpenMathReview.TwinDensityExtension.hasPair_of_no_singleton_twins_dense' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@hasPair_of_no_singleton_twins_dense : ∀ {A : Type u_1} {R : Type u_2} [inst : Fintype A] [inst_1 : Fintype R]
+  [DecidableEq R] (G : SimpleGraph (A ⊕ R)) [inst_3 : DecidableRel G.Adj],
+  Nonempty (A ⊕ R) →
+    (∀ (a b : A), ¬G.Adj (Sum.inl a) (Sum.inl b)) →
+      (∀ (r s : R), ¬G.Adj (Sum.inr r) (Sum.inr s)) →
+        (∀ (v : A ⊕ R), G.degree v ≤ 6) →
+          3 * Fintype.card (A ⊕ R) ≤ #G.edgeFinset + 2 →
+            (∀ (a : A), ∃ b, b ≠ a ∧ ∀ (r : R), G.Adj (Sum.inl a) (Sum.inr r) ↔ G.Adj (Sum.inl b) (Sum.inr r)) →
+              HasTwoEdgeDisjointCyclesSameVertexSet G

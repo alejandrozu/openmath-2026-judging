@@ -1,0 +1,36 @@
+Regularity.lean:11:12: warning: please avoid 'open (scoped) Classical' statements: this can hide theorem statements which would be better stated with explicit decidability statements.
+Instead, use `open Classical in` for definitions or instances, the `classical` tactic for proofs.
+For theorem statements, either add missing decidability assumptions or use `open Classical in`.
+
+Note: This linter can be disabled with `set_option linter.style.openClassical false`
+Regularity.lean:23:0: warning: automatically included section variable(s) unused in theorem `RobertPublishable.SUB.ValidSimpleSubstitution.internal_edge`:
+  [DecidableEq E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Regularity.lean:28:0: warning: automatically included section variable(s) unused in theorem `RobertPublishable.SUB.ValidSimpleSubstitution.internal_diag`:
+  [DecidableEq U]
+  [DecidableEq E]
+  [DecidableEq I]
+  [DecidableEq O]
+  [Fintype I]
+  [Fintype O]
+  T
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq U] [DecidableEq E] [DecidableEq I] [DecidableEq O] [Fintype I] [Fintype O] T in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Regularity.lean:102:0: warning: Definition `RobertPublishable.SUB.ValidSimpleSubstitution.locallyFinite` of class type is semireducible. Most type class instances should be instance-reducible, so consider marking this
+definition with `@[instance_reducible]`. If it is intentionally semireducible, this warning can be disabled with `set_option warn.classDefReducibility false`.
+Regularity.lean:108:2: warning: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+'RobertPublishable.SUB.ValidSimpleSubstitution.regular' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RobertPublishable.SUB.ValidSimpleSubstitution.bicoloring' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RobertPublishable.SUB.ValidSimpleSubstitution.bipartite' depends on axioms: [propext, Classical.choice, Quot.sound]

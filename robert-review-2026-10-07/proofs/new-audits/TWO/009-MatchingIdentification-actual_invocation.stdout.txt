@@ -1,0 +1,40 @@
+MatchingIdentification.lean:22:0: warning: automatically included section variable(s) unused in theorem `RobertPublishable.TWO.canonical_zero_edge`:
+  [CharP F 3]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharP F 3] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+MatchingIdentification.lean:25:8: warning: This simp argument is unused:
+  vertex
+
+Hint: Omit it from the simp argument list.
+  [apply] simp
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+MatchingIdentification.lean:31:8: warning: This simp argument is unused:
+  vertex
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [map_add]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+MatchingIdentification.lean:37:8: warning: This simp argument is unused:
+  vertex
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [chart_matchA]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+MatchingIdentification.lean:43:8: warning: This simp argument is unused:
+  vertex
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [chart_matchC]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'RobertPublishable.TWO.round1_zero_edge' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RobertPublishable.TWO.round1_B_edge' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RobertPublishable.TWO.round2_AFinal_edge' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RobertPublishable.TWO.round2_CFinal_edge' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RobertPublishable.TWO.round2_zero_edge' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RobertPublishable.TWO.round2_B_edge' depends on axioms: [propext, Classical.choice, Quot.sound]

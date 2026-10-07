@@ -1,0 +1,24 @@
+PrescribedVertex.lean:12:12: warning: please avoid 'open (scoped) Classical' statements: this can hide theorem statements which would be better stated with explicit decidability statements.
+Instead, use `open Classical in` for definitions or instances, the `classical` tactic for proofs.
+For theorem statements, either add missing decidability assumptions or use `open Classical in`.
+
+Note: This linter can be disabled with `set_option linter.style.openClassical false`
+PrescribedVertex.lean:99:4: warning: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+RobertPublishable.SUB.avoiding_graph_from_deleted_vertex.{u_1} {V : Type u_1} [DecidableEq V] [Fintype V]
+  (B : SimpleGraph V) (c : V → Bool) (o : V) (hc : ∀ (a b : V), B.Adj a b → c a ≠ c b)
+  (hreg : ∀ (v : V), B.degree v = 6) (hfree : ¬Erdos585.HasPairF (induce {v | v ≠ o} B)) :
+  ∃ G,
+    Nonempty (BVertex × (DeletedGadget.Inner c o ⊕ DeletedGadget.Outer c o)) ∧
+      ¬Erdos585.HasPairF G ∧
+        (∀ (v : BVertex × (DeletedGadget.Inner c o ⊕ DeletedGadget.Outer c o)), G.degree v = 6) ∧ G.IsBipartite
+RobertPublishable.SUB.prescribed_vertex_equivalence.{u} :
+  EveryBipartiteSixHasPair ↔ EveryBipartiteSixHasPairAvoidingVertex
+'RobertPublishable.SUB.avoiding_graph_from_deleted_vertex' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RobertPublishable.SUB.prescribed_vertex_equivalence' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,254 @@
+{
+  "schema": "robert-additive-GEN-independent-readonly-semantic-review-v1",
+  "checked_utc": "2026-10-07T13:13:05.023422+00:00",
+  "reviewer": "/root/novel_paper_content",
+  "status": "PASS_READ_ONLY_SEMANTIC_SCOPE_NO_CONCRETE_BLOCKER",
+  "review_scope": "Whole current two additive sources, critical imported graph/move interfaces, actual root-produced print/log/artifact identities. Not an independent compiler execution or exhaustive dependency/runtime closure qualification.",
+  "source_and_actual_evidence": [
+    {
+      "name": "HaarInfinite",
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\GEN\\HaarInfinite.lean",
+        "sha256": "70ff39e67bef8a1d6b369296f89f2a798cd3b3890dede5acdfd4f2cd3cbbeb3d",
+        "bytes": 5055
+      },
+      "actual_receipt": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\GEN\\logs\\HaarInfinite-20261007T125147846931Z.json",
+        "sha256": "056b82c5016d4c1a7a75598f4e1deede346b0ed4746df58f7d159cc14cdf2f53",
+        "bytes": 9767
+      },
+      "stdout": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\GEN\\logs\\HaarInfinite-20261007T125147846931Z.stdout.txt",
+        "sha256": "25fd2d426f2f8ec8f0021e9bc53f721e512bebbeab598be3d3ab59888fa84381",
+        "bytes": 1763
+      },
+      "stderr": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\GEN\\logs\\HaarInfinite-20261007T125147846931Z.stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      },
+      "actual_guard_state": "PASS",
+      "actual_guard_exit": 0,
+      "actual_five_axiom_prints": [
+        {
+          "endpoint": "OpenMathReview.HaarInfinite.neighbor_finite",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "endpoint": "OpenMathReview.HaarInfinite.neighbor_ncard",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "endpoint": "OpenMathReview.HaarInfinite.pair_four_neighbors",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "endpoint": "OpenMathReview.HaarInfinite.four_le_card_of_pair",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "endpoint": "OpenMathReview.HaarInfinite.hasPair_iff",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "artifacts_rehashed": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\GEN\\HaarInfinite.olean",
+          "sha256": "830f135609b07c039eb90705f4a979e1951b6a0a8592195541b9facddb82d42a",
+          "bytes": 174976
+        }
+      ],
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-Dpp.unicode.fun=true",
+        "-DautoImplicit=false",
+        "-DrelaxedAutoImplicit=false",
+        "-Dweak.linter.style.copyright.formalConjectures=false",
+        "-Dweak.linter.style.namespace=true",
+        "-Dweak.linter.style.stubs=true",
+        "-Dweak.linter.style.openClassical=true",
+        "-o",
+        "HaarInfinite.olean",
+        "HaarInfinite.lean"
+      ],
+      "source_sha256_after_review": "70ff39e67bef8a1d6b369296f89f2a798cd3b3890dede5acdfd4f2cd3cbbeb3d"
+    },
+    {
+      "name": "AffinePaletteBarrier",
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\GEN\\AffinePaletteBarrier.lean",
+        "sha256": "7ef985f75a373c8ee36a4a054f06c050f0e34dc8206b50578bcecb58d0cfae70",
+        "bytes": 12080
+      },
+      "actual_receipt": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\GEN\\logs\\AffinePaletteBarrier-20261007T130736060481Z.json",
+        "sha256": "8f914ca504cc3e8679f6aa6b50b2e7e071d3344532c189ba2f1afb123bf17cc1",
+        "bytes": 12228
+      },
+      "stdout": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\GEN\\logs\\AffinePaletteBarrier-20261007T130736060481Z.stdout.txt",
+        "sha256": "24eaee3ac167b080164fc8185702741cdc5e27b81223fcd9600f5e5bbdc89829",
+        "bytes": 4068
+      },
+      "stderr": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\GEN\\logs\\AffinePaletteBarrier-20261007T130736060481Z.stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      },
+      "actual_guard_state": "PASS",
+      "actual_guard_exit": 0,
+      "actual_five_axiom_prints": [
+        {
+          "endpoint": "OpenMathReview.AffinePaletteBarrier.component_induced",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "endpoint": "OpenMathReview.AffinePaletteBarrier.tripleClosed_of_sidon",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "endpoint": "OpenMathReview.AffinePaletteBarrier.canonical_full",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "endpoint": "OpenMathReview.AffinePaletteBarrier.exposed_cycle_no_partner",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        },
+        {
+          "endpoint": "OpenMathReview.AffinePaletteBarrier.sidon_exposed_cycle_no_partner",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ]
+        }
+      ],
+      "artifacts_rehashed": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\GEN\\AffinePaletteBarrier.olean",
+          "sha256": "076502f62f2affa4cafab2119b5f555f4363ce90bf24fa92e18f9bd7574e8bfb",
+          "bytes": 726760
+        }
+      ],
+      "command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-Dpp.unicode.fun=true",
+        "-DautoImplicit=false",
+        "-DrelaxedAutoImplicit=false",
+        "-Dweak.linter.style.copyright.formalConjectures=false",
+        "-Dweak.linter.style.namespace=true",
+        "-Dweak.linter.style.stubs=true",
+        "-Dweak.linter.style.openClassical=true",
+        "-o",
+        "AffinePaletteBarrier.olean",
+        "AffinePaletteBarrier.lean"
+      ],
+      "source_sha256_after_review": "7ef985f75a373c8ee36a4a054f06c050f0e34dc8206b50578bcecb58d0cfae70"
+    }
+  ],
+  "critical_frozen_dependencies": [
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\adjacent_robert_20261007\\source-repository\\findings\\supplement\\lean\\Openmath\\Proofs\\Haar.lean",
+      "sha256": "d0267e626ce68cd56be930d4821325de09fba57a9e4fe3095d8b1007175b779b",
+      "bytes": 6993
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\adjacent_robert_20261007\\source-repository\\findings\\supplement\\lean\\Openmath\\Proofs\\HaarClassification.lean",
+      "sha256": "d59ac9ae87c3173ca1c8e5d398ef6a09184712c7cc8268e05ec9b34e719ec3c5",
+      "bytes": 9541
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\adjacent_robert_20261007\\source-repository\\findings\\supplement\\lean\\Openmath\\Proofs\\HaarGamma.lean",
+      "sha256": "a90d0a970e8c92c656e4f1c2b3bf19d99f9902c3942985bd32d973854a65b094",
+      "bytes": 5300
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\adjacent_robert_20261007\\source-repository\\findings\\supplement\\lean\\Openmath\\Proofs\\HaarComponents104.lean",
+      "sha256": "6bda3393068c7a9ee1a79859bee9fd666e941ee304a00d3cad83509abcbac804",
+      "bytes": 5760
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\adjacent_robert_20261007\\source-repository\\findings\\supplement\\lean\\Openmath\\Proofs\\HaarDegree.lean",
+      "sha256": "528eb37828083642059330d57380ceaa539c4fc6ec0bbea39d1237f116224ce3",
+      "bytes": 2730
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\adjacent_robert_20261007\\source-repository\\findings\\supplement\\lean\\Openmath\\Proofs\\KempeSwap104.lean",
+      "sha256": "8f7667478a0aa70f89d329204b025c89815d45cae6c36e0b2f35b82725b49ad8",
+      "bytes": 12065
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\adjacent_robert_20261007\\source-repository\\findings\\supplement\\lean\\Openmath\\Proofs\\InducedComponentBarrier104.lean",
+      "sha256": "9f541b5d42de0c04d8a2bd3061cca003d2379f20bce50df92169dc0be4ad6c5c",
+      "bytes": 2080
+    }
+  ],
+  "HaarInfinite_semantics": [
+    "No FintypeV occurs in the new hasPair_iff type. Finsetpalette, AddCommGroupV,DecidableEqV, primep andModule(ZModp)V are retained.",
+    "Both actual neighbor sets are explicitly equal to injective images of the palette; finiteness and ncard are proved.",
+    "A pair of actual IsCycle walks has two distinct disjoint neighbor sets at a shared support vertex; their union has four vertices.",
+    "The converse uses finite localneighbors and finite walk supports, not a finiteambient cardinality assumption.",
+    "Forward direction calls the existing no-Fintype HaarClassification.hasPair_of_four.",
+    "The conclusion is two finite simplecycles on a common finite support; no infiniteHamiltoncycle or wholehigher-color-host decomposition is implied."
+  ],
+  "AffinePaletteBarrier_semantics": [
+    "Sidon is an algebraic unordered-pair-sum uniqueness premise allowing repetition, not an assumed no-partner or recoloring-failure premise.",
+    "All nine ZMod3 coefficient cases prove TripleClosed from Sidon; the repeated-summand cases are necessary.",
+    "TripleClosed plus actual Haar reachability forces each at-mostthree-color component to be induced in the fullhost.",
+    "Canonical is an actual symmetric edge labeling; each labelgraph equals an actual singleton-color Haargraph and canonical_full proves exactlyone neighbor per color.",
+    "The move is the existing actual swap on an arbitrary union of complete two-color ConnectedComponents.",
+    "KempeSwap104.swap_fullColoring plus the proved canonical_full supplies legality; distinct exposedcolors produce actual component cycles by the existing finitecycle lemma.",
+    "swap_factor_palette proves every resulting twofactor uses at mostthree originalpalette colors; no factor-confinement premise is assumed in the endpoint.",
+    "Actual cyclepartner exclusion follows from inducedness and degree≤3, using actual IsCycle walks/supportFinsets/edgeDisjointness.",
+    "FintypeV is present in both barrier endpoints; there is no asserted infiniteambient swapcycle theorem.",
+    "One component-union round only. No no-pair theorem for the host, all-recolorings obstruction, or multi-round failure is concluded."
+  ],
+  "material_unresolved_findings": [],
+  "nonblocking_scope_notes": [
+    "Sidon-to-2-cap geometric ingredient is knownHTW and must remain attributed; the graph/move application is the candidate extension.",
+    "Proper swapcycle existence is established by composition with the existing swap_fullColoring and swap_twoFactor_component_cycle interfaces; the selected barrier type itself universally quantifies actual IsCycle inputs.",
+    "A sharp minimumradius2 corollary requires at leastfour palettecolors and the separate ordinary two-round Haar-chart composition, not just the general barrier endpoint."
+  ],
+  "compiler_invocations_by_reviewer": 0,
+  "source_mutations": 0,
+  "outbound_actions": 0,
+  "formal_source_preservation_after_review": true
+}

@@ -1,0 +1,16 @@
+'OpenMathReview.InfiniteAffinePaletteBarrier.no_partner_in_component' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'OpenMathReview.InfiniteAffinePaletteBarrier.sidon_exposed_cycle_no_partner' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@sidon_exposed_cycle_no_partner : ∀ {V : Type u_2} [inst : AddCommGroup V] [inst_1 : Module (ZMod 3) V]
+  [inst_2 : DecidableEq V] (S : Finset V),
+  Sidon S →
+    ∀ (a b : Color S) (J : Set (twoFactor (canonical S) a b).ConnectedComponent) (i j : Color S) {u : V × Bool}
+      (p : (twoFactor (swap (canonical S) a b J) i j).Walk u u),
+      p.IsCycle →
+        ¬∃ w q,
+            q.IsCycle ∧
+              (Walk.mapLe ⋯ p).support.toFinset = q.support.toFinset ∧
+                Disjoint (Walk.mapLe ⋯ p).edges.toFinset q.edges.toFinset

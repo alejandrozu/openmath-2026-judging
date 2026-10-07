@@ -1,0 +1,7 @@
+SkeletonB.lean:13:12: warning: please avoid 'open (scoped) Classical' statements: this can hide theorem statements which would be better stated with explicit decidability statements.
+Instead, use `open Classical in` for definitions or instances, the `classical` tactic for proofs.
+For theorem statements, either add missing decidability assumptions or use `open Classical in`.
+
+Note: This linter can be disabled with `set_option linter.style.openClassical false`
+'RobertPublishable.SUB.skeletonB_pairfree' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RobertPublishable.SUB.skeletonB_bipartite' depends on axioms: [propext, Classical.choice, Quot.sound]

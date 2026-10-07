@@ -1,0 +1,193 @@
+SLT/RMT/MatBern.lean:142:2: warning: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+SLT/RMT/MatBern.lean:592:2: warning: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+SLT/RMT/MatBern.lean:631:2: warning: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+SLT/RMT/MatBern.lean:756:6: warning: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+SLT/RMT/MatBern.lean:798:8: warning: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+SLT/RMT/MatBern.lean:926:2: warning: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+SLT/RMT/MatBern.lean:934:2: warning: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+SLT/RMT/MatBern.lean:962:4: warning: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+SLT/RMT/MatBern.lean:1984:2: warning: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+'RMT.matrix_bernstein_inequality_hdp_all' depends on axioms: [propext, Classical.choice, Quot.sound]
+@RMT.matrix_bernstein_inequality_hdp_all : ∀ {Ω : Type u_1} [inst : MeasurableSpace Ω] {n N : ℕ}
+  (X : Fin N → Ω → Matrix (Fin n) (Fin n) ℝ) (μ : Measure Ω) [inst_1 : IsProbabilityMeasure μ] (K : ℝ),
+  RMT.matrix_bernstein_inequality_hdp X μ K
+def RMT.matrix_bernstein_inequality_hdp.{u_1} : {Ω : Type u_1} →
+  [inst : MeasurableSpace Ω] →
+    {n N : Nat} →
+      (Fin N → Ω → Matrix (Fin n) (Fin n) Real) →
+        (μ : @Measure Ω inst) → [@IsProbabilityMeasure Ω inst μ] → Real → Prop :=
+fun {Ω} [inst : MeasurableSpace Ω] {n N} X μ [@IsProbabilityMeasure Ω inst μ] K ↦
+  @LT.lt Nat instLTNat (@OfNat.ofNat Nat (nat_lit 0) (instOfNatNat (nat_lit 0))) n →
+    @RMT.MatrixBernsteinIndependent Ω inst n N X μ →
+      (∀ (i : Fin N),
+          @Integrable (Matrix (Fin n) (Fin n) Real)
+            (@instTopologicalSpaceMatrix (Fin n) (Fin n) Real
+              (@UniformSpace.toTopologicalSpace Real (@PseudoMetricSpace.toUniformSpace Real pseudoMetricSpace)))
+            (@SeminormedAddGroup.toContinuousENorm (Matrix (Fin n) (Fin n) Real)
+              (@SeminormedAddCommGroup.toSeminormedAddGroup (Matrix (Fin n) (Fin n) Real)
+                (@NonUnitalSeminormedRing.toSeminormedAddCommGroup (Matrix (Fin n) (Fin n) Real)
+                  (@NonUnitalNormedRing.toNonUnitalSeminormedRing (Matrix (Fin n) (Fin n) Real)
+                    (@NormedRing.toNonUnitalNormedRing (Matrix (Fin n) (Fin n) Real)
+                      (@Matrix.instL2OpNormedRing Real (Fin n) instRCLike (Fin.fintype n) (instDecidableEqFin n)))))))
+            Ω inst (X i) μ) →
+        (∀ (i : Fin N),
+            @Integrable (Matrix (Fin n) (Fin n) Real)
+              (@instTopologicalSpaceMatrix (Fin n) (Fin n) Real
+                (@UniformSpace.toTopologicalSpace Real (@PseudoMetricSpace.toUniformSpace Real pseudoMetricSpace)))
+              (@SeminormedAddGroup.toContinuousENorm (Matrix (Fin n) (Fin n) Real)
+                (@SeminormedAddCommGroup.toSeminormedAddGroup (Matrix (Fin n) (Fin n) Real)
+                  (@NonUnitalSeminormedRing.toSeminormedAddCommGroup (Matrix (Fin n) (Fin n) Real)
+                    (@NonUnitalNormedRing.toNonUnitalSeminormedRing (Matrix (Fin n) (Fin n) Real)
+                      (@NormedRing.toNonUnitalNormedRing (Matrix (Fin n) (Fin n) Real)
+                        (@Matrix.instL2OpNormedRing Real (Fin n) instRCLike (Fin.fintype n) (instDecidableEqFin n)))))))
+              Ω inst
+              (fun ω ↦
+                @HPow.hPow (Matrix (Fin n) (Fin n) Real) Nat (Matrix (Fin n) (Fin n) Real)
+                  (@instHPow (Matrix (Fin n) (Fin n) Real) Nat
+                    (@NPow.toPow (Matrix (Fin n) (Fin n) Real)
+                      (@Monoid.toNPow (Matrix (Fin n) (Fin n) Real)
+                        (@Semiring.toMonoid (Matrix (Fin n) (Fin n) Real)
+                          (@Matrix.semiring (Fin n) Real semiring (Fin.fintype n) (instDecidableEqFin n))))))
+                  (X i ω) (@OfNat.ofNat Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+              μ) →
+          (∀ (i : Fin N),
+              @Eq (Matrix (Fin n) (Fin n) Real)
+                (@integral Ω (Matrix (Fin n) (Fin n) Real)
+                  (@Matrix.instL2OpNormedAddCommGroup Real (Fin n) (Fin n) instRCLike (Fin.fintype n) (Fin.fintype n)
+                    (instDecidableEqFin n))
+                  (@Matrix.instL2OpNormedSpace Real (Fin n) (Fin n) instRCLike (Fin.fintype n) (Fin.fintype n)
+                    (instDecidableEqFin n))
+                  inst μ fun ω ↦ X i ω)
+                (@OfNat.ofNat (Matrix (Fin n) (Fin n) Real) (nat_lit 0)
+                  (@Zero.toOfNat0 (Matrix (Fin n) (Fin n) Real) (@Matrix.zero (Fin n) (Fin n) Real instZero)))) →
+            (∀ (i : Fin N),
+                @Filter.Eventually Ω
+                  (fun ω ↦
+                    @Matrix.IsHermitian Real (Fin n)
+                      (@InvolutiveStar.toStar Real
+                        (@StarAddMonoid.toInvolutiveStar Real
+                          (@AddCommMonoid.toAddMonoid Real
+                            (@NonUnitalNonAssocSemiring.toAddCommMonoid Real
+                              (@NonUnitalNonAssocRing.toNonUnitalNonAssocSemiring Real
+                                (@NonUnitalNonAssocCommRing.toNonUnitalNonAssocRing Real
+                                  (@NonUnitalCommRing.toNonUnitalNonAssocCommRing Real
+                                    (@CommRing.toNonUnitalCommRing Real commRing))))))
+                          (@StarRing.toStarAddMonoid Real
+                            (@NonUnitalNonAssocRing.toNonUnitalNonAssocSemiring Real
+                              (@NonUnitalNonAssocCommRing.toNonUnitalNonAssocRing Real
+                                (@NonUnitalCommRing.toNonUnitalNonAssocCommRing Real
+                                  (@CommRing.toNonUnitalCommRing Real commRing))))
+                            instStarRingReal)))
+                      (X i ω))
+                  (@ae Ω (@Measure Ω inst) (@Measure.instFunLike Ω inst) ⋯ μ)) →
+              (∀ (i : Fin N),
+                  @Filter.Eventually Ω
+                    (fun ω ↦
+                      @LE.le Real instLE
+                        (@Norm.norm (Matrix (Fin n) (Fin n) Real)
+                          (@NormedRing.toNorm (Matrix (Fin n) (Fin n) Real)
+                            (@Matrix.instL2OpNormedRing Real (Fin n) instRCLike (Fin.fintype n) (instDecidableEqFin n)))
+                          (X i ω))
+                        K)
+                    (@ae Ω (@Measure Ω inst) (@Measure.instFunLike Ω inst) ⋯ μ)) →
+                ∀ (t : Real),
+                  @LE.le Real instLE (@OfNat.ofNat Real (nat_lit 0) (@Zero.toOfNat0 Real instZero)) t →
+                    @LE.le Real instLE
+                      (@DFunLike.coe (@Measure Ω inst) (Set Ω) (fun x ↦ ENNReal) (@Measure.instFunLike Ω inst) μ
+                          (@Set.ofPred Ω fun ω ↦
+                            @GE.ge Real instLE
+                              (@Norm.norm (Matrix (Fin n) (Fin n) Real)
+                                (@NormedRing.toNorm (Matrix (Fin n) (Fin n) Real)
+                                  (@Matrix.instL2OpNormedRing Real (Fin n) instRCLike (Fin.fintype n)
+                                    (instDecidableEqFin n)))
+                                (@RMT.matrixBernsteinSum Ω n N X ω))
+                              t)).toReal
+                      (RMT.matrixBernsteinTailBound n (@RMT.matrixBernsteinVarianceProxy Ω inst n N μ X) K t)
+def RMT.matrixBernsteinVarianceProxy.{u_1} : {Ω : Type u_1} →
+  [inst : MeasurableSpace Ω] → {n N : Nat} → @Measure Ω inst → (Fin N → Ω → Matrix (Fin n) (Fin n) Real) → Real :=
+fun {Ω} [inst : MeasurableSpace Ω] {n N} μ X ↦
+  @Norm.norm (Matrix (Fin n) (Fin n) Real)
+    (@NormedRing.toNorm (Matrix (Fin n) (Fin n) Real)
+      (@Matrix.instL2OpNormedRing Real (Fin n) instRCLike (Fin.fintype n) (instDecidableEqFin n)))
+    (@RMT.matrixBernsteinVarianceMatrix Ω inst n N μ X)
+def RMT.matrixBernsteinVarianceMatrix.{u_1} : {Ω : Type u_1} →
+  [inst : MeasurableSpace Ω] →
+    {n N : Nat} → @Measure Ω inst → (Fin N → Ω → Matrix (Fin n) (Fin n) Real) → Matrix (Fin n) (Fin n) Real :=
+fun {Ω} [inst : MeasurableSpace Ω] {n N} μ X ↦
+  ∑ i,
+    @integral Ω (Matrix (Fin n) (Fin n) Real)
+      (@Matrix.instL2OpNormedAddCommGroup Real (Fin n) (Fin n) instRCLike (Fin.fintype n) (Fin.fintype n)
+        (instDecidableEqFin n))
+      (@Matrix.instL2OpNormedSpace Real (Fin n) (Fin n) instRCLike (Fin.fintype n) (Fin.fintype n)
+        (instDecidableEqFin n))
+      inst μ fun ω ↦
+      @HPow.hPow (Matrix (Fin n) (Fin n) Real) Nat (Matrix (Fin n) (Fin n) Real)
+        (@instHPow (Matrix (Fin n) (Fin n) Real) Nat
+          (@NPow.toPow (Matrix (Fin n) (Fin n) Real)
+            (@Monoid.toNPow (Matrix (Fin n) (Fin n) Real)
+              (@Semiring.toMonoid (Matrix (Fin n) (Fin n) Real)
+                (@Matrix.semiring (Fin n) Real semiring (Fin.fintype n) (instDecidableEqFin n))))))
+        (X i ω) (@OfNat.ofNat Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))

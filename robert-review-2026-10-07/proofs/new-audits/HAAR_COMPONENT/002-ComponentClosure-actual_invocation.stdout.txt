@@ -1,0 +1,8 @@
+'RobertPublishable.HaarComponent.cycle_neighbors_disjoint' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RobertPublishable.HaarComponent.cycle_neighbor_union_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RobertPublishable.HaarComponent.pair_support_edge_closed' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RobertPublishable.HaarComponent.pair_support_eq_component' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RobertPublishable.HaarComponent.pair_edges_exhaust_component' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@HamiltonDecomposesComponent : {W : Type u_2} → [DecidableEq W] → (G : SimpleGraph W) → G.ConnectedComponent → Prop
