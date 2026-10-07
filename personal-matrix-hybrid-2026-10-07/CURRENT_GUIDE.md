@@ -16,4 +16,4 @@ A fresh timestamped result is written to lean/reproduction. Historical evidence 
 
 The [flat circuit and independent polynomial replay](circuit/README.md) can be reviewed without Lean. The redundant temporary regenerated circuit is intentionally omitted; its actual replay digest and coefficient-by-coefficient equality record remain available. The original circuit is unchanged.
 
-The revised short manuscript and current review records are added separately, with immutable proof-source links. Published ingredients retain their original attribution, and AI assistance is disclosed for author review.
+The [revised nine-page manuscript](manuscript/Hybrid_Composition_revised.pdf) and its [current review manifest](manuscript/current_manuscript_manifest.json) include immutable proof-source links. Published ingredients retain their original attribution, and AI assistance is disclosed for author review. The exported PDF has been visually checked on all nine pages. The standalone editable TeX is supplied; the native editor compiler was unavailable at platform initialization, as recorded in its actual diagnostic.
