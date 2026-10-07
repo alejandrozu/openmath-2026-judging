@@ -1,10 +1,19 @@
 # OpenMath 2026 judging archive
 
-Competition-only archive for Alejandro Zarzuelo Urdiales. This snapshot preserves collected contestant materials, judging explanations, OPDP analysis, source evidence, research/checking scripts and outreach history.
+OpenMath competition archive for Alejandro Zarzuelo Urdiales, with separately identified personal research companions. This snapshot preserves collected contestant materials, judging explanations, OPDP analysis, source evidence, research/checking scripts and outreach history.
 
 **Scores and mathematical assessments are preliminary proposals, not final awards or accepted solutions.** Formal closure, literature/independence review, eligibility and official receipts remain separate gates. Apply the handbook with the chair-approved October 4 amendments and the October 5 waiver recorded in the current review hub; old snapshots are retained as history.
 
-## Current publication and judging review — 5 October 2026
+## Current proof and manuscript additions — 7 October 2026
+
+- [Robert Huynh's concise coauthored paper](robert-review-2026-10-07/manuscript/Robert_Huynh_concise.pdf): 11 pages covering eight result families, with [scope and reproduction instructions](robert-review-2026-10-07/README.md). The current selected audit passed for 270 declarations, including the full written Lemma F and spectral-sampling B2.2. Main BM and the parent Erdős 585 problem remain unproved.
+- [Chandra's matrix-family companion](chandra-support138-family-2026-10-07/README.md): a checked universal characteristic-zero field identity with support at most 138 under its parameter restrictions; exact generic support and specialization claims retain their stated holds.
+- [Alejandro's personal matrix manuscript](personal-matrix-hybrid-2026-10-07/manuscript/Hybrid_Composition_revised.pdf): nine pages, separate from contestant matrix submissions. Its [current companion index](personal-matrix-hybrid-2026-10-07/CURRENT_GUIDE.md) records the actual clean build of 11 sources and 45 standard-axiom endpoints, including general composition, the 2208-product realization and integer output-division extension. Scheduled multiplication counts do not establish global optimality or measured speed.
+- [Alejandro's separate current Kobon release](https://github.com/alejandrozu/kobon-proof/releases/tag/manuscripts-2026-10-07): the personal 15-page journal edition and 88-page proof companion, separate from the contestant Kobon entry.
+
+These are author-review manuscripts and mathematical evidence, not journal acceptances. The October 5 publication hub below preserves the original 19 proposed standalone contestant manuscripts; Robert's single current paper covers eight additional families. Result-family counts are not counts of accepted papers. Private publication plans, contact drafts and visa strategy are not part of this public companion upload.
+
+## Preserved publication and judging review — 5 October 2026
 
 Start with the **[current publication-review hub](publication-review/README.md)**: 26 PDFs / 315 pages, including 19 proposed original-result manuscripts and four candidates with separate scope or priority holds, plus the brief, anthology and known-results companion.
 
