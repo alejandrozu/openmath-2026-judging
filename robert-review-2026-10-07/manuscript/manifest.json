@@ -1,31 +1,39 @@
 {
-  "state": "AUTHOR_REVIEW_EDITION_ACTUAL11PAGE_PDF_VISUAL_QA_PASS",
+  "state": "AUTHOR_REVIEW_EDITION_ACTUAL11PAGE_PDF_CURRENT_VISUAL_QA_PASS",
   "pdf": "Robert_Huynh_concise.pdf",
   "pages": 11,
-  "sha256": "8921c42683409faec35f829e43a3b4e4d080f4e543543379689b0aa2a9995800",
-  "bytes": 827196,
+  "sha256": "84cb561bb6c7aaa410bdd4bcbcf7fd159d72652db7ac1cdc322e77bcc9bea468",
+  "bytes": 951121,
   "authors": [
     "Robert Huynh",
     "Alejandro Zarzuelo Urdiales"
   ],
-  "proof_snapshot": "8dd7bbaff24ae0a0cf07056b8d26c8ff9375568f",
+  "proof_snapshot": "70c5ec3107658182f22c207d4c50f53f9cb3e602",
   "source_revision": "1efc324e155ef0b6a7081c5f695c6c825e7debef",
-  "global_novelty_certified": false,
+  "full_F_and_B22_formal": true,
+  "main_BM_formal": false,
   "all_mathematics_formalized": false,
-  "native_latex": "Actual editor compiler unavailable due platform-directory error; editable standalone TeX retained. The supplied PDF is separately exported and actually reviewed.",
+  "global_novelty_certified": false,
+  "native_latex": "Editor compiler unavailable at platform startup; source preserved. PDF separately exported and all11pages inspected.",
+  "actual_current_QA": "actual-11-page-84cb-visual-QA.json",
+  "actual_current_native_result": "native-latex-84cb-platform-result.json",
+  "previous_edition": {
+    "commit": "13a477e6e769961029a8448a38676d29aa21fccb",
+    "pdf_sha256": "8921c42683409faec35f829e43a3b4e4d080f4e543543379689b0aa2a9995800"
+  },
   "sources": [
     {
       "path": "Sources/Robert_Huynh_concise.ast.json",
-      "sha256": "c0c9d829339e8efc1751be04ef9d84a44510218607b82620799afba2e186892b"
+      "sha256": "a883b85baec8424d5d727d222162c271615682ca4d5f9ddc30682cbbd75a1e0e"
     },
     {
       "path": "Sources/Robert_Huynh_concise.md",
-      "sha256": "f9081174db07c5e97b357d45f823049b365e59475d818128f804d5f1d6d8b0a2"
+      "sha256": "61a8940535e452587948264e5ae0bc4863f25dde074963cc2a9be9e787aebcd9"
     },
     {
       "path": "Sources/Robert_Huynh_concise.tex",
-      "sha256": "9624348394d23c19f50bc39db164f18a115be871bbcf495e1793b96d0141ee9f"
+      "sha256": "da8b4e79fd78d9e259342f3a2865883c5b955db7384d0ac678458bfc7464f23e"
     }
   ],
-  "scope": "Eight Robert result families, known ingredients credited, mainBM and census/private/open-bridge limitations explicit;26oldPDFs and19originalscores unchanged."
+  "scores_and_original26_PDF_snapshot_changed": false
 }

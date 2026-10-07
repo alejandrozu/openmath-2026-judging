@@ -174,7 +174,7 @@ BM & Candidate quantitative one-sided spectral Hamiltonicity adaptation
 }
 
 Complete technical proofs and the current verification ledger are in the
-\href{https://github.com/alejandrozu/openmath-2026-judging/tree/8dd7bbaff24ae0a0cf07056b8d26c8ff9375568f/robert-review-2026-10-07}{companion
+\href{https://github.com/alejandrozu/openmath-2026-judging/tree/70c5ec3107658182f22c207d4c50f53f9cb3e602/robert-review-2026-10-07}{companion
 repository}. Exact named declarations are listed in Section 10. The
 repository also retains the longer written dossiers where reproducing
 every technical lemma would obscure the principal statements here.
@@ -215,7 +215,7 @@ threshold}\label{quartic-extraction-below-the-classical-threshold}
 contains a nonempty four-regular subgraph.
 
 The theorem is
-\href{https://github.com/alejandrozu/openmath-2026-judging/blob/8dd7bbaff24ae0a0cf07056b8d26c8ff9375568f/robert-review-2026-10-07/lean/Openmath/Proofs/QB5/Statement.lean\#L42}{\texttt{Erdos585.qb5}};
+\href{https://github.com/alejandrozu/openmath-2026-judging/blob/70c5ec3107658182f22c207d4c50f53f9cb3e602/robert-review-2026-10-07/lean/Openmath/Proofs/QB5/Statement.lean\#L42}{\texttt{Erdos585.qb5}};
 \texttt{qb4}, at \(3n-4\), is a weaker earlier version. The threshold is
 independent of a particular labelled graph or finite census. Robert's
 proof is a universal Lean proof, including a bounded case analysis
@@ -264,7 +264,7 @@ has a distinct vertex \(b\in A\) with exactly the same neighbourhood in
 \(R\). Then \(G\) contains a pair.
 
 The frozen source proves the exact-count case. The added endpoint
-\href{https://github.com/alejandrozu/openmath-2026-judging/blob/8dd7bbaff24ae0a0cf07056b8d26c8ff9375568f/robert-review-2026-10-07/lean/TwinDensityExtension.lean\#L132}{\texttt{OpenMathReview.TwinDensityExtension.hasPair\_of\_no\_singleton\_twins\_dense}}
+\href{https://github.com/alejandrozu/openmath-2026-judging/blob/70c5ec3107658182f22c207d4c50f53f9cb3e602/robert-review-2026-10-07/lean/TwinDensityExtension.lean\#L132}{\texttt{OpenMathReview.TwinDensityExtension.hasPair\_of\_no\_singleton\_twins\_dense}}
 proves the full inequality range. Hypotheses are read directly from
 \(G\); no quotient cycle or successful pair is assumed. Nonemptiness is
 essential because the empty graph satisfies \(e+2\geq3n\) without
@@ -446,14 +446,14 @@ substitution simple; Theorem S gives a bipartite six-regular pair-free
 graph, contradicting B6. The opposite implication is immediate.
 
 The new single endpoint
-\href{https://github.com/alejandrozu/openmath-2026-judging/blob/8dd7bbaff24ae0a0cf07056b8d26c8ff9375568f/robert-review-2026-10-07/lean/R1.lean\#L13}{\texttt{RobertPublishable.SUB.theorem\_R1}}
+\href{https://github.com/alejandrozu/openmath-2026-judging/blob/70c5ec3107658182f22c207d4c50f53f9cb3e602/robert-review-2026-10-07/lean/R1.lean\#L13}{\texttt{RobertPublishable.SUB.theorem\_R1}}
 proves pair-freeness, actual degree \(d\) and bipartiteness from the
 faithful gadget/link/port data. It derives connected projected cycles
 and counts parallel edges separately. Its preservation proof even
 permits heterogeneous pair-free copy fibres with cut size at most seven,
 and a locally finite infinite skeleton; cycles remain finite closed
 walks. The endpoint
-\href{https://github.com/alejandrozu/openmath-2026-judging/blob/8dd7bbaff24ae0a0cf07056b8d26c8ff9375568f/robert-review-2026-10-07/lean/PrescribedVertex.lean\#L89}{\texttt{RobertPublishable.SUB.prescribed\_vertex\_equivalence}}
+\href{https://github.com/alejandrozu/openmath-2026-judging/blob/70c5ec3107658182f22c207d4c50f53f9cb3e602/robert-review-2026-10-07/lean/PrescribedVertex.lean\#L89}{\texttt{RobertPublishable.SUB.prescribed\_vertex\_equivalence}}
 also constructs and verifies the explicit sixteen-vertex,
 forty-eight-edge pair-free bipartite six-regular multigraph skeleton and
 the actual six distinct unit ports of the deleted gadget. Both sides
@@ -472,7 +472,7 @@ Cayley graphs on an abelian group.
 \(\mathbb F_p\)-module. If \(|S|\geq4\), then \(H(V,S)\) contains a
 pair. Conversely, a pair requires at least four colours. The forward
 theorem is formal without finiteness of \(V\); the new
-\href{https://github.com/alejandrozu/openmath-2026-judging/blob/8dd7bbaff24ae0a0cf07056b8d26c8ff9375568f/robert-review-2026-10-07/lean/HaarInfinite.lean\#L110}{\texttt{OpenMathReview.HaarInfinite.hasPair\_iff}}
+\href{https://github.com/alejandrozu/openmath-2026-judging/blob/70c5ec3107658182f22c207d4c50f53f9cb3e602/robert-review-2026-10-07/lean/HaarInfinite.lean\#L110}{\texttt{OpenMathReview.HaarInfinite.hasPair\_iff}}
 completes the converse under the same unrestricted ambient-module
 hypotheses. This is a finite cycle-pair assertion, not an infinite
 Hamilton cycle.
@@ -485,7 +485,7 @@ is therefore closed under all host edges. Connectedness makes that
 support the whole component. Translations and the shore-reversing map
 \((x,b)\mapsto(-x,1-b)\) are actual graph automorphisms, so a pair can
 be moved to any vertex. The new endpoint
-\href{https://github.com/alejandrozu/openmath-2026-judging/blob/8dd7bbaff24ae0a0cf07056b8d26c8ff9375568f/robert-review-2026-10-07/lean/HaarComponents.lean\#L73}{\texttt{RobertPublishable.HaarComponent.every\_connected\_component}}
+\href{https://github.com/alejandrozu/openmath-2026-judging/blob/70c5ec3107658182f22c207d4c50f53f9cb3e602/robert-review-2026-10-07/lean/HaarComponents.lean\#L73}{\texttt{RobertPublishable.HaarComponent.every\_connected\_component}}
 formalizes both the spanning cycles and the exhaustion of component
 edges. This is a strengthened formulation of the four-colour result, not
 an additional independent discovery. For more than four colours, the
@@ -578,7 +578,7 @@ fixed-radius question {[}GO{]}.
 its canonical translation colouring, every cycle exposed after one
 component-union round has no edge-disjoint host cycle on the same
 support. The actual endpoint
-\href{https://github.com/alejandrozu/openmath-2026-judging/blob/8dd7bbaff24ae0a0cf07056b8d26c8ff9375568f/robert-review-2026-10-07/lean/InfiniteAffinePaletteBarrier.lean\#L54}{\texttt{OpenMathReview.InfiniteAffinePaletteBarrier.sidon\_exposed\_cycle\_no\_partner}}
+\href{https://github.com/alejandrozu/openmath-2026-judging/blob/70c5ec3107658182f22c207d4c50f53f9cb3e602/robert-review-2026-10-07/lean/InfiniteAffinePaletteBarrier.lean\#L54}{\texttt{OpenMathReview.InfiniteAffinePaletteBarrier.sidon\_exposed\_cycle\_no\_partner}}
 is kernel verified without \texttt{Fintype\ V}. Its proof first derives
 the geometric closure from the algebraic Sidon condition, then proves
 the actual canonical matching labels, legal swaps, component inducedness
@@ -597,7 +597,7 @@ and \(t\); the second swaps the marked component with colours \(1\) and
 \(1+t\) after the first move. The proof checks component closure, the
 literal successive label swaps, matching identification and the
 connected final cycles. The endpoint
-\href{https://github.com/alejandrozu/openmath-2026-judging/blob/8dd7bbaff24ae0a0cf07056b8d26c8ff9375568f/robert-review-2026-10-07/lean/CycleComposition.lean\#L171}{\texttt{RobertPublishable.TWO.family\_exactly\_two\_component\_union\_rounds}}
+\href{https://github.com/alejandrozu/openmath-2026-judging/blob/70c5ec3107658182f22c207d4c50f53f9cb3e602/robert-review-2026-10-07/lean/CycleComposition.lean\#L171}{\texttt{RobertPublishable.TWO.family\_exactly\_two\_component\_union\_rounds}}
 combines the lower bound and this full-host witness. Thus two is the
 minimum number of component-union rounds for this family. The usual
 construction describes three component flips followed by one; the
@@ -639,6 +639,42 @@ those statements has technical premises, including matrix sampling,
 bounded endpoint multiplicity, actual disjoint paths and balanced
 divisibility. A count of exponents is not a substitute for proving them.
 
+Two dependencies now have complete Lean proofs using standard axioms.
+B2.2 assumes a real binary \(N\times N\) biadjacency with row and column
+sums \(d>0\), \(N\ge2\), \(s_2(W)\le(1-\delta)d\), \(a>0\),
+\(0<\delta<1\), and independent uniform \(m\)-subsets \(U,V\), where
+\(1\le m\le N\) and \(p=m/N\):
+
+\[
+D=pd\ge32(a+4)\delta^{-2}\log(2N)
+\quad\Longrightarrow\quad
+\Pr\!\left[s_2(W[U,V])>(1-\delta/2)D\right]\le(2N)^{-a}.
+\]
+
+Lemma F assumes a finite nonempty balanced bipartite host \(H\), degrees
+in \([(1-\eta)d,d]\), \(0<\gamma\le1\), \(\eta\le\gamma^2/8\),
+\(d\ge16/\gamma^2\), and \(|\partial_H Z|\ge\gamma d|Z|\) for every
+nonempty \(Z\) with \(2|Z|\le|V(H)|\). It constructs a spanning
+\(k\)-regular \(F\subseteq H\) with
+
+\[
+k=\left\lfloor\left(1-\eta-\frac{\eta+2/d}{\gamma}\right)d\right\rfloor_{+},
+\qquad k\ge(1-3\gamma/8)d-1,
+\qquad |\partial_F Z|\ge\frac\gamma2 k|Z|
+\quad(2|Z|\le|V(H)|).
+\]
+
+The degree interval forces \(\eta\ge0\); the cut range is half the total
+vertex set. PartitionTransport preserves the host's vertex labels. These
+proofs close sampling and factor dependencies; main BM Hamiltonicity and
+Erdős 585 remain unproved. See
+\href{https://github.com/alejandrozu/openmath-2026-judging/blob/70c5ec3107658182f22c207d4c50f53f9cb3e602/robert-review-2026-10-07/lean/B22.lean\#L26}{B22
+Lean},
+\href{https://github.com/alejandrozu/openmath-2026-judging/blob/70c5ec3107658182f22c207d4c50f53f9cb3e602/robert-review-2026-10-07/lean/LemmaF.lean\#L18}{LemmaF
+Lean},
+\href{https://github.com/alejandrozu/openmath-2026-judging/blob/70c5ec3107658182f22c207d4c50f53f9cb3e602/robert-review-2026-10-07/lean/PartitionTransport.lean\#L54}{PartitionTransport
+Lean}.
+
 The new graph-semantic proofs verify Hamilton-cycle remainder transfer
 and the balanced-deletion cut loss \(t|S|\), rather than the coarser
 \(2t|S|\) bound. They retain the Hamiltonicity/regular-factor premises
@@ -661,7 +697,7 @@ manuscript's certified claims.
 reproducibility}\label{proof-repository-novelty-and-reproducibility}
 
 The
-\href{https://github.com/alejandrozu/openmath-2026-judging/tree/8dd7bbaff24ae0a0cf07056b8d26c8ff9375568f/robert-review-2026-10-07}{review
+\href{https://github.com/alejandrozu/openmath-2026-judging/tree/70c5ec3107658182f22c207d4c50f53f9cb3e602/robert-review-2026-10-07}{review
 repository} provides the frozen author sources, new additive Lean
 proofs, complete written arguments, graph certificates,
 primary-literature comparisons and a result-to-declaration index. The
@@ -683,30 +719,30 @@ Exact existing Lean endpoint or evidence
 \bottomrule\noalign{}
 \endlastfoot
 Q &
-\href{https://github.com/alejandrozu/openmath-2026-judging/blob/8dd7bbaff24ae0a0cf07056b8d26c8ff9375568f/robert-review-2026-10-07/lean/Openmath/Proofs/QB5/Statement.lean\#L42}{\texttt{Erdos585.qb5}} \\
+\href{https://github.com/alejandrozu/openmath-2026-judging/blob/70c5ec3107658182f22c207d4c50f53f9cb3e602/robert-review-2026-10-07/lean/Openmath/Proofs/QB5/Statement.lean\#L42}{\texttt{Erdos585.qb5}} \\
 Q1 &
-\href{https://github.com/alejandrozu/openmath-2026-judging/blob/8dd7bbaff24ae0a0cf07056b8d26c8ff9375568f/robert-review-2026-10-07/lean/Openmath/Proofs/QB4/Statement.lean\#L230}{\texttt{Erdos585.exists\_four\_regular\_avoiding\_of\_bipartite\_six\_regular}} \\
+\href{https://github.com/alejandrozu/openmath-2026-judging/blob/70c5ec3107658182f22c207d4c50f53f9cb3e602/robert-review-2026-10-07/lean/Openmath/Proofs/QB4/Statement.lean\#L230}{\texttt{Erdos585.exists\_four\_regular\_avoiding\_of\_bipartite\_six\_regular}} \\
 T &
-\href{https://github.com/alejandrozu/openmath-2026-judging/blob/8dd7bbaff24ae0a0cf07056b8d26c8ff9375568f/robert-review-2026-10-07/lean/TwinDensityExtension.lean\#L132}{\texttt{OpenMathReview.TwinDensityExtension.hasPair\_of\_no\_singleton\_twins\_dense}} \\
+\href{https://github.com/alejandrozu/openmath-2026-judging/blob/70c5ec3107658182f22c207d4c50f53f9cb3e602/robert-review-2026-10-07/lean/TwinDensityExtension.lean\#L132}{\texttt{OpenMathReview.TwinDensityExtension.hasPair\_of\_no\_singleton\_twins\_dense}} \\
 Finite lower witnesses &
-\href{https://github.com/alejandrozu/openmath-2026-judging/blob/8dd7bbaff24ae0a0cf07056b8d26c8ff9375568f/robert-review-2026-10-07/lean/Openmath/Proofs/Final.lean\#L112}{\texttt{Erdos585.thirty\_one\_le\_maxEdges\_eleven}},
-\href{https://github.com/alejandrozu/openmath-2026-judging/blob/8dd7bbaff24ae0a0cf07056b8d26c8ff9375568f/robert-review-2026-10-07/lean/Openmath/Proofs/Final.lean\#L116}{\texttt{Erdos585.thirty\_six\_le\_maxEdges\_twelve}} \\
+\href{https://github.com/alejandrozu/openmath-2026-judging/blob/70c5ec3107658182f22c207d4c50f53f9cb3e602/robert-review-2026-10-07/lean/Openmath/Proofs/Final.lean\#L112}{\texttt{Erdos585.thirty\_one\_le\_maxEdges\_eleven}},
+\href{https://github.com/alejandrozu/openmath-2026-judging/blob/70c5ec3107658182f22c207d4c50f53f9cb3e602/robert-review-2026-10-07/lean/Openmath/Proofs/Final.lean\#L116}{\texttt{Erdos585.thirty\_six\_le\_maxEdges\_twelve}} \\
 H &
-\href{https://github.com/alejandrozu/openmath-2026-judging/blob/8dd7bbaff24ae0a0cf07056b8d26c8ff9375568f/robert-review-2026-10-07/lean/HaarInfinite.lean\#L110}{\texttt{OpenMathReview.HaarInfinite.hasPair\_iff}} \\
+\href{https://github.com/alejandrozu/openmath-2026-judging/blob/70c5ec3107658182f22c207d4c50f53f9cb3e602/robert-review-2026-10-07/lean/HaarInfinite.lean\#L110}{\texttt{OpenMathReview.HaarInfinite.hasPair\_iff}} \\
 Exact-four-colour decomposition &
-\href{https://github.com/alejandrozu/openmath-2026-judging/blob/8dd7bbaff24ae0a0cf07056b8d26c8ff9375568f/robert-review-2026-10-07/lean/HaarComponents.lean\#L73}{\texttt{RobertPublishable.HaarComponent.every\_connected\_component}} \\
+\href{https://github.com/alejandrozu/openmath-2026-judging/blob/70c5ec3107658182f22c207d4c50f53f9cb3e602/robert-review-2026-10-07/lean/HaarComponents.lean\#L73}{\texttt{RobertPublishable.HaarComponent.every\_connected\_component}} \\
 Composite Haar &
-\href{https://github.com/alejandrozu/openmath-2026-judging/blob/8dd7bbaff24ae0a0cf07056b8d26c8ff9375568f/robert-review-2026-10-07/lean/Openmath/Proofs/HaarCompositeEven.lean\#L441}{\texttt{Erdos585.HaarCompositeEven.hasTwoEdgeDisjointCyclesSameVertexSet\_all}} \\
+\href{https://github.com/alejandrozu/openmath-2026-judging/blob/70c5ec3107658182f22c207d4c50f53f9cb3e602/robert-review-2026-10-07/lean/Openmath/Proofs/HaarCompositeEven.lean\#L441}{\texttt{Erdos585.HaarCompositeEven.hasTwoEdgeDisjointCyclesSameVertexSet\_all}} \\
 R &
-\href{https://github.com/alejandrozu/openmath-2026-judging/blob/8dd7bbaff24ae0a0cf07056b8d26c8ff9375568f/robert-review-2026-10-07/lean/Openmath/Proofs/ParabolaBarrier104.lean\#L145}{\texttt{Erdos585.ParabolaBarrier104.arbitrary\_polylog\_barrier}} \\
+\href{https://github.com/alejandrozu/openmath-2026-judging/blob/70c5ec3107658182f22c207d4c50f53f9cb3e602/robert-review-2026-10-07/lean/Openmath/Proofs/ParabolaBarrier104.lean\#L145}{\texttt{Erdos585.ParabolaBarrier104.arbitrary\_polylog\_barrier}} \\
 S &
-\href{https://github.com/alejandrozu/openmath-2026-judging/blob/8dd7bbaff24ae0a0cf07056b8d26c8ff9375568f/robert-review-2026-10-07/lean/R1.lean\#L13}{\texttt{RobertPublishable.SUB.theorem\_R1}} \\
+\href{https://github.com/alejandrozu/openmath-2026-judging/blob/70c5ec3107658182f22c207d4c50f53f9cb3e602/robert-review-2026-10-07/lean/R1.lean\#L13}{\texttt{RobertPublishable.SUB.theorem\_R1}} \\
 General Sidon barrier &
-\href{https://github.com/alejandrozu/openmath-2026-judging/blob/8dd7bbaff24ae0a0cf07056b8d26c8ff9375568f/robert-review-2026-10-07/lean/InfiniteAffinePaletteBarrier.lean\#L54}{\texttt{OpenMathReview.InfiniteAffinePaletteBarrier.sidon\_exposed\_cycle\_no\_partner}} \\
+\href{https://github.com/alejandrozu/openmath-2026-judging/blob/70c5ec3107658182f22c207d4c50f53f9cb3e602/robert-review-2026-10-07/lean/InfiniteAffinePaletteBarrier.lean\#L54}{\texttt{OpenMathReview.InfiniteAffinePaletteBarrier.sidon\_exposed\_cycle\_no\_partner}} \\
 S1 &
-\href{https://github.com/alejandrozu/openmath-2026-judging/blob/8dd7bbaff24ae0a0cf07056b8d26c8ff9375568f/robert-review-2026-10-07/lean/PrescribedVertex.lean\#L89}{\texttt{RobertPublishable.SUB.prescribed\_vertex\_equivalence}} \\
+\href{https://github.com/alejandrozu/openmath-2026-judging/blob/70c5ec3107658182f22c207d4c50f53f9cb3e602/robert-review-2026-10-07/lean/PrescribedVertex.lean\#L89}{\texttt{RobertPublishable.SUB.prescribed\_vertex\_equivalence}} \\
 Two-round sharpness &
-\href{https://github.com/alejandrozu/openmath-2026-judging/blob/8dd7bbaff24ae0a0cf07056b8d26c8ff9375568f/robert-review-2026-10-07/lean/CycleComposition.lean\#L171}{\texttt{RobertPublishable.TWO.family\_exactly\_two\_component\_union\_rounds}} \\
+\href{https://github.com/alejandrozu/openmath-2026-judging/blob/70c5ec3107658182f22c207d4c50f53f9cb3e602/robert-review-2026-10-07/lean/CycleComposition.lean\#L171}{\texttt{RobertPublishable.TWO.family\_exactly\_two\_component\_union\_rounds}} \\
 BM & Main Hamiltonicity endpoint remains unverified; exact helper scopes
 in the theorem index \\
 \end{longtable}

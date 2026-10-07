@@ -1,0 +1,100 @@
+{
+  "status": "PASS_EXACT_SELECTED_SCOPE",
+  "checked_utc": "2026-10-07T17:34:16.021966+00:00",
+  "actual_exit_code": 0,
+  "command": [
+    "lake",
+    "env",
+    "lean",
+    "-j1",
+    "-DautoImplicit=false",
+    "-DrelaxedAutoImplicit=false",
+    "SelectedAxiomAudit.lean"
+  ],
+  "unique_prints": 16,
+  "selected_axioms": {
+    "OpenMathReview.Support138Family.count_eq_of_zero_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OpenMathReview.Support138Family.u_zero_outside": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OpenMathReview.Support138Family.v_zero_outside": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OpenMathReview.Support138Family.w_zero_outside": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OpenMathReview.Support138Family.coefficient_eq_activeTerms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OpenMathReview.Support138Family.masked_identities_row0": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OpenMathReview.Support138Family.masked_identities_row1": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OpenMathReview.Support138Family.masked_identities_row2": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OpenMathReview.Support138Family.masked_identities_row3": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OpenMathReview.Support138Family.masked_identities_row4": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OpenMathReview.Support138Family.masked_identities_row5": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OpenMathReview.Support138Family.masked_identities_row6": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OpenMathReview.Support138Family.masked_identities_row7": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OpenMathReview.Support138Family.masked_identities_row8": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OpenMathReview.Support138Family.rational_family_support_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "OpenMathReview.Support138Family.rational_family_identities": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "stdout_sha256": "aab8c87ff4dba0eb21909fb1d2361f7099eec60f938d9228461737d2755572fa",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "scope": "Universal CharZero tensor identity plus support<=138; exact support=138 and specialization remain outside this selected reproduction."
+}

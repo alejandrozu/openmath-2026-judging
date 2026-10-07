@@ -25,3 +25,5 @@ python scripts/check_selected_axioms.py
 The selected audit uses -j1 and LEAN_NUM_THREADS=1, checks all source hashes, requires actual exit0 and exact unique endpoint coverage, and writes a new dated local reproduction receipt. Historical own invocations used the separately recorded suspended 13GiB job guard and were strictly serial. Fresh reproduction needs its own available machine resources.
 
 The [source manifest](proofs/source-manifest.json), [selected endpoint index](proofs/selected-endpoints.json) and [source evidence index](proofs/source-evidence-index.json) preserve the exact trace convention, source hashes, genuine custom prerequisite closure and mathematical limits. The original reported formulas and frozen integer base source are hash-bound in the qualification; no original source archive or compiled cache binary is included here.
+
+A clean [GitHub build and exact16-endpoint audit](https://github.com/alejandrozu/openmath-2026-judging/actions/runs/37659283232) passed at `cca2a5345c6344d009daa8ff1944621eb851c460`; its [actual reproduction output](proofs/portable-ci/37659283232/) is retained.

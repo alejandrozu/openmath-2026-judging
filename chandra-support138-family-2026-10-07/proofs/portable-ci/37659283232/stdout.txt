@@ -1,0 +1,98 @@
+'OpenMathReview.Support138Family.count_eq_of_zero_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+@OpenMathReview.Support138Family.count_eq_of_zero_iff : ∀ {K : Type u_1} [inst : Field K] [CharZero K]
+  [inst_2 : DecidableEq K] {R : Type u_2} [inst_3 : Zero R] [inst_4 : DecidableEq R] (f : Fin 23 → Fin 9 → K)
+  (g : Fin 23 → Fin 9 → R),
+  (∀ (i : Fin 23) (a : Fin 9), f i a = 0 ↔ g i a = 0) →
+    OpenMathReview.Support138Family.count f = OpenMathReview.Support138Family.count g
+'OpenMathReview.Support138Family.u_zero_outside' depends on axioms: [propext, Classical.choice, Quot.sound]
+@OpenMathReview.Support138Family.u_zero_outside : ∀ {K : Type u_1} [inst : Field K] [CharZero K] [DecidableEq K] (s : K)
+  (i : Fin 23) (a : Fin 9), OpenMathReview.Support138Family.baseU i a = 0 → OpenMathReview.Support138Family.u s i a = 0
+'OpenMathReview.Support138Family.v_zero_outside' depends on axioms: [propext, Classical.choice, Quot.sound]
+@OpenMathReview.Support138Family.v_zero_outside : ∀ {K : Type u_1} [inst : Field K] [CharZero K] [DecidableEq K] (s : K)
+  (i : Fin 23) (a : Fin 9), OpenMathReview.Support138Family.baseV i a = 0 → OpenMathReview.Support138Family.v s i a = 0
+'OpenMathReview.Support138Family.w_zero_outside' depends on axioms: [propext, Classical.choice, Quot.sound]
+@OpenMathReview.Support138Family.w_zero_outside : ∀ {K : Type u_1} [inst : Field K] [CharZero K] [DecidableEq K] (s : K)
+  (i : Fin 23) (a : Fin 9), OpenMathReview.Support138Family.baseW i a = 0 → OpenMathReview.Support138Family.w s i a = 0
+'OpenMathReview.Support138Family.coefficient_eq_activeTerms' depends on axioms: [propext, Classical.choice, Quot.sound]
+@OpenMathReview.Support138Family.coefficient_eq_activeTerms : ∀ {K : Type u_1} [inst : Field K] [CharZero K]
+  [DecidableEq K] (s : K),
+  s ≠ 0 →
+    s ≠ -2 →
+      ∀ (a b c : Fin 9),
+        OpenMathReview.Support138Family.coefficient s a b c =
+          ∑ i ∈ OpenMathReview.Support138Family.activeTerms a b c,
+            OpenMathReview.Support138Family.u s i a * OpenMathReview.Support138Family.v s i b *
+              OpenMathReview.Support138Family.w s i c
+'OpenMathReview.Support138Family.masked_identities_row0' depends on axioms: [propext, Classical.choice, Quot.sound]
+@OpenMathReview.Support138Family.masked_identities_row0 : ∀ {K : Type u_1} [inst : Field K] [CharZero K] [DecidableEq K]
+  (s : K),
+  s ≠ 0 →
+    s ≠ -2 →
+      ∀ (b c : Fin 9),
+        OpenMathReview.Support138Family.coefficient s 0 b c = OpenMathReview.Support138Family.target 0 b c
+'OpenMathReview.Support138Family.masked_identities_row1' depends on axioms: [propext, Classical.choice, Quot.sound]
+@OpenMathReview.Support138Family.masked_identities_row1 : ∀ {K : Type u_1} [inst : Field K] [CharZero K] [DecidableEq K]
+  (s : K),
+  s ≠ 0 →
+    s ≠ -2 →
+      ∀ (b c : Fin 9),
+        OpenMathReview.Support138Family.coefficient s 1 b c = OpenMathReview.Support138Family.target 1 b c
+'OpenMathReview.Support138Family.masked_identities_row2' depends on axioms: [propext, Classical.choice, Quot.sound]
+@OpenMathReview.Support138Family.masked_identities_row2 : ∀ {K : Type u_1} [inst : Field K] [CharZero K] [DecidableEq K]
+  (s : K),
+  s ≠ 0 →
+    s ≠ -2 →
+      ∀ (b c : Fin 9),
+        OpenMathReview.Support138Family.coefficient s 2 b c = OpenMathReview.Support138Family.target 2 b c
+'OpenMathReview.Support138Family.masked_identities_row3' depends on axioms: [propext, Classical.choice, Quot.sound]
+@OpenMathReview.Support138Family.masked_identities_row3 : ∀ {K : Type u_1} [inst : Field K] [CharZero K] [DecidableEq K]
+  (s : K),
+  s ≠ 0 →
+    s ≠ -2 →
+      ∀ (b c : Fin 9),
+        OpenMathReview.Support138Family.coefficient s 3 b c = OpenMathReview.Support138Family.target 3 b c
+'OpenMathReview.Support138Family.masked_identities_row4' depends on axioms: [propext, Classical.choice, Quot.sound]
+@OpenMathReview.Support138Family.masked_identities_row4 : ∀ {K : Type u_1} [inst : Field K] [CharZero K] [DecidableEq K]
+  (s : K),
+  s ≠ 0 →
+    s ≠ -2 →
+      ∀ (b c : Fin 9),
+        OpenMathReview.Support138Family.coefficient s 4 b c = OpenMathReview.Support138Family.target 4 b c
+'OpenMathReview.Support138Family.masked_identities_row5' depends on axioms: [propext, Classical.choice, Quot.sound]
+@OpenMathReview.Support138Family.masked_identities_row5 : ∀ {K : Type u_1} [inst : Field K] [CharZero K] [DecidableEq K]
+  (s : K),
+  s ≠ 0 →
+    s ≠ -2 →
+      ∀ (b c : Fin 9),
+        OpenMathReview.Support138Family.coefficient s 5 b c = OpenMathReview.Support138Family.target 5 b c
+'OpenMathReview.Support138Family.masked_identities_row6' depends on axioms: [propext, Classical.choice, Quot.sound]
+@OpenMathReview.Support138Family.masked_identities_row6 : ∀ {K : Type u_1} [inst : Field K] [CharZero K] [DecidableEq K]
+  (s : K),
+  s ≠ 0 →
+    s ≠ -2 →
+      ∀ (b c : Fin 9),
+        OpenMathReview.Support138Family.coefficient s 6 b c = OpenMathReview.Support138Family.target 6 b c
+'OpenMathReview.Support138Family.masked_identities_row7' depends on axioms: [propext, Classical.choice, Quot.sound]
+@OpenMathReview.Support138Family.masked_identities_row7 : ∀ {K : Type u_1} [inst : Field K] [CharZero K] [DecidableEq K]
+  (s : K),
+  s ≠ 0 →
+    s ≠ -2 →
+      ∀ (b c : Fin 9),
+        OpenMathReview.Support138Family.coefficient s 7 b c = OpenMathReview.Support138Family.target 7 b c
+'OpenMathReview.Support138Family.masked_identities_row8' depends on axioms: [propext, Classical.choice, Quot.sound]
+@OpenMathReview.Support138Family.masked_identities_row8 : ∀ {K : Type u_1} [inst : Field K] [CharZero K] [DecidableEq K]
+  (s : K),
+  s ≠ 0 →
+    s ≠ -2 →
+      ∀ (b c : Fin 9),
+        OpenMathReview.Support138Family.coefficient s 8 b c = OpenMathReview.Support138Family.target 8 b c
+'OpenMathReview.Support138Family.rational_family_support_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+@OpenMathReview.Support138Family.rational_family_support_le : ∀ {K : Type u_1} [inst : Field K] [CharZero K]
+  [inst_2 : DecidableEq K] (s : K), OpenMathReview.Support138Family.support s ≤ 138
+'OpenMathReview.Support138Family.rational_family_identities' depends on axioms: [propext, Classical.choice, Quot.sound]
+@OpenMathReview.Support138Family.rational_family_identities : ∀ {K : Type u_1} [inst : Field K] [CharZero K]
+  [DecidableEq K] (s : K),
+  s ≠ 0 →
+    s ≠ -2 →
+      ∀ (a b c : Fin 9),
+        OpenMathReview.Support138Family.coefficient s a b c = OpenMathReview.Support138Family.target a b c
