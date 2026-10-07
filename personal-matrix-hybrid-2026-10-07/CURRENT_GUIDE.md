@@ -1,0 +1,19 @@
+# Current personal matrix review edition
+
+This is Alejandro Zarzuelo Urdiales's personal July generalization, separate from the contestant matrix submissions.
+
+The final qualified scope is **11 sources and 45 distinct selected declarations**, using only standard kernel axioms. The frozen nine-source/35-declaration core remains byte-preserved; its README and source_manifest.json describe that earlier subset. [The final integer extension guide](README_FINAL_INTEGER_EXTENSION.md), [final source manifest](lean/final_source_manifest.json) and [final checker](lean/check_final_selected_axioms.py) are the current full reproduction entry points.
+
+The general block and instruction-program theorems have separate ordinary component-validity hypotheses. The concrete order-16 theorem derives the actual matrix product and 2208 scheduled products from proved coefficient data and an explicit 46-product leaf. The integer extension proves a numerator equal to eight times the product over every commutative ring, and exact final integer division by eight; its arbitrary-size version uses a separately valid leaf and schedules 48 times that leaf's product count. It does not assert universal leaf existence, global optimality, tensor rank, numerical stability or journal acceptance.
+
+From the lean directory, fetch the pinned dependencies and Mathlib cache, then run:
+
+```
+python3 check_final_selected_axioms.py
+```
+
+A fresh timestamped result is written to lean/reproduction. Historical evidence is preserved separately; the prepared checker does not by itself constitute a completed fresh run. The manual GitHub workflow invokes this final checker.
+
+The [flat circuit and independent polynomial replay](circuit/README.md) can be reviewed without Lean. The redundant temporary regenerated circuit is intentionally omitted; its actual replay digest and coefficient-by-coefficient equality record remain available. The original circuit is unchanged.
+
+The revised short manuscript and current review records are added separately, with immutable proof-source links. Published ingredients retain their original attribution, and AI assistance is disclosed for author review.

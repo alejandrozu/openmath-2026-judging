@@ -1,0 +1,32 @@
+name: Personal matrix synthesis proofs
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  selected-proofs:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    env:
+      LEAN_NUM_THREADS: "1"
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          sparse-checkout: personal-matrix-hybrid-2026-10-07
+      - uses: leanprover/lean-action@f061402b660e0c34644504b324e830f2991d4865
+        with:
+          lake-package-directory: personal-matrix-hybrid-2026-10-07/lean
+          auto-config: "false"
+          build: "false"
+          test: "false"
+          lint: "false"
+          use-mathlib-cache: "true"
+      - name: Check exact selected proof scope
+        working-directory: personal-matrix-hybrid-2026-10-07/lean
+        run: python3 check_final_selected_axioms.py
+      - name: Preserve fresh reproduction
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: personal-matrix-actual-reproduction
+          path: personal-matrix-hybrid-2026-10-07/lean/reproduction/
