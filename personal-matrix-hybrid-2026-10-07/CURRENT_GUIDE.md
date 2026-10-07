@@ -12,7 +12,7 @@ From the lean directory, fetch the pinned dependencies and Mathlib cache, then r
 python3 check_final_selected_axioms.py
 ```
 
-A fresh timestamped result is written to lean/reproduction. Historical evidence is preserved separately; the prepared checker does not by itself constitute a completed fresh run. The manual GitHub workflow invokes this final checker.
+A fresh timestamped result is written to lean/reproduction. The manual GitHub workflow invokes this final checker. [The clean GitHub run](https://github.com/alejandrozu/openmath-2026-judging/actions/runs/37675264184) completed successfully at proof commit `9e13c89a51a62958ced9ebdf16da31f5e2fb3cdd`, checking all 11 sources and 45 selected declarations with only standard kernel axioms. The [downloaded actual reproduction and qualification](evidence/github_ci/37675264184/actual_download_qualification.json) bind the source hashes and actual audit output. Historical local evidence remains separately preserved.
 
 The [flat circuit and independent polynomial replay](circuit/README.md) can be reviewed without Lean. The redundant temporary regenerated circuit is intentionally omitted; its actual replay digest and coefficient-by-coefficient equality record remain available. The original circuit is unchanged.
 
