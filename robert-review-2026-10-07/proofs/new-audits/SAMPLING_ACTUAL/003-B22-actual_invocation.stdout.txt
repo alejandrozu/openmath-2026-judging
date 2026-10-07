@@ -1,0 +1,24 @@
+'OpenMathReview.Sampling.independent_uniform_bipartite_spectral_sampling' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@independent_uniform_bipartite_spectral_sampling : ∀ {N m : ℕ},
+  1 < N →
+    0 < m →
+      ∀ (hm : m ≤ N) (W : Matrix (Fin N) (Fin N) ℝ) (d : ℝ),
+        0 < d →
+          (∀ (i j : Fin N), W i j = 0 ∨ W i j = 1) →
+            (∀ (i : Fin N), ∑ j, W i j = d) →
+              (∀ (j : Fin N), ∑ i, W i j = d) →
+                ∀ (a δ : ℝ),
+                  0 < a →
+                    0 < δ →
+                      δ < 1 →
+                        secondSingularValue W ≤ (1 - δ) * d →
+                          ∀ (p : ↑unitInterval),
+                            ↑p * ↑N = ↑m →
+                              32 * (a + 4) * Real.log (2 * ↑N) ≤ δ ^ 2 * (↑p * d) →
+                                (twoShoreLaw N m hm).real
+                                    {ω |
+                                      secondSingularValue (sampled W (selectedColumns ω.1) (selectedColumns ω.2)) >
+                                        (1 - δ / 2) * (↑p * d)} ≤
+                                  (2 * ↑N) ^ (-a)

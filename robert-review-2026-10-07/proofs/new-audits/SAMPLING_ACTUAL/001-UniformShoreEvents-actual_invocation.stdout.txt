@@ -1,0 +1,15 @@
+'OpenMathReview.Sampling.uniform_count_mismatch_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OpenMathReview.Sampling.uniform_all_column_degree_tail' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OpenMathReview.Sampling.uniform_row_sample_norm_tail' depends on axioms: [propext, Classical.choice, Quot.sound]
+@uniform_row_sample_norm_tail : ∀ {N m : ℕ},
+  0 < N →
+    0 < m →
+      ∀ (hm : m ≤ N) (F : Matrix (Fin N) (Fin N) ℝ) (d : ℝ),
+        0 < d →
+          (∀ (i : Fin N), rowEnergy F i ≤ d) →
+            ∀ (p : ↑unitInterval),
+              ↑p * ↑N = ↑m →
+                ∀ (t : ℝ),
+                  0 < t →
+                    (uniformFixedColumnLaw N m hm).real {ω | ‖rowSample F (selectedColumns ω)‖ ≥ √↑p * ‖F‖ + √d * √t} ≤
+                      2 * ↑N * (↑N + 1) * Real.exp (-t)

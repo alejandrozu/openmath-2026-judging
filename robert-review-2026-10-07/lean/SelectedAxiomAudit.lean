@@ -530,3 +530,13 @@ import ReviewAdditions
 #check @OpenMathReview.Sampling.actual_full_column_sample_norm_tail_zero
 #print axioms OpenMathReview.Sampling.actual_positive_fixed_column_sample_norm_tail
 #check @OpenMathReview.Sampling.actual_positive_fixed_column_sample_norm_tail
+#print axioms OpenMathReview.Sampling.independent_uniform_bipartite_spectral_sampling
+#check @OpenMathReview.Sampling.independent_uniform_bipartite_spectral_sampling
+#print axioms OpenMathReview.Sampling.actual_two_shore_centered_norm_tail
+#check @OpenMathReview.Sampling.actual_two_shore_centered_norm_tail
+#print axioms OpenMathReview.Sampling.uniform_count_mismatch_zero
+#check @OpenMathReview.Sampling.uniform_count_mismatch_zero
+#print axioms OpenMathReview.Sampling.uniform_all_column_degree_tail
+#check @OpenMathReview.Sampling.uniform_all_column_degree_tail
+#print axioms OpenMathReview.Sampling.uniform_row_sample_norm_tail
+#check @OpenMathReview.Sampling.uniform_row_sample_norm_tail

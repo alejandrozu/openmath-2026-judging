@@ -1,0 +1,20 @@
+'OpenMathReview.Sampling.actual_two_shore_centered_norm_tail' depends on axioms: [propext, Classical.choice, Quot.sound]
+@actual_two_shore_centered_norm_tail : ∀ {N m : ℕ},
+  0 < N →
+    0 < m →
+      ∀ (hm : m ≤ N) (W : Matrix (Fin N) (Fin N) ℝ) (d : ℝ),
+        0 < d →
+          (∀ (i j : Fin N), W i j = 0 ∨ W i j = 1) →
+            (∀ (i : Fin N), ∑ j, W i j = d) →
+              (∀ (j : Fin N), ∑ i, W i j = d) →
+                ∀ (p : ↑unitInterval),
+                  ↑p * ↑N = ↑m →
+                    0 < ↑p * d →
+                      ∀ (t : ℝ),
+                        0 < t →
+                          t ≤ ↑p * d / 3 →
+                            (twoShoreLaw N m hm).real
+                                {ω |
+                                  ‖sampled (centered W d) (selectedColumns ω.1) (selectedColumns ω.2)‖ >
+                                    ↑p * ‖centered W d‖ + (1 + √3) * √(↑p * d) * √t} ≤
+                              6 * ↑N * (↑N + 1) * Real.exp (-t)

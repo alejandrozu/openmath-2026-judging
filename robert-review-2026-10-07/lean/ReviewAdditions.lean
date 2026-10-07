@@ -1,4 +1,5 @@
 import AffinePaletteBarrier
+import B22
 import BernoulliColumnSample
 import BernoulliDegree
 import BernoulliGram
@@ -59,7 +60,9 @@ import SpectralCentering
 import SpectralRankOne
 import Substitution
 import TwinDensityExtension
+import TwoShoreNorm
 import UniformConditioning
 import UniformDegree
 import UniformOperatorSample
+import UniformShoreEvents
 import UnitPorts
