@@ -1,0 +1,67 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,textcomp}
+\usepackage[margin=24mm]{geometry}
+\usepackage{longtable,booktabs,array,enumitem}
+\usepackage[hidelinks]{hyperref}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+\emergencystretch=3em
+\hypersetup{pdfauthor={Rachel Teo, Wenyi Wang, Hamdi Abderrahmene, Alejandro Zarzuelo Urdiales}}
+\begin{document}
+{\LARGE\bfseries A sharp additive-three cover bound for intersecting uniform hypergraphs\par}\medskip
+{\small Rachel Teo\ensuremath{^1}, Wenyi Wang\ensuremath{^1}, Hamdi Abderrahmene\ensuremath{^1}, Alejandro Zarzuelo Urdiales\ensuremath{^2}\par}\medskip
+{\small\textbf{Affiliations:} \href{https://sakana.ai/}{\ensuremath{^1} Sakana AI}; \href{https://rsihouse.ai/openmath}{\ensuremath{^2} Open Math}.\par}
+
+{\small\href{https://github.com/alejandrozu/openmath-2026-judging}{Code and formal proofs}\par}
+
+\subsection{Abstract}
+For every finite intersecting r-uniform hypergraph H, 4\ensuremath{\tau}(H)\ensuremath{\leq}|H|+r+3. The degree-at-most-three residual bound closes the explicit additive-three question in Sivashankar's pre-event paper; degree-four peeling yields the unrestricted form and |H|\ensuremath{\geq}3r\ensuremath{-}3 whenever \ensuremath{\tau}(H)=r.
+
+\subsection{Statement and relation to the existing question}
+For a finite hypergraph H, \ensuremath{\tau}(H) is the minimum size of a vertex set meeting every edge. Intersecting means that every pair of edges has a common vertex. The new residual theorem asserts 4\ensuremath{\tau}(J)\ensuremath{\leq}|J|+r+3 for an intersecting r-uniform J in which every vertex lies in at most three edges.
+
+The source paper proves the analogous additive-four estimate and explicitly asks whether three is possible. The submitted proof answers that subsidiary question. A standard peeling argument then proves 4\ensuremath{\tau}(H)\ensuremath{\leq}|H|+r+3 without the degree restriction. When \ensuremath{\tau}(H)=r, rearrangement gives |H|\ensuremath{\geq}3r\ensuremath{-}3, and in particular |H|\ensuremath{\geq}21 at r=8. The triangle example supplies sharpness of the additive constant.
+
+\subsection{The residual packing improvement}
+The residual proof begins with the source paper's matching and witness machinery. A maximum matching organizes the edges and the uncovered remainder. Its associated link graphs form a three-link packing, encoding the ways covered vertices can meet the uncovered ground set.
+
+The older count leaves a potential equality case consistent with additive four. The new coloured-link budget proves a strict support-sum inequality when the uncovered ground set is odd and large enough relative to the number of packing blocks. The proof separates small configurations and develops structural/equality exclusions for the remaining coloured packings. Combining that strict inequality with the original selected-count identity rules out exactly the obstruction to additive three.
+
+The SharpEndpoint bridge accepts a packing inequality as a component hypothesis. The Main theorem supplies that inequality from the Packing and Colored modules, so the final residual and unrestricted cover statements do not assume it. Their closure does not import the Kahn-dependent asymptotic section.
+
+\subsection{Peeling and the general consequence}
+If some vertex v has degree at least four, delete every edge containing v and call the remaining hypergraph H\ensuremath{^{\prime}}. It stays intersecting and r-uniform. A minimum cover of H\ensuremath{^{\prime}}, together with v, covers H, so \ensuremath{\tau}(H)\ensuremath{\leq}\ensuremath{\tau}(H\ensuremath{^{\prime}})+1. The deletion removes at least four edges, exactly compensating for the factor four in the cover inequality. Induction on the number of edges lifts the residual additive-three bound to all H.
+
+If no vertex has degree at least four, the residual theorem applies directly. This gives the unrestricted cover inequality; the r=8 specialization and triangle sharpness are its consequences.
+
+\subsection{Attribution and scope}
+Varun Sivashankar's pre-event paper supplies the +4 theorem, matching/witness infrastructure and sharpness examples. Its ancillary Lean prefix is reused with explicit attribution and documented compatibility adjustments. The proposed original delta is the strict packing improvement to +3 and the resulting all-r elementary bound.
+
+Kahn resolved the original O(r) Erdős 21 question. The approximately 3.053r asymptotic coefficient in the cited source is not improved here. The present theorem addresses the explicit additive-three residual question and its elementary all-r consequence.
+
+\subsection{Formal verification}
+The 18-source Main closure and selected cover statements were checked with Lean using standard kernel axioms. Their precise declarations and dependency records are supplied in the companion repository; the stronger asymptotic theory is outside this closure.
+
+\begin{samepage}
+\subsection{ErdosLovasz.residual\_cover\_bound\_sharp}
+\begin{quote}\small\ttfamily theorem residual\_cover\_bound\_sharp (r : \ensuremath{\mathbb{N}}) (J : Finset (Finset V))\newline     (huni : IsUniform r J) (hint : Intersecting J)\newline     (hdeg : \ensuremath{\forall} v, edgeDeg J v \ensuremath{\leq} 3) :\newline     4 * coverNum J \ensuremath{\leq} J.card + r + 3\end{quote}
+{\small Source: proofs/erdos21-sharp-residual/OpHack/Erdos21/Main.lean:25.\par}
+
+{\small Source SHA-256: 9314ae7ba95b6fd9922ccfea882f1d33a6c11c9a40d750109014c8184ab7e414\par}
+
+\end{samepage}
+\begin{samepage}
+\subsection{ErdosLovasz.cover\_bound\_sharp}
+\begin{quote}\small\ttfamily theorem cover\_bound\_sharp (r : \ensuremath{\mathbb{N}}) (H : Finset (Finset V))\newline     (huni : IsUniform r H) (hint : Intersecting H) :\newline     4 * coverNum H \ensuremath{\leq} H.card + r + 3\end{quote}
+{\small Source: proofs/erdos21-sharp-residual/OpHack/Erdos21/Main.lean:33.\par}
+
+{\small Source SHA-256: 9314ae7ba95b6fd9922ccfea882f1d33a6c11c9a40d750109014c8184ab7e414\par}
+
+{\small\textbf{Sources and attribution:} \href{https://arxiv.org/html/2606.24878v2}{1. arXiv source: 2606.24878v2}; \href{https://arxiv.org/abs/2606.24878}{2. arXiv source: 2606.24878}; \href{https://www.erdosproblems.com/21}{3. www.erdosproblems.com / 21}; \href{https://arxiv.org/src/2606.24878v2/anc/lean-proof/RequestProject/Theorem1.lean}{4. arXiv source: src/2606.24878v2/anc/lean-proof/RequestProject/Theorem1.lean}; \href{https://github.com/alejandrozu/openmath-2026-judging/blob/d0ed487f487fa7ec814ff705ab55249983fe8707/OpenMath-Judging/review/entries/E02-erdos21-sharp-residual.txt}{5. alejandrozu/openmath-2026-judging / E02-erdos21-sharp-residual.txt}; \href{https://github.com/alejandrozu/openmath-2026-judging}{Proof source repository}.\par}
+
+\end{samepage}
+{\small \textbf{AI assistance.} Codex assisted literature checking, editorial preparation and analysis of the supplied formal artifacts. The human authors are responsible for checking the final mathematical claims, references and attribution.\par}
+
+\end{document}

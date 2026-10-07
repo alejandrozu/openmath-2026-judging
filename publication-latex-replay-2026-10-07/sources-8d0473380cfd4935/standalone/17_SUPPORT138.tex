@@ -1,0 +1,78 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,textcomp}
+\usepackage[margin=24mm]{geometry}
+\usepackage{longtable,booktabs,array,enumitem}
+\usepackage[hidelinks]{hyperref}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+\emergencystretch=3em
+\hypersetup{pdfauthor={Chandragupt Sharma, Alejandro Zarzuelo Urdiales}}
+\begin{document}
+{\LARGE\bfseries A rational 23-product 3\ensuremath{\times}3 matrix-multiplication scheme of support 138\par}\medskip
+{\small Chandragupt Sharma\ensuremath{^1}, Alejandro Zarzuelo Urdiales\ensuremath{^2}\par}\medskip
+{\small\textbf{Affiliations:} \href{https://www.du.ac.in/index.php?page=cluster-innovation-centre-cic}{\ensuremath{^1} Cluster Innovation Centre, University of Delhi}; \href{https://rsihouse.ai/openmath}{\ensuremath{^2} Open Math}.\par}
+
+{\small\href{https://github.com/alejandrozu/openmath-2026-judging}{Code and formal proofs}\par}
+
+\subsection{Abstract}
+An exact rational decomposition of the 3\ensuremath{\times}3 multiplication tensor uses 23 products and 138 nonzero factor coefficients. A diagonal gauge leaves 126 unit coefficients and 12 dyadic coefficients. Exact tensor and polynomial checks confirm the finite scheme and a parameter family; rank 22, support 137 impossibility and practical speedup are not established.
+
+The 3\ensuremath{\times}3 multiplication tensor admits a rational 23-term decomposition with factor supports 47,47,44, totalling 138.
+
+\subsection{Tensor statement and support measure}
+For 3\ensuremath{\times}3 matrices A and B, a 23-product bilinear scheme forms 23 linear expressions in A,23 in B, multiplies the corresponding pairs, and recombines the products into AB. The three factor lists U,V,W each have 23 vectors with nine coefficients. The total number of nonzero coefficients in those lists is the support measure used here.
+
+The submitted rational scheme has support 47+47+44=138. All 729 tensor coefficient equations hold exactly. It therefore gives a valid 23-product multiplication algorithm and tensor rank at most 23. It does not construct 22 products or prove a matching tensor-rank lower bound. Compared with the located 139-support baseline, the proposed numerical advance is one nonzero coefficient.
+
+\subsection{Exact identities and rational lifting}
+The finite certificate expands each rank-one term and checks every triple of input/output coefficient indices against the multiplication tensor. The archived convention places A and B in row order and the C/trace leg in column order, which must be respected when turning the tensor into output formulas.
+
+Separate exact-rational checks confirm the 138-support scheme, its gauged form and the auxiliary 143-support scheme. The rational coefficients match the scaled Lean literals. The pinned finite certificate distinguishes tensor identity, support count and coefficient-gauge statements.
+
+The literal factor lists and their rational lifting data are supplied in a structured representation. They specify a reproducible algorithm; the search history is not the proof of its tensor identity.
+
+\subsection{Gauges, coefficients and the parameter family}
+A diagonal gauge preserves each simple tensor while redistributing scalar factors among its three lists. The gauged 138 scheme has 126 coefficients equal to\ensuremath{\pm}1 and 12 equal to\ensuremath{\pm}2 or\ensuremath{\pm}1/2. Those are coefficient shifts, not 12 additional bilinear products. Its naive addition count is 83 versus a recorded 84 baseline, while the reported common-subexpression count 77 is worse than a cited optimized 70; no overall practical speedup is demonstrated.
+
+An independent symbolic computation clears denominators in the reported family and checks all 729 polynomial identities in Q[s]. Away from s=0 and s=\ensuremath{-}2, every specialization is valid and the support remains 138; s=\ensuremath{-}1 recovers the stored scheme. Polynomial identity also establishes validity for real parameters outside the poles, although the universal-family statement is not part of the supplied finite Lean certificate.
+
+Reducing the support pattern with every nonzero replaced by one over GF(2) gives four failing tensor equations. This excludes a sign-only rational scheme with precisely that support pattern. It does not give a literal mod-two reduction of dyadic coefficients and does not rule out other patterns or fields.
+
+\subsection{Structural claims that need separate proof}
+The numerical tangent dimension seven and six diagonal gauge directions suggest local family structure. They do not prove a global one-dimensional quotient component, classify every parameter point, establish all projective boundary limits, minimize the number of nonunit coefficients or prove support 137 impossible. Failed searches at 137 are evidence about the tested search, not an impossibility theorem.
+
+Factor-matrix rank triples are possible inequivalence invariants only under a specified group action and invariant proof. The valid auxiliary 143-support scheme does not improve the 138/139 support frontier.
+
+\subsection{Prior work and scope}
+HKS, Smirnov and earlier 23-product constructions supply the baselines. Support comparisons use the same factor and gauge conventions. The precise claim here is a certified 138-support scheme and a separately checked parameter family, not minimum tensor rank.
+
+\begin{samepage}
+The finite coefficient identities and rational parameter formulas have distinct evidence from numerical tangent calculations and unsuccessful support searches. Historical comparison of equivalence classes remains incomplete; empirical local structure is not promoted to a classification theorem.
+
+\end{samepage}
+\subsection{Formal verification}
+Lean 4.34.1 checked all seven archived source modules and 12 selected endpoint declarations. Validity and support endpoints are axiom-free, while tensor identities use propext and Quot.sound. The finite verification uses independently produced artifacts. Exact sources and audit records are supplied in the companion repository; the separately checked universal parameter family is not relabelled as part of this finite Lean audit.
+
+\begin{samepage}
+\subsection{MM3.scheme138\_identities}
+\begin{quote}\small\ttfamily theorem scheme138\_identities :\newline     \ensuremath{\forall} a b c : Nat, a < 9 \ensuremath{\to} b < 9 \ensuremath{\to} c < 9 \ensuremath{\to}\newline       coeff (terms Scheme138.u Scheme138.v Scheme138.w) a b c =\newline         Scheme138.su * Scheme138.sv * Scheme138.sw * target a b c\end{quote}
+{\small Source: lean/MM3/Certificates.lean:22.\par}
+
+{\small Source SHA-256: 78cd77c0514b515d10e28a7bed4505a20ad4c2124cc35346fee04c2b589c9bfa\par}
+
+\end{samepage}
+\begin{samepage}
+\subsection{MM3.scheme138\_support}
+\begin{quote}\small\ttfamily theorem scheme138\_support : support Scheme138.u Scheme138.v Scheme138.w = 138\end{quote}
+{\small Source: lean/MM3/Certificates.lean:28.\par}
+
+{\small Source SHA-256: 78cd77c0514b515d10e28a7bed4505a20ad4c2124cc35346fee04c2b589c9bfa\par}
+
+{\small\textbf{Sources and attribution:} \href{https://github.com/ChandraguptSharma07/matrix-multiplication-tensor-3x3/tree/479c2416b6261ee841052eef4881df0e40054f3f}{1. ChandraguptSharma07/matrix-multiplication-tensor-3x3}; \href{https://doi.org/10.1134/S0965542513120129}{2. DOI: 10.1134/S0965542513120129}; \href{https://arxiv.org/abs/1905.10192}{3. arXiv source: 1905.10192}; \href{https://arxiv.org/abs/2212.01175}{4. arXiv source: 2212.01175}; \href{https://github.com/alejandrozu/openmath-2026-judging/blob/d0ed487f487fa7ec814ff705ab55249983fe8707/OpenMath-Judging/review/entries/E04-SUPPORT138.txt}{5. alejandrozu/openmath-2026-judging / E04-SUPPORT 138.txt}; \href{https://github.com/alejandrozu/openmath-2026-judging}{Proof source repository}.\par}
+
+\end{samepage}
+{\small \textbf{AI assistance.} Codex assisted literature checking, editorial preparation and analysis of the supplied formal artifacts. The human authors are responsible for checking the final mathematical claims, references and attribution.\par}
+
+\end{document}

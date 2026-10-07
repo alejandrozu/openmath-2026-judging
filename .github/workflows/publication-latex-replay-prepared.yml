@@ -1,0 +1,78 @@
+name: Publication LaTeX source replay (manual, typesetting only)
+
+on:
+  workflow_dispatch:
+    inputs:
+      source_manifest_sha256:
+        description: Exact root-reviewed staged source-manifest SHA256 (22 files)
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+concurrency:
+  group: publication-latex-replay
+  cancel-in-progress: false
+
+jobs:
+  typeset:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    env:
+      SOURCE_MANIFEST: publication-latex-replay-2026-10-07/source-manifest.json
+      EXPECTED_MANIFEST_SHA256: ${{ inputs.source_manifest_sha256 }}
+    steps:
+      - name: Check out the exact dispatch commit
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # Verified v4 tag
+        with:
+          persist-credentials: false
+
+      - name: Check all source hashes and download the official class on this runner
+        id: source_preflight
+        run: |
+          python3 .github/scripts/publication_tex_replay.py prepare \
+            --manifest "$SOURCE_MANIFEST" \
+            --manifest-sha256 "$EXPECTED_MANIFEST_SHA256" \
+            --github-output "$GITHUB_OUTPUT"
+
+      - name: Typeset the Springer derivative and 21 separate current papers
+        id: compile
+        uses: xu-cheng/latex-action@6549dc21effb2730855a1281407ecfcececc6c1b # Verified v4 commit
+        with:
+          root_file: ${{ steps.source_preflight.outputs.root_files }}
+          work_in_root_file_dir: true
+          continue_on_error: true
+          docker_image: ghcr.io/xu-cheng/texlive-alpine@sha256:c06416ebbc69c8e90e07d1f1a6f7a3f9b334e773daa3543ce879ea533317c3a7
+          compiler: latexmk
+          args: -pdf -file-line-error -halt-on-error -interaction=nonstopmode
+          latexmk_use_lualatex: true
+          latexmk_shell_escape: false
+          post_compile: |
+            lualatex --version > publication-latex-replay-2026-10-07/actual_lualatex_version.txt
+            latexmk --version > publication-latex-replay-2026-10-07/actual_latexmk_version.txt
+
+      - name: Record genuine PDF hashes, compiler outcomes and page counts
+        if: always() && steps.source_preflight.outcome == 'success'
+        env:
+          COMPILATION_OUTCOME: ${{ steps.compile.outcome }}
+        run: |
+          python3 .github/scripts/publication_tex_replay.py record \
+            --manifest "$SOURCE_MANIFEST" \
+            --manifest-sha256 "$EXPECTED_MANIFEST_SHA256" \
+            --compilation-outcome "$COMPILATION_OUTCOME"
+
+      - name: Retain generated PDFs and diagnostics; never upload the downloaded class
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # Verified v4 tag
+        with:
+          name: publication-typesetting-${{ github.run_id }}-${{ github.run_attempt }}
+          retention-days: 14
+          if-no-files-found: warn
+          path: |
+            publication-latex-replay-2026-10-07/**/*.pdf
+            publication-latex-replay-2026-10-07/**/*.log
+            publication-latex-replay-2026-10-07/**/*.blg
+            publication-latex-replay-2026-10-07/actual*.json
+            publication-latex-replay-2026-10-07/actual*version.txt
+
