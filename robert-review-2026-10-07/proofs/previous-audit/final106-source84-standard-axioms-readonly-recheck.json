@@ -1,0 +1,99 @@
+{
+  "status": "READONLY_FINAL106_SOURCE84_SELECTED_STANDARD_AXIOMS_IDENTITY_RECHECK_PASS",
+  "source_head": "1efc324e155ef0b6a7081c5f695c6c825e7debef",
+  "source_git_status_clean": true,
+  "source_count": 106,
+  "main48_supplement58_exact": true,
+  "original81_axioms_standard_only": true,
+  "additive3_axioms_standard_only": true,
+  "unique_selected84": 84,
+  "headline25_types_match_frozen": true,
+  "all106_source_and_current_output_sha256_rechecked": true,
+  "all_new69_provider_and_log_sha256_rechecked": true,
+  "known_Target_admissions": [
+    {
+      "endpoint": "Erdos585.erdos_585",
+      "axioms": [
+        "propext",
+        "sorryAx",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "SORRY_ADMISSION"
+    },
+    {
+      "endpoint": "Erdos585.erdos_585.variants.isTheta",
+      "axioms": [
+        "propext",
+        "sorryAx",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "SORRY_ADMISSION"
+    },
+    {
+      "endpoint": "Erdos585.erdos_585.variants.lower_bound",
+      "axioms": [
+        "propext",
+        "sorryAx",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "SORRY_ADMISSION"
+    },
+    {
+      "endpoint": "Erdos585.erdos_585.variants.upper_bound",
+      "axioms": [
+        "propext",
+        "sorryAx",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "SORRY_ADMISSION"
+    },
+    {
+      "endpoint": "Erdos585.hasTwoEdgeDisjointCyclesSameVertexSet_top_five",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    }
+  ],
+  "preserved_resource_attempts_count": 2,
+  "full_source_receipt": {
+    "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\adjacent_robert_20261007\\verification\\completed106-source81-axioms-immutable.json",
+    "sha256": "82b6c76de58309b35ed3b1b28b211011449b319affde181446870a33e9a9f142",
+    "bytes": 1107666
+  },
+  "additive_novel_receipt": {
+    "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\adjacent_robert_20261007\\verification\\actual-additive-novel-three-axioms-six-types.json",
+    "sha256": "086e8b103ff97a678036302be820b860ac8a1a3efdb87100b242f307319ffa55",
+    "bytes": 10588
+  },
+  "actual_complete6_type_prints": {
+    "Erdos585.ParabolaBarrier104.arbitrary_polylog_barrier": "∀ (C A : ℝ), 0 < C → 0 ≤ A → ∀ (K : ℕ), ∃ k, K ≤ k ∧ 2 ≤ k ∧ Erdos585.ParabolaBarrier104.FamilyProperties k ∧ ∀ (v : Erdos585.ParabolaBarrier104.FamilyVertex k), C * (Real.log ↑(Fintype.card (Erdos585.ParabolaBarrier104.FamilyVertex k))).rpow A < ↑((Erdos585.ParabolaBarrier104.familyGraph k).degree v)",
+    "Erdos585.TwinNoSingleton.hasPair_of_no_singleton_twins": "∀ {A : Type u_1} {R : Type u_2} [inst : Fintype A] [inst_1 : Fintype R] [DecidableEq R] (G : SimpleGraph (A ⊕ R)) [inst_3 : DecidableRel G.Adj], (∀ (a b : A), ¬G.Adj (Sum.inl a) (Sum.inl b)) → (∀ (r s : R), ¬G.Adj (Sum.inr r) (Sum.inr s)) → (∀ (v : A ⊕ R), G.degree v ≤ 6) → G.edgeFinset.card + 2 = 3 * Fintype.card (A ⊕ R) → (∀ (a : A), ∃ b, b ≠ a ∧ ∀ (r : R), G.Adj (Sum.inl a) (Sum.inr r) ↔ G.Adj (Sum.inl b) (Sum.inr r)) → Erdos585.HasTwoEdgeDisjointCyclesSameVertexSet G",
+    "Erdos585.TwinCoreForcing.groupedGraph_hasPair_of_no_singletons": "∀ {I : Type u_1} {R : Type u_2} [inst : Fintype I] [inst_1 : Fintype R] [inst_2 : DecidableEq I] [inst_3 : DecidableEq R] (J : Finset (I × R)) (k : I → ℕ), (∀ (i : I), 2 ≤ k i) → (∀ (v : (i : I) × Fin (k i) ⊕ R), (Erdos585.TwinCoreForcing.groupedGraph J k).degree v ≤ 6) → (Erdos585.TwinCoreForcing.groupedGraph J k).edgeFinset.card + 2 = 3 * Fintype.card ((i : I) × Fin (k i) ⊕ R) → Erdos585.HasTwoEdgeDisjointCyclesSameVertexSet (Erdos585.TwinCoreForcing.groupedGraph J k)",
+    "Erdos585.HaarClassification.hasPair_of_four": "∀ {p : ℕ} [inst : Fact (Nat.Prime p)] {V : Type u_1} [inst_1 : AddCommGroup V] [Module (ZMod p) V] [inst : DecidableEq V] (S : Finset V), 4 ≤ S.card → Erdos585.HasPairF (Erdos585.Haar.graph S)",
+    "Erdos585.HaarGamma.hasPair_iff": "∀ {V : Type u_1} [inst : AddCommGroup V] [DecidableEq V] {p : ℕ} [inst_2 : Fact (Nat.Prime p)] [Module (ZMod p) V] [Fintype V] (S : Finset V), Erdos585.HasTwoEdgeDisjointCyclesSameVertexSet (Erdos585.Haar.graph S) ↔ 4 ≤ S.card",
+    "Erdos585.HaarCompositeEven.hasTwoEdgeDisjointCyclesSameVertexSet_all": "∀ (n : ℕ), 3 ≤ n → Erdos585.HasTwoEdgeDisjointCyclesSameVertexSet (Erdos585.Haar.graph (Erdos585.HaarComposite.colors n))"
+  },
+  "active_compilers_after_actual_exit": [],
+  "scope_limits": [
+    "Four admitted Target general/asymptotic/known-literature statements are not verified by compilation.",
+    "No private Exp11/B2 Lean source was provided or compiled.",
+    "The QB4/QB5 declarations are generic4regular conclusions, not general cycle-pair density theorems."
+  ]
+}

@@ -1,0 +1,34 @@
+name = "openmath"
+defaultTargets = ["ReviewExisting", "HaarInfinite", "HamiltonianDeletion", "CutResilience", "CherryBoundary"]
+
+[leanOptions]
+pp.unicode.fun = true
+autoImplicit = false
+relaxedAutoImplicit = false
+weak.linter.style.copyright.formalConjectures = false
+weak.linter.style.namespace = true
+weak.linter.style.stubs = true
+weak.linter.style.openClassical = true
+
+[[require]]
+name = "formal_conjectures"
+git = "https://github.com/google-deepmind/formal-conjectures"
+rev = "137aec5c7abd3aa61f7a73138a97279acfc79e93"
+
+[[lean_lib]]
+name = "Openmath"
+
+[[lean_lib]]
+name = "ReviewExisting"
+
+[[lean_lib]]
+name = "HaarInfinite"
+
+[[lean_lib]]
+name = "HamiltonianDeletion"
+
+[[lean_lib]]
+name = "CutResilience"
+
+[[lean_lib]]
+name = "CherryBoundary"

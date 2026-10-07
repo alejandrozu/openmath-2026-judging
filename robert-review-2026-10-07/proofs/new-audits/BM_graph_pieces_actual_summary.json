@@ -1,0 +1,716 @@
+{
+  "schema": "Robert-BM-three-new-graph-pieces-actual-final-source-and-axiom-qualification-v1",
+  "status": "PASS_EXACT3_SOURCES_13_STANDARD_KERNEL_ENDPOINTS_MAIN_BM_NOT_PROVED",
+  "checked_utc": "2026-10-07T13:01:09.310136+00:00",
+  "reviewer": "nonnovel_and_affiliations",
+  "actual_successful_source_count": 3,
+  "actual_unique_selected_endpoint_count": 13,
+  "axiom_counts": {
+    "STANDARD_KERNEL_AXIOMS": 13,
+    "AXIOM_FREE": 0,
+    "SORRY_ADMISSION": 0,
+    "NATIVE_EVALUATION_TRUST": 0,
+    "UNRECOGNIZED_AXIOMS": 0
+  },
+  "source_head_of_unchanged_Robert_inputs": "1efc324e155ef0b6a7081c5f695c6c825e7debef",
+  "qualified_sources": [
+    {
+      "module": "HamiltonianDeletion",
+      "actual_receipt": {
+        "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\BM\\attempts\\001-HamiltonianDeletion\\actual_invocation.json",
+        "sha256": "c84aa9e70909d4c2afd9a96d43b63a89623bdb7673d3a95c4a3a091bcd8c064c",
+        "bytes": 11909
+      },
+      "source": {
+        "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\BM\\HamiltonianDeletion.lean",
+        "sha256": "f3d6bc2d85ba3a57d3464ec838d12a0d32f997282162a1fe3c1bfebbd2c343de",
+        "bytes": 3794
+      },
+      "source_snapshot": {
+        "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\BM\\attempts\\001-HamiltonianDeletion\\source.lean",
+        "sha256": "f3d6bc2d85ba3a57d3464ec838d12a0d32f997282162a1fe3c1bfebbd2c343de",
+        "bytes": 3794
+      },
+      "seconds": 7.078,
+      "started_utc": "2026-10-07T12:57:24.225897+00:00",
+      "finished_utc": "2026-10-07T12:57:31.309746+00:00",
+      "own_job_peak_private_bytes": 2288214016,
+      "runtime": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+        "sha256": "af49bacfabaa1fea71332ca0feae0fa1a60912219d5902291adc79f905bffb8d",
+        "version": "Lean (version 4.33.1, x86_64-w64-windows-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)"
+      },
+      "dependency_pins": [
+        {
+          "name": "mathlib",
+          "head": "0df444a360eaa60ab8c11dca51a86af692955474",
+          "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib"
+        },
+        {
+          "name": "plausible",
+          "head": "b7eb3304aeae834b12dda98993a37f6a41f6f0bb",
+          "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\plausible"
+        },
+        {
+          "name": "LeanSearchClient",
+          "head": "5f4d51b81cbd3f6b32b156bfad9056621a040404",
+          "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\LeanSearchClient"
+        },
+        {
+          "name": "importGraph",
+          "head": "16f02aa7642864af59f1ff0e384a015994db9118",
+          "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\importGraph"
+        },
+        {
+          "name": "proofwidgets",
+          "head": "4be2e3d5087eeb272cf5a8853b8f9dd025ef5957",
+          "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\proofwidgets"
+        },
+        {
+          "name": "aesop",
+          "head": "3448c0bcc5ce01b2d1546e483ec3620e32df3d0e",
+          "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\aesop"
+        },
+        {
+          "name": "Qq",
+          "head": "92c15be17b7caf78c2ad767ec40f89052d908d81",
+          "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\Qq"
+        },
+        {
+          "name": "batteries",
+          "head": "4488d40d070b9700d4d5a6aa342f0d40c31b2a2d",
+          "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\batteries"
+        },
+        {
+          "name": "Cli",
+          "head": "6130a47896ce867c6a4a55373441e59e565bad0f",
+          "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\Cli"
+        }
+      ],
+      "guard_sha256": "29578665ab4f1336e8164a547872119939c6a0b86ceafbadcd36f9859bc367f2",
+      "artifacts": [
+        {
+          "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\BM\\attempts\\001-HamiltonianDeletion\\HamiltonianDeletion.olean",
+          "sha256": "66c8f9596a925689f2c0117d97992b3b7a26508b291036d03b9eeac2b06b5a03",
+          "bytes": 73944
+        }
+      ],
+      "selected_axiom_outputs": [
+        {
+          "endpoint": "RobertPublishable.BM.hasPair_of_twoHamiltonianCycles",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS",
+          "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\BM\\HamiltonianDeletion.lean",
+          "source_sha256": "f3d6bc2d85ba3a57d3464ec838d12a0d32f997282162a1fe3c1bfebbd2c343de",
+          "declaration_line": 30
+        },
+        {
+          "endpoint": "RobertPublishable.BM.twoHamiltonianCycles_of_hamiltonian_remainder",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS",
+          "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\BM\\HamiltonianDeletion.lean",
+          "source_sha256": "f3d6bc2d85ba3a57d3464ec838d12a0d32f997282162a1fe3c1bfebbd2c343de",
+          "declaration_line": 39
+        },
+        {
+          "endpoint": "RobertPublishable.BM.twoHamiltonianCycles_of_preserved_criterion",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS",
+          "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\BM\\HamiltonianDeletion.lean",
+          "source_sha256": "f3d6bc2d85ba3a57d3464ec838d12a0d32f997282162a1fe3c1bfebbd2c343de",
+          "declaration_line": 58
+        },
+        {
+          "endpoint": "RobertPublishable.BM.hasPair_of_preserved_criterion",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS",
+          "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\BM\\HamiltonianDeletion.lean",
+          "source_sha256": "f3d6bc2d85ba3a57d3464ec838d12a0d32f997282162a1fe3c1bfebbd2c343de",
+          "declaration_line": 68
+        }
+      ]
+    },
+    {
+      "module": "CutResilience",
+      "actual_receipt": {
+        "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\BM\\attempts\\004-CutResilience\\actual_invocation.json",
+        "sha256": "4995186f840f8e2c9b9983e1ef4c5317f5a2a9aa565a0e614c1a3482e9c1004e",
+        "bytes": 13314
+      },
+      "source": {
+        "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\BM\\CutResilience.lean",
+        "sha256": "070f3e74ecb2d130bc798c96677bbf06d0f4df547680b9dae4686ee5e70e685e",
+        "bytes": 4435
+      },
+      "source_snapshot": {
+        "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\BM\\attempts\\004-CutResilience\\source.lean",
+        "sha256": "070f3e74ecb2d130bc798c96677bbf06d0f4df547680b9dae4686ee5e70e685e",
+        "bytes": 4435
+      },
+      "seconds": 7.079,
+      "started_utc": "2026-10-07T12:58:19.527052+00:00",
+      "finished_utc": "2026-10-07T12:58:26.602715+00:00",
+      "own_job_peak_private_bytes": 2412503040,
+      "runtime": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+        "sha256": "af49bacfabaa1fea71332ca0feae0fa1a60912219d5902291adc79f905bffb8d",
+        "version": "Lean (version 4.33.1, x86_64-w64-windows-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)"
+      },
+      "dependency_pins": [
+        {
+          "name": "mathlib",
+          "head": "0df444a360eaa60ab8c11dca51a86af692955474",
+          "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib"
+        },
+        {
+          "name": "plausible",
+          "head": "b7eb3304aeae834b12dda98993a37f6a41f6f0bb",
+          "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\plausible"
+        },
+        {
+          "name": "LeanSearchClient",
+          "head": "5f4d51b81cbd3f6b32b156bfad9056621a040404",
+          "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\LeanSearchClient"
+        },
+        {
+          "name": "importGraph",
+          "head": "16f02aa7642864af59f1ff0e384a015994db9118",
+          "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\importGraph"
+        },
+        {
+          "name": "proofwidgets",
+          "head": "4be2e3d5087eeb272cf5a8853b8f9dd025ef5957",
+          "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\proofwidgets"
+        },
+        {
+          "name": "aesop",
+          "head": "3448c0bcc5ce01b2d1546e483ec3620e32df3d0e",
+          "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\aesop"
+        },
+        {
+          "name": "Qq",
+          "head": "92c15be17b7caf78c2ad767ec40f89052d908d81",
+          "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\Qq"
+        },
+        {
+          "name": "batteries",
+          "head": "4488d40d070b9700d4d5a6aa342f0d40c31b2a2d",
+          "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\batteries"
+        },
+        {
+          "name": "Cli",
+          "head": "6130a47896ce867c6a4a55373441e59e565bad0f",
+          "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\Cli"
+        }
+      ],
+      "guard_sha256": "29578665ab4f1336e8164a547872119939c6a0b86ceafbadcd36f9859bc367f2",
+      "artifacts": [
+        {
+          "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\BM\\attempts\\004-CutResilience\\CutResilience.olean",
+          "sha256": "04f817612eba55ff7870c85e97749f2d70ec072d998019f6f5eb3824b547ff65",
+          "bytes": 99256
+        }
+      ],
+      "selected_axiom_outputs": [
+        {
+          "endpoint": "RobertPublishable.BM.edgesTo_union",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS",
+          "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\BM\\CutResilience.lean",
+          "source_sha256": "070f3e74ecb2d130bc798c96677bbf06d0f4df547680b9dae4686ee5e70e685e",
+          "declaration_line": 21
+        },
+        {
+          "endpoint": "RobertPublishable.BM.edgesTo_le_card_mul",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS",
+          "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\BM\\CutResilience.lean",
+          "source_sha256": "070f3e74ecb2d130bc798c96677bbf06d0f4df547680b9dae4686ee5e70e685e",
+          "declaration_line": 31
+        },
+        {
+          "endpoint": "RobertPublishable.BM.deleted_neighbors_le_shore_budget",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS",
+          "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\BM\\CutResilience.lean",
+          "source_sha256": "070f3e74ecb2d130bc798c96677bbf06d0f4df547680b9dae4686ee5e70e685e",
+          "declaration_line": 39
+        },
+        {
+          "endpoint": "RobertPublishable.BM.balanced_deleted_edges_le",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS",
+          "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\BM\\CutResilience.lean",
+          "source_sha256": "070f3e74ecb2d130bc798c96677bbf06d0f4df547680b9dae4686ee5e70e685e",
+          "declaration_line": 57
+        },
+        {
+          "endpoint": "RobertPublishable.BM.cut_deletion_identity",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS",
+          "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\BM\\CutResilience.lean",
+          "source_sha256": "070f3e74ecb2d130bc798c96677bbf06d0f4df547680b9dae4686ee5e70e685e",
+          "declaration_line": 71
+        },
+        {
+          "endpoint": "RobertPublishable.BM.balanced_cut_loss_le",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS",
+          "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\BM\\CutResilience.lean",
+          "source_sha256": "070f3e74ecb2d130bc798c96677bbf06d0f4df547680b9dae4686ee5e70e685e",
+          "declaration_line": 93
+        }
+      ]
+    },
+    {
+      "module": "CherryBoundary",
+      "actual_receipt": {
+        "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\BM\\attempts\\005-CherryBoundary\\actual_invocation.json",
+        "sha256": "6987715ab210109bbf8c246b912a04eaaceedbca502f17760e280ee305665cbb",
+        "bytes": 11407
+      },
+      "source": {
+        "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\BM\\CherryBoundary.lean",
+        "sha256": "ec62c4354f263a6d3923d5dc232c40e67eb8677e33f5662ac8be037c3df6fd85",
+        "bytes": 2221
+      },
+      "source_snapshot": {
+        "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\BM\\attempts\\005-CherryBoundary\\source.lean",
+        "sha256": "ec62c4354f263a6d3923d5dc232c40e67eb8677e33f5662ac8be037c3df6fd85",
+        "bytes": 2221
+      },
+      "seconds": 6.843,
+      "started_utc": "2026-10-07T12:58:38.442500+00:00",
+      "finished_utc": "2026-10-07T12:58:45.272617+00:00",
+      "own_job_peak_private_bytes": 2167508992,
+      "runtime": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+        "sha256": "af49bacfabaa1fea71332ca0feae0fa1a60912219d5902291adc79f905bffb8d",
+        "version": "Lean (version 4.33.1, x86_64-w64-windows-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)"
+      },
+      "dependency_pins": [
+        {
+          "name": "mathlib",
+          "head": "0df444a360eaa60ab8c11dca51a86af692955474",
+          "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib"
+        },
+        {
+          "name": "plausible",
+          "head": "b7eb3304aeae834b12dda98993a37f6a41f6f0bb",
+          "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\plausible"
+        },
+        {
+          "name": "LeanSearchClient",
+          "head": "5f4d51b81cbd3f6b32b156bfad9056621a040404",
+          "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\LeanSearchClient"
+        },
+        {
+          "name": "importGraph",
+          "head": "16f02aa7642864af59f1ff0e384a015994db9118",
+          "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\importGraph"
+        },
+        {
+          "name": "proofwidgets",
+          "head": "4be2e3d5087eeb272cf5a8853b8f9dd025ef5957",
+          "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\proofwidgets"
+        },
+        {
+          "name": "aesop",
+          "head": "3448c0bcc5ce01b2d1546e483ec3620e32df3d0e",
+          "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\aesop"
+        },
+        {
+          "name": "Qq",
+          "head": "92c15be17b7caf78c2ad767ec40f89052d908d81",
+          "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\Qq"
+        },
+        {
+          "name": "batteries",
+          "head": "4488d40d070b9700d4d5a6aa342f0d40c31b2a2d",
+          "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\batteries"
+        },
+        {
+          "name": "Cli",
+          "head": "6130a47896ce867c6a4a55373441e59e565bad0f",
+          "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\Cli"
+        }
+      ],
+      "guard_sha256": "29578665ab4f1336e8164a547872119939c6a0b86ceafbadcd36f9859bc367f2",
+      "artifacts": [
+        {
+          "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\BM\\attempts\\005-CherryBoundary\\CherryBoundary.olean",
+          "sha256": "df8d6dd6e187fb41faf809931fc9963b98e105b02b33e65d8063ec16bae32ecc",
+          "bytes": 86008
+        }
+      ],
+      "selected_axiom_outputs": [
+        {
+          "endpoint": "RobertPublishable.BM.vacuous_zero_degree_cherry_counterexample",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS",
+          "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\BM\\CherryBoundary.lean",
+          "source_sha256": "ec62c4354f263a6d3923d5dc232c40e67eb8677e33f5662ac8be037c3df6fd85",
+          "declaration_line": 23
+        },
+        {
+          "endpoint": "RobertPublishable.BM.hasCherry_of_two_neighbors",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS",
+          "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\BM\\CherryBoundary.lean",
+          "source_sha256": "ec62c4354f263a6d3923d5dc232c40e67eb8677e33f5662ac8be037c3df6fd85",
+          "declaration_line": 33
+        },
+        {
+          "endpoint": "RobertPublishable.BM.hasCherry_of_nonempty_centres",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS",
+          "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\BM\\CherryBoundary.lean",
+          "source_sha256": "ec62c4354f263a6d3923d5dc232c40e67eb8677e33f5662ac8be037c3df6fd85",
+          "declaration_line": 42
+        }
+      ]
+    }
+  ],
+  "all13_actual_axiom_outputs": [
+    {
+      "endpoint": "RobertPublishable.BM.hasPair_of_twoHamiltonianCycles",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "STANDARD_KERNEL_AXIOMS",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\BM\\HamiltonianDeletion.lean",
+      "source_sha256": "f3d6bc2d85ba3a57d3464ec838d12a0d32f997282162a1fe3c1bfebbd2c343de",
+      "declaration_line": 30
+    },
+    {
+      "endpoint": "RobertPublishable.BM.twoHamiltonianCycles_of_hamiltonian_remainder",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "STANDARD_KERNEL_AXIOMS",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\BM\\HamiltonianDeletion.lean",
+      "source_sha256": "f3d6bc2d85ba3a57d3464ec838d12a0d32f997282162a1fe3c1bfebbd2c343de",
+      "declaration_line": 39
+    },
+    {
+      "endpoint": "RobertPublishable.BM.twoHamiltonianCycles_of_preserved_criterion",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "STANDARD_KERNEL_AXIOMS",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\BM\\HamiltonianDeletion.lean",
+      "source_sha256": "f3d6bc2d85ba3a57d3464ec838d12a0d32f997282162a1fe3c1bfebbd2c343de",
+      "declaration_line": 58
+    },
+    {
+      "endpoint": "RobertPublishable.BM.hasPair_of_preserved_criterion",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "STANDARD_KERNEL_AXIOMS",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\BM\\HamiltonianDeletion.lean",
+      "source_sha256": "f3d6bc2d85ba3a57d3464ec838d12a0d32f997282162a1fe3c1bfebbd2c343de",
+      "declaration_line": 68
+    },
+    {
+      "endpoint": "RobertPublishable.BM.edgesTo_union",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "STANDARD_KERNEL_AXIOMS",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\BM\\CutResilience.lean",
+      "source_sha256": "070f3e74ecb2d130bc798c96677bbf06d0f4df547680b9dae4686ee5e70e685e",
+      "declaration_line": 21
+    },
+    {
+      "endpoint": "RobertPublishable.BM.edgesTo_le_card_mul",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "STANDARD_KERNEL_AXIOMS",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\BM\\CutResilience.lean",
+      "source_sha256": "070f3e74ecb2d130bc798c96677bbf06d0f4df547680b9dae4686ee5e70e685e",
+      "declaration_line": 31
+    },
+    {
+      "endpoint": "RobertPublishable.BM.deleted_neighbors_le_shore_budget",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "STANDARD_KERNEL_AXIOMS",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\BM\\CutResilience.lean",
+      "source_sha256": "070f3e74ecb2d130bc798c96677bbf06d0f4df547680b9dae4686ee5e70e685e",
+      "declaration_line": 39
+    },
+    {
+      "endpoint": "RobertPublishable.BM.balanced_deleted_edges_le",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "STANDARD_KERNEL_AXIOMS",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\BM\\CutResilience.lean",
+      "source_sha256": "070f3e74ecb2d130bc798c96677bbf06d0f4df547680b9dae4686ee5e70e685e",
+      "declaration_line": 57
+    },
+    {
+      "endpoint": "RobertPublishable.BM.cut_deletion_identity",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "STANDARD_KERNEL_AXIOMS",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\BM\\CutResilience.lean",
+      "source_sha256": "070f3e74ecb2d130bc798c96677bbf06d0f4df547680b9dae4686ee5e70e685e",
+      "declaration_line": 71
+    },
+    {
+      "endpoint": "RobertPublishable.BM.balanced_cut_loss_le",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "STANDARD_KERNEL_AXIOMS",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\BM\\CutResilience.lean",
+      "source_sha256": "070f3e74ecb2d130bc798c96677bbf06d0f4df547680b9dae4686ee5e70e685e",
+      "declaration_line": 93
+    },
+    {
+      "endpoint": "RobertPublishable.BM.vacuous_zero_degree_cherry_counterexample",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "STANDARD_KERNEL_AXIOMS",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\BM\\CherryBoundary.lean",
+      "source_sha256": "ec62c4354f263a6d3923d5dc232c40e67eb8677e33f5662ac8be037c3df6fd85",
+      "declaration_line": 23
+    },
+    {
+      "endpoint": "RobertPublishable.BM.hasCherry_of_two_neighbors",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "STANDARD_KERNEL_AXIOMS",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\BM\\CherryBoundary.lean",
+      "source_sha256": "ec62c4354f263a6d3923d5dc232c40e67eb8677e33f5662ac8be037c3df6fd85",
+      "declaration_line": 33
+    },
+    {
+      "endpoint": "RobertPublishable.BM.hasCherry_of_nonempty_centres",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "STANDARD_KERNEL_AXIOMS",
+      "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\BM\\CherryBoundary.lean",
+      "source_sha256": "ec62c4354f263a6d3923d5dc232c40e67eb8677e33f5662ac8be037c3df6fd85",
+      "declaration_line": 42
+    }
+  ],
+  "preserved_initial_failed_attempts": [
+    {
+      "actual_receipt": {
+        "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\BM\\attempts\\002-CutResilience\\actual_invocation.json",
+        "sha256": "df0508995bcaa8f9476e8b83e44f84ccea93ecf12fbbe3acdfa26638bca4a3ba",
+        "bytes": 9677
+      },
+      "source_snapshot": {
+        "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\BM\\attempts\\002-CutResilience\\source.lean",
+        "sha256": "b9b65d83afe7b9effe4f35939be9c8889c5c56937fab4e0a4b6355d4bf3900f6",
+        "bytes": 4463
+      },
+      "guard_state": "COMMAND_FAILED",
+      "exit": 1,
+      "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\BM\\attempts\\002-CutResilience\\compiler.stdout.txt",
+      "stdout_sha256": "559fa4afc920183dc4f4778167bf98c908285517ab823ec37d353f0b245327c6",
+      "reason": "A prepared import named Mathlib.Tactic.Omega, which is absent in this pin. Cut removed its unused import; Cherry imports exact core Lean.Elab.Tactic.Omega. Failed attempts are retained unchanged. No mathematical or resource failure is inferred."
+    },
+    {
+      "actual_receipt": {
+        "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\BM\\attempts\\003-CherryBoundary\\actual_invocation.json",
+        "sha256": "635314245934eb1fe09d8b4ba6e876a7ddbc9c5161fdccb8b94843b9fd816b04",
+        "bytes": 9688
+      },
+      "source_snapshot": {
+        "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\BM\\attempts\\003-CherryBoundary\\source.lean",
+        "sha256": "e1c262abf7660b47468f73dda53279cb554d6d703a8bdbbe6543a337793038a1",
+        "bytes": 2219
+      },
+      "guard_state": "COMMAND_FAILED",
+      "exit": 1,
+      "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\BM\\attempts\\003-CherryBoundary\\compiler.stdout.txt",
+      "stdout_sha256": "31c06320719b4fd139963c7c8cf385c8ac12ea672144dbe56b77d0303db2c002",
+      "reason": "A prepared import named Mathlib.Tactic.Omega, which is absent in this pin. Cut removed its unused import; Cherry imports exact core Lean.Elab.Tactic.Omega. Failed attempts are retained unchanged. No mathematical or resource failure is inferred."
+    }
+  ],
+  "current_runner": {
+    "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\BM\\compile_guarded.py",
+    "sha256": "a3eb656db61e8f56afaff4dd8a8064437314ae07a72d8984da665484757c6261",
+    "bytes": 6282
+  },
+  "original6GiB_prepared_runner_retained": {
+    "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\BM\\prepared_history\\compile_guarded.before_shared13.84f83e8f6190a024.py",
+    "sha256": "84f83e8f6190a024eee1c7a79fc36dfc9520d1f3ada0e6fc83b2901974f32d47",
+    "bytes": 4725
+  },
+  "source_scope_map": {
+    "HamiltonianDeletion": "Actual simple-graph Hamiltonian walks; transferring a cycle from the first-cycle edge-deleted graph yields disjoint full-support cycles. All Hamiltonicity/preservation assumptions are explicit. The pair predicate matches the original Erdős585 walk/support/edge semantics without importing Target admissions.",
+    "CutResilience": "Six adjacency-count lemmas establish disjoint-target decomposition and balanced vertex-deletion cut loss at most t|S|. They do not prove spanning regular-factor existence or Hamiltonicity.",
+    "CherryBoundary": "Exact Fin1 edgeless counterexample with d0/theta2/r1/empty shores, plus two valid nonvacuous existence-of-one-cherry lemmas. This is not a formal r-cherry packing theorem."
+  },
+  "ordinary_correction": {
+    "REPORT_locator": "findings/supplement/papers/bipartite-hamilton/REPORT.md:416-426",
+    "needed": "The standalone LemmaCh needs d>0 or an equivalent nonvacuity condition. Positive degree already holds in the intended main application.",
+    "proved_counterexample_endpoint": "RobertPublishable.BM.vacuous_zero_degree_cherry_counterexample",
+    "does_not_refute_main_BM": true
+  },
+  "main_BM_proved": false,
+  "regular_factor_F_proved": false,
+  "full_V110_proved": false,
+  "spectral_exponent5_accepted_or_scored": false,
+  "new_family_points": "0 from supporting/conditional pieces alone",
+  "primary_comparison_and_missing_closure": {
+    "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\BM\\primary_BM_novelty_and_proof_closure.json",
+    "sha256": "6399fe1b44173cf4eebb6b2edba452f51e16cad53fd5681378d23465e2d48485",
+    "bytes": 7515
+  },
+  "native_compilation_window_boundary": {
+    "observation": "ACTIVE_LEAN=[] immediately after three passes; SUB/root notified of returned serial window",
+    "actual_tool_output_reference": "functions.exec / exec_command chunk a41524",
+    "exact_census_timestamp_recorded": false,
+    "no_current_zero_Lean_claim": true
+  },
+  "source_privacy": "Only task-owned source/guard/compiler provenance; no correspondence, unrelated process or credential export.",
+  "operations": {
+    "original_repo_or_old_receipt_mutations": 0,
+    "toolchain_or_provider_rebuilds": 0,
+    "native_decide_calls": 0,
+    "GitHub_or_email_writes": 0
+  }
+}

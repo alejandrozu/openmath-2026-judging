@@ -1,0 +1,12 @@
+CherryBoundary.lean:33:0: warning: automatically included section variable(s) unused in theorem `RobertPublishable.BM.hasCherry_of_two_neighbors`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+'RobertPublishable.BM.vacuous_zero_degree_cherry_counterexample' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'RobertPublishable.BM.hasCherry_of_two_neighbors' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RobertPublishable.BM.hasCherry_of_nonempty_centres' depends on axioms: [propext, Classical.choice, Quot.sound]

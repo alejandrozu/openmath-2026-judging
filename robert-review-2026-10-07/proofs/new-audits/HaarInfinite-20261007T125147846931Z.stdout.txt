@@ -1,0 +1,22 @@
+HaarInfinite.lean:10:0: warning: This file has no module docstring (`/-! ... -/`). Add one after the imports to document the file.
+
+Note: This linter can be disabled with `set_option linter.style.moduleDocstring false`
+HaarInfinite.lean:16:0: warning: automatically included section variable(s) unused in theorem `OpenMathReview.HaarInfinite.neighborSet_false`:
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+HaarInfinite.lean:33:0: warning: automatically included section variable(s) unused in theorem `OpenMathReview.HaarInfinite.neighborSet_true`:
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+'OpenMathReview.HaarInfinite.neighbor_finite' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OpenMathReview.HaarInfinite.neighbor_ncard' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OpenMathReview.HaarInfinite.pair_four_neighbors' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OpenMathReview.HaarInfinite.four_le_card_of_pair' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OpenMathReview.HaarInfinite.hasPair_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+@hasPair_iff : ∀ {V : Type u_2} [inst : AddCommGroup V] [DecidableEq V] {p : ℕ} [inst_2 : Fact (Nat.Prime p)]
+  [Module (ZMod p) V] (S : Finset V), HasTwoEdgeDisjointCyclesSameVertexSet (Haar.graph S) ↔ 4 ≤ #S

@@ -1,0 +1,25 @@
+CutResilience.lean:21:0: warning: automatically included section variable(s) unused in theorem `RobertPublishable.BM.edgesTo_union`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+CutResilience.lean:31:0: warning: automatically included section variable(s) unused in theorem `RobertPublishable.BM.edgesTo_le_card_mul`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+CutResilience.lean:39:0: warning: automatically included section variable(s) unused in theorem `RobertPublishable.BM.deleted_neighbors_le_shore_budget`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+'RobertPublishable.BM.edgesTo_union' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RobertPublishable.BM.edgesTo_le_card_mul' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RobertPublishable.BM.deleted_neighbors_le_shore_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RobertPublishable.BM.balanced_deleted_edges_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RobertPublishable.BM.cut_deletion_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RobertPublishable.BM.balanced_cut_loss_le' depends on axioms: [propext, Classical.choice, Quot.sound]

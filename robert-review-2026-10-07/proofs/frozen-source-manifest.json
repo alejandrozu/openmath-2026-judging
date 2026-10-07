@@ -1,0 +1,856 @@
+{
+  "source_head": "1efc324e155ef0b6a7081c5f695c6c825e7debef",
+  "sources": [
+    {
+      "module": "Axioms",
+      "path": "Axioms.lean",
+      "sha256": "abb3b090aa1c2e774495d451a7d4dec2c5b95b263e69c3d93ab0842cfbf50a28",
+      "author_source_path": "Axioms.lean",
+      "author_source_url": "https://github.com/roberthuynh/erdos-585/blob/1efc324e155ef0b6a7081c5f695c6c825e7debef/Axioms.lean",
+      "baseline_compile_scope": "main"
+    },
+    {
+      "module": "Openmath.Proofs.BipartiteEulerian",
+      "path": "Openmath/Proofs/BipartiteEulerian.lean",
+      "sha256": "4929f7fa8307e12d590ae6f9c85d62fa271c3587a7b7794f2aebf23fca69a89d",
+      "author_source_path": "findings/supplement/lean/Openmath/Proofs/BipartiteEulerian.lean",
+      "author_source_url": "https://github.com/roberthuynh/erdos-585/blob/1efc324e155ef0b6a7081c5f695c6c825e7debef/findings/supplement/lean/Openmath/Proofs/BipartiteEulerian.lean",
+      "baseline_compile_scope": "supplement"
+    },
+    {
+      "module": "Openmath.Proofs.BipartiteObstruction",
+      "path": "Openmath/Proofs/BipartiteObstruction.lean",
+      "sha256": "3f2149214e796f014b03dde3e4563762b85adf80929659cd9235d3a0f72c7152",
+      "author_source_path": "findings/supplement/lean/Openmath/Proofs/BipartiteObstruction.lean",
+      "author_source_url": "https://github.com/roberthuynh/erdos-585/blob/1efc324e155ef0b6a7081c5f695c6c825e7debef/findings/supplement/lean/Openmath/Proofs/BipartiteObstruction.lean",
+      "baseline_compile_scope": "supplement"
+    },
+    {
+      "module": "Openmath.Proofs.BipartiteSeparation",
+      "path": "Openmath/Proofs/BipartiteSeparation.lean",
+      "sha256": "a764ba5abb7cabbc83ec4ad70a798189c38750b1de6901167d422ee8f6d29c9f",
+      "author_source_path": "findings/supplement/lean/Openmath/Proofs/BipartiteSeparation.lean",
+      "author_source_url": "https://github.com/roberthuynh/erdos-585/blob/1efc324e155ef0b6a7081c5f695c6c825e7debef/findings/supplement/lean/Openmath/Proofs/BipartiteSeparation.lean",
+      "baseline_compile_scope": "supplement"
+    },
+    {
+      "module": "Openmath.Proofs.CoverTransfer",
+      "path": "Openmath/Proofs/CoverTransfer.lean",
+      "sha256": "c7d496044205cb25157c3bb225b736bc8312d977d11f50bcff08d6269ebb0f8b",
+      "author_source_path": "findings/supplement/lean/Openmath/Proofs/CoverTransfer.lean",
+      "author_source_url": "https://github.com/roberthuynh/erdos-585/blob/1efc324e155ef0b6a7081c5f695c6c825e7debef/findings/supplement/lean/Openmath/Proofs/CoverTransfer.lean",
+      "baseline_compile_scope": "supplement"
+    },
+    {
+      "module": "Openmath.Proofs.Cubelike",
+      "path": "Openmath/Proofs/Cubelike.lean",
+      "sha256": "6bfdf04db59ff8e30ee67618e97227edecd2a3f67a550b436cdf3df7ad46c8e7",
+      "author_source_path": "findings/supplement/lean/Openmath/Proofs/Cubelike.lean",
+      "author_source_url": "https://github.com/roberthuynh/erdos-585/blob/1efc324e155ef0b6a7081c5f695c6c825e7debef/findings/supplement/lean/Openmath/Proofs/Cubelike.lean",
+      "baseline_compile_scope": "supplement"
+    },
+    {
+      "module": "Openmath.Proofs.CubelikeForest",
+      "path": "Openmath/Proofs/CubelikeForest.lean",
+      "sha256": "6c563e5e854e629f969411b42ce08b1f9fce00113cef6fefe6c439a9f4c0391d",
+      "author_source_path": "findings/supplement/lean/Openmath/Proofs/CubelikeForest.lean",
+      "author_source_url": "https://github.com/roberthuynh/erdos-585/blob/1efc324e155ef0b6a7081c5f695c6c825e7debef/findings/supplement/lean/Openmath/Proofs/CubelikeForest.lean",
+      "baseline_compile_scope": "supplement"
+    },
+    {
+      "module": "Openmath.Proofs.CubelikeSplit",
+      "path": "Openmath/Proofs/CubelikeSplit.lean",
+      "sha256": "4a5471663ee081a0d7f07de22656e53b7d50191aa368ad42ffa9c8dbf6d3e602",
+      "author_source_path": "findings/supplement/lean/Openmath/Proofs/CubelikeSplit.lean",
+      "author_source_url": "https://github.com/roberthuynh/erdos-585/blob/1efc324e155ef0b6a7081c5f695c6c825e7debef/findings/supplement/lean/Openmath/Proofs/CubelikeSplit.lean",
+      "baseline_compile_scope": "supplement"
+    },
+    {
+      "module": "Openmath.Proofs.CubelikeWitness",
+      "path": "Openmath/Proofs/CubelikeWitness.lean",
+      "sha256": "89e8c28fadd8027fd54dc4f71b33fe5c677ec685f5d176b1020ad8e8cae22f69",
+      "author_source_path": "findings/supplement/lean/Openmath/Proofs/CubelikeWitness.lean",
+      "author_source_url": "https://github.com/roberthuynh/erdos-585/blob/1efc324e155ef0b6a7081c5f695c6c825e7debef/findings/supplement/lean/Openmath/Proofs/CubelikeWitness.lean",
+      "baseline_compile_scope": "supplement"
+    },
+    {
+      "module": "Openmath.Proofs.CycleFactors",
+      "path": "Openmath/Proofs/CycleFactors.lean",
+      "sha256": "2e845fe5f6006da3d9fc7997709fa436f869b64bcf7ba5c6eec150628f1f77f4",
+      "author_source_path": "findings/supplement/lean/Openmath/Proofs/CycleFactors.lean",
+      "author_source_url": "https://github.com/roberthuynh/erdos-585/blob/1efc324e155ef0b6a7081c5f695c6c825e7debef/findings/supplement/lean/Openmath/Proofs/CycleFactors.lean",
+      "baseline_compile_scope": "supplement"
+    },
+    {
+      "module": "Openmath.Proofs.CycleLift",
+      "path": "Openmath/Proofs/CycleLift.lean",
+      "sha256": "7daa5c7b28a3e059acf4f329eaadb5c43dc7793ddf0f9e2157c16e6d5b6d114c",
+      "author_source_path": "findings/supplement/lean/Openmath/Proofs/CycleLift.lean",
+      "author_source_url": "https://github.com/roberthuynh/erdos-585/blob/1efc324e155ef0b6a7081c5f695c6c825e7debef/findings/supplement/lean/Openmath/Proofs/CycleLift.lean",
+      "baseline_compile_scope": "supplement"
+    },
+    {
+      "module": "Openmath.Proofs.DirectedState",
+      "path": "Openmath/Proofs/DirectedState.lean",
+      "sha256": "abd0306f6532f6836327171c6cba9b7a58de9ca32a302c00dcdd3e14ee2b26b8",
+      "author_source_path": "findings/supplement/lean/Openmath/Proofs/DirectedState.lean",
+      "author_source_url": "https://github.com/roberthuynh/erdos-585/blob/1efc324e155ef0b6a7081c5f695c6c825e7debef/findings/supplement/lean/Openmath/Proofs/DirectedState.lean",
+      "baseline_compile_scope": "supplement"
+    },
+    {
+      "module": "Openmath.Proofs.FactorExchange",
+      "path": "Openmath/Proofs/FactorExchange.lean",
+      "sha256": "db0596c5371c8608b6eafa770e71300256a4ca9740ce35d38e0108c81092bb2e",
+      "author_source_path": "findings/supplement/lean/Openmath/Proofs/FactorExchange.lean",
+      "author_source_url": "https://github.com/roberthuynh/erdos-585/blob/1efc324e155ef0b6a7081c5f695c6c825e7debef/findings/supplement/lean/Openmath/Proofs/FactorExchange.lean",
+      "baseline_compile_scope": "supplement"
+    },
+    {
+      "module": "Openmath.Proofs.Haar",
+      "path": "Openmath/Proofs/Haar.lean",
+      "sha256": "d0267e626ce68cd56be930d4821325de09fba57a9e4fe3095d8b1007175b779b",
+      "author_source_path": "findings/supplement/lean/Openmath/Proofs/Haar.lean",
+      "author_source_url": "https://github.com/roberthuynh/erdos-585/blob/1efc324e155ef0b6a7081c5f695c6c825e7debef/findings/supplement/lean/Openmath/Proofs/Haar.lean",
+      "baseline_compile_scope": "supplement"
+    },
+    {
+      "module": "Openmath.Proofs.HaarClassification",
+      "path": "Openmath/Proofs/HaarClassification.lean",
+      "sha256": "d59ac9ae87c3173ca1c8e5d398ef6a09184712c7cc8268e05ec9b34e719ec3c5",
+      "author_source_path": "findings/supplement/lean/Openmath/Proofs/HaarClassification.lean",
+      "author_source_url": "https://github.com/roberthuynh/erdos-585/blob/1efc324e155ef0b6a7081c5f695c6c825e7debef/findings/supplement/lean/Openmath/Proofs/HaarClassification.lean",
+      "baseline_compile_scope": "supplement"
+    },
+    {
+      "module": "Openmath.Proofs.HaarComponents104",
+      "path": "Openmath/Proofs/HaarComponents104.lean",
+      "sha256": "6bda3393068c7a9ee1a79859bee9fd666e941ee304a00d3cad83509abcbac804",
+      "author_source_path": "findings/supplement/lean/Openmath/Proofs/HaarComponents104.lean",
+      "author_source_url": "https://github.com/roberthuynh/erdos-585/blob/1efc324e155ef0b6a7081c5f695c6c825e7debef/findings/supplement/lean/Openmath/Proofs/HaarComponents104.lean",
+      "baseline_compile_scope": "supplement"
+    },
+    {
+      "module": "Openmath.Proofs.HaarComposite",
+      "path": "Openmath/Proofs/HaarComposite.lean",
+      "sha256": "e56f559695b14ab68d9de3ca14696ed4ccf99a8fd49e2c8d22ff686f686d3f44",
+      "author_source_path": "findings/supplement/lean/Openmath/Proofs/HaarComposite.lean",
+      "author_source_url": "https://github.com/roberthuynh/erdos-585/blob/1efc324e155ef0b6a7081c5f695c6c825e7debef/findings/supplement/lean/Openmath/Proofs/HaarComposite.lean",
+      "baseline_compile_scope": "supplement"
+    },
+    {
+      "module": "Openmath.Proofs.HaarCompositeBlue",
+      "path": "Openmath/Proofs/HaarCompositeBlue.lean",
+      "sha256": "cc7c4b9dd08f359446f963cb0436207bf54a1ec5c29e86b601fa518d971efa95",
+      "author_source_path": "findings/supplement/lean/Openmath/Proofs/HaarCompositeBlue.lean",
+      "author_source_url": "https://github.com/roberthuynh/erdos-585/blob/1efc324e155ef0b6a7081c5f695c6c825e7debef/findings/supplement/lean/Openmath/Proofs/HaarCompositeBlue.lean",
+      "baseline_compile_scope": "supplement"
+    },
+    {
+      "module": "Openmath.Proofs.HaarCompositeDefs",
+      "path": "Openmath/Proofs/HaarCompositeDefs.lean",
+      "sha256": "fcd61e2b4248e4cd5183a6eedac4a24083a250acb08fd5025a69e88fb6d5799c",
+      "author_source_path": "findings/supplement/lean/Openmath/Proofs/HaarCompositeDefs.lean",
+      "author_source_url": "https://github.com/roberthuynh/erdos-585/blob/1efc324e155ef0b6a7081c5f695c6c825e7debef/findings/supplement/lean/Openmath/Proofs/HaarCompositeDefs.lean",
+      "baseline_compile_scope": "supplement"
+    },
+    {
+      "module": "Openmath.Proofs.HaarCompositeEven",
+      "path": "Openmath/Proofs/HaarCompositeEven.lean",
+      "sha256": "5886e57b9091d4d83263731a43e57e1b19b5b67c0c14f22d6942b1dd7e3e6371",
+      "author_source_path": "findings/supplement/lean/Openmath/Proofs/HaarCompositeEven.lean",
+      "author_source_url": "https://github.com/roberthuynh/erdos-585/blob/1efc324e155ef0b6a7081c5f695c6c825e7debef/findings/supplement/lean/Openmath/Proofs/HaarCompositeEven.lean",
+      "baseline_compile_scope": "supplement"
+    },
+    {
+      "module": "Openmath.Proofs.HaarCompositeEvenBlue",
+      "path": "Openmath/Proofs/HaarCompositeEvenBlue.lean",
+      "sha256": "91c1b8a7b48450c5db0030fa69afe48241b4ad7b1108eb3bb8be57cf2a2be2e1",
+      "author_source_path": "findings/supplement/lean/Openmath/Proofs/HaarCompositeEvenBlue.lean",
+      "author_source_url": "https://github.com/roberthuynh/erdos-585/blob/1efc324e155ef0b6a7081c5f695c6c825e7debef/findings/supplement/lean/Openmath/Proofs/HaarCompositeEvenBlue.lean",
+      "baseline_compile_scope": "supplement"
+    },
+    {
+      "module": "Openmath.Proofs.HaarCompositeEvenDefs",
+      "path": "Openmath/Proofs/HaarCompositeEvenDefs.lean",
+      "sha256": "1bf06b9ba5d94e1bb3b48f167caa28592f21a309914dbc1ba1562bcadbc124af",
+      "author_source_path": "findings/supplement/lean/Openmath/Proofs/HaarCompositeEvenDefs.lean",
+      "author_source_url": "https://github.com/roberthuynh/erdos-585/blob/1efc324e155ef0b6a7081c5f695c6c825e7debef/findings/supplement/lean/Openmath/Proofs/HaarCompositeEvenDefs.lean",
+      "baseline_compile_scope": "supplement"
+    },
+    {
+      "module": "Openmath.Proofs.HaarCompositeEvenRed",
+      "path": "Openmath/Proofs/HaarCompositeEvenRed.lean",
+      "sha256": "1540d6fe5ffd20a40a67c029bd79ae5568849037919e3dc9054dd4fedc050f8c",
+      "author_source_path": "findings/supplement/lean/Openmath/Proofs/HaarCompositeEvenRed.lean",
+      "author_source_url": "https://github.com/roberthuynh/erdos-585/blob/1efc324e155ef0b6a7081c5f695c6c825e7debef/findings/supplement/lean/Openmath/Proofs/HaarCompositeEvenRed.lean",
+      "baseline_compile_scope": "supplement"
+    },
+    {
+      "module": "Openmath.Proofs.HaarCycle",
+      "path": "Openmath/Proofs/HaarCycle.lean",
+      "sha256": "b650fa4ba0704cadb0a65c1f80e83c638f29914db6c60f699017f2b6ecafaf81",
+      "author_source_path": "findings/supplement/lean/Openmath/Proofs/HaarCycle.lean",
+      "author_source_url": "https://github.com/roberthuynh/erdos-585/blob/1efc324e155ef0b6a7081c5f695c6c825e7debef/findings/supplement/lean/Openmath/Proofs/HaarCycle.lean",
+      "baseline_compile_scope": "supplement"
+    },
+    {
+      "module": "Openmath.Proofs.HaarDegree",
+      "path": "Openmath/Proofs/HaarDegree.lean",
+      "sha256": "528eb37828083642059330d57380ceaa539c4fc6ec0bbea39d1237f116224ce3",
+      "author_source_path": "findings/supplement/lean/Openmath/Proofs/HaarDegree.lean",
+      "author_source_url": "https://github.com/roberthuynh/erdos-585/blob/1efc324e155ef0b6a7081c5f695c6c825e7debef/findings/supplement/lean/Openmath/Proofs/HaarDegree.lean",
+      "baseline_compile_scope": "supplement"
+    },
+    {
+      "module": "Openmath.Proofs.HaarExtraction",
+      "path": "Openmath/Proofs/HaarExtraction.lean",
+      "sha256": "226325a86adbbc2f4371f8de94aa6bc1702deeeec19500c53b33e646b13d2355",
+      "author_source_path": "findings/supplement/lean/Openmath/Proofs/HaarExtraction.lean",
+      "author_source_url": "https://github.com/roberthuynh/erdos-585/blob/1efc324e155ef0b6a7081c5f695c6c825e7debef/findings/supplement/lean/Openmath/Proofs/HaarExtraction.lean",
+      "baseline_compile_scope": "supplement"
+    },
+    {
+      "module": "Openmath.Proofs.HaarGamma",
+      "path": "Openmath/Proofs/HaarGamma.lean",
+      "sha256": "a90d0a970e8c92c656e4f1c2b3bf19d99f9902c3942985bd32d973854a65b094",
+      "author_source_path": "findings/supplement/lean/Openmath/Proofs/HaarGamma.lean",
+      "author_source_url": "https://github.com/roberthuynh/erdos-585/blob/1efc324e155ef0b6a7081c5f695c6c825e7debef/findings/supplement/lean/Openmath/Proofs/HaarGamma.lean",
+      "baseline_compile_scope": "supplement"
+    },
+    {
+      "module": "Openmath.Proofs.HaarPair",
+      "path": "Openmath/Proofs/HaarPair.lean",
+      "sha256": "365397ced60f8381198b6bd2cfd598c179145175c91849ce4c87c6f41818c36e",
+      "author_source_path": "findings/supplement/lean/Openmath/Proofs/HaarPair.lean",
+      "author_source_url": "https://github.com/roberthuynh/erdos-585/blob/1efc324e155ef0b6a7081c5f695c6c825e7debef/findings/supplement/lean/Openmath/Proofs/HaarPair.lean",
+      "baseline_compile_scope": "supplement"
+    },
+    {
+      "module": "Openmath.Proofs.HaarRankOne",
+      "path": "Openmath/Proofs/HaarRankOne.lean",
+      "sha256": "dd5e129ea487adfc629b0824ab5a12de01098dd2840afa86f5ab50da30335207",
+      "author_source_path": "findings/supplement/lean/Openmath/Proofs/HaarRankOne.lean",
+      "author_source_url": "https://github.com/roberthuynh/erdos-585/blob/1efc324e155ef0b6a7081c5f695c6c825e7debef/findings/supplement/lean/Openmath/Proofs/HaarRankOne.lean",
+      "baseline_compile_scope": "supplement"
+    },
+    {
+      "module": "Openmath.Proofs.HaarRankTwo",
+      "path": "Openmath/Proofs/HaarRankTwo.lean",
+      "sha256": "3b202da7a89655de703347eaee96852a6655ec1b57dd2de46f2970ced78d9821",
+      "author_source_path": "findings/supplement/lean/Openmath/Proofs/HaarRankTwo.lean",
+      "author_source_url": "https://github.com/roberthuynh/erdos-585/blob/1efc324e155ef0b6a7081c5f695c6c825e7debef/findings/supplement/lean/Openmath/Proofs/HaarRankTwo.lean",
+      "baseline_compile_scope": "supplement"
+    },
+    {
+      "module": "Openmath.Proofs.HaarSixCycle",
+      "path": "Openmath/Proofs/HaarSixCycle.lean",
+      "sha256": "bd97f426311e30da9b1aabf74511fb9febbe908fb6d284bdce1853b109408f90",
+      "author_source_path": "findings/supplement/lean/Openmath/Proofs/HaarSixCycle.lean",
+      "author_source_url": "https://github.com/roberthuynh/erdos-585/blob/1efc324e155ef0b6a7081c5f695c6c825e7debef/findings/supplement/lean/Openmath/Proofs/HaarSixCycle.lean",
+      "baseline_compile_scope": "supplement"
+    },
+    {
+      "module": "Openmath.Proofs.HaarWitness",
+      "path": "Openmath/Proofs/HaarWitness.lean",
+      "sha256": "1595419a335385f4b82b9874ebbc5ba467f92e487562d4ed1e4504b106db26f0",
+      "author_source_path": "findings/supplement/lean/Openmath/Proofs/HaarWitness.lean",
+      "author_source_url": "https://github.com/roberthuynh/erdos-585/blob/1efc324e155ef0b6a7081c5f695c6c825e7debef/findings/supplement/lean/Openmath/Proofs/HaarWitness.lean",
+      "baseline_compile_scope": "supplement"
+    },
+    {
+      "module": "Openmath.Proofs.IncidenceExpansion",
+      "path": "Openmath/Proofs/IncidenceExpansion.lean",
+      "sha256": "7cbf875d94d48db17aa7127b4008a25b51dd65d1d355203db4666194759f0f6c",
+      "author_source_path": "findings/supplement/lean/Openmath/Proofs/IncidenceExpansion.lean",
+      "author_source_url": "https://github.com/roberthuynh/erdos-585/blob/1efc324e155ef0b6a7081c5f695c6c825e7debef/findings/supplement/lean/Openmath/Proofs/IncidenceExpansion.lean",
+      "baseline_compile_scope": "supplement"
+    },
+    {
+      "module": "Openmath.Proofs.InducedComponentBarrier104",
+      "path": "Openmath/Proofs/InducedComponentBarrier104.lean",
+      "sha256": "9f541b5d42de0c04d8a2bd3061cca003d2379f20bce50df92169dc0be4ad6c5c",
+      "author_source_path": "findings/supplement/lean/Openmath/Proofs/InducedComponentBarrier104.lean",
+      "author_source_url": "https://github.com/roberthuynh/erdos-585/blob/1efc324e155ef0b6a7081c5f695c6c825e7debef/findings/supplement/lean/Openmath/Proofs/InducedComponentBarrier104.lean",
+      "baseline_compile_scope": "supplement"
+    },
+    {
+      "module": "Openmath.Proofs.KempeSwap104",
+      "path": "Openmath/Proofs/KempeSwap104.lean",
+      "sha256": "8f7667478a0aa70f89d329204b025c89815d45cae6c36e0b2f35b82725b49ad8",
+      "author_source_path": "findings/supplement/lean/Openmath/Proofs/KempeSwap104.lean",
+      "author_source_url": "https://github.com/roberthuynh/erdos-585/blob/1efc324e155ef0b6a7081c5f695c6c825e7debef/findings/supplement/lean/Openmath/Proofs/KempeSwap104.lean",
+      "baseline_compile_scope": "supplement"
+    },
+    {
+      "module": "Openmath.Proofs.LocalMatchingProbe",
+      "path": "Openmath/Proofs/LocalMatchingProbe.lean",
+      "sha256": "a8f390a744a627e49521bd8e46069af92768270b18c2ca8c4550f0598492e918",
+      "author_source_path": "findings/supplement/lean/Openmath/Proofs/LocalMatchingProbe.lean",
+      "author_source_url": "https://github.com/roberthuynh/erdos-585/blob/1efc324e155ef0b6a7081c5f695c6c825e7debef/findings/supplement/lean/Openmath/Proofs/LocalMatchingProbe.lean",
+      "baseline_compile_scope": "supplement"
+    },
+    {
+      "module": "Openmath.Proofs.MatchingComponents",
+      "path": "Openmath/Proofs/MatchingComponents.lean",
+      "sha256": "e518b05e537274afc14fe9b070b4b0454dc9fc238fff8bee8730f6ec24c61d67",
+      "author_source_path": "findings/supplement/lean/Openmath/Proofs/MatchingComponents.lean",
+      "author_source_url": "https://github.com/roberthuynh/erdos-585/blob/1efc324e155ef0b6a7081c5f695c6c825e7debef/findings/supplement/lean/Openmath/Proofs/MatchingComponents.lean",
+      "baseline_compile_scope": "supplement"
+    },
+    {
+      "module": "Openmath.Proofs.MatchingCutPaths",
+      "path": "Openmath/Proofs/MatchingCutPaths.lean",
+      "sha256": "ccfa851e00359ea617a44309f988cb02546bd4ea9326393c464d85ebc2b39a1e",
+      "author_source_path": "findings/supplement/lean/Openmath/Proofs/MatchingCutPaths.lean",
+      "author_source_url": "https://github.com/roberthuynh/erdos-585/blob/1efc324e155ef0b6a7081c5f695c6c825e7debef/findings/supplement/lean/Openmath/Proofs/MatchingCutPaths.lean",
+      "baseline_compile_scope": "supplement"
+    },
+    {
+      "module": "Openmath.Proofs.MatchingJoinCertificates",
+      "path": "Openmath/Proofs/MatchingJoinCertificates.lean",
+      "sha256": "8d7c3cbb3f63eaa02b58bb3208e61a7d885f5fd4b12c36033cf1930d70e04d1a",
+      "author_source_path": "findings/supplement/lean/Openmath/Proofs/MatchingJoinCertificates.lean",
+      "author_source_url": "https://github.com/roberthuynh/erdos-585/blob/1efc324e155ef0b6a7081c5f695c6c825e7debef/findings/supplement/lean/Openmath/Proofs/MatchingJoinCertificates.lean",
+      "baseline_compile_scope": "supplement"
+    },
+    {
+      "module": "Openmath.Proofs.MatchingJoinCore",
+      "path": "Openmath/Proofs/MatchingJoinCore.lean",
+      "sha256": "29829bb4cc1115583365818b2bb2035b140abd566cdc7244f1cb6c25a18a7cfb",
+      "author_source_path": "findings/supplement/lean/Openmath/Proofs/MatchingJoinCore.lean",
+      "author_source_url": "https://github.com/roberthuynh/erdos-585/blob/1efc324e155ef0b6a7081c5f695c6c825e7debef/findings/supplement/lean/Openmath/Proofs/MatchingJoinCore.lean",
+      "baseline_compile_scope": "supplement"
+    },
+    {
+      "module": "Openmath.Proofs.MatchingJoinCycles",
+      "path": "Openmath/Proofs/MatchingJoinCycles.lean",
+      "sha256": "2f35e6550d058f5966771df607400af27cdaf4aa896221a5f19221d8b63f4ac1",
+      "author_source_path": "findings/supplement/lean/Openmath/Proofs/MatchingJoinCycles.lean",
+      "author_source_url": "https://github.com/roberthuynh/erdos-585/blob/1efc324e155ef0b6a7081c5f695c6c825e7debef/findings/supplement/lean/Openmath/Proofs/MatchingJoinCycles.lean",
+      "baseline_compile_scope": "supplement"
+    },
+    {
+      "module": "Openmath.Proofs.MatchingJoinDefs",
+      "path": "Openmath/Proofs/MatchingJoinDefs.lean",
+      "sha256": "2c894c6932f5f6b7496d6e5c315b504d31a566a37d3de47e40d7c1089f7bc320",
+      "author_source_path": "findings/supplement/lean/Openmath/Proofs/MatchingJoinDefs.lean",
+      "author_source_url": "https://github.com/roberthuynh/erdos-585/blob/1efc324e155ef0b6a7081c5f695c6c825e7debef/findings/supplement/lean/Openmath/Proofs/MatchingJoinDefs.lean",
+      "baseline_compile_scope": "supplement"
+    },
+    {
+      "module": "Openmath.Proofs.MatchingJoinDegree",
+      "path": "Openmath/Proofs/MatchingJoinDegree.lean",
+      "sha256": "797af411e14abe4011c32eae1fcdbc77dfe924152fc31b18a793a243e4b29143",
+      "author_source_path": "findings/supplement/lean/Openmath/Proofs/MatchingJoinDegree.lean",
+      "author_source_url": "https://github.com/roberthuynh/erdos-585/blob/1efc324e155ef0b6a7081c5f695c6c825e7debef/findings/supplement/lean/Openmath/Proofs/MatchingJoinDegree.lean",
+      "baseline_compile_scope": "supplement"
+    },
+    {
+      "module": "Openmath.Proofs.MatchingJoinPaths",
+      "path": "Openmath/Proofs/MatchingJoinPaths.lean",
+      "sha256": "57a8f8f5753b1f018e3cc0bb9e6017414b6f7ef1ce7335463732f692a2039970",
+      "author_source_path": "findings/supplement/lean/Openmath/Proofs/MatchingJoinPaths.lean",
+      "author_source_url": "https://github.com/roberthuynh/erdos-585/blob/1efc324e155ef0b6a7081c5f695c6c825e7debef/findings/supplement/lean/Openmath/Proofs/MatchingJoinPaths.lean",
+      "baseline_compile_scope": "supplement"
+    },
+    {
+      "module": "Openmath.Proofs.MatchingJoinSelection",
+      "path": "Openmath/Proofs/MatchingJoinSelection.lean",
+      "sha256": "893e19c48bfe39d4d368bc5990d032f74d9007bee475016600f8484bf92e5aa0",
+      "author_source_path": "findings/supplement/lean/Openmath/Proofs/MatchingJoinSelection.lean",
+      "author_source_url": "https://github.com/roberthuynh/erdos-585/blob/1efc324e155ef0b6a7081c5f695c6c825e7debef/findings/supplement/lean/Openmath/Proofs/MatchingJoinSelection.lean",
+      "baseline_compile_scope": "supplement"
+    },
+    {
+      "module": "Openmath.Proofs.MatchingJoinWalks",
+      "path": "Openmath/Proofs/MatchingJoinWalks.lean",
+      "sha256": "deeb669393e0fe40b447dd32bd52968d3b03ae33eb22ad814af666c927543c0c",
+      "author_source_path": "findings/supplement/lean/Openmath/Proofs/MatchingJoinWalks.lean",
+      "author_source_url": "https://github.com/roberthuynh/erdos-585/blob/1efc324e155ef0b6a7081c5f695c6c825e7debef/findings/supplement/lean/Openmath/Proofs/MatchingJoinWalks.lean",
+      "baseline_compile_scope": "supplement"
+    },
+    {
+      "module": "Openmath.Proofs.ParabolaAlgebra104",
+      "path": "Openmath/Proofs/ParabolaAlgebra104.lean",
+      "sha256": "8b775249692257342a3bbee176033c1caafdb5f932582238c756cc982620a97c",
+      "author_source_path": "findings/supplement/lean/Openmath/Proofs/ParabolaAlgebra104.lean",
+      "author_source_url": "https://github.com/roberthuynh/erdos-585/blob/1efc324e155ef0b6a7081c5f695c6c825e7debef/findings/supplement/lean/Openmath/Proofs/ParabolaAlgebra104.lean",
+      "baseline_compile_scope": "supplement"
+    },
+    {
+      "module": "Openmath.Proofs.ParabolaBarrier104",
+      "path": "Openmath/Proofs/ParabolaBarrier104.lean",
+      "sha256": "f2e3cc3e6ad58e9c45fceffd9b6b259352ca75b09e3c46d612a9cea0de3998e6",
+      "author_source_path": "findings/supplement/lean/Openmath/Proofs/ParabolaBarrier104.lean",
+      "author_source_url": "https://github.com/roberthuynh/erdos-585/blob/1efc324e155ef0b6a7081c5f695c6c825e7debef/findings/supplement/lean/Openmath/Proofs/ParabolaBarrier104.lean",
+      "baseline_compile_scope": "supplement"
+    },
+    {
+      "module": "Openmath.Proofs.ParabolaGraph104",
+      "path": "Openmath/Proofs/ParabolaGraph104.lean",
+      "sha256": "313e3da79b2495a90b48db090b74bd5612c63e8b96ee4c679b85d42af604939e",
+      "author_source_path": "findings/supplement/lean/Openmath/Proofs/ParabolaGraph104.lean",
+      "author_source_url": "https://github.com/roberthuynh/erdos-585/blob/1efc324e155ef0b6a7081c5f695c6c825e7debef/findings/supplement/lean/Openmath/Proofs/ParabolaGraph104.lean",
+      "baseline_compile_scope": "supplement"
+    },
+    {
+      "module": "Openmath.Proofs.ParabolaGrowth104",
+      "path": "Openmath/Proofs/ParabolaGrowth104.lean",
+      "sha256": "c16cea305a678621169cf2d1b0b05ddd217cc022fff1b9466fbed71d15143c31",
+      "author_source_path": "findings/supplement/lean/Openmath/Proofs/ParabolaGrowth104.lean",
+      "author_source_url": "https://github.com/roberthuynh/erdos-585/blob/1efc324e155ef0b6a7081c5f695c6c825e7debef/findings/supplement/lean/Openmath/Proofs/ParabolaGrowth104.lean",
+      "baseline_compile_scope": "supplement"
+    },
+    {
+      "module": "Openmath.Proofs.PortCompletion",
+      "path": "Openmath/Proofs/PortCompletion.lean",
+      "sha256": "37ad636601e54783c91646f648b7e03194b26a23ebff3971b02f9bce15e4cc7f",
+      "author_source_path": "findings/supplement/lean/Openmath/Proofs/PortCompletion.lean",
+      "author_source_url": "https://github.com/roberthuynh/erdos-585/blob/1efc324e155ef0b6a7081c5f695c6c825e7debef/findings/supplement/lean/Openmath/Proofs/PortCompletion.lean",
+      "baseline_compile_scope": "supplement"
+    },
+    {
+      "module": "Openmath.Proofs.SignedPrismCore",
+      "path": "Openmath/Proofs/SignedPrismCore.lean",
+      "sha256": "01260ccb9f27822cf19a4f4da182e29e26e87adaf05fe16006259695d83774f2",
+      "author_source_path": "findings/supplement/lean/Openmath/Proofs/SignedPrismCore.lean",
+      "author_source_url": "https://github.com/roberthuynh/erdos-585/blob/1efc324e155ef0b6a7081c5f695c6c825e7debef/findings/supplement/lean/Openmath/Proofs/SignedPrismCore.lean",
+      "baseline_compile_scope": "supplement"
+    },
+    {
+      "module": "Openmath.Proofs.SignedPrismCoreDefs",
+      "path": "Openmath/Proofs/SignedPrismCoreDefs.lean",
+      "sha256": "4a3e4a7015f5c113f7f93c75db1b55fa47ce37fe9f6c865172485026650608a4",
+      "author_source_path": "findings/supplement/lean/Openmath/Proofs/SignedPrismCoreDefs.lean",
+      "author_source_url": "https://github.com/roberthuynh/erdos-585/blob/1efc324e155ef0b6a7081c5f695c6c825e7debef/findings/supplement/lean/Openmath/Proofs/SignedPrismCoreDefs.lean",
+      "baseline_compile_scope": "supplement"
+    },
+    {
+      "module": "Openmath.Proofs.TwinComponentCount",
+      "path": "Openmath/Proofs/TwinComponentCount.lean",
+      "sha256": "fcf46560fd604bf1d17572e508216a9c200d0b4ca03a952675fa98bfa5564e19",
+      "author_source_path": "findings/supplement/lean/Openmath/Proofs/TwinComponentCount.lean",
+      "author_source_url": "https://github.com/roberthuynh/erdos-585/blob/1efc324e155ef0b6a7081c5f695c6c825e7debef/findings/supplement/lean/Openmath/Proofs/TwinComponentCount.lean",
+      "baseline_compile_scope": "supplement"
+    },
+    {
+      "module": "Openmath.Proofs.TwinCoreForcing",
+      "path": "Openmath/Proofs/TwinCoreForcing.lean",
+      "sha256": "45038dc4ea3a12dd0ccd7df00a9b8e6b0c97ad9d47572b4721a5f788b56680a7",
+      "author_source_path": "findings/supplement/lean/Openmath/Proofs/TwinCoreForcing.lean",
+      "author_source_url": "https://github.com/roberthuynh/erdos-585/blob/1efc324e155ef0b6a7081c5f695c6c825e7debef/findings/supplement/lean/Openmath/Proofs/TwinCoreForcing.lean",
+      "baseline_compile_scope": "supplement"
+    },
+    {
+      "module": "Openmath.Proofs.TwinDoubleCycle",
+      "path": "Openmath/Proofs/TwinDoubleCycle.lean",
+      "sha256": "d8bc0cbe032cf45a0fe4d2591a93325ec83129f6ace65865e42610f2bd182fc6",
+      "author_source_path": "findings/supplement/lean/Openmath/Proofs/TwinDoubleCycle.lean",
+      "author_source_url": "https://github.com/roberthuynh/erdos-585/blob/1efc324e155ef0b6a7081c5f695c6c825e7debef/findings/supplement/lean/Openmath/Proofs/TwinDoubleCycle.lean",
+      "baseline_compile_scope": "supplement"
+    },
+    {
+      "module": "Openmath.Proofs.TwinNoSingleton",
+      "path": "Openmath/Proofs/TwinNoSingleton.lean",
+      "sha256": "a87819150b19b419afe7205ff74f3043b8ef069b51d1e271cc1558dfe56e1f1b",
+      "author_source_path": "findings/supplement/lean/Openmath/Proofs/TwinNoSingleton.lean",
+      "author_source_url": "https://github.com/roberthuynh/erdos-585/blob/1efc324e155ef0b6a7081c5f695c6c825e7debef/findings/supplement/lean/Openmath/Proofs/TwinNoSingleton.lean",
+      "baseline_compile_scope": "supplement"
+    },
+    {
+      "module": "Openmath.Proofs.TwinZeroSum",
+      "path": "Openmath/Proofs/TwinZeroSum.lean",
+      "sha256": "dd076167776c8da6aba851a4f7dea029bc2ea0fb3765b5480ef198ae55cb25b3",
+      "author_source_path": "findings/supplement/lean/Openmath/Proofs/TwinZeroSum.lean",
+      "author_source_url": "https://github.com/roberthuynh/erdos-585/blob/1efc324e155ef0b6a7081c5f695c6c825e7debef/findings/supplement/lean/Openmath/Proofs/TwinZeroSum.lean",
+      "baseline_compile_scope": "supplement"
+    },
+    {
+      "module": "Openmath.Proofs.Wenger",
+      "path": "Openmath/Proofs/Wenger.lean",
+      "sha256": "76e33a07d7047f0f696e4d507e209251191f8e73aa5ea5bb28dec83c6baf2997",
+      "author_source_path": "findings/supplement/lean/Openmath/Proofs/Wenger.lean",
+      "author_source_url": "https://github.com/roberthuynh/erdos-585/blob/1efc324e155ef0b6a7081c5f695c6c825e7debef/findings/supplement/lean/Openmath/Proofs/Wenger.lean",
+      "baseline_compile_scope": "supplement"
+    },
+    {
+      "module": "Openmath.Proofs.AdjacentHubs",
+      "path": "Openmath/Proofs/AdjacentHubs.lean",
+      "sha256": "52cb396728c1c9f5c2c37d11d5e881af2158da51a66aad2c414fd525c1b210ff",
+      "author_source_path": "Openmath/Proofs/AdjacentHubs.lean",
+      "author_source_url": "https://github.com/roberthuynh/erdos-585/blob/1efc324e155ef0b6a7081c5f695c6c825e7debef/Openmath/Proofs/AdjacentHubs.lean",
+      "baseline_compile_scope": "main"
+    },
+    {
+      "module": "Openmath.Proofs.BipartiteBalance",
+      "path": "Openmath/Proofs/BipartiteBalance.lean",
+      "sha256": "4d672d00af1de1ac6e649ef7ac70579dc5216988d3388670c089715a00605099",
+      "author_source_path": "Openmath/Proofs/BipartiteBalance.lean",
+      "author_source_url": "https://github.com/roberthuynh/erdos-585/blob/1efc324e155ef0b6a7081c5f695c6c825e7debef/Openmath/Proofs/BipartiteBalance.lean",
+      "baseline_compile_scope": "main"
+    },
+    {
+      "module": "Openmath.Proofs.BipartiteFive",
+      "path": "Openmath/Proofs/BipartiteFive.lean",
+      "sha256": "169525bd14b221f8a6d52ede129e935d9962fdd1c4b35eaa747cafdeeac67349",
+      "author_source_path": "Openmath/Proofs/BipartiteFive.lean",
+      "author_source_url": "https://github.com/roberthuynh/erdos-585/blob/1efc324e155ef0b6a7081c5f695c6c825e7debef/Openmath/Proofs/BipartiteFive.lean",
+      "baseline_compile_scope": "main"
+    },
+    {
+      "module": "Openmath.Proofs.Compat",
+      "path": "Openmath/Proofs/Compat.lean",
+      "sha256": "838089c8e4dee1f1f29a9ef6a1dcb9d9e479d41ceb447b523ceaac6cb21b258f",
+      "author_source_path": "Openmath/Proofs/Compat.lean",
+      "author_source_url": "https://github.com/roberthuynh/erdos-585/blob/1efc324e155ef0b6a7081c5f695c6c825e7debef/Openmath/Proofs/Compat.lean",
+      "baseline_compile_scope": "main"
+    },
+    {
+      "module": "Openmath.Proofs.Counting",
+      "path": "Openmath/Proofs/Counting.lean",
+      "sha256": "d8c2f58b3a5f33ed52a02486ba8be19395d5323eb2b66f5bbc214c9755cbb972",
+      "author_source_path": "Openmath/Proofs/Counting.lean",
+      "author_source_url": "https://github.com/roberthuynh/erdos-585/blob/1efc324e155ef0b6a7081c5f695c6c825e7debef/Openmath/Proofs/Counting.lean",
+      "baseline_compile_scope": "main"
+    },
+    {
+      "module": "Openmath.Proofs.CutGluing",
+      "path": "Openmath/Proofs/CutGluing.lean",
+      "sha256": "029c878bda18760388b34644cb62269673390504455523ac137d68bcf7cc746e",
+      "author_source_path": "Openmath/Proofs/CutGluing.lean",
+      "author_source_url": "https://github.com/roberthuynh/erdos-585/blob/1efc324e155ef0b6a7081c5f695c6c825e7debef/Openmath/Proofs/CutGluing.lean",
+      "baseline_compile_scope": "main"
+    },
+    {
+      "module": "Openmath.Proofs.DensityCore",
+      "path": "Openmath/Proofs/DensityCore.lean",
+      "sha256": "bd3c93278905d5388b9361c9d2342306c4c257d704438c682fc4f8018571264e",
+      "author_source_path": "Openmath/Proofs/DensityCore.lean",
+      "author_source_url": "https://github.com/roberthuynh/erdos-585/blob/1efc324e155ef0b6a7081c5f695c6c825e7debef/Openmath/Proofs/DensityCore.lean",
+      "baseline_compile_scope": "main"
+    },
+    {
+      "module": "Openmath.Proofs.DoubleWheel",
+      "path": "Openmath/Proofs/DoubleWheel.lean",
+      "sha256": "8395d8643e3ba2f4cdf8468f2cec62788b501a22601eaefc39fe9f6d3190e3ac",
+      "author_source_path": "Openmath/Proofs/DoubleWheel.lean",
+      "author_source_url": "https://github.com/roberthuynh/erdos-585/blob/1efc324e155ef0b6a7081c5f695c6c825e7debef/Openmath/Proofs/DoubleWheel.lean",
+      "baseline_compile_scope": "main"
+    },
+    {
+      "module": "Openmath.Proofs.Extension",
+      "path": "Openmath/Proofs/Extension.lean",
+      "sha256": "00942fb83565ae98f36329ebdc5d5308057cc3225ebef23008085308d29f5a54",
+      "author_source_path": "Openmath/Proofs/Extension.lean",
+      "author_source_url": "https://github.com/roberthuynh/erdos-585/blob/1efc324e155ef0b6a7081c5f695c6c825e7debef/Openmath/Proofs/Extension.lean",
+      "baseline_compile_scope": "main"
+    },
+    {
+      "module": "Openmath.Proofs.Final",
+      "path": "Openmath/Proofs/Final.lean",
+      "sha256": "73095dca497005eacdc0bfd0fd7c85f54753de68e253276b4eaeec2b8edc370a",
+      "author_source_path": "Openmath/Proofs/Final.lean",
+      "author_source_url": "https://github.com/roberthuynh/erdos-585/blob/1efc324e155ef0b6a7081c5f695c6c825e7debef/Openmath/Proofs/Final.lean",
+      "baseline_compile_scope": "main"
+    },
+    {
+      "module": "Openmath.Proofs.Five",
+      "path": "Openmath/Proofs/Five.lean",
+      "sha256": "7323bc8c2ae579748fadd1dce667a80b59d9c98e3fbad383f88791d69c640a88",
+      "author_source_path": "Openmath/Proofs/Five.lean",
+      "author_source_url": "https://github.com/roberthuynh/erdos-585/blob/1efc324e155ef0b6a7081c5f695c6c825e7debef/Openmath/Proofs/Five.lean",
+      "baseline_compile_scope": "main"
+    },
+    {
+      "module": "Openmath.Proofs.IncidenceHubs",
+      "path": "Openmath/Proofs/IncidenceHubs.lean",
+      "sha256": "460a322237a3c0e2ba0df60b56d66f1f3b299cc0982b35d0694f32aded53e5c5",
+      "author_source_path": "Openmath/Proofs/IncidenceHubs.lean",
+      "author_source_url": "https://github.com/roberthuynh/erdos-585/blob/1efc324e155ef0b6a7081c5f695c6c825e7debef/Openmath/Proofs/IncidenceHubs.lean",
+      "baseline_compile_scope": "main"
+    },
+    {
+      "module": "Openmath.Proofs.LatinIncidence",
+      "path": "Openmath/Proofs/LatinIncidence.lean",
+      "sha256": "34558953432721fff1d0418c2266330e8c0666352db3899f3847d8b794579653",
+      "author_source_path": "Openmath/Proofs/LatinIncidence.lean",
+      "author_source_url": "https://github.com/roberthuynh/erdos-585/blob/1efc324e155ef0b6a7081c5f695c6c825e7debef/Openmath/Proofs/LatinIncidence.lean",
+      "baseline_compile_scope": "main"
+    },
+    {
+      "module": "Openmath.Proofs.MatchingSubdivision",
+      "path": "Openmath/Proofs/MatchingSubdivision.lean",
+      "sha256": "6bb48bd7e132c8620926e5d060ce0ed0b2be23227e72089e0d5b7fc562c4401f",
+      "author_source_path": "Openmath/Proofs/MatchingSubdivision.lean",
+      "author_source_url": "https://github.com/roberthuynh/erdos-585/blob/1efc324e155ef0b6a7081c5f695c6c825e7debef/Openmath/Proofs/MatchingSubdivision.lean",
+      "baseline_compile_scope": "main"
+    },
+    {
+      "module": "Openmath.Proofs.QB4.Core",
+      "path": "Openmath/Proofs/QB4/Core.lean",
+      "sha256": "8cc1120c58ef78cc7d38614fc04e082c055effb1097649b5657cd48231d958d2",
+      "author_source_path": "Openmath/Proofs/QB4/Core.lean",
+      "author_source_url": "https://github.com/roberthuynh/erdos-585/blob/1efc324e155ef0b6a7081c5f695c6c825e7debef/Openmath/Proofs/QB4/Core.lean",
+      "baseline_compile_scope": "main"
+    },
+    {
+      "module": "Openmath.Proofs.QB4.Defs",
+      "path": "Openmath/Proofs/QB4/Defs.lean",
+      "sha256": "e3c3fb709df7aa585a2fac0505c35d259eb4421686292d0657f3d7ea02e4aa59",
+      "author_source_path": "Openmath/Proofs/QB4/Defs.lean",
+      "author_source_url": "https://github.com/roberthuynh/erdos-585/blob/1efc324e155ef0b6a7081c5f695c6c825e7debef/Openmath/Proofs/QB4/Defs.lean",
+      "baseline_compile_scope": "main"
+    },
+    {
+      "module": "Openmath.Proofs.QB4.FourFactor",
+      "path": "Openmath/Proofs/QB4/FourFactor.lean",
+      "sha256": "b2d8fd160ff24148fda8f6af765b9b1ab7b3d11a35d15112a4fdd45d5eccc5a7",
+      "author_source_path": "Openmath/Proofs/QB4/FourFactor.lean",
+      "author_source_url": "https://github.com/roberthuynh/erdos-585/blob/1efc324e155ef0b6a7081c5f695c6c825e7debef/Openmath/Proofs/QB4/FourFactor.lean",
+      "baseline_compile_scope": "main"
+    },
+    {
+      "module": "Openmath.Proofs.QB4.Main",
+      "path": "Openmath/Proofs/QB4/Main.lean",
+      "sha256": "8dc915e5f7481648df4eac79c4fa3eeb0dc56f4278b8bd1274f76d102a9fcdcc",
+      "author_source_path": "Openmath/Proofs/QB4/Main.lean",
+      "author_source_url": "https://github.com/roberthuynh/erdos-585/blob/1efc324e155ef0b6a7081c5f695c6c825e7debef/Openmath/Proofs/QB4/Main.lean",
+      "baseline_compile_scope": "main"
+    },
+    {
+      "module": "Openmath.Proofs.QB4.Reductions",
+      "path": "Openmath/Proofs/QB4/Reductions.lean",
+      "sha256": "4ab9f20964f7cbcf7e932476e005b9a6d741e14cf3f53bc1e773cffb46d9da39",
+      "author_source_path": "Openmath/Proofs/QB4/Reductions.lean",
+      "author_source_url": "https://github.com/roberthuynh/erdos-585/blob/1efc324e155ef0b6a7081c5f695c6c825e7debef/Openmath/Proofs/QB4/Reductions.lean",
+      "baseline_compile_scope": "main"
+    },
+    {
+      "module": "Openmath.Proofs.QB4.Statement",
+      "path": "Openmath/Proofs/QB4/Statement.lean",
+      "sha256": "6ca9655cefae08b7ca6f833a289acb792dced35fc56abaeab8ad2a31b146954f",
+      "author_source_path": "Openmath/Proofs/QB4/Statement.lean",
+      "author_source_url": "https://github.com/roberthuynh/erdos-585/blob/1efc324e155ef0b6a7081c5f695c6c825e7debef/Openmath/Proofs/QB4/Statement.lean",
+      "baseline_compile_scope": "main"
+    },
+    {
+      "module": "Openmath.Proofs.QB5.Block",
+      "path": "Openmath/Proofs/QB5/Block.lean",
+      "sha256": "9bc3ec54921cc5d656a65f7f2837415b1de3e368a7d80b937d6ec951406ff21a",
+      "author_source_path": "Openmath/Proofs/QB5/Block.lean",
+      "author_source_url": "https://github.com/roberthuynh/erdos-585/blob/1efc324e155ef0b6a7081c5f695c6c825e7debef/Openmath/Proofs/QB5/Block.lean",
+      "baseline_compile_scope": "main"
+    },
+    {
+      "module": "Openmath.Proofs.QB5.C2Hub",
+      "path": "Openmath/Proofs/QB5/C2Hub.lean",
+      "sha256": "1aa948359057bd7011e08d2b11139a6913aeef0c7707ae823b954aaad51feee0",
+      "author_source_path": "Openmath/Proofs/QB5/C2Hub.lean",
+      "author_source_url": "https://github.com/roberthuynh/erdos-585/blob/1efc324e155ef0b6a7081c5f695c6c825e7debef/Openmath/Proofs/QB5/C2Hub.lean",
+      "baseline_compile_scope": "main"
+    },
+    {
+      "module": "Openmath.Proofs.QB5.C2Petals",
+      "path": "Openmath/Proofs/QB5/C2Petals.lean",
+      "sha256": "5d2db8d3e8b69a0bef9670c599c62cb9e38d395a3c03dc3adcd80903d4a5578a",
+      "author_source_path": "Openmath/Proofs/QB5/C2Petals.lean",
+      "author_source_url": "https://github.com/roberthuynh/erdos-585/blob/1efc324e155ef0b6a7081c5f695c6c825e7debef/Openmath/Proofs/QB5/C2Petals.lean",
+      "baseline_compile_scope": "main"
+    },
+    {
+      "module": "Openmath.Proofs.QB5.C2TwoBlock",
+      "path": "Openmath/Proofs/QB5/C2TwoBlock.lean",
+      "sha256": "bda14ff625d313c26dd43b6d7aeb3534f86bc5ec2969a4df2e0553642ff2e686",
+      "author_source_path": "Openmath/Proofs/QB5/C2TwoBlock.lean",
+      "author_source_url": "https://github.com/roberthuynh/erdos-585/blob/1efc324e155ef0b6a7081c5f695c6c825e7debef/Openmath/Proofs/QB5/C2TwoBlock.lean",
+      "baseline_compile_scope": "main"
+    },
+    {
+      "module": "Openmath.Proofs.QB5.CaseB",
+      "path": "Openmath/Proofs/QB5/CaseB.lean",
+      "sha256": "b7903beb04c647b1b43cf072f37908f9e6bb08bf9fced0cc311e248d36d65ce3",
+      "author_source_path": "Openmath/Proofs/QB5/CaseB.lean",
+      "author_source_url": "https://github.com/roberthuynh/erdos-585/blob/1efc324e155ef0b6a7081c5f695c6c825e7debef/Openmath/Proofs/QB5/CaseB.lean",
+      "baseline_compile_scope": "main"
+    },
+    {
+      "module": "Openmath.Proofs.QB5.Cover",
+      "path": "Openmath/Proofs/QB5/Cover.lean",
+      "sha256": "21fc8e641fc719400681cb6cf0d250d5a72d79f9fad018ebe677cc9516a84798",
+      "author_source_path": "Openmath/Proofs/QB5/Cover.lean",
+      "author_source_url": "https://github.com/roberthuynh/erdos-585/blob/1efc324e155ef0b6a7081c5f695c6c825e7debef/Openmath/Proofs/QB5/Cover.lean",
+      "baseline_compile_scope": "main"
+    },
+    {
+      "module": "Openmath.Proofs.QB5.CoverCheck",
+      "path": "Openmath/Proofs/QB5/CoverCheck.lean",
+      "sha256": "8309c349704061e365a00f51ef9b433d9048c503d4983985076ee393a8078be8",
+      "author_source_path": "Openmath/Proofs/QB5/CoverCheck.lean",
+      "author_source_url": "https://github.com/roberthuynh/erdos-585/blob/1efc324e155ef0b6a7081c5f695c6c825e7debef/Openmath/Proofs/QB5/CoverCheck.lean",
+      "baseline_compile_scope": "main"
+    },
+    {
+      "module": "Openmath.Proofs.QB5.CoverCheck1",
+      "path": "Openmath/Proofs/QB5/CoverCheck1.lean",
+      "sha256": "b3fd4c93cfa2d36da80911c1129536e1ad55642c01b4c6ee17c0a4ab67be8b46",
+      "author_source_path": "Openmath/Proofs/QB5/CoverCheck1.lean",
+      "author_source_url": "https://github.com/roberthuynh/erdos-585/blob/1efc324e155ef0b6a7081c5f695c6c825e7debef/Openmath/Proofs/QB5/CoverCheck1.lean",
+      "baseline_compile_scope": "main"
+    },
+    {
+      "module": "Openmath.Proofs.QB5.CoverCheck2",
+      "path": "Openmath/Proofs/QB5/CoverCheck2.lean",
+      "sha256": "dc55092e7df7069fc1ab23cfb8b1c420eac8d6b30f078ed9c2623c7cbed1721f",
+      "author_source_path": "Openmath/Proofs/QB5/CoverCheck2.lean",
+      "author_source_url": "https://github.com/roberthuynh/erdos-585/blob/1efc324e155ef0b6a7081c5f695c6c825e7debef/Openmath/Proofs/QB5/CoverCheck2.lean",
+      "baseline_compile_scope": "main"
+    },
+    {
+      "module": "Openmath.Proofs.QB5.CoverCheck3",
+      "path": "Openmath/Proofs/QB5/CoverCheck3.lean",
+      "sha256": "101464937216f6712d74998f201fd0ec4771a6a5b926ecbf217b54e268eadfe0",
+      "author_source_path": "Openmath/Proofs/QB5/CoverCheck3.lean",
+      "author_source_url": "https://github.com/roberthuynh/erdos-585/blob/1efc324e155ef0b6a7081c5f695c6c825e7debef/Openmath/Proofs/QB5/CoverCheck3.lean",
+      "baseline_compile_scope": "main"
+    },
+    {
+      "module": "Openmath.Proofs.QB5.Defs",
+      "path": "Openmath/Proofs/QB5/Defs.lean",
+      "sha256": "3f7269697d58d5a703b7134d39a40d64309463d7536f5dbfa297903692c7f8d6",
+      "author_source_path": "Openmath/Proofs/QB5/Defs.lean",
+      "author_source_url": "https://github.com/roberthuynh/erdos-585/blob/1efc324e155ef0b6a7081c5f695c6c825e7debef/Openmath/Proofs/QB5/Defs.lean",
+      "baseline_compile_scope": "main"
+    },
+    {
+      "module": "Openmath.Proofs.QB5.E5",
+      "path": "Openmath/Proofs/QB5/E5.lean",
+      "sha256": "55252979eb1e9a7e38f3d1cc5a94396b848a571a2fcdac6f19a107f8e8d318f0",
+      "author_source_path": "Openmath/Proofs/QB5/E5.lean",
+      "author_source_url": "https://github.com/roberthuynh/erdos-585/blob/1efc324e155ef0b6a7081c5f695c6c825e7debef/Openmath/Proofs/QB5/E5.lean",
+      "baseline_compile_scope": "main"
+    },
+    {
+      "module": "Openmath.Proofs.QB5.KL1",
+      "path": "Openmath/Proofs/QB5/KL1.lean",
+      "sha256": "beadd9d20cd878ebfd0690a7b8965a6fbdcbf5e7e5ec556f4977793e6195095b",
+      "author_source_path": "Openmath/Proofs/QB5/KL1.lean",
+      "author_source_url": "https://github.com/roberthuynh/erdos-585/blob/1efc324e155ef0b6a7081c5f695c6c825e7debef/Openmath/Proofs/QB5/KL1.lean",
+      "baseline_compile_scope": "main"
+    },
+    {
+      "module": "Openmath.Proofs.QB5.KL1Merge",
+      "path": "Openmath/Proofs/QB5/KL1Merge.lean",
+      "sha256": "5979eb3f58a6c4d62e3a1b4e0d3c773bae0c0fc6c82109dac3919e896dfa4c4e",
+      "author_source_path": "Openmath/Proofs/QB5/KL1Merge.lean",
+      "author_source_url": "https://github.com/roberthuynh/erdos-585/blob/1efc324e155ef0b6a7081c5f695c6c825e7debef/Openmath/Proofs/QB5/KL1Merge.lean",
+      "baseline_compile_scope": "main"
+    },
+    {
+      "module": "Openmath.Proofs.QB5.Main",
+      "path": "Openmath/Proofs/QB5/Main.lean",
+      "sha256": "f04060a37c836e76abc652aa123b9b6b195c31fb512710f459b3109adaa4a726",
+      "author_source_path": "Openmath/Proofs/QB5/Main.lean",
+      "author_source_url": "https://github.com/roberthuynh/erdos-585/blob/1efc324e155ef0b6a7081c5f695c6c825e7debef/Openmath/Proofs/QB5/Main.lean",
+      "baseline_compile_scope": "main"
+    },
+    {
+      "module": "Openmath.Proofs.QB5.PairCriterion",
+      "path": "Openmath/Proofs/QB5/PairCriterion.lean",
+      "sha256": "21dd6dfe701fe5d009cc0c87fc81b7b1e6d0c3a3709fdb81b222d392a118b5f6",
+      "author_source_path": "Openmath/Proofs/QB5/PairCriterion.lean",
+      "author_source_url": "https://github.com/roberthuynh/erdos-585/blob/1efc324e155ef0b6a7081c5f695c6c825e7debef/Openmath/Proofs/QB5/PairCriterion.lean",
+      "baseline_compile_scope": "main"
+    },
+    {
+      "module": "Openmath.Proofs.QB5.Statement",
+      "path": "Openmath/Proofs/QB5/Statement.lean",
+      "sha256": "203089ca8e60776dfcebff55ba5d3deefd0732fcdf472d3d653e5b52e683c91e",
+      "author_source_path": "Openmath/Proofs/QB5/Statement.lean",
+      "author_source_url": "https://github.com/roberthuynh/erdos-585/blob/1efc324e155ef0b6a7081c5f695c6c825e7debef/Openmath/Proofs/QB5/Statement.lean",
+      "baseline_compile_scope": "main"
+    },
+    {
+      "module": "Openmath.Proofs.RegularFive",
+      "path": "Openmath/Proofs/RegularFive.lean",
+      "sha256": "d98167750b202b8641f14adefb3851a4bd3f0655a9887d3e01475d3d76a7bce0",
+      "author_source_path": "Openmath/Proofs/RegularFive.lean",
+      "author_source_url": "https://github.com/roberthuynh/erdos-585/blob/1efc324e155ef0b6a7081c5f695c6c825e7debef/Openmath/Proofs/RegularFive.lean",
+      "baseline_compile_scope": "main"
+    },
+    {
+      "module": "Openmath.Proofs.RegularFive18",
+      "path": "Openmath/Proofs/RegularFive18.lean",
+      "sha256": "fba949c093d114e4d752e774cbc2e5f21d85889e389de978cd52e8330e921480",
+      "author_source_path": "Openmath/Proofs/RegularFive18.lean",
+      "author_source_url": "https://github.com/roberthuynh/erdos-585/blob/1efc324e155ef0b6a7081c5f695c6c825e7debef/Openmath/Proofs/RegularFive18.lean",
+      "baseline_compile_scope": "main"
+    },
+    {
+      "module": "Openmath.Proofs.RimDensity",
+      "path": "Openmath/Proofs/RimDensity.lean",
+      "sha256": "ce0cfb1fdfd16e5dc3ed9039a85362960fcb7174641a0b94a80fce31d617c901",
+      "author_source_path": "Openmath/Proofs/RimDensity.lean",
+      "author_source_url": "https://github.com/roberthuynh/erdos-585/blob/1efc324e155ef0b6a7081c5f695c6c825e7debef/Openmath/Proofs/RimDensity.lean",
+      "baseline_compile_scope": "main"
+    },
+    {
+      "module": "Openmath.Proofs.RimStrip",
+      "path": "Openmath/Proofs/RimStrip.lean",
+      "sha256": "f509d2f7e538f33b1595e7c8e8202b496688896a11e32ba5c4529d36a781fb79",
+      "author_source_path": "Openmath/Proofs/RimStrip.lean",
+      "author_source_url": "https://github.com/roberthuynh/erdos-585/blob/1efc324e155ef0b6a7081c5f695c6c825e7debef/Openmath/Proofs/RimStrip.lean",
+      "baseline_compile_scope": "main"
+    },
+    {
+      "module": "Openmath.Proofs.SmallExact",
+      "path": "Openmath/Proofs/SmallExact.lean",
+      "sha256": "ecb55e37642112b3169a56a09bcb3e90371941530654771ede8199feba4d5b40",
+      "author_source_path": "Openmath/Proofs/SmallExact.lean",
+      "author_source_url": "https://github.com/roberthuynh/erdos-585/blob/1efc324e155ef0b6a7081c5f695c6c825e7debef/Openmath/Proofs/SmallExact.lean",
+      "baseline_compile_scope": "main"
+    },
+    {
+      "module": "Openmath.Proofs.TopFive",
+      "path": "Openmath/Proofs/TopFive.lean",
+      "sha256": "f996a812a5f0edc058c8d61980cc4a406d31961aa4148d537d7f63597b80ea2c",
+      "author_source_path": "Openmath/Proofs/TopFive.lean",
+      "author_source_url": "https://github.com/roberthuynh/erdos-585/blob/1efc324e155ef0b6a7081c5f695c6c825e7debef/Openmath/Proofs/TopFive.lean",
+      "baseline_compile_scope": "main"
+    },
+    {
+      "module": "Openmath.Proofs.TwoHub",
+      "path": "Openmath/Proofs/TwoHub.lean",
+      "sha256": "d6b3b7a010904bd2a1042492b9559160166db0a79cea66f82214c944fc4c5804",
+      "author_source_path": "Openmath/Proofs/TwoHub.lean",
+      "author_source_url": "https://github.com/roberthuynh/erdos-585/blob/1efc324e155ef0b6a7081c5f695c6c825e7debef/Openmath/Proofs/TwoHub.lean",
+      "baseline_compile_scope": "main"
+    },
+    {
+      "module": "Openmath.Proofs.TwoHubFamily",
+      "path": "Openmath/Proofs/TwoHubFamily.lean",
+      "sha256": "315d8de3b648e0eff4b15e7362b9df3be556b6bb4240674c3191691011cc21d2",
+      "author_source_path": "Openmath/Proofs/TwoHubFamily.lean",
+      "author_source_url": "https://github.com/roberthuynh/erdos-585/blob/1efc324e155ef0b6a7081c5f695c6c825e7debef/Openmath/Proofs/TwoHubFamily.lean",
+      "baseline_compile_scope": "main"
+    },
+    {
+      "module": "Openmath.Target",
+      "path": "Openmath/Target.lean",
+      "sha256": "61d280e8d42cb10a4699a1e916674075ced58472f1cd6b1c1d337ccf8f850ad9",
+      "author_source_path": "Openmath/Target.lean",
+      "author_source_url": "https://github.com/roberthuynh/erdos-585/blob/1efc324e155ef0b6a7081c5f695c6c825e7debef/Openmath/Target.lean",
+      "baseline_compile_scope": "main"
+    },
+    {
+      "module": "Openmath",
+      "path": "Openmath.lean",
+      "sha256": "678d08731cfb8582723a7158de574987cd09304dbf27b69680bd4532f3f9dee8",
+      "author_source_path": "Openmath.lean",
+      "author_source_url": "https://github.com/roberthuynh/erdos-585/blob/1efc324e155ef0b6a7081c5f695c6c825e7debef/Openmath.lean",
+      "baseline_compile_scope": "main"
+    }
+  ],
+  "count": 106,
+  "selected_verified_endpoints": 84,
+  "excluded_from_certified_claims": "Four admitted general/asymptotic target statements in Openmath/Target.lean; none of the selected84 depends on sorryAx."
+}
