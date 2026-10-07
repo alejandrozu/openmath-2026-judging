@@ -1,6 +1,6 @@
 # Review guide
 
-Start with the concise Robert manuscript when its final PDF is added here. It states the eight families, their short mathematical proofs, exact hypotheses and known overlap. Its proof references are pinned to an immutable source snapshot rather than an evolving branch.
+Start with the [11-page concise Robert manuscript](manuscript/Robert_Huynh_concise.pdf). It states the eight families, their short mathematical proofs, exact hypotheses and known overlap. Its proof references are pinned to an immutable source snapshot rather than an evolving branch.
 
 Then read [Robert's eight-family novelty/proof review](research/Robert8_current_novelty_and_proof_scope.md) and the [other nineteen-family priority followup](research/original19_priority_followup_20261007.md). Each identifies the exact proposed delta, a primary predecessor, what is still unknown and the best concrete improvement to pursue. The deeper [five-family matrix](research/research_five_comparison_matrix.md) retains theorem-level source locators and retrieval limits.
 

@@ -1,6 +1,6 @@
 # Robert Huynh: Erdős585 research and formal proof companion
 
-This dated review preserves Robert Huynh's public work at revision `1efc324e155ef0b6a7081c5f695c6c825e7debef` and the additional research and formalization by Alejandro Zarzuelo Urdiales. Original source copyright and Apache2 notices are preserved. The concise coauthored manuscript is being finalized against the exact proof and literature boundaries recorded here.
+This dated review preserves Robert Huynh's public work at revision `1efc324e155ef0b6a7081c5f695c6c825e7debef` and the additional research and formalization by Alejandro Zarzuelo Urdiales. Original source copyright and Apache2 notices are preserved. The [concise coauthored manuscript](manuscript/Robert_Huynh_concise.pdf) is an11-page author-review edition with direct immutable Lean source links. [Editable sources](manuscript/Sources/) and [actual all-page QA](manuscript/actual-all11-page-visual-QA.json) accompany it.
 
 ## Verified proof sources
 
