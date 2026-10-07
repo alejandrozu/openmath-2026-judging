@@ -1,0 +1,67 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,textcomp}
+\usepackage[margin=24mm]{geometry}
+\usepackage{longtable,booktabs,array,enumitem}
+\usepackage[hidelinks]{hyperref}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+\emergencystretch=3em
+\hypersetup{pdfauthor={Rachel Teo, Wenyi Wang, Hamdi Abderrahmene, Alejandro Zarzuelo Urdiales}}
+\begin{document}
+{\LARGE\bfseries One-factor rigidity at three sparse 3\ensuremath{\times}3 matrix-multiplication seeds\par}\medskip
+{\small Rachel Teo\ensuremath{^1}, Wenyi Wang\ensuremath{^1}, Hamdi Abderrahmene\ensuremath{^1}, Alejandro Zarzuelo Urdiales\ensuremath{^2}\par}\medskip
+{\small\textbf{Affiliations:} \href{https://sakana.ai/}{\ensuremath{^1} Sakana AI}; \href{https://rsihouse.ai/openmath}{\ensuremath{^2} Open Math}.\par}
+
+{\small\href{https://github.com/alejandrozu/openmath-2026-judging}{Code and formal proofs}\par}
+
+\subsection{Abstract}
+At each of three stored 23-product, 139-support HKS seeds, all three paired-factor coefficient matrices have column rank 23. Consequently fixing any two factor lists uniquely determines the third, excluding a support reduction through a change to only one list at those seeds.
+
+For each archived HKS 139 seed, rank\_Q(M\_UV)=rank\_Q(M\_UW)=rank\_Q(M\_VW)=23; fixing two factor lists uniquely determines the third.
+
+\subsection{Tensor factors and the precise obstruction}
+A 23-product bilinear scheme writes the 3\ensuremath{\times}3 multiplication tensor as a sum of 23 simple tensors u\_i\ensuremath{\otimes}v\_i\ensuremath{\otimes}w\_i. Fixing u and v turns the coefficient equations into a linear system for w; analogous statements hold for the other pairs. The paired-factor matrix has 81 rows and 23 columns, with column i formed by the pairwise products of the chosen factor coefficients.
+
+At each of three literal known HKS 139 seeds, the UV, UW and VW matrices have column rank 23 over the rationals. Each corresponding linear system is injective. Since the stored third list is one solution, it is the unique solution. A change to only that list cannot lower support while preserving the tensor identity.
+
+\subsection{Certificates and quantifiers}
+The certificate supplies exact rank/injectivity evidence for all nine seed/pair combinations, followed by the uniqueness consequence. Independent rational elimination reproduced rank 23 for each of those matrices. The seeds themselves have total support 139 and are background constructions.
+
+The theorem fixes the selected two factor lists exactly. It does not prove local rigidity when multiple lists vary, global inequivalence of all schemes, absence of a continuous family, a minimum support 139, or impossibility of support 138 or 137. Chandragupt's 138 scheme is compatible with this result because it changes the construction jointly.
+
+\subsection{One-factor obstruction and formal scope}
+The linear algebra is classical. The certificate applies to the three literal HKS seeds and changes to exactly one factor list; it does not give rigidity under simultaneous changes to multiple lists.
+
+The selected statements prove rational injectivity of each literal 81-by-23 paired-factor matrix: B X = B Y implies X = Y. The tensor coefficient correspondence then gives uniqueness of the remaining factor list. Thus full column rank 23 excludes support reduction through changes to one list while the other two are fixed. The literal matrices and exact left-inverse certificates are provided in the repository.
+
+\subsection{Attribution and priority}
+HKS supplies the seed decompositions. The paired linear system comes directly from their tensor coefficient equations. Repository certificates record the literal seed versions and rational elimination data used for the uniqueness consequence.
+
+Whether these seed-specific rank checks were previously published remains unresolved. Their exact certificate scope is independent of any historical-originality claim.
+
+\subsection{Formal verification}
+Each of the three seed projects completed a Lean 4.33.1 replay of 71 source modules and six selected declarations: 213 source modules and 18 selected declarations in total. The selected declarations use only standard kernel axioms, without admitted proofs, native evaluation or unknown axioms. The proof sources, matrix data and audit records are supplied in the companion repository.
+
+\begin{samepage}
+\subsection{RecoveredMMTKernel.remaining\_factor\_unique\_uv}
+\begin{quote}\small\ttfamily theorem remaining\_factor\_unique\_uv \{p : Type*\}\newline     (X Y : Matrix (Fin 23) p \ensuremath{\mathbb{Q}})\newline     (h : (B\_uv.map (Int.castRingHom \ensuremath{\mathbb{Q}})) * X = (B\_uv.map (Int.castRingHom \ensuremath{\mathbb{Q}})) * Y) : X = Y\end{quote}
+{\small Source: Focus\_Evidence/evidence/FOCUS-MATRIX/kernel/KernelFinal.lean:192.\par}
+
+{\small Source SHA-256: a0e3432e3fa233f5d79d56cf8c90138310752bc3ed52a5f7f1eaab44bfab3fec\par}
+
+\end{samepage}
+\begin{samepage}
+\subsection{RecoveredMMTKernel.remaining\_factor\_unique\_uw}
+\begin{quote}\small\ttfamily theorem remaining\_factor\_unique\_uw \{p : Type*\}\newline     (X Y : Matrix (Fin 23) p \ensuremath{\mathbb{Q}})\newline     (h : (B\_uw.map (Int.castRingHom \ensuremath{\mathbb{Q}})) * X = (B\_uw.map (Int.castRingHom \ensuremath{\mathbb{Q}})) * Y) : X = Y\end{quote}
+{\small Source: Focus\_Evidence/evidence/FOCUS-MATRIX/kernel/KernelFinal.lean:204.\par}
+
+{\small Source SHA-256: a0e3432e3fa233f5d79d56cf8c90138310752bc3ed52a5f7f1eaab44bfab3fec\par}
+
+{\small\textbf{Sources and attribution:} \href{https://github.com/alejandrozu/openmath-2026-judging/blob/d0ed487f487fa7ec814ff705ab55249983fe8707/OpenMath-Judging/review/entries/E02-FOCUS-MATRIX.txt}{1. alejandrozu/openmath-2026-judging / E02-FOCUS-MATRIX.txt}; \href{https://github.com/alejandrozu/openmath-2026-judging}{Proof source repository}.\par}
+
+\end{samepage}
+{\small \textbf{AI assistance.} Codex assisted literature checking, editorial preparation and analysis of the supplied formal artifacts. The human authors are responsible for checking the final mathematical claims, references and attribution.\par}
+
+\end{document}

@@ -1,0 +1,65 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,textcomp}
+\usepackage[margin=24mm]{geometry}
+\usepackage{longtable,booktabs,array,enumitem}
+\usepackage[hidelinks]{hyperref}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+\emergencystretch=3em
+\hypersetup{pdfauthor={Rachel Teo, Wenyi Wang, Hamdi Abderrahmene, Alejandro Zarzuelo Urdiales}}
+\begin{document}
+{\LARGE\bfseries A sharp collapsed-fibre likelihood classification for a four-visible restricted Boltzmann machine\par}\medskip
+{\small Rachel Teo\ensuremath{^1}, Wenyi Wang\ensuremath{^1}, Hamdi Abderrahmene\ensuremath{^1}, Alejandro Zarzuelo Urdiales\ensuremath{^2}\par}\medskip
+{\small\textbf{Affiliations:} \href{https://sakana.ai/}{\ensuremath{^1} Sakana AI}; \href{https://rsihouse.ai/openmath}{\ensuremath{^2} Open Math}.\par}
+
+{\small\href{https://github.com/alejandrozu/openmath-2026-judging}{Code and formal proofs}\par}
+
+\subsection{Abstract}
+For pure four-parity data and a four-visible, one-hidden spin RBM, collapsed parameters are local likelihood maxima precisely below an explicit tanh\ensuremath{^2} threshold. At equality and beyond they are saddles in the full parameter space; every collapsed point remains globally suboptimal and non-strict.
+
+\subsection{The model and full-space theorem}
+For s\ensuremath{\in}\{\ensuremath{-}1,1\}\ensuremath{^4} and 0<|\ensuremath{\rho}|\ensuremath{\leq}1, take data distribution Q\_\ensuremath{\rho}(s)=(1+\ensuremath{\rho}s\ensuremath{_1}s\ensuremath{_2}s\ensuremath{_3}s\ensuremath{_4})/16. The one-hidden spin RBM has normalized probabilities proportional to exp(b\ensuremath{\cdot}s)cosh(c+w\ensuremath{\cdot}s), with b,w\ensuremath{\in}\ensuremath{\mathbb{R}}\ensuremath{^4} and c\ensuremath{\in}\ensuremath{\mathbb{R}}. Its expected log likelihood is \ensuremath{\ell}\_\ensuremath{\rho}. The collapsed fibre consists of \ensuremath{\theta}\ensuremath{_0}=(0,c\ensuremath{_0},0), which all represent the uniform visible distribution.
+
+Every affine directional derivative at \ensuremath{\theta}\ensuremath{_0} is zero. The sharp theorem says \ensuremath{\theta}\ensuremath{_0} is a local maximum in the full nine-dimensional parameter space if and only if tanh\ensuremath{^2}(c\ensuremath{_0})<(3+2|\ensuremath{\rho}|)/(3+6|\ensuremath{\rho}|). At equality or above, every full parameter neighbourhood contains both a strictly higher and a strictly lower likelihood point. Every \ensuremath{\theta}\ensuremath{_0} also has some finite RBM with strictly better likelihood and distinct equal-likelihood points arbitrarily nearby.
+
+\subsection{Why higher-order analysis is needed}
+The collapsed parametrization is singular. Ordinary stationarity and a quadratic Hessian test miss the parity interaction, whose first nonzero signal appears at higher order. The proof expands log cosh and decomposes the visible functions into Walsh/parity components. It controls nuisance visible biases and normalizing terms by quantitative Jensen and likelihood-domination estimates.
+
+The quartic geometry produces the threshold. An independent ordinary fourth-order derivation agrees with the displayed expression, but that calculation alone does not prove a full neighbourhood maximum. The source's StableRegion and LocalMaximum lemmas supply uniform control over arbitrary small parameter perturbations, rather than just along one symmetric ray.
+
+Outside the threshold, a quartic escape direction gives higher likelihood and another direction gives lower likelihood. At equality, moving along the likelihood-flat collapsed fibre reaches nearby unstable parameters, placing both behaviours in every neighbourhood of the boundary point. A strictly signed quartic test alone would not establish this equality case.
+
+\subsection{Non-strictness and global suboptimality}
+Changing the hidden bias while keeping b=w=0 leaves the visible distribution uniform, which creates a flat direction and makes collapsed local maxima non-strict. A suitable finite coupled RBM captures part of the nonzero parity signal and improves the likelihood. Thus a collapsed local maximum can be nonglobal even though it has nearby points of equal value.
+
+The theorem concerns parameter-space likelihood only. It does not assert a distribution-space maximum, an attracting training basin, strict trapping, EM convergence or a lower bound on optimization time. It fixes exactly four visible spins, one hidden unit and pure parity data. Ordinary explorations for larger dimensions or general four-wise-uniform data are outside the selected formal endpoint.
+
+\subsection{Prior setting and formal scope}
+Collapsed stationarity, singular-mixture critical fibres and RBM interaction formulas are prior mathematics. In the Fukumizu-Akaho-Amari comparison the second-derivative splitting matrix vanishes. The refinement here is the exact higher-order threshold with its full-neighbourhood and equality-boundary statements.
+
+\subsection{Formal verification}
+Lean 4.33.1 checked the 15-source closure and all three selected declarations sharp\_parity\_classification, collapsed\_local\_max\_iff and nonstable\_parameter\_saddle, using only standard kernel axioms. The result covers exactly four visible spins, one hidden unit and pure four-parity data, including the equality boundary. Broader RBMs, optimization-time claims and training convergence are outside this verification. Pinned sources and audit records are supplied in the companion repository.
+
+{\small \textbf{AI assistance.} Codex assisted literature checking, editorial preparation and analysis of the supplied formal artifacts. The human authors are responsible for checking the final mathematical claims, references and attribution.\par}
+
+\begin{samepage}
+\subsection{ParityFour.sharp\_parity\_classification}
+\begin{quote}\small\ttfamily theorem sharp\_parity\_classification (\ensuremath{\rho} c\ensuremath{_0} : \ensuremath{\mathbb{R}}) (h\ensuremath{\rho} : 0 < |\ensuremath{\rho}|) (h\ensuremath{\rho}1 : |\ensuremath{\rho}| \ensuremath{\leq} 1) :\newline     (\ensuremath{\forall} (b : Fin 4 \ensuremath{\to} \ensuremath{\mathbb{R}}) (d : \ensuremath{\mathbb{R}}) (w : Fin 4 \ensuremath{\to} \ensuremath{\mathbb{R}}),\newline       HasDerivAt (fun t => objective \ensuremath{\rho} (affineParameterRay c\ensuremath{_0} b d w t)) 0 0) \ensuremath{\wedge}\newline     (IsLocalMax (objective \ensuremath{\rho}) (nullParameter c\ensuremath{_0}) \ensuremath{\leftrightarrow}\newline       Real.tanh c\ensuremath{_0} \textasciicircum{} 2 < (3+2*|\ensuremath{\rho}|)/(3+6*|\ensuremath{\rho}|)) \ensuremath{\wedge}\newline     ((3+2*|\ensuremath{\rho}|)/(3+6*|\ensuremath{\rho}|) \ensuremath{\leq} Real.tanh c\ensuremath{_0} \textasciicircum{} 2 \ensuremath{\to} ParameterSaddle \ensuremath{\rho} (nullParameter c\ensuremath{_0})) \ensuremath{\wedge}\newline     (\ensuremath{\exists} \ensuremath{\theta} : Parameters, objective \ensuremath{\rho} (nullParameter c\ensuremath{_0}) < objective \ensuremath{\rho} \ensuremath{\theta}) \ensuremath{\wedge}\newline     (\ensuremath{\forall} U : Set Parameters, U \ensuremath{\in} nhds (nullParameter c\ensuremath{_0}) \ensuremath{\to}\newline       \ensuremath{\exists} \ensuremath{\theta} : Parameters, \ensuremath{\theta} \ensuremath{\in} U \ensuremath{\wedge} \ensuremath{\theta} \ensuremath{\neq} nullParameter c\ensuremath{_0} \ensuremath{\wedge}\newline         objective \ensuremath{\rho} \ensuremath{\theta} = objective \ensuremath{\rho} (nullParameter c\ensuremath{_0}))\end{quote}
+{\small Source: proofs/opdp89-parity-sharp/SharpClassification.lean:40.\par}
+
+{\small Source SHA-256: 15ef1ad86c585c87e7ac4fabdc3a58702c915e69dbf6aa80d701258bc9efc602\par}
+
+\end{samepage}
+\begin{samepage}
+\subsection{ParityFour.collapsed\_local\_max\_iff}
+\begin{quote}\small\ttfamily theorem collapsed\_local\_max\_iff (\ensuremath{\rho} c\ensuremath{_0} : \ensuremath{\mathbb{R}}) (h\ensuremath{\rho} : 0 < |\ensuremath{\rho}|) (h\ensuremath{\rho}1 : |\ensuremath{\rho}| \ensuremath{\leq} 1) :\newline     IsLocalMax (objective \ensuremath{\rho}) (nullParameter c\ensuremath{_0}) \ensuremath{\leftrightarrow}\newline       Real.tanh c\ensuremath{_0} \textasciicircum{} 2 < (3+2*|\ensuremath{\rho}|)/(3+6*|\ensuremath{\rho}|)\end{quote}
+{\small Source: proofs/opdp89-parity-sharp/SharpClassification.lean:22.\par}
+
+{\small Source SHA-256: 15ef1ad86c585c87e7ac4fabdc3a58702c915e69dbf6aa80d701258bc9efc602\par}
+
+{\small\textbf{Sources and attribution:} \href{http://aimpl.org/boltzmann/2/}{1. aimpl.org / 2}; \href{https://raw.githubusercontent.com/alejandrozu/opdp-week-math-100/main/data/problems.json}{2. raw.githubusercontent.com / problems.json}; \href{https://proceedings.neurips.cc/paper_files/paper/2002/file/2d3acd3e240c61820625fff66a19938f-Paper.pdf}{3. proceedings.neurips.cc / 2d3acd3e240c61820625fff66a19938f-Paper.pdf}; \href{https://arxiv.org/html/2605.19178}{4. arXiv source: 2605.19178}; \href{https://github.com/alejandrozu/openmath-2026-judging/blob/d0ed487f487fa7ec814ff705ab55249983fe8707/OpenMath-Judging/review/entries/E02-opdp89-parity-local-maxima.txt}{5. alejandrozu/openmath-2026-judging / E02-opdp89-parity-local-maxima.txt}; \href{https://github.com/alejandrozu/openmath-2026-judging}{Proof source repository}.\par}
+
+\end{samepage}
+\end{document}

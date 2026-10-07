@@ -1,0 +1,65 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,textcomp}
+\usepackage[margin=24mm]{geometry}
+\usepackage{longtable,booktabs,array,enumitem}
+\usepackage[hidelinks]{hyperref}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+\emergencystretch=3em
+\hypersetup{pdfauthor={Rachel Teo, Wenyi Wang, Hamdi Abderrahmene, Alejandro Zarzuelo Urdiales}}
+\begin{document}
+{\LARGE\bfseries A uniform entropy bound for fibres of k\ensuremath{\sigma}(k)\par}\medskip
+{\small Rachel Teo\ensuremath{^1}, Wenyi Wang\ensuremath{^1}, Hamdi Abderrahmene\ensuremath{^1}, Alejandro Zarzuelo Urdiales\ensuremath{^2}\par}\medskip
+{\small\textbf{Affiliations:} \href{https://sakana.ai/}{\ensuremath{^1} Sakana AI}; \href{https://rsihouse.ai/openmath}{\ensuremath{^2} Open Math}.\par}
+
+{\small\href{https://github.com/alejandrozu/openmath-2026-judging}{Code and formal proofs}\par}
+
+\subsection{Abstract}
+The number f(n) of positive integers k satisfying k\ensuremath{\sigma}(k)=n has an all-target upper bound exp((C+\ensuremath{\varepsilon})log n/log log n), where C=log(2539/1000)/3+log(10/9)/2\ensuremath{\approx}0.36327036. This refines the located log 3/3 coefficient while leaving the requested zero-constant asymptotic open.
+
+\subsection{The exact arithmetic count}
+Let \ensuremath{\sigma}(k) be the sum of positive divisors of k, and let f(n)=\#\{k\ensuremath{\geq}1:k\ensuremath{\sigma}(k)=n\}. Since k\ensuremath{\sigma}(k)\ensuremath{\geq}k for positive k, the solutions form an explicit finite subset of\{0,...,n\}; the source proves identity with the canonical formal-conjecture count, including its positivity convention.
+
+For every \ensuremath{\varepsilon}>0, the result gives a threshold N such that all n\ensuremath{\geq}N satisfy f(n)\ensuremath{\leq}exp((C+\ensuremath{\varepsilon})log n/log log n), with C=log(2539/1000)/3+log(10/9)/2. The numerical comparison is all-target: C is smaller than log 3/3\ensuremath{\approx}0.366204. A separately located log 2/2 bound for odd targets does not subsume a theorem for all n.
+
+\subsection{Powerful cores and an exact pattern bound}
+Split k into its powerful core, containing prime exponents at least two, and a coprime squarefree residual part. The squarefree map s\ensuremath{\mapsto}s\ensuremath{\sigma}(s) is injective; the formal argument removes the largest prime and treats the small primes separately. Thus a solution in a fixed target fibre can be encoded by its core exponent pattern without multiplying by an uncontrolled number of squarefree choices.
+
+The equation k\ensuremath{\sigma}(k)=n constrains both divisibility and size of that core. The development establishes exact weighted exponent-pattern bounds, with local weights and a cubic estimate at a fixed rational parameter. These finite inequalities yield the 2539/1000 constant, rather than introducing an unproved entropy heuristic.
+
+A logarithmic cutoff divides target primes into small and large ranges. Small-prime choices are bounded crudely but contribute a lower-order term; large-prime exponents obey a log-size budget. The proven weighted finite estimate is then converted to the exponential form, and a real asymptotic bridge absorbs lower-order terms into \ensuremath{\varepsilon}. Every premise of the intermediate conditional bridge is discharged by the final SigmaFiberAsymptotic theorem.
+
+\subsection{Mathematical and formal boundaries}
+Erdős 1060 asks for a little-o exponent, corresponding to arbitrarily small leading constant. A fixed positive C does not establish that conclusion. The result here is a uniform quantitative partial improvement.
+
+\subsection{Prior work and attribution}
+Powerful-core decomposition, squarefree injectivity and cutoff counting are prior machinery. The refinement is the exact weighted-pattern estimate and its all-target coefficient. Comparison with Kominers and related sources must retain their different target domains and quantitative hypotheses; no best-known assertion follows from a different-domain bound.
+
+The proof uses the local rational inequality, core injection and cutoff argument described above. The related cube-sum theorem shares some of these background modules; this common infrastructure is not an additional independent contribution.
+
+\subsection{Formal verification}
+Lean 4.33.1 checked all ten source modules and the three selected declarations canonical\_count\_eventually\_upper, canonical\_count\_upper and entropyConstant\_lt\_old. They use only standard kernel axioms, with no admitted proof, native evaluation or unknown axiom. Their source files and exact audit records are supplied in the companion repository. The zero-leading-constant target remains open.
+
+\begin{samepage}
+\subsection{Erdos1060.canonical\_count\_eventually\_upper}
+\begin{quote}\small\ttfamily theorem canonical\_count\_eventually\_upper \{\ensuremath{\varepsilon} : \ensuremath{\mathbb{R}}\} (h\ensuremath{\varepsilon} : 0 < \ensuremath{\varepsilon}) :\newline     \ensuremath{\forall}\ensuremath{^{f}} n : \ensuremath{\mathbb{N}} in atTop,\newline       (\#\{k \ensuremath{\leq} n | k * ArithmeticFunction.sigma 1 k = n\} : \ensuremath{\mathbb{R}}) \ensuremath{\leq}\newline         Real.exp (((Real.log (2539 / 1000) / 3 + Real.log (10 / 9) / 2) + \ensuremath{\varepsilon}) *\newline           Real.log (n : \ensuremath{\mathbb{R}}) / Real.log (Real.log (n : \ensuremath{\mathbb{R}})))\end{quote}
+{\small Source: proofs/erdos1060-uniform-partial/src/SigmaFiberAsymptotic.lean:38.\par}
+
+{\small Source SHA-256: 440f2f6aaa1d5dd04611fe855077352a3b75171d6e1ec823939ede8609e2d45a\par}
+
+\end{samepage}
+\begin{samepage}
+\subsection{Erdos1060.canonical\_count\_upper}
+\begin{quote}\small\ttfamily theorem canonical\_count\_upper \{\ensuremath{\varepsilon} : \ensuremath{\mathbb{R}}\} (h\ensuremath{\varepsilon} : 0 < \ensuremath{\varepsilon}) :\newline     \ensuremath{\exists} N : \ensuremath{\mathbb{N}}, \ensuremath{\forall} n : \ensuremath{\mathbb{N}}, N \ensuremath{\leq} n \ensuremath{\to}\newline       (\#\{k \ensuremath{\leq} n | k * ArithmeticFunction.sigma 1 k = n\} : \ensuremath{\mathbb{R}}) \ensuremath{\leq}\newline         Real.exp (((Real.log (2539 / 1000) / 3 + Real.log (10 / 9) / 2) + \ensuremath{\varepsilon}) *\newline           Real.log (n : \ensuremath{\mathbb{R}}) / Real.log (Real.log (n : \ensuremath{\mathbb{R}})))\end{quote}
+{\small Source: proofs/erdos1060-uniform-partial/src/SigmaFiberAsymptotic.lean:49.\par}
+
+{\small Source SHA-256: 440f2f6aaa1d5dd04611fe855077352a3b75171d6e1ec823939ede8609e2d45a\par}
+
+{\small\textbf{Sources and attribution:} \href{https://www.erdosproblems.com/1060}{1. www.erdosproblems.com / 1060}; \href{https://scottkom.com/assets/articles/Kominers_ksigmak.pdf}{2. scottkom.com / Kominers\_ksigmak.pdf}; \href{https://github.com/google-deepmind/formal-conjectures/blob/main/FormalConjectures/ErdosProblems/1060.lean}{3. google-deepmind/formal-conjectures / 1060.lean}; \href{https://github.com/alejandrozu/ulam-opdp-difficulty-atlas}{4. alejandrozu/ulam-opdp-difficulty-atlas}; \href{https://github.com/alejandrozu/openmath-2026-judging/blob/d0ed487f487fa7ec814ff705ab55249983fe8707/OpenMath-Judging/review/entries/E02-erdos1060-uniform-partial.txt}{5. alejandrozu/openmath-2026-judging / E02-erdos1060-uniform-partial.txt}; \href{https://github.com/alejandrozu/openmath-2026-judging}{Proof source repository}.\par}
+
+\end{samepage}
+{\small \textbf{AI assistance.} Codex assisted literature checking, editorial preparation and analysis of the supplied formal artifacts. The human authors are responsible for checking the final mathematical claims, references and attribution.\par}
+
+\end{document}

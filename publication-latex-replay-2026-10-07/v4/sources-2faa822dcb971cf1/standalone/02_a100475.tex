@@ -1,0 +1,65 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,textcomp}
+\usepackage[margin=24mm]{geometry}
+\usepackage{longtable,booktabs,array,enumitem}
+\usepackage[hidelinks]{hyperref}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+\emergencystretch=3em
+\hypersetup{pdfauthor={Rachel Teo, Wenyi Wang, Hamdi Abderrahmene, Alejandro Zarzuelo Urdiales}}
+\begin{document}
+{\LARGE\bfseries No positive-start periodic orbit for the prime-index reversal map\par}\medskip
+{\small Rachel Teo\ensuremath{^1}, Wenyi Wang\ensuremath{^1}, Hamdi Abderrahmene\ensuremath{^1}, Alejandro Zarzuelo Urdiales\ensuremath{^2}\par}\medskip
+{\small\textbf{Affiliations:} \href{https://sakana.ai/}{\ensuremath{^1} Sakana AI}; \href{https://rsihouse.ai/openmath}{\ensuremath{^2} Open Math}.\par}
+
+{\small\href{https://github.com/alejandrozu/openmath-2026-judging}{Code and formal proofs}\par}
+
+\subsection{Abstract}
+For the map sending n to the decimal reversal of its nth prime, every orbit beginning at a positive integer is not ultimately periodic. The proof combines a uniform large-index growth bound with an exact finite exclusion of the remaining cycles.
+
+\subsection{Definition and exact result}
+Write p\_n for the nth prime with p\_1=2, and let T(n) be the integer obtained by reversing the usual decimal digits of p\_n. Start at x>0 and iterate T. The theorem states that this sequence is not ultimately periodic for every positive x. This includes x=1. Any convention assigning a value to the zeroth prime index is outside the original positive-start problem.
+
+An eventually periodic orbit would eventually enter a directed cycle in the functional graph of T. It therefore suffices to exclude every positive cycle. The proof is not just an empirical assertion that tested trajectories grow: it separates all sufficiently large indices, where a uniform inequality forbids a cycle, from a finite domain on which the entire graph can be checked.
+
+\subsection{The source proof: uniform three-step escape}
+The selected source proves that every n>0 has n<T(n), n<T\ensuremath{^2}(n), or n<T\ensuremath{^3}(n). Its elementary Chebyshev and decimal-digit estimates handle every prime at least 10,000. An exact small-prime prefix certificate identifies precisely 17 nonincreasing indices below that threshold; 16 escape on their second step and index 1118 escapes on its third.
+
+The complete ordinary argument and every exceptional transition are given in the proof sections below. The independent exact recount also verifies the finite prime-counting bounds and source exception list. A periodic tail has a maximum, whereas the three-step lemma produces a later larger value, so no positive orbit can be ultimately periodic.
+
+\subsection{Formalization and reproducibility}
+The endpoint OeisA100475.not\_periodic has the explicit hypothesis 0<x, and the canonical bridge expresses the positive-start conjecture. The prime and decimal-digit lemmas are components of this theorem.
+
+The supplement supplies the exact-integer checker check\_final\_four\_certificates.py and its recorded prime-counting, exception-list and transition checks. These finite calculations independently check the source certificate. The decimal base and ordinary digit convention remain part of the statement.
+
+\subsection{Prior work and priority}
+The proof uses classical prime-growth and decimal-reversal ingredients. The Ball-Coxeter discussion and the 2004 SeqFan archive are unresolved comparison sources for the precise positive-start nonperiodicity theorem.
+
+The inspected OEIS record asks the loop question and records computational extensions from December 2004. The September 2026 formal-conjectures correction distinguishes the positive-start statement from the artificial zero-start solution; it does not exclude positive cycles. The Wolfram Reversal exposition cites Ball-Coxeter pp14-15 for general digit-reversal identities and products. The exact 13th-edition pages and the original SeqFan message bodies were unavailable for this comparison, so neither an earlier proof nor its absence has been established.
+
+\subsection{Formal verification}
+The 84-source development and both selected endpoints were checked with Lean 4.33.1. Their dependencies are confined to standard kernel axioms, with no admitted proof, native evaluation or unknown axiom. Pinned sources and the finite certificate audits are provided in the companion repository.
+
+\begin{samepage}
+\subsection{OeisA100475.not\_periodic}
+\begin{quote}\small\ttfamily theorem not\_periodic \{x : \ensuremath{\mathbb{N}}\} (hx : 0 < x) : \ensuremath{\neg} IsUltimatelyPeriodic (aStartAt x)\end{quote}
+{\small Source: proofs/a100475/A100475.lean:17.\par}
+
+{\small Source SHA-256: e22c200d87ed0a15a25d4760e3f37aaf0005b48aa5b734e79fb0776599c04c95\par}
+
+\end{samepage}
+\begin{samepage}
+\subsection{OeisA100475.conjecture}
+\begin{quote}\small\ttfamily theorem conjecture :\newline     False \ensuremath{\leftrightarrow} \ensuremath{\exists} x : \ensuremath{\mathbb{N}}, 0 < x \ensuremath{\wedge} x \ensuremath{\neq} 1 \ensuremath{\wedge} IsUltimatelyPeriodic (aStartAt x)\end{quote}
+{\small Source: proofs/a100475/A100475.lean:20.\par}
+
+{\small Source SHA-256: e22c200d87ed0a15a25d4760e3f37aaf0005b48aa5b734e79fb0776599c04c95\par}
+
+{\small\textbf{Sources and attribution:} \href{https://oeis.org/A100475}{1. oeis.org / A100475}; \href{https://github.com/google-deepmind/formal-conjectures/pull/5567}{2. google-deepmind/formal-conjectures}; \href{https://dlmf.nist.gov/27.12\#E2}{3. dlmf.nist.gov / 27.12}; \href{https://mathworld.wolfram.com/Reversal.html}{4. mathworld.wolfram.com / Reversal.html}; \href{https://books.google.com/books/about/Mathematical_Recreations_Essays.html?id=9lJqNJhYc9oC}{5. books.google.com / Mathematical\_Recreations\_Essays.html}; \href{https://github.com/alejandrozu/openmath-2026-judging/blob/d0ed487f487fa7ec814ff705ab55249983fe8707/OpenMath-Judging/review/entries/E02-a100475.txt}{6. alejandrozu/openmath-2026-judging / E02-a 100475.txt}; \href{https://github.com/alejandrozu/openmath-2026-judging}{Proof source repository}.\par}
+
+\end{samepage}
+{\small \textbf{AI assistance.} Codex assisted literature checking, editorial preparation and analysis of the supplied formal artifacts. The human authors are responsible for checking the final mathematical claims, references and attribution.\par}
+
+\end{document}

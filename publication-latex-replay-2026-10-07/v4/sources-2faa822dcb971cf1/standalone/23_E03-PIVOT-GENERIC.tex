@@ -1,0 +1,81 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,textcomp}
+\usepackage[margin=24mm]{geometry}
+\usepackage{longtable,booktabs,array,enumitem}
+\usepackage[hidelinks]{hyperref}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+\emergencystretch=3em
+\hypersetup{pdfauthor={Matt Bowring, Alejandro Zarzuelo Urdiales}}
+\begin{document}
+{\LARGE\bfseries A generic matrix pivot with a vanishing eigenphase Walsh angle\par}\medskip
+{\small Matt Bowring, Alejandro Zarzuelo Urdiales\ensuremath{^1}\par}\medskip
+{\small\textbf{Affiliations:} \href{https://rsihouse.ai/openmath}{\ensuremath{^1} Open Math}.\par}
+
+{\small\href{https://github.com/alejandrozu/openmath-2026-judging}{Code and formal proofs}\par}
+
+\subsection{Abstract}
+For arbitrary finite complex matrix dimension D=4(q+1), invertible top blocks X and Y with pairwise distinct eigenvalue crossing angles admit a one-qubit pivot whose polar-factor multiplexor has an eigenphase labeling with an exactly vanishing balanced Walsh angle. The construction combines a discrete half-plane rotation with continuous normalized eigenphase lifting and an intermediate value theorem. It is a genuine restricted matrix-existence theorem and a proposed partial advance toward improved unitary synthesis. The complete circuit bridge, nongeneric nodes and universal improved CNOT count remain unproved in the inspected formal chain; the selected generic theorem has a pinned Lean replay using standard kernel axioms; historical priority remains unresolved.
+
+For D=4(q+1), invertible complex D-by-D blocks X,Y, a full eigenvalue list of X inverse times Y and pairwise crossing-angle separation modulo pi, there exist an unrestricted real angle alpha and an angle beta in [0,pi], an ordinary unitary one-qubit gate, pivoted blocks satisfying the lifted block multiplication identity, and a real phase list of zxzC(Xprime,Yprime) whose finalAngle(q+1) equals zero. No unitarity assumption on the entire block matrix U is needed. The theorem concludes no circuit or CNOT-count bound.
+
+\subsection{Source attribution and formal scope}
+Matt Bowring developed the original matrix construction and AI-assisted formal code. The source revision and imported components are identified below; the formal conclusion is the generic matrix theorem, distinct from the proposed universal synthesis programme.
+
+\begin{samepage}
+The source snapshot is bowrango/lean-unitary at commit 7014b63ee2cfd01c641a7f539c73b664a2aa3d66. The selected generic, arithmetic-count and conditional-bridge statements have a completed replay; the separate baseline Claims statements retain admitted proofs.
+
+\end{samepage}
+\subsection{The actual matrix theorem}
+The actual formal result is a finite-dimensional matrix theorem. Let D=4(q+1). Write a block matrix U=[X Y;Z W] with complex D-by-D blocks, and suppose X and Y are invertible. Let u\_1,...,u\_D list the eigenvalues of X inverse times Y, counted with their algebraic multiplicities. Assume that no two different entries in this list have arguments differing by an integer multiple of pi: geometrically, no two lie on the same line through the origin. This is the explicitly restricted generic regime. The theorem is stated for an arbitrary finite index type of cardinality D, so it is an infinite family of matrix dimensions rather than a test of one numerical instance.
+
+The pivot is the ordinary one-qubit matrix g=Rz(alpha)Ry(beta). Multiplying U by the lifted g produces top blocks Xg=e\textasciicircum{}\{-i alpha/2\}cos(beta/2)X+e\textasciicircum{}\{i alpha/2\}sin(beta/2)Y and Yg=-e\textasciicircum{}\{-i alpha/2\}sin(beta/2)X+e\textasciicircum{}\{i alpha/2\}cos(beta/2)Y. The formal development proves this block multiplication identity and the unitarity of g with ordinary complex matrices. It does not replace the matrix by an abstract object satisfying the desired conclusion.
+
+The associated multiplexor is defined by its actual polar-factor formula
+C(beta)=-i Xg* (Xg Xg*)\textasciicircum{}\{-1/2\}(Yg Yg*)\textasciicircum{}\{-1/2\}Yg,
+where * denotes conjugate transpose and inverse square roots use the continuous functional calculus. For invertible Xg and Yg the library proves C(beta) is unitary. It proves the endpoint symmetry C(pi)=C(0)*, hence C(pi)=C(0)\textasciicircum{}\{-1\}, and continuity of C along the path under the no-real-crossing condition. Those identities explain why eigenphases can be used to interpolate between opposite endpoint imbalances.
+
+\subsection{A half-plane rotation avoids singularities}
+The first angle alpha is chosen by a discrete intermediate-value argument. As a rotation sweeps the nonzero eigenvalues of X inverse times Y, their upper-half-plane count changes one at a time because the crossing angles are distinct. Opposite ends of a half-turn have complementary counts. Since D is even, some intervening interval has exactly D/2 values in each half-plane and no eigenvalue on the real axis. This simultaneously prevents singularities in Xg,Yg and balances the endpoint determinant phase. The exact hypotheses matter: coincident crossings are outside this theorem and are not removed by calling the input generic without explanation.
+
+\subsection{Continuous normalized eigenphases and a vanishing Walsh angle}
+The second angle beta is found by continuous eigenphase lifting. The development constructs normalized ordered lists of real phases representing a unitary matrix's eigenvalues. A normalized list is monotone and spans at most 2pi; its total sum is tied to a continuous argument sigma(beta) of det C(beta). Existence follows by choosing eigenvalue arguments and shifting branches by integer multiples of 2pi. Uniqueness at a fixed sum, stability under small changes, continuity of characteristic-polynomial root lists up to permutation, and continuity of the determinant phase establish continuity of the selected normalized list. This addresses the genuine eigenvalue-collision/branch problem that an informal appeal to continuity of individual principal arguments would miss.
+
+At beta=pi the normalized list equals the negative of its initial list in reversed order. A middle-half imbalance therefore changes sign. The real intermediate value theorem supplies beta* in [0,pi] with zero imbalance. A combinatorial permutation places the equal-size selected subset in the positive half of a Walsh row, and integer branch shifts preserve the complex eigenvalues. Consequently the final angle phi=(1/D)sum\_j h\_j theta\_j, with h\_j=+1 on the first D/2 indices and -1 on the second D/2, is exactly zero. The endpoint LeanUnitary.Pivot.pivot\_merge concludes existence of an unrestricted real alpha and a beta in [0,pi], the pivot, the block identity, the phase list of zxzC(Xg,Yg), and that vanishing Walsh angle.
+
+\subsection{What the theorem accomplishes}
+The theorem proves an actual pivot in every dimension admitted by its hypotheses, rather than a numerical fit or parameter count. Its supporting results include continuous normalized eigenphase lifts and a non-singularity criterion for the polar path. Despite the name pivot\_merge, the formal conclusion contains no circuit, CNOT gate or gate-count inequality.
+
+\subsection{Relation to established Block-ZXZ and Walsh methods}
+The polar factor C=\ensuremath{-}iP(X)*P(Y) comes from Block-ZXZ synthesis (De Vos-De Baerdemacker, arXiv:1512.07240v3, section 5, equation 5; Krol-Al-Ars, arXiv:2403.13692v2, section 4.1). The Walsh/Gray-code angle transform comes from Möttönen et al. (quant-ph/0404089v3, equations 3-5). The candidate refinement is their use in the combined generic pivot-existence theorem; comparison with prior phase-balancing methods remains open.
+
+The inspected primary papers do not state the combined balanced generic pivot, normalized continuous eigenphase lift and zero-Walsh existence argument. This bounded comparison leaves historical priority unresolved and does not supply the missing circuit construction.
+
+\subsection{Earlier synthesis programme}
+Bowring's earlier post Thinking about optimal unitary synthesis describes sparse uniformly controlled rotations and approximate error bounds within Quantum Shannon Decomposition, motivated by unitaryGate. It identifies incomplete work but does not state or prove the present balanced polar-pivot theorem, normalized continuous eigenphase lift or zero-Walsh argument.
+
+\subsection{The proposed global circuit consequence remains conditional}
+The universal synthesis claim remains separate. The proposed recurrence is c\_2=3 and c\_\{n+1\}=4c\_n+3*2\textasciicircum{}n-6, giving c\_n=(21*4\textasciicircum{}n-72*2\textasciicircum{}n+96)/48. Compared with the established 22/48 Block-ZXZ recurrence, this would save (4\textasciicircum{}\{n-2\}-1)/3 CNOTs. The Count module proves these arithmetic identities. The Synthesis module proves the global bound conditional on both Synthesizable 2 3 and the full improved global node rule. That node rule is the central mathematical circuit-construction obligation, not an innocuous baseline assumption. There is currently no formal theorem deriving it from pivot\_merge; non-generic nodes, the Gray-code circuit realization of phi, and the exact sixth-CNOT cancellation remain outside the endpoint. Claims.synth still returns the older 22/48 statement using a baseline BlockZXZ theorem whose proof contains sorry.
+
+The principal proved result is the generic matrix theorem. The improved global circuit recurrence remains conditional on the missing circuit-construction rule and baseline synthesis hypotheses. Admitted baseline proofs are not evidence for unconditional synthesis of arbitrary n-qubit unitaries with fewer CX gates.
+
+\subsection{Formal verification}
+Lean 4.30.0-rc2 with Mathlib c1e30e172c8fda21e6776bf1f10351e882ee31b9 checked the 26-source development and six selected generic/count/conditional-bridge declarations. These use only standard kernel axioms; count\_closed needs propext and Quot.sound. The separate baseline audit returns sorryAx for all eight Claims endpoints, including Claims.synth, and the baseline sources contain 13 admitted placeholders. Consequently this verifies the selected generic theorem and conditional arithmetic statements, not the universal synthesis headline. Pinned proof files and exact audits are provided in the companion repository.
+
+{\small Numerical checks of nine generic block pairs in dimensions 4, 8 and 12 agree with polar-path unitarity, determinant phase, endpoint reversal and Walsh sign change. They are consistency checks, not a proof of the theorem or a circuit-count result; the corresponding data and checker are provided in the repository.\par}
+
+\begin{samepage}
+\subsection{LeanUnitary.Pivot.pivot\_merge}
+\begin{quote}\small\ttfamily For D=4(q+1), invertible complex D-by-D blocks X,Y, a full eigenvalue list of X inverse times Y and pairwise crossing-angle separation modulo pi, there exist an unrestricted real angle alpha and an angle beta in [0,pi], an ordinary unitary one-qubit gate, pivoted blocks satisfying the lifted block multiplication identity, and a real phase list of zxzC(Xprime,Yprime) whose finalAngle(q+1) equals zero. No unitarity assumption on the entire block matrix U is needed. The theorem concludes no circuit or CNOT-count bound.\end{quote}
+{\small Source: LeanUnitary/Pivot/Existence/Pivot.lean.\par}
+
+{\small Source SHA-256: dd8f689a42fc44b1c1ad17fa7af1e5de337aff7ccc0ec0ef7551ff81e362c2bf\par}
+
+{\small\textbf{Sources and attribution:} \href{https://github.com/bowrango/lean-unitary/blob/7014b63ee2cfd01c641a7f539c73b664a2aa3d66/LeanUnitary/Pivot/Existence/Pivot.lean}{1. bowrango/lean-unitary / Pivot.lean}; \href{https://github.com/bowrango/lean-unitary/blob/7014b63ee2cfd01c641a7f539c73b664a2aa3d66/LeanUnitary/Pivot/Multiplexor/Basic.lean}{2. bowrango/lean-unitary / Basic.lean}; \href{https://github.com/bowrango/lean-unitary/blob/7014b63ee2cfd01c641a7f539c73b664a2aa3d66/LeanUnitary/Pivot/Synthesis.lean}{3. bowrango/lean-unitary / Synthesis.lean}; \href{https://github.com/bowrango/lean-unitary/blob/7014b63ee2cfd01c641a7f539c73b664a2aa3d66/LeanUnitary/Claims.lean}{4. bowrango/lean-unitary / Claims.lean}; \href{https://github.com/bowrango/lean-unitary/blob/7014b63ee2cfd01c641a7f539c73b664a2aa3d66/LeanUnitary/README.md}{5. bowrango/lean-unitary / README.md}; \href{https://arxiv.org/abs/2403.13692v2}{6. arXiv source: 2403.13692v2}; \href{https://github.com/bowrango/lean-unitary/blob/7014b63ee2cfd01c641a7f539c73b664a2aa3d66/LeanUnitary/Pivot/Count.lean}{7. bowrango/lean-unitary / Count.lean}; \href{https://arxiv.org/abs/1512.07240v3}{8. arXiv source: 1512.07240v3}; \href{https://arxiv.org/abs/quant-ph/0404089v3}{9. arXiv source: quant-ph/0404089v3}; \href{https://arxiv.org/html/2512.23720v2}{10. arXiv source: 2512.23720v2}; \href{https://www.mattbowring.com/posts/gate-decomp/}{11. www.mattbowring.com / gate-decomp}; \href{https://www.mattbowring.com/}{12. www.mattbowring.com / }; \href{https://github.com/bowrango/lean-unitary/tree/7014b63ee2cfd01c641a7f539c73b664a2aa3d66}{13. bowrango/lean-unitary}; \href{https://github.com/alejandrozu/openmath-2026-judging}{Proof source repository}.\par}
+
+\end{samepage}
+{\small \textbf{AI assistance.} Codex assisted literature checking, editorial preparation and analysis of the supplied formal artifacts. The human authors are responsible for checking the final mathematical claims, references and attribution.\par}
+
+\end{document}

@@ -1,0 +1,69 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,textcomp}
+\usepackage[margin=24mm]{geometry}
+\usepackage{longtable,booktabs,array,enumitem}
+\usepackage[hidelinks]{hyperref}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+\emergencystretch=3em
+\hypersetup{pdfauthor={Rachel Teo, Wenyi Wang, Hamdi Abderrahmene, Alejandro Zarzuelo Urdiales}}
+\begin{document}
+{\LARGE\bfseries Factor-preserving deficiency hierarchies in Ferrers graphs\par}\medskip
+{\small Rachel Teo\ensuremath{^1}, Wenyi Wang\ensuremath{^1}, Hamdi Abderrahmene\ensuremath{^1}, Alejandro Zarzuelo Urdiales\ensuremath{^2}\par}\medskip
+{\small\textbf{Affiliations:} \href{https://sakana.ai/}{\ensuremath{^1} Sakana AI}; \href{https://rsihouse.ai/openmath}{\ensuremath{^2} Open Math}.\par}
+
+{\small\href{https://github.com/alejandrozu/openmath-2026-judging}{Code and formal proofs}\par}
+
+\subsection{Abstract}
+Under two consecutive matching-union rank equalities in a Ferrers graph, every supplied optimal degree-r factor can be preserved while r\ensuremath{-}e disjoint matchings of the required size are appended. The result determines subsequent ranks and gives balanced and one-defect colour-prefix realizations.
+
+\subsection{Ranks and the preservation theorem}
+A Ferrers graph is the bipartite incidence graph of a Young diagram: row lengths are weakly decreasing, and a cell is an allowed row-column edge. Let \ensuremath{\alpha}\_j be the maximum number of edges in a union of j matchings, equivalently the maximum size of an allowed subgraph whose row and column degrees are at most j.
+
+For integers 1\ensuremath{\leq}r\ensuremath{\leq}k and 0\ensuremath{\leq}e<r, assume \ensuremath{\alpha}\_r=rk\ensuremath{-}e and \ensuremath{\alpha}\_(r+1)=(r+1)k\ensuremath{-}r\ensuremath{-}e. Then \ensuremath{\alpha}\_1=k. More strongly, every prescribed optimal degree-r factor F of size rk\ensuremath{-}e is retained, while r\ensuremath{-}e edge-disjoint matching classes, each of size k\ensuremath{-}r and disjoint from F, can be appended. For 0\ensuremath{\leq}h\ensuremath{\leq}r\ensuremath{-}e, the exact later rank is \ensuremath{\alpha}\_(r+h)=rk\ensuremath{-}e+h(k\ensuremath{-}r).
+
+The words every prescribed factor express the useful strengthening. An existence theorem for one specially chosen factor would not imply that an arbitrary already-selected optimum can be extended.
+
+\subsection{Tight corners and matching extensions}
+Ferrers shape gives an explicit corner/min-cut formula for the degree-constrained factor rank. Equality in the two adjacent rank bounds forces a tight deficient corner. Its geometry divides the available cells into two arms and constrains how the selected red factor occupies the special corner region.
+
+The proof extracts a budget on the special red edges, applies a capacitated Hall construction to the top arm, and obtains r\ensuremath{-}e matching classes there. It transposes the Ferrers graph and applies the same result to the other arm. The two arms have separated row and column supports, so corresponding matchings can be united without creating a repeated row or column. Each combined class has the required size k\ensuremath{-}r and avoids every edge of the original F.
+
+Appending h classes supplies a lower bound for \ensuremath{\alpha}\_(r+h); the tight corner supplies the matching upper bound. Balanced and one-defect cases additionally organize the initial colour classes with the required prefix sizes. The source bridges the incidence model to the actual YoungDiagram graph and its independence-number notation, preventing a theorem about a surrogate rank definition from being mistaken for the target statement.
+
+\subsection{Balanced and deficient consequences}
+At e=0, the result realizes simultaneous first 2r CDS colours: r initial independent sets of size k and r further sets of size k\ensuremath{-}r, with all prefixes optimal. At e=1, it supplies the first 2r\ensuremath{-}1 colours with the stated one-defect profile. For e>1, the submitted theorem does not claim that an arbitrary supplied colouring already has every desired individual early colour size.
+
+The general Latin Tableau problem remains open. The contribution is a restricted structural hierarchy, with a preservation quantifier that is stronger than selecting a convenient optimum. Parameterized sharpness and missing-corner transport discussed elsewhere are outside the selected 44-module formal closure unless separately proved and admitted.
+
+\subsection{Prior work}
+Corner formulas, capacitated Hall and bipartite edge colouring are established tools. The greedy boundary e=r\ensuremath{-}1 and several small existence cases, including r=3,e=1, are known. The preservation quantifier here concerns every supplied optimal factor, rather than the existence of one convenient factor.
+
+The full Latin Tableau conjecture remains open. Historical comparison of this factor-preserving extension with the existing factor-theory literature is incomplete; formal correctness does not establish first-discovery priority.
+
+\subsection{Formal verification}
+Lean 4.33.1 checked all 44 source modules and four selected declarations: the factor-preserving extension, Young-diagram later ranks, one-defect independent sets and balanced first-two-r independent sets. The selected declarations use only standard kernel axioms, without admitted proofs, native evaluation or unknown axioms. Pinned sources and audit records are supplied in the companion repository.
+
+\begin{samepage}
+\subsection{FerrersArm.TightDefectCorner.defect\_preserves\_factor}
+\begin{quote}\small\ttfamily theorem defect\_preserves\_factor \{n W : \ensuremath{\mathbb{N}}\} (\ensuremath{\ell} : Fin n \ensuremath{\to} \ensuremath{\mathbb{N}}) (h\ensuremath{\ell} : Antitone \ensuremath{\ell})\newline     (r k e : \ensuremath{\mathbb{N}}) (hr : 1 \ensuremath{\leq} r) (hk : r \ensuremath{\leq} k) (he : e < r)\newline     (hR : factorRank (W := W) \ensuremath{\ell} r = r*k-e)\newline     (hNext : factorRank (W := W) \ensuremath{\ell} (r+1) = (r+1)*k-r-e)\newline     (F : Finset (Fin n \ensuremath{\times} Fin W)) (hF : Feasible \ensuremath{\ell} r F) (hcard : F.card = r*k-e) :\newline     \ensuremath{\exists} G : Fin (r-e) \ensuremath{\to} Finset (Fin n \ensuremath{\times} Fin W),\newline       (\ensuremath{\forall} c, IsMatching (G c) \ensuremath{\wedge} (G c).card = k-r \ensuremath{\wedge}\newline         \ensuremath{\forall} p \ensuremath{\in} G c, Allowed \ensuremath{\ell} p.1 p.2 \ensuremath{\wedge} p \ensuremath{\notin} F) \ensuremath{\wedge}\newline       (\ensuremath{\forall} c d, c \ensuremath{\neq} d \ensuremath{\to} Disjoint (G c) (G d)) \ensuremath{\wedge}\newline       (\ensuremath{\forall} h \ensuremath{\leq} r-e, factorRank (W := W) \ensuremath{\ell} (r+h) = (r+h)*k-h*r-e) \ensuremath{\wedge}\newline       factorRank (W := W) \ensuremath{\ell} 1 = k\end{quote}
+{\small Source: proofs/ferrers/OpHack/Ferrers/DefectExtension.lean:104.\par}
+
+{\small Source SHA-256: c17d8534968c3ac199813212046ba0da17c65fa46e2907460afeca99323b1e20\par}
+
+\end{samepage}
+\begin{samepage}
+\subsection{FerrersArm.YoungDiagramBridge.defect\_indepNumK\_later\_ranks}
+\begin{quote}\small\ttfamily theorem defect\_indepNumK\_later\_ranks (\ensuremath{\mu} : YoungDiagram) (r k e : \ensuremath{\mathbb{N}})\newline     (hr : 1 \ensuremath{\leq} r) (hk : r \ensuremath{\leq} k) (he : e < r)\newline     (hR : FCCompat.indepNumK (FCCompat.YoungDiagram.toSimpleGraph \ensuremath{\mu}) r = r*k-e)\newline     (hNext : FCCompat.indepNumK (FCCompat.YoungDiagram.toSimpleGraph \ensuremath{\mu})\newline       (r+1) = (r+1)*k-r-e) :\newline     \ensuremath{\forall} h \ensuremath{\leq} r-e, FCCompat.indepNumK (FCCompat.YoungDiagram.toSimpleGraph \ensuremath{\mu})\newline       (r+h) = (r+h)*k-h*r-e\end{quote}
+{\small Source: proofs/ferrers/OpHack/Ferrers/YoungDiagramDefect.lean:8.\par}
+
+{\small Source SHA-256: c55685043c4b319f834184a218377c836af11200769eeae94fda76c4fc2c2dbc\par}
+
+{\small\textbf{Sources and attribution:} \href{https://arxiv.org/abs/2408.04086}{1. arXiv source: 2408.04086}; \href{https://www.combinatorics.org/ojs/index.php/eljc/article/download/v32i2p48/pdf/}{2. www.combinatorics.org / pdf}; \href{https://github.com/google-deepmind/formal-conjectures/blob/main/FormalConjectures/Paper/LatinTableau.lean}{3. google-deepmind/formal-conjectures / LatinTableau.lean}; \href{https://github.com/alejandrozu/openmath-2026-judging/blob/d0ed487f487fa7ec814ff705ab55249983fe8707/OpenMath-Judging/review/entries/E02-ferrers-hierarchy.txt}{4. alejandrozu/openmath-2026-judging / E02-ferrers-hierarchy.txt}; \href{https://github.com/alejandrozu/openmath-2026-judging}{Proof source repository}.\par}
+
+\end{samepage}
+{\small \textbf{AI assistance.} Codex assisted literature checking, editorial preparation and analysis of the supplied formal artifacts. The human authors are responsible for checking the final mathematical claims, references and attribution.\par}
+
+\end{document}
