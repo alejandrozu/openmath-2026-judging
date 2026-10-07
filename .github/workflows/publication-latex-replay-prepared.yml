@@ -20,7 +20,7 @@ jobs:
     runs-on: ubuntu-24.04
     timeout-minutes: 30
     env:
-      SOURCE_MANIFEST: publication-latex-replay-2026-10-07/source-manifest.json
+      SOURCE_MANIFEST: publication-latex-replay-2026-10-07/v2/source-manifest.json
       EXPECTED_MANIFEST_SHA256: ${{ inputs.source_manifest_sha256 }}
     steps:
       - name: Check out the exact dispatch commit
@@ -46,10 +46,11 @@ jobs:
           docker_image: ghcr.io/xu-cheng/texlive-alpine@sha256:c06416ebbc69c8e90e07d1f1a6f7a3f9b334e773daa3543ce879ea533317c3a7
           compiler: latexmk
           args: -pdf -file-line-error -halt-on-error -interaction=nonstopmode
-          latexmk_use_lualatex: true
+          latexmk_use_lualatex: false
+          latexmk_use_xelatex: true
           latexmk_shell_escape: false
           post_compile: |
-            lualatex --version > publication-latex-replay-2026-10-07/actual_lualatex_version.txt
+            xelatex --version > publication-latex-replay-2026-10-07/actual_xelatex_version.txt
             latexmk --version > publication-latex-replay-2026-10-07/actual_latexmk_version.txt
 
       - name: Record genuine PDF hashes, compiler outcomes and page counts
@@ -74,5 +75,5 @@ jobs:
             publication-latex-replay-2026-10-07/**/*.log
             publication-latex-replay-2026-10-07/**/*.blg
             publication-latex-replay-2026-10-07/actual*.json
+            publication-latex-replay-2026-10-07/**/actual*.json
             publication-latex-replay-2026-10-07/actual*version.txt
-

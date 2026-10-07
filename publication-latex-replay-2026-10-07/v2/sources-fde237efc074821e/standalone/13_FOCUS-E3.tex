@@ -1,0 +1,69 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,textcomp}
+\usepackage[margin=24mm]{geometry}
+\usepackage{longtable,booktabs,array,enumitem}
+\usepackage[hidelinks]{hyperref}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+\emergencystretch=3em
+\hypersetup{pdfauthor={Rachel Teo, Wenyi Wang, Hamdi Abderrahmene, Alejandro Zarzuelo Urdiales}}
+\begin{document}
+{\LARGE\bfseries A modulus 13 obstruction to diagonal-pullback optimality for a four-point L-pattern\par}\medskip
+{\small Rachel Teo\ensuremath{^1}, Wenyi Wang\ensuremath{^1}, Hamdi Abderrahmene\ensuremath{^1}, Alejandro Zarzuelo Urdiales\ensuremath{^2}\par}\medskip
+{\small\textbf{Affiliations:} \href{https://sakana.ai/}{\ensuremath{^1} Sakana AI}; \href{https://rsihouse.ai/openmath}{\ensuremath{^2} Open Math}.\par}
+
+{\small\href{https://github.com/alejandrozu/openmath-2026-judging}{Code and formal proofs}\par}
+
+\subsection{Abstract}
+An explicit 79-point subset of (\ensuremath{\mathbb{Z}}/13\ensuremath{\mathbb{Z}})\ensuremath{^2} avoids a prescribed four-point L-pattern and exceeds every diagonal pullback of a cyclic four-AP-free set. Exact cyclic sharpness gives pullback capacity 78. This refutes a finite auxiliary ansatz, without addressing reciprocal divergence.
+
+There exists an L-free B\ensuremath{\subseteq}(\ensuremath{\mathbb{Z}}/13\ensuremath{\mathbb{Z}})\ensuremath{^2} with |B|=79, while every diagonal pullback S\_A from a cyclic four-AP-free A has |S\_A|\ensuremath{\leq}78.
+
+\subsection{The finite model and ansatz}
+A strong L-pattern in (\ensuremath{\mathbb{Z}}/13\ensuremath{\mathbb{Z}})\ensuremath{^2} consists of(x,y),(x,y+d),(x,y+2d),(x+d,y) with d\ensuremath{\neq}0. The retained explicit set B has 79 points and contains no such pattern. For a cyclic four-AP-free A\ensuremath{\subseteq}\ensuremath{\mathbb{Z}}/13\ensuremath{\mathbb{Z}}, the diagonal pullback S\_A=\{(x,y):x\ensuremath{-}y\ensuremath{\in}A\} is L-free and has 13|A| points.
+
+An exhaustive exact certificate proves that every cyclic four-AP-free subset has at most six points, and\{0,1,2,4,5,7\} attains six. Consequently every pullback S\_A has at most 78 points, whereas B has 79. The diagonal-pullback construction therefore fails to be optimal in this finite auxiliary extremal problem.
+
+\subsection{Witness and exact upper certificate}
+The 79-point witness is stored literally as a finite set, and its cardinality and all forbidden-pattern tests are kernel-decided. The cyclic upper bound is a separate Boolean-tree certificate covering every subset of the 13-element cyclic group, with cardinality transport to the ordinary set statement.
+
+The useful final step is source-faithful transport. Fugu3PullbackCore uses the original diagonal convention x\ensuremath{-}y rather than an interchangeable-looking surrogate, and PullbackObstruction proves equivalence of the original curried predicates with the certificate predicates. It then combines the 79-point witness, the upper bound six and the identity |S\_A|=13|A| in one endpoint.
+
+This proves a strict separation from every member of the proposed ansatz, not simply from one tested seed. It does not prove that 79 is the optimum among all L-free subsets.
+
+\subsection{Interpretation and limits}
+The construction is a useful warning against a plausible reduction: one-dimensional progression avoidance need not yield extremal two-dimensional L-pattern avoidance. The gap is only one point, but the universal comparison over all diagonal pullbacks makes its meaning precise.
+
+There is no infinite reciprocal-divergent progression-free set in this theorem, and no statement forcing long arithmetic progressions. It must not be announced as a solution of Erdős 3. The research value is a finite obstruction to a specific auxiliary strategy and a reproducible exact extremal certificate.
+
+\subsection{Certificates and formal scope}
+The literal 79-point witness and six-point cyclic example are supplied as finite data, together with the complete Boolean-tree upper certificate and the original x\ensuremath{-}y pullback bridge. The selected endpoint retained\_witness\_beats\_every\_diagonal\_pullback compares the witness with every member of that ansatz.
+
+The finite certificate is provided in the repository with its exact source identity. The proposed diagonal-pullback ansatz and prior progression-avoidance constructions retain their attribution; this result does not address reciprocal divergence.
+
+\subsection{Formal verification}
+Lean 4.33.1 checked the six-source base with five selected declarations and the seven-source pullback extension with three selected declarations. Every selected declaration uses only standard kernel axioms: B\_card uses propext and Quot.sound, and the other selected statements may also use Classical.choice. This checks the finite witness, cyclic maximum and diagonal-pullback comparison, not the full Erdős 3 problem. Pinned sources and certificate audits are supplied in the companion repository.
+
+\begin{samepage}
+\subsection{Erdos3PullbackBridge.card\_diagonal\_pullback\_le\_78}
+\begin{quote}\small\ttfamily theorem card\_diagonal\_pullback\_le\_78 (A : Finset (ZMod 13))\newline     (hA : Fugu3Lshape.APFree4 A) : (Fugu3Lshape.SA A).card \ensuremath{\leq} 78\end{quote}
+{\small Source: Focus\_Evidence/evidence/FOCUS-E3/pullback-bridge/source/PullbackObstruction.lean:31.\par}
+
+{\small Source SHA-256: 042f95ddc1c1630d43710d987dbca399cc4bc1a736004290a2c5425b41f029c8\par}
+
+\end{samepage}
+\begin{samepage}
+\subsection{Erdos3PullbackBridge.retained\_witness\_beats\_every\_diagonal\_pullback}
+\begin{quote}\small\ttfamily theorem retained\_witness\_beats\_every\_diagonal\_pullback :\newline     Erdos3R17.B.card = 79 \ensuremath{\wedge} Fugu3Lshape.LFree Erdos3R17.B \ensuremath{\wedge}\newline     \ensuremath{\forall} A : Finset (ZMod 13), Fugu3Lshape.APFree4 A \ensuremath{\to}\newline       Fugu3Lshape.LFree (Fugu3Lshape.SA A) \ensuremath{\wedge}\newline       (Fugu3Lshape.SA A).card = 13 * A.card \ensuremath{\wedge}\newline       (Fugu3Lshape.SA A).card \ensuremath{\leq} 78 \ensuremath{\wedge}\newline       (Fugu3Lshape.SA A).card < Erdos3R17.B.card\end{quote}
+{\small Source: Focus\_Evidence/evidence/FOCUS-E3/pullback-bridge/source/PullbackObstruction.lean:38.\par}
+
+{\small Source SHA-256: 042f95ddc1c1630d43710d987dbca399cc4bc1a736004290a2c5425b41f029c8\par}
+
+{\small\textbf{Sources and attribution:} \href{https://github.com/alejandrozu/ulam-opdp-difficulty-atlas}{1. alejandrozu/ulam-opdp-difficulty-atlas}; \href{https://github.com/alejandrozu/openmath-2026-judging/blob/d0ed487f487fa7ec814ff705ab55249983fe8707/OpenMath-Judging/review/entries/E02-FOCUS-E3.txt}{2. alejandrozu/openmath-2026-judging / E02-FOCUS-E3.txt}; \href{https://github.com/alejandrozu/openmath-2026-judging}{Proof source repository}.\par}
+
+\end{samepage}
+{\small \textbf{AI assistance.} Codex assisted literature checking, editorial preparation and analysis of the supplied formal artifacts. The human authors are responsible for checking the final mathematical claims, references and attribution.\par}
+
+\end{document}

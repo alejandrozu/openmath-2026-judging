@@ -101,16 +101,19 @@ def record(args):
     for source in d['sources']:
         f=safe_path(root, source['relative_path'])
         pdf=f.with_suffix('.pdf'); log=f.with_suffix('.log')
-        issues=[]; pages=None
+        issues=[]; pages=None; engine_output_format=None
         if not pdf.is_file():
             issues.append('PDF_MISSING')
+        elif not (pdf.read_bytes().startswith(b'%PDF-') and b'%%EOF' in pdf.read_bytes()[-2048:]):
+            issues.append('PDF_HEADER_OR_FINAL_EOF_MISSING')
         if not log.is_file():
             issues.append('LOG_MISSING')
         else:
             text=log.read_text(encoding='utf8', errors='replace')
-            matches=re.findall(r'Output written on\s+.*?\.pdf\s*\((\d+)\s+pages?\b', text, flags=re.S)
+            matches=re.findall(r'Output written on\s+.*?\.(pdf|xdv)\s*\((\d+)\s+pages?\b', text, flags=re.S)
             if matches:
-                pages=int(matches[-1])
+                engine_output_format=matches[-1][0]
+                pages=int(matches[-1][1])
             else:
                 issues.append('NO_ACTUAL_LOG_PAGE_COUNT')
             if re.search(r'(^!|Emergency stop|Fatal error occurred)',text,flags=re.M):
@@ -119,6 +122,7 @@ def record(args):
                 issues.append('SVJOUR3_PAGE_COUNT_EXCEEDS_25')
         all_pass = all_pass and not issues
         row={'source':source,'issues':issues,'pages_from_actual_compiler_log':pages,
+             'actual_engine_log_output_format':engine_output_format,
              'PDF':None,'log':None}
         for kind,p in [('PDF',pdf),('log',log)]:
             if p.is_file():
@@ -132,6 +136,7 @@ def record(args):
           'manifest_sha256':args.manifest_sha256,'source_count':22,'results':rows,
           'run':{k:os.environ.get(k) for k in ['GITHUB_SHA','GITHUB_RUN_ID','GITHUB_RUN_ATTEMPT']},
           'actual_page_counts_are_log_observations_not_visual_QA':True,
+          'XeLaTeX_XDV_log_count_accepted_only_with_complete_PDF_and_successful_compilation_step':True,
           'math_proof_or_journal_acceptance_or_author_approval_claimed':False}
     out.write_text(json.dumps(data,indent=2)+'\n',encoding='utf8')
     print(json.dumps({'status':data['status'],'result_file':str(out)},indent=2))

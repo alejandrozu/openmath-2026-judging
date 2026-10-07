@@ -1,0 +1,55 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,textcomp}
+\usepackage[margin=24mm]{geometry}
+\usepackage{longtable,booktabs,array,enumitem}
+\usepackage[hidelinks]{hyperref}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+\emergencystretch=3em
+\hypersetup{pdfauthor={Rachel Teo, Wenyi Wang, Hamdi Abderrahmene, Alejandro Zarzuelo Urdiales}}
+\begin{document}
+{\LARGE\bfseries A four-term-progression-free set with reciprocal sum exceeding 4.44\par}\medskip
+{\small Rachel Teo\ensuremath{^1}, Wenyi Wang\ensuremath{^1}, Hamdi Abderrahmene\ensuremath{^1}, Alejandro Zarzuelo Urdiales\ensuremath{^2}\par}\medskip
+{\small\textbf{Affiliations:} \href{https://sakana.ai/}{\ensuremath{^1} Sakana AI}; \href{https://rsihouse.ai/openmath}{\ensuremath{^2} Open Math}.\par}
+
+{\small\href{https://github.com/alejandrozu/openmath-2026-judging}{Code and formal proofs}\par}
+
+\subsection{Abstract}
+An explicit six-residue augmentation of the base 55 digit construction gives a finite positive four-AP-free set whose exact reciprocal sum exceeds 111/25. This improves the located lower-bound construction while remaining a finite bound, not a reciprocal-divergence theorem.
+
+\subsection{One explicit set for all three assertions}
+Let D=\{0,1,2,4,5,9,10,11,14,16,17,18,21,24,30,37,39,41,42,45,47\}. Define T\_j as the nonnegative integers with j base 55 digits drawn from D, allowing leading zeroes, and T\_0=\{0\}. Put M=55\ensuremath{^3} and U=\{26286,26726,26737,120061,120501,120512\}. Set E=T\_22\ensuremath{\cup}\ensuremath{\bigcup}\_(u\ensuremath{\in}U)(u+M T\_21), and A=\{e+1:e\ensuremath{\in}E\}.
+
+The theorem proves that every member of A is positive, A contains no nonconstant four-term arithmetic progression over the integers, and the finite rational sum \ensuremath{\sum}\_(a\ensuremath{\in}A)1/a is strictly greater than 111/25=4.44. These clauses concern the same set of distinct elements. Separate large harmonic sums and AP-free witnesses would not establish the result.
+
+\subsection{Digit descent and augmentation}
+The known base 55 alphabet supplies the starting AP-free digital construction. Reducing a hypothetical progression modulo 55 and descending through the digits proves the absence of a nonconstant progression in the digit-restricted part. The six extra residue classes are chosen and checked so that the combined set remains free of forbidden progressions across its pieces.
+
+The formal development includes exact small arithmetic certificates, residue-fibre transport and harmonic estimates. It avoids enumerating an astronomically large set element by element. Grouped levels and rational lower bounds certify the harmonic sum while finset unions preserve distinctness. The finite certificate stages and the original digit alphabet are supporting steps, not additional discoveries.
+
+\subsection{Improvement and limits}
+The cited Walker construction gives reciprocal sum above 4.43975; the later cited augmentation reaches approximately 4.4397534742. The six-residue augmentation here raises the certified lower bound above 4.44 while preserving the absence of four-term progressions.
+
+This result does not give unbounded reciprocal sums and does not refute the Erdős-Turán reciprocal-divergence problem. It is a quantitative lower construction for the associated extremal estimation problem. No optimality of the augmentation or global supremum is claimed.
+
+\subsection{Formal endpoint and scope}
+Erdos3Candidate.explicit\_four\_ap\_free\_reciprocal\_gt states positivity, APFree 4 and the strict rational bound for one explicit set. The digit-descent, residue-transport and harmonic-sum lemmas prove these properties together. Walker and the intervening augmentation provide the prior construction; the claimed improvement is restricted to this set and the 4.44 lower threshold.
+
+\subsection{Formal verification}
+A qualified import-only replay checks all 22 unchanged scientific proof bodies and the final selected endpoint under Lean 4.34.1. Seven import headers were narrowed to the required pinned modules; statements, proofs, options and comments outside those spans are unchanged. The selected endpoint uses only standard kernel axioms. This result is distinct from the preserved partial original-source replay (15/22) and the earlier narrowed replay (7/22); neither partial record is relabelled as complete. Source identities, exact dependency pins and the completed route are provided in the companion repository.
+
+\begin{samepage}
+\subsection{Erdos3Candidate.explicit\_four\_ap\_free\_reciprocal\_gt}
+\begin{quote}\small\ttfamily theorem explicit\_four\_ap\_free\_reciprocal\_gt :\newline     (\ensuremath{\forall} a \ensuremath{\in} sixAFinset, 0 < a) \ensuremath{\wedge}\newline       APFree 4 (sixAFinset : Set \ensuremath{\mathbb{Z}}) \ensuremath{\wedge}\newline       (\ensuremath{\sum} a \ensuremath{\in} sixAFinset, (1 : \ensuremath{\mathbb{Q}}) / (a : \ensuremath{\mathbb{Q}})) > 111 / 25\end{quote}
+{\small Source: proofs/erdos169-fourap/OpHack/MainResult.lean:17.\par}
+
+{\small Source SHA-256: cc686e49443c9f23ccbf715be6e9cf71c528736794df230771d33ec84df80ac5\par}
+
+{\small\textbf{Sources and attribution:} \href{https://www.erdosproblems.com/169}{1. www.erdosproblems.com / 169}; \href{https://arxiv.org/abs/2203.06045}{2. arXiv source: 2203.06045}; \href{https://computoergosum.com/en/principia/erdos-169.html}{3. computoergosum.com / erdos-169.html}; \href{https://github.com/alejandrozu/ulam-opdp-difficulty-atlas}{4. alejandrozu/ulam-opdp-difficulty-atlas}; \href{https://github.com/alejandrozu/openmath-2026-judging/blob/d0ed487f487fa7ec814ff705ab55249983fe8707/OpenMath-Judging/review/entries/E02-erdos169-fourap.txt}{5. alejandrozu/openmath-2026-judging / E02-erdos169-fourap.txt}; \href{https://github.com/alejandrozu/openmath-2026-judging}{Proof source repository}.\par}
+
+\end{samepage}
+{\small \textbf{AI assistance.} Codex assisted literature checking, editorial preparation and analysis of the supplied formal artifacts. The human authors are responsible for checking the final mathematical claims, references and attribution.\par}
+
+\end{document}
