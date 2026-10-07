@@ -1,0 +1,14 @@
+'OpenMathReview.Sampling.actual_full_selected_degree_tail_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'OpenMathReview.Sampling.actual_uniform_selected_degree_tail' depends on axioms: [propext, Classical.choice, Quot.sound]
+@actual_uniform_selected_degree_tail : ∀ {s m : ℕ},
+  0 < s →
+    0 < m →
+      ∀ (hm : m ≤ s) (x : Fin s → ℝ),
+        (∀ (j : Fin s), x j = 0 ∨ x j = 1) →
+          ∀ (p : ↑unitInterval),
+            ↑p * ↑s = ↑m →
+              0 < ↑p * ∑ j, x j →
+                (uniformFixedColumnLaw s m hm).real {ω | selectedDegree x ω ≥ 2 * (↑p * ∑ j, x j)} ≤
+                  2 * (↑s + 1) * Real.exp (-(↑p * ∑ j, x j) / 3)

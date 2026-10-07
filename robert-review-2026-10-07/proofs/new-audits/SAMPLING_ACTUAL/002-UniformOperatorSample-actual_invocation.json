@@ -1,0 +1,590 @@
+{
+  "schema": "new-faithful-matrix-sampling-piece-own-guarded-invocation-v1",
+  "checked_utc": "2026-10-07T16:33:25.728667+00:00",
+  "module": "UniformOperatorSample",
+  "source": {
+    "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\UniformOperatorSample.lean",
+    "sha256": "441c42ba358588887eb5aba58e12a34f081f3210369718f108757a07690b78d2",
+    "bytes": 5038
+  },
+  "runtime": {
+    "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+    "sha256": "af49bacfabaa1fea71332ca0feae0fa1a60912219d5902291adc79f905bffb8d",
+    "bytes": 83456
+  },
+  "qualified_SLT_port": {
+    "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SLT_PORT\\SLT_PORT_actual_final_qualification.json",
+    "sha256": "1e57e284ffd2cdc8cb093e9586f66cd1bb803e0659b7c8ceaff2ae4eb62e38c5",
+    "bytes": 37486
+  },
+  "SLT_readonly_inputs": [
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+      "sha256": "af49bacfabaa1fea71332ca0feae0fa1a60912219d5902291adc79f905bffb8d",
+      "bytes": 83456
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\adjacent_robert_20261007\\verification\\completed106-source81-axioms-immutable.json",
+      "sha256": "82b6c76de58309b35ed3b1b28b211011449b319affde181446870a33e9a9f142",
+      "bytes": 1107666
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\research\\external\\lean-stat-learning-theory\\LICENSE",
+      "sha256": "daa2c62dbd3689f1b3f54aac1ca4724132d5111f7564a7a4b862b27484783447",
+      "bytes": 11569
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SLT_PORT\\LICENSE",
+      "sha256": "daa2c62dbd3689f1b3f54aac1ca4724132d5111f7564a7a4b862b27484783447",
+      "bytes": 11569
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SLT_PORT\\SLT\\MatrixInfra\\Basic.lean",
+      "sha256": "996a35b418cd71e8395421cf9de742dd47f5a2794c7cb5463688e6dc7ee0b03c",
+      "bytes": 35984
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SLT_PORT\\SLT\\MatrixInfra\\Basic.olean",
+      "sha256": "2fe8e977beabb994b0a0d5808475ece39ea0bdb872e2d834945c18cc77d5acc3",
+      "bytes": 1295480
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SLT_PORT\\attempts\\003-SLT.MatrixInfra.Basic\\actual_invocation.json",
+      "sha256": "0755489e965df2f11a3313871b617a575b38015628f8f38251eca5a84845f299",
+      "bytes": 27094
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SLT_PORT\\SLT\\MatrixInfra\\CourantFischer.lean",
+      "sha256": "19abb7c17f5ead16e3dfb85860854932cc830c3bef7e8e674df2e04ddcaf0191",
+      "bytes": 74121
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SLT_PORT\\SLT\\MatrixInfra\\CourantFischer.olean",
+      "sha256": "4789597adadc1f205c0cbc3ec723f9f4569cf6cbbc193631afab013d9f538e16",
+      "bytes": 1959152
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SLT_PORT\\attempts\\001-SLT.MatrixInfra.CourantFischer\\actual_invocation.json",
+      "sha256": "67ee75f97c31d04b187649393cf1c902b31d200a2a48bdf57c76f4240ff7988f",
+      "bytes": 39525
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SLT_PORT\\SLT\\MatrixInfra\\MatCalc.lean",
+      "sha256": "8681606a714e6c0a0c0b3e74912f35d9b88d8588768bfe6420c7d5edeabec3c1",
+      "bytes": 93259
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SLT_PORT\\SLT\\MatrixInfra\\MatCalc.olean",
+      "sha256": "80edbd0ea369c33ab950d82f65c37392c1bfcbe0478956dfd0d9cd9b93728e82",
+      "bytes": 3002920
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SLT_PORT\\attempts\\002-SLT.MatrixInfra.MatCalc\\actual_invocation.json",
+      "sha256": "28fb6642db6ca70b39fba37791a1e33a70b367705336721835c412595278ab60",
+      "bytes": 29038
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SLT_PORT\\SLT\\RMT\\Lieb.lean",
+      "sha256": "d1e90f275914dd5c0ff4027e12c764fbcc6c785301da469e5d80c514ad0de8cb",
+      "bytes": 15412
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SLT_PORT\\SLT\\RMT\\Lieb.olean",
+      "sha256": "a33cd5ea40c093da8eef0cd03f2a742dd03e0f9f3a65a3f418343e51a8b84468",
+      "bytes": 450840
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SLT_PORT\\attempts\\001-SLT.RMT.Lieb\\actual_invocation.json",
+      "sha256": "4cf9cc26227e13e1e566a5ddf29f1c5206d3b02a2f54946e69c36ad1f0714e18",
+      "bytes": 25977
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SLT_PORT\\SLT\\RMT\\MatBern.lean",
+      "sha256": "f55cf2616cbeb3e17a38c2d336a2d1665e290bde2e8290d718484ce6404d6320",
+      "bytes": 145130
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SLT_PORT\\SLT\\RMT\\MatBern.olean",
+      "sha256": "365deadf85fc88ec5c5e5c7b2bd3959b0dfd526a622a83b40f2cc75e0b7d3f57",
+      "bytes": 3055120
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SLT_PORT\\attempts\\001-SLT.RMT.MatBern\\actual_invocation.json",
+      "sha256": "b00bef799e720a379c6af94ff29f0e2f8c7de08f7ca11a456052acfaa0703f14",
+      "bytes": 37877
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\Analysis\\InnerProductSpace\\SingularValues.lean",
+      "sha256": "ce8193fcd5d226845a71f66b8ca7ad385358916a6e0e688745410ac412ed5c81",
+      "bytes": 10354
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Analysis\\InnerProductSpace\\SingularValues.olean",
+      "sha256": "46788a5cdd8e6e4513bf286c2b7fa23d4a66bc16ada96f3e340f8b8c46ebae4a",
+      "bytes": 110392
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\Analysis\\CStarAlgebra\\CStarMatrix.lean",
+      "sha256": "95067757d043ef5e6c52acf952486f5d75e79e89bb740eb0b4033d3a5db4a0de",
+      "bytes": 35842
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Analysis\\CStarAlgebra\\CStarMatrix.olean",
+      "sha256": "61e4b0a29adc1a3c7480cf63e9081022587c9fcee3100d785f61fb014a693acd",
+      "bytes": 1531544
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\Analysis\\CStarAlgebra\\ContinuousFunctionalCalculus\\Instances.lean",
+      "sha256": "0bc04d350ea16313953d98ec4a73ba1767777414c08081572933e8b7dfddf163",
+      "bytes": 20830
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Analysis\\CStarAlgebra\\ContinuousFunctionalCalculus\\Instances.olean",
+      "sha256": "a1d5958946ac5a36b4bd1adfa70c558da5417b20e667ad8edd62c62dd829e3b1",
+      "bytes": 473632
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\Analysis\\CStarAlgebra\\Matrix.lean",
+      "sha256": "79518c9e51c4d0cf4083ab69a9ac7a2817305b48db1fe6f25ae1d678e12ce223",
+      "bytes": 14220
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Analysis\\CStarAlgebra\\Matrix.olean",
+      "sha256": "08f334722a7bcf712b67326c10710e9fe6c2b13052570b8ab79a57bd9995ac57",
+      "bytes": 471168
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\Analysis\\Matrix\\Order.lean",
+      "sha256": "eb786ba4435f1955c504da52de2beae76647d814922266c8aac8f082bbc3e2da",
+      "bytes": 16271
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Analysis\\Matrix\\Order.olean",
+      "sha256": "266fb157167926b001330379c8f37d69fb7609e7e244bd54ee535864bcc828b9",
+      "bytes": 250312
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\Analysis\\Normed\\Algebra\\MatrixExponential.lean",
+      "sha256": "b455181a304df946738ad2856d3d6ec7222300fd1da2cb285f5a519dfd43a224",
+      "bytes": 7815
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Analysis\\Normed\\Algebra\\MatrixExponential.olean",
+      "sha256": "891011a3c2ebab22c3ab77ddcd503c45fbc95988c0ac33fc17f8fd074905dd98",
+      "bytes": 99408
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\Analysis\\SpecialFunctions\\ContinuousFunctionalCalculus\\ExpLog\\Basic.lean",
+      "sha256": "6bf0c9b685cc6b88334c76ad8921b8bcb240ee371ba0a516e9a159bdfb54142a",
+      "bytes": 7445
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Analysis\\SpecialFunctions\\ContinuousFunctionalCalculus\\ExpLog\\Basic.olean",
+      "sha256": "b10c7d26989e11ee4a9baa4dab156162995afb003368d4f1980e006e13d0371e",
+      "bytes": 118584
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\Analysis\\SpecialFunctions\\ContinuousFunctionalCalculus\\ExpLog\\Order.lean",
+      "sha256": "21a4281b12931eedae6899d2bf20b74c5dfb635cfb020853212d187f62bc9208",
+      "bytes": 5882
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Analysis\\SpecialFunctions\\ContinuousFunctionalCalculus\\ExpLog\\Order.olean",
+      "sha256": "c8b351ffeaa70acab2cd0876948011e5d05a325e858dfdd0099e53f050d97535",
+      "bytes": 60576
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\Analysis\\SpecialFunctions\\ImproperIntegrals.lean",
+      "sha256": "e088f3d80344a073e29812e7b626b20bee595635bd520a4f61407b043301b4aa",
+      "bytes": 15967
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Analysis\\SpecialFunctions\\ImproperIntegrals.olean",
+      "sha256": "d82f9a48fc98b4f3fe63b17f53f42f79e4a95a40d0f331918f17b9ca685fbe35",
+      "bytes": 59544
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\Analysis\\SpecialFunctions\\Integrals\\Basic.lean",
+      "sha256": "58a81e8137bddf5cc43ae28f08ffa75ea3aa086e607cf70e70f70c3c8e935e81",
+      "bytes": 28786
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Analysis\\SpecialFunctions\\Integrals\\Basic.olean",
+      "sha256": "00d51c7b2f5392cacd9197f4ca8cec897f12085b4570dc1126ee77aeb5480cee",
+      "bytes": 108144
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\LinearAlgebra\\Lagrange.lean",
+      "sha256": "d499c3a0f94632d32003acec6dd5f40c4bffaf6985374dfa20c3c5addced3259",
+      "bytes": 31424
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\LinearAlgebra\\Lagrange.olean",
+      "sha256": "20a711a061f5314c9228a4033e28f22ecc0a74e5b974768c1158428c119d4edb",
+      "bytes": 292672
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\LinearAlgebra\\Matrix\\SchurComplement.lean",
+      "sha256": "a064102c025395540240d0ca8df41b42fba25f4a874e0817ff9e3c58c1b9e43d",
+      "bytes": 22483
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\LinearAlgebra\\Matrix\\SchurComplement.olean",
+      "sha256": "c26863f03036f5b5bbf8f14322835a15c3b01af5634d3385fe79bf237c41028e",
+      "bytes": 480680
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\LinearAlgebra\\Matrix\\Vec.lean",
+      "sha256": "629d8691b6dd8fd3775f09c8cefa5dc4583902b7b538302bfac79d1bf9887f67",
+      "bytes": 7472
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\LinearAlgebra\\Matrix\\Vec.olean",
+      "sha256": "630388bbd81ff3a8bde72d49348bb7baf8c217f9cccb4f46e626c41b4f37ad45",
+      "bytes": 122944
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\MeasureTheory\\Integral\\Bochner\\Basic.lean",
+      "sha256": "f81a06eab17faccbc4b671a93e7af73332f5fd3946f7690e7c2a3cfee77d28c8",
+      "bytes": 70432
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\MeasureTheory\\Integral\\Bochner\\Basic.olean",
+      "sha256": "6eadcf04831de80b54538b86c4acd2a6c45c889eab1f663661d42afe76889061",
+      "bytes": 710240
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\MeasureTheory\\Integral\\Prod.lean",
+      "sha256": "c7d4d23349591c5c65aa5b1b6024331fb0b7f22e9b2b08d6a1fe19b1c258ec5b",
+      "bytes": 32393
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\MeasureTheory\\Integral\\Prod.olean",
+      "sha256": "526f7f56532d2c1e85a1ab32ff210268923fc1043830d1f488445f5d4d4f6d52",
+      "bytes": 298240
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\Topology\\Algebra\\Module\\ContinuousLinearMap\\PiProd.lean",
+      "sha256": "ed277abbd2ab1086f0b5bc67a7b95bce06b266db240fefa0eb956372a0b36284",
+      "bytes": 16637
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Topology\\Algebra\\Module\\ContinuousLinearMap\\PiProd.olean",
+      "sha256": "89e2f0a4f3c136764f82c890beb9d4bdb9823b7f190a0462897bb921697899db",
+      "bytes": 744048
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\Analysis\\Convex\\Integral.lean",
+      "sha256": "1b3115887fabf0dccc2fed689d1f1ddc7a114b5de4594e752c02908a445aafb4",
+      "bytes": 21375
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Analysis\\Convex\\Integral.olean",
+      "sha256": "483721d7f699c983b3669a58a28dff9e9b6a9e98a817c42822f0d81454fdeceb",
+      "bytes": 92200
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\MeasureTheory\\Measure\\ProbabilityMeasure.lean",
+      "sha256": "ececad97c60703de0e0ee2f47bca44a017aa8537f7186412f69b169f026e92fd",
+      "bytes": 33420
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\MeasureTheory\\Measure\\ProbabilityMeasure.olean",
+      "sha256": "f53efa559e4f605156d811158db96fb09a2f9ae4998e8d81448336c2ae78d51f",
+      "bytes": 227168
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\Probability\\Independence\\Basic.lean",
+      "sha256": "85c6c98a306c1b10952181fcb9cc777c0ed06e91246428690a88d7821d24f9d2",
+      "bytes": 55669
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Probability\\Independence\\Basic.olean",
+      "sha256": "30cab0bd5dae5d180b72b8aafb55b7028c3f2dd54c70dfc08d21e417669e2ba6",
+      "bytes": 447496
+    }
+  ],
+  "additional_direct_official_provider_identities": [],
+  "own_sampling_dependency_source_receipt_and_artifact_identities": [
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\ReindexSampling.lean",
+      "sha256": "f028518c80f964c8dae253747a2dd4544825a661ac7b472e0012b78478784083",
+      "bytes": 5114
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\attempts\\001-ReindexSampling\\actual_invocation.json",
+      "sha256": "c1ba77573bf8b18a4879d6877eb67f9847a915eb9c6a791e6b72c5aad63a87e6",
+      "bytes": 33489
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\ReindexSampling.olean",
+      "sha256": "8ddc7b293e4fb3e2922fb22e426383620ad6fa7be69fa70ffae4ae9b2262fe99",
+      "bytes": 311280
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\UniformConditioning.lean",
+      "sha256": "f3f88b434243c63595f24800e7c40d6adf73914bce02857620fa072a8751f1df",
+      "bytes": 8839
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\attempts\\003-UniformConditioning\\actual_invocation.json",
+      "sha256": "f6248a4411ab7208b82135e1c4be27a69dc189f3e5709a104ddb134f038e7b8c",
+      "bytes": 37183
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\UniformConditioning.olean",
+      "sha256": "7fa26cf2a31eda1d021f29e60f5d55cdc8ec1143b56c3c35d50b6eaf56dc6400",
+      "bytes": 400832
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\BinomialMode.lean",
+      "sha256": "f8f462ecc248fda4b1029b43c7b919f41d043f2be0f473bb8ba3ed6332ef7f5f",
+      "bytes": 6363
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\attempts\\002-BinomialMode\\actual_invocation.json",
+      "sha256": "7c720fb2ab5981fa5c4213819196d1eaede7c12399104b98755438b4a91f499a",
+      "bytes": 32489
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\BinomialMode.olean",
+      "sha256": "754948fb7994ccd736161bd1a5918d4af6e7382e8c5afbc8440863c3d846508b",
+      "bytes": 388048
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\BernoulliOperatorSample.lean",
+      "sha256": "996b969669ef8bad58fbc451846b68844e098bd20fa8c5a1668009d56334a2a0",
+      "bytes": 7076
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\attempts\\002-BernoulliOperatorSample\\actual_invocation.json",
+      "sha256": "13f315071bcd77eb24b475106fdc494ead01e449d0dcb3512f957a706687e9a7",
+      "bytes": 32952
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\BernoulliOperatorSample.olean",
+      "sha256": "dfe6f88399bdff3c84fc3de54128af77422c6b64dd9ff20c69841357488ea831",
+      "bytes": 583376
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\MatrixVarianceBounds.lean",
+      "sha256": "adad71cfb95534b7e10d762e87ba1048891d97978feff65d5607bde2268b05b6",
+      "bytes": 5505
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\attempts\\003-MatrixVarianceBounds\\actual_invocation.json",
+      "sha256": "770816b840dd323b5e983dbdb8a63ad8efd8775c9cd5402d8cb65531200c5a1c",
+      "bytes": 32400
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\MatrixVarianceBounds.olean",
+      "sha256": "2179ba1b7b67430a46ab9bba6ec97d42c257dfde655fed1e9696cae83fb955fc",
+      "bytes": 294176
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\BernoulliColumnSample.lean",
+      "sha256": "b138c934b6f66337a27e3269a103222904c44d90c64f23b596a170b2c264d0f0",
+      "bytes": 3202
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\attempts\\001-BernoulliColumnSample\\actual_invocation.json",
+      "sha256": "3c37c31d0b82270f8ad9a98dc94cd906ccea28e7b574661e79ac6050942f09f5",
+      "bytes": 31087
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\BernoulliColumnSample.olean",
+      "sha256": "f3deb9ba1078b555162930130a22dd1d5ee5c44cb829514164b16a25617e05da",
+      "bytes": 124120
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\BernoulliGram.lean",
+      "sha256": "5e1323ecb059e4bd47606659f1e98cc2c1bc2df9759370467190e70a8876253d",
+      "bytes": 6990
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\attempts\\002-BernoulliGram\\actual_invocation.json",
+      "sha256": "29f280ed64422b15a35c4d62d37608c8e2a2616a8d31b5be339c5ae25b9d92be",
+      "bytes": 34077
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\BernoulliGram.olean",
+      "sha256": "d0ac77d151e09a0fe04fa3111fe6a277e7a62a63bf546895868638ba60109e72",
+      "bytes": 251384
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\NormVariance.lean",
+      "sha256": "40f738c4c5298b726c8087a7417d96aed4e70f9878aea25b4642fba2f42818ea",
+      "bytes": 2774
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\attempts\\001-NormVariance\\actual_invocation.json",
+      "sha256": "e4280c9440f15b13f6949f80a5df01a8623e1287131ade552d72b035af46abd5",
+      "bytes": 28441
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\NormVariance.olean",
+      "sha256": "86b06b75e2ecd6d0b42649af658765f2cc02172a509470ec0a28978c00ea393a",
+      "bytes": 183088
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\MatrixSampling.lean",
+      "sha256": "d2efc982231c792db9ac99e51cfe3406f7c66efd13d980f0268df5a5155209db",
+      "bytes": 5036
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\attempts\\003-MatrixSampling\\actual_invocation.json",
+      "sha256": "c448b981096d8da1ad1baebb666b111e73f1164bd2f8234c7bfa37ab6936a359",
+      "bytes": 29129
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\MatrixSampling.olean",
+      "sha256": "0160d92286541bdbb9225faf9f073a0e196a4ab18bc35abd1de3a23082d911ee",
+      "bytes": 311424
+    }
+  ],
+  "runner": {
+    "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\compile_guarded.py",
+    "sha256": "89e9c86b63883bed647b6702c68a1f60c228e9c644f7d9dffd1c078b861b3df8",
+    "bytes": 12543
+  },
+  "runner_frozen_code": {
+    "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\attempts\\002-UniformOperatorSample\\runner.py",
+    "sha256": "89e9c86b63883bed647b6702c68a1f60c228e9c644f7d9dffd1c078b861b3df8",
+    "bytes": 12543
+  },
+  "guard_binding": {
+    "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\shared_guard.py",
+    "sha256": "29578665ab4f1336e8164a547872119939c6a0b86ceafbadcd36f9859bc367f2",
+    "bytes": 9243
+  },
+  "command": [
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+    "-j1",
+    "-Dpp.unicode.fun=true",
+    "-DautoImplicit=false",
+    "-o",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\UniformOperatorSample.olean",
+    "UniformOperatorSample.lean"
+  ],
+  "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING",
+  "environment": {
+    "LEAN_PATH": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SLT_PORT;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\aesop\\.lake\\build\\lib\\lean;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\batteries\\.lake\\build\\lib\\lean;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\Cli\\.lake\\build\\lib\\lean;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\importGraph\\.lake\\build\\lib\\lean;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\LeanSearchClient\\.lake\\build\\lib\\lean;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\plausible\\.lake\\build\\lib\\lean;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\proofwidgets\\.lake\\build\\lib\\lean;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\Qq\\.lake\\build\\lib\\lean",
+    "LEAN_NUM_THREADS": "1"
+  },
+  "actual_compilers_before_dispatch": [],
+  "guard": {
+    "command": [
+      "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+      "-j1",
+      "-Dpp.unicode.fun=true",
+      "-DautoImplicit=false",
+      "-o",
+      "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\UniformOperatorSample.olean",
+      "UniformOperatorSample.lean"
+    ],
+    "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING",
+    "started_utc": "2026-10-07T16:33:13.912281+00:00",
+    "attempted": true,
+    "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+    "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+    "resource_policy": {
+      "initial_disk_bytes": 4000000000,
+      "initial_physical_bytes": 6442450944,
+      "initial_available_commit_bytes": 17179869184,
+      "continuous_disk_bytes": 1000000000,
+      "continuous_physical_bytes": 3221225472,
+      "continuous_available_commit_bytes": 2147483648,
+      "own_job_private_bytes": 13958643712,
+      "own_process_private_bytes": 13958643712,
+      "poll_seconds": 0.25,
+      "timeout_seconds": 1800
+    },
+    "minimum_disk_free_bytes": 10972516352,
+    "initial_system_memory_snapshot": {
+      "free_physical_bytes": 13941071872,
+      "total_physical_bytes": 34024419328,
+      "available_commit_bytes": 18589331456,
+      "total_commit_limit_bytes": 45444141056
+    },
+    "minimum_physical_available_bytes": 12063428608,
+    "minimum_available_commit_bytes": 14455767040,
+    "root_pid": 24744,
+    "own_job_assignment_before_resume": "PASS",
+    "exit": 0,
+    "job_peak_process_private_bytes": 4163067904,
+    "job_peak_aggregate_private_bytes": 4164325376,
+    "state": "PASS",
+    "finished_utc": "2026-10-07T16:33:25.693614+00:00",
+    "seconds": 11.781,
+    "polled_peak_tree_private_bytes": 4163289088,
+    "polled_peak_tree_rss_bytes": 1831489536,
+    "counter_samples": 46,
+    "observed_own_processes": {
+      "24744": {
+        "exe": "lean.exe",
+        "peak_private_bytes": 4162031616,
+        "peak_rss_bytes": 1924444160
+      },
+      "26856": {
+        "exe": "conhost.exe",
+        "peak_private_bytes": 1257472,
+        "peak_rss_bytes": 7340032
+      }
+    },
+    "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\attempts\\002-UniformOperatorSample\\compiler.stdout.txt",
+    "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\attempts\\002-UniformOperatorSample\\compiler.stderr.txt",
+    "stdout_sha256": "47fd5be74b0d4cf3491993b4921aa70fd080d425186e5cd16f0901a9ba525e89",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout_excerpt": "'OpenMathReview.Sampling.actual_fixed_column_sample_norm_tail' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'OpenMathReview.Sampling.actual_full_column_sample_norm_tail_zero' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'OpenMathReview.Sampling.actual_positive_fixed_column_sample_norm_tail' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n@actual_positive_fixed_column_sample_norm_tail : ∀ {I : Type u_1} [inst : Fintype I] [DecidableEq I] {s m : ℕ},\n  0 < Fintype.card I →\n    0 < s →\n      0 < m →\n        ∀ (hm : m ≤ s) (F : Matrix I (Fin s) ℝ) (p : ↑unitInterval),\n          ↑p * ↑s = ↑m →\n            ∀ (c : ℝ),\n              0 < c →\n                (∀ (j : Fin s), finiteRowColumnEnergy F j ≤ c ^ 2) →\n                  ∀ (t : ℝ),\n                    0 < t →\n                      (uniformFixedColumnLaw s m hm).real\n                          {ω | ‖finiteRowColumnSample F (selectedColumns ω)‖ ≥ √↑p * ‖F‖ + c * √t} ≤\n                        2 * ↑(Fintype.card I) * (↑s + 1) * Real.exp (-t)\n",
+    "stderr_excerpt": ""
+  },
+  "artifacts": [
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\UniformOperatorSample.olean",
+      "sha256": "ff8c218e97be73b26fc3fbef11c3bf5b1fa5b31dac7a03d2aa147fddedc98975",
+      "bytes": 246312
+    }
+  ],
+  "actual_selected_axiom_outputs": [
+    {
+      "endpoint": "OpenMathReview.Sampling.actual_fixed_column_sample_norm_tail",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    },
+    {
+      "endpoint": "OpenMathReview.Sampling.actual_full_column_sample_norm_tail_zero",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    },
+    {
+      "endpoint": "OpenMathReview.Sampling.actual_positive_fixed_column_sample_norm_tail",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    }
+  ],
+  "exact_print_coverage": true,
+  "standard_or_free_only": true,
+  "qualified_piece_PASS": true,
+  "B22_uniform_without_replacement_proved": false,
+  "BM_main_theorem_complete": false,
+  "scope": "Actual uniform fixed positive-cardinality column-submatrix operator-norm tail, including the deterministic full-count boundary; no two-shore spectral-gap theorem.",
+  "old_sources_or_qualified_SLT_artifacts_changed": false
+}

@@ -1,0 +1,10 @@
+'OpenMathReview.Sampling.spectral_rank_error_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OpenMathReview.Sampling.secondSingularValue_rank_one_perturbation' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'OpenMathReview.Sampling.secondSingularValue_constant_perturbation' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@secondSingularValue_constant_perturbation : ∀ {I : Type u_1} {J : Type u_2} [inst : Fintype I] [inst_1 : Fintype J]
+  [inst_2 : DecidableEq I] [inst_3 : DecidableEq J] (F : Matrix I J ℝ) (a : ℝ),
+  1 < Fintype.card J → secondSingularValue F ≤ ‖F - of fun x x_1 ↦ a‖

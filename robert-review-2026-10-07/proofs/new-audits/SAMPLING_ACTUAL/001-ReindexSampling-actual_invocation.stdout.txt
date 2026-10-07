@@ -1,0 +1,18 @@
+ReindexSampling.lean:75:4: warning: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+'OpenMathReview.Sampling.l2_opNorm_row_equiv' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OpenMathReview.Sampling.finiteRowColumnSample_univ_norm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OpenMathReview.Sampling.actual_finite_row_column_sample_norm_tail' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@actual_finite_row_column_sample_norm_tail : ∀ {I : Type u_1} [inst : Fintype I] [DecidableEq I] {s : ℕ},
+  0 < Fintype.card I →
+    ∀ (F : Matrix I (Fin s) ℝ) (p : ↑unitInterval) (c : ℝ),
+      0 < c →
+        (∀ (j : Fin s), finiteRowColumnEnergy F j ≤ c ^ 2) →
+          ∀ (t : ℝ),
+            0 < t →
+              ((bernoulliColumnLaw s p)
+                    {ω | ‖finiteRowColumnSample F (selectedColumns ω)‖ ≥ √↑p * ‖F‖ + c * √t}).toReal ≤
+                2 * ↑(Fintype.card I) * Real.exp (-t)

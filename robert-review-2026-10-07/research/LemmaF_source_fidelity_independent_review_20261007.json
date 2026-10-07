@@ -1,0 +1,72 @@
+{
+  "schema": "bounded-AI-source-semantic-comparison-v1",
+  "status": "PASS_EXACT_NONEMPTY_LEMMA_F_SCOPE_STATIC_REVIEW",
+  "checked_utc": "2026-10-07T16:15:36.010513+00:00",
+  "source_written_statement": {
+    "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\adjacent_robert_20261007\\source-repository\\findings\\supplement\\papers\\lemma-f\\LEMMA-F.md",
+    "sha256": "e11d4c9526ce772f145f76c696985280fa112e94b8500c30f2ae2df280cfea1a"
+  },
+  "actual_read_sources": [
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\NearRegularCriterion.lean",
+      "sha256": "9dcebbdabdb659100a4b04347476afcfeac6956726dd9fd003c1c3d63da29e87",
+      "bytes": 5789
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\LemmaF.lean",
+      "sha256": "9410e8c56eda9b813437e4676c815739d19ffce80eec9f7b0b45147118cf044d",
+      "bytes": 2788
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\PartitionTransport.lean",
+      "sha256": "9e4ee92e1a540cd7f94cc2387c684ff0f2ee2e9c2ee659277597b8fbdd157b07",
+      "bytes": 4608
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\NearRegularScalars.lean",
+      "sha256": "be5acd5aa3dd975507064f9817616f31cf0b6862f7e64579b66692e5be0d9eca",
+      "bytes": 5391
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\GraphCuts.lean",
+      "sha256": "fb1c64f3eafd5e3e5033a7130816979924f7b6a78967d9c1f05b0ed537e96439",
+      "bytes": 3269
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\CapacityHall.lean",
+      "sha256": "af00832b5432e7d71f43a2a3b1c1f9a4816771135b2d5f39b4ccf79eacb053ff",
+      "bytes": 5184
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\BipartiteFactor.lean",
+      "sha256": "47ec9e8376278b31444b18a5401452d5152dac47827643d6c440c254327e55e2",
+      "bytes": 3899
+    }
+  ],
+  "source_reads_only": true,
+  "compiler_or_candidate_execution": false,
+  "reviewer": "nonnovel_and_affiliations AI assistant; not an independent human reviewer",
+  "conclusion": "No concrete mathematical-scope defect found in the three requested final source units. This compares the source statements/proof architecture, not a fresh Lean invocation.",
+  "verified_scope_facts": [
+    "H is an actual balanced finite bipartite simple graph via r:P->Q->Prop. Degree interval applies to every vertex.",
+    "CutCount literally sums adjacency-filter crossing degrees. bipartite_cut_count equals b+c for the two off-diagonal cells and counts each crossing edge once.",
+    "Small-cut expansion hypothesis is gamma*d*|Z|, for nonempty |Z|<=|P|; balance makes this exactly half of all vertices.",
+    "The full Gale CutCondition is derived from degree counts and expansion, including the complementary-pair/shores-swapped argument. It is not a theorem conclusion supplied as a premise.",
+    "theta=(eta+2/d)/gamma and roundedDegree=Nat.floor((1-eta-theta)*d). Scalar bounds prove the quantity nonnegative, so this agrees with the written floor.",
+    "The factor has actual original vertices and adjacency F<=H, exact regular degree, written (1-3gamma/8)*d-1 lower bound, and gamma/2 retained expansion over the half-vertex cut range.",
+    "Real CrossingLoss is used from actual degree upper bound and regularity, with no extra rounding loss.",
+    "PartitionTransport uses only an explicit balanced shore equivalence with adjacency equivalence. It produces F on arbitrary labelled original V and transports literal cuts, cardinalities and regularity by graph isomorphism.",
+    "No Hamiltonicity, BM main theorem, or 2N/3 gamma/2 expansion is concluded."
+  ],
+  "required_explicit_qualifiers": [
+    {
+      "qualifier": "Nonempty P, hence positive even host size",
+      "reason": "The Lean statement explicitly excludes the empty-host case and derives eta>=0 from one actual nonempty degree interval. The written excerpt has no explicit positive-size clause; retain this harmless intended-domain clarification, rather than claiming a literally empty-host/all-real-eta theorem."
+    },
+    {
+      "qualifier": "Half-size expansion versus BJ 2N/3 expansion",
+      "reason": "The source review D6 distinguishes half-size gamma/2 output from BJ-sense gamma/4. Current theorem preserves half-size gamma/2, not a stronger BJ claim."
+    }
+  ],
+  "scoring_priority_limit": "Faithful formalization of Robert written LemmaF plus elementary reusable bridges; no additional family credit or independent priority inferred."
+}

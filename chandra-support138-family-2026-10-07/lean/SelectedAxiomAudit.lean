@@ -1,0 +1,34 @@
+import FamilyTensorUpperBound
+
+#print axioms OpenMathReview.Support138Family.count_eq_of_zero_iff
+#check @OpenMathReview.Support138Family.count_eq_of_zero_iff
+#print axioms OpenMathReview.Support138Family.u_zero_outside
+#check @OpenMathReview.Support138Family.u_zero_outside
+#print axioms OpenMathReview.Support138Family.v_zero_outside
+#check @OpenMathReview.Support138Family.v_zero_outside
+#print axioms OpenMathReview.Support138Family.w_zero_outside
+#check @OpenMathReview.Support138Family.w_zero_outside
+#print axioms OpenMathReview.Support138Family.coefficient_eq_activeTerms
+#check @OpenMathReview.Support138Family.coefficient_eq_activeTerms
+#print axioms OpenMathReview.Support138Family.masked_identities_row0
+#check @OpenMathReview.Support138Family.masked_identities_row0
+#print axioms OpenMathReview.Support138Family.masked_identities_row1
+#check @OpenMathReview.Support138Family.masked_identities_row1
+#print axioms OpenMathReview.Support138Family.masked_identities_row2
+#check @OpenMathReview.Support138Family.masked_identities_row2
+#print axioms OpenMathReview.Support138Family.masked_identities_row3
+#check @OpenMathReview.Support138Family.masked_identities_row3
+#print axioms OpenMathReview.Support138Family.masked_identities_row4
+#check @OpenMathReview.Support138Family.masked_identities_row4
+#print axioms OpenMathReview.Support138Family.masked_identities_row5
+#check @OpenMathReview.Support138Family.masked_identities_row5
+#print axioms OpenMathReview.Support138Family.masked_identities_row6
+#check @OpenMathReview.Support138Family.masked_identities_row6
+#print axioms OpenMathReview.Support138Family.masked_identities_row7
+#check @OpenMathReview.Support138Family.masked_identities_row7
+#print axioms OpenMathReview.Support138Family.masked_identities_row8
+#check @OpenMathReview.Support138Family.masked_identities_row8
+#print axioms OpenMathReview.Support138Family.rational_family_support_le
+#check @OpenMathReview.Support138Family.rational_family_support_le
+#print axioms OpenMathReview.Support138Family.rational_family_identities
+#check @OpenMathReview.Support138Family.rational_family_identities

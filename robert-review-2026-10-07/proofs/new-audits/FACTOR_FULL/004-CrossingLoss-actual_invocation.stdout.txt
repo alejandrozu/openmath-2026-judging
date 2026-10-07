@@ -1,0 +1,13 @@
+'RobertPublishable.Factor.neighbor_difference_card' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RobertPublishable.Factor.vertex_cut_card_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RobertPublishable.Factor.cutCount_le_of_degree_loss' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RobertPublishable.Factor.cutCount_real_le_of_degree_loss' depends on axioms: [propext, Classical.choice, Quot.sound]
+@cutCount_le_of_degree_loss : ∀ {V : Type u_2} [inst : Fintype V] [inst_1 : DecidableEq V] (F H : SimpleGraph V)
+  [inst_2 : DecidableRel F.Adj] [inst_3 : DecidableRel H.Adj],
+  F ≤ H →
+    ∀ (t : ℕ), (∀ (v : V), H.degree v - F.degree v ≤ t) → ∀ (S : Finset V), cutCount H S ≤ cutCount F S + t * S.card
+@cutCount_real_le_of_degree_loss : ∀ {V : Type u_2} [inst : Fintype V] [inst_1 : DecidableEq V] (F H : SimpleGraph V)
+  [inst_2 : DecidableRel F.Adj] [inst_3 : DecidableRel H.Adj],
+  F ≤ H →
+    ∀ (t : ℝ),
+      (∀ (v : V), ↑(H.degree v) - ↑(F.degree v) ≤ t) → ∀ (S : Finset V), ↑(cutCount H S) ≤ ↑(cutCount F S) + t * ↑S.card

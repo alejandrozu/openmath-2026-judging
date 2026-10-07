@@ -1,0 +1,1281 @@
+'Erdos585.maxEdges_eq_choose_two_of_le_four' depends on axioms: [propext, Classical.choice, Quot.sound]
+SelectedAxiomAudit.lean:3:0: warning: This file has no module docstring (`/-! ... -/`). Add one after the imports to document the file.
+
+Note: This linter can be disabled with `set_option linter.style.moduleDocstring false`
+Erdos585.maxEdges_eq_choose_two_of_le_four : ∀ n ≤ 4, Erdos585.maxEdges n = n.choose 2
+'Erdos585.maxEdges_five' depends on axioms: [propext, Classical.choice, Quot.sound]
+Erdos585.maxEdges_five : Erdos585.maxEdges 5 = 9
+'Erdos585.maxEdges_six' depends on axioms: [propext, Classical.choice, Quot.sound]
+Erdos585.maxEdges_six : Erdos585.maxEdges 6 = 12
+'Erdos585.maxEdges_seven' depends on axioms: [propext, Classical.choice, Quot.sound]
+Erdos585.maxEdges_seven : Erdos585.maxEdges 7 = 16
+'Erdos585.three_mul_sub_six_le_maxEdges' depends on axioms: [propext, Classical.choice, Quot.sound]
+Erdos585.three_mul_sub_six_le_maxEdges : ∀ (n : ℕ), 5 ≤ n → 3 * n - 6 ≤ Erdos585.maxEdges n
+'Erdos585.three_mul_sub_five_le_maxEdges' depends on axioms: [propext, Classical.choice, Quot.sound]
+Erdos585.three_mul_sub_five_le_maxEdges : ∀ (n : ℕ), 7 ≤ n → 3 * n - 5 ≤ Erdos585.maxEdges n
+'Erdos585.three_mul_sub_four_le_maxEdges' depends on axioms: [propext, Classical.choice, Quot.sound]
+Erdos585.three_mul_sub_four_le_maxEdges : ∀ (n : ℕ), 9 ≤ n → 3 * n - 4 ≤ Erdos585.maxEdges n
+'Erdos585.maxEdges_succ_ge' depends on axioms: [propext, Classical.choice, Quot.sound]
+Erdos585.maxEdges_succ_ge : ∀ (n : ℕ), 3 ≤ n → Erdos585.maxEdges n + 3 ≤ Erdos585.maxEdges (n + 1)
+'Erdos585.four_mul_sub_thirteen_le_maxEdges' depends on axioms: [propext, Classical.choice, Quot.sound]
+Erdos585.four_mul_sub_thirteen_le_maxEdges : ∀ (n : ℕ), 10 ≤ n → 4 * n - 13 ≤ Erdos585.maxEdges n
+'Erdos585.thirty_one_le_maxEdges_eleven' depends on axioms: [propext, Classical.choice, Quot.sound]
+Erdos585.thirty_one_le_maxEdges_eleven : 31 ≤ Erdos585.maxEdges 11
+'Erdos585.thirty_six_le_maxEdges_twelve' depends on axioms: [propext, Classical.choice, Quot.sound]
+Erdos585.thirty_six_le_maxEdges_twelve : 36 ≤ Erdos585.maxEdges 12
+'Erdos585.complete_matching_subdivision_lower_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+Erdos585.complete_matching_subdivision_lower_bound : ∀ (k : ℕ),
+  8 * k ^ 2 - 3 * k + 1 ≤ Erdos585.maxEdges (2 * k ^ 2 + 2)
+'Erdos585.latin_incidence_lower_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+Erdos585.latin_incidence_lower_bound : ∀ (m : ℕ), 5 * m ^ 2 ≤ Erdos585.maxEdges (m ^ 2 + 3 * m + 2)
+'Erdos585.five_mul_sub_sqrt_le_maxEdges' depends on axioms: [propext, Classical.choice, Quot.sound]
+Erdos585.five_mul_sub_sqrt_le_maxEdges : ∀ (n : ℕ), 16 ≤ n → 5 * n - 15 * n.sqrt - 10 ≤ Erdos585.maxEdges n
+'Erdos585.doubleWheel_not_hasTwoEdgeDisjointCyclesSameVertexSet' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+Erdos585.doubleWheel_not_hasTwoEdgeDisjointCyclesSameVertexSet : ∀ (k : ℕ),
+  2 ≤ k → ¬Erdos585.HasTwoEdgeDisjointCyclesSameVertexSet (Erdos585.doubleWheel (k + 3))
+'Erdos585.thetaWheel_not_hasTwoEdgeDisjointCyclesSameVertexSet' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+Erdos585.thetaWheel_not_hasTwoEdgeDisjointCyclesSameVertexSet : ¬Erdos585.HasTwoEdgeDisjointCyclesSameVertexSet
+    Erdos585.thetaWheel
+'Erdos585.matchingSubdivision_not_hasTwoEdgeDisjointCyclesSameVertexSet' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@Erdos585.matchingSubdivision_not_hasTwoEdgeDisjointCyclesSameVertexSet : ∀ {V : Type u_1} [inst : Fintype V]
+  [inst_1 : DecidableEq V] (H M : SimpleGraph V) [inst_2 : DecidableRel H.Adj] [inst_3 : DecidableRel M.Adj],
+  (∀ (v : V), M.degree v ≤ 1) →
+    ¬Erdos585.HasTwoEdgeDisjointCyclesSameVertexSet (Erdos585.MatchingSubdivision.ofBase H M)
+'Erdos585.RegularFive.exists_five_regular_pairfree' depends on axioms: [propext, Classical.choice, Quot.sound]
+Erdos585.RegularFive.exists_five_regular_pairfree : ∃ G,
+  (∀ (v : Fin 32), (G.neighborSet v).ncard = 5) ∧ ¬Erdos585.HasTwoEdgeDisjointCyclesSameVertexSet G
+'Erdos585.BipartiteFive.exists_bipartite_five_regular_pairfree' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+Erdos585.BipartiteFive.exists_bipartite_five_regular_pairfree : ∃ G,
+  (∀ (v : Fin 104), (G.neighborSet v).ncard = 5) ∧ G.Colorable 2 ∧ ¬Erdos585.HasTwoEdgeDisjointCyclesSameVertexSet G
+'Erdos585.RegularFive18.exists_five_regular_pairfree' depends on axioms: [propext, Classical.choice, Quot.sound]
+Erdos585.RegularFive18.exists_five_regular_pairfree : ∃ G,
+  (∀ (v : Fin 18), (G.neighborSet v).ncard = 5) ∧ ¬Erdos585.HasTwoEdgeDisjointCyclesSameVertexSet G
+'Erdos585.qb5' depends on axioms: [propext, Classical.choice, Quot.sound]
+@Erdos585.qb5 : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V) [inst_1 : DecidableRel G.Adj],
+  G.IsBipartite →
+    G.maxDegree ≤ 6 →
+      3 ≤ Fintype.card V → 3 * Fintype.card V ≤ G.edgeSet.ncard + 5 → ∃ H, H.verts.Nonempty ∧ H.coe.IsRegularOfDegree 4
+'Erdos585.qb4' depends on axioms: [propext, Classical.choice, Quot.sound]
+@Erdos585.qb4 : ∀ {V : Type u_1} [inst : Fintype V] (G : SimpleGraph V) [inst_1 : DecidableRel G.Adj],
+  G.IsBipartite →
+    G.maxDegree ≤ 6 →
+      2 ≤ Fintype.card V → 3 * Fintype.card V ≤ G.edgeSet.ncard + 4 → ∃ H, H.verts.Nonempty ∧ H.coe.IsRegularOfDegree 4
+'Erdos585.exists_four_regular_avoiding_of_bipartite_six_regular' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@Erdos585.exists_four_regular_avoiding_of_bipartite_six_regular : ∀ {V : Type u_1} [inst : Fintype V]
+  (B : SimpleGraph V) [inst_1 : DecidableRel B.Adj],
+  B.IsBipartite → B.IsRegularOfDegree 6 → ∀ (o : V), ∃ H, H.verts.Nonempty ∧ o ∉ H.verts ∧ H.coe.IsRegularOfDegree 4
+'Erdos585.hasPair_top_five' depends on axioms: [propext, Classical.choice, Quot.sound]
+Erdos585.hasPair_top_five : Erdos585.HasPairF Erdos585.K5
+'Erdos585.hasTwoEdgeDisjointCyclesSameVertexSet_top_five' depends on axioms: [propext, Classical.choice, Quot.sound]
+Erdos585.hasTwoEdgeDisjointCyclesSameVertexSet_top_five : Erdos585.HasTwoEdgeDisjointCyclesSameVertexSet ⊤
+'Erdos585.AdjacentHubs.thirty_six_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+Erdos585.AdjacentHubs.thirty_six_le : 36 ≤ Erdos585.maxEdges 12
+'Erdos585.BipartiteBalance.at_most_one_exceptional' depends on axioms: [propext, Classical.choice, Quot.sound]
+@Erdos585.BipartiteBalance.at_most_one_exceptional : ∀ {V : Type u_1} [inst : DecidableEq V] {G : SimpleGraph V}
+  (c : V → Bool) (exceptions : Finset (Sym2 V)),
+  (∀ (a b : V), G.Adj a b → c a = true ∨ c b = true) →
+    (∀ e ∈ G.edgeSet, Erdos585.BipartiteBalance.sameTrue c e → e ∈ exceptions) →
+      exceptions.card ≤ 3 →
+        ∀ {a b : V} {p : G.Walk a a} {q : G.Walk b b},
+          p.IsCycle →
+            q.IsCycle →
+              p.support.toFinset = q.support.toFinset →
+                Disjoint p.edges.toFinset q.edges.toFinset →
+                  (Finset.filter (Erdos585.BipartiteBalance.sameTrue c) p.edges.toFinset).card ≤ 1 ∧
+                    (Finset.filter (Erdos585.BipartiteBalance.sameTrue c) p.edges.toFinset).card =
+                      (Finset.filter (Erdos585.BipartiteBalance.sameTrue c) q.edges.toFinset).card
+'Erdos585.BipartiteEulerian.counterexample' depends on axioms: [propext, Classical.choice, Quot.sound]
+Erdos585.BipartiteEulerian.counterexample : Erdos585.BipartiteEulerian.graph.IsBipartite ∧
+  (∀ (v : Fin 11), 4 ≤ Erdos585.BipartiteEulerian.graph.degree v ∧ Erdos585.BipartiteEulerian.graph.degree v ≤ 6) ∧
+    Erdos585.BipartiteEulerian.red ≤ Erdos585.BipartiteEulerian.graph ∧
+      Erdos585.BipartiteEulerian.blue ≤ Erdos585.BipartiteEulerian.graph ∧
+        Disjoint Erdos585.BipartiteEulerian.red Erdos585.BipartiteEulerian.blue ∧
+          Erdos585.BipartiteEulerian.red.Connected ∧
+            Erdos585.BipartiteEulerian.blue.Connected ∧
+              (∀ (v : Fin 11),
+                  0 < Erdos585.BipartiteEulerian.red.degree v ∧ Even (Erdos585.BipartiteEulerian.red.degree v)) ∧
+                (∀ (v : Fin 11),
+                    0 < Erdos585.BipartiteEulerian.blue.degree v ∧ Even (Erdos585.BipartiteEulerian.blue.degree v)) ∧
+                  ¬Erdos585.HasTwoEdgeDisjointCyclesSameVertexSet Erdos585.BipartiteEulerian.graph
+'Erdos585.BipartiteObstruction.missing_matching_three' depends on axioms: [propext, Classical.choice, Quot.sound]
+@Erdos585.BipartiteObstruction.missing_matching_three : ∀ {V : Type u_1} [inst : DecidableEq V] (G : SimpleGraph V),
+  ¬Erdos585.HasPairF G →
+    ∀ (L R : Fin 6 → V),
+      Function.Injective L →
+        Function.Injective R →
+          (∀ (i j : Fin 6), L i ≠ R j) →
+            (∀ (j : Fin 6), G.Adj (L 0) (R j)) →
+              (∀ (i : Fin 6), G.Adj (L i) (R 0)) → ∃ a b, ∀ (i : Fin 3), ¬G.Adj (L (a i).succ) (R (b i).succ)
+'Erdos585.BipartiteSeparation.counterexample' depends on axioms: [propext, Classical.choice, Quot.sound]
+Erdos585.BipartiteSeparation.counterexample : Erdos585.BipartiteSeparation.graph.IsBipartite ∧
+  (∀ (v : Fin 18), Erdos585.BipartiteSeparation.graph.degree v = 4) ∧
+    Erdos585.BipartiteSeparation.red.IsCycle ∧
+      Erdos585.BipartiteSeparation.blue.IsCycle ∧
+        Erdos585.BipartiteSeparation.red.support.toFinset = Finset.univ ∧
+          Erdos585.BipartiteSeparation.blue.support.toFinset = Finset.univ ∧
+            Disjoint Erdos585.BipartiteSeparation.red.edges.toFinset Erdos585.BipartiteSeparation.blue.edges.toFinset ∧
+              ∀ (u v : Fin 18) (p : Erdos585.BipartiteSeparation.graph.Walk u u)
+                (q : Erdos585.BipartiteSeparation.graph.Walk v v),
+                p.IsCycle →
+                  q.IsCycle →
+                    p.support.toFinset = Finset.univ →
+                      q.support.toFinset = Finset.univ →
+                        Disjoint p.edges.toFinset q.edges.toFinset →
+                          (s(0, 17) ∈ p.edges.toFinset ↔ s(4, 13) ∈ p.edges.toFinset)
+'Erdos585.CoverTransfer.counterexample' depends on axioms: [propext, Classical.choice, Quot.sound]
+Erdos585.CoverTransfer.counterexample : Erdos585.CoverTransfer.base.IsBipartite ∧
+  Erdos585.CoverTransfer.base.IsRegularOfDegree 4 ∧
+    ¬Erdos585.HasTwoEdgeDisjointCyclesSameVertexSet Erdos585.CoverTransfer.base ∧
+      Erdos585.CoverTransfer.lift.IsBipartite ∧
+        Erdos585.CoverTransfer.lift.IsRegularOfDegree 4 ∧
+          Erdos585.HasTwoEdgeDisjointCyclesSameVertexSet Erdos585.CoverTransfer.lift ∧
+            Function.Surjective Erdos585.CoverTransfer.project ∧
+              (∀ (v : Fin 16), {x | Erdos585.CoverTransfer.project x = v}.card = 2) ∧
+                (∀ (x y : Fin 32),
+                    Erdos585.CoverTransfer.lift.Adj x y →
+                      Erdos585.CoverTransfer.base.Adj (Erdos585.CoverTransfer.project x)
+                        (Erdos585.CoverTransfer.project y)) ∧
+                  (∀ (x : Fin 32) (v : Fin 16),
+                      Erdos585.CoverTransfer.base.Adj (Erdos585.CoverTransfer.project x) v ↔
+                        ∃! y, Erdos585.CoverTransfer.lift.Adj x y ∧ Erdos585.CoverTransfer.project y = v) ∧
+                    Erdos585.CoverTransfer.red.IsCycle ∧
+                      Erdos585.CoverTransfer.blue.IsCycle ∧
+                        Erdos585.CoverTransfer.red.support.toFinset = Finset.univ ∧
+                          Erdos585.CoverTransfer.blue.support.toFinset = Finset.univ ∧
+                            Disjoint Erdos585.CoverTransfer.red.edges.toFinset
+                              Erdos585.CoverTransfer.blue.edges.toFinset
+'Erdos585.Cubelike.card_le_three_of_avoiding' depends on axioms: [propext, Classical.choice, Quot.sound]
+@Erdos585.Cubelike.card_le_three_of_avoiding : ∀ {V : Type u_1} [inst : AddCommGroup V] [Module (ZMod 2) V]
+  [DecidableEq V] (S : Finset V),
+  0 ∉ S →
+    (SimpleGraph.addCayley ↑S).IsBipartite →
+      ¬Erdos585.HasTwoEdgeDisjointCyclesSameVertexSet (SimpleGraph.addCayley ↑S) → S.card ≤ 3
+'Erdos585.Cubelike.forest_certificate' depends on axioms: [propext, Classical.choice, Quot.sound]
+@Erdos585.Cubelike.forest_certificate : ∀ {V : Type u_1} [inst : AddCommGroup V] [Module (ZMod 2) V]
+  [inst_2 : DecidableEq V] (S : Finset V),
+  0 ∉ S →
+    S.Nonempty →
+      (SimpleGraph.addCayley ↑S).IsBipartite →
+        ¬Erdos585.HasTwoEdgeDisjointCyclesSameVertexSet (SimpleGraph.addCayley ↑S) →
+          ∃ w,
+            (∀ (s : ↥S), 0 ≤ w s) ∧
+              ∑ s, w s = 1 ∧
+                (∀ (s : ↥S),
+                    Erdos585.Cubelike.generatorForest ↑s ≤ SimpleGraph.addCayley ↑S ∧
+                      (Erdos585.Cubelike.generatorForest ↑s).IsAcyclic) ∧
+                  ∀ (a : V) (p : (SimpleGraph.addCayley ↑S).Walk a a),
+                    p.IsCycle →
+                      4 / 3 ≤
+                        ∑ s, w s * ↑(Erdos585.CubelikeForest.intersectionCount p (Erdos585.Cubelike.generatorForest ↑s))
+'Erdos585.Cubelike.hasPair_of_four' depends on axioms: [propext, Classical.choice, Quot.sound]
+@Erdos585.Cubelike.hasPair_of_four : ∀ {V : Type u_1} [inst : AddCommGroup V] [Module (ZMod 2) V]
+  [inst_2 : DecidableEq V] (S : Finset V),
+  0 ∉ S → (SimpleGraph.addCayley ↑S).IsBipartite → 4 ≤ S.card → Erdos585.HasPairF (SimpleGraph.addCayley ↑S)
+'Erdos585.Cubelike.regular_gamma_cubelike' depends on axioms: [propext, Classical.choice, Quot.sound]
+@Erdos585.Cubelike.regular_gamma_cubelike : ∀ {V : Type u_1} [inst : AddCommGroup V] [Module (ZMod 2) V]
+  [inst_2 : DecidableEq V] (S : Finset V),
+  0 ∉ S →
+    (SimpleGraph.addCayley ↑S).IsBipartite →
+      ¬Erdos585.HasTwoEdgeDisjointCyclesSameVertexSet (SimpleGraph.addCayley ↑S) →
+        ∀ {J : Type u_2} [inst_3 : Fintype J] (base : J → V)
+          (p : (j : J) → (SimpleGraph.addCayley ↑S).Walk (base j) (base j)),
+          (∀ (j : J), (p j).IsCycle) →
+            ∀ (lam : J → ℝ),
+              (∀ (j : J), 0 ≤ lam j) →
+                ∑ j, lam j = 1 →
+                  ∃ F ≤ SimpleGraph.addCayley ↑S,
+                    F.IsAcyclic ∧ 4 / 3 ≤ ∑ j, lam j * ↑(Erdos585.CubelikeForest.intersectionCount (p j) F)
+'Erdos585.CubelikeForest.cycle_law_forest_of_certificate' depends on axioms: [propext, Classical.choice, Quot.sound]
+@Erdos585.CubelikeForest.cycle_law_forest_of_certificate : ∀ {V : Type u_1} [inst : DecidableEq V] {G : SimpleGraph V}
+  {I : Type u_2} [inst_1 : Fintype I] (F : I → SimpleGraph V) (w : I → ℝ),
+  (∀ (i : I), 0 ≤ w i) →
+    ∑ i, w i = 1 →
+      (∀ (i : I), F i ≤ G ∧ (F i).IsAcyclic) →
+        ∀ (c : ℝ),
+          (∀ (a : V) (p : G.Walk a a),
+              p.IsCycle → c ≤ ∑ i, w i * ↑(Erdos585.CubelikeForest.intersectionCount p (F i))) →
+            ∀ {J : Type u_3} [inst_2 : Fintype J] (base : J → V) (p : (j : J) → G.Walk (base j) (base j)),
+              (∀ (j : J), (p j).IsCycle) →
+                ∀ (lam : J → ℝ),
+                  (∀ (j : J), 0 ≤ lam j) →
+                    ∑ j, lam j = 1 →
+                      ∃ H ≤ G, H.IsAcyclic ∧ c ≤ ∑ j, lam j * ↑(Erdos585.CubelikeForest.intersectionCount (p j) H)
+'Erdos585.CubelikeSplit.counterexample' depends on axioms: [propext, Classical.choice, Quot.sound]
+Erdos585.CubelikeSplit.counterexample : Erdos585.CubelikeSplit.source.IsBipartite ∧
+  ¬Erdos585.HasTwoEdgeDisjointCyclesSameVertexSet Erdos585.CubelikeSplit.source ∧
+    Erdos585.CubelikeWitness.q4.IsBipartite ∧
+      Erdos585.CubelikeWitness.q4.IsRegularOfDegree 4 ∧
+        Erdos585.HasTwoEdgeDisjointCyclesSameVertexSet Erdos585.CubelikeWitness.q4 ∧
+          Function.Surjective Erdos585.CubelikeSplit.collapse ∧
+            (∀ (v : Fin 14), {i | Erdos585.CubelikeSplit.collapse i = v}.card = if v = 8 ∨ v = 9 then 2 else 1) ∧
+              (∀ (x y : Fin 14),
+                  Erdos585.CubelikeSplit.source.Adj x y ↔
+                    ∃ a b,
+                      Erdos585.CubelikeSplit.collapse a = x ∧
+                        Erdos585.CubelikeSplit.collapse b = y ∧ Erdos585.CubelikeWitness.q4.Adj a b) ∧
+                ∀ (a b c d : Fin 16),
+                  Erdos585.CubelikeWitness.q4.Adj a b →
+                    Erdos585.CubelikeWitness.q4.Adj c d →
+                      Erdos585.CubelikeSplit.collapse a = Erdos585.CubelikeSplit.collapse c →
+                        Erdos585.CubelikeSplit.collapse b = Erdos585.CubelikeSplit.collapse d → a = c ∧ b = d
+'Erdos585.CubelikeWitness.hasPair_folded' depends on axioms: [propext, Classical.choice, Quot.sound]
+Erdos585.CubelikeWitness.hasPair_folded : Erdos585.HasPairF Erdos585.CubelikeWitness.folded
+'Erdos585.CubelikeWitness.hasPair_q4' depends on axioms: [propext, Classical.choice, Quot.sound]
+Erdos585.CubelikeWitness.hasPair_q4 : Erdos585.HasPairF Erdos585.CubelikeWitness.q4
+'Erdos585.CycleLift.splitGraph_pairfree' depends on axioms: [propext, Classical.choice, Quot.sound]
+@Erdos585.CycleLift.splitGraph_pairfree : ∀ {V : Type u_1} [inst : DecidableEq V] (G : SimpleGraph V) (w : V)
+  (M : Finset (Sym2 V)) (c : V → Bool),
+  c w = false →
+    (∀ (a b : V), G.Adj a b → c a ≠ c b) →
+      (∀ (a b : V), s(a, b) ∈ M → G.Adj w a ∧ G.Adj w b) →
+        M.card ≤ 3 →
+          (∀ e ∈ M, ∀ f ∈ M, ∀ x ∈ e, x ∈ f → e = f) →
+            ¬Erdos585.HasPairF G → ¬Erdos585.HasPairF (Erdos585.CycleLift.splitGraph G w M)
+'Erdos585.DensityCore.regular_six_core' depends on axioms: [propext, Classical.choice, Quot.sound]
+@Erdos585.DensityCore.regular_six_core : ∀ {V : Type u_1} [inst : Fintype V] [inst_1 : DecidableEq V]
+  (G : SimpleGraph V) [inst_2 : DecidableRel G.Adj] [Nonempty V],
+  (∀ (v : V), G.degree v = 6) →
+    ¬Erdos585.HasPairF G →
+      ∃ s,
+        Erdos585.DensityCore.Critical G s ∧
+          ¬Erdos585.HasPairF (SimpleGraph.induce (↑s) G) ∧
+            (∀ (v : ↑↑s), (SimpleGraph.induce (↑s) G).degree v ≤ 6) ∧
+              ∑ v, (6 - (SimpleGraph.induce (↑s) G).degree v) ≤ 4 ∧
+                ∀ (t : Finset V), t.Nonempty → t ⊂ s → 4 ≤ (Erdos585.DensityCore.crossing G s t).card
+'Erdos585.DirectedState.counterexample' depends on axioms: [propext, Classical.choice, Quot.sound]
+Erdos585.DirectedState.counterexample : Erdos585.DirectedState.Hamilton Erdos585.DirectedState.first ∧
+  Erdos585.DirectedState.Hamilton Erdos585.DirectedState.second ∧
+    (∀ (b : Fin 7 → Bool),
+        Erdos585.DirectedState.Hamilton (Erdos585.DirectedState.red b) →
+          Erdos585.DirectedState.Hamilton (Erdos585.DirectedState.blue b) → b 2 = b 6) ∧
+      Function.Bijective (Erdos585.DirectedState.red Erdos585.DirectedState.relaxed) ∧
+        Function.Bijective (Erdos585.DirectedState.blue Erdos585.DirectedState.relaxed) ∧
+          Erdos585.DirectedState.relaxed 2 ≠ Erdos585.DirectedState.relaxed 6 ∧
+            (∀ (S : Finset (Fin 7)),
+                (Erdos585.DirectedState.crosses S Erdos585.DirectedState.arcs).card = 4 →
+                  (Erdos585.DirectedState.crosses S
+                          (Erdos585.DirectedState.redArcs Erdos585.DirectedState.relaxed)).card =
+                      2 ∧
+                    (Erdos585.DirectedState.crosses S
+                          (Erdos585.DirectedState.blueArcs Erdos585.DirectedState.relaxed)).card =
+                      2) ∧
+              ¬Erdos585.DirectedState.Hamilton (Erdos585.DirectedState.red Erdos585.DirectedState.relaxed) ∧
+                ¬Erdos585.DirectedState.Hamilton (Erdos585.DirectedState.blue Erdos585.DirectedState.relaxed)
+'Erdos585.DirectedState.forced_of_two_six_cuts' depends on axioms: [propext, Classical.choice, Quot.sound]
+Erdos585.DirectedState.forced_of_two_six_cuts : ∀ (b : Fin 7 → Bool),
+  Function.Bijective (Erdos585.DirectedState.red b) →
+    Function.Bijective (Erdos585.DirectedState.blue b) →
+      2 ≤ (Erdos585.DirectedState.crosses {3, 4, 5} (Erdos585.DirectedState.redArcs b)).card →
+        2 ≤ (Erdos585.DirectedState.crosses {3, 4, 5} (Erdos585.DirectedState.blueArcs b)).card →
+          2 ≤ (Erdos585.DirectedState.crosses {4, 5, 6} (Erdos585.DirectedState.redArcs b)).card →
+            2 ≤ (Erdos585.DirectedState.crosses {4, 5, 6} (Erdos585.DirectedState.blueArcs b)).card → b 2 = b 6
+'Erdos585.FactorExchange.no_spanning_cycle' depends on axioms: [propext, Classical.choice, Quot.sound]
+@Erdos585.FactorExchange.no_spanning_cycle : ∀ {u : Fin 18} (p : Erdos585.FactorExchange.reduced.Walk u u),
+  p.IsCycle → p.support.toFinset ≠ Finset.univ
+'Erdos585.Haar.rankThree_hasPair' depends on axioms: [propext, Classical.choice, Quot.sound]
+@Erdos585.Haar.rankThree_hasPair : ∀ {p : ℕ} [inst : Fact (Nat.Prime p)],
+  Erdos585.HasPairF (Erdos585.Haar.graph Erdos585.Haar.rankThreeColors)
+'Erdos585.HaarClassification.hasPair_of_four' depends on axioms: [propext, Classical.choice, Quot.sound]
+@Erdos585.HaarClassification.hasPair_of_four : ∀ {p : ℕ} [inst : Fact (Nat.Prime p)] {V : Type u_1}
+  [inst_1 : AddCommGroup V] [Module (ZMod p) V] [inst : DecidableEq V] (S : Finset V),
+  4 ≤ S.card → Erdos585.HasPairF (Erdos585.Haar.graph S)
+'Erdos585.HaarComposite.hasTwoEdgeDisjointCyclesSameVertexSet' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+Erdos585.HaarComposite.hasTwoEdgeDisjointCyclesSameVertexSet : ∀ (n : ℕ),
+  3 ≤ n → Odd n → Erdos585.HasTwoEdgeDisjointCyclesSameVertexSet (Erdos585.Haar.graph (Erdos585.HaarComposite.colors n))
+'Erdos585.HaarCompositeEven.hasTwoEdgeDisjointCyclesSameVertexSet_all' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+Erdos585.HaarCompositeEven.hasTwoEdgeDisjointCyclesSameVertexSet_all : ∀ (n : ℕ),
+  3 ≤ n → Erdos585.HasTwoEdgeDisjointCyclesSameVertexSet (Erdos585.Haar.graph (Erdos585.HaarComposite.colors n))
+'Erdos585.HaarCycle.cycle_of_two_matchings' depends on axioms: [propext, Classical.choice, Quot.sound]
+@Erdos585.HaarCycle.cycle_of_two_matchings : ∀ {V : Type u_1} [Finite V] (H : SimpleGraph (V × Bool))
+  (f g : Equiv.Perm V),
+  (∀ (x y : V), H.Adj (x, false) (y, true) ↔ y = f x ∨ y = g x) →
+    (∀ (x y : V) (b : Bool), ¬H.Adj (x, b) (y, b)) →
+      (∀ (x : V), f x ≠ g x) →
+        (g⁻¹ * f).IsCycleOn Set.univ → ∀ (x₀ : V), ∃ p, p.IsCycle ∧ ∀ (v : V × Bool), v ∈ p.support
+'Erdos585.HaarCycle.splice_isCycleOn' depends on axioms: [propext, Classical.choice, Quot.sound]
+@Erdos585.HaarCycle.splice_isCycleOn : ∀ {V : Type u_1} {I : Type u_2} [Finite V] [Finite I] (P T : Equiv.Perm V)
+  (Q : Equiv.Perm I) (mark : I → V),
+  (∀ (x : V), ∃ i, P.SameCycle x (mark i)) →
+    (∀ (i j : I), P.SameCycle (mark i) (mark j) → i = j) →
+      (∀ (x : V), (∀ (i : I), x ≠ mark i) → T x = P x) →
+        (∀ (i : I), T (mark i) = P (mark (Q i))) → Q.IsCycleOn Set.univ → T.IsCycleOn Set.univ
+'Erdos585.HaarDegree.four_le_card_of_pair' depends on axioms: [propext, Classical.choice, Quot.sound]
+@Erdos585.HaarDegree.four_le_card_of_pair : ∀ {V : Type u_1} [inst : AddCommGroup V] [inst_1 : DecidableEq V]
+  [Fintype V] (S : Finset V), Erdos585.HasPairF (Erdos585.Haar.graph S) → 4 ≤ S.card
+'Erdos585.HaarExtraction.family_boundary' depends on axioms: [propext, Classical.choice, Quot.sound]
+@Erdos585.HaarExtraction.family_boundary : ∀ {V : Type u_1} {K : Type u_2} [inst : AddCommGroup V] [inst_1 : Field K]
+  [inst_2 : Fintype K] [inst_3 : DecidableEq K],
+  Erdos585.Wenger.graph.IsBipartite ∧
+    Fintype.card (Erdos585.Wenger.Vertex K) = 2 * Fintype.card K ^ 3 ∧
+      (∀ (x : Erdos585.Wenger.Vertex K), Erdos585.Wenger.graph.degree x = Fintype.card K) ∧
+        Erdos585.Wenger.graph.edgeFinset.card = Fintype.card K ^ 4 ∧
+          ∀ (S : Finset V), 3 ≤ S.card → ∀ (f : Erdos585.Haar.graph S →g Erdos585.Wenger.graph), ¬Function.Injective ⇑f
+'Erdos585.HaarGamma.hasPair_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+@Erdos585.HaarGamma.hasPair_iff : ∀ {V : Type u_1} [inst : AddCommGroup V] [DecidableEq V] {p : ℕ}
+  [inst_2 : Fact (Nat.Prime p)] [Module (ZMod p) V] [Fintype V] (S : Finset V),
+  Erdos585.HasTwoEdgeDisjointCyclesSameVertexSet (Erdos585.Haar.graph S) ↔ 4 ≤ S.card
+'Erdos585.HaarGamma.regular_gamma_haar' depends on axioms: [propext, Classical.choice, Quot.sound]
+@Erdos585.HaarGamma.regular_gamma_haar : ∀ {V : Type u_1} [inst : AddCommGroup V] [inst_1 : DecidableEq V] {p : ℕ}
+  [inst_2 : Fact (Nat.Prime p)] [Module (ZMod p) V] (S : Finset V),
+  ¬Erdos585.HasTwoEdgeDisjointCyclesSameVertexSet (Erdos585.Haar.graph S) →
+    ∀ {J : Type u_2} [inst_4 : Fintype J] (base : J → V × Bool)
+      (q : (j : J) → (Erdos585.Haar.graph S).Walk (base j) (base j)),
+      (∀ (j : J), (q j).IsCycle) →
+        ∀ (lam : J → ℝ),
+          (∀ (j : J), 0 ≤ lam j) →
+            ∑ j, lam j = 1 →
+              ∃ F ≤ Erdos585.Haar.graph S,
+                F.IsAcyclic ∧ 4 / 3 ≤ ∑ j, lam j * ↑(Erdos585.CubelikeForest.intersectionCount (q j) F)
+'Erdos585.HaarPair.hasPair_of_matching_permutations' depends on axioms: [propext, Classical.choice, Quot.sound]
+@Erdos585.HaarPair.hasPair_of_matching_permutations : ∀ {V : Type u_1} [Finite V] [inst : DecidableEq V]
+  (G : SimpleGraph (V × Bool)) (r₀ r₁ b₀ b₁ : Equiv.Perm V),
+  (∀ (x : V), G.Adj (x, false) (r₀ x, true)) →
+    (∀ (x : V), G.Adj (x, false) (r₁ x, true)) →
+      (∀ (x : V), G.Adj (x, false) (b₀ x, true)) →
+        (∀ (x : V), G.Adj (x, false) (b₁ x, true)) →
+          (∀ (x : V), r₀ x ≠ r₁ x) →
+            (∀ (x : V), b₀ x ≠ b₁ x) →
+              (∀ (x : V), r₀ x ≠ b₀ x ∧ r₀ x ≠ b₁ x ∧ r₁ x ≠ b₀ x ∧ r₁ x ≠ b₁ x) →
+                (r₁⁻¹ * r₀).IsCycleOn Set.univ → (b₁⁻¹ * b₀).IsCycleOn Set.univ → ∀ (x₀ : V), Erdos585.HasPairF G
+'Erdos585.HaarRankOne.hasPair_of_four_distinct' depends on axioms: [propext, Classical.choice, Quot.sound]
+@Erdos585.HaarRankOne.hasPair_of_four_distinct : ∀ {p : ℕ} [inst : Fact (Nat.Prime p)] (S : Finset (ZMod p))
+  (a b c d : ZMod p),
+  a ∈ S →
+    b ∈ S → c ∈ S → d ∈ S → a ≠ b → a ≠ c → a ≠ d → b ≠ c → b ≠ d → c ≠ d → Erdos585.HasPairF (Erdos585.Haar.graph S)
+'Erdos585.HaarRankTwo.hasPair' depends on axioms: [propext, Classical.choice, Quot.sound]
+@Erdos585.HaarRankTwo.hasPair : ∀ {p : ℕ} [inst : Fact (Nat.Prime p)] (a b : ZMod p),
+  a ≠ 0 → (a, b + 1) ≠ (1, 0) → Erdos585.HasPairF (Erdos585.Haar.graph (Erdos585.HaarRankTwo.colors a b))
+'Erdos585.HaarSixCycle.exists_six_cycle' depends on axioms: [propext, Classical.choice, Quot.sound]
+@Erdos585.HaarSixCycle.exists_six_cycle : ∀ {V : Type u_1} [inst : AddCommGroup V] (S : Finset V),
+  3 ≤ S.card → ∃ q, q.IsCycle ∧ q.length = 6
+'Erdos585.IncidenceExpansion.three_hamilton_cycles' depends on axioms: [propext, Classical.choice, Quot.sound]
+Erdos585.IncidenceExpansion.three_hamilton_cycles : Erdos585.IncidenceExpansion.graph.IsBipartite ∧
+  (∀ (v : Fin 42), Erdos585.IncidenceExpansion.graph.degree v = 6) ∧
+    Erdos585.IncidenceExpansion.first.IsCycle ∧
+      Erdos585.IncidenceExpansion.second.IsCycle ∧
+        Erdos585.IncidenceExpansion.third.IsCycle ∧
+          Erdos585.IncidenceExpansion.first.support.toFinset = Finset.univ ∧
+            Erdos585.IncidenceExpansion.second.support.toFinset = Finset.univ ∧
+              Erdos585.IncidenceExpansion.third.support.toFinset = Finset.univ ∧
+                Disjoint Erdos585.IncidenceExpansion.first.edges.toFinset
+                    Erdos585.IncidenceExpansion.second.edges.toFinset ∧
+                  Disjoint Erdos585.IncidenceExpansion.first.edges.toFinset
+                      Erdos585.IncidenceExpansion.third.edges.toFinset ∧
+                    Disjoint Erdos585.IncidenceExpansion.second.edges.toFinset
+                      Erdos585.IncidenceExpansion.third.edges.toFinset
+'Erdos585.LatinIncidence.five_mul_sq_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+Erdos585.LatinIncidence.five_mul_sq_le : ∀ (m : ℕ), 5 * m ^ 2 ≤ Erdos585.maxEdges (m ^ 2 + 3 * m + 2)
+'Erdos585.LatinIncidence.five_mul_sub_sqrt_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+Erdos585.LatinIncidence.five_mul_sub_sqrt_le : ∀ (n : ℕ), 16 ≤ n → 5 * n - 15 * n.sqrt - 10 ≤ Erdos585.maxEdges n
+'Erdos585.LocalMatchingProbe.probe_unmatched_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+@Erdos585.LocalMatchingProbe.probe_unmatched_bounds : ∀ {A : Type u_1} {B : Type u_2} {P : Type u_3}
+  [inst : LinearOrder P] (E : A → B → Prop) (r : A → B → P) (T : Finset B) (s : B → P),
+  (Erdos585.LocalMatchingProbe.oldUnmatched E r T).card ≤ (Erdos585.LocalMatchingProbe.newUnmatched E r T s).card + 1 ∧
+    (Erdos585.LocalMatchingProbe.newUnmatched E r T s).card ≤
+      (Erdos585.LocalMatchingProbe.oldUnmatched E r T).card + (Erdos585.LocalMatchingProbe.records E r T s).card
+'Erdos585.MatchingJoin.matching_join_raising_counterexample' depends on axioms: [propext, Classical.choice, Quot.sound]
+Erdos585.MatchingJoin.matching_join_raising_counterexample : Erdos585.RegularFive.graph.IsRegularOfDegree 5 ∧
+  ¬Erdos585.HasTwoEdgeDisjointCyclesSameVertexSet Erdos585.RegularFive.graph ∧
+    ∀ (f : Equiv.Perm (Fin 32)),
+      Fintype.card (Fin 32 × Bool) = 64 ∧
+        (Erdos585.MatchingJoin.graph f).IsRegularOfDegree 6 ∧
+          (Erdos585.MatchingJoin.graph f).edgeFinset.card = 192 ∧
+            Erdos585.HasTwoEdgeDisjointCyclesSameVertexSet (Erdos585.MatchingJoin.graph f)
+'Erdos585.MatchingSubdivision.complete_even_lower_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+Erdos585.MatchingSubdivision.complete_even_lower_bound : ∀ (k : ℕ),
+  8 * k ^ 2 - 3 * k + 1 ≤ Erdos585.maxEdges (2 * k ^ 2 + 2)
+'Erdos585.MatchingSubdivision.lower_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+@Erdos585.MatchingSubdivision.lower_bound : ∀ {V : Type u_1} [DecidableEq V] [inst : Fintype V] (M : SimpleGraph V)
+  [inst_1 : DecidableRel M.Adj] (H : SimpleGraph V) [inst_2 : DecidableRel H.Adj],
+  M ≤ H →
+    (∀ (v : V), M.degree v ≤ 1) →
+      2 * Fintype.card V + 4 * H.edgeFinset.card - 3 * M.edgeFinset.card + 1 ≤
+        Erdos585.maxEdges (Fintype.card V + H.edgeFinset.card - M.edgeFinset.card + 2)
+'Erdos585.MatchingSubdivision.no_four_regular' depends on axioms: [propext, Classical.choice, Quot.sound]
+@Erdos585.MatchingSubdivision.no_four_regular : ∀ {V : Type u_1} [DecidableEq V] [inst : Fintype V] (M : SimpleGraph V)
+  [inst_1 : DecidableRel M.Adj] (R : Finset (Sym2 V)) {F : SimpleGraph (Erdos585.MatchingSubdivision.Vertex V ↥R)}
+  [inst_2 : DecidableRel F.Adj],
+  F ≤ Erdos585.MatchingSubdivision.graph M R →
+    (∀ e ∈ R, ¬e.IsDiag) →
+      (∀ (v : V), M.degree v ≤ 1) →
+        (∀ e ∈ R, e ∉ M.edgeSet) →
+          (∀ (v : Erdos585.MatchingSubdivision.Vertex V ↥R), F.degree v = 0 ∨ F.degree v = 4) → F = ⊥
+'Erdos585.MatchingSubdivision.ofBase_edge_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+@Erdos585.MatchingSubdivision.ofBase_edge_count : ∀ {V : Type u_1} [inst : DecidableEq V] [inst_1 : Fintype V]
+  (M : SimpleGraph V) [inst_2 : DecidableRel M.Adj] (H : SimpleGraph V) [inst_3 : DecidableRel H.Adj],
+  M ≤ H →
+    (Erdos585.MatchingSubdivision.ofBase H M).edgeFinset.card =
+      2 * Fintype.card V + 4 * H.edgeFinset.card - 3 * M.edgeFinset.card + 1
+'Erdos585.MatchingSubdivision.ofBase_not_hasPair' depends on axioms: [propext, Classical.choice, Quot.sound]
+@Erdos585.MatchingSubdivision.ofBase_not_hasPair : ∀ {V : Type u_1} [inst : DecidableEq V] [inst_1 : Fintype V]
+  (M : SimpleGraph V) [inst_2 : DecidableRel M.Adj] (H : SimpleGraph V) [inst_3 : DecidableRel H.Adj],
+  (∀ (v : V), M.degree v ≤ 1) → ¬Erdos585.HasPairF (Erdos585.MatchingSubdivision.ofBase H M)
+'Erdos585.MatchingSubdivision.ofBase_vertex_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+@Erdos585.MatchingSubdivision.ofBase_vertex_count : ∀ {V : Type u_1} [inst : DecidableEq V] [inst_1 : Fintype V]
+  (M : SimpleGraph V) [inst_2 : DecidableRel M.Adj] (H : SimpleGraph V) [inst_3 : DecidableRel H.Adj],
+  M ≤ H →
+    Fintype.card (Erdos585.MatchingSubdivision.Vertex V ↥(H.edgeFinset \ M.edgeFinset)) =
+      Fintype.card V + H.edgeFinset.card - M.edgeFinset.card + 2
+'Erdos585.PortCompletion.exists_good_pairing' depends on axioms: [propext, Classical.choice, Quot.sound]
+@Erdos585.PortCompletion.exists_good_pairing : ∀ {V : Type u_1} [inst : Fintype V] [inst_1 : DecidableEq V]
+  (f : Finset V → ℕ) (a b c d : V),
+  (∀ (S : Finset V), f (Finset.univ \ S) = f S) →
+    (∀ (S T : Finset V), f (S ∩ T) + f (S ∪ T) ≤ f S + f T) →
+      (∀ (S : Finset V), S.Nonempty → S ≠ Finset.univ → 6 ≤ f S + Erdos585.PortCompletion.ports S a b c d) →
+        (∀ (S : Finset V), (f S + Erdos585.PortCompletion.ports S a b c d) % 2 = 0) →
+          (∀ (S : Finset V),
+              S.Nonempty →
+                S ≠ Finset.univ → 6 ≤ f S + Erdos585.PortCompletion.cross S a c + Erdos585.PortCompletion.cross S b d) ∨
+            ∀ (S : Finset V),
+              S.Nonempty →
+                S ≠ Finset.univ → 6 ≤ f S + Erdos585.PortCompletion.cross S a d + Erdos585.PortCompletion.cross S b c
+'Erdos585.RegularFive.graph_edge_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+Erdos585.RegularFive.graph_edge_count : Erdos585.RegularFive.graph.edgeFinset.card = 80
+'Erdos585.RimDensity.four_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+@Erdos585.RimDensity.four_bounds : ∀ {V : Type u_1} [DecidableEq V] (G : SimpleGraph V) [inst : DecidableRel G.Adj]
+  {S : Finset V},
+  S.card = 4 →
+    (Erdos585.RimDensity.NoSquare G → (Erdos585.RimDensity.edges G S).card ≤ 4) ∧
+      ∀ a ∈ S,
+        ∀ b ∈ S, a ≠ b → ¬G.Adj a b → (∀ x ∈ S, ¬(G.Adj a x ∧ G.Adj b x)) → (Erdos585.RimDensity.edges G S).card ≤ 3
+'Erdos585.SignedPrismCore.signed_prism_raising_counterexample' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+Erdos585.SignedPrismCore.signed_prism_raising_counterexample : Erdos585.RegularFive.graph.IsRegularOfDegree 5 ∧
+  ¬Erdos585.HasTwoEdgeDisjointCyclesSameVertexSet Erdos585.RegularFive.graph ∧
+    ∀ (σ : Sym2 (Fin 32) → Bool),
+      Fintype.card (Fin 32 × Bool) = 64 ∧
+        (Erdos585.SignedPrismCore.prism Erdos585.RegularFive.graph σ).IsRegularOfDegree 6 ∧
+          Erdos585.HasTwoEdgeDisjointCyclesSameVertexSet (Erdos585.SignedPrismCore.prism Erdos585.RegularFive.graph σ)
+'Erdos585.TwoHub.thirty_one_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+Erdos585.TwoHub.thirty_one_le : 31 ≤ Erdos585.maxEdges 11
+'Erdos585.TwoHubFamily.four_mul_sub_thirteen_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+Erdos585.TwoHubFamily.four_mul_sub_thirteen_le : ∀ (n : ℕ), 10 ≤ n → 4 * n - 13 ≤ Erdos585.maxEdges n
+'Erdos585.Wenger.no_six_cycle' depends on axioms: [propext, Classical.choice, Quot.sound]
+@Erdos585.Wenger.no_six_cycle : ∀ {K : Type u_1} [inst : Field K] (x₀ x₁ x₂ x₃ x₄ x₅ : Erdos585.Wenger.Vertex K),
+  [x₀, x₁, x₂, x₃, x₄, x₅].Nodup →
+    Erdos585.Wenger.graph.Adj x₀ x₁ →
+      Erdos585.Wenger.graph.Adj x₁ x₂ →
+        Erdos585.Wenger.graph.Adj x₂ x₃ →
+          Erdos585.Wenger.graph.Adj x₃ x₄ → Erdos585.Wenger.graph.Adj x₄ x₅ → Erdos585.Wenger.graph.Adj x₅ x₀ → False
+'Erdos585.card_edges_delete_vertex' depends on axioms: [propext, Classical.choice, Quot.sound]
+@Erdos585.card_edges_delete_vertex : ∀ {V : Type u_1} [inst : Fintype V] [inst_1 : DecidableEq V] (G : SimpleGraph V)
+  [inst_2 : DecidableRel G.Adj] (v : V), (SimpleGraph.induce {v}ᶜ G).edgeFinset.card = G.edgeFinset.card - G.degree v
+'Erdos585.delete_vertex_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+@Erdos585.delete_vertex_bound : ∀ {V : Type u_1} [inst : Fintype V] [inst_1 : DecidableEq V] (G : SimpleGraph V)
+  [inst_2 : DecidableRel G.Adj],
+  ¬Erdos585.HasPairF G →
+    ∀ {n : ℕ}, Fintype.card V = n + 1 → ∀ (v : V), G.edgeFinset.card ≤ Erdos585.maxEdges n + G.degree v
+'Erdos585.hasPair_six_of_thirteen' depends on axioms: [propext, Classical.choice, Quot.sound]
+Erdos585.hasPair_six_of_thirteen : ∀ (G : SimpleGraph (Fin 6)), 13 ≤ G.edgeSet.ncard → Erdos585.HasPairF G
+'Erdos585.not_hasPairF_induce' depends on axioms: [propext, Classical.choice, Quot.sound]
+@Erdos585.not_hasPairF_induce : ∀ {V : Type u_1} [inst : DecidableEq V] {G : SimpleGraph V},
+  ¬Erdos585.HasPairF G → ∀ (S : Set V), ¬Erdos585.HasPairF (SimpleGraph.induce S G)
+'Erdos585.not_hasPairF_of_small_cut' depends on axioms: [propext, Classical.choice, Quot.sound]
+@Erdos585.not_hasPairF_of_small_cut : ∀ {V : Type u_1} {C : Type u_2} [inst : DecidableEq V] {G : SimpleGraph V}
+  (color : V → C) (cut : Finset (Sym2 V)),
+  (∀ (a b : V), G.Adj a b → color a ≠ color b → s(a, b) ∈ cut) →
+    cut.card ≤ 3 → (∀ (c : C), ¬Erdos585.HasPairF (SimpleGraph.induce {x | color x = c} G)) → ¬Erdos585.HasPairF G
+'Erdos585.ParabolaBarrier104.arbitrary_polylog_barrier' depends on axioms: [propext, Classical.choice, Quot.sound]
+Erdos585.ParabolaBarrier104.arbitrary_polylog_barrier : ∀ (C A : ℝ),
+  0 < C →
+    0 ≤ A →
+      ∀ (K : ℕ),
+        ∃ k,
+          K ≤ k ∧
+            2 ≤ k ∧
+              Erdos585.ParabolaBarrier104.FamilyProperties k ∧
+                ∀ (v : Erdos585.ParabolaBarrier104.FamilyVertex k),
+                  C * (Real.log ↑(Fintype.card (Erdos585.ParabolaBarrier104.FamilyVertex k))).rpow A <
+                    ↑((Erdos585.ParabolaBarrier104.familyGraph k).degree v)
+'Erdos585.TwinNoSingleton.hasPair_of_no_singleton_twins' depends on axioms: [propext, Classical.choice, Quot.sound]
+@Erdos585.TwinNoSingleton.hasPair_of_no_singleton_twins : ∀ {A : Type u_1} {R : Type u_2} [inst : Fintype A]
+  [inst_1 : Fintype R] [DecidableEq R] (G : SimpleGraph (A ⊕ R)) [inst_3 : DecidableRel G.Adj],
+  (∀ (a b : A), ¬G.Adj (Sum.inl a) (Sum.inl b)) →
+    (∀ (r s : R), ¬G.Adj (Sum.inr r) (Sum.inr s)) →
+      (∀ (v : A ⊕ R), G.degree v ≤ 6) →
+        G.edgeFinset.card + 2 = 3 * Fintype.card (A ⊕ R) →
+          (∀ (a : A), ∃ b, b ≠ a ∧ ∀ (r : R), G.Adj (Sum.inl a) (Sum.inr r) ↔ G.Adj (Sum.inl b) (Sum.inr r)) →
+            Erdos585.HasTwoEdgeDisjointCyclesSameVertexSet G
+'Erdos585.TwinCoreForcing.groupedGraph_hasPair_of_no_singletons' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@Erdos585.TwinCoreForcing.groupedGraph_hasPair_of_no_singletons : ∀ {I : Type u_1} {R : Type u_2} [inst : Fintype I]
+  [inst_1 : Fintype R] [inst_2 : DecidableEq I] [inst_3 : DecidableEq R] (J : Finset (I × R)) (k : I → ℕ),
+  (∀ (i : I), 2 ≤ k i) →
+    (∀ (v : (i : I) × Fin (k i) ⊕ R), (Erdos585.TwinCoreForcing.groupedGraph J k).degree v ≤ 6) →
+      (Erdos585.TwinCoreForcing.groupedGraph J k).edgeFinset.card + 2 = 3 * Fintype.card ((i : I) × Fin (k i) ⊕ R) →
+        Erdos585.HasTwoEdgeDisjointCyclesSameVertexSet (Erdos585.TwinCoreForcing.groupedGraph J k)
+'OpenMathReview.HaarInfinite.neighbor_finite' depends on axioms: [propext, Classical.choice, Quot.sound]
+@OpenMathReview.HaarInfinite.neighbor_finite : ∀ {V : Type u_1} [inst : AddCommGroup V] [DecidableEq V] (S : Finset V)
+  (x : V × Bool), ((Erdos585.Haar.graph S).neighborSet x).Finite
+'OpenMathReview.HaarInfinite.neighbor_ncard' depends on axioms: [propext, Classical.choice, Quot.sound]
+@OpenMathReview.HaarInfinite.neighbor_ncard : ∀ {V : Type u_1} [inst : AddCommGroup V] [DecidableEq V] (S : Finset V)
+  (x : V × Bool), ((Erdos585.Haar.graph S).neighborSet x).ncard = S.card
+'OpenMathReview.HaarInfinite.pair_four_neighbors' depends on axioms: [propext, Classical.choice, Quot.sound]
+@OpenMathReview.HaarInfinite.pair_four_neighbors : ∀ {W : Type u_1} [inst : DecidableEq W] {G : SimpleGraph W} {u v : W}
+  {p : G.Walk u u} {q : G.Walk v v},
+  p.IsCycle →
+    q.IsCycle →
+      p.support.toFinset = q.support.toFinset →
+        Disjoint p.edges.toFinset q.edges.toFinset → (G.neighborSet u).Finite → 4 ≤ (G.neighborSet u).ncard
+'OpenMathReview.HaarInfinite.four_le_card_of_pair' depends on axioms: [propext, Classical.choice, Quot.sound]
+@OpenMathReview.HaarInfinite.four_le_card_of_pair : ∀ {V : Type u_1} [inst : AddCommGroup V] [DecidableEq V]
+  (S : Finset V), Erdos585.HasTwoEdgeDisjointCyclesSameVertexSet (Erdos585.Haar.graph S) → 4 ≤ S.card
+'OpenMathReview.HaarInfinite.hasPair_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+@OpenMathReview.HaarInfinite.hasPair_iff : ∀ {V : Type u_1} [inst : AddCommGroup V] [DecidableEq V] {p : ℕ}
+  [inst_2 : Fact (Nat.Prime p)] [Module (ZMod p) V] (S : Finset V),
+  Erdos585.HasTwoEdgeDisjointCyclesSameVertexSet (Erdos585.Haar.graph S) ↔ 4 ≤ S.card
+'RobertPublishable.BM.hasPair_of_twoHamiltonianCycles' depends on axioms: [propext, Classical.choice, Quot.sound]
+@RobertPublishable.BM.hasPair_of_twoHamiltonianCycles : ∀ {V : Type u_1} [Fintype V] [inst : DecidableEq V]
+  {G : SimpleGraph V}, RobertPublishable.BM.HasTwoHamiltonianCycles G → RobertPublishable.BM.HasPair G
+'RobertPublishable.BM.twoHamiltonianCycles_of_hamiltonian_remainder' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@RobertPublishable.BM.twoHamiltonianCycles_of_hamiltonian_remainder : ∀ {V : Type u_1} [inst : Fintype V]
+  [inst_1 : DecidableEq V] [Nontrivial V] {G : SimpleGraph V} {u : V} (p : G.Walk u u),
+  p.IsHamiltonianCycle →
+    (G.deleteEdges {e | e ∈ p.edges}).IsHamiltonian → RobertPublishable.BM.HasTwoHamiltonianCycles G
+'RobertPublishable.BM.twoHamiltonianCycles_of_preserved_criterion' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@RobertPublishable.BM.twoHamiltonianCycles_of_preserved_criterion : ∀ {V : Type u_1} [inst : Fintype V]
+  [inst_1 : DecidableEq V] [Nontrivial V] (criterion : SimpleGraph V → Prop),
+  (∀ (H : SimpleGraph V), criterion H → H.IsHamiltonian) →
+    (∀ (H : SimpleGraph V) (u : V) (p : H.Walk u u),
+        criterion H → p.IsHamiltonianCycle → criterion (H.deleteEdges {e | e ∈ p.edges})) →
+      ∀ {G : SimpleGraph V}, criterion G → RobertPublishable.BM.HasTwoHamiltonianCycles G
+'RobertPublishable.BM.hasPair_of_preserved_criterion' depends on axioms: [propext, Classical.choice, Quot.sound]
+@RobertPublishable.BM.hasPair_of_preserved_criterion : ∀ {V : Type u_1} [inst : Fintype V] [inst_1 : DecidableEq V]
+  [Nontrivial V] (criterion : SimpleGraph V → Prop),
+  (∀ (H : SimpleGraph V), criterion H → H.IsHamiltonian) →
+    (∀ (H : SimpleGraph V) (u : V) (p : H.Walk u u),
+        criterion H → p.IsHamiltonianCycle → criterion (H.deleteEdges {e | e ∈ p.edges})) →
+      ∀ {G : SimpleGraph V}, criterion G → RobertPublishable.BM.HasPair G
+'RobertPublishable.BM.edgesTo_union' depends on axioms: [propext, Classical.choice, Quot.sound]
+@RobertPublishable.BM.edgesTo_union : ∀ {V : Type u_1} [Fintype V] [inst : DecidableEq V] {G : SimpleGraph V}
+  [inst_1 : DecidableRel G.Adj] (S T D : Finset V),
+  Disjoint T D →
+    RobertPublishable.BM.edgesTo G S (T ∪ D) = RobertPublishable.BM.edgesTo G S T + RobertPublishable.BM.edgesTo G S D
+'RobertPublishable.BM.edgesTo_le_card_mul' depends on axioms: [propext, Classical.choice, Quot.sound]
+@RobertPublishable.BM.edgesTo_le_card_mul : ∀ {V : Type u_1} [Fintype V] [DecidableEq V] {G : SimpleGraph V}
+  [inst : DecidableRel G.Adj] (S T : Finset V), RobertPublishable.BM.edgesTo G S T ≤ S.card * T.card
+'RobertPublishable.BM.deleted_neighbors_le_shore_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+@RobertPublishable.BM.deleted_neighbors_le_shore_budget : ∀ {V : Type u_1} [Fintype V] [inst : DecidableEq V]
+  {G : SimpleGraph V} [inst_1 : DecidableRel G.Adj] (P Q D : Finset V) (t : ℕ),
+  G.IsBipartiteWith ↑P ↑Q →
+    (∀ (v : V), v ∈ P ∨ v ∈ Q) → (D ∩ P).card ≤ t → (D ∩ Q).card ≤ t → ∀ (v : V), (Finset.filter (G.Adj v) D).card ≤ t
+'RobertPublishable.BM.balanced_deleted_edges_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+@RobertPublishable.BM.balanced_deleted_edges_le : ∀ {V : Type u_1} [Fintype V] [inst : DecidableEq V]
+  {G : SimpleGraph V} [inst_1 : DecidableRel G.Adj] (P Q D S : Finset V) (t : ℕ),
+  G.IsBipartiteWith ↑P ↑Q →
+    (∀ (v : V), v ∈ P ∨ v ∈ Q) → (D ∩ P).card ≤ t → (D ∩ Q).card ≤ t → RobertPublishable.BM.edgesTo G S D ≤ t * S.card
+'RobertPublishable.BM.cut_deletion_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+@RobertPublishable.BM.cut_deletion_identity : ∀ {V : Type u_1} [inst : Fintype V] [inst_1 : DecidableEq V]
+  {G : SimpleGraph V} [inst_2 : DecidableRel G.Adj] (S D : Finset V),
+  Disjoint S D →
+    RobertPublishable.BM.edgesTo G S Sᶜ = RobertPublishable.BM.edgesTo G S (Sᶜ \ D) + RobertPublishable.BM.edgesTo G S D
+'RobertPublishable.BM.balanced_cut_loss_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+@RobertPublishable.BM.balanced_cut_loss_le : ∀ {V : Type u_1} [inst : Fintype V] [inst_1 : DecidableEq V]
+  {G : SimpleGraph V} [inst_2 : DecidableRel G.Adj] (P Q D S : Finset V) (t : ℕ),
+  G.IsBipartiteWith ↑P ↑Q →
+    (∀ (v : V), v ∈ P ∨ v ∈ Q) →
+      (D ∩ P).card ≤ t →
+        (D ∩ Q).card ≤ t →
+          Disjoint S D → RobertPublishable.BM.edgesTo G S Sᶜ ≤ RobertPublishable.BM.edgesTo G S (Sᶜ \ D) + t * S.card
+'RobertPublishable.BM.vacuous_zero_degree_cherry_counterexample' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+RobertPublishable.BM.vacuous_zero_degree_cherry_counterexample : (∀ (v : Fin 1), ⊥.degree v ≤ 0) ∧
+  (∀ y ∈ ∅, 2 ≤ (Finset.filter (⊥.Adj y) ∅).card) ∧ (2 - 1) * ∅.card ≥ 3 * 1 * 0 ∧ ¬RobertPublishable.BM.HasCherry ⊥ ∅ ∅
+'RobertPublishable.BM.hasCherry_of_two_neighbors' depends on axioms: [propext, Classical.choice, Quot.sound]
+@RobertPublishable.BM.hasCherry_of_two_neighbors : ∀ {V : Type u_1} [Fintype V] [DecidableEq V] {G : SimpleGraph V}
+  [inst : DecidableRel G.Adj] (P Q : Finset V),
+  ∀ y ∈ Q, 2 ≤ (Finset.filter (G.Adj y) P).card → RobertPublishable.BM.HasCherry G P Q
+'RobertPublishable.BM.hasCherry_of_nonempty_centres' depends on axioms: [propext, Classical.choice, Quot.sound]
+@RobertPublishable.BM.hasCherry_of_nonempty_centres : ∀ {V : Type u_1} [Fintype V] [DecidableEq V] {G : SimpleGraph V}
+  [inst : DecidableRel G.Adj] (P Q : Finset V),
+  Q.Nonempty → (∀ y ∈ Q, 2 ≤ (Finset.filter (G.Adj y) P).card) → RobertPublishable.BM.HasCherry G P Q
+'OpenMathReview.AffinePaletteBarrier.component_induced' depends on axioms: [propext, Classical.choice, Quot.sound]
+@OpenMathReview.AffinePaletteBarrier.component_induced : ∀ {V : Type u_1} [inst : AddCommGroup V]
+  [inst_1 : Module (ZMod 3) V] [DecidableEq V] (S T : Finset V),
+  OpenMathReview.AffinePaletteBarrier.TripleClosed S →
+    T ⊆ S →
+      T.Nonempty →
+        T.card ≤ 3 →
+          ∀ {u v : V × Bool},
+            (Erdos585.Haar.graph T).Reachable u v → (Erdos585.Haar.graph S).Adj u v → (Erdos585.Haar.graph T).Adj u v
+'OpenMathReview.AffinePaletteBarrier.tripleClosed_of_sidon' depends on axioms: [propext, Classical.choice, Quot.sound]
+@OpenMathReview.AffinePaletteBarrier.tripleClosed_of_sidon : ∀ {V : Type u_1} [inst : AddCommGroup V]
+  [inst_1 : Module (ZMod 3) V] [DecidableEq V] (S : Finset V),
+  OpenMathReview.AffinePaletteBarrier.Sidon S → OpenMathReview.AffinePaletteBarrier.TripleClosed S
+'OpenMathReview.AffinePaletteBarrier.canonical_full' depends on axioms: [propext, Classical.choice, Quot.sound]
+@OpenMathReview.AffinePaletteBarrier.canonical_full : ∀ {V : Type u_1} [inst : AddCommGroup V]
+  [inst_1 : Module (ZMod 3) V] [inst_2 : DecidableEq V] (S : Finset V),
+  Erdos585.KempeSwap104.FullColoring (OpenMathReview.AffinePaletteBarrier.canonical S)
+'OpenMathReview.AffinePaletteBarrier.exposed_cycle_no_partner' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@OpenMathReview.AffinePaletteBarrier.exposed_cycle_no_partner : ∀ {V : Type u_1} [inst : AddCommGroup V]
+  [inst_1 : Module (ZMod 3) V] [inst_2 : DecidableEq V] [Fintype V] (S : Finset V),
+  OpenMathReview.AffinePaletteBarrier.TripleClosed S →
+    ∀ (a b : OpenMathReview.AffinePaletteBarrier.Color S)
+      (J :
+        Set (Erdos585.KempeSwap104.twoFactor (OpenMathReview.AffinePaletteBarrier.canonical S) a b).ConnectedComponent)
+      (i j : OpenMathReview.AffinePaletteBarrier.Color S) {u : V × Bool}
+      (p :
+        (Erdos585.KempeSwap104.twoFactor
+              (Erdos585.KempeSwap104.swap (OpenMathReview.AffinePaletteBarrier.canonical S) a b J) i j).Walk
+          u u),
+      p.IsCycle →
+        ¬∃ w q,
+            q.IsCycle ∧
+              (SimpleGraph.Walk.mapLe ⋯ p).support.toFinset = q.support.toFinset ∧
+                Disjoint (SimpleGraph.Walk.mapLe ⋯ p).edges.toFinset q.edges.toFinset
+'OpenMathReview.AffinePaletteBarrier.sidon_exposed_cycle_no_partner' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@OpenMathReview.AffinePaletteBarrier.sidon_exposed_cycle_no_partner : ∀ {V : Type u_1} [inst : AddCommGroup V]
+  [inst_1 : Module (ZMod 3) V] [inst_2 : DecidableEq V] [Fintype V] (S : Finset V),
+  OpenMathReview.AffinePaletteBarrier.Sidon S →
+    ∀ (a b : OpenMathReview.AffinePaletteBarrier.Color S)
+      (J :
+        Set (Erdos585.KempeSwap104.twoFactor (OpenMathReview.AffinePaletteBarrier.canonical S) a b).ConnectedComponent)
+      (i j : OpenMathReview.AffinePaletteBarrier.Color S) {u : V × Bool}
+      (p :
+        (Erdos585.KempeSwap104.twoFactor
+              (Erdos585.KempeSwap104.swap (OpenMathReview.AffinePaletteBarrier.canonical S) a b J) i j).Walk
+          u u),
+      p.IsCycle →
+        ¬∃ w q,
+            q.IsCycle ∧
+              (SimpleGraph.Walk.mapLe ⋯ p).support.toFinset = q.support.toFinset ∧
+                Disjoint (SimpleGraph.Walk.mapLe ⋯ p).edges.toFinset q.edges.toFinset
+'OpenMathReview.TwinDensityExtension.grouped_balance_dense' depends on axioms: [propext, Classical.choice, Quot.sound]
+@OpenMathReview.TwinDensityExtension.grouped_balance_dense : ∀ {I : Type u_1} {R : Type u_2} [inst : Fintype I]
+  [inst_1 : Fintype R] [inst_2 : DecidableEq I] [inst_3 : DecidableEq R] (J : Finset (I × R)) (k : I → ℕ),
+  (∀ (v : (i : I) × Fin (k i) ⊕ R), (Erdos585.TwinCoreForcing.groupedGraph J k).degree v ≤ 6) →
+    3 * Fintype.card ((i : I) × Fin (k i) ⊕ R) ≤ (Erdos585.TwinCoreForcing.groupedGraph J k).edgeFinset.card + 2 →
+      ∑ i, k i = Fintype.card R
+'OpenMathReview.TwinDensityExtension.grouped_full_degree_of_strict_dense' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@OpenMathReview.TwinDensityExtension.grouped_full_degree_of_strict_dense : ∀ {I : Type u_1} {R : Type u_2}
+  [inst : Fintype I] [inst_1 : Fintype R] [inst_2 : DecidableEq I] [inst_3 : DecidableEq R] (J : Finset (I × R))
+  (k : I → ℕ),
+  (∀ (i : I), 2 ≤ k i) →
+    (∀ (v : (i : I) × Fin (k i) ⊕ R), (Erdos585.TwinCoreForcing.groupedGraph J k).degree v ≤ 6) →
+      3 * Fintype.card ((i : I) × Fin (k i) ⊕ R) ≤ (Erdos585.TwinCoreForcing.groupedGraph J k).edgeFinset.card + 2 →
+        (Erdos585.TwinCoreForcing.groupedGraph J k).edgeFinset.card + 2 ≠ 3 * Fintype.card ((i : I) × Fin (k i) ⊕ R) →
+          ∀ (i : I), {r | (i, r) ∈ J}.card = 6
+'OpenMathReview.TwinDensityExtension.groupedGraph_hasPair_of_no_singletons_dense' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@OpenMathReview.TwinDensityExtension.groupedGraph_hasPair_of_no_singletons_dense : ∀ {I : Type u_1} {R : Type u_2}
+  [inst : Fintype I] [inst_1 : Fintype R] [inst_2 : DecidableEq I] [inst_3 : DecidableEq R] (J : Finset (I × R))
+  (k : I → ℕ),
+  Nonempty ((i : I) × Fin (k i) ⊕ R) →
+    (∀ (i : I), 2 ≤ k i) →
+      (∀ (v : (i : I) × Fin (k i) ⊕ R), (Erdos585.TwinCoreForcing.groupedGraph J k).degree v ≤ 6) →
+        3 * Fintype.card ((i : I) × Fin (k i) ⊕ R) ≤ (Erdos585.TwinCoreForcing.groupedGraph J k).edgeFinset.card + 2 →
+          Erdos585.HasTwoEdgeDisjointCyclesSameVertexSet (Erdos585.TwinCoreForcing.groupedGraph J k)
+'OpenMathReview.TwinDensityExtension.hasPair_of_no_singleton_twins_dense' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@OpenMathReview.TwinDensityExtension.hasPair_of_no_singleton_twins_dense : ∀ {A : Type u_1} {R : Type u_2}
+  [inst : Fintype A] [inst_1 : Fintype R] [DecidableEq R] (G : SimpleGraph (A ⊕ R)) [inst_3 : DecidableRel G.Adj],
+  Nonempty (A ⊕ R) →
+    (∀ (a b : A), ¬G.Adj (Sum.inl a) (Sum.inl b)) →
+      (∀ (r s : R), ¬G.Adj (Sum.inr r) (Sum.inr s)) →
+        (∀ (v : A ⊕ R), G.degree v ≤ 6) →
+          3 * Fintype.card (A ⊕ R) ≤ G.edgeFinset.card + 2 →
+            (∀ (a : A), ∃ b, b ≠ a ∧ ∀ (r : R), G.Adj (Sum.inl a) (Sum.inr r) ↔ G.Adj (Sum.inl b) (Sum.inr r)) →
+              Erdos585.HasTwoEdgeDisjointCyclesSameVertexSet G
+'OpenMathReview.InfiniteAffinePaletteBarrier.no_partner_in_component' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@OpenMathReview.InfiniteAffinePaletteBarrier.no_partner_in_component : ∀ {V : Type u_1} [inst : AddCommGroup V]
+  [inst_1 : Module (ZMod 3) V] [inst_2 : DecidableEq V] (S T : Finset V),
+  OpenMathReview.AffinePaletteBarrier.TripleClosed S →
+    ∀ (hTS : T ⊆ S),
+      T.Nonempty →
+        T.card ≤ 3 →
+          ∀ {u : V × Bool} (p : (Erdos585.Haar.graph T).Walk u u),
+            p.IsCycle →
+              ¬∃ w q,
+                  q.IsCycle ∧
+                    (SimpleGraph.Walk.mapLe ⋯ p).support.toFinset = q.support.toFinset ∧
+                      Disjoint (SimpleGraph.Walk.mapLe ⋯ p).edges.toFinset q.edges.toFinset
+'OpenMathReview.InfiniteAffinePaletteBarrier.sidon_exposed_cycle_no_partner' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@OpenMathReview.InfiniteAffinePaletteBarrier.sidon_exposed_cycle_no_partner : ∀ {V : Type u_1} [inst : AddCommGroup V]
+  [inst_1 : Module (ZMod 3) V] [inst_2 : DecidableEq V] (S : Finset V),
+  OpenMathReview.AffinePaletteBarrier.Sidon S →
+    ∀ (a b : OpenMathReview.AffinePaletteBarrier.Color S)
+      (J :
+        Set (Erdos585.KempeSwap104.twoFactor (OpenMathReview.AffinePaletteBarrier.canonical S) a b).ConnectedComponent)
+      (i j : OpenMathReview.AffinePaletteBarrier.Color S) {u : V × Bool}
+      (p :
+        (Erdos585.KempeSwap104.twoFactor
+              (Erdos585.KempeSwap104.swap (OpenMathReview.AffinePaletteBarrier.canonical S) a b J) i j).Walk
+          u u),
+      p.IsCycle →
+        ¬∃ w q,
+            q.IsCycle ∧
+              (SimpleGraph.Walk.mapLe ⋯ p).support.toFinset = q.support.toFinset ∧
+                Disjoint (SimpleGraph.Walk.mapLe ⋯ p).edges.toFinset q.edges.toFinset
+'RobertPublishable.SUB.single_passage' depends on axioms: [propext, Classical.choice, Quot.sound]
+@RobertPublishable.SUB.single_passage : ∀ {V : Type u_1} {U : Type u_2} [inst : DecidableEq V] [DecidableEq U]
+  {G : SimpleGraph V} (copy : V → U) (outer : V → Bool) (u : U),
+  (∀ (a b : V), G.Adj a b → copy a = copy b → outer a ≠ outer b) →
+    (∀ (a b : V), G.Adj a b → copy a ≠ copy b → outer a = true ∧ outer b = true) →
+      ∀ (cut : Finset (Sym2 V)),
+        (∀ e ∈ G.edgeSet, e ∈ cut ↔ RobertPublishable.SUB.Crosses copy u e) →
+          cut.card ≤ 7 →
+            ∀ {a b : V} {p : G.Walk a a} {q : G.Walk b b},
+              p.IsCycle →
+                q.IsCycle →
+                  p.support.toFinset = q.support.toFinset →
+                    Disjoint p.edges.toFinset q.edges.toFinset →
+                      (∃ x ∈ p.support, copy x = u) →
+                        (∀ x ∈ p.support, copy x = u) ∨
+                          (Finset.filter (RobertPublishable.SUB.Crosses copy u) p.edges.toFinset).card = 2 ∧
+                            (Finset.filter (RobertPublishable.SUB.Crosses copy u) q.edges.toFinset).card = 2
+'RobertPublishable.SUB.pairfree_of_link_projection' depends on axioms: [propext, Classical.choice, Quot.sound]
+@RobertPublishable.SUB.pairfree_of_link_projection : ∀ {V : Type u_1} {U : Type u_2} {E : Type u_3}
+  [inst : DecidableEq V] [inst_1 : DecidableEq U] [DecidableEq E] {G : SimpleGraph V}
+  {L : RobertPublishable.SUB.LooplessMultigraph U E} {copy : V → U} (P : RobertPublishable.SUB.LinkProjection G L copy)
+  (outer : V → Bool),
+  (∀ (a b : V), G.Adj a b → copy a = copy b → outer a ≠ outer b) →
+    (∀ (a b : V), G.Adj a b → copy a ≠ copy b → outer a = true ∧ outer b = true) →
+      ∀ (cuts : U → Finset (Sym2 V)),
+        (∀ (u : U), ∀ e ∈ G.edgeSet, e ∈ cuts u ↔ RobertPublishable.SUB.Crosses copy u e) →
+          (∀ (u : U), (cuts u).card ≤ 7) →
+            (∀ (u : U), ¬Erdos585.HasPairF (SimpleGraph.induce {x | copy x = u} G)) → ¬L.HasPair → ¬Erdos585.HasPairF G
+'RobertPublishable.SUB.ValidSimpleSubstitution.pairfree' depends on axioms: [propext, Classical.choice, Quot.sound]
+@RobertPublishable.SUB.ValidSimpleSubstitution.pairfree : ∀ {U : Type u_1} {E : Type u_2} {I : Type u_3} {O : Type u_4}
+  [inst : DecidableEq U] [DecidableEq E] [inst_2 : DecidableEq I] [inst_3 : DecidableEq O] [inst_4 : Fintype I]
+  [inst_5 : Fintype O] {Γ : SimpleGraph (I ⊕ O)} {L : RobertPublishable.SUB.LooplessMultigraph U E} {d : ℕ}
+  {G : SimpleGraph (U × (I ⊕ O))} (T : RobertPublishable.SUB.ValidSimpleSubstitution Γ L d G),
+  RobertPublishable.SUB.Gadget Γ d → d ≤ 7 → ¬Erdos585.HasPairF Γ → ¬L.HasPair → ¬Erdos585.HasPairF G
+'RobertPublishable.SUB.ValidSimpleSubstitution.regular' depends on axioms: [propext, Classical.choice, Quot.sound]
+@RobertPublishable.SUB.ValidSimpleSubstitution.regular : ∀ {U : Type u_1} {E : Type u_2} {I : Type u_3} {O : Type u_4}
+  [inst : DecidableEq U] [inst_1 : DecidableEq E] [inst_2 : DecidableEq I] [inst_3 : DecidableEq O] [inst_4 : Fintype I]
+  [inst_5 : Fintype O] {Γ : SimpleGraph (I ⊕ O)} {L : RobertPublishable.SUB.LooplessMultigraph U E} {d : ℕ}
+  {G : SimpleGraph (U × (I ⊕ O))} (T : RobertPublishable.SUB.ValidSimpleSubstitution Γ L d G),
+  RobertPublishable.SUB.Gadget Γ d → G.IsRegularOfDegree d
+'RobertPublishable.SUB.ValidSimpleSubstitution.bicoloring' depends on axioms: [propext, Classical.choice, Quot.sound]
+@RobertPublishable.SUB.ValidSimpleSubstitution.bicoloring : ∀ {U : Type u_1} {E : Type u_2} {I : Type u_3}
+  {O : Type u_4} [inst : DecidableEq U] [DecidableEq E] [inst_2 : DecidableEq I] [inst_3 : DecidableEq O]
+  [inst_4 : Fintype I] [inst_5 : Fintype O] {Γ : SimpleGraph (I ⊕ O)} {L : RobertPublishable.SUB.LooplessMultigraph U E}
+  {d : ℕ} {G : SimpleGraph (U × (I ⊕ O))} (T : RobertPublishable.SUB.ValidSimpleSubstitution Γ L d G),
+  RobertPublishable.SUB.Gadget Γ d →
+    ∀ (c : U → Bool),
+      RobertPublishable.SUB.ValidSimpleSubstitution.SkeletonBicoloring L c →
+        ∃ f, ∀ (a b : U × (I ⊕ O)), G.Adj a b → f a ≠ f b
+'RobertPublishable.SUB.ValidSimpleSubstitution.bipartite' depends on axioms: [propext, Classical.choice, Quot.sound]
+@RobertPublishable.SUB.ValidSimpleSubstitution.bipartite : ∀ {U : Type u_1} {E : Type u_2} {I : Type u_3} {O : Type u_4}
+  [inst : DecidableEq U] [DecidableEq E] [inst_2 : DecidableEq I] [inst_3 : DecidableEq O] [inst_4 : Fintype I]
+  [inst_5 : Fintype O] {Γ : SimpleGraph (I ⊕ O)} {L : RobertPublishable.SUB.LooplessMultigraph U E} {d : ℕ}
+  {G : SimpleGraph (U × (I ⊕ O))} (T : RobertPublishable.SUB.ValidSimpleSubstitution Γ L d G),
+  RobertPublishable.SUB.Gadget Γ d →
+    ∀ (c : U → Bool), RobertPublishable.SUB.ValidSimpleSubstitution.SkeletonBicoloring L c → G.IsBipartite
+'RobertPublishable.SUB.piece_pairfree' depends on axioms: [propext, Classical.choice, Quot.sound]
+RobertPublishable.SUB.piece_pairfree : ¬RobertPublishable.SUB.piece.HasPair
+'RobertPublishable.SUB.skeletonK_pairfree' depends on axioms: [propext, Classical.choice, Quot.sound]
+RobertPublishable.SUB.skeletonK_pairfree : ¬RobertPublishable.SUB.skeletonK.HasPair
+'RobertPublishable.SUB.skeletonB_pairfree' depends on axioms: [propext, Classical.choice, Quot.sound]
+RobertPublishable.SUB.skeletonB_pairfree : ¬RobertPublishable.SUB.skeletonB.HasPair
+'RobertPublishable.SUB.skeletonB_bipartite' depends on axioms: [propext, Classical.choice, Quot.sound]
+RobertPublishable.SUB.skeletonB_bipartite : ∀ (e : RobertPublishable.SUB.BEdge) (u v : RobertPublishable.SUB.BVertex),
+  RobertPublishable.SUB.skeletonB.ends e = s(u, v) →
+    RobertPublishable.SUB.skeletonB_bicolor u ≠ RobertPublishable.SUB.skeletonB_bicolor v
+'RobertPublishable.SUB.DeletedGadget.gadget' depends on axioms: [propext, Classical.choice, Quot.sound]
+@RobertPublishable.SUB.DeletedGadget.gadget : ∀ {V : Type u_1} [inst : DecidableEq V] [inst_1 : Fintype V]
+  (B : SimpleGraph V) (c : V → Bool) (o : V),
+  (∀ (a b : V), B.Adj a b → c a ≠ c b) →
+    (∀ (v : V), B.degree v = 6) → RobertPublishable.SUB.Gadget (RobertPublishable.SUB.DeletedGadget.graph B c o) 6
+'RobertPublishable.SUB.DeletedGadget.pairfree' depends on axioms: [propext, Classical.choice, Quot.sound]
+@RobertPublishable.SUB.DeletedGadget.pairfree : ∀ {V : Type u_1} [inst : DecidableEq V] [Fintype V] (B : SimpleGraph V)
+  (c : V → Bool) (o : V),
+  ¬Erdos585.HasPairF (SimpleGraph.induce {v | v ≠ o} B) →
+    ¬Erdos585.HasPairF (RobertPublishable.SUB.DeletedGadget.graph B c o)
+'RobertPublishable.SUB.UnitPorts.valid' depends on axioms: [propext, Classical.choice, Quot.sound]
+@RobertPublishable.SUB.UnitPorts.valid : {U : Type u_1} →
+  {E : Type u_2} →
+    {I : Type u_3} →
+      {O : Type u_4} →
+        [inst : DecidableEq U] →
+          [inst_1 : DecidableEq E] →
+            [inst_2 : DecidableEq I] →
+              [inst_3 : DecidableEq O] →
+                [inst_4 : Fintype I] →
+                  [inst_5 : Fintype O] →
+                    (Γ : SimpleGraph (I ⊕ O)) →
+                      (L : RobertPublishable.SUB.LooplessMultigraph U E) →
+                        (d : ℕ) →
+                          (stars : RobertPublishable.SUB.RegularStars L d) →
+                            (ports : Finset O) →
+                              (hcard : ports.card = d) →
+                                (hpos : 0 < d) →
+                                  (∀ (o : O), Γ.degree (Sum.inr o) = d - if o ∈ ports then 1 else 0) →
+                                    RobertPublishable.SUB.ValidSimpleSubstitution Γ L d
+                                      (RobertPublishable.SUB.UnitPorts.graph Γ L d stars ports hcard hpos)
+'RobertPublishable.SUB.theorem_R1' depends on axioms: [propext, Classical.choice, Quot.sound]
+@RobertPublishable.SUB.theorem_R1 : ∀ {U : Type u_1} {E : Type u_2} {I : Type u_3} {O : Type u_4} [inst : DecidableEq U]
+  [inst_1 : DecidableEq E] [inst_2 : DecidableEq I] [inst_3 : DecidableEq O] [inst_4 : Fintype I] [inst_5 : Fintype O]
+  {Γ : SimpleGraph (I ⊕ O)} {L : RobertPublishable.SUB.LooplessMultigraph U E} {d : ℕ} {G : SimpleGraph (U × (I ⊕ O))}
+  (T : RobertPublishable.SUB.ValidSimpleSubstitution Γ L d G),
+  RobertPublishable.SUB.Gadget Γ d →
+    d ≤ 7 →
+      ¬Erdos585.HasPairF Γ →
+        ¬L.HasPair →
+          ¬Erdos585.HasPairF G ∧
+            G.IsRegularOfDegree d ∧
+              ((∃ c, RobertPublishable.SUB.ValidSimpleSubstitution.SkeletonBicoloring L c) → G.IsBipartite)
+'RobertPublishable.SUB.avoiding_graph_from_deleted_vertex' depends on axioms: [propext, Classical.choice, Quot.sound]
+@RobertPublishable.SUB.avoiding_graph_from_deleted_vertex : ∀ {V : Type u_1} [inst : DecidableEq V] [inst_1 : Fintype V]
+  (B : SimpleGraph V) (c : V → Bool) (o : V),
+  (∀ (a b : V), B.Adj a b → c a ≠ c b) →
+    (∀ (v : V), B.degree v = 6) →
+      ¬Erdos585.HasPairF (SimpleGraph.induce {v | v ≠ o} B) →
+        ∃ G,
+          Nonempty
+              (RobertPublishable.SUB.BVertex ×
+                (RobertPublishable.SUB.DeletedGadget.Inner c o ⊕ RobertPublishable.SUB.DeletedGadget.Outer c o)) ∧
+            ¬Erdos585.HasPairF G ∧
+              (∀
+                  (v :
+                    RobertPublishable.SUB.BVertex ×
+                      (RobertPublishable.SUB.DeletedGadget.Inner c o ⊕ RobertPublishable.SUB.DeletedGadget.Outer c o)),
+                  G.degree v = 6) ∧
+                G.IsBipartite
+'RobertPublishable.SUB.prescribed_vertex_equivalence' depends on axioms: [propext, Classical.choice, Quot.sound]
+RobertPublishable.SUB.prescribed_vertex_equivalence : RobertPublishable.SUB.EveryBipartiteSixHasPair ↔
+  RobertPublishable.SUB.EveryBipartiteSixHasPairAvoidingVertex
+'RobertPublishable.TWO.mem_of_reachable_of_edge_closed' depends on axioms: [propext]
+@RobertPublishable.TWO.mem_of_reachable_of_edge_closed : ∀ {V : Type u_1} (H : SimpleGraph V) (U : Set V),
+  (∀ ⦃u v : V⦄, u ∈ U → H.Adj u v → v ∈ U) → ∀ {u v : V}, u ∈ U → H.Reachable u v → v ∈ U
+'RobertPublishable.TWO.selected_iff_of_edge_closed' depends on axioms: [propext, Classical.choice, Quot.sound]
+@RobertPublishable.TWO.selected_iff_of_edge_closed : ∀ {V : Type u_1} {C : Type u_2} {G : SimpleGraph V}
+  (φ : G.EdgeLabeling C) (a b : C) (U : Set V),
+  (∀ ⦃u v : V⦄, u ∈ U → (Erdos585.KempeSwap104.twoFactor φ a b).Adj u v → v ∈ U) →
+    ∀ (v : V),
+      Erdos585.KempeSwap104.Selected φ a b
+          (RobertPublishable.TWO.componentsInside (Erdos585.KempeSwap104.twoFactor φ a b) U) v ↔
+        v ∈ U
+'RobertPublishable.TWO.swap_labelGraph_of_other' depends on axioms: [propext, Classical.choice, Quot.sound]
+@RobertPublishable.TWO.swap_labelGraph_of_other : ∀ {V : Type u_1} {C : Type u_2} {G : SimpleGraph V}
+  [inst : DecidableEq C] (φ : G.EdgeLabeling C) (a b c : C)
+  (J : Set (Erdos585.KempeSwap104.twoFactor φ a b).ConnectedComponent),
+  c ≠ a → c ≠ b → (Erdos585.KempeSwap104.swap φ a b J).labelGraph c = φ.labelGraph c
+'RobertPublishable.TWO.swap_twoFactor_of_other' depends on axioms: [propext, Classical.choice, Quot.sound]
+@RobertPublishable.TWO.swap_twoFactor_of_other : ∀ {V : Type u_1} {C : Type u_2} {G : SimpleGraph V}
+  [inst : DecidableEq C] (φ : G.EdgeLabeling C) (a b c d : C)
+  (J : Set (Erdos585.KempeSwap104.twoFactor φ a b).ConnectedComponent),
+  c ≠ a →
+    c ≠ b →
+      d ≠ a →
+        d ≠ b →
+          Erdos585.KempeSwap104.twoFactor (Erdos585.KempeSwap104.swap φ a b J) c d =
+            Erdos585.KempeSwap104.twoFactor φ c d
+'RobertPublishable.TWO.two_actual_swaps_full' depends on axioms: [propext, Classical.choice, Quot.sound]
+@RobertPublishable.TWO.two_actual_swaps_full : ∀ {V : Type u_1} {C : Type u_2} {G : SimpleGraph V}
+  [inst : DecidableEq C] (φ : G.EdgeLabeling C),
+  Erdos585.KempeSwap104.FullColoring φ →
+    ∀ (a b c d : C) (J₁ : Set (Erdos585.KempeSwap104.twoFactor φ a b).ConnectedComponent)
+      (J₂ : Set (Erdos585.KempeSwap104.twoFactor (Erdos585.KempeSwap104.swap φ a b J₁) c d).ConnectedComponent),
+      Erdos585.KempeSwap104.FullColoring (Erdos585.KempeSwap104.swap (Erdos585.KempeSwap104.swap φ a b J₁) c d J₂)
+'RobertPublishable.TWO.prime_scalar_cases' depends on axioms: [propext, Classical.choice, Quot.sound]
+@RobertPublishable.TWO.prime_scalar_cases : ∀ {F : Type u_1} [inst : Field F] [CharP F 3] [inst_2 : Algebra (ZMod 3) F]
+  (s : ZMod 3), (algebraMap (ZMod 3) F) s = 0 ∨ (algebraMap (ZMod 3) F) s = 1 ∨ (algebraMap (ZMod 3) F) s = -1
+'RobertPublishable.TWO.prime_scalar_t_independent' depends on axioms: [propext, Classical.choice, Quot.sound]
+@RobertPublishable.TWO.prime_scalar_t_independent : ∀ {F : Type u_1} [inst : Field F] [CharP F 3]
+  [inst_2 : Algebra (ZMod 3) F] (t : F),
+  t ≠ 0 →
+    t ≠ 1 → t ≠ -1 → ∀ (a b : ZMod 3), (algebraMap (ZMod 3) F) a + (algebraMap (ZMod 3) F) b * t = 0 → a = 0 ∧ b = 0
+'RobertPublishable.TWO.chart_kernel' depends on axioms: [propext, Classical.choice, Quot.sound]
+@RobertPublishable.TWO.chart_kernel : ∀ {F : Type u_1} [inst : Field F] [CharP F 3] [inst_2 : Algebra (ZMod 3) F]
+  (t : F), t ≠ 0 → t ≠ 1 → t ≠ -1 → ∀ (x : RobertPublishable.TWO.Coord), (RobertPublishable.TWO.chart t) x = 0 → x = 0
+'RobertPublishable.TWO.chart_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
+@RobertPublishable.TWO.chart_injective : ∀ {F : Type u_1} [inst : Field F] [CharP F 3] [inst_2 : Algebra (ZMod 3) F]
+  (t : F), t ≠ 0 → t ≠ 1 → t ≠ -1 → Function.Injective ⇑(RobertPublishable.TWO.chart t)
+'RobertPublishable.TWO.exists_nonprime_parameter' depends on axioms: [propext, Classical.choice, Quot.sound]
+@RobertPublishable.TWO.exists_nonprime_parameter : ∀ {F : Type u_1} [inst : Field F] [CharP F 3] [Algebra (ZMod 3) F]
+  [inst_3 : Fintype F] [DecidableEq F], 3 < Fintype.card F → ∃ t, t ≠ 0 ∧ t ≠ 1 ∧ t ≠ -1
+'RobertPublishable.TWO.vertex_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
+@RobertPublishable.TWO.vertex_injective : ∀ {F : Type u_1} [inst : Field F] [DecidableEq F] [Fintype F] [CharP F 3]
+  [inst_4 : Algebra (ZMod 3) F] (t : F), t ≠ 0 → t ≠ 1 → t ≠ -1 → Function.Injective (RobertPublishable.TWO.vertex t)
+'RobertPublishable.TWO.firstSet_edge_closed' depends on axioms: [propext, Classical.choice, Quot.sound]
+@RobertPublishable.TWO.firstSet_edge_closed : ∀ {F : Type u_1} [inst : Field F] [inst_1 : DecidableEq F]
+  [inst_2 : Fintype F] [CharP F 3] [inst_4 : Algebra (ZMod 3) F] (t : F) ⦃u v : RobertPublishable.TWO.Host⦄,
+  u ∈ RobertPublishable.TWO.firstSet t →
+    (Erdos585.KempeSwap104.twoFactor Erdos585.Parabola104.canonical 0 t).Adj u v → v ∈ RobertPublishable.TWO.firstSet t
+'RobertPublishable.TWO.firstSelected_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+@RobertPublishable.TWO.firstSelected_iff : ∀ {F : Type u_1} [inst : Field F] [inst_1 : DecidableEq F]
+  [inst_2 : Fintype F] [CharP F 3] [inst_4 : Algebra (ZMod 3) F] (t : F) (v : RobertPublishable.TWO.Host),
+  Erdos585.KempeSwap104.Selected Erdos585.Parabola104.canonical 0 t (RobertPublishable.TWO.firstComponents t) v ↔
+    v ∈ RobertPublishable.TWO.firstSet t
+'RobertPublishable.TWO.round1_full' depends on axioms: [propext, Classical.choice, Quot.sound]
+@RobertPublishable.TWO.round1_full : ∀ {F : Type u_1} [inst : Field F] [inst_1 : DecidableEq F] [inst_2 : Fintype F]
+  [CharP F 3] [inst_4 : Algebra (ZMod 3) F] (t : F), Erdos585.KempeSwap104.FullColoring (RobertPublishable.TWO.round1 t)
+'RobertPublishable.TWO.secondSet_canonical_edge_closed' depends on axioms: [propext, Classical.choice, Quot.sound]
+@RobertPublishable.TWO.secondSet_canonical_edge_closed : ∀ {F : Type u_1} [inst : Field F] [inst_1 : DecidableEq F]
+  [inst_2 : Fintype F] [CharP F 3] [inst_4 : Algebra (ZMod 3) F] (t : F) ⦃u v : RobertPublishable.TWO.Host⦄,
+  u ∈ RobertPublishable.TWO.secondSet t →
+    (Erdos585.KempeSwap104.twoFactor Erdos585.Parabola104.canonical 1 (1 + t)).Adj u v →
+      v ∈ RobertPublishable.TWO.secondSet t
+'RobertPublishable.TWO.round1_AC_unchanged' depends on axioms: [propext, Classical.choice, Quot.sound]
+@RobertPublishable.TWO.round1_AC_unchanged : ∀ {F : Type u_1} [inst : Field F] [inst_1 : DecidableEq F]
+  [inst_2 : Fintype F] [CharP F 3] [inst_4 : Algebra (ZMod 3) F] (t : F),
+  t ≠ 1 →
+    t ≠ -1 →
+      Erdos585.KempeSwap104.twoFactor (RobertPublishable.TWO.round1 t) 1 (1 + t) =
+        Erdos585.KempeSwap104.twoFactor Erdos585.Parabola104.canonical 1 (1 + t)
+'RobertPublishable.TWO.secondSet_edge_closed' depends on axioms: [propext, Classical.choice, Quot.sound]
+@RobertPublishable.TWO.secondSet_edge_closed : ∀ {F : Type u_1} [inst : Field F] [inst_1 : DecidableEq F]
+  [inst_2 : Fintype F] [CharP F 3] [inst_4 : Algebra (ZMod 3) F] (t : F),
+  t ≠ 1 →
+    t ≠ -1 →
+      ∀ ⦃u v : RobertPublishable.TWO.Host⦄,
+        u ∈ RobertPublishable.TWO.secondSet t →
+          (Erdos585.KempeSwap104.twoFactor (RobertPublishable.TWO.round1 t) 1 (1 + t)).Adj u v →
+            v ∈ RobertPublishable.TWO.secondSet t
+'RobertPublishable.TWO.secondSelected_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+@RobertPublishable.TWO.secondSelected_iff : ∀ {F : Type u_1} [inst : Field F] [inst_1 : DecidableEq F]
+  [inst_2 : Fintype F] [CharP F 3] [inst_4 : Algebra (ZMod 3) F] (t : F),
+  t ≠ 1 →
+    t ≠ -1 →
+      ∀ (v : RobertPublishable.TWO.Host),
+        Erdos585.KempeSwap104.Selected (RobertPublishable.TWO.round1 t) 1 (1 + t)
+            (RobertPublishable.TWO.secondComponents t) v ↔
+          v ∈ RobertPublishable.TWO.secondSet t
+'RobertPublishable.TWO.round2_full' depends on axioms: [propext, Classical.choice, Quot.sound]
+@RobertPublishable.TWO.round2_full : ∀ {F : Type u_1} [inst : Field F] [inst_1 : DecidableEq F] [inst_2 : Fintype F]
+  [CharP F 3] [inst_4 : Algebra (ZMod 3) F] (t : F), Erdos585.KempeSwap104.FullColoring (RobertPublishable.TWO.round2 t)
+'RobertPublishable.TWO.firstSelected_vertex' depends on axioms: [propext, Classical.choice, Quot.sound]
+@RobertPublishable.TWO.firstSelected_vertex : ∀ {F : Type u_1} [inst : Field F] [inst_1 : DecidableEq F]
+  [inst_2 : Fintype F] [CharP F 3] [inst_4 : Algebra (ZMod 3) F] (t : F),
+  t ≠ 0 →
+    t ≠ 1 →
+      t ≠ -1 →
+        ∀ (x : RobertPublishable.TWO.Coord) (b : Bool),
+          Erdos585.KempeSwap104.Selected Erdos585.Parabola104.canonical 0 t (RobertPublishable.TWO.firstComponents t)
+              (RobertPublishable.TWO.vertex t (x, b)) ↔
+            x.1 = x.2.2
+'RobertPublishable.TWO.secondSelected_left' depends on axioms: [propext, Classical.choice, Quot.sound]
+@RobertPublishable.TWO.secondSelected_left : ∀ {F : Type u_1} [inst : Field F] [inst_1 : DecidableEq F]
+  [inst_2 : Fintype F] [CharP F 3] [inst_4 : Algebra (ZMod 3) F] (t : F),
+  t ≠ 0 →
+    t ≠ 1 →
+      t ≠ -1 →
+        ∀ (x : RobertPublishable.TWO.Coord),
+          Erdos585.KempeSwap104.Selected (RobertPublishable.TWO.round1 t) 1 (1 + t)
+              (RobertPublishable.TWO.secondComponents t) (RobertPublishable.TWO.vertex t (x, false)) ↔
+            ∃ u, x = Erdos585.HaarWitness.mark u
+'RobertPublishable.TWO.secondSelected_right' depends on axioms: [propext, Classical.choice, Quot.sound]
+@RobertPublishable.TWO.secondSelected_right : ∀ {F : Type u_1} [inst : Field F] [inst_1 : DecidableEq F]
+  [inst_2 : Fintype F] [CharP F 3] [inst_4 : Algebra (ZMod 3) F] (t : F),
+  t ≠ 0 →
+    t ≠ 1 →
+      t ≠ -1 →
+        ∀ (x : RobertPublishable.TWO.Coord),
+          Erdos585.KempeSwap104.Selected (RobertPublishable.TWO.round1 t) 1 (1 + t)
+              (RobertPublishable.TWO.secondComponents t) (RobertPublishable.TWO.vertex t (x, true)) ↔
+            ∃ u, x = Erdos585.HaarWitness.matchA (Erdos585.HaarWitness.mark u)
+'RobertPublishable.TWO.round1_zero_edge' depends on axioms: [propext, Classical.choice, Quot.sound]
+@RobertPublishable.TWO.round1_zero_edge : ∀ {F : Type u_1} [inst : Field F] [inst_1 : DecidableEq F]
+  [inst_2 : Fintype F] [CharP F 3] [inst_4 : Algebra (ZMod 3) F] (t : F),
+  t ≠ 0 →
+    t ≠ 1 →
+      t ≠ -1 →
+        ∀ (x : RobertPublishable.TWO.Coord),
+          ((RobertPublishable.TWO.round1 t).labelGraph 0).Adj (RobertPublishable.TWO.vertex t (x, false))
+            (RobertPublishable.TWO.vertex t (Erdos585.HaarWitness.matchZero x, true))
+'RobertPublishable.TWO.round1_B_edge' depends on axioms: [propext, Classical.choice, Quot.sound]
+@RobertPublishable.TWO.round1_B_edge : ∀ {F : Type u_1} [inst : Field F] [inst_1 : DecidableEq F] [inst_2 : Fintype F]
+  [CharP F 3] [inst_4 : Algebra (ZMod 3) F] (t : F),
+  t ≠ 0 →
+    t ≠ 1 →
+      t ≠ -1 →
+        ∀ (x : RobertPublishable.TWO.Coord),
+          ((RobertPublishable.TWO.round1 t).labelGraph t).Adj (RobertPublishable.TWO.vertex t (x, false))
+            (RobertPublishable.TWO.vertex t (Erdos585.HaarWitness.matchB x, true))
+'RobertPublishable.TWO.round2_AFinal_edge' depends on axioms: [propext, Classical.choice, Quot.sound]
+@RobertPublishable.TWO.round2_AFinal_edge : ∀ {F : Type u_1} [inst : Field F] [inst_1 : DecidableEq F]
+  [inst_2 : Fintype F] [CharP F 3] [inst_4 : Algebra (ZMod 3) F] (t : F),
+  t ≠ 0 →
+    t ≠ 1 →
+      t ≠ -1 →
+        ∀ (x : RobertPublishable.TWO.Coord),
+          ((RobertPublishable.TWO.round2 t).labelGraph 1).Adj (RobertPublishable.TWO.vertex t (x, false))
+            (RobertPublishable.TWO.vertex t (Erdos585.HaarWitness.matchAFinal x, true))
+'RobertPublishable.TWO.round2_CFinal_edge' depends on axioms: [propext, Classical.choice, Quot.sound]
+@RobertPublishable.TWO.round2_CFinal_edge : ∀ {F : Type u_1} [inst : Field F] [inst_1 : DecidableEq F]
+  [inst_2 : Fintype F] [CharP F 3] [inst_4 : Algebra (ZMod 3) F] (t : F),
+  t ≠ 0 →
+    t ≠ 1 →
+      t ≠ -1 →
+        ∀ (x : RobertPublishable.TWO.Coord),
+          ((RobertPublishable.TWO.round2 t).labelGraph (1 + t)).Adj (RobertPublishable.TWO.vertex t (x, false))
+            (RobertPublishable.TWO.vertex t (Erdos585.HaarWitness.matchCFinal x, true))
+'RobertPublishable.TWO.round2_zero_edge' depends on axioms: [propext, Classical.choice, Quot.sound]
+@RobertPublishable.TWO.round2_zero_edge : ∀ {F : Type u_1} [inst : Field F] [inst_1 : DecidableEq F]
+  [inst_2 : Fintype F] [CharP F 3] [inst_4 : Algebra (ZMod 3) F] (t : F),
+  t ≠ 0 →
+    t ≠ 1 →
+      t ≠ -1 →
+        ∀ (x : RobertPublishable.TWO.Coord),
+          ((RobertPublishable.TWO.round2 t).labelGraph 0).Adj (RobertPublishable.TWO.vertex t (x, false))
+            (RobertPublishable.TWO.vertex t (Erdos585.HaarWitness.matchZero x, true))
+'RobertPublishable.TWO.round2_B_edge' depends on axioms: [propext, Classical.choice, Quot.sound]
+@RobertPublishable.TWO.round2_B_edge : ∀ {F : Type u_1} [inst : Field F] [inst_1 : DecidableEq F] [inst_2 : Fintype F]
+  [CharP F 3] [inst_4 : Algebra (ZMod 3) F] (t : F),
+  t ≠ 0 →
+    t ≠ 1 →
+      t ≠ -1 →
+        ∀ (x : RobertPublishable.TWO.Coord),
+          ((RobertPublishable.TWO.round2 t).labelGraph t).Adj (RobertPublishable.TWO.vertex t (x, false))
+            (RobertPublishable.TWO.vertex t (Erdos585.HaarWitness.matchB x, true))
+'RobertPublishable.TWO.label_cross_iff_matching' depends on axioms: [propext, Classical.choice, Quot.sound]
+@RobertPublishable.TWO.label_cross_iff_matching : ∀ {F : Type u_1} [inst : Field F] [inst_1 : DecidableEq F]
+  [inst_2 : Fintype F] [CharP F 3] [inst_4 : Algebra (ZMod 3) F] (t : F),
+  t ≠ 0 →
+    t ≠ 1 →
+      t ≠ -1 →
+        ∀ (φ : Erdos585.Parabola104.fullGraph.EdgeLabeling F),
+          Erdos585.KempeSwap104.FullColoring φ →
+            ∀ (c : F) (f : Equiv.Perm RobertPublishable.TWO.Coord),
+              (∀ (x : RobertPublishable.TWO.Coord),
+                  (φ.labelGraph c).Adj (RobertPublishable.TWO.vertex t (x, false))
+                    (RobertPublishable.TWO.vertex t (f x, true))) →
+                ∀ (x y : RobertPublishable.TWO.Coord),
+                  (φ.labelGraph c).Adj (RobertPublishable.TWO.vertex t (x, false))
+                      (RobertPublishable.TWO.vertex t (y, true)) ↔
+                    y = f x
+'RobertPublishable.TWO.red_cross' depends on axioms: [propext, Classical.choice, Quot.sound]
+@RobertPublishable.TWO.red_cross : ∀ {F : Type u_1} [inst : Field F] [inst_1 : DecidableEq F] [inst_2 : Fintype F]
+  [CharP F 3] [inst_4 : Algebra (ZMod 3) F] (t : F),
+  t ≠ 0 →
+    t ≠ 1 →
+      t ≠ -1 →
+        ∀ (x y : RobertPublishable.TWO.Coord),
+          (RobertPublishable.TWO.localRed t).Adj (x, false) (y, true) ↔
+            y = Erdos585.HaarWitness.matchAFinal x ∨ y = Erdos585.HaarWitness.matchZero x
+'RobertPublishable.TWO.blue_cross' depends on axioms: [propext, Classical.choice, Quot.sound]
+@RobertPublishable.TWO.blue_cross : ∀ {F : Type u_1} [inst : Field F] [inst_1 : DecidableEq F] [inst_2 : Fintype F]
+  [CharP F 3] [inst_4 : Algebra (ZMod 3) F] (t : F),
+  t ≠ 0 →
+    t ≠ 1 →
+      t ≠ -1 →
+        ∀ (x y : RobertPublishable.TWO.Coord),
+          (RobertPublishable.TWO.localBlue t).Adj (x, false) (y, true) ↔
+            y = Erdos585.HaarWitness.matchCFinal x ∨ y = Erdos585.HaarWitness.matchB x
+'RobertPublishable.TWO.red_cycle_local' depends on axioms: [propext, Classical.choice, Quot.sound]
+@RobertPublishable.TWO.red_cycle_local : ∀ {F : Type u_1} [inst : Field F] [inst_1 : DecidableEq F] [inst_2 : Fintype F]
+  [CharP F 3] [inst_4 : Algebra (ZMod 3) F] (t : F),
+  t ≠ 0 → t ≠ 1 → t ≠ -1 → ∃ p, p.IsCycle ∧ ∀ (v : RobertPublishable.TWO.Coord × Bool), v ∈ p.support
+'RobertPublishable.TWO.blue_cycle_local' depends on axioms: [propext, Classical.choice, Quot.sound]
+@RobertPublishable.TWO.blue_cycle_local : ∀ {F : Type u_1} [inst : Field F] [inst_1 : DecidableEq F]
+  [inst_2 : Fintype F] [CharP F 3] [inst_4 : Algebra (ZMod 3) F] (t : F),
+  t ≠ 0 → t ≠ 1 → t ≠ -1 → ∃ p, p.IsCycle ∧ ∀ (v : RobertPublishable.TWO.Coord × Bool), v ∈ p.support
+'RobertPublishable.TWO.chart_support_card' depends on axioms: [propext, Classical.choice, Quot.sound]
+@RobertPublishable.TWO.chart_support_card : ∀ {F : Type u_1} [inst : Field F] [inst_1 : DecidableEq F] [Fintype F]
+  [CharP F 3] [inst_4 : Algebra (ZMod 3) F] (t : F),
+  t ≠ 0 → t ≠ 1 → t ≠ -1 → (Finset.image (RobertPublishable.TWO.vertex t) Finset.univ).card = 54
+'RobertPublishable.TWO.final_factors_disjoint' depends on axioms: [propext, Classical.choice, Quot.sound]
+@RobertPublishable.TWO.final_factors_disjoint : ∀ {F : Type u_1} [inst : Field F] [inst_1 : DecidableEq F]
+  [inst_2 : Fintype F] [CharP F 3] [inst_4 : Algebra (ZMod 3) F] (t : F),
+  t ≠ 0 →
+    t ≠ 1 → t ≠ -1 → Disjoint (RobertPublishable.TWO.redFactor t).edgeSet (RobertPublishable.TWO.blueFactor t).edgeSet
+'RobertPublishable.TWO.actual_two_round_exposed_cycles' depends on axioms: [propext, Classical.choice, Quot.sound]
+@RobertPublishable.TWO.actual_two_round_exposed_cycles : ∀ {F : Type u_1} [inst : Field F] [inst_1 : DecidableEq F]
+  [inst_2 : Fintype F] [CharP F 3] [inst_4 : Algebra (ZMod 3) F] (t : F),
+  t ≠ 0 →
+    t ≠ 1 →
+      t ≠ -1 →
+        ∃ p q,
+          p.IsCycle ∧
+            q.IsCycle ∧
+              p.support.toFinset = q.support.toFinset ∧
+                Disjoint p.edges.toFinset q.edges.toFinset ∧ p.support.toFinset.card = 54
+'RobertPublishable.TWO.exactly_two_component_union_rounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+@RobertPublishable.TWO.exactly_two_component_union_rounds : ∀ {F : Type u_1} [inst : Field F] [inst_1 : DecidableEq F]
+  [inst_2 : Fintype F] [CharP F 3] [inst_4 : Algebra (ZMod 3) F],
+  3 < Fintype.card F →
+    Erdos585.ParabolaBarrier104.OneRoundBarrier ∧
+      ∃ t,
+        t ≠ 0 ∧
+          t ≠ 1 ∧
+            t ≠ -1 ∧
+              ∃ p q,
+                p.IsCycle ∧
+                  q.IsCycle ∧
+                    p.support.toFinset = q.support.toFinset ∧
+                      Disjoint p.edges.toFinset q.edges.toFinset ∧ p.support.toFinset.card = 54
+'RobertPublishable.TWO.family_exactly_two_component_union_rounds' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+RobertPublishable.TWO.family_exactly_two_component_union_rounds : ∀ (k : ℕ),
+  2 ≤ k →
+    Erdos585.ParabolaBarrier104.OneRoundBarrier ∧
+      ∃ t,
+        t ≠ 0 ∧
+          t ≠ 1 ∧
+            t ≠ -1 ∧
+              ∃ p q,
+                p.IsCycle ∧
+                  q.IsCycle ∧
+                    p.support.toFinset = q.support.toFinset ∧
+                      Disjoint p.edges.toFinset q.edges.toFinset ∧ p.support.toFinset.card = 54
+'RMT.matrix_bernstein_inequality_hdp_all' depends on axioms: [propext, Classical.choice, Quot.sound]
+@RMT.matrix_bernstein_inequality_hdp_all : ∀ {Ω : Type u_1} [inst : MeasurableSpace Ω] {n N : ℕ}
+  (X : Fin N → Ω → Matrix (Fin n) (Fin n) ℝ) (μ : MeasureTheory.Measure Ω)
+  [inst_1 : MeasureTheory.IsProbabilityMeasure μ] (K : ℝ), RMT.matrix_bernstein_inequality_hdp X μ K
+'RobertPublishable.HaarComponent.cycle_neighbors_disjoint' depends on axioms: [propext, Classical.choice, Quot.sound]
+@RobertPublishable.HaarComponent.cycle_neighbors_disjoint : ∀ {W : Type u_1} [inst : DecidableEq W] {G : SimpleGraph W}
+  {u v : W} {p : G.Walk u u} {q : G.Walk v v},
+  Disjoint p.edges.toFinset q.edges.toFinset →
+    ∀ (x : W), Disjoint (p.toSubgraph.neighborSet x) (q.toSubgraph.neighborSet x)
+'RobertPublishable.HaarComponent.cycle_neighbor_union_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+@RobertPublishable.HaarComponent.cycle_neighbor_union_eq : ∀ {W : Type u_1} [inst : DecidableEq W] {G : SimpleGraph W}
+  {u v : W} {p : G.Walk u u} {q : G.Walk v v},
+  p.IsCycle →
+    q.IsCycle →
+      p.support.toFinset = q.support.toFinset →
+        Disjoint p.edges.toFinset q.edges.toFinset →
+          ∀ x ∈ p.support,
+            (G.neighborSet x).Finite →
+              (G.neighborSet x).ncard = 4 → p.toSubgraph.neighborSet x ∪ q.toSubgraph.neighborSet x = G.neighborSet x
+'RobertPublishable.HaarComponent.pair_support_edge_closed' depends on axioms: [propext, Classical.choice, Quot.sound]
+@RobertPublishable.HaarComponent.pair_support_edge_closed : ∀ {W : Type u_1} [inst : DecidableEq W] {G : SimpleGraph W}
+  {u v : W} {p : G.Walk u u} {q : G.Walk v v},
+  p.IsCycle →
+    q.IsCycle →
+      p.support.toFinset = q.support.toFinset →
+        Disjoint p.edges.toFinset q.edges.toFinset →
+          (∀ (x : W), (G.neighborSet x).Finite) →
+            (∀ (x : W), (G.neighborSet x).ncard = 4) → ∀ ⦃x y : W⦄, x ∈ p.support → G.Adj x y → y ∈ p.support
+'RobertPublishable.HaarComponent.pair_support_eq_component' depends on axioms: [propext, Classical.choice, Quot.sound]
+@RobertPublishable.HaarComponent.pair_support_eq_component : ∀ {W : Type u_1} [inst : DecidableEq W] {G : SimpleGraph W}
+  {u v : W} {p : G.Walk u u} {q : G.Walk v v},
+  p.IsCycle →
+    q.IsCycle →
+      p.support.toFinset = q.support.toFinset →
+        Disjoint p.edges.toFinset q.edges.toFinset →
+          (∀ (x : W), (G.neighborSet x).Finite) →
+            (∀ (x : W), (G.neighborSet x).ncard = 4) → ↑p.support.toFinset = (G.connectedComponentMk u).supp
+'RobertPublishable.HaarComponent.pair_edges_exhaust_component' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@RobertPublishable.HaarComponent.pair_edges_exhaust_component : ∀ {W : Type u_1} [inst : DecidableEq W]
+  {G : SimpleGraph W} {u v : W} {p : G.Walk u u} {q : G.Walk v v},
+  p.IsCycle →
+    q.IsCycle →
+      p.support.toFinset = q.support.toFinset →
+        Disjoint p.edges.toFinset q.edges.toFinset →
+          (∀ (x : W), (G.neighborSet x).Finite) →
+            (∀ (x : W), (G.neighborSet x).ncard = 4) →
+              ∀ ⦃x y : W⦄,
+                x ∈ (G.connectedComponentMk u).supp → G.Adj x y → s(x, y) ∈ p.edges.toFinset ∪ q.edges.toFinset
+'RobertPublishable.HaarComponent.translationIso' depends on axioms: [propext, Classical.choice, Quot.sound]
+@RobertPublishable.HaarComponent.translationIso : {V : Type u_1} →
+  [inst : AddCommGroup V] → (S : Finset V) → V → Erdos585.Haar.graph S ≃g Erdos585.Haar.graph S
+'RobertPublishable.HaarComponent.reflectionIso' depends on axioms: [propext, Classical.choice, Quot.sound]
+@RobertPublishable.HaarComponent.reflectionIso : {V : Type u_1} →
+  [inst : AddCommGroup V] → (S : Finset V) → Erdos585.Haar.graph S ≃g Erdos585.Haar.graph S
+'RobertPublishable.HaarComponent.moveIso_apply' depends on axioms: [propext, Classical.choice, Quot.sound]
+@RobertPublishable.HaarComponent.moveIso_apply : ∀ {V : Type u_1} [inst : AddCommGroup V] [DecidableEq V] (S : Finset V)
+  (u x : V × Bool), (RobertPublishable.HaarComponent.moveIso S u x) u = x
+'RobertPublishable.HaarComponent.every_vertex_component' depends on axioms: [propext, Classical.choice, Quot.sound]
+@RobertPublishable.HaarComponent.every_vertex_component : ∀ {V : Type u_1} [inst : AddCommGroup V]
+  [inst_1 : DecidableEq V] {p : ℕ} [inst_2 : Fact (Nat.Prime p)] [Module (ZMod p) V] (S : Finset V),
+  S.card = 4 →
+    ∀ (x : V × Bool),
+      RobertPublishable.HaarComponent.HamiltonDecomposesComponent (Erdos585.Haar.graph S)
+        ((Erdos585.Haar.graph S).connectedComponentMk x)
+'RobertPublishable.HaarComponent.every_connected_component' depends on axioms: [propext, Classical.choice, Quot.sound]
+@RobertPublishable.HaarComponent.every_connected_component : ∀ {V : Type u_1} [inst : AddCommGroup V]
+  [inst_1 : DecidableEq V] {p : ℕ} [inst_2 : Fact (Nat.Prime p)] [Module (ZMod p) V] (S : Finset V),
+  S.card = 4 →
+    ∀ (C : (Erdos585.Haar.graph S).ConnectedComponent),
+      RobertPublishable.HaarComponent.HamiltonDecomposesComponent (Erdos585.Haar.graph S) C
+'RobertPublishable.HaarComponent.every_component_finite' depends on axioms: [propext, Classical.choice, Quot.sound]
+@RobertPublishable.HaarComponent.every_component_finite : ∀ {V : Type u_1} [inst : AddCommGroup V] [DecidableEq V]
+  {p : ℕ} [inst_2 : Fact (Nat.Prime p)] [Module (ZMod p) V] (S : Finset V),
+  S.card = 4 → ∀ (C : (Erdos585.Haar.graph S).ConnectedComponent), C.supp.Finite
+'OpenMathReview.Sampling.sampled_centered_decomposition' depends on axioms: [propext, Classical.choice, Quot.sound]
+@OpenMathReview.Sampling.sampled_centered_decomposition : ∀ {N : ℕ} (W : Matrix (Fin N) (Fin N) ℝ) (d : ℝ)
+  (U V : Finset (Fin N)),
+  OpenMathReview.Sampling.sampled W U V =
+    (Matrix.of fun x x_1 => d / ↑N) + OpenMathReview.Sampling.sampled (OpenMathReview.Sampling.centered W d) U V
+'OpenMathReview.Sampling.centered_row_energy' depends on axioms: [propext, Classical.choice, Quot.sound]
+@OpenMathReview.Sampling.centered_row_energy : ∀ {N : ℕ},
+  0 < N →
+    ∀ (W : Matrix (Fin N) (Fin N) ℝ) (d : ℝ),
+      (∀ (i j : Fin N), W i j = 0 ∨ W i j = 1) →
+        (∀ (i : Fin N), ∑ j, W i j = d) →
+          ∀ (i : Fin N), OpenMathReview.Sampling.rowEnergy (OpenMathReview.Sampling.centered W d) i = d - d ^ 2 / ↑N
+'OpenMathReview.Sampling.centered_column_energy' depends on axioms: [propext, Classical.choice, Quot.sound]
+@OpenMathReview.Sampling.centered_column_energy : ∀ {N : ℕ},
+  0 < N →
+    ∀ (W : Matrix (Fin N) (Fin N) ℝ) (d : ℝ),
+      (∀ (i j : Fin N), W i j = 0 ∨ W i j = 1) →
+        (∀ (j : Fin N), ∑ i, W i j = d) →
+          ∀ (j : Fin N), OpenMathReview.Sampling.columnEnergy (OpenMathReview.Sampling.centered W d) j = d - d ^ 2 / ↑N
+'OpenMathReview.Sampling.centered_row_energy_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+@OpenMathReview.Sampling.centered_row_energy_le : ∀ {N : ℕ},
+  0 < N →
+    ∀ (W : Matrix (Fin N) (Fin N) ℝ) (d : ℝ),
+      (∀ (i j : Fin N), W i j = 0 ∨ W i j = 1) →
+        (∀ (i : Fin N), ∑ j, W i j = d) →
+          ∀ (i : Fin N), OpenMathReview.Sampling.rowEnergy (OpenMathReview.Sampling.centered W d) i ≤ d
+'OpenMathReview.Sampling.columnGram_isHermitian' depends on axioms: [propext, Classical.choice, Quot.sound]
+@OpenMathReview.Sampling.columnGram_isHermitian : ∀ {r s : ℕ} (F : Matrix (Fin r) (Fin s) ℝ) (j : Fin s),
+  (OpenMathReview.Sampling.columnGram F j).IsHermitian
+'OpenMathReview.Sampling.gram_eq_sum_columnGram' depends on axioms: [propext, Classical.choice, Quot.sound]
+@OpenMathReview.Sampling.gram_eq_sum_columnGram : ∀ {r s : ℕ} (F : Matrix (Fin r) (Fin s) ℝ),
+  F * F.transpose = ∑ j, OpenMathReview.Sampling.columnGram F j
+'OpenMathReview.Sampling.weighted_gram_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+@OpenMathReview.Sampling.weighted_gram_eq : ∀ {r s : ℕ} (F : Matrix (Fin r) (Fin s) ℝ) (b : Fin s → ℝ),
+  OpenMathReview.Sampling.weightedColumns F b * (OpenMathReview.Sampling.weightedColumns F b).transpose =
+    ∑ j, b j ^ 2 • OpenMathReview.Sampling.columnGram F j
+'OpenMathReview.Sampling.columnGram_sq' depends on axioms: [propext, Classical.choice, Quot.sound]
+@OpenMathReview.Sampling.columnGram_sq : ∀ {r s : ℕ} (F : Matrix (Fin r) (Fin s) ℝ) (j : Fin s),
+  OpenMathReview.Sampling.columnGram F j ^ 2 =
+    OpenMathReview.Sampling.columnEnergy F j • OpenMathReview.Sampling.columnGram F j
+'OpenMathReview.Sampling.real_opNorm_mono_of_quadratic_forms' depends on axioms: [propext, Classical.choice, Quot.sound]
+@OpenMathReview.Sampling.real_opNorm_mono_of_quadratic_forms : ∀ {E : Type u_1} [inst : NormedAddCommGroup E]
+  [inst_1 : InnerProductSpace ℝ E] (A B : E →L[ℝ] E),
+  (↑A).IsSymmetric → (∀ (x : E), 0 ≤ inner ℝ (A x) x) → (∀ (x : E), inner ℝ (A x) x ≤ inner ℝ (B x) x) → ‖A‖ ≤ ‖B‖
+'OpenMathReview.Sampling.columnGram_norm' depends on axioms: [propext, Classical.choice, Quot.sound]
+@OpenMathReview.Sampling.columnGram_norm : ∀ {r s : ℕ} (F : Matrix (Fin r) (Fin s) ℝ) (j : Fin s),
+  ‖OpenMathReview.Sampling.columnGram F j‖ = OpenMathReview.Sampling.columnEnergy F j
+'OpenMathReview.Sampling.columnGram_norm_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+@OpenMathReview.Sampling.columnGram_norm_le : ∀ {r s : ℕ} (F : Matrix (Fin r) (Fin s) ℝ) (j : Fin s) (c : ℝ),
+  OpenMathReview.Sampling.columnEnergy F j ≤ c ^ 2 → ‖OpenMathReview.Sampling.columnGram F j‖ ≤ c ^ 2
+'OpenMathReview.Sampling.columnGram_square_norm' depends on axioms: [propext, Classical.choice, Quot.sound]
+@OpenMathReview.Sampling.columnGram_square_norm : ∀ {r s : ℕ} (F : Matrix (Fin r) (Fin s) ℝ) (j : Fin s),
+  ‖OpenMathReview.Sampling.columnGram F j ^ 2‖ = OpenMathReview.Sampling.columnEnergy F j ^ 2
+'IndependentTransversals.PartitionedGraph.haxell_no_small_total_domination' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@IndependentTransversals.PartitionedGraph.haxell_no_small_total_domination : ∀ {V : Type u_1} [inst : DecidableEq V]
+  [Fintype V] (G : IndependentTransversals.PartitionedGraph V) [DecidableRel G.graph.Adj],
+  G.NoSmallTotalDomination → ∃ S, G.IsIndependentTransversal S
+

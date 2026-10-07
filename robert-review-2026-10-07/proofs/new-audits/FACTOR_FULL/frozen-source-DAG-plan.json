@@ -1,0 +1,413 @@
+{
+  "status": "ACTUAL_PASS_FULL_LEMMA_F_SOURCE_DAG_FROZEN_FOR_ADDITIVE_PUBLICATION",
+  "checked_utc": "2026-10-07T16:16:53.987806+00:00",
+  "full_qualification": {
+    "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\logs\\FACTOR-full-written-LemmaF-actual-readonly-qualification-20261007.json",
+    "sha256": "02cce4fa70535b70b92eccea39cc4ffec9aa1c9b10100b4b46eeea7f2277e012",
+    "bytes": 122939
+  },
+  "semantic_peer_review": {
+    "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\LemmaF_source_fidelity_independent_review_20261007.json",
+    "sha256": "bfd758013fa335be2b5d00c664b3d2c4ffc92dd553e3fd3be924cd21b598d885"
+  },
+  "topological_order": [
+    "CrossingLoss",
+    "CapacityHall",
+    "FactorExtraction",
+    "BipartiteFactor",
+    "EdgeCounts",
+    "NearRegularScalars",
+    "GraphCuts",
+    "NearRegularCriterion",
+    "LemmaF",
+    "PartitionTransport"
+  ],
+  "modules": [
+    {
+      "module": "CrossingLoss",
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR_LOSS\\CrossingLoss.lean",
+        "sha256": "977fddbab53b71b45d2f765be0a6d6743d15cf7a73d4578c1e0cf625b4122c89",
+        "bytes": 5444
+      },
+      "byte_exact_qualified_source_snapshot": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\logs\\qualified_sources\\977fddbab53b71b45d2f765be0a6d6743d15cf7a73d4578c1e0cf625b4122c89\\CrossingLoss.lean",
+        "sha256": "977fddbab53b71b45d2f765be0a6d6743d15cf7a73d4578c1e0cf625b4122c89",
+        "bytes": 5444
+      },
+      "direct_imports": [
+        "Mathlib.Combinatorics.SimpleGraph.Finite",
+        "Mathlib.Algebra.BigOperators.Group.Finset.Basic",
+        "Mathlib.Algebra.BigOperators.Ring.Finset",
+        "Mathlib.Algebra.Order.BigOperators.Group.Finset",
+        "Mathlib.Data.Real.Basic",
+        "Mathlib.Tactic.NormNum"
+      ],
+      "direct_own_dependencies": [],
+      "current_own_artifacts": [
+        {
+          "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR_LOSS\\attempts\\004-CrossingLoss\\CrossingLoss.olean",
+          "sha256": "f0d5d5a244a3e3d0736bfc129d44adb036946196fdfa69ba840bcce3409e731e",
+          "bytes": 117752
+        }
+      ],
+      "actual_pass_receipt": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR_LOSS\\attempts\\004-CrossingLoss\\actual_invocation.json",
+        "sha256": "0be0f06b0877101332a304a5a692ec59799ef3a6bc2d074bc7af5ba6e98d024c",
+        "bytes": 12509
+      }
+    },
+    {
+      "module": "CapacityHall",
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\CapacityHall.lean",
+        "sha256": "af00832b5432e7d71f43a2a3b1c1f9a4816771135b2d5f39b4ccf79eacb053ff",
+        "bytes": 5184
+      },
+      "byte_exact_qualified_source_snapshot": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\logs\\qualified_sources\\af00832b5432e7d71f43a2a3b1c1f9a4816771135b2d5f39b4ccf79eacb053ff\\CapacityHall.lean",
+        "sha256": "af00832b5432e7d71f43a2a3b1c1f9a4816771135b2d5f39b4ccf79eacb053ff",
+        "bytes": 5184
+      },
+      "direct_imports": [
+        "Mathlib.Combinatorics.Hall.Finite",
+        "Mathlib.Data.Finset.Sum",
+        "Mathlib.Data.Finset.Prod",
+        "Mathlib.Data.Fintype.Prod",
+        "Mathlib.Data.Fintype.Sum",
+        "Mathlib.Tactic.Tauto",
+        "Lean.Elab.Tactic.Omega"
+      ],
+      "direct_own_dependencies": [],
+      "current_own_artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\CapacityHall.olean",
+          "sha256": "cca863fd389908819ddfb8c49d7be335ff11222e4aee2f3ce9b731e4a53cdcca",
+          "bytes": 279264
+        }
+      ],
+      "actual_pass_receipt": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\logs\\CapacityHall-20261007T150050171520Z.json",
+        "sha256": "3605ed5c6688ed5c57f73e17efeb8b3a0665c10bf0db42dc9f14ac2538826d80",
+        "bytes": 8316
+      }
+    },
+    {
+      "module": "FactorExtraction",
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\FactorExtraction.lean",
+        "sha256": "c3e80a729da10513180d2707174c2326b186291ee7062ca746812923812a8b49",
+        "bytes": 6240
+      },
+      "byte_exact_qualified_source_snapshot": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\logs\\qualified_sources\\c3e80a729da10513180d2707174c2326b186291ee7062ca746812923812a8b49\\FactorExtraction.lean",
+        "sha256": "c3e80a729da10513180d2707174c2326b186291ee7062ca746812923812a8b49",
+        "bytes": 6240
+      },
+      "direct_imports": [
+        "CapacityHall",
+        "Mathlib.Combinatorics.SimpleGraph.Finite"
+      ],
+      "direct_own_dependencies": [
+        "CapacityHall"
+      ],
+      "current_own_artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\FactorExtraction.olean",
+          "sha256": "15a41e08a4b3b096f81c011b18142fc0bef780cc17fefadac482754b62bbf893",
+          "bytes": 261136
+        }
+      ],
+      "actual_pass_receipt": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\logs\\FactorExtraction-20261007T150145881579Z.json",
+        "sha256": "caa01c4fd73b2fe39660dce928d2dda5b1db5739dd4faa406384a459fa42e47c",
+        "bytes": 9608
+      }
+    },
+    {
+      "module": "BipartiteFactor",
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\BipartiteFactor.lean",
+        "sha256": "47ec9e8376278b31444b18a5401452d5152dac47827643d6c440c254327e55e2",
+        "bytes": 3899
+      },
+      "byte_exact_qualified_source_snapshot": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\logs\\qualified_sources\\47ec9e8376278b31444b18a5401452d5152dac47827643d6c440c254327e55e2\\BipartiteFactor.lean",
+        "sha256": "47ec9e8376278b31444b18a5401452d5152dac47827643d6c440c254327e55e2",
+        "bytes": 3899
+      },
+      "direct_imports": [
+        "FactorExtraction",
+        "Aesop"
+      ],
+      "direct_own_dependencies": [
+        "FactorExtraction"
+      ],
+      "current_own_artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\BipartiteFactor.olean",
+          "sha256": "0253c229a5a6a467aa8ced68bb7902e323b3a8bdd3ea991006a74fc0cf0b603b",
+          "bytes": 272448
+        }
+      ],
+      "actual_pass_receipt": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\logs\\BipartiteFactor-20261007T150242769131Z.json",
+        "sha256": "b38da9ff6ab6109c93083f2629c8d7b1e37915b6d9be7346c2d569eb7b32355b",
+        "bytes": 10551
+      }
+    },
+    {
+      "module": "EdgeCounts",
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\EdgeCounts.lean",
+        "sha256": "9ed07ca4eee7d7ee978c15a860547ff2d971288e7c7051d70181ff1d464436fe",
+        "bytes": 3612
+      },
+      "byte_exact_qualified_source_snapshot": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\logs\\qualified_sources\\9ed07ca4eee7d7ee978c15a860547ff2d971288e7c7051d70181ff1d464436fe\\EdgeCounts.lean",
+        "sha256": "9ed07ca4eee7d7ee978c15a860547ff2d971288e7c7051d70181ff1d464436fe",
+        "bytes": 3612
+      },
+      "direct_imports": [
+        "BipartiteFactor",
+        "Mathlib.Algebra.BigOperators.Group.Finset.Basic"
+      ],
+      "direct_own_dependencies": [
+        "BipartiteFactor"
+      ],
+      "current_own_artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\EdgeCounts.olean",
+          "sha256": "6caf6b79c4b2370eba7bdf0819d79a01f962020727b908abaca81a9b2a112f68",
+          "bytes": 168592
+        }
+      ],
+      "actual_pass_receipt": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\logs\\EdgeCounts-20261007T150316200085Z.json",
+        "sha256": "faa8ee58914449f0125a60d60455803d4fab8bb0164342c330c4dda87acfb179",
+        "bytes": 8391
+      }
+    },
+    {
+      "module": "NearRegularScalars",
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\NearRegularScalars.lean",
+        "sha256": "be5acd5aa3dd975507064f9817616f31cf0b6862f7e64579b66692e5be0d9eca",
+        "bytes": 5391
+      },
+      "byte_exact_qualified_source_snapshot": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\logs\\qualified_sources\\be5acd5aa3dd975507064f9817616f31cf0b6862f7e64579b66692e5be0d9eca\\NearRegularScalars.lean",
+        "sha256": "be5acd5aa3dd975507064f9817616f31cf0b6862f7e64579b66692e5be0d9eca",
+        "bytes": 5391
+      },
+      "direct_imports": [
+        "Mathlib.Algebra.Order.Floor.Ring",
+        "Mathlib.Data.Real.Basic",
+        "Mathlib.Algebra.Order.Archimedean.Real.Basic",
+        "Mathlib.Tactic.Linarith",
+        "Mathlib.Tactic.Positivity",
+        "Mathlib.Tactic.NormNum",
+        "Mathlib.Tactic.FieldSimp",
+        "Mathlib.Tactic.Ring"
+      ],
+      "direct_own_dependencies": [],
+      "current_own_artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\NearRegularScalars.olean",
+          "sha256": "2e65e122c57473624e2256b3125fb6136c209b1136ba9777b66efc0b6174e2b2",
+          "bytes": 1006744
+        }
+      ],
+      "actual_pass_receipt": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\logs\\NearRegularScalars-20261007T153648274038Z.json",
+        "sha256": "eb708103344c846bd365f00383d8c22c9020304de91d390803c3bcd764d46064",
+        "bytes": 7751
+      }
+    },
+    {
+      "module": "GraphCuts",
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\GraphCuts.lean",
+        "sha256": "fb1c64f3eafd5e3e5033a7130816979924f7b6a78967d9c1f05b0ed537e96439",
+        "bytes": 3269
+      },
+      "byte_exact_qualified_source_snapshot": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\logs\\qualified_sources\\fb1c64f3eafd5e3e5033a7130816979924f7b6a78967d9c1f05b0ed537e96439\\GraphCuts.lean",
+        "sha256": "fb1c64f3eafd5e3e5033a7130816979924f7b6a78967d9c1f05b0ed537e96439",
+        "bytes": 3269
+      },
+      "direct_imports": [
+        "EdgeCounts",
+        "CrossingLoss",
+        "Mathlib.Tactic.Tauto"
+      ],
+      "direct_own_dependencies": [
+        "EdgeCounts",
+        "CrossingLoss"
+      ],
+      "current_own_artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\GraphCuts.olean",
+          "sha256": "831152f0c3c27823f8944ee0d74235404344cbf7205a4b168f7cad92c004e959",
+          "bytes": 234048
+        }
+      ],
+      "actual_pass_receipt": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\logs\\GraphCuts-20261007T161016929350Z.json",
+        "sha256": "d93d6255547c1bbcffe7145df7ba3f48d0e5c7b3dc836f504f45da1baa6139c7",
+        "bytes": 7901
+      }
+    },
+    {
+      "module": "NearRegularCriterion",
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\NearRegularCriterion.lean",
+        "sha256": "9dcebbdabdb659100a4b04347476afcfeac6956726dd9fd003c1c3d63da29e87",
+        "bytes": 5789
+      },
+      "byte_exact_qualified_source_snapshot": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\logs\\qualified_sources\\9dcebbdabdb659100a4b04347476afcfeac6956726dd9fd003c1c3d63da29e87\\NearRegularCriterion.lean",
+        "sha256": "9dcebbdabdb659100a4b04347476afcfeac6956726dd9fd003c1c3d63da29e87",
+        "bytes": 5789
+      },
+      "direct_imports": [
+        "GraphCuts",
+        "NearRegularScalars"
+      ],
+      "direct_own_dependencies": [
+        "GraphCuts",
+        "NearRegularScalars"
+      ],
+      "current_own_artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\NearRegularCriterion.olean",
+          "sha256": "12736f6303c8853a38487823ee990a7ee442bfd1c7e9ba4b1465fdc3cf5cf259",
+          "bytes": 362456
+        }
+      ],
+      "actual_pass_receipt": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\logs\\NearRegularCriterion-20261007T161125452453Z.json",
+        "sha256": "f3086027fd9585f1c04199772deab267a378226e41d2bcb5e596ab56ce7c1ace",
+        "bytes": 8003
+      }
+    },
+    {
+      "module": "LemmaF",
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\LemmaF.lean",
+        "sha256": "9410e8c56eda9b813437e4676c815739d19ffce80eec9f7b0b45147118cf044d",
+        "bytes": 2788
+      },
+      "byte_exact_qualified_source_snapshot": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\logs\\qualified_sources\\9410e8c56eda9b813437e4676c815739d19ffce80eec9f7b0b45147118cf044d\\LemmaF.lean",
+        "sha256": "9410e8c56eda9b813437e4676c815739d19ffce80eec9f7b0b45147118cf044d",
+        "bytes": 2788
+      },
+      "direct_imports": [
+        "NearRegularCriterion"
+      ],
+      "direct_own_dependencies": [
+        "NearRegularCriterion"
+      ],
+      "current_own_artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\LemmaF.olean",
+          "sha256": "79969d38281419f9c9ea0d89bbab6355e2b6df1cc3959a78b5e0f9627b8e54da",
+          "bytes": 255768
+        }
+      ],
+      "actual_pass_receipt": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\logs\\LemmaF-20261007T161152853072Z.json",
+        "sha256": "c995bfe1ac28f74c80a8256d69c6a5bf7d16dfe26202e61cd99da8efc8d4101c",
+        "bytes": 8800
+      }
+    },
+    {
+      "module": "PartitionTransport",
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\PartitionTransport.lean",
+        "sha256": "9e4ee92e1a540cd7f94cc2387c684ff0f2ee2e9c2ee659277597b8fbdd157b07",
+        "bytes": 4608
+      },
+      "byte_exact_qualified_source_snapshot": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\logs\\qualified_sources\\9e4ee92e1a540cd7f94cc2387c684ff0f2ee2e9c2ee659277597b8fbdd157b07\\PartitionTransport.lean",
+        "sha256": "9e4ee92e1a540cd7f94cc2387c684ff0f2ee2e9c2ee659277597b8fbdd157b07",
+        "bytes": 4608
+      },
+      "direct_imports": [
+        "LemmaF"
+      ],
+      "direct_own_dependencies": [
+        "LemmaF"
+      ],
+      "current_own_artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\PartitionTransport.olean",
+          "sha256": "e23de0930224edee8a2dd953fbe90423f8b7457b8fb83c6478e3715f3ea01018",
+          "bytes": 250960
+        }
+      ],
+      "actual_pass_receipt": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\logs\\PartitionTransport-20261007T161406799644Z.json",
+        "sha256": "420f42bc245e5ddf7c7fd61be50fb7d13622c13d0e964ec2b202634bc7b11b2f",
+        "bytes": 9506
+      }
+    }
+  ],
+  "unique_standard_endpoint_count": 19,
+  "ordinary_source_sha256": "e11d4c9526ce772f145f76c696985280fa112e94b8500c30f2ae2df280cfea1a",
+  "runtime": {
+    "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+    "sha256": "af49bacfabaa1fea71332ca0feae0fa1a60912219d5902291adc79f905bffb8d",
+    "version": "Lean (version 4.33.1, x86_64-w64-windows-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)"
+  },
+  "dependency_pins": [
+    {
+      "name": "mathlib",
+      "head": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib"
+    },
+    {
+      "name": "plausible",
+      "head": "b7eb3304aeae834b12dda98993a37f6a41f6f0bb",
+      "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\plausible"
+    },
+    {
+      "name": "LeanSearchClient",
+      "head": "5f4d51b81cbd3f6b32b156bfad9056621a040404",
+      "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\LeanSearchClient"
+    },
+    {
+      "name": "importGraph",
+      "head": "16f02aa7642864af59f1ff0e384a015994db9118",
+      "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\importGraph"
+    },
+    {
+      "name": "proofwidgets",
+      "head": "4be2e3d5087eeb272cf5a8853b8f9dd025ef5957",
+      "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\proofwidgets"
+    },
+    {
+      "name": "aesop",
+      "head": "3448c0bcc5ce01b2d1546e483ec3620e32df3d0e",
+      "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\aesop"
+    },
+    {
+      "name": "Qq",
+      "head": "92c15be17b7caf78c2ad767ec40f89052d908d81",
+      "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\Qq"
+    },
+    {
+      "name": "batteries",
+      "head": "4488d40d070b9700d4d5a6aa342f0d40c31b2a2d",
+      "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\batteries"
+    },
+    {
+      "name": "Cli",
+      "head": "6130a47896ce867c6a4a55373441e59e565bad0f",
+      "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\Cli"
+    }
+  ],
+  "no_original_source_or_cache_mutation": true,
+  "scope": "Full known balanced bipartite near-regular factor Lemma F; not full BM Hamiltonicity or a novelty/award conclusion."
+}

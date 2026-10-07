@@ -6,9 +6,11 @@ This dated review preserves Robert Huynh's public work at revision `1efc324e155e
 
 - [106 frozen author source files](proofs/frozen-source-manifest.json), matched byte for byte to the sources in the completed audit.
 - [84 selected existing endpoints](proofs/existing-endpoints.json), all using standard kernel axioms in the actual prior compile and axiom audit.
-- [108 additional verified endpoints](proofs/new-endpoints.json), with actual compiler receipts: full substitution preservation and prescribed-vertex equivalence; uniform full-host two-round sharpness; a general Sidon-palette obstruction without finite ambient space; the extended twin density range; and Hamilton decomposition of every exact-four-colour prime-field Haar component. Matrix algebra and conditional Hamilton-cycle/deletion lemmas retain their limited scopes.
-- [192 selected declarations in total](proofs/selected-endpoints.json). Declaration counts measure audited proof coverage, not discoveries or competition points.
-- [38 additional source modules](proofs/additive-source-manifest.json), including nine attributed modules of known third-party matrix-Bernstein and Haxell foundations. These foundations are not original Robert Huynh results and do not establish main BM.
+- [181 additional verified endpoints](proofs/new-endpoints.json), with actual compiler receipts: full substitution preservation and prescribed-vertex equivalence; uniform full-host two-round sharpness; a general Sidon-palette obstruction without finite ambient space; the extended twin density range; Hamilton decomposition of every exact-four-colour prime-field Haar component; and the full near-regular factor/cut-retention Lemma F. The current 18-source sampling development proves actual Bernoulli/fixed-count concentration, spectral centering and probability/numerical ingredients. It does not yet prove the full two-shore B2.2 or main BM theorem.
+- [265 selected declarations in total](proofs/selected-endpoints.json). Declaration counts measure audited proof coverage, not discoveries or competition points.
+- [65 additional source modules](proofs/additive-source-manifest.json), including nine attributed modules of known third-party matrix-Bernstein and Haxell foundations. Known mathematics and additive formalizations retain attribution; these foundations do not establish main BM.
+
+The previous 192-endpoint source snapshot at `8dd7bbaff24ae0a0cf07056b8d26c8ff9375568f` passed a clean [GitHub build and exact selected audit](https://github.com/alejandrozu/openmath-2026-judging/actions/runs/37641375097). Its [actual output](proofs/portable-ci/37641375097/) is retained. Subsequent additions have actual byte-bound Windows compiler evidence; a new clean build must be assessed separately.
 
 There are four deliberately admitted general/asymptotic target statements in `Openmath/Target.lean`. They are not certified results and none of the selected endpoints depends on `sorryAx`. A successful selected audit does not prove the parent Erdős 585 problem.
 
@@ -23,6 +25,8 @@ There are four deliberately admitted general/asymptotic target statements in `Op
 | Two-round sharpness | [CycleComposition](lean/CycleComposition.lean) | Every q=3^k, k≥2; literal two-round moves in full host; common 54-vertex support |
 | Matrix Bernstein | [SLT](lean/SLT/PORTING.md) | Published third-party operator-norm concentration foundation |
 | Haxell foundation | [Port record](lean/IndependentTransversals/PORTING.md) | Sufficient IT non-domination criterion; no claim of the sharper hypergraph constant |
+| Full Lemma F | [LemmaF](lean/LemmaF.lean), [arbitrary-partition transport](lean/PartitionTransport.lean) | Actual near-regular factor and retained cuts under the exact written numerical hypotheses; not main BM |
+| Sampling foundations | [source/endpoint index](proofs/new-audits/SAMPLING_ACTUAL/current-source-DAG.json) | Actual compressed-matrix tails, uniform conditioning, regular spectral centering and budgets; two-shore assembly remains separate |
 
 ## Reproduce
 
@@ -48,3 +52,5 @@ The selected audit requires an actual successful Lean exit, exact endpoint cover
 Several ingredients are prior mathematics: AFK/Olson zero-sum selection, Eppstein's subdivided-double Hamilton lift, classical Sidon/2-cap geometry, generic five-regular pair-free existence, and specified abelian/dihedral Haar decomposition cases. Formal checking does not establish historical novelty. No absence of search results is presented as a proof of priority.
 
 Evaluated by Alejandro Zarzuelo Urdiales in connection with OpenMath2026 at Harvard and MIT. Competition scores remain separate provisional judging records; this archive asserts no signed award or journal acceptance.
+
+The independently attributed [Chandragupt Sharma universal matrix family](../chandra-support138-family-2026-10-07/) is a sibling source project. It is not a Robert Huynh result.

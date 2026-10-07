@@ -1,0 +1,23 @@
+BernoulliOperatorSample.lean:21:5: warning: Variable name `hp` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hp
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+'OpenMathReview.Sampling.columnSampleExcess_rate' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OpenMathReview.Sampling.matrixBernsteinTailBound_columnSampleExcess' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'OpenMathReview.Sampling.columnSample_norm_bad_implies_gram_bad' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'OpenMathReview.Sampling.actual_column_sample_norm_tail' depends on axioms: [propext, Classical.choice, Quot.sound]
+@actual_column_sample_norm_tail : ∀ {r s : ℕ},
+  0 < r →
+    ∀ (F : Matrix (Fin r) (Fin s) ℝ) (p : ↑unitInterval) (c : ℝ),
+      0 < c →
+        (∀ (j : Fin s), columnEnergy F j ≤ c ^ 2) →
+          ∀ (t : ℝ),
+            0 < t →
+              ((bernoulliColumnLaw s p) {ω | ‖columnSample F (selectedColumns ω)‖ ≥ √↑p * ‖F‖ + c * √t}).toReal ≤
+                2 * ↑r * Real.exp (-t)

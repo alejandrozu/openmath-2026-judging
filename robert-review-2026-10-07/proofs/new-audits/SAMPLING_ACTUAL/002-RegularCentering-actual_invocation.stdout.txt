@@ -1,0 +1,12 @@
+RegularCentering.lean:58:13: warning: `ContinuousLinearMap.sub_apply` has been deprecated: Use `_root_.sub_apply` instead
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.sub_apply` to `_root_.sub_apply x`).
+'OpenMathReview.Sampling.regular_uniform_gram_eigenvector' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OpenMathReview.Sampling.centering_operator_eq_projection' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OpenMathReview.Sampling.regular_centered_norm_eq_second' depends on axioms: [propext, Classical.choice, Quot.sound]
+@regular_centered_norm_eq_second : ∀ {N : ℕ},
+  1 < N →
+    ∀ (W : Matrix (Fin N) (Fin N) ℝ) (d : ℝ),
+      0 < d →
+        (∀ (i : Fin N), ∑ j, W i j = d) →
+          (∀ (j : Fin N), ∑ i, W i j = d) → secondSingularValue W < d → ‖centered W d‖ = secondSingularValue W

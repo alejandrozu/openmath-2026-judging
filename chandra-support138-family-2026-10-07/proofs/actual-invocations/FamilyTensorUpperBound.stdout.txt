@@ -1,0 +1,6 @@
+'OpenMathReview.Support138Family.rational_family_identities' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OpenMathReview.Support138Family.rational_family_support_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+@rational_family_identities : ∀ {K : Type u_2} [inst : Field K] [CharZero K] [DecidableEq K] (s : K),
+  s ≠ 0 → s ≠ -2 → ∀ (a b c : Fin 9), coefficient s a b c = target a b c
+@rational_family_support_le : ∀ {K : Type u_2} [inst : Field K] [CharZero K] [inst_2 : DecidableEq K] (s : K),
+  support s ≤ 138

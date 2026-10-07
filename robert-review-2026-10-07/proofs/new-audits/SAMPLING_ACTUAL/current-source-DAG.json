@@ -1,0 +1,2473 @@
+{
+  "schema": "current-qualified-sampling-flat-source-receipt-guard-axiom-index-v1",
+  "checked_utc": "2026-10-07T17:15:53.864877+00:00",
+  "status": "ACTUAL_CURRENT_SOURCE_MATCHING_PASS_MODULES_ONLY",
+  "producer": {
+    "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\save_flat_actual_sampling_index_readonly.py",
+    "sha256": "8435c3adb3ddd194088fe3e156006d213686cc3737495871ba548662066c2f94",
+    "bytes": 3836
+  },
+  "module_count": 18,
+  "selected_unique_endpoint_count": 65,
+  "selected_standard_count": 65,
+  "selected_native_sorry_unknown_count": 0,
+  "modules": [
+    {
+      "module": "BernoulliColumnSample",
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\BernoulliColumnSample.lean",
+        "sha256": "b138c934b6f66337a27e3269a103222904c44d90c64f23b596a170b2c264d0f0",
+        "bytes": 3202
+      },
+      "source_sha256": "b138c934b6f66337a27e3269a103222904c44d90c64f23b596a170b2c264d0f0",
+      "actual_PASS_receipt": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\attempts\\001-BernoulliColumnSample\\actual_invocation.json",
+        "sha256": "3c37c31d0b82270f8ad9a98dc94cd906ccea28e7b574661e79ac6050942f09f5",
+        "bytes": 31087
+      },
+      "actual_PASS_receipt_sha256": "3c37c31d0b82270f8ad9a98dc94cd906ccea28e7b574661e79ac6050942f09f5",
+      "actual_command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-Dpp.unicode.fun=true",
+        "-DautoImplicit=false",
+        "-o",
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\BernoulliColumnSample.olean",
+        "BernoulliColumnSample.lean"
+      ],
+      "runtime": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+        "sha256": "af49bacfabaa1fea71332ca0feae0fa1a60912219d5902291adc79f905bffb8d",
+        "bytes": 83456
+      },
+      "guard_binding": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\shared_guard.py",
+        "sha256": "29578665ab4f1336e8164a547872119939c6a0b86ceafbadcd36f9859bc367f2",
+        "bytes": 9243
+      },
+      "receipt_guard": {
+        "state": "PASS",
+        "exit": 0,
+        "attempted": true,
+        "started_utc": "2026-10-07T14:49:40.349209+00:00",
+        "finished_utc": "2026-10-07T14:49:51.611290+00:00",
+        "seconds": 11.266,
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 17179869184,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 2147483648,
+          "own_job_private_bytes": 13958643712,
+          "own_process_private_bytes": 13958643712,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 1800
+        },
+        "minimum_disk_free_bytes": 11057274880,
+        "minimum_physical_available_bytes": 12382081024,
+        "minimum_available_commit_bytes": 14897197056,
+        "job_peak_process_private_bytes": 4156190720,
+        "job_peak_aggregate_private_bytes": 4157464576,
+        "polled_peak_tree_private_bytes": 4156366848,
+        "polled_peak_tree_rss_bytes": 1817579520,
+        "own_job_assignment_before_resume": "PASS",
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed"
+      },
+      "actual_stdout": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\attempts\\001-BernoulliColumnSample\\compiler.stdout.txt",
+        "sha256": "97f6ea30abde8e3c75c9a75ccce20c2bb8a695397715de7963d29fc6d647bd2a",
+        "bytes": 1167
+      },
+      "actual_stderr": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\attempts\\001-BernoulliColumnSample\\compiler.stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      },
+      "current_output_artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\BernoulliColumnSample.olean",
+          "sha256": "f3deb9ba1078b555162930130a22dd1d5ee5c44cb829514164b16a25617e05da",
+          "bytes": 124120
+        }
+      ],
+      "frozen_runner_code": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\prepared_history\\38553a6c0ddc8809fbaa07a34c14cf89ee3cb3d8fc1f07072faaefda88bf7aca.py",
+        "sha256": "38553a6c0ddc8809fbaa07a34c14cf89ee3cb3d8fc1f07072faaefda88bf7aca",
+        "bytes": 7632
+      },
+      "actual_selected_axiom_outputs": [
+        {
+          "endpoint": "OpenMathReview.Sampling.columnSample_gram_eq_sum",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        },
+        {
+          "endpoint": "OpenMathReview.Sampling.actualSelectedGram_eq_sum",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        },
+        {
+          "endpoint": "OpenMathReview.Sampling.actualSelectedGram_centered_eq",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        },
+        {
+          "endpoint": "OpenMathReview.Sampling.actual_column_sample_gram_deviation",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        }
+      ],
+      "actual_source_exit": 0,
+      "actual_seconds": 11.266,
+      "B22_scope_complete": false,
+      "BM_scope_complete": false
+    },
+    {
+      "module": "BernoulliDegree",
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\BernoulliDegree.lean",
+        "sha256": "9593bef1de801d1d3d7c7eb060c8f9950e02cafc89795e402ce9b85584449e75",
+        "bytes": 6738
+      },
+      "source_sha256": "9593bef1de801d1d3d7c7eb060c8f9950e02cafc89795e402ce9b85584449e75",
+      "actual_PASS_receipt": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\attempts\\003-BernoulliDegree\\actual_invocation.json",
+        "sha256": "701b9645923dc211a4aee8f078db10b5ec1fd600f10bc6ab3c39cc3e8fb83ebf",
+        "bytes": 31785
+      },
+      "actual_PASS_receipt_sha256": "701b9645923dc211a4aee8f078db10b5ec1fd600f10bc6ab3c39cc3e8fb83ebf",
+      "actual_command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-Dpp.unicode.fun=true",
+        "-DautoImplicit=false",
+        "-o",
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\BernoulliDegree.olean",
+        "BernoulliDegree.lean"
+      ],
+      "runtime": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+        "sha256": "af49bacfabaa1fea71332ca0feae0fa1a60912219d5902291adc79f905bffb8d",
+        "bytes": 83456
+      },
+      "guard_binding": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\shared_guard.py",
+        "sha256": "29578665ab4f1336e8164a547872119939c6a0b86ceafbadcd36f9859bc367f2",
+        "bytes": 9243
+      },
+      "receipt_guard": {
+        "state": "PASS",
+        "exit": 0,
+        "attempted": true,
+        "started_utc": "2026-10-07T16:39:40.116143+00:00",
+        "finished_utc": "2026-10-07T16:39:53.847086+00:00",
+        "seconds": 13.719,
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 17179869184,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 2147483648,
+          "own_job_private_bytes": 13958643712,
+          "own_process_private_bytes": 13958643712,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 1800
+        },
+        "minimum_disk_free_bytes": 10952863744,
+        "minimum_physical_available_bytes": 11266347008,
+        "minimum_available_commit_bytes": 14162210816,
+        "job_peak_process_private_bytes": 4159242240,
+        "job_peak_aggregate_private_bytes": 4160495616,
+        "polled_peak_tree_private_bytes": 4156882944,
+        "polled_peak_tree_rss_bytes": 1850392576,
+        "own_job_assignment_before_resume": "PASS",
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed"
+      },
+      "actual_stdout": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\attempts\\003-BernoulliDegree\\compiler.stdout.txt",
+        "sha256": "55e20062329ad767f683fc579373aeca662362ee2aa65db5d58c6d3177aa61cd",
+        "bytes": 547
+      },
+      "actual_stderr": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\attempts\\003-BernoulliDegree\\compiler.stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      },
+      "current_output_artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\BernoulliDegree.olean",
+          "sha256": "501c98b1a57e2e6eb9c72353b37f81a03758fb64a2e9cd650f7a3162c7d11ce0",
+          "bytes": 311576
+        }
+      ],
+      "frozen_runner_code": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\attempts\\003-BernoulliDegree\\runner.py",
+        "sha256": "89e9c86b63883bed647b6702c68a1f60c228e9c644f7d9dffd1c078b861b3df8",
+        "bytes": 12543
+      },
+      "actual_selected_axiom_outputs": [
+        {
+          "endpoint": "OpenMathReview.Sampling.selectedDegree_variance",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        },
+        {
+          "endpoint": "OpenMathReview.Sampling.actual_selected_degree_tail",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        }
+      ],
+      "actual_source_exit": 0,
+      "actual_seconds": 13.719,
+      "B22_scope_complete": false,
+      "BM_scope_complete": false
+    },
+    {
+      "module": "BernoulliGram",
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\BernoulliGram.lean",
+        "sha256": "5e1323ecb059e4bd47606659f1e98cc2c1bc2df9759370467190e70a8876253d",
+        "bytes": 6990
+      },
+      "source_sha256": "5e1323ecb059e4bd47606659f1e98cc2c1bc2df9759370467190e70a8876253d",
+      "actual_PASS_receipt": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\attempts\\002-BernoulliGram\\actual_invocation.json",
+        "sha256": "29f280ed64422b15a35c4d62d37608c8e2a2616a8d31b5be339c5ae25b9d92be",
+        "bytes": 34077
+      },
+      "actual_PASS_receipt_sha256": "29f280ed64422b15a35c4d62d37608c8e2a2616a8d31b5be339c5ae25b9d92be",
+      "actual_command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-Dpp.unicode.fun=true",
+        "-DautoImplicit=false",
+        "-o",
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\BernoulliGram.olean",
+        "BernoulliGram.lean"
+      ],
+      "runtime": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+        "sha256": "af49bacfabaa1fea71332ca0feae0fa1a60912219d5902291adc79f905bffb8d",
+        "bytes": 83456
+      },
+      "guard_binding": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\shared_guard.py",
+        "sha256": "29578665ab4f1336e8164a547872119939c6a0b86ceafbadcd36f9859bc367f2",
+        "bytes": 9243
+      },
+      "receipt_guard": {
+        "state": "PASS",
+        "exit": 0,
+        "attempted": true,
+        "started_utc": "2026-10-07T14:40:17.262538+00:00",
+        "finished_utc": "2026-10-07T14:40:31.098593+00:00",
+        "seconds": 13.828,
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 17179869184,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 2147483648,
+          "own_job_private_bytes": 13958643712,
+          "own_process_private_bytes": 13958643712,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 1800
+        },
+        "minimum_disk_free_bytes": 11073617920,
+        "minimum_physical_available_bytes": 13066440704,
+        "minimum_available_commit_bytes": 15435354112,
+        "job_peak_process_private_bytes": 4154933248,
+        "job_peak_aggregate_private_bytes": 4156219392,
+        "polled_peak_tree_private_bytes": 4156219392,
+        "polled_peak_tree_rss_bytes": 1834946560,
+        "own_job_assignment_before_resume": "PASS",
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed"
+      },
+      "actual_stdout": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\attempts\\002-BernoulliGram\\compiler.stdout.txt",
+        "sha256": "de5ee2c209caf44469ea9507a3e3bcba7692b25351c5ff94903b7e20beb95949",
+        "bytes": 1674
+      },
+      "actual_stderr": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\attempts\\002-BernoulliGram\\compiler.stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      },
+      "current_output_artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\BernoulliGram.olean",
+          "sha256": "d0ac77d151e09a0fe04fa3111fe6a277e7a62a63bf546895868638ba60109e72",
+          "bytes": 251384
+        }
+      ],
+      "frozen_runner_code": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\prepared_history\\c7f870c2ec5fc64a4efbcd2129ac889a4fdd7b7e2d1a1791ba9c37790fe3db0f.py",
+        "sha256": "c7f870c2ec5fc64a4efbcd2129ac889a4fdd7b7e2d1a1791ba9c37790fe3db0f",
+        "bytes": 7372
+      },
+      "actual_selected_axiom_outputs": [
+        {
+          "endpoint": "OpenMathReview.Sampling.gramSummand_mean_zero",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        },
+        {
+          "endpoint": "OpenMathReview.Sampling.gramSummand_second_moment",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        },
+        {
+          "endpoint": "OpenMathReview.Sampling.gramSummand_independent",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        },
+        {
+          "endpoint": "OpenMathReview.Sampling.gramSummand_norm_bound",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        },
+        {
+          "endpoint": "OpenMathReview.Sampling.bernoulli_gram_variance_matrix",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        },
+        {
+          "endpoint": "OpenMathReview.Sampling.bernoulli_gram_deviation",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        }
+      ],
+      "actual_source_exit": 0,
+      "actual_seconds": 13.828,
+      "B22_scope_complete": false,
+      "BM_scope_complete": false
+    },
+    {
+      "module": "BernoulliOperatorSample",
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\BernoulliOperatorSample.lean",
+        "sha256": "996b969669ef8bad58fbc451846b68844e098bd20fa8c5a1668009d56334a2a0",
+        "bytes": 7076
+      },
+      "source_sha256": "996b969669ef8bad58fbc451846b68844e098bd20fa8c5a1668009d56334a2a0",
+      "actual_PASS_receipt": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\attempts\\002-BernoulliOperatorSample\\actual_invocation.json",
+        "sha256": "13f315071bcd77eb24b475106fdc494ead01e449d0dcb3512f957a706687e9a7",
+        "bytes": 32952
+      },
+      "actual_PASS_receipt_sha256": "13f315071bcd77eb24b475106fdc494ead01e449d0dcb3512f957a706687e9a7",
+      "actual_command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-Dpp.unicode.fun=true",
+        "-DautoImplicit=false",
+        "-o",
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\BernoulliOperatorSample.olean",
+        "BernoulliOperatorSample.lean"
+      ],
+      "runtime": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+        "sha256": "af49bacfabaa1fea71332ca0feae0fa1a60912219d5902291adc79f905bffb8d",
+        "bytes": 83456
+      },
+      "guard_binding": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\shared_guard.py",
+        "sha256": "29578665ab4f1336e8164a547872119939c6a0b86ceafbadcd36f9859bc367f2",
+        "bytes": 9243
+      },
+      "receipt_guard": {
+        "state": "PASS",
+        "exit": 0,
+        "attempted": true,
+        "started_utc": "2026-10-07T15:45:56.735941+00:00",
+        "finished_utc": "2026-10-07T15:46:10.851584+00:00",
+        "seconds": 14.125,
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 17179869184,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 2147483648,
+          "own_job_private_bytes": 13958643712,
+          "own_process_private_bytes": 13958643712,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 1800
+        },
+        "minimum_disk_free_bytes": 10997747712,
+        "minimum_physical_available_bytes": 12288479232,
+        "minimum_available_commit_bytes": 14847799296,
+        "job_peak_process_private_bytes": 4168065024,
+        "job_peak_aggregate_private_bytes": 4169338880,
+        "polled_peak_tree_private_bytes": 4156956672,
+        "polled_peak_tree_rss_bytes": 1927901184,
+        "own_job_assignment_before_resume": "PASS",
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed"
+      },
+      "actual_stdout": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\attempts\\002-BernoulliOperatorSample\\compiler.stdout.txt",
+        "sha256": "e1c4dde21d8f60522c48cabb4065291ffff4015527ddc15ce41b45fef2bf464d",
+        "bytes": 1250
+      },
+      "actual_stderr": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\attempts\\002-BernoulliOperatorSample\\compiler.stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      },
+      "current_output_artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\BernoulliOperatorSample.olean",
+          "sha256": "dfe6f88399bdff3c84fc3de54128af77422c6b64dd9ff20c69841357488ea831",
+          "bytes": 583376
+        }
+      ],
+      "frozen_runner_code": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\prepared_history\\1b77f160a31326b435852ee384d923e7ba3484b7eca6495a0ba3ab8f97b989ee.py",
+        "sha256": "1b77f160a31326b435852ee384d923e7ba3484b7eca6495a0ba3ab8f97b989ee",
+        "bytes": 8789
+      },
+      "actual_selected_axiom_outputs": [
+        {
+          "endpoint": "OpenMathReview.Sampling.columnSampleExcess_rate",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        },
+        {
+          "endpoint": "OpenMathReview.Sampling.matrixBernsteinTailBound_columnSampleExcess",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        },
+        {
+          "endpoint": "OpenMathReview.Sampling.columnSample_norm_bad_implies_gram_bad",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        },
+        {
+          "endpoint": "OpenMathReview.Sampling.actual_column_sample_norm_tail",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        }
+      ],
+      "actual_source_exit": 0,
+      "actual_seconds": 14.125,
+      "B22_scope_complete": false,
+      "BM_scope_complete": false
+    },
+    {
+      "module": "BinomialMode",
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\BinomialMode.lean",
+        "sha256": "f8f462ecc248fda4b1029b43c7b919f41d043f2be0f473bb8ba3ed6332ef7f5f",
+        "bytes": 6363
+      },
+      "source_sha256": "f8f462ecc248fda4b1029b43c7b919f41d043f2be0f473bb8ba3ed6332ef7f5f",
+      "actual_PASS_receipt": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\attempts\\002-BinomialMode\\actual_invocation.json",
+        "sha256": "7c720fb2ab5981fa5c4213819196d1eaede7c12399104b98755438b4a91f499a",
+        "bytes": 32489
+      },
+      "actual_PASS_receipt_sha256": "7c720fb2ab5981fa5c4213819196d1eaede7c12399104b98755438b4a91f499a",
+      "actual_command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-Dpp.unicode.fun=true",
+        "-DautoImplicit=false",
+        "-o",
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\BinomialMode.olean",
+        "BinomialMode.lean"
+      ],
+      "runtime": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+        "sha256": "af49bacfabaa1fea71332ca0feae0fa1a60912219d5902291adc79f905bffb8d",
+        "bytes": 83456
+      },
+      "guard_binding": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\shared_guard.py",
+        "sha256": "29578665ab4f1336e8164a547872119939c6a0b86ceafbadcd36f9859bc367f2",
+        "bytes": 9243
+      },
+      "receipt_guard": {
+        "state": "PASS",
+        "exit": 0,
+        "attempted": true,
+        "started_utc": "2026-10-07T16:16:25.028968+00:00",
+        "finished_utc": "2026-10-07T16:16:37.059680+00:00",
+        "seconds": 12.032,
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 17179869184,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 2147483648,
+          "own_job_private_bytes": 13958643712,
+          "own_process_private_bytes": 13958643712,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 1800
+        },
+        "minimum_disk_free_bytes": 10979348480,
+        "minimum_physical_available_bytes": 11808964608,
+        "minimum_available_commit_bytes": 14653775872,
+        "job_peak_process_private_bytes": 4183359488,
+        "job_peak_aggregate_private_bytes": 4184616960,
+        "polled_peak_tree_private_bytes": 4172308480,
+        "polled_peak_tree_rss_bytes": 1836249088,
+        "own_job_assignment_before_resume": "PASS",
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed"
+      },
+      "actual_stdout": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\attempts\\002-BinomialMode\\compiler.stdout.txt",
+        "sha256": "4eb29692aa7d06714c196dac1b0cac7f8c4620db21d0c852a8f786b74dabdc03",
+        "bytes": 477
+      },
+      "actual_stderr": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\attempts\\002-BinomialMode\\compiler.stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      },
+      "current_output_artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\BinomialMode.olean",
+          "sha256": "754948fb7994ccd736161bd1a5918d4af6e7382e8c5afbc8440863c3d846508b",
+          "bytes": 388048
+        }
+      ],
+      "frozen_runner_code": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\attempts\\002-BinomialMode\\runner.py",
+        "sha256": "7de75766d44cd07e9a200341b65fb21af28883f201dff84306b21df68ba837c2",
+        "bytes": 11419
+      },
+      "actual_selected_axiom_outputs": [
+        {
+          "endpoint": "OpenMathReview.Sampling.binomialWeight_recurrence",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        },
+        {
+          "endpoint": "OpenMathReview.Sampling.binomialWeight_le_mode",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        },
+        {
+          "endpoint": "OpenMathReview.Sampling.binomialWeight_mode_lower",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        }
+      ],
+      "actual_source_exit": 0,
+      "actual_seconds": 12.032,
+      "B22_scope_complete": false,
+      "BM_scope_complete": false
+    },
+    {
+      "module": "FiniteProductProbability",
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\FiniteProductProbability.lean",
+        "sha256": "1ec9372a40200ba1ab05495cf95eef4095dd97e17cdf4ae1f06ffc87e8db8fae",
+        "bytes": 3535
+      },
+      "source_sha256": "1ec9372a40200ba1ab05495cf95eef4095dd97e17cdf4ae1f06ffc87e8db8fae",
+      "actual_PASS_receipt": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\attempts\\001-FiniteProductProbability\\actual_invocation.json",
+        "sha256": "383401390fc4916714c8b6bc3584a8b683b28ca6c12301e77333600a75cab35d",
+        "bytes": 38454
+      },
+      "actual_PASS_receipt_sha256": "383401390fc4916714c8b6bc3584a8b683b28ca6c12301e77333600a75cab35d",
+      "actual_command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-Dpp.unicode.fun=true",
+        "-DautoImplicit=false",
+        "-o",
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\FiniteProductProbability.olean",
+        "FiniteProductProbability.lean"
+      ],
+      "runtime": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+        "sha256": "af49bacfabaa1fea71332ca0feae0fa1a60912219d5902291adc79f905bffb8d",
+        "bytes": 83456
+      },
+      "guard_binding": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\shared_guard.py",
+        "sha256": "29578665ab4f1336e8164a547872119939c6a0b86ceafbadcd36f9859bc367f2",
+        "bytes": 9243
+      },
+      "receipt_guard": {
+        "state": "PASS",
+        "exit": 0,
+        "attempted": true,
+        "started_utc": "2026-10-07T17:08:57.476640+00:00",
+        "finished_utc": "2026-10-07T17:09:08.805537+00:00",
+        "seconds": 11.328,
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 17179869184,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 2147483648,
+          "own_job_private_bytes": 13958643712,
+          "own_process_private_bytes": 13958643712,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 1800
+        },
+        "minimum_disk_free_bytes": 10857680896,
+        "minimum_physical_available_bytes": 12696567808,
+        "minimum_available_commit_bytes": 14536810496,
+        "job_peak_process_private_bytes": 4162080768,
+        "job_peak_aggregate_private_bytes": 4163338240,
+        "polled_peak_tree_private_bytes": 4163338240,
+        "polled_peak_tree_rss_bytes": 1825976320,
+        "own_job_assignment_before_resume": "PASS",
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed"
+      },
+      "actual_stdout": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\attempts\\001-FiniteProductProbability\\compiler.stdout.txt",
+        "sha256": "61d84b4051a3413189250722e8aafb97fa535d9247d48fa62b0490008ddd727a",
+        "bytes": 1385
+      },
+      "actual_stderr": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\attempts\\001-FiniteProductProbability\\compiler.stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      },
+      "current_output_artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\FiniteProductProbability.olean",
+          "sha256": "3e1973908db45cd000e53187261dc130e25859739d1ece92e0b1f26e93275b9c",
+          "bytes": 157424
+        }
+      ],
+      "frozen_runner_code": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\attempts\\001-FiniteProductProbability\\runner.py",
+        "sha256": "478166d51eb33c33250d39ca19107d90ae0055e644db589b5b86cf98a561fc83",
+        "bytes": 14048
+      },
+      "actual_selected_axiom_outputs": [
+        {
+          "endpoint": "OpenMathReview.Sampling.finite_product_real_fiber_sum",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        },
+        {
+          "endpoint": "OpenMathReview.Sampling.finite_product_bad_fiber_bound",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        }
+      ],
+      "actual_source_exit": 0,
+      "actual_seconds": 11.328,
+      "B22_scope_complete": false,
+      "BM_scope_complete": false
+    },
+    {
+      "module": "MatrixSampling",
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\MatrixSampling.lean",
+        "sha256": "d2efc982231c792db9ac99e51cfe3406f7c66efd13d980f0268df5a5155209db",
+        "bytes": 5036
+      },
+      "source_sha256": "d2efc982231c792db9ac99e51cfe3406f7c66efd13d980f0268df5a5155209db",
+      "actual_PASS_receipt": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\attempts\\003-MatrixSampling\\actual_invocation.json",
+        "sha256": "c448b981096d8da1ad1baebb666b111e73f1164bd2f8234c7bfa37ab6936a359",
+        "bytes": 29129
+      },
+      "actual_PASS_receipt_sha256": "c448b981096d8da1ad1baebb666b111e73f1164bd2f8234c7bfa37ab6936a359",
+      "actual_command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-Dpp.unicode.fun=true",
+        "-DautoImplicit=false",
+        "-o",
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\MatrixSampling.olean",
+        "MatrixSampling.lean"
+      ],
+      "runtime": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+        "sha256": "af49bacfabaa1fea71332ca0feae0fa1a60912219d5902291adc79f905bffb8d",
+        "bytes": 83456
+      },
+      "guard_binding": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\shared_guard.py",
+        "sha256": "29578665ab4f1336e8164a547872119939c6a0b86ceafbadcd36f9859bc367f2",
+        "bytes": 9243
+      },
+      "receipt_guard": {
+        "state": "PASS",
+        "exit": 0,
+        "attempted": true,
+        "started_utc": "2026-10-07T14:20:41.209404+00:00",
+        "finished_utc": "2026-10-07T14:20:53.263404+00:00",
+        "seconds": 12.047,
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 17179869184,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 2147483648,
+          "own_job_private_bytes": 13958643712,
+          "own_process_private_bytes": 13958643712,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 1800
+        },
+        "minimum_disk_free_bytes": 11073589248,
+        "minimum_physical_available_bytes": 12942372864,
+        "minimum_available_commit_bytes": 15263584256,
+        "job_peak_process_private_bytes": 4153659392,
+        "job_peak_aggregate_private_bytes": 4154937344,
+        "polled_peak_tree_private_bytes": 4154937344,
+        "polled_peak_tree_rss_bytes": 1828446208,
+        "own_job_assignment_before_resume": "PASS",
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed"
+      },
+      "actual_stdout": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\attempts\\003-MatrixSampling\\compiler.stdout.txt",
+        "sha256": "f767a6e062ee0dc7dfb3f753fdcac87641be25470afdb9c6008469876638a140",
+        "bytes": 854
+      },
+      "actual_stderr": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\attempts\\003-MatrixSampling\\compiler.stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      },
+      "current_output_artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\MatrixSampling.olean",
+          "sha256": "0160d92286541bdbb9225faf9f073a0e196a4ab18bc35abd1de3a23082d911ee",
+          "bytes": 311424
+        }
+      ],
+      "frozen_runner_code": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\prepared_history\\e54212a8b9100aebc851ba962c35a04ebb08ce5a9167335486639fd9a761ed53.py",
+        "sha256": "e54212a8b9100aebc851ba962c35a04ebb08ce5a9167335486639fd9a761ed53",
+        "bytes": 5485
+      },
+      "actual_selected_axiom_outputs": [
+        {
+          "endpoint": "OpenMathReview.Sampling.sampled_centered_decomposition",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        },
+        {
+          "endpoint": "OpenMathReview.Sampling.centered_row_energy",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        },
+        {
+          "endpoint": "OpenMathReview.Sampling.centered_column_energy",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        },
+        {
+          "endpoint": "OpenMathReview.Sampling.centered_row_energy_le",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        },
+        {
+          "endpoint": "OpenMathReview.Sampling.columnGram_isHermitian",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        },
+        {
+          "endpoint": "OpenMathReview.Sampling.gram_eq_sum_columnGram",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        },
+        {
+          "endpoint": "OpenMathReview.Sampling.weighted_gram_eq",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        },
+        {
+          "endpoint": "OpenMathReview.Sampling.columnGram_sq",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        }
+      ],
+      "actual_source_exit": 0,
+      "actual_seconds": 12.047,
+      "B22_scope_complete": false,
+      "BM_scope_complete": false
+    },
+    {
+      "module": "MatrixVarianceBounds",
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\MatrixVarianceBounds.lean",
+        "sha256": "adad71cfb95534b7e10d762e87ba1048891d97978feff65d5607bde2268b05b6",
+        "bytes": 5505
+      },
+      "source_sha256": "adad71cfb95534b7e10d762e87ba1048891d97978feff65d5607bde2268b05b6",
+      "actual_PASS_receipt": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\attempts\\003-MatrixVarianceBounds\\actual_invocation.json",
+        "sha256": "770816b840dd323b5e983dbdb8a63ad8efd8775c9cd5402d8cb65531200c5a1c",
+        "bytes": 32400
+      },
+      "actual_PASS_receipt_sha256": "770816b840dd323b5e983dbdb8a63ad8efd8775c9cd5402d8cb65531200c5a1c",
+      "actual_command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-Dpp.unicode.fun=true",
+        "-DautoImplicit=false",
+        "-o",
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\MatrixVarianceBounds.olean",
+        "MatrixVarianceBounds.lean"
+      ],
+      "runtime": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+        "sha256": "af49bacfabaa1fea71332ca0feae0fa1a60912219d5902291adc79f905bffb8d",
+        "bytes": 83456
+      },
+      "guard_binding": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\shared_guard.py",
+        "sha256": "29578665ab4f1336e8164a547872119939c6a0b86ceafbadcd36f9859bc367f2",
+        "bytes": 9243
+      },
+      "receipt_guard": {
+        "state": "PASS",
+        "exit": 0,
+        "attempted": true,
+        "started_utc": "2026-10-07T15:43:25.073885+00:00",
+        "finished_utc": "2026-10-07T15:43:36.860087+00:00",
+        "seconds": 11.782,
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 17179869184,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 2147483648,
+          "own_job_private_bytes": 13958643712,
+          "own_process_private_bytes": 13958643712,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 1800
+        },
+        "minimum_disk_free_bytes": 10999857152,
+        "minimum_physical_available_bytes": 12528181248,
+        "minimum_available_commit_bytes": 15029673984,
+        "job_peak_process_private_bytes": 4160897024,
+        "job_peak_aggregate_private_bytes": 4162158592,
+        "polled_peak_tree_private_bytes": 4148830208,
+        "polled_peak_tree_rss_bytes": 1836621824,
+        "own_job_assignment_before_resume": "PASS",
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed"
+      },
+      "actual_stdout": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\attempts\\003-MatrixVarianceBounds\\compiler.stdout.txt",
+        "sha256": "89f6347c6b2bc8886fdb1202fdc584ac36b1f6dda1ec9b4c74ee32512462107a",
+        "bytes": 1396
+      },
+      "actual_stderr": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\attempts\\003-MatrixVarianceBounds\\compiler.stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      },
+      "current_output_artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\MatrixVarianceBounds.olean",
+          "sha256": "2179ba1b7b67430a46ab9bba6ec97d42c257dfde655fed1e9696cae83fb955fc",
+          "bytes": 294176
+        }
+      ],
+      "frozen_runner_code": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\prepared_history\\1b77f160a31326b435852ee384d923e7ba3484b7eca6495a0ba3ab8f97b989ee.py",
+        "sha256": "1b77f160a31326b435852ee384d923e7ba3484b7eca6495a0ba3ab8f97b989ee",
+        "bytes": 8789
+      },
+      "actual_selected_axiom_outputs": [
+        {
+          "endpoint": "OpenMathReview.Sampling.columnGram_posSemidef",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        },
+        {
+          "endpoint": "OpenMathReview.Sampling.real_matrix_psd_norm_mono",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        },
+        {
+          "endpoint": "OpenMathReview.Sampling.real_gram_norm",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        },
+        {
+          "endpoint": "OpenMathReview.Sampling.weighted_columnGram_norm_le",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        },
+        {
+          "endpoint": "OpenMathReview.Sampling.bernoulli_variance_proxy_le",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        }
+      ],
+      "actual_source_exit": 0,
+      "actual_seconds": 11.782,
+      "B22_scope_complete": false,
+      "BM_scope_complete": false
+    },
+    {
+      "module": "NormVariance",
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\NormVariance.lean",
+        "sha256": "40f738c4c5298b726c8087a7417d96aed4e70f9878aea25b4642fba2f42818ea",
+        "bytes": 2774
+      },
+      "source_sha256": "40f738c4c5298b726c8087a7417d96aed4e70f9878aea25b4642fba2f42818ea",
+      "actual_PASS_receipt": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\attempts\\001-NormVariance\\actual_invocation.json",
+        "sha256": "e4280c9440f15b13f6949f80a5df01a8623e1287131ade552d72b035af46abd5",
+        "bytes": 28441
+      },
+      "actual_PASS_receipt_sha256": "e4280c9440f15b13f6949f80a5df01a8623e1287131ade552d72b035af46abd5",
+      "actual_command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-Dpp.unicode.fun=true",
+        "-DautoImplicit=false",
+        "-o",
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\NormVariance.olean",
+        "NormVariance.lean"
+      ],
+      "runtime": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+        "sha256": "af49bacfabaa1fea71332ca0feae0fa1a60912219d5902291adc79f905bffb8d",
+        "bytes": 83456
+      },
+      "guard_binding": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\shared_guard.py",
+        "sha256": "29578665ab4f1336e8164a547872119939c6a0b86ceafbadcd36f9859bc367f2",
+        "bytes": 9243
+      },
+      "receipt_guard": {
+        "state": "PASS",
+        "exit": 0,
+        "attempted": true,
+        "started_utc": "2026-10-07T14:27:13.936470+00:00",
+        "finished_utc": "2026-10-07T14:27:25.171688+00:00",
+        "seconds": 11.234,
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 17179869184,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 2147483648,
+          "own_job_private_bytes": 13958643712,
+          "own_process_private_bytes": 13958643712,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 1800
+        },
+        "minimum_disk_free_bytes": 11079925760,
+        "minimum_physical_available_bytes": 13089042432,
+        "minimum_available_commit_bytes": 15358885888,
+        "job_peak_process_private_bytes": 4180574208,
+        "job_peak_aggregate_private_bytes": 4181835776,
+        "polled_peak_tree_private_bytes": 4171325440,
+        "polled_peak_tree_rss_bytes": 1899212800,
+        "own_job_assignment_before_resume": "PASS",
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed"
+      },
+      "actual_stdout": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\attempts\\001-NormVariance\\compiler.stdout.txt",
+        "sha256": "d0daec0d068cd708c232889af994497bc54fa70367f4132def99c4fb2b464fdd",
+        "bytes": 434
+      },
+      "actual_stderr": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\attempts\\001-NormVariance\\compiler.stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      },
+      "current_output_artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\NormVariance.olean",
+          "sha256": "86b06b75e2ecd6d0b42649af658765f2cc02172a509470ec0a28978c00ea393a",
+          "bytes": 183088
+        }
+      ],
+      "frozen_runner_code": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\prepared_history\\16bae41f2d6e4b54cd219be7bb6f698da347febf2852399873dbe7d69f0922a6.py",
+        "sha256": "16bae41f2d6e4b54cd219be7bb6f698da347febf2852399873dbe7d69f0922a6",
+        "bytes": 6400
+      },
+      "actual_selected_axiom_outputs": [
+        {
+          "endpoint": "OpenMathReview.Sampling.real_opNorm_mono_of_quadratic_forms",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        },
+        {
+          "endpoint": "OpenMathReview.Sampling.columnGram_norm",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        },
+        {
+          "endpoint": "OpenMathReview.Sampling.columnGram_norm_le",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        },
+        {
+          "endpoint": "OpenMathReview.Sampling.columnGram_square_norm",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        }
+      ],
+      "actual_source_exit": 0,
+      "actual_seconds": 11.234,
+      "B22_scope_complete": false,
+      "BM_scope_complete": false
+    },
+    {
+      "module": "RegularCentering",
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\RegularCentering.lean",
+        "sha256": "5078f42c098a869f03a0145dc9de27822f283bfe5b43ba3701f7ad565f1b412d",
+        "bytes": 4522
+      },
+      "source_sha256": "5078f42c098a869f03a0145dc9de27822f283bfe5b43ba3701f7ad565f1b412d",
+      "actual_PASS_receipt": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\attempts\\002-RegularCentering\\actual_invocation.json",
+        "sha256": "0640918cb7df2a08f8ae3b752157ab512d36e47c4034455500bb605ca1dc9429",
+        "bytes": 31671
+      },
+      "actual_PASS_receipt_sha256": "0640918cb7df2a08f8ae3b752157ab512d36e47c4034455500bb605ca1dc9429",
+      "actual_command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-Dpp.unicode.fun=true",
+        "-DautoImplicit=false",
+        "-o",
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\RegularCentering.olean",
+        "RegularCentering.lean"
+      ],
+      "runtime": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+        "sha256": "af49bacfabaa1fea71332ca0feae0fa1a60912219d5902291adc79f905bffb8d",
+        "bytes": 83456
+      },
+      "guard_binding": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\shared_guard.py",
+        "sha256": "29578665ab4f1336e8164a547872119939c6a0b86ceafbadcd36f9859bc367f2",
+        "bytes": 9243
+      },
+      "receipt_guard": {
+        "state": "PASS",
+        "exit": 0,
+        "attempted": true,
+        "started_utc": "2026-10-07T17:05:20.232948+00:00",
+        "finished_utc": "2026-10-07T17:05:32.796711+00:00",
+        "seconds": 12.562,
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 17179869184,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 2147483648,
+          "own_job_private_bytes": 13958643712,
+          "own_process_private_bytes": 13958643712,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 1800
+        },
+        "minimum_disk_free_bytes": 10856288256,
+        "minimum_physical_available_bytes": 12430962688,
+        "minimum_available_commit_bytes": 14283550720,
+        "job_peak_process_private_bytes": 4168712192,
+        "job_peak_aggregate_private_bytes": 4169986048,
+        "polled_peak_tree_private_bytes": 4156477440,
+        "polled_peak_tree_rss_bytes": 1847681024,
+        "own_job_assignment_before_resume": "PASS",
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed"
+      },
+      "actual_stdout": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\attempts\\002-RegularCentering\\compiler.stdout.txt",
+        "sha256": "86dcffd288915e202517b918bac02cd5a11592443b913181acc421331176f8d8",
+        "bytes": 921
+      },
+      "actual_stderr": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\attempts\\002-RegularCentering\\compiler.stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      },
+      "current_output_artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\RegularCentering.olean",
+          "sha256": "12790a37b5b3b54d145d30bdfcc0fbb6b5467bf35042e50be88b4fafa43b4b0d",
+          "bytes": 343736
+        }
+      ],
+      "frozen_runner_code": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\attempts\\002-RegularCentering\\runner.py",
+        "sha256": "478166d51eb33c33250d39ca19107d90ae0055e644db589b5b86cf98a561fc83",
+        "bytes": 14048
+      },
+      "actual_selected_axiom_outputs": [
+        {
+          "endpoint": "OpenMathReview.Sampling.regular_uniform_gram_eigenvector",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        },
+        {
+          "endpoint": "OpenMathReview.Sampling.centering_operator_eq_projection",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        },
+        {
+          "endpoint": "OpenMathReview.Sampling.regular_centered_norm_eq_second",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        }
+      ],
+      "actual_source_exit": 0,
+      "actual_seconds": 12.562,
+      "B22_scope_complete": false,
+      "BM_scope_complete": false
+    },
+    {
+      "module": "ReindexSampling",
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\ReindexSampling.lean",
+        "sha256": "f028518c80f964c8dae253747a2dd4544825a661ac7b472e0012b78478784083",
+        "bytes": 5114
+      },
+      "source_sha256": "f028518c80f964c8dae253747a2dd4544825a661ac7b472e0012b78478784083",
+      "actual_PASS_receipt": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\attempts\\001-ReindexSampling\\actual_invocation.json",
+        "sha256": "c1ba77573bf8b18a4879d6877eb67f9847a915eb9c6a791e6b72c5aad63a87e6",
+        "bytes": 33489
+      },
+      "actual_PASS_receipt_sha256": "c1ba77573bf8b18a4879d6877eb67f9847a915eb9c6a791e6b72c5aad63a87e6",
+      "actual_command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-Dpp.unicode.fun=true",
+        "-DautoImplicit=false",
+        "-o",
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\ReindexSampling.olean",
+        "ReindexSampling.lean"
+      ],
+      "runtime": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+        "sha256": "af49bacfabaa1fea71332ca0feae0fa1a60912219d5902291adc79f905bffb8d",
+        "bytes": 83456
+      },
+      "guard_binding": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\shared_guard.py",
+        "sha256": "29578665ab4f1336e8164a547872119939c6a0b86ceafbadcd36f9859bc367f2",
+        "bytes": 9243
+      },
+      "receipt_guard": {
+        "state": "PASS",
+        "exit": 0,
+        "attempted": true,
+        "started_utc": "2026-10-07T16:31:06.695145+00:00",
+        "finished_utc": "2026-10-07T16:31:18.458667+00:00",
+        "seconds": 11.75,
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 17179869184,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 2147483648,
+          "own_job_private_bytes": 13958643712,
+          "own_process_private_bytes": 13958643712,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 1800
+        },
+        "minimum_disk_free_bytes": 10973622272,
+        "minimum_physical_available_bytes": 12244733952,
+        "minimum_available_commit_bytes": 14694055936,
+        "job_peak_process_private_bytes": 4163940352,
+        "job_peak_aggregate_private_bytes": 4165197824,
+        "polled_peak_tree_private_bytes": 4157218816,
+        "polled_peak_tree_rss_bytes": 1883762688,
+        "own_job_assignment_before_resume": "PASS",
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed"
+      },
+      "actual_stdout": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\attempts\\001-ReindexSampling\\compiler.stdout.txt",
+        "sha256": "1248f5629262db15006c294b463a86513795f2ef7bc678d7ce1a78e1150aac85",
+        "bytes": 1052
+      },
+      "actual_stderr": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\attempts\\001-ReindexSampling\\compiler.stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      },
+      "current_output_artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\ReindexSampling.olean",
+          "sha256": "8ddc7b293e4fb3e2922fb22e426383620ad6fa7be69fa70ffae4ae9b2262fe99",
+          "bytes": 311280
+        }
+      ],
+      "frozen_runner_code": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\attempts\\001-ReindexSampling\\runner.py",
+        "sha256": "89e9c86b63883bed647b6702c68a1f60c228e9c644f7d9dffd1c078b861b3df8",
+        "bytes": 12543
+      },
+      "actual_selected_axiom_outputs": [
+        {
+          "endpoint": "OpenMathReview.Sampling.l2_opNorm_row_equiv",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        },
+        {
+          "endpoint": "OpenMathReview.Sampling.finiteRowColumnSample_univ_norm",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        },
+        {
+          "endpoint": "OpenMathReview.Sampling.actual_finite_row_column_sample_norm_tail",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        }
+      ],
+      "actual_source_exit": 0,
+      "actual_seconds": 11.75,
+      "B22_scope_complete": false,
+      "BM_scope_complete": false
+    },
+    {
+      "module": "SampledColumnEnergy",
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\SampledColumnEnergy.lean",
+        "sha256": "4dabe1e21779506c3648fd411a13480af4ab025322110738ef568005069d5b81",
+        "bytes": 3671
+      },
+      "source_sha256": "4dabe1e21779506c3648fd411a13480af4ab025322110738ef568005069d5b81",
+      "actual_PASS_receipt": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\attempts\\001-SampledColumnEnergy\\actual_invocation.json",
+        "sha256": "7f6bb9b6425648eb77bcaadbabbaf72430a0d28bd0b1a96cf72da8122436e76e",
+        "bytes": 35024
+      },
+      "actual_PASS_receipt_sha256": "7f6bb9b6425648eb77bcaadbabbaf72430a0d28bd0b1a96cf72da8122436e76e",
+      "actual_command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-Dpp.unicode.fun=true",
+        "-DautoImplicit=false",
+        "-o",
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\SampledColumnEnergy.olean",
+        "SampledColumnEnergy.lean"
+      ],
+      "runtime": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+        "sha256": "af49bacfabaa1fea71332ca0feae0fa1a60912219d5902291adc79f905bffb8d",
+        "bytes": 83456
+      },
+      "guard_binding": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\shared_guard.py",
+        "sha256": "29578665ab4f1336e8164a547872119939c6a0b86ceafbadcd36f9859bc367f2",
+        "bytes": 9243
+      },
+      "receipt_guard": {
+        "state": "PASS",
+        "exit": 0,
+        "attempted": true,
+        "started_utc": "2026-10-07T16:40:32.770312+00:00",
+        "finished_utc": "2026-10-07T16:40:45.406090+00:00",
+        "seconds": 12.64,
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 17179869184,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 2147483648,
+          "own_job_private_bytes": 13958643712,
+          "own_process_private_bytes": 13958643712,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 1800
+        },
+        "minimum_disk_free_bytes": 10965839872,
+        "minimum_physical_available_bytes": 11393216512,
+        "minimum_available_commit_bytes": 14214430720,
+        "job_peak_process_private_bytes": 4157566976,
+        "job_peak_aggregate_private_bytes": 4158828544,
+        "polled_peak_tree_private_bytes": 4158103552,
+        "polled_peak_tree_rss_bytes": 1833648128,
+        "own_job_assignment_before_resume": "PASS",
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed"
+      },
+      "actual_stdout": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\attempts\\001-SampledColumnEnergy\\compiler.stdout.txt",
+        "sha256": "7a0107380bdff3378b09d56b9b942e888eca8c992d7f8b41dbb7303c30cf3e9e",
+        "bytes": 817
+      },
+      "actual_stderr": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\attempts\\001-SampledColumnEnergy\\compiler.stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      },
+      "current_output_artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\SampledColumnEnergy.olean",
+          "sha256": "c543d4ed76882707df0563ae716055a6ba99a85a297d16268d5a52f2948a8eca",
+          "bytes": 300624
+        }
+      ],
+      "frozen_runner_code": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\attempts\\001-SampledColumnEnergy\\runner.py",
+        "sha256": "89e9c86b63883bed647b6702c68a1f60c228e9c644f7d9dffd1c078b861b3df8",
+        "bytes": 12543
+      },
+      "actual_selected_axiom_outputs": [
+        {
+          "endpoint": "OpenMathReview.Sampling.actual_sampled_column_energy",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        },
+        {
+          "endpoint": "OpenMathReview.Sampling.binary_regular_degree_le_order",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        },
+        {
+          "endpoint": "OpenMathReview.Sampling.actual_sampled_column_energy_le",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        }
+      ],
+      "actual_source_exit": 0,
+      "actual_seconds": 12.64,
+      "B22_scope_complete": false,
+      "BM_scope_complete": false
+    },
+    {
+      "module": "SamplingNumerics",
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\SamplingNumerics.lean",
+        "sha256": "e1f7e05fb96cc263d1db339cc8a9b7d302b47b78f628b056325e018e1371aec3",
+        "bytes": 3301
+      },
+      "source_sha256": "e1f7e05fb96cc263d1db339cc8a9b7d302b47b78f628b056325e018e1371aec3",
+      "actual_PASS_receipt": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\attempts\\002-SamplingNumerics\\actual_invocation.json",
+        "sha256": "5ffd66b2490f9cb46736dd1df9f094594895eefec9e23a31569620af2f52665f",
+        "bytes": 37682
+      },
+      "actual_PASS_receipt_sha256": "5ffd66b2490f9cb46736dd1df9f094594895eefec9e23a31569620af2f52665f",
+      "actual_command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-Dpp.unicode.fun=true",
+        "-DautoImplicit=false",
+        "-o",
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\SamplingNumerics.olean",
+        "SamplingNumerics.lean"
+      ],
+      "runtime": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+        "sha256": "af49bacfabaa1fea71332ca0feae0fa1a60912219d5902291adc79f905bffb8d",
+        "bytes": 83456
+      },
+      "guard_binding": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\shared_guard.py",
+        "sha256": "29578665ab4f1336e8164a547872119939c6a0b86ceafbadcd36f9859bc367f2",
+        "bytes": 9243
+      },
+      "receipt_guard": {
+        "state": "PASS",
+        "exit": 0,
+        "attempted": true,
+        "started_utc": "2026-10-07T17:13:16.077970+00:00",
+        "finished_utc": "2026-10-07T17:13:28.661137+00:00",
+        "seconds": 12.578,
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 17179869184,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 2147483648,
+          "own_job_private_bytes": 13958643712,
+          "own_process_private_bytes": 13958643712,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 1800
+        },
+        "minimum_disk_free_bytes": 10851901440,
+        "minimum_physical_available_bytes": 12710486016,
+        "minimum_available_commit_bytes": 14496702464,
+        "job_peak_process_private_bytes": 4164919296,
+        "job_peak_aggregate_private_bytes": 4166205440,
+        "polled_peak_tree_private_bytes": 4153696256,
+        "polled_peak_tree_rss_bytes": 1834287104,
+        "own_job_assignment_before_resume": "PASS",
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed"
+      },
+      "actual_stdout": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\attempts\\002-SamplingNumerics\\compiler.stdout.txt",
+        "sha256": "84897e77238f2c329e8980681b7a8197849c5faf3b29fd34fe5dea5e8c33ca6e",
+        "bytes": 659
+      },
+      "actual_stderr": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\attempts\\002-SamplingNumerics\\compiler.stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      },
+      "current_output_artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\SamplingNumerics.olean",
+          "sha256": "80ef1bc362f90113bcb9cec648d5ae37199a5e73bf45151dbf1404ef4b8ebfd4",
+          "bytes": 338664
+        }
+      ],
+      "frozen_runner_code": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\attempts\\002-SamplingNumerics\\runner.py",
+        "sha256": "478166d51eb33c33250d39ca19107d90ae0055e644db589b5b86cf98a561fc83",
+        "bytes": 14048
+      },
+      "actual_selected_axiom_outputs": [
+        {
+          "endpoint": "OpenMathReview.Sampling.two_shore_noise_le_half_loss",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        },
+        {
+          "endpoint": "OpenMathReview.Sampling.two_shore_probability_budget",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        }
+      ],
+      "actual_source_exit": 0,
+      "actual_seconds": 12.578,
+      "B22_scope_complete": false,
+      "BM_scope_complete": false
+    },
+    {
+      "module": "SpectralCentering",
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\SpectralCentering.lean",
+        "sha256": "4ce8572013c2f8e623d544029938bb7bfa96bf70c672cd4b1abf82e054a737c2",
+        "bytes": 6755
+      },
+      "source_sha256": "4ce8572013c2f8e623d544029938bb7bfa96bf70c672cd4b1abf82e054a737c2",
+      "actual_PASS_receipt": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\attempts\\002-SpectralCentering\\actual_invocation.json",
+        "sha256": "93c65b31046531564fa618d7c6b10617f808213592a3fcd72b1e94c00d3c5ae0",
+        "bytes": 32050
+      },
+      "actual_PASS_receipt_sha256": "93c65b31046531564fa618d7c6b10617f808213592a3fcd72b1e94c00d3c5ae0",
+      "actual_command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-Dpp.unicode.fun=true",
+        "-DautoImplicit=false",
+        "-o",
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\SpectralCentering.olean",
+        "SpectralCentering.lean"
+      ],
+      "runtime": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+        "sha256": "af49bacfabaa1fea71332ca0feae0fa1a60912219d5902291adc79f905bffb8d",
+        "bytes": 83456
+      },
+      "guard_binding": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\shared_guard.py",
+        "sha256": "29578665ab4f1336e8164a547872119939c6a0b86ceafbadcd36f9859bc367f2",
+        "bytes": 9243
+      },
+      "receipt_guard": {
+        "state": "PASS",
+        "exit": 0,
+        "attempted": true,
+        "started_utc": "2026-10-07T17:02:49.963786+00:00",
+        "finished_utc": "2026-10-07T17:03:03.371899+00:00",
+        "seconds": 13.406,
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 17179869184,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 2147483648,
+          "own_job_private_bytes": 13958643712,
+          "own_process_private_bytes": 13958643712,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 1800
+        },
+        "minimum_disk_free_bytes": 10859634688,
+        "minimum_physical_available_bytes": 12253470720,
+        "minimum_available_commit_bytes": 14390095872,
+        "job_peak_process_private_bytes": 4166012928,
+        "job_peak_aggregate_private_bytes": 4167278592,
+        "polled_peak_tree_private_bytes": 4155740160,
+        "polled_peak_tree_rss_bytes": 1845096448,
+        "own_job_assignment_before_resume": "PASS",
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed"
+      },
+      "actual_stdout": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\attempts\\002-SpectralCentering\\compiler.stdout.txt",
+        "sha256": "7a41182c0e45ac558e78aa2551f754cffbef53f3849066c59d9c2eb38749c6dc",
+        "bytes": 2159
+      },
+      "actual_stderr": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\attempts\\002-SpectralCentering\\compiler.stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      },
+      "current_output_artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\SpectralCentering.olean",
+          "sha256": "66940b05c6b4aedcc256c078d7bcf3f115bb9c23bba11c8f96f340e0748d70dd",
+          "bytes": 503816
+        }
+      ],
+      "frozen_runner_code": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\attempts\\002-SpectralCentering\\runner.py",
+        "sha256": "478166d51eb33c33250d39ca19107d90ae0055e644db589b5b86cf98a561fc83",
+        "bytes": 14048
+      },
+      "actual_selected_axiom_outputs": [
+        {
+          "endpoint": "OpenMathReview.Sampling.gram_top_eigenvector_span",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        },
+        {
+          "endpoint": "OpenMathReview.Sampling.singular_norm_on_top_orthogonal",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        },
+        {
+          "endpoint": "OpenMathReview.Sampling.spectral_centered_operator_bound",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        }
+      ],
+      "actual_source_exit": 0,
+      "actual_seconds": 13.406,
+      "B22_scope_complete": false,
+      "BM_scope_complete": false
+    },
+    {
+      "module": "SpectralRankOne",
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\SpectralRankOne.lean",
+        "sha256": "24c7b2c5962ab85092abc1b60d137db14da2e4eb4d83efb8635e04e42a730868",
+        "bytes": 5303
+      },
+      "source_sha256": "24c7b2c5962ab85092abc1b60d137db14da2e4eb4d83efb8635e04e42a730868",
+      "actual_PASS_receipt": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\attempts\\002-SpectralRankOne\\actual_invocation.json",
+        "sha256": "48e4c92eb66707da5f241358bfd282495c8334e252865d5c5ae46f03df13fd21",
+        "bytes": 31045
+      },
+      "actual_PASS_receipt_sha256": "48e4c92eb66707da5f241358bfd282495c8334e252865d5c5ae46f03df13fd21",
+      "actual_command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-Dpp.unicode.fun=true",
+        "-DautoImplicit=false",
+        "-o",
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\SpectralRankOne.olean",
+        "SpectralRankOne.lean"
+      ],
+      "runtime": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+        "sha256": "af49bacfabaa1fea71332ca0feae0fa1a60912219d5902291adc79f905bffb8d",
+        "bytes": 83456
+      },
+      "guard_binding": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\shared_guard.py",
+        "sha256": "29578665ab4f1336e8164a547872119939c6a0b86ceafbadcd36f9859bc367f2",
+        "bytes": 9243
+      },
+      "receipt_guard": {
+        "state": "PASS",
+        "exit": 0,
+        "attempted": true,
+        "started_utc": "2026-10-07T17:00:25.273792+00:00",
+        "finished_utc": "2026-10-07T17:00:38.086949+00:00",
+        "seconds": 12.813,
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 17179869184,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 2147483648,
+          "own_job_private_bytes": 13958643712,
+          "own_process_private_bytes": 13958643712,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 1800
+        },
+        "minimum_disk_free_bytes": 10859012096,
+        "minimum_physical_available_bytes": 12379877376,
+        "minimum_available_commit_bytes": 14613045248,
+        "job_peak_process_private_bytes": 4159508480,
+        "job_peak_aggregate_private_bytes": 4160774144,
+        "polled_peak_tree_private_bytes": 4156039168,
+        "polled_peak_tree_rss_bytes": 1835429888,
+        "own_job_assignment_before_resume": "PASS",
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed"
+      },
+      "actual_stdout": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\attempts\\002-SpectralRankOne\\compiler.stdout.txt",
+        "sha256": "608e539233f1b7505cbcaa67cac2cd6bd241ffd05712ce13dcccc7a0abd6e8c5",
+        "bytes": 652
+      },
+      "actual_stderr": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\attempts\\002-SpectralRankOne\\compiler.stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      },
+      "current_output_artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\SpectralRankOne.olean",
+          "sha256": "dc81d9d8ebec87178fe7cc19f6f203622e733d864ee6cc102e9e4403bad8f462",
+          "bytes": 492888
+        }
+      ],
+      "frozen_runner_code": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\attempts\\002-SpectralRankOne\\runner.py",
+        "sha256": "478166d51eb33c33250d39ca19107d90ae0055e644db589b5b86cf98a561fc83",
+        "bytes": 14048
+      },
+      "actual_selected_axiom_outputs": [
+        {
+          "endpoint": "OpenMathReview.Sampling.spectral_rank_error_lower",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        },
+        {
+          "endpoint": "OpenMathReview.Sampling.secondSingularValue_rank_one_perturbation",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        },
+        {
+          "endpoint": "OpenMathReview.Sampling.secondSingularValue_constant_perturbation",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        }
+      ],
+      "actual_source_exit": 0,
+      "actual_seconds": 12.813,
+      "B22_scope_complete": false,
+      "BM_scope_complete": false
+    },
+    {
+      "module": "UniformConditioning",
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\UniformConditioning.lean",
+        "sha256": "f3f88b434243c63595f24800e7c40d6adf73914bce02857620fa072a8751f1df",
+        "bytes": 8839
+      },
+      "source_sha256": "f3f88b434243c63595f24800e7c40d6adf73914bce02857620fa072a8751f1df",
+      "actual_PASS_receipt": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\attempts\\003-UniformConditioning\\actual_invocation.json",
+        "sha256": "f6248a4411ab7208b82135e1c4be27a69dc189f3e5709a104ddb134f038e7b8c",
+        "bytes": 37183
+      },
+      "actual_PASS_receipt_sha256": "f6248a4411ab7208b82135e1c4be27a69dc189f3e5709a104ddb134f038e7b8c",
+      "actual_command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-Dpp.unicode.fun=true",
+        "-DautoImplicit=false",
+        "-o",
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\UniformConditioning.olean",
+        "UniformConditioning.lean"
+      ],
+      "runtime": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+        "sha256": "af49bacfabaa1fea71332ca0feae0fa1a60912219d5902291adc79f905bffb8d",
+        "bytes": 83456
+      },
+      "guard_binding": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\shared_guard.py",
+        "sha256": "29578665ab4f1336e8164a547872119939c6a0b86ceafbadcd36f9859bc367f2",
+        "bytes": 9243
+      },
+      "receipt_guard": {
+        "state": "PASS",
+        "exit": 0,
+        "attempted": true,
+        "started_utc": "2026-10-07T16:20:58.826831+00:00",
+        "finished_utc": "2026-10-07T16:21:11.106910+00:00",
+        "seconds": 12.282,
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 17179869184,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 2147483648,
+          "own_job_private_bytes": 13958643712,
+          "own_process_private_bytes": 13958643712,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 1800
+        },
+        "minimum_disk_free_bytes": 10976608256,
+        "minimum_physical_available_bytes": 11979350016,
+        "minimum_available_commit_bytes": 14583369728,
+        "job_peak_process_private_bytes": 4165365760,
+        "job_peak_aggregate_private_bytes": 4166631424,
+        "polled_peak_tree_private_bytes": 4161990656,
+        "polled_peak_tree_rss_bytes": 1854103552,
+        "own_job_assignment_before_resume": "PASS",
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed"
+      },
+      "actual_stdout": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\attempts\\003-UniformConditioning\\compiler.stdout.txt",
+        "sha256": "1af0d1f1a0fed79996545db19ab167998434daf028a2a6c501321a214dc3858f",
+        "bytes": 2148
+      },
+      "actual_stderr": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\attempts\\003-UniformConditioning\\compiler.stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      },
+      "current_output_artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\UniformConditioning.olean",
+          "sha256": "7fa26cf2a31eda1d021f29e60f5d55cdc8ec1143b56c3c35d50b6eaf56dc6400",
+          "bytes": 400832
+        }
+      ],
+      "frozen_runner_code": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\attempts\\003-UniformConditioning\\runner.py",
+        "sha256": "7de75766d44cd07e9a200341b65fb21af28883f201dff84306b21df68ba837c2",
+        "bytes": 11419
+      },
+      "actual_selected_axiom_outputs": [
+        {
+          "endpoint": "OpenMathReview.Sampling.fixedCountSelectors_card",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        },
+        {
+          "endpoint": "OpenMathReview.Sampling.bernoulliColumnLaw_real_fixed_count_lower",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        },
+        {
+          "endpoint": "OpenMathReview.Sampling.uniformFixedColumnLaw_actual_subset_probability",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        },
+        {
+          "endpoint": "OpenMathReview.Sampling.uniformFixedColumnLaw_real_as_conditioning",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        },
+        {
+          "endpoint": "OpenMathReview.Sampling.uniformFixedColumnLaw_event_le",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        }
+      ],
+      "actual_source_exit": 0,
+      "actual_seconds": 12.282,
+      "B22_scope_complete": false,
+      "BM_scope_complete": false
+    },
+    {
+      "module": "UniformDegree",
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\UniformDegree.lean",
+        "sha256": "3bb9bbb4e39466d1eaff88c4bd2c87a89baa115cd442101e0325b85a4a16e26e",
+        "bytes": 3402
+      },
+      "source_sha256": "3bb9bbb4e39466d1eaff88c4bd2c87a89baa115cd442101e0325b85a4a16e26e",
+      "actual_PASS_receipt": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\attempts\\001-UniformDegree\\actual_invocation.json",
+        "sha256": "baa66ea7d2ef75b5ddc09785dba7055488f345aec8d7477070b3e0f2ad849912",
+        "bytes": 34585
+      },
+      "actual_PASS_receipt_sha256": "baa66ea7d2ef75b5ddc09785dba7055488f345aec8d7477070b3e0f2ad849912",
+      "actual_command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-Dpp.unicode.fun=true",
+        "-DautoImplicit=false",
+        "-o",
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\UniformDegree.olean",
+        "UniformDegree.lean"
+      ],
+      "runtime": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+        "sha256": "af49bacfabaa1fea71332ca0feae0fa1a60912219d5902291adc79f905bffb8d",
+        "bytes": 83456
+      },
+      "guard_binding": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\shared_guard.py",
+        "sha256": "29578665ab4f1336e8164a547872119939c6a0b86ceafbadcd36f9859bc367f2",
+        "bytes": 9243
+      },
+      "receipt_guard": {
+        "state": "PASS",
+        "exit": 0,
+        "attempted": true,
+        "started_utc": "2026-10-07T17:07:39.871643+00:00",
+        "finished_utc": "2026-10-07T17:07:51.391616+00:00",
+        "seconds": 11.516,
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 17179869184,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 2147483648,
+          "own_job_private_bytes": 13958643712,
+          "own_process_private_bytes": 13958643712,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 1800
+        },
+        "minimum_disk_free_bytes": 10855239680,
+        "minimum_physical_available_bytes": 12612767744,
+        "minimum_available_commit_bytes": 14444994560,
+        "job_peak_process_private_bytes": 4161445888,
+        "job_peak_aggregate_private_bytes": 4162695168,
+        "polled_peak_tree_private_bytes": 4162695168,
+        "polled_peak_tree_rss_bytes": 1831198720,
+        "own_job_assignment_before_resume": "PASS",
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed"
+      },
+      "actual_stdout": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\attempts\\001-UniformDegree\\compiler.stdout.txt",
+        "sha256": "76b4c2db67dd96d0be7cea9b3890db03f5be271a112eedbdacd7fcb570fee4a8",
+        "bytes": 719
+      },
+      "actual_stderr": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\attempts\\001-UniformDegree\\compiler.stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      },
+      "current_output_artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\UniformDegree.olean",
+          "sha256": "32686bf4ff68700c9a1113110839396836a1857e5a9f5650c340a33bb802ed3a",
+          "bytes": 200088
+        }
+      ],
+      "frozen_runner_code": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\attempts\\001-UniformDegree\\runner.py",
+        "sha256": "478166d51eb33c33250d39ca19107d90ae0055e644db589b5b86cf98a561fc83",
+        "bytes": 14048
+      },
+      "actual_selected_axiom_outputs": [
+        {
+          "endpoint": "OpenMathReview.Sampling.actual_full_selected_degree_tail_zero",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        },
+        {
+          "endpoint": "OpenMathReview.Sampling.actual_uniform_selected_degree_tail",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        }
+      ],
+      "actual_source_exit": 0,
+      "actual_seconds": 11.516,
+      "B22_scope_complete": false,
+      "BM_scope_complete": false
+    },
+    {
+      "module": "UniformOperatorSample",
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\UniformOperatorSample.lean",
+        "sha256": "441c42ba358588887eb5aba58e12a34f081f3210369718f108757a07690b78d2",
+        "bytes": 5038
+      },
+      "source_sha256": "441c42ba358588887eb5aba58e12a34f081f3210369718f108757a07690b78d2",
+      "actual_PASS_receipt": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\attempts\\002-UniformOperatorSample\\actual_invocation.json",
+        "sha256": "0113d7d700dfa735ec6616e311d8419029a2246b2a3f35032414dba08696709f",
+        "bytes": 36256
+      },
+      "actual_PASS_receipt_sha256": "0113d7d700dfa735ec6616e311d8419029a2246b2a3f35032414dba08696709f",
+      "actual_command": [
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+        "-j1",
+        "-Dpp.unicode.fun=true",
+        "-DautoImplicit=false",
+        "-o",
+        "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\UniformOperatorSample.olean",
+        "UniformOperatorSample.lean"
+      ],
+      "runtime": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+        "sha256": "af49bacfabaa1fea71332ca0feae0fa1a60912219d5902291adc79f905bffb8d",
+        "bytes": 83456
+      },
+      "guard_binding": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\shared_guard.py",
+        "sha256": "29578665ab4f1336e8164a547872119939c6a0b86ceafbadcd36f9859bc367f2",
+        "bytes": 9243
+      },
+      "receipt_guard": {
+        "state": "PASS",
+        "exit": 0,
+        "attempted": true,
+        "started_utc": "2026-10-07T16:33:13.912281+00:00",
+        "finished_utc": "2026-10-07T16:33:25.693614+00:00",
+        "seconds": 11.781,
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 17179869184,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 2147483648,
+          "own_job_private_bytes": 13958643712,
+          "own_process_private_bytes": 13958643712,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 1800
+        },
+        "minimum_disk_free_bytes": 10972516352,
+        "minimum_physical_available_bytes": 12063428608,
+        "minimum_available_commit_bytes": 14455767040,
+        "job_peak_process_private_bytes": 4163067904,
+        "job_peak_aggregate_private_bytes": 4164325376,
+        "polled_peak_tree_private_bytes": 4163289088,
+        "polled_peak_tree_rss_bytes": 1831489536,
+        "own_job_assignment_before_resume": "PASS",
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed"
+      },
+      "actual_stdout": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\attempts\\002-UniformOperatorSample\\compiler.stdout.txt",
+        "sha256": "47fd5be74b0d4cf3491993b4921aa70fd080d425186e5cd16f0901a9ba525e89",
+        "bytes": 1111
+      },
+      "actual_stderr": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\attempts\\002-UniformOperatorSample\\compiler.stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      },
+      "current_output_artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\UniformOperatorSample.olean",
+          "sha256": "ff8c218e97be73b26fc3fbef11c3bf5b1fa5b31dac7a03d2aa147fddedc98975",
+          "bytes": 246312
+        }
+      ],
+      "frozen_runner_code": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\attempts\\002-UniformOperatorSample\\runner.py",
+        "sha256": "89e9c86b63883bed647b6702c68a1f60c228e9c644f7d9dffd1c078b861b3df8",
+        "bytes": 12543
+      },
+      "actual_selected_axiom_outputs": [
+        {
+          "endpoint": "OpenMathReview.Sampling.actual_fixed_column_sample_norm_tail",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        },
+        {
+          "endpoint": "OpenMathReview.Sampling.actual_full_column_sample_norm_tail_zero",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        },
+        {
+          "endpoint": "OpenMathReview.Sampling.actual_positive_fixed_column_sample_norm_tail",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        }
+      ],
+      "actual_source_exit": 0,
+      "actual_seconds": 11.781,
+      "B22_scope_complete": false,
+      "BM_scope_complete": false
+    }
+  ],
+  "failed_draft_receipt_bindings_excluded_from_module_list": [
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\attempts\\001-BernoulliDegree\\actual_invocation.json",
+      "sha256": "058ae9747ce3fa09d089219f1bfab9d97f5a8d6774d6ab5c79c16195f162967e",
+      "bytes": 38554
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\attempts\\001-BernoulliGram\\actual_invocation.json",
+      "sha256": "bf11a8e1eb699f73cf921af4857bc4a035d15f43c2ce593c40ec78025077e4b8",
+      "bytes": 37516
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\attempts\\001-BernoulliOperatorSample\\actual_invocation.json",
+      "sha256": "c4b9951672fe3ae6366cb290499d1c21f3b3de89bf04edffd16298aebe476f8e",
+      "bytes": 33078
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\attempts\\001-BinomialMode\\actual_invocation.json",
+      "sha256": "ddd5f8e52ef879826572d18fb6e73fa721b57d9f70c92ee98edde116bbd8986c",
+      "bytes": 33230
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\attempts\\001-MatrixSampling\\actual_invocation.json",
+      "sha256": "9e9a67b933b6200c39e524b9244cfa757fafbf87ce0a7031db382fec779865d4",
+      "bytes": 32897
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\attempts\\001-MatrixVarianceBounds\\actual_invocation.json",
+      "sha256": "1a2dcf9cecf9e12c12951f8c4ca3dca00f3c3534d7bb156069ba349436a8372d",
+      "bytes": 32523
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\attempts\\001-RegularCentering\\actual_invocation.json",
+      "sha256": "b220dd13c4f1e1d940cc263eaa124bf2556ae7164422b2564527f78d464d15c9",
+      "bytes": 32005
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\attempts\\001-SamplingNumerics\\actual_invocation.json",
+      "sha256": "1957be433686bd70d1c957e9eadd6dca06d9937e5bbe4d6387a02334f45bfd48",
+      "bytes": 38018
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\attempts\\001-SpectralCentering\\actual_invocation.json",
+      "sha256": "9ccadc745bc8294043a718d2403e9f345486aad4dfa6e4ddea2ac9e1b5f571ad",
+      "bytes": 33422
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\attempts\\001-SpectralRankOne\\actual_invocation.json",
+      "sha256": "ac42ec3671e1cd617e84a614a3918708c1ae2b41d5eb88ec22b7891a3f93a205",
+      "bytes": 31334
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\attempts\\001-UniformConditioning\\actual_invocation.json",
+      "sha256": "8965203e6e796eb2bde8987a7f29c1b4c6337cd78ddfd98f8e69e942d15b342b",
+      "bytes": 39259
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\attempts\\001-UniformOperatorSample\\actual_invocation.json",
+      "sha256": "2bb664be4698495b6c3edcca5d2e5b9a76636cfbdbf8b067ba454541c4adf93d",
+      "bytes": 36434
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\attempts\\002-BernoulliDegree\\actual_invocation.json",
+      "sha256": "fd437c3aac94ff0a294c585e1b04d076200811cc233630a6e1e86dcb90622984",
+      "bytes": 32231
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\attempts\\002-MatrixSampling\\actual_invocation.json",
+      "sha256": "1b4aa5dfcc84c03533d9743856ad3c18fa504c91d8d4254b980587bb5cbbdc27",
+      "bytes": 29036
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\attempts\\002-MatrixVarianceBounds\\actual_invocation.json",
+      "sha256": "9ed4bb25562ef348c2ea079ed1ae855fda770a7f295efb4fabbd6fa02d992dae",
+      "bytes": 32106
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SAMPLING\\attempts\\002-UniformConditioning\\actual_invocation.json",
+      "sha256": "41aa31fe6633aee93c9af457d7d279366e91fd2e43baad62cdeb22c813f0ac74",
+      "bytes": 37694
+    }
+  ],
+  "B22_complete": false,
+  "BM_Hamiltonicity_complete": false,
+  "qualification_Lean_invocations": 0,
+  "scientific_source_runtime_guard_receipt_mutations": false
+}

@@ -1,0 +1,19 @@
+BernoulliColumnSample.lean:45:31: warning: This simp argument is unused:
+  h
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [bit]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'OpenMathReview.Sampling.columnSample_gram_eq_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OpenMathReview.Sampling.actualSelectedGram_eq_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OpenMathReview.Sampling.actualSelectedGram_centered_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OpenMathReview.Sampling.actual_column_sample_gram_deviation' depends on axioms: [propext, Classical.choice, Quot.sound]
+@actual_column_sample_gram_deviation : ∀ {r s : ℕ},
+  0 < r →
+    ∀ (F : Matrix (Fin r) (Fin s) ℝ) (p : ↑unitInterval) (c : ℝ),
+      (∀ (j : Fin s), columnEnergy F j ≤ c ^ 2) →
+        ∀ (t : ℝ),
+          0 ≤ t →
+            ((bernoulliColumnLaw s p) {ω | ‖actualSelectedGram F ω - ↑p • (F * Fᵀ)‖ ≥ t}).toReal ≤
+              RMT.matrixBernsteinTailBound r ‖(↑p * (1 - ↑p)) • ∑ j, columnEnergy F j • columnGram F j‖ (c ^ 2) t

@@ -1,0 +1,41 @@
+UniformConditioning.lean:74:12: warning: This simp argument is unused:
+  ← measureReal_def
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [bernoulliMeasure_real_apply, h, Bool.false_eq_true]
+
+Note: Simp arguments with `←` have the additional effect of removing the other direction from the simp set, even if the simp argument itself is unused. If the hint above does not work, try replacing `←` with `-` to only get that effect and silence this warning.
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+UniformConditioning.lean:74:31: warning: This simp argument is unused:
+  bernoulliMeasure_real_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [← measureReal_def, h, Bool.false_eq_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+UniformConditioning.lean:74:60: warning: This simp argument is unused:
+  h
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [← measureReal_def, bernoulliMeasure_real_apply, Bool.false_eq_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+UniformConditioning.lean:133:13: warning: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+'OpenMathReview.Sampling.fixedCountSelectors_card' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OpenMathReview.Sampling.bernoulliColumnLaw_real_fixed_count_lower' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'OpenMathReview.Sampling.uniformFixedColumnLaw_actual_subset_probability' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'OpenMathReview.Sampling.uniformFixedColumnLaw_real_as_conditioning' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'OpenMathReview.Sampling.uniformFixedColumnLaw_event_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+uniformFixedColumnLaw_event_le : ∀ (s m : ℕ) (p : ↑unitInterval),
+  0 < ↑p →
+    ↑p < 1 →
+      ∀ (hm : m < s),
+        ↑p * ↑s = ↑m →
+          ∀ (E : Set (Fin s → Bool)), (uniformFixedColumnLaw s m ⋯).real E ≤ (↑s + 1) * (bernoulliColumnLaw s p).real E

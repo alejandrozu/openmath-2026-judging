@@ -1,0 +1,17 @@
+FiniteProductProbability.lean:32:0: warning: automatically included section variable(s) unused in theorem `OpenMathReview.Sampling.finite_product_singleton_real`:
+  [Fintype Ω]
+  [MeasurableSingletonClass Ω]
+  [MeasurableSingletonClass Λ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype Ω] [MeasurableSingletonClass Ω] [MeasurableSingletonClass Λ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+FiniteProductProbability.lean:59:4: warning: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+'OpenMathReview.Sampling.finite_product_real_fiber_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OpenMathReview.Sampling.finite_product_bad_fiber_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+@finite_product_bad_fiber_bound : ∀ {Ω : Type u_3} {Λ : Type u_4} [Fintype Ω] [Fintype Λ] [inst : MeasurableSpace Ω]
+  [inst_1 : MeasurableSpace Λ] [MeasurableSingletonClass Ω] [MeasurableSingletonClass Λ] (μ : Measure Ω) (ν : Measure Λ)
+  [IsProbabilityMeasure μ] [IsProbabilityMeasure ν] (E : Set (Ω × Λ)) (A : Set Ω) (b : ℝ),
+  0 ≤ b → (∀ ω ∉ A, ν.real {η | (ω, η) ∈ E} ≤ b) → (μ.prod ν).real E ≤ μ.real A + b

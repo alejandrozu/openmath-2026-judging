@@ -1,0 +1,2320 @@
+{
+  "status": "ACTUAL_KERNEL_VERIFIED_FULL_BALANCED_BIPARTITE_NEAR_REGULAR_LEMMA_F",
+  "checked_utc": "2026-10-07T16:16:29.800940+00:00",
+  "producer": {
+    "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\qualify_full_LemmaF_readonly.py",
+    "sha256": "ce202d3c2e098d7d3b9939b7cc62078175d6040536334364c915f69612b5b44e",
+    "bytes": 11777
+  },
+  "original_written_proof": {
+    "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\adjacent_robert_20261007\\source-repository\\findings\\supplement\\papers\\lemma-f\\LEMMA-F.md",
+    "sha256": "e11d4c9526ce772f145f76c696985280fa112e94b8500c30f2ae2df280cfea1a",
+    "bytes": 3195
+  },
+  "original_public_source_commit": "1efc324e155ef0b6a7081c5f695c6c825e7debef",
+  "actual_own_source_module_count": 9,
+  "actual_own_unique_endpoint_count": 15,
+  "actual_endpoint_outputs": [
+    {
+      "endpoint": "RobertPublishable.Factor.capacity_hall",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    },
+    {
+      "endpoint": "RobertPublishable.Factor.capacity_matching",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    },
+    {
+      "endpoint": "RobertPublishable.Factor.selected_left_degree",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    },
+    {
+      "endpoint": "RobertPublishable.Factor.selected_right_degree",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    },
+    {
+      "endpoint": "RobertPublishable.Factor.exists_regular_edge_set",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    },
+    {
+      "endpoint": "RobertPublishable.Factor.exists_spanning_regular_factor",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    },
+    {
+      "endpoint": "RobertPublishable.Factor.row_sum",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    },
+    {
+      "endpoint": "RobertPublishable.Factor.column_sum",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    },
+    {
+      "endpoint": "RobertPublishable.Factor.scalar_bounds",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    },
+    {
+      "endpoint": "RobertPublishable.Factor.no_small_cut_violation",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    },
+    {
+      "endpoint": "RobertPublishable.Factor.bipartite_cut_count",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    },
+    {
+      "endpoint": "RobertPublishable.Factor.near_regular_cut_condition",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    },
+    {
+      "endpoint": "RobertPublishable.Factor.lemma_F",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    },
+    {
+      "endpoint": "RobertPublishable.Factor.cutCount_iso",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    },
+    {
+      "endpoint": "RobertPublishable.Factor.lemma_F_of_balanced_partition",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    }
+  ],
+  "actual_modules": [
+    {
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\CapacityHall.lean",
+        "sha256": "af00832b5432e7d71f43a2a3b1c1f9a4816771135b2d5f39b4ccf79eacb053ff",
+        "bytes": 5184
+      },
+      "actual_receipt": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\logs\\CapacityHall-20261007T150050171520Z.json",
+        "sha256": "3605ed5c6688ed5c57f73e17efeb8b3a0665c10bf0db42dc9f14ac2538826d80",
+        "bytes": 8316
+      },
+      "actual_source_snapshot": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\logs\\CapacityHall-20261007T150050171520Z.source.lean",
+        "sha256": "af00832b5432e7d71f43a2a3b1c1f9a4816771135b2d5f39b4ccf79eacb053ff"
+      },
+      "actual_guard": {
+        "command": [
+          "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+          "-j1",
+          "-Dpp.unicode.fun=true",
+          "-DautoImplicit=false",
+          "-DrelaxedAutoImplicit=false",
+          "-Dweak.linter.style.copyright.formalConjectures=false",
+          "-Dweak.linter.style.namespace=true",
+          "-Dweak.linter.style.stubs=true",
+          "-Dweak.linter.style.openClassical=true",
+          "-o",
+          "CapacityHall.olean",
+          "CapacityHall.lean"
+        ],
+        "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR",
+        "started_utc": "2026-10-07T15:00:50.182066+00:00",
+        "attempted": true,
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 17179869184,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 2147483648,
+          "own_job_private_bytes": 13958643712,
+          "own_process_private_bytes": 13958643712,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 600
+        },
+        "minimum_disk_free_bytes": 11018682368,
+        "initial_system_memory_snapshot": {
+          "free_physical_bytes": 13896089600,
+          "total_physical_bytes": 34024419328,
+          "available_commit_bytes": 18662760448,
+          "total_commit_limit_bytes": 45444141056
+        },
+        "minimum_physical_available_bytes": 12820045824,
+        "minimum_available_commit_bytes": 16303026176,
+        "root_pid": 30328,
+        "own_job_assignment_before_resume": "PASS",
+        "exit": 0,
+        "job_peak_process_private_bytes": 2149228544,
+        "job_peak_aggregate_private_bytes": 2150490112,
+        "state": "PASS",
+        "finished_utc": "2026-10-07T15:00:58.626828+00:00",
+        "seconds": 8.437,
+        "polled_peak_tree_private_bytes": 2149109760,
+        "polled_peak_tree_rss_bytes": 951689216,
+        "counter_samples": 33,
+        "observed_own_processes": {
+          "30328": {
+            "exe": "lean.exe",
+            "peak_private_bytes": 2147848192,
+            "peak_rss_bytes": 961011712
+          },
+          "27272": {
+            "exe": "conhost.exe",
+            "peak_private_bytes": 1261568,
+            "peak_rss_bytes": 7344128
+          }
+        },
+        "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\logs\\CapacityHall-20261007T150050171520Z.stdout.txt",
+        "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\logs\\CapacityHall-20261007T150050171520Z.stderr.txt",
+        "stdout_sha256": "5030d4f9cb6ce2269437c243c1c988e83b3243b1438f4b0de2e5493d5dac5ce4",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_excerpt": "CapacityHall.lean:17:12: warning: please avoid 'open (scoped) Classical' statements: this can hide theorem statements which would be better stated with explicit decidability statements.\nInstead, use `open Classical in` for definitions or instances, the `classical` tactic for proofs.\nFor theorem statements, either add missing decidability assumptions or use `open Classical in`.\n\nNote: This linter can be disabled with `set_option linter.style.openClassical false`\nCapacityHall.lean:107:4: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n'RobertPublishable.Factor.capacity_hall' depends on axioms: [propext, Classical.choice, Quot.sound]\n'RobertPublishable.Factor.capacity_matching' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+        "stderr_excerpt": ""
+      },
+      "rawlogs": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\logs\\CapacityHall-20261007T150050171520Z.stdout.txt",
+          "sha256": "5030d4f9cb6ce2269437c243c1c988e83b3243b1438f4b0de2e5493d5dac5ce4",
+          "bytes": 817
+        },
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\logs\\CapacityHall-20261007T150050171520Z.stderr.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        }
+      ],
+      "actual_current_outputs": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\CapacityHall.olean",
+          "sha256": "cca863fd389908819ddfb8c49d7be335ff11222e4aee2f3ce9b731e4a53cdcca",
+          "bytes": 279264
+        }
+      ],
+      "actual_axiom_outputs": [
+        {
+          "endpoint": "RobertPublishable.Factor.capacity_hall",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        },
+        {
+          "endpoint": "RobertPublishable.Factor.capacity_matching",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        }
+      ]
+    },
+    {
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\FactorExtraction.lean",
+        "sha256": "c3e80a729da10513180d2707174c2326b186291ee7062ca746812923812a8b49",
+        "bytes": 6240
+      },
+      "actual_receipt": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\logs\\FactorExtraction-20261007T150145881579Z.json",
+        "sha256": "caa01c4fd73b2fe39660dce928d2dda5b1db5739dd4faa406384a459fa42e47c",
+        "bytes": 9608
+      },
+      "actual_source_snapshot": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\logs\\FactorExtraction-20261007T150145881579Z.source.lean",
+        "sha256": "c3e80a729da10513180d2707174c2326b186291ee7062ca746812923812a8b49"
+      },
+      "actual_guard": {
+        "command": [
+          "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+          "-j1",
+          "-Dpp.unicode.fun=true",
+          "-DautoImplicit=false",
+          "-DrelaxedAutoImplicit=false",
+          "-Dweak.linter.style.copyright.formalConjectures=false",
+          "-Dweak.linter.style.namespace=true",
+          "-Dweak.linter.style.stubs=true",
+          "-Dweak.linter.style.openClassical=true",
+          "-o",
+          "FactorExtraction.olean",
+          "FactorExtraction.lean"
+        ],
+        "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR",
+        "started_utc": "2026-10-07T15:01:45.890927+00:00",
+        "attempted": true,
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 17179869184,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 2147483648,
+          "own_job_private_bytes": 13958643712,
+          "own_process_private_bytes": 13958643712,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 600
+        },
+        "minimum_disk_free_bytes": 11018080256,
+        "initial_system_memory_snapshot": {
+          "free_physical_bytes": 14107234304,
+          "total_physical_bytes": 34024419328,
+          "available_commit_bytes": 18918055936,
+          "total_commit_limit_bytes": 45444141056
+        },
+        "minimum_physical_available_bytes": 13146013696,
+        "minimum_available_commit_bytes": 16779509760,
+        "root_pid": 25236,
+        "own_job_assignment_before_resume": "PASS",
+        "exit": 0,
+        "job_peak_process_private_bytes": 2172063744,
+        "job_peak_aggregate_private_bytes": 2173329408,
+        "state": "PASS",
+        "finished_utc": "2026-10-07T15:01:52.982457+00:00",
+        "seconds": 7.094,
+        "polled_peak_tree_private_bytes": 2172256256,
+        "polled_peak_tree_rss_bytes": 988430336,
+        "counter_samples": 28,
+        "observed_own_processes": {
+          "29912": {
+            "exe": "conhost.exe",
+            "peak_private_bytes": 1265664,
+            "peak_rss_bytes": 7344128
+          },
+          "25236": {
+            "exe": "lean.exe",
+            "peak_private_bytes": 2170990592,
+            "peak_rss_bytes": 981086208
+          }
+        },
+        "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\logs\\FactorExtraction-20261007T150145881579Z.stdout.txt",
+        "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\logs\\FactorExtraction-20261007T150145881579Z.stderr.txt",
+        "stdout_sha256": "5eb63e8a9098ce2ffbbf8dac8c4eaafbbed7a20e25ee12d7009edbeb19199d7b",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_excerpt": "FactorExtraction.lean:11:12: warning: please avoid 'open (scoped) Classical' statements: this can hide theorem statements which would be better stated with explicit decidability statements.\nInstead, use `open Classical in` for definitions or instances, the `classical` tactic for proofs.\nFor theorem statements, either add missing decidability assumptions or use `open Classical in`.\n\nNote: This linter can be disabled with `set_option linter.style.openClassical false`\nFactorExtraction.lean:18:0: warning: automatically included section variable(s) unused in theorem `RobertPublishable.Factor.left_exists`:\n  [DecidableEq P]\n  [DecidableEq Q]\n  [Fintype P]\n  [Fintype Q]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [DecidableEq P] [DecidableEq Q] [Fintype P] [Fintype Q] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`\nFactorExtraction.lean:62:0: warning: automatically included section variable(s) unused in theorem `RobertPublishable.Factor.right_exists`:\n  [DecidableEq P]\n  [DecidableEq Q]\n  [Fintype P]\n  [Fintype Q]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [DecidableEq P] [DecidableEq Q] [Fintype P] [Fintype Q] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`\n'RobertPublishable.Factor.selected_left_degree' depends on axioms: [propext, Classical.choice, Quot.sound]\n'RobertPublishable.Factor.selected_right_degree' depends on axioms: [propext, Classical.choice, Quot.sound]\n'RobertPublishable.Factor.exists_regular_edge_set' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+        "stderr_excerpt": ""
+      },
+      "rawlogs": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\logs\\FactorExtraction-20261007T150145881579Z.stdout.txt",
+          "sha256": "5eb63e8a9098ce2ffbbf8dac8c4eaafbbed7a20e25ee12d7009edbeb19199d7b",
+          "bytes": 1756
+        },
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\logs\\FactorExtraction-20261007T150145881579Z.stderr.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        }
+      ],
+      "actual_current_outputs": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\FactorExtraction.olean",
+          "sha256": "15a41e08a4b3b096f81c011b18142fc0bef780cc17fefadac482754b62bbf893",
+          "bytes": 261136
+        }
+      ],
+      "actual_axiom_outputs": [
+        {
+          "endpoint": "RobertPublishable.Factor.selected_left_degree",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        },
+        {
+          "endpoint": "RobertPublishable.Factor.selected_right_degree",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        },
+        {
+          "endpoint": "RobertPublishable.Factor.exists_regular_edge_set",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        }
+      ]
+    },
+    {
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\BipartiteFactor.lean",
+        "sha256": "47ec9e8376278b31444b18a5401452d5152dac47827643d6c440c254327e55e2",
+        "bytes": 3899
+      },
+      "actual_receipt": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\logs\\BipartiteFactor-20261007T150242769131Z.json",
+        "sha256": "b38da9ff6ab6109c93083f2629c8d7b1e37915b6d9be7346c2d569eb7b32355b",
+        "bytes": 10551
+      },
+      "actual_source_snapshot": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\logs\\BipartiteFactor-20261007T150242769131Z.source.lean",
+        "sha256": "47ec9e8376278b31444b18a5401452d5152dac47827643d6c440c254327e55e2"
+      },
+      "actual_guard": {
+        "command": [
+          "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+          "-j1",
+          "-Dpp.unicode.fun=true",
+          "-DautoImplicit=false",
+          "-DrelaxedAutoImplicit=false",
+          "-Dweak.linter.style.copyright.formalConjectures=false",
+          "-Dweak.linter.style.namespace=true",
+          "-Dweak.linter.style.stubs=true",
+          "-Dweak.linter.style.openClassical=true",
+          "-o",
+          "BipartiteFactor.olean",
+          "BipartiteFactor.lean"
+        ],
+        "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR",
+        "started_utc": "2026-10-07T15:02:42.777041+00:00",
+        "attempted": true,
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 17179869184,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 2147483648,
+          "own_job_private_bytes": 13958643712,
+          "own_process_private_bytes": 13958643712,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 600
+        },
+        "minimum_disk_free_bytes": 11014770688,
+        "initial_system_memory_snapshot": {
+          "free_physical_bytes": 14100504576,
+          "total_physical_bytes": 34024419328,
+          "available_commit_bytes": 18933239808,
+          "total_commit_limit_bytes": 45444141056
+        },
+        "minimum_physical_available_bytes": 13123342336,
+        "minimum_available_commit_bytes": 16766369792,
+        "root_pid": 30100,
+        "own_job_assignment_before_resume": "PASS",
+        "exit": 0,
+        "job_peak_process_private_bytes": 2191073280,
+        "job_peak_aggregate_private_bytes": 2192355328,
+        "state": "PASS",
+        "finished_utc": "2026-10-07T15:02:50.651953+00:00",
+        "seconds": 7.875,
+        "polled_peak_tree_private_bytes": 2180317184,
+        "polled_peak_tree_rss_bytes": 973373440,
+        "counter_samples": 31,
+        "observed_own_processes": {
+          "30100": {
+            "exe": "lean.exe",
+            "peak_private_bytes": 2179035136,
+            "peak_rss_bytes": 987955200
+          },
+          "31972": {
+            "exe": "conhost.exe",
+            "peak_private_bytes": 1282048,
+            "peak_rss_bytes": 7348224
+          }
+        },
+        "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\logs\\BipartiteFactor-20261007T150242769131Z.stdout.txt",
+        "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\logs\\BipartiteFactor-20261007T150242769131Z.stderr.txt",
+        "stdout_sha256": "bff269ac83a345806768d2402f58cd11c43f10723baf88d5a4bd9f306588e90a",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_excerpt": "BipartiteFactor.lean:10:12: warning: please avoid 'open (scoped) Classical' statements: this can hide theorem statements which would be better stated with explicit decidability statements.\nInstead, use `open Classical in` for definitions or instances, the `classical` tactic for proofs.\nFor theorem statements, either add missing decidability assumptions or use `open Classical in`.\n\nNote: This linter can be disabled with `set_option linter.style.openClassical false`\nBipartiteFactor.lean:29:0: warning: automatically included section variable(s) unused in theorem `RobertPublishable.Factor.degree_left`:\n  [DecidableEq P]\n  [DecidableEq Q]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [DecidableEq P] [DecidableEq Q] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`\nBipartiteFactor.lean:38:0: warning: automatically included section variable(s) unused in theorem `RobertPublishable.Factor.degree_right`:\n  [DecidableEq P]\n  [DecidableEq Q]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [DecidableEq P] [DecidableEq Q] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`\nBipartiteFactor.lean:50:0: warning: automatically included section variable(s) unused in theorem `RobertPublishable.Factor.selectedRel_sub`:\n  [DecidableEq P]\n  [DecidableEq Q]\n  [Fintype P]\n  [Fintype Q]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [DecidableEq P] [DecidableEq Q] [Fintype P] [Fintype Q] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`\nBipartiteFactor.lean:55:0: warning: automatically included section variable(s) unused in theorem `RobertPublishable.Factor.left_neighbours_as_image`:\n  [Fintype P]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [Fintype P] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`\nBipartiteFactor.lean:61:0: warning: automatically included section variable(s) unused in theorem `RobertPublishable.Factor.right_neighbours_as_image`:\n  [Fintype Q]\nconsider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:\n  omit [Fintype Q] in theorem ...\n\nNote: This linter can be disabled with `set_option linter.unusedSectionVars false`\nBipartiteFactor.lean:64:24: warning: This simp argument is unused:\n  mem_univ\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [mem_filter, true_and, selectedRel, mem_image]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\nBipartiteFactor.lean:64:33: warning: This simp argument is unused:\n  true_and\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [mem_filter, mem_univ, selectedRel, mem_image]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\n'RobertPublishable.Factor.exists_spanning_regular_factor' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+        "stderr_excerpt": ""
+      },
+      "rawlogs": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\logs\\BipartiteFactor-20261007T150242769131Z.stdout.txt",
+          "sha256": "bff269ac83a345806768d2402f58cd11c43f10723baf88d5a4bd9f306588e90a",
+          "bytes": 3261
+        },
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\logs\\BipartiteFactor-20261007T150242769131Z.stderr.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        }
+      ],
+      "actual_current_outputs": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\BipartiteFactor.olean",
+          "sha256": "0253c229a5a6a467aa8ced68bb7902e323b3a8bdd3ea991006a74fc0cf0b603b",
+          "bytes": 272448
+        }
+      ],
+      "actual_axiom_outputs": [
+        {
+          "endpoint": "RobertPublishable.Factor.exists_spanning_regular_factor",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        }
+      ]
+    },
+    {
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\EdgeCounts.lean",
+        "sha256": "9ed07ca4eee7d7ee978c15a860547ff2d971288e7c7051d70181ff1d464436fe",
+        "bytes": 3612
+      },
+      "actual_receipt": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\logs\\EdgeCounts-20261007T150316200085Z.json",
+        "sha256": "faa8ee58914449f0125a60d60455803d4fab8bb0164342c330c4dda87acfb179",
+        "bytes": 8391
+      },
+      "actual_source_snapshot": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\logs\\EdgeCounts-20261007T150316200085Z.source.lean",
+        "sha256": "9ed07ca4eee7d7ee978c15a860547ff2d971288e7c7051d70181ff1d464436fe"
+      },
+      "actual_guard": {
+        "command": [
+          "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+          "-j1",
+          "-Dpp.unicode.fun=true",
+          "-DautoImplicit=false",
+          "-DrelaxedAutoImplicit=false",
+          "-Dweak.linter.style.copyright.formalConjectures=false",
+          "-Dweak.linter.style.namespace=true",
+          "-Dweak.linter.style.stubs=true",
+          "-Dweak.linter.style.openClassical=true",
+          "-o",
+          "EdgeCounts.olean",
+          "EdgeCounts.lean"
+        ],
+        "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR",
+        "started_utc": "2026-10-07T15:03:16.207997+00:00",
+        "attempted": true,
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 17179869184,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 2147483648,
+          "own_job_private_bytes": 13958643712,
+          "own_process_private_bytes": 13958643712,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 600
+        },
+        "minimum_disk_free_bytes": 11014361088,
+        "initial_system_memory_snapshot": {
+          "free_physical_bytes": 14126022656,
+          "total_physical_bytes": 34024419328,
+          "available_commit_bytes": 18952404992,
+          "total_commit_limit_bytes": 45444141056
+        },
+        "minimum_physical_available_bytes": 13133258752,
+        "minimum_available_commit_bytes": 16778686464,
+        "root_pid": 31068,
+        "own_job_assignment_before_resume": "PASS",
+        "exit": 0,
+        "job_peak_process_private_bytes": 2170826752,
+        "job_peak_aggregate_private_bytes": 2172080128,
+        "state": "PASS",
+        "finished_utc": "2026-10-07T15:03:23.812055+00:00",
+        "seconds": 7.61,
+        "polled_peak_tree_private_bytes": 2172080128,
+        "polled_peak_tree_rss_bytes": 967643136,
+        "counter_samples": 30,
+        "observed_own_processes": {
+          "28480": {
+            "exe": "conhost.exe",
+            "peak_private_bytes": 1253376,
+            "peak_rss_bytes": 7344128
+          },
+          "31068": {
+            "exe": "lean.exe",
+            "peak_private_bytes": 2170826752,
+            "peak_rss_bytes": 982102016
+          }
+        },
+        "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\logs\\EdgeCounts-20261007T150316200085Z.stdout.txt",
+        "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\logs\\EdgeCounts-20261007T150316200085Z.stderr.txt",
+        "stdout_sha256": "5770f929a0e99551dec59873b337c802ce570b58680ef57c7b86c2145ea1c0a8",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_excerpt": "EdgeCounts.lean:6:12: warning: please avoid 'open (scoped) Classical' statements: this can hide theorem statements which would be better stated with explicit decidability statements.\nInstead, use `open Classical in` for definitions or instances, the `classical` tactic for proofs.\nFor theorem statements, either add missing decidability assumptions or use `open Classical in`.\n\nNote: This linter can be disabled with `set_option linter.style.openClassical false`\nEdgeCounts.lean:88:54: warning: This simp argument is unused:\n  and_true\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [cellEdges, mem_filter, mem_univ, true_and]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\n'RobertPublishable.Factor.row_sum' depends on axioms: [propext, Classical.choice, Quot.sound]\n'RobertPublishable.Factor.column_sum' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+        "stderr_excerpt": ""
+      },
+      "rawlogs": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\logs\\EdgeCounts-20261007T150316200085Z.stdout.txt",
+          "sha256": "5770f929a0e99551dec59873b337c802ce570b58680ef57c7b86c2145ea1c0a8",
+          "bytes": 916
+        },
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\logs\\EdgeCounts-20261007T150316200085Z.stderr.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        }
+      ],
+      "actual_current_outputs": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\EdgeCounts.olean",
+          "sha256": "6caf6b79c4b2370eba7bdf0819d79a01f962020727b908abaca81a9b2a112f68",
+          "bytes": 168592
+        }
+      ],
+      "actual_axiom_outputs": [
+        {
+          "endpoint": "RobertPublishable.Factor.row_sum",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        },
+        {
+          "endpoint": "RobertPublishable.Factor.column_sum",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        }
+      ]
+    },
+    {
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\NearRegularScalars.lean",
+        "sha256": "be5acd5aa3dd975507064f9817616f31cf0b6862f7e64579b66692e5be0d9eca",
+        "bytes": 5391
+      },
+      "actual_receipt": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\logs\\NearRegularScalars-20261007T153648274038Z.json",
+        "sha256": "eb708103344c846bd365f00383d8c22c9020304de91d390803c3bcd764d46064",
+        "bytes": 7751
+      },
+      "actual_source_snapshot": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\logs\\NearRegularScalars-20261007T153648274038Z.source.lean",
+        "sha256": "be5acd5aa3dd975507064f9817616f31cf0b6862f7e64579b66692e5be0d9eca"
+      },
+      "actual_guard": {
+        "command": [
+          "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+          "-j1",
+          "-Dpp.unicode.fun=true",
+          "-DautoImplicit=false",
+          "-DrelaxedAutoImplicit=false",
+          "-Dweak.linter.style.copyright.formalConjectures=false",
+          "-Dweak.linter.style.namespace=true",
+          "-Dweak.linter.style.stubs=true",
+          "-Dweak.linter.style.openClassical=true",
+          "-o",
+          "NearRegularScalars.olean",
+          "NearRegularScalars.lean"
+        ],
+        "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR",
+        "started_utc": "2026-10-07T15:36:48.285927+00:00",
+        "attempted": true,
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 17179869184,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 2147483648,
+          "own_job_private_bytes": 13958643712,
+          "own_process_private_bytes": 13958643712,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 600
+        },
+        "minimum_disk_free_bytes": 11002130432,
+        "initial_system_memory_snapshot": {
+          "free_physical_bytes": 14362566656,
+          "total_physical_bytes": 34024419328,
+          "available_commit_bytes": 19103838208,
+          "total_commit_limit_bytes": 45444141056
+        },
+        "minimum_physical_available_bytes": 13269217280,
+        "minimum_available_commit_bytes": 16776163328,
+        "root_pid": 32460,
+        "own_job_assignment_before_resume": "PASS",
+        "exit": 0,
+        "job_peak_process_private_bytes": 2362961920,
+        "job_peak_aggregate_private_bytes": 2364235776,
+        "state": "PASS",
+        "finished_utc": "2026-10-07T15:37:35.697630+00:00",
+        "seconds": 47.422,
+        "polled_peak_tree_private_bytes": 2364170240,
+        "polled_peak_tree_rss_bytes": 1083359232,
+        "counter_samples": 183,
+        "observed_own_processes": {
+          "4588": {
+            "exe": "conhost.exe",
+            "peak_private_bytes": 1273856,
+            "peak_rss_bytes": 7348224
+          },
+          "32460": {
+            "exe": "lean.exe",
+            "peak_private_bytes": 2362896384,
+            "peak_rss_bytes": 1095135232
+          }
+        },
+        "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\logs\\NearRegularScalars-20261007T153648274038Z.stdout.txt",
+        "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\logs\\NearRegularScalars-20261007T153648274038Z.stderr.txt",
+        "stdout_sha256": "e7ea525bbec4cba46b9f6a8cb75a28fc75cf21a49ba52b6e230b3623e131cb98",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_excerpt": "'RobertPublishable.Factor.scalar_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]\n'RobertPublishable.Factor.no_small_cut_violation' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+        "stderr_excerpt": ""
+      },
+      "rawlogs": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\logs\\NearRegularScalars-20261007T153648274038Z.stdout.txt",
+          "sha256": "e7ea525bbec4cba46b9f6a8cb75a28fc75cf21a49ba52b6e230b3623e131cb98",
+          "bytes": 209
+        },
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\logs\\NearRegularScalars-20261007T153648274038Z.stderr.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        }
+      ],
+      "actual_current_outputs": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\NearRegularScalars.olean",
+          "sha256": "2e65e122c57473624e2256b3125fb6136c209b1136ba9777b66efc0b6174e2b2",
+          "bytes": 1006744
+        }
+      ],
+      "actual_axiom_outputs": [
+        {
+          "endpoint": "RobertPublishable.Factor.scalar_bounds",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        },
+        {
+          "endpoint": "RobertPublishable.Factor.no_small_cut_violation",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        }
+      ]
+    },
+    {
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\GraphCuts.lean",
+        "sha256": "fb1c64f3eafd5e3e5033a7130816979924f7b6a78967d9c1f05b0ed537e96439",
+        "bytes": 3269
+      },
+      "actual_receipt": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\logs\\GraphCuts-20261007T161016929350Z.json",
+        "sha256": "d93d6255547c1bbcffe7145df7ba3f48d0e5c7b3dc836f504f45da1baa6139c7",
+        "bytes": 7901
+      },
+      "actual_source_snapshot": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\logs\\GraphCuts-20261007T161016929350Z.source.lean",
+        "sha256": "fb1c64f3eafd5e3e5033a7130816979924f7b6a78967d9c1f05b0ed537e96439"
+      },
+      "actual_guard": {
+        "command": [
+          "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+          "-j1",
+          "-Dpp.unicode.fun=true",
+          "-DautoImplicit=false",
+          "-DrelaxedAutoImplicit=false",
+          "-Dweak.linter.style.copyright.formalConjectures=false",
+          "-Dweak.linter.style.namespace=true",
+          "-Dweak.linter.style.stubs=true",
+          "-Dweak.linter.style.openClassical=true",
+          "-o",
+          "GraphCuts.olean",
+          "GraphCuts.lean"
+        ],
+        "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR",
+        "started_utc": "2026-10-07T16:10:16.937969+00:00",
+        "attempted": true,
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 17179869184,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 2147483648,
+          "own_job_private_bytes": 13958643712,
+          "own_process_private_bytes": 13958643712,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 600
+        },
+        "minimum_disk_free_bytes": 10983526400,
+        "initial_system_memory_snapshot": {
+          "free_physical_bytes": 13998198784,
+          "total_physical_bytes": 34024419328,
+          "available_commit_bytes": 19087745024,
+          "total_commit_limit_bytes": 45444141056
+        },
+        "minimum_physical_available_bytes": 12921241600,
+        "minimum_available_commit_bytes": 16783810560,
+        "root_pid": 18820,
+        "own_job_assignment_before_resume": "PASS",
+        "exit": 0,
+        "job_peak_process_private_bytes": 2287923200,
+        "job_peak_aggregate_private_bytes": 2289176576,
+        "state": "PASS",
+        "finished_utc": "2026-10-07T16:10:24.800533+00:00",
+        "seconds": 7.859,
+        "polled_peak_tree_private_bytes": 2286886912,
+        "polled_peak_tree_rss_bytes": 1021542400,
+        "counter_samples": 31,
+        "observed_own_processes": {
+          "25516": {
+            "exe": "conhost.exe",
+            "peak_private_bytes": 1253376,
+            "peak_rss_bytes": 7344128
+          },
+          "18820": {
+            "exe": "lean.exe",
+            "peak_private_bytes": 2285633536,
+            "peak_rss_bytes": 1041285120
+          }
+        },
+        "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\logs\\GraphCuts-20261007T161016929350Z.stdout.txt",
+        "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\logs\\GraphCuts-20261007T161016929350Z.stderr.txt",
+        "stdout_sha256": "ca85f45dd7e52c56abd2f1d3f241f7ff8bb9dfbaa2735c4d38a05a7b3ac1c494",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_excerpt": "GraphCuts.lean:10:12: warning: please avoid 'open (scoped) Classical' statements: this can hide theorem statements which would be better stated with explicit decidability statements.\nInstead, use `open Classical in` for definitions or instances, the `classical` tactic for proofs.\nFor theorem statements, either add missing decidability assumptions or use `open Classical in`.\n\nNote: This linter can be disabled with `set_option linter.style.openClassical false`\n'RobertPublishable.Factor.bipartite_cut_count' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+        "stderr_excerpt": ""
+      },
+      "rawlogs": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\logs\\GraphCuts-20261007T161016929350Z.stdout.txt",
+          "sha256": "ca85f45dd7e52c56abd2f1d3f241f7ff8bb9dfbaa2735c4d38a05a7b3ac1c494",
+          "bytes": 569
+        },
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\logs\\GraphCuts-20261007T161016929350Z.stderr.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        }
+      ],
+      "actual_current_outputs": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\GraphCuts.olean",
+          "sha256": "831152f0c3c27823f8944ee0d74235404344cbf7205a4b168f7cad92c004e959",
+          "bytes": 234048
+        }
+      ],
+      "actual_axiom_outputs": [
+        {
+          "endpoint": "RobertPublishable.Factor.bipartite_cut_count",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        }
+      ]
+    },
+    {
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\NearRegularCriterion.lean",
+        "sha256": "9dcebbdabdb659100a4b04347476afcfeac6956726dd9fd003c1c3d63da29e87",
+        "bytes": 5789
+      },
+      "actual_receipt": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\logs\\NearRegularCriterion-20261007T161125452453Z.json",
+        "sha256": "f3086027fd9585f1c04199772deab267a378226e41d2bcb5e596ab56ce7c1ace",
+        "bytes": 8003
+      },
+      "actual_source_snapshot": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\logs\\NearRegularCriterion-20261007T161125452453Z.source.lean",
+        "sha256": "9dcebbdabdb659100a4b04347476afcfeac6956726dd9fd003c1c3d63da29e87"
+      },
+      "actual_guard": {
+        "command": [
+          "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+          "-j1",
+          "-Dpp.unicode.fun=true",
+          "-DautoImplicit=false",
+          "-DrelaxedAutoImplicit=false",
+          "-Dweak.linter.style.copyright.formalConjectures=false",
+          "-Dweak.linter.style.namespace=true",
+          "-Dweak.linter.style.stubs=true",
+          "-Dweak.linter.style.openClassical=true",
+          "-o",
+          "NearRegularCriterion.olean",
+          "NearRegularCriterion.lean"
+        ],
+        "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR",
+        "started_utc": "2026-10-07T16:11:25.462456+00:00",
+        "attempted": true,
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 17179869184,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 2147483648,
+          "own_job_private_bytes": 13958643712,
+          "own_process_private_bytes": 13958643712,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 600
+        },
+        "minimum_disk_free_bytes": 10982834176,
+        "initial_system_memory_snapshot": {
+          "free_physical_bytes": 13559468032,
+          "total_physical_bytes": 34024419328,
+          "available_commit_bytes": 18584064000,
+          "total_commit_limit_bytes": 45444141056
+        },
+        "minimum_physical_available_bytes": 12465434624,
+        "minimum_available_commit_bytes": 16212217856,
+        "root_pid": 32552,
+        "own_job_assignment_before_resume": "PASS",
+        "exit": 0,
+        "job_peak_process_private_bytes": 2368761856,
+        "job_peak_aggregate_private_bytes": 2370019328,
+        "state": "PASS",
+        "finished_utc": "2026-10-07T16:11:36.454094+00:00",
+        "seconds": 10.984,
+        "polled_peak_tree_private_bytes": 2360328192,
+        "polled_peak_tree_rss_bytes": 1073963008,
+        "counter_samples": 43,
+        "observed_own_processes": {
+          "32552": {
+            "exe": "lean.exe",
+            "peak_private_bytes": 2359070720,
+            "peak_rss_bytes": 1089929216
+          },
+          "32676": {
+            "exe": "conhost.exe",
+            "peak_private_bytes": 1257472,
+            "peak_rss_bytes": 7344128
+          }
+        },
+        "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\logs\\NearRegularCriterion-20261007T161125452453Z.stdout.txt",
+        "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\logs\\NearRegularCriterion-20261007T161125452453Z.stderr.txt",
+        "stdout_sha256": "74b14227a21989020c7c508f02f782d154c1d301681fe277189dce3d118f2c13",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_excerpt": "NearRegularCriterion.lean:9:12: warning: please avoid 'open (scoped) Classical' statements: this can hide theorem statements which would be better stated with explicit decidability statements.\nInstead, use `open Classical in` for definitions or instances, the `classical` tactic for proofs.\nFor theorem statements, either add missing decidability assumptions or use `open Classical in`.\n\nNote: This linter can be disabled with `set_option linter.style.openClassical false`\n'RobertPublishable.Factor.near_regular_cut_condition' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+        "stderr_excerpt": ""
+      },
+      "rawlogs": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\logs\\NearRegularCriterion-20261007T161125452453Z.stdout.txt",
+          "sha256": "74b14227a21989020c7c508f02f782d154c1d301681fe277189dce3d118f2c13",
+          "bytes": 586
+        },
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\logs\\NearRegularCriterion-20261007T161125452453Z.stderr.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        }
+      ],
+      "actual_current_outputs": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\NearRegularCriterion.olean",
+          "sha256": "12736f6303c8853a38487823ee990a7ee442bfd1c7e9ba4b1465fdc3cf5cf259",
+          "bytes": 362456
+        }
+      ],
+      "actual_axiom_outputs": [
+        {
+          "endpoint": "RobertPublishable.Factor.near_regular_cut_condition",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        }
+      ]
+    },
+    {
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\LemmaF.lean",
+        "sha256": "9410e8c56eda9b813437e4676c815739d19ffce80eec9f7b0b45147118cf044d",
+        "bytes": 2788
+      },
+      "actual_receipt": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\logs\\LemmaF-20261007T161152853072Z.json",
+        "sha256": "c995bfe1ac28f74c80a8256d69c6a5bf7d16dfe26202e61cd99da8efc8d4101c",
+        "bytes": 8800
+      },
+      "actual_source_snapshot": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\logs\\LemmaF-20261007T161152853072Z.source.lean",
+        "sha256": "9410e8c56eda9b813437e4676c815739d19ffce80eec9f7b0b45147118cf044d"
+      },
+      "actual_guard": {
+        "command": [
+          "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+          "-j1",
+          "-Dpp.unicode.fun=true",
+          "-DautoImplicit=false",
+          "-DrelaxedAutoImplicit=false",
+          "-Dweak.linter.style.copyright.formalConjectures=false",
+          "-Dweak.linter.style.namespace=true",
+          "-Dweak.linter.style.stubs=true",
+          "-Dweak.linter.style.openClassical=true",
+          "-o",
+          "LemmaF.olean",
+          "LemmaF.lean"
+        ],
+        "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR",
+        "started_utc": "2026-10-07T16:11:52.861054+00:00",
+        "attempted": true,
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 17179869184,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 2147483648,
+          "own_job_private_bytes": 13958643712,
+          "own_process_private_bytes": 13958643712,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 600
+        },
+        "minimum_disk_free_bytes": 10982400000,
+        "initial_system_memory_snapshot": {
+          "free_physical_bytes": 13593911296,
+          "total_physical_bytes": 34024419328,
+          "available_commit_bytes": 18627174400,
+          "total_commit_limit_bytes": 45444141056
+        },
+        "minimum_physical_available_bytes": 12512104448,
+        "minimum_available_commit_bytes": 16252452864,
+        "root_pid": 27248,
+        "own_job_assignment_before_resume": "PASS",
+        "exit": 0,
+        "job_peak_process_private_bytes": 2364456960,
+        "job_peak_aggregate_private_bytes": 2365730816,
+        "state": "PASS",
+        "finished_utc": "2026-10-07T16:12:02.277408+00:00",
+        "seconds": 9.421,
+        "polled_peak_tree_private_bytes": 2365706240,
+        "polled_peak_tree_rss_bytes": 1061163008,
+        "counter_samples": 37,
+        "observed_own_processes": {
+          "27248": {
+            "exe": "lean.exe",
+            "peak_private_bytes": 2364432384,
+            "peak_rss_bytes": 1078431744
+          },
+          "32636": {
+            "exe": "conhost.exe",
+            "peak_private_bytes": 1273856,
+            "peak_rss_bytes": 7352320
+          }
+        },
+        "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\logs\\LemmaF-20261007T161152853072Z.stdout.txt",
+        "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\logs\\LemmaF-20261007T161152853072Z.stderr.txt",
+        "stdout_sha256": "e27ac2aa2692e97741ad90f93b40f6b2388f8e74d5535149ae3c1a8bd9e77cf3",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_excerpt": "LemmaF.lean:12:12: warning: please avoid 'open (scoped) Classical' statements: this can hide theorem statements which would be better stated with explicit decidability statements.\nInstead, use `open Classical in` for definitions or instances, the `classical` tactic for proofs.\nFor theorem statements, either add missing decidability assumptions or use `open Classical in`.\n\nNote: This linter can be disabled with `set_option linter.style.openClassical false`\n@lemma_F : ∀ {P : Type u_3} {Q : Type u_4} [inst : DecidableEq P] [inst_1 : DecidableEq Q] [inst_2 : Fintype P]\n  [inst_3 : Fintype Q] (r : P → Q → Prop) [Nonempty P] (η γ d : ℝ),\n  Fintype.card P = Fintype.card Q →\n    0 < γ →\n      γ ≤ 1 →\n        η ≤ γ ^ 2 / 8 →\n          16 / γ ^ 2 ≤ d →\n            (∀ (v : P ⊕ Q), (1 - η) * d ≤ ↑((bipGraph r).degree v) ∧ ↑((bipGraph r).degree v) ≤ d) →\n              (∀ (Z : Finset (P ⊕ Q)), Z.Nonempty → #Z ≤ Fintype.card P → γ * d * ↑(#Z) ≤ ↑(cutCount (bipGraph r) Z)) →\n                ∃ F ≤ bipGraph r,\n                  F.IsRegularOfDegree (roundedDegree η γ d) ∧\n                    (1 - 3 * γ / 8) * d - 1 ≤ ↑(roundedDegree η γ d) ∧\n                      ∀ (Z : Finset (P ⊕ Q)),\n                        #Z ≤ Fintype.card P → γ / 2 * ↑(roundedDegree η γ d) * ↑(#Z) ≤ ↑(cutCount F Z)\n'RobertPublishable.Factor.lemma_F' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+        "stderr_excerpt": ""
+      },
+      "rawlogs": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\logs\\LemmaF-20261007T161152853072Z.stdout.txt",
+          "sha256": "e27ac2aa2692e97741ad90f93b40f6b2388f8e74d5535149ae3c1a8bd9e77cf3",
+          "bytes": 1487
+        },
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\logs\\LemmaF-20261007T161152853072Z.stderr.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        }
+      ],
+      "actual_current_outputs": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\LemmaF.olean",
+          "sha256": "79969d38281419f9c9ea0d89bbab6355e2b6df1cc3959a78b5e0f9627b8e54da",
+          "bytes": 255768
+        }
+      ],
+      "actual_axiom_outputs": [
+        {
+          "endpoint": "RobertPublishable.Factor.lemma_F",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        }
+      ]
+    },
+    {
+      "source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\PartitionTransport.lean",
+        "sha256": "9e4ee92e1a540cd7f94cc2387c684ff0f2ee2e9c2ee659277597b8fbdd157b07",
+        "bytes": 4608
+      },
+      "actual_receipt": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\logs\\PartitionTransport-20261007T161406799644Z.json",
+        "sha256": "420f42bc245e5ddf7c7fd61be50fb7d13622c13d0e964ec2b202634bc7b11b2f",
+        "bytes": 9506
+      },
+      "actual_source_snapshot": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\logs\\PartitionTransport-20261007T161406799644Z.source.lean",
+        "sha256": "9e4ee92e1a540cd7f94cc2387c684ff0f2ee2e9c2ee659277597b8fbdd157b07"
+      },
+      "actual_guard": {
+        "command": [
+          "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+          "-j1",
+          "-Dpp.unicode.fun=true",
+          "-DautoImplicit=false",
+          "-DrelaxedAutoImplicit=false",
+          "-Dweak.linter.style.copyright.formalConjectures=false",
+          "-Dweak.linter.style.namespace=true",
+          "-Dweak.linter.style.stubs=true",
+          "-Dweak.linter.style.openClassical=true",
+          "-o",
+          "PartitionTransport.olean",
+          "PartitionTransport.lean"
+        ],
+        "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR",
+        "started_utc": "2026-10-07T16:14:06.809065+00:00",
+        "attempted": true,
+        "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+        "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+        "resource_policy": {
+          "initial_disk_bytes": 4000000000,
+          "initial_physical_bytes": 6442450944,
+          "initial_available_commit_bytes": 17179869184,
+          "continuous_disk_bytes": 1000000000,
+          "continuous_physical_bytes": 3221225472,
+          "continuous_available_commit_bytes": 2147483648,
+          "own_job_private_bytes": 13958643712,
+          "own_process_private_bytes": 13958643712,
+          "poll_seconds": 0.25,
+          "timeout_seconds": 600
+        },
+        "minimum_disk_free_bytes": 10981470208,
+        "initial_system_memory_snapshot": {
+          "free_physical_bytes": 13708492800,
+          "total_physical_bytes": 34024419328,
+          "available_commit_bytes": 18808098816,
+          "total_commit_limit_bytes": 45444141056
+        },
+        "minimum_physical_available_bytes": 12636479488,
+        "minimum_available_commit_bytes": 16477392896,
+        "root_pid": 1192,
+        "own_job_assignment_before_resume": "PASS",
+        "exit": 0,
+        "job_peak_process_private_bytes": 2357972992,
+        "job_peak_aggregate_private_bytes": 2359250944,
+        "state": "PASS",
+        "finished_utc": "2026-10-07T16:14:14.415717+00:00",
+        "seconds": 7.609,
+        "polled_peak_tree_private_bytes": 2345373696,
+        "polled_peak_tree_rss_bytes": 1040019456,
+        "counter_samples": 30,
+        "observed_own_processes": {
+          "1192": {
+            "exe": "lean.exe",
+            "peak_private_bytes": 2344095744,
+            "peak_rss_bytes": 1063051264
+          },
+          "1560": {
+            "exe": "conhost.exe",
+            "peak_private_bytes": 1277952,
+            "peak_rss_bytes": 7352320
+          }
+        },
+        "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\logs\\PartitionTransport-20261007T161406799644Z.stdout.txt",
+        "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\logs\\PartitionTransport-20261007T161406799644Z.stderr.txt",
+        "stdout_sha256": "940b8391542b7f9c83e689970d81b790c467f0e5763d52522fe7c8ed9d8ae3ae",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_excerpt": "PartitionTransport.lean:9:12: warning: please avoid 'open (scoped) Classical' statements: this can hide theorem statements which would be better stated with explicit decidability statements.\nInstead, use `open Classical in` for definitions or instances, the `classical` tactic for proofs.\nFor theorem statements, either add missing decidability assumptions or use `open Classical in`.\n\nNote: This linter can be disabled with `set_option linter.style.openClassical false`\n'RobertPublishable.Factor.cutCount_iso' depends on axioms: [propext, Classical.choice, Quot.sound]\n@lemma_F_of_balanced_partition : ∀ {P : Type u_4} {Q : Type u_5} {V : Type u_6} [DecidableEq P] [DecidableEq Q]\n  [inst : DecidableEq V] [inst_1 : Fintype P] [inst_2 : Fintype Q] [inst_3 : Fintype V] (r : P → Q → Prop) [Nonempty P]\n  (H : SimpleGraph V) (e : P ⊕ Q ≃ V),\n  (∀ (a b : P ⊕ Q), H.Adj (e a) (e b) ↔ (bipGraph r).Adj a b) →\n    ∀ (η γ d : ℝ),\n      Fintype.card P = Fintype.card Q →\n        0 < γ →\n          γ ≤ 1 →\n            η ≤ γ ^ 2 / 8 →\n              16 / γ ^ 2 ≤ d →\n                (∀ (v : V), (1 - η) * d ≤ ↑(H.degree v) ∧ ↑(H.degree v) ≤ d) →\n                  (∀ (Z : Finset V), Z.Nonempty → 2 * #Z ≤ Fintype.card V → γ * d * ↑(#Z) ≤ ↑(cutCount H Z)) →\n                    ∃ F ≤ H,\n                      F.IsRegularOfDegree (roundedDegree η γ d) ∧\n                        (1 - 3 * γ / 8) * d - 1 ≤ ↑(roundedDegree η γ d) ∧\n                          ∀ (Z : Finset V),\n                            2 * #Z ≤ Fintype.card V → γ / 2 * ↑(roundedDegree η γ d) * ↑(#Z) ≤ ↑(cutCount F Z)\n'RobertPublishable.Factor.lemma_F_of_balanced_partition' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+        "stderr_excerpt": ""
+      },
+      "rawlogs": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\logs\\PartitionTransport-20261007T161406799644Z.stdout.txt",
+          "sha256": "940b8391542b7f9c83e689970d81b790c467f0e5763d52522fe7c8ed9d8ae3ae",
+          "bytes": 1799
+        },
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\logs\\PartitionTransport-20261007T161406799644Z.stderr.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        }
+      ],
+      "actual_current_outputs": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\PartitionTransport.olean",
+          "sha256": "e23de0930224edee8a2dd953fbe90423f8b7457b8fb83c6478e3715f3ea01018",
+          "bytes": 250960
+        }
+      ],
+      "actual_axiom_outputs": [
+        {
+          "endpoint": "RobertPublishable.Factor.cutCount_iso",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        },
+        {
+          "endpoint": "RobertPublishable.Factor.lemma_F_of_balanced_partition",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        }
+      ]
+    }
+  ],
+  "actual_spanning_edge_loss_dependency": {
+    "receipt": {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR_LOSS\\attempts\\004-CrossingLoss\\actual_invocation.json",
+      "sha256": "0be0f06b0877101332a304a5a692ec59799ef3a6bc2d074bc7af5ba6e98d024c",
+      "bytes": 12509
+    },
+    "source": {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR_LOSS\\CrossingLoss.lean",
+      "sha256": "977fddbab53b71b45d2f765be0a6d6743d15cf7a73d4578c1e0cf625b4122c89",
+      "bytes": 5444
+    },
+    "rawlogs": [
+      {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR_LOSS\\attempts\\004-CrossingLoss\\compiler.stdout.txt",
+        "sha256": "e2396c82cd448fbd171209c6dd976e1fadd6a7d0b0367b3364c595ca58fa91b0",
+        "bytes": 1127
+      },
+      {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR_LOSS\\attempts\\004-CrossingLoss\\compiler.stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    ],
+    "current_actual_artifacts": [
+      {
+        "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR_LOSS\\attempts\\004-CrossingLoss\\CrossingLoss.olean",
+        "sha256": "f0d5d5a244a3e3d0736bfc129d44adb036946196fdfa69ba840bcce3409e731e",
+        "bytes": 117752
+      }
+    ],
+    "actual_endpoint_outputs": [
+      {
+        "endpoint": "RobertPublishable.Factor.neighbor_difference_card",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "classification": "STANDARD_KERNEL_AXIOMS"
+      },
+      {
+        "endpoint": "RobertPublishable.Factor.vertex_cut_card_le",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "classification": "STANDARD_KERNEL_AXIOMS"
+      },
+      {
+        "endpoint": "RobertPublishable.Factor.cutCount_le_of_degree_loss",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "classification": "STANDARD_KERNEL_AXIOMS"
+      },
+      {
+        "endpoint": "RobertPublishable.Factor.cutCount_real_le_of_degree_loss",
+        "axioms": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ],
+        "classification": "STANDARD_KERNEL_AXIOMS"
+      }
+    ]
+  },
+  "actual_new_factor_and_loss_total_modules": 10,
+  "actual_unique_factor_and_loss_endpoints": 19,
+  "runtime": {
+    "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+    "sha256": "af49bacfabaa1fea71332ca0feae0fa1a60912219d5902291adc79f905bffb8d",
+    "version": "Lean (version 4.33.1, x86_64-w64-windows-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)"
+  },
+  "original_dependency_pins": [
+    {
+      "name": "mathlib",
+      "head": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib"
+    },
+    {
+      "name": "plausible",
+      "head": "b7eb3304aeae834b12dda98993a37f6a41f6f0bb",
+      "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\plausible"
+    },
+    {
+      "name": "LeanSearchClient",
+      "head": "5f4d51b81cbd3f6b32b156bfad9056621a040404",
+      "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\LeanSearchClient"
+    },
+    {
+      "name": "importGraph",
+      "head": "16f02aa7642864af59f1ff0e384a015994db9118",
+      "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\importGraph"
+    },
+    {
+      "name": "proofwidgets",
+      "head": "4be2e3d5087eeb272cf5a8853b8f9dd025ef5957",
+      "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\proofwidgets"
+    },
+    {
+      "name": "aesop",
+      "head": "3448c0bcc5ce01b2d1546e483ec3620e32df3d0e",
+      "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\aesop"
+    },
+    {
+      "name": "Qq",
+      "head": "92c15be17b7caf78c2ad767ec40f89052d908d81",
+      "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\Qq"
+    },
+    {
+      "name": "batteries",
+      "head": "4488d40d070b9700d4d5a6aa342f0d40c31b2a2d",
+      "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\batteries"
+    },
+    {
+      "name": "Cli",
+      "head": "6130a47896ce867c6a4a55373441e59e565bad0f",
+      "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\Cli"
+    }
+  ],
+  "original106_immutable_not_mutated": {
+    "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\adjacent_robert_20261007\\verification\\completed106-source81-axioms-immutable.json",
+    "sha256": "82b6c76de58309b35ed3b1b28b211011449b319affde181446870a33e9a9f142",
+    "bytes": 1107666
+  },
+  "direct_official_import_identity_bindings": [
+    {
+      "module": "Aesop",
+      "direct_source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\aesop\\Aesop.lean",
+        "sha256": "6806b32ad8ef01dd86cbf70d72a64ab731858956522a336409804ac303b14260",
+        "bytes": 95
+      },
+      "current_official_artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\aesop\\.lake\\build\\lib\\lean\\Aesop.olean",
+          "sha256": "1d384ed5d84f8b8bb06c930875156a8376651b9d04c480c242e2b4ca16438a72",
+          "bytes": 1776
+        },
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\aesop\\.lake\\build\\lib\\lean\\Aesop.olean.private",
+          "sha256": "0a818b18a5e64dba1d9ad324d74e3b78d1b6d7f795eb6e53e2ede03b44420848",
+          "bytes": 96
+        },
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\aesop\\.lake\\build\\lib\\lean\\Aesop.olean.server",
+          "sha256": "a09eff4870dde6b0af9c95b7eb004f23ae0ae0a9fd66433ae69aca0829c32eb9",
+          "bytes": 96
+        },
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\aesop\\.lake\\build\\lib\\lean\\Aesop.ir",
+          "sha256": "e6ff54fa37dc6ea009e2494558a8b69a4365a13a293cc1730a197e5cbac432b1",
+          "bytes": 1640
+        }
+      ]
+    },
+    {
+      "module": "Lean.Elab.Tactic.Omega",
+      "direct_source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\src\\lean\\Lean\\Elab\\Tactic\\Omega.lean",
+        "sha256": "7a81cef2ff724f9f690993d01aef906b200ca11c36f72fb57f9e6e5eaf4ec45e",
+        "bytes": 9449
+      },
+      "current_official_artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\lib\\lean\\Lean\\Elab\\Tactic\\Omega.olean",
+          "sha256": "280aa742e537120eb8e2f436fdc8417e2482b173262df6f88bddfbaea87c770c",
+          "bytes": 1480
+        },
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\lib\\lean\\Lean\\Elab\\Tactic\\Omega.olean.private",
+          "sha256": "649a076cbbe3b5db6d4fe6c1647114c43c542bfda2748a4c8db06e1ac0a8aea6",
+          "bytes": 96
+        },
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\lib\\lean\\Lean\\Elab\\Tactic\\Omega.olean.server",
+          "sha256": "6c2ba11344d28720ebbe5dee7e8e015a308ccf85c0d87fea392edc943ca22c1e",
+          "bytes": 9936
+        },
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\lib\\lean\\Lean\\Elab\\Tactic\\Omega.ir",
+          "sha256": "cfa0563ed18dcf3676405dae548d05fb331e7201a6f82ce7151d158416d060bc",
+          "bytes": 1376
+        }
+      ]
+    },
+    {
+      "module": "Mathlib.Algebra.BigOperators.Group.Finset.Basic",
+      "direct_source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\Algebra\\BigOperators\\Group\\Finset\\Basic.lean",
+        "sha256": "1305c143ee5528281992dc083faa3c881c2e7c0f3d09b127de4f58987182d1f2",
+        "bytes": 51600
+      },
+      "current_official_artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Algebra\\BigOperators\\Group\\Finset\\Basic.olean",
+          "sha256": "5b6daf8fb8a469491a156cf9cee931c7f13411a4b9193bf4dc2d40d23d79f615",
+          "bytes": 520368
+        },
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Algebra\\BigOperators\\Group\\Finset\\Basic.olean.private",
+          "sha256": "62523c7921b5f7d260902141d4618725adebe90dbd560eb22177b93948874357",
+          "bytes": 2146696
+        },
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Algebra\\BigOperators\\Group\\Finset\\Basic.olean.server",
+          "sha256": "59e74bba43ce1a31747f84db55ed158bf18203fbad73c3230fb423ad6d2c6fd0",
+          "bytes": 71288
+        },
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Algebra\\BigOperators\\Group\\Finset\\Basic.ir",
+          "sha256": "472afc291f24913d5ecdb3958bf7ae1591aed31a74035e912be742bf7f75d65b",
+          "bytes": 2024
+        }
+      ]
+    },
+    {
+      "module": "Mathlib.Algebra.Order.Archimedean.Real.Basic",
+      "direct_source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\Algebra\\Order\\Archimedean\\Real\\Basic.lean",
+        "sha256": "ba51e7d1078ee669a1b5e95968163937113d8ba729e9f2fb7e6ed0ebd66acfd0",
+        "bytes": 18602
+      },
+      "current_official_artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Algebra\\Order\\Archimedean\\Real\\Basic.olean",
+          "sha256": "d689792f6f28228195f1ddc4008aba9ab999620f49cd70c6db2a7ec3c304f9ec",
+          "bytes": 88912
+        },
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Algebra\\Order\\Archimedean\\Real\\Basic.olean.private",
+          "sha256": "77ac48dc75ae1477ec852c60024808370ca7fc04e58e92bb33964f60d94facd6",
+          "bytes": 399960
+        },
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Algebra\\Order\\Archimedean\\Real\\Basic.olean.server",
+          "sha256": "d357c42a5622097505a49b20441423c580cb7651dfc9e413fda9784a85ee37c1",
+          "bytes": 19008
+        },
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Algebra\\Order\\Archimedean\\Real\\Basic.ir",
+          "sha256": "72534b9122c49c61481b058040fb1764188075b70ad8bfa7216ddb5dfafe1e4e",
+          "bytes": 2752
+        }
+      ]
+    },
+    {
+      "module": "Mathlib.Algebra.Order.Floor.Ring",
+      "direct_source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\Algebra\\Order\\Floor\\Ring.lean",
+        "sha256": "d46979d7e9a446825f04b9b8ee080d303812c01083406ed9e76a296454a5387f",
+        "bytes": 32735
+      },
+      "current_official_artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Algebra\\Order\\Floor\\Ring.olean",
+          "sha256": "7e0f832702dc3fd3b60576bd3c881af3c379866171ec3878dd999f6419cbe198",
+          "bytes": 519416
+        },
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Algebra\\Order\\Floor\\Ring.olean.private",
+          "sha256": "1e4e3117720131e159d02c0ae9398a56eca35526252b93b57842245c4ce45430",
+          "bytes": 1630528
+        },
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Algebra\\Order\\Floor\\Ring.olean.server",
+          "sha256": "9c4ca98fbd4702079c2a8d35fb3ec4140a7d0173e57c14e6b8507a5728a3611c",
+          "bytes": 41584
+        },
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Algebra\\Order\\Floor\\Ring.ir",
+          "sha256": "6ebf745245287d533b5cc13781453e86d9b3868e088a46ac0317b6569a443643",
+          "bytes": 218056
+        }
+      ]
+    },
+    {
+      "module": "Mathlib.Combinatorics.Hall.Finite",
+      "direct_source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\Combinatorics\\Hall\\Finite.lean",
+        "sha256": "021d53831a6821a76cb2d99ef7ca743715efb12ca642f75997779c23ce10da8c",
+        "bytes": 10444
+      },
+      "current_official_artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Combinatorics\\Hall\\Finite.olean",
+          "sha256": "d56c0caa31017684a2abc6cf227c62cc12ef007d7622346937d7ee335be15c83",
+          "bytes": 35104
+        },
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Combinatorics\\Hall\\Finite.olean.private",
+          "sha256": "8045495b01e8703bc77bf019a8473ce8493036d229bd87cd9592f821e33ca77c",
+          "bytes": 336584
+        },
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Combinatorics\\Hall\\Finite.olean.server",
+          "sha256": "9549e5784d674f92930a13577b30f9150d0800fad9e7834aee6900e5258aa986",
+          "bytes": 4872
+        },
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Combinatorics\\Hall\\Finite.ir",
+          "sha256": "163ba2710b59080ffa6fe96de3f74390205088771bdcdfb713e0dff49e12f2a4",
+          "bytes": 1880
+        }
+      ]
+    },
+    {
+      "module": "Mathlib.Combinatorics.SimpleGraph.Finite",
+      "direct_source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\Combinatorics\\SimpleGraph\\Finite.lean",
+        "sha256": "1aa6eeffe77fd243fb2659ceb377843206bfa62fdeeae9e64741bedadd411934",
+        "bytes": 30231
+      },
+      "current_official_artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Combinatorics\\SimpleGraph\\Finite.olean",
+          "sha256": "7cbdf0a8154410cba75e02a34565bdbbb8f027f39ee993155fe6146d5e2aaabd",
+          "bytes": 290600
+        },
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Combinatorics\\SimpleGraph\\Finite.olean.private",
+          "sha256": "f22a236301598b84049745c17b33ed2132c15cd5c94d4077581dc9ad71c720ed",
+          "bytes": 642552
+        },
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Combinatorics\\SimpleGraph\\Finite.olean.server",
+          "sha256": "ffe2c92ed9e60c7534bc63bd5e494f9d72f45e0549b1ffcfa3add890619c867f",
+          "bytes": 40256
+        },
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Combinatorics\\SimpleGraph\\Finite.ir",
+          "sha256": "5f8ea9d257c3a61f3e5b3e6e9c78767419dfdaa54b268aacb877227856a9882b",
+          "bytes": 13408
+        }
+      ]
+    },
+    {
+      "module": "Mathlib.Data.Finset.Prod",
+      "direct_source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\Data\\Finset\\Prod.lean",
+        "sha256": "ea0f132dc48b81a7a1f4683dd04459d81bc1a04b664d0281d6dc42f08599d1d8",
+        "bytes": 13857
+      },
+      "current_official_artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Data\\Finset\\Prod.olean",
+          "sha256": "5bf757030e3ca63a10eac3b6b9e2ef2e0235ee75692eedcbf4ef5d9581aeac0c",
+          "bytes": 174024
+        },
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Data\\Finset\\Prod.olean.private",
+          "sha256": "a20c452abb2424948fc425cf5081a3f5f033d137337ff4a0368801ce2a457375",
+          "bytes": 991400
+        },
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Data\\Finset\\Prod.olean.server",
+          "sha256": "85988f831d2b8323f768d54107d8561e9e466ab2e0f5ca79cfad6f7b8c453c67",
+          "bytes": 20664
+        },
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Data\\Finset\\Prod.ir",
+          "sha256": "4a67a51141e81cd8c1e8e34be9c35b9b339a613d5610206a0a0820b2d9f10639",
+          "bytes": 8760
+        }
+      ]
+    },
+    {
+      "module": "Mathlib.Data.Finset.Sum",
+      "direct_source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\Data\\Finset\\Sum.lean",
+        "sha256": "431ff54addd495aadb5dbb812ab68b7d59c138b5f2647ce023877e0ee71ec834",
+        "bytes": 10117
+      },
+      "current_official_artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Data\\Finset\\Sum.olean",
+          "sha256": "308b2cdfb81aa1850f41505ed7ca34c2c57f5d4245a79e305679c9d6038db52d",
+          "bytes": 141256
+        },
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Data\\Finset\\Sum.olean.private",
+          "sha256": "6b3ed624af15aeb807f7d709c93990f314782f41b4d34fd3c2563333b34b9a8d",
+          "bytes": 287584
+        },
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Data\\Finset\\Sum.olean.server",
+          "sha256": "9ed60186e9027a840f9e8654d1f55914f3507f90a7ac2f8562b8888f08852b39",
+          "bytes": 18000
+        },
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Data\\Finset\\Sum.ir",
+          "sha256": "b13c495b3190802b8dd193ee10604a92dae9f3fb017351caf08d798d43cc96ce",
+          "bytes": 8424
+        }
+      ]
+    },
+    {
+      "module": "Mathlib.Data.Fintype.Prod",
+      "direct_source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\Data\\Fintype\\Prod.lean",
+        "sha256": "0356fd85ee13640f7b33ea2e1e443a6c937a0c7c68010973367728bb535b5b01",
+        "bytes": 3713
+      },
+      "current_official_artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Data\\Fintype\\Prod.olean",
+          "sha256": "bef38af97e89d7c55fed96860a30bbb07abb2f3e998a627a98a47b1b7f766096",
+          "bytes": 51280
+        },
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Data\\Fintype\\Prod.olean.private",
+          "sha256": "65e6583fd9c7af8d8d5b5dce840197fa43b468f94befb1dec1ee073274f43037",
+          "bytes": 68760
+        },
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Data\\Fintype\\Prod.olean.server",
+          "sha256": "fc70ac9c90dac726f195eb4e26a3f67b79f88ff3185a535fb451a0be6851a63f",
+          "bytes": 5232
+        },
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Data\\Fintype\\Prod.ir",
+          "sha256": "a269b9acbeb27f8ade169c628723a7104b2c996f9e523c1b4e6159285535a736",
+          "bytes": 2864
+        }
+      ]
+    },
+    {
+      "module": "Mathlib.Data.Fintype.Sum",
+      "direct_source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\Data\\Fintype\\Sum.lean",
+        "sha256": "534b389e1c6fe2f489980bf52ef304cf4fd15349ec1ed7d313fe161f794e409c",
+        "bytes": 6217
+      },
+      "current_official_artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Data\\Fintype\\Sum.olean",
+          "sha256": "3dd774a167e8512ecb4aee0b65f0bbb40ac66dae1ac713c6b531f8fece0298d6",
+          "bytes": 69200
+        },
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Data\\Fintype\\Sum.olean.private",
+          "sha256": "4f5048b7304026abbeec428e4ef77c1e88aeee621597048486277d136bca1142",
+          "bytes": 199856
+        },
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Data\\Fintype\\Sum.olean.server",
+          "sha256": "fdc811a8a7d410510828277fa27d13c9735e3609cde4be34b7ccdad7887c49f5",
+          "bytes": 5912
+        },
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Data\\Fintype\\Sum.ir",
+          "sha256": "c568cef44d559259b8a29cc967c25650259737338257c71127f51f715c567799",
+          "bytes": 5488
+        }
+      ]
+    },
+    {
+      "module": "Mathlib.Data.Real.Basic",
+      "direct_source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\Data\\Real\\Basic.lean",
+        "sha256": "b1dde0e82be30e8a9ca87b23c46d04afc92be61818622ba6d4603daa4d4a9f70",
+        "bytes": 20395
+      },
+      "current_official_artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Data\\Real\\Basic.olean",
+          "sha256": "559efb0e853f55be8ae0de97c10d22f58e7ed4b71a5e2e4c92bdfe764636b724",
+          "bytes": 365504
+        },
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Data\\Real\\Basic.olean.private",
+          "sha256": "50d60b9c1f14c949e037ae9b4c48834194a7cfb52728a905305b1f57f8d1d756",
+          "bytes": 397328
+        },
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Data\\Real\\Basic.olean.server",
+          "sha256": "5939387da44df7a56ada0eba0536ed54c4583be4a3c5c954f44f692c49f12993",
+          "bytes": 33416
+        },
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Data\\Real\\Basic.ir",
+          "sha256": "f17b06733581e323af082973fa3d1ffbf16db2fa9953a40f9321ca4b78428ea1",
+          "bytes": 63792
+        }
+      ]
+    },
+    {
+      "module": "Mathlib.Tactic.FieldSimp",
+      "direct_source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\Tactic\\FieldSimp.lean",
+        "sha256": "924a11d74ca2851409f1d78284affbd60c21c9d54ac5bb4fb4676f17cbecb679",
+        "bytes": 42079
+      },
+      "current_official_artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Tactic\\FieldSimp.olean",
+          "sha256": "70c6925cd9edb780a85b5bf695d5ecc45eb1bb650c57e2729c8dbfd8b8c902d4",
+          "bytes": 1720080
+        },
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Tactic\\FieldSimp.olean.private",
+          "sha256": "83cf7dae8212cbd918706c49b6b133ac650e574fb2d1af1354023d6c11e62932",
+          "bytes": 5197000
+        },
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Tactic\\FieldSimp.olean.server",
+          "sha256": "7efab462cba2eedfcee6fb5182a97ea18acd0f89c9e529120d225f1282061cb9",
+          "bytes": 30184
+        },
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Tactic\\FieldSimp.ir",
+          "sha256": "25e4de500c93a084cc7732821cac52296427ca2859529b1392b829076c7afaca",
+          "bytes": 1465992
+        }
+      ]
+    },
+    {
+      "module": "Mathlib.Tactic.Linarith",
+      "direct_source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\Tactic\\Linarith.lean",
+        "sha256": "0581fd9f80f34d728ad628e7c1fb5a93d36cb9cb48d469fbc797869e83ebe0a6",
+        "bytes": 391
+      },
+      "current_official_artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Tactic\\Linarith.olean",
+          "sha256": "f87d414cd6ee07958edb9eb1ccb405173ee00e2df9dbbbffdb526a485c92d322",
+          "bytes": 2792
+        },
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Tactic\\Linarith.olean.private",
+          "sha256": "cd499ef4fdfaa9673d0d7d02da7c4865690293963cc9f948faf693fd7fae8dae",
+          "bytes": 672
+        },
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Tactic\\Linarith.olean.server",
+          "sha256": "f58b0d13bd3290ebaf7c370cf95fdd33c26a78f3af814cb61df9a9e74be8e9f4",
+          "bytes": 776
+        },
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Tactic\\Linarith.ir",
+          "sha256": "4333a46eabd07b8735962238c01553c8d975a9df3f3213cd34037c7456d81b94",
+          "bytes": 1784
+        }
+      ]
+    },
+    {
+      "module": "Mathlib.Tactic.NormNum",
+      "direct_source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\Tactic\\NormNum.lean",
+        "sha256": "dca9500572c6d887000f3de17c7145b53bf35233afc1ad8026cca908cec7a2fe",
+        "bytes": 430
+      },
+      "current_official_artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Tactic\\NormNum.olean",
+          "sha256": "f6be00ff19229f44a6a58dff006a3896f6da3dee197d730fb566889c0c532843",
+          "bytes": 2752
+        },
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Tactic\\NormNum.olean.private",
+          "sha256": "908fb0befbb276aa69fcedcde2d67f0637fa6ae5da66f25ce6bd324969066170",
+          "bytes": 96
+        },
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Tactic\\NormNum.olean.server",
+          "sha256": "fe5b9176fcdae5fcffbadb8f9d0e101a21897e79fde0dd4a0af104f2b7711a70",
+          "bytes": 96
+        },
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Tactic\\NormNum.ir",
+          "sha256": "ba2d197a51ea005f3d859e5d35f41ac6e2257e689b53e63c09fdb26a76a6989e",
+          "bytes": 2616
+        }
+      ]
+    },
+    {
+      "module": "Mathlib.Tactic.Positivity",
+      "direct_source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\Tactic\\Positivity.lean",
+        "sha256": "74549078792cb4bef7b904577b94f0e206912935507b6f2f39eb73b7a15927d6",
+        "bytes": 187
+      },
+      "current_official_artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Tactic\\Positivity.olean",
+          "sha256": "11440b335f1cd98c125aeae637daaf01c5c90386929d40a15db7bfeea47ace8a",
+          "bytes": 2088
+        },
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Tactic\\Positivity.olean.private",
+          "sha256": "aab16354ca3f68b93be45692ceee09b84de2a4b6198d2a74adc30ef4e885f5e1",
+          "bytes": 96
+        },
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Tactic\\Positivity.olean.server",
+          "sha256": "830e32b4ca909d7e23af81731962bc4eeab925a64c8d68f8795cee000979314c",
+          "bytes": 96
+        },
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Tactic\\Positivity.ir",
+          "sha256": "2ef89c74195b35db9ca3f0d6db92eca60b9f8c435da3b6f60e8af8f249872bab",
+          "bytes": 1952
+        }
+      ]
+    },
+    {
+      "module": "Mathlib.Tactic.Ring",
+      "direct_source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\Tactic\\Ring.lean",
+        "sha256": "d3ef5c49ebbd1108ce3f935e5ad95485e143abf02f28c027dba4bb6f3be8196e",
+        "bytes": 166
+      },
+      "current_official_artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Tactic\\Ring.olean",
+          "sha256": "0d6d9cfc5fb5f47b125e7a85bb0126257337c279edd7a735f4c5aaf810e38061",
+          "bytes": 1904
+        },
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Tactic\\Ring.olean.private",
+          "sha256": "7e39e83ea7bd126e9f6dd9fbf87a77d58924ea51a23dff9884251c4669f3d6d8",
+          "bytes": 96
+        },
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Tactic\\Ring.olean.server",
+          "sha256": "21fb3bb2a5de82b01b2839105770785b3e9906077cac4b4b178ef663056e8456",
+          "bytes": 96
+        },
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Tactic\\Ring.ir",
+          "sha256": "473553b41a17f3804802255facd6886b6f51489b84ecc2005f018ff696fefeb5",
+          "bytes": 1768
+        }
+      ]
+    },
+    {
+      "module": "Mathlib.Tactic.Tauto",
+      "direct_source": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\Mathlib\\Tactic\\Tauto.lean",
+        "sha256": "7251597429f1817631b0f5ce8823e57cc377a1db408bdf2033fc1f1291e179ef",
+        "bytes": 9355
+      },
+      "current_official_artifacts": [
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Tactic\\Tauto.olean",
+          "sha256": "ae54b145ae803c94f6bfe27162930d0f6bb38c8c815aadfe2c7ae195377c3e06",
+          "bytes": 601848
+        },
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Tactic\\Tauto.olean.private",
+          "sha256": "30f75a0d4c44395a718abbf33cd8b62bb7741616bc67b5e0b3fa3057272ad49b",
+          "bytes": 1371728
+        },
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Tactic\\Tauto.olean.server",
+          "sha256": "6d84d9568cc25257b1b9911187c00bf4609662f16b631b62d76a5a19285d2f12",
+          "bytes": 13056
+        },
+        {
+          "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean\\Mathlib\\Tactic\\Tauto.ir",
+          "sha256": "3b67d9417a782557c627bd452530644986aa1959844a26377459f383bc6b6a7c",
+          "bytes": 546576
+        }
+      ]
+    }
+  ],
+  "preserved_failed_development_attempts": [
+    {
+      "receipt": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\logs\\BipartiteFactor-20261007T150202135773Z.json",
+        "sha256": "f63dcc1256b26166c7a14d06339005a7fb9db64fa1a7b920ff4541982d89a8af",
+        "bytes": 12485
+      },
+      "source_revision_sha256": "a65509cf698bbda3348c6bcef078492388aa52c0c1cd4216a87d84a4e9332a84",
+      "guard_status": "COMMAND_FAILED",
+      "actual_exit": 1,
+      "error_recovery_axioms_never_qualified": [
+        {
+          "endpoint": "RobertPublishable.Factor.exists_spanning_regular_factor",
+          "axioms": [
+            "propext",
+            "sorryAx",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "SORRY_ADMISSION"
+        }
+      ]
+    },
+    {
+      "receipt": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\logs\\CapacityHall-20261007T143444215591Z.json",
+        "sha256": "43a8184fc16478d6f591dec16f89acfe097056043f406171bae0e2f6ff2a6425",
+        "bytes": 8918
+      },
+      "source_revision_sha256": "82f2e60e25dac037617097cc1a69ee31b9fea7bb3a68a60e3b901b9e79e67e01",
+      "guard_status": "COMMAND_FAILED",
+      "actual_exit": 1,
+      "error_recovery_axioms_never_qualified": [
+        {
+          "endpoint": "RobertPublishable.Factor.capacity_hall",
+          "axioms": [
+            "propext",
+            "sorryAx",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "SORRY_ADMISSION"
+        },
+        {
+          "endpoint": "RobertPublishable.Factor.capacity_matching",
+          "axioms": [
+            "propext",
+            "sorryAx",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "SORRY_ADMISSION"
+        }
+      ]
+    },
+    {
+      "receipt": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\logs\\CapacityHall-20261007T144730793973Z.json",
+        "sha256": "77218d548898954434cbb9ac7dcc3b3e756f908a09fcba3e7ace8e628dfbbda7",
+        "bytes": 11726
+      },
+      "source_revision_sha256": "991bf92be105fae7b0fdfbb11c12a4af67d29df2a77fca76fc8bc55a1cddb802",
+      "guard_status": "COMMAND_FAILED",
+      "actual_exit": 1,
+      "error_recovery_axioms_never_qualified": [
+        {
+          "endpoint": "RobertPublishable.Factor.capacity_hall",
+          "axioms": [
+            "propext",
+            "sorryAx",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "SORRY_ADMISSION"
+        },
+        {
+          "endpoint": "RobertPublishable.Factor.capacity_matching",
+          "axioms": [
+            "propext",
+            "sorryAx",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "SORRY_ADMISSION"
+        }
+      ]
+    },
+    {
+      "receipt": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\logs\\FactorExtraction-20261007T150122323671Z.json",
+        "sha256": "a7517ee1e45482ff8ced77a66811731daec4dd77887d0270fb93655807f8e3a4",
+        "bytes": 9360
+      },
+      "source_revision_sha256": "d9c69b1b67d7df4e1b37a1997218412913584451d1bdd413ea6915318d0a7761",
+      "guard_status": "COMMAND_FAILED",
+      "actual_exit": 1,
+      "error_recovery_axioms_never_qualified": [
+        {
+          "endpoint": "RobertPublishable.Factor.selected_left_degree",
+          "axioms": [
+            "propext",
+            "sorryAx",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "SORRY_ADMISSION"
+        },
+        {
+          "endpoint": "RobertPublishable.Factor.selected_right_degree",
+          "axioms": [
+            "propext",
+            "sorryAx",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "SORRY_ADMISSION"
+        },
+        {
+          "endpoint": "RobertPublishable.Factor.exists_regular_edge_set",
+          "axioms": [
+            "propext",
+            "sorryAx",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "SORRY_ADMISSION"
+        }
+      ]
+    },
+    {
+      "receipt": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\logs\\GraphCuts-20261007T161000784573Z.json",
+        "sha256": "e99cd3c9373922fc0641efea93c865119cb14cda8d854dd1d0633b0da37da98f",
+        "bytes": 10022
+      },
+      "source_revision_sha256": "7af0c29008ba5d25a93e5b73ab2b0af955d0edb1a52c2ca7a9063e05996d1658",
+      "guard_status": "COMMAND_FAILED",
+      "actual_exit": 1,
+      "error_recovery_axioms_never_qualified": [
+        {
+          "endpoint": "RobertPublishable.Factor.bipartite_cut_count",
+          "axioms": [
+            "propext",
+            "sorryAx",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "SORRY_ADMISSION"
+        }
+      ]
+    },
+    {
+      "receipt": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\logs\\NearRegularCriterion-20261007T161029352155Z.json",
+        "sha256": "90fd8cde056756f0ceb385ed8ceec126284dc05caef46551443815739e843726",
+        "bytes": 9694
+      },
+      "source_revision_sha256": "6a7bcb82fc8dd5f19e734fdd3a515bc21eb6170afe3522145217891441c05492",
+      "guard_status": "COMMAND_FAILED",
+      "actual_exit": 1,
+      "error_recovery_axioms_never_qualified": [
+        {
+          "endpoint": "RobertPublishable.Factor.near_regular_cut_condition",
+          "axioms": [
+            "propext",
+            "sorryAx",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "SORRY_ADMISSION"
+        }
+      ]
+    },
+    {
+      "receipt": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\logs\\NearRegularScalars-20261007T150333239368Z.json",
+        "sha256": "330387ce9d05e02776c0cdb3005edcbe8465801020eb8a4fe7315561c546ee3f",
+        "bytes": 8675
+      },
+      "source_revision_sha256": "00a6c794357a79fbde57cff1319333d8b57c5abe0592eb3bff5c06caa6d97052",
+      "guard_status": "COMMAND_FAILED",
+      "actual_exit": 1,
+      "error_recovery_axioms_never_qualified": [
+        {
+          "endpoint": "RobertPublishable.Factor.scalar_bounds",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        },
+        {
+          "endpoint": "RobertPublishable.Factor.no_small_cut_violation",
+          "axioms": [],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "AXIOM_FREE"
+        }
+      ]
+    },
+    {
+      "receipt": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\logs\\NearRegularScalars-20261007T153341549682Z.json",
+        "sha256": "1bc7b76a4bc7d57c2dad13b24c4711257adfb94ec74574b1f1345efcb285c753",
+        "bytes": 7569
+      },
+      "source_revision_sha256": "98d0b52bd04dc83296a076e8978d5bba6df4a4302626d789d6b5c8c6167a1746",
+      "guard_status": "COMMAND_FAILED",
+      "actual_exit": 1,
+      "error_recovery_axioms_never_qualified": [
+        {
+          "endpoint": "RobertPublishable.Factor.scalar_bounds",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        },
+        {
+          "endpoint": "RobertPublishable.Factor.no_small_cut_violation",
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "STANDARD_KERNEL_AXIOMS"
+        }
+      ]
+    },
+    {
+      "receipt": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\logs\\PartitionTransport-20261007T161217949070Z.json",
+        "sha256": "d8ead9baa47b7087556cfe40a8b1cee8b1bb67b0417c2f78c716501246ed5d3a",
+        "bytes": 15100
+      },
+      "source_revision_sha256": "16cd35246a53f25a0dc565ede1c37d0c4c6c73d6aea6166982adf5da6f074332",
+      "guard_status": "COMMAND_FAILED",
+      "actual_exit": 1,
+      "error_recovery_axioms_never_qualified": [
+        {
+          "endpoint": "RobertPublishable.Factor.cutCount_iso",
+          "axioms": [
+            "propext",
+            "sorryAx",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "SORRY_ADMISSION"
+        },
+        {
+          "endpoint": "RobertPublishable.Factor.lemma_F_of_balanced_partition",
+          "axioms": [
+            "propext",
+            "sorryAx",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "SORRY_ADMISSION"
+        }
+      ]
+    },
+    {
+      "receipt": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\logs\\PartitionTransport-20261007T161258594377Z.json",
+        "sha256": "ef77de516a9037447a89bac4f2d2d89296f7cdc7036cf64fba33646810cc041b",
+        "bytes": 10188
+      },
+      "source_revision_sha256": "7b41916512017fe7263a4a83e2bb062199d84ed731e4364b5c7e2a60ecf0445e",
+      "guard_status": "COMMAND_FAILED",
+      "actual_exit": 1,
+      "error_recovery_axioms_never_qualified": [
+        {
+          "endpoint": "RobertPublishable.Factor.cutCount_iso",
+          "axioms": [
+            "propext",
+            "sorryAx",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "SORRY_ADMISSION"
+        },
+        {
+          "endpoint": "RobertPublishable.Factor.lemma_F_of_balanced_partition",
+          "axioms": [
+            "propext",
+            "sorryAx",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "SORRY_ADMISSION"
+        }
+      ]
+    },
+    {
+      "receipt": {
+        "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\logs\\PartitionTransport-20261007T161333163758Z.json",
+        "sha256": "e1bf96d57e7d17be77e0e475f9659f61203dee85273053a78e693f84a657cb5b",
+        "bytes": 12363
+      },
+      "source_revision_sha256": "bea2b1049b8bf7b8cbce58dadd9184a4f1a1f3a8dc366acbba7d1a8bfa9ccfdb",
+      "guard_status": "COMMAND_FAILED",
+      "actual_exit": 1,
+      "error_recovery_axioms_never_qualified": [
+        {
+          "endpoint": "RobertPublishable.Factor.cutCount_iso",
+          "axioms": [
+            "propext",
+            "sorryAx",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "SORRY_ADMISSION"
+        },
+        {
+          "endpoint": "RobertPublishable.Factor.lemma_F_of_balanced_partition",
+          "axioms": [
+            "propext",
+            "sorryAx",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "native_axioms": [],
+          "unrecognized_axioms": [],
+          "classification": "SORRY_ADMISSION"
+        }
+      ]
+    }
+  ],
+  "scientific_scope": {
+    "actual_original_host_same_vertex_spanning_subgraph": true,
+    "actual_degree_and_cut_expansion_hypotheses_not_desired_criterion": true,
+    "balanced_finite_nonempty_bipartite_host_via_explicit_shore_labelling": true,
+    "nominal_degree_parameter": "real d, so integer source case included",
+    "parameters": "0<gamma<=1, eta<=gamma^2/8, d>=16/gamma^2; eta>=0 derived from nonempty degree interval",
+    "factor_degree": "Nat.floor ((1-eta-(eta+2/d)/gamma)*d); floor argument nonnegative, agrees with integer floor",
+    "degree_lower_bound": "(1-3*gamma/8)*d-1 <= factor degree",
+    "retained_cut_bound": "cut_F(Z) >= (gamma/2)*factorDegree*|Z| for 2|Z|<=|V|",
+    "unit_original_edge_capacity_derived_by_clone_edge_buddy_Hall_matching": true,
+    "no_assumed_cutcriterion_factor_or_retained_expansion": true,
+    "BM_Hamiltonicity_main_theorem_proved_by_this_bundle": false
+  },
+  "limitations": [
+    "This is the known factor/flow consequence in the written Lemma F, not a proof of the entire sampling/router/Hamiltonicity BM pipeline.",
+    "The gamma/2 bound is for sets up to half the vertices; it is not asserted for the BJ two-thirds range.",
+    "Direct official imports were freshly rehashed; the complete official transitive library cache remains the pinned original replay input, not a newly rebuilt or independently rehashed full cache.",
+    "Formal kernel verification does not establish novelty, priority, awards, or family progress scores.",
+    "All failed development attempts are preserved and never promoted from error-recovery axiom prints."
+  ],
+  "no_Lean_guard_census_original_source_old_evidence_or_control_mutation_by_qualification": true
+}

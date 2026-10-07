@@ -1,0 +1,20 @@
+LemmaF.lean:12:12: warning: please avoid 'open (scoped) Classical' statements: this can hide theorem statements which would be better stated with explicit decidability statements.
+Instead, use `open Classical in` for definitions or instances, the `classical` tactic for proofs.
+For theorem statements, either add missing decidability assumptions or use `open Classical in`.
+
+Note: This linter can be disabled with `set_option linter.style.openClassical false`
+@lemma_F : ∀ {P : Type u_3} {Q : Type u_4} [inst : DecidableEq P] [inst_1 : DecidableEq Q] [inst_2 : Fintype P]
+  [inst_3 : Fintype Q] (r : P → Q → Prop) [Nonempty P] (η γ d : ℝ),
+  Fintype.card P = Fintype.card Q →
+    0 < γ →
+      γ ≤ 1 →
+        η ≤ γ ^ 2 / 8 →
+          16 / γ ^ 2 ≤ d →
+            (∀ (v : P ⊕ Q), (1 - η) * d ≤ ↑((bipGraph r).degree v) ∧ ↑((bipGraph r).degree v) ≤ d) →
+              (∀ (Z : Finset (P ⊕ Q)), Z.Nonempty → #Z ≤ Fintype.card P → γ * d * ↑(#Z) ≤ ↑(cutCount (bipGraph r) Z)) →
+                ∃ F ≤ bipGraph r,
+                  F.IsRegularOfDegree (roundedDegree η γ d) ∧
+                    (1 - 3 * γ / 8) * d - 1 ≤ ↑(roundedDegree η γ d) ∧
+                      ∀ (Z : Finset (P ⊕ Q)),
+                        #Z ≤ Fintype.card P → γ / 2 * ↑(roundedDegree η γ d) * ↑(#Z) ≤ ↑(cutCount F Z)
+'RobertPublishable.Factor.lemma_F' depends on axioms: [propext, Classical.choice, Quot.sound]

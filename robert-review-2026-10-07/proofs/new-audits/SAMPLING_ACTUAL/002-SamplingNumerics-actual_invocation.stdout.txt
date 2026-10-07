@@ -1,0 +1,11 @@
+SamplingNumerics.lean:27:41: warning: This simp argument is unused:
+  one_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [mul_pow, add_sq, one_pow, h3, hDsq, htsq]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'OpenMathReview.Sampling.two_shore_noise_le_half_loss' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OpenMathReview.Sampling.two_shore_probability_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+two_shore_probability_budget : ∀ (N : ℕ),
+  1 ≤ N → ∀ (a : ℝ), 6 * ↑N * (↑N + 1) * Real.exp (-((a + 4) * Real.log (2 * ↑N))) ≤ (2 * ↑N) ^ (-a)

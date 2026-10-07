@@ -1,0 +1,16 @@
+MatrixVarianceBounds.lean:47:13: warning: `ContinuousLinearMap.sub_apply` has been deprecated: Use `_root_.sub_apply` instead
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.sub_apply` to `_root_.sub_apply x`).
+MatrixVarianceBounds.lean:39:4: warning: Unused tactic linter: `change
+  (Matrix.toEuclideanCLM (n := Fin r) (𝕜 := ℝ) A :
+      EuclideanSpace ℝ (Fin r) →ₗ[ℝ] EuclideanSpace ℝ (Fin r)).IsSymmetric` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+'OpenMathReview.Sampling.columnGram_posSemidef' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OpenMathReview.Sampling.real_matrix_psd_norm_mono' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OpenMathReview.Sampling.real_gram_norm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OpenMathReview.Sampling.weighted_columnGram_norm_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OpenMathReview.Sampling.bernoulli_variance_proxy_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+@bernoulli_variance_proxy_le : ∀ {r s : ℕ} (F : Matrix (Fin r) (Fin s) ℝ) (p : ↑unitInterval) (c : ℝ),
+  (∀ (j : Fin s), columnEnergy F j ≤ c ^ 2) →
+    RMT.matrixBernsteinVarianceProxy (bernoulliColumnLaw s p) (gramSummand F p) ≤ ↑p * c ^ 2 * ‖F‖ ^ 2

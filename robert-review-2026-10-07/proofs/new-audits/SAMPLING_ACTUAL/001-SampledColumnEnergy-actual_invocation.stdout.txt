@@ -1,0 +1,13 @@
+'OpenMathReview.Sampling.actual_sampled_column_energy' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OpenMathReview.Sampling.binary_regular_degree_le_order' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OpenMathReview.Sampling.actual_sampled_column_energy_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+@actual_sampled_column_energy_le : ∀ {N : ℕ},
+  0 < N →
+    ∀ (W : Matrix (Fin N) (Fin N) ℝ) (d : ℝ),
+      0 ≤ d →
+        d ≤ ↑N →
+          (∀ (i j : Fin N), W i j = 0 ∨ W i j = 1) →
+            ∀ (U : Finset (Fin N)) (D : ℝ),
+              D = ↑(#U) / ↑N * d →
+                (∀ (j : Fin N), sampledDegree W U j ≤ 2 * D) →
+                  ∀ (j : Fin N), finiteRowColumnEnergy (rowSample (centered W d) U) j ≤ 3 * D

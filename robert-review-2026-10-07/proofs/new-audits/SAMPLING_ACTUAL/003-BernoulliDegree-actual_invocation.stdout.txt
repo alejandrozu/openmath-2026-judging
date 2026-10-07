@@ -1,0 +1,8 @@
+'OpenMathReview.Sampling.selectedDegree_variance' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OpenMathReview.Sampling.actual_selected_degree_tail' depends on axioms: [propext, Classical.choice, Quot.sound]
+@actual_selected_degree_tail : ∀ {s : ℕ} (x : Fin s → ℝ),
+  (∀ (j : Fin s), x j = 0 ∨ x j = 1) →
+    ∀ (p : ↑unitInterval),
+      0 < ↑p * ∑ j, x j →
+        ((bernoulliColumnLaw s p) {ω | selectedDegree x ω ≥ 2 * (↑p * ∑ j, x j)}).toReal ≤
+          2 * Real.exp (-(↑p * ∑ j, x j) / 3)

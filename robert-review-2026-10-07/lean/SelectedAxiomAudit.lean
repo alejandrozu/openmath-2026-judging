@@ -384,3 +384,149 @@ import ReviewAdditions
 #check @OpenMathReview.Sampling.columnGram_square_norm
 #print axioms IndependentTransversals.PartitionedGraph.haxell_no_small_total_domination
 #check @IndependentTransversals.PartitionedGraph.haxell_no_small_total_domination
+#print axioms RobertPublishable.Factor.neighbor_difference_card
+#check @RobertPublishable.Factor.neighbor_difference_card
+#print axioms RobertPublishable.Factor.vertex_cut_card_le
+#check @RobertPublishable.Factor.vertex_cut_card_le
+#print axioms RobertPublishable.Factor.cutCount_le_of_degree_loss
+#check @RobertPublishable.Factor.cutCount_le_of_degree_loss
+#print axioms RobertPublishable.Factor.cutCount_real_le_of_degree_loss
+#check @RobertPublishable.Factor.cutCount_real_le_of_degree_loss
+#print axioms RobertPublishable.Factor.capacity_hall
+#check @RobertPublishable.Factor.capacity_hall
+#print axioms RobertPublishable.Factor.capacity_matching
+#check @RobertPublishable.Factor.capacity_matching
+#print axioms RobertPublishable.Factor.selected_left_degree
+#check @RobertPublishable.Factor.selected_left_degree
+#print axioms RobertPublishable.Factor.selected_right_degree
+#check @RobertPublishable.Factor.selected_right_degree
+#print axioms RobertPublishable.Factor.exists_regular_edge_set
+#check @RobertPublishable.Factor.exists_regular_edge_set
+#print axioms RobertPublishable.Factor.exists_spanning_regular_factor
+#check @RobertPublishable.Factor.exists_spanning_regular_factor
+#print axioms RobertPublishable.Factor.row_sum
+#check @RobertPublishable.Factor.row_sum
+#print axioms RobertPublishable.Factor.column_sum
+#check @RobertPublishable.Factor.column_sum
+#print axioms RobertPublishable.Factor.scalar_bounds
+#check @RobertPublishable.Factor.scalar_bounds
+#print axioms RobertPublishable.Factor.no_small_cut_violation
+#check @RobertPublishable.Factor.no_small_cut_violation
+#print axioms RobertPublishable.Factor.bipartite_cut_count
+#check @RobertPublishable.Factor.bipartite_cut_count
+#print axioms RobertPublishable.Factor.near_regular_cut_condition
+#check @RobertPublishable.Factor.near_regular_cut_condition
+#print axioms RobertPublishable.Factor.lemma_F
+#check @RobertPublishable.Factor.lemma_F
+#print axioms RobertPublishable.Factor.cutCount_iso
+#check @RobertPublishable.Factor.cutCount_iso
+#print axioms RobertPublishable.Factor.lemma_F_of_balanced_partition
+#check @RobertPublishable.Factor.lemma_F_of_balanced_partition
+#print axioms OpenMathReview.WeakHypergraph.disjoint_representatives
+#check @OpenMathReview.WeakHypergraph.disjoint_representatives
+#print axioms OpenMathReview.Sampling.columnSample_gram_eq_sum
+#check @OpenMathReview.Sampling.columnSample_gram_eq_sum
+#print axioms OpenMathReview.Sampling.actualSelectedGram_eq_sum
+#check @OpenMathReview.Sampling.actualSelectedGram_eq_sum
+#print axioms OpenMathReview.Sampling.actualSelectedGram_centered_eq
+#check @OpenMathReview.Sampling.actualSelectedGram_centered_eq
+#print axioms OpenMathReview.Sampling.actual_column_sample_gram_deviation
+#check @OpenMathReview.Sampling.actual_column_sample_gram_deviation
+#print axioms OpenMathReview.Sampling.selectedDegree_variance
+#check @OpenMathReview.Sampling.selectedDegree_variance
+#print axioms OpenMathReview.Sampling.actual_selected_degree_tail
+#check @OpenMathReview.Sampling.actual_selected_degree_tail
+#print axioms OpenMathReview.Sampling.gramSummand_mean_zero
+#check @OpenMathReview.Sampling.gramSummand_mean_zero
+#print axioms OpenMathReview.Sampling.gramSummand_second_moment
+#check @OpenMathReview.Sampling.gramSummand_second_moment
+#print axioms OpenMathReview.Sampling.gramSummand_independent
+#check @OpenMathReview.Sampling.gramSummand_independent
+#print axioms OpenMathReview.Sampling.gramSummand_norm_bound
+#check @OpenMathReview.Sampling.gramSummand_norm_bound
+#print axioms OpenMathReview.Sampling.bernoulli_gram_variance_matrix
+#check @OpenMathReview.Sampling.bernoulli_gram_variance_matrix
+#print axioms OpenMathReview.Sampling.bernoulli_gram_deviation
+#check @OpenMathReview.Sampling.bernoulli_gram_deviation
+#print axioms OpenMathReview.Sampling.columnSampleExcess_rate
+#check @OpenMathReview.Sampling.columnSampleExcess_rate
+#print axioms OpenMathReview.Sampling.matrixBernsteinTailBound_columnSampleExcess
+#check @OpenMathReview.Sampling.matrixBernsteinTailBound_columnSampleExcess
+#print axioms OpenMathReview.Sampling.columnSample_norm_bad_implies_gram_bad
+#check @OpenMathReview.Sampling.columnSample_norm_bad_implies_gram_bad
+#print axioms OpenMathReview.Sampling.actual_column_sample_norm_tail
+#check @OpenMathReview.Sampling.actual_column_sample_norm_tail
+#print axioms OpenMathReview.Sampling.binomialWeight_recurrence
+#check @OpenMathReview.Sampling.binomialWeight_recurrence
+#print axioms OpenMathReview.Sampling.binomialWeight_le_mode
+#check @OpenMathReview.Sampling.binomialWeight_le_mode
+#print axioms OpenMathReview.Sampling.binomialWeight_mode_lower
+#check @OpenMathReview.Sampling.binomialWeight_mode_lower
+#print axioms OpenMathReview.Sampling.finite_product_real_fiber_sum
+#check @OpenMathReview.Sampling.finite_product_real_fiber_sum
+#print axioms OpenMathReview.Sampling.finite_product_bad_fiber_bound
+#check @OpenMathReview.Sampling.finite_product_bad_fiber_bound
+#print axioms OpenMathReview.Sampling.columnGram_posSemidef
+#check @OpenMathReview.Sampling.columnGram_posSemidef
+#print axioms OpenMathReview.Sampling.real_matrix_psd_norm_mono
+#check @OpenMathReview.Sampling.real_matrix_psd_norm_mono
+#print axioms OpenMathReview.Sampling.real_gram_norm
+#check @OpenMathReview.Sampling.real_gram_norm
+#print axioms OpenMathReview.Sampling.weighted_columnGram_norm_le
+#check @OpenMathReview.Sampling.weighted_columnGram_norm_le
+#print axioms OpenMathReview.Sampling.bernoulli_variance_proxy_le
+#check @OpenMathReview.Sampling.bernoulli_variance_proxy_le
+#print axioms OpenMathReview.Sampling.regular_uniform_gram_eigenvector
+#check @OpenMathReview.Sampling.regular_uniform_gram_eigenvector
+#print axioms OpenMathReview.Sampling.centering_operator_eq_projection
+#check @OpenMathReview.Sampling.centering_operator_eq_projection
+#print axioms OpenMathReview.Sampling.regular_centered_norm_eq_second
+#check @OpenMathReview.Sampling.regular_centered_norm_eq_second
+#print axioms OpenMathReview.Sampling.l2_opNorm_row_equiv
+#check @OpenMathReview.Sampling.l2_opNorm_row_equiv
+#print axioms OpenMathReview.Sampling.finiteRowColumnSample_univ_norm
+#check @OpenMathReview.Sampling.finiteRowColumnSample_univ_norm
+#print axioms OpenMathReview.Sampling.actual_finite_row_column_sample_norm_tail
+#check @OpenMathReview.Sampling.actual_finite_row_column_sample_norm_tail
+#print axioms OpenMathReview.Sampling.actual_sampled_column_energy
+#check @OpenMathReview.Sampling.actual_sampled_column_energy
+#print axioms OpenMathReview.Sampling.binary_regular_degree_le_order
+#check @OpenMathReview.Sampling.binary_regular_degree_le_order
+#print axioms OpenMathReview.Sampling.actual_sampled_column_energy_le
+#check @OpenMathReview.Sampling.actual_sampled_column_energy_le
+#print axioms OpenMathReview.Sampling.two_shore_noise_le_half_loss
+#check @OpenMathReview.Sampling.two_shore_noise_le_half_loss
+#print axioms OpenMathReview.Sampling.two_shore_probability_budget
+#check @OpenMathReview.Sampling.two_shore_probability_budget
+#print axioms OpenMathReview.Sampling.gram_top_eigenvector_span
+#check @OpenMathReview.Sampling.gram_top_eigenvector_span
+#print axioms OpenMathReview.Sampling.singular_norm_on_top_orthogonal
+#check @OpenMathReview.Sampling.singular_norm_on_top_orthogonal
+#print axioms OpenMathReview.Sampling.spectral_centered_operator_bound
+#check @OpenMathReview.Sampling.spectral_centered_operator_bound
+#print axioms OpenMathReview.Sampling.spectral_rank_error_lower
+#check @OpenMathReview.Sampling.spectral_rank_error_lower
+#print axioms OpenMathReview.Sampling.secondSingularValue_rank_one_perturbation
+#check @OpenMathReview.Sampling.secondSingularValue_rank_one_perturbation
+#print axioms OpenMathReview.Sampling.secondSingularValue_constant_perturbation
+#check @OpenMathReview.Sampling.secondSingularValue_constant_perturbation
+#print axioms OpenMathReview.Sampling.fixedCountSelectors_card
+#check @OpenMathReview.Sampling.fixedCountSelectors_card
+#print axioms OpenMathReview.Sampling.bernoulliColumnLaw_real_fixed_count_lower
+#check @OpenMathReview.Sampling.bernoulliColumnLaw_real_fixed_count_lower
+#print axioms OpenMathReview.Sampling.uniformFixedColumnLaw_actual_subset_probability
+#check @OpenMathReview.Sampling.uniformFixedColumnLaw_actual_subset_probability
+#print axioms OpenMathReview.Sampling.uniformFixedColumnLaw_real_as_conditioning
+#check @OpenMathReview.Sampling.uniformFixedColumnLaw_real_as_conditioning
+#print axioms OpenMathReview.Sampling.uniformFixedColumnLaw_event_le
+#check @OpenMathReview.Sampling.uniformFixedColumnLaw_event_le
+#print axioms OpenMathReview.Sampling.actual_full_selected_degree_tail_zero
+#check @OpenMathReview.Sampling.actual_full_selected_degree_tail_zero
+#print axioms OpenMathReview.Sampling.actual_uniform_selected_degree_tail
+#check @OpenMathReview.Sampling.actual_uniform_selected_degree_tail
+#print axioms OpenMathReview.Sampling.actual_fixed_column_sample_norm_tail
+#check @OpenMathReview.Sampling.actual_fixed_column_sample_norm_tail
+#print axioms OpenMathReview.Sampling.actual_full_column_sample_norm_tail_zero
+#check @OpenMathReview.Sampling.actual_full_column_sample_norm_tail_zero
+#print axioms OpenMathReview.Sampling.actual_positive_fixed_column_sample_norm_tail
+#check @OpenMathReview.Sampling.actual_positive_fixed_column_sample_norm_tail

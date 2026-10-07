@@ -1,0 +1,31 @@
+SpectralCentering.lean:28:0: warning: automatically included section variable(s) unused in theorem `OpenMathReview.Sampling.mem_gram_trailing_of_repr_zero`:
+  [CompleteSpace E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CompleteSpace E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+SpectralCentering.lean:54:0: warning: automatically included section variable(s) unused in theorem `OpenMathReview.Sampling.gram_top_eigenvector_span`:
+  [CompleteSpace E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CompleteSpace E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+SpectralCentering.lean:138:15: warning: `ContinuousLinearMap.sub_apply` has been deprecated: Use `sub_apply` instead
+
+Note: The updated constant is in a different namespace. Dot notation may need to be changed (e.g., from `x.sub_apply` to `sub_apply x`).
+'OpenMathReview.Sampling.gram_top_eigenvector_span' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OpenMathReview.Sampling.singular_norm_on_top_orthogonal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OpenMathReview.Sampling.spectral_centered_operator_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+@spectral_centered_operator_bound : ∀ {E : Type u_3} {F : Type u_4} [inst : NormedAddCommGroup E]
+  [inst_1 : InnerProductSpace ℝ E] [inst_2 : FiniteDimensional ℝ E] [CompleteSpace E] [inst_4 : NormedAddCommGroup F]
+  [inst_5 : InnerProductSpace ℝ F] [inst_6 : FiniteDimensional ℝ F] (T : E →ₗ[ℝ] F) {n : ℕ},
+  finrank ℝ E = n →
+    1 < n →
+      ∀ (u : E),
+        u ≠ 0 →
+          ∀ (d : ℝ),
+            0 < d →
+              (LinearMap.adjoint T ∘ₗ T) u = d ^ 2 • u →
+                T.singularValues 1 < d →
+                  ‖LinearMap.toContinuousLinearMap T - LinearMap.toContinuousLinearMap T ∘SL (ℝ ∙ u).starProjection‖ ≤
+                    T.singularValues 1

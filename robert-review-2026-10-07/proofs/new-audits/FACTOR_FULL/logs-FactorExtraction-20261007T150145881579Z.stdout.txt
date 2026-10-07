@@ -1,0 +1,26 @@
+FactorExtraction.lean:11:12: warning: please avoid 'open (scoped) Classical' statements: this can hide theorem statements which would be better stated with explicit decidability statements.
+Instead, use `open Classical in` for definitions or instances, the `classical` tactic for proofs.
+For theorem statements, either add missing decidability assumptions or use `open Classical in`.
+
+Note: This linter can be disabled with `set_option linter.style.openClassical false`
+FactorExtraction.lean:18:0: warning: automatically included section variable(s) unused in theorem `RobertPublishable.Factor.left_exists`:
+  [DecidableEq P]
+  [DecidableEq Q]
+  [Fintype P]
+  [Fintype Q]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq P] [DecidableEq Q] [Fintype P] [Fintype Q] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+FactorExtraction.lean:62:0: warning: automatically included section variable(s) unused in theorem `RobertPublishable.Factor.right_exists`:
+  [DecidableEq P]
+  [DecidableEq Q]
+  [Fintype P]
+  [Fintype Q]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq P] [DecidableEq Q] [Fintype P] [Fintype Q] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+'RobertPublishable.Factor.selected_left_degree' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RobertPublishable.Factor.selected_right_degree' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RobertPublishable.Factor.exists_regular_edge_set' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,5 @@
+'OpenMathReview.Sampling.binomialWeight_recurrence' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OpenMathReview.Sampling.binomialWeight_le_mode' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OpenMathReview.Sampling.binomialWeight_mode_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+binomialWeight_mode_lower : ∀ (N m : ℕ) {p : ℝ},
+  0 < p → p < 1 → m < N → p * ↑N = ↑m → 1 / (↑N + 1) ≤ binomialWeight N p m

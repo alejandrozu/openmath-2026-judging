@@ -1,0 +1,24 @@
+IndependentTransversals/WeakHypergraph.lean:24:0: warning: automatically included section variable(s) unused in theorem `OpenMathReview.WeakHypergraph.block_injective`:
+  [Fintype A]
+  [Fintype B]
+  [DecidableEq A]
+  [DecidableEq B]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype A] [Fintype B] [DecidableEq A] [DecidableEq B] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+IndependentTransversals/WeakHypergraph.lean:63:2: warning: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+'OpenMathReview.WeakHypergraph.disjoint_representatives' depends on axioms: [propext, Classical.choice, Quot.sound]
+@disjoint_representatives : ∀ {A : Type u_3} {B : Type u_4} [Fintype A] [Fintype B] [DecidableEq A] [DecidableEq B]
+  (F : A → Finset (Finset B)) (ℓ : ℕ),
+  (∀ (a : A), ∀ e ∈ F a, e.card ≤ ℓ) →
+    (∀ (I : Finset A),
+        I.Nonempty → ∀ (U : Finset B), U.card ≤ 2 * ℓ * (I.card - 1) → ∃ a ∈ I, ∃ e ∈ F a, Disjoint e U) →
+      ∃ f, (∀ (a : A), f a ∈ F a) ∧ Pairwise fun a b ↦ Disjoint (f a) (f b)

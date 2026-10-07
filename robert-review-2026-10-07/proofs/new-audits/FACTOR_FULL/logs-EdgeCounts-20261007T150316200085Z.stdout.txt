@@ -1,0 +1,14 @@
+EdgeCounts.lean:6:12: warning: please avoid 'open (scoped) Classical' statements: this can hide theorem statements which would be better stated with explicit decidability statements.
+Instead, use `open Classical in` for definitions or instances, the `classical` tactic for proofs.
+For theorem statements, either add missing decidability assumptions or use `open Classical in`.
+
+Note: This linter can be disabled with `set_option linter.style.openClassical false`
+EdgeCounts.lean:88:54: warning: This simp argument is unused:
+  and_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [cellEdges, mem_filter, mem_univ, true_and]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'RobertPublishable.Factor.row_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RobertPublishable.Factor.column_sum' depends on axioms: [propext, Classical.choice, Quot.sound]

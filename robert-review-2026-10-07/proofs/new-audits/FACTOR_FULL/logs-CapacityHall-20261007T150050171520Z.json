@@ -1,0 +1,126 @@
+{
+  "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\CapacityHall.lean",
+  "source_sha256": "af00832b5432e7d71f43a2a3b1c1f9a4816771135b2d5f39b4ccf79eacb053ff",
+  "source_head_provenance": "1efc324e155ef0b6a7081c5f695c6c825e7debef",
+  "source_snapshot": {
+    "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\logs\\CapacityHall-20261007T150050171520Z.source.lean",
+    "sha256": "af00832b5432e7d71f43a2a3b1c1f9a4816771135b2d5f39b4ccf79eacb053ff"
+  },
+  "driver_sha256": "e1c909b5d2eddd855b241b4d091f5f6fa4c6c88f18dc45d1ad9e664b405b1fa0",
+  "completed106_baseline": {
+    "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\adjacent_robert_20261007\\verification\\completed106-source81-axioms-immutable.json",
+    "sha256": "82b6c76de58309b35ed3b1b28b211011449b319affde181446870a33e9a9f142"
+  },
+  "runtime": {
+    "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+    "sha256": "af49bacfabaa1fea71332ca0feae0fa1a60912219d5902291adc79f905bffb8d",
+    "version": "Lean (version 4.33.1, x86_64-w64-windows-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)"
+  },
+  "environment": {
+    "LEAN_PATH": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\adjacent_robert_20261007\\verification\\replay;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\adjacent_robert_20261007\\verification\\provider-replay;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\aesop\\.lake\\build\\lib\\lean;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\batteries\\.lake\\build\\lib\\lean;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\Cli\\.lake\\build\\lib\\lean;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\importGraph\\.lake\\build\\lib\\lean;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\LeanSearchClient\\.lake\\build\\lib\\lean;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\plausible\\.lake\\build\\lib\\lean;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\proofwidgets\\.lake\\build\\lib\\lean;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\Qq\\.lake\\build\\lib\\lean",
+    "LEAN_NUM_THREADS": "1"
+  },
+  "resource_guard_sha256": "29578665ab4f1336e8164a547872119939c6a0b86ceafbadcd36f9859bc367f2",
+  "guard": {
+    "command": [
+      "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+      "-j1",
+      "-Dpp.unicode.fun=true",
+      "-DautoImplicit=false",
+      "-DrelaxedAutoImplicit=false",
+      "-Dweak.linter.style.copyright.formalConjectures=false",
+      "-Dweak.linter.style.namespace=true",
+      "-Dweak.linter.style.stubs=true",
+      "-Dweak.linter.style.openClassical=true",
+      "-o",
+      "CapacityHall.olean",
+      "CapacityHall.lean"
+    ],
+    "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR",
+    "started_utc": "2026-10-07T15:00:50.182066+00:00",
+    "attempted": true,
+    "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+    "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+    "resource_policy": {
+      "initial_disk_bytes": 4000000000,
+      "initial_physical_bytes": 6442450944,
+      "initial_available_commit_bytes": 17179869184,
+      "continuous_disk_bytes": 1000000000,
+      "continuous_physical_bytes": 3221225472,
+      "continuous_available_commit_bytes": 2147483648,
+      "own_job_private_bytes": 13958643712,
+      "own_process_private_bytes": 13958643712,
+      "poll_seconds": 0.25,
+      "timeout_seconds": 600
+    },
+    "minimum_disk_free_bytes": 11018682368,
+    "initial_system_memory_snapshot": {
+      "free_physical_bytes": 13896089600,
+      "total_physical_bytes": 34024419328,
+      "available_commit_bytes": 18662760448,
+      "total_commit_limit_bytes": 45444141056
+    },
+    "minimum_physical_available_bytes": 12820045824,
+    "minimum_available_commit_bytes": 16303026176,
+    "root_pid": 30328,
+    "own_job_assignment_before_resume": "PASS",
+    "exit": 0,
+    "job_peak_process_private_bytes": 2149228544,
+    "job_peak_aggregate_private_bytes": 2150490112,
+    "state": "PASS",
+    "finished_utc": "2026-10-07T15:00:58.626828+00:00",
+    "seconds": 8.437,
+    "polled_peak_tree_private_bytes": 2149109760,
+    "polled_peak_tree_rss_bytes": 951689216,
+    "counter_samples": 33,
+    "observed_own_processes": {
+      "30328": {
+        "exe": "lean.exe",
+        "peak_private_bytes": 2147848192,
+        "peak_rss_bytes": 961011712
+      },
+      "27272": {
+        "exe": "conhost.exe",
+        "peak_private_bytes": 1261568,
+        "peak_rss_bytes": 7344128
+      }
+    },
+    "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\logs\\CapacityHall-20261007T150050171520Z.stdout.txt",
+    "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\logs\\CapacityHall-20261007T150050171520Z.stderr.txt",
+    "stdout_sha256": "5030d4f9cb6ce2269437c243c1c988e83b3243b1438f4b0de2e5493d5dac5ce4",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout_excerpt": "CapacityHall.lean:17:12: warning: please avoid 'open (scoped) Classical' statements: this can hide theorem statements which would be better stated with explicit decidability statements.\nInstead, use `open Classical in` for definitions or instances, the `classical` tactic for proofs.\nFor theorem statements, either add missing decidability assumptions or use `open Classical in`.\n\nNote: This linter can be disabled with `set_option linter.style.openClassical false`\nCapacityHall.lean:107:4: warning: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`\n'RobertPublishable.Factor.capacity_hall' depends on axioms: [propext, Classical.choice, Quot.sound]\n'RobertPublishable.Factor.capacity_matching' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+    "stderr_excerpt": ""
+  },
+  "actual_axiom_outputs": [
+    {
+      "endpoint": "RobertPublishable.Factor.capacity_hall",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    },
+    {
+      "endpoint": "RobertPublishable.Factor.capacity_matching",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    }
+  ],
+  "artifacts": [
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\CapacityHall.olean",
+      "sha256": "cca863fd389908819ddfb8c49d7be335ff11222e4aee2f3ce9b731e4a53cdcca",
+      "bytes": 279264
+    }
+  ]
+}

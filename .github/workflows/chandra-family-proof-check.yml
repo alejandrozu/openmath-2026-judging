@@ -1,0 +1,32 @@
+name: Chandra universal matrix family
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  selected-proofs:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    env:
+      LEAN_NUM_THREADS: "1"
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          sparse-checkout: chandra-support138-family-2026-10-07
+      - uses: leanprover/lean-action@f061402b660e0c34644504b324e830f2991d4865
+        with:
+          lake-package-directory: chandra-support138-family-2026-10-07/lean
+          auto-config: "false"
+          build: "true"
+          test: "false"
+          lint: "false"
+          use-mathlib-cache: "true"
+      - name: Check exact selected scope
+        working-directory: chandra-support138-family-2026-10-07
+        run: python3 scripts/check_selected_axioms.py
+      - name: Preserve actual reproduction
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: chandra-family-actual-reproduction
+          path: chandra-support138-family-2026-10-07/reproduction-evidence/

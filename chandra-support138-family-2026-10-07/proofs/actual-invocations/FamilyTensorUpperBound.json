@@ -1,0 +1,391 @@
+{
+  "schema": "support138-modular-family-own-4.33.1-guarded-invocation-v1",
+  "checked_utc": "2026-10-07T17:06:52.595391+00:00",
+  "module": "FamilyTensorUpperBound",
+  "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SUPPORT138_FAMILY\\zero_outside_route_prepared\\minimal_assembly\\FamilyTensorUpperBound.lean",
+  "source_sha256": "80eb79df61766e1c287632ba47f0daade7fc9987a2a7789ee95ab71986a506e7",
+  "modular_plan_sha256": "74bd4aeec6b25b1c0a81ec839b1e6dda789cc3adfb09b31fffa0fc2fbe8e5800",
+  "fixed_row_extension_plan_sha256": "ed31da28f0eda5afdcef3698429b55ada30026a64bb9d5780f98c6559b4a8b1b",
+  "minimal_assembly_plan_sha256": "a3732d151d814d68a12bd9f299756f95e35ddc9509b41b7f96b0b36c2c97cff1",
+  "exact_custom_prerequisite_closure": [
+    "MaskedRow0Fixed",
+    "MaskedRow1Fixed",
+    "MaskedRow2Fixed",
+    "MaskedRow3Fixed",
+    "MaskedRow4Fixed",
+    "MaskedRow5Fixed",
+    "MaskedRow6Fixed",
+    "MaskedRow7Fixed",
+    "MaskedRow8Fixed",
+    "SupportBound",
+    "SupportData",
+    "SupportMask",
+    "ZeroOutside"
+  ],
+  "runtime": {
+    "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+    "sha256": "af49bacfabaa1fea71332ca0feae0fa1a60912219d5902291adc79f905bffb8d",
+    "version": "Lean (version 4.33.1, x86_64-w64-windows-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)"
+  },
+  "dependency_pins": [
+    {
+      "name": "mathlib",
+      "head": "0df444a360eaa60ab8c11dca51a86af692955474",
+      "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib"
+    },
+    {
+      "name": "plausible",
+      "head": "b7eb3304aeae834b12dda98993a37f6a41f6f0bb",
+      "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\plausible"
+    },
+    {
+      "name": "LeanSearchClient",
+      "head": "5f4d51b81cbd3f6b32b156bfad9056621a040404",
+      "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\LeanSearchClient"
+    },
+    {
+      "name": "importGraph",
+      "head": "16f02aa7642864af59f1ff0e384a015994db9118",
+      "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\importGraph"
+    },
+    {
+      "name": "proofwidgets",
+      "head": "4be2e3d5087eeb272cf5a8853b8f9dd025ef5957",
+      "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\proofwidgets"
+    },
+    {
+      "name": "aesop",
+      "head": "3448c0bcc5ce01b2d1546e483ec3620e32df3d0e",
+      "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\aesop"
+    },
+    {
+      "name": "Qq",
+      "head": "92c15be17b7caf78c2ad767ec40f89052d908d81",
+      "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\Qq"
+    },
+    {
+      "name": "batteries",
+      "head": "4488d40d070b9700d4d5a6aa342f0d40c31b2a2d",
+      "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\batteries"
+    },
+    {
+      "name": "Cli",
+      "head": "6130a47896ce867c6a4a55373441e59e565bad0f",
+      "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\Cli"
+    }
+  ],
+  "original_receipt": {
+    "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\adjacent_robert_20261007\\verification\\completed106-source81-axioms-immutable.json",
+    "sha256": "82b6c76de58309b35ed3b1b28b211011449b319affde181446870a33e9a9f142"
+  },
+  "runner_sha256": "66a4a8c6ebf6e051490c8d111a848e0e534914716737c53bc0f197687798fa62",
+  "guard_sha256": "29578665ab4f1336e8164a547872119939c6a0b86ceafbadcd36f9859bc367f2",
+  "command": [
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+    "-j1",
+    "-DautoImplicit=false",
+    "-DrelaxedAutoImplicit=false",
+    "-o",
+    "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SUPPORT138_FAMILY\\zero_outside_route_prepared\\attempts\\001-FamilyTensorUpperBound\\FamilyTensorUpperBound.olean",
+    "FamilyTensorUpperBound.lean"
+  ],
+  "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SUPPORT138_FAMILY\\zero_outside_route_prepared\\minimal_assembly",
+  "environment": {
+    "LEAN_PATH": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SUPPORT138_FAMILY\\zero_outside_route_prepared\\attempts\\001-MaskedRow0Fixed;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SUPPORT138_FAMILY\\zero_outside_route_prepared\\attempts\\001-MaskedRow1Fixed;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SUPPORT138_FAMILY\\zero_outside_route_prepared\\attempts\\001-MaskedRow2Fixed;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SUPPORT138_FAMILY\\zero_outside_route_prepared\\attempts\\001-MaskedRow3Fixed;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SUPPORT138_FAMILY\\zero_outside_route_prepared\\attempts\\001-MaskedRow4Fixed;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SUPPORT138_FAMILY\\zero_outside_route_prepared\\attempts\\001-MaskedRow5Fixed;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SUPPORT138_FAMILY\\zero_outside_route_prepared\\attempts\\001-MaskedRow6Fixed;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SUPPORT138_FAMILY\\zero_outside_route_prepared\\attempts\\001-MaskedRow7Fixed;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SUPPORT138_FAMILY\\zero_outside_route_prepared\\attempts\\001-MaskedRow8Fixed;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SUPPORT138_FAMILY\\zero_outside_route_prepared\\attempts\\001-SupportBound;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SUPPORT138_FAMILY\\zero_outside_route_prepared\\attempts\\001-SupportData;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SUPPORT138_FAMILY\\zero_outside_route_prepared\\attempts\\001-SupportMask;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SUPPORT138_FAMILY\\zero_outside_route_prepared\\attempts\\001-ZeroOutside;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\adjacent_robert_20261007\\verification\\replay;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\adjacent_robert_20261007\\verification\\provider-replay;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\aesop\\.lake\\build\\lib\\lean;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\batteries\\.lake\\build\\lib\\lean;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\Cli\\.lake\\build\\lib\\lean;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\importGraph\\.lake\\build\\lib\\lean;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\LeanSearchClient\\.lake\\build\\lib\\lean;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\plausible\\.lake\\build\\lib\\lean;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\proofwidgets\\.lake\\build\\lib\\lean;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\Qq\\.lake\\build\\lib\\lean",
+    "LEAN_NUM_THREADS": "1"
+  },
+  "active_compilers_before": [],
+  "guard": {
+    "command": [
+      "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+      "-j1",
+      "-DautoImplicit=false",
+      "-DrelaxedAutoImplicit=false",
+      "-o",
+      "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SUPPORT138_FAMILY\\zero_outside_route_prepared\\attempts\\001-FamilyTensorUpperBound\\FamilyTensorUpperBound.olean",
+      "FamilyTensorUpperBound.lean"
+    ],
+    "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SUPPORT138_FAMILY\\zero_outside_route_prepared\\minimal_assembly",
+    "started_utc": "2026-10-07T17:06:43.801523+00:00",
+    "attempted": true,
+    "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+    "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+    "resource_policy": {
+      "initial_disk_bytes": 4000000000,
+      "initial_physical_bytes": 6442450944,
+      "initial_available_commit_bytes": 17179869184,
+      "continuous_disk_bytes": 1000000000,
+      "continuous_physical_bytes": 3221225472,
+      "continuous_available_commit_bytes": 2147483648,
+      "own_job_private_bytes": 13958643712,
+      "own_process_private_bytes": 13958643712,
+      "poll_seconds": 0.25,
+      "timeout_seconds": 300
+    },
+    "minimum_disk_free_bytes": 10855112704,
+    "initial_system_memory_snapshot": {
+      "free_physical_bytes": 14295711744,
+      "total_physical_bytes": 34024419328,
+      "available_commit_bytes": 18403577856,
+      "total_commit_limit_bytes": 45444141056
+    },
+    "minimum_physical_available_bytes": 13499449344,
+    "minimum_available_commit_bytes": 16232796160,
+    "root_pid": 25452,
+    "own_job_assignment_before_resume": "PASS",
+    "exit": 0,
+    "job_peak_process_private_bytes": 2385326080,
+    "job_peak_aggregate_private_bytes": 2386608128,
+    "state": "PASS",
+    "finished_utc": "2026-10-07T17:06:52.494535+00:00",
+    "seconds": 8.703,
+    "polled_peak_tree_private_bytes": 2373287936,
+    "polled_peak_tree_rss_bytes": 1015005184,
+    "counter_samples": 34,
+    "observed_own_processes": {
+      "31184": {
+        "exe": "conhost.exe",
+        "peak_private_bytes": 1282048,
+        "peak_rss_bytes": 7360512
+      },
+      "25452": {
+        "exe": "lean.exe",
+        "peak_private_bytes": 2372005888,
+        "peak_rss_bytes": 1035833344
+      }
+    },
+    "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SUPPORT138_FAMILY\\zero_outside_route_prepared\\attempts\\001-FamilyTensorUpperBound\\compiler.stdout.txt",
+    "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SUPPORT138_FAMILY\\zero_outside_route_prepared\\attempts\\001-FamilyTensorUpperBound\\compiler.stderr.txt",
+    "stdout_sha256": "6a428945bbd42c0914c34fe7552738a87eb100f83fc040466fd9c6e4748a7659",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout_excerpt": "'OpenMathReview.Support138Family.rational_family_identities' depends on axioms: [propext, Classical.choice, Quot.sound]\n'OpenMathReview.Support138Family.rational_family_support_le' depends on axioms: [propext, Classical.choice, Quot.sound]\n@rational_family_identities : ∀ {K : Type u_2} [inst : Field K] [CharZero K] [DecidableEq K] (s : K),\n  s ≠ 0 → s ≠ -2 → ∀ (a b c : Fin 9), coefficient s a b c = target a b c\n@rational_family_support_le : ∀ {K : Type u_2} [inst : Field K] [CharZero K] [inst_2 : DecidableEq K] (s : K),\n  support s ≤ 138\n",
+    "stderr_excerpt": ""
+  },
+  "artifacts": [
+    {
+      "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SUPPORT138_FAMILY\\zero_outside_route_prepared\\attempts\\001-FamilyTensorUpperBound\\FamilyTensorUpperBound.olean",
+      "sha256": "a0c10a181850a007e262996d8cb2cc02f8582d1a03e417918ae804f16ef32310",
+      "bytes": 124552
+    }
+  ],
+  "own_prior_qualified_imports": [
+    {
+      "module": "MaskedRow0Fixed",
+      "receipt": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SUPPORT138_FAMILY\\zero_outside_route_prepared\\attempts\\001-MaskedRow0Fixed\\actual_invocation.json",
+      "sha256": "8f78a847cee341848b13bcc26ee55cba67c4761077538868df3b980712247375",
+      "library_root": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SUPPORT138_FAMILY\\zero_outside_route_prepared\\attempts\\001-MaskedRow0Fixed",
+      "artifacts": [
+        {
+          "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SUPPORT138_FAMILY\\zero_outside_route_prepared\\attempts\\001-MaskedRow0Fixed\\MaskedRow0Fixed.olean",
+          "sha256": "13be32608b24ccd3b2b34a3959cddacc38cc16fd1f03cc4972df432b6f17f0fa",
+          "bytes": 9472016
+        }
+      ]
+    },
+    {
+      "module": "MaskedRow1Fixed",
+      "receipt": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SUPPORT138_FAMILY\\zero_outside_route_prepared\\attempts\\001-MaskedRow1Fixed\\actual_invocation.json",
+      "sha256": "a155f49f7ed508485ba672deecc8555c518eb9c4d9c90d2cdcafc08e5f4a4719",
+      "library_root": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SUPPORT138_FAMILY\\zero_outside_route_prepared\\attempts\\001-MaskedRow1Fixed",
+      "artifacts": [
+        {
+          "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SUPPORT138_FAMILY\\zero_outside_route_prepared\\attempts\\001-MaskedRow1Fixed\\MaskedRow1Fixed.olean",
+          "sha256": "a756c7b3a2be9e7c5c357524e9b7148d3e4609134b4fcc0da8de92c73f041004",
+          "bytes": 9217320
+        }
+      ]
+    },
+    {
+      "module": "MaskedRow2Fixed",
+      "receipt": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SUPPORT138_FAMILY\\zero_outside_route_prepared\\attempts\\001-MaskedRow2Fixed\\actual_invocation.json",
+      "sha256": "9376e1da88926a419d6ef40af146388a1bd8cab051d0096f4714d726c95af0fe",
+      "library_root": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SUPPORT138_FAMILY\\zero_outside_route_prepared\\attempts\\001-MaskedRow2Fixed",
+      "artifacts": [
+        {
+          "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SUPPORT138_FAMILY\\zero_outside_route_prepared\\attempts\\001-MaskedRow2Fixed\\MaskedRow2Fixed.olean",
+          "sha256": "7f3e62a3f4de06cbdce0fa222f97b5c5670e791538a3439e10eb90a10be1e71f",
+          "bytes": 8797416
+        }
+      ]
+    },
+    {
+      "module": "MaskedRow3Fixed",
+      "receipt": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SUPPORT138_FAMILY\\zero_outside_route_prepared\\attempts\\001-MaskedRow3Fixed\\actual_invocation.json",
+      "sha256": "efbb7d56cf498a30b13d4db7633b0597e9b47c80f5dba7775de5da4f5c927a6b",
+      "library_root": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SUPPORT138_FAMILY\\zero_outside_route_prepared\\attempts\\001-MaskedRow3Fixed",
+      "artifacts": [
+        {
+          "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SUPPORT138_FAMILY\\zero_outside_route_prepared\\attempts\\001-MaskedRow3Fixed\\MaskedRow3Fixed.olean",
+          "sha256": "5c9956b06dc106bf784dbd63f22652bfe5a37ef88252f9516f8871796939e41e",
+          "bytes": 8841344
+        }
+      ]
+    },
+    {
+      "module": "MaskedRow4Fixed",
+      "receipt": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SUPPORT138_FAMILY\\zero_outside_route_prepared\\attempts\\001-MaskedRow4Fixed\\actual_invocation.json",
+      "sha256": "cea639f8c3ce2f49140c3d6e5b2143f44023e553bdd7074d4167fd17b14c31c6",
+      "library_root": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SUPPORT138_FAMILY\\zero_outside_route_prepared\\attempts\\001-MaskedRow4Fixed",
+      "artifacts": [
+        {
+          "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SUPPORT138_FAMILY\\zero_outside_route_prepared\\attempts\\001-MaskedRow4Fixed\\MaskedRow4Fixed.olean",
+          "sha256": "921d48fffcc93c40cfb09861fa52a78fb7cf5fb3d7b21d9d303a9fed609b4908",
+          "bytes": 9835504
+        }
+      ]
+    },
+    {
+      "module": "MaskedRow5Fixed",
+      "receipt": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SUPPORT138_FAMILY\\zero_outside_route_prepared\\attempts\\001-MaskedRow5Fixed\\actual_invocation.json",
+      "sha256": "035fbdc6aa744bc54d286b12f6e4b8cf0dcabc1b7e15bbb57f2f169c469d59ac",
+      "library_root": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SUPPORT138_FAMILY\\zero_outside_route_prepared\\attempts\\001-MaskedRow5Fixed",
+      "artifacts": [
+        {
+          "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SUPPORT138_FAMILY\\zero_outside_route_prepared\\attempts\\001-MaskedRow5Fixed\\MaskedRow5Fixed.olean",
+          "sha256": "37bbe313073a379f3f47b271adbb39ec61a1f5b75c70cd6f1344f24b5950e5a2",
+          "bytes": 10207224
+        }
+      ]
+    },
+    {
+      "module": "MaskedRow6Fixed",
+      "receipt": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SUPPORT138_FAMILY\\zero_outside_route_prepared\\attempts\\001-MaskedRow6Fixed\\actual_invocation.json",
+      "sha256": "b36cee6baaa5b5dcfc34248c4f0de2a85577f0c92aab421a23e636eeefb302ca",
+      "library_root": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SUPPORT138_FAMILY\\zero_outside_route_prepared\\attempts\\001-MaskedRow6Fixed",
+      "artifacts": [
+        {
+          "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SUPPORT138_FAMILY\\zero_outside_route_prepared\\attempts\\001-MaskedRow6Fixed\\MaskedRow6Fixed.olean",
+          "sha256": "6b49ad02c6def5e99b6d25d7f7829163bc0f5874e9e415c04a3e1dc36a8799b1",
+          "bytes": 9407008
+        }
+      ]
+    },
+    {
+      "module": "MaskedRow7Fixed",
+      "receipt": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SUPPORT138_FAMILY\\zero_outside_route_prepared\\attempts\\001-MaskedRow7Fixed\\actual_invocation.json",
+      "sha256": "d529e52a5a35e01aa8569d5d0705cedc4f5d1a358adbad3fa35f9a1268f0f58c",
+      "library_root": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SUPPORT138_FAMILY\\zero_outside_route_prepared\\attempts\\001-MaskedRow7Fixed",
+      "artifacts": [
+        {
+          "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SUPPORT138_FAMILY\\zero_outside_route_prepared\\attempts\\001-MaskedRow7Fixed\\MaskedRow7Fixed.olean",
+          "sha256": "33766b6abf66822c21922e2150aec87e7012085253990b6349e0fd73cf1748c5",
+          "bytes": 8736640
+        }
+      ]
+    },
+    {
+      "module": "MaskedRow8Fixed",
+      "receipt": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SUPPORT138_FAMILY\\zero_outside_route_prepared\\attempts\\001-MaskedRow8Fixed\\actual_invocation.json",
+      "sha256": "1289d17199e2e0917993503304349cf0538f130110b4cd20619ee27528734be8",
+      "library_root": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SUPPORT138_FAMILY\\zero_outside_route_prepared\\attempts\\001-MaskedRow8Fixed",
+      "artifacts": [
+        {
+          "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SUPPORT138_FAMILY\\zero_outside_route_prepared\\attempts\\001-MaskedRow8Fixed\\MaskedRow8Fixed.olean",
+          "sha256": "915d2d23c8f87d02d7dea5a513a3f7c23cbb4a995cee64bf85bc301f54b3b455",
+          "bytes": 9166000
+        }
+      ]
+    },
+    {
+      "module": "SupportBound",
+      "receipt": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SUPPORT138_FAMILY\\zero_outside_route_prepared\\attempts\\001-SupportBound\\actual_invocation.json",
+      "sha256": "f61a294d9b2f4e2ac2de1672ac4e5c3cc9992f4fc618bd2f36014b60d9c1d9cd",
+      "library_root": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SUPPORT138_FAMILY\\zero_outside_route_prepared\\attempts\\001-SupportBound",
+      "artifacts": [
+        {
+          "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SUPPORT138_FAMILY\\zero_outside_route_prepared\\attempts\\001-SupportBound\\SupportBound.olean",
+          "sha256": "0522fe2bb4331c7c96c7343d61ae5e13732bc887f3fae0fe97bf807e658c2e5e",
+          "bytes": 38064
+        }
+      ]
+    },
+    {
+      "module": "SupportData",
+      "receipt": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SUPPORT138_FAMILY\\zero_outside_route_prepared\\attempts\\001-SupportData\\actual_invocation.json",
+      "sha256": "4d9e6277c365388e2ab93df6e7f768e6336ca71837d5080ee4a5916c24ffced7",
+      "library_root": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SUPPORT138_FAMILY\\zero_outside_route_prepared\\attempts\\001-SupportData",
+      "artifacts": [
+        {
+          "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SUPPORT138_FAMILY\\zero_outside_route_prepared\\attempts\\001-SupportData\\SupportData.olean",
+          "sha256": "1cbe735b9360cec775346c31a48e780a6ad6eb08716fb28fd2fe02d408a2ee29",
+          "bytes": 857816
+        }
+      ]
+    },
+    {
+      "module": "SupportMask",
+      "receipt": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SUPPORT138_FAMILY\\zero_outside_route_prepared\\attempts\\001-SupportMask\\actual_invocation.json",
+      "sha256": "846592524848af12c7cbd5c524936731bb110329260a3000f95037171003fa87",
+      "library_root": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SUPPORT138_FAMILY\\zero_outside_route_prepared\\attempts\\001-SupportMask",
+      "artifacts": [
+        {
+          "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SUPPORT138_FAMILY\\zero_outside_route_prepared\\attempts\\001-SupportMask\\SupportMask.olean",
+          "sha256": "758431990ba888d6395bca6e14536967eb698979596d052be2c2603896ec8c55",
+          "bytes": 79568
+        }
+      ]
+    },
+    {
+      "module": "ZeroOutside",
+      "receipt": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SUPPORT138_FAMILY\\zero_outside_route_prepared\\attempts\\001-ZeroOutside\\actual_invocation.json",
+      "sha256": "5ba35cd6849bfe8b06818ab4e5380cfabf48285bf44185275e6cfaa6ef2b08cd",
+      "library_root": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SUPPORT138_FAMILY\\zero_outside_route_prepared\\attempts\\001-ZeroOutside",
+      "artifacts": [
+        {
+          "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SUPPORT138_FAMILY\\zero_outside_route_prepared\\attempts\\001-ZeroOutside\\ZeroOutside.olean",
+          "sha256": "080526aca85a4571ab050ee62f59fa2a42d07f6984be935a409717e1a43544ed",
+          "bytes": 11043928
+        }
+      ]
+    }
+  ],
+  "family_precheck": {
+    "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SUPPORT138_FAMILY\\literal_family_source_and_symbolic_precheck.json",
+    "sha256": "15f829e4a2574c6dc7a9be7d5342b5ab7d4f1f4c45cbbf73efff479ae5784569"
+  },
+  "sparse_manifest": {
+    "path": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\SUPPORT138_FAMILY\\sparse_lookup_exact_coefficient_manifest.json",
+    "sha256": "e69c7b68fae884696b2af90974b8f6024032076cb940df9ab7658e702834f4a1"
+  },
+  "owned_operational_timeout_seconds": 300,
+  "original_scientific_source_bindings": [
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\builds\\chandragupt\\MM3\\Scheme138.lean",
+      "sha256": "2e2604ad024af9318f59b215bf3c62104e6c25e558dd82ab46cefd4d38dd5442"
+    },
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\judging_audit\\repository\\OpenMath-Judging\\review\\chandra-REPORT_138_structure.txt",
+      "sha256": "c7191545dd38120b5a06bd140944ee2bdeaf93e7e625cabfa0e12f1d979e8e3f"
+    }
+  ],
+  "actual_selected_axiom_outputs": [
+    {
+      "endpoint": "OpenMathReview.Support138Family.rational_family_identities",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    },
+    {
+      "endpoint": "OpenMathReview.Support138Family.rational_family_support_le",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    }
+  ],
+  "expected_print_coverage_exact": true,
+  "selected_axioms_standard_or_free_only": true,
+  "piece_qualified_PASS": true,
+  "scope": "Exactly one source in the same42-function characteristic-zero-field support138 modular proof plan. IdentityRow modules certify only their81coordinates; data/support/specialization passes are separate. Universal identity/upper-bound theorem requires actual final FamilyCompleted closure. Exact support=138 is still pending. No rank22/optimal-support or new scoring claim.",
+  "universal_identity_and_support_upper_bound_actual_PASS": true,
+  "old_sources_or_outputs_changed": false
+}

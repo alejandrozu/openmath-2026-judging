@@ -1,0 +1,126 @@
+{
+  "source": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\EdgeCounts.lean",
+  "source_sha256": "9ed07ca4eee7d7ee978c15a860547ff2d971288e7c7051d70181ff1d464436fe",
+  "source_head_provenance": "1efc324e155ef0b6a7081c5f695c6c825e7debef",
+  "source_snapshot": {
+    "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\logs\\EdgeCounts-20261007T150316200085Z.source.lean",
+    "sha256": "9ed07ca4eee7d7ee978c15a860547ff2d971288e7c7051d70181ff1d464436fe"
+  },
+  "driver_sha256": "e1c909b5d2eddd855b241b4d091f5f6fa4c6c88f18dc45d1ad9e664b405b1fa0",
+  "completed106_baseline": {
+    "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\adjacent_robert_20261007\\verification\\completed106-source81-axioms-immutable.json",
+    "sha256": "82b6c76de58309b35ed3b1b28b211011449b319affde181446870a33e9a9f142"
+  },
+  "runtime": {
+    "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+    "sha256": "af49bacfabaa1fea71332ca0feae0fa1a60912219d5902291adc79f905bffb8d",
+    "version": "Lean (version 4.33.1, x86_64-w64-windows-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)"
+  },
+  "environment": {
+    "LEAN_PATH": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\adjacent_robert_20261007\\verification\\replay;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\adjacent_robert_20261007\\verification\\provider-replay;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\build\\lib\\lean;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\aesop\\.lake\\build\\lib\\lean;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\batteries\\.lake\\build\\lib\\lean;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\Cli\\.lake\\build\\lib\\lean;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\importGraph\\.lake\\build\\lib\\lean;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\LeanSearchClient\\.lake\\build\\lib\\lean;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\plausible\\.lake\\build\\lib\\lean;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\proofwidgets\\.lake\\build\\lib\\lean;C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\dependencies\\4.33.1\\mathlib\\.lake\\packages\\Qq\\.lake\\build\\lib\\lean",
+    "LEAN_NUM_THREADS": "1"
+  },
+  "resource_guard_sha256": "29578665ab4f1336e8164a547872119939c6a0b86ceafbadcd36f9859bc367f2",
+  "guard": {
+    "command": [
+      "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\publication\\verification\\runtimes\\lean-4.33.1-windows\\bin\\lean.exe",
+      "-j1",
+      "-Dpp.unicode.fun=true",
+      "-DautoImplicit=false",
+      "-DrelaxedAutoImplicit=false",
+      "-Dweak.linter.style.copyright.formalConjectures=false",
+      "-Dweak.linter.style.namespace=true",
+      "-Dweak.linter.style.stubs=true",
+      "-Dweak.linter.style.openClassical=true",
+      "-o",
+      "EdgeCounts.olean",
+      "EdgeCounts.lean"
+    ],
+    "cwd": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR",
+    "started_utc": "2026-10-07T15:03:16.207997+00:00",
+    "attempted": true,
+    "counter_helper_sha256": "0543549476ccdffdc00eab05e3139f423cf0b1471e985e196e69df011a77bed4",
+    "commit_counter_helper_sha256": "1d7cb5131a34499f3000b34f46d271ef5cb43fdde37e7bb2c16dac6d01c8d8ed",
+    "resource_policy": {
+      "initial_disk_bytes": 4000000000,
+      "initial_physical_bytes": 6442450944,
+      "initial_available_commit_bytes": 17179869184,
+      "continuous_disk_bytes": 1000000000,
+      "continuous_physical_bytes": 3221225472,
+      "continuous_available_commit_bytes": 2147483648,
+      "own_job_private_bytes": 13958643712,
+      "own_process_private_bytes": 13958643712,
+      "poll_seconds": 0.25,
+      "timeout_seconds": 600
+    },
+    "minimum_disk_free_bytes": 11014361088,
+    "initial_system_memory_snapshot": {
+      "free_physical_bytes": 14126022656,
+      "total_physical_bytes": 34024419328,
+      "available_commit_bytes": 18952404992,
+      "total_commit_limit_bytes": 45444141056
+    },
+    "minimum_physical_available_bytes": 13133258752,
+    "minimum_available_commit_bytes": 16778686464,
+    "root_pid": 31068,
+    "own_job_assignment_before_resume": "PASS",
+    "exit": 0,
+    "job_peak_process_private_bytes": 2170826752,
+    "job_peak_aggregate_private_bytes": 2172080128,
+    "state": "PASS",
+    "finished_utc": "2026-10-07T15:03:23.812055+00:00",
+    "seconds": 7.61,
+    "polled_peak_tree_private_bytes": 2172080128,
+    "polled_peak_tree_rss_bytes": 967643136,
+    "counter_samples": 30,
+    "observed_own_processes": {
+      "28480": {
+        "exe": "conhost.exe",
+        "peak_private_bytes": 1253376,
+        "peak_rss_bytes": 7344128
+      },
+      "31068": {
+        "exe": "lean.exe",
+        "peak_private_bytes": 2170826752,
+        "peak_rss_bytes": 982102016
+      }
+    },
+    "stdout_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\logs\\EdgeCounts-20261007T150316200085Z.stdout.txt",
+    "stderr_file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\logs\\EdgeCounts-20261007T150316200085Z.stderr.txt",
+    "stdout_sha256": "5770f929a0e99551dec59873b337c802ce570b58680ef57c7b86c2145ea1c0a8",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout_excerpt": "EdgeCounts.lean:6:12: warning: please avoid 'open (scoped) Classical' statements: this can hide theorem statements which would be better stated with explicit decidability statements.\nInstead, use `open Classical in` for definitions or instances, the `classical` tactic for proofs.\nFor theorem statements, either add missing decidability assumptions or use `open Classical in`.\n\nNote: This linter can be disabled with `set_option linter.style.openClassical false`\nEdgeCounts.lean:88:54: warning: This simp argument is unused:\n  and_true\n\nHint: Omit it from the simp argument list.\n  [apply] simp only [cellEdges, mem_filter, mem_univ, true_and]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`\n'RobertPublishable.Factor.row_sum' depends on axioms: [propext, Classical.choice, Quot.sound]\n'RobertPublishable.Factor.column_sum' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+    "stderr_excerpt": ""
+  },
+  "actual_axiom_outputs": [
+    {
+      "endpoint": "RobertPublishable.Factor.row_sum",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    },
+    {
+      "endpoint": "RobertPublishable.Factor.column_sum",
+      "axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "native_axioms": [],
+      "unrecognized_axioms": [],
+      "classification": "STANDARD_KERNEL_AXIOMS"
+    }
+  ],
+  "artifacts": [
+    {
+      "file": "C:\\Users\\Propietario\\Documents\\Codex\\2026-10-01\\loo\\work\\robert_publishable_20261007\\formal\\FACTOR\\EdgeCounts.olean",
+      "sha256": "6caf6b79c4b2370eba7bdf0819d79a01f962020727b908abaca81a9b2a112f68",
+      "bytes": 168592
+    }
+  ]
+}
