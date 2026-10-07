@@ -1,0 +1,80 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,textcomp}
+\usepackage[margin=24mm]{geometry}
+\usepackage{longtable,booktabs,array,enumitem}
+\usepackage[hidelinks]{hyperref}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+\emergencystretch=3em
+\hypersetup{pdfauthor={Rachel Teo, Wenyi Wang, Hamdi Abderrahmene, Alejandro Zarzuelo Urdiales}}
+\begin{document}
+{\LARGE\bfseries Finite order obstructions for edge-resilient four-critical graphs\par}\medskip
+{\small Rachel Teo\ensuremath{^1}, Wenyi Wang\ensuremath{^1}, Hamdi Abderrahmene\ensuremath{^1}, Alejandro Zarzuelo Urdiales\ensuremath{^2}\par}\medskip
+{\small\textbf{Affiliations:} \href{https://sakana.ai/}{\ensuremath{^1} Sakana AI}; \href{https://rsihouse.ai/openmath}{\ensuremath{^2} Open Math}.\par}
+
+{\small\href{https://github.com/alejandrozu/openmath-2026-judging}{Code and formal proofs}\par}
+
+\subsection{Abstract}
+A finite vertex-critical four-chromatic graph that stays four-chromatic after deletion of any r or fewer edges satisfies 27r+19\ensuremath{\leq}4n, together with stronger quadratic and integral independent-set filters. These refine explicit finite lower bounds, without improving the prior eventual asymptotic restriction.
+
+\subsection{Graph hypotheses and inequalities}
+Let G be a finite simple graph on n vertices, with chromatic number four. Assume that deletion of any vertex lowers that number, and that deletion of any set of at most r edges does not lower it, where r\ensuremath{\geq}1. The submitted theorem gives 27r+19\ensuremath{\leq}4n.
+
+Two further necessary conditions are 27(r+1)(n\ensuremath{-}1)\ensuremath{\leq}(2n+1)\ensuremath{^2} and 9b(r+1)\ensuremath{\leq}(2b+1)(n\ensuremath{-}b), where b=floor((n+1)/3). The integral filter can exclude an order allowed by the linear inequality: at r=4 it requires n\ensuremath{\geq}33, whereas the linear inequality alone gives n\ensuremath{\geq}32. These are one family of obstructions, not three separate original results.
+
+\subsection{Criticality supplies a finite code}
+Deleting a vertex of a four-critical graph produces a three-colouring of the remainder. The proof extracts a large independent colour class and encodes neighbourhood information on that class. Edge resilience forces separation between the relevant codewords: too few differences would produce a critical edge set of size at most r.
+
+The finite-code theorem compares a lower bound for total pairwise distance with an upper bound obtained by coordinate counts. This is a Plotkin/Cauchy-Schwarz argument. Optimizing the independent-set parameter and retaining its integer size gives the quadratic and exact filters; a final numerical derivation yields the clean linear inequality.
+
+The formal graph module supplies every hypothesis of the numeric code lemma from the actual canonical criticality definitions. The final theorem is not a numeric inequality assuming an unproved graph-to-code model. The target audit checks deletion and finite-cardinality conventions against the registered problem.
+
+\subsection{An ordinary derivation of the code and order bounds}
+Put s=r+1\ensuremath{\geq}2. For any vertex v, choose a proper three-colouring of G\ensuremath{-}v. Each of its three colour classes contains at least s neighbours of v: otherwise delete the fewer than s edges from v into that class and give v its colour, producing a three-colouring after too few deletions. Thus every vertex has degree at least 3s.
+
+Choose a maximum independent set A of size a and put H=V(G)\ensuremath{\setminus}A, |H|=h=n\ensuremath{-}a. A three-colouring after deleting one vertex shows n\ensuremath{-}1\ensuremath{\leq}3a. For each v\ensuremath{\in}A let C\_v\ensuremath{\subseteq}H be its nonneighbours in H. Independence of A and the degree bound imply |C\_v|\ensuremath{\leq}h\ensuremath{-}3s. If u,v\ensuremath{\in}A are distinct, take a three-colouring of G\ensuremath{-}u and look at neighbours x of u having the colour of v. There are at least s of them. Such an x is outside A and cannot be adjacent to v, so it belongs to C\_v\ensuremath{\setminus}C\_u. Therefore |C\_v\ensuremath{\setminus}C\_u|\ensuremath{\geq}s in both directed orders.
+
+Here is the complete numerical lemma. Let a subsets C\_v of an h-element ground set satisfy those weight and directed separation bounds. Write t\_x=\#\{v:x\ensuremath{\in}C\_v\}, T=\ensuremath{\sum}t\_x and Q=\ensuremath{\sum}t\_x\ensuremath{^2}. Double counting directed differences gives a(a\ensuremath{-}1)s\ensuremath{\leq}\ensuremath{\sum}\_(u,v)|C\_v\ensuremath{\setminus}C\_u|=aT\ensuremath{-}Q. Also T\ensuremath{\leq}a(h\ensuremath{-}3s) and T\ensuremath{^2}\ensuremath{\leq}hQ by Cauchy-Schwarz.
+
+If h\ensuremath{\leq}6s, then T\ensuremath{\leq}a(h\ensuremath{-}3s)\ensuremath{\leq}ah/2. The function aT\ensuremath{-}T\ensuremath{^2}/h is increasing for 0\ensuremath{\leq}T\ensuremath{\leq}ah/2, so a(a\ensuremath{-}1)s\ensuremath{\leq}a\ensuremath{^2}(h\ensuremath{-}3s)\ensuremath{-}a\ensuremath{^2}(h\ensuremath{-}3s)\ensuremath{^2}/h=3a\ensuremath{^2}s(h\ensuremath{-}3s)/h. Rearrangement gives 9as\ensuremath{\leq}(2a+1)h. If h>6s, that inequality is immediate from(2a+1)h>6s(2a+1)>9as. This proves the code bound in all cases. The separation of two codewords also gives h\ensuremath{\geq}4s, because one C\_v has at least s members while its weight is at most h\ensuremath{-}3s.
+
+The degree bound gives n\ensuremath{\geq}3s+1\ensuremath{\geq}7; hence a\ensuremath{\geq}ceil((n\ensuremath{-}1)/3)\ensuremath{\geq}2, so two codewords do exist. Combining h\ensuremath{\geq}4s with n\ensuremath{-}1\ensuremath{\leq}3a and n=a+h yields 2n\ensuremath{\geq}12s\ensuremath{-}1 and therefore n\ensuremath{\geq}6s. Now divide the code bound by a>0. The function(2a+1)(n\ensuremath{-}a)/a=2n\ensuremath{-}2a+n/a\ensuremath{-}1 is decreasing in positive a. Substituting the smaller integer b=floor((n+1)/3) gives 9bs\ensuremath{\leq}(2b+1)(n\ensuremath{-}b). Substituting the real lower value(n\ensuremath{-}1)/3 instead gives 27s(n\ensuremath{-}1)\ensuremath{\leq}(2n+1)\ensuremath{^2}.
+
+Finally n\ensuremath{\geq}6s\ensuremath{\geq}12. If27s\ensuremath{\geq}4n+9, the quadratic inequality would force(4n+9)(n\ensuremath{-}1)\ensuremath{\leq}(2n+1)\ensuremath{^2}, or n\ensuremath{\leq}10, a contradiction. Therefore 27s\ensuremath{\leq}4n+8. Replacing s by r+1 yields 27r+19\ensuremath{\leq}4n, as claimed. This derives all three displayed inequalities from the graph hypotheses, without an assumed coding model.
+
+\subsection{What the finite improvement accomplishes}
+The located prior explicit bound is n\ensuremath{\geq}5r+6. After integer rounding, the new linear condition ties at r=1 and improves the finite lower requirement for larger r. However, Skottova and Steiner also prove an eventual restriction r=O(n/(log n)\textasciicircum{}c), which is stronger asymptotically. The new theorem does not supersede that result or construct any graph meeting its obstruction.
+
+In particular it does not solve existence for r\ensuremath{\geq}2, cover k>4, or address infinite graphs. Known r=1 constructions are prior evidence, not a new contribution of this packet.
+
+\subsection{Formal scope and prior comparison}
+The three proof modules and canonical target audit were checked from the frozen sources using Lean and standard kernel axioms. Their exact compiler/library pins and declarations are supplied in the companion repository.
+
+The finite inequalities follow from criticality-to-code separation and classical finite coding estimates. They refine explicit finite order bounds while preserving the distinction from the stronger eventual asymptotic restriction of Skottova and Steiner.
+
+\subsection{Formal verification}
+The selected canonical linear, quadratic and integral order bounds have a completed Lean replay of the three-source closure. This verifies the stated necessary conditions, not existence of resilient critical graphs. Exact proof files and audit records are supplied in the companion repository.
+
+\begin{samepage}
+\subsection{Erdos944Bounds.erdos944\_order\_linear}
+\begin{quote}\small\ttfamily theorem erdos944\_order\_linear \{r : \ensuremath{\mathbb{N}}\} (hr : 1 \ensuremath{\leq} r)\newline     (hG : G.IsCritical 4)\newline     (hE : \ensuremath{\forall} edges : Set (Sym2 V), G.IsCriticalEdges edges \ensuremath{\to} r < edges.ncard) :\newline     27*r + 19 \ensuremath{\leq} 4 * Fintype.card V\end{quote}
+{\small Source: proofs/erdos944-order-bound/OpHack/Erdos944Bounds.lean:42.\par}
+
+{\small Source SHA-256: 8f9e544d0e9f465f8d92d0c0b878ab2bd9b542c0c969eaa4e2d7c908acec27f4\par}
+
+\end{samepage}
+\begin{samepage}
+\subsection{Erdos944Bounds.erdos944\_order\_quadratic}
+\begin{quote}\small\ttfamily theorem erdos944\_order\_quadratic \{r : \ensuremath{\mathbb{N}}\} (hr : 1 \ensuremath{\leq} r)\newline     (hG : G.IsCritical 4)\newline     (hE : \ensuremath{\forall} edges : Set (Sym2 V), G.IsCriticalEdges edges \ensuremath{\to} r < edges.ncard) :\newline     27 * (r+1) * (Fintype.card V - 1) \ensuremath{\leq} (2 * Fintype.card V + 1)\textasciicircum{}2\end{quote}
+{\small Source: proofs/erdos944-order-bound/OpHack/Erdos944Bounds.lean:28.\par}
+
+{\small Source SHA-256: 8f9e544d0e9f465f8d92d0c0b878ab2bd9b542c0c969eaa4e2d7c908acec27f4\par}
+
+{\small\textbf{Sources and attribution:} \href{https://www.erdosproblems.com/944}{1. www.erdosproblems.com / 944}; \href{https://arxiv.org/html/2508.08703}{2. arXiv source: 2508.08703}; \href{https://github.com/google-deepmind/formal-conjectures/blob/main/FormalConjectures/ErdosProblems/944.lean}{3. google-deepmind/formal-conjectures / 944.lean}; \href{https://github.com/KitaKen1/erdos-944-dirac-k4-lean}{4. KitaKen1/erdos-944-dirac-k4-lean}; \href{https://arxiv.org/abs/2606.18462}{5. arXiv source: 2606.18462}; \href{https://github.com/alejandrozu/ulam-opdp-difficulty-atlas}{6. alejandrozu/ulam-opdp-difficulty-atlas}; \href{https://github.com/alejandrozu/openmath-2026-judging/blob/d0ed487f487fa7ec814ff705ab55249983fe8707/OpenMath-Judging/review/entries/E02-erdos944-order-bound.txt}{7. alejandrozu/openmath-2026-judging / E02-erdos944-order-bound.txt}; \href{https://github.com/alejandrozu/openmath-2026-judging}{Proof source repository}.\par}
+
+\end{samepage}
+{\small \textbf{AI assistance.} Codex assisted literature checking, editorial preparation and analysis of the supplied formal artifacts. The human authors are responsible for checking the final mathematical claims, references and attribution.\par}
+
+\end{document}

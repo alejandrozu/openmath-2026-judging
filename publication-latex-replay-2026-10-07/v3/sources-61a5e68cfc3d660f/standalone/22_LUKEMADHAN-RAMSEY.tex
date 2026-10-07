@@ -1,0 +1,77 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,textcomp}
+\usepackage[margin=24mm]{geometry}
+\usepackage{longtable,booktabs,array,enumitem}
+\usepackage[hidelinks]{hyperref}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+\emergencystretch=3em
+\hypersetup{pdfauthor={Luke Van Seters, Madhan Jothimani, Alejandro Zarzuelo Urdiales}}
+\begin{document}
+{\LARGE\bfseries Clebsch structure and exact stochastic refinements for monochromatic K\_4\par}\medskip
+{\small Luke Van Seters, Madhan Jothimani, Alejandro Zarzuelo Urdiales\ensuremath{^1}\par}\medskip
+{\small\textbf{Affiliations:} \href{https://rsihouse.ai/openmath}{\ensuremath{^1} Open Math}.\par}
+
+{\small\href{https://github.com/alejandrozu/openmath-2026-judging}{Code and formal proofs}\par}
+
+\subsection{Abstract}
+A structural decomposition of the published 768-vertex PPSS construction leads to a 192-class stochastic family and a 3840-class refinement with exact upper bound 0.030138887566497221.... The latest packet supplies finite-realization and counting proofs, with native evaluation explicitly in the arithmetic trust boundary. Exact numerical and construction comparison with Feinstein and Even-Zohar's earlier announced work remains unresolved.
+
+For every n\ensuremath{\geq}4 there exists a red/blue colouring of K\_n with monochromatic K\_4 proportion at most 8450462766487926638466333426306607129/280384030360880691940646801777885184000; hence the corresponding upper-limit bound holds.
+
+\subsection{Two exact construction theorems}
+The compact 192-class construction at p=32/41 and h=22/41 has exact density 1013294255057839/33620705806123008\ensuremath{\approx}0.030138994133588287. The refined 3840-class construction has exact density 8450462766487926638466333426306607129/280384030360880691940646801777885184000\ensuremath{\approx}0.030138887566497220. Both are below the reported McKay numerical value and the rounded 0.030139 threshold in the Technion announcement.
+
+The scientific proposal is broader than a single decimal: the public PPSS graph is decomposed into twelve 64-vertex families, each built from sixteen four-vertex fibres over the Clebsch graph, with inter-family rules on \ensuremath{\mathbb{Z}}3\ensuremath{\times}\ensuremath{\mathbb{Z}}2\ensuremath{\times}\ensuremath{\mathbb{Z}}2. The stochastic 192-class family makes two formerly fractional patterns adjustable. A pentagon refinement and two balanced sign splits give the 3840-class table. The source revision fixes the precise construction and literal data used here.
+
+\subsection{A direct finite-realization proof}
+For any finite symmetric probability table W, choose a class independently and uniformly for every vertex of K\_n. Conditioned on the classes, colour each edge independently using the corresponding table entry as its red probability. For four distinct vertices, the class labels are independent, allowing repetitions, and the six colour trials are conditionally independent.
+
+The expected normalized ordered injective-four-tuple density is the ordered class average of the six red probabilities' product plus the blue complements' product. Every monochromatic unordered four-set has exactly 24 orderings, and the total ordered injective tuple count is 24 times binomial(n,4); therefore this is also the usual unordered-four-set proportion. That equivalence is an ordinary 24-ordering observation, not a separately selected Lean bijection theorem. Some outcome cannot exceed the expectation, proving the actual finite coloring bound at every n\ensuremath{\geq}4. Repeated class labels are legitimate because graph vertices remain distinct. The same uniform finite bound controls the upper limit of extremal minima, and any ordinary limit if supplied separately.
+
+\subsection{Centered refinement and exact counting}
+The embedded 3840 witness stores 1248 fractional 20\ensuremath{\times}20 blocks and derives the remaining blocks by the Clebsch rule. Zero row means in the centered blocks allow a substantial algebraic reduction of the six-edge expansion. A graph term with a leaf vanishes after summing that vertex; only the empty/base term and the surviving subgraphs without degree-one vertices remain. For K4 those include its four triangles, three four-cycles, six diamonds and the full perturbation K4.
+
+Eleven general realization/counting prototype theorems have standard-kernel axiom scope. The fixed 3840-class sparse-count correctness, raw\_total and density instantiations additionally inherit native finite-data facts, including hard\_blocks. Native evaluation checks the literal integer expression; kernel rational arithmetic then converts 519196432373018212667371525712277942005760 over 65536\textasciicircum{}6\ensuremath{\cdot}3840\textasciicircum{}4 to the stated fraction. The complete instantiated endpoints therefore trust the native compiler/evaluator as well as the kernel; calling their last rational step kernel-checked does not remove that inherited trust.
+
+\subsection{Priority and theorem scope}
+A value below the announced rounded threshold does not establish improvement over the announcement's unknown exact construction: both values can lie below 0.030139 in either numerical order. Exact density and normalization comparison is unresolved. The PPSS structural decomposition and explicit stochastic family are mathematical contributions distinct from a chronological-record claim.
+
+The official Random Structures \& Algorithms 2025 program already advertised Noam Feinstein's Improved Constructions for Ramsey Multiplicities, jointly with Chaim Even-Zohar. Its abstract describes random constructions improving c\_4 and c\_5 and emphasizes their symmetry and structure, but supplies no exact density, manuscript or construction certificate. Therefore the comparison needed here predates the January 21, 2026 Technion talk, and the unresolved question concerns both the exact numerical bound and possible overlap of construction ideas. Program: \url{https://www.dmg.tuwien.ac.at/rsa2025/}.
+
+The algebraic-minimum analysis, structural relabeling tests and exact rational certificate have separate proof boundaries. Certifying one rational point does not prove a global minimum or degree-seventeen assertion. The selected every-n and upper-limit endpoints do not require convergence; an ordinary-limit conclusion retains its convergence hypothesis.
+
+\subsection{Separate exact integer recount}
+A separate exact-integer calculation matches the complete 3840-class raw numerator 519196432373018212667371525712277942005760 and the reduced density above, using the frozen literal blocks independently of the source counting program. Zero row/column sums, base transitivity and sparse multiplicities are checked. Permuting the four coarse vertices reduces 6912 ordered supported tetrahedra to 288 unordered ones. Signed-integer limb contractions and arbitrary-size recombination avoid floating-point error and overflow.
+
+The portable checker, pickle-free input data and exact contribution records are supplied with the proof sources. The recount verifies the finite arithmetic separately from native evaluation; it does not establish historical priority over the earlier announced construction.
+
+\subsection{Formal scope of the construction}
+The verified conclusions concern the exact 192/3840 densities, correspondence with literal counts, finite colourings for every n and the unconditional upper-limit bound. Global-minimum assertions and ordinary limits require their separate stated hypotheses.
+
+The concrete finite-data statements depend on native compiler/evaluator trust as well as the kernel. The separate exact-integer recount provides additional arithmetic evidence but does not eliminate those formal dependencies. Verification of the construction does not establish a global numerical record or priority over Feinstein and Even-Zohar.
+
+\subsection{Formal verification}
+The source-identical Lean replay checks all 51 modules and 35 selected declarations: 12 use standard kernel axioms and 23 inherit native-evaluation dependencies; none uses admitted or unknown axioms. The standard-only group includes ValidTemplate.countSubgraphs\_numerator. The fixed-data assertions retain native compiler/evaluator trust, and the accompanying runtime audit has a documented observation limitation rather than a complete continuous image trace. Pinned sources, separate integer recounts and the exact axiom audit are supplied in the companion repository.
+
+{\small Separate integer recounts verify the 192-class density 1013294255057839/33620705806123008 and the 3840-class numerator and fraction above. Their arithmetic scope is distinct from the Lean/native dependency audit and from historical priority.\par}
+
+\begin{samepage}
+\subsection{K4Ramsey.Clebsch192.exists\_coloring}
+\begin{quote}\small\ttfamily For every n\ensuremath{\geq}4 an actual colouring has density\ensuremath{\leq}1013294255057839/33620705806123008.\end{quote}
+{\small Source: lean/K4Ramsey/Constructions/Clebsch192/Bound.lean.\par}
+
+\end{samepage}
+\begin{samepage}
+\subsection{K4Ramsey.Final3840.exists\_coloring\_exact}
+\begin{quote}\small\ttfamily For every n\ensuremath{\geq}4 an actual colouring has density\ensuremath{\leq}8450462766487926638466333426306607129/280384030360880691940646801777885184000.\end{quote}
+{\small Source: lean/K4Ramsey/Constructions/Final3840/NumericalBound.lean.\par}
+
+{\small\textbf{Sources and attribution:} \href{https://github.com/lukevs/k4-ramsey/tree/2cf216ba885fbb1b2d1b2d4920efeaa6ba438842}{1. lukevs/k4-ramsey}; \href{https://github.com/lukevs/k4-ramsey/blob/2cf216ba885fbb1b2d1b2d4920efeaa6ba438842/paper/main.tex}{2. lukevs/k4-ramsey / main.tex}; \href{https://github.com/lukevs/k4-ramsey/blob/2cf216ba885fbb1b2d1b2d4920efeaa6ba438842/docs/verification.md}{3. lukevs/k4-ramsey / verification.md}; \href{https://math.technion.ac.il/events/noam-feinstein/}{4. math.technion.ac.il / noam-feinstein}; \href{https://www.dmg.tuwien.ac.at/rsa2025/}{5. www.dmg.tuwien.ac.at / rsa 2025}; \href{https://github.com/alejandrozu/openmath-2026-judging}{Proof source repository}.\par}
+
+\end{samepage}
+{\small \textbf{AI assistance.} Codex assisted literature checking, editorial preparation and analysis of the supplied formal artifacts. The human authors are responsible for checking the final mathematical claims, references and attribution.\par}
+
+\end{document}

@@ -1,0 +1,67 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,textcomp}
+\usepackage[margin=24mm]{geometry}
+\usepackage{longtable,booktabs,array,enumitem}
+\usepackage[hidelinks]{hyperref}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+\emergencystretch=3em
+\hypersetup{pdfauthor={Woohyuk Kang, Alejandro Zarzuelo Urdiales}}
+\begin{document}
+{\LARGE\bfseries An exact 39-line arrangement with 471 triangular faces\par}\medskip
+{\small Woohyuk Kang\ensuremath{^1}, Alejandro Zarzuelo Urdiales\ensuremath{^2}\par}\medskip
+{\small\textbf{Affiliations:} \href{https://www.kyunghee.edu/eng/user/main/view.do}{\ensuremath{^1} Kyung Hee University, Computer Science and Engineering}; \href{https://rsihouse.ai/openmath}{\ensuremath{^2} Open Math}.\par}
+
+{\small\href{https://github.com/alejandrozu/openmath-2026-judging}{Code and formal proofs}\par}
+
+\subsection{Abstract}
+Thirty-nine explicit rational straight lines form a simple arrangement with 471 bounded triangular faces. Exact geometry independently confirms the data and improves the recorded pre-event 470 construction by one; no optimality is claimed.
+
+There exists a simple arrangement of 39 ordinary straight lines with 471 bounded triangular faces; hence K(39)\ensuremath{\geq}471.
+
+\subsection{Kobon triangles and the exact theorem}
+In the ordinary straight-line Kobon problem, count bounded triangular faces formed by the arrangement, with disjoint interiors. A triple of lines can determine a geometric triangle whose interior is crossed by other lines; such a triangle is not an arrangement face and must not be counted. The submitted 39-line certificate has 471 actual bounded triangular faces.
+
+The arrangement is simple: no parallel pairs, no duplicate lines and no triple concurrence. All 741 pair intersections are distinct. The freshly replayed formal endpoints carry the rational construction into actual real triangle faces and pairwise interior-disjointness.
+
+\subsection{Independent exact geometry}
+The ordinary audit normalizes line equations, computes every rational intersection and orders the intersection points on each line. A candidate triangle is counted only when each of its three sides joins consecutive arrangement vertices. This adjacency condition excludes a side cut by another intersection and ensures the bounded triangular-face interpretation.
+
+A separate exact-arithmetic recount gives 471 faces and confirms the simple-arrangement conditions without relying on the search program. The rational line list and deterministic face list provide a reproducible certificate; plots do not decide counts when intersections are close.
+
+\subsection{Baseline comparison and originality}
+The cited earlier simple 39-line arrangement has 470 triangles and a matching SimpleLowerBound39470 certificate, confirmed under the same 741-intersection convention. The improvement claimed here is one triangle over that construction, rather than an improvement from 468.
+
+The historical straight-line/pseudoline distinction also matters. Generic doubling formulas in the located literature can concern pseudolines; they do not automatically prove stretchability of the doubled result. The cited straight-line recursive sequences do not already establish 39\ensuremath{\geq}471. This clears those particular comparisons, while a specialist historical check remains necessary before a numerical-record headline.
+
+\subsection{Theorem scope and formal verification}
+The construction proves K(39)\ensuremath{\geq}471. It does not prove K(39)=471, attainment of the general upper bound or a construction at every order. The known 18-line/93-face reconstruction is a separate result.
+
+Historical priority of the 39-line construction remains separate from its exact geometric verification. The distinction between straight-line arrangements and pseudoline constructions is retained in the cited comparisons.
+
+\subsection{Formal verification}
+Lean 4.33.1 checked the 55-source development and seven selected declarations. The concrete certificate depends only on propext, sol\_simple is axiom-free, and the real-face lower bound, interior-disjointness and checker equivalence use standard kernel axioms. No selected declaration depends on admitted proofs, native evaluation or unknown axioms. Exact line data, proof files and audit records are supplied in the companion repository.
+
+\begin{samepage}
+\subsection{Kobon.kobon\_lower\_bound}
+\begin{quote}\small\ttfamily theorem kobon\_lower\_bound :\newline     \ensuremath{\exists} L : List Line, L.length = 39 \ensuremath{\wedge} (\ensuremath{\forall} l \ensuremath{\in} L, l.a \ensuremath{\neq} 0 \ensuremath{\vee} l.b \ensuremath{\neq} 0) \ensuremath{\wedge}\newline       L.Pairwise (fun p q => \ensuremath{\neg} \ensuremath{\forall} P : \ensuremath{\mathbb{R}} \ensuremath{\times} \ensuremath{\mathbb{R}}, OnLine p P \ensuremath{\leftrightarrow} OnLine q P) \ensuremath{\wedge}\newline       \{t : \ensuremath{\mathbb{N}} \ensuremath{\times} \ensuremath{\mathbb{N}} \ensuremath{\times} \ensuremath{\mathbb{N}} | t.1 < t.2.1 \ensuremath{\wedge} t.2.1 < t.2.2 \ensuremath{\wedge} t.2.2 < 39 \ensuremath{\wedge}\newline         IsTriFace L (nth L t.1) (nth L t.2.1) (nth L t.2.2)\}.ncard = 471\end{quote}
+{\small Source: entries/hills/kobon-n39-lavaskiller/lean/KobonCert/Main.lean:29.\par}
+
+{\small Source SHA-256: eaa912ef13c79c074821a1a674f51de8dcf0c2b4a628e8a670d4633a9a579311\par}
+
+\end{samepage}
+\begin{samepage}
+\subsection{Kobon.kobon\_nonoverlapping}
+\begin{quote}\small\ttfamily theorem kobon\_nonoverlapping :\newline     \ensuremath{\exists} (L : List Line) (T : Finset (\ensuremath{\mathbb{N}} \ensuremath{\times} \ensuremath{\mathbb{N}} \ensuremath{\times} \ensuremath{\mathbb{N}})) (tri : \ensuremath{\mathbb{N}} \ensuremath{\times} \ensuremath{\mathbb{N}} \ensuremath{\times} \ensuremath{\mathbb{N}} \ensuremath{\to} (\ensuremath{\mathbb{R}} \ensuremath{\times} \ensuremath{\mathbb{R}}) \ensuremath{\times} (\ensuremath{\mathbb{R}} \ensuremath{\times} \ensuremath{\mathbb{R}}) \ensuremath{\times} (\ensuremath{\mathbb{R}} \ensuremath{\times} \ensuremath{\mathbb{R}})),\newline       L.length = 39 \ensuremath{\wedge} (\ensuremath{\forall} l \ensuremath{\in} L, l.a \ensuremath{\neq} 0 \ensuremath{\vee} l.b \ensuremath{\neq} 0) \ensuremath{\wedge}\newline       L.Pairwise (fun p q => \ensuremath{\neg} \ensuremath{\forall} P : \ensuremath{\mathbb{R}} \ensuremath{\times} \ensuremath{\mathbb{R}}, OnLine p P \ensuremath{\leftrightarrow} OnLine q P) \ensuremath{\wedge}\newline       T.card = 471 \ensuremath{\wedge}\newline       (\ensuremath{\forall} t \ensuremath{\in} T, t.1 < t.2.1 \ensuremath{\wedge} t.2.1 < t.2.2 \ensuremath{\wedge} t.2.2 < 39 \ensuremath{\wedge}\newline         TriWitness L (nth L t.1) (nth L t.2.1) (nth L t.2.2) (tri t).1 (tri t).2.1 (tri t).2.2) \ensuremath{\wedge}\newline       (\ensuremath{\forall} t \ensuremath{\in} T, \ensuremath{\forall} t' \ensuremath{\in} T, t \ensuremath{\neq} t' \ensuremath{\to}\newline         Disjoint (openTri (tri t).1 (tri t).2.1 (tri t).2.2)\newline           (openTri (tri t').1 (tri t').2.1 (tri t').2.2))\end{quote}
+{\small Source: entries/hills/kobon-n39-lavaskiller/lean/KobonCert/Main.lean:40.\par}
+
+{\small Source SHA-256: eaa912ef13c79c074821a1a674f51de8dcf0c2b4a628e8a670d4633a9a579311\par}
+
+{\small\textbf{Sources and attribution:} \href{https://github.com/alejandrozu/kobon-proof/commit/99fdc8ec1ef8b1fb22c3da32b011b7361762e958}{1. alejandrozu/kobon-proof}; \href{https://arxiv.org/html/0706.0723v1}{2. arXiv source: 0706.0723v1}; \href{https://zegalur.github.io/line-order/gallery/kobon.html}{3. zegalur.github.io / kobon.html}; \href{https://github.com/alejandrozu/ulam-opdp-difficulty-atlas}{4. alejandrozu/ulam-opdp-difficulty-atlas}; \href{https://github.com/alejandrozu/openmath-2026-judging/blob/d0ed487f487fa7ec814ff705ab55249983fe8707/OpenMath-Judging/review/entries/E08-KOBON39.txt}{5. alejandrozu/openmath-2026-judging / E08-KOBON 39.txt}; \href{https://github.com/alejandrozu/openmath-2026-judging}{Proof source repository}.\par}
+
+\end{samepage}
+{\small \textbf{AI assistance.} Codex assisted literature checking, editorial preparation and analysis of the supplied formal artifacts. The human authors are responsible for checking the final mathematical claims, references and attribution.\par}
+
+\end{document}

@@ -20,7 +20,7 @@ jobs:
     runs-on: ubuntu-24.04
     timeout-minutes: 30
     env:
-      SOURCE_MANIFEST: publication-latex-replay-2026-10-07/v2/source-manifest.json
+      SOURCE_MANIFEST: publication-latex-replay-2026-10-07/v3/source-manifest.json
       EXPECTED_MANIFEST_SHA256: ${{ inputs.source_manifest_sha256 }}
     steps:
       - name: Check out the exact dispatch commit

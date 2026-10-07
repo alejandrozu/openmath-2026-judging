@@ -1,0 +1,67 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,textcomp}
+\usepackage[margin=24mm]{geometry}
+\usepackage{longtable,booktabs,array,enumitem}
+\usepackage[hidelinks]{hyperref}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+\emergencystretch=3em
+\hypersetup{pdfauthor={Rachel Teo, Wenyi Wang, Hamdi Abderrahmene, Alejandro Zarzuelo Urdiales}}
+\begin{document}
+{\LARGE\bfseries A three-prime exclusion for the quadratic-residue divisibility criterion\par}\medskip
+{\small Rachel Teo\ensuremath{^1}, Wenyi Wang\ensuremath{^1}, Hamdi Abderrahmene\ensuremath{^1}, Alejandro Zarzuelo Urdiales\ensuremath{^2}\par}\medskip
+{\small\textbf{Affiliations:} \href{https://sakana.ai/}{\ensuremath{^1} Sakana AI}; \href{https://rsihouse.ai/openmath}{\ensuremath{^2} Open Math}.\par}
+
+{\small\href{https://github.com/alejandrozu/openmath-2026-judging}{Code and formal proofs}\par}
+
+\subsection{Abstract}
+For n=pqr with three distinct odd primes, the quadratic-residue count a(n), including zero, satisfies a(n)(a(n)\ensuremath{-}1) not dividing n\ensuremath{^2}\ensuremath{-}1. A global arithmetic reduction bounds the first two primes and the quotient; exact discriminant certificates exclude all remaining cases.
+
+\subsection{The residue convention and theorem}
+Let a(n) count all square residue classes modulo n, including zero. For distinct odd primes 2<p<q<r, the Chinese remainder theorem gives a(pqr)=(p+1)(q+1)(r+1)/8. The theorem excludes divisibility of n\ensuremath{^2}\ensuremath{-}1 by a(n)(a(n)\ensuremath{-}1) throughout this unbounded squarefree three-prime family. It therefore establishes the corresponding conjectured equivalence on this entire factorization class.
+
+Including zero is essential: a count of only nonzero quadratic residues would change the arithmetic. The theorem concerns three ordered distinct odd primes; it makes no assertion about repeated prime powers or products of four or more distinct primes. It is an infinite subcase of A000224, not the full conjecture.
+
+\subsection{Global reduction to a finite certificate}
+Set A=(p+1)/2, B=(q+1)/2 and C=(r+1)/2. Under a contrary divisibility assumption, there is a positive integer quotient K satisfying (pqr)\ensuremath{^2}=KABC(ABC\ensuremath{-}1)+1. The proof derives necessary bounds from that exact equation, after explicitly justifying every conversion from natural-number subtraction to ring subtraction.
+
+The key global step bounds p by 381 and gives a p-dependent upper bound on q. With p and q fixed, K lies in an explicit finite interval. The remaining equation is quadratic in C. Writing H=pq and U=AB, its coefficients are 4H\ensuremath{^2}\ensuremath{-}KU\ensuremath{^2}, \ensuremath{-}(4H\ensuremath{^2}\ensuremath{-}KU), and H\ensuremath{^2}\ensuremath{-}1. An integral root forces the corresponding discriminant to be an integer square.
+
+The certificates reject that finite quotient/discriminant domain using strict gaps between consecutive squares, plus a separate congruence exclusion for the exceptional square case. Because the bounds were derived without an upper bound on r, this closes an unbounded theorem. A bounded Pell scan up to a large numerical cutoff would not by itself do so.
+
+\subsection{Formal certificate architecture}
+The 171-module formal source separates square-count transport, necessary bounds, quadratic reduction and generated certificate blocks, with three final canonical endpoints. The archived author record and the partial Lean 4.33.1 replay are distinct. The tactic compatibility changes in Bounds preserve definitions and theorem statements.
+
+The machine-readable certificate describes the finite domain and discriminant exclusions. A separate check of 2,024 small prime triples agrees with the formula and exclusion; it is a finite consistency check, not the universal proof.
+
+\subsection{Prior scope and research contribution}
+CRT, quotient/Pell methods and gcd obstructions are established tools. The precise assertion here is the global reduction and exclusion for every ordered triple of distinct odd primes. Earlier bounded scans do not prove this assertion merely because their local survivors lie below the scan cutoff.
+
+The relevant priority comparison concerns the earlier project's exact hypotheses and global bounds. The number of generated modules or rejected certificate leaves is not a measure of mathematical novelty.
+
+\subsection{Formal verification}
+The separate replay currently qualifies 167 of the 171 source modules: the 166 granular sources and Bounds. Four remaining source modules and all three selected endpoint axiom audits were not executed. Thus this replay is partial and does not qualify the full 171-source/3-endpoint theorem scope. The mathematical assertion remains the zero-inclusive quadratic-residue statement for three ordered distinct odd primes. The companion repository preserves this partial record separately from the archived author verification; no completion of the unrestricted A000224 conjecture is claimed.
+
+\begin{samepage}
+\subsection{OeisA224.not\_divisible\_three\_primes}
+\begin{quote}\small\ttfamily theorem not\_divisible\_three\_primes \{p q r : \ensuremath{\mathbb{N}}\}\newline     (hp : p.Prime) (hq : q.Prime) (hr : r.Prime)\newline     (hp2 : 2 < p) (hpq : p < q) (hqr : q < r) :\newline     \ensuremath{\neg} a (p * q * r) * (a (p * q * r) - 1) \ensuremath{\mid} (p * q * r) \textasciicircum{} 2 - 1\end{quote}
+{\small Source: proofs/a000224/OpHack/QuadraticResidue224/Target224.lean:33.\par}
+
+{\small Source SHA-256: 3b67f7494439886af3359a9e684433f49a6dccb7d10258d1d05dcc01de7886d0\par}
+
+\end{samepage}
+\begin{samepage}
+\subsection{OeisA224.not\_modEq\_three\_primes}
+\begin{quote}\small\ttfamily theorem not\_modEq\_three\_primes \{p q r : \ensuremath{\mathbb{N}}\}\newline     (hp : p.Prime) (hq : q.Prime) (hr : r.Prime)\newline     (hp2 : 2 < p) (hpq : p < q) (hqr : q < r) :\newline     \ensuremath{\neg} (p * q * r) \textasciicircum{} 2 \ensuremath{\equiv} 1 [MOD a (p * q * r) * (a (p * q * r) - 1)]\end{quote}
+{\small Source: proofs/a000224/OpHack/QuadraticResidue224/Target224.lean:43.\par}
+
+{\small Source SHA-256: 3b67f7494439886af3359a9e684433f49a6dccb7d10258d1d05dcc01de7886d0\par}
+
+{\small\textbf{Sources and attribution:} \href{https://oeis.org/A000224}{1. oeis.org / A000224}; \href{https://github.com/umaia1234/agentic-conjectures/blob/96ea0039d9dc3a1940b9d5ec1cbe616ed58d1da2/problems/oeis-a000224/DETAILS.md}{2. umaia1234/agentic-conjectures / DETAILS.md}; \href{https://github.com/umaia1234/agentic-conjectures/blob/96ea0039d9dc3a1940b9d5ec1cbe616ed58d1da2/problems/oeis-a000224/pell_quotient_scan.py}{3. umaia1234/agentic-conjectures / pell\_quotient\_scan.py}; \href{https://github.com/alejandrozu/openmath-2026-judging/blob/d0ed487f487fa7ec814ff705ab55249983fe8707/OpenMath-Judging/review/entries/E02-a000224.txt}{4. alejandrozu/openmath-2026-judging / E02-a 000224.txt}; \href{https://github.com/alejandrozu/openmath-2026-judging}{Proof source repository}.\par}
+
+\end{samepage}
+{\small \textbf{AI assistance.} Codex assisted literature checking, editorial preparation and analysis of the supplied formal artifacts. The human authors are responsible for checking the final mathematical claims, references and attribution.\par}
+
+\end{document}
