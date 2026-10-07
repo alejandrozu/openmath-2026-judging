@@ -6,12 +6,15 @@ OpenMath competition archive for Alejandro Zarzuelo Urdiales, with separately id
 
 ## Current proof and manuscript additions — 7 October 2026
 
-- [Robert Huynh's concise coauthored paper](robert-review-2026-10-07/manuscript/Robert_Huynh_concise.pdf): 11 pages covering eight result families, with [scope and reproduction instructions](robert-review-2026-10-07/README.md). The current selected audit passed for 270 declarations, including the full written Lemma F and spectral-sampling B2.2. Main BM and the parent Erdős 585 problem remain unproved.
-- [Chandra's matrix-family companion](chandra-support138-family-2026-10-07/README.md): a checked universal characteristic-zero field identity with support at most 138 under its parameter restrictions; exact generic support and specialization claims retain their stated holds.
-- [Alejandro's personal matrix manuscript](personal-matrix-hybrid-2026-10-07/manuscript/Hybrid_Composition_revised.pdf): nine pages, separate from contestant matrix submissions. Its [current companion index](personal-matrix-hybrid-2026-10-07/CURRENT_GUIDE.md) records the actual clean build of 11 sources and 45 standard-axiom endpoints, including general composition, the 2208-product realization and integer output-division extension. Scheduled multiplication counts do not establish global optimality or measured speed.
-- [Alejandro's separate current Kobon release](https://github.com/alejandrozu/kobon-proof/releases/tag/manuscripts-2026-10-07): the personal 15-page journal edition and 88-page proof companion, separate from the contestant Kobon entry.
+- [Current20 coauthored manuscripts](author-return/2026-10-07/README.md):19 standalone PDFs plus Robert’s 23-page canonical SV paper; 69 pages and27 bounded families. Author decisions and novelty gates remain separate from typesetting/proof coverage.
+- [Robert’s current paper](robert-review-2026-10-07/manuscript/Robert_Huynh_concise.pdf) and [proof/source guide](robert-review-2026-10-07/README.md): the270 selected declarations retain their exact audit scope; full F/B2.2 are dependencies, not main BM or parent585.
+- [Chandra’s matrix-family companion](chandra-support138-family-2026-10-07/README.md) retains its characteristic-zero identity/support bound and stated specialization holds.
+- [Alejandro’s separate clean matrix9-page paper](personal-matrix-hybrid-2026-10-07/manuscript/Hybrid_Composition_revised.pdf) and [current proof guide](personal-matrix-hybrid-2026-10-07/CURRENT_GUIDE.md): 11 sources/45 standard selected declarations; scheduled counts are not global optimality or measured speed.
+- [Alejandro’s separate Kobon15/88-page release](https://github.com/alejandrozu/kobon-proof/releases/tag/manuscripts-2026-10-07) remains a personal project.
 
-These are author-review manuscripts and mathematical evidence, not journal acceptances. The October 5 publication hub below preserves the original 19 proposed standalone contestant manuscripts; Robert's single current paper covers eight additional families. Result-family counts are not counts of accepted papers. Private publication plans, contact drafts and visa strategy are not part of this public companion upload.
+- [Unchanged unsigned12-page expanded judging audit](judging-review/2026-10-07/README.md):27 considered families, preserved dated scores and blank joint-signoff fields; no Stephen Wolfram endorsement.
+
+Actual [proof](author-return/2026-10-07/evidence/proof_CI.json), [typesetting](author-return/2026-10-07/evidence/typesetting_CI.json) and [image QA](author-return/2026-10-07/evidence/current_document_QA.json) scopes are distinct. These are author-review manuscripts, not accepted journal papers. Private claims, contact drafts and visa/planning material are excluded.
 
 ## Preserved publication and judging review — 5 October 2026
 

@@ -1,14 +1,20 @@
-Robert Huynh: Harvard Business School, MBA programme (author-reported affiliation). Alejandro Zarzuelo Urdiales: OpenMath. Author-review manuscript, 7 October 2026.
+¹ [Harvard Business School](https://www.hbs.edu/) · ² [Open Math](https://rsihouse.ai/openmath)
+
+[Code and formal proofs](https://github.com/alejandrozu/openmath-2026-judging/tree/70c5ec3107658182f22c207d4c50f53f9cb3e602/robert-review-2026-10-07)
 
 ## Abstract
 
-We collect eight related families of results concerning two edge-disjoint cycles with the same vertex set. The principal certified results are a quartic-extraction theorem for bipartite graphs of maximum degree six at the threshold $3n-5$, a cycle-pair criterion throughout the dense range for a restricted class with repeated neighbourhoods, explicit pair-free five-regular graphs, finite extremal constructions, a four-colour classification for prime-field Haar graphs, and an obstruction to a specified one-round recolouring detector. The substitution criterion and prescribed-vertex deletion equivalence are formally verified. The recolouring obstruction extends to arbitrary finite Sidon palettes in characteristic-three modules, without a finite ambient-space assumption, and the parabola family has a sharp two-round threshold. For exact four-colour prime-field palettes, every connected component has a Hamilton decomposition. A quantitative bipartite Hamiltonicity programme is retained with its remaining proof obligations explicit. The recolouring discussion separates the classical Sidon-set construction from its application to the detector. A linked proof repository supplies complete Lean sources, theorem statements, dependency pins, computational certificates and a comparison with the primary literature. None of these results closes the general asymptotic gap in Erdős 585 or proves that every bipartite six-regular graph contains the required pair. We state the exact hypotheses and the remaining proof or priority obligations for each family, so that the reader can assess the mathematical contributions without reading the longer verification dossier.
+We study two edge-disjoint cycles having the same vertex set in finite simple graphs. For bipartite graphs of maximum degree six, we prove extraction of a nonempty four-regular subgraph at the threshold $3n-5$. Repeated neighbourhoods give a cycle-pair criterion in the dense range, together with an ordinary six-regular extension allowing two singleton neighbourhood classes. We give explicit pair-free five-regular graphs on 18 and 32 vertices and a bipartite example on 104 vertices, and describe finite extremal profiles and incidence-based lower constructions. A gadget-substitution theorem preserves pair-freeness at degrees at most seven and yields an equivalence with prescribed-vertex deletion. Four colours force a pair in prime-field Haar graphs, with Hamilton decomposition of every exact-four-colour component; a specified cyclic composite family is also treated. A canonical parabola colouring defeats every one-round component-union recolouring detector, while two rounds expose a pair on 54 vertices. We state and certify quantitative sampling and regular-factor lemmas used in a separate Hamiltonicity programme. Human-readable constructions and proof arguments accompany pinned Lean sources and finite certificates. The result catalogue distinguishes proved statements, conditional consequences and source-reported computations; no general asymptotic improvement for the parent extremal problem is claimed.
+
+**Keywords:** edge-disjoint cycles; regular subgraphs; graph substitution; Haar graphs; recolouring barriers.
+
+**Mathematics Subject Classification (2020):** Primary 05C38; Secondary 05C35, 05C25, 05C70.
 
 ## 1. The problem and the contributions
 
 Throughout, a *pair* in a simple graph $G$ means two genuine connected cycles $C_1,C_2$ with $V(C_1)=V(C_2)$ and $E(C_1)\cap E(C_2)=\varnothing$. A graph is *pair-free* if it contains no pair. Write $f(n)$ for the maximum number of edges in a pair-free simple graph on $n$ vertices. The problem is to determine the growth of $f(n)$.
 
-The established general bounds are $\Omega(n\log\log n)\leq f(n)\leq n(\log n)^{O(1)}$. The lower-bound construction of Pyber, Rödl and Szemerédi contains no four-regular subgraph; the polylogarithmic upper bound is due to Chakraborti, Janzer, Methuku and Montgomery \[PRS, CJMM\]. Our results concern finite cases, restricted graph classes, intermediate extraction and the limitations of a particular proof method. We claim no improvement in that general asymptotic order.
+The established general bounds are $\Omega(n\log\log n)\leq f(n)\leq n(\log n)^{O(1)}$. The lower-bound construction of Pyber, Rödl and Szemerédi contains no four-regular subgraph; the polylogarithmic upper bound is due to Chakraborti, Janzer, Methuku and Montgomery \[3, 2\]. Our results concern finite cases, restricted graph classes, intermediate extraction and the limitations of a particular proof method. We claim no improvement in that general asymptotic order.
 
 A pair has a four-regular union on its common support. The converse fails: a four-regular graph can decompose into two disconnected two-factors rather than two connected cycles. This distinction separates the quartic-extraction theorem from the cycle-pair forcing results throughout the paper.
 
@@ -50,11 +56,48 @@ The frozen public source is Robert Huynh's revision `1efc324e155ef0b6a7081c5f695
 
 The theorem is [`Erdos585.qb5`](https://github.com/alejandrozu/openmath-2026-judging/blob/70c5ec3107658182f22c207d4c50f53f9cb3e602/robert-review-2026-10-07/lean/Openmath/Proofs/QB5/Statement.lean#L42); `qb4`, at $3n-4$, is a weaker earlier version. The threshold is independent of a particular labelled graph or finite census. Robert's proof is a universal Lean proof, including a bounded case analysis evaluated by the kernel.
 
-The closest located comparator is Alon, Friedland and Kalai \[AFK, Remark 3.6\]. For bipartite graphs, their divisibility argument yields a nonempty four-divisible subgraph once $e>3(n-1)$. With maximum degree at most seven, nonzero degrees in that subgraph must be four, so the integer threshold is $3n-2$. Theorem Q lowers it by three edges under the stronger maximum-degree-six assumption. One must not transfer results whose proof selects seven matching classes directly into the degree-six setting.
+The closest located comparator is Alon, Friedland and Kalai \[1, Remark 3.6\]. For bipartite graphs, their divisibility argument yields a nonempty four-divisible subgraph once $e>3(n-1)$. With maximum degree at most seven, nonzero degrees in that subgraph must be four, so the integer threshold is $3n-2$. Theorem Q lowers it by three edges under the stronger maximum-degree-six assumption. One must not transfer results whose proof selects seven matching classes directly into the degree-six setting.
 
-**Proof architecture.** Remove vertices whose degree cannot belong to a quartic and reduce a minimal counterexample to a saturated bipartite graph. In an unbalanced saturated piece, a Hall-type deficiency barrier prevents the desired factor. The reduction tracks the deficiencies of both shores and the exact density loss when a vertex or obstruction piece is removed. The critical cases split into smaller pieces or into the explicitly handled low-deficiency configurations. The verified cover identifies every such configuration, with the finite residual branch evaluated inside Lean. The complete recursive reduction, factor construction and cover proof are linked rather than replaced by a numerical experiment.
+**Proof of Theorem Q.** Here is the proof chain of the four original QB5 papers, including its computer-assisted boundary. For a vertex set $S$, write $g(S)=6|S|-2e(S)$. Choose a counterexample with first $n$, then its edge count minimal. It has $e=3n-5$, hence $g(V)=10$. For every proper $S$ with $|S|\ge3$, minimality gives $g(S)\ge12$; deleting a vertex therefore gives minimum degree at least four. The cases $3\le n\le9$ are excluded by the bipartite edge bound, and the only ten-vertex possibility is $K_{5,5}$, which contains a quartic.
 
-**Corollary Q1.** If $B$ is a bipartite six-regular graph and $v$ is any vertex, then $B-v$ contains a nonempty four-regular subgraph. Indeed, if $B$ has $N$ vertices, deletion gives $n=N-1$ and $e=3N-6=3n-3\geq3n-5$, while preserving bipartiteness and the degree cap. This corollary does not assert that $B-v$ contains a pair.
+If the shore sizes differ by $j\ge0$, and the smaller shore has deficiency $d=\sum(6-\deg v)$, edge counting gives $10=6j+2d$. Thus either the shores are balanced with deficiency five each (E5), or their sizes differ by one with deficiencies two and eight (C2). Part I's C2 hub-and-petals lemma produces a vertex on the larger shore whose deletion has a four-factor. Its hypotheses are the preceding sparsity inequalities, not an assumed factor; the analytic proof is implemented by the C2Hub/C2Petals/C2TwoBlock modules.
+
+It remains to exclude E5. The bipartite four-factor flow criterion supplies a violating cut. Its slack, together with $g(S)\ge12$, forces a decomposition
+
+$$
+X=A\sqcup C,\qquad Y=B\sqcup D,\qquad
+|A|=|C|+2,\quad |D|=|B|+2.
+$$
+
+Vertices of $C$ are saturated inside $A$, and vertices of $B$ inside $D$. Exactly seven edges join $A$ to $D$. Both blocks have $g=12$. For a selected four-set $M$ of those edges, let $m(T)$ count its ends in $T\subseteq A$, and define
+
+$$
+\operatorname{dem}_X(T)=4|T|-\sum_{c\in C}\min(4,e(c,T)),\qquad
+I_X(M)=\bigcap_{m(T)<\operatorname{dem}_X(T)}T.
+$$
+
+The family in this intersection is nonempty: $A$ has demand eight but supply four. The flow criterion says that deleting $p\in A,q\in D$ leaves a four-factor precisely when some $M$ satisfies $p\in I_X(M)$, $q\in I_Y(M)$. Indeed these memberships imply no selected edge meets $p,q$, and all demands on the remaining vertices are met. Conversely the four-factor uses exactly four cut edges, and its degree sums give those demand inequalities.
+
+Part IV proves KL1: if $M$ meets every in-block degree-three vertex, then $I_X(M)\ne\varnothing$. Its mechanism is uncrossing. Put $\delta_a=6-\deg_X a$, $w(a)=\delta_a-m(a)$; then $w(A)=8$, $0\le w(a)\le2$. The complement of an under-supplied set is overloaded when
+
+$$
+\theta(T)=m(T)+4-4|T|+\sum_{c\in C}(e(c,T)-2)_+\ge1.
+$$
+
+If $I_X(M)$ were empty, maximal overloaded sets would cover $A$. The induced deficiency identity gives supermodularity with a nonnegative crossing-edge bonus. A minimal cover by maximal overloaded sets must therefore contain a common hub $K$, whose enlargement $K^+$ has $\theta=2$. The remaining petals $P_i$ are disjoint; put $Q_i=P_i\cap A$, $E_i=e(K^+,P_i)$. In the equal-shore hub case, $m(K)=4$, there are no singleton members and every petal satisfies $w(Q_i)<E_i$. Summing contradicts $8-w(K)=\sum w(Q_i)<\sum E_i\le8-w(K)$.
+
+In the other case $w(K)=0$, $\sum E_i\le m(K)+6$, and
+
+$$
+w(Q_i)\le\tfrac23\bigl(E_i+m(Q_i)\bigr)
++\tfrac13\mathbf1_{\{|P_i|\ge3,\ |Q_i|-|P_i\cap C|=2\}}.
+$$
+
+Without a singleton member, weight eight requires at least four exceptional petals, but these require at least 27 boundary edges against a budget at most ten. With a singleton, $m(K)=3$, no exception is possible, and equality forces three singleton petals. A remaining vertex of $C$ would then have degree six but only four possible neighbours. Parts III--IV prove the precise maximal-family/hub lemmas used here; their complete analytic proofs remain in the mathematical supplement.
+
+A chosen $M$ need not meet every degree-three vertex. The final **seven-edge covering lemma** supplies a four-set missing at most one such vertex on each side. It also excludes every rigid set at a missed vertex: a set of selected ends whose marked members have cut degree three, all its incident cut edges lie in $M$, and their number is three or four. Part III's rigidity lemma makes such a set necessary if the missed vertex is overloaded. Thus each side has a vertex in $I(M)$, either by KL1 or by rigidity exclusion, and the factor just constructed contradicts minimality.
+
+This last covering lemma is a finite certificate, not a claimed closed-form ordinary argument. It encodes the endpoint partitions of seven labelled edges, admissible degree-three marks and the 35 four-subsets. The encoding-to-graph proof and kernel evaluations establish the exact two-sided conclusion \[11\]. Neither the earlier large graph census nor the "$n\ge40$" computational observation is needed. This completes the certificate-assisted proof of Q \[11\]. **Corollary Q1.** If $B$ is a bipartite six-regular graph and $v$ is any vertex, then $B-v$ contains a nonempty four-regular subgraph. Indeed, if $B$ has $N$ vertices, deletion gives $n=N-1$ and $e=3N-6=3n-3\geq3n-5$, while preserving bipartiteness and the degree cap. This corollary does not assert that $B-v$ contains a pair.
 
 The candidate original contribution is the precise improved threshold and its proof mechanism. This is not a new proof of the existence of regular subgraphs in general, nor a Hamilton decomposition theorem. The sharpness of $3n-5$ and the possible extensions to $3n-6$ or $3n-7$ remain separate questions.
 
@@ -68,9 +111,19 @@ The frozen source proves the exact-count case. The added endpoint [`OpenMathRevi
 
 Otherwise let $p,q$ count the classes of sizes two and three and let $g=p+q$. The quotient incidence graph has left degrees at most six and right degrees at most three. Write $m$ for its number of incidences. If $d=0$, then $m=6g$ and $r=2p+3q$, so $m\geq3g+r$. If $d=2$, exactly one pair class loses one common neighbour; hence $m=6g-1$ and $p\geq1$, giving the same inequality.
 
-Apply the classical zero-sum selection \[AFK, Theorem 2.1\] in $(\mathbb Z/4\mathbb Z)^g\oplus(\mathbb Z/2\mathbb Z)^{r-1}$. The bound $m\geq3g+r$ gives a nonempty selected incidence set whose left degrees are zero or four. The omitted right parity follows from the even selected total, so right degrees are zero or two. Take an active connected component and suppress the degree-two right vertices. The result is a connected four-regular loopless multigraph with individually labelled edges. Its subdivided double embeds in $G$ using two actual twins in each active class. The known Euler-tour lift gives two complementary Hamilton cycles on that subgraph \[Eppstein\]; their actual supports and edges map faithfully into $G$. ∎
+Apply the classical zero-sum selection \[1, Theorem 2.1\] in $(\mathbb Z/4\mathbb Z)^g\oplus(\mathbb Z/2\mathbb Z)^{r-1}$. The bound $m\geq3g+r$ gives a nonempty selected incidence set whose left degrees are zero or four. The omitted right parity follows from the even selected total, so right degrees are zero or two. Take an active connected component and suppress the degree-two right vertices. The result is a connected four-regular loopless multigraph with individually labelled edges. Its subdivided double embeds in $G$ using two actual twins in each active class. The known Euler-tour lift gives two complementary Hamilton cycles on that subgraph \[8\]; their actual supports and edges map faithfully into $G$. ∎
 
-The selected subgraph is precisely a subdivided double, and Eppstein's prior is stronger: every Hamilton cycle there has a Hamiltonian complement. The selection is classical Olson/AFK zero-sum theory. The possible contribution is the exact actual-host criterion and its formalization, rather than a new counting principle or Eulerian lift. Its priority remains unresolved and it may be a routine corollary of those ingredients. The at-most-two-singleton extension is tracked separately.
+The selected subgraph is precisely a subdivided double, and Eppstein's prior is stronger: every Hamilton cycle there has a Hamiltonian complement. The selection is classical Olson/AFK zero-sum theory. The possible contribution is the exact actual-host criterion and its formalization, rather than a new counting principle or Eulerian lift. Its priority remains unresolved and it may be a routine corollary of those ingredients. The at-most-two-singleton extension is proved below.
+
+The following is an ordinary source-derived corollary within the existing TWIN family. It is not represented as a separately selected Lean endpoint or a new family credit.
+
+**Corollary.** Every nonempty finite simple bipartite six-regular graph whose one shore has at most two singleton maximal equal-neighbourhood classes contains a pair.
+
+**Proof.** Six-regularity balances the two shores. A twin class of size at least four immediately supplies $K_{4,4}$, using four of its six common neighbours. Otherwise let $p,q,s$ count maximal classes of sizes two, three and one. Collapse the nonsingleton classes and omit the singleton vertices while retaining all right vertices. The quotient has $g=p+q$ group vertices, $r=2p+3q+s$ right vertices and $m=6(p+q)$ incidences. Its right degrees are at most three. The parity-dependent mixed-modulus selection criterion requires $m>3g+r-1$, which holds when $p\ge s$. It selects group degrees zero or four and right degrees zero or two. Suppressing the active right vertices produces a labelled loopless four-regular multigraph; an Euler circuit and two distinct actual twins in each active group lift to two edge-disjoint connected cycles with identical support.
+
+For $s=0$, $p\ge s$ is automatic. For $s=1$, a neighbour of the singleton has five other neighbours, consisting of entire twin classes. With class sizes two or three, five can only be partitioned as $2+3$, so $p\ge1$. For $s=2$, suppose $p\le1$. A common neighbour of the two singletons would need four remaining neighbours from two distinct pair classes, impossible. The two six-neighbour sets are therefore disjoint. Each of those twelve right vertices needs a pair class among its remaining five neighbours. If $p=0$ this is impossible; if $p=1$, the unique pair class would have twelve neighbours despite degree six. Thus $p\ge2$. In all cases $s\le2$ implies $p\ge s$, and the selection-and-lifting argument applies. $\square$
+
+There is no claim for three singleton classes, no assumption that every six-regular graph has such twins, and no deduction of B6. The ordinary proof and its review are in [`TWIN-ZEROSUM.md`, Section 5](https://github.com/roberthuynh/erdos-585/blob/1efc324e155ef0b6a7081c5f695c6c825e7debef/findings/supplement/papers/twin-core/TWIN-ZEROSUM.md). The no-singleton formal density theorem and this ordinary restricted six-regular extension should be distinguished.
 
 ## 5. Finite extremal profiles and lower constructions
 
@@ -84,21 +137,59 @@ The evidence is not uniform across this row. Exact values through seven have for
 
 **Basic counting.** If a pair has support of size $s$, its two cycles use $2s$ distinct edges, hence $2s\leq\binom{s}{2}$ and $s\geq5$. Therefore $f(n)=\binom n2$ for $n\leq4$, and $K_5$ minus an edge is pair-free. Adding a new vertex with three earlier neighbours preserves pair-freeness: any pair containing that vertex would require four distinct incident edges. This supplies useful linear extensions without claiming an asymptotic improvement.
 
-**Larger witnesses.** The two-hub, adjacent-hub and matching-subdivision constructions are supplied with explicit edge descriptions and genuine pair-exclusion proofs. The 11-vertex and 12-vertex lower witnesses have 31 and 36 edges, respectively. The repository records vertex counts, edge counts and theorem statements alongside their edge lists, so that construction and extremal exactness can be checked separately.
+The source's larger formal lower bounds should remain visible rather than being reduced to the phrase "linear constructions":
 
-The publication contribution is a reproducible finite record and any newly identified construction mechanism. The trivial small values and routine extension argument are background; a complete minimality or extremality claim requires both attainment and exhaustive upper coverage. The linear construction families do not surpass the known $\Omega(n\log\log n)$ lower order. A reusable certificate implementation can still be valuable even where the underlying numerical value is already known.
+  ---------------------------------------------------------------------------------------------------------------
+  Bound                                     Parameter domain and certificate
+  ----------------------------------------- ---------------------------------------------------------------------
+  $f(n)\ge4n-13$                            $n\ge10$; the two-hub sparse-rim family
+
+  $f(11)\ge31,\ f(12)\ge36$                 Two-hub witness and two adjacent hubs joined to the Petersen graph
+
+  $f(2k^2+2)\ge8k^2-3k+1$                   $k\in\mathbb{N}$; complete-base matching subdivision
+
+  $f(m^2+3m+2)\ge5m^2$                      $m\in\mathbb{N}$; Latin incidence with two exceptional hub vertices
+
+  $f(n)\ge5n-15\lfloor\sqrt{n}\rfloor-10$   $n\ge16$; selected Latin triples and padding
+
+  $f(n)\ge3n-6,\ 3n-5,\ 3n-4$               Respectively $n\ge5,7,9$; the smaller hub/rim witnesses
+
+  $f(n+1)\ge f(n)+3$                        $n\ge3$; adjoining a vertex with three neighbours
+  ---------------------------------------------------------------------------------------------------------------
+
+Here the inequalities are about the actual maximum over pair-free simple graphs. In the Lean source subtraction is natural subtraction; the stated parameter restrictions prevent a misleading negative interpretation of the uniform bounds. The formal statements are in `Openmath/Proofs/Final.lean`, especially lines 102--126. None changes the established asymptotic lower order $\Omega(n\log\log n)$.
+
+For **matching subdivision**, let $H$ have $v$ vertices and $e$ edges, and let $M\subseteq H$ be a matching with $m$ edges. Keep the edges of $M$, subdivide each remaining edge once, and adjoin two adjacent hubs joined to every other vertex. The actual construction has
+
+$$N=v+e-m+2,\qquad E=2v+4e-3m+1.$$
+
+**Why matching subdivision is pair-free.** Suppose its union contained a nonempty four-regular subgraph. An ordinary base vertex has at most one retained matching neighbour and two hub neighbours, so some subdivision vertex must occur. Every subdivision vertex has exactly four neighbours, forcing both hubs and its two base endpoints into the subgraph. Let $t$ count selected subdivision vertices, $v$ selected base vertices, and $h\in\{0,1\}$ indicate use of the hub edge. The two hubs' degree sum gives $8-2t-2h$ hub-to-base edges. Counting the base vertices' degrees then gives $4v\le(8-2t-2h)+2t+v$, because the retained matching contributes at most $v$ edge ends. Hence $v\le2$, while a subdivision vertex forces $v\ge2$. With only two base vertices, simplicity permits at most one subdivision vertex, and its base pair cannot also be a retained matching edge. Each base vertex would consequently have degree at most three, a contradiction. A pair would have a four-regular union, so none exists.
+
+The pair-exclusion theorem uses the matching degree bound; the displayed counting identities additionally require $M\subseteq H$. These hypotheses must not be conflated. Taking $H=K_{2k}$ and a perfect matching gives the bound in the table. At $k=2$ it gives the ten-vertex, 27-edge lower witness. The proof works with genuine cycles and actual subdivision vertices, not merely a claimed four-factor.
+
+For **Latin incidence**, use triples from the addition table of a cyclic group of order $m>0$. There are $m^2$ line vertices and $3m$ point vertices. Each line is incident with exactly three points, and two distinct ordinary points lie on at most one common line. Put two further hub vertices on the point shore and join each to every line vertex. There are no edges between the hubs and no added hub-to-point edges: this differs from the adjacent-universal-hub matching construction. Each line has degree five, giving $N=m^2+3m+2$ and $E=5m^2$. The incidence exclusion criterion uses the three-ordinary-neighbour cap and uniqueness of the line through two ordinary points. It is not valid for an arbitrary incidence relation lacking those conditions. **Why Latin incidence is pair-free.** A four-regular subgraph must contain at least one hub, since a line has only three ordinary neighbours. With one hub, its degree forces exactly four selected lines; regularity balances the bipartition, leaving three ordinary point vertices. Every selected line would contain all three points, contrary to uniqueness of the line through two ordinary points. With two hubs, let $\ell$ count selected lines. There are $\ell-2$ ordinary point vertices and exactly eight hub-to-line edges. Each line uses one or two hub edges, so $4\le\ell\le8$. Exactly $8-\ell$ lines use two ordinary points and $2\ell-8$ use three. They therefore use $5\ell-16$ distinct ordinary-point pairs. Uniqueness allows at most $\binom{\ell-2}{2}$ pairs, which is strictly smaller for each integer $4\le\ell\le8$. This again excludes a quartic, and hence a pair.
+
+Selecting a subset of the triples and adding harmless low-degree vertices gives the uniform square-root-error bound. The case $m=0$ of the lower inequality is handled separately in the source.
+
+The exact finite profile through twelve remains
+
+$$ (0,1,3,6,9,12,16,19,23,27,31,36). $$
+
+Formal exactness through seven, fresh computational coverage through ten, and source-reported upper exclusions at eleven and twelve are different evidence classes. The two formal lower witnesses at eleven and twelve establish attainment, not the exhaustive upper inequalities. Likewise, an edge census or a regular-graph census must retain its generator completeness, replication and stopping limitations. The publication contribution is a reproducible finite record and any newly identified construction mechanism. The trivial small values and routine extension argument are background; a complete minimality or extremality claim requires both attainment and exhaustive upper coverage. The linear construction families do not surpass the known $\Omega(n\log\log n)$ lower order. A reusable certificate implementation can still be valuable even where the underlying numerical value is already known.
 
 ## 6. Five-regular pair-free examples
 
 **Theorem W.** There exist simple five-regular pair-free graphs on 18 and 32 vertices, and a simple bipartite five-regular pair-free graph on 104 vertices.
 
-Their regularity, actual vertex counts and pair exclusion are formalized. The three examples are concrete certified witnesses, not three different asymptotic theorems. The 104-vertex source also supplies a second valid assignment that is not isomorphic to the formal witness; it illustrates the same construction family.
+The three five-regular examples certify existence at orders 18, 32 and 104; they do not constitute three asymptotic improvements. Their mechanisms are worth stating explicitly because regularity alone hides the reason a pair is excluded. Each vertex on the common support of a pair has four incident edges in the union. Moreover, if that support meets both sides of a cut, each connected cycle crosses the cut an even positive number of times. Two edge-disjoint cycles therefore use at least four distinct cut edges. A cut of size at most three confines every pair to one side.
 
-**The 104-vertex mechanism.** A bipartite gadget has six inner and seven outer vertices. Its inner vertices all have degree five, and its outer deficiency is distributed as $1,2,2$ over three ports. The gadget is built from $K_{3,3}$ by adding vertices with three earlier neighbours, so it contains no four-regular subgraph and no pair. Eight copies are joined according to a five-regular bipartite multigraph skeleton. Small cuts of sizes two and three confine any alleged pair to a pair-free block. The existing formal proof uses this cut certificate directly, rather than relying on the general substitution theorem in Section 7.
+**The eighteen-vertex witness.** Start with a nine-vertex block. Vertices $0,1,2$ form a triangle and are each joined to $3,4,5$. Vertices $6,7,8$ form another triangle; add $6\!-\!3,6\!-\!4,6\!-\!5,7\!-\!3,7\!-\!4,8\!-\!5$. There are 21 edges. Vertices 7 and 8 have degrees four and three, respectively, and every other vertex has degree five. In the displayed order each vertex has at most three earlier neighbours, so the block is three-degenerate and cannot contain a pair. Take two copies, with the second labelled $9,\ldots,17$, and add $8\!-\!17,8\!-\!16,7\!-\!17$. These links fill precisely the two copies' degree deficiencies. The resulting graph has 18 vertices and 45 edges and is five-regular. Its three-edge joining cut confines any alleged pair to a pair-free block. This example can have quartic subgraphs crossing the cut in two edges; quartic extraction still does not supply a Hamilton decomposition. The source gives an explicit 17-vertex quartic support illustrating that distinction.
 
-The source reports an exhaustive exclusion of five-regular pair-free graphs through order sixteen, which would establish that eighteen is the smallest order. That is a stronger statement than Theorem W: the large exclusion census was not independently rerun in full. We therefore state eighteen as a certified example and keep the least-order claim conditional on acceptance of the complete census.
+**The thirty-two-vertex witness.** A block consists of the double wheel on a five-cycle with its hub edge removed, together with a degree-three vertex. Two such eight-vertex blocks form a half, joined by three edges; two halves are joined by two edges. The exact labelled joins are given in the source edge list. Regularity is checked on the actual graph, which has 32 vertices and 80 edges. The two-edge cut first confines a pair to one half, and the three-edge cut confines it to one block. A degree-three vertex cannot belong to the pair's support; the remaining seven-vertex double wheel is itself pair-free. To see this, a quartic support must use both hubs. Every selected rim vertex must then use both of its rim neighbours, forcing the entire five-cycle into the support; each hub would have degree five instead of four. Thus the double wheel has no quartic support. Thus the exclusion is a hierarchy of small-cut and local-support certificates, not an exhaustive search of all five-regular graphs.
 
-Generic non-bipartite five-regular pair-free existence is classical: Read and Wilson \[RW, p.155\] record five-regular graphs without a quartic subgraph, which therefore have no pair. This does not identify the eighteen-vertex witness, prove its minimum order, or settle bipartite pair-freeness. A five-regular bipartite graph always has a quartic factor by removing a perfect matching, so the bipartite example needs actual cycle-pair exclusion. Exact witness and construction priority remain separate questions.
+**The bipartite 104-vertex witness.** The thirteen-vertex block has six inner and seven outer vertices. It is built from $K_{3,3}$ by adjoining seven vertices with three earlier neighbours. Its three-degeneracy excludes a quartic subgraph and hence a pair. Every inner vertex has degree five; the outer deficiencies are $1,2,2$ at three ports. Eight copies are linked by 20 edges according to the specified five-regular bipartite multigraph skeleton, filling all deficiencies and producing 104 vertices and 260 edges. The hierarchy of two- and three-edge cuts confines a pair to a block. The published formal endpoint verifies the actual simple graph, bipartition, regularity and pair exclusion directly by this cut route. The construction also fits the gadget interpretation, but its original proof is not silently replaced by an assumed projected-cycle argument. A second, nonisomorphic port assignment is an author-supplied computational example in the same family; the original formal endpoint covers the first assignment.
+
+The separate claim that 18 is the least possible order depends on the complete exclusion census through 16 vertices. One complete method and a partial independent second method are documented; the latter is not a second full census. We retain the claimed minimum as source-reported computational evidence, separately from the three independently compiled existence statements. Generic nonbipartite five-regular pair-free existence has known predecessors, so witness identities, minimality and bipartite priority require their own comparisons. Generic non-bipartite five-regular pair-free existence is classical: Read and Wilson \[9, p.155\] record five-regular graphs without a quartic subgraph, which therefore have no pair. This does not identify the eighteen-vertex witness, prove its minimum order, or settle bipartite pair-freeness. A five-regular bipartite graph always has a quartic factor by removing a perfect matching, so the bipartite example needs actual cycle-pair exclusion. Exact witness and construction priority remain separate questions.
 
 ## 7. Substitution and prescribed-vertex deletion
 
@@ -128,13 +219,55 @@ Let $V$ be an additive group and $S\subset V$ a finite palette. The Haar graph $
 
 **Hamilton decomposition corollary.** If $|S|=4$, every connected component of $H(V,S)$ is finite and decomposes into two Hamilton cycles. Given a pair, its union supplies four distinct neighbours at every support vertex, exhausting the four host neighbours. Its support is therefore closed under all host edges. Connectedness makes that support the whole component. Translations and the shore-reversing map $(x,b)\mapsto(-x,1-b)$ are actual graph automorphisms, so a pair can be moved to any vertex. The new endpoint [`RobertPublishable.HaarComponent.every_connected_component`](https://github.com/alejandrozu/openmath-2026-judging/blob/70c5ec3107658182f22c207d4c50f53f9cb3e602/robert-review-2026-10-07/lean/HaarComponents.lean#L73) formalizes both the spanning cycles and the exhaustion of component edges. This is a strengthened formulation of the four-colour result, not an additional independent discovery. For more than four colours, the pair lies in a selected four-colour subgraph; the conclusion does not decompose the larger-palette host.
 
-**Proof architecture.** Choose four distinct colours and translate one to zero. Their affine span has rank one, two or three. Each normalized rank has an explicit connected cycle-pair construction. Injective additive coordinate maps, with a separate shift on the right shore, transport the witnesses into the original Haar graph. The construction proves successor orbits and connectedness, rather than merely two-factor degrees. For the converse, every vertex on the common support has four distinct neighbours in the cycle union, while a Haar vertex has exactly $|S|$ neighbours.
+**Proof of the four-colour construction.** For a finite coordinate set, a matching permutation $P$ sends $x_L$ to $P(x)_R$. Two edge-disjoint matchings $P,Q$ form one Hamilton cycle exactly when $Q^{-1}P$ has one orbit. In $\mathbb F_p^2$, a skew shift with nonzero horizontal step has one orbit if its total vertical increment over the $p$ horizontal positions is nonzero: $p$ steps return horizontally and translate vertically by that total.
 
-The prime-line case is covered by the dihedral decomposition theorem \[Zhou et al., Theorem 3\]. Degree-four abelian Cayley decomposition \[BFM\] covers characteristic two and centrally symmetric odd-prime palettes: for $S=\{c\pm u,c\pm v\}$, shifting the right shore by $-c$ identifies the four-colour component with an abelian Cayley graph on the subgroup generated by $(\pm u,1),(\pm v,1)$ in $V\times\mathbb Z_2$. Neither comparison settles every nonsymmetric odd-prime rank-two or rank-three palette.
+**Rank two.** Normalize the colours to $0,(1,0),(0,1),(\alpha,\beta+1)$, with $\alpha\ne0$ and the fourth colour different from $(1,0)$. The four matchings are
 
-The recent generalized-dihedral preprint \[Chen et al., v3\] proves one Hamilton cycle; the cyclic-Haar result \[BPZ, Proposition 5.1\] also proves one cycle under its factorization hypotheses. Neither is a decomposition theorem. Thus the candidate new portion is the residual complementary-cycle construction and the specified composite template, subject to exact priority review.
+$$
+\begin{aligned}
+R_0(x,y)&=(x+1,y),&R_1(x,y)&=(x,y+\mathbf1_{x=0}),\\
+B_0(x,y)&=(x+\alpha,y+\beta+1),&
+B_1(x,y)&=(x,y+\mathbf1_{x\ne0}).
+\end{aligned}
+$$
 
-**Composite template.** In the cyclic ambient group $\mathbb Z/n^2\mathbb Z$, the four shifts $\{0,n,2n,1\}$ force a pair for every $n\geq3$. For odd $n$, marked translation orbits are spliced into connected red and blue factors. For even $n$, a six-edge exchange merges the blue orbits while preserving the connected red factor. The formal endpoint covers both parities. This is a specified family, not a classification of every composite group or every palette.
+They partition the host: the two vertical choices use complementary zero/unit colours, while the other translations are distinct. The red successor has vertical increment $-\mathbf1_{x+1=0}$, totalling $-1$. The blue successor has increment $\beta+\mathbf1_{x+\alpha=0}$, totalling $p\beta+1=1$. Both are full orbits.
+
+If the fourth colour is $(0,v)$, $v\ne0,1$, use $F(x,y)=(-x-y,y)$, translating the right shore by $(1,0)$. This maps the palette $0,(1,0),(0,1),(1-v,v)$ bijectively to the desired palette. Since $1-v\ne0$, the preceding construction applies \[11\].
+
+**Rank three.** For colours $0,e_a,e_b,e_c$, use $A(x)=x+e_a$, $C(x)=x+e_c$, and
+
+$$
+Z(a,b,c)=(a,b+\mathbf1_{a=c},c),\qquad
+B(a,b,c)=(a,b+\mathbf1_{a\ne c},c).
+$$
+
+The red successor $Z^{-1}A$ has one $p^2$-point orbit in each fixed-$c$ level: its vertical period increment is $-1$. The blue successor $B^{-1}C$ similarly has one orbit per fixed-$a$ level, with increment $-(p-1)=1$. Mark $m_u=(u,0,-u)$. Exchange $A$ and $C$ at these marks. This preserves both permutations because $A(m_u)=C(m_{u+1})$. The new red successor joins the cut level paths in order $u\mapsto u-1$, and blue joins them in order $u\mapsto u+1$. Each now has one orbit on all $p^3$ coordinates. Their matching unions partition the host, giving two Hamilton cycles on the same $2p^3$ vertices \[11\].
+
+Rank one uses two distinct translation pairs, each with a nonzero prime-field step. Selecting four colours, subtracting an anchor and using an injective rank-one/two/three coordinate chart exhausts the possibilities. Add the anchor only on the right shore. These maps preserve actual edges and supports; they work in an infinite ambient module because the selected chart is finite. The prime-line case is covered by the dihedral decomposition theorem [the prime-dihedral preprint, Theorem 3](https://arxiv.org/html/1810.07866v1). Degree-four abelian Cayley decomposition \[6\] covers characteristic two and centrally symmetric odd-prime palettes: for $S=\{c\pm u,c\pm v\}$, shifting the right shore by $-c$ identifies the four-colour component with an abelian Cayley graph on the subgroup generated by $(\pm u,1),(\pm v,1)$ in $V\times\mathbb Z_2$. Neither comparison settles every nonsymmetric odd-prime rank-two or rank-three palette.
+
+The [current generalized-dihedral preprint](https://arxiv.org/html/1810.13311v3) proves one Hamilton cycle; the cyclic-Haar result \[10, Proposition 5.1\] also proves one cycle under its factorization hypotheses. Neither is a decomposition theorem. Thus the candidate new portion is the residual complementary-cycle construction and the specified composite template, subject to exact priority review.
+
+**Composite template and certificate.** The separate cyclic construction has ambient group $\mathbb Z/n^2\mathbb Z$, palette $\{0,n,2n,1\}$, $n\ge3$. Write $r(x)=x\bmod n$, and mark the integer representatives $0,\ldots,n-1$. Let $\sigma_\pm$ shift these marks by $\pm1\bmod n$ and fix every other coordinate. Put
+
+$$
+R_1(x)=\begin{cases}x&r(x)=0,\\x+n&r(x)\ne0,\end{cases}
+\quad
+S(x)=\begin{cases}x+n&r(x)=0,\\x&r(x)\ne0.\end{cases}
+$$
+
+The four actual matchings are $R_0=S\sigma_+$, $R_1$, $B_0=(x\mapsto x+1)\sigma_-$, $B_1=(x\mapsto x+2n)$. Their values use four distinct permitted shifts. The red base successor translates each residue class by $n$ or $-n$, with exactly one mark per class. The cyclic mark splice joins all $n$ classes.
+
+For odd $n$, blue agrees off the marks with translation by $d=1-2n$, a unit modulo $n^2$ with inverse $1+2n$. Put $h=(n+1)/2\bmod n$. In this translation's cyclic order the marks are $\operatorname{mark}(hj)$, at integer positions $nj+\operatorname{val}(hj)$. After rewiring, the path departing mark $h(j+2)$ reaches mark $h(j+1)$ along the intervening unmarked interval. Hence all marks lie in one blue orbit; every unmarked point reaches a mark by following the old unit translation. This proves blue connectedness without assuming it \[11\].
+
+For even $n\ge4$, the old blue successor has two orbits. Set $r=n/2-1$ and
+
+$$
+a=r_L,\ b=(r+1)_R,\ c=(r+1)_L,\quad
+d=(r+1+n)_R,\ e=(r+n)_L,\ f=(r+2n)_R.
+$$
+
+Exchange the red edges $ab,cd,ef$ with the blue edges $bc,de,fa$. Each of these six distinct vertices loses and gains one edge in each factor, so degrees and disjointness are preserved. **Connectedness requires more:** the supplied interval-path certificate proves a surviving red $b$-to-$d$ path, surviving blue $a$-to-$c$ and $b$-to-$f$ paths, the exact two-orbit blue partition, and global connectedness of both exchanged factors. These are proved obligations, not premises inferred from degree two \[11\]. The two connected degree-two factors give actual spanning cycles. This paragraph explains that formal certificate; it does not claim a new independent ordinary proof of its interval lemmas or an arbitrary composite-group classification.
 
 ## 9. A recolouring barrier and the quantitative expander route
 
@@ -146,13 +279,17 @@ An allowed *round* chooses two colours and swaps them on any union of connected 
 
 **Theorem R.** Every exposed cycle has induced host degree at most three on its support. It consequently has no edge-disjoint host cycle on that same support. For every fixed $C>0$ and $A\geq0$, this obstruction occurs at arbitrarily large orders with $q>C(\log N)^A$.
 
-**Proof.** The parabola is a Sidon set, and in characteristic three this is equivalent to a 2-cap: every subset of at most four points is affinely independent \[HTW, Theorem 3.2\]. Both this equivalence and the parabola construction predate the present work. For a nonempty set $T$ of at most three colours, choose $a_0\in T$ and put $U=\operatorname{span}_{\mathbb F_3}\{v_a-v_{a_0}:a\in T\}$. A component has shores $X+U$ and $X+v_{a_0}+U$: two-edge walks generate the differences, and selected edges stay in those cosets. A fourth palette point in this affine coset would contradict the 2-cap property. The component is therefore induced in the whole host and has degree $|T|\leq3$. After one allowed round, every exposed bichromatic cycle uses at most three original colours. Its support lies in such an induced component; a pair would require four distinct incident host edges at each support vertex, a contradiction. Finally $q=\sqrt{N/2}$ exceeds every fixed polylogarithm along this family. ∎
+**Proof.** The parabola is a Sidon set, and in characteristic three this is equivalent to a 2-cap: every subset of at most four points is affinely independent \[7, Theorem 3.2\]. Both this equivalence and the parabola construction predate the present work. For a nonempty set $T$ of at most three colours, choose $a_0\in T$ and put $U=\operatorname{span}_{\mathbb F_3}\{v_a-v_{a_0}:a\in T\}$. A component has shores $X+U$ and $X+v_{a_0}+U$: two-edge walks generate the differences, and selected edges stay in those cosets. A fourth palette point in this affine coset would contradict the 2-cap property. The component is therefore induced in the whole host and has degree $|T|\leq3$. After one allowed round, every exposed bichromatic cycle uses at most three original colours. Its support lies in such an induced component; a pair would require four distinct incident host edges at each support vertex, a contradiction. Finally $q=\sqrt{N/2}$ exceeds every fixed polylogarithm along this family. ∎
 
-The contribution is the actual recolouring-detector obstruction, not a new Sidon construction, an avoiding graph of polynomial degree, or a claim about unrestricted Kempe sequences. The full graph already contains pairs by Theorem H. Standard Kempe-equivalence results concern reachability under unrestricted sequences and do not decide this fixed-radius question \[GO\].
+The contribution is the actual recolouring-detector obstruction, not a new Sidon construction, an avoiding graph of polynomial degree, or a claim about unrestricted Kempe sequences. The full graph already contains pairs by Theorem H. Standard Kempe-equivalence results concern reachability under unrestricted sequences and do not decide this fixed-radius question [the cited preprint](https://arxiv.org/abs/2105.01363).
 
 **General Sidon-palette theorem.** Let $V$ be any $\mathbb F_3$-module and $S\subset V$ a finite Sidon palette. Under its canonical translation colouring, every cycle exposed after one component-union round has no edge-disjoint host cycle on the same support. The actual endpoint [`OpenMathReview.InfiniteAffinePaletteBarrier.sidon_exposed_cycle_no_partner`](https://github.com/alejandrozu/openmath-2026-judging/blob/70c5ec3107658182f22c207d4c50f53f9cb3e602/robert-review-2026-10-07/lean/InfiniteAffinePaletteBarrier.lean#L54) is kernel verified without `Fintype V`. Its proof first derives the geometric closure from the algebraic Sidon condition, then proves the actual canonical matching labels, legal swaps, component inducedness and cycle exclusion. No detector failure or degree bound is a conclusion-shaped premise. If $|S|\geq4$, Theorem H simultaneously supplies an uncoloured pair, emphasizing the limitation of the detector.
 
 **Theorem R2 (formal two-round sharpness).** For every $k\geq2$, the canonical parabola-coloured full host over $\mathbb F_{3^k}$ fails the zero/one-round detector, but two legal component-union rounds expose an actual pair on a common support of exactly 54 vertices. Choose $t\notin\{0,1,-1\}$ and the four colours $0,1,t,1+t$. Their injective rank-three chart transports the $p=3$ construction into the full host. The first round swaps selected components with colours $0$ and $t$; the second swaps the marked component with colours $1$ and $1+t$ after the first move. The proof checks component closure, the literal successive label swaps, matching identification and the connected final cycles. The endpoint [`RobertPublishable.TWO.family_exactly_two_component_union_rounds`](https://github.com/alejandrozu/openmath-2026-judging/blob/70c5ec3107658182f22c207d4c50f53f9cb3e602/robert-review-2026-10-07/lean/CycleComposition.lean#L171) combines the lower bound and this full-host witness. Thus two is the minimum number of component-union rounds for this family. The usual construction describes three component flips followed by one; the theorem does not assert minimum individual-flip count.
+
+**Proof of the two-round upper bound.** In characteristic three choose $t\notin\{0,1,-1\}$ and canonical colours $0,1,t,1+t$. Their parabola vectors are affinely independent over $\mathbb F_3$, so the chart $f:\mathbb F_3^3\to\mathbb F_q^2$ is injective. Its two shores have 54 vertices. Identify the selected colours with $0,A,B,C$.
+
+First swap $0,B$ on the three components $a=c$, with $b$ arbitrary. These are whole global bichromatic six-cycles: their successor is translation by the selected vector $e_b$, of order three. This produces precisely $Z,B$ above. Next swap $A,C$ on the component with left marks $m_u=(u,0,-u)$. The identity $A(m_u)=C(m_{u+1})$ proves component closure; $A,C$ were unchanged by round one. The rank-three splice therefore gives the two Hamilton cycles on the same 54 vertices. Other colours and every host edge remain unchanged. The one-round induced-support obstruction rules out zero or one round, while this witness gives two. The count concerns component-union rounds, not individual flips \[11\].
 
 ### 9.2 Quantitative bipartite Hamiltonicity
 
@@ -160,7 +297,7 @@ For a balanced bipartite $d$-regular graph, write $W$ for the biadjacency matrix
 
 **BM quantitative candidate.** The written dossier proposes an absolute-constant threshold $d\geq C_{\rm BM}\delta^{-5}(\log n)^3$ for Hamiltonicity in this one-sided bipartite setting, with a conservative power-six route also recorded. The graph has positive degree and even order $n\geq4$; the asymptotic proof requires its stated sufficiently-large-order convention. The complete sampling, router and rounding argument is linked in the repository. This edition does not call the main theorem Lean verified without an exact audited endpoint.
 
-Müyesser \[M\] proves a power-six two-sided spectral theorem and explicitly notes a bipartite one-sided analogue after Corollary 1.4. Bradač and Janzer \[BJ\] already prove Hamiltonicity and stronger resilience results for regular bipartite expanders. Consequently generic bipartite Hamiltonicity is background. The potentially original delta is the explicit power-five quantitative ledger and its faithful side/parity implementation.
+Müyesser [the cited preprint](https://arxiv.org/html/2609.35766v1) proves a power-six two-sided spectral theorem and explicitly notes a bipartite one-sided analogue after Corollary 1.4. Bradač and Janzer [their preprint](https://arxiv.org/html/2605.15043v1) already prove Hamiltonicity and stronger resilience results for regular bipartite expanders. Consequently generic bipartite Hamiltonicity is background. The potentially original delta is the explicit power-five quantitative ledger and its faithful side/parity implementation.
 
 The written power budget is: the sampled layer degree needs $D\gtrsim\delta^{-2}\log n$; the router supports $k\asymp\delta^2 qn/(\log n)^2$ terminals; and the perturbation slack permits reservoir fraction $q\asymp\delta$. Substituting $D\asymp kd/n$ gives the candidate power $\delta^{-5}$. Each of those statements has technical premises, including matrix sampling, bounded endpoint multiplicity, actual disjoint paths and balanced divisibility. A count of exponents is not a substitute for proving them.
 
@@ -184,6 +321,10 @@ $$
 The degree interval forces $\eta\ge0$; the cut range is half the total vertex set. PartitionTransport preserves the host's vertex labels. These proofs close sampling and factor dependencies; main BM Hamiltonicity and Erdős 585 remain unproved. See [B22 Lean](https://github.com/alejandrozu/openmath-2026-judging/blob/70c5ec3107658182f22c207d4c50f53f9cb3e602/robert-review-2026-10-07/lean/B22.lean#L26), [LemmaF Lean](https://github.com/alejandrozu/openmath-2026-judging/blob/70c5ec3107658182f22c207d4c50f53f9cb3e602/robert-review-2026-10-07/lean/LemmaF.lean#L18), [PartitionTransport Lean](https://github.com/alejandrozu/openmath-2026-judging/blob/70c5ec3107658182f22c207d4c50f53f9cb3e602/robert-review-2026-10-07/lean/PartitionTransport.lean#L54).
 
 The new graph-semantic proofs verify Hamilton-cycle remainder transfer and the balanced-deletion cut loss $t|S|$, rather than the coarser $2t|S|$ bound. They retain the Hamiltonicity/regular-factor premises explicitly and do not certify the main BM theorem. The isolated written cherry-packing lemma also needs $d>0$: with $d=0$, empty shores and one requested path satisfy its literal inequality but provide no path. The new Lean counterexample certifies that defect; positive degree already holds in the intended application. The factor and vertex-deletion consequences are attached to the accepted Hamiltonicity input, not separately counted discoveries. Equal deletions from the two shores are necessary for a spanning bipartite cycle. In edge-expansion language, the power-five and power-six routes correspond to inverse-expansion powers ten and twelve. The avoidance-conditioned extraction bridge E110 remains open; neither route yields an unconditional improvement to the general upper bound for $f(n)$. The unavailable private exponent-eleven and B2 projects are outside this manuscript's certified claims.
+
+**Conditional degree-six consequence.** If every nonempty finite simple bipartite six-regular graph has a pair, then $f(n)=\Theta(n\log\log n)$. This is a consequence of published regular-subgraph theory, rather than a claim that the hypothesis is proved. Indeed, a spanning bipartite subgraph retains at least half the edges of any graph. Once the average degree exceeds a suitable constant times $\log\log n$, the regular-subgraph theorem \[4\] supplies a six-regular subgraph. The assumed cycle-pair statement then gives a pair in the original graph. The lower order is the known construction \[3\], completing the conditional conclusion.
+
+**Conditional polylogarithmic consequence.** Suppose every bipartite $r$-regular graph on $N$ vertices with $r\ge A(\log(2N))^3$ has a pair. The regular-subgraph extraction theorem of Chakraborti, Janzer, Methuku and Montgomery \[12, Theorem 1.5\], with average-degree requirement $Cr\log(n/r)$, then yields $f(n)=O(n(\log n)^4)$. Choose $r=\lceil A(\log(2n))^3\rceil$ for sufficiently large $n$ and first take a spanning bipartite subgraph; the extracted regular graph has order at most $n$, so the hypothesis applies. This reduction is conditional. The separate extraction bridge in the source programme is open, and the completed sampling and factor lemmas do not supply it.
 
 ## 10. Proof repository, novelty and reproducibility
 
@@ -223,38 +364,111 @@ The frozen audit used Lean 4.33.1, Mathlib revision `0df444a360eaa60ab8c11dca51a
 
 The novelty record distinguishes an exact located predecessor, a result not implied by that predecessor, and an unresolved priority question. Our strongest present publication candidates are the precise extraction threshold, the restricted twin-forcing theorem, the specified recolouring obstruction and any Haar cases surviving exact decomposition comparisons. Finite examples and classifications must retain their evidence and attribution boundaries. Substitution preservation and the prescribed-vertex equivalence are formally complete; their historical priority remains unresolved. BM retains its explicit main proof obligations. Supporting interfaces and classical ingredients do not become additional discoveries by proximity to compiled code.
 
-**Acknowledgements and provenance.** These results were judged and evaluated by Alejandro Zarzuelo Urdiales in connection with OpenMath 2026 at Harvard and MIT. This edition preserves Robert Huynh's mathematical and source attribution. The original work used AI agents for proof development and review; the author repository records that history. The present concise synthesis and additional formal work are supplied for author review. Competition difficulty and progress coefficients are maintained in the separate judging record, rather than treated as mathematical publication claims.
+**Acknowledgements and authorship.** Robert Huynh supplied the original mathematics, constructions and formal development. Alejandro Zarzuelo Urdiales contributed literature comparison, exposition, independent verification and the additive formal proofs identified in the companion. Original source copyrights, Apache-2.0 notices and library attributions are retained.
+
+**AI assistance.** The original development used AI agents under Robert Huynh's direction. Codex assisted the present literature synthesis, drafting and additive formalization. The formal audit certifies the selected encoded statements; responsibility for the mathematical claims, attribution and final text belongs to the human authors.
+
+## Appendix A. Additional source reports and the complete public-result map
+
+**P2 and near-additive quartic questions.** The author reports an ordinary proof that every simple graph, not necessarily bipartite, with $n\ge2$, maximum degree at most six and at least $3n-2$ edges has a nonempty quartic subgraph. Its Tutte-budget/C1 proof has AI reviews but no selected formal endpoint here; it remains an attributed appendix claim. The stronger bipartite finite census at $3n-7$, the $3n-8$ witnesses, and the failed general-graph P4 proof attempt are also distinct. A finite census through a stated order does not prove a universal additive threshold.
+
+**The B6 census programme.** The reported W1 counts through fourteen vertices, bipartite counts through eighteen, written-plus-computational extension through twenty-three, and resulting prescribed-vertex B6 claim through twenty-four belong to the supplementary record. The S6 census at twenty-two is one main method with a small independent spot-check, not a universal theorem. False spanning-decomposition and marked-edge routes have explicit counterexamples; they do not refute B6. Those records can guide research without being relabelled as fresh full replay or accepted discoveries.
+
+Here W1 is the assertion that a simple graph with maximum degree at most six and at least $3n-4$ edges contains a pair. The reported unrestricted census covers $2\le n\le14$, and its bipartite counterpart covers $2\le n\le18$. The source's additional reductions and censuses assert the bipartite version through $n=23$; since a vertex-deleted six-regular graph has $3n-3$ edges, this would give the prescribed-vertex assertion for nonempty bipartite six-regular hosts through order 24. These are finite source reports, not a proof of the universal conjecture.
+
+**The S6 condition.** For a bipartite six-regular graph $B$, delete a vertex $o$ and write $\Gamma=B-o$. Its six neighbours of $o$ are the degree-five ports on the larger shore. Call $\Gamma$ sparse when $g(S)=6|S|-2e_\Gamma(S)\ge10$ for every $2\le|S|\le|V(\Gamma)|-1$. S6 asserts that, under this hypothesis, deleting any port $y$ from $\Gamma$ leaves two edge-disjoint spanning Hamilton cycles. The source relates this sparsity to the E10 cut condition: every cut of $B$ with at least two vertices on each side has at least ten edges. Its 22-vertex S6 census and 0.376-percent spot-check are evidence at that order only; the all-order statement remains open.
+
+**Why a spanning-cycle shortcut fails.** Take two copies of $K_{5,5}$ with shores $\{0,\ldots,4\},\{10,\ldots,14\}$ and $\{5,\ldots,9\},\{15,\ldots,19\}$. Add $0\!-!15,1\!-!16,2\!-!17,3\!-!18,4\!-!19$ and $10\!-!5$. This is the source's 20-vertex, 56-edge sparse example. Each spanning Hamilton cycle must cross between the pieces. The first piece is balanced, so its cycle uses equally many crossing edges of the two shore orientations; the edge $10\!-!5$ is the sole crossing edge of one orientation and must be used. Two edge-disjoint spanning Hamilton cycles are therefore impossible, although an internal $K_{4,4}$ supplies a pair on a smaller support. The separate marked-edge rule is also false: the source supplies six 11-vertex, 30-edge certificates where removal of two marked disjoint edges is pair-free but no pair places those marks on different cycles. These counterexamples reject the specified shortcuts, not B6.
+
+### The original 22 headline rows
+
+This catalogue preserves source scope rather than awarding one contribution per row. "Formal" refers to the actual matched graph statement; "reported" retains the author's computational/written coverage and its restrictions. The eight families remain QB, TWIN, FINITE, REG5, SUB, HAAR, ONE and BM. Most auxiliary census and obstruction rows lie within those programmes or their open-question record.
+
+  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    Original row Claim retained                                                                              Current evidence and boundary
+  -------------- ------------------------------------------------------------------------------------------- ----------------------------------------------------------------------------------------------------------------------------------------
+               1 QB5: bipartite $\Delta\le6,\ n\ge3,\ e\ge3n-5$ gives a nonempty quartic                     Formal universal theorem; a quartic is not a pair.
+
+               2 QB4 at $3n-4$, and a quartic in every vertex-deleted bipartite six-regular host             Formal earlier consequence; no Hamilton splitting conclusion.
+
+               3 P2: general simple $\Delta\le6,\ n\ge2,\ e\ge3n-2$                                          Author's ordinary reviewed proof; no selected formal P2 endpoint.
+
+               4 No-quartic edge census: $3n-7$ suffices for $4\le n\le19$; extrema at 17--19 are 43,46,49   Source-reported two-method finite computation; not a universal threshold.
+
+               5 Pair-free five-regular graph on 18 vertices                                                 Formal actual witness; minimum order is a separate census claim.
+
+               6 Pair-free five-regular graph on 32 vertices                                                 Formal actual witness, same REG5 family.
+
+               7 Bipartite pair-free five-regular graph on 104 vertices                                      Formal first assignment; alternate assignment computational.
+
+               8 No pair-free five-regular graph through 16; claimed minimum 18                              One complete 16-vertex method plus partial second method; qualification retained.
+
+               9 Exact $f(n)$ through 7                                                                      Formal upper and lower inequalities, including trivial orders.
+
+              10 $f(8)=19,\ f(9)=23,\ f(10)=27$                                                              Finite methods independently replayed in the earlier audit; not universal formulas.
+
+              11 $f(11)=31,\ f(12)=36$                                                                       Lower witnesses formal; exact upper exclusions remain source-reported.
+
+              12 Explicit linear lower bounds and incidence/subdivision families                             Formal constructions with printed parameter restrictions; no asymptotic improvement.
+
+              13 W1 at $3n-4$ through 14, bipartite through 18                                               Reported finite census with order-dependent replication; no new complete census here.
+
+              14 No pair-free six-regular graph through 15                                                   Reported direct counts and W1 consequence; finite evidence only.
+
+              15 B6 would imply $f(n)=\Theta(n\log\log n)$                                                   Conditional consequence of published regular-subgraph/lower-bound results; B6 remains open.
+
+              16 Substitution for $d\le7$ and prescribed-vertex B6 equivalence                               Full new formal preservation/equivalence; neither proves B6.
+
+              17 Bipartite W1 through 23; prescribed-vertex B6 through 24                                    Written-plus-census source claim with shared/partial replication limits; not a formal universal result.
+
+              18 S6 at 22 vertices                                                                           Source-reported main census with 0.376% independent spot-check; its sparsity hypothesis is essential.
+
+              19 Counterexamples to two proposed B6 routes                                                   Particular spanning/marked-edge rules fail; the target B6 is not refuted.
+
+              20 B(polylog), via an open extraction step, would give $O(n(\log n)^4)$                        Conditional published-theory reduction; sampling and Lemma F are now formal, main BM/extraction still incomplete.
+
+              21 One-round canonical recolouring barrier                                                     Formal specified detector; new full-host two-round sharpness does not concern arbitrary initial colourings or individual-flip minimum.
+
+              22 Twin-core forcing at exact $3v-2$                                                           Original formal restricted host; new no-singleton inequality-range extension belongs to the same family.
+  ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+### Supplementary results and supporting declarations
+
+The complete names and source files are listed in [`DECLARATIONS.md`](https://github.com/roberthuynh/erdos-585/blob/1efc324e155ef0b6a7081c5f695c6c825e7debef/findings/supplement/lean/DECLARATIONS.md). They are included in the earlier 106-source replay and its selected-standard-axiom coverage; this is not 56 additional discoveries. A compact nonoverlapping grouping is:
+
+- **Sixteen finite/construction declarations** (rows 1,35--36,39--44,47,49--50,52--55): hub witnesses, Latin incidence, matching subdivisions, rim bounds, deletion counts and small-order exclusion tools. Counts and lower inequalities remain part of FINITE, not new asymptotic claims.
+- **Twenty-two structured-class/cycle declarations** (rows 7--11,13--14,20--33,51): cubelike witnesses and forest interfaces; Haar rank constructions, cycle splices, exact-four threshold, composite parity template; and the Wenger no-six-cycle boundary. Known subcases retain their prior context. The formal Haar-extraction obstruction says that the Wenger host cannot contain an injective abelian three-colour Haar subgraph; it does not say the host is pair-free.
+- **Ten transfer limitations and split constructions** (rows 3--6,12,15,17,19,38,48): explicit counterexamples or restrictions on Eulerian splitting, cover transfer, state projection and degree-raising rules. They invalidate specified transformations, not the parent conjecture.
+- **Eight supporting interfaces** (rows 2,16,18,34,37,45--46,56): bipartite balance, density core, labelled cuts/incidence lifts, matching probes, port completion, witness counts and small-cut confinement. Their hypotheses and actual-cycle interpretation remain visible; helper count does not determine scientific credit.
+
+The Haar composite template and one-/two-round mechanisms are substantive results already retained in the main text, not lost among these groups. The linked comprehensive dossier gives the rank-specific permutations and splice checks, the exact component choices in the two rounds, full QB5 covering/hub arguments and operational census records. It remains useful for expert verification; the concise article and this catalogue do not claim to reproduce every one of those technical proofs.
 
 ## References
 
-\[AFK\] N. Alon, S. Friedland and G. Kalai, Regular subgraphs of almost regular graphs, Journal of Combinatorial Theory, Series B 37 (1984), 79-91. [Author-hosted paper](https://web.math.princeton.edu/~nalon/PDFS/Publications/Regular%20subgraphs%20of%20almost%20regular%20graphs.pdf).
+\[1\] N. Alon, S. Friedland and G. Kalai, Regular subgraphs of almost regular graphs, Journal of Combinatorial Theory, Series B 37 (1984), 79-91. [Author-hosted paper](https://web.math.princeton.edu/~nalon/PDFS/Publications/Regular%20subgraphs%20of%20almost%20regular%20graphs.pdf).
 
-\[CJMM\] D. Chakraborti, O. Janzer, A. Methuku and R. Montgomery, Edge-disjoint cycles with the same vertex set, Advances in Mathematics 469 (2025), 110228. [Primary preprint](https://arxiv.org/abs/2404.07190).
+\[2\] D. Chakraborti, O. Janzer, A. Methuku and R. Montgomery, Edge-disjoint cycles with the same vertex set, Advances in Mathematics 469 (2025), 110228. [Primary preprint](https://arxiv.org/abs/2404.07190).
 
-\[PRS\] L. Pyber, V. Rödl and E. Szemerédi, Dense graphs without 3-regular subgraphs, Journal of Combinatorial Theory, Series B 63 (1995), 41-54. The lower-bound application used here is discussed in \[CJMM\].
+\[3\] L. Pyber, V. Rödl and E. Szemerédi, Dense graphs without 3-regular subgraphs, Journal of Combinatorial Theory, Series B 63 (1995), 41-54. The lower-bound application used here is discussed in \[CJMM\].
 
-\[JS\] O. Janzer and B. Sudakov, Resolution of the Erdős-Sauer problem on regular subgraphs, Forum of Mathematics, Pi 11 (2023). [Primary preprint](https://arxiv.org/abs/2204.12455).
+\[4\] O. Janzer and B. Sudakov, Resolution of the Erdős-Sauer problem on regular subgraphs, Forum of Mathematics, Pi 11 (2023). [Primary preprint](https://arxiv.org/abs/2204.12455).
 
-\[Meredith\] G. H. J. Meredith, Regular n-valent n-connected nonHamiltonian non-n-edge-colorable graphs, Journal of Combinatorial Theory, Series B 14 (1973), 55-60. [Publisher record](https://doi.org/10.1016/S0095-8956(73)80006-1).
+\[5\] G. H. J. Meredith, Regular n-valent n-connected nonHamiltonian non-n-edge-colorable graphs, Journal of Combinatorial Theory, Series B 14 (1973), 55-60. [Publisher record](https://doi.org/10.1016/S0095-8956(73)80006-1).
 
-\[BFM\] J.-C. Bermond, O. Favaron and M. Mahéo, Hamiltonian decomposition of Cayley graphs of degree 4, Journal of Combinatorial Theory, Series B 46 (1989), 142-153. [Publisher record](https://doi.org/10.1016/0095-8956(89)90040-3).
+\[6\] J.-C. Bermond, O. Favaron and M. Mahéo, Hamiltonian decomposition of Cayley graphs of degree 4, Journal of Combinatorial Theory, Series B 46 (1989), 142-153. [Publisher record](https://doi.org/10.1016/0095-8956(89)90040-3).
 
-\[HTW\] Y. Huang, M. Tait and R. Won, Sidon sets and 2-caps in $\mathbb F_3^n$, Involve 12 (2019), 995-1003. [Published primary paper](https://msp.org/involve/2019/12-6/involve-v12-n6-p06-p.pdf), particularly Theorems 3.2 and 3.4.
+\[7\] Y. Huang, M. Tait and R. Won, Sidon sets and 2-caps in $\mathbb F_3^n$, Involve 12 (2019), 995-1003. [Published primary paper](https://msp.org/involve/2019/12-6/involve-v12-n6-p06-p.pdf), particularly Theorems 3.2 and 3.4.
 
-\[GO\] J. Goedgebeur and P. R. J. Östergård, Switching 3-edge-colorings of cubic graphs. [Primary preprint, arXiv:2105.01363](https://arxiv.org/abs/2105.01363).
+\[8\] D. Eppstein, Hamiltonian Cycles in Subdivided Doubles, Ars Mathematica Contemporanea 26 (4.02) (2026), 1-9; arXiv: 2510.18359v1 (21 October 2025). [Primary theorem and proof](https://arxiv.org/html/2510.18359v1).
 
-\[M\] A. Müyesser, Hamiltonicity of mildly pseudorandom regular graphs, arXiv: 2609.35766v1 (28 September 2026). [Primary paper](https://arxiv.org/html/2609.35766v1).
+\[9\] R. C. Read and R. J. Wilson, An Atlas of Graphs, Oxford University Press (1998), Chapter 5, p.155. [Publisher](https://academic.oup.com/book/54439), [chapter scan](https://oeis.org/A000088/a000088_14.pdf).
 
-\[BJ\] D. Bradač and O. Janzer, Hamiltonicity of regular sublinear expanders, arXiv: 2605.15043v1 (14 May 2026). [Primary paper](https://arxiv.org/html/2605.15043v1).
+\[10\] S. Bonvicini, T. Pisanski and A. Žitnik, All generalized rose window graphs are hamiltonian, Graphs and Combinatorics 42, article 27 (2026), Proposition 5.1. [Primary publication](https://doi.org/10.1007/s00373-026-03016-w).
 
-\[Eppstein\] D. Eppstein, Hamiltonian Cycles in Subdivided Doubles, Ars Mathematica Contemporanea 26 (4.02) (2026), 1-9; arXiv: 2510.18359v1 (21 October 2025). [Primary theorem and proof](https://arxiv.org/html/2510.18359v1).
+\[11\] R. Huynh, Erdős 585 public sources and findings, revision `1efc324e155ef0b6a7081c5f695c6c825e7debef`. [Frozen findings](https://github.com/roberthuynh/erdos-585/blob/1efc324e155ef0b6a7081c5f695c6c825e7debef/findings/FINDINGS.md). The companion retains the complete source map and its associated written proof dossiers.
 
-\[RW\] R. C. Read and R. J. Wilson, An Atlas of Graphs, Oxford University Press (1998), Chapter 5, p.155. [Publisher](https://academic.oup.com/book/54439), [chapter scan](https://oeis.org/A000088/a000088_14.pdf).
+\[12\] D. Chakraborti, O. Janzer, A. Methuku and R. Montgomery, Regular subgraphs at every density, Transactions of the American Mathematical Society (2026), accepted/in press. [Publisher DOI](https://doi.org/10.1090/tran/9694); [institutional accepted-version record](https://wrap.warwick.ac.uk/id/eprint/194663/). The theorem numbering follows the linked preprint version in the source findings.
 
-\[Zhou et al.\] H. Zhou, L. Xu, Y. Cui, Q. Ding, Y. Luo, X. Gao and D. Yang, Hamiltonian decomposition of the Cayley graph on the dihedral group $D_{2p}$ where $p$ is a prime, arXiv: 1810.07866v1 (2018). [Exact cited version](https://arxiv.org/html/1810.07866v1).
+## Mathematical proof supplement
 
-\[Chen et al.\] J. Chen, J. Ou, Y.-L. Qin, B. Xia and K. Yuan, Hamilton cycles in generalized dihedral Cayley graphs and digraphs, arXiv: 1810.13311v3 (5 October 2026). [Current cited preprint](https://arxiv.org/html/1810.13311v3). This is not the withdrawn earlier version.
-
-\[BPZ\] S. Bonvicini, T. Pisanski and A. Žitnik, All generalized rose window graphs are hamiltonian, Graphs and Combinatorics 42, article 27 (2026), Proposition 5.1. [Primary publication](https://doi.org/10.1007/s00373-026-03016-w).
-
-\[RH\] R. Huynh, Erdős 585 public sources and findings, revision `1efc324e155ef0b6a7081c5f695c6c825e7debef`. [Frozen findings](https://github.com/roberthuynh/erdos-585/blob/1efc324e155ef0b6a7081c5f695c6c825e7debef/findings/FINDINGS.md). The companion retains the complete source map and its associated written proof dossiers.
+\[RH\] Frozen QB5 Parts I--IV, with their stated corrections, and [Statement](https://github.com/roberthuynh/erdos-585/blob/1efc324e155ef0b6a7081c5f695c6c825e7debef/Openmath/Proofs/QB5/Statement.lean#L42); \[QB-cover\] [refined_cover](https://github.com/roberthuynh/erdos-585/blob/1efc324e155ef0b6a7081c5f695c6c825e7debef/Openmath/Proofs/QB5/Cover.lean#L800) and CoverCheck 1--3; \[RH\] HaarRankTwo; \[RH\] HaarWitness/Haar; \[RH\] HaarCompositeDefs/HaarCompositeBlue; \[RH\] HaarCompositeEvenDefs/Red/Blue and [all-parameter endpoint](https://github.com/roberthuynh/erdos-585/blob/1efc324e155ef0b6a7081c5f695c6c825e7debef/findings/supplement/lean/Openmath/Proofs/HaarCompositeEven.lean#L441); \[RH\] [actual full-host composition](https://github.com/alejandrozu/openmath-2026-judging/blob/70c5ec3107658182f22c207d4c50f53f9cb3e602/robert-review-2026-10-07/lean/CycleComposition.lean#L171).

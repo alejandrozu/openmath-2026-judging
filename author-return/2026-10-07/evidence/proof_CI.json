@@ -1,0 +1,48 @@
+{
+  "schema": "safe-actual-proof-ci-projection-v1",
+  "records": [
+    {
+      "input_record_sha256": "4e56809f39efd2699f07ec4756497b945fd18a333a55d2760a457a5cd5acb241",
+      "status": "ACTUAL_GITHUB_SELECTED_AUDIT_PASS270_STANDARD_KERNEL",
+      "checked_utc": "2026-10-07T21:57:48.250483+00:00",
+      "run": {
+        "url": "https://github.com/alejandrozu/openmath-2026-judging/actions/runs/37663424314",
+        "headSha": "70c5ec3107658182f22c207d4c50f53f9cb3e602",
+        "conclusion": "success",
+        "status": "completed"
+      },
+      "scope": "174-source reviewed companion;270 selected endpoints use standard kernel axioms, including full F and B2.2 dependencies. Main BM, parent585, finite census upper/minimum claims and unavailable private projects are not proved by this audit.",
+      "selected_endpoint_count": 270,
+      "actual_reproduction_sha256": "9dc243a484ee4af9191f9539c9f73773924d41d69c506ab089f192a43342ff99"
+    },
+    {
+      "input_record_sha256": "fe78e9df2d223a70d447cc4bf8ba031ba2d29810423cdefb04ca470709f431cb",
+      "status": "ACTUAL_GITHUB_SELECTED_AUDIT_PASS16_STANDARD_KERNEL",
+      "checked_utc": "2026-10-07T21:57:48.259093+00:00",
+      "run": {
+        "url": "https://github.com/alejandrozu/openmath-2026-judging/actions/runs/37659283232",
+        "headSha": "cca2a5345c6344d009daa8ff1944621eb851c460",
+        "conclusion": "success",
+        "status": "completed"
+      },
+      "scope": "14-source universal characteristic-zero matrix-family companion;16 selected standard-kernel endpoints. Exact generic support and parameter specializations retain their stated holds.",
+      "selected_endpoint_count": 16,
+      "actual_reproduction_sha256": "23523c6cb0e73921f570a6d4ee736635a345ee1baa69101e71172765501316d5"
+    },
+    {
+      "input_record_sha256": "f2ac5dd9a584c19c7e60c28022e6744662a5eb5cd92f1113846bb01f84f9339f",
+      "status": "ACTUAL_GITHUB_COLD_REPRODUCTION_PASS_11_SOURCES_45_STANDARD_ENDPOINTS",
+      "checked_utc": "2026-10-07T19:38:47.954202+00:00",
+      "run": {
+        "url": "https://github.com/alejandrozu/openmath-2026-judging/actions/runs/37675264184",
+        "headSha": "9e13c89a51a62958ced9ebdf16da31f5e2fb3cdd",
+        "conclusion": "success",
+        "status": "completed"
+      },
+      "scope": "Selected actual matrix constructions only; no claim of global novelty, every external algorithm formalized, or journal acceptance.",
+      "source_count": 11,
+      "standard_endpoint_count": 45,
+      "actual_reproduction_sha256": "04c73b128eb111719dc27b3c5473e02e1fcdeb42488e545c8b88d16d61942e16"
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,textcomp}
+\usepackage[margin=24mm]{geometry}
+\usepackage{longtable,booktabs,array,enumitem}
+\usepackage[hidelinks]{hyperref}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+\emergencystretch=3em
+\hypersetup{pdfauthor={Rachel Teo, Wenyi Wang, Hamdi Abderrahmene, Alejandro Zarzuelo Urdiales}}
+\begin{document}
+{\LARGE\bfseries A log(5/3) uniform bound for representations as two nonnegative cubes\par}\medskip
+{\small Rachel Teo\ensuremath{^1}, Wenyi Wang\ensuremath{^1}, Hamdi Abderrahmene\ensuremath{^1}, Alejandro Zarzuelo Urdiales\ensuremath{^2}\par}\medskip
+{\small\textbf{Affiliations:} \href{https://sakana.ai/}{\ensuremath{^1} Sakana AI}; \href{https://rsihouse.ai/openmath}{\ensuremath{^2} Open Math}.\par}
+
+{\small\href{https://github.com/alejandrozu/openmath-2026-judging}{Code and formal proofs}\par}
+
+\subsection{Abstract}
+For ordered nonnegative representations x\ensuremath{^3}+y\ensuremath{^3}=n, the formal endpoint gives the eventual bound exp((log(5/3)+\ensuremath{\varepsilon})log n/log log n). The author-supplied ordinary proof optimizes the same weighted ternary coding method to coefficient C=log 3\ensuremath{-}H((2\ensuremath{-}\ensuremath{\surd}2)/3)\ensuremath{-}((2\ensuremath{-}\ensuremath{\surd}2)/3)log 2\ensuremath{\approx}0.4695030882. A gcd transfer and prime cutoff remove primitive and cube-free restrictions. The stronger ordinary endpoint is not asserted as Lean-checked.
+
+\subsection{Count and uniform theorem}
+Let R(n)=\#\{(x,y)\ensuremath{\in}\ensuremath{\mathbb{N}}\ensuremath{^2}:x\ensuremath{^3}+y\ensuremath{^3}=n\}, with ordered pairs and zero coordinates included. For every \ensuremath{\varepsilon}>0 there is N such that R(n)\ensuremath{\leq}exp((log(5/3)+\ensuremath{\varepsilon})log n/log log n) for every n\ensuremath{\geq}N. No cubefree-target restriction or gcd-one restriction appears in the final theorem.
+
+The coefficient log(5/3)\ensuremath{\approx}0.510826 improves the earlier same-family log(7/4)\ensuremath{\approx}0.559616 endpoint. The located approximately0.556477 comparison applies only to cubefree targets. It therefore cannot be substituted as a stronger all-target theorem. The result still falls far short of a fixed polylogarithmic bound, which remains the original target.
+
+\subsection{Primitive ratios as a separated ternary code}
+For a primitive positive solution, the ratio of its coordinates is a unit modulo the relevant prime powers, with cube equal to minus one. The unit cube-root lemma gives at most three choices at each prime-power coordinate, including the ramified prime three. Distinct solutions are encoded by distinct ternary words.
+
+If two encoded words agree at selected prime-power coordinates, those moduli divide a cross determinant of the two solutions. An upper bound for the determinant and the target-size product force a weighted separation property. This converts an arithmetic representation problem into a weighted code problem without assuming the desired representation bound.
+
+Elias/Plotkin localization bounds the size of a separated code in a weighted ball. An exact binomial block certificate uses blocks of 500 coordinates and support 90, producing the rational base 5/3 with an explicit finite multiplicative constant. The constant is harmless for the eventual leading exponent, but its proof is retained rather than replaced by a decimal numerical guess.
+
+\subsection{From primitive pairs to the canonical count}
+A general positive pair has gcd d and a primitive pair representing n/d\ensuremath{^3}. The source proves the exact gcd-fibre identity and sums over positive cube divisors d. Coordinatewise multiplicative weights bound this sum uniformly across targets, including those with repeated prime factors.
+
+The prime cutoff and elementary log budgets control the resulting product. They reuse background modules from the k\ensuremath{\sigma}(k) development, while the cubic encoding and local-factor estimates are specific to this result. Finally at most two boundary pairs have a zero coordinate, and their contribution is absorbed. A semantic bridge identifies the resulting count with the original ordered cube-value representation definition; it does not import the open conjecture as a hypothesis.
+
+\subsection{Formal scope and prior work}
+The checked source snapshot contains reconstructed arithmetic variants, identified in the source ledger. It verifies those delivered variants; it does not claim recovery of the earlier lost bytes. The selected final endpoints use standard kernel axioms.
+
+Merikoski's ratio-root and determinant methods and classical coding/entropy estimates are prior ingredients. The refinements are the exact 5/3 weighted-code constant and the separately justified ordinary coefficient 0.4695030882.... Their all-target transfer is a quantitative partial result; the polylogarithmic target and a signed-integer representation theorem are not proved here.
+
+The weighted-distance condition, finite block inequality and gcd-fibre identity give the proof chain from primitive representations to the canonical count. The coefficient is justified by exact finite inequalities, not a floating-point estimate.
+
+\subsection{Formal verification}
+Lean 4.33.1 checked all 31 delivered source modules and both selected declarations canonicalCubeCount\_eventually\_exp and canonicalCubeCount\_eventual\_threshold. They use only standard kernel axioms and prove the all-target log(5/3) bound. The sharper ordinary coefficient .46950308823856934 has a separate proof and is not asserted as a selected Lean endpoint. Pinned source identities and audit records are supplied in the companion repository.
+
+\begin{samepage}
+\subsection{Erdos829FiveThirds.canonicalCubeCount\_eventually\_exp}
+\begin{quote}\small\ttfamily theorem canonicalCubeCount\_eventually\_exp \{\ensuremath{\varepsilon} : \ensuremath{\mathbb{R}}\} (h\ensuremath{\varepsilon} : 0<\ensuremath{\varepsilon}) :\newline     \ensuremath{\forall}\ensuremath{^{f}} n : \ensuremath{\mathbb{N}} in atTop, (canonicalCubeCount n : \ensuremath{\mathbb{R}}) \ensuremath{\leq}\newline       Real.exp ((Real.log (5/3 : \ensuremath{\mathbb{R}})+\ensuremath{\varepsilon})*Real.log (n : \ensuremath{\mathbb{R}})/Real.log (Real.log (n : \ensuremath{\mathbb{R}})))\end{quote}
+{\small Source: proofs/erdos829-log-five-thirds/FiveThirdsCanonical.lean:8.\par}
+
+{\small Source SHA-256: 51541747f8104588463d8b7b051d69692876cee605c68a2f50df9da132e6a006\par}
+
+\end{samepage}
+\begin{samepage}
+\subsection{Erdos829FiveThirds.canonicalCubeCount\_eventual\_threshold}
+\begin{quote}\small\ttfamily theorem canonicalCubeCount\_eventual\_threshold \{\ensuremath{\varepsilon} : \ensuremath{\mathbb{R}}\} (h\ensuremath{\varepsilon} : 0<\ensuremath{\varepsilon}) :\newline     \ensuremath{\exists} N : \ensuremath{\mathbb{N}}, \ensuremath{\forall} n : \ensuremath{\mathbb{N}}, N\ensuremath{\leq}n \ensuremath{\to} (canonicalCubeCount n : \ensuremath{\mathbb{R}}) \ensuremath{\leq}\newline       Real.exp ((Real.log (5/3 : \ensuremath{\mathbb{R}})+\ensuremath{\varepsilon})*Real.log (n : \ensuremath{\mathbb{R}})/Real.log (Real.log (n : \ensuremath{\mathbb{R}})))\end{quote}
+{\small Source: proofs/erdos829-log-five-thirds/FiveThirdsCanonical.lean:14.\par}
+
+{\small Source SHA-256: 51541747f8104588463d8b7b051d69692876cee605c68a2f50df9da132e6a006\par}
+
+{\small\textbf{Sources and attribution:} \href{https://www.erdosproblems.com/829}{1. www.erdosproblems.com / 829}; \href{https://github.com/google-deepmind/formal-conjectures/blob/main/FormalConjectures/ErdosProblems/829.lean}{2. google-deepmind/formal-conjectures / 829.lean}; \href{https://github.com/google-deepmind/formal-conjectures/blob/main/FormalConjecturesForMathlib/Combinatorics/Additive/Convolution.lean}{3. google-deepmind/formal-conjectures / Convolution.lean}; \href{https://arxiv.org/html/2112.03617}{4. arXiv source: 2112.03617}; \href{https://arxiv.org/html/2207.12487v2}{5. arXiv source: 2207.12487v2}; \href{https://github.com/alejandrozu/ulam-opdp-difficulty-atlas}{6. alejandrozu/ulam-opdp-difficulty-atlas}; \href{https://github.com/alejandrozu/openmath-2026-judging/blob/d0ed487f487fa7ec814ff705ab55249983fe8707/OpenMath-Judging/review/entries/E02-erdos829-log-five-thirds.txt}{7. alejandrozu/openmath-2026-judging / E02-erdos829-log-five-thirds.txt}; \href{https://github.com/alejandrozu/openmath-2026-judging}{Proof source repository}.\par}
+
+\end{samepage}
+{\small \textbf{AI assistance.} Codex assisted literature checking, editorial preparation and analysis of the supplied formal artifacts. The human authors are responsible for checking the final mathematical claims, references and attribution.\par}
+
+\end{document}
